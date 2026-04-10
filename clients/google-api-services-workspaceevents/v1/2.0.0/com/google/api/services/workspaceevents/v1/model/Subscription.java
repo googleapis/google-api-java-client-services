@@ -116,9 +116,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The service account that was used to authorize the creation of the subscription.
-   * This service account must be owned by the same Google Cloud project where you create this
-   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * This service account must be owned by the same Google Cloud project where you created this
+   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +178,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Output only. The user who authorized the creation of the subscription. The user must be able to
    * view the `target_resource`. For Google Workspace users, the `{user}` value is the [`user.id`](h
    * ttps://developers.google.com/workspace/admin/directory/reference/rest/v1/users#User.FIELDS.id)
-   * field from the Directory API. Format: `users/{user}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * field from the Directory API. Format: `users/{user}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -379,9 +377,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The service account that was used to authorize the creation of the subscription.
-   * This service account must be owned by the same Google Cloud project where you create this
-   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * This service account must be owned by the same Google Cloud project where you created this
+   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountAuthority() {
@@ -390,9 +387,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The service account that was used to authorize the creation of the subscription.
-   * This service account must be owned by the same Google Cloud project where you create this
-   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * This service account must be owned by the same Google Cloud project where you created this
+   * subscription. Format: `projects/{project_id}/serviceAccounts/{service_account_id}`
    * @param serviceAccountAuthority serviceAccountAuthority or {@code null} for none
    */
   public Subscription setServiceAccountAuthority(java.lang.String serviceAccountAuthority) {
@@ -524,8 +520,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Output only. The user who authorized the creation of the subscription. The user must be able to
    * view the `target_resource`. For Google Workspace users, the `{user}` value is the [`user.id`](h
    * ttps://developers.google.com/workspace/admin/directory/reference/rest/v1/users#User.FIELDS.id)
-   * field from the Directory API. Format: `users/{user}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * field from the Directory API. Format: `users/{user}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUserAuthority() {
@@ -536,8 +531,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Output only. The user who authorized the creation of the subscription. The user must be able to
    * view the `target_resource`. For Google Workspace users, the `{user}` value is the [`user.id`](h
    * ttps://developers.google.com/workspace/admin/directory/reference/rest/v1/users#User.FIELDS.id)
-   * field from the Directory API. Format: `users/{user}` [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * field from the Directory API. Format: `users/{user}`
    * @param userAuthority userAuthority or {@code null} for none
    */
   public Subscription setUserAuthority(java.lang.String userAuthority) {

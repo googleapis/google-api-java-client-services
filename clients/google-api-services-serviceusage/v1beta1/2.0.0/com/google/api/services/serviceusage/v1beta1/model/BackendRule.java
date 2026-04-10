@@ -99,7 +99,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, BackendRule> overridesByRequestProtocol;
 
   /**
-   * no-lint
+   * Path translation specifies how to combine the backend address with the request path in order to
+   * produce the appropriate forwarding URL for the request. See PathTranslation for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -288,7 +289,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * no-lint
+   * Path translation specifies how to combine the backend address with the request path in order to
+   * produce the appropriate forwarding URL for the request. See PathTranslation for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathTranslation() {
@@ -296,7 +298,8 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * no-lint
+   * Path translation specifies how to combine the backend address with the request path in order to
+   * produce the appropriate forwarding URL for the request. See PathTranslation for more details.
    * @param pathTranslation pathTranslation or {@code null} for none
    */
   public BackendRule setPathTranslation(java.lang.String pathTranslation) {

@@ -31,12 +31,20 @@ package com.google.api.services.dataflow.model;
 public final class RuntimeUpdatableParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated: Use `autoscaling_tier` instead. The backlog threshold duration in seconds
-   * for autoscaling. Value must be non-negative.
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold duration in seconds for
+   * autoscaling. Value must be non-negative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String acceptableBacklogDuration;
+
+  /**
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold tier for autoscaling.
+   * Value must be one of "low-latency", "medium-latency", or "high-latency".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoscalingTier;
 
   /**
    * Optional. The backlog threshold tier for autoscaling. Value must be one of "low-latency",
@@ -44,7 +52,7 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String autoscalingTier;
+  private java.lang.String latencyTier;
 
   /**
    * The maximum number of workers to cap autoscaling at. This field is currently only supported for
@@ -73,8 +81,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   private java.lang.Double workerUtilizationHint;
 
   /**
-   * Optional. Deprecated: Use `autoscaling_tier` instead. The backlog threshold duration in seconds
-   * for autoscaling. Value must be non-negative.
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold duration in seconds for
+   * autoscaling. Value must be non-negative.
    * @return value or {@code null} for none
    */
   public String getAcceptableBacklogDuration() {
@@ -82,8 +90,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Deprecated: Use `autoscaling_tier` instead. The backlog threshold duration in seconds
-   * for autoscaling. Value must be non-negative.
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold duration in seconds for
+   * autoscaling. Value must be non-negative.
    * @param acceptableBacklogDuration acceptableBacklogDuration or {@code null} for none
    */
   public RuntimeUpdatableParams setAcceptableBacklogDuration(String acceptableBacklogDuration) {
@@ -92,8 +100,8 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The backlog threshold tier for autoscaling. Value must be one of "low-latency",
-   * "medium-latency", or "high-latency".
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold tier for autoscaling.
+   * Value must be one of "low-latency", "medium-latency", or "high-latency".
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoscalingTier() {
@@ -101,12 +109,31 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The backlog threshold tier for autoscaling. Value must be one of "low-latency",
-   * "medium-latency", or "high-latency".
+   * Optional. Deprecated: Use `latency_tier` instead. The backlog threshold tier for autoscaling.
+   * Value must be one of "low-latency", "medium-latency", or "high-latency".
    * @param autoscalingTier autoscalingTier or {@code null} for none
    */
   public RuntimeUpdatableParams setAutoscalingTier(java.lang.String autoscalingTier) {
     this.autoscalingTier = autoscalingTier;
+    return this;
+  }
+
+  /**
+   * Optional. The backlog threshold tier for autoscaling. Value must be one of "low-latency",
+   * "medium-latency", or "high-latency".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatencyTier() {
+    return latencyTier;
+  }
+
+  /**
+   * Optional. The backlog threshold tier for autoscaling. Value must be one of "low-latency",
+   * "medium-latency", or "high-latency".
+   * @param latencyTier latencyTier or {@code null} for none
+   */
+  public RuntimeUpdatableParams setLatencyTier(java.lang.String latencyTier) {
+    this.latencyTier = latencyTier;
     return this;
   }
 

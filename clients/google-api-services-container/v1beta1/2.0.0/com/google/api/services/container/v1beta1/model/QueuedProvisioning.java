@@ -31,7 +31,7 @@ package com.google.api.services.container.v1beta1.model;
 public final class QueuedProvisioning extends com.google.api.client.json.GenericJson {
 
   /**
-   * Denotes that this nodepool is QRM specific, meaning nodes can be only obtained through queuing
+   * Denotes that this node pool is QRM specific, meaning nodes can be only obtained through queuing
    * via the Cluster Autoscaler ProvisioningRequest API.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class QueuedProvisioning extends com.google.api.client.json.Generic
   private java.lang.Boolean enabled;
 
   /**
-   * Denotes that this nodepool is QRM specific, meaning nodes can be only obtained through queuing
+   * Denotes that this node pool is QRM specific, meaning nodes can be only obtained through queuing
    * via the Cluster Autoscaler ProvisioningRequest API.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class QueuedProvisioning extends com.google.api.client.json.Generic
   }
 
   /**
-   * Denotes that this nodepool is QRM specific, meaning nodes can be only obtained through queuing
+   * Denotes that this node pool is QRM specific, meaning nodes can be only obtained through queuing
    * via the Cluster Autoscaler ProvisioningRequest API.
    * @param enabled enabled or {@code null} for none
    */

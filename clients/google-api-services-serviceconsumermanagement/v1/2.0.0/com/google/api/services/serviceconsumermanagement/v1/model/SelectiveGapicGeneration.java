@@ -18,7 +18,7 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
  * This message is used to configure the generation of a subset of the RPCs in a service for client
- * libraries.
+ * libraries. Note: This feature should not be used in most cases.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed

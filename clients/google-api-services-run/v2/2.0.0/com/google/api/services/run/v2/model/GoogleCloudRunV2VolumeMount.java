@@ -48,7 +48,7 @@ public final class GoogleCloudRunV2VolumeMount extends com.google.api.client.jso
 
   /**
    * Optional. Path within the volume from which the container's volume should be mounted. Defaults
-   * to "" (volume's root). This field is currently ignored for Secret volumes.
+   * to "" (volume's root). This field is currently rejected in Secret volume mounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class GoogleCloudRunV2VolumeMount extends com.google.api.client.jso
 
   /**
    * Optional. Path within the volume from which the container's volume should be mounted. Defaults
-   * to "" (volume's root). This field is currently ignored for Secret volumes.
+   * to "" (volume's root). This field is currently rejected in Secret volume mounts.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubPath() {
@@ -105,7 +105,7 @@ public final class GoogleCloudRunV2VolumeMount extends com.google.api.client.jso
 
   /**
    * Optional. Path within the volume from which the container's volume should be mounted. Defaults
-   * to "" (volume's root). This field is currently ignored for Secret volumes.
+   * to "" (volume's root). This field is currently rejected in Secret volume mounts.
    * @param subPath subPath or {@code null} for none
    */
   public GoogleCloudRunV2VolumeMount setSubPath(java.lang.String subPath) {

@@ -39,7 +39,7 @@ public final class ReadWrite extends com.google.api.client.json.GenericJson {
   private java.lang.String multiplexedSessionPreviousTransactionId;
 
   /**
-   * Read lock mode for the transaction.
+   * The read lock mode for the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ReadWrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read lock mode for the transaction.
+   * The read lock mode for the transaction.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadLockMode() {
@@ -103,7 +103,7 @@ public final class ReadWrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Read lock mode for the transaction.
+   * The read lock mode for the transaction.
    * @param readLockMode readLockMode or {@code null} for none
    */
   public ReadWrite setReadLockMode(java.lang.String readLockMode) {

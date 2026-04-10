@@ -116,7 +116,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.String kmsKeyName;
 
   /**
-   * The machine type to use for launching the job. The default is n1-standard-1.
+   * The machine type to use for launching the job. If not set, Dataflow will select a default
+   * machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -448,7 +449,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * The machine type to use for launching the job. The default is n1-standard-1.
+   * The machine type to use for launching the job. If not set, Dataflow will select a default
+   * machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getLauncherMachineType() {
@@ -456,7 +458,8 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   }
 
   /**
-   * The machine type to use for launching the job. The default is n1-standard-1.
+   * The machine type to use for launching the job. If not set, Dataflow will select a default
+   * machine type.
    * @param launcherMachineType launcherMachineType or {@code null} for none
    */
   public FlexTemplateRuntimeEnvironment setLauncherMachineType(java.lang.String launcherMachineType) {

@@ -37,13 +37,6 @@ public final class GoogleFirestoreAdminV1SearchConfig extends com.google.api.cli
   private GoogleFirestoreAdminV1SearchGeoSpec geoSpec;
 
   /**
-   * Optional. The specification for building a number search index for a field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleFirestoreAdminV1SearchNumberSpec numberSpec;
-
-  /**
    * Optional. The specification for building a text search index for a field.
    * The value may be {@code null}.
    */
@@ -64,23 +57,6 @@ public final class GoogleFirestoreAdminV1SearchConfig extends com.google.api.cli
    */
   public GoogleFirestoreAdminV1SearchConfig setGeoSpec(GoogleFirestoreAdminV1SearchGeoSpec geoSpec) {
     this.geoSpec = geoSpec;
-    return this;
-  }
-
-  /**
-   * Optional. The specification for building a number search index for a field.
-   * @return value or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1SearchNumberSpec getNumberSpec() {
-    return numberSpec;
-  }
-
-  /**
-   * Optional. The specification for building a number search index for a field.
-   * @param numberSpec numberSpec or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1SearchConfig setNumberSpec(GoogleFirestoreAdminV1SearchNumberSpec numberSpec) {
-    this.numberSpec = numberSpec;
     return this;
   }
 

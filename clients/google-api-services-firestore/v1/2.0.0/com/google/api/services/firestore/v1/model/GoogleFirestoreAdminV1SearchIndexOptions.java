@@ -30,17 +30,6 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1SearchIndexOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Custom partition fields to use for the search index. If unspecified, all indexed
-   * fields will be in the same default partition. If a search index is created specifying custom
-   * partition fields, all search queries using that index will be required to filter on the
-   * partition. For indexes with MONGODB_COMPATIBLE_API ApiScope: This must refer to a top level
-   * field name.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> customPartitionFieldPaths;
-
-  /**
    * Optional. The language to use for text search indexes. Used as the default language if not
    * overridden at the document level by specifying the `text_language_override_field`. The language
    * is specified as a BCP 47 language code. For indexes with MONGODB_COMPATIBLE_API ApiScope: If
@@ -59,31 +48,6 @@ public final class GoogleFirestoreAdminV1SearchIndexOptions extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String textLanguageOverrideFieldPath;
-
-  /**
-   * Optional. Custom partition fields to use for the search index. If unspecified, all indexed
-   * fields will be in the same default partition. If a search index is created specifying custom
-   * partition fields, all search queries using that index will be required to filter on the
-   * partition. For indexes with MONGODB_COMPATIBLE_API ApiScope: This must refer to a top level
-   * field name.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getCustomPartitionFieldPaths() {
-    return customPartitionFieldPaths;
-  }
-
-  /**
-   * Optional. Custom partition fields to use for the search index. If unspecified, all indexed
-   * fields will be in the same default partition. If a search index is created specifying custom
-   * partition fields, all search queries using that index will be required to filter on the
-   * partition. For indexes with MONGODB_COMPATIBLE_API ApiScope: This must refer to a top level
-   * field name.
-   * @param customPartitionFieldPaths customPartitionFieldPaths or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1SearchIndexOptions setCustomPartitionFieldPaths(java.util.List<java.lang.String> customPartitionFieldPaths) {
-    this.customPartitionFieldPaths = customPartitionFieldPaths;
-    return this;
-  }
 
   /**
    * Optional. The language to use for text search indexes. Used as the default language if not

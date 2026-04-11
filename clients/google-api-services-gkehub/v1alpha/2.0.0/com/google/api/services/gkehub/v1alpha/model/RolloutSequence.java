@@ -58,6 +58,13 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private java.lang.String etag;
 
   /**
+   * Optional. Selector for clusters to exclude from the Rollout Sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterSelector ignoredClustersSelector;
+
+  /**
    * Optional. Labels for this Rollout Sequence.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Selector for clusters to exclude from the Rollout Sequence.
+   * @return value or {@code null} for none
+   */
+  public ClusterSelector getIgnoredClustersSelector() {
+    return ignoredClustersSelector;
+  }
+
+  /**
+   * Optional. Selector for clusters to exclude from the Rollout Sequence.
+   * @param ignoredClustersSelector ignoredClustersSelector or {@code null} for none
+   */
+  public RolloutSequence setIgnoredClustersSelector(ClusterSelector ignoredClustersSelector) {
+    this.ignoredClustersSelector = ignoredClustersSelector;
     return this;
   }
 

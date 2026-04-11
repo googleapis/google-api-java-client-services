@@ -66,9 +66,12 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying
-   * the minimum alignment period to use in a time series query For example, if the data is
+   * the minimum alignment period to use in a time series query. For example, if the data is
    * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
-   * would not make sense to fetch and align data at one minute intervals.
+   * would not make sense to fetch and align data at one minute intervals.For PromQL queries, this
+   * field is used to set the minimum interval for the query step, controlling data granularity.
+   * Larger values can improve performance on long time ranges. See Querying Basics and Range
+   * Queries for more details on the PromQL step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,9 +183,12 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying
-   * the minimum alignment period to use in a time series query For example, if the data is
+   * the minimum alignment period to use in a time series query. For example, if the data is
    * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
-   * would not make sense to fetch and align data at one minute intervals.
+   * would not make sense to fetch and align data at one minute intervals.For PromQL queries, this
+   * field is used to set the minimum interval for the query step, controlling data granularity.
+   * Larger values can improve performance on long time ranges. See Querying Basics and Range
+   * Queries for more details on the PromQL step.
    * @return value or {@code null} for none
    */
   public String getMinAlignmentPeriod() {
@@ -191,9 +197,12 @@ public final class DataSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The lower bound on data point frequency for this data set, implemented by specifying
-   * the minimum alignment period to use in a time series query For example, if the data is
+   * the minimum alignment period to use in a time series query. For example, if the data is
    * published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It
-   * would not make sense to fetch and align data at one minute intervals.
+   * would not make sense to fetch and align data at one minute intervals.For PromQL queries, this
+   * field is used to set the minimum interval for the query step, controlling data granularity.
+   * Larger values can improve performance on long time ranges. See Querying Basics and Range
+   * Queries for more details on the PromQL step.
    * @param minAlignmentPeriod minAlignmentPeriod or {@code null} for none
    */
   public DataSet setMinAlignmentPeriod(String minAlignmentPeriod) {

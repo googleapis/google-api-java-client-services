@@ -74,7 +74,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Network resources available to the cluster. Must contain at most one value. Keys
+   * Optional. Network resources available to the cluster. Must contain exactly one value. Keys
    * specify the ID of the network resource by which it can be referenced elsewhere, and must
    * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
    * and at most 63 characters).
@@ -211,7 +211,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Network resources available to the cluster. Must contain at most one value. Keys
+   * Optional. Network resources available to the cluster. Must contain exactly one value. Keys
    * specify the ID of the network resource by which it can be referenced elsewhere, and must
    * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
    * and at most 63 characters).
@@ -222,7 +222,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Network resources available to the cluster. Must contain at most one value. Keys
+   * Optional. Network resources available to the cluster. Must contain exactly one value. Keys
    * specify the ID of the network resource by which it can be referenced elsewhere, and must
    * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
    * and at most 63 characters).

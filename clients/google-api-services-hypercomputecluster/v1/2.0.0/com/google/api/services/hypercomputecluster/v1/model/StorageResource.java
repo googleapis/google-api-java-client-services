@@ -31,8 +31,8 @@ package com.google.api.services.hypercomputecluster.v1.model;
 public final class StorageResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reference to a Google Cloud Storage bucket. Populated if and only if the storage resource was
-   * configured to use Google Cloud Storage.
+   * Output only. Reference to a Google Cloud Storage bucket. Populated if and only if the storage
+   * resource was configured to use Google Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,24 +49,24 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   private StorageResourceConfig config;
 
   /**
-   * Reference to a Filestore instance. Populated if and only if the storage resource was configured
-   * to use Filestore.
+   * Output only. Reference to a Filestore instance. Populated if and only if the storage resource
+   * was configured to use Filestore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FilestoreReference filestore;
 
   /**
-   * Reference to a Managed Lustre instance. Populated if and only if the storage resource was
-   * configured to use Managed Lustre.
+   * Output only. Reference to a Managed Lustre instance. Populated if and only if the storage
+   * resource was configured to use Managed Lustre.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LustreReference lustre;
 
   /**
-   * Reference to a Google Cloud Storage bucket. Populated if and only if the storage resource was
-   * configured to use Google Cloud Storage.
+   * Output only. Reference to a Google Cloud Storage bucket. Populated if and only if the storage
+   * resource was configured to use Google Cloud Storage.
    * @return value or {@code null} for none
    */
   public BucketReference getBucket() {
@@ -74,8 +74,8 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a Google Cloud Storage bucket. Populated if and only if the storage resource was
-   * configured to use Google Cloud Storage.
+   * Output only. Reference to a Google Cloud Storage bucket. Populated if and only if the storage
+   * resource was configured to use Google Cloud Storage.
    * @param bucket bucket or {@code null} for none
    */
   public StorageResource setBucket(BucketReference bucket) {
@@ -107,8 +107,8 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a Filestore instance. Populated if and only if the storage resource was configured
-   * to use Filestore.
+   * Output only. Reference to a Filestore instance. Populated if and only if the storage resource
+   * was configured to use Filestore.
    * @return value or {@code null} for none
    */
   public FilestoreReference getFilestore() {
@@ -116,8 +116,8 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a Filestore instance. Populated if and only if the storage resource was configured
-   * to use Filestore.
+   * Output only. Reference to a Filestore instance. Populated if and only if the storage resource
+   * was configured to use Filestore.
    * @param filestore filestore or {@code null} for none
    */
   public StorageResource setFilestore(FilestoreReference filestore) {
@@ -126,8 +126,8 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a Managed Lustre instance. Populated if and only if the storage resource was
-   * configured to use Managed Lustre.
+   * Output only. Reference to a Managed Lustre instance. Populated if and only if the storage
+   * resource was configured to use Managed Lustre.
    * @return value or {@code null} for none
    */
   public LustreReference getLustre() {
@@ -135,8 +135,8 @@ public final class StorageResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a Managed Lustre instance. Populated if and only if the storage resource was
-   * configured to use Managed Lustre.
+   * Output only. Reference to a Managed Lustre instance. Populated if and only if the storage
+   * resource was configured to use Managed Lustre.
    * @param lustre lustre or {@code null} for none
    */
   public StorageResource setLustre(LustreReference lustre) {

@@ -31,7 +31,7 @@ package com.google.api.services.hypercomputecluster.v1.model;
 public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
+   * Required. ID of the compute resource on which this nodeset will run. Must match a key in the
    * cluster's compute_resources.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
   private java.util.List<StorageConfig> storageConfigs;
 
   /**
-   * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
+   * Required. ID of the compute resource on which this nodeset will run. Must match a key in the
    * cluster's compute_resources.
    * @return value or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
+   * Required. ID of the compute resource on which this nodeset will run. Must match a key in the
    * cluster's compute_resources.
    * @param computeId computeId or {@code null} for none
    */

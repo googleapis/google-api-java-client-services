@@ -30,6 +30,15 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Map of attribute name and value linked to the rule. The rules to evaluate can be
+   * filtered based on attributes provided here and a filter expression provided in the
+   * DataQualitySpec.filter field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> attributes;
+
+  /**
    * Optional. The unnested column which this rule is evaluated against.
    * The value may be {@code null}.
    */
@@ -107,6 +116,14 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation rowConditionExpectation;
 
   /**
+   * Output only. Contains information about the source of the rule and its relationship with the
+   * BigQuery table, where applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualityRuleRuleSource ruleSource;
+
+  /**
    * Row-level rule which evaluates whether each column value is contained by a specified set.
    * The value may be {@code null}.
    */
@@ -144,6 +161,14 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation;
 
   /**
+   * Aggregate rule which references a rule template and provides the parameters to be substituted
+   * in the template. If any rows are returned, this rule fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataQualityRuleTemplateReference templateReference;
+
+  /**
    * Optional. The minimum ratio of passing_rows / total_rows required to pass this rule, with a
    * range of 0.0, 1.0.0 indicates default value (i.e. 1.0).This field is only valid for row-level
    * type rules.
@@ -158,6 +183,27 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation uniquenessExpectation;
+
+  /**
+   * Optional. Map of attribute name and value linked to the rule. The rules to evaluate can be
+   * filtered based on attributes provided here and a filter expression provided in the
+   * DataQualitySpec.filter field.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAttributes() {
+    return attributes;
+  }
+
+  /**
+   * Optional. Map of attribute name and value linked to the rule. The rules to evaluate can be
+   * filtered based on attributes provided here and a filter expression provided in the
+   * DataQualitySpec.filter field.
+   * @param attributes attributes or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setAttributes(java.util.Map<String, java.lang.String> attributes) {
+    this.attributes = attributes;
+    return this;
+  }
 
   /**
    * Optional. The unnested column which this rule is evaluated against.
@@ -344,6 +390,25 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
+   * Output only. Contains information about the source of the rule and its relationship with the
+   * BigQuery table, where applicable.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRuleRuleSource getRuleSource() {
+    return ruleSource;
+  }
+
+  /**
+   * Output only. Contains information about the source of the rule and its relationship with the
+   * BigQuery table, where applicable.
+   * @param ruleSource ruleSource or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setRuleSource(GoogleCloudDataplexV1DataQualityRuleRuleSource ruleSource) {
+    this.ruleSource = ruleSource;
+    return this;
+  }
+
+  /**
    * Row-level rule which evaluates whether each column value is contained by a specified set.
    * @return value or {@code null} for none
    */
@@ -429,6 +494,25 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataQualityRule setTableConditionExpectation(GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation tableConditionExpectation) {
     this.tableConditionExpectation = tableConditionExpectation;
+    return this;
+  }
+
+  /**
+   * Aggregate rule which references a rule template and provides the parameters to be substituted
+   * in the template. If any rows are returned, this rule fails.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRuleTemplateReference getTemplateReference() {
+    return templateReference;
+  }
+
+  /**
+   * Aggregate rule which references a rule template and provides the parameters to be substituted
+   * in the template. If any rows are returned, this rule fails.
+   * @param templateReference templateReference or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setTemplateReference(GoogleCloudDataplexV1DataQualityRuleTemplateReference templateReference) {
+    this.templateReference = templateReference;
     return this;
   }
 

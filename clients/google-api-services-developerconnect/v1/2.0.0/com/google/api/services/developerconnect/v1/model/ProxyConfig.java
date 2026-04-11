@@ -39,6 +39,16 @@ public final class ProxyConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
+   * Output only. The base URI for the HTTP proxy endpoint. Has the format
+   * `https://{generatedID}-a-h-{shortRegion}.developerconnect.dev` Populated only when `enabled` is
+   * set to `true`. This endpoint is used by other Google services that integrate with Developer
+   * Connect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String httpProxyBaseUri;
+
+  /**
    * Optional. Setting this to true allows the git and http proxies to perform actions on behalf of
    * the user configured under the account connector.
    * @return value or {@code null} for none
@@ -54,6 +64,29 @@ public final class ProxyConfig extends com.google.api.client.json.GenericJson {
    */
   public ProxyConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Output only. The base URI for the HTTP proxy endpoint. Has the format
+   * `https://{generatedID}-a-h-{shortRegion}.developerconnect.dev` Populated only when `enabled` is
+   * set to `true`. This endpoint is used by other Google services that integrate with Developer
+   * Connect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHttpProxyBaseUri() {
+    return httpProxyBaseUri;
+  }
+
+  /**
+   * Output only. The base URI for the HTTP proxy endpoint. Has the format
+   * `https://{generatedID}-a-h-{shortRegion}.developerconnect.dev` Populated only when `enabled` is
+   * set to `true`. This endpoint is used by other Google services that integrate with Developer
+   * Connect.
+   * @param httpProxyBaseUri httpProxyBaseUri or {@code null} for none
+   */
+  public ProxyConfig setHttpProxyBaseUri(java.lang.String httpProxyBaseUri) {
+    this.httpProxyBaseUri = httpProxyBaseUri;
     return this;
   }
 

@@ -99,6 +99,13 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
   private ProxyConfig proxyConfig;
 
   /**
+   * Output only. A system-assigned unique identifier for the Account Connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. The timestamp when the accountConnector was updated.
    * The value may be {@code null}.
    */
@@ -261,6 +268,23 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
    */
   public AccountConnector setProxyConfig(ProxyConfig proxyConfig) {
     this.proxyConfig = proxyConfig;
+    return this;
+  }
+
+  /**
+   * Output only. A system-assigned unique identifier for the Account Connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. A system-assigned unique identifier for the Account Connector.
+   * @param uid uid or {@code null} for none
+   */
+  public AccountConnector setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

@@ -40,7 +40,7 @@ public final class NetworkResource extends com.google.api.client.json.GenericJso
   private NetworkResourceConfig config;
 
   /**
-   * Reference to a network in Google Compute Engine.
+   * Output only. Reference to a network in Google Compute Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class NetworkResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a network in Google Compute Engine.
+   * Output only. Reference to a network in Google Compute Engine.
    * @return value or {@code null} for none
    */
   public NetworkReference getNetwork() {
@@ -78,7 +78,7 @@ public final class NetworkResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Reference to a network in Google Compute Engine.
+   * Output only. Reference to a network in Google Compute Engine.
    * @param network network or {@code null} for none
    */
   public NetworkResource setNetwork(NetworkReference network) {

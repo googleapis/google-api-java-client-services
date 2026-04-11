@@ -11847,6 +11847,153 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Jobs {
 
           /**
+           * Cancels a running/pending DataScan job.
+           *
+           * Create a request for the method "jobs.cancel".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the DataScanJob: projects/{project_id_or_number}/locations/{location_
+           *        id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project_id_or_number refers to
+           *        a project_id or project_number and location_id refers to a Google Cloud region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+
+            /**
+             * Cancels a running/pending DataScan job.
+             *
+             * Create a request for the method "jobs.cancel".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the DataScanJob: projects/{project_id_or_number}/locations/{location_
+           *        id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project_id_or_number refers to
+           *        a project_id or project_number and location_id refers to a Google Cloud region.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobRequest content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1CancelDataScanJobResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the DataScanJob: projects/{project_id_or_number}/locat
+             * ions/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where
+             * project_id_or_number refers to a project_id or project_number and location_id refers
+             * to a Google Cloud region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the DataScanJob: projects/{project_id_or_number}/locations/{location
+           _id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project_id_or_number refers to a
+           project_id or project_number and location_id refers to a Google Cloud region.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the DataScanJob: projects/{project_id_or_number}/locat
+             * ions/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where
+             * project_id_or_number refers to a project_id or project_number and location_id refers
+             * to a Google Cloud region.
+             */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/dataScans/[^/]+/jobs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
            * Generates recommended data quality rules based on the results of a data profiling scan.Use the
            * recommendations to build rules for a data quality scan.
            *

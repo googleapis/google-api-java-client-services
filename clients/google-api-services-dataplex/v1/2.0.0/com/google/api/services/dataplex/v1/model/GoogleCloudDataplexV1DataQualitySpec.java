@@ -38,6 +38,32 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
   private java.lang.Boolean catalogPublishingEnabled;
 
   /**
+   * Optional. If enabled, the data scan will retrieve rules defined in the dataplex-
+   * types.global.data-rules aspect on all paths of the catalog entry corresponding to the BigQuery
+   * table resource and all attached glossary terms. The path that data-rules aspect is attached on
+   * the table entry defines the column that the rule will be evaluated against. For glossary terms,
+   * the path that the terms are attached on the table entry defines the column that the rule will
+   * be evaluated against. At the start of scan execution, the rules reflect the latest state
+   * retrieved from the catalog entry and any updates on the rules thereafter are ignored for that
+   * execution. The updates will be reflected from the next execution. Rules defined in the datascan
+   * must be empty if this field is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableCatalogBasedRules;
+
+  /**
+   * Optional. Filter for selectively running a subset of rules. You can filter the request by the
+   * name or attribute key-value pairs defined on the rule. If not specified, all rules are run. The
+   * filter is applicable to both, the rules retrieved from catalog and explicitly defined rules in
+   * the scan. Please see filter syntax (https://docs.cloud.google.com/dataplex/docs/auto-data-
+   * quality-overview#rule-filtering) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * Optional. Actions to take upon job completion.
    * The value may be {@code null}.
    */
@@ -92,6 +118,64 @@ public final class GoogleCloudDataplexV1DataQualitySpec extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataQualitySpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {
     this.catalogPublishingEnabled = catalogPublishingEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. If enabled, the data scan will retrieve rules defined in the dataplex-
+   * types.global.data-rules aspect on all paths of the catalog entry corresponding to the BigQuery
+   * table resource and all attached glossary terms. The path that data-rules aspect is attached on
+   * the table entry defines the column that the rule will be evaluated against. For glossary terms,
+   * the path that the terms are attached on the table entry defines the column that the rule will
+   * be evaluated against. At the start of scan execution, the rules reflect the latest state
+   * retrieved from the catalog entry and any updates on the rules thereafter are ignored for that
+   * execution. The updates will be reflected from the next execution. Rules defined in the datascan
+   * must be empty if this field is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableCatalogBasedRules() {
+    return enableCatalogBasedRules;
+  }
+
+  /**
+   * Optional. If enabled, the data scan will retrieve rules defined in the dataplex-
+   * types.global.data-rules aspect on all paths of the catalog entry corresponding to the BigQuery
+   * table resource and all attached glossary terms. The path that data-rules aspect is attached on
+   * the table entry defines the column that the rule will be evaluated against. For glossary terms,
+   * the path that the terms are attached on the table entry defines the column that the rule will
+   * be evaluated against. At the start of scan execution, the rules reflect the latest state
+   * retrieved from the catalog entry and any updates on the rules thereafter are ignored for that
+   * execution. The updates will be reflected from the next execution. Rules defined in the datascan
+   * must be empty if this field is enabled.
+   * @param enableCatalogBasedRules enableCatalogBasedRules or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpec setEnableCatalogBasedRules(java.lang.Boolean enableCatalogBasedRules) {
+    this.enableCatalogBasedRules = enableCatalogBasedRules;
+    return this;
+  }
+
+  /**
+   * Optional. Filter for selectively running a subset of rules. You can filter the request by the
+   * name or attribute key-value pairs defined on the rule. If not specified, all rules are run. The
+   * filter is applicable to both, the rules retrieved from catalog and explicitly defined rules in
+   * the scan. Please see filter syntax (https://docs.cloud.google.com/dataplex/docs/auto-data-
+   * quality-overview#rule-filtering) for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. Filter for selectively running a subset of rules. You can filter the request by the
+   * name or attribute key-value pairs defined on the rule. If not specified, all rules are run. The
+   * filter is applicable to both, the rules retrieved from catalog and explicitly defined rules in
+   * the scan. Please see filter syntax (https://docs.cloud.google.com/dataplex/docs/auto-data-
+   * quality-overview#rule-filtering) for more details.
+   * @param filter filter or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualitySpec setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

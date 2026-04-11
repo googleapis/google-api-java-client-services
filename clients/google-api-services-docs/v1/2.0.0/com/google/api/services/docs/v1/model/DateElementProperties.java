@@ -68,7 +68,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The time zone of the DateElement, as defined by the Unicode Common Locale Data Repository
-   * (CLDR) project. For example, `America/New York`. If unset, the default time zone is `etc/UTC`.
+   * (CLDR) project. For example, `America/New_York`. If unset, the default time zone is `etc/UTC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
    * midnight UTC. Timestamp is expected to be in UTC. If time_zone_id is set, the timestamp is
    * adjusted according to the time zone. For example, a timestamp of `18000` with a date format of
    * `DATE_FORMAT_ISO8601` and time format of `TIME_FORMAT_HOUR_MINUTE` would be displayed as
-   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_8SO8601`, time
+   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_ISO8601`, time
    * format of `TIME_FORMAT_HOUR_MINUTE`, and time zone set to `America/New_York` will instead be
    * `1970-01-01 12:00 AM`.
    * The value may be {@code null}.
@@ -175,7 +175,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The time zone of the DateElement, as defined by the Unicode Common Locale Data Repository
-   * (CLDR) project. For example, `America/New York`. If unset, the default time zone is `etc/UTC`.
+   * (CLDR) project. For example, `America/New_York`. If unset, the default time zone is `etc/UTC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZoneId() {
@@ -184,7 +184,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The time zone of the DateElement, as defined by the Unicode Common Locale Data Repository
-   * (CLDR) project. For example, `America/New York`. If unset, the default time zone is `etc/UTC`.
+   * (CLDR) project. For example, `America/New_York`. If unset, the default time zone is `etc/UTC`.
    * @param timeZoneId timeZoneId or {@code null} for none
    */
   public DateElementProperties setTimeZoneId(java.lang.String timeZoneId) {
@@ -197,7 +197,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
    * midnight UTC. Timestamp is expected to be in UTC. If time_zone_id is set, the timestamp is
    * adjusted according to the time zone. For example, a timestamp of `18000` with a date format of
    * `DATE_FORMAT_ISO8601` and time format of `TIME_FORMAT_HOUR_MINUTE` would be displayed as
-   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_8SO8601`, time
+   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_ISO8601`, time
    * format of `TIME_FORMAT_HOUR_MINUTE`, and time zone set to `America/New_York` will instead be
    * `1970-01-01 12:00 AM`.
    * @return value or {@code null} for none
@@ -211,7 +211,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
    * midnight UTC. Timestamp is expected to be in UTC. If time_zone_id is set, the timestamp is
    * adjusted according to the time zone. For example, a timestamp of `18000` with a date format of
    * `DATE_FORMAT_ISO8601` and time format of `TIME_FORMAT_HOUR_MINUTE` would be displayed as
-   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_8SO8601`, time
+   * `1970-01-01 5:00 AM`. A timestamp of `18000` with date format of `DATE_FORMAT_ISO8601`, time
    * format of `TIME_FORMAT_HOUR_MINUTE`, and time zone set to `America/New_York` will instead be
    * `1970-01-01 12:00 AM`.
    * @param timestamp timestamp or {@code null} for none

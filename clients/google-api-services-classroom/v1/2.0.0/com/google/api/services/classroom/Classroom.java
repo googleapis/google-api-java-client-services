@@ -851,14 +851,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Restricts returned courses to those having a student with the specified identifier. The
        * identifier can be one of the following: * the numeric identifier for the user * the email
-       * address of the user * the string literal `"me"`, indicating the requesting user
+       * address of the user * the string literal `"me"`, indicating the requesting user If
+       * specified, `teacher_id` must be empty.
        */
       @com.google.api.client.util.Key
       private java.lang.String studentId;
 
       /** Restricts returned courses to those having a student with the specified identifier. The identifier
      can be one of the following: * the numeric identifier for the user * the email address of the user
-     * the string literal `"me"`, indicating the requesting user
+     * the string literal `"me"`, indicating the requesting user If specified, `teacher_id` must be
+     empty.
        */
       public java.lang.String getStudentId() {
         return studentId;
@@ -867,7 +869,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Restricts returned courses to those having a student with the specified identifier. The
        * identifier can be one of the following: * the numeric identifier for the user * the email
-       * address of the user * the string literal `"me"`, indicating the requesting user
+       * address of the user * the string literal `"me"`, indicating the requesting user If
+       * specified, `teacher_id` must be empty.
        */
       public List setStudentId(java.lang.String studentId) {
         this.studentId = studentId;
@@ -877,14 +880,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Restricts returned courses to those having a teacher with the specified identifier. The
        * identifier can be one of the following: * the numeric identifier for the user * the email
-       * address of the user * the string literal `"me"`, indicating the requesting user
+       * address of the user * the string literal `"me"`, indicating the requesting user If
+       * specified, `student_id` must be empty.
        */
       @com.google.api.client.util.Key
       private java.lang.String teacherId;
 
       /** Restricts returned courses to those having a teacher with the specified identifier. The identifier
      can be one of the following: * the numeric identifier for the user * the email address of the user
-     * the string literal `"me"`, indicating the requesting user
+     * the string literal `"me"`, indicating the requesting user If specified, `student_id` must be
+     empty.
        */
       public java.lang.String getTeacherId() {
         return teacherId;
@@ -893,7 +898,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Restricts returned courses to those having a teacher with the specified identifier. The
        * identifier can be one of the following: * the numeric identifier for the user * the email
-       * address of the user * the string literal `"me"`, indicating the requesting user
+       * address of the user * the string literal `"me"`, indicating the requesting user If
+       * specified, `student_id` must be empty.
        */
       public List setTeacherId(java.lang.String teacherId) {
         this.teacherId = teacherId;

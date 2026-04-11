@@ -43,6 +43,20 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private AutomatedDiscounts automatedDiscounts;
 
   /**
+   * Output only. The **unpadded base64url encoded name** of the product. Format:
+   * `accounts/{account}/products/{product}` where the last section `product` is the unpadded
+   * base64url encoding of the `content_language~feed_label~offer_id` name. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw` for the decoded product name
+   * `accounts/123/products/en~US~sku/123`. This field can be used directly as input to the API
+   * methods that require the product name to be encoded if it contains special characters, for
+   * example [`GetProduct`](https://developers.google.com/merchant/api/reference/rest/products_v1/ac
+   * counts.products/get).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String base64EncodedName;
+
+  /**
    * Output only. The two-letter [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code
    * for the product.
    * The value may be {@code null}.
@@ -155,6 +169,37 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setAutomatedDiscounts(AutomatedDiscounts automatedDiscounts) {
     this.automatedDiscounts = automatedDiscounts;
+    return this;
+  }
+
+  /**
+   * Output only. The **unpadded base64url encoded name** of the product. Format:
+   * `accounts/{account}/products/{product}` where the last section `product` is the unpadded
+   * base64url encoding of the `content_language~feed_label~offer_id` name. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw` for the decoded product name
+   * `accounts/123/products/en~US~sku/123`. This field can be used directly as input to the API
+   * methods that require the product name to be encoded if it contains special characters, for
+   * example [`GetProduct`](https://developers.google.com/merchant/api/reference/rest/products_v1/ac
+   * counts.products/get).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBase64EncodedName() {
+    return base64EncodedName;
+  }
+
+  /**
+   * Output only. The **unpadded base64url encoded name** of the product. Format:
+   * `accounts/{account}/products/{product}` where the last section `product` is the unpadded
+   * base64url encoding of the `content_language~feed_label~offer_id` name. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw` for the decoded product name
+   * `accounts/123/products/en~US~sku/123`. This field can be used directly as input to the API
+   * methods that require the product name to be encoded if it contains special characters, for
+   * example [`GetProduct`](https://developers.google.com/merchant/api/reference/rest/products_v1/ac
+   * counts.products/get).
+   * @param base64EncodedName base64EncodedName or {@code null} for none
+   */
+  public Product setBase64EncodedName(java.lang.String base64EncodedName) {
+    this.base64EncodedName = base64EncodedName;
     return this;
   }
 

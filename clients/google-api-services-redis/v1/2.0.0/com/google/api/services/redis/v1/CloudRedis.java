@@ -1438,21 +1438,21 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. The `next_page_token` value returned from a previous ListAclPolicies request,
-           * if any.
+           * Optional. The `next_page_token` value returned from a previous `ListAclPolicies`
+           * request, if any.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The `next_page_token` value returned from a previous ListAclPolicies request, if any.
+          /** Optional. The `next_page_token` value returned from a previous `ListAclPolicies` request, if any.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The `next_page_token` value returned from a previous ListAclPolicies request,
-           * if any.
+           * Optional. The `next_page_token` value returned from a previous `ListAclPolicies`
+           * request, if any.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1616,13 +1616,13 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. Mask of fields to be updated. At least one path must be supplied in this
            * field. The elements of the repeated paths field may only include these fields from
-           * AclPolicy: * `rules`
+           * `AclPolicy`: * `rules`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Optional. Mask of fields to be updated. At least one path must be supplied in this field. The
-         elements of the repeated paths field may only include these fields from AclPolicy: * `rules`
+         elements of the repeated paths field may only include these fields from `AclPolicy`: * `rules`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -1631,7 +1631,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. Mask of fields to be updated. At least one path must be supplied in this
            * field. The elements of the repeated paths field may only include these fields from
-           * AclPolicy: * `rules`
+           * `AclPolicy`: * `rules`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3853,17 +3853,21 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** The `next_page_token` value returned from a previous ListClusters request, if any. */
+          /**
+           * The `next_page_token` value returned from a previous `ListClusters` request, if any.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The `next_page_token` value returned from a previous ListClusters request, if any.
+          /** The `next_page_token` value returned from a previous `ListClusters` request, if any.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The `next_page_token` value returned from a previous ListClusters request, if any. */
+          /**
+           * The `next_page_token` value returned from a previous `ListClusters` request, if any.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

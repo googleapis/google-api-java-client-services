@@ -22,7 +22,8 @@ package com.google.api.services.saasservicemgmt.v1.model;
  * building block of a SaaS Tenant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
+ * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -79,6 +80,13 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Optional. Output only. Flag revisions used by this Unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> flagRevisions;
 
   /**
    * Optional. Output only. Indicates the current input variables deployed by the unit
@@ -343,6 +351,23 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Flag revisions used by this Unit.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFlagRevisions() {
+    return flagRevisions;
+  }
+
+  /**
+   * Optional. Output only. Flag revisions used by this Unit.
+   * @param flagRevisions flagRevisions or {@code null} for none
+   */
+  public Unit setFlagRevisions(java.util.List<java.lang.String> flagRevisions) {
+    this.flagRevisions = flagRevisions;
     return this;
   }
 

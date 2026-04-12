@@ -21,7 +21,8 @@ package com.google.api.services.saasservicemgmt.v1.model;
  * GCP and GDC, and customizable policies.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
+ * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

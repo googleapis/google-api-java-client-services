@@ -25,7 +25,8 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
  * contains the common fields in all unit operations. Next: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
+ * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -104,6 +105,12 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlagUpdate flagUpdate;
 
   /**
    * Optional. The labels on the resource, which can be used for categorization. similar to
@@ -357,6 +364,21 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
    */
   public UnitOperation setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public FlagUpdate getFlagUpdate() {
+    return flagUpdate;
+  }
+
+  /**
+   * @param flagUpdate flagUpdate or {@code null} for none
+   */
+  public UnitOperation setFlagUpdate(FlagUpdate flagUpdate) {
+    this.flagUpdate = flagUpdate;
     return this;
   }
 

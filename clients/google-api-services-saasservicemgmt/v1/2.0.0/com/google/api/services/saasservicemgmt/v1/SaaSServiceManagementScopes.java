@@ -17,7 +17,7 @@
 package com.google.api.services.saasservicemgmt.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the SaaS Runtime API.
+ * Available OAuth 2.0 scopes for use with the App Lifecycle Manager API.
  *
  * @since 1.4
  */

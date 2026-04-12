@@ -24,7 +24,8 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
  * "projects/gshoe/locations/loc/shoes/black-shoe"
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
+ * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,9 +46,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
-   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
-   * API).
+   * relationship with a consumer resource can be used by App Lifecycle Manager for retrieving
+   * consumer-defined settings and policies such as maintenance policies (using Unified Maintenance
+   * Policy API).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,9 +139,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
-   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
-   * API).
+   * relationship with a consumer resource can be used by App Lifecycle Manager for retrieving
+   * consumer-defined settings and policies such as maintenance policies (using Unified Maintenance
+   * Policy API).
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerResource() {
@@ -148,9 +150,9 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
-   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
-   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
-   * API).
+   * relationship with a consumer resource can be used by App Lifecycle Manager for retrieving
+   * consumer-defined settings and policies such as maintenance policies (using Unified Maintenance
+   * Policy API).
    * @param consumerResource consumerResource or {@code null} for none
    */
   public Tenant setConsumerResource(java.lang.String consumerResource) {
@@ -236,7 +238,8 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaas() {
@@ -245,7 +248,8 @@ public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model.
    * @param saas saas or {@code null} for none
    */
   public Tenant setSaas(java.lang.String saas) {

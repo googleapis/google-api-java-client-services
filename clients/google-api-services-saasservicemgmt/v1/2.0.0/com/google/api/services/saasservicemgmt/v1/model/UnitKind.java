@@ -21,7 +21,8 @@ package com.google.api.services.saasservicemgmt.v1.model;
  * follow the same release model (blueprints, versions etc.) and are typically rolled out together.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
+ * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,6 +47,14 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
+   * default_flag_revisions present at the time of creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> defaultFlagRevisions;
 
   /**
    * Optional. A reference to the Release object to use as default for creating new units of this
@@ -114,8 +123,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
-   * Immutable once set.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model. Immutable once set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,6 +186,25 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
+   * default_flag_revisions present at the time of creation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDefaultFlagRevisions() {
+    return defaultFlagRevisions;
+  }
+
+  /**
+   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
+   * default_flag_revisions present at the time of creation.
+   * @param defaultFlagRevisions defaultFlagRevisions or {@code null} for none
+   */
+  public UnitKind setDefaultFlagRevisions(java.util.List<java.lang.String> defaultFlagRevisions) {
+    this.defaultFlagRevisions = defaultFlagRevisions;
     return this;
   }
 
@@ -321,8 +349,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
-   * Immutable once set.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model. Immutable once set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaas() {
@@ -331,8 +359,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
-   * Immutable once set.
+   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
+   * common data model. Immutable once set.
    * @param saas saas or {@code null} for none
    */
   public UnitKind setSaas(java.lang.String saas) {

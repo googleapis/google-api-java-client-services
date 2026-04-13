@@ -82,6 +82,13 @@ public final class Batch extends com.google.api.client.json.GenericJson {
   private PySparkBatch pysparkBatch;
 
   /**
+   * Optional. PySpark notebook batch config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PySparkNotebookBatch pysparkNotebookBatch;
+
+  /**
    * Optional. Runtime configuration for the batch execution.
    * The value may be {@code null}.
    */
@@ -274,6 +281,23 @@ public final class Batch extends com.google.api.client.json.GenericJson {
    */
   public Batch setPysparkBatch(PySparkBatch pysparkBatch) {
     this.pysparkBatch = pysparkBatch;
+    return this;
+  }
+
+  /**
+   * Optional. PySpark notebook batch config.
+   * @return value or {@code null} for none
+   */
+  public PySparkNotebookBatch getPysparkNotebookBatch() {
+    return pysparkNotebookBatch;
+  }
+
+  /**
+   * Optional. PySpark notebook batch config.
+   * @param pysparkNotebookBatch pysparkNotebookBatch or {@code null} for none
+   */
+  public Batch setPysparkNotebookBatch(PySparkNotebookBatch pysparkNotebookBatch) {
+    this.pysparkNotebookBatch = pysparkNotebookBatch;
     return this;
   }
 

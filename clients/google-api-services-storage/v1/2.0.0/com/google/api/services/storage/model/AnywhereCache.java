@@ -66,6 +66,13 @@ public final class AnywhereCache extends com.google.api.client.json.GenericJson 
   private java.lang.String id;
 
   /**
+   * Specifies whether objects are ingested into the cache upon write.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ingestOnWrite;
+
+  /**
    * The kind of item this is. For Anywhere Cache, this is always storage#anywhereCache.
    * The value may be {@code null}.
    */
@@ -196,6 +203,23 @@ public final class AnywhereCache extends com.google.api.client.json.GenericJson 
    */
   public AnywhereCache setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Specifies whether objects are ingested into the cache upon write.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIngestOnWrite() {
+    return ingestOnWrite;
+  }
+
+  /**
+   * Specifies whether objects are ingested into the cache upon write.
+   * @param ingestOnWrite ingestOnWrite or {@code null} for none
+   */
+  public AnywhereCache setIngestOnWrite(java.lang.Boolean ingestOnWrite) {
+    this.ingestOnWrite = ingestOnWrite;
     return this;
   }
 

@@ -891,7 +891,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
+     * Updates the config of an Anywhere Cache instance.
      *
      * Create a request for the method "anywhereCaches.update".
      *
@@ -914,7 +914,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}";
 
       /**
-       * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
+       * Updates the config of an Anywhere Cache instance.
        *
        * Create a request for the method "anywhereCaches.update".
        *

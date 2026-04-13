@@ -3507,6 +3507,40 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
             return this;
           }
 
+          /**
+           * Optional. The checksum to be validated against the current DebugToken, to ensure the
+           * client has an up-to-date value before proceeding. This checksum is computed by the
+           * server based on the values of fields in the DebugToken object, and can be obtained from
+           * the DebugToken object received from the last CreateDebugToken, GetDebugToken,
+           * ListDebugTokens, or UpdateDebugToken call. This etag is strongly validated as defined
+           * by RFC 7232.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The checksum to be validated against the current DebugToken, to ensure the client has an
+         up-to-date value before proceeding. This checksum is computed by the server based on the values of
+         fields in the DebugToken object, and can be obtained from the DebugToken object received from the
+         last CreateDebugToken, GetDebugToken, ListDebugTokens, or UpdateDebugToken call. This etag is
+         strongly validated as defined by RFC 7232.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The checksum to be validated against the current DebugToken, to ensure the
+           * client has an up-to-date value before proceeding. This checksum is computed by the
+           * server based on the values of fields in the DebugToken object, and can be obtained from
+           * the DebugToken object received from the last CreateDebugToken, GetDebugToken,
+           * ListDebugTokens, or UpdateDebugToken call. This etag is strongly validated as defined
+           * by RFC 7232.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

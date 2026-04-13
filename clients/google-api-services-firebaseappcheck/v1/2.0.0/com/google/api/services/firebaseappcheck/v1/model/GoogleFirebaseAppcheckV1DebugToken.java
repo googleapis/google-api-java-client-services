@@ -40,6 +40,15 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Required. The relative resource name of the debug token, in the format: ```
    * projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id} ```
    * The value may be {@code null}.
@@ -79,6 +88,27 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
    */
   public GoogleFirebaseAppcheckV1DebugToken setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * @param etag etag or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1DebugToken setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

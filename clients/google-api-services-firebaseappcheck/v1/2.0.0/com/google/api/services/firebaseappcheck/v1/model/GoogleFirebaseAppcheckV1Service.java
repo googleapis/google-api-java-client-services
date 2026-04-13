@@ -38,6 +38,15 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
   private java.lang.String enforcementMode;
 
   /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
    * a supported service ID. Currently, the following service IDs are supported: *
@@ -48,6 +57,27 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
+   * be set to a level higher than the overall App Check enforcement mode. For example, if the
+   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
+   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
+   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
+   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
+   * requests to your protected services may experience higher latency. To opt out of replay
+   * protection after opting in, set this field to `OFF`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String replayProtection;
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Required. The App Check enforcement mode for this service.
@@ -63,6 +93,27 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    */
   public GoogleFirebaseAppcheckV1Service setEnforcementMode(java.lang.String enforcementMode) {
     this.enforcementMode = enforcementMode;
+    return this;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. This etag is strongly validated as defined by RFC 7232.
+   * @param etag etag or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1Service setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 
@@ -90,6 +141,54 @@ public final class GoogleFirebaseAppcheckV1Service extends com.google.api.client
    */
   public GoogleFirebaseAppcheckV1Service setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
+   * be set to a level higher than the overall App Check enforcement mode. For example, if the
+   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
+   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
+   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
+   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
+   * requests to your protected services may experience higher latency. To opt out of replay
+   * protection after opting in, set this field to `OFF`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReplayProtection() {
+    return replayProtection;
+  }
+
+  /**
+   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
+   * be set to a level higher than the overall App Check enforcement mode. For example, if the
+   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
+   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
+   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
+   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
+   * requests to your protected services may experience higher latency. To opt out of replay
+   * protection after opting in, set this field to `OFF`.
+   * @param replayProtection replayProtection or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1Service setReplayProtection(java.lang.String replayProtection) {
+    this.replayProtection = replayProtection;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp when this service configuration object was most recently updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleFirebaseAppcheckV1Service setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

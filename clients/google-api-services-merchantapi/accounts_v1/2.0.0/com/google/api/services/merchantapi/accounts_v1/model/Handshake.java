@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * The current status of establishing of the service. (for example, pending approval or approved).
+ * The current status of establishing of the service. (for example, pending approval, approved,
+ * established).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

@@ -246,6 +246,14 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   private java.lang.String productTypeL5;
 
   /**
+   * Store type to which metrics apply. Can be `ONLINE_STORE` or `LOCAL_STORES`. Segment. For
+   * `LOCAL_STORES` store type, further segmentation by a specific store is not available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storeType;
+
+  /**
    * Title of the product. Segment.
    * The value may be {@code null}.
    */
@@ -756,6 +764,25 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
    */
   public ProductPerformanceView setProductTypeL5(java.lang.String productTypeL5) {
     this.productTypeL5 = productTypeL5;
+    return this;
+  }
+
+  /**
+   * Store type to which metrics apply. Can be `ONLINE_STORE` or `LOCAL_STORES`. Segment. For
+   * `LOCAL_STORES` store type, further segmentation by a specific store is not available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStoreType() {
+    return storeType;
+  }
+
+  /**
+   * Store type to which metrics apply. Can be `ONLINE_STORE` or `LOCAL_STORES`. Segment. For
+   * `LOCAL_STORES` store type, further segmentation by a specific store is not available.
+   * @param storeType storeType or {@code null} for none
+   */
+  public ProductPerformanceView setStoreType(java.lang.String storeType) {
+    this.storeType = storeType;
     return this;
   }
 

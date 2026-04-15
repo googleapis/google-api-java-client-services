@@ -49,6 +49,21 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
   private java.lang.String availability;
 
   /**
+   * Output only. The unpadded base64url encoded name of the `RegionalInventory` resource. Format:
+   * `accounts/{account}/products/{product}/regionalInventories/{region}` where the `{product}`
+   * segment is the unpadded base64url encoded value of the identifier of the form
+   * `content_language~feed_label~offer_id`. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123` for the decoded
+   * product ID `en~US~sku/123` and `region` "region123". Can be used directly as input to the API
+   * methods that require the product identifier within the regional inventory name to be encoded if
+   * it contains special characters, for example [`GetRegionalInventory`](https://developers.google.
+   * com/merchant/api/reference/rest/inventories_v1beta/accounts.products.regionalInventories/get).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String base64EncodedName;
+
+  /**
    * A list of custom (merchant-provided) attributes. You can also use `CustomAttribute` to submit
    * any attribute of the data specification in its generic form.
    * The value may be {@code null}.
@@ -155,6 +170,39 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
    */
   public RegionalInventory setAvailability(java.lang.String availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * Output only. The unpadded base64url encoded name of the `RegionalInventory` resource. Format:
+   * `accounts/{account}/products/{product}/regionalInventories/{region}` where the `{product}`
+   * segment is the unpadded base64url encoded value of the identifier of the form
+   * `content_language~feed_label~offer_id`. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123` for the decoded
+   * product ID `en~US~sku/123` and `region` "region123". Can be used directly as input to the API
+   * methods that require the product identifier within the regional inventory name to be encoded if
+   * it contains special characters, for example [`GetRegionalInventory`](https://developers.google.
+   * com/merchant/api/reference/rest/inventories_v1beta/accounts.products.regionalInventories/get).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBase64EncodedName() {
+    return base64EncodedName;
+  }
+
+  /**
+   * Output only. The unpadded base64url encoded name of the `RegionalInventory` resource. Format:
+   * `accounts/{account}/products/{product}/regionalInventories/{region}` where the `{product}`
+   * segment is the unpadded base64url encoded value of the identifier of the form
+   * `content_language~feed_label~offer_id`. Example:
+   * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123` for the decoded
+   * product ID `en~US~sku/123` and `region` "region123". Can be used directly as input to the API
+   * methods that require the product identifier within the regional inventory name to be encoded if
+   * it contains special characters, for example [`GetRegionalInventory`](https://developers.google.
+   * com/merchant/api/reference/rest/inventories_v1beta/accounts.products.regionalInventories/get).
+   * @param base64EncodedName base64EncodedName or {@code null} for none
+   */
+  public RegionalInventory setBase64EncodedName(java.lang.String base64EncodedName) {
+    this.base64EncodedName = base64EncodedName;
     return this;
   }
 

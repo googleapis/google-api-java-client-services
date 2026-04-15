@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAssistant extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Represents the time when this Assistant was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. Customer policy for the assistant.
    * The value may be {@code null}.
    */
@@ -95,11 +102,35 @@ public final class GoogleCloudDiscoveryengineV1betaAssistant extends com.google.
   private java.lang.String name;
 
   /**
+   * Output only. Represents the time when this Assistant was most recently updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Optional. The type of web grounding to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webGroundingType;
+
+  /**
+   * Output only. Represents the time when this Assistant was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Represents the time when this Assistant was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistant setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Optional. Customer policy for the assistant.
@@ -249,6 +280,23 @@ public final class GoogleCloudDiscoveryengineV1betaAssistant extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaAssistant setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the time when this Assistant was most recently updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Represents the time when this Assistant was most recently updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistant setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

@@ -261,12 +261,10 @@ class JavaLanguageModel(language_model.LanguageModel):
     if result:
       return result
 
-    # TODO(user): Uncomment this and update golden files.
-    # result = self.type_map.get((json_type, None))
-    # if result:
-    #   return result
-    #
-    # raise ValueError('Unknown type: %s format: %s' % (json_type, json_format))
+    # Fallback to the unformatted base type if exact format mapping is not found.
+    result = self.type_map.get((json_type, None))
+    if result:
+      return result
 
     return (utilities.CamelCase(json_type), None, None)
 

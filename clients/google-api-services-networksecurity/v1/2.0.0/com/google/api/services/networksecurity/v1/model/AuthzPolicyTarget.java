@@ -31,8 +31,10 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
+   * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
+   * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
+   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
+   * more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * The value may be {@code null}.
    */
@@ -40,7 +42,8 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * Required. A list of references to the Forwarding Rules, Secure Web Proxy Gateways, or Agent
+   * Gateways on which this policy will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +51,10 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
+   * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
+   * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
+   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
+   * more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
@@ -59,8 +64,10 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
-   * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
-   * For more information, refer to [Backend services overview](https://cloud.google.com/load-
+   * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
+   * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
+   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
+   * more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
@@ -70,7 +77,8 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * Required. A list of references to the Forwarding Rules, Secure Web Proxy Gateways, or Agent
+   * Gateways on which this policy will be applied.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -78,7 +86,8 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A list of references to the Forwarding Rules on which this policy will be applied.
+   * Required. A list of references to the Forwarding Rules, Secure Web Proxy Gateways, or Agent
+   * Gateways on which this policy will be applied.
    * @param resources resources or {@code null} for none
    */
   public AuthzPolicyTarget setResources(java.util.List<java.lang.String> resources) {

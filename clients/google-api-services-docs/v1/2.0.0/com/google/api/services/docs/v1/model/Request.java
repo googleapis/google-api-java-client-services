@@ -163,6 +163,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private InsertPersonRequest insertPerson;
 
   /**
+   * Insert a rich link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertRichLinkRequest insertRichLink;
+
+  /**
    * Inserts a section break at the specified location.
    * The value may be {@code null}.
    */
@@ -615,6 +622,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setInsertPerson(InsertPersonRequest insertPerson) {
     this.insertPerson = insertPerson;
+    return this;
+  }
+
+  /**
+   * Insert a rich link.
+   * @return value or {@code null} for none
+   */
+  public InsertRichLinkRequest getInsertRichLink() {
+    return insertRichLink;
+  }
+
+  /**
+   * Insert a rich link.
+   * @param insertRichLink insertRichLink or {@code null} for none
+   */
+  public Request setInsertRichLink(InsertRichLinkRequest insertRichLink) {
+    this.insertRichLink = insertRichLink;
     return this;
   }
 

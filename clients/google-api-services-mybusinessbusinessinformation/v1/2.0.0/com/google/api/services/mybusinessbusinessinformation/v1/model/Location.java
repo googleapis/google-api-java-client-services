@@ -110,7 +110,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Describes your business in your own voice and shares with users the unique story of
    * your business and offerings. This field is required for all categories except lodging
-   * categories (e.g. hotels, motels, inns).
+   * categories (e.g., hotels, motels, inns).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -379,7 +379,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Describes your business in your own voice and shares with users the unique story of
    * your business and offerings. This field is required for all categories except lodging
-   * categories (e.g. hotels, motels, inns).
+   * categories (e.g., hotels, motels, inns).
    * @return value or {@code null} for none
    */
   public Profile getProfile() {
@@ -389,7 +389,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Describes your business in your own voice and shares with users the unique story of
    * your business and offerings. This field is required for all categories except lodging
-   * categories (e.g. hotels, motels, inns).
+   * categories (e.g., hotels, motels, inns).
    * @param profile profile or {@code null} for none
    */
   public Location setProfile(Profile profile) {

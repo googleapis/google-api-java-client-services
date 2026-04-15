@@ -99,13 +99,6 @@ public final class GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfig 
   private java.lang.String procurementEntitlementId;
 
   /**
-   * Optional. Scheduled update configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfigScheduledUpdate scheduledUpdate;
-
-  /**
    * Required. The subscription start date.
    * The value may be {@code null}.
    */
@@ -309,23 +302,6 @@ public final class GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfig 
    */
   public GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfig setProcurementEntitlementId(java.lang.String procurementEntitlementId) {
     this.procurementEntitlementId = procurementEntitlementId;
-    return this;
-  }
-
-  /**
-   * Optional. Scheduled update configuration.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfigScheduledUpdate getScheduledUpdate() {
-    return scheduledUpdate;
-  }
-
-  /**
-   * Optional. Scheduled update configuration.
-   * @param scheduledUpdate scheduledUpdate or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfig setScheduledUpdate(GoogleCloudDiscoveryengineV1alphaBillingAccountLicenseConfigScheduledUpdate scheduledUpdate) {
-    this.scheduledUpdate = scheduledUpdate;
     return this;
   }
 

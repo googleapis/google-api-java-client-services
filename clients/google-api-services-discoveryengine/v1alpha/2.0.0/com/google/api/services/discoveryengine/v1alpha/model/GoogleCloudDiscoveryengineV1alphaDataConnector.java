@@ -92,6 +92,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private java.util.List<java.lang.String> blockingReasons;
 
   /**
+   * Optional. The configuration for establishing a CLI connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCliConfig cliConfig;
+
+  /**
    * Optional. The modes enabled for this connector. Default state is CONNECTOR_MODE_UNSPECIFIED.
    * The value may be {@code null}.
    */
@@ -514,6 +521,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setBlockingReasons(java.util.List<java.lang.String> blockingReasons) {
     this.blockingReasons = blockingReasons;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for establishing a CLI connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCliConfig getCliConfig() {
+    return cliConfig;
+  }
+
+  /**
+   * Optional. The configuration for establishing a CLI connection.
+   * @param cliConfig cliConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setCliConfig(GoogleCloudDiscoveryengineV1alphaCliConfig cliConfig) {
+    this.cliConfig = cliConfig;
     return this;
   }
 

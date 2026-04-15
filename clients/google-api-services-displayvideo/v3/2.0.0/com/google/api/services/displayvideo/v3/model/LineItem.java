@@ -179,6 +179,17 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Whether to enable DV360's bid optimization for fixed bid line items. By default,
+   * DV360 optimizes your fixed bid by automatically lowering bids for impressions that are less
+   * likely to perform well. This optimization is enabled by default (value is true). When this
+   * field is set to `false`, this optimization is disabled, and the bid will not be lowered for any
+   * reason. This setting only applies to line items with a `bidding_strategy` of type `FIXED_BID`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean optimizeFixedBidding;
+
+  /**
    * Required. The budget spending speed setting of the line item.
    * The value may be {@code null}.
    */
@@ -588,6 +599,31 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable DV360's bid optimization for fixed bid line items. By default,
+   * DV360 optimizes your fixed bid by automatically lowering bids for impressions that are less
+   * likely to perform well. This optimization is enabled by default (value is true). When this
+   * field is set to `false`, this optimization is disabled, and the bid will not be lowered for any
+   * reason. This setting only applies to line items with a `bidding_strategy` of type `FIXED_BID`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOptimizeFixedBidding() {
+    return optimizeFixedBidding;
+  }
+
+  /**
+   * Optional. Whether to enable DV360's bid optimization for fixed bid line items. By default,
+   * DV360 optimizes your fixed bid by automatically lowering bids for impressions that are less
+   * likely to perform well. This optimization is enabled by default (value is true). When this
+   * field is set to `false`, this optimization is disabled, and the bid will not be lowered for any
+   * reason. This setting only applies to line items with a `bidding_strategy` of type `FIXED_BID`.
+   * @param optimizeFixedBidding optimizeFixedBidding or {@code null} for none
+   */
+  public LineItem setOptimizeFixedBidding(java.lang.Boolean optimizeFixedBidding) {
+    this.optimizeFixedBidding = optimizeFixedBidding;
     return this;
   }
 

@@ -84,6 +84,7 @@ class JavaApiTest(absltest.TestCase):
         ['java.lang.Integer', {'type': 'integer', 'format': 'int32'}],
         ['java.lang.Long', {'type': 'string', 'format': 'int64'}],
         ['java.lang.Object', {'type': 'any'}],
+        ['java.lang.Object', {'type': 'any', 'format': 'google.protobuf.Value'}],
         ['java.lang.Boolean', {'type': 'boolean'}],
         ['java.lang.String', {'type': 'string'}],
         ['java.lang.Long', {'type': 'integer', 'format': 'uint32'}],

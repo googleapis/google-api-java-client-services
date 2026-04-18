@@ -3023,10 +3023,14 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -3050,10 +3054,15 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -3438,10 +3447,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -3450,10 +3459,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
          example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3465,10 +3474,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3642,10 +3651,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -3654,10 +3663,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes after the first request. For
          example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3669,10 +3678,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * after the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -4448,10 +4457,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
@@ -4460,10 +4469,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
          must retry your request, the server will know to ignore the request if it has already been
          completed. The server will guarantee that for at least 60 minutes since the first request. For
          example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         make the request again with the same request ID, the server can check if the original operation
+         with the same request ID was received, and if so, will ignore the second request. This prevents
+         clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with
+         the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -4475,10 +4484,10 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
            * has already been completed. The server will guarantee that for at least 60 minutes
            * since the first request. For example, consider a situation where you make an initial
            * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * ID, the server can check if the original operation with the same request ID was
+           * received, and if so, will ignore the second request. This prevents clients from
+           * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+           * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -15920,16 +15929,16 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Optional. An optional request ID to identify requests. Specify a unique request ID so
-             * that if you must retry your request, the server will know to ignore request if it has
-             * already been completed. The server will guarantee that for at least 60 minutes since
-             * the first request.
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request.
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
             /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-           must retry your request, the server will know to ignore request if it has already been completed.
-           The server will guarantee that for at least 60 minutes since the first request.
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request.
              */
             public java.lang.String getRequestId() {
               return requestId;
@@ -15937,9 +15946,9 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Optional. An optional request ID to identify requests. Specify a unique request ID so
-             * that if you must retry your request, the server will know to ignore request if it has
-             * already been completed. The server will guarantee that for at least 60 minutes since
-             * the first request.
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request.
              */
             public Create setRequestId(java.lang.String requestId) {
               this.requestId = requestId;

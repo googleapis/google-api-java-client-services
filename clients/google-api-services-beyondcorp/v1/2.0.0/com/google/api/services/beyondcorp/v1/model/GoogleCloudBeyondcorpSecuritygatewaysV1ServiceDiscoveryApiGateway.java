@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Enables fetching resource model updates to alter service behavior per Chrome profile.
+   * Optional. Enables fetching resource model updates to alter service behavior per Chrome profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor resourceOverride;
 
   /**
-   * Required. Enables fetching resource model updates to alter service behavior per Chrome profile.
+   * Optional. Enables fetching resource model updates to alter service behavior per Chrome profile.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor getResourceOverride() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGat
   }
 
   /**
-   * Required. Enables fetching resource model updates to alter service behavior per Chrome profile.
+   * Optional. Enables fetching resource model updates to alter service behavior per Chrome profile.
    * @param resourceOverride resourceOverride or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway setResourceOverride(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGatewayOperationDescriptor resourceOverride) {

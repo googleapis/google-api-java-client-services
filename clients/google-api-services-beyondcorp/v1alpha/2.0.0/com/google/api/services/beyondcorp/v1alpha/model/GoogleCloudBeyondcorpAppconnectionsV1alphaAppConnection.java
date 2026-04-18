@@ -19,7 +19,7 @@ package com.google.api.services.beyondcorp.v1alpha.model;
 /**
  * A BeyondCorp AppConnection resource represents a BeyondCorp protected AppConnection to a remote
  * application. It creates all the necessary GCP components needed for creating a BeyondCorp
- * protected AppConnection. Multiple connectors can be authorised for a single AppConnection.
+ * protected AppConnection. Multiple connectors can be authorized for a single AppConnection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection exten
   private GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnectionApplicationEndpoint applicationEndpoint;
 
   /**
-   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorised to be
+   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorized to be
    * associated with this AppConnection.
    * The value may be {@code null}.
    */
@@ -142,7 +142,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection exten
   }
 
   /**
-   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorised to be
+   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorized to be
    * associated with this AppConnection.
    * @return value or {@code null} for none
    */
@@ -151,7 +151,7 @@ public final class GoogleCloudBeyondcorpAppconnectionsV1alphaAppConnection exten
   }
 
   /**
-   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorised to be
+   * Optional. List of [google.cloud.beyondcorp.v1main.Connector.name] that are authorized to be
    * associated with this AppConnection.
    * @param connectors connectors or {@code null} for none
    */

@@ -71,6 +71,13 @@ public final class InitializeServiceRequest extends com.google.api.client.json.G
   private java.lang.String resourceType;
 
   /**
+   * Optional. If set, validates the request and returns the result, but does not actually run it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Optional. The location where the BackupPlan will be created. This field is required for multi-
    * region BackupVaults and is optional for regional BackupVaults. It is useful when creating a
    * Backup Vault in a multi-region, allowing the BackupPlan to reside in a specific region within
@@ -159,6 +166,23 @@ public final class InitializeServiceRequest extends com.google.api.client.json.G
    */
   public InitializeServiceRequest setResourceType(java.lang.String resourceType) {
     this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
+   * Optional. If set, validates the request and returns the result, but does not actually run it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set, validates the request and returns the result, but does not actually run it.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public InitializeServiceRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

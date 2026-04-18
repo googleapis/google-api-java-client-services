@@ -37,8 +37,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   private GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSource conversationSource;
 
   /**
-   * Optional. The memories that are expected to be generated from the input conversation. An empty
-   * list indicates that no memories are expected to be generated for the input conversation.
+   * Optional. Represents the memories that are expected to be generated from the input
+   * conversation. An empty list indicates that no memories are expected to be generated for the
+   * input conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +63,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   }
 
   /**
-   * Optional. The memories that are expected to be generated from the input conversation. An empty
-   * list indicates that no memories are expected to be generated for the input conversation.
+   * Optional. Represents the memories that are expected to be generated from the input
+   * conversation. An empty list indicates that no memories are expected to be generated for the
+   * input conversation.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory> getGeneratedMemories() {
@@ -71,8 +73,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   }
 
   /**
-   * Optional. The memories that are expected to be generated from the input conversation. An empty
-   * list indicates that no memories are expected to be generated for the input conversation.
+   * Optional. Represents the memories that are expected to be generated from the input
+   * conversation. An empty list indicates that no memories are expected to be generated for the
+   * input conversation.
    * @param generatedMemories generatedMemories or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExample setGeneratedMemories(java.util.List<GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory> generatedMemories) {

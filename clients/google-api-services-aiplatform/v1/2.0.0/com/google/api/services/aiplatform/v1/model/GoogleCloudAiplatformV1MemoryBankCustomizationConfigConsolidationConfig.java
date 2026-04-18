@@ -30,18 +30,18 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The maximum number of revisions to consider for each candidate memory. If not set,
-   * then the default value (1) will be used, which means that only the latest revision will be
-   * considered.
+   * Optional. Represents the maximum number of revisions to consider for each candidate memory. If
+   * not set, then the default value (1) will be used, which means that only the latest revision
+   * will be considered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer revisionsPerCandidateCount;
 
   /**
-   * Optional. The maximum number of revisions to consider for each candidate memory. If not set,
-   * then the default value (1) will be used, which means that only the latest revision will be
-   * considered.
+   * Optional. Represents the maximum number of revisions to consider for each candidate memory. If
+   * not set, then the default value (1) will be used, which means that only the latest revision
+   * will be considered.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRevisionsPerCandidateCount() {
@@ -49,9 +49,9 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolida
   }
 
   /**
-   * Optional. The maximum number of revisions to consider for each candidate memory. If not set,
-   * then the default value (1) will be used, which means that only the latest revision will be
-   * considered.
+   * Optional. Represents the maximum number of revisions to consider for each candidate memory. If
+   * not set, then the default value (1) will be used, which means that only the latest revision
+   * will be considered.
    * @param revisionsPerCandidateCount revisionsPerCandidateCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig setRevisionsPerCandidateCount(java.lang.Integer revisionsPerCandidateCount) {

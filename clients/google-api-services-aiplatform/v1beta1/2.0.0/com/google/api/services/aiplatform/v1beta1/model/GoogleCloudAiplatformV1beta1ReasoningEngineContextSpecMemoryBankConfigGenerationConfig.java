@@ -30,7 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The model used to generate memories. Format:
+   * Optional. Specifies the default trigger configuration for generating memories using
+   * `IngestEvents`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfig generationTriggerConfig;
+
+  /**
+   * Optional. The model used to generate memories. Format:
    * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * The value may be {@code null}.
    */
@@ -38,7 +46,26 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
   private java.lang.String model;
 
   /**
-   * Required. The model used to generate memories. Format:
+   * Optional. Specifies the default trigger configuration for generating memories using
+   * `IngestEvents`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfig getGenerationTriggerConfig() {
+    return generationTriggerConfig;
+  }
+
+  /**
+   * Optional. Specifies the default trigger configuration for generating memories using
+   * `IngestEvents`.
+   * @param generationTriggerConfig generationTriggerConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig setGenerationTriggerConfig(GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfig generationTriggerConfig) {
+    this.generationTriggerConfig = generationTriggerConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The model used to generate memories. Format:
    * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @return value or {@code null} for none
    */
@@ -47,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
   }
 
   /**
-   * Required. The model used to generate memories. Format:
+   * Optional. The model used to generate memories. Format:
    * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @param model model or {@code null} for none
    */

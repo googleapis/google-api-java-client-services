@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
   private GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig similaritySearchConfig;
 
   /**
+   * Optional. Configuration for organizing structured memories for a particular scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1StructuredMemoryConfig> structuredMemoryConfigs;
+
+  /**
    * Optional. Configuration for automatic TTL ("time-to-live") of the memories in the Memory Bank.
    * If not set, TTL will not be applied automatically. The TTL can be explicitly set by modifying
    * the `expire_time` of each Memory resource.
@@ -140,6 +147,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setSimilaritySearchConfig(GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig similaritySearchConfig) {
     this.similaritySearchConfig = similaritySearchConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for organizing structured memories for a particular scope.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1StructuredMemoryConfig> getStructuredMemoryConfigs() {
+    return structuredMemoryConfigs;
+  }
+
+  /**
+   * Optional. Configuration for organizing structured memories for a particular scope.
+   * @param structuredMemoryConfigs structuredMemoryConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfig setStructuredMemoryConfigs(java.util.List<GoogleCloudAiplatformV1beta1StructuredMemoryConfig> structuredMemoryConfigs) {
+    this.structuredMemoryConfigs = structuredMemoryConfigs;
     return this;
   }
 

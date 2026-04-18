@@ -60,6 +60,14 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   private java.lang.String model;
 
   /**
+   * Optional. The parallelism of the evaluation run for the inference step. If not specified, the
+   * default parallelism will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer parallelism;
+
+  /**
    * Optional. Agent run config.
    * @return value or {@code null} for none
    */
@@ -117,6 +125,25 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
    */
   public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. The parallelism of the evaluation run for the inference step. If not specified, the
+   * default parallelism will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getParallelism() {
+    return parallelism;
+  }
+
+  /**
+   * Optional. The parallelism of the evaluation run for the inference step. If not specified, the
+   * default parallelism will be used.
+   * @param parallelism parallelism or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setParallelism(java.lang.Integer parallelism) {
+    this.parallelism = parallelism;
     return this;
   }
 

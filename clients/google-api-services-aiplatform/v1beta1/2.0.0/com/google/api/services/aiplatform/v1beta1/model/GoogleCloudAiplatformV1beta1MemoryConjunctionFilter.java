@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryConjunctionFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filters that will combined using AND logic.
+   * Represents filters that will be combined using AND logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1MemoryFilter> filters;
 
   /**
-   * Filters that will combined using AND logic.
+   * Represents filters that will be combined using AND logic.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1MemoryFilter> getFilters() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryConjunctionFilter extends c
   }
 
   /**
-   * Filters that will combined using AND logic.
+   * Represents filters that will be combined using AND logic.
    * @param filters filters or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryConjunctionFilter setFilters(java.util.List<GoogleCloudAiplatformV1beta1MemoryFilter> filters) {

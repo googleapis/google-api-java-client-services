@@ -72,7 +72,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
 
   /**
    * Required. A list of metric sources to be used for evaluating samples. At least one MetricSource
-   * must be provided.
+   * must be provided. Right now, only predefined metrics and registered metrics are supported.
+   * Every registered metric must have `display_name` (or `title`) and `score_range` defined.
+   * Otherwise, the evaluations will fail. The maximum number of `metric_sources` is 25.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,6 +100,14 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. Contains additional information about the state of the OnlineEvaluator. This is
+   * used to provide more details in the event of a failure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1OnlineEvaluatorStateDetails> stateDetails;
 
   /**
    * Output only. Timestamp when the OnlineEvaluator was last updated.
@@ -205,7 +215,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
 
   /**
    * Required. A list of metric sources to be used for evaluating samples. At least one MetricSource
-   * must be provided.
+   * must be provided. Right now, only predefined metrics and registered metrics are supported.
+   * Every registered metric must have `display_name` (or `title`) and `score_range` defined.
+   * Otherwise, the evaluations will fail. The maximum number of `metric_sources` is 25.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1MetricSource> getMetricSources() {
@@ -214,7 +226,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
 
   /**
    * Required. A list of metric sources to be used for evaluating samples. At least one MetricSource
-   * must be provided.
+   * must be provided. Right now, only predefined metrics and registered metrics are supported.
+   * Every registered metric must have `display_name` (or `title`) and `score_range` defined.
+   * Otherwise, the evaluations will fail. The maximum number of `metric_sources` is 25.
    * @param metricSources metricSources or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluator setMetricSources(java.util.List<GoogleCloudAiplatformV1beta1MetricSource> metricSources) {
@@ -255,6 +269,25 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluator setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Contains additional information about the state of the OnlineEvaluator. This is
+   * used to provide more details in the event of a failure.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1OnlineEvaluatorStateDetails> getStateDetails() {
+    return stateDetails;
+  }
+
+  /**
+   * Output only. Contains additional information about the state of the OnlineEvaluator. This is
+   * used to provide more details in the event of a failure.
+   * @param stateDetails stateDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OnlineEvaluator setStateDetails(java.util.List<GoogleCloudAiplatformV1beta1OnlineEvaluatorStateDetails> stateDetails) {
+    this.stateDetails = stateDetails;
     return this;
   }
 

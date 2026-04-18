@@ -30,35 +30,36 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Boolean value.
+   * Represents a boolean value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
-   * Double value.
+   * Represents a double value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double doubleValue;
 
   /**
-   * String value.
+   * Represents a string value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
-   * Timestamp value. When filtering on timestamp values, only the seconds field will be compared.
+   * Represents a timestamp value. When filtering on timestamp values, only the seconds field will
+   * be compared.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestampValue;
 
   /**
-   * Boolean value.
+   * Represents a boolean value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -66,7 +67,7 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * Boolean value.
+   * Represents a boolean value.
    * @param boolValue boolValue or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryMetadataValue setBoolValue(java.lang.Boolean boolValue) {
@@ -75,7 +76,7 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * Double value.
+   * Represents a double value.
    * @return value or {@code null} for none
    */
   public java.lang.Double getDoubleValue() {
@@ -83,7 +84,7 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * Double value.
+   * Represents a double value.
    * @param doubleValue doubleValue or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryMetadataValue setDoubleValue(java.lang.Double doubleValue) {
@@ -92,7 +93,7 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * String value.
+   * Represents a string value.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -100,7 +101,7 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * String value.
+   * Represents a string value.
    * @param stringValue stringValue or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryMetadataValue setStringValue(java.lang.String stringValue) {
@@ -109,7 +110,8 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * Timestamp value. When filtering on timestamp values, only the seconds field will be compared.
+   * Represents a timestamp value. When filtering on timestamp values, only the seconds field will
+   * be compared.
    * @return value or {@code null} for none
    */
   public String getTimestampValue() {
@@ -117,7 +119,8 @@ public final class GoogleCloudAiplatformV1MemoryMetadataValue extends com.google
   }
 
   /**
-   * Timestamp value. When filtering on timestamp values, only the seconds field will be compared.
+   * Represents a timestamp value. When filtering on timestamp values, only the seconds field will
+   * be compared.
    * @param timestampValue timestampValue or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryMetadataValue setTimestampValue(String timestampValue) {

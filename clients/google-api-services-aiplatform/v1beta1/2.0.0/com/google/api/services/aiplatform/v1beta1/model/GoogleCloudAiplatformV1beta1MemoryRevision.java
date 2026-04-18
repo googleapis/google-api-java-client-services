@@ -30,23 +30,23 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Timestamp when this Memory Revision was created.
+   * Output only. Represents the timestamp when this Memory Revision was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Timestamp of when this resource is considered expired.
+   * Output only. Represents the timestamp of when this resource is considered expired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * Output only. The extracted memories from the source content before consolidation when the
-   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
-   * via Consolidation.
+   * Output only. Represents the extracted memories from the source content before consolidation
+   * when the memory was updated via GenerateMemories. This information was used to modify an
+   * existing Memory via Consolidation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,31 +59,39 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The fact of the Memory Revision. This corresponds to the `fact` field of the
-   * parent Memory at the time of revision creation.
+   * Output only. Represents the fact of the Memory Revision. This corresponds to the `fact` field
+   * of the parent Memory at the time of revision creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fact;
 
   /**
-   * Output only. The labels of the Memory Revision. These labels are applied to the MemoryRevision
-   * when it is created based on `GenerateMemoriesRequest.revision_labels`.
+   * Output only. Represents the labels of the Memory Revision. These labels are applied to the
+   * MemoryRevision when it is created based on `GenerateMemoriesRequest.revision_labels`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. The resource name of the Memory Revision. Format: `projects/{project}/locations/{lo
-   * cation}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}`
+   * Identifier. Represents the resource name of the Memory Revision. Format: `projects/{project}/lo
+   * cations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revi
+   * sion}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Timestamp when this Memory Revision was created.
+   * Output only. Represents the structured value of the memory at the time of revision creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structuredData;
+
+  /**
+   * Output only. Represents the timestamp when this Memory Revision was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -91,7 +99,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. Timestamp when this Memory Revision was created.
+   * Output only. Represents the timestamp when this Memory Revision was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setCreateTime(String createTime) {
@@ -100,7 +108,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. Timestamp of when this resource is considered expired.
+   * Output only. Represents the timestamp of when this resource is considered expired.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -108,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. Timestamp of when this resource is considered expired.
+   * Output only. Represents the timestamp of when this resource is considered expired.
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setExpireTime(String expireTime) {
@@ -117,9 +125,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The extracted memories from the source content before consolidation when the
-   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
-   * via Consolidation.
+   * Output only. Represents the extracted memories from the source content before consolidation
+   * when the memory was updated via GenerateMemories. This information was used to modify an
+   * existing Memory via Consolidation.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1IntermediateExtractedMemory> getExtractedMemories() {
@@ -127,9 +135,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The extracted memories from the source content before consolidation when the
-   * memory was updated via GenerateMemories. This information was used to modify an existing Memory
-   * via Consolidation.
+   * Output only. Represents the extracted memories from the source content before consolidation
+   * when the memory was updated via GenerateMemories. This information was used to modify an
+   * existing Memory via Consolidation.
    * @param extractedMemories extractedMemories or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setExtractedMemories(java.util.List<GoogleCloudAiplatformV1beta1IntermediateExtractedMemory> extractedMemories) {
@@ -138,8 +146,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The fact of the Memory Revision. This corresponds to the `fact` field of the
-   * parent Memory at the time of revision creation.
+   * Output only. Represents the fact of the Memory Revision. This corresponds to the `fact` field
+   * of the parent Memory at the time of revision creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getFact() {
@@ -147,8 +155,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The fact of the Memory Revision. This corresponds to the `fact` field of the
-   * parent Memory at the time of revision creation.
+   * Output only. Represents the fact of the Memory Revision. This corresponds to the `fact` field
+   * of the parent Memory at the time of revision creation.
    * @param fact fact or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setFact(java.lang.String fact) {
@@ -157,8 +165,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The labels of the Memory Revision. These labels are applied to the MemoryRevision
-   * when it is created based on `GenerateMemoriesRequest.revision_labels`.
+   * Output only. Represents the labels of the Memory Revision. These labels are applied to the
+   * MemoryRevision when it is created based on `GenerateMemoriesRequest.revision_labels`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -166,8 +174,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Output only. The labels of the Memory Revision. These labels are applied to the MemoryRevision
-   * when it is created based on `GenerateMemoriesRequest.revision_labels`.
+   * Output only. Represents the labels of the Memory Revision. These labels are applied to the
+   * MemoryRevision when it is created based on `GenerateMemoriesRequest.revision_labels`.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -176,8 +184,9 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Identifier. The resource name of the Memory Revision. Format: `projects/{project}/locations/{lo
-   * cation}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}`
+   * Identifier. Represents the resource name of the Memory Revision. Format: `projects/{project}/lo
+   * cations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revi
+   * sion}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -185,12 +194,30 @@ public final class GoogleCloudAiplatformV1beta1MemoryRevision extends com.google
   }
 
   /**
-   * Identifier. The resource name of the Memory Revision. Format: `projects/{project}/locations/{lo
-   * cation}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revision}`
+   * Identifier. Represents the resource name of the Memory Revision. Format: `projects/{project}/lo
+   * cations/{location}/reasoningEngines/{reasoning_engine}/memories/{memory}/revisions/{memory_revi
+   * sion}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryRevision setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the structured value of the memory at the time of revision creation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructuredData() {
+    return structuredData;
+  }
+
+  /**
+   * Output only. Represents the structured value of the memory at the time of revision creation.
+   * @param structuredData structuredData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MemoryRevision setStructuredData(java.util.Map<String, java.lang.Object> structuredData) {
+    this.structuredData = structuredData;
     return this;
   }
 

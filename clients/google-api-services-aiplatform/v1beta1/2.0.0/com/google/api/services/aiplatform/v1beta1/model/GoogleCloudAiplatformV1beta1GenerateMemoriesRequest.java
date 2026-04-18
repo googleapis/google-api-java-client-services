@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Restricts memory generation to a subset of memory topics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> allowedTopics;
+
+  /**
    * Defines a direct source of content as the source content from which to generate memories.
    * The value may be {@code null}.
    */
@@ -115,6 +122,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GenerateMemoriesRequestVertexSessionSource vertexSessionSource;
+
+  /**
+   * Optional. Restricts memory generation to a subset of memory topics.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> getAllowedTopics() {
+    return allowedTopics;
+  }
+
+  /**
+   * Optional. Restricts memory generation to a subset of memory topics.
+   * @param allowedTopics allowedTopics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setAllowedTopics(java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> allowedTopics) {
+    this.allowedTopics = allowedTopics;
+    return this;
+  }
 
   /**
    * Defines a direct source of content as the source content from which to generate memories.

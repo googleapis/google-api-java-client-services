@@ -30,23 +30,23 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicCustomMemoryTopic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Description of the memory topic. This should explain what information should be
-   * extracted for this topic.
+   * Required. Represents the description of the memory topic. This should explain what information
+   * should be extracted for this topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The label of the topic.
+   * Required. Represents the label of the topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * Required. Description of the memory topic. This should explain what information should be
-   * extracted for this topic.
+   * Required. Represents the description of the memory topic. This should explain what information
+   * should be extracted for this topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTop
   }
 
   /**
-   * Required. Description of the memory topic. This should explain what information should be
-   * extracted for this topic.
+   * Required. Represents the description of the memory topic. This should explain what information
+   * should be extracted for this topic.
    * @param description description or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicCustomMemoryTopic setDescription(java.lang.String description) {
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTop
   }
 
   /**
-   * Required. The label of the topic.
+   * Required. Represents the label of the topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -72,7 +72,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTop
   }
 
   /**
-   * Required. The label of the topic.
+   * Required. Represents the label of the topic.
    * @param label label or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopicCustomMemoryTopic setLabel(java.lang.String label) {

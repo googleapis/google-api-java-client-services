@@ -31,21 +31,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryTopicId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The custom memory topic label.
+   * Optional. Represents the custom memory topic label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customMemoryTopicLabel;
 
   /**
-   * Optional. The managed memory topic.
+   * Optional. Represents the managed memory topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String managedMemoryTopic;
 
   /**
-   * Optional. The custom memory topic label.
+   * Optional. Represents the custom memory topic label.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomMemoryTopicLabel() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryTopicId extends com.google.
   }
 
   /**
-   * Optional. The custom memory topic label.
+   * Optional. Represents the custom memory topic label.
    * @param customMemoryTopicLabel customMemoryTopicLabel or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryTopicId setCustomMemoryTopicLabel(java.lang.String customMemoryTopicLabel) {
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryTopicId extends com.google.
   }
 
   /**
-   * Optional. The managed memory topic.
+   * Optional. Represents the managed memory topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagedMemoryTopic() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryTopicId extends com.google.
   }
 
   /**
-   * Optional. The managed memory topic.
+   * Optional. Represents the managed memory topic.
    * @param managedMemoryTopic managedMemoryTopic or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryTopicId setManagedMemoryTopic(java.lang.String managedMemoryTopic) {

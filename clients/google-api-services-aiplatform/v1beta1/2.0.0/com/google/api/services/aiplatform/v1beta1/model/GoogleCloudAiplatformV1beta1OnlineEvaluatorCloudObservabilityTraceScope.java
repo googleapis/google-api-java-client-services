@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Defines the scope and filters for selecting traces.
+ * If chosen, the online evaluator will evaluate single traces matching specified `filter`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,6 +31,7 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
 
   /**
    * Optional. A list of predicates to filter traces. Multiple predicates are combined using AND.
+   * The maximum number of predicates is 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,6 +39,7 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
 
   /**
    * Optional. A list of predicates to filter traces. Multiple predicates are combined using AND.
+   * The maximum number of predicates is 10.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScopePredicate> getFilter() {
@@ -46,6 +48,7 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
 
   /**
    * Optional. A list of predicates to filter traces. Multiple predicates are combined using AND.
+   * The maximum number of predicates is 10.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScope setFilter(java.util.List<GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScopePredicate> filter) {

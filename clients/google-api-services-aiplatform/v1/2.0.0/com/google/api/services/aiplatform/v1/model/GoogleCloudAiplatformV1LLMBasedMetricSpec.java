@@ -58,6 +58,13 @@ public final class GoogleCloudAiplatformV1LLMBasedMetricSpec extends com.google.
   private GoogleCloudAiplatformV1PredefinedMetricSpec predefinedRubricGenerationSpec;
 
   /**
+   * Optional. The parser config for the metric result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationParserConfig resultParserConfig;
+
+  /**
    * Dynamically generate rubrics using this specification.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class GoogleCloudAiplatformV1LLMBasedMetricSpec extends com.google.
    */
   public GoogleCloudAiplatformV1LLMBasedMetricSpec setPredefinedRubricGenerationSpec(GoogleCloudAiplatformV1PredefinedMetricSpec predefinedRubricGenerationSpec) {
     this.predefinedRubricGenerationSpec = predefinedRubricGenerationSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The parser config for the metric result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationParserConfig getResultParserConfig() {
+    return resultParserConfig;
+  }
+
+  /**
+   * Optional. The parser config for the metric result.
+   * @param resultParserConfig resultParserConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1LLMBasedMetricSpec setResultParserConfig(GoogleCloudAiplatformV1EvaluationParserConfig resultParserConfig) {
+    this.resultParserConfig = resultParserConfig;
     return this;
   }
 

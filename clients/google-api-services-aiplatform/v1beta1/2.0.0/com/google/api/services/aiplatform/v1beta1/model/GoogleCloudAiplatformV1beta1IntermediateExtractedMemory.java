@@ -30,14 +30,48 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1IntermediateExtractedMemory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The fact of the extracted memory.
+   * Output only. Represents the explanation of why the information was extracted from the source
+   * content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String context;
+
+  /**
+   * Output only. Represents the fact of the extracted memory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fact;
 
   /**
-   * Output only. The fact of the extracted memory.
+   * Output only. Represents the structured value of the extracted memory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> structuredData;
+
+  /**
+   * Output only. Represents the explanation of why the information was extracted from the source
+   * content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContext() {
+    return context;
+  }
+
+  /**
+   * Output only. Represents the explanation of why the information was extracted from the source
+   * content.
+   * @param context context or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IntermediateExtractedMemory setContext(java.lang.String context) {
+    this.context = context;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the fact of the extracted memory.
    * @return value or {@code null} for none
    */
   public java.lang.String getFact() {
@@ -45,11 +79,28 @@ public final class GoogleCloudAiplatformV1beta1IntermediateExtractedMemory exten
   }
 
   /**
-   * Output only. The fact of the extracted memory.
+   * Output only. Represents the fact of the extracted memory.
    * @param fact fact or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1IntermediateExtractedMemory setFact(java.lang.String fact) {
     this.fact = fact;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the structured value of the extracted memory.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getStructuredData() {
+    return structuredData;
+  }
+
+  /**
+   * Output only. Represents the structured value of the extracted memory.
+   * @param structuredData structuredData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1IntermediateExtractedMemory setStructuredData(java.util.Map<String, java.lang.Object> structuredData) {
+    this.structuredData = structuredData;
     return this;
   }
 

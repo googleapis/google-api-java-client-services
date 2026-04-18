@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSourceEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The content of the event.
+   * Required. Represents the content of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1Content content;
 
   /**
-   * Required. The content of the event.
+   * Required. Represents the content of the event.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1Content getContent() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateM
   }
 
   /**
-   * Required. The content of the event.
+   * Required. Represents the content of the event.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExampleConversationSourceEvent setContent(GoogleCloudAiplatformV1Content content) {

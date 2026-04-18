@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Represents configuration for organizing memories for a particular scope.
+ * Represents configuration for organizing natural language memories for a particular scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -37,7 +37,16 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   private GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig consolidationConfig;
 
   /**
-   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * Optional. Indicates whether natural language memory generation should be disabled for all
+   * requests. By default, natural language memory generation is enabled. Set this to `true` when
+   * you only want to generate structured memories.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableNaturalLanguageMemories;
+
+  /**
+   * Optional. Indicates whether the memories will be generated in the third person (i.e. "The user
    * generates memories with Memory Bank."). By default, the memories will be generated in the first
    * person (i.e. "I generate memories with Memory Bank.")
    * The value may be {@code null}.
@@ -46,25 +55,25 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   private java.lang.Boolean enableThirdPersonMemories;
 
   /**
-   * Optional. Examples of how to generate memories for a particular scope.
+   * Optional. Provides examples of how to generate memories for a particular scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExample> generateMemoriesExamples;
 
   /**
-   * Optional. Topics of information that should be extracted from conversations and stored as
-   * memories. If not set, then Memory Bank's default topics will be used.
+   * Optional. Represents topics of information that should be extracted from conversations and
+   * stored as memories. If not set, then Memory Bank's default topics will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic> memoryTopics;
 
   /**
-   * Optional. The scope keys (i.e. 'user_id') for which to use this config. A request's scope must
-   * include all of the provided keys for the config to be used (order does not matter). If empty,
-   * then the config will be used for all requests that do not have a more specific config. Only one
-   * default config is allowed per Memory Bank.
+   * Optional. Represents the scope keys (i.e. 'user_id') for which to use this config. A request's
+   * scope must include all of the provided keys for the config to be used (order does not matter).
+   * If empty, then the config will be used for all requests that do not have a more specific
+   * config. Only one default config is allowed per Memory Bank.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +97,28 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * Optional. Indicates whether natural language memory generation should be disabled for all
+   * requests. By default, natural language memory generation is enabled. Set this to `true` when
+   * you only want to generate structured memories.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableNaturalLanguageMemories() {
+    return disableNaturalLanguageMemories;
+  }
+
+  /**
+   * Optional. Indicates whether natural language memory generation should be disabled for all
+   * requests. By default, natural language memory generation is enabled. Set this to `true` when
+   * you only want to generate structured memories.
+   * @param disableNaturalLanguageMemories disableNaturalLanguageMemories or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setDisableNaturalLanguageMemories(java.lang.Boolean disableNaturalLanguageMemories) {
+    this.disableNaturalLanguageMemories = disableNaturalLanguageMemories;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the memories will be generated in the third person (i.e. "The user
    * generates memories with Memory Bank."). By default, the memories will be generated in the first
    * person (i.e. "I generate memories with Memory Bank.")
    * @return value or {@code null} for none
@@ -98,7 +128,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. If true, then the memories will be generated in the third person (i.e. "The user
+   * Optional. Indicates whether the memories will be generated in the third person (i.e. "The user
    * generates memories with Memory Bank."). By default, the memories will be generated in the first
    * person (i.e. "I generate memories with Memory Bank.")
    * @param enableThirdPersonMemories enableThirdPersonMemories or {@code null} for none
@@ -109,7 +139,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. Examples of how to generate memories for a particular scope.
+   * Optional. Provides examples of how to generate memories for a particular scope.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExample> getGenerateMemoriesExamples() {
@@ -117,7 +147,7 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. Examples of how to generate memories for a particular scope.
+   * Optional. Provides examples of how to generate memories for a particular scope.
    * @param generateMemoriesExamples generateMemoriesExamples or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setGenerateMemoriesExamples(java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigGenerateMemoriesExample> generateMemoriesExamples) {
@@ -126,8 +156,8 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. Topics of information that should be extracted from conversations and stored as
-   * memories. If not set, then Memory Bank's default topics will be used.
+   * Optional. Represents topics of information that should be extracted from conversations and
+   * stored as memories. If not set, then Memory Bank's default topics will be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic> getMemoryTopics() {
@@ -135,8 +165,8 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. Topics of information that should be extracted from conversations and stored as
-   * memories. If not set, then Memory Bank's default topics will be used.
+   * Optional. Represents topics of information that should be extracted from conversations and
+   * stored as memories. If not set, then Memory Bank's default topics will be used.
    * @param memoryTopics memoryTopics or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setMemoryTopics(java.util.List<GoogleCloudAiplatformV1MemoryBankCustomizationConfigMemoryTopic> memoryTopics) {
@@ -145,10 +175,10 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. The scope keys (i.e. 'user_id') for which to use this config. A request's scope must
-   * include all of the provided keys for the config to be used (order does not matter). If empty,
-   * then the config will be used for all requests that do not have a more specific config. Only one
-   * default config is allowed per Memory Bank.
+   * Optional. Represents the scope keys (i.e. 'user_id') for which to use this config. A request's
+   * scope must include all of the provided keys for the config to be used (order does not matter).
+   * If empty, then the config will be used for all requests that do not have a more specific
+   * config. Only one default config is allowed per Memory Bank.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopeKeys() {
@@ -156,10 +186,10 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
   }
 
   /**
-   * Optional. The scope keys (i.e. 'user_id') for which to use this config. A request's scope must
-   * include all of the provided keys for the config to be used (order does not matter). If empty,
-   * then the config will be used for all requests that do not have a more specific config. Only one
-   * default config is allowed per Memory Bank.
+   * Optional. Represents the scope keys (i.e. 'user_id') for which to use this config. A request's
+   * scope must include all of the provided keys for the config to be used (order does not matter).
+   * If empty, then the config will be used for all requests that do not have a more specific
+   * config. Only one default config is allowed per Memory Bank.
    * @param scopeKeys scopeKeys or {@code null} for none
    */
   public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setScopeKeys(java.util.List<java.lang.String> scopeKeys) {

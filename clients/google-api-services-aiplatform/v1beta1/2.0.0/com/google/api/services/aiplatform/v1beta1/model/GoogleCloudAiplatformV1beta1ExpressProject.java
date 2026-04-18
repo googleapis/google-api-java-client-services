@@ -44,14 +44,14 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   private java.lang.String defaultApiKey;
 
   /**
-   * Output only. The project ID of the project.
+   * Output only. The ID of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Output only. The project number of the project.
+   * Output only. The number of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -99,7 +99,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * Output only. The project ID of the project.
+   * Output only. The ID of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -107,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * Output only. The project ID of the project.
+   * Output only. The ID of the project.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setProjectId(java.lang.String projectId) {
@@ -116,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * Output only. The project number of the project.
+   * Output only. The number of the project.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -124,7 +124,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * Output only. The project number of the project.
+   * Output only. The number of the project.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setProjectNumber(java.lang.Long projectNumber) {

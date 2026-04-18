@@ -30,15 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The fact to generate a memory from.
+   * Required. Represents the fact to generate a memory from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fact;
 
   /**
-   * Optional. The list of topics that the memory should be associated with. For example, use
-   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * Optional. Represents the list of topics that the memory should be associated with. For example,
+   * use `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
    * extraction for the custom topic `jargon`.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   private java.util.List<GoogleCloudAiplatformV1beta1MemoryTopicId> topics;
 
   /**
-   * Required. The fact to generate a memory from.
+   * Required. Represents the fact to generate a memory from.
    * @return value or {@code null} for none
    */
   public java.lang.String getFact() {
@@ -54,7 +54,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   }
 
   /**
-   * Required. The fact to generate a memory from.
+   * Required. Represents the fact to generate a memory from.
    * @param fact fact or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGenerateMemoriesExampleGeneratedMemory setFact(java.lang.String fact) {
@@ -63,8 +63,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   }
 
   /**
-   * Optional. The list of topics that the memory should be associated with. For example, use
-   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * Optional. Represents the list of topics that the memory should be associated with. For example,
+   * use `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
    * extraction for the custom topic `jargon`.
    * @return value or {@code null} for none
    */
@@ -73,8 +73,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigGene
   }
 
   /**
-   * Optional. The list of topics that the memory should be associated with. For example, use
-   * `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
+   * Optional. Represents the list of topics that the memory should be associated with. For example,
+   * use `custom_memory_topic_label = "jargon"` if the extracted memory is an example of memory
    * extraction for the custom topic `jargon`.
    * @param topics topics or {@code null} for none
    */

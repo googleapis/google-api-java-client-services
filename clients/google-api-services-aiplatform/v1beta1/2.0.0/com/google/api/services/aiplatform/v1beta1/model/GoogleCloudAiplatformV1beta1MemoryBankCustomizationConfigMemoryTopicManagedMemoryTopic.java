@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigMemoryTopicManagedMemoryTopic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The managed topic.
+   * Required. Represents the managed topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String managedTopicEnum;
 
   /**
-   * Required. The managed topic.
+   * Required. Represents the managed topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagedTopicEnum() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigMemo
   }
 
   /**
-   * Required. The managed topic.
+   * Required. Represents the managed topic.
    * @param managedTopicEnum managedTopicEnum or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryBankCustomizationConfigMemoryTopicManagedMemoryTopic setManagedTopicEnum(java.lang.String managedTopicEnum) {

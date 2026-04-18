@@ -97,6 +97,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpec spec;
 
   /**
+   * Optional. Traffic distribution configuration for the Reasoning Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineTrafficConfig trafficConfig;
+
+  /**
    * Output only. Timestamp when this ReasoningEngine was most recently updated.
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngine setSpec(GoogleCloudAiplatformV1beta1ReasoningEngineSpec spec) {
     this.spec = spec;
+    return this;
+  }
+
+  /**
+   * Optional. Traffic distribution configuration for the Reasoning Engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineTrafficConfig getTrafficConfig() {
+    return trafficConfig;
+  }
+
+  /**
+   * Optional. Traffic distribution configuration for the Reasoning Engine.
+   * @param trafficConfig trafficConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngine setTrafficConfig(GoogleCloudAiplatformV1beta1ReasoningEngineTrafficConfig trafficConfig) {
+    this.trafficConfig = trafficConfig;
     return this;
   }
 

@@ -65,7 +65,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationMetric extends com.goog
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. The metric configuration.
+   * Optional. The metric configuration. Only LLMMetric and CustomCodeExecutionMetric are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +172,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationMetric extends com.goog
   }
 
   /**
-   * Optional. The metric configuration.
+   * Optional. The metric configuration. Only LLMMetric and CustomCodeExecutionMetric are supported.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Metric getMetric() {
@@ -180,7 +180,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationMetric extends com.goog
   }
 
   /**
-   * Optional. The metric configuration.
+   * Optional. The metric configuration. Only LLMMetric and CustomCodeExecutionMetric are supported.
    * @param metric metric or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationMetric setMetric(GoogleCloudAiplatformV1beta1Metric metric) {

@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo exten
   private java.lang.String loadBalancerIp;
 
   /**
+   * Output only. The hostname of the SandboxEnvironment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sandboxHostname;
+
+  /**
    * Output only. The internal IP address of the SandboxEnvironment.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo exten
    */
   public GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo setLoadBalancerIp(java.lang.String loadBalancerIp) {
     this.loadBalancerIp = loadBalancerIp;
+    return this;
+  }
+
+  /**
+   * Output only. The hostname of the SandboxEnvironment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSandboxHostname() {
+    return sandboxHostname;
+  }
+
+  /**
+   * Output only. The hostname of the SandboxEnvironment.
+   * @param sandboxHostname sandboxHostname or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentConnectionInfo setSandboxHostname(java.lang.String sandboxHostname) {
+    this.sandboxHostname = sandboxHostname;
     return this;
   }
 

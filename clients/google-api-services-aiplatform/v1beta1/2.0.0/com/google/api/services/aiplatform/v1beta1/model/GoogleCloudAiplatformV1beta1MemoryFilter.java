@@ -30,37 +30,37 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Key of the filter. For example, "author" would apply to `metadata` entries with the key
-   * "author".
+   * Represents the key of the filter. For example, "author" would apply to `metadata` entries with
+   * the key "author".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * If true, the filter will be negated.
+   * Indicates whether the filter will be negated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean negate;
 
   /**
-   * Operator to apply to the filter. If not set, then EQUAL will be used.
+   * Represents the operator to apply to the filter. If not set, then EQUAL will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String op;
 
   /**
-   * Value to compare to.
+   * Represents the value to compare to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1MemoryMetadataValue value;
 
   /**
-   * Key of the filter. For example, "author" would apply to `metadata` entries with the key
-   * "author".
+   * Represents the key of the filter. For example, "author" would apply to `metadata` entries with
+   * the key "author".
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -68,8 +68,8 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * Key of the filter. For example, "author" would apply to `metadata` entries with the key
-   * "author".
+   * Represents the key of the filter. For example, "author" would apply to `metadata` entries with
+   * the key "author".
    * @param key key or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryFilter setKey(java.lang.String key) {
@@ -78,7 +78,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * If true, the filter will be negated.
+   * Indicates whether the filter will be negated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegate() {
@@ -86,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * If true, the filter will be negated.
+   * Indicates whether the filter will be negated.
    * @param negate negate or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryFilter setNegate(java.lang.Boolean negate) {
@@ -95,7 +95,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * Operator to apply to the filter. If not set, then EQUAL will be used.
+   * Represents the operator to apply to the filter. If not set, then EQUAL will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getOp() {
@@ -103,7 +103,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * Operator to apply to the filter. If not set, then EQUAL will be used.
+   * Represents the operator to apply to the filter. If not set, then EQUAL will be used.
    * @param op op or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryFilter setOp(java.lang.String op) {
@@ -112,7 +112,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * Value to compare to.
+   * Represents the value to compare to.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryMetadataValue getValue() {
@@ -120,7 +120,7 @@ public final class GoogleCloudAiplatformV1beta1MemoryFilter extends com.google.a
   }
 
   /**
-   * Value to compare to.
+   * Represents the value to compare to.
    * @param value value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MemoryFilter setValue(GoogleCloudAiplatformV1beta1MemoryMetadataValue value) {

@@ -59,6 +59,16 @@ public final class GoogleCloudAiplatformV1RetrieveMemoriesRequest extends com.go
   }
 
   /**
+   * Optional. Specifies the types of memories to retrieve. If this field is empty or not provided,
+   * the request will default to retrieving only memories of type `NATURAL_LANGUAGE_COLLECTION`. If
+   * populated, the request will retrieve memories matching any of the specified `MemoryType`
+   * values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> memoryTypes;
+
+  /**
    * Required. The scope of the memories to retrieve. A memory must have exactly the same scope
    * (`Memory.scope`) as the scope provided here to be retrieved (same keys and values). Order does
    * not matter, but it is case-sensitive.
@@ -130,6 +140,29 @@ public final class GoogleCloudAiplatformV1RetrieveMemoriesRequest extends com.go
    */
   public GoogleCloudAiplatformV1RetrieveMemoriesRequest setFilterGroups(java.util.List<GoogleCloudAiplatformV1MemoryConjunctionFilter> filterGroups) {
     this.filterGroups = filterGroups;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the types of memories to retrieve. If this field is empty or not provided,
+   * the request will default to retrieving only memories of type `NATURAL_LANGUAGE_COLLECTION`. If
+   * populated, the request will retrieve memories matching any of the specified `MemoryType`
+   * values.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMemoryTypes() {
+    return memoryTypes;
+  }
+
+  /**
+   * Optional. Specifies the types of memories to retrieve. If this field is empty or not provided,
+   * the request will default to retrieving only memories of type `NATURAL_LANGUAGE_COLLECTION`. If
+   * populated, the request will retrieve memories matching any of the specified `MemoryType`
+   * values.
+   * @param memoryTypes memoryTypes or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RetrieveMemoriesRequest setMemoryTypes(java.util.List<java.lang.String> memoryTypes) {
+    this.memoryTypes = memoryTypes;
     return this;
   }
 

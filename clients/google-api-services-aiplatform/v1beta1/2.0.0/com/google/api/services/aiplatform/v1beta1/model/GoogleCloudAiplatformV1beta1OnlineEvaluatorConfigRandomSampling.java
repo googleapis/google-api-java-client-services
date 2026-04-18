@@ -30,16 +30,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorConfigRandomSampling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The percentage of traces to sample for evaluation. Must be an integer between 0 and
-   * 100.
+   * Required. The percentage of traces to sample for evaluation. Must be an integer between `1` and
+   * `100`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer percentage;
 
   /**
-   * Required. The percentage of traces to sample for evaluation. Must be an integer between 0 and
-   * 100.
+   * Required. The percentage of traces to sample for evaluation. Must be an integer between `1` and
+   * `100`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPercentage() {
@@ -47,8 +47,8 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorConfigRandomSampli
   }
 
   /**
-   * Required. The percentage of traces to sample for evaluation. Must be an integer between 0 and
-   * 100.
+   * Required. The percentage of traces to sample for evaluation. Must be an integer between `1` and
+   * `100`.
    * @param percentage percentage or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorConfigRandomSampling setPercentage(java.lang.Integer percentage) {

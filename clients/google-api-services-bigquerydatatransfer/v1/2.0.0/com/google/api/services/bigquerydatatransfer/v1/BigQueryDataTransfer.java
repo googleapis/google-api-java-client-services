@@ -4507,9 +4507,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-           *        should be in one of the following form: *
-           *        `projects/{project_id}/transferConfigs/{config_id}` *
-           *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           *        should be in one of the following forms: *
+           *        `projects/{project}/transferConfigs/{transfer_config}` *
+           *        `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4537,9 +4537,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-           *        should be in one of the following form: *
-           *        `projects/{project_id}/transferConfigs/{config_id}` *
-           *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           *        should be in one of the following forms: *
+           *        `projects/{project}/transferConfigs/{transfer_config}` *
+           *        `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4619,16 +4619,16 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
             /**
              * Required. Name of transfer configuration for which transfer resources should be
-             * retrieved. The name should be in one of the following form: *
-             * `projects/{project_id}/transferConfigs/{config_id}` *
-             * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             * retrieved. The name should be in one of the following forms: *
+             * `projects/{project}/transferConfigs/{transfer_config}` *
+             * `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-           should be in one of the following form: * `projects/{project_id}/transferConfigs/{config_id}` *
-           `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           should be in one of the following forms: * `projects/{project}/transferConfigs/{transfer_config}` *
+           `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
              */
             public java.lang.String getParent() {
               return parent;
@@ -4636,9 +4636,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
             /**
              * Required. Name of transfer configuration for which transfer resources should be
-             * retrieved. The name should be in one of the following form: *
-             * `projects/{project_id}/transferConfigs/{config_id}` *
-             * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             * retrieved. The name should be in one of the following forms: *
+             * `projects/{project}/transferConfigs/{transfer_config}` *
+             * `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4658,7 +4658,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
              * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
              * latest_status_detail.state="SUCCEEDED")` * `update_time >=
-             * "2012-04-21T11:30:00-04:00` * `hierarchy_detail.partition_detail.table = "table1"`
+             * "2012-04-21T11:30:00-04:00"` * `hierarchy_detail.partition_detail.table = "table1"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -4668,7 +4668,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            resource state: `latest_status_detail.state` * Last update time: `update_time` - RFC-3339 format *
            Parent table name: `hierarchy_detail.partition_detail.table` Multiple filters can be applied using
            the `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
-           latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00` *
+           latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00"` *
            `hierarchy_detail.partition_detail.table = "table1"`
              */
             public java.lang.String getFilter() {
@@ -4683,7 +4683,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
              * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
              * latest_status_detail.state="SUCCEEDED")` * `update_time >=
-             * "2012-04-21T11:30:00-04:00` * `hierarchy_detail.partition_detail.table = "table1"`
+             * "2012-04-21T11:30:00-04:00"` * `hierarchy_detail.partition_detail.table = "table1"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -7218,9 +7218,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-         *        should be in one of the following form: *
-         *        `projects/{project_id}/transferConfigs/{config_id}` *
-         *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+         *        should be in one of the following forms: *
+         *        `projects/{project}/transferConfigs/{transfer_config}` *
+         *        `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7248,9 +7248,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-         *        should be in one of the following form: *
-         *        `projects/{project_id}/transferConfigs/{config_id}` *
-         *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+         *        should be in one of the following forms: *
+         *        `projects/{project}/transferConfigs/{transfer_config}` *
+         *        `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7330,16 +7330,16 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
           /**
            * Required. Name of transfer configuration for which transfer resources should be
-           * retrieved. The name should be in one of the following form: *
-           * `projects/{project_id}/transferConfigs/{config_id}` *
-           * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           * retrieved. The name should be in one of the following forms: *
+           * `projects/{project}/transferConfigs/{transfer_config}` *
+           * `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Name of transfer configuration for which transfer resources should be retrieved. The name
-         should be in one of the following form: * `projects/{project_id}/transferConfigs/{config_id}` *
-         `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+         should be in one of the following forms: * `projects/{project}/transferConfigs/{transfer_config}` *
+         `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -7347,9 +7347,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
           /**
            * Required. Name of transfer configuration for which transfer resources should be
-           * retrieved. The name should be in one of the following form: *
-           * `projects/{project_id}/transferConfigs/{config_id}` *
-           * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           * retrieved. The name should be in one of the following forms: *
+           * `projects/{project}/transferConfigs/{transfer_config}` *
+           * `projects/{project}/locations/{location_id}/transferConfigs/{transfer_config}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7368,7 +7368,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * update time: `update_time` - RFC-3339 format * Parent table name:
            * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
            * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
-           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00`
+           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00"`
            * * `hierarchy_detail.partition_detail.table = "table1"`
            */
           @com.google.api.client.util.Key
@@ -7379,7 +7379,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          resource state: `latest_status_detail.state` * Last update time: `update_time` - RFC-3339 format *
          Parent table name: `hierarchy_detail.partition_detail.table` Multiple filters can be applied using
          the `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
-         latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00` *
+         latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00"` *
          `hierarchy_detail.partition_detail.table = "table1"`
            */
           public java.lang.String getFilter() {
@@ -7393,7 +7393,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * update time: `update_time` - RFC-3339 format * Parent table name:
            * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
            * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
-           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00`
+           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00"`
            * * `hierarchy_detail.partition_detail.table = "table1"`
            */
           public List setFilter(java.lang.String filter) {

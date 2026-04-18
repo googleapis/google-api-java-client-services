@@ -30,14 +30,14 @@ package com.google.api.services.beyondcorp.v1.model;
 public final class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. External API configuration.
+   * Optional. External API configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway apiGateway;
 
   /**
-   * Required. External API configuration.
+   * Optional. External API configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway getApiGateway() {
@@ -45,7 +45,7 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery exten
   }
 
   /**
-   * Required. External API configuration.
+   * Optional. External API configuration.
    * @param apiGateway apiGateway or {@code null} for none
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery setApiGateway(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway apiGateway) {

@@ -38,6 +38,48 @@ public final class ImportEvaluationsResponse extends com.google.api.client.json.
   private java.util.List<java.lang.String> errorMessages;
 
   /**
+   * The number of evaluation results that either failed to import entirely or completed import with
+   * one or more errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer evaluationResultImportFailureCount;
+
+  /**
+   * The list of evaluation results that were imported into the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EvaluationResult> evaluationResults;
+
+  static {
+    // hack to force ProGuard to consider EvaluationResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EvaluationResult.class);
+  }
+
+  /**
+   * The number of evaluation runs that either failed to import entirely or completed import with
+   * one or more errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer evaluationRunImportFailureCount;
+
+  /**
+   * The list of evaluation runs that were imported into the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EvaluationRun> evaluationRuns;
+
+  static {
+    // hack to force ProGuard to consider EvaluationRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EvaluationRun.class);
+  }
+
+  /**
    * The list of evaluations that were imported into the app.
    * The value may be {@code null}.
    */
@@ -51,7 +93,8 @@ public final class ImportEvaluationsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The number of evaluations that were not imported due to errors.
+   * The number of evaluations that either failed to import entirely or completed import with one or
+   * more errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +118,78 @@ public final class ImportEvaluationsResponse extends com.google.api.client.json.
   }
 
   /**
+   * The number of evaluation results that either failed to import entirely or completed import with
+   * one or more errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEvaluationResultImportFailureCount() {
+    return evaluationResultImportFailureCount;
+  }
+
+  /**
+   * The number of evaluation results that either failed to import entirely or completed import with
+   * one or more errors.
+   * @param evaluationResultImportFailureCount evaluationResultImportFailureCount or {@code null} for none
+   */
+  public ImportEvaluationsResponse setEvaluationResultImportFailureCount(java.lang.Integer evaluationResultImportFailureCount) {
+    this.evaluationResultImportFailureCount = evaluationResultImportFailureCount;
+    return this;
+  }
+
+  /**
+   * The list of evaluation results that were imported into the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EvaluationResult> getEvaluationResults() {
+    return evaluationResults;
+  }
+
+  /**
+   * The list of evaluation results that were imported into the app.
+   * @param evaluationResults evaluationResults or {@code null} for none
+   */
+  public ImportEvaluationsResponse setEvaluationResults(java.util.List<EvaluationResult> evaluationResults) {
+    this.evaluationResults = evaluationResults;
+    return this;
+  }
+
+  /**
+   * The number of evaluation runs that either failed to import entirely or completed import with
+   * one or more errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEvaluationRunImportFailureCount() {
+    return evaluationRunImportFailureCount;
+  }
+
+  /**
+   * The number of evaluation runs that either failed to import entirely or completed import with
+   * one or more errors.
+   * @param evaluationRunImportFailureCount evaluationRunImportFailureCount or {@code null} for none
+   */
+  public ImportEvaluationsResponse setEvaluationRunImportFailureCount(java.lang.Integer evaluationRunImportFailureCount) {
+    this.evaluationRunImportFailureCount = evaluationRunImportFailureCount;
+    return this;
+  }
+
+  /**
+   * The list of evaluation runs that were imported into the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EvaluationRun> getEvaluationRuns() {
+    return evaluationRuns;
+  }
+
+  /**
+   * The list of evaluation runs that were imported into the app.
+   * @param evaluationRuns evaluationRuns or {@code null} for none
+   */
+  public ImportEvaluationsResponse setEvaluationRuns(java.util.List<EvaluationRun> evaluationRuns) {
+    this.evaluationRuns = evaluationRuns;
+    return this;
+  }
+
+  /**
    * The list of evaluations that were imported into the app.
    * @return value or {@code null} for none
    */
@@ -92,7 +207,8 @@ public final class ImportEvaluationsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The number of evaluations that were not imported due to errors.
+   * The number of evaluations that either failed to import entirely or completed import with one or
+   * more errors.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getImportFailureCount() {
@@ -100,7 +216,8 @@ public final class ImportEvaluationsResponse extends com.google.api.client.json.
   }
 
   /**
-   * The number of evaluations that were not imported due to errors.
+   * The number of evaluations that either failed to import entirely or completed import with one or
+   * more errors.
    * @param importFailureCount importFailureCount or {@code null} for none
    */
   public ImportEvaluationsResponse setImportFailureCount(java.lang.Integer importFailureCount) {

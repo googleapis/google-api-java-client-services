@@ -38,6 +38,14 @@ public final class ConversationLoggingSettings extends com.google.api.client.jso
   private java.lang.Boolean disableConversationLogging;
 
   /**
+   * Optional. Controls the retention window for the conversation. If not set, the conversation will
+   * be retained for 365 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String retentionWindow;
+
+  /**
    * Optional. Whether to disable conversation logging for the sessions.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class ConversationLoggingSettings extends com.google.api.client.jso
    */
   public ConversationLoggingSettings setDisableConversationLogging(java.lang.Boolean disableConversationLogging) {
     this.disableConversationLogging = disableConversationLogging;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the retention window for the conversation. If not set, the conversation will
+   * be retained for 365 days.
+   * @return value or {@code null} for none
+   */
+  public String getRetentionWindow() {
+    return retentionWindow;
+  }
+
+  /**
+   * Optional. Controls the retention window for the conversation. If not set, the conversation will
+   * be retained for 365 days.
+   * @param retentionWindow retentionWindow or {@code null} for none
+   */
+  public ConversationLoggingSettings setRetentionWindow(String retentionWindow) {
+    this.retentionWindow = retentionWindow;
     return this;
   }
 

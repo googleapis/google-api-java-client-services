@@ -31,11 +31,42 @@ package com.google.api.services.ces.v1beta.model;
 public final class ErrorHandlingSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for ending the session in case of system errors (e.g. LLM errors).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ErrorHandlingSettingsEndSessionConfig endSessionConfig;
+
+  /**
    * Optional. The strategy to use for error handling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorHandlingStrategy;
+
+  /**
+   * Optional. Configuration for handling fallback responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ErrorHandlingSettingsFallbackResponseConfig fallbackResponseConfig;
+
+  /**
+   * Optional. Configuration for ending the session in case of system errors (e.g. LLM errors).
+   * @return value or {@code null} for none
+   */
+  public ErrorHandlingSettingsEndSessionConfig getEndSessionConfig() {
+    return endSessionConfig;
+  }
+
+  /**
+   * Optional. Configuration for ending the session in case of system errors (e.g. LLM errors).
+   * @param endSessionConfig endSessionConfig or {@code null} for none
+   */
+  public ErrorHandlingSettings setEndSessionConfig(ErrorHandlingSettingsEndSessionConfig endSessionConfig) {
+    this.endSessionConfig = endSessionConfig;
+    return this;
+  }
 
   /**
    * Optional. The strategy to use for error handling.
@@ -51,6 +82,23 @@ public final class ErrorHandlingSettings extends com.google.api.client.json.Gene
    */
   public ErrorHandlingSettings setErrorHandlingStrategy(java.lang.String errorHandlingStrategy) {
     this.errorHandlingStrategy = errorHandlingStrategy;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for handling fallback responses.
+   * @return value or {@code null} for none
+   */
+  public ErrorHandlingSettingsFallbackResponseConfig getFallbackResponseConfig() {
+    return fallbackResponseConfig;
+  }
+
+  /**
+   * Optional. Configuration for handling fallback responses.
+   * @param fallbackResponseConfig fallbackResponseConfig or {@code null} for none
+   */
+  public ErrorHandlingSettings setFallbackResponseConfig(ErrorHandlingSettingsFallbackResponseConfig fallbackResponseConfig) {
+    this.fallbackResponseConfig = fallbackResponseConfig;
     return this;
   }
 

@@ -47,6 +47,14 @@ public final class ExecuteToolRequest extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.Object> context;
 
   /**
+   * Optional. Mock configuration for the tool execution. If this field is set, tools that call
+   * other tools will be mocked based on the provided patterns and responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MockConfig mockConfig;
+
+  /**
    * Optional. The name of the tool to execute. Format:
    * projects/{project}/locations/{location}/apps/{app}/tools/{tool}
    * The value may be {@code null}.
@@ -104,6 +112,25 @@ public final class ExecuteToolRequest extends com.google.api.client.json.Generic
    */
   public ExecuteToolRequest setContext(java.util.Map<String, java.lang.Object> context) {
     this.context = context;
+    return this;
+  }
+
+  /**
+   * Optional. Mock configuration for the tool execution. If this field is set, tools that call
+   * other tools will be mocked based on the provided patterns and responses.
+   * @return value or {@code null} for none
+   */
+  public MockConfig getMockConfig() {
+    return mockConfig;
+  }
+
+  /**
+   * Optional. Mock configuration for the tool execution. If this field is set, tools that call
+   * other tools will be mocked based on the provided patterns and responses.
+   * @param mockConfig mockConfig or {@code null} for none
+   */
+  public ExecuteToolRequest setMockConfig(MockConfig mockConfig) {
+    this.mockConfig = mockConfig;
     return this;
   }
 

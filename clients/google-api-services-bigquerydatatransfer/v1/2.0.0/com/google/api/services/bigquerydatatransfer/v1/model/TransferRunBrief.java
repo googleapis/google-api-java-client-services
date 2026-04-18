@@ -31,8 +31,8 @@ package com.google.api.services.bigquerydatatransfer.v1.model;
 public final class TransferRunBrief extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Run URI. Format
-   * projects/{project}/locations/{location}/transferConfigs/{config}/run/{run}
+   * Optional. Run URI. The format must be:
+   * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/run/{run}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class TransferRunBrief extends com.google.api.client.json.GenericJs
   private String startTime;
 
   /**
-   * Optional. Run URI. Format
-   * projects/{project}/locations/{location}/transferConfigs/{config}/run/{run}
+   * Optional. Run URI. The format must be:
+   * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/run/{run}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRun() {
@@ -55,8 +55,8 @@ public final class TransferRunBrief extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Run URI. Format
-   * projects/{project}/locations/{location}/transferConfigs/{config}/run/{run}
+   * Optional. Run URI. The format must be:
+   * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/run/{run}`
    * @param run run or {@code null} for none
    */
   public TransferRunBrief setRun(java.lang.String run) {

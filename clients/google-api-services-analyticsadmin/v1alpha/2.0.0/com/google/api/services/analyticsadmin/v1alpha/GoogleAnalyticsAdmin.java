@@ -4203,6 +4203,155 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Looks up settings related to user-provided data for a property.
+     *
+     * Create a request for the method "properties.getUserProvidedDataSettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetUserProvidedDataSettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the user provided data settings to retrieve. Format:
+     *        properties/{property}/userProvidedDataSettings
+     * @return the request
+     */
+    public GetUserProvidedDataSettings getUserProvidedDataSettings(java.lang.String name) throws java.io.IOException {
+      GetUserProvidedDataSettings result = new GetUserProvidedDataSettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetUserProvidedDataSettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserProvidedDataSettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/userProvidedDataSettings$");
+
+      /**
+       * Looks up settings related to user-provided data for a property.
+       *
+       * Create a request for the method "properties.getUserProvidedDataSettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetUserProvidedDataSettings#execute()} method to invoke
+       * the remote operation. <p> {@link GetUserProvidedDataSettings#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the user provided data settings to retrieve. Format:
+     *        properties/{property}/userProvidedDataSettings
+       * @since 1.13
+       */
+      protected GetUserProvidedDataSettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaUserProvidedDataSettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/userProvidedDataSettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetUserProvidedDataSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetUserProvidedDataSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setAccessToken(java.lang.String accessToken) {
+        return (GetUserProvidedDataSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setAlt(java.lang.String alt) {
+        return (GetUserProvidedDataSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setCallback(java.lang.String callback) {
+        return (GetUserProvidedDataSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setFields(java.lang.String fields) {
+        return (GetUserProvidedDataSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setKey(java.lang.String key) {
+        return (GetUserProvidedDataSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetUserProvidedDataSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetUserProvidedDataSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetUserProvidedDataSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setUploadType(java.lang.String uploadType) {
+        return (GetUserProvidedDataSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetUserProvidedDataSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetUserProvidedDataSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the user provided data settings to retrieve. Format:
+       * properties/{property}/userProvidedDataSettings
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the user provided data settings to retrieve. Format:
+     properties/{property}/userProvidedDataSettings
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the user provided data settings to retrieve. Format:
+       * properties/{property}/userProvidedDataSettings
+       */
+      public GetUserProvidedDataSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/userProvidedDataSettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetUserProvidedDataSettings set(String parameterName, Object value) {
+        return (GetUserProvidedDataSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns child Properties under the specified parent Account. Properties will be excluded if the
      * caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default.
      * Returns an empty list if no relevant properties are found.

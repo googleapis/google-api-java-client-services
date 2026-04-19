@@ -168,7 +168,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   /**
    * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
    * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
-   * applies to.
+   * applies to. If set to "all" for POLICY_BASED route, the route applies to VLAN attachments of
+   * Cloud Interconnect in all regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -538,7 +539,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   /**
    * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
    * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
-   * applies to.
+   * applies to. If set to "all" for POLICY_BASED route, the route applies to VLAN attachments of
+   * Cloud Interconnect in all regions.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -548,7 +550,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   /**
    * Region of the route. DYNAMIC, PEERING_DYNAMIC, POLICY_BASED and ADVERTISED routes only. If set
    * for POLICY_BASED route, this is a region of VLAN attachments for Cloud Interconnect the route
-   * applies to.
+   * applies to. If set to "all" for POLICY_BASED route, the route applies to VLAN attachments of
+   * Cloud Interconnect in all regions.
    * @param region region or {@code null} for none
    */
   public RouteInfo setRegion(java.lang.String region) {

@@ -158,6 +158,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private HeartRateVariability heartRateVariability;
 
   /**
+   * Optional. Data for points in the `height` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Height height;
+
+  /**
    * Optional. Data for points in the `hydration-log` session data type collection.
    * The value may be {@code null}.
    */
@@ -220,6 +227,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Steps steps;
+
+  /**
+   * Optional. Data for points in the `swim-lengths-data` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SwimLengthsData swimLengthsData;
 
   /**
    * Optional. Data for points in the `time-in-heart-rate-zone` interval data type collection.
@@ -553,6 +567,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Data for points in the `height` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public Height getHeight() {
+    return height;
+  }
+
+  /**
+   * Optional. Data for points in the `height` sample data type collection.
+   * @param height height or {@code null} for none
+   */
+  public DataPoint setHeight(Height height) {
+    this.height = height;
+    return this;
+  }
+
+  /**
    * Optional. Data for points in the `hydration-log` session data type collection.
    * @return value or {@code null} for none
    */
@@ -701,6 +732,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setSteps(Steps steps) {
     this.steps = steps;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `swim-lengths-data` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public SwimLengthsData getSwimLengthsData() {
+    return swimLengthsData;
+  }
+
+  /**
+   * Optional. Data for points in the `swim-lengths-data` interval data type collection.
+   * @param swimLengthsData swimLengthsData or {@code null} for none
+   */
+  public DataPoint setSwimLengthsData(SwimLengthsData swimLengthsData) {
+    this.swimLengthsData = swimLengthsData;
     return this;
   }
 

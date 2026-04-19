@@ -149,6 +149,14 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
   private StepsRollupValue steps;
 
   /**
+   * Returned by default when rolling up data points from the `swim-lengths-data` data type, or when
+   * requested explicitly using the `swim-lengths-data` rollup type identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SwimLengthsDataRollupValue swimLengthsData;
+
+  /**
    * Returned by default when rolling up data points from the `time-in-heart-rate-zone` data type,
    * or when requested explicitly using the `time-in-heart-rate-zone` rollup type identifier.
    * The value may be {@code null}.
@@ -452,6 +460,25 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   public RollupDataPoint setSteps(StepsRollupValue steps) {
     this.steps = steps;
+    return this;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `swim-lengths-data` data type, or when
+   * requested explicitly using the `swim-lengths-data` rollup type identifier.
+   * @return value or {@code null} for none
+   */
+  public SwimLengthsDataRollupValue getSwimLengthsData() {
+    return swimLengthsData;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `swim-lengths-data` data type, or when
+   * requested explicitly using the `swim-lengths-data` rollup type identifier.
+   * @param swimLengthsData swimLengthsData or {@code null} for none
+   */
+  public RollupDataPoint setSwimLengthsData(SwimLengthsDataRollupValue swimLengthsData) {
+    this.swimLengthsData = swimLengthsData;
     return this;
   }
 

@@ -63,6 +63,24 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String cloudSqlInstance;
 
   /**
+   * A [Datastream Private Connection](https://docs.cloud.google.com/datastream/docs/reference/rest/
+   * v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datastreamPrivateConnection;
+
+  /**
+   * A [DMS Private Connection](https://docs.cloud.google.com/database-
+   * migration/docs/reference/rest/v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dmsPrivateConnection;
+
+  /**
    * A forwarding rule and its corresponding IP address represent the frontend configuration of a
    * Google Cloud load balancer. Forwarding rules are also used for protocol forwarding, Private
    * Service Connect and other network services to provide forwarding information in the control
@@ -256,6 +274,48 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setCloudSqlInstance(java.lang.String cloudSqlInstance) {
     this.cloudSqlInstance = cloudSqlInstance;
+    return this;
+  }
+
+  /**
+   * A [Datastream Private Connection](https://docs.cloud.google.com/datastream/docs/reference/rest/
+   * v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatastreamPrivateConnection() {
+    return datastreamPrivateConnection;
+  }
+
+  /**
+   * A [Datastream Private Connection](https://docs.cloud.google.com/datastream/docs/reference/rest/
+   * v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * @param datastreamPrivateConnection datastreamPrivateConnection or {@code null} for none
+   */
+  public Endpoint setDatastreamPrivateConnection(java.lang.String datastreamPrivateConnection) {
+    this.datastreamPrivateConnection = datastreamPrivateConnection;
+    return this;
+  }
+
+  /**
+   * A [DMS Private Connection](https://docs.cloud.google.com/database-
+   * migration/docs/reference/rest/v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDmsPrivateConnection() {
+    return dmsPrivateConnection;
+  }
+
+  /**
+   * A [DMS Private Connection](https://docs.cloud.google.com/database-
+   * migration/docs/reference/rest/v1/projects.locations.privateConnections) name format:
+   * projects/{project}/locations/{location}/privateConnections/{privateConnection}.
+   * @param dmsPrivateConnection dmsPrivateConnection or {@code null} for none
+   */
+  public Endpoint setDmsPrivateConnection(java.lang.String dmsPrivateConnection) {
+    this.dmsPrivateConnection = dmsPrivateConnection;
     return this;
   }
 

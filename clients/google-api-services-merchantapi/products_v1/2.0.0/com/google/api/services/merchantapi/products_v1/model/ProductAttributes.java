@@ -331,8 +331,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String googleProductCategory;
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -507,7 +507,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String mobileLinkTemplate;
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * The value may be {@code null}.
    */
@@ -805,6 +805,15 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private UnitPricingMeasure unitPricingMeasure;
+
+  /**
+   * Optional. A list of video URLs for the item. Use this attribute to provide more visuals for
+   * your product beyond your image attributes. See the [Help Center
+   * article](https://support.google.com/merchants/answer/15216925) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> videoLinks;
 
   /**
    * URL of the 3D image of the item. See the [Help Center
@@ -1489,8 +1498,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGtins() {
@@ -1498,8 +1507,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs.
    * @param gtins gtins or {@code null} for none
    */
   public ProductAttributes setGtins(java.util.List<java.lang.String> gtins) {
@@ -1880,7 +1889,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * @return value or {@code null} for none
    */
@@ -1889,7 +1898,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * @param mpn mpn or {@code null} for none
    */
@@ -2593,6 +2602,27 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setUnitPricingMeasure(UnitPricingMeasure unitPricingMeasure) {
     this.unitPricingMeasure = unitPricingMeasure;
+    return this;
+  }
+
+  /**
+   * Optional. A list of video URLs for the item. Use this attribute to provide more visuals for
+   * your product beyond your image attributes. See the [Help Center
+   * article](https://support.google.com/merchants/answer/15216925) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getVideoLinks() {
+    return videoLinks;
+  }
+
+  /**
+   * Optional. A list of video URLs for the item. Use this attribute to provide more visuals for
+   * your product beyond your image attributes. See the [Help Center
+   * article](https://support.google.com/merchants/answer/15216925) for more information.
+   * @param videoLinks videoLinks or {@code null} for none
+   */
+  public ProductAttributes setVideoLinks(java.util.List<java.lang.String> videoLinks) {
+    this.videoLinks = videoLinks;
     return this;
   }
 

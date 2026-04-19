@@ -31,18 +31,18 @@ package com.google.api.services.developerknowledge.v1alpha.model;
 public final class SearchDocumentChunksResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A token that can be sent as `page_token` to retrieve the next page. If this field is
-   * omitted, there are no subsequent pages.
+   * Optional. Provides a token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The search results for the given query. Each DocumentChunk in this list contains a snippet of
-   * content relevant to the search query. Use the DocumentChunk.parent field of each result with
-   * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve the full
-   * document content.
+   * Contains the search results for the given query. Each DocumentChunk in this list contains a
+   * snippet of content relevant to the search query. Use the DocumentChunk.parent field of each
+   * result with DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve
+   * the full document content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class SearchDocumentChunksResponse extends com.google.api.client.js
   }
 
   /**
-   * Optional. A token that can be sent as `page_token` to retrieve the next page. If this field is
-   * omitted, there are no subsequent pages.
+   * Optional. Provides a token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -64,8 +64,8 @@ public final class SearchDocumentChunksResponse extends com.google.api.client.js
   }
 
   /**
-   * Optional. A token that can be sent as `page_token` to retrieve the next page. If this field is
-   * omitted, there are no subsequent pages.
+   * Optional. Provides a token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SearchDocumentChunksResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -74,10 +74,10 @@ public final class SearchDocumentChunksResponse extends com.google.api.client.js
   }
 
   /**
-   * The search results for the given query. Each DocumentChunk in this list contains a snippet of
-   * content relevant to the search query. Use the DocumentChunk.parent field of each result with
-   * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve the full
-   * document content.
+   * Contains the search results for the given query. Each DocumentChunk in this list contains a
+   * snippet of content relevant to the search query. Use the DocumentChunk.parent field of each
+   * result with DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve
+   * the full document content.
    * @return value or {@code null} for none
    */
   public java.util.List<DocumentChunk> getResults() {
@@ -85,10 +85,10 @@ public final class SearchDocumentChunksResponse extends com.google.api.client.js
   }
 
   /**
-   * The search results for the given query. Each DocumentChunk in this list contains a snippet of
-   * content relevant to the search query. Use the DocumentChunk.parent field of each result with
-   * DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve the full
-   * document content.
+   * Contains the search results for the given query. Each DocumentChunk in this list contains a
+   * snippet of content relevant to the search query. Use the DocumentChunk.parent field of each
+   * result with DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to retrieve
+   * the full document content.
    * @param results results or {@code null} for none
    */
   public SearchDocumentChunksResponse setResults(java.util.List<DocumentChunk> results) {

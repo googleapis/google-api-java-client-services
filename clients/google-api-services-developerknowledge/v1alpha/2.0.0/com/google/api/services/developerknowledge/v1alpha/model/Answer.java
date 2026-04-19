@@ -17,7 +17,7 @@
 package com.google.api.services.developerknowledge.v1alpha.model;
 
 /**
- * Response message for DeveloperKnowledge.BatchGetDocuments.
+ * An answer to a query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Knowledge API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.developerknowledge.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BatchGetDocumentsResponse extends com.google.api.client.json.GenericJson {
+public final class Answer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains the documents requested.
+   * The text of the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Document> documents;
+  private java.lang.String answerText;
 
   /**
-   * Contains the documents requested.
+   * The text of the answer.
    * @return value or {@code null} for none
    */
-  public java.util.List<Document> getDocuments() {
-    return documents;
+  public java.lang.String getAnswerText() {
+    return answerText;
   }
 
   /**
-   * Contains the documents requested.
-   * @param documents documents or {@code null} for none
+   * The text of the answer.
+   * @param answerText answerText or {@code null} for none
    */
-  public BatchGetDocumentsResponse setDocuments(java.util.List<Document> documents) {
-    this.documents = documents;
+  public Answer setAnswerText(java.lang.String answerText) {
+    this.answerText = answerText;
     return this;
   }
 
   @Override
-  public BatchGetDocumentsResponse set(String fieldName, Object value) {
-    return (BatchGetDocumentsResponse) super.set(fieldName, value);
+  public Answer set(String fieldName, Object value) {
+    return (Answer) super.set(fieldName, value);
   }
 
   @Override
-  public BatchGetDocumentsResponse clone() {
-    return (BatchGetDocumentsResponse) super.clone();
+  public Answer clone() {
+    return (Answer) super.clone();
   }
 
 }

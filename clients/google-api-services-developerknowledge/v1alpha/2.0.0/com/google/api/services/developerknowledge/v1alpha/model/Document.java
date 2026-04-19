@@ -31,37 +31,68 @@ package com.google.api.services.developerknowledge.v1alpha.model;
 public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The full content of the document in Markdown format.
+   * Output only. Contains the full content of the document in Markdown format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Output only. A description of the document.
+   * Output only. Specifies the data source of the document. Example data source:
+   * `firebase.google.com`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSource;
+
+  /**
+   * Output only. Provides a description of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Identifier. The resource name of the document. Format: `documents/{uri_without_scheme}`
-   * Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+   * Identifier. Contains the resource name of the document. Format:
+   * `documents/{uri_without_scheme}` Example:
+   * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The URI of the content, such as `docs.cloud.google.com/storage/docs/creating-
-   * buckets`.
+   * Output only. Provides the title of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
+   * Output only. Represents the timestamp when the content or metadata of the document was last
+   * updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. Provides the URI of the content, such as
+   * `docs.cloud.google.com/storage/docs/creating-buckets`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. The full content of the document in Markdown format.
+   * Output only. Specifies the DocumentView of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String view;
+
+  /**
+   * Output only. Contains the full content of the document in Markdown format.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -69,7 +100,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The full content of the document in Markdown format.
+   * Output only. Contains the full content of the document in Markdown format.
    * @param content content or {@code null} for none
    */
   public Document setContent(java.lang.String content) {
@@ -78,7 +109,26 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A description of the document.
+   * Output only. Specifies the data source of the document. Example data source:
+   * `firebase.google.com`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSource() {
+    return dataSource;
+  }
+
+  /**
+   * Output only. Specifies the data source of the document. Example data source:
+   * `firebase.google.com`
+   * @param dataSource dataSource or {@code null} for none
+   */
+  public Document setDataSource(java.lang.String dataSource) {
+    this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Output only. Provides a description of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -86,7 +136,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A description of the document.
+   * Output only. Provides a description of the document.
    * @param description description or {@code null} for none
    */
   public Document setDescription(java.lang.String description) {
@@ -95,8 +145,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the document. Format: `documents/{uri_without_scheme}`
-   * Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+   * Identifier. Contains the resource name of the document. Format:
+   * `documents/{uri_without_scheme}` Example:
+   * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,8 +155,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the document. Format: `documents/{uri_without_scheme}`
-   * Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+   * Identifier. Contains the resource name of the document. Format:
+   * `documents/{uri_without_scheme}` Example:
+   * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * @param name name or {@code null} for none
    */
   public Document setName(java.lang.String name) {
@@ -114,8 +166,44 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URI of the content, such as `docs.cloud.google.com/storage/docs/creating-
-   * buckets`.
+   * Output only. Provides the title of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * Output only. Provides the title of the document.
+   * @param title title or {@code null} for none
+   */
+  public Document setTitle(java.lang.String title) {
+    this.title = title;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the timestamp when the content or metadata of the document was last
+   * updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Represents the timestamp when the content or metadata of the document was last
+   * updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Document setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Provides the URI of the content, such as
+   * `docs.cloud.google.com/storage/docs/creating-buckets`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -123,12 +211,29 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URI of the content, such as `docs.cloud.google.com/storage/docs/creating-
-   * buckets`.
+   * Output only. Provides the URI of the content, such as
+   * `docs.cloud.google.com/storage/docs/creating-buckets`.
    * @param uri uri or {@code null} for none
    */
   public Document setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the DocumentView of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getView() {
+    return view;
+  }
+
+  /**
+   * Output only. Specifies the DocumentView of the document.
+   * @param view view or {@code null} for none
+   */
+  public Document setView(java.lang.String view) {
+    this.view = view;
     return this;
   }
 

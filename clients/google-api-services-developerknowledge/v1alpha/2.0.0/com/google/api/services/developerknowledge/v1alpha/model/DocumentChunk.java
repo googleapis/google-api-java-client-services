@@ -33,15 +33,27 @@ package com.google.api.services.developerknowledge.v1alpha.model;
 public final class DocumentChunk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The content of the document chunk.
+   * Output only. Contains the content of the document chunk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Output only. The ID of this chunk within the document. The chunk ID is unique within a
-   * document, but not globally unique across documents. The chunk ID is not stable and may change
+   * Output only. Represents metadata about the Document this chunk is from. The DocumentView of
+   * this Document message will be set to `DOCUMENT_VIEW_BASIC`. It is included here for convenience
+   * so that clients do not need to call DeveloperKnowledge.GetDocument or
+   * DeveloperKnowledge.BatchGetDocuments if they only need the metadata fields. Otherwise, clients
+   * should use DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to fetch the
+   * full document content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Document document;
+
+  /**
+   * Output only. Specifies the ID of this chunk within the document. The chunk ID is unique within
+   * a document, but not globally unique across documents. The chunk ID is not stable and may change
    * over time.
    * The value may be {@code null}.
    */
@@ -49,7 +61,7 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   private java.lang.String id;
 
   /**
-   * Output only. The resource name of the document this chunk is from. Format:
+   * Output only. Contains the resource name of the document this chunk is from. Format:
    * `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * The value may be {@code null}.
@@ -58,7 +70,7 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   private java.lang.String parent;
 
   /**
-   * Output only. The content of the document chunk.
+   * Output only. Contains the content of the document chunk.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -66,7 +78,7 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The content of the document chunk.
+   * Output only. Contains the content of the document chunk.
    * @param content content or {@code null} for none
    */
   public DocumentChunk setContent(java.lang.String content) {
@@ -75,8 +87,35 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of this chunk within the document. The chunk ID is unique within a
-   * document, but not globally unique across documents. The chunk ID is not stable and may change
+   * Output only. Represents metadata about the Document this chunk is from. The DocumentView of
+   * this Document message will be set to `DOCUMENT_VIEW_BASIC`. It is included here for convenience
+   * so that clients do not need to call DeveloperKnowledge.GetDocument or
+   * DeveloperKnowledge.BatchGetDocuments if they only need the metadata fields. Otherwise, clients
+   * should use DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to fetch the
+   * full document content.
+   * @return value or {@code null} for none
+   */
+  public Document getDocument() {
+    return document;
+  }
+
+  /**
+   * Output only. Represents metadata about the Document this chunk is from. The DocumentView of
+   * this Document message will be set to `DOCUMENT_VIEW_BASIC`. It is included here for convenience
+   * so that clients do not need to call DeveloperKnowledge.GetDocument or
+   * DeveloperKnowledge.BatchGetDocuments if they only need the metadata fields. Otherwise, clients
+   * should use DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments to fetch the
+   * full document content.
+   * @param document document or {@code null} for none
+   */
+  public DocumentChunk setDocument(Document document) {
+    this.document = document;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the ID of this chunk within the document. The chunk ID is unique within
+   * a document, but not globally unique across documents. The chunk ID is not stable and may change
    * over time.
    * @return value or {@code null} for none
    */
@@ -85,8 +124,8 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The ID of this chunk within the document. The chunk ID is unique within a
-   * document, but not globally unique across documents. The chunk ID is not stable and may change
+   * Output only. Specifies the ID of this chunk within the document. The chunk ID is unique within
+   * a document, but not globally unique across documents. The chunk ID is not stable and may change
    * over time.
    * @param id id or {@code null} for none
    */
@@ -96,7 +135,7 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of the document this chunk is from. Format:
+   * Output only. Contains the resource name of the document this chunk is from. Format:
    * `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * @return value or {@code null} for none
@@ -106,7 +145,7 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The resource name of the document this chunk is from. Format:
+   * Output only. Contains the resource name of the document this chunk is from. Format:
    * `documents/{uri_without_scheme}` Example:
    * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
    * @param parent parent or {@code null} for none

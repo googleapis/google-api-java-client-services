@@ -256,31 +256,54 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Required. The names of the documents to retrieve. A maximum of 20 documents can be
-       * retrieved in a batch. The documents are returned in the same order as the `names` in the
+       * Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can
+       * be retrieved in a batch. The documents are returned in the same order as the `names` in the
        * request. Format: `documents/{uri_without_scheme}` Example:
        * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> names;
 
-      /** Required. The names of the documents to retrieve. A maximum of 20 documents can be retrieved in a
-     batch. The documents are returned in the same order as the `names` in the request. Format:
-     `documents/{uri_without_scheme}` Example: `documents/docs.cloud.google.com/storage/docs/creating-
-     buckets`
+      /** Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can be
+     retrieved in a batch. The documents are returned in the same order as the `names` in the request.
+     Format: `documents/{uri_without_scheme}` Example:
+     `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       public java.util.List<java.lang.String> getNames() {
         return names;
       }
 
       /**
-       * Required. The names of the documents to retrieve. A maximum of 20 documents can be
-       * retrieved in a batch. The documents are returned in the same order as the `names` in the
+       * Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can
+       * be retrieved in a batch. The documents are returned in the same order as the `names` in the
        * request. Format: `documents/{uri_without_scheme}` Example:
        * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       public BatchGet setNames(java.util.List<java.lang.String> names) {
         this.names = names;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies the DocumentView of the document. If unspecified,
+       * DeveloperKnowledge.BatchGetDocuments defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Optional. Specifies the DocumentView of the document. If unspecified,
+     DeveloperKnowledge.BatchGetDocuments defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Optional. Specifies the DocumentView of the document. If unspecified,
+       * DeveloperKnowledge.BatchGetDocuments defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      public BatchGet setView(java.lang.String view) {
+        this.view = view;
         return this;
       }
 
@@ -297,8 +320,8 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
      * This request holds the parameters needed by the developerknowledge server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the document to retrieve. Format: `documents/{uri_without_scheme}` Example:
-     *        `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+     * @param name Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
+     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -325,8 +348,8 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the document to retrieve. Format: `documents/{uri_without_scheme}` Example:
-     *        `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * @param name Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
+     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -405,22 +428,24 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Required. The name of the document to retrieve. Format: `documents/{uri_without_scheme}`
-       * Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * Required. Specifies the name of the document to retrieve. Format:
+       * `documents/{uri_without_scheme}` Example:
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the document to retrieve. Format: `documents/{uri_without_scheme}` Example:
-     `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+      /** Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
+     Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The name of the document to retrieve. Format: `documents/{uri_without_scheme}`
-       * Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * Required. Specifies the name of the document to retrieve. Format:
+       * `documents/{uri_without_scheme}` Example:
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -432,17 +457,39 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
         return this;
       }
 
+      /**
+       * Optional. Specifies the DocumentView of the document. If unspecified,
+       * DeveloperKnowledge.GetDocument defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Optional. Specifies the DocumentView of the document. If unspecified,
+     DeveloperKnowledge.GetDocument defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Optional. Specifies the DocumentView of the document. If unspecified,
+       * DeveloperKnowledge.GetDocument defaults to `DOCUMENT_VIEW_CONTENT`.
+       */
+      public Get setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
       }
     }
     /**
-     * Searches for developer knowledge across Google's developer documentation. This method returns
-     * document chunks based on the user's query. There can be many chunks of the same Document. To
-     * retrieve full documents, use DeveloperKnowledge.GetDocument or
-     * DeveloperKnowledge.BatchGetDocuments with the DocumentChunk.parent returned in the
-     * SearchDocumentChunksResponse.results.
+     * Searches for developer knowledge across Google's developer documentation. Returns DocumentChunks
+     * based on the user's query. There may be many chunks from the same Document. To retrieve full
+     * documents, use DeveloperKnowledge.GetDocument or DeveloperKnowledge.BatchGetDocuments with the
+     * DocumentChunk.parent returned in the SearchDocumentChunksResponse.results.
      *
      * Create a request for the method "documents.searchDocumentChunks".
      *
@@ -463,8 +510,8 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1alpha/documents:searchDocumentChunks";
 
       /**
-       * Searches for developer knowledge across Google's developer documentation. This method returns
-       * document chunks based on the user's query. There can be many chunks of the same Document. To
+       * Searches for developer knowledge across Google's developer documentation. Returns
+       * DocumentChunks based on the user's query. There may be many chunks from the same Document. To
        * retrieve full documents, use DeveloperKnowledge.GetDocument or
        * DeveloperKnowledge.BatchGetDocuments with the DocumentChunk.parent returned in the
        * SearchDocumentChunksResponse.results.
@@ -549,25 +596,101 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Optional. The maximum number of results to return. The service may return fewer than this
-       * value. If unspecified, at most 5 results will be returned. The maximum value is 20; values
-       * above 20 will result in an INVALID_ARGUMENT error.
+       * Optional. Applies a strict filter to the search results. The expression supports a subset
+       * of the syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
+       * DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields
+       * for filtering: * `data_source` (STRING): The source of the document, e.g.
+       * `docs.cloud.google.com`. See https://developers.google.com/knowledge/reference/corpus-
+       * reference for the complete list of data sources in the corpus. * `update_time` (TIMESTAMP):
+       * The timestamp of when the document was last meaningfully updated. A meaningful update is
+       * one that changes document's markdown content or metadata. * `uri` (STRING): The document
+       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=`
+       * (equals) and `!=` (not equals) operators for **exact match** on the whole string. Partial
+       * match, prefix match, and regexp match are not supported. TIMESTAMP fields support `=`, `<`,
+       * `<=`, `>`, and `>=` operators. Timestamps must be in RFC-3339 format, e.g.,
+       * `"2025-01-01T00:00:00Z"`. You can combine expressions using `AND`, `OR`, and `NOT` (or `-`)
+       * logical operators. `OR` has higher precedence than `AND`. Use parentheses for explicit
+       * precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR data_source =
+       * "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
+       * "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
+       * "developer.chrome.com" OR data_source = "web.dev")` * `uri =
+       * "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500
+       * characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. Applies a strict filter to the search results. The expression supports a subset of the
+     syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
+     DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields for
+     filtering: * `data_source` (STRING): The source of the document, e.g. `docs.cloud.google.com`. See
+     https://developers.google.com/knowledge/reference/corpus-reference for the complete list of data
+     sources in the corpus. * `update_time` (TIMESTAMP): The timestamp of when the document was last
+     meaningfully updated. A meaningful update is one that changes document's markdown content or
+     metadata. * `uri` (STRING): The document URI, e.g.
+     `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=` (equals) and `!=`
+     (not equals) operators for **exact match** on the whole string. Partial match, prefix match, and
+     regexp match are not supported. TIMESTAMP fields support `=`, `<`, `<=`, `>`, and `>=` operators.
+     Timestamps must be in RFC-3339 format, e.g., `"2025-01-01T00:00:00Z"`. You can combine expressions
+     using `AND`, `OR`, and `NOT` (or `-`) logical operators. `OR` has higher precedence than `AND`. Use
+     parentheses for explicit precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR
+     data_source = "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
+     "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
+     "developer.chrome.com" OR data_source = "web.dev")` * `uri =
+     "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500 characters;
+     values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. Applies a strict filter to the search results. The expression supports a subset
+       * of the syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
+       * DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields
+       * for filtering: * `data_source` (STRING): The source of the document, e.g.
+       * `docs.cloud.google.com`. See https://developers.google.com/knowledge/reference/corpus-
+       * reference for the complete list of data sources in the corpus. * `update_time` (TIMESTAMP):
+       * The timestamp of when the document was last meaningfully updated. A meaningful update is
+       * one that changes document's markdown content or metadata. * `uri` (STRING): The document
+       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=`
+       * (equals) and `!=` (not equals) operators for **exact match** on the whole string. Partial
+       * match, prefix match, and regexp match are not supported. TIMESTAMP fields support `=`, `<`,
+       * `<=`, `>`, and `>=` operators. Timestamps must be in RFC-3339 format, e.g.,
+       * `"2025-01-01T00:00:00Z"`. You can combine expressions using `AND`, `OR`, and `NOT` (or `-`)
+       * logical operators. `OR` has higher precedence than `AND`. Use parentheses for explicit
+       * precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR data_source =
+       * "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
+       * "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
+       * "developer.chrome.com" OR data_source = "web.dev")` * `uri =
+       * "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500
+       * characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+       */
+      public SearchDocumentChunks setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies the maximum number of results to return. The service may return fewer
+       * than this value. If unspecified, at most 5 results will be returned. The maximum value is
+       * 20; values above 20 will result in an INVALID_ARGUMENT error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. The maximum number of results to return. The service may return fewer than this value. If
-     unspecified, at most 5 results will be returned. The maximum value is 20; values above 20 will
-     result in an INVALID_ARGUMENT error.
+      /** Optional. Specifies the maximum number of results to return. The service may return fewer than this
+     value. If unspecified, at most 5 results will be returned. The maximum value is 20; values above 20
+     will result in an INVALID_ARGUMENT error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. The maximum number of results to return. The service may return fewer than this
-       * value. If unspecified, at most 5 results will be returned. The maximum value is 20; values
-       * above 20 will result in an INVALID_ARGUMENT error.
+       * Optional. Specifies the maximum number of results to return. The service may return fewer
+       * than this value. If unspecified, at most 5 results will be returned. The maximum value is
+       * 20; values above 20 will result in an INVALID_ARGUMENT error.
        */
       public SearchDocumentChunks setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -575,22 +698,22 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Optional. A page token, received from a previous `SearchDocumentChunks` call. Provide this
-       * to retrieve the subsequent page.
+       * Optional. Contains a page token, received from a previous `SearchDocumentChunks` call.
+       * Provide this to retrieve the subsequent page.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `SearchDocumentChunks` call. Provide this to
-     retrieve the subsequent page.
+      /** Optional. Contains a page token, received from a previous `SearchDocumentChunks` call. Provide this
+     to retrieve the subsequent page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `SearchDocumentChunks` call. Provide this
-       * to retrieve the subsequent page.
+       * Optional. Contains a page token, received from a previous `SearchDocumentChunks` call.
+       * Provide this to retrieve the subsequent page.
        */
       public SearchDocumentChunks setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -598,22 +721,22 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       }
 
       /**
-       * Required. The raw query string provided by the user, such as "How to create a Cloud Storage
-       * bucket?".
+       * Required. Provides the raw query string provided by the user, such as "How to create a
+       * Cloud Storage bucket?".
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. The raw query string provided by the user, such as "How to create a Cloud Storage
-     bucket?".
+      /** Required. Provides the raw query string provided by the user, such as "How to create a Cloud
+     Storage bucket?".
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Required. The raw query string provided by the user, such as "How to create a Cloud Storage
-       * bucket?".
+       * Required. Provides the raw query string provided by the user, such as "How to create a
+       * Cloud Storage bucket?".
        */
       public SearchDocumentChunks setQuery(java.lang.String query) {
         this.query = query;
@@ -623,6 +746,129 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       @Override
       public SearchDocumentChunks set(String parameterName, Object value) {
         return (SearchDocumentChunks) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the V1alpha collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DeveloperKnowledge developerknowledge = new DeveloperKnowledge(...);}
+   *   {@code DeveloperKnowledge.V1alpha.List request = developerknowledge.v1alpha().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1alpha v1alpha() {
+    return new V1alpha();
+  }
+
+  /**
+   * The "v1alpha" collection of methods.
+   */
+  public class V1alpha {
+
+    /**
+     * Answers a query using grounded generation.
+     *
+     * Create a request for the method "v1alpha.answerQuery".
+     *
+     * This request holds the parameters needed by the developerknowledge server.  After setting any
+     * optional parameters, call the {@link AnswerQuery#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryRequest}
+     * @return the request
+     */
+    public AnswerQuery answerQuery(com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryRequest content) throws java.io.IOException {
+      AnswerQuery result = new AnswerQuery(content);
+      initialize(result);
+      return result;
+    }
+
+    public class AnswerQuery extends DeveloperKnowledgeRequest<com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryResponse> {
+
+      private static final String REST_PATH = "v1alpha:answerQuery";
+
+      /**
+       * Answers a query using grounded generation.
+       *
+       * Create a request for the method "v1alpha.answerQuery".
+       *
+       * This request holds the parameters needed by the the developerknowledge server.  After setting
+       * any optional parameters, call the {@link AnswerQuery#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * AnswerQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryRequest}
+       * @since 1.13
+       */
+      protected AnswerQuery(com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryRequest content) {
+        super(DeveloperKnowledge.this, "POST", REST_PATH, content, com.google.api.services.developerknowledge.v1alpha.model.AnswerQueryResponse.class);
+      }
+
+      @Override
+      public AnswerQuery set$Xgafv(java.lang.String $Xgafv) {
+        return (AnswerQuery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnswerQuery setAccessToken(java.lang.String accessToken) {
+        return (AnswerQuery) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnswerQuery setAlt(java.lang.String alt) {
+        return (AnswerQuery) super.setAlt(alt);
+      }
+
+      @Override
+      public AnswerQuery setCallback(java.lang.String callback) {
+        return (AnswerQuery) super.setCallback(callback);
+      }
+
+      @Override
+      public AnswerQuery setFields(java.lang.String fields) {
+        return (AnswerQuery) super.setFields(fields);
+      }
+
+      @Override
+      public AnswerQuery setKey(java.lang.String key) {
+        return (AnswerQuery) super.setKey(key);
+      }
+
+      @Override
+      public AnswerQuery setOauthToken(java.lang.String oauthToken) {
+        return (AnswerQuery) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnswerQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnswerQuery) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnswerQuery setQuotaUser(java.lang.String quotaUser) {
+        return (AnswerQuery) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnswerQuery setUploadType(java.lang.String uploadType) {
+        return (AnswerQuery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnswerQuery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnswerQuery) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public AnswerQuery set(String parameterName, Object value) {
+        return (AnswerQuery) super.set(parameterName, value);
       }
     }
 

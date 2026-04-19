@@ -30,6 +30,32 @@ package com.google.api.services.homegraph.v1.model;
 public final class ReportStateAndNotificationDevice extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. UDDM/WHDM trait events
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HomeEvents> homeEvents;
+
+  static {
+    // hack to force ProGuard to consider HomeEvents used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HomeEvents.class);
+  }
+
+  /**
+   * Optional. UDDM/WHDM trait updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<HomeTraitUpdates> homeTraits;
+
+  static {
+    // hack to force ProGuard to consider HomeTraitUpdates used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HomeTraitUpdates.class);
+  }
+
+  /**
    * Notifications metadata for devices. See the **Device NOTIFICATIONS** section of the individual
    * trait [reference guides](https://developers.home.google.com/cloud-to-cloud/traits).
    * The value may be {@code null}.
@@ -44,6 +70,40 @@ public final class ReportStateAndNotificationDevice extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> states;
+
+  /**
+   * Optional. UDDM/WHDM trait events
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HomeEvents> getHomeEvents() {
+    return homeEvents;
+  }
+
+  /**
+   * Optional. UDDM/WHDM trait events
+   * @param homeEvents homeEvents or {@code null} for none
+   */
+  public ReportStateAndNotificationDevice setHomeEvents(java.util.List<HomeEvents> homeEvents) {
+    this.homeEvents = homeEvents;
+    return this;
+  }
+
+  /**
+   * Optional. UDDM/WHDM trait updates.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<HomeTraitUpdates> getHomeTraits() {
+    return homeTraits;
+  }
+
+  /**
+   * Optional. UDDM/WHDM trait updates.
+   * @param homeTraits homeTraits or {@code null} for none
+   */
+  public ReportStateAndNotificationDevice setHomeTraits(java.util.List<HomeTraitUpdates> homeTraits) {
+    this.homeTraits = homeTraits;
+    return this;
+  }
 
   /**
    * Notifications metadata for devices. See the **Device NOTIFICATIONS** section of the individual

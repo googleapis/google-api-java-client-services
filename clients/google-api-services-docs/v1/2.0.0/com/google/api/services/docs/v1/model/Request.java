@@ -261,6 +261,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateDocumentTabPropertiesRequest updateDocumentTabProperties;
 
   /**
+   * Updates a named style.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateNamedStyleRequest updateNamedStyle;
+
+  /**
    * Updates the paragraph style at the specified range.
    * The value may be {@code null}.
    */
@@ -860,6 +867,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateDocumentTabProperties(UpdateDocumentTabPropertiesRequest updateDocumentTabProperties) {
     this.updateDocumentTabProperties = updateDocumentTabProperties;
+    return this;
+  }
+
+  /**
+   * Updates a named style.
+   * @return value or {@code null} for none
+   */
+  public UpdateNamedStyleRequest getUpdateNamedStyle() {
+    return updateNamedStyle;
+  }
+
+  /**
+   * Updates a named style.
+   * @param updateNamedStyle updateNamedStyle or {@code null} for none
+   */
+  public Request setUpdateNamedStyle(UpdateNamedStyleRequest updateNamedStyle) {
+    this.updateNamedStyle = updateNamedStyle;
     return this;
   }
 

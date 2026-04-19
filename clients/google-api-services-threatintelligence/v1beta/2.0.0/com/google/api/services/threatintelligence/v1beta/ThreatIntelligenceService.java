@@ -1290,72 +1290,122 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
           return this;
         }
 
-        /** Optional. Filter criteria. */
+        /**
+         * Optional. Filter criteria. Supported fields for filtering include: * `audit.create_time`
+         * * `audit.creator` * `audit.update_time` * `audit.updater` *
+         * `detail.data_leak.discovery_document_ids` * `detail.data_leak.severity` *
+         * `detail.detail_type` * `detail.initial_access_broker.discovery_document_ids` *
+         * `detail.initial_access_broker.severity` * `detail.insider_threat.discovery_document_ids`
+         * * `detail.insider_threat.severity` * `finding_count` * `priority_analysis.priority_level`
+         * * `relevance_analysis.confidence` * `relevance_analysis.relevance_level` *
+         * `relevance_analysis.relevant` * `severity_analysis.severity_level` * `state` Examples: *
+         * `detail.detail_type = "initial_access_broker"` * `detail.detail_type != "data_leak"` *
+         * `detail.insider_threat.severity = "HIGH"` * `audit.create_time >= "2026-04-03T00:00:00Z"
+         * AND audit.create_time < "2026-04-06T00:00:00Z"` * `state = "NEW" OR state = "TRIAGED"` *
+         * `severity_analysis.severity_level = "SEVERITY_LEVEL_CRITICAL"`
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Filter criteria.
+        /** Optional. Filter criteria. Supported fields for filtering include: * `audit.create_time` *
+       `audit.creator` * `audit.update_time` * `audit.updater` * `detail.data_leak.discovery_document_ids`
+       * `detail.data_leak.severity` * `detail.detail_type` *
+       `detail.initial_access_broker.discovery_document_ids` * `detail.initial_access_broker.severity` *
+       `detail.insider_threat.discovery_document_ids` * `detail.insider_threat.severity` * `finding_count`
+       * `priority_analysis.priority_level` * `relevance_analysis.confidence` *
+       `relevance_analysis.relevance_level` * `relevance_analysis.relevant` *
+       `severity_analysis.severity_level` * `state` Examples: * `detail.detail_type =
+       "initial_access_broker"` * `detail.detail_type != "data_leak"` * `detail.insider_threat.severity =
+       "HIGH"` * `audit.create_time >= "2026-04-03T00:00:00Z" AND audit.create_time <
+       "2026-04-06T00:00:00Z"` * `state = "NEW" OR state = "TRIAGED"` * `severity_analysis.severity_level
+       = "SEVERITY_LEVEL_CRITICAL"`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** Optional. Filter criteria. */
+        /**
+         * Optional. Filter criteria. Supported fields for filtering include: * `audit.create_time`
+         * * `audit.creator` * `audit.update_time` * `audit.updater` *
+         * `detail.data_leak.discovery_document_ids` * `detail.data_leak.severity` *
+         * `detail.detail_type` * `detail.initial_access_broker.discovery_document_ids` *
+         * `detail.initial_access_broker.severity` * `detail.insider_threat.discovery_document_ids`
+         * * `detail.insider_threat.severity` * `finding_count` * `priority_analysis.priority_level`
+         * * `relevance_analysis.confidence` * `relevance_analysis.relevance_level` *
+         * `relevance_analysis.relevant` * `severity_analysis.severity_level` * `state` Examples: *
+         * `detail.detail_type = "initial_access_broker"` * `detail.detail_type != "data_leak"` *
+         * `detail.insider_threat.severity = "HIGH"` * `audit.create_time >= "2026-04-03T00:00:00Z"
+         * AND audit.create_time < "2026-04-06T00:00:00Z"` * `state = "NEW" OR state = "TRIAGED"` *
+         * `severity_analysis.severity_level = "SEVERITY_LEVEL_CRITICAL"`
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
         /**
-         * Optional. Order by criteria in the csv format: "field1,field2 desc" or "field1,field2" or
-         * "field1 asc, field2".
+         * Optional. Order by criteria in the csv format: "field1, field2 desc" or "field1, field2"
+         * or "field1 asc, field2". If a field is specified without `asc` or `desc`, ascending order
+         * is used by default. Supported fields for ordering are identical to those supported for
+         * filtering. Examples: * `audit.create_time desc` * `audit.update_time asc` *
+         * `audit.create_time desc, severity_analysis.severity_level desc`
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Order by criteria in the csv format: "field1,field2 desc" or "field1,field2" or "field1
-       asc, field2".
+        /** Optional. Order by criteria in the csv format: "field1, field2 desc" or "field1, field2" or "field1
+       asc, field2". If a field is specified without `asc` or `desc`, ascending order is used by default.
+       Supported fields for ordering are identical to those supported for filtering. Examples: *
+       `audit.create_time desc` * `audit.update_time asc` * `audit.create_time desc,
+       severity_analysis.severity_level desc`
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional. Order by criteria in the csv format: "field1,field2 desc" or "field1,field2" or
-         * "field1 asc, field2".
+         * Optional. Order by criteria in the csv format: "field1, field2 desc" or "field1, field2"
+         * or "field1 asc, field2". If a field is specified without `asc` or `desc`, ascending order
+         * is used by default. Supported fields for ordering are identical to those supported for
+         * filtering. Examples: * `audit.create_time desc` * `audit.update_time asc` *
+         * `audit.create_time desc, severity_analysis.severity_level desc`
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /** Optional. Page size. */
+        /**
+         * Optional. Page size. Default to 100 alerts per page. Maximum is 1000 alerts per page.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. Page size.
+        /** Optional. Page size. Default to 100 alerts per page. Maximum is 1000 alerts per page.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Optional. Page size. */
+        /**
+         * Optional. Page size. Default to 100 alerts per page. Maximum is 1000 alerts per page.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** Optional. Page token. */
+        /** Optional. Page token to retrieve the next page of results. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. Page token.
+        /** Optional. Page token to retrieve the next page of results.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Optional. Page token. */
+        /** Optional. Page token to retrieve the next page of results. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;

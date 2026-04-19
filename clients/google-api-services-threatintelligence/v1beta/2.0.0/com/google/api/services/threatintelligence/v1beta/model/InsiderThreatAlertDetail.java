@@ -38,8 +38,8 @@ public final class InsiderThreatAlertDetail extends com.google.api.client.json.G
   private java.util.List<java.lang.String> discoveryDocumentIds;
 
   /**
-   * Required. InsiderThreat specific severity This will be the string representation of the
-   * InsiderThreatFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Insider Threat alert. Allowed values are: * `LOW` * `MEDIUM` *
+   * `HIGH` * `CRITICAL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class InsiderThreatAlertDetail extends com.google.api.client.json.G
   }
 
   /**
-   * Required. InsiderThreat specific severity This will be the string representation of the
-   * InsiderThreatFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Insider Threat alert. Allowed values are: * `LOW` * `MEDIUM` *
+   * `HIGH` * `CRITICAL`
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -72,8 +72,8 @@ public final class InsiderThreatAlertDetail extends com.google.api.client.json.G
   }
 
   /**
-   * Required. InsiderThreat specific severity This will be the string representation of the
-   * InsiderThreatFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Insider Threat alert. Allowed values are: * `LOW` * `MEDIUM` *
+   * `HIGH` * `CRITICAL`
    * @param severity severity or {@code null} for none
    */
   public InsiderThreatAlertDetail setSeverity(java.lang.String severity) {

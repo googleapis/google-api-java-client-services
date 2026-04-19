@@ -38,8 +38,8 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   private CapacityConfig capacityConfig;
 
   /**
-   * Optional. Configurations for the worker that are overridden from the defaults. The key of the
-   * map is a Kafka Connect worker property name, for example: `exactly.once.source.support`.
+   * Optional. Reserved for future use. This field is meant for worker config overrides, but is
+   * unsupported for now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +129,8 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Configurations for the worker that are overridden from the defaults. The key of the
-   * map is a Kafka Connect worker property name, for example: `exactly.once.source.support`.
+   * Optional. Reserved for future use. This field is meant for worker config overrides, but is
+   * unsupported for now.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getConfig() {
@@ -138,8 +138,8 @@ public final class ConnectCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Configurations for the worker that are overridden from the defaults. The key of the
-   * map is a Kafka Connect worker property name, for example: `exactly.once.source.support`.
+   * Optional. Reserved for future use. This field is meant for worker config overrides, but is
+   * unsupported for now.
    * @param config config or {@code null} for none
    */
   public ConnectCluster setConfig(java.util.Map<String, java.lang.String> config) {

@@ -586,8 +586,8 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Returns all rows that match the search query. List of thrown errors: [AuthenticationError]()
-       * [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]()
-       * [RequestError]()
+       * [AuthorizationError]() [ChangeEventError]() [ChangeStatusError]() [ClickViewError]()
+       * [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
        *
        * Create a request for the method "searchAds360.search".
        *
@@ -613,8 +613,8 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Returns all rows that match the search query. List of thrown errors: [AuthenticationError]()
-         * [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]()
-         * [RequestError]()
+         * [AuthorizationError]() [ChangeEventError]() [ChangeStatusError]() [ClickViewError]()
+         * [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
          *
          * Create a request for the method "searchAds360.search".
          *

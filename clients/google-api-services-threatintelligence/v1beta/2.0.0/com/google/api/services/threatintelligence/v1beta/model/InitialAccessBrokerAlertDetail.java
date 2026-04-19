@@ -38,7 +38,8 @@ public final class InitialAccessBrokerAlertDetail extends com.google.api.client.
   private java.util.List<java.lang.String> discoveryDocumentIds;
 
   /**
-   * Required. IAB specific severity
+   * Required. The severity of the Initial Access Broker (IAB) alert. Allowed values are: * `LOW` *
+   * `MEDIUM` * `HIGH` * `CRITICAL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class InitialAccessBrokerAlertDetail extends com.google.api.client.
   }
 
   /**
-   * Required. IAB specific severity
+   * Required. The severity of the Initial Access Broker (IAB) alert. Allowed values are: * `LOW` *
+   * `MEDIUM` * `HIGH` * `CRITICAL`
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -70,7 +72,8 @@ public final class InitialAccessBrokerAlertDetail extends com.google.api.client.
   }
 
   /**
-   * Required. IAB specific severity
+   * Required. The severity of the Initial Access Broker (IAB) alert. Allowed values are: * `LOW` *
+   * `MEDIUM` * `HIGH` * `CRITICAL`
    * @param severity severity or {@code null} for none
    */
   public InitialAccessBrokerAlertDetail setSeverity(java.lang.String severity) {

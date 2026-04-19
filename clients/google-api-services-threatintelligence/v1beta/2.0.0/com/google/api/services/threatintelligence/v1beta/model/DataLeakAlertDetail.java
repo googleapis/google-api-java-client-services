@@ -38,8 +38,8 @@ public final class DataLeakAlertDetail extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> discoveryDocumentIds;
 
   /**
-   * Required. Data Leak specific severity This will be the string representation of the
-   * DataLeakFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Data Leak alert. Allowed values are: * `LOW` * `MEDIUM` * `HIGH`
+   * * `CRITICAL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class DataLeakAlertDetail extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Data Leak specific severity This will be the string representation of the
-   * DataLeakFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Data Leak alert. Allowed values are: * `LOW` * `MEDIUM` * `HIGH`
+   * * `CRITICAL`
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -72,8 +72,8 @@ public final class DataLeakAlertDetail extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Data Leak specific severity This will be the string representation of the
-   * DataLeakFindingDetail.Severityenum. (e.g., "LOW", "MEDIUM", "HIGH", "CRITICAL")
+   * Required. The severity of the Data Leak alert. Allowed values are: * `LOW` * `MEDIUM` * `HIGH`
+   * * `CRITICAL`
    * @param severity severity or {@code null} for none
    */
   public DataLeakAlertDetail setSeverity(java.lang.String severity) {

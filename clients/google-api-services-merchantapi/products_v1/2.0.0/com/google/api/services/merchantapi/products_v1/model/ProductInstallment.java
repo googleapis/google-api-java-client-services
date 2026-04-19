@@ -37,6 +37,13 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
   private Price amount;
 
   /**
+   * Optional. Annual percentage rate for `credit_type` finance
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double annualPercentageRate;
+
+  /**
    * Type of installment payments.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
    */
   public ProductInstallment setAmount(Price amount) {
     this.amount = amount;
+    return this;
+  }
+
+  /**
+   * Optional. Annual percentage rate for `credit_type` finance
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAnnualPercentageRate() {
+    return annualPercentageRate;
+  }
+
+  /**
+   * Optional. Annual percentage rate for `credit_type` finance
+   * @param annualPercentageRate annualPercentageRate or {@code null} for none
+   */
+  public ProductInstallment setAnnualPercentageRate(java.lang.Double annualPercentageRate) {
+    this.annualPercentageRate = annualPercentageRate;
     return this;
   }
 

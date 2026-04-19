@@ -310,8 +310,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String googleProductCategory;
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -319,8 +319,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of Global Trade Item Numbers
-   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
-   * up to 10 GTINs.
+   * ([GTIN](https://support.google.com/merchants/answer/6324461)) of the item. You can provide up
+   * to 10 GTINs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -476,7 +476,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String mobileLinkTemplate;
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * The value may be {@code null}.
    */
@@ -1437,8 +1437,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGtin() {
@@ -1446,8 +1446,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
+   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/6324461)) of the
+   * item. You can provide up to 10 GTINs. Deprecated: Use `gtins` instead.
    * @param gtin gtin or {@code null} for none
    */
   public Attributes setGtin(java.util.List<java.lang.String> gtin) {
@@ -1457,8 +1457,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of Global Trade Item Numbers
-   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
-   * up to 10 GTINs.
+   * ([GTIN](https://support.google.com/merchants/answer/6324461)) of the item. You can provide up
+   * to 10 GTINs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGtins() {
@@ -1467,8 +1467,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of Global Trade Item Numbers
-   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
-   * up to 10 GTINs.
+   * ([GTIN](https://support.google.com/merchants/answer/6324461)) of the item. You can provide up
+   * to 10 GTINs.
    * @param gtins gtins or {@code null} for none
    */
   public Attributes setGtins(java.util.List<java.lang.String> gtins) {
@@ -1832,7 +1832,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * @return value or {@code null} for none
    */
@@ -1841,7 +1841,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/188494#mpn)) of the
+   * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
    * item.
    * @param mpn mpn or {@code null} for none
    */

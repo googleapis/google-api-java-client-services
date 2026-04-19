@@ -17,7 +17,7 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * The `Account` message represents a business's account within Shopping Ads. It's the primary
+ * The `Account` message represents a business's account within Merchant Center. It's the primary
  * entity for managing product data, settings, and interactions with Google's services and external
  * providers. Accounts can operate as standalone entities or be part of a advanced account
  * structure. In an advanced account setup the parent account manages multiple sub-accounts.

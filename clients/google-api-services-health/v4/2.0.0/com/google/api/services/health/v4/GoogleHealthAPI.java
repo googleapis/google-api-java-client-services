@@ -134,6 +134,812 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+   *   {@code GoogleHealthAPI.Projects.List request = health.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Subscribers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+     *   {@code GoogleHealthAPI.Subscribers.List request = health.subscribers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Subscribers subscribers() {
+      return new Subscribers();
+    }
+
+    /**
+     * The "subscribers" collection of methods.
+     */
+    public class Subscribers {
+
+      /**
+       * Registers a new subscriber endpoint to receive notifications. A subscriber represents an
+       * application or service that wishes to receive data change notifications for users who have
+       * granted consent. **Endpoint Verification:** For a subscriber to be successfully created, the
+       * provided `endpoint_uri` must be a valid HTTPS endpoint and must pass an automated verification
+       * check. The backend will send two HTTP POST requests to the `endpoint_uri`: 1. **Verification with
+       * Authorization:** * **Headers:** Includes `Content-Type: application/json` and `Authorization`
+       * (with the exact value from `CreateSubscriberPayload.endpoint_authorization.secret`). * **Body:**
+       * `{"type": "verification"}` * **Expected Response:** HTTP `201 Created`. 2. **Verification without
+       * Authorization:** * **Headers:** Includes `Content-Type: application/json`. The `Authorization`
+       * header is OMITTED. * **Body:** `{"type": "verification"}` * **Expected Response:** HTTP `401
+       * Unauthorized` or `403 Forbidden`. Both tests must pass for the subscriber creation to succeed. If
+       * verification fails, the operation will not be completed and an error will be returned. This
+       * process ensures the endpoint is reachable and correctly validates the `Authorization` header.
+       *
+       * Create a request for the method "subscribers.create".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this subscriber will be created. Format: projects/{project}
+       *        Example: projects/my-project-123
+       * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriberPayload}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.health.v4.model.CreateSubscriberPayload content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Operation> {
+
+        private static final String REST_PATH = "v4/{+parent}/subscribers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Registers a new subscriber endpoint to receive notifications. A subscriber represents an
+         * application or service that wishes to receive data change notifications for users who have
+         * granted consent. **Endpoint Verification:** For a subscriber to be successfully created, the
+         * provided `endpoint_uri` must be a valid HTTPS endpoint and must pass an automated verification
+         * check. The backend will send two HTTP POST requests to the `endpoint_uri`: 1. **Verification
+         * with Authorization:** * **Headers:** Includes `Content-Type: application/json` and
+         * `Authorization` (with the exact value from
+         * `CreateSubscriberPayload.endpoint_authorization.secret`). * **Body:** `{"type":
+         * "verification"}` * **Expected Response:** HTTP `201 Created`. 2. **Verification without
+         * Authorization:** * **Headers:** Includes `Content-Type: application/json`. The `Authorization`
+         * header is OMITTED. * **Body:** `{"type": "verification"}` * **Expected Response:** HTTP `401
+         * Unauthorized` or `403 Forbidden`. Both tests must pass for the subscriber creation to succeed.
+         * If verification fails, the operation will not be completed and an error will be returned. This
+         * process ensures the endpoint is reachable and correctly validates the `Authorization` header.
+         *
+         * Create a request for the method "subscribers.create".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this subscriber will be created. Format: projects/{project}
+       *        Example: projects/my-project-123
+         * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriberPayload}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.health.v4.model.CreateSubscriberPayload content) {
+          super(GoogleHealthAPI.this, "POST", REST_PATH, content, com.google.api.services.health.v4.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this subscriber will be created. Format:
+         * projects/{project} Example: projects/my-project-123
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this subscriber will be created. Format: projects/{project}
+       Example: projects/my-project-123
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this subscriber will be created. Format:
+         * projects/{project} Example: projects/my-project-123
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The ID to use for the subscriber, which will become the final component of the
+         * subscriber's resource name. This value should be 4-36 characters, and valid characters
+         * are /[a-z]([a-z0-9-]{2,34}[a-z0-9])/.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String subscriberId;
+
+        /** Optional. The ID to use for the subscriber, which will become the final component of the
+       subscriber's resource name. This value should be 4-36 characters, and valid characters are
+       /[a-z]([a-z0-9-]{2,34}[a-z0-9])/.
+         */
+        public java.lang.String getSubscriberId() {
+          return subscriberId;
+        }
+
+        /**
+         * Optional. The ID to use for the subscriber, which will become the final component of the
+         * subscriber's resource name. This value should be 4-36 characters, and valid characters
+         * are /[a-z]([a-z0-9-]{2,34}[a-z0-9])/.
+         */
+        public Create setSubscriberId(java.lang.String subscriberId) {
+          this.subscriberId = subscriberId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a subscriber registration. This will stop all notifications to the subscriber's endpoint.
+       *
+       * Create a request for the method "subscribers.delete".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the subscriber to delete. Format: projects/{project}/subscribers/{subscriber}
+       *        Example: projects/my-project/subscribers/my-subscriber-123 The {subscriber} ID is user-
+       *        settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+       *        if not provided during creation.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Operation> {
+
+        private static final String REST_PATH = "v4/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+$");
+
+        /**
+         * Deletes a subscriber registration. This will stop all notifications to the subscriber's
+         * endpoint.
+         *
+         * Create a request for the method "subscribers.delete".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the subscriber to delete. Format: projects/{project}/subscribers/{subscriber}
+       *        Example: projects/my-project/subscribers/my-subscriber-123 The {subscriber} ID is user-
+       *        settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+       *        if not provided during creation.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleHealthAPI.this, "DELETE", REST_PATH, null, com.google.api.services.health.v4.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/subscribers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the subscriber to delete. Format:
+         * projects/{project}/subscribers/{subscriber} Example: projects/my-project/subscribers/my-
+         * subscriber-123 The {subscriber} ID is user-settable (4-36 characters, matching
+         * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the subscriber to delete. Format: projects/{project}/subscribers/{subscriber}
+       Example: projects/my-project/subscribers/my-subscriber-123 The {subscriber} ID is user-settable
+       (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+       during creation.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the subscriber to delete. Format:
+         * projects/{project}/subscribers/{subscriber} Example: projects/my-project/subscribers/my-
+         * subscriber-123 The {subscriber} ID is user-settable (4-36 characters, matching
+         * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/subscribers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If set to true, any child resources (e.g., subscriptions) will also be deleted.
+         * If false (default) and child resources exist, the request will fail.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean force;
+
+        /** Optional. If set to true, any child resources (e.g., subscriptions) will also be deleted. If false
+       (default) and child resources exist, the request will fail.
+         */
+        public java.lang.Boolean getForce() {
+          return force;
+        }
+
+        /**
+         * Optional. If set to true, any child resources (e.g., subscriptions) will also be deleted.
+         * If false (default) and child resources exist, the request will fail.
+         */
+        public Delete setForce(java.lang.Boolean force) {
+          this.force = force;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all subscribers registered within the owned Google Cloud Project.
+       *
+       * Create a request for the method "subscribers.list".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns this collection of subscribers. Format: projects/{project}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.ListSubscribersResponse> {
+
+        private static final String REST_PATH = "v4/{+parent}/subscribers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists all subscribers registered within the owned Google Cloud Project.
+         *
+         * Create a request for the method "subscribers.list".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns this collection of subscribers. Format: projects/{project}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.ListSubscribersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which owns this collection of subscribers. Format:
+         * projects/{project}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns this collection of subscribers. Format: projects/{project}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which owns this collection of subscribers. Format:
+         * projects/{project}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of subscribers to return. The service may return fewer than
+         * this value. If unspecified, at most 50 subscribers will be returned. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of subscribers to return. The service may return fewer than this
+       value. If unspecified, at most 50 subscribers will be returned. The maximum value is 1000; values
+       above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of subscribers to return. The service may return fewer than
+         * this value. If unspecified, at most 50 subscribers will be returned. The maximum value is
+         * 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSubscribers` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListSubscribers` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListSubscribers` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListSubscribers` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSubscribers` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListSubscribers` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the configuration of an existing subscriber, such as the endpoint URI or the data types
+       * it's interested in. **Endpoint Verification:** If the `endpoint_uri` or `endpoint_authorization`
+       * field is included in the `update_mask`, the backend will re-verify the endpoint. The verification
+       * process is the same as described in `CreateSubscriber`: 1. **Verification with Authorization:**
+       * POST to the new or existing `endpoint_uri` with the new or existing `Authorization` secret.
+       * Expects HTTP `201 Created`. 2. **Verification without Authorization:** POST to the `endpoint_uri`
+       * without the `Authorization` header. Expects HTTP `401 Unauthorized` or `403 Forbidden`. Both
+       * tests must pass using the potentially updated values for the subscriber update to succeed. If
+       * verification fails, the update will not be applied, and an error will be returned.
+       *
+       * Create a request for the method "subscribers.patch".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the Subscriber. Format: projects/{project}/subscribers/{subscriber}
+       *        The {project} ID is a Google Cloud Project ID or Project Number. The {subscriber} ID is
+       *        user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided
+       *        during creation, or system-generated otherwise (e.g., a UUID). Example (User-settable
+       *        subscriber ID): projects/my-project/subscribers/my-sub-123 Example (System-generated
+       *        subscriber ID): projects/my-project/subscribers/a1b2c3d4-e5f6-7890-1234-567890abcdef
+       * @param content the {@link com.google.api.services.health.v4.model.Subscriber}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.health.v4.model.Subscriber content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Operation> {
+
+        private static final String REST_PATH = "v4/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+$");
+
+        /**
+         * Updates the configuration of an existing subscriber, such as the endpoint URI or the data types
+         * it's interested in. **Endpoint Verification:** If the `endpoint_uri` or
+         * `endpoint_authorization` field is included in the `update_mask`, the backend will re-verify the
+         * endpoint. The verification process is the same as described in `CreateSubscriber`: 1.
+         * **Verification with Authorization:** POST to the new or existing `endpoint_uri` with the new or
+         * existing `Authorization` secret. Expects HTTP `201 Created`. 2. **Verification without
+         * Authorization:** POST to the `endpoint_uri` without the `Authorization` header. Expects HTTP
+         * `401 Unauthorized` or `403 Forbidden`. Both tests must pass using the potentially updated
+         * values for the subscriber update to succeed. If verification fails, the update will not be
+         * applied, and an error will be returned.
+         *
+         * Create a request for the method "subscribers.patch".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the Subscriber. Format: projects/{project}/subscribers/{subscriber}
+       *        The {project} ID is a Google Cloud Project ID or Project Number. The {subscriber} ID is
+       *        user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided
+       *        during creation, or system-generated otherwise (e.g., a UUID). Example (User-settable
+       *        subscriber ID): projects/my-project/subscribers/my-sub-123 Example (System-generated
+       *        subscriber ID): projects/my-project/subscribers/a1b2c3d4-e5f6-7890-1234-567890abcdef
+         * @param content the {@link com.google.api.services.health.v4.model.Subscriber}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.health.v4.model.Subscriber content) {
+          super(GoogleHealthAPI.this, "PATCH", REST_PATH, content, com.google.api.services.health.v4.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/subscribers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the Subscriber. Format:
+         * projects/{project}/subscribers/{subscriber} The {project} ID is a Google Cloud Project ID
+         * or Project Number. The {subscriber} ID is user-settable (4-36 characters, matching
+         * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         * otherwise (e.g., a UUID). Example (User-settable subscriber ID): projects/my-
+         * project/subscribers/my-sub-123 Example (System-generated subscriber ID): projects/my-
+         * project/subscribers/a1b2c3d4-e5f6-7890-1234-567890abcdef
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the Subscriber. Format:
+       projects/{project}/subscribers/{subscriber} The {project} ID is a Google Cloud Project ID or
+       Project Number. The {subscriber} ID is user-settable (4-36 characters, matching
+       /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated otherwise (e.g.,
+       a UUID). Example (User-settable subscriber ID): projects/my-project/subscribers/my-sub-123 Example
+       (System-generated subscriber ID): projects/my-
+       project/subscribers/a1b2c3d4-e5f6-7890-1234-567890abcdef
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the Subscriber. Format:
+         * projects/{project}/subscribers/{subscriber} The {project} ID is a Google Cloud Project ID
+         * or Project Number. The {subscriber} ID is user-settable (4-36 characters, matching
+         * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         * otherwise (e.g., a UUID). Example (User-settable subscriber ID): projects/my-
+         * project/subscribers/my-sub-123 Example (System-generated subscriber ID): projects/my-
+         * project/subscribers/a1b2c3d4-e5f6-7890-1234-567890abcdef
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/subscribers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A field mask that specifies which fields of the Subscriber message are to be
+         * updated. This allows for partial updates. Supported fields: - endpoint_uri -
+         * subscriber_configs - endpoint_authorization
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. A field mask that specifies which fields of the Subscriber message are to be updated.
+       This allows for partial updates. Supported fields: - endpoint_uri - subscriber_configs -
+       endpoint_authorization
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. A field mask that specifies which fields of the Subscriber message are to be
+         * updated. This allows for partial updates. Supported fields: - endpoint_uri -
+         * subscriber_configs - endpoint_authorization
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Users collection.
    *
    * <p>The typical use is:</p>
@@ -1613,6 +2419,158 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           @Override
           public ExportExerciseTcx set(String parameterName, Object value) {
             return (ExportExerciseTcx) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a single identifyable data point.
+         *
+         * Create a request for the method "dataPoints.get".
+         *
+         * This request holds the parameters needed by the health server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the data point to retrieve. Format:
+         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
+         *        examples and possible values.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.DataPoint> {
+
+          private static final String REST_PATH = "v4/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^users/[^/]+/dataTypes/[^/]+/dataPoints/[^/]+$");
+
+          /**
+           * Get a single identifyable data point.
+           *
+           * Create a request for the method "dataPoints.get".
+           *
+           * This request holds the parameters needed by the the health server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the data point to retrieve. Format:
+         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
+         *        examples and possible values.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.DataPoint.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/dataTypes/[^/]+/dataPoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the data point to retrieve. Format:
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
+           * examples and possible values.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the data point to retrieve. Format:
+         `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for examples and
+         possible values.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the data point to retrieve. Format:
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
+           * examples and possible values.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/dataTypes/[^/]+/dataPoints/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
           }
         }
         /**

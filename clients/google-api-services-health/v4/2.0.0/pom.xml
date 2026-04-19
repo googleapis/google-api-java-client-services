@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-health</artifactId>
-  <version>v4-rev20260405-2.0.0</version>
-  <name>Google Health API v4-rev20260405-2.0.0</name>
+  <version>v4-rev20260416-2.0.0</version>
+  <name>Google Health API v4-rev20260416-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

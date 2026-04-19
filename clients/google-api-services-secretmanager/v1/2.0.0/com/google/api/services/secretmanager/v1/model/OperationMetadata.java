@@ -37,18 +37,26 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String apiVersion;
 
   /**
-   * Output only. The time the operation was created.
+   * Output only. Time the operation was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The time the operation finished running.
+   * Output only. Time the operation finished running.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * Output only. Represents the progress of the operation. This field is populated for operations
+   * that involve processing multiple secret versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Progress progress;
 
   /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
@@ -98,7 +106,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation was created.
+   * Output only. Time the operation was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -106,7 +114,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation was created.
+   * Output only. Time the operation was created.
    * @param createTime createTime or {@code null} for none
    */
   public OperationMetadata setCreateTime(String createTime) {
@@ -115,7 +123,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation finished running.
+   * Output only. Time the operation finished running.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -123,11 +131,30 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The time the operation finished running.
+   * Output only. Time the operation finished running.
    * @param endTime endTime or {@code null} for none
    */
   public OperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the progress of the operation. This field is populated for operations
+   * that involve processing multiple secret versions.
+   * @return value or {@code null} for none
+   */
+  public Progress getProgress() {
+    return progress;
+  }
+
+  /**
+   * Output only. Represents the progress of the operation. This field is populated for operations
+   * that involve processing multiple secret versions.
+   * @param progress progress or {@code null} for none
+   */
+  public OperationMetadata setProgress(Progress progress) {
+    this.progress = progress;
     return this;
   }
 

@@ -89,6 +89,9 @@ class JavaApiTest(absltest.TestCase):
         ['java.lang.String', {'type': 'string'}],
         ['java.lang.Long', {'type': 'integer', 'format': 'uint32'}],
         ['java.math.BigInteger', {'type': 'string', 'format': 'uint64'}],
+        ['java.lang.Object', {'type': 'any', 'format': 'unknown'}],
+        ['String', {'type': 'string', 'format': 'unknown'}],
+
     ]
     for test_case in test_cases:
       self.assertEqual(
@@ -111,6 +114,9 @@ class JavaApiTest(absltest.TestCase):
         [None, {'type': 'string', 'format': 'date-time'}],
         [None, {'type': 'string', 'format': 'uint64'}],
         [None, {'type': 'anything_else', 'format': 'uint64'}],
+        [None, {'type': 'any', 'format': 'unknown'}],
+        [None, {'type': 'string', 'format': 'unknown'}],
+
     ]
 
     for test_case in test_cases:

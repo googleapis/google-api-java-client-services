@@ -263,8 +263,9 @@ class JavaLanguageModel(language_model.LanguageModel):
 
     # Fallback to the unformatted base type if exact format mapping is not found.
     result = self.type_map.get((json_type, None))
-    if result:
+    if result and json_type != 'string':
       return result
+
 
     return (utilities.CamelCase(json_type), None, None)
 

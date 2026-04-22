@@ -75,7 +75,7 @@ class JavaApiTest(absltest.TestCase):
     """Test mapping of JSON schema types to Java class names."""
     language_model = java_generator.JavaLanguageModel()
     test_cases = [
-        ['String', {'type': 'string', 'format': 'byte'}],
+        ['java.lang.String', {'type': 'string', 'format': 'byte'}],
         ['com.google.api.client.util.DateTime',
          {'type': 'string', 'format': 'date-time'}],
         ['java.lang.Double', {'type': 'number', 'format': 'double'}],
@@ -86,7 +86,7 @@ class JavaApiTest(absltest.TestCase):
         ['java.lang.Object', {'type': 'any'}],
         ['java.lang.Object', {'type': 'any', 'format': 'google.protobuf.Value'}],
         ['java.lang.Boolean', {'type': 'boolean'}],
-        ['String', {'type': 'string'}],
+        ['java.lang.String', {'type': 'string'}],
         ['java.lang.Long', {'type': 'integer', 'format': 'uint32'}],
         ['java.math.BigInteger', {'type': 'string', 'format': 'uint64'}],
     ]

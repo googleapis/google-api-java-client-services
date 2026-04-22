@@ -152,7 +152,7 @@ class JavaLanguageModel(language_model.LanguageModel):
   _TYPE_DATETIME = ('com.google.api.client.util.DateTime',
                     ImportDefinition(['com.google.api.client.util.DateTime']),
                     None)
-  _TYPE_STRING = ('String', ImportDefinition(), None)
+  _TYPE_STRING = _SimpleType('java.lang.String')
 
   _TYPE_FORMAT_TO_DATATYPE_AND_IMPORTS = {
       ('any', None): _SimpleType('java.lang.Object'),

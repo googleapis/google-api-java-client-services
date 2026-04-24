@@ -33,6 +33,7 @@ jobs:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
+          token: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: 3.8.18

@@ -45,6 +45,13 @@ public final class VideoAdInventoryControl extends com.google.api.client.json.Ge
   private java.lang.Boolean allowInStream;
 
   /**
+   * Optional. Indicates whether ads can serve as non-skippable in-stream format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowNonSkippableInStream;
+
+  /**
    * Optional. Whether ads can serve as shorts format.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class VideoAdInventoryControl extends com.google.api.client.json.Ge
    */
   public VideoAdInventoryControl setAllowInStream(java.lang.Boolean allowInStream) {
     this.allowInStream = allowInStream;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether ads can serve as non-skippable in-stream format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowNonSkippableInStream() {
+    return allowNonSkippableInStream;
+  }
+
+  /**
+   * Optional. Indicates whether ads can serve as non-skippable in-stream format.
+   * @param allowNonSkippableInStream allowNonSkippableInStream or {@code null} for none
+   */
+  public VideoAdInventoryControl setAllowNonSkippableInStream(java.lang.Boolean allowNonSkippableInStream) {
+    this.allowNonSkippableInStream = allowNonSkippableInStream;
     return this;
   }
 

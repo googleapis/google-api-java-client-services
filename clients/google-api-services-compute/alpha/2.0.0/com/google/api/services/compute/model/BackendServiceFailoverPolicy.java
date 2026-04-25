@@ -38,7 +38,7 @@ package com.google.api.services.compute.model;
 public final class BackendServiceFailoverPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * This can be set to true only if the protocol isTCP.
+   * This can be set to true if the protocol isTCP, UDP, or UNSPECIFIED.
    *
    * The default is false.
    * The value may be {@code null}.
@@ -73,7 +73,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   private java.lang.Float failoverRatio;
 
   /**
-   * This can be set to true only if the protocol isTCP.
+   * This can be set to true if the protocol isTCP, UDP, or UNSPECIFIED.
    *
    * The default is false.
    * @return value or {@code null} for none
@@ -83,7 +83,7 @@ public final class BackendServiceFailoverPolicy extends com.google.api.client.js
   }
 
   /**
-   * This can be set to true only if the protocol isTCP.
+   * This can be set to true if the protocol isTCP, UDP, or UNSPECIFIED.
    *
    * The default is false.
    * @param disableConnectionDrainOnFailover disableConnectionDrainOnFailover or {@code null} for none

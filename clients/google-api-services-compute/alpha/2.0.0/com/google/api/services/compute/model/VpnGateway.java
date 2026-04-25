@@ -35,7 +35,7 @@ package com.google.api.services.compute.model;
 public final class VpnGateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,15 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.lang.String gatewayIpVersion;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,14 +120,14 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private VpnGatewayParams params;
 
   /**
-   * [Output Only] URL of the region where the VPN gateway resides.
+   * Output only. [Output Only] URL of the region where the VPN gateway resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +150,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   private java.util.List<VpnGatewayVpnGatewayInterface> vpnInterfaces;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -157,7 +158,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public VpnGateway setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -202,7 +203,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -210,7 +212,8 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public VpnGateway setId(java.math.BigInteger id) {
@@ -219,7 +222,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -227,7 +230,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
+   * Output only. [Output Only] Type of resource. Always compute#vpnGateway for VPN gateways.
    * @param kind kind or {@code null} for none
    */
   public VpnGateway setKind(java.lang.String kind) {
@@ -387,7 +390,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the VPN gateway resides.
+   * Output only. [Output Only] URL of the region where the VPN gateway resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -395,7 +398,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the VPN gateway resides.
+   * Output only. [Output Only] URL of the region where the VPN gateway resides.
    * @param region region or {@code null} for none
    */
   public VpnGateway setRegion(java.lang.String region) {
@@ -404,7 +407,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -412,7 +415,7 @@ public final class VpnGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public VpnGateway setSelfLink(java.lang.String selfLink) {

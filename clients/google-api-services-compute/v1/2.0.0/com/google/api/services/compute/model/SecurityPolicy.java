@@ -52,7 +52,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.util.List<SecurityPolicyAssociation> associations;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,14 +85,16 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyfor security policies
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyfor security
+   * policies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +132,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * [Output Only] The parent of the security policy.
+   * Output only. [Output Only] The parent of the security policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +145,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private SecurityPolicyRecaptchaOptionsConfig recaptchaOptionsConfig;
 
   /**
-   * [Output Only] URL of the region where the regional security policy resides. This field is not
-   * applicable to global security policies.
+   * Output only. [Output Only] URL of the region where the regional security policy resides. This
+   * field is not applicable to global security policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +164,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.util.List<SecurityPolicyRule> rules;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +269,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -275,7 +277,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public SecurityPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -385,7 +387,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -393,7 +396,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public SecurityPolicy setId(java.math.BigInteger id) {
@@ -402,7 +406,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyfor security policies
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyfor security
+   * policies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -410,7 +415,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyfor security policies
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyfor security
+   * policies
    * @param kind kind or {@code null} for none
    */
   public SecurityPolicy setKind(java.lang.String kind) {
@@ -528,7 +534,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The parent of the security policy.
+   * Output only. [Output Only] The parent of the security policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -536,7 +542,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The parent of the security policy.
+   * Output only. [Output Only] The parent of the security policy.
    * @param parent parent or {@code null} for none
    */
   public SecurityPolicy setParent(java.lang.String parent) {
@@ -560,8 +566,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional security policy resides. This field is not
-   * applicable to global security policies.
+   * Output only. [Output Only] URL of the region where the regional security policy resides. This
+   * field is not applicable to global security policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -569,8 +575,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional security policy resides. This field is not
-   * applicable to global security policies.
+   * Output only. [Output Only] URL of the region where the regional security policy resides. This
+   * field is not applicable to global security policies.
    * @param region region or {@code null} for none
    */
   public SecurityPolicy setRegion(java.lang.String region) {
@@ -604,7 +610,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -612,7 +618,7 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public SecurityPolicy setSelfLink(java.lang.String selfLink) {

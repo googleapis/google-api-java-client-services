@@ -42,7 +42,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private NodeGroupAutoscalingPolicy autoscalingPolicy;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +62,15 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,14 +127,14 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String nodeTemplate;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +148,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private ShareSettings shareSettings;
 
   /**
-   * [Output Only] The total number of nodes in the node group.
+   * Output only. [Output Only] The total number of nodes in the node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,8 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * [Output Only] The name of the zone where the node group resides, such as us-central1-a.
+   * Output only. [Output Only] The name of the zone where the node group resides, such as us-
+   * central1-a.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +186,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -192,7 +194,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NodeGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -261,7 +263,8 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -269,7 +272,8 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public NodeGroup setId(java.math.BigInteger id) {
@@ -278,7 +282,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -286,7 +290,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
    * @param kind kind or {@code null} for none
    */
   public NodeGroup setKind(java.lang.String kind) {
@@ -413,7 +417,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -421,7 +425,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeGroup setSelfLink(java.lang.String selfLink) {
@@ -430,7 +434,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -438,7 +442,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NodeGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -464,7 +468,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The total number of nodes in the node group.
+   * Output only. [Output Only] The total number of nodes in the node group.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSize() {
@@ -472,7 +476,7 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The total number of nodes in the node group.
+   * Output only. [Output Only] The total number of nodes in the node group.
    * @param size size or {@code null} for none
    */
   public NodeGroup setSize(java.lang.Integer size) {
@@ -496,7 +500,8 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The name of the zone where the node group resides, such as us-central1-a.
+   * Output only. [Output Only] The name of the zone where the node group resides, such as us-
+   * central1-a.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -504,7 +509,8 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The name of the zone where the node group resides, such as us-central1-a.
+   * Output only. [Output Only] The name of the zone where the node group resides, such as us-
+   * central1-a.
    * @param zone zone or {@code null} for none
    */
   public NodeGroup setZone(java.lang.String zone) {

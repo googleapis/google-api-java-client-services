@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusAllInstancesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * Output only. Current all-instances configuration revision. This value is in RFC3339 text
    * format.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   private java.lang.String currentRevision;
 
   /**
-   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * Output only. A bit indicating whether this configuration has been applied to all managed
    * instances in the group.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   private java.lang.Boolean effective;
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * Output only. Current all-instances configuration revision. This value is in RFC3339 text
    * format.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * Output only. Current all-instances configuration revision. This value is in RFC3339 text
    * format.
    * @param currentRevision currentRevision or {@code null} for none
    */
@@ -65,7 +65,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * Output only. A bit indicating whether this configuration has been applied to all managed
    * instances in the group.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * Output only. A bit indicating whether this configuration has been applied to all managed
    * instances in the group.
    * @param effective effective or {@code null} for none
    */

@@ -38,7 +38,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private BulkInsertInstanceResource bulkInsertInstanceResource;
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,16 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#queuedResource for QueuedResources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#queuedResource for
+   * QueuedResources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,37 +86,37 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private QueuingPolicy queuingPolicy;
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output only] High-level status of the request.
+   * Output only. [Output only] High-level status of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output only] Result of queuing and provisioning based on deferred capacity.
+   * Output only. [Output only] Result of queuing and provisioning based on deferred capacity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueuedResourceStatus status;
 
   /**
-   * [Output Only] URL of the zone where the resource resides. Only applicable for zonal resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the zone where the resource resides. Only applicable for
+   * zonal resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +140,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -146,7 +148,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp in RFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public QueuedResource setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -172,7 +174,8 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -180,7 +183,8 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public QueuedResource setId(java.math.BigInteger id) {
@@ -189,7 +193,8 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#queuedResource for QueuedResources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#queuedResource for
+   * QueuedResources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -197,7 +202,8 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#queuedResource for QueuedResources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#queuedResource for
+   * QueuedResources.
    * @param kind kind or {@code null} for none
    */
   public QueuedResource setKind(java.lang.String kind) {
@@ -248,7 +254,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. [Output only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -256,7 +262,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Server-defined URL for the resource.
+   * Output only. [Output only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public QueuedResource setSelfLink(java.lang.String selfLink) {
@@ -265,7 +271,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -273,7 +279,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public QueuedResource setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -282,7 +288,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] High-level status of the request.
+   * Output only. [Output only] High-level status of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -290,7 +296,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] High-level status of the request.
+   * Output only. [Output only] High-level status of the request.
    * @param state state or {@code null} for none
    */
   public QueuedResource setState(java.lang.String state) {
@@ -299,7 +305,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Result of queuing and provisioning based on deferred capacity.
+   * Output only. [Output only] Result of queuing and provisioning based on deferred capacity.
    * @return value or {@code null} for none
    */
   public QueuedResourceStatus getStatus() {
@@ -307,7 +313,7 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output only] Result of queuing and provisioning based on deferred capacity.
+   * Output only. [Output only] Result of queuing and provisioning based on deferred capacity.
    * @param status status or {@code null} for none
    */
   public QueuedResource setStatus(QueuedResourceStatus status) {
@@ -316,9 +322,9 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the zone where the resource resides. Only applicable for zonal resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the zone where the resource resides. Only applicable for
+   * zonal resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -326,9 +332,9 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the zone where the resource resides. Only applicable for zonal resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the zone where the resource resides. Only applicable for
+   * zonal resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public QueuedResource setZone(java.lang.String zone) {

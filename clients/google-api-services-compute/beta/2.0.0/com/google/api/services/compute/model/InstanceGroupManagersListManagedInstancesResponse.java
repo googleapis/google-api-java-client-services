@@ -30,24 +30,24 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersListManagedInstancesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The list of instances in the managed instance group.
+   * Output only. [Output Only] The list of instances in the managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ManagedInstance> managedInstances;
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] The list of instances in the managed instance group.
+   * Output only. [Output Only] The list of instances in the managed instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedInstance> getManagedInstances() {
@@ -55,7 +55,7 @@ public final class InstanceGroupManagersListManagedInstancesResponse extends com
   }
 
   /**
-   * [Output Only] The list of instances in the managed instance group.
+   * Output only. [Output Only] The list of instances in the managed instance group.
    * @param managedInstances managedInstances or {@code null} for none
    */
   public InstanceGroupManagersListManagedInstancesResponse setManagedInstances(java.util.List<ManagedInstance> managedInstances) {
@@ -64,10 +64,10 @@ public final class InstanceGroupManagersListManagedInstancesResponse extends com
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,10 +75,10 @@ public final class InstanceGroupManagersListManagedInstancesResponse extends com
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public InstanceGroupManagersListManagedInstancesResponse setNextPageToken(java.lang.String nextPageToken) {

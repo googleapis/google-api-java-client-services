@@ -37,7 +37,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   private java.lang.String attachmentId;
 
   /**
-   * [Output Only] The display name of the security policy of the association.
+   * Output only. [Output Only] The display name of the security policy of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +65,14 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
-   * [Output Only] The security policy ID of the association.
+   * Output only. [Output Only] The security policy ID of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securityPolicyId;
 
   /**
-   * [Output Only] The short name of the security policy of the association.
+   * Output only. [Output Only] The short name of the security policy of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The display name of the security policy of the association.
+   * Output only. [Output Only] The display name of the security policy of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -104,7 +104,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The display name of the security policy of the association.
+   * Output only. [Output Only] The display name of the security policy of the association.
    * @param displayName displayName or {@code null} for none
    */
   public SecurityPolicyAssociation setDisplayName(java.lang.String displayName) {
@@ -164,7 +164,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The security policy ID of the association.
+   * Output only. [Output Only] The security policy ID of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityPolicyId() {
@@ -172,7 +172,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The security policy ID of the association.
+   * Output only. [Output Only] The security policy ID of the association.
    * @param securityPolicyId securityPolicyId or {@code null} for none
    */
   public SecurityPolicyAssociation setSecurityPolicyId(java.lang.String securityPolicyId) {
@@ -181,7 +181,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The short name of the security policy of the association.
+   * Output only. [Output Only] The short name of the security policy of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortName() {
@@ -189,7 +189,7 @@ public final class SecurityPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The short name of the security policy of the association.
+   * Output only. [Output Only] The short name of the security policy of the association.
    * @param shortName shortName or {@code null} for none
    */
   public SecurityPolicyAssociation setShortName(java.lang.String shortName) {

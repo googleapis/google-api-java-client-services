@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class BackendBucketUsedBy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
+   * Output only. [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reference;
 
   /**
-   * [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
+   * Output only. [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getReference() {
@@ -45,7 +45,7 @@ public final class BackendBucketUsedBy extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
+   * Output only. [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
    * @param reference reference or {@code null} for none
    */
   public BackendBucketUsedBy setReference(java.lang.String reference) {

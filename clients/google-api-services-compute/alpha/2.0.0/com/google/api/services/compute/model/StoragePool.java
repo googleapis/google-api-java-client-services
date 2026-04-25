@@ -37,7 +37,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String capacityProvisioningType;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,21 +51,22 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePool for storage pools.
+   * Output only. [Output Only] Type of the resource. Always compute#storagePool for storage pools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,6 +102,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoragePoolParams params;
 
   /**
    * Provisioning type of the performance-related parameters of the pool, such as throughput and
@@ -149,21 +158,21 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long provisionedThroughput;
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StoragePoolResourceStatus resourceStatus;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,16 +186,16 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeGb;
 
   /**
-   * [Output Only] The status of storage pool creation.              - CREATING: Storage pool is
-   * provisioning.      storagePool.      - FAILED: Storage pool creation failed.      - READY:
-   * Storage pool is ready for use.      - DELETING: Storage pool is deleting.
+   * Output only. [Output Only] The status of storage pool creation.              - CREATING:
+   * Storage pool is provisioning.      storagePool.      - FAILED: Storage pool creation failed.
+   * - READY: Storage pool is ready for use.      - DELETING: Storage pool is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,8 +209,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String storagePoolType;
 
   /**
-   * [Output Only] URL of the zone where the storage pool resides. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the storage pool resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +234,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -233,7 +242,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public StoragePool setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -259,7 +268,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
    * @return value or {@code null} for none
    */
   public StoragePoolExapoolProvisionedCapacityGb getExapoolProvisionedCapacityGb() {
@@ -267,7 +276,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
    * @param exapoolProvisionedCapacityGb exapoolProvisionedCapacityGb or {@code null} for none
    */
   public StoragePool setExapoolProvisionedCapacityGb(StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb) {
@@ -276,7 +285,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -284,7 +294,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public StoragePool setId(java.math.BigInteger id) {
@@ -293,7 +304,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePool for storage pools.
+   * Output only. [Output Only] Type of the resource. Always compute#storagePool for storage pools.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -301,7 +312,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#storagePool for storage pools.
+   * Output only. [Output Only] Type of the resource. Always compute#storagePool for storage pools.
    * @param kind kind or {@code null} for none
    */
   public StoragePool setKind(java.lang.String kind) {
@@ -421,6 +432,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @return value or {@code null} for none
+   */
+  public StoragePoolParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @param params params or {@code null} for none
+   */
+  public StoragePool setParams(StoragePoolParams params) {
+    this.params = params;
+    return this;
+  }
+
+  /**
    * Provisioning type of the performance-related parameters of the pool, such as throughput and
    * IOPS.
    * @return value or {@code null} for none
@@ -531,7 +561,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * @return value or {@code null} for none
    */
   public StoragePoolResourceStatus getResourceStatus() {
@@ -539,7 +569,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public StoragePool setResourceStatus(StoragePoolResourceStatus resourceStatus) {
@@ -548,7 +578,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -556,7 +586,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public StoragePool setSelfLink(java.lang.String selfLink) {
@@ -565,7 +595,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -573,7 +603,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public StoragePool setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -599,9 +629,9 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of storage pool creation.              - CREATING: Storage pool is
-   * provisioning.      storagePool.      - FAILED: Storage pool creation failed.      - READY:
-   * Storage pool is ready for use.      - DELETING: Storage pool is deleting.
+   * Output only. [Output Only] The status of storage pool creation.              - CREATING:
+   * Storage pool is provisioning.      storagePool.      - FAILED: Storage pool creation failed.
+   * - READY: Storage pool is ready for use.      - DELETING: Storage pool is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -609,9 +639,9 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of storage pool creation.              - CREATING: Storage pool is
-   * provisioning.      storagePool.      - FAILED: Storage pool creation failed.      - READY:
-   * Storage pool is ready for use.      - DELETING: Storage pool is deleting.
+   * Output only. [Output Only] The status of storage pool creation.              - CREATING:
+   * Storage pool is provisioning.      storagePool.      - FAILED: Storage pool creation failed.
+   * - READY: Storage pool is ready for use.      - DELETING: Storage pool is deleting.
    * @param state state or {@code null} for none
    */
   public StoragePool setState(java.lang.String state) {
@@ -620,7 +650,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * @return value or {@code null} for none
    */
   public StoragePoolResourceStatus getStatus() {
@@ -628,7 +658,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the storage pool resource.
+   * Output only. [Output Only] Status information for the storage pool resource.
    * @param status status or {@code null} for none
    */
   public StoragePool setStatus(StoragePoolResourceStatus status) {
@@ -654,8 +684,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the storage pool resides. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the storage pool resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -663,8 +693,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the storage pool resides. You must specify this field as
-   * part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the storage pool resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public StoragePool setZone(java.lang.String zone) {

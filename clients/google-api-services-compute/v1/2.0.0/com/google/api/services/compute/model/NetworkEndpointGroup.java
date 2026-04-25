@@ -23,6 +23,12 @@ package com.google.api.services.compute.model;
  * reachable, and where they are located. For more information about using NEGs for different use
  * cases, seeNetwork endpoint groups overview.
  *
+ * Note: Use the following APIs to manage network endpoint groups:        -     To manage NEGs with
+ * zonal scope (such as zonal NEGs, hybrid connectivity    NEGs): zonal    API    -     To manage
+ * NEGs with regional scope (such as regional internet NEGs,    serverless NEGs, Private Service
+ * Connect NEGs): regional    API    -     To manage NEGs with global scope (such as global internet
+ * NEGs):global    API
+ *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
@@ -65,7 +71,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private NetworkEndpointGroupCloudRun cloudRun;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,15 +95,16 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
-   * group.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network
+   * endpoint group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,21 +156,21 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String pscTargetService;
 
   /**
-   * [Output Only] The URL of theregion where the network endpoint group is located.
+   * Output only. [Output Only] The URL of theregion where the network endpoint group is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output only] Number of network endpoints in the network endpoint group.
+   * Output only. [Output only] Number of network endpoints in the network endpoint group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +184,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String subnetwork;
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +265,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -266,7 +273,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkEndpointGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -315,7 +322,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -323,7 +331,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public NetworkEndpointGroup setId(java.math.BigInteger id) {
@@ -332,8 +341,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
-   * group.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network
+   * endpoint group.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -341,8 +350,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint
-   * group.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network
+   * endpoint group.
    * @param kind kind or {@code null} for none
    */
   public NetworkEndpointGroup setKind(java.lang.String kind) {
@@ -456,7 +465,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of theregion where the network endpoint group is located.
+   * Output only. [Output Only] The URL of theregion where the network endpoint group is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -464,7 +473,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of theregion where the network endpoint group is located.
+   * Output only. [Output Only] The URL of theregion where the network endpoint group is located.
    * @param region region or {@code null} for none
    */
   public NetworkEndpointGroup setRegion(java.lang.String region) {
@@ -473,7 +482,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -481,7 +490,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkEndpointGroup setSelfLink(java.lang.String selfLink) {
@@ -490,7 +499,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] Number of network endpoints in the network endpoint group.
+   * Output only. [Output only] Number of network endpoints in the network endpoint group.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSize() {
@@ -498,7 +507,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] Number of network endpoints in the network endpoint group.
+   * Output only. [Output only] Number of network endpoints in the network endpoint group.
    * @param size size or {@code null} for none
    */
   public NetworkEndpointGroup setSize(java.lang.Integer size) {
@@ -524,7 +533,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -532,7 +541,7 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
    * @param zone zone or {@code null} for none
    */
   public NetworkEndpointGroup setZone(java.lang.String zone) {

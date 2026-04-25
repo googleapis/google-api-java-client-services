@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class LicenseCodeLicenseAlias extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Description of this License Code.
+   * Output only. [Output Only] Description of this License Code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output Only] URL of license corresponding to this License Code.
+   * Output only. [Output Only] URL of license corresponding to this License Code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Description of this License Code.
+   * Output only. [Output Only] Description of this License Code.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -52,7 +52,7 @@ public final class LicenseCodeLicenseAlias extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Description of this License Code.
+   * Output only. [Output Only] Description of this License Code.
    * @param description description or {@code null} for none
    */
   public LicenseCodeLicenseAlias setDescription(java.lang.String description) {
@@ -61,7 +61,7 @@ public final class LicenseCodeLicenseAlias extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] URL of license corresponding to this License Code.
+   * Output only. [Output Only] URL of license corresponding to this License Code.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -69,7 +69,7 @@ public final class LicenseCodeLicenseAlias extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] URL of license corresponding to this License Code.
+   * Output only. [Output Only] URL of license corresponding to this License Code.
    * @param selfLink selfLink or {@code null} for none
    */
   public LicenseCodeLicenseAlias setSelfLink(java.lang.String selfLink) {

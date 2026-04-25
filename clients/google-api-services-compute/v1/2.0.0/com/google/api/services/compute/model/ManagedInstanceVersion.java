@@ -30,23 +30,23 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The intended template of the instance. This field is empty when current_action is
-   * one of { DELETING, ABANDONING }.
+   * Output only. [Output Only] The intended template of the instance. This field is empty when
+   * current_action is one of { DELETING, ABANDONING }.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceTemplate;
 
   /**
-   * [Output Only] Name of the version.
+   * Output only. [Output Only] Name of the version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] The intended template of the instance. This field is empty when current_action is
-   * one of { DELETING, ABANDONING }.
+   * Output only. [Output Only] The intended template of the instance. This field is empty when
+   * current_action is one of { DELETING, ABANDONING }.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -54,8 +54,8 @@ public final class ManagedInstanceVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The intended template of the instance. This field is empty when current_action is
-   * one of { DELETING, ABANDONING }.
+   * Output only. [Output Only] The intended template of the instance. This field is empty when
+   * current_action is one of { DELETING, ABANDONING }.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public ManagedInstanceVersion setInstanceTemplate(java.lang.String instanceTemplate) {
@@ -64,7 +64,7 @@ public final class ManagedInstanceVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Name of the version.
+   * Output only. [Output Only] Name of the version.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,7 +72,7 @@ public final class ManagedInstanceVersion extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Name of the version.
+   * Output only. [Output Only] Name of the version.
    * @param name name or {@code null} for none
    */
   public ManagedInstanceVersion setName(java.lang.String name) {

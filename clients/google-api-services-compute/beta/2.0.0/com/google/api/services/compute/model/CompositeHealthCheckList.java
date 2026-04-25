@@ -50,8 +50,8 @@ public final class CompositeHealthCheckList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
-   * checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for
+   * composite health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class CompositeHealthCheckList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
-   * checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for
+   * composite health checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class CompositeHealthCheckList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health
-   * checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for
+   * composite health checks.
    * @param kind kind or {@code null} for none
    */
   public CompositeHealthCheckList setKind(java.lang.String kind) {

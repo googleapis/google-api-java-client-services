@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of all drain IP:port-range mappings assigned to this interface. These ranges are
-   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. List of all drain IP:port-range mappings assigned to this interface. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * The value may be {@code null}.
    */
@@ -39,8 +39,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   private java.util.List<java.lang.String> drainNatIpPortRanges;
 
   /**
-   * A list of all IP:port-range mappings assigned to this interface. These ranges are inclusive,
-   * that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. A list of all IP:port-range mappings assigned to this interface. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * The value may be {@code null}.
    */
@@ -48,46 +48,46 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   private java.util.List<java.lang.String> natIpPortRanges;
 
   /**
-   * Total number of drain ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field drain_nat_ip_port_ranges.
+   * Output only. Total number of drain ports across all NAT IPs allocated to this interface. It
+   * equals to the aggregated port number in the field drain_nat_ip_port_ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numTotalDrainNatPorts;
 
   /**
-   * Total number of ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field nat_ip_port_ranges.
+   * Output only. Total number of ports across all NAT IPs allocated to this interface. It equals to
+   * the aggregated port number in the field nat_ip_port_ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numTotalNatPorts;
 
   /**
-   * Information about mappings provided by rules in this NAT.
+   * Output only. Information about mappings provided by rules in this NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> ruleMappings;
 
   /**
-   * Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP range. Examples:
-   * "10.33.4.55/32", or "192.168.5.0/24".
+   * Output only. Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP
+   * range. Examples: "10.33.4.55/32", or "192.168.5.0/24".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceAliasIpRange;
 
   /**
-   * Primary IP of the VM for this NIC.
+   * Output only. Primary IP of the VM for this NIC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceVirtualIp;
 
   /**
-   * List of all drain IP:port-range mappings assigned to this interface. These ranges are
-   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. List of all drain IP:port-range mappings assigned to this interface. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @return value or {@code null} for none
    */
@@ -96,8 +96,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * List of all drain IP:port-range mappings assigned to this interface. These ranges are
-   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. List of all drain IP:port-range mappings assigned to this interface. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @param drainNatIpPortRanges drainNatIpPortRanges or {@code null} for none
    */
@@ -107,8 +107,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * A list of all IP:port-range mappings assigned to this interface. These ranges are inclusive,
-   * that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. A list of all IP:port-range mappings assigned to this interface. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @return value or {@code null} for none
    */
@@ -117,8 +117,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * A list of all IP:port-range mappings assigned to this interface. These ranges are inclusive,
-   * that is, both the first and the last ports can be used for NAT. Example:
+   * Output only. A list of all IP:port-range mappings assigned to this interface. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
    * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @param natIpPortRanges natIpPortRanges or {@code null} for none
    */
@@ -128,8 +128,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Total number of drain ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field drain_nat_ip_port_ranges.
+   * Output only. Total number of drain ports across all NAT IPs allocated to this interface. It
+   * equals to the aggregated port number in the field drain_nat_ip_port_ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumTotalDrainNatPorts() {
@@ -137,8 +137,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Total number of drain ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field drain_nat_ip_port_ranges.
+   * Output only. Total number of drain ports across all NAT IPs allocated to this interface. It
+   * equals to the aggregated port number in the field drain_nat_ip_port_ranges.
    * @param numTotalDrainNatPorts numTotalDrainNatPorts or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappings setNumTotalDrainNatPorts(java.lang.Integer numTotalDrainNatPorts) {
@@ -147,8 +147,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Total number of ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field nat_ip_port_ranges.
+   * Output only. Total number of ports across all NAT IPs allocated to this interface. It equals to
+   * the aggregated port number in the field nat_ip_port_ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumTotalNatPorts() {
@@ -156,8 +156,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Total number of ports across all NAT IPs allocated to this interface. It equals to the
-   * aggregated port number in the field nat_ip_port_ranges.
+   * Output only. Total number of ports across all NAT IPs allocated to this interface. It equals to
+   * the aggregated port number in the field nat_ip_port_ranges.
    * @param numTotalNatPorts numTotalNatPorts or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappings setNumTotalNatPorts(java.lang.Integer numTotalNatPorts) {
@@ -166,7 +166,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Information about mappings provided by rules in this NAT.
+   * Output only. Information about mappings provided by rules in this NAT.
    * @return value or {@code null} for none
    */
   public java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> getRuleMappings() {
@@ -174,7 +174,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Information about mappings provided by rules in this NAT.
+   * Output only. Information about mappings provided by rules in this NAT.
    * @param ruleMappings ruleMappings or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappings setRuleMappings(java.util.List<VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings> ruleMappings) {
@@ -183,8 +183,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP range. Examples:
-   * "10.33.4.55/32", or "192.168.5.0/24".
+   * Output only. Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP
+   * range. Examples: "10.33.4.55/32", or "192.168.5.0/24".
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceAliasIpRange() {
@@ -192,8 +192,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP range. Examples:
-   * "10.33.4.55/32", or "192.168.5.0/24".
+   * Output only. Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP
+   * range. Examples: "10.33.4.55/32", or "192.168.5.0/24".
    * @param sourceAliasIpRange sourceAliasIpRange or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappings setSourceAliasIpRange(java.lang.String sourceAliasIpRange) {
@@ -202,7 +202,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Primary IP of the VM for this NIC.
+   * Output only. Primary IP of the VM for this NIC.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceVirtualIp() {
@@ -210,7 +210,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappings extends com.google.
   }
 
   /**
-   * Primary IP of the VM for this NIC.
+   * Output only. Primary IP of the VM for this NIC.
    * @param sourceVirtualIp sourceVirtualIp or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappings setSourceVirtualIp(java.lang.String sourceVirtualIp) {

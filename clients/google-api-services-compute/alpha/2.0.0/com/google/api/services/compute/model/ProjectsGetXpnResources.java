@@ -30,18 +30,18 @@ package com.google.api.services.compute.model;
 public final class ProjectsGetXpnResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of service
-   * resources (a.k.a service projects)
+   * Output only. [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of
+   * service resources (a.k.a service projects)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class ProjectsGetXpnResources extends com.google.api.client.json.Ge
   private java.util.List<XpnResourceId> resources;
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of service
-   * resources (a.k.a service projects)
+   * Output only. [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of
+   * service resources (a.k.a service projects)
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -64,8 +64,8 @@ public final class ProjectsGetXpnResources extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of service
-   * resources (a.k.a service projects)
+   * Output only. [Output Only] Type of resource. Alwayscompute#projectsGetXpnResources for lists of
+   * service resources (a.k.a service projects)
    * @param kind kind or {@code null} for none
    */
   public ProjectsGetXpnResources setKind(java.lang.String kind) {
@@ -74,10 +74,10 @@ public final class ProjectsGetXpnResources extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -85,10 +85,10 @@ public final class ProjectsGetXpnResources extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ProjectsGetXpnResources setNextPageToken(java.lang.String nextPageToken) {

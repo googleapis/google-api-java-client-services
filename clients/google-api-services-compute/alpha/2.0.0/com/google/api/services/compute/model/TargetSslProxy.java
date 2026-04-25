@@ -46,7 +46,7 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   private java.lang.String certificateMap;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL
+   * proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,7 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -160,7 +161,7 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetSslProxy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -203,7 +204,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL
+   * proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -211,7 +213,8 @@ public final class TargetSslProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL
+   * proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetSslProxy setKind(java.lang.String kind) {

@@ -31,7 +31,7 @@ public final class CapacityAdviceRequestDistributionPolicy extends com.google.ap
 
   /**
    * The distribution shape to which the group converges. You can only specify the following values:
-   * ANY,ANY_SINGLE_ZONE.
+   * ANY,ANY_SINGLE_ZONE,BALANCED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class CapacityAdviceRequestDistributionPolicy extends com.google.ap
 
   /**
    * The distribution shape to which the group converges. You can only specify the following values:
-   * ANY,ANY_SINGLE_ZONE.
+   * ANY,ANY_SINGLE_ZONE,BALANCED.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetShape() {
@@ -55,7 +55,7 @@ public final class CapacityAdviceRequestDistributionPolicy extends com.google.ap
 
   /**
    * The distribution shape to which the group converges. You can only specify the following values:
-   * ANY,ANY_SINGLE_ZONE.
+   * ANY,ANY_SINGLE_ZONE,BALANCED.
    * @param targetShape targetShape or {@code null} for none
    */
   public CapacityAdviceRequestDistributionPolicy setTargetShape(java.lang.String targetShape) {

@@ -30,22 +30,22 @@ package com.google.api.services.compute.model;
 public final class MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Encountered errors on the last state check.
+   * Output only. [Output Only] Encountered errors on the last state check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
 
   /**
-   * [Output Only] Timestamp is shown only if there is an error. The field has // RFC3339 // text
-   * format.
+   * Output only. [Output Only] Timestamp is shown only if there is an error. The field has //
+   * RFC3339 // text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * [Output Only] Encountered errors on the last state check.
+   * Output only. [Output Only] Encountered errors on the last state check.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -53,7 +53,7 @@ public final class MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLast
   }
 
   /**
-   * [Output Only] Encountered errors on the last state check.
+   * Output only. [Output Only] Encountered errors on the last state check.
    * @param error error or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck setError(Error error) {
@@ -62,8 +62,8 @@ public final class MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLast
   }
 
   /**
-   * [Output Only] Timestamp is shown only if there is an error. The field has // RFC3339 // text
-   * format.
+   * Output only. [Output Only] Timestamp is shown only if there is an error. The field has //
+   * RFC3339 // text format.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -71,8 +71,8 @@ public final class MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLast
   }
 
   /**
-   * [Output Only] Timestamp is shown only if there is an error. The field has // RFC3339 // text
-   * format.
+   * Output only. [Output Only] Timestamp is shown only if there is an error. The field has //
+   * RFC3339 // text format.
    * @param timestamp timestamp or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck setTimestamp(String timestamp) {
@@ -91,7 +91,7 @@ public final class MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLast
   }
 
   /**
-   * [Output Only] Encountered errors on the last state check.
+   * Output only. [Output Only] Encountered errors on the last state check.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

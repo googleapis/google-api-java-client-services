@@ -34,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class SslPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] The list of features enabled in the SSL policy.
+   * Output only. [Output Only] The list of features enabled in the SSL policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +76,15 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
+   * Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,31 +112,32 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Profile specifies the set of SSL features that can be used by the load balancer when
-   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED, orCUSTOM. If
-   * using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED,FIPS_202205, or
+   * CUSTOM. If usingCUSTOM, the set of SSL features to enable must be specified in the
+   * customFeatures field. If using FIPS_202205, the min_tls_version field must be set to TLS_1_2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profile;
 
   /**
-   * [Output Only] URL of the region where the regional SSL policy resides. This field is not
-   * applicable to global SSL policies.
+   * Output only. [Output Only] URL of the region where the regional SSL policy resides. This field
+   * is not applicable to global SSL policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] If potential misconfigurations are detected for this SSL policy, this field will
-   * be populated with warning messages.
+   * Output only. [Output Only] If potential misconfigurations are detected for this SSL policy,
+   * this field will be populated with warning messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +150,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -156,7 +158,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public SslPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -203,7 +205,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The list of features enabled in the SSL policy.
+   * Output only. [Output Only] The list of features enabled in the SSL policy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledFeatures() {
@@ -211,7 +213,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The list of features enabled in the SSL policy.
+   * Output only. [Output Only] The list of features enabled in the SSL policy.
    * @param enabledFeatures enabledFeatures or {@code null} for none
    */
   public SslPolicy setEnabledFeatures(java.util.List<java.lang.String> enabledFeatures) {
@@ -285,7 +287,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -293,7 +296,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public SslPolicy setId(java.math.BigInteger id) {
@@ -302,7 +306,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
+   * Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -310,7 +314,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
+   * Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
    * @param kind kind or {@code null} for none
    */
   public SslPolicy setKind(java.lang.String kind) {
@@ -366,8 +370,9 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Profile specifies the set of SSL features that can be used by the load balancer when
-   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED, orCUSTOM. If
-   * using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED,FIPS_202205, or
+   * CUSTOM. If usingCUSTOM, the set of SSL features to enable must be specified in the
+   * customFeatures field. If using FIPS_202205, the min_tls_version field must be set to TLS_1_2.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfile() {
@@ -376,8 +381,9 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Profile specifies the set of SSL features that can be used by the load balancer when
-   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED, orCUSTOM. If
-   * using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
+   * negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED,FIPS_202205, or
+   * CUSTOM. If usingCUSTOM, the set of SSL features to enable must be specified in the
+   * customFeatures field. If using FIPS_202205, the min_tls_version field must be set to TLS_1_2.
    * @param profile profile or {@code null} for none
    */
   public SslPolicy setProfile(java.lang.String profile) {
@@ -386,8 +392,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the regional SSL policy resides. This field is not
-   * applicable to global SSL policies.
+   * Output only. [Output Only] URL of the region where the regional SSL policy resides. This field
+   * is not applicable to global SSL policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -395,8 +401,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the regional SSL policy resides. This field is not
-   * applicable to global SSL policies.
+   * Output only. [Output Only] URL of the region where the regional SSL policy resides. This field
+   * is not applicable to global SSL policies.
    * @param region region or {@code null} for none
    */
   public SslPolicy setRegion(java.lang.String region) {
@@ -405,7 +411,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -413,7 +419,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public SslPolicy setSelfLink(java.lang.String selfLink) {
@@ -422,8 +428,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] If potential misconfigurations are detected for this SSL policy, this field will
-   * be populated with warning messages.
+   * Output only. [Output Only] If potential misconfigurations are detected for this SSL policy,
+   * this field will be populated with warning messages.
    * @return value or {@code null} for none
    */
   public java.util.List<Warnings> getWarnings() {
@@ -431,8 +437,8 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] If potential misconfigurations are detected for this SSL policy, this field will
-   * be populated with warning messages.
+   * Output only. [Output Only] If potential misconfigurations are detected for this SSL policy,
+   * this field will be populated with warning messages.
    * @param warnings warnings or {@code null} for none
    */
   public SslPolicy setWarnings(java.util.List<Warnings> warnings) {

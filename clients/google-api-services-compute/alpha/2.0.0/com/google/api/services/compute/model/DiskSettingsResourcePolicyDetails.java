@@ -35,9 +35,9 @@ package com.google.api.services.compute.model;
 public final class DiskSettingsResourcePolicyDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A list of Disk Types that will be excluded from applying the Resource Policy
-   * referenced here. If absent, Disks created in any DiskType can use the referenced default
-   * Resource Policy.
+   * Output only. [Output Only] A list of Disk Types that will be excluded from applying the
+   * Resource Policy referenced here. If absent, Disks created in any DiskType can use the
+   * referenced default Resource Policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +51,9 @@ public final class DiskSettingsResourcePolicyDetails extends com.google.api.clie
   private java.lang.String resourcePolicy;
 
   /**
-   * [Output Only] A list of Disk Types that will be excluded from applying the Resource Policy
-   * referenced here. If absent, Disks created in any DiskType can use the referenced default
-   * Resource Policy.
+   * Output only. [Output Only] A list of Disk Types that will be excluded from applying the
+   * Resource Policy referenced here. If absent, Disks created in any DiskType can use the
+   * referenced default Resource Policy.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedDiskTypes() {
@@ -61,9 +61,9 @@ public final class DiskSettingsResourcePolicyDetails extends com.google.api.clie
   }
 
   /**
-   * [Output Only] A list of Disk Types that will be excluded from applying the Resource Policy
-   * referenced here. If absent, Disks created in any DiskType can use the referenced default
-   * Resource Policy.
+   * Output only. [Output Only] A list of Disk Types that will be excluded from applying the
+   * Resource Policy referenced here. If absent, Disks created in any DiskType can use the
+   * referenced default Resource Policy.
    * @param excludedDiskTypes excludedDiskTypes or {@code null} for none
    */
   public DiskSettingsResourcePolicyDetails setExcludedDiskTypes(java.util.List<java.lang.String> excludedDiskTypes) {

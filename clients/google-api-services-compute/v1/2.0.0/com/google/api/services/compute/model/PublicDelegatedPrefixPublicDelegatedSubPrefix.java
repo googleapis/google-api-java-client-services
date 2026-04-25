@@ -51,6 +51,14 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String description;
 
   /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEnhancedIpv4Allocation;
+
+  /**
    * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * The value may be {@code null}.
    */
@@ -58,8 +66,8 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String ipCidrRange;
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes.
+   * Inherited from parent prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,15 +95,15 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String name;
 
   /**
-   * [Output Only] The region of the sub public delegated prefix if it is regional. If absent, the
-   * sub prefix is global.
+   * Output only. [Output Only] The region of the sub public delegated prefix if it is regional. If
+   * absent, the sub prefix is global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] The status of the sub public delegated prefix.
+   * Output only. [Output Only] The status of the sub public delegated prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,6 +161,25 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEnhancedIpv4Allocation() {
+    return enableEnhancedIpv4Allocation;
+  }
+
+  /**
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
+   * @param enableEnhancedIpv4Allocation enableEnhancedIpv4Allocation or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setEnableEnhancedIpv4Allocation(java.lang.Boolean enableEnhancedIpv4Allocation) {
+    this.enableEnhancedIpv4Allocation = enableEnhancedIpv4Allocation;
+    return this;
+  }
+
+  /**
    * The IP address range, in CIDR format, represented by this sub public delegated prefix.
    * @return value or {@code null} for none
    */
@@ -170,8 +197,8 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes.
+   * Inherited from parent prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6AccessType() {
@@ -179,8 +206,8 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes.
+   * Inherited from parent prefix.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
@@ -240,8 +267,8 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The region of the sub public delegated prefix if it is regional. If absent, the
-   * sub prefix is global.
+   * Output only. [Output Only] The region of the sub public delegated prefix if it is regional. If
+   * absent, the sub prefix is global.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -249,8 +276,8 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The region of the sub public delegated prefix if it is regional. If absent, the
-   * sub prefix is global.
+   * Output only. [Output Only] The region of the sub public delegated prefix if it is regional. If
+   * absent, the sub prefix is global.
    * @param region region or {@code null} for none
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setRegion(java.lang.String region) {
@@ -259,7 +286,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The status of the sub public delegated prefix.
+   * Output only. [Output Only] The status of the sub public delegated prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -267,7 +294,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   }
 
   /**
-   * [Output Only] The status of the sub public delegated prefix.
+   * Output only. [Output Only] The status of the sub public delegated prefix.
    * @param status status or {@code null} for none
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setStatus(java.lang.String status) {

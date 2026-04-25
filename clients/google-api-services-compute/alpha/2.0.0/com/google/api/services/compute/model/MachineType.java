@@ -104,7 +104,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isSharedCpu;
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#machineType for machine
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +147,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,7 +318,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#machineType for machine
+   * types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -325,7 +327,8 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#machineType for machine
+   * types.
    * @param kind kind or {@code null} for none
    */
   public MachineType setKind(java.lang.String kind) {
@@ -419,7 +422,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -427,7 +430,7 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public MachineType setSelfLinkWithId(java.lang.String selfLinkWithId) {

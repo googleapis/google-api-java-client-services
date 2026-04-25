@@ -59,6 +59,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVpcScopedDns;
+
+  /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
    * in order to update theNetworkInterface. The request will fail with error400 Bad Request if the
@@ -99,8 +107,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * The value may be {@code null}.
@@ -118,7 +126,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String ipv6Address;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,6 +197,15 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.Integer queueCount;
 
   /**
+   * Optional. Producer Service's Service class Id for the region of this network interface. Can
+   * only be used with network_attachment. It is not possible to use on its own however,
+   * network_attachment can be used without service_class_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClassId;
+
+  /**
    * The stack type for this network interface. To assign only IPv4 addresses, use IPV4_ONLY. To
    * assign both IPv4 and IPv6 addresses, useIPV4_IPV6. If not specified, IPV4_ONLY is used.
    *
@@ -255,6 +273,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setAliasIpRanges(java.util.List<AliasIpRange> aliasIpRanges) {
     this.aliasIpRanges = aliasIpRanges;
+    return this;
+  }
+
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVpcScopedDns() {
+    return enableVpcScopedDns;
+  }
+
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @param enableVpcScopedDns enableVpcScopedDns or {@code null} for none
+   */
+  public NetworkInterface setEnableVpcScopedDns(java.lang.Boolean enableVpcScopedDns) {
+    this.enableVpcScopedDns = enableVpcScopedDns;
     return this;
   }
 
@@ -373,8 +410,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * @return value or {@code null} for none
@@ -384,8 +421,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
@@ -417,7 +454,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -425,7 +463,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * @param kind kind or {@code null} for none
    */
   public NetworkInterface setKind(java.lang.String kind) {
@@ -577,6 +616,27 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setQueueCount(java.lang.Integer queueCount) {
     this.queueCount = queueCount;
+    return this;
+  }
+
+  /**
+   * Optional. Producer Service's Service class Id for the region of this network interface. Can
+   * only be used with network_attachment. It is not possible to use on its own however,
+   * network_attachment can be used without service_class_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClassId() {
+    return serviceClassId;
+  }
+
+  /**
+   * Optional. Producer Service's Service class Id for the region of this network interface. Can
+   * only be used with network_attachment. It is not possible to use on its own however,
+   * network_attachment can be used without service_class_id.
+   * @param serviceClassId serviceClassId or {@code null} for none
+   */
+  public NetworkInterface setServiceClassId(java.lang.String serviceClassId) {
+    this.serviceClassId = serviceClassId;
     return this;
   }
 

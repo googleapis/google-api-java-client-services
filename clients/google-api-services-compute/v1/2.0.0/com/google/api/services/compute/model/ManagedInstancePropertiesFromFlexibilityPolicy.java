@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -45,7 +45,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * @param machineType machineType or {@code null} for none
    */
   public ManagedInstancePropertiesFromFlexibilityPolicy setMachineType(java.lang.String machineType) {

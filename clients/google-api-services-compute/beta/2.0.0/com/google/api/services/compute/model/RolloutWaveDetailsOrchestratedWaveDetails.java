@@ -60,6 +60,14 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
   private java.lang.Long failedResourcesCount;
 
   /**
+   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
+   * "us-east1" or "asia-west1-a".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> locationStatus;
+
+  /**
    * Output only. Resource completed so far.
    * @return value or {@code null} for none
    */
@@ -128,6 +136,25 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
    */
   public RolloutWaveDetailsOrchestratedWaveDetails setFailedResourcesCount(java.lang.Long failedResourcesCount) {
     this.failedResourcesCount = failedResourcesCount;
+    return this;
+  }
+
+  /**
+   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
+   * "us-east1" or "asia-west1-a".
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> getLocationStatus() {
+    return locationStatus;
+  }
+
+  /**
+   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
+   * "us-east1" or "asia-west1-a".
+   * @param locationStatus locationStatus or {@code null} for none
+   */
+  public RolloutWaveDetailsOrchestratedWaveDetails setLocationStatus(java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> locationStatus) {
+    this.locationStatus = locationStatus;
     return this;
   }
 

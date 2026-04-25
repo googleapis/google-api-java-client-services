@@ -50,8 +50,8 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   private java.util.Map<String, HaControllersScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for lists of
-   * HaControllers.
+   * Output only. [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for
+   * lists of HaControllers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +138,8 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for lists of
-   * HaControllers.
+   * Output only. [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for
+   * lists of HaControllers.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,8 +147,8 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for lists of
-   * HaControllers.
+   * Output only. [Output Only] Type of resource. Alwayscompute#haControllersAggregatedList for
+   * lists of HaControllers.
    * @param kind kind or {@code null} for none
    */
   public HaControllersAggregatedList setKind(java.lang.String kind) {
@@ -180,7 +180,7 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -188,7 +188,7 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public HaControllersAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -197,7 +197,7 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -205,7 +205,7 @@ public final class HaControllersAggregatedList extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public HaControllersAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

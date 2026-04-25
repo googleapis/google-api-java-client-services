@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class Reference extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Type of the resource. Always compute#reference for references.
+   * Output only. [Output Only] Type of the resource. Always compute#reference for references.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   private java.lang.String target;
 
   /**
-   * [Output Only] Type of the resource. Always compute#reference for references.
+   * Output only. [Output Only] Type of the resource. Always compute#reference for references.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -67,7 +67,7 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#reference for references.
+   * Output only. [Output Only] Type of the resource. Always compute#reference for references.
    * @param kind kind or {@code null} for none
    */
   public Reference setKind(java.lang.String kind) {

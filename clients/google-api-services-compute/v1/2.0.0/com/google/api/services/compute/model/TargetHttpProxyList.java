@@ -50,7 +50,8 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * Type of resource. Always compute#targetHttpProxyList for lists of target HTTP proxies.
+   * Output only. Type of resource. Always compute#targetHttpProxyList for lists of target HTTP
+   * proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * Type of resource. Always compute#targetHttpProxyList for lists of target HTTP proxies.
+   * Output only. Type of resource. Always compute#targetHttpProxyList for lists of target HTTP
+   * proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -123,7 +125,8 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * Type of resource. Always compute#targetHttpProxyList for lists of target HTTP proxies.
+   * Output only. Type of resource. Always compute#targetHttpProxyList for lists of target HTTP
+   * proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetHttpProxyList setKind(java.lang.String kind) {
@@ -155,7 +158,7 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -163,7 +166,7 @@ public final class TargetHttpProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public TargetHttpProxyList setSelfLink(java.lang.String selfLink) {

@@ -30,21 +30,22 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceInstanceHealth extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The current detailed instance health state.
+   * Output only. [Output Only] The current detailed instance health state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detailedHealthState;
 
   /**
-   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
+   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
+   * healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String healthCheck;
 
   /**
-   * [Output Only] The current detailed instance health state.
+   * Output only. [Output Only] The current detailed instance health state.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetailedHealthState() {
@@ -52,7 +53,7 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The current detailed instance health state.
+   * Output only. [Output Only] The current detailed instance health state.
    * @param detailedHealthState detailedHealthState or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setDetailedHealthState(java.lang.String detailedHealthState) {
@@ -61,7 +62,8 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
+   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
+   * healthy.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthCheck() {
@@ -69,7 +71,8 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
+   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
+   * healthy.
    * @param healthCheck healthCheck or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setHealthCheck(java.lang.String healthCheck) {

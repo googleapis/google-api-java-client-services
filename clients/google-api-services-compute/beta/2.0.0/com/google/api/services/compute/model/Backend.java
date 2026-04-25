@@ -190,6 +190,13 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxUtilization;
 
   /**
+   * Information about the resource or system that manages the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendBackendOrchestrationInfo orchestrationInfo;
+
+  /**
    * This field indicates whether this backend should be fully utilized before sending traffic to
    * backends with default preference. The possible values are:        - PREFERRED: Backends with
    * this preference level will be    filled up to their capacity limits first, based on RTT.    -
@@ -200,6 +207,16 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String preference;
+
+  /**
+   * Represents a service backend (e.g., Cloud Run service, PSC Service Attachment). e.g.
+   * "run.googleapis.com/projects/123456789/locations/us-central1/services/my-service"  for Cloud
+   * Run service.  "compute.googleapis.com/projects/123456789/regions/us-
+   * central1/serviceAttachments/my-service-attachment"  for PSC Service Attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String service;
 
   /**
    * The value may be {@code null}.
@@ -576,6 +593,23 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Information about the resource or system that manages the backend.
+   * @return value or {@code null} for none
+   */
+  public BackendBackendOrchestrationInfo getOrchestrationInfo() {
+    return orchestrationInfo;
+  }
+
+  /**
+   * Information about the resource or system that manages the backend.
+   * @param orchestrationInfo orchestrationInfo or {@code null} for none
+   */
+  public Backend setOrchestrationInfo(BackendBackendOrchestrationInfo orchestrationInfo) {
+    this.orchestrationInfo = orchestrationInfo;
+    return this;
+  }
+
+  /**
    * This field indicates whether this backend should be fully utilized before sending traffic to
    * backends with default preference. The possible values are:        - PREFERRED: Backends with
    * this preference level will be    filled up to their capacity limits first, based on RTT.    -
@@ -599,6 +633,29 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setPreference(java.lang.String preference) {
     this.preference = preference;
+    return this;
+  }
+
+  /**
+   * Represents a service backend (e.g., Cloud Run service, PSC Service Attachment). e.g.
+   * "run.googleapis.com/projects/123456789/locations/us-central1/services/my-service"  for Cloud
+   * Run service.  "compute.googleapis.com/projects/123456789/regions/us-
+   * central1/serviceAttachments/my-service-attachment"  for PSC Service Attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getService() {
+    return service;
+  }
+
+  /**
+   * Represents a service backend (e.g., Cloud Run service, PSC Service Attachment). e.g.
+   * "run.googleapis.com/projects/123456789/locations/us-central1/services/my-service"  for Cloud
+   * Run service.  "compute.googleapis.com/projects/123456789/regions/us-
+   * central1/serviceAttachments/my-service-attachment"  for PSC Service Attachment.
+   * @param service service or {@code null} for none
+   */
+  public Backend setService(java.lang.String service) {
+    this.service = service;
     return this;
   }
 

@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class GuestAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest
+   * attributes entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +46,14 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   private java.lang.String queryPath;
 
   /**
-   * [Output Only] The value of the requested queried path.
+   * Output only. [Output Only] The value of the requested queried path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GuestAttributesValue queryValue;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +67,15 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   private java.lang.String variableKey;
 
   /**
-   * [Output Only] The value found for the requested key.
+   * Output only. [Output Only] The value found for the requested key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String variableValue;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest
+   * attributes entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -81,7 +83,8 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest
+   * attributes entry.
    * @param kind kind or {@code null} for none
    */
   public GuestAttributes setKind(java.lang.String kind) {
@@ -109,7 +112,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The value of the requested queried path.
+   * Output only. [Output Only] The value of the requested queried path.
    * @return value or {@code null} for none
    */
   public GuestAttributesValue getQueryValue() {
@@ -117,7 +120,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The value of the requested queried path.
+   * Output only. [Output Only] The value of the requested queried path.
    * @param queryValue queryValue or {@code null} for none
    */
   public GuestAttributes setQueryValue(GuestAttributesValue queryValue) {
@@ -126,7 +129,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -134,7 +137,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public GuestAttributes setSelfLink(java.lang.String selfLink) {
@@ -160,7 +163,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The value found for the requested key.
+   * Output only. [Output Only] The value found for the requested key.
    * @return value or {@code null} for none
    */
   public java.lang.String getVariableValue() {
@@ -168,7 +171,7 @@ public final class GuestAttributes extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The value found for the requested key.
+   * Output only. [Output Only] The value found for the requested key.
    * @param variableValue variableValue or {@code null} for none
    */
   public GuestAttributes setVariableValue(java.lang.String variableValue) {

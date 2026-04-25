@@ -50,7 +50,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#regionList for lists of regions.
+   * Output only. [Output Only] Type of resource. Always compute#regionList for lists of regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#regionList for lists of regions.
+   * Output only. [Output Only] Type of resource. Always compute#regionList for lists of regions.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -123,7 +123,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#regionList for lists of regions.
+   * Output only. [Output Only] Type of resource. Always compute#regionList for lists of regions.
    * @param kind kind or {@code null} for none
    */
   public RegionList setKind(java.lang.String kind) {
@@ -155,7 +155,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -163,7 +163,7 @@ public final class RegionList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public RegionList setSelfLink(java.lang.String selfLink) {

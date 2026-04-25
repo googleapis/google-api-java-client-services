@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier for the security policy. This identifier is defined by the server.
+   * Output only. The unique identifier for the security policy. This identifier is defined by the
+   * server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,7 +45,8 @@ public final class InstancesGetEffectiveFirewallsResponseOrganizationFirewallPol
   private java.util.List<SecurityPolicyRule> rules;
 
   /**
-   * The unique identifier for the security policy. This identifier is defined by the server.
+   * Output only. The unique identifier for the security policy. This identifier is defined by the
+   * server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -52,7 +54,8 @@ public final class InstancesGetEffectiveFirewallsResponseOrganizationFirewallPol
   }
 
   /**
-   * The unique identifier for the security policy. This identifier is defined by the server.
+   * Output only. The unique identifier for the security policy. This identifier is defined by the
+   * server.
    * @param id id or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseOrganizationFirewallPolicy setId(java.math.BigInteger id) {

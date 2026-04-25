@@ -31,21 +31,21 @@ package com.google.api.services.compute.model;
 public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * Output only. [Output Only] The display name of the firewall policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output only] The packet mirroring rules that apply to the network.
+   * Output only. [Output only] The packet mirroring rules that apply to the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,15 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer priority;
 
   /**
-   * [Output only] The rules that apply to the network.
+   * Output only. [Output only] The rules that apply to the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * The value may be {@code null}.
    */
@@ -86,7 +87,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   private java.lang.String type;
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * Output only. [Output Only] The display name of the firewall policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -94,7 +95,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The display name of the firewall policy.
+   * Output only. [Output Only] The display name of the firewall policy.
    * @param displayName displayName or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setDisplayName(java.lang.String displayName) {
@@ -103,7 +104,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -111,7 +112,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * @param name name or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setName(java.lang.String name) {
@@ -120,7 +121,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] The packet mirroring rules that apply to the network.
+   * Output only. [Output only] The packet mirroring rules that apply to the network.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getPacketMirroringRules() {
@@ -128,7 +129,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] The packet mirroring rules that apply to the network.
+   * Output only. [Output only] The packet mirroring rules that apply to the network.
    * @param packetMirroringRules packetMirroringRules or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setPacketMirroringRules(java.util.List<FirewallPolicyRule> packetMirroringRules) {
@@ -137,7 +138,8 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -145,7 +147,8 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * @param priority priority or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setPriority(java.lang.Integer priority) {
@@ -154,7 +157,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] The rules that apply to the network.
+   * Output only. [Output only] The rules that apply to the network.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getRules() {
@@ -162,7 +165,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output only] The rules that apply to the network.
+   * Output only. [Output only] The rules that apply to the network.
    * @param rules rules or {@code null} for none
    */
   public RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setRules(java.util.List<FirewallPolicyRule> rules) {
@@ -171,7 +174,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @return value or {@code null} for none
    */
@@ -180,7 +183,7 @@ public final class RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEff
   }
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @param type type or {@code null} for none
    */

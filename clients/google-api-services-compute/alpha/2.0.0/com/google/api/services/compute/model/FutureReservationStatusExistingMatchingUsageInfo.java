@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatusExistingMatchingUsageInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Count to represent min(FR total_count,
+   * Output only. Count to represent min(FR total_count,
    * matching_reserved_capacity+matching_unreserved_instances)
    * The value may be {@code null}.
    */
@@ -38,14 +38,14 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
   private java.lang.Long count;
 
   /**
-   * Timestamp when the matching usage was calculated
+   * Output only. Timestamp when the matching usage was calculated
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timestamp;
 
   /**
-   * Count to represent min(FR total_count,
+   * Output only. Count to represent min(FR total_count,
    * matching_reserved_capacity+matching_unreserved_instances)
    * @return value or {@code null} for none
    */
@@ -54,7 +54,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
   }
 
   /**
-   * Count to represent min(FR total_count,
+   * Output only. Count to represent min(FR total_count,
    * matching_reserved_capacity+matching_unreserved_instances)
    * @param count count or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
   }
 
   /**
-   * Timestamp when the matching usage was calculated
+   * Output only. Timestamp when the matching usage was calculated
    * @return value or {@code null} for none
    */
   public java.lang.String getTimestamp() {
@@ -72,7 +72,7 @@ public final class FutureReservationStatusExistingMatchingUsageInfo extends com.
   }
 
   /**
-   * Timestamp when the matching usage was calculated
+   * Output only. Timestamp when the matching usage was calculated
    * @param timestamp timestamp or {@code null} for none
    */
   public FutureReservationStatusExistingMatchingUsageInfo setTimestamp(java.lang.String timestamp) {

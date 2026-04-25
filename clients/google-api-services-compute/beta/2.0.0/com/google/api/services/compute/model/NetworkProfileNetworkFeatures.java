@@ -37,6 +37,13 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.util.List<java.lang.String> addressPurposes;
 
   /**
+   * Specifies whether address creation is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowAddressCreation;
+
+  /**
    * Specifies whether alias IP ranges (and secondary address ranges) are allowed.
    * The value may be {@code null}.
    */
@@ -122,6 +129,13 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String allowMultiNicInSameNetwork;
 
   /**
+   * Specifies whether multi-nic in the same subnetwork is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowMultiNicInSameSubnetwork;
+
+  /**
    * Specifies whether multicast is allowed.
    * The value may be {@code null}.
    */
@@ -185,6 +199,20 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String allowSubInterfaces;
 
   /**
+   * Specifies whether subnetwork creation is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowSubnetworkCreation;
+
+  /**
+   * Specifies whether VPC firewall rules can be created under the network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allowVpcFirewallRules;
+
+  /**
    * Specifies whether VPC peering is allowed.
    * The value may be {@code null}.
    */
@@ -220,6 +248,20 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.lang.String multicast;
 
   /**
+   * Specifies a predefined internal IPv6 range for the network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String predefinedNetworkInternalIpv6Range;
+
+  /**
+   * Predefined subnetwork ranges for the network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkProfileNetworkFeaturesPredefinedSubnetworkRange> predefinedSubnetworkRanges;
+
+  /**
    * Specifies which subnetwork purposes are supported.
    * The value may be {@code null}.
    */
@@ -234,14 +276,14 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.util.List<java.lang.String> subnetStackTypes;
 
   /**
-   * Specifies which subnetwork purposes are supported.
+   * Output only. Specifies which subnetwork purposes are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworkPurposes;
 
   /**
-   * Specifies which subnetwork stack types are supported.
+   * Output only. Specifies which subnetwork stack types are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,6 +310,23 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
    */
   public NetworkProfileNetworkFeatures setAddressPurposes(java.util.List<java.lang.String> addressPurposes) {
     this.addressPurposes = addressPurposes;
+    return this;
+  }
+
+  /**
+   * Specifies whether address creation is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowAddressCreation() {
+    return allowAddressCreation;
+  }
+
+  /**
+   * Specifies whether address creation is allowed.
+   * @param allowAddressCreation allowAddressCreation or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowAddressCreation(java.lang.String allowAddressCreation) {
+    this.allowAddressCreation = allowAddressCreation;
     return this;
   }
 
@@ -478,6 +537,23 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
+   * Specifies whether multi-nic in the same subnetwork is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowMultiNicInSameSubnetwork() {
+    return allowMultiNicInSameSubnetwork;
+  }
+
+  /**
+   * Specifies whether multi-nic in the same subnetwork is allowed.
+   * @param allowMultiNicInSameSubnetwork allowMultiNicInSameSubnetwork or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowMultiNicInSameSubnetwork(java.lang.String allowMultiNicInSameSubnetwork) {
+    this.allowMultiNicInSameSubnetwork = allowMultiNicInSameSubnetwork;
+    return this;
+  }
+
+  /**
    * Specifies whether multicast is allowed.
    * @return value or {@code null} for none
    */
@@ -631,6 +707,40 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
+   * Specifies whether subnetwork creation is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowSubnetworkCreation() {
+    return allowSubnetworkCreation;
+  }
+
+  /**
+   * Specifies whether subnetwork creation is allowed.
+   * @param allowSubnetworkCreation allowSubnetworkCreation or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowSubnetworkCreation(java.lang.String allowSubnetworkCreation) {
+    this.allowSubnetworkCreation = allowSubnetworkCreation;
+    return this;
+  }
+
+  /**
+   * Specifies whether VPC firewall rules can be created under the network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllowVpcFirewallRules() {
+    return allowVpcFirewallRules;
+  }
+
+  /**
+   * Specifies whether VPC firewall rules can be created under the network.
+   * @param allowVpcFirewallRules allowVpcFirewallRules or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setAllowVpcFirewallRules(java.lang.String allowVpcFirewallRules) {
+    this.allowVpcFirewallRules = allowVpcFirewallRules;
+    return this;
+  }
+
+  /**
    * Specifies whether VPC peering is allowed.
    * @return value or {@code null} for none
    */
@@ -716,6 +826,40 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
+   * Specifies a predefined internal IPv6 range for the network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPredefinedNetworkInternalIpv6Range() {
+    return predefinedNetworkInternalIpv6Range;
+  }
+
+  /**
+   * Specifies a predefined internal IPv6 range for the network.
+   * @param predefinedNetworkInternalIpv6Range predefinedNetworkInternalIpv6Range or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setPredefinedNetworkInternalIpv6Range(java.lang.String predefinedNetworkInternalIpv6Range) {
+    this.predefinedNetworkInternalIpv6Range = predefinedNetworkInternalIpv6Range;
+    return this;
+  }
+
+  /**
+   * Predefined subnetwork ranges for the network.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkProfileNetworkFeaturesPredefinedSubnetworkRange> getPredefinedSubnetworkRanges() {
+    return predefinedSubnetworkRanges;
+  }
+
+  /**
+   * Predefined subnetwork ranges for the network.
+   * @param predefinedSubnetworkRanges predefinedSubnetworkRanges or {@code null} for none
+   */
+  public NetworkProfileNetworkFeatures setPredefinedSubnetworkRanges(java.util.List<NetworkProfileNetworkFeaturesPredefinedSubnetworkRange> predefinedSubnetworkRanges) {
+    this.predefinedSubnetworkRanges = predefinedSubnetworkRanges;
+    return this;
+  }
+
+  /**
    * Specifies which subnetwork purposes are supported.
    * @return value or {@code null} for none
    */
@@ -750,7 +894,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Specifies which subnetwork purposes are supported.
+   * Output only. Specifies which subnetwork purposes are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkPurposes() {
@@ -758,7 +902,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Specifies which subnetwork purposes are supported.
+   * Output only. Specifies which subnetwork purposes are supported.
    * @param subnetworkPurposes subnetworkPurposes or {@code null} for none
    */
   public NetworkProfileNetworkFeatures setSubnetworkPurposes(java.util.List<java.lang.String> subnetworkPurposes) {
@@ -767,7 +911,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Specifies which subnetwork stack types are supported.
+   * Output only. Specifies which subnetwork stack types are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkStackTypes() {
@@ -775,7 +919,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Specifies which subnetwork stack types are supported.
+   * Output only. Specifies which subnetwork stack types are supported.
    * @param subnetworkStackTypes subnetworkStackTypes or {@code null} for none
    */
   public NetworkProfileNetworkFeatures setSubnetworkStackTypes(java.util.List<java.lang.String> subnetworkStackTypes) {

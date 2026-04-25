@@ -30,6 +30,17 @@ package com.google.api.services.compute.model;
 public final class CacheInvalidationRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * If set, this invalidation rule will only apply to requests routed to the given backend service
+   * or backend bucket. For example, for a backend bucket `bb1` in the same scope as the URL map,
+   * the path would be `projects/my-project/global/backendBuckets/bb1`; and for a backend service
+   * `bs1` in the same scope as the URL map, the path would be `projects/my-
+   * project/global/backendServices/bs1`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backendService;
+
+  /**
    * A list of cache tags used to identify cached objects.
    *
    *        - Cache tags are specified when the response is first cached, by setting    the `Cache-
@@ -44,6 +55,15 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> cacheTags;
 
   /**
+   * If set, this invalidation rule will only apply to responses with the given content-type.
+   * Parameters are not allowed and are ignored from the response when matching. Wildcards are not
+   * allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentType;
+
+  /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
    * The value may be {@code null}.
    */
@@ -51,10 +71,43 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
   private java.lang.String host;
 
   /**
+   * If set, this invalidation rule will only apply to responses with the given HTTP status. Valid
+   * range is 200-599.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer httpStatus;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
+
+  /**
+   * If set, this invalidation rule will only apply to requests routed to the given backend service
+   * or backend bucket. For example, for a backend bucket `bb1` in the same scope as the URL map,
+   * the path would be `projects/my-project/global/backendBuckets/bb1`; and for a backend service
+   * `bs1` in the same scope as the URL map, the path would be `projects/my-
+   * project/global/backendServices/bs1`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackendService() {
+    return backendService;
+  }
+
+  /**
+   * If set, this invalidation rule will only apply to requests routed to the given backend service
+   * or backend bucket. For example, for a backend bucket `bb1` in the same scope as the URL map,
+   * the path would be `projects/my-project/global/backendBuckets/bb1`; and for a backend service
+   * `bs1` in the same scope as the URL map, the path would be `projects/my-
+   * project/global/backendServices/bs1`.
+   * @param backendService backendService or {@code null} for none
+   */
+  public CacheInvalidationRule setBackendService(java.lang.String backendService) {
+    this.backendService = backendService;
+    return this;
+  }
 
   /**
    * A list of cache tags used to identify cached objects.
@@ -88,6 +141,27 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
   }
 
   /**
+   * If set, this invalidation rule will only apply to responses with the given content-type.
+   * Parameters are not allowed and are ignored from the response when matching. Wildcards are not
+   * allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentType() {
+    return contentType;
+  }
+
+  /**
+   * If set, this invalidation rule will only apply to responses with the given content-type.
+   * Parameters are not allowed and are ignored from the response when matching. Wildcards are not
+   * allowed.
+   * @param contentType contentType or {@code null} for none
+   */
+  public CacheInvalidationRule setContentType(java.lang.String contentType) {
+    this.contentType = contentType;
+    return this;
+  }
+
+  /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
    * @return value or {@code null} for none
    */
@@ -101,6 +175,25 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
    */
   public CacheInvalidationRule setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * If set, this invalidation rule will only apply to responses with the given HTTP status. Valid
+   * range is 200-599.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHttpStatus() {
+    return httpStatus;
+  }
+
+  /**
+   * If set, this invalidation rule will only apply to responses with the given HTTP status. Valid
+   * range is 200-599.
+   * @param httpStatus httpStatus or {@code null} for none
+   */
+  public CacheInvalidationRule setHttpStatus(java.lang.Integer httpStatus) {
+    this.httpStatus = httpStatus;
     return this;
   }
 

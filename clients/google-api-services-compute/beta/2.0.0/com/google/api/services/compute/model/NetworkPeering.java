@@ -42,7 +42,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean autoCreateRoutes;
 
   /**
-   * [Output Only] The effective state of the peering connection as a whole.
+   * Output only. [Output Only] The effective state of the peering connection as a whole.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
-   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
+   * Output only. [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,15 +125,14 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String stackType;
 
   /**
-   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
-   * when there's a matching configuration in the peer network.
+   * Output only. [Output Only] State for the peering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output Only] Details about the current state of the peering.
+   * Output only. [Output Only] Details about the current state of the peering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +170,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The effective state of the peering connection as a whole.
+   * Output only. [Output Only] The effective state of the peering connection as a whole.
    * @return value or {@code null} for none
    */
   public NetworkPeeringConnectionStatus getConnectionStatus() {
@@ -179,7 +178,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The effective state of the peering connection as a whole.
+   * Output only. [Output Only] The effective state of the peering connection as a whole.
    * @param connectionStatus connectionStatus or {@code null} for none
    */
   public NetworkPeering setConnectionStatus(NetworkPeeringConnectionStatus connectionStatus) {
@@ -331,7 +330,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
+   * Output only. [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeerMtu() {
@@ -339,7 +338,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
+   * Output only. [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * @param peerMtu peerMtu or {@code null} for none
    */
   public NetworkPeering setPeerMtu(java.lang.Integer peerMtu) {
@@ -367,8 +366,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
-   * when there's a matching configuration in the peer network.
+   * Output only. [Output Only] State for the peering.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -376,8 +374,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
-   * when there's a matching configuration in the peer network.
+   * Output only. [Output Only] State for the peering.
    * @param state state or {@code null} for none
    */
   public NetworkPeering setState(java.lang.String state) {
@@ -386,7 +383,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Details about the current state of the peering.
+   * Output only. [Output Only] Details about the current state of the peering.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateDetails() {
@@ -394,7 +391,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Details about the current state of the peering.
+   * Output only. [Output Only] Details about the current state of the peering.
    * @param stateDetails stateDetails or {@code null} for none
    */
   public NetworkPeering setStateDetails(java.lang.String stateDetails) {

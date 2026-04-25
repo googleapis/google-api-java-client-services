@@ -37,7 +37,8 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   private java.lang.String contents;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port output.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port
+   * output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   private java.lang.Long next;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port output.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port
+   * output.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -96,7 +98,8 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port output.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serialPortOutput for serial port
+   * output.
    * @param kind kind or {@code null} for none
    */
   public SerialPortOutput setKind(java.lang.String kind) {
@@ -126,7 +129,7 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -134,7 +137,7 @@ public final class SerialPortOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public SerialPortOutput setSelfLink(java.lang.String selfLink) {

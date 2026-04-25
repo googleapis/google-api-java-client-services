@@ -37,7 +37,7 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
   private java.util.Map<String, java.lang.String> items;
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,7 +69,7 @@ public final class InstanceSettingsMetadata extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * @param kind kind or {@code null} for none
    */
   public InstanceSettingsMetadata setKind(java.lang.String kind) {

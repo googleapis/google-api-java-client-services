@@ -44,6 +44,13 @@ public final class UrlMapValidationResult extends com.google.api.client.json.Gen
   private java.lang.Boolean loadSucceeded;
 
   /**
+   * Output only. Summary of quota usage for given UrlMap.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UrlMapQuotaUsage quotaUsage;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +101,23 @@ public final class UrlMapValidationResult extends com.google.api.client.json.Gen
    */
   public UrlMapValidationResult setLoadSucceeded(java.lang.Boolean loadSucceeded) {
     this.loadSucceeded = loadSucceeded;
+    return this;
+  }
+
+  /**
+   * Output only. Summary of quota usage for given UrlMap.
+   * @return value or {@code null} for none
+   */
+  public UrlMapQuotaUsage getQuotaUsage() {
+    return quotaUsage;
+  }
+
+  /**
+   * Output only. Summary of quota usage for given UrlMap.
+   * @param quotaUsage quotaUsage or {@code null} for none
+   */
+  public UrlMapValidationResult setQuotaUsage(UrlMapQuotaUsage quotaUsage) {
+    this.quotaUsage = quotaUsage;
     return this;
   }
 

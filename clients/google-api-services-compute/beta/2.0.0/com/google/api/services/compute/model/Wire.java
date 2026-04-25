@@ -30,25 +30,25 @@ package com.google.api.services.compute.model;
 public final class Wire extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Indicates whether the wire is enabled. When false, the wire is disabled. When
-   * true and when the wire group of the wire is also enabled, the wire is enabled. Defaults to
-   * true.
+   * Output only. [Output Only] Indicates whether the wire is enabled. When false, the wire is
+   * disabled. When true and when the wire group of the wire is also enabled, the wire is enabled.
+   * Defaults to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminEnabled;
 
   /**
-   * Wire endpoints are specific Interconnect connections.
+   * Output only. Wire endpoints are specific Interconnect connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WireEndpoint> endpoints;
 
   /**
-   * [Output Only] A label that identifies the wire. The format of this label combines the existing
-   * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * Output only. [Output Only] A label that identifies the wire. The format of this label combines
+   * the existing labels of the wire group endpoints and Interconnect connections used by this wire
+   * in alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
    * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
    * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
    * that you entered as map keys when you specified the wire group    Interconnect objects.
@@ -58,16 +58,16 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   private java.lang.String label;
 
   /**
-   * [Output Only] Properties of the wire.
+   * Output only. [Output Only] Properties of the wire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WireProperties wireProperties;
 
   /**
-   * [Output Only] Indicates whether the wire is enabled. When false, the wire is disabled. When
-   * true and when the wire group of the wire is also enabled, the wire is enabled. Defaults to
-   * true.
+   * Output only. [Output Only] Indicates whether the wire is enabled. When false, the wire is
+   * disabled. When true and when the wire group of the wire is also enabled, the wire is enabled.
+   * Defaults to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdminEnabled() {
@@ -75,9 +75,9 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Indicates whether the wire is enabled. When false, the wire is disabled. When
-   * true and when the wire group of the wire is also enabled, the wire is enabled. Defaults to
-   * true.
+   * Output only. [Output Only] Indicates whether the wire is enabled. When false, the wire is
+   * disabled. When true and when the wire group of the wire is also enabled, the wire is enabled.
+   * Defaults to true.
    * @param adminEnabled adminEnabled or {@code null} for none
    */
   public Wire setAdminEnabled(java.lang.Boolean adminEnabled) {
@@ -86,7 +86,7 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Wire endpoints are specific Interconnect connections.
+   * Output only. Wire endpoints are specific Interconnect connections.
    * @return value or {@code null} for none
    */
   public java.util.List<WireEndpoint> getEndpoints() {
@@ -94,7 +94,7 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Wire endpoints are specific Interconnect connections.
+   * Output only. Wire endpoints are specific Interconnect connections.
    * @param endpoints endpoints or {@code null} for none
    */
   public Wire setEndpoints(java.util.List<WireEndpoint> endpoints) {
@@ -103,9 +103,9 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A label that identifies the wire. The format of this label combines the existing
-   * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * Output only. [Output Only] A label that identifies the wire. The format of this label combines
+   * the existing labels of the wire group endpoints and Interconnect connections used by this wire
+   * in alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
    * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
    * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
    * that you entered as map keys when you specified the wire group    Interconnect objects.
@@ -116,9 +116,9 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A label that identifies the wire. The format of this label combines the existing
-   * labels of the wire group endpoints and Interconnect connections used by this wire in
-   * alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
+   * Output only. [Output Only] A label that identifies the wire. The format of this label combines
+   * the existing labels of the wire group endpoints and Interconnect connections used by this wire
+   * in alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
    * - ENDPOINT_A and ENDPOINT_B: are the labels    that you entered as map keys when you specified
    * the wire group endpoint    objects.    - CONNECTION_A1 and CONNECTION_B1: are the    labels
    * that you entered as map keys when you specified the wire group    Interconnect objects.
@@ -130,7 +130,7 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Properties of the wire.
+   * Output only. [Output Only] Properties of the wire.
    * @return value or {@code null} for none
    */
   public WireProperties getWireProperties() {
@@ -138,7 +138,7 @@ public final class Wire extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Properties of the wire.
+   * Output only. [Output Only] Properties of the wire.
    * @param wireProperties wireProperties or {@code null} for none
    */
   public Wire setWireProperties(WireProperties wireProperties) {

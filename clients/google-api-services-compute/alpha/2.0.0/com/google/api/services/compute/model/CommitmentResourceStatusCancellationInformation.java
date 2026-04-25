@@ -30,43 +30,44 @@ package com.google.api.services.compute.model;
 public final class CommitmentResourceStatusCancellationInformation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
+   * Output only. [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money canceledCommitment;
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
+   * Output only. [Output Only] An optional last update time of canceled_commitment.RFC3339 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String canceledCommitmentLastUpdatedTimestamp;
 
   /**
-   * [Output Only] An optional,the cancellation cap for how much commitments can be canceled in a
-   * rolling 365 per billing account.
+   * Output only. [Output Only] An optional,the cancellation cap for how much commitments can be
+   * canceled in a rolling 365 per billing account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money cancellationCap;
 
   /**
-   * [Output Only] An optional, cancellation fee.
+   * Output only. [Output Only] An optional, cancellation fee.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money cancellationFee;
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
+   * Output only. [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cancellationFeeExpirationTimestamp;
 
   /**
-   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
+   * Output only. [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * @return value or {@code null} for none
    */
   public Money getCanceledCommitment() {
@@ -74,7 +75,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
+   * Output only. [Output Only] An optional amount of CUDs canceled so far in the last 365 days.
    * @param canceledCommitment canceledCommitment or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCanceledCommitment(Money canceledCommitment) {
@@ -83,7 +84,8 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
+   * Output only. [Output Only] An optional last update time of canceled_commitment.RFC3339 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanceledCommitmentLastUpdatedTimestamp() {
@@ -91,7 +93,8 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional last update time of canceled_commitment.RFC3339 text format.
+   * Output only. [Output Only] An optional last update time of canceled_commitment.RFC3339 text
+   * format.
    * @param canceledCommitmentLastUpdatedTimestamp canceledCommitmentLastUpdatedTimestamp or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCanceledCommitmentLastUpdatedTimestamp(java.lang.String canceledCommitmentLastUpdatedTimestamp) {
@@ -100,8 +103,8 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional,the cancellation cap for how much commitments can be canceled in a
-   * rolling 365 per billing account.
+   * Output only. [Output Only] An optional,the cancellation cap for how much commitments can be
+   * canceled in a rolling 365 per billing account.
    * @return value or {@code null} for none
    */
   public Money getCancellationCap() {
@@ -109,8 +112,8 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional,the cancellation cap for how much commitments can be canceled in a
-   * rolling 365 per billing account.
+   * Output only. [Output Only] An optional,the cancellation cap for how much commitments can be
+   * canceled in a rolling 365 per billing account.
    * @param cancellationCap cancellationCap or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCancellationCap(Money cancellationCap) {
@@ -119,7 +122,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee.
+   * Output only. [Output Only] An optional, cancellation fee.
    * @return value or {@code null} for none
    */
   public Money getCancellationFee() {
@@ -127,7 +130,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee.
+   * Output only. [Output Only] An optional, cancellation fee.
    * @param cancellationFee cancellationFee or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCancellationFee(Money cancellationFee) {
@@ -136,7 +139,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
+   * Output only. [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCancellationFeeExpirationTimestamp() {
@@ -144,7 +147,7 @@ public final class CommitmentResourceStatusCancellationInformation extends com.g
   }
 
   /**
-   * [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
+   * Output only. [Output Only] An optional, cancellation fee expiration time.RFC3339 text format.
    * @param cancellationFeeExpirationTimestamp cancellationFeeExpirationTimestamp or {@code null} for none
    */
   public CommitmentResourceStatusCancellationInformation setCancellationFeeExpirationTimestamp(java.lang.String cancellationFeeExpirationTimestamp) {

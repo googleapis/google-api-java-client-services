@@ -50,8 +50,8 @@ public final class NotificationEndpointList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class NotificationEndpointList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class NotificationEndpointList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * @param kind kind or {@code null} for none
    */
   public NotificationEndpointList setKind(java.lang.String kind) {

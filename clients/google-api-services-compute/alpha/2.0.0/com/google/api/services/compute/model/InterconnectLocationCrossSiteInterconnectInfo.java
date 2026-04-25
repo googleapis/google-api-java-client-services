@@ -31,24 +31,26 @@ package com.google.api.services.compute.model;
 public final class InterconnectLocationCrossSiteInterconnectInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
-   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
+   * Output only. The remote location for Cross-Site Interconnect wires. This specifies an
+   * InterconnectLocation city (metropolitan area designator), which itself may match multiple
+   * InterconnectLocations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * The maximum gbps for a single flow to this metro. This limits the total bandwidth which may be
-   * configured per wire.
+   * Output only. The maximum gbps for a single flow to this metro. This limits the total bandwidth
+   * which may be configured per wire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxSingleFlowGbps;
 
   /**
-   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
-   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
+   * Output only. The remote location for Cross-Site Interconnect wires. This specifies an
+   * InterconnectLocation city (metropolitan area designator), which itself may match multiple
+   * InterconnectLocations.
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -56,8 +58,9 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   }
 
   /**
-   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
-   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
+   * Output only. The remote location for Cross-Site Interconnect wires. This specifies an
+   * InterconnectLocation city (metropolitan area designator), which itself may match multiple
+   * InterconnectLocations.
    * @param city city or {@code null} for none
    */
   public InterconnectLocationCrossSiteInterconnectInfo setCity(java.lang.String city) {
@@ -66,8 +69,8 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   }
 
   /**
-   * The maximum gbps for a single flow to this metro. This limits the total bandwidth which may be
-   * configured per wire.
+   * Output only. The maximum gbps for a single flow to this metro. This limits the total bandwidth
+   * which may be configured per wire.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxSingleFlowGbps() {
@@ -75,8 +78,8 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   }
 
   /**
-   * The maximum gbps for a single flow to this metro. This limits the total bandwidth which may be
-   * configured per wire.
+   * Output only. The maximum gbps for a single flow to this metro. This limits the total bandwidth
+   * which may be configured per wire.
    * @param maxSingleFlowGbps maxSingleFlowGbps or {@code null} for none
    */
   public InterconnectLocationCrossSiteInterconnectInfo setMaxSingleFlowGbps(java.lang.Integer maxSingleFlowGbps) {

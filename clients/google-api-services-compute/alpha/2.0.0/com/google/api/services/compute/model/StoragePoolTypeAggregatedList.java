@@ -44,7 +44,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   private java.util.Map<String, StoragePoolTypesScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
+   * Output only. [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
+   * Output only. [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -117,7 +117,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
+   * Output only. [Output Only] Type of resource. Alwayscompute#storagePoolTypeAggregatedList.
    * @param kind kind or {@code null} for none
    */
   public StoragePoolTypeAggregatedList setKind(java.lang.String kind) {
@@ -149,7 +149,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -157,7 +157,7 @@ public final class StoragePoolTypeAggregatedList extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public StoragePoolTypeAggregatedList setSelfLink(java.lang.String selfLink) {

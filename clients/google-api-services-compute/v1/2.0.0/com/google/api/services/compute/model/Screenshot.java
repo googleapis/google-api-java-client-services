@@ -37,7 +37,7 @@ public final class Screenshot extends com.google.api.client.json.GenericJson {
   private java.lang.String contents;
 
   /**
-   * [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
+   * Output only. [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Screenshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
+   * Output only. [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -69,7 +69,7 @@ public final class Screenshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
+   * Output only. [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
    * @param kind kind or {@code null} for none
    */
   public Screenshot setKind(java.lang.String kind) {

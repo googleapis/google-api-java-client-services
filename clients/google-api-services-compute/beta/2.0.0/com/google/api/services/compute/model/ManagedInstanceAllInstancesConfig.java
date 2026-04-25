@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceAllInstancesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
-   * format.
+   * Output only. [Output Only] Current all-instances configuration revision. This value is in
+   * RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revision;
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
-   * format.
+   * Output only. [Output Only] Current all-instances configuration revision. This value is in
+   * RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -47,8 +47,8 @@ public final class ManagedInstanceAllInstancesConfig extends com.google.api.clie
   }
 
   /**
-   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
-   * format.
+   * Output only. [Output Only] Current all-instances configuration revision. This value is in
+   * RFC3339 text format.
    * @param revision revision or {@code null} for none
    */
   public ManagedInstanceAllInstancesConfig setRevision(java.lang.String revision) {

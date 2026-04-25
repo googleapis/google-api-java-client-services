@@ -30,38 +30,38 @@ package com.google.api.services.compute.model;
 public final class HaControllerStatusFailoverProgress extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
-   * in lastFailoverInfo.
+   * Output only. [Output Only] Timestamp of the failover completion. Filled only if the failover is
+   * completed, in lastFailoverInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String failoverCompleteTimestamp;
 
   /**
-   * [Output Only] Indicates if failover has been triggered automatically or manually.
+   * Output only. [Output Only] Indicates if failover has been triggered automatically or manually.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String failoverTrigger;
 
   /**
-   * [Output Only] Timestamp of the last failover trigger.
+   * Output only. [Output Only] Timestamp of the last failover trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String failoverTriggerTimestamp;
 
   /**
-   * [Output Only] Contains details of the last failed failover. This field is filled only if the
-   * current failover is failing
+   * Output only. [Output Only] Contains details of the last failed failover. This field is filled
+   * only if the current failover is failing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HaControllerStatusFailoverProgressLastFailoverAttempt lastFailoverAttempt;
 
   /**
-   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
-   * in lastFailoverInfo.
+   * Output only. [Output Only] Timestamp of the failover completion. Filled only if the failover is
+   * completed, in lastFailoverInfo.
    * @return value or {@code null} for none
    */
   public String getFailoverCompleteTimestamp() {
@@ -69,8 +69,8 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Timestamp of the failover completion. Filled only if the failover is completed,
-   * in lastFailoverInfo.
+   * Output only. [Output Only] Timestamp of the failover completion. Filled only if the failover is
+   * completed, in lastFailoverInfo.
    * @param failoverCompleteTimestamp failoverCompleteTimestamp or {@code null} for none
    */
   public HaControllerStatusFailoverProgress setFailoverCompleteTimestamp(String failoverCompleteTimestamp) {
@@ -79,7 +79,7 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Indicates if failover has been triggered automatically or manually.
+   * Output only. [Output Only] Indicates if failover has been triggered automatically or manually.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailoverTrigger() {
@@ -87,7 +87,7 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Indicates if failover has been triggered automatically or manually.
+   * Output only. [Output Only] Indicates if failover has been triggered automatically or manually.
    * @param failoverTrigger failoverTrigger or {@code null} for none
    */
   public HaControllerStatusFailoverProgress setFailoverTrigger(java.lang.String failoverTrigger) {
@@ -96,7 +96,7 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Timestamp of the last failover trigger.
+   * Output only. [Output Only] Timestamp of the last failover trigger.
    * @return value or {@code null} for none
    */
   public String getFailoverTriggerTimestamp() {
@@ -104,7 +104,7 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Timestamp of the last failover trigger.
+   * Output only. [Output Only] Timestamp of the last failover trigger.
    * @param failoverTriggerTimestamp failoverTriggerTimestamp or {@code null} for none
    */
   public HaControllerStatusFailoverProgress setFailoverTriggerTimestamp(String failoverTriggerTimestamp) {
@@ -113,8 +113,8 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Contains details of the last failed failover. This field is filled only if the
-   * current failover is failing
+   * Output only. [Output Only] Contains details of the last failed failover. This field is filled
+   * only if the current failover is failing
    * @return value or {@code null} for none
    */
   public HaControllerStatusFailoverProgressLastFailoverAttempt getLastFailoverAttempt() {
@@ -122,8 +122,8 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Contains details of the last failed failover. This field is filled only if the
-   * current failover is failing
+   * Output only. [Output Only] Contains details of the last failed failover. This field is filled
+   * only if the current failover is failing
    * @param lastFailoverAttempt lastFailoverAttempt or {@code null} for none
    */
   public HaControllerStatusFailoverProgress setLastFailoverAttempt(HaControllerStatusFailoverProgressLastFailoverAttempt lastFailoverAttempt) {

@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class HaControllerStatusZoneStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Indicates if the zone is primary at this moment.
+   * Output only. [Output Only] Indicates if the zone is primary at this moment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPrimary;
 
   /**
-   * [Output Only] Indicates if the zone is ready for initiating a failover.
+   * Output only. [Output Only] Indicates if the zone is ready for initiating a failover.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isZoneReady;
 
   /**
-   * [Output Only] This field is filled only if the current operation is failing.
+   * Output only. [Output Only] This field is filled only if the current operation is failing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HaControllerStatusZoneStatusLastError lastError;
 
   /**
-   * [Output Only] Indicates if the zone is primary at this moment.
+   * Output only. [Output Only] Indicates if the zone is primary at this moment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsPrimary() {
@@ -59,7 +59,7 @@ public final class HaControllerStatusZoneStatus extends com.google.api.client.js
   }
 
   /**
-   * [Output Only] Indicates if the zone is primary at this moment.
+   * Output only. [Output Only] Indicates if the zone is primary at this moment.
    * @param isPrimary isPrimary or {@code null} for none
    */
   public HaControllerStatusZoneStatus setIsPrimary(java.lang.Boolean isPrimary) {
@@ -68,7 +68,7 @@ public final class HaControllerStatusZoneStatus extends com.google.api.client.js
   }
 
   /**
-   * [Output Only] Indicates if the zone is ready for initiating a failover.
+   * Output only. [Output Only] Indicates if the zone is ready for initiating a failover.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsZoneReady() {
@@ -76,7 +76,7 @@ public final class HaControllerStatusZoneStatus extends com.google.api.client.js
   }
 
   /**
-   * [Output Only] Indicates if the zone is ready for initiating a failover.
+   * Output only. [Output Only] Indicates if the zone is ready for initiating a failover.
    * @param isZoneReady isZoneReady or {@code null} for none
    */
   public HaControllerStatusZoneStatus setIsZoneReady(java.lang.Boolean isZoneReady) {
@@ -85,7 +85,7 @@ public final class HaControllerStatusZoneStatus extends com.google.api.client.js
   }
 
   /**
-   * [Output Only] This field is filled only if the current operation is failing.
+   * Output only. [Output Only] This field is filled only if the current operation is failing.
    * @return value or {@code null} for none
    */
   public HaControllerStatusZoneStatusLastError getLastError() {
@@ -93,7 +93,7 @@ public final class HaControllerStatusZoneStatus extends com.google.api.client.js
   }
 
   /**
-   * [Output Only] This field is filled only if the current operation is failing.
+   * Output only. [Output Only] This field is filled only if the current operation is failing.
    * @param lastError lastError or {@code null} for none
    */
   public HaControllerStatusZoneStatus setLastError(HaControllerStatusZoneStatusLastError lastError) {

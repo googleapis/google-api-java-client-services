@@ -30,38 +30,39 @@ package com.google.api.services.compute.model;
 public final class FutureReservationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The current status of the requested amendment.
+   * Output only. [Output Only] The current status of the requested amendment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String amendmentStatus;
 
   /**
-   * Fully qualified urls of the automatically created reservations at start_time.
+   * Output only. Fully qualified urls of the automatically created reservations at start_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> autoCreatedReservations;
 
   /**
-   * [Output Only] Represents the existing matching usage for the future reservation.
+   * Output only. [Output Only] Represents the existing matching usage for the future reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo;
 
   /**
-   * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state.
-   * This count also includes capacity delivered as part of existing matching reservations.
+   * Output only. This count indicates the fulfilled capacity so far. This is set during
+   * "PROVISIONING" state. This count also includes capacity delivered as part of existing matching
+   * reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fulfilledCount;
 
   /**
-   * [Output Only] This field represents the future reservation before an amendment was requested.
-   * If the amendment is declined, the Future Reservation will be reverted to the last known good
-   * state. The last known good state is not set when updating a future reservation whose
+   * Output only. [Output Only] This field represents the future reservation before an amendment was
+   * requested. If the amendment is declined, the Future Reservation will be reverted to the last
+   * known good state. The last known good state is not set when updating a future reservation whose
    * Procurement Status is DRAFTING.
    * The value may be {@code null}.
    */
@@ -69,17 +70,17 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private FutureReservationStatusLastKnownGoodState lastKnownGoodState;
 
   /**
-   * Time when Future Reservation would become LOCKED, after which no modifications to Future
-   * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
-   * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time.
+   * Output only. Time when Future Reservation would become LOCKED, after which no modifications to
+   * Future Reservation will be allowed. Applicable only after the Future Reservation is in the
+   * APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to
+   * PROCURING state at this time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lockTime;
 
   /**
-   * Current state of this Future Reservation
+   * Output only. Current state of this Future Reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private FutureReservationStatusSpecificSKUProperties specificSkuProperties;
 
   /**
-   * [Output Only] The current status of the requested amendment.
+   * Output only. [Output Only] The current status of the requested amendment.
    * @return value or {@code null} for none
    */
   public java.lang.String getAmendmentStatus() {
@@ -100,7 +101,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] The current status of the requested amendment.
+   * Output only. [Output Only] The current status of the requested amendment.
    * @param amendmentStatus amendmentStatus or {@code null} for none
    */
   public FutureReservationStatus setAmendmentStatus(java.lang.String amendmentStatus) {
@@ -109,7 +110,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Fully qualified urls of the automatically created reservations at start_time.
+   * Output only. Fully qualified urls of the automatically created reservations at start_time.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAutoCreatedReservations() {
@@ -117,7 +118,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Fully qualified urls of the automatically created reservations at start_time.
+   * Output only. Fully qualified urls of the automatically created reservations at start_time.
    * @param autoCreatedReservations autoCreatedReservations or {@code null} for none
    */
   public FutureReservationStatus setAutoCreatedReservations(java.util.List<java.lang.String> autoCreatedReservations) {
@@ -126,7 +127,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Represents the existing matching usage for the future reservation.
+   * Output only. [Output Only] Represents the existing matching usage for the future reservation.
    * @return value or {@code null} for none
    */
   public FutureReservationStatusExistingMatchingUsageInfo getExistingMatchingUsageInfo() {
@@ -134,7 +135,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Represents the existing matching usage for the future reservation.
+   * Output only. [Output Only] Represents the existing matching usage for the future reservation.
    * @param existingMatchingUsageInfo existingMatchingUsageInfo or {@code null} for none
    */
   public FutureReservationStatus setExistingMatchingUsageInfo(FutureReservationStatusExistingMatchingUsageInfo existingMatchingUsageInfo) {
@@ -143,8 +144,9 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state.
-   * This count also includes capacity delivered as part of existing matching reservations.
+   * Output only. This count indicates the fulfilled capacity so far. This is set during
+   * "PROVISIONING" state. This count also includes capacity delivered as part of existing matching
+   * reservations.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFulfilledCount() {
@@ -152,8 +154,9 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state.
-   * This count also includes capacity delivered as part of existing matching reservations.
+   * Output only. This count indicates the fulfilled capacity so far. This is set during
+   * "PROVISIONING" state. This count also includes capacity delivered as part of existing matching
+   * reservations.
    * @param fulfilledCount fulfilledCount or {@code null} for none
    */
   public FutureReservationStatus setFulfilledCount(java.lang.Long fulfilledCount) {
@@ -162,9 +165,9 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] This field represents the future reservation before an amendment was requested.
-   * If the amendment is declined, the Future Reservation will be reverted to the last known good
-   * state. The last known good state is not set when updating a future reservation whose
+   * Output only. [Output Only] This field represents the future reservation before an amendment was
+   * requested. If the amendment is declined, the Future Reservation will be reverted to the last
+   * known good state. The last known good state is not set when updating a future reservation whose
    * Procurement Status is DRAFTING.
    * @return value or {@code null} for none
    */
@@ -173,9 +176,9 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] This field represents the future reservation before an amendment was requested.
-   * If the amendment is declined, the Future Reservation will be reverted to the last known good
-   * state. The last known good state is not set when updating a future reservation whose
+   * Output only. [Output Only] This field represents the future reservation before an amendment was
+   * requested. If the amendment is declined, the Future Reservation will be reverted to the last
+   * known good state. The last known good state is not set when updating a future reservation whose
    * Procurement Status is DRAFTING.
    * @param lastKnownGoodState lastKnownGoodState or {@code null} for none
    */
@@ -185,10 +188,10 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Time when Future Reservation would become LOCKED, after which no modifications to Future
-   * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
-   * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time.
+   * Output only. Time when Future Reservation would become LOCKED, after which no modifications to
+   * Future Reservation will be allowed. Applicable only after the Future Reservation is in the
+   * APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to
+   * PROCURING state at this time.
    * @return value or {@code null} for none
    */
   public java.lang.String getLockTime() {
@@ -196,10 +199,10 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Time when Future Reservation would become LOCKED, after which no modifications to Future
-   * Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED
-   * state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING
-   * state at this time.
+   * Output only. Time when Future Reservation would become LOCKED, after which no modifications to
+   * Future Reservation will be allowed. Applicable only after the Future Reservation is in the
+   * APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to
+   * PROCURING state at this time.
    * @param lockTime lockTime or {@code null} for none
    */
   public FutureReservationStatus setLockTime(java.lang.String lockTime) {
@@ -208,7 +211,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Current state of this Future Reservation
+   * Output only. Current state of this Future Reservation
    * @return value or {@code null} for none
    */
   public java.lang.String getProcurementStatus() {
@@ -216,7 +219,7 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   }
 
   /**
-   * Current state of this Future Reservation
+   * Output only. Current state of this Future Reservation
    * @param procurementStatus procurementStatus or {@code null} for none
    */
   public FutureReservationStatus setProcurementStatus(java.lang.String procurementStatus) {

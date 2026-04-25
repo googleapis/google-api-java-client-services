@@ -32,6 +32,14 @@ package com.google.api.services.compute.model;
 public final class VpnTunnel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String capacityTier;
+
+  /**
    * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
    * The value may be {@code null}.
    */
@@ -39,7 +47,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private VpnTunnelCipherSuite cipherSuite;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +83,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ikeVersion;
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,6 +130,14 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpnTunnelParams params;
 
   /**
    * URL of the peer side external VPN gateway to which this VPN tunnel is connected. Provided by
@@ -255,6 +271,25 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.Integer vpnGatewayInterface;
 
   /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCapacityTier() {
+    return capacityTier;
+  }
+
+  /**
+   * Capacity tier of the VPN tunnel. This is used for IPsec over Interconnect tunnels to indicate
+   * different bandwidth limits.
+   * @param capacityTier capacityTier or {@code null} for none
+   */
+  public VpnTunnel setCapacityTier(java.lang.String capacityTier) {
+    this.capacityTier = capacityTier;
+    return this;
+  }
+
+  /**
    * User specified list of ciphers to use for the phase 1 and phase 2 of the IKE protocol.
    * @return value or {@code null} for none
    */
@@ -272,7 +307,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -280,7 +315,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public VpnTunnel setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -359,7 +394,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -367,7 +402,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * @param kind kind or {@code null} for none
    */
   public VpnTunnel setKind(java.lang.String kind) {
@@ -508,6 +543,25 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   public VpnTunnel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public VpnTunnelParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public VpnTunnel setParams(VpnTunnelParams params) {
+    this.params = params;
     return this;
   }
 

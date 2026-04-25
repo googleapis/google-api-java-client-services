@@ -80,7 +80,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health
+   * checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,7 +243,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health
+   * checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -250,7 +252,8 @@ public final class HttpHealthCheck extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health checks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#httpHealthCheck for HTTP health
+   * checks.
    * @param kind kind or {@code null} for none
    */
   public HttpHealthCheck setKind(java.lang.String kind) {

@@ -30,16 +30,18 @@ package com.google.api.services.compute.model;
 public final class WireGroupServiceLevel extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The availability SLA that the wire group qualifies for. One of the following:
-   * `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or `AVAILABILITY_9995`.
+   * Output only. [Output Only] The availability SLA that the wire group qualifies for. One of the
+   * following: `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or
+   * `AVAILABILITY_9995`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String availabilityClass;
 
   /**
-   * [Output Only] The availability SLA that the wire group qualifies for. One of the following:
-   * `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or `AVAILABILITY_9995`.
+   * Output only. [Output Only] The availability SLA that the wire group qualifies for. One of the
+   * following: `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or
+   * `AVAILABILITY_9995`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityClass() {
@@ -47,8 +49,9 @@ public final class WireGroupServiceLevel extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The availability SLA that the wire group qualifies for. One of the following:
-   * `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or `AVAILABILITY_9995`.
+   * Output only. [Output Only] The availability SLA that the wire group qualifies for. One of the
+   * following: `NO_AVAILABILITY_SLA`, `AVAILABILITY_99`, `AVAILABILITY_999`, or
+   * `AVAILABILITY_9995`.
    * @param availabilityClass availabilityClass or {@code null} for none
    */
   public WireGroupServiceLevel setAvailabilityClass(java.lang.String availabilityClass) {

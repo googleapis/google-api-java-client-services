@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class WireGroupTopology extends com.google.api.client.json.GenericJson {
 
   /**
-   * Topology details for all endpoints in the wire group.
+   * Output only. Topology details for all endpoints in the wire group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WireGroupTopologyEndpoint> endpoints;
 
   /**
-   * Topology details for all endpoints in the wire group.
+   * Output only. Topology details for all endpoints in the wire group.
    * @return value or {@code null} for none
    */
   public java.util.List<WireGroupTopologyEndpoint> getEndpoints() {
@@ -45,7 +45,7 @@ public final class WireGroupTopology extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Topology details for all endpoints in the wire group.
+   * Output only. Topology details for all endpoints in the wire group.
    * @param endpoints endpoints or {@code null} for none
    */
   public WireGroupTopology setEndpoints(java.util.List<WireGroupTopologyEndpoint> endpoints) {

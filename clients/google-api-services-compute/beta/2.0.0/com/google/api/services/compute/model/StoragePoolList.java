@@ -56,7 +56,8 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#storagePoolList for lists of storagePools.
+   * Output only. [Output Only] Type of resource. Always compute#storagePoolList for lists of
+   * storagePools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,14 +74,15 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +145,8 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#storagePoolList for lists of storagePools.
+   * Output only. [Output Only] Type of resource. Always compute#storagePoolList for lists of
+   * storagePools.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -151,7 +154,8 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#storagePoolList for lists of storagePools.
+   * Output only. [Output Only] Type of resource. Always compute#storagePoolList for lists of
+   * storagePools.
    * @param kind kind or {@code null} for none
    */
   public StoragePoolList setKind(java.lang.String kind) {
@@ -183,7 +187,7 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -191,7 +195,7 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public StoragePoolList setSelfLink(java.lang.String selfLink) {
@@ -200,7 +204,8 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -208,7 +213,8 @@ public final class StoragePoolList extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public StoragePoolList setUnreachables(java.util.List<java.lang.String> unreachables) {

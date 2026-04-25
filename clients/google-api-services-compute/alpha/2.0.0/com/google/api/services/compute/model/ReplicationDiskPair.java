@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class ReplicationDiskPair extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL of the primary disk.
+   * Output only. URL of the primary disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryDisk;
 
   /**
-   * URL of the secondary disk.
+   * Output only. URL of the secondary disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryDisk;
 
   /**
-   * URL of the primary disk.
+   * Output only. URL of the primary disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryDisk() {
@@ -52,7 +52,7 @@ public final class ReplicationDiskPair extends com.google.api.client.json.Generi
   }
 
   /**
-   * URL of the primary disk.
+   * Output only. URL of the primary disk.
    * @param primaryDisk primaryDisk or {@code null} for none
    */
   public ReplicationDiskPair setPrimaryDisk(java.lang.String primaryDisk) {
@@ -61,7 +61,7 @@ public final class ReplicationDiskPair extends com.google.api.client.json.Generi
   }
 
   /**
-   * URL of the secondary disk.
+   * Output only. URL of the secondary disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryDisk() {
@@ -69,7 +69,7 @@ public final class ReplicationDiskPair extends com.google.api.client.json.Generi
   }
 
   /**
-   * URL of the secondary disk.
+   * Output only. URL of the secondary disk.
    * @param secondaryDisk secondaryDisk or {@code null} for none
    */
   public ReplicationDiskPair setSecondaryDisk(java.lang.String secondaryDisk) {

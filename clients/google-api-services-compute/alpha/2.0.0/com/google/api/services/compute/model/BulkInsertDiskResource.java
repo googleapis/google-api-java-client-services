@@ -38,7 +38,7 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
   private InstantSnapshotGroupParameters instantSnapshotGroupParameters;
 
   /**
-   * The parameters for the snapshot group.
+   * The parameters for the snapshot group. The usage of snapshot group feature is restricted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
   }
 
   /**
-   * The parameters for the snapshot group.
+   * The parameters for the snapshot group. The usage of snapshot group feature is restricted.
    * @return value or {@code null} for none
    */
   public SnapshotGroupParameters getSnapshotGroupParameters() {
@@ -81,7 +81,7 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
   }
 
   /**
-   * The parameters for the snapshot group.
+   * The parameters for the snapshot group. The usage of snapshot group feature is restricted.
    * @param snapshotGroupParameters snapshotGroupParameters or {@code null} for none
    */
   public BulkInsertDiskResource setSnapshotGroupParameters(SnapshotGroupParameters snapshotGroupParameters) {

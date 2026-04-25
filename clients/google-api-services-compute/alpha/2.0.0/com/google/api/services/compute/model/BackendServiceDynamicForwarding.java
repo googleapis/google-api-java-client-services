@@ -30,11 +30,35 @@ package com.google.api.services.compute.model;
 public final class BackendServiceDynamicForwarding extends com.google.api.client.json.GenericJson {
 
   /**
+   * Dynamic Forwarding Proxy configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceDynamicForwardingForwardProxy forwardProxy;
+
+  /**
    * IP:PORT based dynamic forwarding configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackendServiceDynamicForwardingIpPortSelection ipPortSelection;
+
+  /**
+   * Dynamic Forwarding Proxy configuration.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceDynamicForwardingForwardProxy getForwardProxy() {
+    return forwardProxy;
+  }
+
+  /**
+   * Dynamic Forwarding Proxy configuration.
+   * @param forwardProxy forwardProxy or {@code null} for none
+   */
+  public BackendServiceDynamicForwarding setForwardProxy(BackendServiceDynamicForwardingForwardProxy forwardProxy) {
+    this.forwardProxy = forwardProxy;
+    return this;
+  }
 
   /**
    * IP:PORT based dynamic forwarding configuration.

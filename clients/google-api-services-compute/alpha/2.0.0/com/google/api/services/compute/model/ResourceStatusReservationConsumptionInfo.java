@@ -30,30 +30,32 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusReservationConsumptionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservation;
 
   /**
-   * [Output Only] The full resource name of the reservation block that this instance is consuming
-   * from.
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservationBlock;
 
   /**
-   * [Output Only] The full resource name of the reservation sub-block that this instance is
-   * consuming from.
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservationSubBlock;
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservation() {
@@ -61,7 +63,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * @param consumedReservation consumedReservation or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo setConsumedReservation(java.lang.String consumedReservation) {
@@ -70,8 +73,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation block that this instance is consuming
-   * from.
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservationBlock() {
@@ -79,8 +82,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation block that this instance is consuming
-   * from.
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
    * @param consumedReservationBlock consumedReservationBlock or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo setConsumedReservationBlock(java.lang.String consumedReservationBlock) {
@@ -89,8 +92,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation sub-block that this instance is
-   * consuming from.
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservationSubBlock() {
@@ -98,8 +101,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation sub-block that this instance is
-   * consuming from.
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
    * @param consumedReservationSubBlock consumedReservationSubBlock or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo setConsumedReservationSubBlock(java.lang.String consumedReservationSubBlock) {

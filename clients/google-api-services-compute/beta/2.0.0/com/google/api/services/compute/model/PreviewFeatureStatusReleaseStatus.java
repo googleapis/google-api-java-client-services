@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class PreviewFeatureStatusReleaseStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The stage of the feature.
+   * Output only. [Output Only] The stage of the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class PreviewFeatureStatusReleaseStatus extends com.google.api.clie
   private Date updateDate;
 
   /**
-   * [Output Only] The stage of the feature.
+   * Output only. [Output Only] The stage of the feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getStage() {
@@ -52,7 +52,7 @@ public final class PreviewFeatureStatusReleaseStatus extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The stage of the feature.
+   * Output only. [Output Only] The stage of the feature.
    * @param stage stage or {@code null} for none
    */
   public PreviewFeatureStatusReleaseStatus setStage(java.lang.String stage) {

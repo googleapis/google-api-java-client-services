@@ -61,7 +61,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#region for regions.
+   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
-   * only if fetching of the `quotas` field fails.
+   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
+   * is populated only if fetching of the `quotas` field fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +199,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#region for regions.
+   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -207,7 +207,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#region for regions.
+   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
    * @param kind kind or {@code null} for none
    */
   public Region setKind(java.lang.String kind) {
@@ -233,8 +233,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
-   * only if fetching of the `quotas` field fails.
+   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
+   * is populated only if fetching of the `quotas` field fails.
    * @return value or {@code null} for none
    */
   public QuotaStatusWarning getQuotaStatusWarning() {
@@ -242,8 +242,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
-   * only if fetching of the `quotas` field fails.
+   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
+   * is populated only if fetching of the `quotas` field fails.
    * @param quotaStatusWarning quotaStatusWarning or {@code null} for none
    */
   public Region setQuotaStatusWarning(QuotaStatusWarning quotaStatusWarning) {
@@ -286,7 +286,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -294,7 +294,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Region setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -320,7 +320,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -328,7 +328,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public Region setSupportsPzs(java.lang.Boolean supportsPzs) {
@@ -364,8 +364,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
-   * only if fetching of the `quotas` field fails.
+   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field is
+   * populated only if fetching of the `quotas` field fails.
    */
   public static final class QuotaStatusWarning extends com.google.api.client.json.GenericJson {
 

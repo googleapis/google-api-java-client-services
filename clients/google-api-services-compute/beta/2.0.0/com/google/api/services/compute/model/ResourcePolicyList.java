@@ -56,7 +56,8 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof resourcePolicies
+   * Output only. [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof
+   * resourcePolicies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +74,7 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +137,8 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof resourcePolicies
+   * Output only. [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof
+   * resourcePolicies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -144,7 +146,8 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof resourcePolicies
+   * Output only. [Output Only] Type of resource.Alwayscompute#resourcePoliciesList for listsof
+   * resourcePolicies
    * @param kind kind or {@code null} for none
    */
   public ResourcePolicyList setKind(java.lang.String kind) {
@@ -176,7 +179,7 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -184,7 +187,7 @@ public final class ResourcePolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ResourcePolicyList setSelfLink(java.lang.String selfLink) {

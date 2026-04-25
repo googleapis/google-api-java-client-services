@@ -31,21 +31,21 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusBulkInstanceOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Informs whether bulk instance operation is in progress.
+   * Output only. Informs whether bulk instance operation is in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean inProgress;
 
   /**
-   * [Output Only] Information from the last progress check of bulk instance operation.
+   * Output only. Information from the last progress check of bulk instance operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck lastProgressCheck;
 
   /**
-   * [Output Only] Informs whether bulk instance operation is in progress.
+   * Output only. Informs whether bulk instance operation is in progress.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInProgress() {
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerStatusBulkInstanceOperation extends com.g
   }
 
   /**
-   * [Output Only] Informs whether bulk instance operation is in progress.
+   * Output only. Informs whether bulk instance operation is in progress.
    * @param inProgress inProgress or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperation setInProgress(java.lang.Boolean inProgress) {
@@ -62,7 +62,7 @@ public final class InstanceGroupManagerStatusBulkInstanceOperation extends com.g
   }
 
   /**
-   * [Output Only] Information from the last progress check of bulk instance operation.
+   * Output only. Information from the last progress check of bulk instance operation.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck getLastProgressCheck() {
@@ -70,7 +70,7 @@ public final class InstanceGroupManagerStatusBulkInstanceOperation extends com.g
   }
 
   /**
-   * [Output Only] Information from the last progress check of bulk instance operation.
+   * Output only. Information from the last progress check of bulk instance operation.
    * @param lastProgressCheck lastProgressCheck or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperation setLastProgressCheck(InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck lastProgressCheck) {

@@ -72,8 +72,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Boolean enableLogging;
 
   /**
-   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
-   * andcompute#packetMirroringRule for packet mirroring rules.
+   * Output only. [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall
+   * rules andcompute#packetMirroringRule for packet mirroring rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String ruleName;
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall policy rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,8 +274,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
-   * andcompute#packetMirroringRule for packet mirroring rules.
+   * Output only. [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall
+   * rules andcompute#packetMirroringRule for packet mirroring rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -283,8 +283,8 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules
-   * andcompute#packetMirroringRule for packet mirroring rules.
+   * Output only. [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall
+   * rules andcompute#packetMirroringRule for packet mirroring rules.
    * @param kind kind or {@code null} for none
    */
   public FirewallPolicyRule setKind(java.lang.String kind) {
@@ -350,7 +350,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall policy rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleTupleCount() {
@@ -358,7 +358,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall policy rule.
    * @param ruleTupleCount ruleTupleCount or {@code null} for none
    */
   public FirewallPolicyRule setRuleTupleCount(java.lang.Integer ruleTupleCount) {

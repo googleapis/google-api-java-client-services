@@ -31,8 +31,8 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupPscData extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Address allocated from given subnetwork for PSC. This IP address acts as a VIP
-   * for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
+   * Output only. [Output Only] Address allocated from given subnetwork for PSC. This IP address
+   * acts as a VIP for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,22 +47,22 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   private java.lang.Integer producerPort;
 
   /**
-   * [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
+   * Output only. [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger pscConnectionId;
 
   /**
-   * [Output Only] The connection status of the PSC Forwarding Rule.
+   * Output only. [Output Only] The connection status of the PSC Forwarding Rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pscConnectionStatus;
 
   /**
-   * [Output Only] Address allocated from given subnetwork for PSC. This IP address acts as a VIP
-   * for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
+   * Output only. [Output Only] Address allocated from given subnetwork for PSC. This IP address
+   * acts as a VIP for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerPscAddress() {
@@ -70,8 +70,8 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] Address allocated from given subnetwork for PSC. This IP address acts as a VIP
-   * for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
+   * Output only. [Output Only] Address allocated from given subnetwork for PSC. This IP address
+   * acts as a VIP for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
    * @param consumerPscAddress consumerPscAddress or {@code null} for none
    */
   public NetworkEndpointGroupPscData setConsumerPscAddress(java.lang.String consumerPscAddress) {
@@ -99,7 +99,7 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
+   * Output only. [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getPscConnectionId() {
@@ -107,7 +107,7 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
+   * Output only. [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
    * @param pscConnectionId pscConnectionId or {@code null} for none
    */
   public NetworkEndpointGroupPscData setPscConnectionId(java.math.BigInteger pscConnectionId) {
@@ -116,7 +116,7 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] The connection status of the PSC Forwarding Rule.
+   * Output only. [Output Only] The connection status of the PSC Forwarding Rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getPscConnectionStatus() {
@@ -124,7 +124,7 @@ public final class NetworkEndpointGroupPscData extends com.google.api.client.jso
   }
 
   /**
-   * [Output Only] The connection status of the PSC Forwarding Rule.
+   * Output only. [Output Only] The connection status of the PSC Forwarding Rule.
    * @param pscConnectionStatus pscConnectionStatus or {@code null} for none
    */
   public NetworkEndpointGroupPscData setPscConnectionStatus(java.lang.String pscConnectionStatus) {

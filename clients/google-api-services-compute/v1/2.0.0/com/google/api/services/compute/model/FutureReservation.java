@@ -73,7 +73,14 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private FutureReservationCommitmentInfo commitmentInfo;
 
   /**
-   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String confidentialComputeType;
+
+  /**
+   * Output only. [Output Only] The creation timestamp for this future reservation inRFC3339 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,15 +109,16 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableEmergentMaintenance;
 
   /**
-   * [Output Only] A unique identifier for this future reservation. The server defines this
-   * identifier.
+   * Output only. [Output Only] A unique identifier for this future reservation. The server defines
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#futureReservation for future
+   * reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,6 +143,14 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String namePrefix;
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationParams params;
 
   /**
    * Planning state before being submitted for evaluation
@@ -168,14 +184,14 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String schedulingType;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +221,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private FutureReservationSpecificSKUProperties specificSkuProperties;
 
   /**
-   * [Output only] Status of the Future Reservation
+   * Output only. [Output only] Status of the Future Reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +235,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private FutureReservationTimeWindow timeWindow;
 
   /**
-   * [Output Only] URL of the Zone where this future reservation resides.
+   * Output only. [Output Only] URL of the Zone where this future reservation resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +343,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfidentialComputeType() {
+    return confidentialComputeType;
+  }
+
+  /**
+   * @param confidentialComputeType confidentialComputeType or {@code null} for none
+   */
+  public FutureReservation setConfidentialComputeType(java.lang.String confidentialComputeType) {
+    this.confidentialComputeType = confidentialComputeType;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The creation timestamp for this future reservation inRFC3339 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -335,7 +367,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The creation timestamp for this future reservation inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this future reservation inRFC3339 text
+   * format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public FutureReservation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -397,8 +430,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] A unique identifier for this future reservation. The server defines this
-   * identifier.
+   * Output only. [Output Only] A unique identifier for this future reservation. The server defines
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -406,8 +439,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] A unique identifier for this future reservation. The server defines this
-   * identifier.
+   * Output only. [Output Only] A unique identifier for this future reservation. The server defines
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public FutureReservation setId(java.math.BigInteger id) {
@@ -416,7 +449,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#futureReservation for future
+   * reservations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -424,7 +458,8 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#futureReservation for future
+   * reservations.
    * @param kind kind or {@code null} for none
    */
   public FutureReservation setKind(java.lang.String kind) {
@@ -475,6 +510,25 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setNamePrefix(java.lang.String namePrefix) {
     this.namePrefix = namePrefix;
+    return this;
+  }
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. Additional params passed with the request, but not persisted as part of resource
+   * payload.
+   * @param params params or {@code null} for none
+   */
+  public FutureReservation setParams(FutureReservationParams params) {
+    this.params = params;
     return this;
   }
 
@@ -553,7 +607,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -561,7 +615,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public FutureReservation setSelfLink(java.lang.String selfLink) {
@@ -570,7 +624,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -578,7 +632,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public FutureReservation setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -642,7 +696,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output only] Status of the Future Reservation
+   * Output only. [Output only] Status of the Future Reservation
    * @return value or {@code null} for none
    */
   public FutureReservationStatus getStatus() {
@@ -650,7 +704,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output only] Status of the Future Reservation
+   * Output only. [Output only] Status of the Future Reservation
    * @param status status or {@code null} for none
    */
   public FutureReservation setStatus(FutureReservationStatus status) {
@@ -676,7 +730,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the Zone where this future reservation resides.
+   * Output only. [Output Only] URL of the Zone where this future reservation resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -684,7 +738,7 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the Zone where this future reservation resides.
+   * Output only. [Output Only] URL of the Zone where this future reservation resides.
    * @param zone zone or {@code null} for none
    */
   public FutureReservation setZone(java.lang.String zone) {

@@ -31,6 +31,13 @@ package com.google.api.services.games.model;
 public final class AchievementDefinition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The lifecycle state of the achievement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String achievementLifecycleState;
+
+  /**
    * The type of the achievement.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class AchievementDefinition extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String unlockedIconUrl;
+
+  /**
+   * Output only. The lifecycle state of the achievement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAchievementLifecycleState() {
+    return achievementLifecycleState;
+  }
+
+  /**
+   * Output only. The lifecycle state of the achievement.
+   * @param achievementLifecycleState achievementLifecycleState or {@code null} for none
+   */
+  public AchievementDefinition setAchievementLifecycleState(java.lang.String achievementLifecycleState) {
+    this.achievementLifecycleState = achievementLifecycleState;
+    return this;
+  }
 
   /**
    * The type of the achievement.

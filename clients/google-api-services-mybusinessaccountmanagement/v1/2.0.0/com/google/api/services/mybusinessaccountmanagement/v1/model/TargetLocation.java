@@ -31,7 +31,7 @@ package com.google.api.services.mybusinessaccountmanagement.v1.model;
 public final class TargetLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The address of the location to which the user is invited.
+   * The address of the location to which the user is invited. Not always populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class TargetLocation extends com.google.api.client.json.GenericJson
   private java.lang.String locationName;
 
   /**
-   * The address of the location to which the user is invited.
+   * The address of the location to which the user is invited. Not always populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -53,7 +53,7 @@ public final class TargetLocation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The address of the location to which the user is invited.
+   * The address of the location to which the user is invited. Not always populated.
    * @param address address or {@code null} for none
    */
   public TargetLocation setAddress(java.lang.String address) {

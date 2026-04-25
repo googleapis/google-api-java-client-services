@@ -4472,8 +4472,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
            *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
-           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           *        `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_URL` *
            *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
            * @param content the {@link com.google.api.services.displayvideo.v4.model.AssignedTargetingOption}
            * @return the request
@@ -4516,8 +4515,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
            *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
-           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           *        `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_URL` *
            *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              * @param content the {@link com.google.api.services.displayvideo.v4.model.AssignedTargetingOption}
              * @since 1.13
@@ -4627,8 +4625,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
              * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
-             * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             @com.google.api.client.util.Key
@@ -4638,9 +4635,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
            `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           `TARGETING_TYPE_YOUTUBE_VIDEO`
+           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_URL` *
+           `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -4652,8 +4648,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
              * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
-             * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public Create setTargetingType(java.lang.String targetingType) {
@@ -4686,9 +4681,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
            *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
            * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
            * @return the request
            */
@@ -4732,9 +4728,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
            *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
              * @since 1.13
              */
@@ -4847,11 +4844,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of this assigned targeting option. Supported targeting
              * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             @com.google.api.client.util.Key
             private java.lang.String targetingType;
@@ -4859,9 +4856,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
            `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           `TARGETING_TYPE_YOUTUBE_VIDEO`
+           `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -4871,11 +4868,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of this assigned targeting option. Supported targeting
              * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public Delete setTargetingType(java.lang.String targetingType) {
               if (!getSuppressPatternChecks()) {
@@ -4927,9 +4924,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types include:
            *        * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
            * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
            *        targeting option being requested.
            * @return the request
@@ -4972,9 +4970,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types include:
            *        * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this line item that identifies the assigned
            *        targeting option being requested.
              * @since 1.13
@@ -5098,11 +5097,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of this assigned targeting option. Supported targeting
              * types include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             @com.google.api.client.util.Key
             private java.lang.String targetingType;
@@ -5110,9 +5109,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /** Required. Identifies the type of this assigned targeting option. Supported targeting types include:
            * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           `TARGETING_TYPE_YOUTUBE_VIDEO`
+           `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -5122,11 +5121,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of this assigned targeting option. Supported targeting
              * types include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public Get setTargetingType(java.lang.String targetingType) {
               if (!getSuppressPatternChecks()) {
@@ -5185,10 +5184,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types
            *        include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
            *        `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-           *        `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
-           *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
-           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
            * @return the request
            */
           public List list(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType) throws java.io.IOException {
@@ -5226,10 +5225,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * @param targetingType Required. Identifies the type of assigned targeting options to list. Supported targeting types
            *        include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
            *        `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-           *        `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_HOUSEHOLD_INCOME` *
-           *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           *        `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
-           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           *        `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              * @since 1.13
              */
             protected List(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType) {
@@ -5345,11 +5344,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of assigned targeting options to list. Supported
              * targeting types include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             @com.google.api.client.util.Key
             private java.lang.String targetingType;
@@ -5357,9 +5356,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /** Required. Identifies the type of assigned targeting options to list. Supported targeting types
            include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
            `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
-           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
-           `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           `TARGETING_TYPE_YOUTUBE_VIDEO`
+           `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -5369,11 +5368,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * Required. Identifies the type of assigned targeting options to list. Supported
              * targeting types include: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
              * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
-             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
              * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
-             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
-             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
              */
             public List setTargetingType(java.lang.String targetingType) {
               if (!getSuppressPatternChecks()) {

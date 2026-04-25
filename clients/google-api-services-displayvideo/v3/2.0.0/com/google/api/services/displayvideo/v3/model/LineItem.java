@@ -85,7 +85,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> creativeIds;
 
   /**
-   * Optional. Settings specific to Demand Gen line items.
+   * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -379,7 +381,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Settings specific to Demand Gen line items.
+   * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @return value or {@code null} for none
    */
   public DemandGenSettings getDemandGenSettings() {
@@ -387,7 +391,9 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Settings specific to Demand Gen line items.
+   * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @param demandGenSettings demandGenSettings or {@code null} for none
    */
   public LineItem setDemandGenSettings(DemandGenSettings demandGenSettings) {

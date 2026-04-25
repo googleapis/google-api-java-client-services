@@ -31,16 +31,16 @@ package com.google.api.services.compute.model;
 public final class NodeGroupMaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String duration;
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class NodeGroupMaintenanceWindow extends com.google.api.client.json
   private java.lang.String startTime;
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @return value or {@code null} for none
    */
   public java.lang.String getDuration() {
@@ -64,8 +64,8 @@ public final class NodeGroupMaintenanceWindow extends com.google.api.client.json
   }
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @param duration duration or {@code null} for none
    */
   public NodeGroupMaintenanceWindow setDuration(java.lang.String duration) {
@@ -74,8 +74,8 @@ public final class NodeGroupMaintenanceWindow extends com.google.api.client.json
   }
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @return value or {@code null} for none
    */
   public Duration getMaintenanceDuration() {
@@ -83,8 +83,8 @@ public final class NodeGroupMaintenanceWindow extends com.google.api.client.json
   }
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @param maintenanceDuration maintenanceDuration or {@code null} for none
    */
   public NodeGroupMaintenanceWindow setMaintenanceDuration(Duration maintenanceDuration) {

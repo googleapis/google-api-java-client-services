@@ -56,8 +56,8 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   private java.lang.String subnetwork;
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
-   * field is deprecated.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
+   * [Deprecated] This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
-   * field is deprecated.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
+   * [Deprecated] This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -134,8 +134,8 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * [Output Only] The URL of thezone where the network endpoint group is located. [Deprecated] This
-   * field is deprecated.
+   * Output only. [Output Only] The URL of thezone where the network endpoint group is located.
+   * [Deprecated] This field is deprecated.
    * @param zone zone or {@code null} for none
    */
   public NetworkEndpointGroupLbNetworkEndpointGroup setZone(java.lang.String zone) {

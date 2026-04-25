@@ -50,8 +50,8 @@ public final class PublicDelegatedPrefixList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for public
-   * delegated prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for
+   * public delegated prefixes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class PublicDelegatedPrefixList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for public
-   * delegated prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for
+   * public delegated prefixes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class PublicDelegatedPrefixList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for public
-   * delegated prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixList for
+   * public delegated prefixes.
    * @param kind kind or {@code null} for none
    */
   public PublicDelegatedPrefixList setKind(java.lang.String kind) {

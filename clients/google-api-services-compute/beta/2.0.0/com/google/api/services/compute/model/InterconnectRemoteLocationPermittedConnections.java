@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class InterconnectRemoteLocationPermittedConnections extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
-   * remote location.
+   * Output only. [Output Only] URL of an Interconnect location that is permitted to connect to this
+   * Interconnect remote location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnectLocation;
 
   /**
-   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
-   * remote location.
+   * Output only. [Output Only] URL of an Interconnect location that is permitted to connect to this
+   * Interconnect remote location.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectLocation() {
@@ -47,8 +47,8 @@ public final class InterconnectRemoteLocationPermittedConnections extends com.go
   }
 
   /**
-   * [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect
-   * remote location.
+   * Output only. [Output Only] URL of an Interconnect location that is permitted to connect to this
+   * Interconnect remote location.
    * @param interconnectLocation interconnectLocation or {@code null} for none
    */
   public InterconnectRemoteLocationPermittedConnections setInterconnectLocation(java.lang.String interconnectLocation) {

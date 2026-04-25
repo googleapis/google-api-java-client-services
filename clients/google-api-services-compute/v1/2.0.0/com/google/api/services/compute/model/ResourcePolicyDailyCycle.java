@@ -38,8 +38,8 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
   private java.lang.Integer daysInCycle;
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
   }
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @return value or {@code null} for none
    */
   public java.lang.String getDuration() {
@@ -82,8 +82,8 @@ public final class ResourcePolicyDailyCycle extends com.google.api.client.json.G
   }
 
   /**
-   * [Output only] A predetermined duration for the window, automatically chosen to be the smallest
-   * possible in the given scenario.
+   * Output only. [Output only] A predetermined duration for the window, automatically chosen to be
+   * the smallest possible in the given scenario.
    * @param duration duration or {@code null} for none
    */
   public ResourcePolicyDailyCycle setDuration(java.lang.String duration) {

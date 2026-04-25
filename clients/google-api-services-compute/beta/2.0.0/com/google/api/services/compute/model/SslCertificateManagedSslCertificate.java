@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class SslCertificateManagedSslCertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+   * Output only. [Output only] Detailed statuses of the domains specified for managed certificate
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +47,15 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
   private java.util.List<java.lang.String> domains;
 
   /**
-   * [Output only] Status of the managed certificate resource.
+   * Output only. [Output only] Status of the managed certificate resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+   * Output only. [Output only] Detailed statuses of the domains specified for managed certificate
+   * resource.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDomainStatus() {
@@ -61,7 +63,8 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
   }
 
   /**
-   * [Output only] Detailed statuses of the domains specified for managed certificate resource.
+   * Output only. [Output only] Detailed statuses of the domains specified for managed certificate
+   * resource.
    * @param domainStatus domainStatus or {@code null} for none
    */
   public SslCertificateManagedSslCertificate setDomainStatus(java.util.Map<String, java.lang.String> domainStatus) {
@@ -91,7 +94,7 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
   }
 
   /**
-   * [Output only] Status of the managed certificate resource.
+   * Output only. [Output only] Status of the managed certificate resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -99,7 +102,7 @@ public final class SslCertificateManagedSslCertificate extends com.google.api.cl
   }
 
   /**
-   * [Output only] Status of the managed certificate resource.
+   * Output only. [Output only] Status of the managed certificate resource.
    * @param status status or {@code null} for none
    */
   public SslCertificateManagedSslCertificate setStatus(java.lang.String status) {

@@ -50,8 +50,8 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   private java.util.Map<String, SslPoliciesScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of SSL
-   * Policies.
+   * Output only. [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of
+   * SSL Policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +138,8 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of SSL
-   * Policies.
+   * Output only. [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of
+   * SSL Policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,8 +147,8 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of SSL
-   * Policies.
+   * Output only. [Output Only] Type of resource. Alwayscompute#sslPolicyAggregatedList for lists of
+   * SSL Policies.
    * @param kind kind or {@code null} for none
    */
   public SslPoliciesAggregatedList setKind(java.lang.String kind) {
@@ -180,7 +180,7 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -188,7 +188,7 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public SslPoliciesAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -197,7 +197,7 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -205,7 +205,7 @@ public final class SslPoliciesAggregatedList extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public SslPoliciesAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

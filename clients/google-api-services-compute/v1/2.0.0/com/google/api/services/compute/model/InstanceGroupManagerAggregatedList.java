@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerAggregatedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,46 +44,47 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   private java.util.Map<String, InstanceGroupManagersScopedList> items;
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerAggregatedList for
-   * an aggregated list of managed instance groups.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerAggregatedList for an aggregated list of managed instance
+   * groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachables;
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -91,7 +92,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setId(java.lang.String id) {
@@ -117,8 +118,9 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerAggregatedList for
-   * an aggregated list of managed instance groups.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerAggregatedList for an aggregated list of managed instance
+   * groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +128,9 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerAggregatedList for
-   * an aggregated list of managed instance groups.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerAggregatedList for an aggregated list of managed instance
+   * groups.
    * @param kind kind or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setKind(java.lang.String kind) {
@@ -136,10 +139,10 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -147,10 +150,10 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setNextPageToken(java.lang.String nextPageToken) {
@@ -159,7 +162,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -167,7 +170,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -176,7 +179,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +187,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {
@@ -193,7 +196,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -201,7 +204,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
   public InstanceGroupManagerAggregatedList setWarning(Warning warning) {
@@ -220,7 +223,7 @@ public final class InstanceGroupManagerAggregatedList extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

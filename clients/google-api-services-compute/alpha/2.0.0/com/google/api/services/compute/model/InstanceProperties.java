@@ -201,9 +201,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
-   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
-   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * Input only. Resource manager tags to be bound to the instance. Tag keys and values have the
+   * same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`,
+   * and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -656,9 +657,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
-   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
-   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * Input only. Resource manager tags to be bound to the instance. Tag keys and values have the
+   * same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`,
+   * and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when
+   * empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getResourceManagerTags() {
@@ -666,9 +668,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource manager tags to be bound to the instance. Tag keys and values have the same definition
-   * as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in
-   * the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
+   * Input only. Resource manager tags to be bound to the instance. Tag keys and values have the
+   * same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`,
+   * and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when
+   * empty.
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
   public InstanceProperties setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {

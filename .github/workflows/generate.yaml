@@ -27,11 +27,13 @@ jobs:
         with:
           fetch-depth: 1
           path: google-api-java-client-services
+          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
       - uses: actions/checkout@v2
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
+          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: 3.8.18
@@ -41,18 +43,46 @@ jobs:
           pip install pip==21.3.1
           pip --version  
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+      - name: Create PR via Local Checkout (Large Commit Support)
+        shell: bash
+        working-directory: google-api-java-client-services
         env:
-          ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-        with:
-          command: pr
-          upstream_owner: ${{ github.repository_owner }}
-          upstream_repo: google-api-java-client-services
-          description: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-          title: 'chore: regenerate ${{ matrix.service }} client'
-          message: 'chore: regenerate ${{ matrix.service }} client'
-          branch: regenerate-${{ matrix.service }}
-          git_dir: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-          primary: main
-          force: true
-          fork: true
+          GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          SERVICE: ${{ matrix.service }}
+          AUTHOR: "yoshi-code-bot <yoshi-code-bot@google.com>"
+          BASE_REPO: "${{ github.repository }}"
+        run: |
+          set -ex
+
+          # 1. Setup Identity
+          git config user.name "yoshi-code-bot"
+          git config user.email "yoshi-code-bot@google.com"
+          
+          # 2. Setup Remote Fork
+          git remote add fork "https://yoshi-code-bot:${GH_TOKEN}@github.com/yoshi-code-bot/google-api-java-client-services.git"
+          
+          # 3. Create Branch
+          BRANCH="regenerate-${SERVICE}"
+          git checkout -b "$BRANCH"
+
+          # 4. Stage specific files (Large commit handling)
+          TARGET_PATH="clients/google-api-services-${SERVICE}"
+          git add "$TARGET_PATH"
+
+          # 5. Commit & Push
+          MESSAGE="chore: regenerate ${SERVICE} client"
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit for ${SERVICE}."
+            exit 0
+          fi
+
+          git commit -m "$MESSAGE"
+          git push fork "$BRANCH" --force
+          
+          gh pr create \
+            --repo "$BASE_REPO" \
+            --head "yoshi-code-bot:${BRANCH}" \
+            --base "main" \
+            --title "$MESSAGE" \
+            --body "Generated in GitHub action: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            || echo "PR already exists or failed to create, but changes are pushed."

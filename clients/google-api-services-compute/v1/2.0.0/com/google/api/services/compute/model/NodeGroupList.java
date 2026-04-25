@@ -50,7 +50,8 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#nodeGroupList for lists of node groups.
+   * Output only. [Output Only] Type of resource.Always compute#nodeGroupList for lists of node
+   * groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +68,7 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#nodeGroupList for lists of node groups.
+   * Output only. [Output Only] Type of resource.Always compute#nodeGroupList for lists of node
+   * groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -123,7 +125,8 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of resource.Always compute#nodeGroupList for lists of node groups.
+   * Output only. [Output Only] Type of resource.Always compute#nodeGroupList for lists of node
+   * groups.
    * @param kind kind or {@code null} for none
    */
   public NodeGroupList setKind(java.lang.String kind) {
@@ -155,7 +158,7 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -163,7 +166,7 @@ public final class NodeGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeGroupList setSelfLink(java.lang.String selfLink) {

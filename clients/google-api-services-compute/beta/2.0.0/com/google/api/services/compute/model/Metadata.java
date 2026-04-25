@@ -56,7 +56,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -157,7 +157,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#metadata for metadata.
+   * Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
    * @param kind kind or {@code null} for none
    */
   public Metadata setKind(java.lang.String kind) {

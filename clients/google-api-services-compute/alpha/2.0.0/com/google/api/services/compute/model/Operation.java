@@ -85,6 +85,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Error error;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetVersionOperationMetadata getVersionOperationMetadata;
+
+  /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
    * returned, such as `NOT FOUND`.
    * The value may be {@code null}.
@@ -122,7 +128,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata;
 
   /**
-   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
+   * Output only. [Output Only] Type of the resource. Always `compute#operation` for Operation
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,8 +143,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] An ID that represents a group of operations, such as when a group of operations
-   * results from a `bulkInsert` API request.
+   * Output only. [Output Only] An ID that represents a group of operations, such as when a group of
+   * operations results from a `bulkInsert` API request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,15 +183,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
-   * contain information on all underlying zonal actions and their state.
+   * Output only. [Output Only] If the operation is for projects.setCommonInstanceMetadata, this
+   * field will contain information on all underlying zonal actions and their state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -351,6 +358,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public GetVersionOperationMetadata getGetVersionOperationMetadata() {
+    return getVersionOperationMetadata;
+  }
+
+  /**
+   * @param getVersionOperationMetadata getVersionOperationMetadata or {@code null} for none
+   */
+  public Operation setGetVersionOperationMetadata(GetVersionOperationMetadata getVersionOperationMetadata) {
+    this.getVersionOperationMetadata = getVersionOperationMetadata;
+    return this;
+  }
+
+  /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
    * returned, such as `NOT FOUND`.
    * @return value or {@code null} for none
@@ -440,7 +462,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
+   * Output only. [Output Only] Type of the resource. Always `compute#operation` for Operation
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -448,7 +471,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
+   * Output only. [Output Only] Type of the resource. Always `compute#operation` for Operation
+   * resources.
    * @param kind kind or {@code null} for none
    */
   public Operation setKind(java.lang.String kind) {
@@ -474,8 +498,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] An ID that represents a group of operations, such as when a group of operations
-   * results from a `bulkInsert` API request.
+   * Output only. [Output Only] An ID that represents a group of operations, such as when a group of
+   * operations results from a `bulkInsert` API request.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationGroupId() {
@@ -483,8 +507,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] An ID that represents a group of operations, such as when a group of operations
-   * results from a `bulkInsert` API request.
+   * Output only. [Output Only] An ID that represents a group of operations, such as when a group of
+   * operations results from a `bulkInsert` API request.
    * @param operationGroupId operationGroupId or {@code null} for none
    */
   public Operation setOperationGroupId(java.lang.String operationGroupId) {
@@ -569,7 +593,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -577,7 +601,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Operation setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -586,8 +610,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
-   * contain information on all underlying zonal actions and their state.
+   * Output only. [Output Only] If the operation is for projects.setCommonInstanceMetadata, this
+   * field will contain information on all underlying zonal actions and their state.
    * @return value or {@code null} for none
    */
   public SetCommonInstanceMetadataOperationMetadata getSetCommonInstanceMetadataOperationMetadata() {
@@ -595,8 +619,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
-   * contain information on all underlying zonal actions and their state.
+   * Output only. [Output Only] If the operation is for projects.setCommonInstanceMetadata, this
+   * field will contain information on all underlying zonal actions and their state.
    * @param setCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata or {@code null} for none
    */
   public Operation setSetCommonInstanceMetadataOperationMetadata(SetCommonInstanceMetadataOperationMetadata setCommonInstanceMetadataOperationMetadata) {

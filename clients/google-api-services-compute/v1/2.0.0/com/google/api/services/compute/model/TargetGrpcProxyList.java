@@ -50,7 +50,8 @@ public final class TargetGrpcProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc
+   * proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class TargetGrpcProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc
+   * proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -123,7 +125,8 @@ public final class TargetGrpcProxyList extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetGrpcProxy for target grpc
+   * proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetGrpcProxyList setKind(java.lang.String kind) {

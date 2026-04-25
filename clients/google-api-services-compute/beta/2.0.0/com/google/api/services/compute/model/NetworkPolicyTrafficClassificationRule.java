@@ -54,8 +54,9 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   private java.lang.Boolean disabled;
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
-   * network policy traffic classification rules
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#networkPolicyTrafficClassificationRule for network policy traffic classification
+   * rules
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   private java.lang.String ruleName;
 
   /**
-   * [Output Only] Calculation of the complexity of a single network policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single network policy rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +170,9 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
-   * network policy traffic classification rules
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#networkPolicyTrafficClassificationRule for network policy traffic classification
+   * rules
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -178,8 +180,9 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#networkPolicyTrafficClassificationRule for
-   * network policy traffic classification rules
+   * Output only. [Output only] Type of the resource.
+   * Alwayscompute#networkPolicyTrafficClassificationRule for network policy traffic classification
+   * rules
    * @param kind kind or {@code null} for none
    */
   public NetworkPolicyTrafficClassificationRule setKind(java.lang.String kind) {
@@ -247,7 +250,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single network policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single network policy rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleTupleCount() {
@@ -255,7 +258,7 @@ public final class NetworkPolicyTrafficClassificationRule extends com.google.api
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single network policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single network policy rule.
    * @param ruleTupleCount ruleTupleCount or {@code null} for none
    */
   public NetworkPolicyTrafficClassificationRule setRuleTupleCount(java.lang.Integer ruleTupleCount) {

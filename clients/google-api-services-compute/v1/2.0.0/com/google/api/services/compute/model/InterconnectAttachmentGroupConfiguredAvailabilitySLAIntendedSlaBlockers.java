@@ -31,7 +31,8 @@ package com.google.api.services.compute.model;
 public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] URLs of any particular Attachments to explain this blocker in more detail.
+   * Output only. [Output Only] URLs of any particular Attachments to explain this blocker in more
+   * detail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,24 +45,24 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   private java.lang.String blockerType;
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentationLink;
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String explanation;
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". This will be set for some blockers (like
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". This will be set for some blockers (like
    * NO_ATTACHMENTS_IN_METRO_AND_ZONE) but does not apply to others.
    * The value may be {@code null}.
    */
@@ -69,24 +70,26 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   private java.util.List<java.lang.String> metros;
 
   /**
-   * [Output Only] Regions used to explain this blocker in more detail. These are region names
-   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
-   * but does not apply to others.
+   * Output only. [Output Only] Regions used to explain this blocker in more detail. These are
+   * region names formatted like "us-central1". This will be set for some blockers (like
+   * INCOMPATIBLE_REGIONS) but does not apply to others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> regions;
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Format is "zone1"
+   * and/or "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to
+   * others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> zones;
 
   /**
-   * [Output Only] URLs of any particular Attachments to explain this blocker in more detail.
+   * Output only. [Output Only] URLs of any particular Attachments to explain this blocker in more
+   * detail.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAttachments() {
@@ -94,7 +97,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] URLs of any particular Attachments to explain this blocker in more detail.
+   * Output only. [Output Only] URLs of any particular Attachments to explain this blocker in more
+   * detail.
    * @param attachments attachments or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setAttachments(java.util.List<java.lang.String> attachments) {
@@ -118,8 +122,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentationLink() {
@@ -127,8 +131,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * @param documentationLink documentationLink or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setDocumentationLink(java.lang.String documentationLink) {
@@ -137,8 +141,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * @return value or {@code null} for none
    */
   public java.lang.String getExplanation() {
@@ -146,8 +150,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * @param explanation explanation or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setExplanation(java.lang.String explanation) {
@@ -156,8 +160,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". This will be set for some blockers (like
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". This will be set for some blockers (like
    * NO_ATTACHMENTS_IN_METRO_AND_ZONE) but does not apply to others.
    * @return value or {@code null} for none
    */
@@ -166,8 +170,8 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". This will be set for some blockers (like
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". This will be set for some blockers (like
    * NO_ATTACHMENTS_IN_METRO_AND_ZONE) but does not apply to others.
    * @param metros metros or {@code null} for none
    */
@@ -177,9 +181,9 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Regions used to explain this blocker in more detail. These are region names
-   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
-   * but does not apply to others.
+   * Output only. [Output Only] Regions used to explain this blocker in more detail. These are
+   * region names formatted like "us-central1". This will be set for some blockers (like
+   * INCOMPATIBLE_REGIONS) but does not apply to others.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegions() {
@@ -187,9 +191,9 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Regions used to explain this blocker in more detail. These are region names
-   * formatted like "us-central1". This will be set for some blockers (like INCOMPATIBLE_REGIONS)
-   * but does not apply to others.
+   * Output only. [Output Only] Regions used to explain this blocker in more detail. These are
+   * region names formatted like "us-central1". This will be set for some blockers (like
+   * INCOMPATIBLE_REGIONS) but does not apply to others.
    * @param regions regions or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setRegions(java.util.List<java.lang.String> regions) {
@@ -198,8 +202,9 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Format is "zone1"
+   * and/or "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to
+   * others.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZones() {
@@ -207,8 +212,9 @@ public final class InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedS
   }
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Format is "zone1" and/or
-   * "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to others.
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Format is "zone1"
+   * and/or "zone2". This will be set for some blockers (like  MISSING_ZONE) but does not apply to
+   * others.
    * @param zones zones or {@code null} for none
    */
   public InterconnectAttachmentGroupConfiguredAvailabilitySLAIntendedSlaBlockers setZones(java.util.List<java.lang.String> zones) {

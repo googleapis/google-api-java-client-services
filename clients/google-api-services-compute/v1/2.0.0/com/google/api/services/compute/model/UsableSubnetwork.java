@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class UsableSubnetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIpv6Prefix;
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   private java.lang.String subnetwork;
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIpv6Prefix() {
@@ -116,7 +116,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The external IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The external IPv6 address range that is assigned to this subnetwork.
    * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
    */
   public UsableSubnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {
@@ -125,7 +125,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalIpv6Prefix() {
@@ -133,7 +133,7 @@ public final class UsableSubnetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
+   * Output only. [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
    * @param internalIpv6Prefix internalIpv6Prefix or {@code null} for none
    */
   public UsableSubnetwork setInternalIpv6Prefix(java.lang.String internalIpv6Prefix) {

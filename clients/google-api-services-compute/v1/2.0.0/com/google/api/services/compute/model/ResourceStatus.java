@@ -31,32 +31,34 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
-   * and instance-level predefined metadata keys to provide the overridden value for those metadata
-   * keys at the instance level.
+   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
+   * instance settings, and instance-level predefined metadata keys to provide the overridden value
+   * for those metadata keys at the instance level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata;
 
   /**
-   * [Output Only] The precise location of your instance within the zone's data center, including
-   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
+   * Output only. [Output Only] The precise location of your instance within the zone's data center,
+   * including the block, sub-block, and host. The field is formatted as follows:
+   * blockId/subBlockId/hostId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String physicalHost;
 
   /**
-   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
-   * well as the ID of the block, sub-block, and host on which the running instance is located.
+   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
+   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
+   * located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatusPhysicalHostTopology physicalHostTopology;
 
   /**
-   * [Output Only] Reservation information that the instance is consuming from.
+   * Output only. [Output Only] Reservation information that the instance is consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +77,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private UpcomingMaintenance upcomingMaintenance;
 
   /**
-   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
-   * and instance-level predefined metadata keys to provide the overridden value for those metadata
-   * keys at the instance level.
+   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
+   * instance settings, and instance-level predefined metadata keys to provide the overridden value
+   * for those metadata keys at the instance level.
    * @return value or {@code null} for none
    */
   public ResourceStatusEffectiveInstanceMetadata getEffectiveInstanceMetadata() {
@@ -85,9 +87,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
-   * and instance-level predefined metadata keys to provide the overridden value for those metadata
-   * keys at the instance level.
+   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
+   * instance settings, and instance-level predefined metadata keys to provide the overridden value
+   * for those metadata keys at the instance level.
    * @param effectiveInstanceMetadata effectiveInstanceMetadata or {@code null} for none
    */
   public ResourceStatus setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata) {
@@ -96,8 +98,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The precise location of your instance within the zone's data center, including
-   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
+   * Output only. [Output Only] The precise location of your instance within the zone's data center,
+   * including the block, sub-block, and host. The field is formatted as follows:
+   * blockId/subBlockId/hostId.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhysicalHost() {
@@ -105,8 +108,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The precise location of your instance within the zone's data center, including
-   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
+   * Output only. [Output Only] The precise location of your instance within the zone's data center,
+   * including the block, sub-block, and host. The field is formatted as follows:
+   * blockId/subBlockId/hostId.
    * @param physicalHost physicalHost or {@code null} for none
    */
   public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {
@@ -115,8 +119,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
-   * well as the ID of the block, sub-block, and host on which the running instance is located.
+   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
+   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
+   * located.
    * @return value or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology getPhysicalHostTopology() {
@@ -124,8 +129,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
-   * well as the ID of the block, sub-block, and host on which the running instance is located.
+   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
+   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
+   * located.
    * @param physicalHostTopology physicalHostTopology or {@code null} for none
    */
   public ResourceStatus setPhysicalHostTopology(ResourceStatusPhysicalHostTopology physicalHostTopology) {
@@ -134,7 +140,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Reservation information that the instance is consuming from.
+   * Output only. [Output Only] Reservation information that the instance is consuming from.
    * @return value or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo getReservationConsumptionInfo() {
@@ -142,7 +148,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Reservation information that the instance is consuming from.
+   * Output only. [Output Only] Reservation information that the instance is consuming from.
    * @param reservationConsumptionInfo reservationConsumptionInfo or {@code null} for none
    */
   public ResourceStatus setReservationConsumptionInfo(ResourceStatusReservationConsumptionInfo reservationConsumptionInfo) {

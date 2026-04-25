@@ -43,7 +43,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   private java.lang.String minCpuPlatform;
 
   /**
-   * The provisioning model to be used for this instance.
+   * Output only. The provisioning model to be used for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -89,7 +89,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The machine type to be used for this instance.
+   * Output only. The machine type to be used for this instance.
    * @param machineType machineType or {@code null} for none
    */
   public ManagedInstancePropertiesFromFlexibilityPolicy setMachineType(java.lang.String machineType) {
@@ -115,7 +115,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The provisioning model to be used for this instance.
+   * Output only. The provisioning model to be used for this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvisioningModel() {
@@ -123,7 +123,7 @@ public final class ManagedInstancePropertiesFromFlexibilityPolicy extends com.go
   }
 
   /**
-   * The provisioning model to be used for this instance.
+   * Output only. The provisioning model to be used for this instance.
    * @param provisioningModel provisioningModel or {@code null} for none
    */
   public ManagedInstancePropertiesFromFlexibilityPolicy setProvisioningModel(java.lang.String provisioningModel) {

@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class InterconnectGroupPhysicalStructureMetrosFacilities extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The ID of this facility, as a numeric string like "5467". This is the third
-   * component of the location of Interconnects in this facility.
+   * Output only. [Output Only] The ID of this facility, as a numeric string like "5467". This is
+   * the third component of the location of Interconnects in this facility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +44,8 @@ public final class InterconnectGroupPhysicalStructureMetrosFacilities extends co
   private java.util.List<InterconnectGroupPhysicalStructureMetrosFacilitiesZones> zones;
 
   /**
-   * [Output Only] The ID of this facility, as a numeric string like "5467". This is the third
-   * component of the location of Interconnects in this facility.
+   * Output only. [Output Only] The ID of this facility, as a numeric string like "5467". This is
+   * the third component of the location of Interconnects in this facility.
    * @return value or {@code null} for none
    */
   public java.lang.String getFacility() {
@@ -53,8 +53,8 @@ public final class InterconnectGroupPhysicalStructureMetrosFacilities extends co
   }
 
   /**
-   * [Output Only] The ID of this facility, as a numeric string like "5467". This is the third
-   * component of the location of Interconnects in this facility.
+   * Output only. [Output Only] The ID of this facility, as a numeric string like "5467". This is
+   * the third component of the location of Interconnects in this facility.
    * @param facility facility or {@code null} for none
    */
   public InterconnectGroupPhysicalStructureMetrosFacilities setFacility(java.lang.String facility) {

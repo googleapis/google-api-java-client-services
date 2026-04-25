@@ -53,6 +53,13 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.String latestWindowStartTime;
 
   /**
+   * Output only. Maintenance method for the upcoming maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceMethod;
+
+  /**
    * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   public UpcomingMaintenance setLatestWindowStartTime(java.lang.String latestWindowStartTime) {
     this.latestWindowStartTime = latestWindowStartTime;
+    return this;
+  }
+
+  /**
+   * Output only. Maintenance method for the upcoming maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceMethod() {
+    return maintenanceMethod;
+  }
+
+  /**
+   * Output only. Maintenance method for the upcoming maintenance.
+   * @param maintenanceMethod maintenanceMethod or {@code null} for none
+   */
+  public UpcomingMaintenance setMaintenanceMethod(java.lang.String maintenanceMethod) {
+    this.maintenanceMethod = maintenanceMethod;
     return this;
   }
 

@@ -125,8 +125,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
    * orRING_HASH.
    *
-   * This field is applicable to either:        - A regional backend service with the
-   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
@@ -135,7 +135,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private ConsistentHashLoadBalancerSettings consistentHash;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,7 +339,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String ipAddressSelectionPolicy;
 
   /**
-   * [Output Only] Type of resource. Always compute#backendService for backend services.
+   * Output only. [Output Only] Type of resource. Always compute#backendService for backend
+   * services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -386,8 +387,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the
-   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:       - A regional backend service with the service
+   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
    * sessionAffinity is not configured—that is, if session    affinity remains at the default value
@@ -469,6 +470,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceNetworkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy;
 
   /**
+   * Information about the resource or system that manages the backend service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceOrchestrationInfo orchestrationInfo;
+
+  /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
    * of each individual proxy instance that processes the traffic for the given backend service. If
    * not set, this feature is considered disabled.
@@ -488,7 +496,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * Applicable backend service types can be:        - A global backend service with the
    * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
-   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * backend    service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and
    * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
    * Serverless NEGs.
    *
@@ -542,9 +550,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String protocol;
 
   /**
-   * [Output Only] URL of the region where the regional backend service resides. This field is not
-   * applicable to global backend services. You must specify this field as part of the HTTP request
-   * URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the regional backend service resides. This
+   * field is not applicable to global backend services. You must specify this field as part of the
+   * HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -574,7 +582,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -654,26 +662,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private BackendServiceTlsSettings tlsSettings;
 
   /**
-   * [Output Only] List of resources referencing given backend service.
+   * Output only. [Output Only] List of resources referencing given backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<BackendServiceUsedBy> usedBy;
-
-  /**
-   * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
-   *
-   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
-   * in global VPC networks.
-   *
-   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
-   * backends in regional networks in the same scope as the backend service. Note: if not specified
-   * then GLOBAL_VPC_NETWORK will be used.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String vpcNetworkScope;
 
   /**
    * Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and
@@ -845,8 +838,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
    * orRING_HASH.
    *
-   * This field is applicable to either:        - A regional backend service with the
-   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
@@ -863,8 +856,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV
    * orRING_HASH.
    *
-   * This field is applicable to either:        - A regional backend service with the
-   * service_protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED.
    * @param consistentHash consistentHash or {@code null} for none
@@ -875,7 +868,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -883,7 +876,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public BackendService setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -1372,7 +1365,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#backendService for backend services.
+   * Output only. [Output Only] Type of resource. Always compute#backendService for backend
+   * services.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -1380,7 +1374,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#backendService for backend services.
+   * Output only. [Output Only] Type of resource. Always compute#backendService for backend
+   * services.
    * @param kind kind or {@code null} for none
    */
   public BackendService setKind(java.lang.String kind) {
@@ -1458,8 +1453,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the
-   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:       - A regional backend service with the service
+   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
    * sessionAffinity is not configured—that is, if session    affinity remains at the default value
@@ -1492,8 +1487,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the
-   * service_protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * This field is applicable to either:       - A regional backend service with the service
+   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
    * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
    * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
    * sessionAffinity is not configured—that is, if session    affinity remains at the default value
@@ -1662,6 +1657,23 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Information about the resource or system that manages the backend service.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceOrchestrationInfo getOrchestrationInfo() {
+    return orchestrationInfo;
+  }
+
+  /**
+   * Information about the resource or system that manages the backend service.
+   * @param orchestrationInfo orchestrationInfo or {@code null} for none
+   */
+  public BackendService setOrchestrationInfo(BackendServiceOrchestrationInfo orchestrationInfo) {
+    this.orchestrationInfo = orchestrationInfo;
+    return this;
+  }
+
+  /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
    * of each individual proxy instance that processes the traffic for the given backend service. If
    * not set, this feature is considered disabled.
@@ -1681,7 +1693,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * Applicable backend service types can be:        - A global backend service with the
    * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
-   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * backend    service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and
    * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
    * Serverless NEGs.
    *
@@ -1713,7 +1725,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * Applicable backend service types can be:        - A global backend service with the
    * loadBalancingScheme set to    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.     - A regional
-   * backend    service with the serviceProtocol set to HTTP, HTTPS, HTTP2 or H2C, and
+   * backend    service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and
    * loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not    supported for
    * Serverless NEGs.
    *
@@ -1823,9 +1835,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional backend service resides. This field is not
-   * applicable to global backend services. You must specify this field as part of the HTTP request
-   * URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the regional backend service resides. This
+   * field is not applicable to global backend services. You must specify this field as part of the
+   * HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -1833,9 +1845,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional backend service resides. This field is not
-   * applicable to global backend services. You must specify this field as part of the HTTP request
-   * URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the regional backend service resides. This
+   * field is not applicable to global backend services. You must specify this field as part of the
+   * HTTP request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public BackendService setRegion(java.lang.String region) {
@@ -1899,7 +1911,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1907,7 +1919,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public BackendService setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -2083,7 +2095,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] List of resources referencing given backend service.
+   * Output only. [Output Only] List of resources referencing given backend service.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendServiceUsedBy> getUsedBy() {
@@ -2091,44 +2103,11 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] List of resources referencing given backend service.
+   * Output only. [Output Only] List of resources referencing given backend service.
    * @param usedBy usedBy or {@code null} for none
    */
   public BackendService setUsedBy(java.util.List<BackendServiceUsedBy> usedBy) {
     this.usedBy = usedBy;
-    return this;
-  }
-
-  /**
-   * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
-   *
-   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
-   * in global VPC networks.
-   *
-   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
-   * backends in regional networks in the same scope as the backend service. Note: if not specified
-   * then GLOBAL_VPC_NETWORK will be used.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVpcNetworkScope() {
-    return vpcNetworkScope;
-  }
-
-  /**
-   * The network scope of the backends that can be added to the backend service. This field can be
-   * either GLOBAL_VPC_NETWORK orREGIONAL_VPC_NETWORK.
-   *
-   * A backend service with the VPC scope set to GLOBAL_VPC_NETWORK is only allowed to have backends
-   * in global VPC networks.
-   *
-   * When the VPC scope is set to REGIONAL_VPC_NETWORK the backend service is only allowed to have
-   * backends in regional networks in the same scope as the backend service. Note: if not specified
-   * then GLOBAL_VPC_NETWORK will be used.
-   * @param vpcNetworkScope vpcNetworkScope or {@code null} for none
-   */
-  public BackendService setVpcNetworkScope(java.lang.String vpcNetworkScope) {
-    this.vpcNetworkScope = vpcNetworkScope;
     return this;
   }
 

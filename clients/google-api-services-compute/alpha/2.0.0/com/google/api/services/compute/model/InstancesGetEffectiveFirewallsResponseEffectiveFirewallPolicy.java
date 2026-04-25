@@ -30,22 +30,22 @@ package com.google.api.services.compute.model;
 public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
-   * policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The display name of the
+   * firewall policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] The packet mirroring rules that apply to the instance.
+   * Output only. [Output Only] The packet mirroring rules that apply to the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,8 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,14 +81,14 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shortName;
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * The value may be {@code null}.
    */
@@ -95,8 +96,8 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   private java.lang.String type;
 
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
-   * policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The display name of the
+   * firewall policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -104,8 +105,8 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] Deprecated, please use short name instead. The display name of the firewall
-   * policy.
+   * Output only. [Output Only] Deprecated, please use short name instead. The display name of the
+   * firewall policy.
    * @param displayName displayName or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setDisplayName(java.lang.String displayName) {
@@ -114,7 +115,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -122,7 +123,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The name of the firewall policy.
+   * Output only. [Output Only] The name of the firewall policy.
    * @param name name or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setName(java.lang.String name) {
@@ -131,7 +132,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The packet mirroring rules that apply to the instance.
+   * Output only. [Output Only] The packet mirroring rules that apply to the instance.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallPolicyRule> getPacketMirroringRules() {
@@ -139,7 +140,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The packet mirroring rules that apply to the instance.
+   * Output only. [Output Only] The packet mirroring rules that apply to the instance.
    * @param packetMirroringRules packetMirroringRules or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setPacketMirroringRules(java.util.List<FirewallPolicyRule> packetMirroringRules) {
@@ -148,7 +149,8 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -156,7 +158,8 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
+   * Output only. [Output only] Priority of firewall policy association. Not applicable for
+   * type=HIERARCHY.
    * @param priority priority or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setPriority(java.lang.Integer priority) {
@@ -186,7 +189,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortName() {
@@ -194,7 +197,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The short name of the firewall policy.
+   * Output only. [Output Only] The short name of the firewall policy.
    * @param shortName shortName or {@code null} for none
    */
   public InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy setShortName(java.lang.String shortName) {
@@ -203,7 +206,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @return value or {@code null} for none
    */
@@ -212,7 +215,7 @@ public final class InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy
   }
 
   /**
-   * [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
+   * Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK,
    * NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
    * @param type type or {@code null} for none
    */

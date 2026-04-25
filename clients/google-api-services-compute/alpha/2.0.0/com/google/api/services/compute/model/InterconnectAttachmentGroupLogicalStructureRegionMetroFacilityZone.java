@@ -31,23 +31,23 @@ package com.google.api.services.compute.model;
 public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] URLs of Attachments in the given zone, to the given region, on Interconnects in
-   * the given facility and metro. Every Attachment in the AG has such an entry.
+   * Output only. [Output Only] URLs of Attachments in the given zone, to the given region, on
+   * Interconnects in the given facility and metro. Every Attachment in the AG has such an entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> attachments;
 
   /**
-   * [Output Only] The name of a zone, either "zone1" or "zone2".
+   * Output only. [Output Only] The name of a zone, either "zone1" or "zone2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * [Output Only] URLs of Attachments in the given zone, to the given region, on Interconnects in
-   * the given facility and metro. Every Attachment in the AG has such an entry.
+   * Output only. [Output Only] URLs of Attachments in the given zone, to the given region, on
+   * Interconnects in the given facility and metro. Every Attachment in the AG has such an entry.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAttachments() {
@@ -55,8 +55,8 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilit
   }
 
   /**
-   * [Output Only] URLs of Attachments in the given zone, to the given region, on Interconnects in
-   * the given facility and metro. Every Attachment in the AG has such an entry.
+   * Output only. [Output Only] URLs of Attachments in the given zone, to the given region, on
+   * Interconnects in the given facility and metro. Every Attachment in the AG has such an entry.
    * @param attachments attachments or {@code null} for none
    */
   public InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone setAttachments(java.util.List<java.lang.String> attachments) {
@@ -65,7 +65,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilit
   }
 
   /**
-   * [Output Only] The name of a zone, either "zone1" or "zone2".
+   * Output only. [Output Only] The name of a zone, either "zone1" or "zone2".
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -73,7 +73,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilit
   }
 
   /**
-   * [Output Only] The name of a zone, either "zone1" or "zone2".
+   * Output only. [Output Only] The name of a zone, either "zone1" or "zone2".
    * @param zone zone or {@code null} for none
    */
   public InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone setZone(java.lang.String zone) {

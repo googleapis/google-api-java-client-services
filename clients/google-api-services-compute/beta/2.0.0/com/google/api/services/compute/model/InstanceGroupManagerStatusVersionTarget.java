@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusVersionTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A bit indicating whether version target has been reached in this managed instance
+   * Output only. A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
    * byversion field on Instance Group Manager.
    * The value may be {@code null}.
@@ -39,7 +39,7 @@ public final class InstanceGroupManagerStatusVersionTarget extends com.google.ap
   private java.lang.Boolean isReached;
 
   /**
-   * [Output Only] A bit indicating whether version target has been reached in this managed instance
+   * Output only. A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
    * byversion field on Instance Group Manager.
    * @return value or {@code null} for none
@@ -49,7 +49,7 @@ public final class InstanceGroupManagerStatusVersionTarget extends com.google.ap
   }
 
   /**
-   * [Output Only] A bit indicating whether version target has been reached in this managed instance
+   * Output only. A bit indicating whether version target has been reached in this managed instance
    * group, i.e. all instances are in their target version. Instances' target version are specified
    * byversion field on Instance Group Manager.
    * @param isReached isReached or {@code null} for none

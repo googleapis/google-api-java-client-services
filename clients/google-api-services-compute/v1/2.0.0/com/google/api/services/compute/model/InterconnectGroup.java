@@ -37,7 +37,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   private InterconnectGroupConfigured configured;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -85,7 +85,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   private java.util.Map<String, InterconnectGroupInterconnect> interconnects;
 
   /**
-   * [Output Only] Type of the resource. Always compute#InterconnectGroup
+   * Output only. [Output Only] Type of the resource. Always compute#InterconnectGroup
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   private InterconnectGroupPhysicalStructure physicalStructure;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -139,7 +139,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -188,8 +188,8 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -197,8 +197,8 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public InterconnectGroup setId(java.math.BigInteger id) {
@@ -245,7 +245,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#InterconnectGroup
+   * Output only. [Output Only] Type of the resource. Always compute#InterconnectGroup
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -253,7 +253,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#InterconnectGroup
+   * Output only. [Output Only] Type of the resource. Always compute#InterconnectGroup
    * @param kind kind or {@code null} for none
    */
   public InterconnectGroup setKind(java.lang.String kind) {
@@ -302,7 +302,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -310,7 +310,7 @@ public final class InterconnectGroup extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InterconnectGroup setSelfLink(java.lang.String selfLink) {

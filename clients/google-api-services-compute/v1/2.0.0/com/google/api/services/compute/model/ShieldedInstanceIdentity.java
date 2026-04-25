@@ -51,8 +51,8 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   private ShieldedInstanceIdentityEntry encryptionKey;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for shielded
-   * Instance identity entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for
+   * shielded Instance identity entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for shielded
-   * Instance identity entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for
+   * shielded Instance identity entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +126,8 @@ public final class ShieldedInstanceIdentity extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for shielded
-   * Instance identity entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for
+   * shielded Instance identity entry.
    * @param kind kind or {@code null} for none
    */
   public ShieldedInstanceIdentity setKind(java.lang.String kind) {

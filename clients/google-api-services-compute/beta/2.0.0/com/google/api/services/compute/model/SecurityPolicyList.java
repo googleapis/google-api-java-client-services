@@ -50,7 +50,8 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
+   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
+   * securityPolicies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
+   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
+   * securityPolicies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -116,7 +118,8 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
+   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
+   * securityPolicies
    * @param kind kind or {@code null} for none
    */
   public SecurityPolicyList setKind(java.lang.String kind) {

@@ -32,24 +32,31 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in theValid ranges list.
+   * secondary IP ranges within a network. Both IPv4 and IPv6 ranges are supported. For IPv4, the
+   * range can be any range listed in theValid ranges list.
+   *
+   * For IPv6: The range must have a /64 prefix length. The range must be omitted, for auto-
+   * allocation from Google-defined ULA IPv6 range. For BYOGUA internal IPv6 secondary range, the
+   * range may be specified along with the `ipCollection` field. If an `ipCollection` is specified,
+   * the requested ip_cidr_range must lie within the range of the PDP referenced by the
+   * `ipCollection` field for allocation. If `ipCollection` field is specified, but ip_cidr_range is
+   * not, the range is auto-allocated from the PDP referenced by the `ipCollection` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
 
   /**
-   * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
-   * unique within the subnetwork.
+   * The name associated with this subnetwork secondary range, used when adding an alias IP/IPv6
+   * range to a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name
+   * must be unique within the subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rangeName;
 
   /**
-   * The URL of the reserved internal range.
+   * The URL of the reserved internal range. Only IPv4 is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +65,15 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in theValid ranges list.
+   * secondary IP ranges within a network. Both IPv4 and IPv6 ranges are supported. For IPv4, the
+   * range can be any range listed in theValid ranges list.
+   *
+   * For IPv6: The range must have a /64 prefix length. The range must be omitted, for auto-
+   * allocation from Google-defined ULA IPv6 range. For BYOGUA internal IPv6 secondary range, the
+   * range may be specified along with the `ipCollection` field. If an `ipCollection` is specified,
+   * the requested ip_cidr_range must lie within the range of the PDP referenced by the
+   * `ipCollection` field for allocation. If `ipCollection` field is specified, but ip_cidr_range is
+   * not, the range is auto-allocated from the PDP referenced by the `ipCollection` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -69,8 +83,15 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
-   * in theValid ranges list.
+   * secondary IP ranges within a network. Both IPv4 and IPv6 ranges are supported. For IPv4, the
+   * range can be any range listed in theValid ranges list.
+   *
+   * For IPv6: The range must have a /64 prefix length. The range must be omitted, for auto-
+   * allocation from Google-defined ULA IPv6 range. For BYOGUA internal IPv6 secondary range, the
+   * range may be specified along with the `ipCollection` field. If an `ipCollection` is specified,
+   * the requested ip_cidr_range must lie within the range of the PDP referenced by the
+   * `ipCollection` field for allocation. If `ipCollection` field is specified, but ip_cidr_range is
+   * not, the range is auto-allocated from the PDP referenced by the `ipCollection` field.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public SubnetworkSecondaryRange setIpCidrRange(java.lang.String ipCidrRange) {
@@ -79,9 +100,9 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   }
 
   /**
-   * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
-   * unique within the subnetwork.
+   * The name associated with this subnetwork secondary range, used when adding an alias IP/IPv6
+   * range to a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name
+   * must be unique within the subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getRangeName() {
@@ -89,9 +110,9 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   }
 
   /**
-   * The name associated with this subnetwork secondary range, used when adding an alias IP range to
-   * a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name must be
-   * unique within the subnetwork.
+   * The name associated with this subnetwork secondary range, used when adding an alias IP/IPv6
+   * range to a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name
+   * must be unique within the subnetwork.
    * @param rangeName rangeName or {@code null} for none
    */
   public SubnetworkSecondaryRange setRangeName(java.lang.String rangeName) {
@@ -100,7 +121,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   }
 
   /**
-   * The URL of the reserved internal range.
+   * The URL of the reserved internal range. Only IPv4 is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedInternalRange() {
@@ -108,7 +129,7 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   }
 
   /**
-   * The URL of the reserved internal range.
+   * The URL of the reserved internal range. Only IPv4 is supported.
    * @param reservedInternalRange reservedInternalRange or {@code null} for none
    */
   public SubnetworkSecondaryRange setReservedInternalRange(java.lang.String reservedInternalRange) {

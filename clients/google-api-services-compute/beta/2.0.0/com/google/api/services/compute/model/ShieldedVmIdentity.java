@@ -37,8 +37,8 @@ public final class ShieldedVmIdentity extends com.google.api.client.json.Generic
   private ShieldedVmIdentityEntry encryptionKey;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded VM identity
-   * entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded
+   * VM identity entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class ShieldedVmIdentity extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded VM identity
-   * entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded
+   * VM identity entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -78,8 +78,8 @@ public final class ShieldedVmIdentity extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded VM identity
-   * entry.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#shieldedVmIdentity for shielded
+   * VM identity entry.
    * @param kind kind or {@code null} for none
    */
   public ShieldedVmIdentity setKind(java.lang.String kind) {

@@ -46,6 +46,17 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> includedDisks;
 
   /**
+   * Input only. Resource manager tags to be bound to the machine image. Tag keys and values have
+   * the same definition as resource manager tags. Keys and values can be either in numeric format,
+   * such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as
+   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
+   * (both PUT & PATCH) when empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
    * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
    * new machine image.
    * @return value or {@code null} for none
@@ -80,6 +91,31 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
    */
   public MachineImageParams setIncludedDisks(java.util.List<java.lang.String> includedDisks) {
     this.includedDisks = includedDisks;
+    return this;
+  }
+
+  /**
+   * Input only. Resource manager tags to be bound to the machine image. Tag keys and values have
+   * the same definition as resource manager tags. Keys and values can be either in numeric format,
+   * such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as
+   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
+   * (both PUT & PATCH) when empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Input only. Resource manager tags to be bound to the machine image. Tag keys and values have
+   * the same definition as resource manager tags. Keys and values can be either in numeric format,
+   * such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as
+   * `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored
+   * (both PUT & PATCH) when empty.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public MachineImageParams setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

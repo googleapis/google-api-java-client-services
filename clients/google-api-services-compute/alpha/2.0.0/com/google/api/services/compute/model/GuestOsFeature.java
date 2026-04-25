@@ -34,6 +34,7 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
    * one or more of the following values:        - VIRTIO_SCSI_MULTIQUEUE    - WINDOWS    -
    * MULTI_IP_SUBNET    - UEFI_COMPATIBLE    - GVNIC    - SEV_CAPABLE    - SUSPEND_RESUME_COMPATIBLE
    * - SEV_LIVE_MIGRATABLE_V2    - SEV_SNP_CAPABLE    - TDX_CAPABLE    - IDPF    - SNP_SVSM_CAPABLE
+   * - CCA_CAPABLE
    *
    * For more information, see Enabling guest operating system features.
    * The value may be {@code null}.
@@ -46,6 +47,7 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
    * one or more of the following values:        - VIRTIO_SCSI_MULTIQUEUE    - WINDOWS    -
    * MULTI_IP_SUBNET    - UEFI_COMPATIBLE    - GVNIC    - SEV_CAPABLE    - SUSPEND_RESUME_COMPATIBLE
    * - SEV_LIVE_MIGRATABLE_V2    - SEV_SNP_CAPABLE    - TDX_CAPABLE    - IDPF    - SNP_SVSM_CAPABLE
+   * - CCA_CAPABLE
    *
    * For more information, see Enabling guest operating system features.
    * @return value or {@code null} for none
@@ -59,6 +61,7 @@ public final class GuestOsFeature extends com.google.api.client.json.GenericJson
    * one or more of the following values:        - VIRTIO_SCSI_MULTIQUEUE    - WINDOWS    -
    * MULTI_IP_SUBNET    - UEFI_COMPATIBLE    - GVNIC    - SEV_CAPABLE    - SUSPEND_RESUME_COMPATIBLE
    * - SEV_LIVE_MIGRATABLE_V2    - SEV_SNP_CAPABLE    - TDX_CAPABLE    - IDPF    - SNP_SVSM_CAPABLE
+   * - CCA_CAPABLE
    *
    * For more information, see Enabling guest operating system features.
    * @param type type or {@code null} for none

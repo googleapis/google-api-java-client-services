@@ -79,7 +79,8 @@ public final class InterconnectGroupsListResponse extends com.google.api.client.
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +198,8 @@ public final class InterconnectGroupsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -205,7 +207,8 @@ public final class InterconnectGroupsListResponse extends com.google.api.client.
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public InterconnectGroupsListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {

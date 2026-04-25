@@ -72,14 +72,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private DiskAsyncReplication asyncPrimaryDisk;
 
   /**
-   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * Output only. [Output Only] A list of disks this disk is asynchronously replicated to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<GuestOsFeature> guestOsFeatures;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -156,7 +157,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String interface__;
 
   /**
-   * [Output Only] Type of the resource. Always compute#disk for disks.
+   * Output only. [Output Only] Type of the resource. Always compute#disk for disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,14 +184,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Output Only] Last attach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last attach timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastAttachTimestamp;
 
   /**
-   * [Output Only] Last detach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last detach timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,11 +220,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String locationHint;
 
   /**
-   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
-   * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
-   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
-   * images or snapshots    - Disk cloning
+   * Output only. [Output Only] The field indicates if the disk is created from a locked source
+   * image. Attachment of a disk created from a locked source image will cause the following
+   * operations to become irreversibly prohibited:        - R/W or R/O disk attachment to any other
+   * instance    - Disk detachment. And the disk can only be deleted when the instance    is deleted
+   * - Creation of images or snapshots    - Disk cloning
    *
    * Furthermore, the instance with at least one disk with locked flag set to true will be
    * prohibited from performing the operations below:        - Further attachment of secondary
@@ -296,9 +297,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Long provisionedThroughput;
 
   /**
-   * [Output Only] URL of the region where the disk resides. Only applicable for regional resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the region where the disk resides. Only applicable for
+   * regional resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,7 +321,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * [Output Only] Status information for the disk resource.
+   * Output only. [Output Only] Status information for the disk resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,21 +335,21 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,16 +368,16 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Long sizeGb;
 
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceConsistencyGroupPolicy;
 
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,10 +397,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDisk;
 
   /**
-   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
-   * exact disk that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a disk that was later deleted and recreated under the same name, the
-   * source disk ID would identify the exact version of the disk that was used.
+   * Output only. [Output Only] The unique ID of the disk used to create this disk. This value
+   * identifies the exact disk that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a disk that was later deleted and recreated under the same
+   * name, the source disk ID would identify the exact version of the disk that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -441,10 +442,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceImageEncryptionKey;
 
   /**
-   * [Output Only] The ID value of the image used to create this disk. This value identifies the
-   * exact image that was used to create this persistent disk. For example, if you created the
-   * persistent disk from an image that was later deleted and recreated under the same name, the
-   * source image ID would identify the exact version of the image that was used.
+   * Output only. [Output Only] The ID value of the image used to create this disk. This value
+   * identifies the exact image that was used to create this persistent disk. For example, if you
+   * created the persistent disk from an image that was later deleted and recreated under the same
+   * name, the source image ID would identify the exact version of the image that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -462,8 +463,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstantSnapshot;
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
-   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this disk. This
+   * value identifies the exact instant snapshot that was used to create this persistent disk. For
    * example, if you created the persistent disk from an instant snapshot that was later deleted and
    * recreated under the same name, the source instant snapshot ID would identify the exact version
    * of the instant snapshot that was used.
@@ -483,8 +484,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceMachineImage;
 
   /**
-   * Input only. The device name of a disk within a given machine image. The source_machine_image
-   * must be specified.
+   * The device name of a disk within a given machine image. The source_machine_image must be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -499,11 +500,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceMachineImageEncryptionKey;
 
   /**
-   * [Output Only] The unique ID of the machine image used to create this disk. This value
-   * identifies the exact machine image that was used to create this persistent disk. For example,
-   * if you created the persistent disk from a machine image that was later deleted and recreated
-   * under the same name, the source machine image ID would identify the exact version of the
-   * machine image that was used.
+   * Output only. [Output Only] The unique ID of the machine image used to create this disk. This
+   * value identifies the exact machine image that was used to create this persistent disk. For
+   * example, if you created the persistent disk from a machine image that was later deleted and
+   * recreated under the same name, the source machine image ID would identify the exact version of
+   * the machine image that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -528,10 +529,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceSnapshotEncryptionKey;
 
   /**
-   * [Output Only] The unique ID of the snapshot used to create this disk. This value identifies the
-   * exact snapshot that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a snapshot that was later deleted and recreated under the same name, the
-   * source snapshot ID would identify the exact version of the snapshot that was used.
+   * Output only. [Output Only] The unique ID of the snapshot used to create this disk. This value
+   * identifies the exact snapshot that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a snapshot that was later deleted and recreated under the same
+   * name, the source snapshot ID would identify the exact version of the snapshot that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -549,9 +550,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceStorageObject;
 
   /**
-   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
-   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
-   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
+   * Output only. [Output Only] The status of disk creation.              - CREATING: Disk is
+   * provisioning.      - RESTORING: Source data is being copied into the      disk.      - FAILED:
+   * Disk creation failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -585,18 +586,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
-   * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license:
-   *
-   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> userLicenses;
-
-  /**
-   * [Output Only] Links to the users of the disk (attached instances) in
+   * Output only. [Output Only] Links to the users of the disk (attached instances) in
    * form:projects/project/zones/zone/instances/instance
    * The value may be {@code null}.
    */
@@ -604,8 +594,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> users;
 
   /**
-   * [Output Only] URL of the zone where the disk resides. You must specify this field as part of
-   * the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the disk resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -675,7 +665,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * Output only. [Output Only] A list of disks this disk is asynchronously replicated to.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, DiskAsyncReplicationList> getAsyncSecondaryDisks() {
@@ -683,7 +673,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of disks this disk is asynchronously replicated to.
+   * Output only. [Output Only] A list of disks this disk is asynchronously replicated to.
    * @param asyncSecondaryDisks asyncSecondaryDisks or {@code null} for none
    */
   public Disk setAsyncSecondaryDisks(java.util.Map<String, DiskAsyncReplicationList> asyncSecondaryDisks) {
@@ -692,7 +682,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -700,7 +690,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Disk setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -834,7 +824,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -842,7 +833,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public Disk setId(java.math.BigInteger id) {
@@ -870,7 +862,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#disk for disks.
+   * Output only. [Output Only] Type of the resource. Always compute#disk for disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -878,7 +870,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#disk for disks.
+   * Output only. [Output Only] Type of the resource. Always compute#disk for disks.
    * @param kind kind or {@code null} for none
    */
   public Disk setKind(java.lang.String kind) {
@@ -973,7 +965,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last attach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last attach timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastAttachTimestamp() {
@@ -981,7 +973,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last attach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last attach timestamp inRFC3339 text format.
    * @param lastAttachTimestamp lastAttachTimestamp or {@code null} for none
    */
   public Disk setLastAttachTimestamp(java.lang.String lastAttachTimestamp) {
@@ -990,7 +982,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last detach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last detach timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastDetachTimestamp() {
@@ -998,7 +990,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Last detach timestamp inRFC3339 text format.
+   * Output only. [Output Only] Last detach timestamp inRFC3339 text format.
    * @param lastDetachTimestamp lastDetachTimestamp or {@code null} for none
    */
   public Disk setLastDetachTimestamp(java.lang.String lastDetachTimestamp) {
@@ -1060,11 +1052,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
-   * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
-   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
-   * images or snapshots    - Disk cloning
+   * Output only. [Output Only] The field indicates if the disk is created from a locked source
+   * image. Attachment of a disk created from a locked source image will cause the following
+   * operations to become irreversibly prohibited:        - R/W or R/O disk attachment to any other
+   * instance    - Disk detachment. And the disk can only be deleted when the instance    is deleted
+   * - Creation of images or snapshots    - Disk cloning
    *
    * Furthermore, the instance with at least one disk with locked flag set to true will be
    * prohibited from performing the operations below:        - Further attachment of secondary
@@ -1078,11 +1070,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The field indicates if the disk is created from a locked source image. Attachment
-   * of a disk created from a locked source image will cause the following operations to become
-   * irreversibly prohibited:        - R/W or R/O disk attachment to any other instance    - Disk
-   * detachment. And the disk can only be deleted when the instance    is deleted    - Creation of
-   * images or snapshots    - Disk cloning
+   * Output only. [Output Only] The field indicates if the disk is created from a locked source
+   * image. Attachment of a disk created from a locked source image will cause the following
+   * operations to become irreversibly prohibited:        - R/W or R/O disk attachment to any other
+   * instance    - Disk detachment. And the disk can only be deleted when the instance    is deleted
+   * - Creation of images or snapshots    - Disk cloning
    *
    * Furthermore, the instance with at least one disk with locked flag set to true will be
    * prohibited from performing the operations below:        - Further attachment of secondary
@@ -1238,9 +1230,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the disk resides. Only applicable for regional resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the region where the disk resides. Only applicable for
+   * regional resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -1248,9 +1240,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where the disk resides. Only applicable for regional resources.
-   * You must specify this field as part of the HTTP request URL. It is not settable as a field in
-   * the request body.
+   * Output only. [Output Only] URL of the region where the disk resides. Only applicable for
+   * regional resources. You must specify this field as part of the HTTP request URL. It is not
+   * settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public Disk setRegion(java.lang.String region) {
@@ -1295,7 +1287,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the disk resource.
+   * Output only. [Output Only] Status information for the disk resource.
    * @return value or {@code null} for none
    */
   public DiskResourceStatus getResourceStatus() {
@@ -1303,7 +1295,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Status information for the disk resource.
+   * Output only. [Output Only] Status information for the disk resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public Disk setResourceStatus(DiskResourceStatus resourceStatus) {
@@ -1329,7 +1321,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -1337,7 +1329,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Disk setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -1346,7 +1338,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -1354,7 +1346,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Disk setSelfLink(java.lang.String selfLink) {
@@ -1363,7 +1355,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1371,7 +1363,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Disk setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -1407,8 +1399,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceConsistencyGroupPolicy() {
@@ -1416,8 +1408,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * @param sourceConsistencyGroupPolicy sourceConsistencyGroupPolicy or {@code null} for none
    */
   public Disk setSourceConsistencyGroupPolicy(java.lang.String sourceConsistencyGroupPolicy) {
@@ -1426,8 +1418,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceConsistencyGroupPolicyId() {
@@ -1435,8 +1427,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using
-   * a consistency group.
+   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was
+   * created using a consistency group.
    * @param sourceConsistencyGroupPolicyId sourceConsistencyGroupPolicyId or {@code null} for none
    */
   public Disk setSourceConsistencyGroupPolicyId(java.lang.String sourceConsistencyGroupPolicyId) {
@@ -1474,10 +1466,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
-   * exact disk that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a disk that was later deleted and recreated under the same name, the
-   * source disk ID would identify the exact version of the disk that was used.
+   * Output only. [Output Only] The unique ID of the disk used to create this disk. This value
+   * identifies the exact disk that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a disk that was later deleted and recreated under the same
+   * name, the source disk ID would identify the exact version of the disk that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDiskId() {
@@ -1485,10 +1477,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the disk used to create this disk. This value identifies the
-   * exact disk that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a disk that was later deleted and recreated under the same name, the
-   * source disk ID would identify the exact version of the disk that was used.
+   * Output only. [Output Only] The unique ID of the disk used to create this disk. This value
+   * identifies the exact disk that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a disk that was later deleted and recreated under the same
+   * name, the source disk ID would identify the exact version of the disk that was used.
    * @param sourceDiskId sourceDiskId or {@code null} for none
    */
   public Disk setSourceDiskId(java.lang.String sourceDiskId) {
@@ -1573,10 +1565,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The ID value of the image used to create this disk. This value identifies the
-   * exact image that was used to create this persistent disk. For example, if you created the
-   * persistent disk from an image that was later deleted and recreated under the same name, the
-   * source image ID would identify the exact version of the image that was used.
+   * Output only. [Output Only] The ID value of the image used to create this disk. This value
+   * identifies the exact image that was used to create this persistent disk. For example, if you
+   * created the persistent disk from an image that was later deleted and recreated under the same
+   * name, the source image ID would identify the exact version of the image that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImageId() {
@@ -1584,10 +1576,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The ID value of the image used to create this disk. This value identifies the
-   * exact image that was used to create this persistent disk. For example, if you created the
-   * persistent disk from an image that was later deleted and recreated under the same name, the
-   * source image ID would identify the exact version of the image that was used.
+   * Output only. [Output Only] The ID value of the image used to create this disk. This value
+   * identifies the exact image that was used to create this persistent disk. For example, if you
+   * created the persistent disk from an image that was later deleted and recreated under the same
+   * name, the source image ID would identify the exact version of the image that was used.
    * @param sourceImageId sourceImageId or {@code null} for none
    */
   public Disk setSourceImageId(java.lang.String sourceImageId) {
@@ -1621,8 +1613,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
-   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this disk. This
+   * value identifies the exact instant snapshot that was used to create this persistent disk. For
    * example, if you created the persistent disk from an instant snapshot that was later deleted and
    * recreated under the same name, the source instant snapshot ID would identify the exact version
    * of the instant snapshot that was used.
@@ -1633,8 +1625,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this disk. This value
-   * identifies the exact instant snapshot that was used to create this persistent disk. For
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this disk. This
+   * value identifies the exact instant snapshot that was used to create this persistent disk. For
    * example, if you created the persistent disk from an instant snapshot that was later deleted and
    * recreated under the same name, the source instant snapshot ID would identify the exact version
    * of the instant snapshot that was used.
@@ -1669,8 +1661,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The device name of a disk within a given machine image. The source_machine_image
-   * must be specified.
+   * The device name of a disk within a given machine image. The source_machine_image must be
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceMachineImageDiskDeviceName() {
@@ -1678,8 +1670,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The device name of a disk within a given machine image. The source_machine_image
-   * must be specified.
+   * The device name of a disk within a given machine image. The source_machine_image must be
+   * specified.
    * @param sourceMachineImageDiskDeviceName sourceMachineImageDiskDeviceName or {@code null} for none
    */
   public Disk setSourceMachineImageDiskDeviceName(java.lang.String sourceMachineImageDiskDeviceName) {
@@ -1707,11 +1699,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the machine image used to create this disk. This value
-   * identifies the exact machine image that was used to create this persistent disk. For example,
-   * if you created the persistent disk from a machine image that was later deleted and recreated
-   * under the same name, the source machine image ID would identify the exact version of the
-   * machine image that was used.
+   * Output only. [Output Only] The unique ID of the machine image used to create this disk. This
+   * value identifies the exact machine image that was used to create this persistent disk. For
+   * example, if you created the persistent disk from a machine image that was later deleted and
+   * recreated under the same name, the source machine image ID would identify the exact version of
+   * the machine image that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceMachineImageId() {
@@ -1719,11 +1711,11 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the machine image used to create this disk. This value
-   * identifies the exact machine image that was used to create this persistent disk. For example,
-   * if you created the persistent disk from a machine image that was later deleted and recreated
-   * under the same name, the source machine image ID would identify the exact version of the
-   * machine image that was used.
+   * Output only. [Output Only] The unique ID of the machine image used to create this disk. This
+   * value identifies the exact machine image that was used to create this persistent disk. For
+   * example, if you created the persistent disk from a machine image that was later deleted and
+   * recreated under the same name, the source machine image ID would identify the exact version of
+   * the machine image that was used.
    * @param sourceMachineImageId sourceMachineImageId or {@code null} for none
    */
   public Disk setSourceMachineImageId(java.lang.String sourceMachineImageId) {
@@ -1774,10 +1766,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the snapshot used to create this disk. This value identifies the
-   * exact snapshot that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a snapshot that was later deleted and recreated under the same name, the
-   * source snapshot ID would identify the exact version of the snapshot that was used.
+   * Output only. [Output Only] The unique ID of the snapshot used to create this disk. This value
+   * identifies the exact snapshot that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a snapshot that was later deleted and recreated under the same
+   * name, the source snapshot ID would identify the exact version of the snapshot that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshotId() {
@@ -1785,10 +1777,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the snapshot used to create this disk. This value identifies the
-   * exact snapshot that was used to create this persistent disk. For example, if you created the
-   * persistent disk from a snapshot that was later deleted and recreated under the same name, the
-   * source snapshot ID would identify the exact version of the snapshot that was used.
+   * Output only. [Output Only] The unique ID of the snapshot used to create this disk. This value
+   * identifies the exact snapshot that was used to create this persistent disk. For example, if you
+   * created the persistent disk from a snapshot that was later deleted and recreated under the same
+   * name, the source snapshot ID would identify the exact version of the snapshot that was used.
    * @param sourceSnapshotId sourceSnapshotId or {@code null} for none
    */
   public Disk setSourceSnapshotId(java.lang.String sourceSnapshotId) {
@@ -1822,9 +1814,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
-   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
-   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
+   * Output only. [Output Only] The status of disk creation.              - CREATING: Disk is
+   * provisioning.      - RESTORING: Source data is being copied into the      disk.      - FAILED:
+   * Disk creation failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1832,9 +1824,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation.              - CREATING: Disk is provisioning.
-   * - RESTORING: Source data is being copied into the      disk.      - FAILED: Disk creation
-   * failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
+   * Output only. [Output Only] The status of disk creation.              - CREATING: Disk is
+   * provisioning.      - RESTORING: Source data is being copied into the      disk.      - FAILED:
+   * Disk creation failed.      - READY: Disk is ready for use.      - DELETING: Disk is deleting.
    * @param status status or {@code null} for none
    */
   public Disk setStatus(java.lang.String status) {
@@ -1906,32 +1898,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
-   * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license:
-   *
-   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getUserLicenses() {
-    return userLicenses;
-  }
-
-  /**
-   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
-   * be modified after the disk is created. This includes a list of URLs to the license resource.
-   * For example, to provide a debian license:
-   *
-   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
-   * @param userLicenses userLicenses or {@code null} for none
-   */
-  public Disk setUserLicenses(java.util.List<java.lang.String> userLicenses) {
-    this.userLicenses = userLicenses;
-    return this;
-  }
-
-  /**
-   * [Output Only] Links to the users of the disk (attached instances) in
+   * Output only. [Output Only] Links to the users of the disk (attached instances) in
    * form:projects/project/zones/zone/instances/instance
    * @return value or {@code null} for none
    */
@@ -1940,7 +1907,7 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Links to the users of the disk (attached instances) in
+   * Output only. [Output Only] Links to the users of the disk (attached instances) in
    * form:projects/project/zones/zone/instances/instance
    * @param users users or {@code null} for none
    */
@@ -1950,8 +1917,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the disk resides. You must specify this field as part of
-   * the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the disk resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -1959,8 +1926,8 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the zone where the disk resides. You must specify this field as part of
-   * the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the disk resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public Disk setZone(java.lang.String zone) {

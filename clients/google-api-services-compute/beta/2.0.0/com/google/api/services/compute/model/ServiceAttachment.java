@@ -34,8 +34,8 @@ package com.google.api.services.compute.model;
 public final class ServiceAttachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] An array of connections for all the consumers connected to this service
-   * attachment.
+   * Output only. [Output Only] An array of connections for all the consumers connected to this
+   * service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> consumerRejectLists;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,15 +115,16 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
+   * attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +182,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.Long propagatedConnectionLimit;
 
   /**
-   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * Output only. [Output Only] An 128-bit global unique ID of the PSC service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,16 +203,16 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.Boolean reconcileConnections;
 
   /**
-   * [Output Only] URL of the region where the service attachment resides. This field applies only
-   * to the region resource. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the service attachment resides. This field
+   * applies only to the region resource. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,8 +237,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private ServiceAttachmentTunnelingConfig tunnelingConfig;
 
   /**
-   * [Output Only] An array of connections for all the consumers connected to this service
-   * attachment.
+   * Output only. [Output Only] An array of connections for all the consumers connected to this
+   * service attachment.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAttachmentConnectedEndpoint> getConnectedEndpoints() {
@@ -245,8 +246,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] An array of connections for all the consumers connected to this service
-   * attachment.
+   * Output only. [Output Only] An array of connections for all the consumers connected to this
+   * service attachment.
    * @param connectedEndpoints connectedEndpoints or {@code null} for none
    */
   public ServiceAttachment setConnectedEndpoints(java.util.List<ServiceAttachmentConnectedEndpoint> connectedEndpoints) {
@@ -326,7 +327,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -334,7 +335,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ServiceAttachment setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -461,8 +462,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -470,8 +471,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public ServiceAttachment setId(java.math.BigInteger id) {
@@ -480,7 +481,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
+   * attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -488,7 +490,8 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
+   * attachments.
    * @param kind kind or {@code null} for none
    */
   public ServiceAttachment setKind(java.lang.String kind) {
@@ -614,7 +617,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * Output only. [Output Only] An 128-bit global unique ID of the PSC service attachment.
    * @return value or {@code null} for none
    */
   public Uint128 getPscServiceAttachmentId() {
@@ -622,7 +625,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] An 128-bit global unique ID of the PSC service attachment.
+   * Output only. [Output Only] An 128-bit global unique ID of the PSC service attachment.
    * @param pscServiceAttachmentId pscServiceAttachmentId or {@code null} for none
    */
   public ServiceAttachment setPscServiceAttachmentId(Uint128 pscServiceAttachmentId) {
@@ -662,9 +665,9 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the region where the service attachment resides. This field applies only
-   * to the region resource. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the service attachment resides. This field
+   * applies only to the region resource. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -672,9 +675,9 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] URL of the region where the service attachment resides. This field applies only
-   * to the region resource. You must specify this field as part of the HTTP request URL. It is not
-   * settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the service attachment resides. This field
+   * applies only to the region resource. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public ServiceAttachment setRegion(java.lang.String region) {
@@ -683,7 +686,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -691,7 +694,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ServiceAttachment setSelfLink(java.lang.String selfLink) {

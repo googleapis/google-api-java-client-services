@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The list of managed instance groups that are contained in the specified project
-   * and zone.
+   * Output only. [Output Only] The list of managed instance groups that are contained in the
+   * specified project and zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +44,16 @@ public final class InstanceGroupManagersScopedList extends com.google.api.client
   }
 
   /**
-   * [Output Only] The warning that replaces the list of managed instance groups when the list is
-   * empty.
+   * Output only. [Output Only] The warning that replaces the list of managed instance groups when
+   * the list is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * [Output Only] The list of managed instance groups that are contained in the specified project
-   * and zone.
+   * Output only. [Output Only] The list of managed instance groups that are contained in the
+   * specified project and zone.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroupManager> getInstanceGroupManagers() {
@@ -61,8 +61,8 @@ public final class InstanceGroupManagersScopedList extends com.google.api.client
   }
 
   /**
-   * [Output Only] The list of managed instance groups that are contained in the specified project
-   * and zone.
+   * Output only. [Output Only] The list of managed instance groups that are contained in the
+   * specified project and zone.
    * @param instanceGroupManagers instanceGroupManagers or {@code null} for none
    */
   public InstanceGroupManagersScopedList setInstanceGroupManagers(java.util.List<InstanceGroupManager> instanceGroupManagers) {
@@ -71,8 +71,8 @@ public final class InstanceGroupManagersScopedList extends com.google.api.client
   }
 
   /**
-   * [Output Only] The warning that replaces the list of managed instance groups when the list is
-   * empty.
+   * Output only. [Output Only] The warning that replaces the list of managed instance groups when
+   * the list is empty.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -80,8 +80,8 @@ public final class InstanceGroupManagersScopedList extends com.google.api.client
   }
 
   /**
-   * [Output Only] The warning that replaces the list of managed instance groups when the list is
-   * empty.
+   * Output only. [Output Only] The warning that replaces the list of managed instance groups when
+   * the list is empty.
    * @param warning warning or {@code null} for none
    */
   public InstanceGroupManagersScopedList setWarning(Warning warning) {
@@ -100,8 +100,8 @@ public final class InstanceGroupManagersScopedList extends com.google.api.client
   }
 
   /**
-   * [Output Only] The warning that replaces the list of managed instance groups when the list is
-   * empty.
+   * Output only. [Output Only] The warning that replaces the list of managed instance groups when the
+   * list is empty.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

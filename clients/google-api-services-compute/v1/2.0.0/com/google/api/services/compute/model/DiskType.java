@@ -79,7 +79,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +209,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -217,7 +217,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
    * @param kind kind or {@code null} for none
    */
   public DiskType setKind(java.lang.String kind) {

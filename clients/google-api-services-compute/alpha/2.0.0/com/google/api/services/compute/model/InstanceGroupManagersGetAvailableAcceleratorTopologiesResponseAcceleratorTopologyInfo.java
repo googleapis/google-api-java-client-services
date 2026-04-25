@@ -44,6 +44,26 @@ public final class InstanceGroupManagersGetAvailableAcceleratorTopologiesRespons
   private java.lang.String acceleratorTopologyHealth;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyState acceleratorTopologyState;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instancesHealth;
+
+  /**
+   * Identified by the topology Id in the accelerator_topology_info map. Empty for the top-level
+   * topology
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * Topology in the format of: "16x16", "4x4x4", etc.
    * @return value or {@code null} for none
    */
@@ -72,6 +92,55 @@ public final class InstanceGroupManagersGetAvailableAcceleratorTopologiesRespons
    */
   public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo setAcceleratorTopologyHealth(java.lang.String acceleratorTopologyHealth) {
     this.acceleratorTopologyHealth = acceleratorTopologyHealth;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyState getAcceleratorTopologyState() {
+    return acceleratorTopologyState;
+  }
+
+  /**
+   * @param acceleratorTopologyState acceleratorTopologyState or {@code null} for none
+   */
+  public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo setAcceleratorTopologyState(InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyState acceleratorTopologyState) {
+    this.acceleratorTopologyState = acceleratorTopologyState;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstancesHealth() {
+    return instancesHealth;
+  }
+
+  /**
+   * @param instancesHealth instancesHealth or {@code null} for none
+   */
+  public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo setInstancesHealth(java.lang.String instancesHealth) {
+    this.instancesHealth = instancesHealth;
+    return this;
+  }
+
+  /**
+   * Identified by the topology Id in the accelerator_topology_info map. Empty for the top-level
+   * topology
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Identified by the topology Id in the accelerator_topology_info map. Empty for the top-level
+   * topology
+   * @param parent parent or {@code null} for none
+   */
+  public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo setParent(java.lang.String parent) {
+    this.parent = parent;
     return this;
   }
 

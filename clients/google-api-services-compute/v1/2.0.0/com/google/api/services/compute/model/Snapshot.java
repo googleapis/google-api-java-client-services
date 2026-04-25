@@ -33,15 +33,15 @@ package com.google.api.services.compute.model;
 public final class Snapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String architecture;
 
   /**
-   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
-   * the target disk.
+   * Output only. [Output Only] Set to true if snapshots are automatically created by applying
+   * resource policy on the target disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +59,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String chainName;
 
   /**
-   * [Output Only] Size in bytes of the snapshot at creation time.
+   * Output only. [Output Only] Size in bytes of the snapshot at creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long creationSizeBytes;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,22 +80,22 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long diskSizeGb;
 
   /**
-   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * Output only. [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long downloadBytes;
 
   /**
-   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
-   * field is not set by user, but from source disk.
+   * Output only. Whether this snapshot is created from a confidential compute mode disk. [Output
+   * Only]: This field is not set by user, but from source disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +110,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean guestFlush;
 
   /**
-   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
-   * bootable images. Read  Enabling guest operating system features to see a list of available
-   * options.
+   * Output only. [Output Only] A list of features to enable on the guest operating system.
+   * Applicable only for bootable images. Read  Enabling guest operating system features to see a
+   * list of available options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,14 +125,16 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#snapshot for Snapshot resources.
+   * Output only. [Output Only] Type of the resource. Always compute#snapshot for Snapshot
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,15 +162,16 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * [Output Only] Integer license codes indicating which licenses are attached to this snapshot.
+   * Output only. [Output Only] Integer license codes indicating which licenses are attached to this
+   * snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> licenseCodes;
 
   /**
-   * [Output Only] A list of public visible licenses that apply to this snapshot. This can be
-   * because the original image had licenses attached (such as a Windows image).
+   * Output only. [Output Only] A list of public visible licenses that apply to this snapshot. This
+   * can be because the original image had licenses attached (such as a Windows image).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,6 +205,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private SnapshotParams params;
 
   /**
+   * Output only. [Output Only] URL of the region where the snapshot resides. Only applicable for
+   * regional snapshots.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -209,14 +220,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,6 +249,22 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private CustomerEncryptionKey snapshotEncryptionKey;
+
+  /**
+   * Output only. [Output Only] The unique ID of the snapshot group that this snapshot belongs to.
+   * The usage of snapshot group feature is restricted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snapshotGroupId;
+
+  /**
+   * Output only. [Output only] The snapshot group that this snapshot belongs to. The usage of
+   * snapshot group feature is restricted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String snapshotGroupName;
 
   /**
    * Indicates the type of the snapshot.
@@ -269,9 +296,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDiskForRecoveryCheckpoint;
 
   /**
-   * [Output Only] The ID value of the disk used to create this snapshot. This value may be used to
-   * determine whether the snapshot was taken from the current or a previous instance of a given
-   * disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this snapshot. This value
+   * may be used to determine whether the snapshot was taken from the current or a previous instance
+   * of a given disk name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,51 +323,51 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceInstantSnapshotEncryptionKey;
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
-   * identifies the exact instant snapshot that was used to create this snapshot. For example, if
-   * you created the snapshot from an instant snapshot that was later deleted and recreated under
-   * the same name, the source instant snapshot ID would identify the exact instant snapshot that
-   * was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this snapshot.
+   * This value identifies the exact instant snapshot that was used to create this snapshot. For
+   * example, if you created the snapshot from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceInstantSnapshotId;
 
   /**
-   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] URL of the resource policy which created this scheduled snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSnapshotSchedulePolicy;
 
   /**
-   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] ID of the resource policy which created this scheduled snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSnapshotSchedulePolicyId;
 
   /**
-   * [Output Only] The status of the snapshot. This can beCREATING, DELETING, FAILED,READY, or
-   * UPLOADING.
+   * Output only. [Output Only] The status of the snapshot. This can beCREATING, DELETING,
+   * FAILED,READY, or UPLOADING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] A size of the storage used by the snapshot. As snapshots share storage, this
-   * number is expected to change with snapshot creation/deletion.
+   * Output only. [Output Only] A size of the storage used by the snapshot. As snapshots share
+   * storage, this number is expected to change with snapshot creation/deletion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long storageBytes;
 
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
-   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
-   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
-   * date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
+   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
+   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
+   * snapshot is up-to-date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,7 +381,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> storageLocations;
 
   /**
-   * [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchitecture() {
@@ -362,7 +389,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the snapshot. Valid values are ARM64 or X86_64.
    * @param architecture architecture or {@code null} for none
    */
   public Snapshot setArchitecture(java.lang.String architecture) {
@@ -371,8 +398,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
-   * the target disk.
+   * Output only. [Output Only] Set to true if snapshots are automatically created by applying
+   * resource policy on the target disk.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreated() {
@@ -380,8 +407,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Set to true if snapshots are automatically created by applying resource policy on
-   * the target disk.
+   * Output only. [Output Only] Set to true if snapshots are automatically created by applying
+   * resource policy on the target disk.
    * @param autoCreated autoCreated or {@code null} for none
    */
   public Snapshot setAutoCreated(java.lang.Boolean autoCreated) {
@@ -415,7 +442,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size in bytes of the snapshot at creation time.
+   * Output only. [Output Only] Size in bytes of the snapshot at creation time.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreationSizeBytes() {
@@ -423,7 +450,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size in bytes of the snapshot at creation time.
+   * Output only. [Output Only] Size in bytes of the snapshot at creation time.
    * @param creationSizeBytes creationSizeBytes or {@code null} for none
    */
   public Snapshot setCreationSizeBytes(java.lang.Long creationSizeBytes) {
@@ -432,7 +459,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -440,7 +467,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Snapshot setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -466,7 +493,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -474,7 +501,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Size of the source disk, specified in GB.
+   * Output only. [Output Only] Size of the source disk, specified in GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public Snapshot setDiskSizeGb(java.lang.Long diskSizeGb) {
@@ -483,7 +510,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * Output only. [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDownloadBytes() {
@@ -491,7 +518,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
+   * Output only. [Output Only] Number of bytes downloaded to restore a snapshot to a disk.
    * @param downloadBytes downloadBytes or {@code null} for none
    */
   public Snapshot setDownloadBytes(java.lang.Long downloadBytes) {
@@ -500,8 +527,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
-   * field is not set by user, but from source disk.
+   * Output only. Whether this snapshot is created from a confidential compute mode disk. [Output
+   * Only]: This field is not set by user, but from source disk.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -509,8 +536,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this snapshot is created from a confidential compute mode disk. [Output Only]: This
-   * field is not set by user, but from source disk.
+   * Output only. Whether this snapshot is created from a confidential compute mode disk. [Output
+   * Only]: This field is not set by user, but from source disk.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public Snapshot setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
@@ -538,9 +565,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
-   * bootable images. Read  Enabling guest operating system features to see a list of available
-   * options.
+   * Output only. [Output Only] A list of features to enable on the guest operating system.
+   * Applicable only for bootable images. Read  Enabling guest operating system features to see a
+   * list of available options.
    * @return value or {@code null} for none
    */
   public java.util.List<GuestOsFeature> getGuestOsFeatures() {
@@ -548,9 +575,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of features to enable on the guest operating system. Applicable only for
-   * bootable images. Read  Enabling guest operating system features to see a list of available
-   * options.
+   * Output only. [Output Only] A list of features to enable on the guest operating system.
+   * Applicable only for bootable images. Read  Enabling guest operating system features to see a
+   * list of available options.
    * @param guestOsFeatures guestOsFeatures or {@code null} for none
    */
   public Snapshot setGuestOsFeatures(java.util.List<GuestOsFeature> guestOsFeatures) {
@@ -559,7 +586,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -567,7 +595,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public Snapshot setId(java.math.BigInteger id) {
@@ -576,7 +605,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#snapshot for Snapshot resources.
+   * Output only. [Output Only] Type of the resource. Always compute#snapshot for Snapshot
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -584,7 +614,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#snapshot for Snapshot resources.
+   * Output only. [Output Only] Type of the resource. Always compute#snapshot for Snapshot
+   * resources.
    * @param kind kind or {@code null} for none
    */
   public Snapshot setKind(java.lang.String kind) {
@@ -681,7 +712,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Integer license codes indicating which licenses are attached to this snapshot.
+   * Output only. [Output Only] Integer license codes indicating which licenses are attached to this
+   * snapshot.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getLicenseCodes() {
@@ -689,7 +721,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Integer license codes indicating which licenses are attached to this snapshot.
+   * Output only. [Output Only] Integer license codes indicating which licenses are attached to this
+   * snapshot.
    * @param licenseCodes licenseCodes or {@code null} for none
    */
   public Snapshot setLicenseCodes(java.util.List<java.lang.Long> licenseCodes) {
@@ -698,8 +731,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of public visible licenses that apply to this snapshot. This can be
-   * because the original image had licenses attached (such as a Windows image).
+   * Output only. [Output Only] A list of public visible licenses that apply to this snapshot. This
+   * can be because the original image had licenses attached (such as a Windows image).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLicenses() {
@@ -707,8 +740,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of public visible licenses that apply to this snapshot. This can be
-   * because the original image had licenses attached (such as a Windows image).
+   * Output only. [Output Only] A list of public visible licenses that apply to this snapshot. This
+   * can be because the original image had licenses attached (such as a Windows image).
    * @param licenses licenses or {@code null} for none
    */
   public Snapshot setLicenses(java.util.List<java.lang.String> licenses) {
@@ -780,6 +813,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. [Output Only] URL of the region where the snapshot resides. Only applicable for
+   * regional snapshots.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Output only. [Output Only] URL of the region where the snapshot resides. Only applicable for
+   * regional snapshots.
+   * @param region region or {@code null} for none
+   */
+  public Snapshot setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
    * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -797,7 +849,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -805,7 +857,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Snapshot setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -814,7 +866,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -822,7 +874,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Snapshot setSelfLink(java.lang.String selfLink) {
@@ -864,6 +916,44 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setSnapshotEncryptionKey(CustomerEncryptionKey snapshotEncryptionKey) {
     this.snapshotEncryptionKey = snapshotEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The unique ID of the snapshot group that this snapshot belongs to.
+   * The usage of snapshot group feature is restricted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnapshotGroupId() {
+    return snapshotGroupId;
+  }
+
+  /**
+   * Output only. [Output Only] The unique ID of the snapshot group that this snapshot belongs to.
+   * The usage of snapshot group feature is restricted.
+   * @param snapshotGroupId snapshotGroupId or {@code null} for none
+   */
+  public Snapshot setSnapshotGroupId(java.lang.String snapshotGroupId) {
+    this.snapshotGroupId = snapshotGroupId;
+    return this;
+  }
+
+  /**
+   * Output only. [Output only] The snapshot group that this snapshot belongs to. The usage of
+   * snapshot group feature is restricted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSnapshotGroupName() {
+    return snapshotGroupName;
+  }
+
+  /**
+   * Output only. [Output only] The snapshot group that this snapshot belongs to. The usage of
+   * snapshot group feature is restricted.
+   * @param snapshotGroupName snapshotGroupName or {@code null} for none
+   */
+  public Snapshot setSnapshotGroupName(java.lang.String snapshotGroupName) {
+    this.snapshotGroupName = snapshotGroupName;
     return this;
   }
 
@@ -938,9 +1028,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The ID value of the disk used to create this snapshot. This value may be used to
-   * determine whether the snapshot was taken from the current or a previous instance of a given
-   * disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this snapshot. This value
+   * may be used to determine whether the snapshot was taken from the current or a previous instance
+   * of a given disk name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDiskId() {
@@ -948,9 +1038,9 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The ID value of the disk used to create this snapshot. This value may be used to
-   * determine whether the snapshot was taken from the current or a previous instance of a given
-   * disk name.
+   * Output only. [Output Only] The ID value of the disk used to create this snapshot. This value
+   * may be used to determine whether the snapshot was taken from the current or a previous instance
+   * of a given disk name.
    * @param sourceDiskId sourceDiskId or {@code null} for none
    */
   public Snapshot setSourceDiskId(java.lang.String sourceDiskId) {
@@ -1001,11 +1091,11 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
-   * identifies the exact instant snapshot that was used to create this snapshot. For example, if
-   * you created the snapshot from an instant snapshot that was later deleted and recreated under
-   * the same name, the source instant snapshot ID would identify the exact instant snapshot that
-   * was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this snapshot.
+   * This value identifies the exact instant snapshot that was used to create this snapshot. For
+   * example, if you created the snapshot from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstantSnapshotId() {
@@ -1013,11 +1103,11 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique ID of the instant snapshot used to create this snapshot. This value
-   * identifies the exact instant snapshot that was used to create this snapshot. For example, if
-   * you created the snapshot from an instant snapshot that was later deleted and recreated under
-   * the same name, the source instant snapshot ID would identify the exact instant snapshot that
-   * was used.
+   * Output only. [Output Only] The unique ID of the instant snapshot used to create this snapshot.
+   * This value identifies the exact instant snapshot that was used to create this snapshot. For
+   * example, if you created the snapshot from an instant snapshot that was later deleted and
+   * recreated under the same name, the source instant snapshot ID would identify the exact instant
+   * snapshot that was used.
    * @param sourceInstantSnapshotId sourceInstantSnapshotId or {@code null} for none
    */
   public Snapshot setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
@@ -1026,7 +1116,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] URL of the resource policy which created this scheduled snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshotSchedulePolicy() {
@@ -1034,7 +1124,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] URL of the resource policy which created this scheduled snapshot.
    * @param sourceSnapshotSchedulePolicy sourceSnapshotSchedulePolicy or {@code null} for none
    */
   public Snapshot setSourceSnapshotSchedulePolicy(java.lang.String sourceSnapshotSchedulePolicy) {
@@ -1043,7 +1133,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] ID of the resource policy which created this scheduled snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshotSchedulePolicyId() {
@@ -1051,7 +1141,7 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] ID of the resource policy which created this scheduled snapshot.
+   * Output only. [Output Only] ID of the resource policy which created this scheduled snapshot.
    * @param sourceSnapshotSchedulePolicyId sourceSnapshotSchedulePolicyId or {@code null} for none
    */
   public Snapshot setSourceSnapshotSchedulePolicyId(java.lang.String sourceSnapshotSchedulePolicyId) {
@@ -1060,8 +1150,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the snapshot. This can beCREATING, DELETING, FAILED,READY, or
-   * UPLOADING.
+   * Output only. [Output Only] The status of the snapshot. This can beCREATING, DELETING,
+   * FAILED,READY, or UPLOADING.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1069,8 +1159,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the snapshot. This can beCREATING, DELETING, FAILED,READY, or
-   * UPLOADING.
+   * Output only. [Output Only] The status of the snapshot. This can beCREATING, DELETING,
+   * FAILED,READY, or UPLOADING.
    * @param status status or {@code null} for none
    */
   public Snapshot setStatus(java.lang.String status) {
@@ -1079,8 +1169,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A size of the storage used by the snapshot. As snapshots share storage, this
-   * number is expected to change with snapshot creation/deletion.
+   * Output only. [Output Only] A size of the storage used by the snapshot. As snapshots share
+   * storage, this number is expected to change with snapshot creation/deletion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStorageBytes() {
@@ -1088,8 +1178,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A size of the storage used by the snapshot. As snapshots share storage, this
-   * number is expected to change with snapshot creation/deletion.
+   * Output only. [Output Only] A size of the storage used by the snapshot. As snapshots share
+   * storage, this number is expected to change with snapshot creation/deletion.
    * @param storageBytes storageBytes or {@code null} for none
    */
   public Snapshot setStorageBytes(java.lang.Long storageBytes) {
@@ -1098,10 +1188,10 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
-   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
-   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
-   * date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
+   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
+   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
+   * snapshot is up-to-date.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBytesStatus() {
@@ -1109,10 +1199,10 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
-   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
-   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
-   * date.
+   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
+   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
+   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
+   * snapshot is up-to-date.
    * @param storageBytesStatus storageBytesStatus or {@code null} for none
    */
   public Snapshot setStorageBytesStatus(java.lang.String storageBytesStatus) {

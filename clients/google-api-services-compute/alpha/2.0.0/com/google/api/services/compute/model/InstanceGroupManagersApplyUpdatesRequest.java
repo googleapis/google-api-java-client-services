@@ -38,6 +38,13 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   private java.lang.Boolean allInstances;
 
   /**
+   * Whether the boot disk is allowed to be updated with restart.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String disruptionMode;
+
+  /**
    * The list of URLs of one or more instances for which you want to apply updates. Each URL can be
    * a full URL or a partial URL, such aszones/[ZONE]/instances/[INSTANCE_NAME].
    * The value may be {@code null}.
@@ -95,6 +102,23 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
    */
   public InstanceGroupManagersApplyUpdatesRequest setAllInstances(java.lang.Boolean allInstances) {
     this.allInstances = allInstances;
+    return this;
+  }
+
+  /**
+   * Whether the boot disk is allowed to be updated with restart.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisruptionMode() {
+    return disruptionMode;
+  }
+
+  /**
+   * Whether the boot disk is allowed to be updated with restart.
+   * @param disruptionMode disruptionMode or {@code null} for none
+   */
+  public InstanceGroupManagersApplyUpdatesRequest setDisruptionMode(java.lang.String disruptionMode) {
+    this.disruptionMode = disruptionMode;
     return this;
   }
 

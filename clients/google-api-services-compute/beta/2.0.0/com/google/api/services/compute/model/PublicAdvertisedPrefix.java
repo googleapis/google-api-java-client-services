@@ -32,14 +32,14 @@ package com.google.api.services.compute.model;
 public final class PublicAdvertisedPrefix extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String byoipApiVersion;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -94,8 +94,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String ipv6AccessType;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for
+   * public advertised prefixes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,15 +125,15 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String pdpScope;
 
   /**
-   * [Output Only] The list of public delegated prefixes that exist for this public advertised
-   * prefix.
+   * Output only. [Output Only] The list of public delegated prefixes that exist for this public
+   * advertised prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PublicAdvertisedPrefixPublicDelegatedPrefix> publicDelegatedPrefixs;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String status;
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * @return value or {@code null} for none
    */
   public java.lang.String getByoipApiVersion() {
@@ -167,7 +167,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * @param byoipApiVersion byoipApiVersion or {@code null} for none
    */
   public PublicAdvertisedPrefix setByoipApiVersion(java.lang.String byoipApiVersion) {
@@ -176,7 +176,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -184,7 +184,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PublicAdvertisedPrefix setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -292,8 +292,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -301,8 +301,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public PublicAdvertisedPrefix setId(java.math.BigInteger id) {
@@ -345,8 +345,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for
+   * public advertised prefixes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -354,8 +354,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for
+   * public advertised prefixes.
    * @param kind kind or {@code null} for none
    */
   public PublicAdvertisedPrefix setKind(java.lang.String kind) {
@@ -416,8 +416,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The list of public delegated prefixes that exist for this public advertised
-   * prefix.
+   * Output only. [Output Only] The list of public delegated prefixes that exist for this public
+   * advertised prefix.
    * @return value or {@code null} for none
    */
   public java.util.List<PublicAdvertisedPrefixPublicDelegatedPrefix> getPublicDelegatedPrefixs() {
@@ -425,8 +425,8 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The list of public delegated prefixes that exist for this public advertised
-   * prefix.
+   * Output only. [Output Only] The list of public delegated prefixes that exist for this public
+   * advertised prefix.
    * @param publicDelegatedPrefixs publicDelegatedPrefixs or {@code null} for none
    */
   public PublicAdvertisedPrefix setPublicDelegatedPrefixs(java.util.List<PublicAdvertisedPrefixPublicDelegatedPrefix> publicDelegatedPrefixs) {
@@ -435,7 +435,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -443,7 +443,7 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public PublicAdvertisedPrefix setSelfLink(java.lang.String selfLink) {

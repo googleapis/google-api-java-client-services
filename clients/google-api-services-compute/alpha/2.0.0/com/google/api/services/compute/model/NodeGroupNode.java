@@ -43,7 +43,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Node resources that are reserved by all instances.
+   * Output only. Node resources that are reserved by all instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Instance data that shows consumed resources on the node.
+   * Output only. Instance data that shows consumed resources on the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private java.lang.String nodeType;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,14 +131,14 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   private java.lang.String status;
 
   /**
-   * Total amount of available resources on the node.
+   * Output only. Total amount of available resources on the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceConsumptionInfo totalResources;
 
   /**
-   * [Output Only] The information about an upcoming maintenance event.
+   * Output only. [Output Only] The information about an upcoming maintenance event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Node resources that are reserved by all instances.
+   * Output only. Node resources that are reserved by all instances.
    * @return value or {@code null} for none
    */
   public InstanceConsumptionInfo getConsumedResources() {
@@ -170,7 +170,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Node resources that are reserved by all instances.
+   * Output only. Node resources that are reserved by all instances.
    * @param consumedResources consumedResources or {@code null} for none
    */
   public NodeGroupNode setConsumedResources(InstanceConsumptionInfo consumedResources) {
@@ -213,7 +213,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Instance data that shows consumed resources on the node.
+   * Output only. Instance data that shows consumed resources on the node.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceConsumptionData> getInstanceConsumptionData() {
@@ -221,7 +221,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Instance data that shows consumed resources on the node.
+   * Output only. Instance data that shows consumed resources on the node.
    * @param instanceConsumptionData instanceConsumptionData or {@code null} for none
    */
   public NodeGroupNode setInstanceConsumptionData(java.util.List<InstanceConsumptionData> instanceConsumptionData) {
@@ -281,7 +281,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -289,7 +289,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public NodeGroupNode setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -347,7 +347,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Total amount of available resources on the node.
+   * Output only. Total amount of available resources on the node.
    * @return value or {@code null} for none
    */
   public InstanceConsumptionInfo getTotalResources() {
@@ -355,7 +355,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Total amount of available resources on the node.
+   * Output only. Total amount of available resources on the node.
    * @param totalResources totalResources or {@code null} for none
    */
   public NodeGroupNode setTotalResources(InstanceConsumptionInfo totalResources) {
@@ -364,7 +364,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The information about an upcoming maintenance event.
+   * Output only. [Output Only] The information about an upcoming maintenance event.
    * @return value or {@code null} for none
    */
   public UpcomingMaintenance getUpcomingMaintenance() {
@@ -372,7 +372,7 @@ public final class NodeGroupNode extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The information about an upcoming maintenance event.
+   * Output only. [Output Only] The information about an upcoming maintenance event.
    * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
    */
   public NodeGroupNode setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {

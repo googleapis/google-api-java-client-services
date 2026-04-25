@@ -53,7 +53,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String addressType;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,11 +67,26 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
+   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
+   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
 
   /**
    * The IP version that will be used by this address. Valid options areIPV4 or IPV6.
@@ -89,7 +104,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String ipv6EndpointType;
 
   /**
-   * [Output Only] Type of the resource. Always compute#address for addresses.
+   * Output only. [Output Only] Type of the resource. Always compute#address for addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,9 +190,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String purpose;
 
   /**
-   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
-   * you must specify the region as a path parameter in the HTTP request URL. *This field is not
-   * applicable to global addresses.*
+   * Output only. [Output Only] The URL of the region where a regional address resides. For regional
+   * addresses, you must specify the region as a path parameter in the HTTP request URL. *This field
+   * is not applicable to global addresses.*
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,10 +206,10 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of the address, which can be one ofRESERVING, RESERVED, or IN_USE. An
-   * address that is RESERVING is currently in the process of being reserved. A RESERVED address is
-   * currently reserved and available to use. An IN_USE address is currently being used by another
-   * resource and is not available.
+   * Output only. [Output Only] The status of the address, which can be one ofRESERVING, RESERVED,
+   * or IN_USE. An address that is RESERVING is currently in the process of being reserved. A
+   * RESERVED address is currently reserved and available to use. An IN_USE address is currently
+   * being used by another resource and is not available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,7 +268,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -261,7 +276,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Address setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -287,7 +302,8 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -295,11 +311,43 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public Address setId(java.math.BigInteger id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
+   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
+   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
+   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
+   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public Address setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
     return this;
   }
 
@@ -340,7 +388,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#address for addresses.
+   * Output only. [Output Only] Type of the resource. Always compute#address for addresses.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -348,7 +396,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#address for addresses.
+   * Output only. [Output Only] Type of the resource. Always compute#address for addresses.
    * @param kind kind or {@code null} for none
    */
   public Address setKind(java.lang.String kind) {
@@ -576,9 +624,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
-   * you must specify the region as a path parameter in the HTTP request URL. *This field is not
-   * applicable to global addresses.*
+   * Output only. [Output Only] The URL of the region where a regional address resides. For regional
+   * addresses, you must specify the region as a path parameter in the HTTP request URL. *This field
+   * is not applicable to global addresses.*
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -586,9 +634,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
-   * you must specify the region as a path parameter in the HTTP request URL. *This field is not
-   * applicable to global addresses.*
+   * Output only. [Output Only] The URL of the region where a regional address resides. For regional
+   * addresses, you must specify the region as a path parameter in the HTTP request URL. *This field
+   * is not applicable to global addresses.*
    * @param region region or {@code null} for none
    */
   public Address setRegion(java.lang.String region) {
@@ -614,10 +662,10 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the address, which can be one ofRESERVING, RESERVED, or IN_USE. An
-   * address that is RESERVING is currently in the process of being reserved. A RESERVED address is
-   * currently reserved and available to use. An IN_USE address is currently being used by another
-   * resource and is not available.
+   * Output only. [Output Only] The status of the address, which can be one ofRESERVING, RESERVED,
+   * or IN_USE. An address that is RESERVING is currently in the process of being reserved. A
+   * RESERVED address is currently reserved and available to use. An IN_USE address is currently
+   * being used by another resource and is not available.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -625,10 +673,10 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of the address, which can be one ofRESERVING, RESERVED, or IN_USE. An
-   * address that is RESERVING is currently in the process of being reserved. A RESERVED address is
-   * currently reserved and available to use. An IN_USE address is currently being used by another
-   * resource and is not available.
+   * Output only. [Output Only] The status of the address, which can be one ofRESERVING, RESERVED,
+   * or IN_USE. An address that is RESERVING is currently in the process of being reserved. A
+   * RESERVED address is currently reserved and available to use. An IN_USE address is currently
+   * being used by another resource and is not available.
    * @param status status or {@code null} for none
    */
   public Address setStatus(java.lang.String status) {

@@ -68,7 +68,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#zone for zones.
+   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,6 +89,12 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ZoneResourceStatus resourceStatus;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -103,7 +109,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +201,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#zone for zones.
+   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -203,7 +209,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#zone for zones.
+   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
    * @param kind kind or {@code null} for none
    */
   public Zone setKind(java.lang.String kind) {
@@ -246,6 +252,21 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public ZoneResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Zone setResourceStatus(ZoneResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
+    return this;
+  }
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
@@ -280,7 +301,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -288,7 +309,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public Zone setSupportsPzs(java.lang.Boolean supportsPzs) {

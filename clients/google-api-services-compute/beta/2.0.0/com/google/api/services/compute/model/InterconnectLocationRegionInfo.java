@@ -31,38 +31,38 @@ package com.google.api.services.compute.model;
 public final class InterconnectLocationRegionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Expected round-trip time in milliseconds, from this InterconnectLocation to a VM in this
-   * region.
+   * Output only. Expected round-trip time in milliseconds, from this InterconnectLocation to a VM
+   * in this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long expectedRttMs;
 
   /**
-   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
-   * that are in this location.
+   * Output only. Identifies whether L2 Interconnect Attachments can be created in this region for
+   * interconnects that are in this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean l2ForwardingEnabled;
 
   /**
-   * Identifies the network presence of this location.
+   * Output only. Identifies the network presence of this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationPresence;
 
   /**
-   * URL for the region of this location.
+   * Output only. URL for the region of this location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Expected round-trip time in milliseconds, from this InterconnectLocation to a VM in this
-   * region.
+   * Output only. Expected round-trip time in milliseconds, from this InterconnectLocation to a VM
+   * in this region.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExpectedRttMs() {
@@ -70,8 +70,8 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * Expected round-trip time in milliseconds, from this InterconnectLocation to a VM in this
-   * region.
+   * Output only. Expected round-trip time in milliseconds, from this InterconnectLocation to a VM
+   * in this region.
    * @param expectedRttMs expectedRttMs or {@code null} for none
    */
   public InterconnectLocationRegionInfo setExpectedRttMs(java.lang.Long expectedRttMs) {
@@ -80,8 +80,8 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
-   * that are in this location.
+   * Output only. Identifies whether L2 Interconnect Attachments can be created in this region for
+   * interconnects that are in this location.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getL2ForwardingEnabled() {
@@ -89,8 +89,8 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
-   * that are in this location.
+   * Output only. Identifies whether L2 Interconnect Attachments can be created in this region for
+   * interconnects that are in this location.
    * @param l2ForwardingEnabled l2ForwardingEnabled or {@code null} for none
    */
   public InterconnectLocationRegionInfo setL2ForwardingEnabled(java.lang.Boolean l2ForwardingEnabled) {
@@ -99,7 +99,7 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * Identifies the network presence of this location.
+   * Output only. Identifies the network presence of this location.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationPresence() {
@@ -107,7 +107,7 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * Identifies the network presence of this location.
+   * Output only. Identifies the network presence of this location.
    * @param locationPresence locationPresence or {@code null} for none
    */
   public InterconnectLocationRegionInfo setLocationPresence(java.lang.String locationPresence) {
@@ -116,7 +116,7 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * URL for the region of this location.
+   * Output only. URL for the region of this location.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -124,7 +124,7 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   }
 
   /**
-   * URL for the region of this location.
+   * Output only. URL for the region of this location.
    * @param region region or {@code null} for none
    */
   public InterconnectLocationRegionInfo setRegion(java.lang.String region) {

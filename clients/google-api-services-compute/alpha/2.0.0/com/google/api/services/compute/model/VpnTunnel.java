@@ -47,7 +47,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private VpnTunnelCipherSuite cipherSuite;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.Integer ikeVersion;
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -307,7 +307,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -315,7 +315,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public VpnTunnel setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -394,7 +394,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -402,7 +402,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
+   * Output only. [Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels.
    * @param kind kind or {@code null} for none
    */
   public VpnTunnel setKind(java.lang.String kind) {

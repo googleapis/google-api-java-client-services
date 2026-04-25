@@ -41,7 +41,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.Boolean adminEnabled;
 
   /**
-   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * Output only. [Output Only] URL of the AttachmentGroup that includes this Attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
    * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
    * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
-   * Gbit/s    - BPS_100G: 100 Gbit/s
+   * Gbit/s    - BPS_100G: 100 Gbit/s    - BPS_400G: 400 Gbit/s
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,16 +119,16 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> candidateSubnets;
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudRouterIpAddress;
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,31 +142,31 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String cloudRouterIpv6InterfaceId;
 
   /**
-   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
-   * constraints are not met.
+   * Output only. [Output Only] Constraints for this attachment, if any. The attachment does not
+   * work if these constraints are not met.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectAttachmentConfigurationConstraints configurationConstraints;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerRouterIpAddress;
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,9 +180,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String customerRouterIpv6InterfaceId;
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment. This field is only present for
-   * Dataplane version 2 and higher. Absence of this field in the API output indicates that the
-   * Dataplane is version 1.
+   * Output only. [Output Only] Dataplane version for this InterconnectAttachment. This field is
+   * only present for Dataplane version 2 and higher. Absence of this field in the API output
+   * indicates that the Dataplane is version 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,15 +224,16 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String encryption;
 
   /**
-   * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+   * Output only. [Output Only] Google reference ID, to be used when raising support tickets with
+   * Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleReferenceId;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -262,8 +263,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> ipsecInternalAddresses;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
-   * attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for
+   * interconnect attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -330,10 +331,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
-   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
-   * because turnup is not complete.
+   * Output only. [Output Only] The current status of whether or not this interconnect attachment is
+   * functional, which can take one of the following values:        - OS_ACTIVE: The attachment has
+   * been turned up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to
+   * use yet,    because turnup is not complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -374,25 +375,25 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private InterconnectAttachmentPartnerMetadata partnerMetadata;
 
   /**
-   * [Output Only] Information specific to an InterconnectAttachment. This property is populated if
-   * the interconnect that this is attached to is of type DEDICATED.
+   * Output only. [Output Only] Information specific to an InterconnectAttachment. This property is
+   * populated if the interconnect that this is attached to is of type DEDICATED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectAttachmentPrivateInfo privateInterconnectInfo;
 
   /**
-   * [Output Only] URL of the region where the regional interconnect attachment resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the regional interconnect attachment
+   * resides. You must specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
-   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Output only. [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this
+   * field contains the interconnect's remote location service provider. Example values: "Amazon Web
    * Services" "Microsoft Azure".
    *
    * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
@@ -412,21 +413,21 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String router;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -444,19 +445,19 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.String stackType;
 
   /**
-   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
-   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
-   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
-   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
-   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
-   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
-   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
-   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
-   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
-   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
-   * longer functional. This    could be because the associated Interconnect was removed, or because
-   * the    other side of a Partner attachment was deleted.
+   * Output only. [Output Only] The current state of this attachment's functionality. Enum values
+   * ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER
+   * interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and
+   * PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This
+   * state can take one of the following values:        - ACTIVE: The attachment has been turned up
+   * and is ready to use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup
+   * is not complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet
+   * been configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in
+   * the process of    provisioning after a PARTNER_PROVIDER attachment was created that
+   * references it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is
+   * waiting for a customer to activate it.     - DEFUNCT:    The attachment was deleted externally
+   * and is no longer functional. This    could be because the associated Interconnect was removed,
+   * or because the    other side of a Partner attachment was deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -515,7 +516,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * Output only. [Output Only] URL of the AttachmentGroup that includes this Attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachmentGroup() {
@@ -523,7 +524,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * Output only. [Output Only] URL of the AttachmentGroup that includes this Attachment.
    * @param attachmentGroup attachmentGroup or {@code null} for none
    */
   public InterconnectAttachment setAttachmentGroup(java.lang.String attachmentGroup) {
@@ -539,7 +540,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
    * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
    * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
-   * Gbit/s    - BPS_100G: 100 Gbit/s
+   * Gbit/s    - BPS_100G: 100 Gbit/s    - BPS_400G: 400 Gbit/s
    * @return value or {@code null} for none
    */
   public java.lang.String getBandwidth() {
@@ -554,7 +555,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    * BPS_50M: 50 Mbit/s    - BPS_100M: 100 Mbit/s    - BPS_200M: 200 Mbit/s    - BPS_300M: 300
    * Mbit/s    - BPS_400M: 400 Mbit/s    - BPS_500M: 500 Mbit/s    - BPS_1G: 1 Gbit/s    - BPS_2G: 2
    * Gbit/s    - BPS_5G: 5 Gbit/s    - BPS_10G: 10 Gbit/s    - BPS_20G: 20 Gbit/s    - BPS_50G: 50
-   * Gbit/s    - BPS_100G: 100 Gbit/s
+   * Gbit/s    - BPS_100G: 100 Gbit/s    - BPS_400G: 400 Gbit/s
    * @param bandwidth bandwidth or {@code null} for none
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
@@ -695,8 +696,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudRouterIpAddress() {
@@ -704,8 +705,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * @param cloudRouterIpAddress cloudRouterIpAddress or {@code null} for none
    */
   public InterconnectAttachment setCloudRouterIpAddress(java.lang.String cloudRouterIpAddress) {
@@ -714,8 +715,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudRouterIpv6Address() {
@@ -723,8 +724,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on Cloud Router Interface for this
-   * interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on Cloud Router
+   * Interface for this interconnect attachment.
    * @param cloudRouterIpv6Address cloudRouterIpv6Address or {@code null} for none
    */
   public InterconnectAttachment setCloudRouterIpv6Address(java.lang.String cloudRouterIpv6Address) {
@@ -750,8 +751,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
-   * constraints are not met.
+   * Output only. [Output Only] Constraints for this attachment, if any. The attachment does not
+   * work if these constraints are not met.
    * @return value or {@code null} for none
    */
   public InterconnectAttachmentConfigurationConstraints getConfigurationConstraints() {
@@ -759,8 +760,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Constraints for this attachment, if any. The attachment does not work if these
-   * constraints are not met.
+   * Output only. [Output Only] Constraints for this attachment, if any. The attachment does not
+   * work if these constraints are not met.
    * @param configurationConstraints configurationConstraints or {@code null} for none
    */
   public InterconnectAttachment setConfigurationConstraints(InterconnectAttachmentConfigurationConstraints configurationConstraints) {
@@ -769,7 +770,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -777,7 +778,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectAttachment setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -786,8 +787,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerRouterIpAddress() {
@@ -795,8 +796,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv4 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv4 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * @param customerRouterIpAddress customerRouterIpAddress or {@code null} for none
    */
   public InterconnectAttachment setCustomerRouterIpAddress(java.lang.String customerRouterIpAddress) {
@@ -805,8 +806,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerRouterIpv6Address() {
@@ -814,8 +815,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] IPv6 address + prefix length to be configured on the customer router subinterface
-   * for this interconnect attachment.
+   * Output only. [Output Only] IPv6 address + prefix length to be configured on the customer router
+   * subinterface for this interconnect attachment.
    * @param customerRouterIpv6Address customerRouterIpv6Address or {@code null} for none
    */
   public InterconnectAttachment setCustomerRouterIpv6Address(java.lang.String customerRouterIpv6Address) {
@@ -841,9 +842,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment. This field is only present for
-   * Dataplane version 2 and higher. Absence of this field in the API output indicates that the
-   * Dataplane is version 1.
+   * Output only. [Output Only] Dataplane version for this InterconnectAttachment. This field is
+   * only present for Dataplane version 2 and higher. Absence of this field in the API output
+   * indicates that the Dataplane is version 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataplaneVersion() {
@@ -851,9 +852,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Dataplane version for this InterconnectAttachment. This field is only present for
-   * Dataplane version 2 and higher. Absence of this field in the API output indicates that the
-   * Dataplane is version 1.
+   * Output only. [Output Only] Dataplane version for this InterconnectAttachment. This field is
+   * only present for Dataplane version 2 and higher. Absence of this field in the API output
+   * indicates that the Dataplane is version 1.
    * @param dataplaneVersion dataplaneVersion or {@code null} for none
    */
   public InterconnectAttachment setDataplaneVersion(java.lang.Integer dataplaneVersion) {
@@ -941,8 +942,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+   * Output only. [Output Only] Google reference ID, to be used when raising support tickets with
+   * Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleReferenceId() {
@@ -950,8 +951,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Google reference ID, to be used when raising support tickets with Google or
-   * otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
+   * Output only. [Output Only] Google reference ID, to be used when raising support tickets with
+   * Google or otherwise to debug backend connectivity issues. [Deprecated] This field is not used.
    * @param googleReferenceId googleReferenceId or {@code null} for none
    */
   public InterconnectAttachment setGoogleReferenceId(java.lang.String googleReferenceId) {
@@ -960,7 +961,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -968,7 +970,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public InterconnectAttachment setId(java.math.BigInteger id) {
@@ -1029,8 +1032,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
-   * attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for
+   * interconnect attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -1038,8 +1041,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for interconnect
-   * attachments.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectAttachment for
+   * interconnect attachments.
    * @param kind kind or {@code null} for none
    */
   public InterconnectAttachment setKind(java.lang.String kind) {
@@ -1226,10 +1229,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
-   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
-   * because turnup is not complete.
+   * Output only. [Output Only] The current status of whether or not this interconnect attachment is
+   * functional, which can take one of the following values:        - OS_ACTIVE: The attachment has
+   * been turned up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to
+   * use yet,    because turnup is not complete.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationalStatus() {
@@ -1237,10 +1240,10 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current status of whether or not this interconnect attachment is functional,
-   * which can take one of the following values:        - OS_ACTIVE: The attachment has been turned
-   * up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to use yet,
-   * because turnup is not complete.
+   * Output only. [Output Only] The current status of whether or not this interconnect attachment is
+   * functional, which can take one of the following values:        - OS_ACTIVE: The attachment has
+   * been turned up and is ready to    use.     - OS_UNPROVISIONED: The attachment is not ready to
+   * use yet,    because turnup is not complete.
    * @param operationalStatus operationalStatus or {@code null} for none
    */
   public InterconnectAttachment setOperationalStatus(java.lang.String operationalStatus) {
@@ -1329,8 +1332,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Information specific to an InterconnectAttachment. This property is populated if
-   * the interconnect that this is attached to is of type DEDICATED.
+   * Output only. [Output Only] Information specific to an InterconnectAttachment. This property is
+   * populated if the interconnect that this is attached to is of type DEDICATED.
    * @return value or {@code null} for none
    */
   public InterconnectAttachmentPrivateInfo getPrivateInterconnectInfo() {
@@ -1338,8 +1341,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Information specific to an InterconnectAttachment. This property is populated if
-   * the interconnect that this is attached to is of type DEDICATED.
+   * Output only. [Output Only] Information specific to an InterconnectAttachment. This property is
+   * populated if the interconnect that this is attached to is of type DEDICATED.
    * @param privateInterconnectInfo privateInterconnectInfo or {@code null} for none
    */
   public InterconnectAttachment setPrivateInterconnectInfo(InterconnectAttachmentPrivateInfo privateInterconnectInfo) {
@@ -1348,9 +1351,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] URL of the region where the regional interconnect attachment resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the regional interconnect attachment
+   * resides. You must specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -1358,9 +1361,9 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] URL of the region where the regional interconnect attachment resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * Output only. [Output Only] URL of the region where the regional interconnect attachment
+   * resides. You must specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
    * @param region region or {@code null} for none
    */
   public InterconnectAttachment setRegion(java.lang.String region) {
@@ -1369,8 +1372,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
-   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Output only. [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this
+   * field contains the interconnect's remote location service provider. Example values: "Amazon Web
    * Services" "Microsoft Azure".
    *
    * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
@@ -1382,8 +1385,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this field
-   * contains the interconnect's remote location service provider. Example values: "Amazon Web
+   * Output only. [Output Only] If the attachment is on a Cross-Cloud Interconnect connection, this
+   * field contains the interconnect's remote location service provider. Example values: "Amazon Web
    * Services" "Microsoft Azure".
    *
    * The field is set only for attachments on Cross-Cloud Interconnect connections. Its value is
@@ -1417,7 +1420,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -1425,7 +1428,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public InterconnectAttachment setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -1434,7 +1437,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -1442,7 +1445,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InterconnectAttachment setSelfLink(java.lang.String selfLink) {
@@ -1451,7 +1454,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1459,7 +1462,7 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public InterconnectAttachment setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -1493,19 +1496,19 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
-   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
-   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
-   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
-   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
-   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
-   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
-   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
-   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
-   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
-   * longer functional. This    could be because the associated Interconnect was removed, or because
-   * the    other side of a Partner attachment was deleted.
+   * Output only. [Output Only] The current state of this attachment's functionality. Enum values
+   * ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER
+   * interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and
+   * PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This
+   * state can take one of the following values:        - ACTIVE: The attachment has been turned up
+   * and is ready to use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup
+   * is not complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet
+   * been configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in
+   * the process of    provisioning after a PARTNER_PROVIDER attachment was created that
+   * references it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is
+   * waiting for a customer to activate it.     - DEFUNCT:    The attachment was deleted externally
+   * and is no longer functional. This    could be because the associated Interconnect was removed,
+   * or because the    other side of a Partner attachment was deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1513,19 +1516,19 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The current state of this attachment's functionality. Enum values ACTIVE and
-   * UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER interconnect
-   * attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and PENDING_CUSTOMER
-   * are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This state can take
-   * one of the following values:        - ACTIVE: The attachment has been turned up and is ready to
-   * use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup    is not
-   * complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet    been
-   * configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in the
-   * process of    provisioning after a PARTNER_PROVIDER attachment was created that    references
-   * it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is waiting for a
-   * customer to activate it.     - DEFUNCT:    The attachment was deleted externally and is no
-   * longer functional. This    could be because the associated Interconnect was removed, or because
-   * the    other side of a Partner attachment was deleted.
+   * Output only. [Output Only] The current state of this attachment's functionality. Enum values
+   * ACTIVE and UNPROVISIONED are shared by DEDICATED/PRIVATE, PARTNER, and PARTNER_PROVIDER
+   * interconnect attachments, while enum values PENDING_PARTNER, PARTNER_REQUEST_RECEIVED, and
+   * PENDING_CUSTOMER are used for only PARTNER and PARTNER_PROVIDER interconnect attachments. This
+   * state can take one of the following values:        - ACTIVE: The attachment has been turned up
+   * and is ready to use.    - UNPROVISIONED: The attachment is not ready to use yet, because turnup
+   * is not complete.    - PENDING_PARTNER: A newly-created PARTNER attachment that has not yet
+   * been configured on the Partner side.    - PARTNER_REQUEST_RECEIVED: A PARTNER attachment is in
+   * the process of    provisioning after a PARTNER_PROVIDER attachment was created that
+   * references it.     - PENDING_CUSTOMER: A PARTNER or PARTNER_PROVIDER    attachment that is
+   * waiting for a customer to activate it.     - DEFUNCT:    The attachment was deleted externally
+   * and is no longer functional. This    could be because the associated Interconnect was removed,
+   * or because the    other side of a Partner attachment was deleted.
    * @param state state or {@code null} for none
    */
   public InterconnectAttachment setState(java.lang.String state) {

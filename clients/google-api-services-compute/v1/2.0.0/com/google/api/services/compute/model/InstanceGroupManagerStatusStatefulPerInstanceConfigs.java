@@ -30,16 +30,18 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusStatefulPerInstanceConfigs extends com.google.api.client.json.GenericJson {
 
   /**
-   * A bit indicating if all of the group's per-instance configurations (listed in the output of a
-   * listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
+   * Output only. A bit indicating if all of the group's per-instance configurations (listed in the
+   * output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-
+   * instance-configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allEffective;
 
   /**
-   * A bit indicating if all of the group's per-instance configurations (listed in the output of a
-   * listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
+   * Output only. A bit indicating if all of the group's per-instance configurations (listed in the
+   * output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-
+   * instance-configs.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllEffective() {
@@ -47,8 +49,9 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigs extends 
   }
 
   /**
-   * A bit indicating if all of the group's per-instance configurations (listed in the output of a
-   * listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
+   * Output only. A bit indicating if all of the group's per-instance configurations (listed in the
+   * output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-
+   * instance-configs.
    * @param allEffective allEffective or {@code null} for none
    */
   public InstanceGroupManagerStatusStatefulPerInstanceConfigs setAllEffective(java.lang.Boolean allEffective) {

@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupsScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The list ofinstance groups that are contained in this scope.
+   * Output only. [Output Only] The list ofinstance groups that are contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] An informational warning that replaces the list of instance groups when the list
-   * is empty.
+   * Output only. [Output Only] An informational warning that replaces the list of instance groups
+   * when the list is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * [Output Only] The list ofinstance groups that are contained in this scope.
+   * Output only. [Output Only] The list ofinstance groups that are contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<InstanceGroup> getInstanceGroups() {
@@ -59,7 +59,7 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] The list ofinstance groups that are contained in this scope.
+   * Output only. [Output Only] The list ofinstance groups that are contained in this scope.
    * @param instanceGroups instanceGroups or {@code null} for none
    */
   public InstanceGroupsScopedList setInstanceGroups(java.util.List<InstanceGroup> instanceGroups) {
@@ -68,8 +68,8 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] An informational warning that replaces the list of instance groups when the list
-   * is empty.
+   * Output only. [Output Only] An informational warning that replaces the list of instance groups
+   * when the list is empty.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -77,8 +77,8 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] An informational warning that replaces the list of instance groups when the list
-   * is empty.
+   * Output only. [Output Only] An informational warning that replaces the list of instance groups
+   * when the list is empty.
    * @param warning warning or {@code null} for none
    */
   public InstanceGroupsScopedList setWarning(Warning warning) {
@@ -97,8 +97,8 @@ public final class InstanceGroupsScopedList extends com.google.api.client.json.G
   }
 
   /**
-   * [Output Only] An informational warning that replaces the list of instance groups when the list is
-   * empty.
+   * Output only. [Output Only] An informational warning that replaces the list of instance groups
+   * when the list is empty.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

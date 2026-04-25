@@ -50,8 +50,9 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   private java.util.Map<String, FutureReservationsScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#futureReservationsAggregatedListResponse for
-   * future resevation aggregated list response.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#futureReservationsAggregatedListResponse for future resevation aggregated list
+   * response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +69,14 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +139,9 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#futureReservationsAggregatedListResponse for
-   * future resevation aggregated list response.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#futureReservationsAggregatedListResponse for future resevation aggregated list
+   * response.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -147,8 +149,9 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Type of resource. Alwayscompute#futureReservationsAggregatedListResponse for
-   * future resevation aggregated list response.
+   * Output only. [Output Only] Type of resource.
+   * Alwayscompute#futureReservationsAggregatedListResponse for future resevation aggregated list
+   * response.
    * @param kind kind or {@code null} for none
    */
   public FutureReservationsAggregatedListResponse setKind(java.lang.String kind) {
@@ -180,7 +183,7 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -188,7 +191,7 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public FutureReservationsAggregatedListResponse setSelfLink(java.lang.String selfLink) {
@@ -197,7 +200,7 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -205,7 +208,7 @@ public final class FutureReservationsAggregatedListResponse extends com.google.a
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public FutureReservationsAggregatedListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {

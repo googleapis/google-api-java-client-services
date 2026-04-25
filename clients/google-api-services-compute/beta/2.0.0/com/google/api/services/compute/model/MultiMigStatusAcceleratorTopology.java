@@ -30,30 +30,30 @@ package com.google.api.services.compute.model;
 public final class MultiMigStatusAcceleratorTopology extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the same as
-   * configured in the WorkloadPolicy.
+   * Output only. [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the
+   * same as configured in the WorkloadPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorTopology;
 
   /**
-   * [Output Only] The state of the accelerator topology.
+   * Output only. [Output Only] The state of the accelerator topology.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorTopologyState;
 
   /**
-   * [Output Only] The result of the latest accelerator topology state check.
+   * Output only. [Output Only] The result of the latest accelerator topology state check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck acceleratorTopologyStateLastCheck;
 
   /**
-   * [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the same as
-   * configured in the WorkloadPolicy.
+   * Output only. [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the
+   * same as configured in the WorkloadPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorTopology() {
@@ -61,8 +61,8 @@ public final class MultiMigStatusAcceleratorTopology extends com.google.api.clie
   }
 
   /**
-   * [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the same as
-   * configured in the WorkloadPolicy.
+   * Output only. [Output Only] Topology in the format of: "16x16", "4x4x4", etc. The value is the
+   * same as configured in the WorkloadPolicy.
    * @param acceleratorTopology acceleratorTopology or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopology setAcceleratorTopology(java.lang.String acceleratorTopology) {
@@ -71,7 +71,7 @@ public final class MultiMigStatusAcceleratorTopology extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The state of the accelerator topology.
+   * Output only. [Output Only] The state of the accelerator topology.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorTopologyState() {
@@ -79,7 +79,7 @@ public final class MultiMigStatusAcceleratorTopology extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The state of the accelerator topology.
+   * Output only. [Output Only] The state of the accelerator topology.
    * @param acceleratorTopologyState acceleratorTopologyState or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopology setAcceleratorTopologyState(java.lang.String acceleratorTopologyState) {
@@ -88,7 +88,7 @@ public final class MultiMigStatusAcceleratorTopology extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The result of the latest accelerator topology state check.
+   * Output only. [Output Only] The result of the latest accelerator topology state check.
    * @return value or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck getAcceleratorTopologyStateLastCheck() {
@@ -96,7 +96,7 @@ public final class MultiMigStatusAcceleratorTopology extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The result of the latest accelerator topology state check.
+   * Output only. [Output Only] The result of the latest accelerator topology state check.
    * @param acceleratorTopologyStateLastCheck acceleratorTopologyStateLastCheck or {@code null} for none
    */
   public MultiMigStatusAcceleratorTopology setAcceleratorTopologyStateLastCheck(MultiMigStatusAcceleratorTopologyAcceleratorTopologyStateLastCheck acceleratorTopologyStateLastCheck) {

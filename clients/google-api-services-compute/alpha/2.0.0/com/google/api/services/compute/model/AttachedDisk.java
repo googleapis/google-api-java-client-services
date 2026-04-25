@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class AttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the attached disk. Valid values are ARM64 or
+   * X86_64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +117,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.util.List<GuestOsFeature> guestOsFeatures;
 
   /**
-   * [Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you
-   * have many disks attached to an instance, each disk would have a unique index number.
+   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
+   * disk. If you have many disks attached to an instance, each disk would have a unique index
+   * number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,25 +147,25 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String interface__;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> licenses;
 
   /**
-   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
-   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
-   * image creation. The instance with at least one locked attached disk is not allow to be used as
-   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
-   * --keep-disk parameter set to true for locked disks.
+   * Output only. [Output Only] Whether to indicate the attached disk is locked. The locked disk is
+   * not allowed to be detached from the instance, or to be used as the source of the snapshot
+   * creation, and the image creation. The instance with at least one locked attached disk is not
+   * allow to be used as source of machine image creation, instant snapshot creation, and not
+   * allowed to be deleted with --keep-disk parameter set to true for locked disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,16 +180,16 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String mode;
 
   /**
-   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
-   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
-   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is
+   * set to PRESERVED if the LocalSSD data has been saved to a persistent location by customer
+   * request.  (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String savedState;
 
   /**
-   * [Output Only] shielded vm initial state stored on disk
+   * Output only. [Output Only] shielded vm initial state stored on disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,16 +219,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
-   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
-   * created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> userLicenses;
-
-  /**
-   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the attached disk. Valid values are ARM64 or
+   * X86_64.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchitecture() {
@@ -234,7 +228,8 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
+   * Output only. [Output Only] The architecture of the attached disk. Valid values are ARM64 or
+   * X86_64.
    * @param architecture architecture or {@code null} for none
    */
   public AttachedDisk setArchitecture(java.lang.String architecture) {
@@ -422,8 +417,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you
-   * have many disks attached to an instance, each disk would have a unique index number.
+   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
+   * disk. If you have many disks attached to an instance, each disk would have a unique index
+   * number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -431,8 +427,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you
-   * have many disks attached to an instance, each disk would have a unique index number.
+   * Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot
+   * disk. If you have many disks attached to an instance, each disk would have a unique index
+   * number.
    * @param index index or {@code null} for none
    */
   public AttachedDisk setIndex(java.lang.Integer index) {
@@ -489,7 +486,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -497,7 +494,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @param kind kind or {@code null} for none
    */
   public AttachedDisk setKind(java.lang.String kind) {
@@ -506,7 +503,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLicenses() {
@@ -514,7 +511,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Any valid publicly visible licenses.
+   * Output only. [Output Only] Any valid publicly visible licenses.
    * @param licenses licenses or {@code null} for none
    */
   public AttachedDisk setLicenses(java.util.List<java.lang.String> licenses) {
@@ -523,11 +520,11 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
-   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
-   * image creation. The instance with at least one locked attached disk is not allow to be used as
-   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
-   * --keep-disk parameter set to true for locked disks.
+   * Output only. [Output Only] Whether to indicate the attached disk is locked. The locked disk is
+   * not allowed to be detached from the instance, or to be used as the source of the snapshot
+   * creation, and the image creation. The instance with at least one locked attached disk is not
+   * allow to be used as source of machine image creation, instant snapshot creation, and not
+   * allowed to be deleted with --keep-disk parameter set to true for locked disks.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -535,11 +532,11 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Whether to indicate the attached disk is locked. The locked disk is not allowed
-   * to be detached from the instance, or to be used as the source of the snapshot creation, and the
-   * image creation. The instance with at least one locked attached disk is not allow to be used as
-   * source of machine image creation, instant snapshot creation, and not allowed to be deleted with
-   * --keep-disk parameter set to true for locked disks.
+   * Output only. [Output Only] Whether to indicate the attached disk is locked. The locked disk is
+   * not allowed to be detached from the instance, or to be used as the source of the snapshot
+   * creation, and the image creation. The instance with at least one locked attached disk is not
+   * allow to be used as source of machine image creation, instant snapshot creation, and not
+   * allowed to be deleted with --keep-disk parameter set to true for locked disks.
    * @param locked locked or {@code null} for none
    */
   public AttachedDisk setLocked(java.lang.Boolean locked) {
@@ -567,9 +564,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
-   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
-   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is
+   * set to PRESERVED if the LocalSSD data has been saved to a persistent location by customer
+   * request.  (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
    * @return value or {@code null} for none
    */
   public java.lang.String getSavedState() {
@@ -577,9 +574,9 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to
-   * PRESERVED if the LocalSSD data has been saved to a persistent location by customer request.
-   * (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
+   * Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is
+   * set to PRESERVED if the LocalSSD data has been saved to a persistent location by customer
+   * request.  (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
    * @param savedState savedState or {@code null} for none
    */
   public AttachedDisk setSavedState(java.lang.String savedState) {
@@ -588,7 +585,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] shielded vm initial state stored on disk
+   * Output only. [Output Only] shielded vm initial state stored on disk
    * @return value or {@code null} for none
    */
   public InitialStateConfig getShieldedInstanceInitialState() {
@@ -596,7 +593,7 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] shielded vm initial state stored on disk
+   * Output only. [Output Only] shielded vm initial state stored on disk
    * @param shieldedInstanceInitialState shieldedInstanceInitialState or {@code null} for none
    */
   public AttachedDisk setShieldedInstanceInitialState(InitialStateConfig shieldedInstanceInitialState) {
@@ -653,27 +650,6 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setType(java.lang.String type) {
     this.type = type;
-    return this;
-  }
-
-  /**
-   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
-   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
-   * created.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getUserLicenses() {
-    return userLicenses;
-  }
-
-  /**
-   * [Output Only] A list of user provided licenses. It represents a list of URLs to the license
-   * resource. Unlike regular licenses, user provided licenses can be modified after the disk is
-   * created.
-   * @param userLicenses userLicenses or {@code null} for none
-   */
-  public AttachedDisk setUserLicenses(java.util.List<java.lang.String> userLicenses) {
-    this.userLicenses = userLicenses;
     return this;
   }
 

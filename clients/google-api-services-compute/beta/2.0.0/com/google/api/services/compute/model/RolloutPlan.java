@@ -17,7 +17,11 @@
 package com.google.api.services.compute.model;
 
 /**
- * Message describing RolloutPlan object
+ * RolloutPlan resource.
+ *
+ * A RolloutPlan is the customer-defined strategy to divide a large-scale change into smaller
+ * increments, referred to as "waves". Each wave targets a specific portion of the overall affected
+ * area and defines criteria that must be met before progressing to the subsequent wave.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class RolloutPlan extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +48,15 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
+   * Output only. [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,14 +82,14 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +103,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   private java.util.List<RolloutPlanWave> waves;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -106,7 +111,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public RolloutPlan setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -132,7 +137,8 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -140,7 +146,8 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public RolloutPlan setId(java.math.BigInteger id) {
@@ -149,7 +156,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
+   * Output only. [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -157,7 +164,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
+   * Output only. [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
    * @param kind kind or {@code null} for none
    */
   public RolloutPlan setKind(java.lang.String kind) {
@@ -210,7 +217,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -218,7 +225,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public RolloutPlan setSelfLink(java.lang.String selfLink) {
@@ -227,7 +234,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -235,7 +242,7 @@ public final class RolloutPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public RolloutPlan setSelfLinkWithId(java.lang.String selfLinkWithId) {

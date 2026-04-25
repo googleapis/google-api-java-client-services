@@ -30,84 +30,84 @@ package com.google.api.services.compute.model;
 public final class StoragePoolDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Instances this disk is attached to.
+   * Output only. [Output Only] Instances this disk is attached to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> attachedInstances;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] The URL of the disk.
+   * Output only. [Output Only] The URL of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String disk;
 
   /**
-   * [Output Only] The name of the disk.
+   * Output only. [Output Only] The name of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] The number of IOPS provisioned for the disk.
+   * Output only. [Output Only] The number of IOPS provisioned for the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long provisionedIops;
 
   /**
-   * [Output Only] The throughput provisioned for the disk.
+   * Output only. [Output Only] The throughput provisioned for the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long provisionedThroughput;
 
   /**
-   * [Output Only] Resource policies applied to disk for automatic snapshot creations.
+   * Output only. [Output Only] Resource policies applied to disk for automatic snapshot creations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * [Output Only] The disk size, in GB.
+   * Output only. [Output Only] The disk size, in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeGb;
 
   /**
-   * [Output Only] The disk status.
+   * Output only. [Output Only] The disk status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] The disk type.
+   * Output only. [Output Only] The disk type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * [Output Only] Amount of disk space used.
+   * Output only. [Output Only] Amount of disk space used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long usedBytes;
 
   /**
-   * [Output Only] Instances this disk is attached to.
+   * Output only. [Output Only] Instances this disk is attached to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAttachedInstances() {
@@ -115,7 +115,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Instances this disk is attached to.
+   * Output only. [Output Only] Instances this disk is attached to.
    * @param attachedInstances attachedInstances or {@code null} for none
    */
   public StoragePoolDisk setAttachedInstances(java.util.List<java.lang.String> attachedInstances) {
@@ -124,7 +124,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -132,7 +132,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public StoragePoolDisk setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -141,7 +141,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The URL of the disk.
+   * Output only. [Output Only] The URL of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisk() {
@@ -149,7 +149,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The URL of the disk.
+   * Output only. [Output Only] The URL of the disk.
    * @param disk disk or {@code null} for none
    */
   public StoragePoolDisk setDisk(java.lang.String disk) {
@@ -158,7 +158,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The name of the disk.
+   * Output only. [Output Only] The name of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,7 +166,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The name of the disk.
+   * Output only. [Output Only] The name of the disk.
    * @param name name or {@code null} for none
    */
   public StoragePoolDisk setName(java.lang.String name) {
@@ -175,7 +175,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The number of IOPS provisioned for the disk.
+   * Output only. [Output Only] The number of IOPS provisioned for the disk.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedIops() {
@@ -183,7 +183,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The number of IOPS provisioned for the disk.
+   * Output only. [Output Only] The number of IOPS provisioned for the disk.
    * @param provisionedIops provisionedIops or {@code null} for none
    */
   public StoragePoolDisk setProvisionedIops(java.lang.Long provisionedIops) {
@@ -192,7 +192,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The throughput provisioned for the disk.
+   * Output only. [Output Only] The throughput provisioned for the disk.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedThroughput() {
@@ -200,7 +200,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The throughput provisioned for the disk.
+   * Output only. [Output Only] The throughput provisioned for the disk.
    * @param provisionedThroughput provisionedThroughput or {@code null} for none
    */
   public StoragePoolDisk setProvisionedThroughput(java.lang.Long provisionedThroughput) {
@@ -209,7 +209,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Resource policies applied to disk for automatic snapshot creations.
+   * Output only. [Output Only] Resource policies applied to disk for automatic snapshot creations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -217,7 +217,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Resource policies applied to disk for automatic snapshot creations.
+   * Output only. [Output Only] Resource policies applied to disk for automatic snapshot creations.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public StoragePoolDisk setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
@@ -226,7 +226,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk size, in GB.
+   * Output only. [Output Only] The disk size, in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -234,7 +234,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk size, in GB.
+   * Output only. [Output Only] The disk size, in GB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public StoragePoolDisk setSizeGb(java.lang.Long sizeGb) {
@@ -243,7 +243,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk status.
+   * Output only. [Output Only] The disk status.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -251,7 +251,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk status.
+   * Output only. [Output Only] The disk status.
    * @param status status or {@code null} for none
    */
   public StoragePoolDisk setStatus(java.lang.String status) {
@@ -260,7 +260,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk type.
+   * Output only. [Output Only] The disk type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -268,7 +268,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The disk type.
+   * Output only. [Output Only] The disk type.
    * @param type type or {@code null} for none
    */
   public StoragePoolDisk setType(java.lang.String type) {
@@ -277,7 +277,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Amount of disk space used.
+   * Output only. [Output Only] Amount of disk space used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUsedBytes() {
@@ -285,7 +285,7 @@ public final class StoragePoolDisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Amount of disk space used.
+   * Output only. [Output Only] Amount of disk space used.
    * @param usedBytes usedBytes or {@code null} for none
    */
   public StoragePoolDisk setUsedBytes(java.lang.Long usedBytes) {

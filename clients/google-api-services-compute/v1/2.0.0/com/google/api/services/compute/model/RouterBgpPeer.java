@@ -166,12 +166,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   private java.lang.String ipv6NexthopAddress;
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
-   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
-   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
-   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
-   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
-   * deleted.
+   * Output only. [Output Only] The resource that configures and manages this BGP peer.        -
+   * MANAGED_BY_USER is the default value and can be managed by you    or other users    -
+   * MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed    by Cloud Interconnect,
+   * specifically by an InterconnectAttachment of type    PARTNER. Google automatically creates,
+   * updates, and deletes this type of    BGP peer when the PARTNER InterconnectAttachment is
+   * created, updated,    or deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -543,12 +543,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
-   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
-   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
-   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
-   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
-   * deleted.
+   * Output only. [Output Only] The resource that configures and manages this BGP peer.        -
+   * MANAGED_BY_USER is the default value and can be managed by you    or other users    -
+   * MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed    by Cloud Interconnect,
+   * specifically by an InterconnectAttachment of type    PARTNER. Google automatically creates,
+   * updates, and deletes this type of    BGP peer when the PARTNER InterconnectAttachment is
+   * created, updated,    or deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -556,12 +556,12 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The resource that configures and manages this BGP peer.        -  MANAGED_BY_USER
-   * is the default value and can be managed by you    or other users    - MANAGED_BY_ATTACHMENT is
-   * a BGP peer that is configured and managed    by Cloud Interconnect, specifically by an
-   * InterconnectAttachment of type    PARTNER. Google automatically creates, updates, and deletes
-   * this type of    BGP peer when the PARTNER InterconnectAttachment is created, updated,    or
-   * deleted.
+   * Output only. [Output Only] The resource that configures and manages this BGP peer.        -
+   * MANAGED_BY_USER is the default value and can be managed by you    or other users    -
+   * MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed    by Cloud Interconnect,
+   * specifically by an InterconnectAttachment of type    PARTNER. Google automatically creates,
+   * updates, and deletes this type of    BGP peer when the PARTNER InterconnectAttachment is
+   * created, updated,    or deleted.
    * @param managementType managementType or {@code null} for none
    */
   public RouterBgpPeer setManagementType(java.lang.String managementType) {

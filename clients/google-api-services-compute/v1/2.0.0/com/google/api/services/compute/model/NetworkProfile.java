@@ -30,77 +30,79 @@ package com.google.api.services.compute.model;
 public final class NetworkProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] An optional description of this resource.
+   * Output only. [Output Only] An optional description of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output Only] Features supported by the network.
+   * Output only. [Output Only] Features supported by the network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkProfileNetworkFeatures features;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkProfile for network
+   * profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] Location to which the network is restricted.
+   * Output only. [Output Only] Location to which the network is restricted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkProfileLocation location;
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] Type of the network profile.
+   * Output only. [Output Only] Type of the network profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkProfileProfileType profileType;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -108,7 +110,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkProfile setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -117,7 +119,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] An optional description of this resource.
+   * Output only. [Output Only] An optional description of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -125,7 +127,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] An optional description of this resource.
+   * Output only. [Output Only] An optional description of this resource.
    * @param description description or {@code null} for none
    */
   public NetworkProfile setDescription(java.lang.String description) {
@@ -134,7 +136,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Features supported by the network.
+   * Output only. [Output Only] Features supported by the network.
    * @return value or {@code null} for none
    */
   public NetworkProfileNetworkFeatures getFeatures() {
@@ -142,7 +144,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Features supported by the network.
+   * Output only. [Output Only] Features supported by the network.
    * @param features features or {@code null} for none
    */
   public NetworkProfile setFeatures(NetworkProfileNetworkFeatures features) {
@@ -151,7 +153,8 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -159,7 +162,8 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public NetworkProfile setId(java.math.BigInteger id) {
@@ -168,7 +172,8 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkProfile for network
+   * profiles.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -176,7 +181,8 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkProfile for network
+   * profiles.
    * @param kind kind or {@code null} for none
    */
   public NetworkProfile setKind(java.lang.String kind) {
@@ -185,7 +191,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Location to which the network is restricted.
+   * Output only. [Output Only] Location to which the network is restricted.
    * @return value or {@code null} for none
    */
   public NetworkProfileLocation getLocation() {
@@ -193,7 +199,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Location to which the network is restricted.
+   * Output only. [Output Only] Location to which the network is restricted.
    * @param location location or {@code null} for none
    */
   public NetworkProfile setLocation(NetworkProfileLocation location) {
@@ -202,7 +208,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -210,7 +216,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * @param name name or {@code null} for none
    */
   public NetworkProfile setName(java.lang.String name) {
@@ -219,7 +225,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the network profile.
+   * Output only. [Output Only] Type of the network profile.
    * @return value or {@code null} for none
    */
   public NetworkProfileProfileType getProfileType() {
@@ -227,7 +233,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the network profile.
+   * Output only. [Output Only] Type of the network profile.
    * @param profileType profileType or {@code null} for none
    */
   public NetworkProfile setProfileType(NetworkProfileProfileType profileType) {
@@ -236,7 +242,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -244,7 +250,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkProfile setSelfLink(java.lang.String selfLink) {
@@ -253,7 +259,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -261,7 +267,7 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NetworkProfile setSelfLinkWithId(java.lang.String selfLinkWithId) {

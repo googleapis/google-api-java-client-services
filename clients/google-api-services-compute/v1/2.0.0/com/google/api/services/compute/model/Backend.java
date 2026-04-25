@@ -126,6 +126,30 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxConnectionsPerInstance;
 
   /**
+   * Defines a maximum number of in-flight requests for the whole NEG or instance group. Not
+   * available if backend's balancingMode isRATE or CONNECTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInFlightRequests;
+
+  /**
+   * Defines a maximum number of in-flight requests for a single endpoint. Not available if
+   * backend's balancingMode is RATE or CONNECTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInFlightRequestsPerEndpoint;
+
+  /**
+   * Defines a maximum number of in-flight requests for a single VM. Not available if backend's
+   * balancingMode is RATE or CONNECTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInFlightRequestsPerInstance;
+
+  /**
    * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, seeRate
    * balancing mode and Utilization balancing mode.
    *
@@ -166,6 +190,13 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxUtilization;
 
   /**
+   * Information about the resource or system that manages the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendBackendOrchestrationInfo orchestrationInfo;
+
+  /**
    * This field indicates whether this backend should be fully utilized before sending traffic to
    * backends with default preference. The possible values are:        - PREFERRED: Backends with
    * this preference level will be    filled up to their capacity limits first, based on RTT.    -
@@ -176,6 +207,12 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String preference;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficDuration;
 
   /**
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
@@ -397,6 +434,63 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Defines a maximum number of in-flight requests for the whole NEG or instance group. Not
+   * available if backend's balancingMode isRATE or CONNECTION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInFlightRequests() {
+    return maxInFlightRequests;
+  }
+
+  /**
+   * Defines a maximum number of in-flight requests for the whole NEG or instance group. Not
+   * available if backend's balancingMode isRATE or CONNECTION.
+   * @param maxInFlightRequests maxInFlightRequests or {@code null} for none
+   */
+  public Backend setMaxInFlightRequests(java.lang.Integer maxInFlightRequests) {
+    this.maxInFlightRequests = maxInFlightRequests;
+    return this;
+  }
+
+  /**
+   * Defines a maximum number of in-flight requests for a single endpoint. Not available if
+   * backend's balancingMode is RATE or CONNECTION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInFlightRequestsPerEndpoint() {
+    return maxInFlightRequestsPerEndpoint;
+  }
+
+  /**
+   * Defines a maximum number of in-flight requests for a single endpoint. Not available if
+   * backend's balancingMode is RATE or CONNECTION.
+   * @param maxInFlightRequestsPerEndpoint maxInFlightRequestsPerEndpoint or {@code null} for none
+   */
+  public Backend setMaxInFlightRequestsPerEndpoint(java.lang.Integer maxInFlightRequestsPerEndpoint) {
+    this.maxInFlightRequestsPerEndpoint = maxInFlightRequestsPerEndpoint;
+    return this;
+  }
+
+  /**
+   * Defines a maximum number of in-flight requests for a single VM. Not available if backend's
+   * balancingMode is RATE or CONNECTION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInFlightRequestsPerInstance() {
+    return maxInFlightRequestsPerInstance;
+  }
+
+  /**
+   * Defines a maximum number of in-flight requests for a single VM. Not available if backend's
+   * balancingMode is RATE or CONNECTION.
+   * @param maxInFlightRequestsPerInstance maxInFlightRequestsPerInstance or {@code null} for none
+   */
+  public Backend setMaxInFlightRequestsPerInstance(java.lang.Integer maxInFlightRequestsPerInstance) {
+    this.maxInFlightRequestsPerInstance = maxInFlightRequestsPerInstance;
+    return this;
+  }
+
+  /**
    * Defines a maximum number of HTTP requests per second (RPS). For usage guidelines, seeRate
    * balancing mode and Utilization balancing mode.
    *
@@ -489,6 +583,23 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Information about the resource or system that manages the backend.
+   * @return value or {@code null} for none
+   */
+  public BackendBackendOrchestrationInfo getOrchestrationInfo() {
+    return orchestrationInfo;
+  }
+
+  /**
+   * Information about the resource or system that manages the backend.
+   * @param orchestrationInfo orchestrationInfo or {@code null} for none
+   */
+  public Backend setOrchestrationInfo(BackendBackendOrchestrationInfo orchestrationInfo) {
+    this.orchestrationInfo = orchestrationInfo;
+    return this;
+  }
+
+  /**
    * This field indicates whether this backend should be fully utilized before sending traffic to
    * backends with default preference. The possible values are:        - PREFERRED: Backends with
    * this preference level will be    filled up to their capacity limits first, based on RTT.    -
@@ -512,6 +623,21 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setPreference(java.lang.String preference) {
     this.preference = preference;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficDuration() {
+    return trafficDuration;
+  }
+
+  /**
+   * @param trafficDuration trafficDuration or {@code null} for none
+   */
+  public Backend setTrafficDuration(java.lang.String trafficDuration) {
+    this.trafficDuration = trafficDuration;
     return this;
   }
 

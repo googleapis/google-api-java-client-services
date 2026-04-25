@@ -54,6 +54,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
+   * Network context of the traffic destination. Allowed values are:              - UNSPECIFIED
+   * - INTERNET      - NON_INTERNET
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destNetworkContext;
+
+  /**
    * Network type of the traffic destination. Allowed values are:              - UNSPECIFIED      -
    * INTERNET      - NON_INTERNET
    * The value may be {@code null}.
@@ -107,6 +115,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * Network context of the traffic source. Allowed values are:              - UNSPECIFIED      -
+   * INTERNET      - INTRA_VPC      - NON_INTERNET      - VPC_NETWORKS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String srcNetworkContext;
 
   /**
    * Network type of the traffic source. Allowed values are:              - UNSPECIFIED      -
@@ -201,6 +217,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
     this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Network context of the traffic destination. Allowed values are:              - UNSPECIFIED
+   * - INTERNET      - NON_INTERNET
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestNetworkContext() {
+    return destNetworkContext;
+  }
+
+  /**
+   * Network context of the traffic destination. Allowed values are:              - UNSPECIFIED
+   * - INTERNET      - NON_INTERNET
+   * @param destNetworkContext destNetworkContext or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestNetworkContext(java.lang.String destNetworkContext) {
+    this.destNetworkContext = destNetworkContext;
     return this;
   }
 
@@ -332,6 +367,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
+    return this;
+  }
+
+  /**
+   * Network context of the traffic source. Allowed values are:              - UNSPECIFIED      -
+   * INTERNET      - INTRA_VPC      - NON_INTERNET      - VPC_NETWORKS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSrcNetworkContext() {
+    return srcNetworkContext;
+  }
+
+  /**
+   * Network context of the traffic source. Allowed values are:              - UNSPECIFIED      -
+   * INTERNET      - INTRA_VPC      - NON_INTERNET      - VPC_NETWORKS
+   * @param srcNetworkContext srcNetworkContext or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcNetworkContext(java.lang.String srcNetworkContext) {
+    this.srcNetworkContext = srcNetworkContext;
     return this;
   }
 

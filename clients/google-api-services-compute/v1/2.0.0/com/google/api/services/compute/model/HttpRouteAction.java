@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class HttpRouteAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies the cache policy configuration for matched traffic. Available only for Global
+   * `EXTERNAL_MANAGED` load balancer schemes. At least one property must be specified. This policy
+   * cannot be specified if any target backend has Identity-Aware Proxy enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CachePolicy cachePolicy;
+
+  /**
    * The specification for allowing client-side cross-origin requests. For more information about
    * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
    *
@@ -132,6 +141,27 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<WeightedBackendService> weightedBackendServices;
+
+  /**
+   * Specifies the cache policy configuration for matched traffic. Available only for Global
+   * `EXTERNAL_MANAGED` load balancer schemes. At least one property must be specified. This policy
+   * cannot be specified if any target backend has Identity-Aware Proxy enabled.
+   * @return value or {@code null} for none
+   */
+  public CachePolicy getCachePolicy() {
+    return cachePolicy;
+  }
+
+  /**
+   * Specifies the cache policy configuration for matched traffic. Available only for Global
+   * `EXTERNAL_MANAGED` load balancer schemes. At least one property must be specified. This policy
+   * cannot be specified if any target backend has Identity-Aware Proxy enabled.
+   * @param cachePolicy cachePolicy or {@code null} for none
+   */
+  public HttpRouteAction setCachePolicy(CachePolicy cachePolicy) {
+    this.cachePolicy = cachePolicy;
+    return this;
+  }
 
   /**
    * The specification for allowing client-side cross-origin requests. For more information about

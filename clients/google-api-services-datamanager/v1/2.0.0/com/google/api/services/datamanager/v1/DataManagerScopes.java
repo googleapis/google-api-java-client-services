@@ -26,6 +26,9 @@ public class DataManagerScopes {
   /** See, edit, create, import, or delete your customer data in Google Ads, Google Marketing Platform (Campaign Manager 360, Search Ads 360, Display & Video 360), and Google Analytics. */
   public static final String DATAMANAGER = "https://www.googleapis.com/auth/datamanager";
 
+  /** View, create, or delete your partner links in Google Ads, Marketing Platform (Campaign Manager 360, Search Ads 360, Display & Video 360), and Analytics. */
+  public static final String DATAMANAGER_PARTNERLINK = "https://www.googleapis.com/auth/datamanager.partnerlink";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class DataManagerScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DATAMANAGER);
+    set.add(DATAMANAGER_PARTNERLINK);
     return java.util.Collections.unmodifiableSet(set);
   }
 

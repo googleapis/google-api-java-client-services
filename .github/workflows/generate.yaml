@@ -27,13 +27,13 @@ jobs:
         with:
           fetch-depth: 1
           path: google-api-java-client-services
-          token: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
       - uses: actions/checkout@v2
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
-          token: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
+          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
       - uses: actions/setup-python@v5
         with:
           python-version: 3.8.18
@@ -47,16 +47,19 @@ jobs:
         shell: bash
         working-directory: google-api-java-client-services
         env:
-          GH_TOKEN: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
           SERVICE: ${{ matrix.service }}
-          AUTHOR: "Cloud Java Bot <cloud-java-bot@google.com>"
+          AUTHOR: "yoshi-code-bot <yoshi-code-bot@google.com>"
           BASE_REPO: "${{ github.repository }}"
         run: |
           set -ex
 
           # 1. Setup Identity
-          git config user.name "Cloud Java Bot"
-          git config user.email "cloud-java-bot@google.com"
+          git config user.name "yoshi-code-bot"
+          git config user.email "yoshi-code-bot@google.com"
+          
+          # 2. Setup Remote Fork
+          git remote add fork "https://yoshi-code-bot:${GH_TOKEN}@github.com/yoshi-code-bot/google-api-java-client-services.git"
           
           # 3. Create Branch
           BRANCH="regenerate-${SERVICE}"
@@ -74,11 +77,11 @@ jobs:
           fi
 
           git commit -m "$MESSAGE"
-          git push origin "$BRANCH" --force
+          git push fork "$BRANCH" --force
           
           gh pr create \
             --repo "$BASE_REPO" \
-            --head "${BRANCH}" \
+            --head "yoshi-code-bot:${BRANCH}" \
             --base "main" \
             --title "$MESSAGE" \
             --body "Generated in GitHub action: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

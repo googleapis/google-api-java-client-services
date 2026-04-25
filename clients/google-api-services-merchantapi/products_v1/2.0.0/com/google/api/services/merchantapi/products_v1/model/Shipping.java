@@ -73,6 +73,28 @@ public final class Shipping extends com.google.api.client.json.GenericJson {
   private java.lang.Long locationId;
 
   /**
+   * Optional. The label of the [loyalty
+   * program](https://support.google.com/merchants/answer/6324484). Must match one of the program
+   * labels set in loyalty_programs. When set (in combination with
+   * [loyalty_tier_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loyaltyProgramLabel;
+
+  /**
+   * Optional. The label of the [loyalty tier](https://support.google.com/merchants/answer/6324484)
+   * within the loyalty program. Must match one of the tiers set in the loyalty_programs. When set
+   * (in combination with
+   * [loyalty_program_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loyaltyTierLabel;
+
+  /**
    * Maximum handling time (inclusive) between when the order is received and shipped in business
    * days. 0 means that the order is shipped on the same day as it is received if it happens before
    * the cut-off time. Both maxHandlingTime and maxTransitTime are required if providing shipping
@@ -241,6 +263,56 @@ public final class Shipping extends com.google.api.client.json.GenericJson {
    */
   public Shipping setLocationId(java.lang.Long locationId) {
     this.locationId = locationId;
+    return this;
+  }
+
+  /**
+   * Optional. The label of the [loyalty
+   * program](https://support.google.com/merchants/answer/6324484). Must match one of the program
+   * labels set in loyalty_programs. When set (in combination with
+   * [loyalty_tier_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoyaltyProgramLabel() {
+    return loyaltyProgramLabel;
+  }
+
+  /**
+   * Optional. The label of the [loyalty
+   * program](https://support.google.com/merchants/answer/6324484). Must match one of the program
+   * labels set in loyalty_programs. When set (in combination with
+   * [loyalty_tier_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * @param loyaltyProgramLabel loyaltyProgramLabel or {@code null} for none
+   */
+  public Shipping setLoyaltyProgramLabel(java.lang.String loyaltyProgramLabel) {
+    this.loyaltyProgramLabel = loyaltyProgramLabel;
+    return this;
+  }
+
+  /**
+   * Optional. The label of the [loyalty tier](https://support.google.com/merchants/answer/6324484)
+   * within the loyalty program. Must match one of the tiers set in the loyalty_programs. When set
+   * (in combination with
+   * [loyalty_program_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoyaltyTierLabel() {
+    return loyaltyTierLabel;
+  }
+
+  /**
+   * Optional. The label of the [loyalty tier](https://support.google.com/merchants/answer/6324484)
+   * within the loyalty program. Must match one of the tiers set in the loyalty_programs. When set
+   * (in combination with
+   * [loyalty_program_label](https://support.google.com/merchants/answer/6324484)), this shipping
+   * option is only applicable to loyalty program members of the specified tier.
+   * @param loyaltyTierLabel loyaltyTierLabel or {@code null} for none
+   */
+  public Shipping setLoyaltyTierLabel(java.lang.String loyaltyTierLabel) {
+    this.loyaltyTierLabel = loyaltyTierLabel;
     return this;
   }
 

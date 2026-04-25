@@ -492,6 +492,15 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Long minHandlingTime;
 
   /**
+   * The [minimum value](https://support.google.com/merchants/answer/16989009) in the cart before a
+   * customer can initiate checkout. Supports multiple minimum order values. Different minimum order
+   * values can be specified per country, service and surface. Maximum entries: 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductMinimumOrderValue> minimumOrderValues;
+
+  /**
    * URL for the mobile-optimized version of your item's landing page.
    * The value may be {@code null}.
    */
@@ -1849,6 +1858,27 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setMinHandlingTime(java.lang.Long minHandlingTime) {
     this.minHandlingTime = minHandlingTime;
+    return this;
+  }
+
+  /**
+   * The [minimum value](https://support.google.com/merchants/answer/16989009) in the cart before a
+   * customer can initiate checkout. Supports multiple minimum order values. Different minimum order
+   * values can be specified per country, service and surface. Maximum entries: 100.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductMinimumOrderValue> getMinimumOrderValues() {
+    return minimumOrderValues;
+  }
+
+  /**
+   * The [minimum value](https://support.google.com/merchants/answer/16989009) in the cart before a
+   * customer can initiate checkout. Supports multiple minimum order values. Different minimum order
+   * values can be specified per country, service and surface. Maximum entries: 100.
+   * @param minimumOrderValues minimumOrderValues or {@code null} for none
+   */
+  public ProductAttributes setMinimumOrderValues(java.util.List<ProductMinimumOrderValue> minimumOrderValues) {
+    this.minimumOrderValues = minimumOrderValues;
     return this;
   }
 

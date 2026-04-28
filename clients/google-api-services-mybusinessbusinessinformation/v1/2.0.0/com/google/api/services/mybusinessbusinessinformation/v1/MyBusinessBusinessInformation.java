@@ -1943,7 +1943,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
     }
     /**
-     * Returns the specified location.
+     * Returns the specified location as last set by the merchant. It may not reflect updates from
+     * Google or user-generated content that are live on Google Maps.
      *
      * Create a request for the method "locations.get".
      *
@@ -1968,7 +1969,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
           java.util.regex.Pattern.compile("^locations/[^/]+$");
 
       /**
-       * Returns the specified location.
+       * Returns the specified location as last set by the merchant. It may not reflect updates from
+       * Google or user-generated content that are live on Google Maps.
        *
        * Create a request for the method "locations.get".
        *
@@ -2099,7 +2101,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
     }
     /**
-     * Looks up all the attributes set for a given location.
+     * Retrieves attributes for a location as last set by the merchant. It may not reflect updates from
+     * Google or user-generated content that are live on Google Maps.
      *
      * Create a request for the method "locations.getAttributes".
      *
@@ -2124,7 +2127,8 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
           java.util.regex.Pattern.compile("^locations/[^/]+/attributes$");
 
       /**
-       * Looks up all the attributes set for a given location.
+       * Retrieves attributes for a location as last set by the merchant. It may not reflect updates
+       * from Google or user-generated content that are live on Google Maps.
        *
        * Create a request for the method "locations.getAttributes".
        *
@@ -2245,9 +2249,10 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
     }
     /**
-     * Gets the version of the specified location, returning a `GoogleUpdatedLocation` that provides the
-     * location view as it appears to consumers and masks indicating which fields are different than the
-     * merchant's information.
+     * Returns the specified location as it appears live on Google Maps and Search. This consumer-facing
+     * view may have been updated by Google or user-generated content and may differ from the merchant's
+     * version. The returned GoogleUpdatedLocation contains masks that indicate which fields differ from
+     * the merchant's information.
      *
      * Create a request for the method "locations.getGoogleUpdated".
      *
@@ -2272,9 +2277,10 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
           java.util.regex.Pattern.compile("^locations/[^/]+$");
 
       /**
-       * Gets the version of the specified location, returning a `GoogleUpdatedLocation` that provides
-       * the location view as it appears to consumers and masks indicating which fields are different
-       * than the merchant's information.
+       * Returns the specified location as it appears live on Google Maps and Search. This consumer-
+       * facing view may have been updated by Google or user-generated content and may differ from the
+       * merchant's version. The returned GoogleUpdatedLocation contains masks that indicate which
+       * fields differ from the merchant's information.
        *
        * Create a request for the method "locations.getGoogleUpdated".
        *
@@ -2778,9 +2784,9 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
     public class Attributes {
 
       /**
-       * Gets the version of the specified location, returning an `Attributes` message that provides the
-       * attributes view as it appears to consumers, which may be different than the merchant's
-       * information.
+       * Retrieves attributes for a location as they appear live on Google Maps and Search. This consumer-
+       * facing view may have been updated by Google or user-generated content and may differ from the
+       * merchant's version.
        *
        * Create a request for the method "attributes.getGoogleUpdated".
        *
@@ -2805,9 +2811,9 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
             java.util.regex.Pattern.compile("^locations/[^/]+/attributes$");
 
         /**
-         * Gets the version of the specified location, returning an `Attributes` message that provides the
-         * attributes view as it appears to consumers, which may be different than the merchant's
-         * information.
+         * Retrieves attributes for a location as they appear live on Google Maps and Search. This
+         * consumer-facing view may have been updated by Google or user-generated content and may differ
+         * from the merchant's version.
          *
          * Create a request for the method "attributes.getGoogleUpdated".
          *

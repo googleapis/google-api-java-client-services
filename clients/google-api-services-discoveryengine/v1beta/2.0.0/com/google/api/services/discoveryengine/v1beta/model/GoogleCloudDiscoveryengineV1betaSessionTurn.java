@@ -56,6 +56,13 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
   private GoogleCloudDiscoveryengineV1betaAssistAnswer detailedAssistAnswer;
 
   /**
+   * Optional. Indicates whether this turn is a live turn.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean live;
+
+  /**
    * Optional. The user query. May not be set if this turn is merely regenerating an answer to a
    * different turn
    * The value may be {@code null}.
@@ -130,6 +137,23 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
    */
   public GoogleCloudDiscoveryengineV1betaSessionTurn setDetailedAssistAnswer(GoogleCloudDiscoveryengineV1betaAssistAnswer detailedAssistAnswer) {
     this.detailedAssistAnswer = detailedAssistAnswer;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether this turn is a live turn.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLive() {
+    return live;
+  }
+
+  /**
+   * Optional. Indicates whether this turn is a live turn.
+   * @param live live or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSessionTurn setLive(java.lang.Boolean live) {
+    this.live = live;
     return this;
   }
 

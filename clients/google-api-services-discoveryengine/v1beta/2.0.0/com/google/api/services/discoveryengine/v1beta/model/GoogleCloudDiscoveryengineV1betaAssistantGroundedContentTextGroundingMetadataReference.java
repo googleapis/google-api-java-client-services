@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Chunk of code snippet from the referenced document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String codeSnippet;
+
+  /**
    * Referenced text content.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextG
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata documentMetadata;
+
+  /**
+   * Chunk of code snippet from the referenced document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCodeSnippet() {
+    return codeSnippet;
+  }
+
+  /**
+   * Chunk of code snippet from the referenced document.
+   * @param codeSnippet codeSnippet or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReference setCodeSnippet(java.lang.String codeSnippet) {
+    this.codeSnippet = codeSnippet;
+    return this;
+  }
 
   /**
    * Referenced text content.

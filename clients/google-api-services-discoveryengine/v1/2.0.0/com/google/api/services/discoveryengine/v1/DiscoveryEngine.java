@@ -47040,8 +47040,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list
              * users who attempted login but no license assigned. * `license_assignment_state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
-             * assigned. * `user_principal = user1@abc.com` to list user license for
-             * `user1@abc.com`.
+             * assigned. * `user_principal = user1@example.com` to list user license for
+             * `user1@example.com`.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -47051,8 +47051,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            licenses. * `license_assignment_state = NO_LICENSE` to list not licensed users. *
            `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but no
            license assigned. * `license_assignment_state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out users
-           who attempted login but no license assigned. * `user_principal = user1@abc.com` to list user
-           license for `user1@abc.com`.
+           who attempted login but no license assigned. * `user_principal = user1@example.com` to list user
+           license for `user1@example.com`.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -47065,8 +47065,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list
              * users who attempted login but no license assigned. * `license_assignment_state !=
              * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
-             * assigned. * `user_principal = user1@abc.com` to list user license for
-             * `user1@abc.com`.
+             * assigned. * `user_principal = user1@example.com` to list user license for
+             * `user1@example.com`.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

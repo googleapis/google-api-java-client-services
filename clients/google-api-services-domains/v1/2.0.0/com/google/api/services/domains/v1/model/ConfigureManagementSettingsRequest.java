@@ -46,6 +46,13 @@ public final class ConfigureManagementSettingsRequest extends com.google.api.cli
   private String updateMask;
 
   /**
+   * Optional. If set, validates the request without actually updating the management settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Fields of the `ManagementSettings` to update.
    * @return value or {@code null} for none
    */
@@ -80,6 +87,23 @@ public final class ConfigureManagementSettingsRequest extends com.google.api.cli
    */
   public ConfigureManagementSettingsRequest setUpdateMask(String updateMask) {
     this.updateMask = updateMask;
+    return this;
+  }
+
+  /**
+   * Optional. If set, validates the request without actually updating the management settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set, validates the request without actually updating the management settings.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public ConfigureManagementSettingsRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

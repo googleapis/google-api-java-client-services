@@ -17,7 +17,7 @@
 package com.google.api.services.meet.v2.model;
 
 /**
- * Details how to join the conference via a SIP gateway.
+ * Details how to join the conference through a SIP gateway.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Meet API. For a detailed explanation see:
@@ -30,23 +30,25 @@ package com.google.api.services.meet.v2.model;
 public final class GatewaySipAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * Permanent numeric code for manual entry on specially configured devices.
+   * The permanent numeric code for manual entry on specially configured devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sipAccessCode;
 
   /**
-   * The SIP URI the conference can be reached through. The string is on one of the formats: "sip:@"
-   * "sips:@" where currently is the 13-digit universal pin, and is a valid address to be resolved
-   * using a DNS SRV lookup, or a dotted quad.
+   * The Session Initiation Protocol (SIP) URI the conference can be reached through. The string is
+   * in one of these formats: * "sip:USER_ID@GATEWAY_ADDRESS" * "sips:USER_ID@GATEWAY_ADDRESS" where
+   * USER_ID is the 13-digit universal pin (with the future option to support using a Meet meeting
+   * code as well), and GATEWAY_ADDRESS is a valid address to be resolved using a DNS SRV lookup, or
+   * a dotted quad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Permanent numeric code for manual entry on specially configured devices.
+   * The permanent numeric code for manual entry on specially configured devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getSipAccessCode() {
@@ -54,7 +56,7 @@ public final class GatewaySipAccess extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Permanent numeric code for manual entry on specially configured devices.
+   * The permanent numeric code for manual entry on specially configured devices.
    * @param sipAccessCode sipAccessCode or {@code null} for none
    */
   public GatewaySipAccess setSipAccessCode(java.lang.String sipAccessCode) {
@@ -63,9 +65,11 @@ public final class GatewaySipAccess extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The SIP URI the conference can be reached through. The string is on one of the formats: "sip:@"
-   * "sips:@" where currently is the 13-digit universal pin, and is a valid address to be resolved
-   * using a DNS SRV lookup, or a dotted quad.
+   * The Session Initiation Protocol (SIP) URI the conference can be reached through. The string is
+   * in one of these formats: * "sip:USER_ID@GATEWAY_ADDRESS" * "sips:USER_ID@GATEWAY_ADDRESS" where
+   * USER_ID is the 13-digit universal pin (with the future option to support using a Meet meeting
+   * code as well), and GATEWAY_ADDRESS is a valid address to be resolved using a DNS SRV lookup, or
+   * a dotted quad.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -73,9 +77,11 @@ public final class GatewaySipAccess extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The SIP URI the conference can be reached through. The string is on one of the formats: "sip:@"
-   * "sips:@" where currently is the 13-digit universal pin, and is a valid address to be resolved
-   * using a DNS SRV lookup, or a dotted quad.
+   * The Session Initiation Protocol (SIP) URI the conference can be reached through. The string is
+   * in one of these formats: * "sip:USER_ID@GATEWAY_ADDRESS" * "sips:USER_ID@GATEWAY_ADDRESS" where
+   * USER_ID is the 13-digit universal pin (with the future option to support using a Meet meeting
+   * code as well), and GATEWAY_ADDRESS is a valid address to be resolved using a DNS SRV lookup, or
+   * a dotted quad.
    * @param uri uri or {@code null} for none
    */
   public GatewaySipAccess setUri(java.lang.String uri) {

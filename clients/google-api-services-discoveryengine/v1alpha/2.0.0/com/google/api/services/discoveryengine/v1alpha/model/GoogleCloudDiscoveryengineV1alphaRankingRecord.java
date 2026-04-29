@@ -46,7 +46,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRankingRecord extends com.go
 
   /**
    * The score of this record based on the given query and selected model. The score will be rounded
-   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * to 4 decimal places. If the score is close to 0, it will be rounded to 0.00001 to avoid
    * returning unset.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRankingRecord extends com.go
 
   /**
    * The score of this record based on the given query and selected model. The score will be rounded
-   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * to 4 decimal places. If the score is close to 0, it will be rounded to 0.00001 to avoid
    * returning unset.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class GoogleCloudDiscoveryengineV1alphaRankingRecord extends com.go
 
   /**
    * The score of this record based on the given query and selected model. The score will be rounded
-   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * to 4 decimal places. If the score is close to 0, it will be rounded to 0.00001 to avoid
    * returning unset.
    * @param score score or {@code null} for none
    */

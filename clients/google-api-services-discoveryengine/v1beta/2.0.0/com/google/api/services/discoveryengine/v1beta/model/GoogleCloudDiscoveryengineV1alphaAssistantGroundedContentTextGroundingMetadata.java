@@ -44,6 +44,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentText
   private java.util.List<GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataSegment> segments;
 
   /**
+   * Grounding information for parts of the visual content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment> visualSegments;
+
+  /**
    * References for the grounded text.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentText
    */
   public GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadata setSegments(java.util.List<GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataSegment> segments) {
     this.segments = segments;
+    return this;
+  }
+
+  /**
+   * Grounding information for parts of the visual content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment> getVisualSegments() {
+    return visualSegments;
+  }
+
+  /**
+   * Grounding information for parts of the visual content.
+   * @param visualSegments visualSegments or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadata setVisualSegments(java.util.List<GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadataVisualSegment> visualSegments) {
+    this.visualSegments = visualSegments;
     return this;
   }
 

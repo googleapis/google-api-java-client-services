@@ -29,6 +29,33 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The scope to request for the access token. Scope will override default scope if
+   * specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scope;
+
+  /**
+   * Optional. The scope to request for the access token. Scope will override default scope if
+   * specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScope() {
+    return scope;
+  }
+
+  /**
+   * Optional. The scope to request for the access token. Scope will override default scope if
+   * specified.
+   * @param scope scope or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest setScope(java.lang.String scope) {
+    this.scope = scope;
+    return this;
+  }
+
   @Override
   public GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest set(String fieldName, Object value) {
     return (GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest) super.set(fieldName, value);

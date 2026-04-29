@@ -113,10 +113,10 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
-   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
-   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails` *
-   * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
+   * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
+   * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -336,10 +336,10 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
-   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
-   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails` *
-   * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
+   * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
+   * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -350,10 +350,10 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
    * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
-   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
-   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails` *
-   * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
+   * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
+   * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {

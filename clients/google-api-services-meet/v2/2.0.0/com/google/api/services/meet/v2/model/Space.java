@@ -45,7 +45,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceConfig config;
 
   /**
-   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * Output only. The SIP-based access methods that can be used to join the conference. Can be
    * empty.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * Output only. The SIP-based access methods that can be used to join the conference. Can be
    * empty.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Space extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * Output only. The SIP-based access methods that can be used to join the conference. Can be
    * empty.
    * @param gatewaySipAccess gatewaySipAccess or {@code null} for none
    */

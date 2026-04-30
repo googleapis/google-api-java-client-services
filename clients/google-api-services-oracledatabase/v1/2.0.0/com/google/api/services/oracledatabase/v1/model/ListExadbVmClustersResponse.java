@@ -51,6 +51,13 @@ public final class ListExadbVmClustersResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
+   * Unreachable locations when listing resources across all locations using wildcard location '-'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The list of ExadbVmClusters.
    * @return value or {@code null} for none
    */
@@ -81,6 +88,23 @@ public final class ListExadbVmClustersResponse extends com.google.api.client.jso
    */
   public ListExadbVmClustersResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Unreachable locations when listing resources across all locations using wildcard location '-'.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable locations when listing resources across all locations using wildcard location '-'.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListExadbVmClustersResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

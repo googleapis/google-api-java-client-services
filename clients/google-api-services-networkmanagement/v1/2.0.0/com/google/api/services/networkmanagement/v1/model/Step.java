@@ -74,6 +74,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private CloudSQLInstanceInfo cloudSqlInstance;
 
   /**
+   * Display information of a Datastream Private Connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateConnectionInfo datastreamPrivateConnection;
+
+  /**
    * Display information of the final state "deliver" and reason.
    * The value may be {@code null}.
    */
@@ -93,6 +100,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DirectVpcEgressConnectionInfo directVpcEgressConnection;
+
+  /**
+   * Display information of a DMS Private Connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateConnectionInfo dmsPrivateConnection;
 
   /**
    * Display information of the final state "drop" and reason.
@@ -418,6 +432,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Display information of a Datastream Private Connection.
+   * @return value or {@code null} for none
+   */
+  public PrivateConnectionInfo getDatastreamPrivateConnection() {
+    return datastreamPrivateConnection;
+  }
+
+  /**
+   * Display information of a Datastream Private Connection.
+   * @param datastreamPrivateConnection datastreamPrivateConnection or {@code null} for none
+   */
+  public Step setDatastreamPrivateConnection(PrivateConnectionInfo datastreamPrivateConnection) {
+    this.datastreamPrivateConnection = datastreamPrivateConnection;
+    return this;
+  }
+
+  /**
    * Display information of the final state "deliver" and reason.
    * @return value or {@code null} for none
    */
@@ -465,6 +496,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setDirectVpcEgressConnection(DirectVpcEgressConnectionInfo directVpcEgressConnection) {
     this.directVpcEgressConnection = directVpcEgressConnection;
+    return this;
+  }
+
+  /**
+   * Display information of a DMS Private Connection.
+   * @return value or {@code null} for none
+   */
+  public PrivateConnectionInfo getDmsPrivateConnection() {
+    return dmsPrivateConnection;
+  }
+
+  /**
+   * Display information of a DMS Private Connection.
+   * @param dmsPrivateConnection dmsPrivateConnection or {@code null} for none
+   */
+  public Step setDmsPrivateConnection(PrivateConnectionInfo dmsPrivateConnection) {
+    this.dmsPrivateConnection = dmsPrivateConnection;
     return this;
   }
 

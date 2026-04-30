@@ -55,9 +55,9 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   private GoogleCloudRetailV2betaSearchResponseConversationalSearchResult conversationalSearchResult;
 
   /**
-   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query is used for
-   * search.
+   * Contains the spell corrected query, if found. The search results are based on corrected_query
+   * by default. However, if SearchRequest.SpellCorrectionSpec.mode is set to
+   * SearchRequest.SpellCorrectionSpec.Mode.SUGGESTION_ONLY, the original query is used for search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,9 +210,9 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   }
 
   /**
-   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query is used for
-   * search.
+   * Contains the spell corrected query, if found. The search results are based on corrected_query
+   * by default. However, if SearchRequest.SpellCorrectionSpec.mode is set to
+   * SearchRequest.SpellCorrectionSpec.Mode.SUGGESTION_ONLY, the original query is used for search.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorrectedQuery() {
@@ -220,9 +220,9 @@ public final class GoogleCloudRetailV2betaSearchResponse extends com.google.api.
   }
 
   /**
-   * Contains the spell corrected query, if found. If the spell correction type is AUTOMATIC, then
-   * the search results are based on corrected_query. Otherwise the original query is used for
-   * search.
+   * Contains the spell corrected query, if found. The search results are based on corrected_query
+   * by default. However, if SearchRequest.SpellCorrectionSpec.mode is set to
+   * SearchRequest.SpellCorrectionSpec.Mode.SUGGESTION_ONLY, the original query is used for search.
    * @param correctedQuery correctedQuery or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchResponse setCorrectedQuery(java.lang.String correctedQuery) {

@@ -9593,6 +9593,233 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code YouTube youtube = new YouTube(...);}
+   *   {@code YouTube.Media.List request = youtube.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Inserts a new AudioTrack for a video.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the youtube server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.youtube.model.AudioTrack}
+     * @return the request
+     */
+    public Upload upload(com.google.api.services.youtube.model.AudioTrack content) throws java.io.IOException {
+      Upload result = new Upload(content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Inserts a new AudioTrack for a video.
+     *
+     * Create a request for the method "media.upload".
+     *
+     * This request holds the parameters needed by the the youtube server.  After setting any optional
+     * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     *
+     * @param content the {@link com.google.api.services.youtube.model.AudioTrack} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Upload upload(com.google.api.services.youtube.model.AudioTrack content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Upload result = new Upload(content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Upload extends YouTubeRequest<com.google.api.services.youtube.model.AudioTrack> {
+
+      private static final String REST_PATH = "youtube/v3/audiotracks";
+
+      /**
+       * Inserts a new AudioTrack for a video.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.youtube.model.AudioTrack}
+       * @since 1.13
+       */
+      protected Upload(com.google.api.services.youtube.model.AudioTrack content) {
+        super(YouTube.this, "POST", REST_PATH, content, com.google.api.services.youtube.model.AudioTrack.class);
+      }
+
+      /**
+       * Inserts a new AudioTrack for a video.
+       *
+       * Create a request for the method "media.upload".
+       *
+       * This request holds the parameters needed by the the youtube server.  After setting any optional
+       * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+       * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       *
+       * @param content the {@link com.google.api.services.youtube.model.AudioTrack} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Upload(com.google.api.services.youtube.model.AudioTrack content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(YouTube.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.youtube.model.AudioTrack.class);
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Upload set$Xgafv(java.lang.String $Xgafv) {
+        return (Upload) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Upload setAccessToken(java.lang.String accessToken) {
+        return (Upload) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Upload setAlt(java.lang.String alt) {
+        return (Upload) super.setAlt(alt);
+      }
+
+      @Override
+      public Upload setCallback(java.lang.String callback) {
+        return (Upload) super.setCallback(callback);
+      }
+
+      @Override
+      public Upload setFields(java.lang.String fields) {
+        return (Upload) super.setFields(fields);
+      }
+
+      @Override
+      public Upload setKey(java.lang.String key) {
+        return (Upload) super.setKey(key);
+      }
+
+      @Override
+      public Upload setOauthToken(java.lang.String oauthToken) {
+        return (Upload) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Upload) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Upload setQuotaUser(java.lang.String quotaUser) {
+        return (Upload) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Upload setUploadType(java.lang.String uploadType) {
+        return (Upload) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Upload) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The BCP-47 language code of the AudioTrack (e.g., "es-ES"). */
+      @com.google.api.client.util.Key
+      private java.lang.String language;
+
+      /** Required. The BCP-47 language code of the AudioTrack (e.g., "es-ES").
+       */
+      public java.lang.String getLanguage() {
+        return language;
+      }
+
+      /** Required. The BCP-47 language code of the AudioTrack (e.g., "es-ES"). */
+      public Upload setLanguage(java.lang.String language) {
+        this.language = language;
+        return this;
+      }
+
+      /**
+       * Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API
+       * response will include. The `part` names that you can include in the parameter value are
+       * `id` and `snippet`.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> part;
+
+      /** Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API response will
+     include. The `part` names that you can include in the parameter value are `id` and `snippet`.
+       */
+      public java.util.List<java.lang.String> getPart() {
+        return part;
+      }
+
+      /**
+       * Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API
+       * response will include. The `part` names that you can include in the parameter value are
+       * `id` and `snippet`.
+       */
+      public Upload setPart(java.util.List<java.lang.String> part) {
+        this.part = part;
+        return this;
+      }
+
+      /** Required. The external YouTube video ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String videoId;
+
+      /** Required. The external YouTube video ID.
+       */
+      public java.lang.String getVideoId() {
+        return videoId;
+      }
+
+      /** Required. The external YouTube video ID. */
+      public Upload setVideoId(java.lang.String videoId) {
+        this.videoId = videoId;
+        return this;
+      }
+
+      @Override
+      public Upload set(String parameterName, Object value) {
+        return (Upload) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Members collection.
    *
    * <p>The typical use is:</p>
@@ -18041,6 +18268,160 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
     public class V3 {
 
       /**
+       * Deletes one or more AudioTracks from a video.
+       *
+       * Create a request for the method "v3.deleteAudiotracks".
+       *
+       * This request holds the parameters needed by the youtube server.  After setting any optional
+       * parameters, call the {@link DeleteAudiotracks#execute()} method to invoke the remote operation.
+       *
+       * @return the request
+       */
+      public DeleteAudiotracks deleteAudiotracks() throws java.io.IOException {
+        DeleteAudiotracks result = new DeleteAudiotracks();
+        initialize(result);
+        return result;
+      }
+
+      public class DeleteAudiotracks extends YouTubeRequest<Void> {
+
+        private static final String REST_PATH = "youtube/v3/audiotracks";
+
+        /**
+         * Deletes one or more AudioTracks from a video.
+         *
+         * Create a request for the method "v3.deleteAudiotracks".
+         *
+         * This request holds the parameters needed by the the youtube server.  After setting any optional
+         * parameters, call the {@link DeleteAudiotracks#execute()} method to invoke the remote operation.
+         * <p> {@link DeleteAudiotracks#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @since 1.13
+         */
+        protected DeleteAudiotracks() {
+          super(YouTube.this, "DELETE", REST_PATH, null, Void.class);
+        }
+
+        @Override
+        public DeleteAudiotracks set$Xgafv(java.lang.String $Xgafv) {
+          return (DeleteAudiotracks) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public DeleteAudiotracks setAccessToken(java.lang.String accessToken) {
+          return (DeleteAudiotracks) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public DeleteAudiotracks setAlt(java.lang.String alt) {
+          return (DeleteAudiotracks) super.setAlt(alt);
+        }
+
+        @Override
+        public DeleteAudiotracks setCallback(java.lang.String callback) {
+          return (DeleteAudiotracks) super.setCallback(callback);
+        }
+
+        @Override
+        public DeleteAudiotracks setFields(java.lang.String fields) {
+          return (DeleteAudiotracks) super.setFields(fields);
+        }
+
+        @Override
+        public DeleteAudiotracks setKey(java.lang.String key) {
+          return (DeleteAudiotracks) super.setKey(key);
+        }
+
+        @Override
+        public DeleteAudiotracks setOauthToken(java.lang.String oauthToken) {
+          return (DeleteAudiotracks) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public DeleteAudiotracks setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (DeleteAudiotracks) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public DeleteAudiotracks setQuotaUser(java.lang.String quotaUser) {
+          return (DeleteAudiotracks) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public DeleteAudiotracks setUploadType(java.lang.String uploadType) {
+          return (DeleteAudiotracks) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public DeleteAudiotracks setUploadProtocol(java.lang.String uploadProtocol) {
+          return (DeleteAudiotracks) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The audio track ID of the AudioTrack to be deleted (e.g., "v1234567890"). */
+        @com.google.api.client.util.Key
+        private java.lang.String audioTrackId;
+
+        /** Required. The audio track ID of the AudioTrack to be deleted (e.g., "v1234567890").
+         */
+        public java.lang.String getAudioTrackId() {
+          return audioTrackId;
+        }
+
+        /** Required. The audio track ID of the AudioTrack to be deleted (e.g., "v1234567890"). */
+        public DeleteAudiotracks setAudioTrackId(java.lang.String audioTrackId) {
+          this.audioTrackId = audioTrackId;
+          return this;
+        }
+
+        /**
+         * Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API
+         * response will include. The `part` names that you can include in the parameter value are
+         * `id` and `snippet`.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> part;
+
+        /** Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API response will
+       include. The `part` names that you can include in the parameter value are `id` and `snippet`.
+         */
+        public java.util.List<java.lang.String> getPart() {
+          return part;
+        }
+
+        /**
+         * Optional. The `part` parameter specifies the `AudioTrack` resource parts that the API
+         * response will include. The `part` names that you can include in the parameter value are
+         * `id` and `snippet`.
+         */
+        public DeleteAudiotracks setPart(java.util.List<java.lang.String> part) {
+          this.part = part;
+          return this;
+        }
+
+        /** Required. The external YouTube video ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String videoId;
+
+        /** Required. The external YouTube video ID.
+         */
+        public java.lang.String getVideoId() {
+          return videoId;
+        }
+
+        /** Required. The external YouTube video ID. */
+        public DeleteAudiotracks setVideoId(java.lang.String videoId) {
+          this.videoId = videoId;
+          return this;
+        }
+
+        @Override
+        public DeleteAudiotracks set(String parameterName, Object value) {
+          return (DeleteAudiotracks) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates an existing resource.
        *
        * Create a request for the method "v3.updateCommentThreads".
@@ -18169,6 +18550,192 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+      /**
+       * An accessor for creating requests from the Audiotracks collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code YouTube youtube = new YouTube(...);}
+       *   {@code YouTube.Audiotracks.List request = youtube.audiotracks().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Audiotracks audiotracks() {
+        return new Audiotracks();
+      }
+
+      /**
+       * The "audiotracks" collection of methods.
+       */
+      public class Audiotracks {
+
+        /**
+         * Retrieves a list of AudioTracks for a video.
+         *
+         * Create a request for the method "audiotracks.list".
+         *
+         * This request holds the parameters needed by the youtube server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @return the request
+         */
+        public List list() throws java.io.IOException {
+          List result = new List();
+          initialize(result);
+          return result;
+        }
+
+        public class List extends YouTubeRequest<com.google.api.services.youtube.model.ListAudioTracksResponse> {
+
+          private static final String REST_PATH = "youtube/v3/audiotracks";
+
+          /**
+           * Retrieves a list of AudioTracks for a video.
+           *
+           * Create a request for the method "audiotracks.list".
+           *
+           * This request holds the parameters needed by the the youtube server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @since 1.13
+           */
+          protected List() {
+            super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.ListAudioTracksResponse.class);
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Filter by specific BCP-47 language codes. */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> language;
+
+          /** Required. Filter by specific BCP-47 language codes.
+           */
+          public java.util.List<java.lang.String> getLanguage() {
+            return language;
+          }
+
+          /** Required. Filter by specific BCP-47 language codes. */
+          public List setLanguage(java.util.List<java.lang.String> language) {
+            this.language = language;
+            return this;
+          }
+
+          /**
+           * Optional. The `part` parameter specifies a comma-separated list of one or more
+           * `AudioTrack` resource parts that the API response will include. The `part` names that
+           * you can include in the parameter value are `id` and `snippet`.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> part;
+
+          /** Optional. The `part` parameter specifies a comma-separated list of one or more `AudioTrack`
+         resource parts that the API response will include. The `part` names that you can include in the
+         parameter value are `id` and `snippet`.
+           */
+          public java.util.List<java.lang.String> getPart() {
+            return part;
+          }
+
+          /**
+           * Optional. The `part` parameter specifies a comma-separated list of one or more
+           * `AudioTrack` resource parts that the API response will include. The `part` names that
+           * you can include in the parameter value are `id` and `snippet`.
+           */
+          public List setPart(java.util.List<java.lang.String> part) {
+            this.part = part;
+            return this;
+          }
+
+          /** Required. The external YouTube video ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String videoId;
+
+          /** Required. The external YouTube video ID.
+           */
+          public java.lang.String getVideoId() {
+            return videoId;
+          }
+
+          /** Required. The external YouTube video ID. */
+          public List setVideoId(java.lang.String videoId) {
+            this.videoId = videoId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the LiveChat collection.
        *

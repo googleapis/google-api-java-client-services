@@ -46,6 +46,14 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRule extends com.goog
   private java.lang.String effect;
 
   /**
+   * Optional. The operation attributes that determine whether this rule applies to a request. If
+   * this field is not specified, the rule applies to all operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation operation;
+
+  /**
    * Required. A list of Resource Manager resources. If a resource is listed in the rule, then the
    * rule applies for that resource and its descendants. The number of resources in a policy is
    * limited to 500 across all rules in the policy. The following resource types are supported: *
@@ -91,6 +99,25 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRule extends com.goog
    */
   public GoogleIamV3PrincipalAccessBoundaryPolicyRule setEffect(java.lang.String effect) {
     this.effect = effect;
+    return this;
+  }
+
+  /**
+   * Optional. The operation attributes that determine whether this rule applies to a request. If
+   * this field is not specified, the rule applies to all operations.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation getOperation() {
+    return operation;
+  }
+
+  /**
+   * Optional. The operation attributes that determine whether this rule applies to a request. If
+   * this field is not specified, the rule applies to all operations.
+   * @param operation operation or {@code null} for none
+   */
+  public GoogleIamV3PrincipalAccessBoundaryPolicyRule setOperation(GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation operation) {
+    this.operation = operation;
     return this;
   }
 

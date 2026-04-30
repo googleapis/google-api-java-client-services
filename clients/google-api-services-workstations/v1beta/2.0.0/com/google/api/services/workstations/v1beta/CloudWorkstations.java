@@ -4737,6 +4737,141 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
+             * Pushes credentials to a running workstation on behalf of a user. Once complete, supported
+             * credential types (application_default_credentials) are made available to processes running in the
+             * user container.
+             *
+             * Create a request for the method "workstations.pushCredentials".
+             *
+             * This request holds the parameters needed by the workstations server.  After setting any optional
+             * parameters, call the {@link PushCredentials#execute()} method to invoke the remote operation.
+             *
+             * @param workstation Required. Name of the workstation for which the credentials should be pushed.
+             * @param content the {@link com.google.api.services.workstations.v1beta.model.PushCredentialsRequest}
+             * @return the request
+             */
+            public PushCredentials pushCredentials(java.lang.String workstation, com.google.api.services.workstations.v1beta.model.PushCredentialsRequest content) throws java.io.IOException {
+              PushCredentials result = new PushCredentials(workstation, content);
+              initialize(result);
+              return result;
+            }
+
+            public class PushCredentials extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.Operation> {
+
+              private static final String REST_PATH = "v1beta/{+workstation}:pushCredentials";
+
+              private final java.util.regex.Pattern WORKSTATION_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+
+              /**
+               * Pushes credentials to a running workstation on behalf of a user. Once complete, supported
+               * credential types (application_default_credentials) are made available to processes running in
+               * the user container.
+               *
+               * Create a request for the method "workstations.pushCredentials".
+               *
+               * This request holds the parameters needed by the the workstations server.  After setting any
+               * optional parameters, call the {@link PushCredentials#execute()} method to invoke the remote
+               * operation. <p> {@link PushCredentials#initialize(com.google.api.client.googleapis.services.Abst
+               * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param workstation Required. Name of the workstation for which the credentials should be pushed.
+               * @param content the {@link com.google.api.services.workstations.v1beta.model.PushCredentialsRequest}
+               * @since 1.13
+               */
+              protected PushCredentials(java.lang.String workstation, com.google.api.services.workstations.v1beta.model.PushCredentialsRequest content) {
+                super(CloudWorkstations.this, "POST", REST_PATH, content, com.google.api.services.workstations.v1beta.model.Operation.class);
+                this.workstation = com.google.api.client.util.Preconditions.checkNotNull(workstation, "Required parameter workstation must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(WORKSTATION_PATTERN.matcher(workstation).matches(),
+                      "Parameter workstation must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+                }
+              }
+
+              @Override
+              public PushCredentials set$Xgafv(java.lang.String $Xgafv) {
+                return (PushCredentials) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public PushCredentials setAccessToken(java.lang.String accessToken) {
+                return (PushCredentials) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public PushCredentials setAlt(java.lang.String alt) {
+                return (PushCredentials) super.setAlt(alt);
+              }
+
+              @Override
+              public PushCredentials setCallback(java.lang.String callback) {
+                return (PushCredentials) super.setCallback(callback);
+              }
+
+              @Override
+              public PushCredentials setFields(java.lang.String fields) {
+                return (PushCredentials) super.setFields(fields);
+              }
+
+              @Override
+              public PushCredentials setKey(java.lang.String key) {
+                return (PushCredentials) super.setKey(key);
+              }
+
+              @Override
+              public PushCredentials setOauthToken(java.lang.String oauthToken) {
+                return (PushCredentials) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public PushCredentials setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (PushCredentials) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public PushCredentials setQuotaUser(java.lang.String quotaUser) {
+                return (PushCredentials) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public PushCredentials setUploadType(java.lang.String uploadType) {
+                return (PushCredentials) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public PushCredentials setUploadProtocol(java.lang.String uploadProtocol) {
+                return (PushCredentials) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the workstation for which the credentials should be pushed. */
+              @com.google.api.client.util.Key
+              private java.lang.String workstation;
+
+              /** Required. Name of the workstation for which the credentials should be pushed.
+               */
+              public java.lang.String getWorkstation() {
+                return workstation;
+              }
+
+              /** Required. Name of the workstation for which the credentials should be pushed. */
+              public PushCredentials setWorkstation(java.lang.String workstation) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(WORKSTATION_PATTERN.matcher(workstation).matches(),
+                      "Parameter workstation must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+                }
+                this.workstation = workstation;
+                return this;
+              }
+
+              @Override
+              public PushCredentials set(String parameterName, Object value) {
+                return (PushCredentials) super.set(parameterName, value);
+              }
+            }
+            /**
              * Sets the access control policy on the specified resource. Replaces any existing policy. Can
              * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *

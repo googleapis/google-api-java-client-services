@@ -133,6 +133,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableAuditAgent;
 
   /**
+   * Optional. Enables pushing user provided credentials to Workstations by calling
+   * workstations.pushCredentials. If application_default_credentials are supplied to
+   * pushCredentials, the provided token is returned when tools and applications running in the user
+   * container make a request for Default Application Credentials. Please note that any credentials
+   * supplied are made available to all users with access to the workstation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePushingCredentials;
+
+  /**
    * Immutable. Encrypts resources of this workstation configuration using a customer-managed
    * encryption key (CMEK). If specified, the boot disk of the Compute Engine instance and the
    * persistent disk are encrypted using this encryption key. If this field is not set, the disks
@@ -281,17 +292,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> replicaZones;
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down.
-   * This field applies to workstations in both STATE_RUNNING and STATE_SUSPENDED. We recommend that
-   * workstations be shut down daily to reduce costs and so that security updates can be applied
-   * upon restart. The idle_timeout and running_timeout fields are independent of each other. Note
-   * that the running_timeout field shuts down VMs after the specified time, regardless of whether
-   * or not the VMs are idle. Provide duration terminated by `s` for seconds—for example, `"54000s"`
-   * (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that workstations
-   * using this configuration should never time out. If encryption_key is set, it must be greater
-   * than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that
-   * Cloud Workstations VMs created with this configuration have no maximum running time. This is
-   * strongly discouraged because you incur costs and will not pick up security updates.
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -522,6 +533,31 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setEnableAuditAgent(java.lang.Boolean enableAuditAgent) {
     this.enableAuditAgent = enableAuditAgent;
+    return this;
+  }
+
+  /**
+   * Optional. Enables pushing user provided credentials to Workstations by calling
+   * workstations.pushCredentials. If application_default_credentials are supplied to
+   * pushCredentials, the provided token is returned when tools and applications running in the user
+   * container make a request for Default Application Credentials. Please note that any credentials
+   * supplied are made available to all users with access to the workstation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePushingCredentials() {
+    return enablePushingCredentials;
+  }
+
+  /**
+   * Optional. Enables pushing user provided credentials to Workstations by calling
+   * workstations.pushCredentials. If application_default_credentials are supplied to
+   * pushCredentials, the provided token is returned when tools and applications running in the user
+   * container make a request for Default Application Credentials. Please note that any credentials
+   * supplied are made available to all users with access to the workstation.
+   * @param enablePushingCredentials enablePushingCredentials or {@code null} for none
+   */
+  public WorkstationConfig setEnablePushingCredentials(java.lang.Boolean enablePushingCredentials) {
+    this.enablePushingCredentials = enablePushingCredentials;
     return this;
   }
 
@@ -828,17 +864,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down.
-   * This field applies to workstations in both STATE_RUNNING and STATE_SUSPENDED. We recommend that
-   * workstations be shut down daily to reduce costs and so that security updates can be applied
-   * upon restart. The idle_timeout and running_timeout fields are independent of each other. Note
-   * that the running_timeout field shuts down VMs after the specified time, regardless of whether
-   * or not the VMs are idle. Provide duration terminated by `s` for seconds—for example, `"54000s"`
-   * (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that workstations
-   * using this configuration should never time out. If encryption_key is set, it must be greater
-   * than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that
-   * Cloud Workstations VMs created with this configuration have no maximum running time. This is
-   * strongly discouraged because you incur costs and will not pick up security updates.
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * @return value or {@code null} for none
    */
   public String getRunningTimeout() {
@@ -846,17 +882,17 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down.
-   * This field applies to workstations in both STATE_RUNNING and STATE_SUSPENDED. We recommend that
-   * workstations be shut down daily to reduce costs and so that security updates can be applied
-   * upon restart. The idle_timeout and running_timeout fields are independent of each other. Note
-   * that the running_timeout field shuts down VMs after the specified time, regardless of whether
-   * or not the VMs are idle. Provide duration terminated by `s` for seconds—for example, `"54000s"`
-   * (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that workstations
-   * using this configuration should never time out. If encryption_key is set, it must be greater
-   * than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that
-   * Cloud Workstations VMs created with this configuration have no maximum running time. This is
-   * strongly discouraged because you incur costs and will not pick up security updates.
+   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
+   * recommend that workstations be shut down daily to reduce costs and so that security updates can
+   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
+   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
+   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
+   * workstations using this configuration should never time out. If encryption_key is set, it must
+   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
+   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
+   * time. This is strongly discouraged because you incur costs and will not pick up security
+   * updates.
    * @param runningTimeout runningTimeout or {@code null} for none
    */
   public WorkstationConfig setRunningTimeout(String runningTimeout) {

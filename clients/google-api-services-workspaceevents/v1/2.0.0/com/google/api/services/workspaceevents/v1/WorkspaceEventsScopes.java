@@ -65,6 +65,12 @@ public class WorkspaceEventsScopes {
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
+  /** View and modify last read time for Google Chat conversations. */
+  public static final String CHAT_USERS_READSTATE = "https://www.googleapis.com/auth/chat.users.readstate";
+
+  /** View last read time for Google Chat conversations. */
+  public static final String CHAT_USERS_READSTATE_READONLY = "https://www.googleapis.com/auth/chat.users.readstate.readonly";
+
   /** See, edit, create, and delete all of your Google Drive files. */
   public static final String DRIVE = "https://www.googleapis.com/auth/drive";
 
@@ -107,6 +113,8 @@ public class WorkspaceEventsScopes {
     set.add(CHAT_MESSAGES_READONLY);
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_READONLY);
+    set.add(CHAT_USERS_READSTATE);
+    set.add(CHAT_USERS_READSTATE_READONLY);
     set.add(DRIVE);
     set.add(DRIVE_FILE);
     set.add(DRIVE_METADATA);

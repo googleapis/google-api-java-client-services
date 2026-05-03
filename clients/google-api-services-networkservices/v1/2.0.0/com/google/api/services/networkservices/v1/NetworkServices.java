@@ -313,7 +313,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -344,7 +344,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -460,22 +460,22 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -6100,6 +6100,22 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -6523,6 +6539,22 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filter expression to restrict the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression to restrict the list.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filter expression to restrict the list. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 

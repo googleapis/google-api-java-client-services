@@ -17,9 +17,9 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * A subscription resource. If none of `push_config`, `bigquery_config`, or `cloud_storage_config`
- * is set, then the subscriber will pull and ack messages using API methods. At most one of these
- * fields may be set.
+ * A subscription resource. If none of `push_config`, `bigquery_config`, `cloud_storage_config`, or
+ * `bigtable_config` is set, then the subscriber will pull and ack messages using API methods. At
+ * most one of these fields may be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:
@@ -226,7 +226,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * "123/environment": "production", "123/costCenter": "marketing" See
+   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
+   * on using tags with Pub/Sub resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -685,7 +687,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * "123/environment": "production", "123/costCenter": "marketing" See
+   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
+   * on using tags with Pub/Sub resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -694,7 +698,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing"
+   * "123/environment": "production", "123/costCenter": "marketing" See
+   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
+   * on using tags with Pub/Sub resources.
    * @param tags tags or {@code null} for none
    */
   public Subscription setTags(java.util.Map<String, java.lang.String> tags) {

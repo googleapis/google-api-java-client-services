@@ -54,8 +54,7 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   private java.lang.String order;
 
   /**
-   * Indicates that this field supports search operations. This field is only currently supported
-   * for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Indicates that this field supports search operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,8 +123,7 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   }
 
   /**
-   * Indicates that this field supports search operations. This field is only currently supported
-   * for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Indicates that this field supports search operations.
    * @return value or {@code null} for none
    */
   public GoogleFirestoreAdminV1SearchConfig getSearchConfig() {
@@ -133,8 +131,7 @@ public final class GoogleFirestoreAdminV1IndexField extends com.google.api.clien
   }
 
   /**
-   * Indicates that this field supports search operations. This field is only currently supported
-   * for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Indicates that this field supports search operations.
    * @param searchConfig searchConfig or {@code null} for none
    */
   public GoogleFirestoreAdminV1IndexField setSearchConfig(GoogleFirestoreAdminV1SearchConfig searchConfig) {

@@ -5412,7 +5412,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *
          * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         *        `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
          * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
          * @return the request
          */
@@ -5442,7 +5443,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         *        `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
            * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
            * @since 1.13
            */
@@ -5514,14 +5516,17 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+           * `projects/{project_id}/databases/{database_id}/documents` to list top-level
+           * collections.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent document. In the format:
          `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
            */
           public java.lang.String getParent() {
             return parent;
@@ -5530,7 +5535,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+           * `projects/{project_id}/databases/{database_id}/documents` to list top-level
+           * collections.
            */
           public ListCollectionIds setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -8889,7 +8896,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -8920,7 +8927,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -9036,22 +9043,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;

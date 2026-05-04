@@ -17,8 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Options for a transaction that can be used to read and write documents. Firestore does not allow
- * 3rd party auth requests to create read-write. transactions.
+ * Options for a transaction that can be used to read and write documents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -31,11 +30,44 @@ package com.google.api.services.firestore.v1.model;
 public final class ReadWrite extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The concurrency control mode to use for this transaction. A database is able to use
+   * different concurrency modes for different transactions simultaneously. 3rd party auth requests
+   * are only allowed to create optimistic read-write transactions and must specify that here even
+   * if the database-level setting is already configured to optimistic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String concurrencyMode;
+
+  /**
    * An optional transaction to retry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retryTransaction;
+
+  /**
+   * Optional. The concurrency control mode to use for this transaction. A database is able to use
+   * different concurrency modes for different transactions simultaneously. 3rd party auth requests
+   * are only allowed to create optimistic read-write transactions and must specify that here even
+   * if the database-level setting is already configured to optimistic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConcurrencyMode() {
+    return concurrencyMode;
+  }
+
+  /**
+   * Optional. The concurrency control mode to use for this transaction. A database is able to use
+   * different concurrency modes for different transactions simultaneously. 3rd party auth requests
+   * are only allowed to create optimistic read-write transactions and must specify that here even
+   * if the database-level setting is already configured to optimistic.
+   * @param concurrencyMode concurrencyMode or {@code null} for none
+   */
+  public ReadWrite setConcurrencyMode(java.lang.String concurrencyMode) {
+    this.concurrencyMode = concurrencyMode;
+    return this;
+  }
 
   /**
    * An optional transaction to retry.

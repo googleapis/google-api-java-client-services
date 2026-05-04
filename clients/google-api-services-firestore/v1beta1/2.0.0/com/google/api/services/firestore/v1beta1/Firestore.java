@@ -2159,7 +2159,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *
          * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         *        `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
          * @param content the {@link com.google.api.services.firestore.v1beta1.model.ListCollectionIdsRequest}
          * @return the request
          */
@@ -2189,7 +2190,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param parent Required. The parent document. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         *        `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
            * @param content the {@link com.google.api.services.firestore.v1beta1.model.ListCollectionIdsRequest}
            * @since 1.13
            */
@@ -2261,14 +2263,17 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+           * `projects/{project_id}/databases/{database_id}/documents` to list top-level
+           * collections.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent document. In the format:
          `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-         `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+         `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+         `projects/{project_id}/databases/{database_id}/documents` to list top-level collections.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2277,7 +2282,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Required. The parent document. In the format:
            * `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
-           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+           * `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom` Use
+           * `projects/{project_id}/databases/{database_id}/documents` to list top-level
+           * collections.
            */
           public ListCollectionIds setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

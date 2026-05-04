@@ -44,9 +44,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private GoogleFirestoreAdminV1CmekConfig cmekConfig;
 
   /**
-   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
-   * request, this will default based on the database edition: Optimistic for Enterprise and
-   * Pessimistic for all other databases.
+   * The default concurrency control mode to use for this database. If unspecified in a
+   * CreateDatabase request, this will default based on the database edition: Optimistic for
+   * Enterprise and Pessimistic for all other databases. While transactions can explicitly specify
+   * their own concurrency mode, this setting defines the default behavior when left unspecified.
+   * Important: This database-level setting is not respected for Firestore with MongoDB
+   * compatibility. All transactions through the MongoDB compatibility layer will use optimistic
+   * concurrency control, regardless of this setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,9 +265,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
-   * request, this will default based on the database edition: Optimistic for Enterprise and
-   * Pessimistic for all other databases.
+   * The default concurrency control mode to use for this database. If unspecified in a
+   * CreateDatabase request, this will default based on the database edition: Optimistic for
+   * Enterprise and Pessimistic for all other databases. While transactions can explicitly specify
+   * their own concurrency mode, this setting defines the default behavior when left unspecified.
+   * Important: This database-level setting is not respected for Firestore with MongoDB
+   * compatibility. All transactions through the MongoDB compatibility layer will use optimistic
+   * concurrency control, regardless of this setting.
    * @return value or {@code null} for none
    */
   public java.lang.String getConcurrencyMode() {
@@ -271,9 +279,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
-   * request, this will default based on the database edition: Optimistic for Enterprise and
-   * Pessimistic for all other databases.
+   * The default concurrency control mode to use for this database. If unspecified in a
+   * CreateDatabase request, this will default based on the database edition: Optimistic for
+   * Enterprise and Pessimistic for all other databases. While transactions can explicitly specify
+   * their own concurrency mode, this setting defines the default behavior when left unspecified.
+   * Important: This database-level setting is not respected for Firestore with MongoDB
+   * compatibility. All transactions through the MongoDB compatibility layer will use optimistic
+   * concurrency control, regardless of this setting.
    * @param concurrencyMode concurrencyMode or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setConcurrencyMode(java.lang.String concurrencyMode) {

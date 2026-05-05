@@ -65,6 +65,13 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
   private java.lang.Long months;
 
   /**
+   * Optional. Total amount the buyer has to pay, including interest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price totalAmount;
+
+  /**
    * The amount the buyer has to pay per month.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
    */
   public ProductInstallment setMonths(java.lang.Long months) {
     this.months = months;
+    return this;
+  }
+
+  /**
+   * Optional. Total amount the buyer has to pay, including interest.
+   * @return value or {@code null} for none
+   */
+  public Price getTotalAmount() {
+    return totalAmount;
+  }
+
+  /**
+   * Optional. Total amount the buyer has to pay, including interest.
+   * @param totalAmount totalAmount or {@code null} for none
+   */
+  public ProductInstallment setTotalAmount(Price totalAmount) {
+    this.totalAmount = totalAmount;
     return this;
   }
 

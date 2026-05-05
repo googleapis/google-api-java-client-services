@@ -43,7 +43,8 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
    * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
    * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
    * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
-   * of the form `projects//locations//keyRings//cryptoKeys/`.
+   * of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +52,16 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
 
   /**
    * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
-   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced by
-   * `kms_key_names` must fully cover all regions of the backup's instance configuration. Some
-   * examples: * For regional (single-region) instance configurations, specify a regional location
-   * KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a
-   * multi-region location KMS key or multiple regional location KMS keys that cover all regions in
-   * the instance configuration. * For an instance configuration of type `USER_MANAGED`, specify
-   * only regional location KMS keys to cover each region in the instance configuration. Multi-
-   * region location KMS keys aren't supported for `USER_MANAGED` type instance configurations.
+   * Values are of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`. The
+   * keys referenced by `kms_key_names` must fully cover all regions of the backup's instance
+   * configuration. Some examples: * For regional (single-region) instance configurations, specify a
+   * regional location KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`,
+   * either specify a multi-region location KMS key or multiple regional location KMS keys that
+   * cover all regions in the instance configuration. * For an instance configuration of type
+   * `USER_MANAGED`, specify only regional location KMS keys to cover each region in the instance
+   * configuration. Multi-region location KMS keys aren't supported for `USER_MANAGED` type instance
+   * configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +91,8 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
    * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
    * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
    * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
-   * of the form `projects//locations//keyRings//cryptoKeys/`.
+   * of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -102,7 +106,8 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
    * KMS location is in `us-central1` or `nam3`, then the database instance must also be in `us-
    * central1` or `nam3`. The Cloud KMS key that is used to encrypt and decrypt the restored
    * database. Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are
-   * of the form `projects//locations//keyRings//cryptoKeys/`.
+   * of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public CreateBackupEncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {
@@ -112,14 +117,16 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
 
   /**
    * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
-   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced by
-   * `kms_key_names` must fully cover all regions of the backup's instance configuration. Some
-   * examples: * For regional (single-region) instance configurations, specify a regional location
-   * KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a
-   * multi-region location KMS key or multiple regional location KMS keys that cover all regions in
-   * the instance configuration. * For an instance configuration of type `USER_MANAGED`, specify
-   * only regional location KMS keys to cover each region in the instance configuration. Multi-
-   * region location KMS keys aren't supported for `USER_MANAGED` type instance configurations.
+   * Values are of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`. The
+   * keys referenced by `kms_key_names` must fully cover all regions of the backup's instance
+   * configuration. Some examples: * For regional (single-region) instance configurations, specify a
+   * regional location KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`,
+   * either specify a multi-region location KMS key or multiple regional location KMS keys that
+   * cover all regions in the instance configuration. * For an instance configuration of type
+   * `USER_MANAGED`, specify only regional location KMS keys to cover each region in the instance
+   * configuration. Multi-region location KMS keys aren't supported for `USER_MANAGED` type instance
+   * configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKmsKeyNames() {
@@ -128,14 +135,16 @@ public final class CreateBackupEncryptionConfig extends com.google.api.client.js
 
   /**
    * Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
-   * Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced by
-   * `kms_key_names` must fully cover all regions of the backup's instance configuration. Some
-   * examples: * For regional (single-region) instance configurations, specify a regional location
-   * KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a
-   * multi-region location KMS key or multiple regional location KMS keys that cover all regions in
-   * the instance configuration. * For an instance configuration of type `USER_MANAGED`, specify
-   * only regional location KMS keys to cover each region in the instance configuration. Multi-
-   * region location KMS keys aren't supported for `USER_MANAGED` type instance configurations.
+   * Values are of the form
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`. The
+   * keys referenced by `kms_key_names` must fully cover all regions of the backup's instance
+   * configuration. Some examples: * For regional (single-region) instance configurations, specify a
+   * regional location KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`,
+   * either specify a multi-region location KMS key or multiple regional location KMS keys that
+   * cover all regions in the instance configuration. * For an instance configuration of type
+   * `USER_MANAGED`, specify only regional location KMS keys to cover each region in the instance
+   * configuration. Multi-region location KMS keys aren't supported for `USER_MANAGED` type instance
+   * configurations.
    * @param kmsKeyNames kmsKeyNames or {@code null} for none
    */
   public CreateBackupEncryptionConfig setKmsKeyNames(java.util.List<java.lang.String> kmsKeyNames) {

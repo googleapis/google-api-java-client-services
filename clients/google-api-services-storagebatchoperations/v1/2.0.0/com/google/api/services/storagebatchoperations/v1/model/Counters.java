@@ -78,6 +78,14 @@ public final class Counters extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalBytesFound;
 
   /**
+   * Output only. The total number of bytes affected by the transformation. For example, this counts
+   * bytes deleted for `DeleteObject` operations and bytes rewritten for `RewriteObject` operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBytesTransformed;
+
+  /**
    * Output only. Number of objects listed.
    * The value may be {@code null}.
    */
@@ -193,6 +201,25 @@ public final class Counters extends com.google.api.client.json.GenericJson {
    */
   public Counters setTotalBytesFound(java.lang.Long totalBytesFound) {
     this.totalBytesFound = totalBytesFound;
+    return this;
+  }
+
+  /**
+   * Output only. The total number of bytes affected by the transformation. For example, this counts
+   * bytes deleted for `DeleteObject` operations and bytes rewritten for `RewriteObject` operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBytesTransformed() {
+    return totalBytesTransformed;
+  }
+
+  /**
+   * Output only. The total number of bytes affected by the transformation. For example, this counts
+   * bytes deleted for `DeleteObject` operations and bytes rewritten for `RewriteObject` operations.
+   * @param totalBytesTransformed totalBytesTransformed or {@code null} for none
+   */
+  public Counters setTotalBytesTransformed(java.lang.Long totalBytesTransformed) {
+    this.totalBytesTransformed = totalBytesTransformed;
     return this;
   }
 

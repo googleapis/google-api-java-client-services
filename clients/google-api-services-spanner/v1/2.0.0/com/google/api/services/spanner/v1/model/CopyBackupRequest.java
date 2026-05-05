@@ -31,7 +31,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The id of the backup copy. The `backup_id` appended to `parent` forms the full
-   * backup_uri of the form `projects//instances//backups/`.
+   * backup_uri of the form `projects/{project}/instances/{instance}/backups/{backup}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
    * Required. The source backup to be copied. The source backup needs to be in READY state for it
    * to be copied. Once CopyBackup is in progress, the source backup cannot be deleted or cleaned up
    * on expiration until CopyBackup is finished. Values are of the form:
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The id of the backup copy. The `backup_id` appended to `parent` forms the full
-   * backup_uri of the form `projects//instances//backups/`.
+   * backup_uri of the form `projects/{project}/instances/{instance}/backups/{backup}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupId() {
@@ -77,7 +77,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Required. The id of the backup copy. The `backup_id` appended to `parent` forms the full
-   * backup_uri of the form `projects//instances//backups/`.
+   * backup_uri of the form `projects/{project}/instances/{instance}/backups/{backup}`.
    * @param backupId backupId or {@code null} for none
    */
   public CopyBackupRequest setBackupId(java.lang.String backupId) {
@@ -133,7 +133,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
    * Required. The source backup to be copied. The source backup needs to be in READY state for it
    * to be copied. Once CopyBackup is in progress, the source backup cannot be deleted or cleaned up
    * on expiration until CopyBackup is finished. Values are of the form:
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -144,7 +144,7 @@ public final class CopyBackupRequest extends com.google.api.client.json.GenericJ
    * Required. The source backup to be copied. The source backup needs to be in READY state for it
    * to be copied. Once CopyBackup is in progress, the source backup cannot be deleted or cleaned up
    * on expiration until CopyBackup is finished. Values are of the form:
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public CopyBackupRequest setSourceBackup(java.lang.String sourceBackup) {

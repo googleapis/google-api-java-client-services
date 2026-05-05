@@ -4265,7 +4265,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance of the backup operations. Values are of the form `projects//instances/`.
+         * @param parent Required. The instance of the backup operations. Values are of the form
+         *        `projects/{project}/instances/{instance}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4296,7 +4297,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance of the backup operations. Values are of the form `projects//instances/`.
+           * @param parent Required. The instance of the backup operations. Values are of the form
+         *        `projects/{project}/instances/{instance}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4376,12 +4378,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance of the backup operations. Values are of the form
-           * `projects//instances/`.
+           * `projects/{project}/instances/{instance}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The instance of the backup operations. Values are of the form `projects//instances/`.
+          /** Required. The instance of the backup operations. Values are of the form
+         `projects/{project}/instances/{instance}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4389,7 +4392,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance of the backup operations. Values are of the form
-           * `projects//instances/`.
+           * `projects/{project}/instances/{instance}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4614,7 +4617,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * parameters, call the {@link Copy#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The name of the destination instance that will contain the backup copy. Values are of the
-         *        form: `projects//instances/`.
+         *        form: `projects/{project}/instances/{instance}`.
          * @param content the {@link com.google.api.services.spanner.v1.model.CopyBackupRequest}
          * @return the request
          */
@@ -4647,7 +4650,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The name of the destination instance that will contain the backup copy. Values are of the
-         *        form: `projects//instances/`.
+         *        form: `projects/{project}/instances/{instance}`.
            * @param content the {@link com.google.api.services.spanner.v1.model.CopyBackupRequest}
            * @since 1.13
            */
@@ -4718,13 +4721,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The name of the destination instance that will contain the backup copy.
-           * Values are of the form: `projects//instances/`.
+           * Values are of the form: `projects/{project}/instances/{instance}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The name of the destination instance that will contain the backup copy. Values are of the
-         form: `projects//instances/`.
+         form: `projects/{project}/instances/{instance}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4732,7 +4735,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The name of the destination instance that will contain the backup copy.
-           * Values are of the form: `projects//instances/`.
+           * Values are of the form: `projects/{project}/instances/{instance}`.
            */
           public Copy setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4765,7 +4768,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * @param parent Required. The name of the instance in which the backup is created. This must be the same instance
          *        that contains the database the backup is created from. The backup will be stored in the
          *        locations specified in the instance configuration of this instance. Values are of the form
-         *        `projects//instances/`.
+         *        `projects/{project}/instances/{instance}`.
          * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
          * @return the request
          */
@@ -4800,7 +4803,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * @param parent Required. The name of the instance in which the backup is created. This must be the same instance
          *        that contains the database the backup is created from. The backup will be stored in the
          *        locations specified in the instance configuration of this instance. Values are of the form
-         *        `projects//instances/`.
+         *        `projects/{project}/instances/{instance}`.
            * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
            * @since 1.13
            */
@@ -4873,7 +4876,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Required. The name of the instance in which the backup is created. This must be the
            * same instance that contains the database the backup is created from. The backup will be
            * stored in the locations specified in the instance configuration of this instance.
-           * Values are of the form `projects//instances/`.
+           * Values are of the form `projects/{project}/instances/{instance}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -4881,7 +4884,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /** Required. The name of the instance in which the backup is created. This must be the same instance
          that contains the database the backup is created from. The backup will be stored in the locations
          specified in the instance configuration of this instance. Values are of the form
-         `projects//instances/`.
+         `projects/{project}/instances/{instance}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4891,7 +4894,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Required. The name of the instance in which the backup is created. This must be the
            * same instance that contains the database the backup is created from. The backup will be
            * stored in the locations specified in the instance configuration of this instance.
-           * Values are of the form `projects//instances/`.
+           * Values are of the form `projects/{project}/instances/{instance}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4905,13 +4908,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The id of the backup to be created. The `backup_id` appended to `parent`
-           * forms the full backup name of the form `projects//instances//backups/`.
+           * forms the full backup name of the form
+           * `projects/{project}/instances/{instance}/backups/{backup_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String backupId;
 
           /** Required. The id of the backup to be created. The `backup_id` appended to `parent` forms the full
-         backup name of the form `projects//instances//backups/`.
+         backup name of the form `projects/{project}/instances/{instance}/backups/{backup_id}`.
            */
           public java.lang.String getBackupId() {
             return backupId;
@@ -4919,7 +4923,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The id of the backup to be created. The `backup_id` appended to `parent`
-           * forms the full backup name of the form `projects//instances//backups/`.
+           * forms the full backup name of the form
+           * `projects/{project}/instances/{instance}/backups/{backup_id}`.
            */
           public Create setBackupId(java.lang.String backupId) {
             this.backupId = backupId;
@@ -4949,8 +4954,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * exactly. For example, if the KMS location is in `us-central1` or `nam3`, then the
            * database instance must also be in `us-central1` or `nam3`. The Cloud KMS key that is
            * used to encrypt and decrypt the restored database. Set this field only when
-           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-           * `projects//locations//keyRings//cryptoKeys/`.
+           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects/{pro
+           * ject}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
            */
           @com.google.api.client.util.Key("encryptionConfig.kmsKeyName")
           private java.lang.String encryptionConfigKmsKeyName;
@@ -4961,7 +4966,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          is in `us-central1` or `nam3`, then the database instance must also be in `us-central1` or `nam3`.
          The Cloud KMS key that is used to encrypt and decrypt the restored database. Set this field only
          when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-         `projects//locations//keyRings//cryptoKeys/`.
+         `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
            */
           public java.lang.String getEncryptionConfigKmsKeyName() {
             return encryptionConfigKmsKeyName;
@@ -4974,8 +4979,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * exactly. For example, if the KMS location is in `us-central1` or `nam3`, then the
            * database instance must also be in `us-central1` or `nam3`. The Cloud KMS key that is
            * used to encrypt and decrypt the restored database. Set this field only when
-           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-           * `projects//locations//keyRings//cryptoKeys/`.
+           * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects/{pro
+           * ject}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`.
            */
           public Create setEncryptionConfigKmsKeyName(java.lang.String encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
@@ -4984,28 +4989,30 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Optional. Specifies the KMS configuration for the one or more keys used to protect the
-           * backup. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
-           * referenced by `kms_key_names` must fully cover all regions of the backup's instance
-           * configuration. Some examples: * For regional (single-region) instance configurations,
-           * specify a regional location KMS key. * For multi-region instance configurations of type
-           * `GOOGLE_MANAGED`, either specify a multi-region location KMS key or multiple regional
-           * location KMS keys that cover all regions in the instance configuration. * For an
-           * instance configuration of type `USER_MANAGED`, specify only regional location KMS keys
-           * to cover each region in the instance configuration. Multi-region location KMS keys
-           * aren't supported for `USER_MANAGED` type instance configurations.
+           * backup. Values are of the form `projects/{project}/locations/{location}/keyRings/{key_r
+           * ing}/cryptoKeys/{kms_key_name}`. The keys referenced by `kms_key_names` must fully
+           * cover all regions of the backup's instance configuration. Some examples: * For regional
+           * (single-region) instance configurations, specify a regional location KMS key. * For
+           * multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a multi-
+           * region location KMS key or multiple regional location KMS keys that cover all regions
+           * in the instance configuration. * For an instance configuration of type `USER_MANAGED`,
+           * specify only regional location KMS keys to cover each region in the instance
+           * configuration. Multi-region location KMS keys aren't supported for `USER_MANAGED` type
+           * instance configurations.
            */
           @com.google.api.client.util.Key("encryptionConfig.kmsKeyNames")
           private java.util.List<java.lang.String> encryptionConfigKmsKeyNames;
 
           /** Optional. Specifies the KMS configuration for the one or more keys used to protect the backup.
-         Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced by
-         `kms_key_names` must fully cover all regions of the backup's instance configuration. Some examples:
-         * For regional (single-region) instance configurations, specify a regional location KMS key. * For
-         multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a multi-region
-         location KMS key or multiple regional location KMS keys that cover all regions in the instance
-         configuration. * For an instance configuration of type `USER_MANAGED`, specify only regional
-         location KMS keys to cover each region in the instance configuration. Multi-region location KMS
-         keys aren't supported for `USER_MANAGED` type instance configurations.
+         Values are of the form
+         `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{kms_key_name}`. The keys
+         referenced by `kms_key_names` must fully cover all regions of the backup's instance configuration.
+         Some examples: * For regional (single-region) instance configurations, specify a regional location
+         KMS key. * For multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a
+         multi-region location KMS key or multiple regional location KMS keys that cover all regions in the
+         instance configuration. * For an instance configuration of type `USER_MANAGED`, specify only
+         regional location KMS keys to cover each region in the instance configuration. Multi-region
+         location KMS keys aren't supported for `USER_MANAGED` type instance configurations.
            */
           public java.util.List<java.lang.String> getEncryptionConfigKmsKeyNames() {
             return encryptionConfigKmsKeyNames;
@@ -5013,15 +5020,16 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Optional. Specifies the KMS configuration for the one or more keys used to protect the
-           * backup. Values are of the form `projects//locations//keyRings//cryptoKeys/`. The keys
-           * referenced by `kms_key_names` must fully cover all regions of the backup's instance
-           * configuration. Some examples: * For regional (single-region) instance configurations,
-           * specify a regional location KMS key. * For multi-region instance configurations of type
-           * `GOOGLE_MANAGED`, either specify a multi-region location KMS key or multiple regional
-           * location KMS keys that cover all regions in the instance configuration. * For an
-           * instance configuration of type `USER_MANAGED`, specify only regional location KMS keys
-           * to cover each region in the instance configuration. Multi-region location KMS keys
-           * aren't supported for `USER_MANAGED` type instance configurations.
+           * backup. Values are of the form `projects/{project}/locations/{location}/keyRings/{key_r
+           * ing}/cryptoKeys/{kms_key_name}`. The keys referenced by `kms_key_names` must fully
+           * cover all regions of the backup's instance configuration. Some examples: * For regional
+           * (single-region) instance configurations, specify a regional location KMS key. * For
+           * multi-region instance configurations of type `GOOGLE_MANAGED`, either specify a multi-
+           * region location KMS key or multiple regional location KMS keys that cover all regions
+           * in the instance configuration. * For an instance configuration of type `USER_MANAGED`,
+           * specify only regional location KMS keys to cover each region in the instance
+           * configuration. Multi-region location KMS keys aren't supported for `USER_MANAGED` type
+           * instance configurations.
            */
           public Create setEncryptionConfigKmsKeyNames(java.util.List<java.lang.String> encryptionConfigKmsKeyNames) {
             this.encryptionConfigKmsKeyNames = encryptionConfigKmsKeyNames;
@@ -5041,7 +5049,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
+         * @param name Required. Name of the backup to delete. Values are of the form
+         *        `projects/{project}/instances/{instance}/backups/{backup}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5067,7 +5076,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
+           * @param name Required. Name of the backup to delete. Values are of the form
+         *        `projects/{project}/instances/{instance}/backups/{backup}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -5137,12 +5147,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. Name of the backup to delete. Values are of the form
-           * `projects//instances//backups/`.
+           * `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
+          /** Required. Name of the backup to delete. Values are of the form
+         `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           public java.lang.String getName() {
             return name;
@@ -5150,7 +5161,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. Name of the backup to delete. Values are of the form
-           * `projects//instances//backups/`.
+           * `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5175,7 +5186,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+         * @param name Required. Name of the backup. Values are of the form
+         *        `projects/{project}/instances/{instance}/backups/{backup}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5201,7 +5213,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           * @param name Required. Name of the backup. Values are of the form
+         *        `projects/{project}/instances/{instance}/backups/{backup}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5280,19 +5293,22 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           * Required. Name of the backup. Values are of the form
+           * `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+          /** Required. Name of the backup. Values are of the form
+         `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the backup. Values are of the form `projects//instances//backups/`.
+           * Required. Name of the backup. Values are of the form
+           * `projects/{project}/instances/{instance}/backups/{backup}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5471,7 +5487,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance to list backups from. Values are of the form `projects//instances/`.
+         * @param parent Required. The instance to list backups from. Values are of the form
+         *        `projects/{project}/instances/{instance}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5498,7 +5515,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance to list backups from. Values are of the form `projects//instances/`.
+           * @param parent Required. The instance to list backups from. Values are of the form
+         *        `projects/{project}/instances/{instance}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5578,12 +5596,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance to list backups from. Values are of the form
-           * `projects//instances/`.
+           * `projects/{project}/instances/{instance}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The instance to list backups from. Values are of the form `projects//instances/`.
+          /** Required. The instance to list backups from. Values are of the form
+         `projects/{project}/instances/{instance}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -5591,7 +5610,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Required. The instance to list backups from. Values are of the form
-           * `projects//instances/`.
+           * `projects/{project}/instances/{instance}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5738,10 +5757,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param name Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
          *        unique identifier for the backup which cannot be changed. Values are of the form
-         *        `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between
-         *        2 and 60 characters in length. The backup is stored in the location(s) specified in the
-         *        instance configuration of the instance containing the backup, identified by the prefix of
-         *        the backup name of the form `projects//instances/`.
+         *        `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the
+         *        name must be between 2 and 60 characters in length. The backup is stored in the
+         *        location(s) specified in the instance configuration of the instance containing the backup,
+         *        identified by the prefix of the backup name of the form
+         *        `projects/{project}/instances/{instance}`.
          * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
          * @return the request
          */
@@ -5770,10 +5790,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param name Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
          *        unique identifier for the backup which cannot be changed. Values are of the form
-         *        `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between
-         *        2 and 60 characters in length. The backup is stored in the location(s) specified in the
-         *        instance configuration of the instance containing the backup, identified by the prefix of
-         *        the backup name of the form `projects//instances/`.
+         *        `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the
+         *        name must be between 2 and 60 characters in length. The backup is stored in the
+         *        location(s) specified in the instance configuration of the instance containing the backup,
+         *        identified by the prefix of the backup name of the form
+         *        `projects/{project}/instances/{instance}`.
            * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
            * @since 1.13
            */
@@ -5845,20 +5866,21 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A
            * globally unique identifier for the backup which cannot be changed. Values are of the
-           * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
-           * between 2 and 60 characters in length. The backup is stored in the location(s)
-           * specified in the instance configuration of the instance containing the backup,
-           * identified by the prefix of the backup name of the form `projects//instances/`.
+           * form `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment
+           * of the name must be between 2 and 60 characters in length. The backup is stored in the
+           * location(s) specified in the instance configuration of the instance containing the
+           * backup, identified by the prefix of the backup name of the form
+           * `projects/{project}/instances/{instance}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
          unique identifier for the backup which cannot be changed. Values are of the form
-         `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60
-         characters in length. The backup is stored in the location(s) specified in the instance
-         configuration of the instance containing the backup, identified by the prefix of the backup name of
-         the form `projects//instances/`.
+         `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the name must
+         be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the
+         instance configuration of the instance containing the backup, identified by the prefix of the
+         backup name of the form `projects/{project}/instances/{instance}`.
            */
           public java.lang.String getName() {
             return name;
@@ -5867,10 +5889,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A
            * globally unique identifier for the backup which cannot be changed. Values are of the
-           * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
-           * between 2 and 60 characters in length. The backup is stored in the location(s)
-           * specified in the instance configuration of the instance containing the backup,
-           * identified by the prefix of the backup name of the form `projects//instances/`.
+           * form `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment
+           * of the name must be between 2 and 60 characters in length. The backup is stored in the
+           * location(s) specified in the instance configuration of the instance containing the
+           * backup, identified by the prefix of the backup name of the form
+           * `projects/{project}/instances/{instance}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

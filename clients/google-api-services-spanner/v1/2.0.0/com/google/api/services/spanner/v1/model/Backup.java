@@ -52,7 +52,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Required for the CreateBackup operation. Name of the database from which this backup was
    * created. This needs to be in the same instance as the backup. Values are of the form
-   * `projects//instances//databases/`.
+   * `projects/{project}/instances/{instance}/databases/{database}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,10 +155,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
-   * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length. The backup is stored in the location(s) specified in the instance
-   * configuration of the instance containing the backup, identified by the prefix of the backup
-   * name of the form `projects//instances/`.
+   * `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the name
+   * must be between 2 and 60 characters in length. The backup is stored in the location(s)
+   * specified in the instance configuration of the instance containing the backup, identified by
+   * the prefix of the backup name of the form `projects/{project}/instances/{instance}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,10 +177,11 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the destination backups being created by copying this source backup.
-   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
-   * in different instances. The existence of any referencing backup prevents the backup from being
-   * deleted. When the copy operation is done (either successfully completed or cancelled or the
-   * destination backup is deleted), the reference to the backup is removed.
+   * The backup names are of the form `projects/{project}/instances/{instance}/backups/{backup}`.
+   * Referencing backups may exist in different instances. The existence of any referencing backup
+   * prevents the backup from being deleted. When the copy operation is done (either successfully
+   * completed or cancelled or the destination backup is deleted), the reference to the backup is
+   * removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,10 +189,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the restored databases that reference the backup. The database names
-   * are of the form `projects//instances//databases/`. Referencing databases may exist in different
-   * instances. The existence of any referencing database prevents the backup from being deleted.
-   * When a restored database from the backup enters the `READY` state, the reference to the backup
-   * is removed.
+   * are of the form `projects/{project}/instances/{instance}/databases/{database}`. Referencing
+   * databases may exist in different instances. The existence of any referencing database prevents
+   * the backup from being deleted. When a restored database from the backup enters the `READY`
+   * state, the reference to the backup is removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -270,7 +271,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Required for the CreateBackup operation. Name of the database from which this backup was
    * created. This needs to be in the same instance as the backup. Values are of the form
-   * `projects//instances//databases/`.
+   * `projects/{project}/instances/{instance}/databases/{database}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -280,7 +281,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Required for the CreateBackup operation. Name of the database from which this backup was
    * created. This needs to be in the same instance as the backup. Values are of the form
-   * `projects//instances//databases/`.
+   * `projects/{project}/instances/{instance}/databases/{database}`.
    * @param database database or {@code null} for none
    */
   public Backup setDatabase(java.lang.String database) {
@@ -509,10 +510,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
-   * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length. The backup is stored in the location(s) specified in the instance
-   * configuration of the instance containing the backup, identified by the prefix of the backup
-   * name of the form `projects//instances/`.
+   * `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the name
+   * must be between 2 and 60 characters in length. The backup is stored in the location(s)
+   * specified in the instance configuration of the instance containing the backup, identified by
+   * the prefix of the backup name of the form `projects/{project}/instances/{instance}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -522,10 +523,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
-   * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
-   * 60 characters in length. The backup is stored in the location(s) specified in the instance
-   * configuration of the instance containing the backup, identified by the prefix of the backup
-   * name of the form `projects//instances/`.
+   * `projects/{project}/instances/{instance}/backups/a-z*[a-z0-9]` The final segment of the name
+   * must be between 2 and 60 characters in length. The backup is stored in the location(s)
+   * specified in the instance configuration of the instance containing the backup, identified by
+   * the prefix of the backup name of the form `projects/{project}/instances/{instance}`.
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {
@@ -560,10 +561,11 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the destination backups being created by copying this source backup.
-   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
-   * in different instances. The existence of any referencing backup prevents the backup from being
-   * deleted. When the copy operation is done (either successfully completed or cancelled or the
-   * destination backup is deleted), the reference to the backup is removed.
+   * The backup names are of the form `projects/{project}/instances/{instance}/backups/{backup}`.
+   * Referencing backups may exist in different instances. The existence of any referencing backup
+   * prevents the backup from being deleted. When the copy operation is done (either successfully
+   * completed or cancelled or the destination backup is deleted), the reference to the backup is
+   * removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencingBackups() {
@@ -572,10 +574,11 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the destination backups being created by copying this source backup.
-   * The backup names are of the form `projects//instances//backups/`. Referencing backups may exist
-   * in different instances. The existence of any referencing backup prevents the backup from being
-   * deleted. When the copy operation is done (either successfully completed or cancelled or the
-   * destination backup is deleted), the reference to the backup is removed.
+   * The backup names are of the form `projects/{project}/instances/{instance}/backups/{backup}`.
+   * Referencing backups may exist in different instances. The existence of any referencing backup
+   * prevents the backup from being deleted. When the copy operation is done (either successfully
+   * completed or cancelled or the destination backup is deleted), the reference to the backup is
+   * removed.
    * @param referencingBackups referencingBackups or {@code null} for none
    */
   public Backup setReferencingBackups(java.util.List<java.lang.String> referencingBackups) {
@@ -585,10 +588,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the restored databases that reference the backup. The database names
-   * are of the form `projects//instances//databases/`. Referencing databases may exist in different
-   * instances. The existence of any referencing database prevents the backup from being deleted.
-   * When a restored database from the backup enters the `READY` state, the reference to the backup
-   * is removed.
+   * are of the form `projects/{project}/instances/{instance}/databases/{database}`. Referencing
+   * databases may exist in different instances. The existence of any referencing database prevents
+   * the backup from being deleted. When a restored database from the backup enters the `READY`
+   * state, the reference to the backup is removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencingDatabases() {
@@ -597,10 +600,10 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The names of the restored databases that reference the backup. The database names
-   * are of the form `projects//instances//databases/`. Referencing databases may exist in different
-   * instances. The existence of any referencing database prevents the backup from being deleted.
-   * When a restored database from the backup enters the `READY` state, the reference to the backup
-   * is removed.
+   * are of the form `projects/{project}/instances/{instance}/databases/{database}`. Referencing
+   * databases may exist in different instances. The existence of any referencing database prevents
+   * the backup from being deleted. When a restored database from the backup enters the `READY`
+   * state, the reference to the backup is removed.
    * @param referencingDatabases referencingDatabases or {@code null} for none
    */
   public Backup setReferencingDatabases(java.util.List<java.lang.String> referencingDatabases) {

@@ -44,7 +44,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the backup being created through the copy operation. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the source backup that is being copied. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the backup being created through the copy operation. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -105,7 +105,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the backup being created through the copy operation. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @param name name or {@code null} for none
    */
   public CopyBackupMetadata setName(java.lang.String name) {
@@ -132,7 +132,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the source backup that is being copied. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -141,7 +141,7 @@ public final class CopyBackupMetadata extends com.google.api.client.json.Generic
 
   /**
    * The name of the source backup that is being copied. Values are of the form
-   * `projects//instances//backups/`.
+   * `projects/{project}/instances/{instance}/backups/{backup}`.
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public CopyBackupMetadata setSourceBackup(java.lang.String sourceBackup) {

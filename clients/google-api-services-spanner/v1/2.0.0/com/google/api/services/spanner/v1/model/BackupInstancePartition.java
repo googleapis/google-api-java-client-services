@@ -31,7 +31,7 @@ public final class BackupInstancePartition extends com.google.api.client.json.Ge
 
   /**
    * A unique identifier for the instance partition. Values are of the form
-   * `projects//instances//instancePartitions/`
+   * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class BackupInstancePartition extends com.google.api.client.json.Ge
 
   /**
    * A unique identifier for the instance partition. Values are of the form
-   * `projects//instances//instancePartitions/`
+   * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getInstancePartition() {
@@ -48,7 +48,7 @@ public final class BackupInstancePartition extends com.google.api.client.json.Ge
 
   /**
    * A unique identifier for the instance partition. Values are of the form
-   * `projects//instances//instancePartitions/`
+   * `projects/{project}/instances/{instance}/instancePartitions/{instance_partition_id}`
    * @param instancePartition instancePartition or {@code null} for none
    */
   public BackupInstancePartition setInstancePartition(java.lang.String instancePartition) {

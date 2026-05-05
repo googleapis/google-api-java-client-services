@@ -21,7 +21,9 @@ package com.google.api.services.discoveryengine.v1.model;
  * the customer's subscription history stored internally and reflect the thresholds actively being
  * used for billing purposes at the time of the GetProject call. This includes the start_time of the
  * subscription and may differ from the values in `customer_provided_config` due to billing rules
- * (e.g., scale-downs taking effect only at the start of a new month).
+ * (e.g., scale-downs taking effect only at the start of a new month). We also include the update
+ * type to indicate the type of update performed on the configurable billing configuration in the
+ * UpdateProject operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -81,6 +83,14 @@ public final class GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingSt
    */
   @com.google.api.client.util.Key
   private String terminateTime;
+
+  /**
+   * Output only. The type of update performed in this operation. This field is populated in the
+   * response of UpdateProject.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updateType;
 
   /**
    * Optional. The currently effective Indexing Core threshold. This is the threshold against which
@@ -195,6 +205,25 @@ public final class GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingSt
    */
   public GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus setTerminateTime(String terminateTime) {
     this.terminateTime = terminateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The type of update performed in this operation. This field is populated in the
+   * response of UpdateProject.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdateType() {
+    return updateType;
+  }
+
+  /**
+   * Output only. The type of update performed in this operation. This field is populated in the
+   * response of UpdateProject.
+   * @param updateType updateType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus setUpdateType(java.lang.String updateType) {
+    this.updateType = updateType;
     return this;
   }
 

@@ -47,6 +47,15 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
   private java.lang.String name;
 
   /**
+   * Optional. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultsBucket;
+
+  /**
    * Optional. Configuration for Robo crawler
    * The value may be {@code null}.
    */
@@ -95,6 +104,27 @@ public final class GoogleFirebaseAppdistroV1alphaTestConfig extends com.google.a
    */
   public GoogleFirebaseAppdistroV1alphaTestConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultsBucket() {
+    return resultsBucket;
+  }
+
+  /**
+   * Optional. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * @param resultsBucket resultsBucket or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaTestConfig setResultsBucket(java.lang.String resultsBucket) {
+    this.resultsBucket = resultsBucket;
     return this;
   }
 

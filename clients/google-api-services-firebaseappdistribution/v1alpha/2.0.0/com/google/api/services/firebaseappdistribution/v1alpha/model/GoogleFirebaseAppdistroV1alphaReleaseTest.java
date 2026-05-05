@@ -81,6 +81,15 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
   private java.lang.String name;
 
   /**
+   * Optional. Input only. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resultsBucket;
+
+  /**
    * Optional. The test case that was used to generate this release test. Note: The test case may
    * have changed or been deleted since the release test was created. Format:
    * `projects/{project_number}/apps/{app}/testCases/{test_case}`
@@ -199,6 +208,27 @@ public final class GoogleFirebaseAppdistroV1alphaReleaseTest extends com.google.
    */
   public GoogleFirebaseAppdistroV1alphaReleaseTest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResultsBucket() {
+    return resultsBucket;
+  }
+
+  /**
+   * Optional. Input only. The custom Cloud Storage bucket where test results are stored. Format:
+   * `projects/{project_number}/buckets/{bucket}` If not provided, the default test lab bucket is
+   * used.
+   * @param resultsBucket resultsBucket or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaReleaseTest setResultsBucket(java.lang.String resultsBucket) {
+    this.resultsBucket = resultsBucket;
     return this;
   }
 

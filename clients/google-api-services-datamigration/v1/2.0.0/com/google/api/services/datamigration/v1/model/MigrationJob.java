@@ -188,6 +188,13 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.lang.String phase;
 
   /**
+   * Optional. Configuration for PostgreSQL homogeneous migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgresHomogeneousConfig postgresHomogeneousConfig;
+
+  /**
    * Configuration for heterogeneous failback migrations from **PostgreSQL to SQL Server**.
    * The value may be {@code null}.
    */
@@ -658,6 +665,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setPhase(java.lang.String phase) {
     this.phase = phase;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for PostgreSQL homogeneous migration.
+   * @return value or {@code null} for none
+   */
+  public PostgresHomogeneousConfig getPostgresHomogeneousConfig() {
+    return postgresHomogeneousConfig;
+  }
+
+  /**
+   * Optional. Configuration for PostgreSQL homogeneous migration.
+   * @param postgresHomogeneousConfig postgresHomogeneousConfig or {@code null} for none
+   */
+  public MigrationJob setPostgresHomogeneousConfig(PostgresHomogeneousConfig postgresHomogeneousConfig) {
+    this.postgresHomogeneousConfig = postgresHomogeneousConfig;
     return this;
   }
 

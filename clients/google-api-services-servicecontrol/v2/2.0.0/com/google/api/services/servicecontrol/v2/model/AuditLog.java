@@ -30,6 +30,16 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class AuditLog extends com.google.api.client.json.GenericJson {
 
   /**
+   * The API version identifier of the operation that uses interface based versioning (IBV). For
+   * example, `"2026-01-01-preview"`. The version identifier generally follows the format of
+   * [variant_]date[_decorator]. It should not be parsed because the exact format varies across
+   * services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiVersionIdentifier;
+
+  /**
    * Authentication information.
    * The value may be {@code null}.
    */
@@ -151,6 +161,29 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Status status;
+
+  /**
+   * The API version identifier of the operation that uses interface based versioning (IBV). For
+   * example, `"2026-01-01-preview"`. The version identifier generally follows the format of
+   * [variant_]date[_decorator]. It should not be parsed because the exact format varies across
+   * services.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiVersionIdentifier() {
+    return apiVersionIdentifier;
+  }
+
+  /**
+   * The API version identifier of the operation that uses interface based versioning (IBV). For
+   * example, `"2026-01-01-preview"`. The version identifier generally follows the format of
+   * [variant_]date[_decorator]. It should not be parsed because the exact format varies across
+   * services.
+   * @param apiVersionIdentifier apiVersionIdentifier or {@code null} for none
+   */
+  public AuditLog setApiVersionIdentifier(java.lang.String apiVersionIdentifier) {
+    this.apiVersionIdentifier = apiVersionIdentifier;
+    return this;
+  }
 
   /**
    * Authentication information.

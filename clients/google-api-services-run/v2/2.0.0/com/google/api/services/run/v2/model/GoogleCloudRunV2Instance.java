@@ -113,6 +113,13 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private java.lang.String creator;
 
   /**
+   * Optional. Disables public resolution of the default URI of this Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultUriDisabled;
+
+  /**
    * Output only. The deletion time.
    * The value may be {@code null}.
    */
@@ -496,6 +503,23 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Instance setCreator(java.lang.String creator) {
     this.creator = creator;
+    return this;
+  }
+
+  /**
+   * Optional. Disables public resolution of the default URI of this Instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultUriDisabled() {
+    return defaultUriDisabled;
+  }
+
+  /**
+   * Optional. Disables public resolution of the default URI of this Instance.
+   * @param defaultUriDisabled defaultUriDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Instance setDefaultUriDisabled(java.lang.Boolean defaultUriDisabled) {
+    this.defaultUriDisabled = defaultUriDisabled;
     return this;
   }
 

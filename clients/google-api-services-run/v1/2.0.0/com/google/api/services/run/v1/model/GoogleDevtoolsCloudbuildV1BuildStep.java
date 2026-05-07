@@ -132,7 +132,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildStep extends com.google.api.cl
   private GoogleDevtoolsCloudbuildV1TimeSpan pullTiming;
 
   /**
-   * Declaration of results for this build step.
+   * Output only. Declaration of results for this build step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -435,7 +435,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildStep extends com.google.api.cl
   }
 
   /**
-   * Declaration of results for this build step.
+   * Output only. Declaration of results for this build step.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleDevtoolsCloudbuildV1StepResult> getResults() {
@@ -443,7 +443,7 @@ public final class GoogleDevtoolsCloudbuildV1BuildStep extends com.google.api.cl
   }
 
   /**
-   * Declaration of results for this build step.
+   * Output only. Declaration of results for this build step.
    * @param results results or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1BuildStep setResults(java.util.List<GoogleDevtoolsCloudbuildV1StepResult> results) {

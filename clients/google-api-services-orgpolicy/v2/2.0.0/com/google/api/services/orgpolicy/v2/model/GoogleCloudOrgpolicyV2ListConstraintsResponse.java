@@ -44,7 +44,7 @@ public final class GoogleCloudOrgpolicyV2ListConstraintsResponse extends com.goo
   }
 
   /**
-   * Page token used to retrieve the next page. This is currently not used.
+   * Page token used to retrieve the next page. This is not used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudOrgpolicyV2ListConstraintsResponse extends com.goo
   }
 
   /**
-   * Page token used to retrieve the next page. This is currently not used.
+   * Page token used to retrieve the next page. This is not used.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +76,7 @@ public final class GoogleCloudOrgpolicyV2ListConstraintsResponse extends com.goo
   }
 
   /**
-   * Page token used to retrieve the next page. This is currently not used.
+   * Page token used to retrieve the next page. This is not used.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ListConstraintsResponse setNextPageToken(java.lang.String nextPageToken) {

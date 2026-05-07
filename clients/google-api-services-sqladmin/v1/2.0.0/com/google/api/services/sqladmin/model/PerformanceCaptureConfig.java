@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Performance Capture configuration.
+ * Performance capture configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,52 +30,54 @@ package com.google.api.services.sqladmin.model;
 public final class PerformanceCaptureConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Enable or disable the Performance Capture feature.
+   * Optional. Enables or disables the performance capture feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Optional. The minimum number of consecutive readings above threshold that triggers instance
-   * state capture.
+   * Optional. Specifies the minimum number of consecutive probe threshold that triggers performance
+   * capture.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer probeThreshold;
 
   /**
-   * Optional. The time interval in seconds between any two probes.
+   * Optional. Specifies the interval in seconds between consecutive probes that check if any
+   * trigger condition thresholds have been reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer probingIntervalSeconds;
 
   /**
-   * Optional. The minimum number of server threads running to trigger the capture on primary.
+   * Optional. Specifies the minimum number of MySQL `Threads_running` to trigger the performance
+   * capture on the primary instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer runningThreadsThreshold;
 
   /**
-   * Optional. The minimum number of seconds replica must be lagging behind primary to trigger
-   * capture on replica.
+   * Optional. Specifies the minimum number of seconds replica must be lagging behind primary
+   * instance to trigger the performance capture on replica.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer secondsBehindSourceThreshold;
 
   /**
-   * Optional. The amount of time in seconds that a transaction needs to have been open before the
-   * watcher starts recording it.
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts recording it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer transactionDurationThreshold;
 
   /**
-   * Optional. Enable or disable the Performance Capture feature.
+   * Optional. Enables or disables the performance capture feature.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -83,7 +85,7 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Enable or disable the Performance Capture feature.
+   * Optional. Enables or disables the performance capture feature.
    * @param enabled enabled or {@code null} for none
    */
   public PerformanceCaptureConfig setEnabled(java.lang.Boolean enabled) {
@@ -92,8 +94,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of consecutive readings above threshold that triggers instance
-   * state capture.
+   * Optional. Specifies the minimum number of consecutive probe threshold that triggers performance
+   * capture.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProbeThreshold() {
@@ -101,8 +103,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of consecutive readings above threshold that triggers instance
-   * state capture.
+   * Optional. Specifies the minimum number of consecutive probe threshold that triggers performance
+   * capture.
    * @param probeThreshold probeThreshold or {@code null} for none
    */
   public PerformanceCaptureConfig setProbeThreshold(java.lang.Integer probeThreshold) {
@@ -111,7 +113,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The time interval in seconds between any two probes.
+   * Optional. Specifies the interval in seconds between consecutive probes that check if any
+   * trigger condition thresholds have been reached.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProbingIntervalSeconds() {
@@ -119,7 +122,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The time interval in seconds between any two probes.
+   * Optional. Specifies the interval in seconds between consecutive probes that check if any
+   * trigger condition thresholds have been reached.
    * @param probingIntervalSeconds probingIntervalSeconds or {@code null} for none
    */
   public PerformanceCaptureConfig setProbingIntervalSeconds(java.lang.Integer probingIntervalSeconds) {
@@ -128,7 +132,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of server threads running to trigger the capture on primary.
+   * Optional. Specifies the minimum number of MySQL `Threads_running` to trigger the performance
+   * capture on the primary instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRunningThreadsThreshold() {
@@ -136,7 +141,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of server threads running to trigger the capture on primary.
+   * Optional. Specifies the minimum number of MySQL `Threads_running` to trigger the performance
+   * capture on the primary instance.
    * @param runningThreadsThreshold runningThreadsThreshold or {@code null} for none
    */
   public PerformanceCaptureConfig setRunningThreadsThreshold(java.lang.Integer runningThreadsThreshold) {
@@ -145,8 +151,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of seconds replica must be lagging behind primary to trigger
-   * capture on replica.
+   * Optional. Specifies the minimum number of seconds replica must be lagging behind primary
+   * instance to trigger the performance capture on replica.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSecondsBehindSourceThreshold() {
@@ -154,8 +160,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The minimum number of seconds replica must be lagging behind primary to trigger
-   * capture on replica.
+   * Optional. Specifies the minimum number of seconds replica must be lagging behind primary
+   * instance to trigger the performance capture on replica.
    * @param secondsBehindSourceThreshold secondsBehindSourceThreshold or {@code null} for none
    */
   public PerformanceCaptureConfig setSecondsBehindSourceThreshold(java.lang.Integer secondsBehindSourceThreshold) {
@@ -164,8 +170,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The amount of time in seconds that a transaction needs to have been open before the
-   * watcher starts recording it.
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts recording it.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTransactionDurationThreshold() {
@@ -173,8 +179,8 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The amount of time in seconds that a transaction needs to have been open before the
-   * watcher starts recording it.
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts recording it.
    * @param transactionDurationThreshold transactionDurationThreshold or {@code null} for none
    */
   public PerformanceCaptureConfig setTransactionDurationThreshold(java.lang.Integer transactionDurationThreshold) {

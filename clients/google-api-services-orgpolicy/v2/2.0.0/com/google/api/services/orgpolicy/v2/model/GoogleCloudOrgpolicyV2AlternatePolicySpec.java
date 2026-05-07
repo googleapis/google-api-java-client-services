@@ -32,8 +32,8 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reference to the launch that will be used while audit logging and to control the launch. Should
-   * be set only in the alternate policy.
+   * Reference to the launch that will be used while audit logging and to control the launch. Set
+   * only in the alternate policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.
   private GoogleCloudOrgpolicyV2PolicySpec spec;
 
   /**
-   * Reference to the launch that will be used while audit logging and to control the launch. Should
-   * be set only in the alternate policy.
+   * Reference to the launch that will be used while audit logging and to control the launch. Set
+   * only in the alternate policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunch() {
@@ -56,8 +56,8 @@ public final class GoogleCloudOrgpolicyV2AlternatePolicySpec extends com.google.
   }
 
   /**
-   * Reference to the launch that will be used while audit logging and to control the launch. Should
-   * be set only in the alternate policy.
+   * Reference to the launch that will be used while audit logging and to control the launch. Set
+   * only in the alternate policy.
    * @param launch launch or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2AlternatePolicySpec setLaunch(java.lang.String launch) {

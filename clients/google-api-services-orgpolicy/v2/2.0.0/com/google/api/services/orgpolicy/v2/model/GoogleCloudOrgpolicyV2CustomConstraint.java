@@ -71,8 +71,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   private java.util.List<java.lang.String> methodTypes;
 
   /**
-   * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * Immutable. Name of the constraint. This is unique within the organization. The name must be of
+   * the form: * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
    * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
    * `organizations/{organization_id}/customConstraints/custom.` is not counted.
@@ -189,8 +189,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * Immutable. Name of the constraint. This is unique within the organization. The name must be of
+   * the form: * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
    * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
    * `organizations/{organization_id}/customConstraints/custom.` is not counted.
@@ -201,8 +201,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Immutable. Name of the constraint. This is unique within the organization. Format of the name
-   * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
+   * Immutable. Name of the constraint. This is unique within the organization. The name must be of
+   * the form: * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
    * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
    * `organizations/{organization_id}/customConstraints/custom.` is not counted.

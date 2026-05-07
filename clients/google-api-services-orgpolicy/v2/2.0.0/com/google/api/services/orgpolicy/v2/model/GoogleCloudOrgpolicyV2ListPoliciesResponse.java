@@ -32,8 +32,8 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Page token used to retrieve the next page. This is currently not used, but the server may at
-   * any point start supplying a valid token.
+   * Page token used to retrieve the next page. This is not used, but the server may at any point
+   * start supplying a valid token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google
   private java.util.List<GoogleCloudOrgpolicyV2Policy> policies;
 
   /**
-   * Page token used to retrieve the next page. This is currently not used, but the server may at
-   * any point start supplying a valid token.
+   * Page token used to retrieve the next page. This is not used, but the server may at any point
+   * start supplying a valid token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,8 +56,8 @@ public final class GoogleCloudOrgpolicyV2ListPoliciesResponse extends com.google
   }
 
   /**
-   * Page token used to retrieve the next page. This is currently not used, but the server may at
-   * any point start supplying a valid token.
+   * Page token used to retrieve the next page. This is not used, but the server may at any point
+   * start supplying a valid token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ListPoliciesResponse setNextPageToken(java.lang.String nextPageToken) {

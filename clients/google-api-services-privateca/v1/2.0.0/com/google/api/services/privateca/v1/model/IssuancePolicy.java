@@ -31,6 +31,18 @@ package com.google.api.services.privateca.v1.model;
 public final class IssuancePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set to true, allows requesters to specify the requested_not_before_time field when
+   * creating a Certificate. Certificates requested with this option enabled will have a
+   * 'not_before_time' equal to the value specified in the request. The 'not_after_time' will be
+   * adjusted to preserve the requested lifetime. The maximum time that a certificate can be
+   * backdated with these options is 48 hours in the past. This option cannot be set if
+   * backdate_duration is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowRequesterSpecifiedNotBeforeTime;
+
+  /**
    * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue
    * Certificates.
    * The value may be {@code null}.
@@ -104,6 +116,33 @@ public final class IssuancePolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private CertificateExtensionConstraints passthroughExtensions;
+
+  /**
+   * Optional. If set to true, allows requesters to specify the requested_not_before_time field when
+   * creating a Certificate. Certificates requested with this option enabled will have a
+   * 'not_before_time' equal to the value specified in the request. The 'not_after_time' will be
+   * adjusted to preserve the requested lifetime. The maximum time that a certificate can be
+   * backdated with these options is 48 hours in the past. This option cannot be set if
+   * backdate_duration is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowRequesterSpecifiedNotBeforeTime() {
+    return allowRequesterSpecifiedNotBeforeTime;
+  }
+
+  /**
+   * Optional. If set to true, allows requesters to specify the requested_not_before_time field when
+   * creating a Certificate. Certificates requested with this option enabled will have a
+   * 'not_before_time' equal to the value specified in the request. The 'not_after_time' will be
+   * adjusted to preserve the requested lifetime. The maximum time that a certificate can be
+   * backdated with these options is 48 hours in the past. This option cannot be set if
+   * backdate_duration is set.
+   * @param allowRequesterSpecifiedNotBeforeTime allowRequesterSpecifiedNotBeforeTime or {@code null} for none
+   */
+  public IssuancePolicy setAllowRequesterSpecifiedNotBeforeTime(java.lang.Boolean allowRequesterSpecifiedNotBeforeTime) {
+    this.allowRequesterSpecifiedNotBeforeTime = allowRequesterSpecifiedNotBeforeTime;
+    return this;
+  }
 
   /**
    * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue

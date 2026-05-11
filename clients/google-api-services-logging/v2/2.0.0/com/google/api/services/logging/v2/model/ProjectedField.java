@@ -21,7 +21,9 @@ package com.google.api.services.logging.v2.model;
  * specifies the source field and optionally applies transformations like aggregation, casting,
  * regex extraction, or assigns an alias. Use ProjectedField when you need more than just the raw
  * source field name (for which you might use FieldSource directly in QueryBuilderConfig's
- * field_sources list if no transformations or specific operation type are needed).
+ * field_sources list if no transformations or specific operation type are needed).A ProjectedField
+ * can represent either a field present in the data schema (specified via the field property) or a
+ * virtual field that is computed from other fields (specified via the virtual_field property).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -52,8 +54,8 @@ public final class ProjectedField extends com.google.api.client.json.GenericJson
   private java.lang.String cast;
 
   /**
-   * The field name. This will be the field that is selected using the dot notation to display the
-   * drill down value.
+   * Optional. The field name. This will be the field that is selected using the dot notation to
+   * display the drill down value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +142,8 @@ public final class ProjectedField extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The field name. This will be the field that is selected using the dot notation to display the
-   * drill down value.
+   * Optional. The field name. This will be the field that is selected using the dot notation to
+   * display the drill down value.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -149,8 +151,8 @@ public final class ProjectedField extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The field name. This will be the field that is selected using the dot notation to display the
-   * drill down value.
+   * Optional. The field name. This will be the field that is selected using the dot notation to
+   * display the drill down value.
    * @param field field or {@code null} for none
    */
   public ProjectedField setField(java.lang.String field) {

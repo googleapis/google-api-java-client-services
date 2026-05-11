@@ -31,7 +31,7 @@ package com.google.api.services.hypercomputecluster.v1.model;
 public final class BootDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Size of the disk in gigabytes. Must be at least 10GB.
+   * Required. Immutable. Size of the disk in gigabytes. Must be at least 40GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -46,7 +46,7 @@ public final class BootDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Required. Immutable. Size of the disk in gigabytes. Must be at least 10GB.
+   * Required. Immutable. Size of the disk in gigabytes. Must be at least 40GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -54,7 +54,7 @@ public final class BootDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. Size of the disk in gigabytes. Must be at least 10GB.
+   * Required. Immutable. Size of the disk in gigabytes. Must be at least 40GB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public BootDisk setSizeGb(java.lang.Long sizeGb) {

@@ -17,8 +17,9 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * A source that can be used to represent a field within various parts of a structured query, such
- * as in SELECT, WHERE, or ORDER BY clauses.
+ * A source that can be used to represent a "field of data" within various parts of a structured
+ * query, such as in SELECT, WHERE, or ORDER BY clauses. The term "field of data" is used here
+ * because it is not limited to literal fields in the underlying data schema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:

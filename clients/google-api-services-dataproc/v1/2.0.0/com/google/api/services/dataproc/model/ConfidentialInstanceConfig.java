@@ -31,14 +31,16 @@ package com.google.api.services.dataproc.model;
 public final class ConfidentialInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
+   * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines whether the instance
+   * should have confidential compute enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
 
   /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
+   * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines whether the instance
+   * should have confidential compute enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -46,7 +48,8 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
+   * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines whether the instance
+   * should have confidential compute enabled.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public ConfidentialInstanceConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {

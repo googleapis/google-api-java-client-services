@@ -77,7 +77,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
-   * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
+   * network of the project is used, if it exists. Cannot be a Custom Subnet Network (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default
@@ -286,7 +286,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
-   * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
+   * network of the project is used, if it exists. Cannot be a Custom Subnet Network (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default
@@ -300,7 +300,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   /**
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
-   * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
+   * network of the project is used, if it exists. Cannot be a Custom Subnet Network (see Using
    * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
    * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/networks/default

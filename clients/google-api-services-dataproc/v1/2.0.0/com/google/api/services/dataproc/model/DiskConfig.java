@@ -68,9 +68,9 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced"
-   * (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or
-   * "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types
+   * Optional. Type of the boot disk (default is pd-standard). Valid values: pd-balanced (Persistent
+   * Disk Balanced Solid State Drive), pd-ssd (Persistent Disk Solid State Drive), or pd-standard
+   * (Persistent Disk Hard Disk Drive). See Disk types
    * (https://cloud.google.com/compute/docs/disks#disk-types).
    * The value may be {@code null}.
    */
@@ -78,8 +78,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String bootDiskType;
 
   /**
-   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
-   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See local SSD performance
+   * Optional. Interface type of local SSDs (default is scsi). Valid values: scsi (Small Computer
+   * System Interface), nvme (Non-Volatile Memory Express). See local SSD performance
    * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
    * The value may be {@code null}.
    */
@@ -175,9 +175,9 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced"
-   * (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or
-   * "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types
+   * Optional. Type of the boot disk (default is pd-standard). Valid values: pd-balanced (Persistent
+   * Disk Balanced Solid State Drive), pd-ssd (Persistent Disk Solid State Drive), or pd-standard
+   * (Persistent Disk Hard Disk Drive). See Disk types
    * (https://cloud.google.com/compute/docs/disks#disk-types).
    * @return value or {@code null} for none
    */
@@ -186,9 +186,9 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Type of the boot disk (default is "pd-standard"). Valid values: "pd-balanced"
-   * (Persistent Disk Balanced Solid State Drive), "pd-ssd" (Persistent Disk Solid State Drive), or
-   * "pd-standard" (Persistent Disk Hard Disk Drive). See Disk types
+   * Optional. Type of the boot disk (default is pd-standard). Valid values: pd-balanced (Persistent
+   * Disk Balanced Solid State Drive), pd-ssd (Persistent Disk Solid State Drive), or pd-standard
+   * (Persistent Disk Hard Disk Drive). See Disk types
    * (https://cloud.google.com/compute/docs/disks#disk-types).
    * @param bootDiskType bootDiskType or {@code null} for none
    */
@@ -198,8 +198,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
-   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See local SSD performance
+   * Optional. Interface type of local SSDs (default is scsi). Valid values: scsi (Small Computer
+   * System Interface), nvme (Non-Volatile Memory Express). See local SSD performance
    * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
    * @return value or {@code null} for none
    */
@@ -208,8 +208,8 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small
-   * Computer System Interface), "nvme" (Non-Volatile Memory Express). See local SSD performance
+   * Optional. Interface type of local SSDs (default is scsi). Valid values: scsi (Small Computer
+   * System Interface), nvme (Non-Volatile Memory Express). See local SSD performance
    * (https://cloud.google.com/compute/docs/disks/local-ssd#performance).
    * @param localSsdInterface localSsdInterface or {@code null} for none
    */

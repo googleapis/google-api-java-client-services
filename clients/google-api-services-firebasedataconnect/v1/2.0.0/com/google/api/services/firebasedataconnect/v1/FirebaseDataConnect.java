@@ -2021,6 +2021,296 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
         }
         /**
+         * Generates a GraphQL query based on a natural language prompt and the provided schema context.
+         * This is a stateless method; the schema is provided per request to support local development
+         * states. Streams results with real-time status and output chunks.
+         *
+         * Create a request for the method "services.generateQuery".
+         *
+         * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+         * optional parameters, call the {@link GenerateQuery#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the service in which to generate the query. Format:
+         *        projects/{project}/locations/{location}/services/{service}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GenerateQueryRequest}
+         * @return the request
+         */
+        public GenerateQuery generateQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GenerateQueryRequest content) throws java.io.IOException {
+          GenerateQuery result = new GenerateQuery(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateQuery extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GenerateQueryResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateQuery";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Generates a GraphQL query based on a natural language prompt and the provided schema context.
+           * This is a stateless method; the schema is provided per request to support local development
+           * states. Streams results with real-time status and output chunks.
+           *
+           * Create a request for the method "services.generateQuery".
+           *
+           * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+           * any optional parameters, call the {@link GenerateQuery#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateQuery#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The resource name of the service in which to generate the query. Format:
+         *        projects/{project}/locations/{location}/services/{service}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GenerateQueryRequest}
+           * @since 1.13
+           */
+          protected GenerateQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GenerateQueryRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GenerateQueryResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateQuery setAccessToken(java.lang.String accessToken) {
+            return (GenerateQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateQuery setAlt(java.lang.String alt) {
+            return (GenerateQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateQuery setCallback(java.lang.String callback) {
+            return (GenerateQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateQuery setFields(java.lang.String fields) {
+            return (GenerateQuery) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateQuery setKey(java.lang.String key) {
+            return (GenerateQuery) super.setKey(key);
+          }
+
+          @Override
+          public GenerateQuery setOauthToken(java.lang.String oauthToken) {
+            return (GenerateQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateQuery setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateQuery setUploadType(java.lang.String uploadType) {
+            return (GenerateQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the service in which to generate the query. Format:
+           * projects/{project}/locations/{location}/services/{service}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the service in which to generate the query. Format:
+         projects/{project}/locations/{location}/services/{service}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the service in which to generate the query. Format:
+           * projects/{project}/locations/{location}/services/{service}
+           */
+          public GenerateQuery setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateQuery set(String parameterName, Object value) {
+            return (GenerateQuery) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generates GraphQL schema based on a natural language prompt or data description. This allows
+         * users to scaffold new types and tables quickly. Streams results with real-time status and output
+         * chunks.
+         *
+         * Create a request for the method "services.generateSchema".
+         *
+         * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+         * optional parameters, call the {@link GenerateSchema#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the service in which to generate the schema. Format:
+         *        projects/{project}/locations/{location}/services/{service}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaRequest}
+         * @return the request
+         */
+        public GenerateSchema generateSchema(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaRequest content) throws java.io.IOException {
+          GenerateSchema result = new GenerateSchema(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateSchema extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateSchema";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+          /**
+           * Generates GraphQL schema based on a natural language prompt or data description. This allows
+           * users to scaffold new types and tables quickly. Streams results with real-time status and
+           * output chunks.
+           *
+           * Create a request for the method "services.generateSchema".
+           *
+           * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+           * any optional parameters, call the {@link GenerateSchema#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateSchema#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The resource name of the service in which to generate the schema. Format:
+         *        projects/{project}/locations/{location}/services/{service}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaRequest}
+           * @since 1.13
+           */
+          protected GenerateSchema(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GenerateSchemaResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateSchema set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateSchema) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateSchema setAccessToken(java.lang.String accessToken) {
+            return (GenerateSchema) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateSchema setAlt(java.lang.String alt) {
+            return (GenerateSchema) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateSchema setCallback(java.lang.String callback) {
+            return (GenerateSchema) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateSchema setFields(java.lang.String fields) {
+            return (GenerateSchema) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateSchema setKey(java.lang.String key) {
+            return (GenerateSchema) super.setKey(key);
+          }
+
+          @Override
+          public GenerateSchema setOauthToken(java.lang.String oauthToken) {
+            return (GenerateSchema) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateSchema) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateSchema setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateSchema) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateSchema setUploadType(java.lang.String uploadType) {
+            return (GenerateSchema) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateSchema setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateSchema) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the service in which to generate the schema. Format:
+           * projects/{project}/locations/{location}/services/{service}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the service in which to generate the schema. Format:
+         projects/{project}/locations/{location}/services/{service}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the service in which to generate the schema. Format:
+           * projects/{project}/locations/{location}/services/{service}
+           */
+          public GenerateSchema setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateSchema set(String parameterName, Object value) {
+            return (GenerateSchema) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single Service.
          *
          * Create a request for the method "services.get".

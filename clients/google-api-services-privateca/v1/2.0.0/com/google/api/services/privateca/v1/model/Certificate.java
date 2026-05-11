@@ -117,6 +117,17 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private java.lang.String pemCsr;
 
   /**
+   * Optional. The requested not_before_time of this Certificate. This field may only be set if the
+   * CaPool.IssuancePolicy.allow_requester_specified_not_before_time field is set to true for the
+   * issuing CaPool. If this field is specified, the certificate will be issued with this
+   * 'not_before_time'. If this is not specified, the 'not_before_time' will be set to the issuance
+   * time or issuance time minus backdate_duration depending on the CaPool configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String requestedNotBeforeTime;
+
+  /**
    * Output only. Details regarding the revocation of this Certificate. This Certificate is
    * considered revoked if and only if this field is present.
    * The value may be {@code null}.
@@ -341,6 +352,31 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
    */
   public Certificate setPemCsr(java.lang.String pemCsr) {
     this.pemCsr = pemCsr;
+    return this;
+  }
+
+  /**
+   * Optional. The requested not_before_time of this Certificate. This field may only be set if the
+   * CaPool.IssuancePolicy.allow_requester_specified_not_before_time field is set to true for the
+   * issuing CaPool. If this field is specified, the certificate will be issued with this
+   * 'not_before_time'. If this is not specified, the 'not_before_time' will be set to the issuance
+   * time or issuance time minus backdate_duration depending on the CaPool configuration.
+   * @return value or {@code null} for none
+   */
+  public String getRequestedNotBeforeTime() {
+    return requestedNotBeforeTime;
+  }
+
+  /**
+   * Optional. The requested not_before_time of this Certificate. This field may only be set if the
+   * CaPool.IssuancePolicy.allow_requester_specified_not_before_time field is set to true for the
+   * issuing CaPool. If this field is specified, the certificate will be issued with this
+   * 'not_before_time'. If this is not specified, the 'not_before_time' will be set to the issuance
+   * time or issuance time minus backdate_duration depending on the CaPool configuration.
+   * @param requestedNotBeforeTime requestedNotBeforeTime or {@code null} for none
+   */
+  public Certificate setRequestedNotBeforeTime(String requestedNotBeforeTime) {
+    this.requestedNotBeforeTime = requestedNotBeforeTime;
     return this;
   }
 

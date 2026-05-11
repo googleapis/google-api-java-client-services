@@ -31,6 +31,13 @@ package com.google.api.services.dfareporting.model;
 public final class DependentFieldValue extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The ID of the dynamic feed that value's field will match against.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dynamicFeedId;
+
+  /**
    * Optional. The ID of the element that value's field will match against.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class DependentFieldValue extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.Integer fieldId;
+
+  /**
+   * Optional. The ID of the dynamic feed that value's field will match against.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDynamicFeedId() {
+    return dynamicFeedId;
+  }
+
+  /**
+   * Optional. The ID of the dynamic feed that value's field will match against.
+   * @param dynamicFeedId dynamicFeedId or {@code null} for none
+   */
+  public DependentFieldValue setDynamicFeedId(java.lang.Long dynamicFeedId) {
+    this.dynamicFeedId = dynamicFeedId;
+    return this;
+  }
 
   /**
    * Optional. The ID of the element that value's field will match against.

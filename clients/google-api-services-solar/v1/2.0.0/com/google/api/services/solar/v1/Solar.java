@@ -257,6 +257,22 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
         return (FindClosest) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional. A list of additional_insights to be included in the response. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> additionalInsights;
+
+      /** Optional. A list of additional_insights to be included in the response.
+       */
+      public java.util.List<java.lang.String> getAdditionalInsights() {
+        return additionalInsights;
+      }
+
+      /** Optional. A list of additional_insights to be included in the response. */
+      public FindClosest setAdditionalInsights(java.util.List<java.lang.String> additionalInsights) {
+        this.additionalInsights = additionalInsights;
+        return this;
+      }
+
       /**
        * Optional. Whether to require exact quality of the imagery. If set to false, the
        * `required_quality` field is interpreted as the minimum required quality, such that HIGH

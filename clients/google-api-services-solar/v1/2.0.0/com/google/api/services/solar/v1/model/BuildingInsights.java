@@ -53,6 +53,14 @@ public final class BuildingInsights extends com.google.api.client.json.GenericJs
   private LatLng center;
 
   /**
+   * Solar arrays detected on the building. This field is only populated if DETECTED_ARRAYS is
+   * included in the request's FindClosestBuildingInsightsRequest.additional_insights.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuildingInsightsDetectedArrays detectedArrays;
+
+  /**
    * Date that the underlying imagery was acquired. This is approximate.
    * The value may be {@code null}.
    */
@@ -158,6 +166,25 @@ public final class BuildingInsights extends com.google.api.client.json.GenericJs
    */
   public BuildingInsights setCenter(LatLng center) {
     this.center = center;
+    return this;
+  }
+
+  /**
+   * Solar arrays detected on the building. This field is only populated if DETECTED_ARRAYS is
+   * included in the request's FindClosestBuildingInsightsRequest.additional_insights.
+   * @return value or {@code null} for none
+   */
+  public BuildingInsightsDetectedArrays getDetectedArrays() {
+    return detectedArrays;
+  }
+
+  /**
+   * Solar arrays detected on the building. This field is only populated if DETECTED_ARRAYS is
+   * included in the request's FindClosestBuildingInsightsRequest.additional_insights.
+   * @param detectedArrays detectedArrays or {@code null} for none
+   */
+  public BuildingInsights setDetectedArrays(BuildingInsightsDetectedArrays detectedArrays) {
+    this.detectedArrays = detectedArrays;
     return this;
   }
 

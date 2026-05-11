@@ -38,6 +38,13 @@ public final class AISkillAnalysisOccurrence extends com.google.api.client.json.
   private java.util.List<Finding> findings;
 
   /**
+   * Maximum severity found among findings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maxSeverity;
+
+  /**
    * Name of the skill that produced this analysis.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class AISkillAnalysisOccurrence extends com.google.api.client.json.
    */
   public AISkillAnalysisOccurrence setFindings(java.util.List<Finding> findings) {
     this.findings = findings;
+    return this;
+  }
+
+  /**
+   * Maximum severity found among findings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaxSeverity() {
+    return maxSeverity;
+  }
+
+  /**
+   * Maximum severity found among findings.
+   * @param maxSeverity maxSeverity or {@code null} for none
+   */
+  public AISkillAnalysisOccurrence setMaxSeverity(java.lang.String maxSeverity) {
+    this.maxSeverity = maxSeverity;
     return this;
   }
 

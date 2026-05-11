@@ -38,25 +38,18 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
-   * Detailed description of the finding.
+   * Location (path and line) where the finding was detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String description;
+  private FindingLocation location;
 
   /**
-   * Path to the file where the finding was detected.
+   * Scanner determines which engine (e.g. static, llm) emitted the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String filePath;
-
-  /**
-   * Unique identifier of the rule that produced this finding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String ruleId;
+  private java.lang.String scanner;
 
   /**
    * Severity of the finding.
@@ -64,20 +57,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
-
-  /**
-   * Code snippet relevant to the finding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String snippet;
-
-  /**
-   * Title of the finding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String title;
 
   /**
    * Category of the finding.
@@ -97,53 +76,36 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Detailed description of the finding.
+   * Location (path and line) where the finding was detected.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDescription() {
-    return description;
+  public FindingLocation getLocation() {
+    return location;
   }
 
   /**
-   * Detailed description of the finding.
-   * @param description description or {@code null} for none
+   * Location (path and line) where the finding was detected.
+   * @param location location or {@code null} for none
    */
-  public Finding setDescription(java.lang.String description) {
-    this.description = description;
+  public Finding setLocation(FindingLocation location) {
+    this.location = location;
     return this;
   }
 
   /**
-   * Path to the file where the finding was detected.
+   * Scanner determines which engine (e.g. static, llm) emitted the finding.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFilePath() {
-    return filePath;
+  public java.lang.String getScanner() {
+    return scanner;
   }
 
   /**
-   * Path to the file where the finding was detected.
-   * @param filePath filePath or {@code null} for none
+   * Scanner determines which engine (e.g. static, llm) emitted the finding.
+   * @param scanner scanner or {@code null} for none
    */
-  public Finding setFilePath(java.lang.String filePath) {
-    this.filePath = filePath;
-    return this;
-  }
-
-  /**
-   * Unique identifier of the rule that produced this finding.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRuleId() {
-    return ruleId;
-  }
-
-  /**
-   * Unique identifier of the rule that produced this finding.
-   * @param ruleId ruleId or {@code null} for none
-   */
-  public Finding setRuleId(java.lang.String ruleId) {
-    this.ruleId = ruleId;
+  public Finding setScanner(java.lang.String scanner) {
+    this.scanner = scanner;
     return this;
   }
 
@@ -161,40 +123,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setSeverity(java.lang.String severity) {
     this.severity = severity;
-    return this;
-  }
-
-  /**
-   * Code snippet relevant to the finding.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSnippet() {
-    return snippet;
-  }
-
-  /**
-   * Code snippet relevant to the finding.
-   * @param snippet snippet or {@code null} for none
-   */
-  public Finding setSnippet(java.lang.String snippet) {
-    this.snippet = snippet;
-    return this;
-  }
-
-  /**
-   * Title of the finding.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTitle() {
-    return title;
-  }
-
-  /**
-   * Title of the finding.
-   * @param title title or {@code null} for none
-   */
-  public Finding setTitle(java.lang.String title) {
-    this.title = title;
     return this;
   }
 

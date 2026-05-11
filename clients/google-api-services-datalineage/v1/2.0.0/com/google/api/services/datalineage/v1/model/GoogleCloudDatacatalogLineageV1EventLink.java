@@ -30,6 +30,13 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageV1EventLink extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Describes how the target depends on the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogLineageV1DependencyInfo dependencyInfo;
+
+  /**
    * Required. Reference to the source entity
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDatacatalogLineageV1EventLink extends com.google.a
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogLineageV1EntityReference target;
+
+  /**
+   * Optional. Describes how the target depends on the source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1DependencyInfo getDependencyInfo() {
+    return dependencyInfo;
+  }
+
+  /**
+   * Optional. Describes how the target depends on the source.
+   * @param dependencyInfo dependencyInfo or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1EventLink setDependencyInfo(GoogleCloudDatacatalogLineageV1DependencyInfo dependencyInfo) {
+    this.dependencyInfo = dependencyInfo;
+    return this;
+  }
 
   /**
    * Required. Reference to the source entity

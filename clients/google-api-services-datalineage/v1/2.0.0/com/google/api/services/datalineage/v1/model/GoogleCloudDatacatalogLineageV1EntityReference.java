@@ -30,12 +30,48 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageV1EntityReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Field path within the entity. Each nesting level should be a separate value in the
+   * repeated field. The order matters. Must be empty for asset level lineage For example to address
+   * "salary.net" subfield where "salary" is a column and "net" is a proto field two values in the
+   * `field` should be reported, the first is "salary" and the second is "net". Each field length is
+   * limited to 500 characters. Maximum supported nesting level is 20.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> field;
+
+  /**
    * Required. [Fully Qualified Name (FQN)](https://cloud.google.com/dataplex/docs/fully-qualified-
    * names) of the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullyQualifiedName;
+
+  /**
+   * Optional. Field path within the entity. Each nesting level should be a separate value in the
+   * repeated field. The order matters. Must be empty for asset level lineage For example to address
+   * "salary.net" subfield where "salary" is a column and "net" is a proto field two values in the
+   * `field` should be reported, the first is "salary" and the second is "net". Each field length is
+   * limited to 500 characters. Maximum supported nesting level is 20.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getField() {
+    return field;
+  }
+
+  /**
+   * Optional. Field path within the entity. Each nesting level should be a separate value in the
+   * repeated field. The order matters. Must be empty for asset level lineage For example to address
+   * "salary.net" subfield where "salary" is a column and "net" is a proto field two values in the
+   * `field` should be reported, the first is "salary" and the second is "net". Each field length is
+   * limited to 500 characters. Maximum supported nesting level is 20.
+   * @param field field or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1EntityReference setField(java.util.List<java.lang.String> field) {
+    this.field = field;
+    return this;
+  }
 
   /**
    * Required. [Fully Qualified Name (FQN)](https://cloud.google.com/dataplex/docs/fully-qualified-

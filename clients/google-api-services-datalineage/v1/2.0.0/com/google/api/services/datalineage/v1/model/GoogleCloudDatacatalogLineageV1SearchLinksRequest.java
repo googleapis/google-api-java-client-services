@@ -56,12 +56,32 @@ public final class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends com
   private GoogleCloudDatacatalogLineageV1EntityReference source;
 
   /**
+   * Optional. Send a list of asset information in the **sources** field to retrieve all links that
+   * lead from the specified assets to downstream assets. This field is similar to the `source`
+   * source field but allows providing multiple entities. All entities within the
+   * `MultipleEntityReference` must have the same `fully_qualified_name`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogLineageV1MultipleEntityReference sources;
+
+  /**
    * Optional. Send asset information in the **target** field to retrieve all links that lead from
    * upstream assets to the specified asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogLineageV1EntityReference target;
+
+  /**
+   * Optional. Send a list of asset information in the **targets** field to retrieve all links that
+   * lead from upstream assets to the specified assets. This field is similar to the `target` target
+   * field but allows providing multiple entities. All entities within the `MultipleEntityReference`
+   * must have the same `fully_qualified_name`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogLineageV1MultipleEntityReference targets;
 
   /**
    * Optional. The maximum number of links to return in a single page of the response. A page may
@@ -125,6 +145,29 @@ public final class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends com
   }
 
   /**
+   * Optional. Send a list of asset information in the **sources** field to retrieve all links that
+   * lead from the specified assets to downstream assets. This field is similar to the `source`
+   * source field but allows providing multiple entities. All entities within the
+   * `MultipleEntityReference` must have the same `fully_qualified_name`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1MultipleEntityReference getSources() {
+    return sources;
+  }
+
+  /**
+   * Optional. Send a list of asset information in the **sources** field to retrieve all links that
+   * lead from the specified assets to downstream assets. This field is similar to the `source`
+   * source field but allows providing multiple entities. All entities within the
+   * `MultipleEntityReference` must have the same `fully_qualified_name`.
+   * @param sources sources or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1SearchLinksRequest setSources(GoogleCloudDatacatalogLineageV1MultipleEntityReference sources) {
+    this.sources = sources;
+    return this;
+  }
+
+  /**
    * Optional. Send asset information in the **target** field to retrieve all links that lead from
    * upstream assets to the specified asset.
    * @return value or {@code null} for none
@@ -140,6 +183,29 @@ public final class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends com
    */
   public GoogleCloudDatacatalogLineageV1SearchLinksRequest setTarget(GoogleCloudDatacatalogLineageV1EntityReference target) {
     this.target = target;
+    return this;
+  }
+
+  /**
+   * Optional. Send a list of asset information in the **targets** field to retrieve all links that
+   * lead from upstream assets to the specified assets. This field is similar to the `target` target
+   * field but allows providing multiple entities. All entities within the `MultipleEntityReference`
+   * must have the same `fully_qualified_name`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1MultipleEntityReference getTargets() {
+    return targets;
+  }
+
+  /**
+   * Optional. Send a list of asset information in the **targets** field to retrieve all links that
+   * lead from upstream assets to the specified assets. This field is similar to the `target` target
+   * field but allows providing multiple entities. All entities within the `MultipleEntityReference`
+   * must have the same `fully_qualified_name`.
+   * @param targets targets or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1SearchLinksRequest setTargets(GoogleCloudDatacatalogLineageV1MultipleEntityReference targets) {
+    this.targets = targets;
     return this;
   }
 

@@ -39,8 +39,8 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   private java.util.List<java.lang.String> links;
 
   /**
-   * The maximum number of processes to return in a single page of the response. A page may contain
-   * fewer results than this value.
+   * Optional. The maximum number of processes to return in a single page of the response. A page
+   * may contain fewer results than this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +77,8 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   }
 
   /**
-   * The maximum number of processes to return in a single page of the response. A page may contain
-   * fewer results than this value.
+   * Optional. The maximum number of processes to return in a single page of the response. A page
+   * may contain fewer results than this value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -86,8 +86,8 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   }
 
   /**
-   * The maximum number of processes to return in a single page of the response. A page may contain
-   * fewer results than this value.
+   * Optional. The maximum number of processes to return in a single page of the response. A page
+   * may contain fewer results than this value.
    * @param pageSize pageSize or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest setPageSize(java.lang.Integer pageSize) {

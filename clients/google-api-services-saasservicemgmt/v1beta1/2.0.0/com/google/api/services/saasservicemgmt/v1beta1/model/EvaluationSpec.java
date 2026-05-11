@@ -52,11 +52,25 @@ public final class EvaluationSpec extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> attributes;
 
   /**
-   * Required. Default variant or allocation of the flag.
+   * Optional. The ID of an allocation to use as the default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultAllocation;
+
+  /**
+   * Optional. Deprecated: Use `base_target` instead. Default variant or allocation of the flag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultTarget;
+
+  /**
+   * Optional. The name of a variant to use as the default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultVariant;
 
   /**
    * Optional. Evaluation rules define the logic for evaluating the flag against a given context.
@@ -116,7 +130,24 @@ public final class EvaluationSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Default variant or allocation of the flag.
+   * Optional. The ID of an allocation to use as the default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultAllocation() {
+    return defaultAllocation;
+  }
+
+  /**
+   * Optional. The ID of an allocation to use as the default.
+   * @param defaultAllocation defaultAllocation or {@code null} for none
+   */
+  public EvaluationSpec setDefaultAllocation(java.lang.String defaultAllocation) {
+    this.defaultAllocation = defaultAllocation;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: Use `base_target` instead. Default variant or allocation of the flag.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultTarget() {
@@ -124,11 +155,28 @@ public final class EvaluationSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Default variant or allocation of the flag.
+   * Optional. Deprecated: Use `base_target` instead. Default variant or allocation of the flag.
    * @param defaultTarget defaultTarget or {@code null} for none
    */
   public EvaluationSpec setDefaultTarget(java.lang.String defaultTarget) {
     this.defaultTarget = defaultTarget;
+    return this;
+  }
+
+  /**
+   * Optional. The name of a variant to use as the default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultVariant() {
+    return defaultVariant;
+  }
+
+  /**
+   * Optional. The name of a variant to use as the default.
+   * @param defaultVariant defaultVariant or {@code null} for none
+   */
+  public EvaluationSpec setDefaultVariant(java.lang.String defaultVariant) {
+    this.defaultVariant = defaultVariant;
     return this;
   }
 

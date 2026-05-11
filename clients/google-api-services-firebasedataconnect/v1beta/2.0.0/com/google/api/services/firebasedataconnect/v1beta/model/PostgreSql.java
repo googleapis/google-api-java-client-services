@@ -66,14 +66,16 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   private java.lang.String schema;
 
   /**
-   * Optional. Configure how to perform Postgresql schema migration.
+   * Optional. Configure how to perform automatic PostgreSQL schema migration before deploying the
+   * FDC schema. This is an additive-only operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schemaMigration;
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform.
+   * Optional. Configure how much PostgreSQL schema validation to perform against the live database
+   * before deploying the FDC schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +172,8 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how to perform Postgresql schema migration.
+   * Optional. Configure how to perform automatic PostgreSQL schema migration before deploying the
+   * FDC schema. This is an additive-only operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaMigration() {
@@ -178,7 +181,8 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how to perform Postgresql schema migration.
+   * Optional. Configure how to perform automatic PostgreSQL schema migration before deploying the
+   * FDC schema. This is an additive-only operation.
    * @param schemaMigration schemaMigration or {@code null} for none
    */
   public PostgreSql setSchemaMigration(java.lang.String schemaMigration) {
@@ -187,7 +191,8 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform.
+   * Optional. Configure how much PostgreSQL schema validation to perform against the live database
+   * before deploying the FDC schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaValidation() {
@@ -195,7 +200,8 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configure how much Postgresql schema validation to perform.
+   * Optional. Configure how much PostgreSQL schema validation to perform against the live database
+   * before deploying the FDC schema.
    * @param schemaValidation schemaValidation or {@code null} for none
    */
   public PostgreSql setSchemaValidation(java.lang.String schemaValidation) {

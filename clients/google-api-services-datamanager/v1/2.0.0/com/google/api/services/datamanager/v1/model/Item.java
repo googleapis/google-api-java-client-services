@@ -39,11 +39,52 @@ public final class Item extends com.google.api.client.json.GenericJson {
   private java.util.List<ItemParameter> additionalItemParameters;
 
   /**
+   * Optional. The conversion value associated with this item within the event, for cases where the
+   * conversion value is different for each item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversionValue;
+
+  /**
+   * Optional. Additional key/value pair information to send to the conversion containers
+   * (conversion action or Floodlight activity), when tracking per-item conversions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ItemCustomVariable> customVariables;
+
+  /**
    * Optional. A unique identifier to reference the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
+
+  /**
+   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
+   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
+   * will override the value set at the cart level. This field is ignored for other events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String merchantFeedLabel;
+
+  /**
+   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
+   * items are uploaded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String merchantFeedLanguageCode;
+
+  /**
+   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
+   * override the value set at the cart level. This field is ignored for other events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String merchantId;
 
   /**
    * Optional. The product ID within the Merchant Center account.
@@ -88,6 +129,44 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The conversion value associated with this item within the event, for cases where the
+   * conversion value is different for each item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversionValue() {
+    return conversionValue;
+  }
+
+  /**
+   * Optional. The conversion value associated with this item within the event, for cases where the
+   * conversion value is different for each item.
+   * @param conversionValue conversionValue or {@code null} for none
+   */
+  public Item setConversionValue(java.lang.Double conversionValue) {
+    this.conversionValue = conversionValue;
+    return this;
+  }
+
+  /**
+   * Optional. Additional key/value pair information to send to the conversion containers
+   * (conversion action or Floodlight activity), when tracking per-item conversions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ItemCustomVariable> getCustomVariables() {
+    return customVariables;
+  }
+
+  /**
+   * Optional. Additional key/value pair information to send to the conversion containers
+   * (conversion action or Floodlight activity), when tracking per-item conversions.
+   * @param customVariables customVariables or {@code null} for none
+   */
+  public Item setCustomVariables(java.util.List<ItemCustomVariable> customVariables) {
+    this.customVariables = customVariables;
+    return this;
+  }
+
+  /**
    * Optional. A unique identifier to reference the item.
    * @return value or {@code null} for none
    */
@@ -101,6 +180,65 @@ public final class Item extends com.google.api.client.json.GenericJson {
    */
   public Item setItemId(java.lang.String itemId) {
     this.itemId = itemId;
+    return this;
+  }
+
+  /**
+   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
+   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
+   * will override the value set at the cart level. This field is ignored for other events.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMerchantFeedLabel() {
+    return merchantFeedLabel;
+  }
+
+  /**
+   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
+   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
+   * will override the value set at the cart level. This field is ignored for other events.
+   * @param merchantFeedLabel merchantFeedLabel or {@code null} for none
+   */
+  public Item setMerchantFeedLabel(java.lang.String merchantFeedLabel) {
+    this.merchantFeedLabel = merchantFeedLabel;
+    return this;
+  }
+
+  /**
+   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
+   * items are uploaded.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMerchantFeedLanguageCode() {
+    return merchantFeedLanguageCode;
+  }
+
+  /**
+   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
+   * items are uploaded.
+   * @param merchantFeedLanguageCode merchantFeedLanguageCode or {@code null} for none
+   */
+  public Item setMerchantFeedLanguageCode(java.lang.String merchantFeedLanguageCode) {
+    this.merchantFeedLanguageCode = merchantFeedLanguageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
+   * override the value set at the cart level. This field is ignored for other events.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMerchantId() {
+    return merchantId;
+  }
+
+  /**
+   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
+   * override the value set at the cart level. This field is ignored for other events.
+   * @param merchantId merchantId or {@code null} for none
+   */
+  public Item setMerchantId(java.lang.String merchantId) {
+    this.merchantId = merchantId;
     return this;
   }
 

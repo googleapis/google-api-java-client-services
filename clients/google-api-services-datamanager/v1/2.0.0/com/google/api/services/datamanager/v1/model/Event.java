@@ -47,6 +47,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.util.List<EventParameter> additionalEventParameters;
 
   /**
+   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appInstanceId;
+
+  /**
    * Optional. Information about the transaction and items associated with the event.
    * The value may be {@code null}.
    */
@@ -112,6 +119,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private DeviceInfo eventDeviceInfo;
 
   /**
+   * Optional. Information gathered about the location of the user when this event occurred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventLocation eventLocation;
+
+  /**
    * Optional. The name of the event. Required for GA4 events.
    * The value may be {@code null}.
    */
@@ -148,8 +162,16 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private String lastUpdatedTimestamp;
 
   /**
-   * Optional. The unique identifier for this event. Required for conversions using multiple data
-   * sources.
+   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
+   * as owned by a third-party and not first-party advertiser data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserData thirdPartyUserData;
+
+  /**
+   * Optional. The unique identifier for this event. Required for events sent as an additional data
+   * source for tag conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,6 +235,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setAdditionalEventParameters(java.util.List<EventParameter> additionalEventParameters) {
     this.additionalEventParameters = additionalEventParameters;
+    return this;
+  }
+
+  /**
+   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppInstanceId() {
+    return appInstanceId;
+  }
+
+  /**
+   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
+   * @param appInstanceId appInstanceId or {@code null} for none
+   */
+  public Event setAppInstanceId(java.lang.String appInstanceId) {
+    this.appInstanceId = appInstanceId;
     return this;
   }
 
@@ -359,6 +398,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Information gathered about the location of the user when this event occurred.
+   * @return value or {@code null} for none
+   */
+  public EventLocation getEventLocation() {
+    return eventLocation;
+  }
+
+  /**
+   * Optional. Information gathered about the location of the user when this event occurred.
+   * @param eventLocation eventLocation or {@code null} for none
+   */
+  public Event setEventLocation(EventLocation eventLocation) {
+    this.eventLocation = eventLocation;
+    return this;
+  }
+
+  /**
    * Optional. The name of the event. Required for GA4 events.
    * @return value or {@code null} for none
    */
@@ -446,8 +502,27 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unique identifier for this event. Required for conversions using multiple data
-   * sources.
+   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
+   * as owned by a third-party and not first-party advertiser data.
+   * @return value or {@code null} for none
+   */
+  public UserData getThirdPartyUserData() {
+    return thirdPartyUserData;
+  }
+
+  /**
+   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
+   * as owned by a third-party and not first-party advertiser data.
+   * @param thirdPartyUserData thirdPartyUserData or {@code null} for none
+   */
+  public Event setThirdPartyUserData(UserData thirdPartyUserData) {
+    this.thirdPartyUserData = thirdPartyUserData;
+    return this;
+  }
+
+  /**
+   * Optional. The unique identifier for this event. Required for events sent as an additional data
+   * source for tag conversions.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionId() {
@@ -455,8 +530,8 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unique identifier for this event. Required for conversions using multiple data
-   * sources.
+   * Optional. The unique identifier for this event. Required for events sent as an additional data
+   * source for tag conversions.
    * @param transactionId transactionId or {@code null} for none
    */
   public Event setTransactionId(java.lang.String transactionId) {

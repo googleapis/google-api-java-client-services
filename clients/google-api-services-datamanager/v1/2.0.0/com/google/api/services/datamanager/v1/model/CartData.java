@@ -30,6 +30,15 @@ package com.google.api.services.datamanager.v1.model;
 public final class CartData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
+   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
+   * a single coupon code. Google Analytics ignores additional coupon codes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> couponCodes;
+
+  /**
    * Optional. The list of items associated with the event.
    * The value may be {@code null}.
    */
@@ -64,6 +73,27 @@ public final class CartData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Double transactionDiscount;
+
+  /**
+   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
+   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
+   * a single coupon code. Google Analytics ignores additional coupon codes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCouponCodes() {
+    return couponCodes;
+  }
+
+  /**
+   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
+   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
+   * a single coupon code. Google Analytics ignores additional coupon codes.
+   * @param couponCodes couponCodes or {@code null} for none
+   */
+  public CartData setCouponCodes(java.util.List<java.lang.String> couponCodes) {
+    this.couponCodes = couponCodes;
+    return this;
+  }
 
   /**
    * Optional. The list of items associated with the event.

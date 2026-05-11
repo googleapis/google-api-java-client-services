@@ -30,6 +30,34 @@ package com.google.api.services.datamanager.v1.model;
 public final class DeviceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The brand of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String brand;
+
+  /**
+   * Optional. The brand or type of the browser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String browser;
+
+  /**
+   * Optional. The version of the browser.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String browserVersion;
+
+  /**
+   * Optional. The category of device. For example, “desktop”, “tablet”, “mobile”, “smart TV”.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String category;
+
+  /**
    * Optional. The IP address of the device for the given context. **Note:** Google Ads does not
    * support IP address matching for end users in the European Economic Area (EEA), United Kingdom
    * (UK), or Switzerland (CH). Add logic to conditionally exclude sharing IP addresses from users
@@ -43,11 +71,121 @@ public final class DeviceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
+   * Optional. The language the device uses in ISO 639-1 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
+   * Optional. The model of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
+   * Optional. The operating system or platform of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operatingSystem;
+
+  /**
+   * Optional. The version of the operating system or platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operatingSystemVersion;
+
+  /**
+   * Optional. The height of the screen in pixels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer screenHeight;
+
+  /**
+   * Optional. The width of the screen in pixels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer screenWidth;
+
+  /**
    * Optional. The user-agent string of the device for the given context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userAgent;
+
+  /**
+   * Optional. The brand of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBrand() {
+    return brand;
+  }
+
+  /**
+   * Optional. The brand of the device.
+   * @param brand brand or {@code null} for none
+   */
+  public DeviceInfo setBrand(java.lang.String brand) {
+    this.brand = brand;
+    return this;
+  }
+
+  /**
+   * Optional. The brand or type of the browser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBrowser() {
+    return browser;
+  }
+
+  /**
+   * Optional. The brand or type of the browser.
+   * @param browser browser or {@code null} for none
+   */
+  public DeviceInfo setBrowser(java.lang.String browser) {
+    this.browser = browser;
+    return this;
+  }
+
+  /**
+   * Optional. The version of the browser.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBrowserVersion() {
+    return browserVersion;
+  }
+
+  /**
+   * Optional. The version of the browser.
+   * @param browserVersion browserVersion or {@code null} for none
+   */
+  public DeviceInfo setBrowserVersion(java.lang.String browserVersion) {
+    this.browserVersion = browserVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The category of device. For example, “desktop”, “tablet”, “mobile”, “smart TV”.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategory() {
+    return category;
+  }
+
+  /**
+   * Optional. The category of device. For example, “desktop”, “tablet”, “mobile”, “smart TV”.
+   * @param category category or {@code null} for none
+   */
+  public DeviceInfo setCategory(java.lang.String category) {
+    this.category = category;
+    return this;
+  }
 
   /**
    * Optional. The IP address of the device for the given context. **Note:** Google Ads does not
@@ -75,6 +213,108 @@ public final class DeviceInfo extends com.google.api.client.json.GenericJson {
    */
   public DeviceInfo setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * Optional. The language the device uses in ISO 639-1 format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Optional. The language the device uses in ISO 639-1 format.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public DeviceInfo setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The model of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Optional. The model of the device.
+   * @param model model or {@code null} for none
+   */
+  public DeviceInfo setModel(java.lang.String model) {
+    this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. The operating system or platform of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperatingSystem() {
+    return operatingSystem;
+  }
+
+  /**
+   * Optional. The operating system or platform of the device.
+   * @param operatingSystem operatingSystem or {@code null} for none
+   */
+  public DeviceInfo setOperatingSystem(java.lang.String operatingSystem) {
+    this.operatingSystem = operatingSystem;
+    return this;
+  }
+
+  /**
+   * Optional. The version of the operating system or platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperatingSystemVersion() {
+    return operatingSystemVersion;
+  }
+
+  /**
+   * Optional. The version of the operating system or platform.
+   * @param operatingSystemVersion operatingSystemVersion or {@code null} for none
+   */
+  public DeviceInfo setOperatingSystemVersion(java.lang.String operatingSystemVersion) {
+    this.operatingSystemVersion = operatingSystemVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The height of the screen in pixels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScreenHeight() {
+    return screenHeight;
+  }
+
+  /**
+   * Optional. The height of the screen in pixels.
+   * @param screenHeight screenHeight or {@code null} for none
+   */
+  public DeviceInfo setScreenHeight(java.lang.Integer screenHeight) {
+    this.screenHeight = screenHeight;
+    return this;
+  }
+
+  /**
+   * Optional. The width of the screen in pixels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getScreenWidth() {
+    return screenWidth;
+  }
+
+  /**
+   * Optional. The width of the screen in pixels.
+   * @param screenWidth screenWidth or {@code null} for none
+   */
+  public DeviceInfo setScreenWidth(java.lang.Integer screenWidth) {
+    this.screenWidth = screenWidth;
     return this;
   }
 

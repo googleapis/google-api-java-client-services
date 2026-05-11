@@ -54,6 +54,14 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   private DeviceInfo landingPageDeviceInfo;
 
   /**
+   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
+   * other platforms’ identifiers for advertisers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mobileDeviceId;
+
+  /**
    * Optional. Session attributes for event attribution and modeling.
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
    */
   public AdIdentifiers setLandingPageDeviceInfo(DeviceInfo landingPageDeviceInfo) {
     this.landingPageDeviceInfo = landingPageDeviceInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
+   * other platforms’ identifiers for advertisers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMobileDeviceId() {
+    return mobileDeviceId;
+  }
+
+  /**
+   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
+   * other platforms’ identifiers for advertisers.
+   * @param mobileDeviceId mobileDeviceId or {@code null} for none
+   */
+  public AdIdentifiers setMobileDeviceId(java.lang.String mobileDeviceId) {
+    this.mobileDeviceId = mobileDeviceId;
     return this;
   }
 

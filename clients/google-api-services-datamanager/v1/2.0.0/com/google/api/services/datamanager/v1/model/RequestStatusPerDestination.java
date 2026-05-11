@@ -51,7 +51,9 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   private Destination destination;
 
   /**
-   * An error info error containing the error reason and error counts related to the upload.
+   * An error info error containing the error reason and error counts related to the upload. Only
+   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
+   * while the request has `request_status` of `PROCESSING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +74,8 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   private java.lang.String requestStatus;
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload.
+   * A warning info containing the warning reason and warning counts related to the upload. This
+   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +133,9 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * An error info error containing the error reason and error counts related to the upload.
+   * An error info error containing the error reason and error counts related to the upload. Only
+   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
+   * while the request has `request_status` of `PROCESSING`.
    * @return value or {@code null} for none
    */
   public ErrorInfo getErrorInfo() {
@@ -138,7 +143,9 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * An error info error containing the error reason and error counts related to the upload.
+   * An error info error containing the error reason and error counts related to the upload. Only
+   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
+   * while the request has `request_status` of `PROCESSING`.
    * @param errorInfo errorInfo or {@code null} for none
    */
   public RequestStatusPerDestination setErrorInfo(ErrorInfo errorInfo) {
@@ -181,7 +188,8 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload.
+   * A warning info containing the warning reason and warning counts related to the upload. This
+   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * @return value or {@code null} for none
    */
   public WarningInfo getWarningInfo() {
@@ -189,7 +197,8 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload.
+   * A warning info containing the warning reason and warning counts related to the upload. This
+   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * @param warningInfo warningInfo or {@code null} for none
    */
   public RequestStatusPerDestination setWarningInfo(WarningInfo warningInfo) {

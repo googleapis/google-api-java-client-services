@@ -37,12 +37,26 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Long displayNetworkMembersCount;
 
   /**
+   * Output only. Estimated number of members in this user list on Gmail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long gmailMembersCount;
+
+  /**
    * Output only. Estimated number of members in this user list in the google.com domain. These are
    * the members available for targeting in Search campaigns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long searchNetworkMembersCount;
+
+  /**
+   * Output only. Estimated number of members in this user list on YouTube.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long youtubeMembersCount;
 
   /**
    * Output only. Estimated number of members in this user list, on the Google Display Network.
@@ -62,6 +76,23 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Estimated number of members in this user list on Gmail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGmailMembersCount() {
+    return gmailMembersCount;
+  }
+
+  /**
+   * Output only. Estimated number of members in this user list on Gmail.
+   * @param gmailMembersCount gmailMembersCount or {@code null} for none
+   */
+  public SizeInfo setGmailMembersCount(java.lang.Long gmailMembersCount) {
+    this.gmailMembersCount = gmailMembersCount;
+    return this;
+  }
+
+  /**
    * Output only. Estimated number of members in this user list in the google.com domain. These are
    * the members available for targeting in Search campaigns.
    * @return value or {@code null} for none
@@ -77,6 +108,23 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
    */
   public SizeInfo setSearchNetworkMembersCount(java.lang.Long searchNetworkMembersCount) {
     this.searchNetworkMembersCount = searchNetworkMembersCount;
+    return this;
+  }
+
+  /**
+   * Output only. Estimated number of members in this user list on YouTube.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getYoutubeMembersCount() {
+    return youtubeMembersCount;
+  }
+
+  /**
+   * Output only. Estimated number of members in this user list on YouTube.
+   * @param youtubeMembersCount youtubeMembersCount or {@code null} for none
+   */
+  public SizeInfo setYoutubeMembersCount(java.lang.Long youtubeMembersCount) {
+    this.youtubeMembersCount = youtubeMembersCount;
     return this;
   }
 

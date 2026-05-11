@@ -32,6 +32,13 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
 public final class EvaluationRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The ID of an allocation to target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allocationId;
+
+  /**
    * Required. A Common Expression Language (CEL) expression that evaluates to a boolean. The
    * expression is evaluated against the provided context. If it returns true, the rule's target is
    * applied.
@@ -48,12 +55,36 @@ public final class EvaluationRule extends com.google.api.client.json.GenericJson
   private java.lang.String id;
 
   /**
-   * Required. The target variant or allocation to apply if the condition is met. This should match
-   * the name of a defined variant or allocation's ID.
+   * Optional. Deprecated: Use `rule_target` instead. The target variant or allocation to apply if
+   * the condition is met. This should match the name of a defined variant or allocation's ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
+
+  /**
+   * Optional. The name of a variant to target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String variantId;
+
+  /**
+   * Optional. The ID of an allocation to target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllocationId() {
+    return allocationId;
+  }
+
+  /**
+   * Optional. The ID of an allocation to target.
+   * @param allocationId allocationId or {@code null} for none
+   */
+  public EvaluationRule setAllocationId(java.lang.String allocationId) {
+    this.allocationId = allocationId;
+    return this;
+  }
 
   /**
    * Required. A Common Expression Language (CEL) expression that evaluates to a boolean. The
@@ -94,8 +125,8 @@ public final class EvaluationRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The target variant or allocation to apply if the condition is met. This should match
-   * the name of a defined variant or allocation's ID.
+   * Optional. Deprecated: Use `rule_target` instead. The target variant or allocation to apply if
+   * the condition is met. This should match the name of a defined variant or allocation's ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -103,12 +134,29 @@ public final class EvaluationRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The target variant or allocation to apply if the condition is met. This should match
-   * the name of a defined variant or allocation's ID.
+   * Optional. Deprecated: Use `rule_target` instead. The target variant or allocation to apply if
+   * the condition is met. This should match the name of a defined variant or allocation's ID.
    * @param target target or {@code null} for none
    */
   public EvaluationRule setTarget(java.lang.String target) {
     this.target = target;
+    return this;
+  }
+
+  /**
+   * Optional. The name of a variant to target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVariantId() {
+    return variantId;
+  }
+
+  /**
+   * Optional. The name of a variant to target.
+   * @param variantId variantId or {@code null} for none
+   */
+  public EvaluationRule setVariantId(java.lang.String variantId) {
+    this.variantId = variantId;
     return this;
   }
 

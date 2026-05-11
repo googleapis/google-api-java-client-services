@@ -1248,6 +1248,166 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
+       * Retrieves a streaming response of lineage links connected to the requested assets by performing a
+       * breadth-first search in the given direction. Links represent the data flow between **source**
+       * (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in
+       * the same project as the Lineage Events that create them. This method retrieves links from all
+       * valid locations provided in the request. This method supports Column-Level Lineage (CLL) along
+       * with wildcard support to retrieve all CLL for an Entity FQN. Following permissions are required
+       * to retrieve links: * `datalineage.events.get` permission for the project where the link is stored
+       * for entity-level lineage. * `datalineage.events.getFields` permission for the project where the
+       * link is stored for column-level lineage. This method also returns processes that created the
+       * links if explicitly requested by setting [max_process_per_link](google.cloud.datacatalog.lineage.
+       * v1.SearchLineageStreamingRequest.limits.max_process_per_link) is non-zero and full process
+       * details are requested via `links.processes.process` in the
+       * [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-
+       * masks#read_with_a_field_mask). Permission required to retrieve processes: *
+       * `datalineage.processes.get` permission for the project where the process is stored.
+       *
+       * Create a request for the method "locations.searchLineageStreaming".
+       *
+       * This request holds the parameters needed by the datalineage server.  After setting any optional
+       * parameters, call the {@link SearchLineageStreaming#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The project and location to initiate the search from.
+       * @param content the {@link com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest}
+       * @return the request
+       */
+      public SearchLineageStreaming searchLineageStreaming(java.lang.String parent, com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest content) throws java.io.IOException {
+        SearchLineageStreaming result = new SearchLineageStreaming(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class SearchLineageStreaming extends DatalineageRequest<com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:searchLineageStreaming";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Retrieves a streaming response of lineage links connected to the requested assets by performing
+         * a breadth-first search in the given direction. Links represent the data flow between **source**
+         * (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in
+         * the same project as the Lineage Events that create them. This method retrieves links from all
+         * valid locations provided in the request. This method supports Column-Level Lineage (CLL) along
+         * with wildcard support to retrieve all CLL for an Entity FQN. Following permissions are required
+         * to retrieve links: * `datalineage.events.get` permission for the project where the link is
+         * stored for entity-level lineage. * `datalineage.events.getFields` permission for the project
+         * where the link is stored for column-level lineage. This method also returns processes that
+         * created the links if explicitly requested by setting [max_process_per_link](google.cloud.dataca
+         * talog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link) is non-zero and
+         * full process details are requested via `links.processes.process` in the
+         * [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-
+         * masks#read_with_a_field_mask). Permission required to retrieve processes: *
+         * `datalineage.processes.get` permission for the project where the process is stored.
+         *
+         * Create a request for the method "locations.searchLineageStreaming".
+         *
+         * This request holds the parameters needed by the the datalineage server.  After setting any
+         * optional parameters, call the {@link SearchLineageStreaming#execute()} method to invoke the
+         * remote operation. <p> {@link SearchLineageStreaming#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. The project and location to initiate the search from.
+         * @param content the {@link com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest}
+         * @since 1.13
+         */
+        protected SearchLineageStreaming(java.lang.String parent, com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest content) {
+          super(Datalineage.this, "POST", REST_PATH, content, com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1SearchLineageStreamingResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public SearchLineageStreaming set$Xgafv(java.lang.String $Xgafv) {
+          return (SearchLineageStreaming) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public SearchLineageStreaming setAccessToken(java.lang.String accessToken) {
+          return (SearchLineageStreaming) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public SearchLineageStreaming setAlt(java.lang.String alt) {
+          return (SearchLineageStreaming) super.setAlt(alt);
+        }
+
+        @Override
+        public SearchLineageStreaming setCallback(java.lang.String callback) {
+          return (SearchLineageStreaming) super.setCallback(callback);
+        }
+
+        @Override
+        public SearchLineageStreaming setFields(java.lang.String fields) {
+          return (SearchLineageStreaming) super.setFields(fields);
+        }
+
+        @Override
+        public SearchLineageStreaming setKey(java.lang.String key) {
+          return (SearchLineageStreaming) super.setKey(key);
+        }
+
+        @Override
+        public SearchLineageStreaming setOauthToken(java.lang.String oauthToken) {
+          return (SearchLineageStreaming) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public SearchLineageStreaming setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (SearchLineageStreaming) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public SearchLineageStreaming setQuotaUser(java.lang.String quotaUser) {
+          return (SearchLineageStreaming) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public SearchLineageStreaming setUploadType(java.lang.String uploadType) {
+          return (SearchLineageStreaming) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public SearchLineageStreaming setUploadProtocol(java.lang.String uploadProtocol) {
+          return (SearchLineageStreaming) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project and location to initiate the search from. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project and location to initiate the search from.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project and location to initiate the search from. */
+        public SearchLineageStreaming setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public SearchLineageStreaming set(String parameterName, Object value) {
+          return (SearchLineageStreaming) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieve a list of links connected to a specific asset. Links represent the data flow between
        * **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are
        * stored in the same project as the Lineage Events that create them. You can retrieve links in

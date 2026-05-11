@@ -32,6 +32,13 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageV1Link extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The dependency info of the link (applies only to column level links).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDatacatalogLineageV1LinkDependencyInfo> dependencyInfo;
+
+  /**
    * The end of the last event establishing this link.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleCloudDatacatalogLineageV1Link extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogLineageV1EntityReference target;
+
+  /**
+   * Optional. The dependency info of the link (applies only to column level links).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDatacatalogLineageV1LinkDependencyInfo> getDependencyInfo() {
+    return dependencyInfo;
+  }
+
+  /**
+   * Optional. The dependency info of the link (applies only to column level links).
+   * @param dependencyInfo dependencyInfo or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1Link setDependencyInfo(java.util.List<GoogleCloudDatacatalogLineageV1LinkDependencyInfo> dependencyInfo) {
+    this.dependencyInfo = dependencyInfo;
+    return this;
+  }
 
   /**
    * The end of the last event establishing this link.

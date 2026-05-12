@@ -34,6 +34,15 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String behavior;
+
+  /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
    * call the function.
    * The value may be {@code null}.
@@ -89,6 +98,27 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.Object responseJsonSchema;
+
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBehavior() {
+    return behavior;
+  }
+
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * @param behavior behavior or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setBehavior(java.lang.String behavior) {
+    this.behavior = behavior;
+    return this;
+  }
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to

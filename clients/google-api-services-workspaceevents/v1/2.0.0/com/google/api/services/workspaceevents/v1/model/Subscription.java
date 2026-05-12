@@ -53,6 +53,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Features that are supported only for subscriptions on Drive resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriveOptions driveOptions;
+
+  /**
    * Optional. This checksum is computed by the server based on the value of other fields, and might
    * be sent on update requests to ensure the client has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -227,6 +234,23 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Features that are supported only for subscriptions on Drive resources.
+   * @return value or {@code null} for none
+   */
+  public DriveOptions getDriveOptions() {
+    return driveOptions;
+  }
+
+  /**
+   * Optional. Features that are supported only for subscriptions on Drive resources.
+   * @param driveOptions driveOptions or {@code null} for none
+   */
+  public Subscription setDriveOptions(DriveOptions driveOptions) {
+    this.driveOptions = driveOptions;
     return this;
   }
 

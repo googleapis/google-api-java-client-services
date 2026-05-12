@@ -637,6 +637,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String pause;
 
   /**
+   * Optional. The [pickup cost](https://support.google.com/merchants/answer/16988704) for an item
+   * when a customer buys it online and picks it up at a store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PickupCost pickupCost;
+
+  /**
    * The [pickup](https://support.google.com/merchants/answer/14634021) option for the item.
    * The value may be {@code null}.
    */
@@ -2370,6 +2378,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setPause(java.lang.String pause) {
     this.pause = pause;
+    return this;
+  }
+
+  /**
+   * Optional. The [pickup cost](https://support.google.com/merchants/answer/16988704) for an item
+   * when a customer buys it online and picks it up at a store.
+   * @return value or {@code null} for none
+   */
+  public PickupCost getPickupCost() {
+    return pickupCost;
+  }
+
+  /**
+   * Optional. The [pickup cost](https://support.google.com/merchants/answer/16988704) for an item
+   * when a customer buys it online and picks it up at a store.
+   * @param pickupCost pickupCost or {@code null} for none
+   */
+  public ProductAttributes setPickupCost(PickupCost pickupCost) {
+    this.pickupCost = pickupCost;
     return this;
   }
 

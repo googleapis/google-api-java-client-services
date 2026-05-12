@@ -33,9 +33,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The containing Folder resource name. This should take the format:
    * projects/{project}/locations/{location}/folders/{folder},
-   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just
-   * projects/{project}/locations/{location} if this is a root Folder. This field can only be
-   * updated through MoveFolder.
+   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just "" if this is a root
+   * Folder. This field can only be updated through MoveFolder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +95,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The containing Folder resource name. This should take the format:
    * projects/{project}/locations/{location}/folders/{folder},
-   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just
-   * projects/{project}/locations/{location} if this is a root Folder. This field can only be
-   * updated through MoveFolder.
+   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just "" if this is a root
+   * Folder. This field can only be updated through MoveFolder.
    * @return value or {@code null} for none
    */
   public java.lang.String getContainingFolder() {
@@ -108,9 +106,8 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The containing Folder resource name. This should take the format:
    * projects/{project}/locations/{location}/folders/{folder},
-   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just
-   * projects/{project}/locations/{location} if this is a root Folder. This field can only be
-   * updated through MoveFolder.
+   * projects/{project}/locations/{location}/teamFolders/{teamFolder}, or just "" if this is a root
+   * Folder. This field can only be updated through MoveFolder.
    * @param containingFolder containingFolder or {@code null} for none
    */
   public Folder setContainingFolder(java.lang.String containingFolder) {

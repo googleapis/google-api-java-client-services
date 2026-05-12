@@ -452,7 +452,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -483,7 +483,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -599,22 +599,22 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -700,7 +700,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link QueryUserRootContents#execute()} method to invoke the remote
        * operation.
        *
-       * @param location Required. Location of the user root folder whose contents to list. Format: projects/locations
+       * @param location Required. Location of the user root folder to list contents for. Format: projects/locations
        * @return the request
        */
       public QueryUserRootContents queryUserRootContents(java.lang.String location) throws java.io.IOException {
@@ -728,7 +728,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
          * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param location Required. Location of the user root folder whose contents to list. Format: projects/locations
+         * @param location Required. Location of the user root folder to list contents for. Format: projects/locations
          * @since 1.13
          */
         protected QueryUserRootContents(java.lang.String location) {
@@ -807,20 +807,20 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. Location of the user root folder whose contents to list. Format:
+         * Required. Location of the user root folder to list contents for. Format:
          * projects/locations
          */
         @com.google.api.client.util.Key
         private java.lang.String location;
 
-        /** Required. Location of the user root folder whose contents to list. Format: projects/locations
+        /** Required. Location of the user root folder to list contents for. Format: projects/locations
          */
         public java.lang.String getLocation() {
           return location;
         }
 
         /**
-         * Required. Location of the user root folder whose contents to list. Format:
+         * Required. Location of the user root folder to list contents for. Format:
          * projects/locations
          */
         public QueryUserRootContents setLocation(java.lang.String location) {
@@ -835,13 +835,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Optional filtering for the returned list. Filtering is currently only supported
-         * on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+         * on the `display_name` field. Example: * `filter="display_name="MyFolder""`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
-       `display_name` field. Example: - `filter="display_name="MyFolder""`
+       `display_name` field. Example: * `filter="display_name="MyFolder""`
          */
         public java.lang.String getFilter() {
           return filter;
@@ -849,7 +849,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. Optional filtering for the returned list. Filtering is currently only supported
-         * on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+         * on the `display_name` field. Example: * `filter="display_name="MyFolder""`
          */
         public QueryUserRootContents setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -859,7 +859,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Field to additionally sort results by. Will order Folders before Repositories,
          * and then by `order_by` in ascending order. Supported keywords: display_name (default),
-         * created_at, last_modified_at. Examples: - `orderBy="display_name"` -
+         * created_at, last_modified_at. Examples: * `orderBy="display_name"` *
          * `orderBy="display_name desc"`
          */
         @com.google.api.client.util.Key
@@ -867,7 +867,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
         /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
        by `order_by` in ascending order. Supported keywords: display_name (default), created_at,
-       last_modified_at. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+       last_modified_at. Examples: * `orderBy="display_name"` * `orderBy="display_name desc"`
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -876,7 +876,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Optional. Field to additionally sort results by. Will order Folders before Repositories,
          * and then by `order_by` in ascending order. Supported keywords: display_name (default),
-         * created_at, last_modified_at. Examples: - `orderBy="display_name"` -
+         * created_at, last_modified_at. Examples: * `orderBy="display_name"` *
          * `orderBy="display_name desc"`
          */
         public QueryUserRootContents setOrderBy(java.lang.String orderBy) {
@@ -2151,7 +2151,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataform server.  After setting any optional
          * parameters, call the {@link QueryFolderContents#execute()} method to invoke the remote operation.
          *
-         * @param folder Required. Name of the folder whose contents to list. Format: projects/locations/folders
+         * @param folder Required. Resource name of the Folder to list contents for. Format: projects/locations/folders
          * @return the request
          */
         public QueryFolderContents queryFolderContents(java.lang.String folder) throws java.io.IOException {
@@ -2178,7 +2178,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param folder Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           * @param folder Required. Resource name of the Folder to list contents for. Format: projects/locations/folders
            * @since 1.13
            */
           protected QueryFolderContents(java.lang.String folder) {
@@ -2257,19 +2257,21 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           * Required. Resource name of the Folder to list contents for. Format:
+           * projects/locations/folders
            */
           @com.google.api.client.util.Key
           private java.lang.String folder;
 
-          /** Required. Name of the folder whose contents to list. Format: projects/locations/folders
+          /** Required. Resource name of the Folder to list contents for. Format: projects/locations/folders
            */
           public java.lang.String getFolder() {
             return folder;
           }
 
           /**
-           * Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           * Required. Resource name of the Folder to list contents for. Format:
+           * projects/locations/folders
            */
           public QueryFolderContents setFolder(java.lang.String folder) {
             if (!getSuppressPatternChecks()) {
@@ -2283,13 +2285,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
-         `display_name` field. Example: - `filter="display_name="MyFolder""`
+         `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -2297,7 +2299,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public QueryFolderContents setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2307,15 +2309,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Field to additionally sort results by. Will order Folders before
            * Repositories, and then by `order_by` in ascending order. Supported keywords:
-           * display_name (default), create_time, last_modified_time. Examples: -
-           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           * display_name (default), create_time, last_modified_time. Examples: *
+           * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
          by `order_by` in ascending order. Supported keywords: display_name (default), create_time,
-         last_modified_time. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+         last_modified_time. Examples: * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -2324,8 +2326,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Field to additionally sort results by. Will order Folders before
            * Repositories, and then by `order_by` in ascending order. Supported keywords:
-           * display_name (default), create_time, last_modified_time. Examples: -
-           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           * display_name (default), create_time, last_modified_time. Examples: *
+           * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           public QueryFolderContents setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -6046,7 +6048,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The compilation result's name.
+           * @param name Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
+           *        n/data_pipelines.proto:GetCompilationResultRequest)
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6072,7 +6075,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The compilation result's name.
+             * @param name Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
+           *        n/data_pipelines.proto:GetCompilationResultRequest)
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -6150,17 +6154,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The compilation result's name. */
+            /**
+             * Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud
+             * /dataform/v2main/data_pipelines.proto:GetCompilationResultRequest)
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The compilation result's name.
+            /** Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2ma
+           in/data_pipelines.proto:GetCompilationResultRequest)
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The compilation result's name. */
+            /**
+             * Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud
+             * /dataform/v2main/data_pipelines.proto:GetCompilationResultRequest)
+             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6318,17 +6329,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Optional. Filter for the returned list. */
+            /**
+             * Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/
+             * dataform/v2main/data_pipelines.proto:ListCompilationResultsRequest)
+             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter for the returned list.
+            /** Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
+           n/data_pipelines.proto:ListCompilationResultsRequest)
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filter for the returned list. */
+            /**
+             * Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/
+             * dataform/v2main/data_pipelines.proto:ListCompilationResultsRequest)
+             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -6793,13 +6811,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the release config, which will become the final component
-             * of the release config's resource name.
+             * of the release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/d
+             * ataform/v2main/data_pipelines.proto:CreateReleaseConfigRequest)
              */
             @com.google.api.client.util.Key
             private java.lang.String releaseConfigId;
 
             /** Required. The ID to use for the release config, which will become the final component of the
-           release config's resource name.
+           release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/data_p
+           ipelines.proto:CreateReleaseConfigRequest)
              */
             public java.lang.String getReleaseConfigId() {
               return releaseConfigId;
@@ -6807,7 +6827,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the release config, which will become the final component
-             * of the release config's resource name.
+             * of the release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/d
+             * ataform/v2main/data_pipelines.proto:CreateReleaseConfigRequest)
              */
             public Create setReleaseConfigId(java.lang.String releaseConfigId) {
               this.releaseConfigId = releaseConfigId;
@@ -6827,7 +6848,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The release config's name.
+           * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
+           *        ta_pipelines.proto:DeleteReleaseConfigRequest)
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6854,7 +6876,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The release config's name.
+             * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
+           *        ta_pipelines.proto:DeleteReleaseConfigRequest)
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6922,17 +6945,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The release config's name. */
+            /**
+             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
+             * aform/v2main/data_pipelines.proto:DeleteReleaseConfigRequest)
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The release config's name.
+            /** Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/d
+           ata_pipelines.proto:DeleteReleaseConfigRequest)
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The release config's name. */
+            /**
+             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
+             * aform/v2main/data_pipelines.proto:DeleteReleaseConfigRequest)
+             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6956,7 +6986,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The release config's name.
+           * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
+           *        ta_pipelines.proto:GetReleaseConfigRequest)
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6982,7 +7013,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The release config's name.
+             * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
+           *        ta_pipelines.proto:GetReleaseConfigRequest)
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -7060,17 +7092,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The release config's name. */
+            /**
+             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
+             * aform/v2main/data_pipelines.proto:GetReleaseConfigRequest)
+             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The release config's name.
+            /** Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/d
+           ata_pipelines.proto:GetReleaseConfigRequest)
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The release config's name. */
+            /**
+             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
+             * aform/v2main/data_pipelines.proto:GetReleaseConfigRequest)
+             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7255,14 +7294,16 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
              * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
-             * provided the page token.
+             * provided the page token. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main
+             * /data_pipelines.proto:ListReleaseConfigsRequest)
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this to retrieve
            the subsequent page. When paginating, all other parameters provided to `ListReleaseConfigs`, with
-           the exception of `page_size`, must match the call that provided the page token.
+           the exception of `page_size`, must match the call that provided the page token. LINT.ThenChange(//d
+           epot/google3/google/cloud/dataform/v2main/data_pipelines.proto:ListReleaseConfigsRequest)
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -7272,7 +7313,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
              * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
-             * provided the page token.
+             * provided the page token. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main
+             * /data_pipelines.proto:ListReleaseConfigsRequest)
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -13908,7 +13950,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the dataform server.  After setting any optional
          * parameters, call the {@link QueryContents#execute()} method to invoke the remote operation.
          *
-         * @param teamFolder Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+         * @param teamFolder Required. Resource name of the TeamFolder to list contents for. Format:
+         *        `projects/locations/teamFolders`.
          * @return the request
          */
         public QueryContents queryContents(java.lang.String teamFolder) throws java.io.IOException {
@@ -13935,7 +13978,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param teamFolder Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+           * @param teamFolder Required. Resource name of the TeamFolder to list contents for. Format:
+         *        `projects/locations/teamFolders`.
            * @since 1.13
            */
           protected QueryContents(java.lang.String teamFolder) {
@@ -14014,20 +14058,21 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. Name of the team_folder whose contents to list. Format:
+           * Required. Resource name of the TeamFolder to list contents for. Format:
            * `projects/locations/teamFolders`.
            */
           @com.google.api.client.util.Key
           private java.lang.String teamFolder;
 
-          /** Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+          /** Required. Resource name of the TeamFolder to list contents for. Format:
+         `projects/locations/teamFolders`.
            */
           public java.lang.String getTeamFolder() {
             return teamFolder;
           }
 
           /**
-           * Required. Name of the team_folder whose contents to list. Format:
+           * Required. Resource name of the TeamFolder to list contents for. Format:
            * `projects/locations/teamFolders`.
            */
           public QueryContents setTeamFolder(java.lang.String teamFolder) {
@@ -14042,13 +14087,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
-         `display_name` field. Example: - `filter="display_name="MyFolder""`
+         `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -14056,7 +14101,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public QueryContents setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -14066,15 +14111,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Field to additionally sort results by. Will order Folders before
            * Repositories, and then by `order_by` in ascending order. Supported keywords:
-           * `display_name` (default), `create_time`, last_modified_time. Examples: -
-           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           * `display_name` (default), `create_time`, last_modified_time. Examples: *
+           * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
          by `order_by` in ascending order. Supported keywords: `display_name` (default), `create_time`,
-         last_modified_time. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+         last_modified_time. Examples: * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -14083,8 +14128,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Optional. Field to additionally sort results by. Will order Folders before
            * Repositories, and then by `order_by` in ascending order. Supported keywords:
-           * `display_name` (default), `create_time`, last_modified_time. Examples: -
-           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           * `display_name` (default), `create_time`, last_modified_time. Examples: *
+           * `orderBy="display_name"` * `orderBy="display_name desc"`
            */
           public QueryContents setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -14286,13 +14331,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
-         `display_name` field. Example: - `filter="display_name="MyFolder""`
+         `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -14300,7 +14345,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Optional filtering for the returned list. Filtering is currently only
-           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           * supported on the `display_name` field. Example: * `filter="display_name="MyFolder""`
            */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -14309,14 +14354,14 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Field to additionally sort results by. Supported keywords: `display_name`
-           * (default), `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` -
+           * (default), `create_time`, `last_modified_time`. Examples: * `orderBy="display_name"` *
            * `orderBy="display_name desc"`
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. Field to additionally sort results by. Supported keywords: `display_name` (default),
-         `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` - `orderBy="display_name
+         `create_time`, `last_modified_time`. Examples: * `orderBy="display_name"` * `orderBy="display_name
          desc"`
            */
           public java.lang.String getOrderBy() {
@@ -14325,7 +14370,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Field to additionally sort results by. Supported keywords: `display_name`
-           * (default), `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` -
+           * (default), `create_time`, `last_modified_time`. Examples: * `orderBy="display_name"` *
            * `orderBy="display_name desc"`
            */
           public Search setOrderBy(java.lang.String orderBy) {

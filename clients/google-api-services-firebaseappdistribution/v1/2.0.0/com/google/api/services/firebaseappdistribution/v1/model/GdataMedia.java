@@ -256,6 +256,13 @@ public final class GdataMedia extends com.google.api.client.json.GenericJson {
   private java.lang.String sha256Hash;
 
   /**
+   * Scotty-provided SHA512 hash for an upload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sha512Hash;
+
+  /**
    * Time at which the media data was last updated, in milliseconds since UNIX epoch
    * The value may be {@code null}.
    */
@@ -1024,6 +1031,51 @@ public final class GdataMedia extends com.google.api.client.json.GenericJson {
    */
   public GdataMedia encodeSha256Hash(byte[] sha256Hash) {
     this.sha256Hash = com.google.api.client.util.Base64.encodeBase64URLSafeString(sha256Hash);
+    return this;
+  }
+
+  /**
+   * Scotty-provided SHA512 hash for an upload.
+   * @see #decodeSha512Hash()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha512Hash() {
+    return sha512Hash;
+  }
+
+  /**
+   * Scotty-provided SHA512 hash for an upload.
+   * @see #getSha512Hash()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeSha512Hash() {
+    return com.google.api.client.util.Base64.decodeBase64(sha512Hash);
+  }
+
+  /**
+   * Scotty-provided SHA512 hash for an upload.
+   * @see #encodeSha512Hash()
+   * @param sha512Hash sha512Hash or {@code null} for none
+   */
+  public GdataMedia setSha512Hash(java.lang.String sha512Hash) {
+    this.sha512Hash = sha512Hash;
+    return this;
+  }
+
+  /**
+   * Scotty-provided SHA512 hash for an upload.
+   * @see #setSha512Hash()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataMedia encodeSha512Hash(byte[] sha512Hash) {
+    this.sha512Hash = com.google.api.client.util.Base64.encodeBase64URLSafeString(sha512Hash);
     return this;
   }
 

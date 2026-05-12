@@ -10227,25 +10227,28 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. DataScan identifier. Must contain only lowercase letters, numbers and
-           * hyphens. Must start with a letter. Must end with a number or a letter. Must be between
-           * 1-63 characters. Must be unique within the customer project / location.
+           * Optional. DataScan identifier. If not provided, a unique ID will be generated with the
+           * prefix "data-scan-". Must contain only lowercase letters, numbers and hyphens. Must
+           * start with a letter. Must end with a number or a letter. Must be between 1-63
+           * characters. Must be unique within the customer project / location.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataScanId;
 
-          /** Required. DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start
-         with a letter. Must end with a number or a letter. Must be between 1-63 characters. Must be unique
-         within the customer project / location.
+          /** Optional. DataScan identifier. If not provided, a unique ID will be generated with the prefix
+         "data-scan-". Must contain only lowercase letters, numbers and hyphens. Must start with a letter.
+         Must end with a number or a letter. Must be between 1-63 characters. Must be unique within the
+         customer project / location.
            */
           public java.lang.String getDataScanId() {
             return dataScanId;
           }
 
           /**
-           * Required. DataScan identifier. Must contain only lowercase letters, numbers and
-           * hyphens. Must start with a letter. Must end with a number or a letter. Must be between
-           * 1-63 characters. Must be unique within the customer project / location.
+           * Optional. DataScan identifier. If not provided, a unique ID will be generated with the
+           * prefix "data-scan-". Must contain only lowercase letters, numbers and hyphens. Must
+           * start with a letter. Must end with a number or a letter. Must be between 1-63
+           * characters. Must be unique within the customer project / location.
            */
           public Create setDataScanId(java.lang.String dataScanId) {
             this.dataScanId = dataScanId;

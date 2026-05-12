@@ -38,7 +38,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String authenticationTokenSecretVersion;
 
   /**
-   * Required. The Git remote's default branch name.
+   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
+   * the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The Git remote's default branch name.
+   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
+   * the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBranch() {
@@ -95,7 +97,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The Git remote's default branch name.
+   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
+   * the repository.
    * @param defaultBranch defaultBranch or {@code null} for none
    */
   public GitRemoteSettings setDefaultBranch(java.lang.String defaultBranch) {

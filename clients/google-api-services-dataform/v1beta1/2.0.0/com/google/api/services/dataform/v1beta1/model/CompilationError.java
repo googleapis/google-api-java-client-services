@@ -30,7 +30,8 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class CompilationError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The identifier of the action where this error occurred, if available.
+   * Output only. The identifier of the action where this error occurred, if available. LINT.ThenCha
+   * nge(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:CompilationError)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class CompilationError extends com.google.api.client.json.GenericJs
   private java.lang.String stack;
 
   /**
-   * Output only. The identifier of the action where this error occurred, if available.
+   * Output only. The identifier of the action where this error occurred, if available. LINT.ThenCha
+   * nge(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:CompilationError)
    * @return value or {@code null} for none
    */
   public Target getActionTarget() {
@@ -67,7 +69,8 @@ public final class CompilationError extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The identifier of the action where this error occurred, if available.
+   * Output only. The identifier of the action where this error occurred, if available. LINT.ThenCha
+   * nge(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:CompilationError)
    * @param actionTarget actionTarget or {@code null} for none
    */
   public CompilationError setActionTarget(Target actionTarget) {

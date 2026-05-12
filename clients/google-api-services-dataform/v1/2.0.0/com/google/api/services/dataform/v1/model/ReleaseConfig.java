@@ -62,7 +62,8 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. All the metadata information that is used internally to serve the resource. For
-   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string. LINT
+   * .ThenChange(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:ReleaseConfig)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,7 +182,8 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. All the metadata information that is used internally to serve the resource. For
-   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string. LINT
+   * .ThenChange(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:ReleaseConfig)
    * @return value or {@code null} for none
    */
   public java.lang.String getInternalMetadata() {
@@ -190,7 +192,8 @@ public final class ReleaseConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. All the metadata information that is used internally to serve the resource. For
-   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string. LINT
+   * .ThenChange(//depot/google3/google/cloud/dataform/v2main/data_pipelines.proto:ReleaseConfig)
    * @param internalMetadata internalMetadata or {@code null} for none
    */
   public ReleaseConfig setInternalMetadata(java.lang.String internalMetadata) {

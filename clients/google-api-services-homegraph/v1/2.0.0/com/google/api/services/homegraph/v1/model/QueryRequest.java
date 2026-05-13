@@ -37,6 +37,13 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String agentUserId;
 
   /**
+   * Optional. If true, the response will include device metadata in the device_metadata field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeDeviceMetadata;
+
+  /**
    * Required. Inputs containing third-party device IDs for which to get the device states.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setAgentUserId(java.lang.String agentUserId) {
     this.agentUserId = agentUserId;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the response will include device metadata in the device_metadata field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeDeviceMetadata() {
+    return includeDeviceMetadata;
+  }
+
+  /**
+   * Optional. If true, the response will include device metadata in the device_metadata field.
+   * @param includeDeviceMetadata includeDeviceMetadata or {@code null} for none
+   */
+  public QueryRequest setIncludeDeviceMetadata(java.lang.Boolean includeDeviceMetadata) {
+    this.includeDeviceMetadata = includeDeviceMetadata;
     return this;
   }
 

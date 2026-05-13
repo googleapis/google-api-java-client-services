@@ -30,11 +30,44 @@ package com.google.api.services.homegraph.v1.model;
 public final class QueryResponsePayload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Map from the Trait ID (e.g., "action.devices.traits.OnOff") to its last Spanner commit
+   * timestamp. If a trait has no recorded timestamp, it will be omitted from this map.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, DeviceMetadata> deviceMetadata;
+
+  static {
+    // hack to force ProGuard to consider DeviceMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeviceMetadata.class);
+  }
+
+  /**
    * States of the devices. Map of third-party device ID to struct of device states.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> devices;
+
+  /**
+   * Map from the Trait ID (e.g., "action.devices.traits.OnOff") to its last Spanner commit
+   * timestamp. If a trait has no recorded timestamp, it will be omitted from this map.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, DeviceMetadata> getDeviceMetadata() {
+    return deviceMetadata;
+  }
+
+  /**
+   * Map from the Trait ID (e.g., "action.devices.traits.OnOff") to its last Spanner commit
+   * timestamp. If a trait has no recorded timestamp, it will be omitted from this map.
+   * @param deviceMetadata deviceMetadata or {@code null} for none
+   */
+  public QueryResponsePayload setDeviceMetadata(java.util.Map<String, DeviceMetadata> deviceMetadata) {
+    this.deviceMetadata = deviceMetadata;
+    return this;
+  }
 
   /**
    * States of the devices. Map of third-party device ID to struct of device states.

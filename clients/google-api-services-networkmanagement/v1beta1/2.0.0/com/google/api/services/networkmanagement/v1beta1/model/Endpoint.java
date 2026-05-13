@@ -48,6 +48,16 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * A [Cloud Run](https://cloud.google.com/run)
+   * [job](https://docs.cloud.google.com/run/docs/reference/rest/v2/projects.locations.jobs#Job)
+   * URI. Applicable only to source endpoint. The format is:
+   * projects/{project}/locations/{location}/jobs/{job}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudRunJob;
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
    * [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get)
    * Applicable only to source endpoint.
    * The value may be {@code null}.
@@ -236,6 +246,29 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setCloudFunction(CloudFunctionEndpoint cloudFunction) {
     this.cloudFunction = cloudFunction;
+    return this;
+  }
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
+   * [job](https://docs.cloud.google.com/run/docs/reference/rest/v2/projects.locations.jobs#Job)
+   * URI. Applicable only to source endpoint. The format is:
+   * projects/{project}/locations/{location}/jobs/{job}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudRunJob() {
+    return cloudRunJob;
+  }
+
+  /**
+   * A [Cloud Run](https://cloud.google.com/run)
+   * [job](https://docs.cloud.google.com/run/docs/reference/rest/v2/projects.locations.jobs#Job)
+   * URI. Applicable only to source endpoint. The format is:
+   * projects/{project}/locations/{location}/jobs/{job}
+   * @param cloudRunJob cloudRunJob or {@code null} for none
+   */
+  public Endpoint setCloudRunJob(java.lang.String cloudRunJob) {
+    this.cloudRunJob = cloudRunJob;
     return this;
   }
 

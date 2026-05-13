@@ -72,8 +72,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
-   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
-   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * policy will default to triggering on all paths if both ignored_paths and required_paths are not
+   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,8 +166,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
-   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
-   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * policy will default to triggering on all paths if both ignored_paths and required_paths are not
+   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
    * @return value or {@code null} for none
    */
   public java.util.List<Path> getRequiredPaths() {
@@ -177,8 +177,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
-   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
-   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * policy will default to triggering on all paths if both ignored_paths and required_paths are not
+   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
    * @param requiredPaths requiredPaths or {@code null} for none
    */
   public RolloutPolicy setRequiredPaths(java.util.List<Path> requiredPaths) {

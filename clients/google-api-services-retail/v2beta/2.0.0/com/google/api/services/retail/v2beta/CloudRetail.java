@@ -2110,22 +2110,22 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided Catalog to update. If an unsupported or unknown
-           * field is provided, an INVALID_ARGUMENT error is returned.
+           * Optional. Indicates which fields in the provided Catalog to update. If an unsupported
+           * or unknown field is provided, an INVALID_ARGUMENT error is returned.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Indicates which fields in the provided Catalog to update. If an unsupported or unknown field is
-         provided, an INVALID_ARGUMENT error is returned.
+          /** Optional. Indicates which fields in the provided Catalog to update. If an unsupported or unknown
+         field is provided, an INVALID_ARGUMENT error is returned.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Indicates which fields in the provided Catalog to update. If an unsupported or unknown
-           * field is provided, an INVALID_ARGUMENT error is returned.
+           * Optional. Indicates which fields in the provided Catalog to update. If an unsupported
+           * or unknown field is provided, an INVALID_ARGUMENT error is returned.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2448,15 +2448,15 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided AttributesConfig to update. The following is the
-           * only supported field: * AttributesConfig.catalog_attributes If not set, all supported
-           * fields are updated.
+           * Optional. Indicates which fields in the provided AttributesConfig to update. The
+           * following is the only supported field: * AttributesConfig.catalog_attributes If not
+           * set, all supported fields are updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Indicates which fields in the provided AttributesConfig to update. The following is the only
-         supported field: * AttributesConfig.catalog_attributes If not set, all supported fields are
+          /** Optional. Indicates which fields in the provided AttributesConfig to update. The following is the
+         only supported field: * AttributesConfig.catalog_attributes If not set, all supported fields are
          updated.
            */
           public String getUpdateMask() {
@@ -2464,9 +2464,9 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided AttributesConfig to update. The following is the
-           * only supported field: * AttributesConfig.catalog_attributes If not set, all supported
-           * fields are updated.
+           * Optional. Indicates which fields in the provided AttributesConfig to update. The
+           * following is the only supported field: * AttributesConfig.catalog_attributes If not
+           * set, all supported fields are updated.
            */
           public UpdateAttributesConfig setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2612,16 +2612,16 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided CompletionConfig to update. The following are
-           * the only supported fields: * CompletionConfig.matching_order *
+           * Optional. Indicates which fields in the provided CompletionConfig to update. The
+           * following are the only supported fields: * CompletionConfig.matching_order *
            * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
            * CompletionConfig.auto_learning If not set, all supported fields are updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Indicates which fields in the provided CompletionConfig to update. The following are the only
-         supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
+          /** Optional. Indicates which fields in the provided CompletionConfig to update. The following are the
+         only supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
          CompletionConfig.min_prefix_length * CompletionConfig.auto_learning If not set, all supported
          fields are updated.
            */
@@ -2630,8 +2630,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Indicates which fields in the provided CompletionConfig to update. The following are
-           * the only supported fields: * CompletionConfig.matching_order *
+           * Optional. Indicates which fields in the provided CompletionConfig to update. The
+           * following are the only supported fields: * CompletionConfig.matching_order *
            * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
            * CompletionConfig.auto_learning If not set, all supported fields are updated.
            */

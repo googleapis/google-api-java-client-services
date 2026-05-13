@@ -38,8 +38,8 @@ public final class GoogleCloudRetailV2alphaReplaceCatalogAttributeRequest extend
   private GoogleCloudRetailV2alphaCatalogAttribute catalogAttribute;
 
   /**
-   * Indicates which fields in the provided CatalogAttribute to update. The following are NOT
-   * supported: * CatalogAttribute.key If not set, all supported fields are updated.
+   * Optional. Indicates which fields in the provided CatalogAttribute to update. The following are
+   * NOT supported: * CatalogAttribute.key If not set, all supported fields are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class GoogleCloudRetailV2alphaReplaceCatalogAttributeRequest extend
   }
 
   /**
-   * Indicates which fields in the provided CatalogAttribute to update. The following are NOT
-   * supported: * CatalogAttribute.key If not set, all supported fields are updated.
+   * Optional. Indicates which fields in the provided CatalogAttribute to update. The following are
+   * NOT supported: * CatalogAttribute.key If not set, all supported fields are updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -72,8 +72,8 @@ public final class GoogleCloudRetailV2alphaReplaceCatalogAttributeRequest extend
   }
 
   /**
-   * Indicates which fields in the provided CatalogAttribute to update. The following are NOT
-   * supported: * CatalogAttribute.key If not set, all supported fields are updated.
+   * Optional. Indicates which fields in the provided CatalogAttribute to update. The following are
+   * NOT supported: * CatalogAttribute.key If not set, all supported fields are updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudRetailV2alphaReplaceCatalogAttributeRequest setUpdateMask(String updateMask) {

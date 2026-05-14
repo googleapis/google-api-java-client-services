@@ -31,7 +31,7 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class AlertDocument extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. AI summary of the finding.
+   * Output only. AI summary of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   private AlertDocumentTranslation translation;
 
   /**
-   * Output only. AI summary of the finding.
+   * Output only. AI summary of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getAiSummary() {
@@ -131,7 +131,7 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. AI summary of the finding.
+   * Output only. AI summary of the document.
    * @param aiSummary aiSummary or {@code null} for none
    */
   public AlertDocument setAiSummary(java.lang.String aiSummary) {

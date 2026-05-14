@@ -37,6 +37,19 @@ public final class CreateContainerVersionResponse extends com.google.api.client.
   private java.lang.Boolean compilerError;
 
   /**
+   * Compiler error details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CompilerErrorLite> compilerErrors;
+
+  static {
+    // hack to force ProGuard to consider CompilerErrorLite used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CompilerErrorLite.class);
+  }
+
+  /**
    * The container version created.
    * The value may be {@code null}.
    */
@@ -72,6 +85,23 @@ public final class CreateContainerVersionResponse extends com.google.api.client.
    */
   public CreateContainerVersionResponse setCompilerError(java.lang.Boolean compilerError) {
     this.compilerError = compilerError;
+    return this;
+  }
+
+  /**
+   * Compiler error details.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CompilerErrorLite> getCompilerErrors() {
+    return compilerErrors;
+  }
+
+  /**
+   * Compiler error details.
+   * @param compilerErrors compilerErrors or {@code null} for none
+   */
+  public CreateContainerVersionResponse setCompilerErrors(java.util.List<CompilerErrorLite> compilerErrors) {
+    this.compilerErrors = compilerErrors;
     return this;
   }
 

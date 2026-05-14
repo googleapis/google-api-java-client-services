@@ -32,7 +32,7 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. AI summary of the finding.
+   * Optional. AI summary of the alert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Optional. AI summary of the finding.
+   * Optional. AI summary of the alert.
    * @return value or {@code null} for none
    */
   public java.lang.String getAiSummary() {
@@ -158,7 +158,7 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. AI summary of the finding.
+   * Optional. AI summary of the alert.
    * @param aiSummary aiSummary or {@code null} for none
    */
   public Alert setAiSummary(java.lang.String aiSummary) {

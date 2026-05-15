@@ -5123,22 +5123,22 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
-           * no action will be taken on the server.
+           * Optional. If set to true, and the GoogleApiSource is not found, the request will
+           * succeed but no action will be taken on the server.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** Optional. If set to true, and the MessageBus is not found, the request will succeed but no action
-         will be taken on the server.
+          /** Optional. If set to true, and the GoogleApiSource is not found, the request will succeed but no
+         action will be taken on the server.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * Optional. If set to true, and the MessageBus is not found, the request will succeed but
-           * no action will be taken on the server.
+           * Optional. If set to true, and the GoogleApiSource is not found, the request will
+           * succeed but no action will be taken on the server.
            */
           public Delete setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
@@ -5146,21 +5146,21 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * Optional. If provided, the GoogleApiSource will only be deleted if the etag matches the
            * current etag on the resource.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. If provided, the MessageBus will only be deleted if the etag matches the current etag on
-         the resource.
+          /** Optional. If provided, the GoogleApiSource will only be deleted if the etag matches the current
+         etag on the resource.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. If provided, the MessageBus will only be deleted if the etag matches the
+           * Optional. If provided, the GoogleApiSource will only be deleted if the etag matches the
            * current etag on the resource.
            */
           public Delete setEtag(java.lang.String etag) {

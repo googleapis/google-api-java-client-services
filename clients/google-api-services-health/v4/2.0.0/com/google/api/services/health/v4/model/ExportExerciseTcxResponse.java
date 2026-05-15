@@ -30,14 +30,18 @@ package com.google.api.services.health.v4.model;
 public final class ExportExerciseTcxResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains the exported TCX data.
+   * Contains the exported TCX data. This field is intended for gRPC clients, as media download
+   * integration is not supported for gRPC. HTTP clients should instead use the `alt=media` query
+   * parameter to download the raw binary TCX file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tcxData;
 
   /**
-   * Contains the exported TCX data.
+   * Contains the exported TCX data. This field is intended for gRPC clients, as media download
+   * integration is not supported for gRPC. HTTP clients should instead use the `alt=media` query
+   * parameter to download the raw binary TCX file.
    * @return value or {@code null} for none
    */
   public java.lang.String getTcxData() {
@@ -45,7 +49,9 @@ public final class ExportExerciseTcxResponse extends com.google.api.client.json.
   }
 
   /**
-   * Contains the exported TCX data.
+   * Contains the exported TCX data. This field is intended for gRPC clients, as media download
+   * integration is not supported for gRPC. HTTP clients should instead use the `alt=media` query
+   * parameter to download the raw binary TCX file.
    * @param tcxData tcxData or {@code null} for none
    */
   public ExportExerciseTcxResponse setTcxData(java.lang.String tcxData) {

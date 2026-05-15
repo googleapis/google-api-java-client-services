@@ -26,6 +26,24 @@ public class GoogleHealthAPIScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** See your Google Health activity and fitness data. */
+  public static final String GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY = "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly";
+
+  /** See your Google Health health metrics and measurement data. */
+  public static final String GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY = "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
+
+  /** See exercise GPS location data in Google Health. */
+  public static final String GOOGLEHEALTH_LOCATION_READONLY = "https://www.googleapis.com/auth/googlehealth.location.readonly";
+
+  /** See your Google Health profile data. */
+  public static final String GOOGLEHEALTH_PROFILE_READONLY = "https://www.googleapis.com/auth/googlehealth.profile.readonly";
+
+  /** See your Google Health settings. */
+  public static final String GOOGLEHEALTH_SETTINGS_READONLY = "https://www.googleapis.com/auth/googlehealth.settings.readonly";
+
+  /** See your Google Health sleep data. */
+  public static final String GOOGLEHEALTH_SLEEP_READONLY = "https://www.googleapis.com/auth/googlehealth.sleep.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +52,12 @@ public class GoogleHealthAPIScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY);
+    set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY);
+    set.add(GOOGLEHEALTH_LOCATION_READONLY);
+    set.add(GOOGLEHEALTH_PROFILE_READONLY);
+    set.add(GOOGLEHEALTH_SETTINGS_READONLY);
+    set.add(GOOGLEHEALTH_SLEEP_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

@@ -33,6 +33,17 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Enables the use of limited-availability built-in infoTypes in inspect_config. These
+   * infoTypes are supported only in specific regions and can cause scanning errors if used
+   * elsewhere. For more information, see https://cloud.google.com/sensitive-data-
+   * protection/docs/locations#location-specific_limitations to learn more about location-specific
+   * limitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowLimitedAvailabilityInfoTypes;
+
+  /**
    * Output only. The creation timestamp of an inspectTemplate.
    * The value may be {@code null}.
    */
@@ -75,6 +86,31 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Enables the use of limited-availability built-in infoTypes in inspect_config. These
+   * infoTypes are supported only in specific regions and can cause scanning errors if used
+   * elsewhere. For more information, see https://cloud.google.com/sensitive-data-
+   * protection/docs/locations#location-specific_limitations to learn more about location-specific
+   * limitations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowLimitedAvailabilityInfoTypes() {
+    return allowLimitedAvailabilityInfoTypes;
+  }
+
+  /**
+   * Optional. Enables the use of limited-availability built-in infoTypes in inspect_config. These
+   * infoTypes are supported only in specific regions and can cause scanning errors if used
+   * elsewhere. For more information, see https://cloud.google.com/sensitive-data-
+   * protection/docs/locations#location-specific_limitations to learn more about location-specific
+   * limitations.
+   * @param allowLimitedAvailabilityInfoTypes allowLimitedAvailabilityInfoTypes or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InspectTemplate setAllowLimitedAvailabilityInfoTypes(java.lang.Boolean allowLimitedAvailabilityInfoTypes) {
+    this.allowLimitedAvailabilityInfoTypes = allowLimitedAvailabilityInfoTypes;
+    return this;
+  }
 
   /**
    * Output only. The creation timestamp of an inspectTemplate.

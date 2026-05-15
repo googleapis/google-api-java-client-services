@@ -32,7 +32,7 @@ package com.google.api.services.datamigration.v1beta1.model;
 public final class QuotaFailureViolation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API Service from which the `QuotaFailure.Violation` orginates. In some cases, Quota issues
+   * The API Service from which the `QuotaFailure.Violation` originates. In some cases, Quota issues
    * originate from an API Service other than the one that was called. In other words, a dependency
    * of the called API Service could be the cause of the `QuotaFailure`, and this field would have
    * the dependency API service name. For example, if the called API is Kubernetes Engine API
@@ -115,7 +115,7 @@ public final class QuotaFailureViolation extends com.google.api.client.json.Gene
   private java.lang.String subject;
 
   /**
-   * The API Service from which the `QuotaFailure.Violation` orginates. In some cases, Quota issues
+   * The API Service from which the `QuotaFailure.Violation` originates. In some cases, Quota issues
    * originate from an API Service other than the one that was called. In other words, a dependency
    * of the called API Service could be the cause of the `QuotaFailure`, and this field would have
    * the dependency API service name. For example, if the called API is Kubernetes Engine API
@@ -130,7 +130,7 @@ public final class QuotaFailureViolation extends com.google.api.client.json.Gene
   }
 
   /**
-   * The API Service from which the `QuotaFailure.Violation` orginates. In some cases, Quota issues
+   * The API Service from which the `QuotaFailure.Violation` originates. In some cases, Quota issues
    * originate from an API Service other than the one that was called. In other words, a dependency
    * of the called API Service could be the cause of the `QuotaFailure`, and this field would have
    * the dependency API service name. For example, if the called API is Kubernetes Engine API

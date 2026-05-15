@@ -31,14 +31,14 @@ package com.google.api.services.developerknowledge.v1alpha.model;
 public final class Answer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text of the answer.
+   * Contains the text of the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerText;
 
   /**
-   * The text of the answer.
+   * Contains the text of the answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerText() {
@@ -46,7 +46,7 @@ public final class Answer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The text of the answer.
+   * Contains the text of the answer.
    * @param answerText answerText or {@code null} for none
    */
   public Answer setAnswerText(java.lang.String answerText) {

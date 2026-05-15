@@ -5600,7 +5600,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the netapp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Name of the KmsConfig. Format:
+         * @param name Identifier. Name of the `KmsConfig`. Format:
          *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
          * @param content the {@link com.google.api.services.netapp.v1.model.KmsConfig}
          * @return the request
@@ -5628,7 +5628,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Name of the KmsConfig. Format:
+           * @param name Identifier. Name of the `KmsConfig`. Format:
          *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            * @param content the {@link com.google.api.services.netapp.v1.model.KmsConfig}
            * @since 1.13
@@ -5699,13 +5699,13 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Identifier. Name of the KmsConfig. Format:
+           * Identifier. Name of the `KmsConfig`. Format:
            * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Name of the KmsConfig. Format:
+          /** Identifier. Name of the `KmsConfig`. Format:
          `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           public java.lang.String getName() {
@@ -5713,7 +5713,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Identifier. Name of the KmsConfig. Format:
+           * Identifier. Name of the `KmsConfig`. Format:
            * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           public Patch setName(java.lang.String name) {
@@ -7648,7 +7648,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
         public class Ontap {
 
           /**
-           * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+           * `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapDelete".
            *
@@ -7675,7 +7675,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+             * `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapDelete".
              *
@@ -7795,7 +7795,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+           * `ExecuteOntapGet` sends the ONTAP `GET` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapGet".
            *
@@ -7822,7 +7822,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+             * `ExecuteOntapGet` sends the ONTAP `GET` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapGet".
              *
@@ -7952,7 +7952,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+           * `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapPatch".
            *
@@ -7980,7 +7980,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+             * `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapPatch".
              *
@@ -8101,15 +8101,15 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+           * `ExecuteOntapPost` sends the ONTAP `POST` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapPost".
            *
            * This request holds the parameters needed by the netapp server.  After setting any optional
            * parameters, call the {@link ExecuteOntapPost#execute()} method to invoke the remote operation.
            *
-           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           * @param ontapPath Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id}
+           *        /storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            *        `projects/123456789/locations/us-central1/storagePools/my-storage-
            *        pool/ontap/api/storage/volumes`.
            * @param content the {@link com.google.api.services.netapp.v1.model.ExecuteOntapPostRequest}
@@ -8129,7 +8129,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+             * `ExecuteOntapPost` sends the ONTAP `POST` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapPost".
              *
@@ -8139,8 +8139,8 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
              * ClientRequest)} must be called to initialize this instance immediately after invoking the
              * constructor. </p>
              *
-             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+             * @param ontapPath Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id}
+           *        /storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            *        `projects/123456789/locations/us-central1/storagePools/my-storage-
            *        pool/ontap/api/storage/volumes`.
              * @param content the {@link com.google.api.services.netapp.v1.model.ExecuteOntapPostRequest}
@@ -8212,16 +8212,16 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
-             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
-             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * Required. The path of the ONTAP resource. Format: `projects/{project_number}/location
+             * s/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For
+             * example: `projects/123456789/locations/us-central1/storagePools/my-storage-
              * pool/ontap/api/storage/volumes`.
              */
             @com.google.api.client.util.Key
             private java.lang.String ontapPath;
 
-            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
-           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+            /** Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id
+           }/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
              */
             public java.lang.String getOntapPath() {
@@ -8229,9 +8229,9 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
-             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
-             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * Required. The path of the ONTAP resource. Format: `projects/{project_number}/location
+             * s/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For
+             * example: `projects/123456789/locations/us-central1/storagePools/my-storage-
              * pool/ontap/api/storage/volumes`.
              */
             public ExecuteOntapPost setOntapPath(java.lang.String ontapPath) {

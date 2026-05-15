@@ -38,7 +38,7 @@ public final class EstablishVolumePeeringRequest extends com.google.api.client.j
   private java.lang.String peerClusterName;
 
   /**
-   * Optional. List of IPv4 ip addresses to be used for peering.
+   * Optional. List of IPv4 IP addresses to be used for peering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class EstablishVolumePeeringRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. List of IPv4 ip addresses to be used for peering.
+   * Optional. List of IPv4 IP addresses to be used for peering.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPeerIpAddresses() {
@@ -85,7 +85,7 @@ public final class EstablishVolumePeeringRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. List of IPv4 ip addresses to be used for peering.
+   * Optional. List of IPv4 IP addresses to be used for peering.
    * @param peerIpAddresses peerIpAddresses or {@code null} for none
    */
   public EstablishVolumePeeringRequest setPeerIpAddresses(java.util.List<java.lang.String> peerIpAddresses) {

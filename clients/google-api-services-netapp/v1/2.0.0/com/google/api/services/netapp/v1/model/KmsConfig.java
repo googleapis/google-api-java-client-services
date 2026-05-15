@@ -66,7 +66,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Name of the KmsConfig. Format:
+   * Identifier. Name of the `KmsConfig`. Format:
    * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * The value may be {@code null}.
    */
@@ -183,7 +183,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the KmsConfig. Format:
+   * Identifier. Name of the `KmsConfig`. Format:
    * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @return value or {@code null} for none
    */
@@ -192,7 +192,7 @@ public final class KmsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the KmsConfig. Format:
+   * Identifier. Name of the `KmsConfig`. Format:
    * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
    * @param name name or {@code null} for none
    */

@@ -17,9 +17,7 @@
 package com.google.api.services.netapp.v1beta1.model;
 
 /**
- * Configuration for a Large Capacity Volume. A Large Capacity Volume supports sizes ranging from
- * 4.8 TiB to 20 PiB; it is composed of multiple internal constituents, and must be created in a
- * large capacity pool.
+ * Backup configuration for a volume in a pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the NetApp API. For a detailed explanation see:
@@ -29,43 +27,64 @@ package com.google.api.services.netapp.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LargeCapacityConfig extends com.google.api.client.json.GenericJson {
+public final class VolumeBackupConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The number of internal constituents (e.g., FlexVols) for this large volume. The
-   * minimum number of constituents is 2.
+   * Backup configuration for the volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer constituentCount;
+  private BackupConfig backupConfig;
 
   /**
-   * Optional. The number of internal constituents (e.g., FlexVols) for this large volume. The
-   * minimum number of constituents is 2.
+   * Provides the Ontap UUID of the volume within the pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String volumeUuid;
+
+  /**
+   * Backup configuration for the volume.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getConstituentCount() {
-    return constituentCount;
+  public BackupConfig getBackupConfig() {
+    return backupConfig;
   }
 
   /**
-   * Optional. The number of internal constituents (e.g., FlexVols) for this large volume. The
-   * minimum number of constituents is 2.
-   * @param constituentCount constituentCount or {@code null} for none
+   * Backup configuration for the volume.
+   * @param backupConfig backupConfig or {@code null} for none
    */
-  public LargeCapacityConfig setConstituentCount(java.lang.Integer constituentCount) {
-    this.constituentCount = constituentCount;
+  public VolumeBackupConfig setBackupConfig(BackupConfig backupConfig) {
+    this.backupConfig = backupConfig;
+    return this;
+  }
+
+  /**
+   * Provides the Ontap UUID of the volume within the pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVolumeUuid() {
+    return volumeUuid;
+  }
+
+  /**
+   * Provides the Ontap UUID of the volume within the pool.
+   * @param volumeUuid volumeUuid or {@code null} for none
+   */
+  public VolumeBackupConfig setVolumeUuid(java.lang.String volumeUuid) {
+    this.volumeUuid = volumeUuid;
     return this;
   }
 
   @Override
-  public LargeCapacityConfig set(String fieldName, Object value) {
-    return (LargeCapacityConfig) super.set(fieldName, value);
+  public VolumeBackupConfig set(String fieldName, Object value) {
+    return (VolumeBackupConfig) super.set(fieldName, value);
   }
 
   @Override
-  public LargeCapacityConfig clone() {
-    return (LargeCapacityConfig) super.clone();
+  public VolumeBackupConfig clone() {
+    return (VolumeBackupConfig) super.clone();
   }
 
 }

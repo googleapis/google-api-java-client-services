@@ -116,7 +116,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
+   * `enable-end-user-sharing-with-groups`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,7 +340,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
+   * `enable-end-user-sharing-with-groups`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -353,7 +355,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-mobile-
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills`
+   * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
+   * `enable-end-user-sharing-with-groups`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {

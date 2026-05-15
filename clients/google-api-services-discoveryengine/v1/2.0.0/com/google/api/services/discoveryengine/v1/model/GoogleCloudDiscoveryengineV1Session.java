@@ -68,6 +68,15 @@ public final class GoogleCloudDiscoveryengineV1Session extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Output only. Full resource name of an in-progress AsyncAssist operation for this session, e.g.
+   * `projects/locations/collections/engines/sessions/operations`. Set when the operation starts and
+   * cleared when it finishes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pendingAsyncAssistOperationId;
+
+  /**
    * Output only. The time the session started.
    * The value may be {@code null}.
    */
@@ -183,6 +192,27 @@ public final class GoogleCloudDiscoveryengineV1Session extends com.google.api.cl
    */
   public GoogleCloudDiscoveryengineV1Session setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Full resource name of an in-progress AsyncAssist operation for this session, e.g.
+   * `projects/locations/collections/engines/sessions/operations`. Set when the operation starts and
+   * cleared when it finishes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPendingAsyncAssistOperationId() {
+    return pendingAsyncAssistOperationId;
+  }
+
+  /**
+   * Output only. Full resource name of an in-progress AsyncAssist operation for this session, e.g.
+   * `projects/locations/collections/engines/sessions/operations`. Set when the operation starts and
+   * cleared when it finishes.
+   * @param pendingAsyncAssistOperationId pendingAsyncAssistOperationId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Session setPendingAsyncAssistOperationId(java.lang.String pendingAsyncAssistOperationId) {
+    this.pendingAsyncAssistOperationId = pendingAsyncAssistOperationId;
     return this;
   }
 

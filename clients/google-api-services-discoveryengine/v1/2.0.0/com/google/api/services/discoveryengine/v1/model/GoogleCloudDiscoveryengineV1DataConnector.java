@@ -106,6 +106,14 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   private java.util.List<java.lang.String> connectorModes;
 
   /**
+   * Optional. If set, this value instead of `data_source` is used to fetch the corresponding
+   * connector source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectorSourceId;
+
+  /**
    * Output only. The type of connector. Each source can only map to one type. For example,
    * salesforce, confluence and jira have THIRD_PARTY connector type. It is not mutable once set by
    * system.
@@ -548,6 +556,25 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
    */
   public GoogleCloudDiscoveryengineV1DataConnector setConnectorModes(java.util.List<java.lang.String> connectorModes) {
     this.connectorModes = connectorModes;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this value instead of `data_source` is used to fetch the corresponding
+   * connector source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectorSourceId() {
+    return connectorSourceId;
+  }
+
+  /**
+   * Optional. If set, this value instead of `data_source` is used to fetch the corresponding
+   * connector source.
+   * @param connectorSourceId connectorSourceId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnector setConnectorSourceId(java.lang.String connectorSourceId) {
+    this.connectorSourceId = connectorSourceId;
     return this;
   }
 

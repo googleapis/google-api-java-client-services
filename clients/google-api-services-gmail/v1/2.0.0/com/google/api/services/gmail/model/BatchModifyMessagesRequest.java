@@ -30,6 +30,18 @@ package com.google.api.services.gmail.model;
 public final class BatchModifyMessagesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of Classification Label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClassificationLabelValue> addClassificationLabels;
+
+  /**
    * A list of label IDs to add to messages.
    * The value may be {@code null}.
    */
@@ -44,11 +56,45 @@ public final class BatchModifyMessagesRequest extends com.google.api.client.json
   private java.util.List<java.lang.String> ids;
 
   /**
+   * A list of Classification Label values to remove from messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> removeClassificationLabelIds;
+
+  /**
    * A list of label IDs to remove from messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> removeLabelIds;
+
+  /**
+   * A list of Classification Label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClassificationLabelValue> getAddClassificationLabels() {
+    return addClassificationLabels;
+  }
+
+  /**
+   * A list of Classification Label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * @param addClassificationLabels addClassificationLabels or {@code null} for none
+   */
+  public BatchModifyMessagesRequest setAddClassificationLabels(java.util.List<ClassificationLabelValue> addClassificationLabels) {
+    this.addClassificationLabels = addClassificationLabels;
+    return this;
+  }
 
   /**
    * A list of label IDs to add to messages.
@@ -81,6 +127,23 @@ public final class BatchModifyMessagesRequest extends com.google.api.client.json
    */
   public BatchModifyMessagesRequest setIds(java.util.List<java.lang.String> ids) {
     this.ids = ids;
+    return this;
+  }
+
+  /**
+   * A list of Classification Label values to remove from messages.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRemoveClassificationLabelIds() {
+    return removeClassificationLabelIds;
+  }
+
+  /**
+   * A list of Classification Label values to remove from messages.
+   * @param removeClassificationLabelIds removeClassificationLabelIds or {@code null} for none
+   */
+  public BatchModifyMessagesRequest setRemoveClassificationLabelIds(java.util.List<java.lang.String> removeClassificationLabelIds) {
+    this.removeClassificationLabelIds = removeClassificationLabelIds;
     return this;
   }
 

@@ -30,11 +30,36 @@ package com.google.api.services.gmail.model;
 public final class ModifyMessageRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of classification label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ClassificationLabelValue> addClassificationLabels;
+
+  static {
+    // hack to force ProGuard to consider ClassificationLabelValue used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ClassificationLabelValue.class);
+  }
+
+  /**
    * A list of IDs of labels to add to this message. You can add up to 100 labels with each update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> addLabelIds;
+
+  /**
+   * A list of Classification Label values to remove from this message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> removeClassificationLabelIds;
 
   /**
    * A list IDs of labels to remove from this message. You can remove up to 100 labels with each
@@ -43,6 +68,33 @@ public final class ModifyMessageRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> removeLabelIds;
+
+  /**
+   * A list of classification label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ClassificationLabelValue> getAddClassificationLabels() {
+    return addClassificationLabels;
+  }
+
+  /**
+   * A list of classification label values to add. If a Classification Label with the same label ID
+   * is already applied to the message, fields with existing field IDs will be updated and fields
+   * with new field IDs will be added. There's a limit of 20 Classification Label values per
+   * request. If the message is already classified and the final total number of Classification
+   * Label values exceeds the maximum allowed number of Classification Label values per message, the
+   * modification fails.
+   * @param addClassificationLabels addClassificationLabels or {@code null} for none
+   */
+  public ModifyMessageRequest setAddClassificationLabels(java.util.List<ClassificationLabelValue> addClassificationLabels) {
+    this.addClassificationLabels = addClassificationLabels;
+    return this;
+  }
 
   /**
    * A list of IDs of labels to add to this message. You can add up to 100 labels with each update.
@@ -58,6 +110,23 @@ public final class ModifyMessageRequest extends com.google.api.client.json.Gener
    */
   public ModifyMessageRequest setAddLabelIds(java.util.List<java.lang.String> addLabelIds) {
     this.addLabelIds = addLabelIds;
+    return this;
+  }
+
+  /**
+   * A list of Classification Label values to remove from this message.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRemoveClassificationLabelIds() {
+    return removeClassificationLabelIds;
+  }
+
+  /**
+   * A list of Classification Label values to remove from this message.
+   * @param removeClassificationLabelIds removeClassificationLabelIds or {@code null} for none
+   */
+  public ModifyMessageRequest setRemoveClassificationLabelIds(java.util.List<java.lang.String> removeClassificationLabelIds) {
+    this.removeClassificationLabelIds = removeClassificationLabelIds;
     return this;
   }
 

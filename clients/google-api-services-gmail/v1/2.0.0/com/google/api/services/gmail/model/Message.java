@@ -33,7 +33,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Classification Label values on the message. Available Classification Label schemas can be
    * queried using the Google Drive Labels API. Each classification label ID must be unique. If
    * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
-   * used for Google Workspace accounts.
+   * used for Google Workspace accounts. There's a limit of 20 Classification Label values per
+   * request. If the Classification Label values exceeds the maximum allowed number, the request
+   * fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +122,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Classification Label values on the message. Available Classification Label schemas can be
    * queried using the Google Drive Labels API. Each classification label ID must be unique. If
    * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
-   * used for Google Workspace accounts.
+   * used for Google Workspace accounts. There's a limit of 20 Classification Label values per
+   * request. If the Classification Label values exceeds the maximum allowed number, the request
+   * fails.
    * @return value or {@code null} for none
    */
   public java.util.List<ClassificationLabelValue> getClassificationLabelValues() {
@@ -131,7 +135,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
    * Classification Label values on the message. Available Classification Label schemas can be
    * queried using the Google Drive Labels API. Each classification label ID must be unique. If
    * duplicate IDs are provided, only one will be retained, and the selection is arbitrary. Only
-   * used for Google Workspace accounts.
+   * used for Google Workspace accounts. There's a limit of 20 Classification Label values per
+   * request. If the Classification Label values exceeds the maximum allowed number, the request
+   * fails.
    * @param classificationLabelValues classificationLabelValues or {@code null} for none
    */
   public Message setClassificationLabelValues(java.util.List<ClassificationLabelValue> classificationLabelValues) {

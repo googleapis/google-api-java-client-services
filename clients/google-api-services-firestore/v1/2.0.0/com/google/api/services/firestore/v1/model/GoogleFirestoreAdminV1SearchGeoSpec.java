@@ -31,6 +31,7 @@ public final class GoogleFirestoreAdminV1SearchGeoSpec extends com.google.api.cl
 
   /**
    * Optional. Disables geoJSON indexing for the field. By default, geoJSON points are indexed.
+   * Firestore GeoPoints are indexed regardless of this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,6 +39,7 @@ public final class GoogleFirestoreAdminV1SearchGeoSpec extends com.google.api.cl
 
   /**
    * Optional. Disables geoJSON indexing for the field. By default, geoJSON points are indexed.
+   * Firestore GeoPoints are indexed regardless of this value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGeoJsonIndexingDisabled() {
@@ -46,6 +48,7 @@ public final class GoogleFirestoreAdminV1SearchGeoSpec extends com.google.api.cl
 
   /**
    * Optional. Disables geoJSON indexing for the field. By default, geoJSON points are indexed.
+   * Firestore GeoPoints are indexed regardless of this value.
    * @param geoJsonIndexingDisabled geoJsonIndexingDisabled or {@code null} for none
    */
   public GoogleFirestoreAdminV1SearchGeoSpec setGeoJsonIndexingDisabled(java.lang.Boolean geoJsonIndexingDisabled) {

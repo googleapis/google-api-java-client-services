@@ -88,8 +88,7 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String queryScope;
 
   /**
-   * Optional. Options for search indexes that are at the index definition level. This field is only
-   * currently supported for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Optional. Options for search indexes that are at the index definition level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -252,8 +251,7 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Options for search indexes that are at the index definition level. This field is only
-   * currently supported for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Optional. Options for search indexes that are at the index definition level.
    * @return value or {@code null} for none
    */
   public GoogleFirestoreAdminV1SearchIndexOptions getSearchIndexOptions() {
@@ -261,8 +259,7 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Options for search indexes that are at the index definition level. This field is only
-   * currently supported for indexes with MONGODB_COMPATIBLE_API ApiScope.
+   * Optional. Options for search indexes that are at the index definition level.
    * @param searchIndexOptions searchIndexOptions or {@code null} for none
    */
   public GoogleFirestoreAdminV1Index setSearchIndexOptions(GoogleFirestoreAdminV1SearchIndexOptions searchIndexOptions) {

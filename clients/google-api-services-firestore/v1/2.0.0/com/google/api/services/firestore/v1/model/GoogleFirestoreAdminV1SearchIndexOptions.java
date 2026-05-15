@@ -42,8 +42,8 @@ public final class GoogleFirestoreAdminV1SearchIndexOptions extends com.google.a
 
   /**
    * Optional. The field in the document that specifies which language to use for that specific
-   * document. For indexes with MONGODB_COMPATIBLE_API ApiScope: if unspecified, the language is
-   * taken from the "language" field if it exists or from `text_language` if it does not.
+   * document. If unspecified, the language is taken from the "language" field if it exists or from
+   * `text_language` if it does not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class GoogleFirestoreAdminV1SearchIndexOptions extends com.google.a
 
   /**
    * Optional. The field in the document that specifies which language to use for that specific
-   * document. For indexes with MONGODB_COMPATIBLE_API ApiScope: if unspecified, the language is
-   * taken from the "language" field if it exists or from `text_language` if it does not.
+   * document. If unspecified, the language is taken from the "language" field if it exists or from
+   * `text_language` if it does not.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextLanguageOverrideFieldPath() {
@@ -86,8 +86,8 @@ public final class GoogleFirestoreAdminV1SearchIndexOptions extends com.google.a
 
   /**
    * Optional. The field in the document that specifies which language to use for that specific
-   * document. For indexes with MONGODB_COMPATIBLE_API ApiScope: if unspecified, the language is
-   * taken from the "language" field if it exists or from `text_language` if it does not.
+   * document. If unspecified, the language is taken from the "language" field if it exists or from
+   * `text_language` if it does not.
    * @param textLanguageOverrideFieldPath textLanguageOverrideFieldPath or {@code null} for none
    */
   public GoogleFirestoreAdminV1SearchIndexOptions setTextLanguageOverrideFieldPath(java.lang.String textLanguageOverrideFieldPath) {

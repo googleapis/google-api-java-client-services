@@ -47,9 +47,9 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   private java.lang.Integer pageSize;
 
   /**
-   * The page token received from a previous `BatchSearchLinkProcesses` call. Use it to get the next
-   * page. When requesting subsequent pages of a response, remember that all parameters must match
-   * the values you provided in the original request.
+   * Optional. The page token received from a previous `BatchSearchLinkProcesses` call. Use it to
+   * get the next page. When requesting subsequent pages of a response, remember that all parameters
+   * must match the values you provided in the original request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +96,9 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   }
 
   /**
-   * The page token received from a previous `BatchSearchLinkProcesses` call. Use it to get the next
-   * page. When requesting subsequent pages of a response, remember that all parameters must match
-   * the values you provided in the original request.
+   * Optional. The page token received from a previous `BatchSearchLinkProcesses` call. Use it to
+   * get the next page. When requesting subsequent pages of a response, remember that all parameters
+   * must match the values you provided in the original request.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -106,9 +106,9 @@ public final class GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesReques
   }
 
   /**
-   * The page token received from a previous `BatchSearchLinkProcesses` call. Use it to get the next
-   * page. When requesting subsequent pages of a response, remember that all parameters must match
-   * the values you provided in the original request.
+   * Optional. The page token received from a previous `BatchSearchLinkProcesses` call. Use it to
+   * get the next page. When requesting subsequent pages of a response, remember that all parameters
+   * must match the values you provided in the original request.
    * @param pageToken pageToken or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest setPageToken(java.lang.String pageToken) {

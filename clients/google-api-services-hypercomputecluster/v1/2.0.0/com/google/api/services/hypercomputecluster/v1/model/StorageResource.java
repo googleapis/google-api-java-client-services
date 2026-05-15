@@ -17,8 +17,8 @@
 package com.google.api.services.hypercomputecluster.v1.model;
 
 /**
- * A resource representing a form of persistent storage that is accessible to compute resources in
- * the cluster.
+ * A resource representing a form of persistent storage that can be mounted onto compute resources
+ * in the cluster.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cluster Director API. For a detailed explanation see:

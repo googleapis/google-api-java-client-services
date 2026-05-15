@@ -45,6 +45,13 @@ public final class TargetLocation extends com.google.api.client.json.GenericJson
   private java.lang.String locationName;
 
   /**
+   * Output only. The Place ID of the location to which the user is invited. Not always populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String placeId;
+
+  /**
    * The address of the location to which the user is invited. Not always populated.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class TargetLocation extends com.google.api.client.json.GenericJson
    */
   public TargetLocation setLocationName(java.lang.String locationName) {
     this.locationName = locationName;
+    return this;
+  }
+
+  /**
+   * Output only. The Place ID of the location to which the user is invited. Not always populated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaceId() {
+    return placeId;
+  }
+
+  /**
+   * Output only. The Place ID of the location to which the user is invited. Not always populated.
+   * @param placeId placeId or {@code null} for none
+   */
+  public TargetLocation setPlaceId(java.lang.String placeId) {
+    this.placeId = placeId;
     return this;
   }
 

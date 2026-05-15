@@ -150,8 +150,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Mode of the storage pool. This field is used to control whether the user can perform
-   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
-   * during creation, it defaults to `DEFAULT`.
+   * ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified during
+   * creation, it defaults to `DEFAULT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -566,8 +566,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Mode of the storage pool. This field is used to control whether the user can perform
-   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
-   * during creation, it defaults to `DEFAULT`.
+   * ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified during
+   * creation, it defaults to `DEFAULT`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -576,8 +576,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Mode of the storage pool. This field is used to control whether the user can perform
-   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
-   * during creation, it defaults to `DEFAULT`.
+   * ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified during
+   * creation, it defaults to `DEFAULT`.
    * @param mode mode or {@code null} for none
    */
   public StoragePool setMode(java.lang.String mode) {

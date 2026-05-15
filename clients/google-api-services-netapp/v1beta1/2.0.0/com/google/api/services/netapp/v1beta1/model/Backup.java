@@ -90,6 +90,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OntapSource ontapSource;
+
+  /**
    * Output only. Reserved for future use
    * The value may be {@code null}.
    */
@@ -113,8 +121,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshot;
 
   /**
-   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
-   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * The resource name of the volume that this backup belongs to. You must provide either
+   * `source_volume` or `ontap_source`. Format:
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -288,6 +297,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * @return value or {@code null} for none
+   */
+  public OntapSource getOntapSource() {
+    return ontapSource;
+  }
+
+  /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * @param ontapSource ontapSource or {@code null} for none
+   */
+  public Backup setOntapSource(OntapSource ontapSource) {
+    this.ontapSource = ontapSource;
+    return this;
+  }
+
+  /**
    * Output only. Reserved for future use
    * @return value or {@code null} for none
    */
@@ -343,8 +371,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
-   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * The resource name of the volume that this backup belongs to. You must provide either
+   * `source_volume` or `ontap_source`. Format:
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceVolume() {
@@ -352,8 +381,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
-   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * The resource name of the volume that this backup belongs to. You must provide either
+   * `source_volume` or `ontap_source`. Format:
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
    * @param sourceVolume sourceVolume or {@code null} for none
    */
   public Backup setSourceVolume(java.lang.String sourceVolume) {

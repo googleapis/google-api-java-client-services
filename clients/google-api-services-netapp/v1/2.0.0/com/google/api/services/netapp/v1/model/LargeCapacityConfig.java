@@ -18,7 +18,7 @@ package com.google.api.services.netapp.v1.model;
 
 /**
  * Configuration for a Large Capacity Volume. A Large Capacity Volume supports sizes ranging from
- * 4.8 TiB to 20 PiB, it is composed of multiple internal constituents, and must be created in a
+ * 4.8 TiB to 20 PiB; it is composed of multiple internal constituents, and must be created in a
  * large capacity pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

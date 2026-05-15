@@ -5600,7 +5600,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
          * This request holds the parameters needed by the netapp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Name of the KmsConfig. Format:
+         * @param name Identifier. Name of the `KmsConfig`. Format:
          *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
          * @param content the {@link com.google.api.services.netapp.v1beta1.model.KmsConfig}
          * @return the request
@@ -5628,7 +5628,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Name of the KmsConfig. Format:
+           * @param name Identifier. Name of the `KmsConfig`. Format:
          *        `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            * @param content the {@link com.google.api.services.netapp.v1beta1.model.KmsConfig}
            * @since 1.13
@@ -5699,13 +5699,13 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Identifier. Name of the KmsConfig. Format:
+           * Identifier. Name of the `KmsConfig`. Format:
            * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Name of the KmsConfig. Format:
+          /** Identifier. Name of the `KmsConfig`. Format:
          `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           public java.lang.String getName() {
@@ -5713,7 +5713,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * Identifier. Name of the KmsConfig. Format:
+           * Identifier. Name of the `KmsConfig`. Format:
            * `projects/{project}/locations/{location}/kmsConfigs/{kms_config}`
            */
           public Patch setName(java.lang.String name) {
@@ -7362,6 +7362,146 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Restores a backup to an ONTAP-mode volume.
+         *
+         * Create a request for the method "storagePools.restoreVolume".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link RestoreVolume#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the ONTAP mode storage pool, in the format of
+         *        `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+         * @param content the {@link com.google.api.services.netapp.v1beta1.model.RestoreVolumeRequest}
+         * @return the request
+         */
+        public RestoreVolume restoreVolume(java.lang.String name, com.google.api.services.netapp.v1beta1.model.RestoreVolumeRequest content) throws java.io.IOException {
+          RestoreVolume result = new RestoreVolume(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RestoreVolume extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:restoreVolume";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+
+          /**
+           * Restores a backup to an ONTAP-mode volume.
+           *
+           * Create a request for the method "storagePools.restoreVolume".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link RestoreVolume#execute()} method to invoke the remote operation. <p>
+           * {@link RestoreVolume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+           * equest)} must be called to initialize this instance immediately after invoking the constructor.
+           * </p>
+           *
+           * @param name Required. The resource name of the ONTAP mode storage pool, in the format of
+         *        `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.RestoreVolumeRequest}
+           * @since 1.13
+           */
+          protected RestoreVolume(java.lang.String name, com.google.api.services.netapp.v1beta1.model.RestoreVolumeRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+          }
+
+          @Override
+          public RestoreVolume set$Xgafv(java.lang.String $Xgafv) {
+            return (RestoreVolume) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RestoreVolume setAccessToken(java.lang.String accessToken) {
+            return (RestoreVolume) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RestoreVolume setAlt(java.lang.String alt) {
+            return (RestoreVolume) super.setAlt(alt);
+          }
+
+          @Override
+          public RestoreVolume setCallback(java.lang.String callback) {
+            return (RestoreVolume) super.setCallback(callback);
+          }
+
+          @Override
+          public RestoreVolume setFields(java.lang.String fields) {
+            return (RestoreVolume) super.setFields(fields);
+          }
+
+          @Override
+          public RestoreVolume setKey(java.lang.String key) {
+            return (RestoreVolume) super.setKey(key);
+          }
+
+          @Override
+          public RestoreVolume setOauthToken(java.lang.String oauthToken) {
+            return (RestoreVolume) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RestoreVolume setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RestoreVolume) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RestoreVolume setQuotaUser(java.lang.String quotaUser) {
+            return (RestoreVolume) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RestoreVolume setUploadType(java.lang.String uploadType) {
+            return (RestoreVolume) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RestoreVolume setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RestoreVolume) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ONTAP mode storage pool, in the format of
+           * `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the ONTAP mode storage pool, in the format of
+         `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the ONTAP mode storage pool, in the format of
+           * `projects/{project}/locations/{location}/storagePools/{storage_pool}`
+           */
+          public RestoreVolume setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RestoreVolume set(String parameterName, Object value) {
+            return (RestoreVolume) super.set(parameterName, value);
+          }
+        }
+        /**
          * This operation will switch the active/replica zone for a regional storagePool.
          *
          * Create a request for the method "storagePools.switch".
@@ -7490,6 +7630,146 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           @Override
           public NetAppFilesSwitch set(String parameterName, Object value) {
             return (NetAppFilesSwitch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the backup configuration for an ONTAP-mode volume.
+         *
+         * Create a request for the method "storagePools.updateBackupConfig".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link UpdateBackupConfig#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the StoragePool, in the format:
+         *        projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+         * @param content the {@link com.google.api.services.netapp.v1beta1.model.UpdateBackupConfigRequest}
+         * @return the request
+         */
+        public UpdateBackupConfig updateBackupConfig(java.lang.String name, com.google.api.services.netapp.v1beta1.model.UpdateBackupConfigRequest content) throws java.io.IOException {
+          UpdateBackupConfig result = new UpdateBackupConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateBackupConfig extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:updateBackupConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+
+          /**
+           * Updates the backup configuration for an ONTAP-mode volume.
+           *
+           * Create a request for the method "storagePools.updateBackupConfig".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link UpdateBackupConfig#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateBackupConfig#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the StoragePool, in the format:
+         *        projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.UpdateBackupConfigRequest}
+           * @since 1.13
+           */
+          protected UpdateBackupConfig(java.lang.String name, com.google.api.services.netapp.v1beta1.model.UpdateBackupConfigRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateBackupConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateBackupConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateBackupConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateBackupConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateBackupConfig setAlt(java.lang.String alt) {
+            return (UpdateBackupConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateBackupConfig setCallback(java.lang.String callback) {
+            return (UpdateBackupConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateBackupConfig setFields(java.lang.String fields) {
+            return (UpdateBackupConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateBackupConfig setKey(java.lang.String key) {
+            return (UpdateBackupConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateBackupConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateBackupConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateBackupConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateBackupConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateBackupConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateBackupConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateBackupConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateBackupConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateBackupConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateBackupConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the StoragePool, in the format:
+           * projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the StoragePool, in the format:
+         projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the StoragePool, in the format:
+           * projects/{projectNumber}/locations/{locationId}/storagePools/{poolId}
+           */
+          public UpdateBackupConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public UpdateBackupConfig set(String parameterName, Object value) {
+            return (UpdateBackupConfig) super.set(parameterName, value);
           }
         }
         /**
@@ -7628,6 +7908,258 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
         }
 
         /**
+         * An accessor for creating requests from the BackupConfigs collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetAppFiles netapp = new NetAppFiles(...);}
+         *   {@code NetAppFiles.BackupConfigs.List request = netapp.backupConfigs().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public BackupConfigs backupConfigs() {
+          return new BackupConfigs();
+        }
+
+        /**
+         * The "backupConfigs" collection of methods.
+         */
+        public class BackupConfigs {
+
+          /**
+           * Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+           *
+           * Create a request for the method "backupConfigs.list".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The ONTAP StoragePool for which to retrieve backup configuration information, in the
+           *        format `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.ListBackupConfigsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/backupConfigs";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+
+            /**
+             * Lists backup configurations for all volumes in an ONTAP-mode Storage Pool.
+             *
+             * Create a request for the method "backupConfigs.list".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The ONTAP StoragePool for which to retrieve backup configuration information, in the
+           *        format `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetAppFiles.this, "GET", REST_PATH, null, com.google.api.services.netapp.v1beta1.model.ListBackupConfigsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The ONTAP StoragePool for which to retrieve backup configuration
+             * information, in the format
+             * `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The ONTAP StoragePool for which to retrieve backup configuration information, in the
+           format `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The ONTAP StoragePool for which to retrieve backup configuration
+             * information, in the format
+             * `projects/{project}/locations/{location}/storagePools/{storage_pool}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The standard list filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. The standard list filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Sort results. Supported values are "volume_id" or "" */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Sort results. Supported values are "volume_id" or ""
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Sort results. Supported values are "volume_id" or "" */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. The service may return fewer than
+             * this value. The maximum value is 1000; values above 1000 will be coerced to 1000. If
+             * unspecified or set to 0, a default of 50 will be used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. The service may return fewer than this value. The
+           maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified or set to 0, a
+           default of 50 will be used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. The service may return fewer than
+             * this value. The maximum value is 1000; values above 1000 will be coerced to 1000. If
+             * unspecified or set to 0, a default of 50 will be used.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value to use if there are additional results to
+             * retrieve for this list request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value to use if there are additional results to retrieve for this
+           list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value to use if there are additional results to
+             * retrieve for this list request.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Ontap collection.
          *
          * <p>The typical use is:</p>
@@ -7648,7 +8180,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
         public class Ontap {
 
           /**
-           * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+           * `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapDelete".
            *
@@ -7675,7 +8207,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+             * `ExecuteOntapDelete` sends the ONTAP `DELETE` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapDelete".
              *
@@ -7795,7 +8327,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+           * `ExecuteOntapGet` sends the ONTAP `GET` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapGet".
            *
@@ -7822,7 +8354,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+             * `ExecuteOntapGet` sends the ONTAP `GET` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapGet".
              *
@@ -7952,7 +8484,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+           * `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapPatch".
            *
@@ -7980,7 +8512,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+             * `ExecuteOntapPatch` sends the ONTAP `PATCH` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapPatch".
              *
@@ -8101,15 +8633,15 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
           }
           /**
-           * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+           * `ExecuteOntapPost` sends the ONTAP `POST` request to the `StoragePool` cluster.
            *
            * Create a request for the method "ontap.executeOntapPost".
            *
            * This request holds the parameters needed by the netapp server.  After setting any optional
            * parameters, call the {@link ExecuteOntapPost#execute()} method to invoke the remote operation.
            *
-           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           * @param ontapPath Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id}
+           *        /storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            *        `projects/123456789/locations/us-central1/storagePools/my-storage-
            *        pool/ontap/api/storage/volumes`.
            * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest}
@@ -8129,7 +8661,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
 
             /**
-             * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+             * `ExecuteOntapPost` sends the ONTAP `POST` request to the `StoragePool` cluster.
              *
              * Create a request for the method "ontap.executeOntapPost".
              *
@@ -8139,8 +8671,8 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
              * ClientRequest)} must be called to initialize this instance immediately after invoking the
              * constructor. </p>
              *
-             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
-           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+             * @param ontapPath Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id}
+           *        /storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            *        `projects/123456789/locations/us-central1/storagePools/my-storage-
            *        pool/ontap/api/storage/volumes`.
              * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest}
@@ -8212,16 +8744,16 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
-             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
-             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * Required. The path of the ONTAP resource. Format: `projects/{project_number}/location
+             * s/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For
+             * example: `projects/123456789/locations/us-central1/storagePools/my-storage-
              * pool/ontap/api/storage/volumes`.
              */
             @com.google.api.client.util.Key
             private java.lang.String ontapPath;
 
-            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
-           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+            /** Required. The path of the ONTAP resource. Format: `projects/{project_number}/locations/{location_id
+           }/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
            `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
              */
             public java.lang.String getOntapPath() {
@@ -8229,9 +8761,9 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
-             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
-             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * Required. The path of the ONTAP resource. Format: `projects/{project_number}/location
+             * s/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For
+             * example: `projects/123456789/locations/us-central1/storagePools/my-storage-
              * pool/ontap/api/storage/volumes`.
              */
             public ExecuteOntapPost setOntapPath(java.lang.String ontapPath) {

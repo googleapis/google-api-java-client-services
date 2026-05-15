@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBl
   private GoogleCloudDocumentaiV1BoundingPoly boundingBox;
 
   /**
+   * Block consisting of image content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImageBlock imageBlock;
+
+  /**
    * Block consisting of list content/structure.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBl
    */
   public GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock setBoundingBox(GoogleCloudDocumentaiV1BoundingPoly boundingBox) {
     this.boundingBox = boundingBox;
+    return this;
+  }
+
+  /**
+   * Block consisting of image content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImageBlock getImageBlock() {
+    return imageBlock;
+  }
+
+  /**
+   * Block consisting of image content.
+   * @param imageBlock imageBlock or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock setImageBlock(GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutImageBlock imageBlock) {
+    this.imageBlock = imageBlock;
     return this;
   }
 

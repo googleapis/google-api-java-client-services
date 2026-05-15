@@ -66,6 +66,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsApplicationLoadBalancerDetails awsApplicationLoadBalancerDetails;
 
   /**
+   * Output only. Asset information specific for AwsAthenaWorkGroupDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsAthenaWorkGroupDetails awsAthenaWorkGroupDetails;
+
+  /**
    * Output only. Asset information specific for AwsAutoscalingGroupDetails
    * The value may be {@code null}.
    */
@@ -150,11 +157,39 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsElbLoadBalancerDetails awsElbLoadBalancerDetails;
 
   /**
+   * Output only. Asset information specific for AwsEmrClusterDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEmrClusterDetails awsEmrClusterDetails;
+
+  /**
+   * Output only. Asset information specific for AwsFirehoseDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsFirehoseDetails awsFirehoseDetails;
+
+  /**
+   * Output only. Asset information specific for AwsGlueJobDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsGlueJobDetails awsGlueJobDetails;
+
+  /**
    * Output only. Asset information specific for AWS Internet Gateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsInternetGatewayDetails awsInternetGatewayDetails;
+
+  /**
+   * Output only. Asset information specific for AwsKinesisStreamDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsKinesisStreamDetails awsKinesisStreamDetails;
 
   /**
    * Output only. Asset information specific for AWS Lambda functions.
@@ -410,6 +445,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AwsAthenaWorkGroupDetails
+   * @return value or {@code null} for none
+   */
+  public AwsAthenaWorkGroupDetails getAwsAthenaWorkGroupDetails() {
+    return awsAthenaWorkGroupDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsAthenaWorkGroupDetails
+   * @param awsAthenaWorkGroupDetails awsAthenaWorkGroupDetails or {@code null} for none
+   */
+  public Asset setAwsAthenaWorkGroupDetails(AwsAthenaWorkGroupDetails awsAthenaWorkGroupDetails) {
+    this.awsAthenaWorkGroupDetails = awsAthenaWorkGroupDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AwsAutoscalingGroupDetails
    * @return value or {@code null} for none
    */
@@ -614,6 +666,57 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AwsEmrClusterDetails
+   * @return value or {@code null} for none
+   */
+  public AwsEmrClusterDetails getAwsEmrClusterDetails() {
+    return awsEmrClusterDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsEmrClusterDetails
+   * @param awsEmrClusterDetails awsEmrClusterDetails or {@code null} for none
+   */
+  public Asset setAwsEmrClusterDetails(AwsEmrClusterDetails awsEmrClusterDetails) {
+    this.awsEmrClusterDetails = awsEmrClusterDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsFirehoseDetails
+   * @return value or {@code null} for none
+   */
+  public AwsFirehoseDetails getAwsFirehoseDetails() {
+    return awsFirehoseDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsFirehoseDetails
+   * @param awsFirehoseDetails awsFirehoseDetails or {@code null} for none
+   */
+  public Asset setAwsFirehoseDetails(AwsFirehoseDetails awsFirehoseDetails) {
+    this.awsFirehoseDetails = awsFirehoseDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsGlueJobDetails
+   * @return value or {@code null} for none
+   */
+  public AwsGlueJobDetails getAwsGlueJobDetails() {
+    return awsGlueJobDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsGlueJobDetails
+   * @param awsGlueJobDetails awsGlueJobDetails or {@code null} for none
+   */
+  public Asset setAwsGlueJobDetails(AwsGlueJobDetails awsGlueJobDetails) {
+    this.awsGlueJobDetails = awsGlueJobDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AWS Internet Gateways.
    * @return value or {@code null} for none
    */
@@ -627,6 +730,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsInternetGatewayDetails(AwsInternetGatewayDetails awsInternetGatewayDetails) {
     this.awsInternetGatewayDetails = awsInternetGatewayDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsKinesisStreamDetails
+   * @return value or {@code null} for none
+   */
+  public AwsKinesisStreamDetails getAwsKinesisStreamDetails() {
+    return awsKinesisStreamDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsKinesisStreamDetails
+   * @param awsKinesisStreamDetails awsKinesisStreamDetails or {@code null} for none
+   */
+  public Asset setAwsKinesisStreamDetails(AwsKinesisStreamDetails awsKinesisStreamDetails) {
+    this.awsKinesisStreamDetails = awsKinesisStreamDetails;
     return this;
   }
 

@@ -2864,7 +2864,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Registers the GCP used for the API call to the shopping account passed in the request. Will
        * create a user with an "API developer" and add the "developer_email" as a contact with "API
-       * notifications" email preference on.
+       * notifications" email preference on. Restrictions: * The caller account must be authenticated and
+       * must not impersonate another account at registration time. Registering for subaccounts is not
+       * supported if the caller account is authenticated with the parent or the managing advanced
+       * account. * The caller account must have a [verified
+       * website](https://support.google.com/merchants/answer/11586344) in Merchant Center. * [Test
+       * accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts) are not
+       * eligible for registration.
        *
        * Create a request for the method "developerRegistration.registerGcp".
        *
@@ -2874,6 +2880,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
        *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
        *        used must be the same account where user calling this API method is directly added to.
+       *        Note: The account used must be a production account (can't be a [test
+       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+       *        must have a [verified website](https://support.google.com/merchants/answer/11586344) in
+       *        Merchant Center.
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGcpRequest}
        * @return the request
        */
@@ -2893,7 +2903,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Registers the GCP used for the API call to the shopping account passed in the request. Will
          * create a user with an "API developer" and add the "developer_email" as a contact with "API
-         * notifications" email preference on.
+         * notifications" email preference on. Restrictions: * The caller account must be authenticated
+         * and must not impersonate another account at registration time. Registering for subaccounts is
+         * not supported if the caller account is authenticated with the parent or the managing advanced
+         * account. * The caller account must have a [verified
+         * website](https://support.google.com/merchants/answer/11586344) in Merchant Center. * [Test
+         * accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts) are not
+         * eligible for registration.
          *
          * Create a request for the method "developerRegistration.registerGcp".
          *
@@ -2906,6 +2922,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
        *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
        *        used must be the same account where user calling this API method is directly added to.
+       *        Note: The account used must be a production account (can't be a [test
+       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+       *        must have a [verified website](https://support.google.com/merchants/answer/11586344) in
+       *        Merchant Center.
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGcpRequest}
          * @since 1.13
          */
@@ -2978,14 +2998,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The name of the developer registration to be created for the merchant account
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
          * The {account} used must be the same account where user calling this API method is
-         * directly added to.
+         * directly added to. Note: The account used must be a production account (can't be a [test
+         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+         * must have a [verified website](https://support.google.com/merchants/answer/11586344) in
+         * Merchant Center.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the developer registration to be created for the merchant account that the
        GCP will be registered with. Format: `accounts/{account}/developerRegistration` The {account} used
-       must be the same account where user calling this API method is directly added to.
+       must be the same account where user calling this API method is directly added to. Note: The account
+       used must be a production account (can't be a [test
+       account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and must have
+       a [verified website](https://support.google.com/merchants/answer/11586344) in Merchant Center.
          */
         public java.lang.String getName() {
           return name;
@@ -2995,7 +3021,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The name of the developer registration to be created for the merchant account
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
          * The {account} used must be the same account where user calling this API method is
-         * directly added to.
+         * directly added to. Note: The account used must be a production account (can't be a [test
+         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+         * must have a [verified website](https://support.google.com/merchants/answer/11586344) in
+         * Merchant Center.
          */
         public RegisterGcp setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

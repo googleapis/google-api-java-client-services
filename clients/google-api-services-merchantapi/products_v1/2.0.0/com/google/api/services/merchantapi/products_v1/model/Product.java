@@ -36,6 +36,16 @@ package com.google.api.services.merchantapi.products_v1.model;
 public final class Product extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Determines whether the product is
+   * [archived](https://support.google.com/merchants/answer/11909930). To archive or restore your
+   * product, visit Merchant Center products page. Learn also more about [offer
+   * visibility](https://support.google.com/merchants/answer/12488713).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean archived;
+
+  /**
    * Output only. The automated discounts information for the product.
    * The value may be {@code null}.
    */
@@ -154,6 +164,29 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionNumber;
+
+  /**
+   * Output only. Determines whether the product is
+   * [archived](https://support.google.com/merchants/answer/11909930). To archive or restore your
+   * product, visit Merchant Center products page. Learn also more about [offer
+   * visibility](https://support.google.com/merchants/answer/12488713).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getArchived() {
+    return archived;
+  }
+
+  /**
+   * Output only. Determines whether the product is
+   * [archived](https://support.google.com/merchants/answer/11909930). To archive or restore your
+   * product, visit Merchant Center products page. Learn also more about [offer
+   * visibility](https://support.google.com/merchants/answer/12488713).
+   * @param archived archived or {@code null} for none
+   */
+  public Product setArchived(java.lang.Boolean archived) {
+    this.archived = archived;
+    return this;
+  }
 
   /**
    * Output only. The automated discounts information for the product.

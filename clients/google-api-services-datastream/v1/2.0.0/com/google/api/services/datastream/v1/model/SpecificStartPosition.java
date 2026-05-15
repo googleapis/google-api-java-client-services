@@ -58,6 +58,13 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
   private OracleScnPosition oracleScnPosition;
 
   /**
+   * Optional. Spanner change stream position to start replicating from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerChangeStreamPosition spannerChangeStreamPosition;
+
+  /**
    * SqlServer LSN to start replicating from.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
    */
   public SpecificStartPosition setOracleScnPosition(OracleScnPosition oracleScnPosition) {
     this.oracleScnPosition = oracleScnPosition;
+    return this;
+  }
+
+  /**
+   * Optional. Spanner change stream position to start replicating from.
+   * @return value or {@code null} for none
+   */
+  public SpannerChangeStreamPosition getSpannerChangeStreamPosition() {
+    return spannerChangeStreamPosition;
+  }
+
+  /**
+   * Optional. Spanner change stream position to start replicating from.
+   * @param spannerChangeStreamPosition spannerChangeStreamPosition or {@code null} for none
+   */
+  public SpecificStartPosition setSpannerChangeStreamPosition(SpannerChangeStreamPosition spannerChangeStreamPosition) {
+    this.spannerChangeStreamPosition = spannerChangeStreamPosition;
     return this;
   }
 

@@ -45,13 +45,13 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
    * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
    * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
-   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution . *
    * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
    * disabled`: Service. * `run.googleapis.com/description`: Service. *
    * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
-   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
-   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * key`: Revision, Execution . * `run.googleapis.com/execution-environment`: Revision, Execution .
+   * * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
    * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
    * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
@@ -61,7 +61,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
    * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
    * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
+   * Execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,13 +191,13 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
    * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
    * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
-   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution . *
    * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
    * disabled`: Service. * `run.googleapis.com/description`: Service. *
    * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
-   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
-   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * key`: Revision, Execution . * `run.googleapis.com/execution-environment`: Revision, Execution .
+   * * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
    * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
    * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
@@ -206,7 +207,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
    * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
    * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
+   * Execution.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -228,13 +230,13 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
    * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
    * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
-   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution . *
    * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
    * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
    * disabled`: Service. * `run.googleapis.com/description`: Service. *
    * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
-   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
-   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * key`: Revision, Execution . * `run.googleapis.com/execution-environment`: Revision, Execution .
+   * * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
    * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
    * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
@@ -244,7 +246,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
    * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
    * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
+   * Execution.
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {

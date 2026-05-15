@@ -31,8 +31,8 @@ package com.google.api.services.health.v4.model;
 public final class SubscriberConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Supported data types are: "altitude", "distance", "floors", "sleep", "steps",
-   * "weight". Values should be in kebab-case.
+   * Required. See [Google Health API data types](https://developers.google.com/health/data-types)
+   * for the list of supported data types. Values should be in kebab-case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class SubscriberConfig extends com.google.api.client.json.GenericJs
   private java.lang.String subscriptionCreatePolicy;
 
   /**
-   * Required. Supported data types are: "altitude", "distance", "floors", "sleep", "steps",
-   * "weight". Values should be in kebab-case.
+   * Required. See [Google Health API data types](https://developers.google.com/health/data-types)
+   * for the list of supported data types. Values should be in kebab-case.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataTypes() {
@@ -55,8 +55,8 @@ public final class SubscriberConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Supported data types are: "altitude", "distance", "floors", "sleep", "steps",
-   * "weight". Values should be in kebab-case.
+   * Required. See [Google Health API data types](https://developers.google.com/health/data-types)
+   * for the list of supported data types. Values should be in kebab-case.
    * @param dataTypes dataTypes or {@code null} for none
    */
   public SubscriberConfig setDataTypes(java.util.List<java.lang.String> dataTypes) {

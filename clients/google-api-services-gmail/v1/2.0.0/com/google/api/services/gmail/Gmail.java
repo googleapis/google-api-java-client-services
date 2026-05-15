@@ -3020,7 +3020,12 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Modifies the labels on the specified messages.
+       * Modifies the labels and the Classification Label values on the specified messages. For
+       * administrators modifying messages for users in their organization, requests require authorization
+       * with a [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
+       * that has [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAut
+       * h2ServiceAccount#delegatingauthority) to impersonate users with the
+       * `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
        *
        * Create a request for the method "messages.batchModify".
        *
@@ -3043,7 +3048,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages/batchModify";
 
         /**
-         * Modifies the labels on the specified messages.
+         * Modifies the labels and the Classification Label values on the specified messages. For
+         * administrators modifying messages for users in their organization, requests require
+         * authorization with a [service
+         * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+         * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+         * ceAccount#delegatingauthority) to impersonate users with the
+         * `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
          *
          * Create a request for the method "messages.batchModify".
          *
@@ -4379,7 +4390,12 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Modifies the labels on the specified message.
+       * Modifies the labels and the Classification Label values on the specified message. For
+       * administrators modifying message for users in their organization, requests require authorization
+       * with a [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
+       * that has [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAut
+       * h2ServiceAccount#delegatingauthority) to impersonate users with the
+       * `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
        *
        * Create a request for the method "messages.modify".
        *
@@ -4403,7 +4419,13 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages/{id}/modify";
 
         /**
-         * Modifies the labels on the specified message.
+         * Modifies the labels and the Classification Label values on the specified message. For
+         * administrators modifying message for users in their organization, requests require
+         * authorization with a [service
+         * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+         * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+         * ceAccount#delegatingauthority) to impersonate users with the
+         * `https://www.googleapis.com/auth/gmail.modify.restricted` scope.
          *
          * Create a request for the method "messages.modify".
          *

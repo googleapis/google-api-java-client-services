@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The time at which the server accepted this query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Query content parts.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDiscoveryengineV1alphaQuery extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Output only. The time at which the server accepted this query.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time at which the server accepted this query.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaQuery setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Query content parts.

@@ -19108,8 +19108,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /**
            * Sets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the resource
            * does not exist. **Important:** When setting a policy directly on an Engine resource, the only
-           * recommended roles in the bindings are: `roles/discoveryengine.user` and
-           * `roles/discoveryengine.agentspaceUser`. Attempting to grant any other role will result in a
+           * recommended roles in the bindings are: `roles/discoveryengine.admin`,
+           * `roles/discoveryengine.agentspaceAdmin`, `roles/discoveryengine.user`,
+           * `roles/discoveryengine.agentspaceUser`, `roles/discoveryengine.viewer`,
+           * `roles/discoveryengine.agentspaceViewer`. Attempting to grant any other role will result in a
            * warning in logging.
            *
            * Create a request for the method "engines.setIamPolicy".
@@ -19140,8 +19142,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * Sets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the
              * resource does not exist. **Important:** When setting a policy directly on an Engine resource,
-             * the only recommended roles in the bindings are: `roles/discoveryengine.user` and
-             * `roles/discoveryengine.agentspaceUser`. Attempting to grant any other role will result in a
+             * the only recommended roles in the bindings are: `roles/discoveryengine.admin`,
+             * `roles/discoveryengine.agentspaceAdmin`, `roles/discoveryengine.user`,
+             * `roles/discoveryengine.agentspaceUser`, `roles/discoveryengine.viewer`,
+             * `roles/discoveryengine.agentspaceViewer`. Attempting to grant any other role will result in a
              * warning in logging.
              *
              * Create a request for the method "engines.setIamPolicy".
@@ -42468,6 +42472,213 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the LicenseConfigs associated with the project.
+         *
+         * Create a request for the method "licenseConfigs.list".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListLicenseConfigsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/licenseConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the LicenseConfigs associated with the project.
+           *
+           * Create a request for the method "licenseConfigs.list".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaListLicenseConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent branch resource name, such as `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent branch resource name, such as
+           * `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The filter to apply to the list results. The supported fields are: *
+           * `subscription_tier` * `state` Examples: *
+           * `subscription_tier=SUBSCRIPTION_TIER_SEARCH,state=ACTIVE` - Lists all active search
+           * license configs. * `state=ACTIVE` - Lists all active license configs. The filter string
+           * should be a comma-separated list of field=value pairs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to the list results. The supported fields are: * `subscription_tier`
+         * `state` Examples: * `subscription_tier=SUBSCRIPTION_TIER_SEARCH,state=ACTIVE` - Lists all active
+         search license configs. * `state=ACTIVE` - Lists all active license configs. The filter string
+         should be a comma-separated list of field=value pairs.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter to apply to the list results. The supported fields are: *
+           * `subscription_tier` * `state` Examples: *
+           * `subscription_tier=SUBSCRIPTION_TIER_SEARCH,state=ACTIVE` - Lists all active search
+           * license configs. * `state=ACTIVE` - Lists all active license configs. The filter string
+           * should be a comma-separated list of field=value pairs.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Not supported. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Not supported.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Not supported. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Not supported. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Not supported.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Not supported. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
         /**

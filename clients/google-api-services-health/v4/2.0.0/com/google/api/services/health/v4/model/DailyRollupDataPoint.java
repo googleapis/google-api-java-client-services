@@ -17,7 +17,9 @@
 package com.google.api.services.health.v4.model;
 
 /**
- * Value of a daily rollup for a single civil time interval (aggregation window)
+ * Value of a daily rollup for a single civil time interval (aggregation window) of reconciled data
+ * points from all data sources, excluding those data points that are identified as recorded by
+ * wearables in intervals when they were not actually worn.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Health API. For a detailed explanation see:

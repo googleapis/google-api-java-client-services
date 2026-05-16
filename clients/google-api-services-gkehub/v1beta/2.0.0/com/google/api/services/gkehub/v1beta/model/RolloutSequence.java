@@ -95,18 +95,18 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Output only. Operational state of the Rollout Sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperationalState operationalState;
+
+  /**
    * Required. Ordered list of stages that constitutes this Rollout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Stage> stages;
-
-  /**
-   * Output only. State of the Rollout Sequence as a whole.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RolloutSequenceState state;
 
   /**
    * Output only. Google-generated UUID for this resource. This is unique across all Rollout
@@ -282,6 +282,23 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Output only. Operational state of the Rollout Sequence.
+   * @return value or {@code null} for none
+   */
+  public OperationalState getOperationalState() {
+    return operationalState;
+  }
+
+  /**
+   * Output only. Operational state of the Rollout Sequence.
+   * @param operationalState operationalState or {@code null} for none
+   */
+  public RolloutSequence setOperationalState(OperationalState operationalState) {
+    this.operationalState = operationalState;
+    return this;
+  }
+
+  /**
    * Required. Ordered list of stages that constitutes this Rollout.
    * @return value or {@code null} for none
    */
@@ -295,23 +312,6 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setStages(java.util.List<Stage> stages) {
     this.stages = stages;
-    return this;
-  }
-
-  /**
-   * Output only. State of the Rollout Sequence as a whole.
-   * @return value or {@code null} for none
-   */
-  public RolloutSequenceState getState() {
-    return state;
-  }
-
-  /**
-   * Output only. State of the Rollout Sequence as a whole.
-   * @param state state or {@code null} for none
-   */
-  public RolloutSequence setState(RolloutSequenceState state) {
-    this.state = state;
     return this;
   }
 

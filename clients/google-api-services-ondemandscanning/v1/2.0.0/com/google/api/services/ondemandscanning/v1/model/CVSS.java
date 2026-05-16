@@ -33,26 +33,35 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class CVSS extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attack Complexity (AC). Defined in CVSS v2, v3, v4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackComplexity;
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * Attack Requirements (AT). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attackRequirements;
+
+  /**
+   * Attack Vector (AV). Defined in CVSS v2, v3, v4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackVector;
 
   /**
+   * Authentication (Au). Defined in CVSS v2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authentication;
 
   /**
+   * Availability Impact (A). Defined in CVSS v2, v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +75,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   private java.lang.Float baseScore;
 
   /**
+   * Confidentiality Impact (C). Defined in CVSS v2, v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,30 +94,77 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   private java.lang.Float impactScore;
 
   /**
+   * Integrity Impact (I). Defined in CVSS v2, v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrityImpact;
 
   /**
+   * Privileges Required (PR). Defined in CVSS v3, v4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privilegesRequired;
 
   /**
+   * Scope (S). Defined in CVSS v3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scope;
 
   /**
+   * Subsequent System Availability Impact (SA). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subsequentSystemAvailabilityImpact;
+
+  /**
+   * Subsequent System Confidentiality Impact (SC). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subsequentSystemConfidentialityImpact;
+
+  /**
+   * Subsequent System Integrity Impact (SI). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subsequentSystemIntegrityImpact;
+
+  /**
+   * User Interaction (UI). Defined in CVSS v3, v4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userInteraction;
 
   /**
+   * Vulnerable System Availability Impact (VA). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vulnerableSystemAvailabilityImpact;
+
+  /**
+   * Vulnerable System Confidentiality Impact (VC). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vulnerableSystemConfidentialityImpact;
+
+  /**
+   * Vulnerable System Integrity Impact (VI). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vulnerableSystemIntegrityImpact;
+
+  /**
+   * Attack Complexity (AC). Defined in CVSS v2, v3, v4.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackComplexity() {
@@ -115,6 +172,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Attack Complexity (AC). Defined in CVSS v2, v3, v4.
    * @param attackComplexity attackComplexity or {@code null} for none
    */
   public CVSS setAttackComplexity(java.lang.String attackComplexity) {
@@ -123,8 +181,24 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * Attack Requirements (AT). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttackRequirements() {
+    return attackRequirements;
+  }
+
+  /**
+   * Attack Requirements (AT). Defined in CVSS v4.
+   * @param attackRequirements attackRequirements or {@code null} for none
+   */
+  public CVSS setAttackRequirements(java.lang.String attackRequirements) {
+    this.attackRequirements = attackRequirements;
+    return this;
+  }
+
+  /**
+   * Attack Vector (AV). Defined in CVSS v2, v3, v4.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackVector() {
@@ -132,8 +206,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments.
+   * Attack Vector (AV). Defined in CVSS v2, v3, v4.
    * @param attackVector attackVector or {@code null} for none
    */
   public CVSS setAttackVector(java.lang.String attackVector) {
@@ -142,6 +215,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Authentication (Au). Defined in CVSS v2.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthentication() {
@@ -149,6 +223,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Authentication (Au). Defined in CVSS v2.
    * @param authentication authentication or {@code null} for none
    */
   public CVSS setAuthentication(java.lang.String authentication) {
@@ -157,6 +232,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Availability Impact (A). Defined in CVSS v2, v3.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityImpact() {
@@ -164,6 +240,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Availability Impact (A). Defined in CVSS v2, v3.
    * @param availabilityImpact availabilityImpact or {@code null} for none
    */
   public CVSS setAvailabilityImpact(java.lang.String availabilityImpact) {
@@ -189,6 +266,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Confidentiality Impact (C). Defined in CVSS v2, v3.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidentialityImpact() {
@@ -196,6 +274,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Confidentiality Impact (C). Defined in CVSS v2, v3.
    * @param confidentialityImpact confidentialityImpact or {@code null} for none
    */
   public CVSS setConfidentialityImpact(java.lang.String confidentialityImpact) {
@@ -234,6 +313,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Integrity Impact (I). Defined in CVSS v2, v3.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrityImpact() {
@@ -241,6 +321,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Integrity Impact (I). Defined in CVSS v2, v3.
    * @param integrityImpact integrityImpact or {@code null} for none
    */
   public CVSS setIntegrityImpact(java.lang.String integrityImpact) {
@@ -249,6 +330,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Privileges Required (PR). Defined in CVSS v3, v4.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivilegesRequired() {
@@ -256,6 +338,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Privileges Required (PR). Defined in CVSS v3, v4.
    * @param privilegesRequired privilegesRequired or {@code null} for none
    */
   public CVSS setPrivilegesRequired(java.lang.String privilegesRequired) {
@@ -264,6 +347,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Scope (S). Defined in CVSS v3.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -271,6 +355,7 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Scope (S). Defined in CVSS v3.
    * @param scope scope or {@code null} for none
    */
   public CVSS setScope(java.lang.String scope) {
@@ -279,6 +364,58 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Subsequent System Availability Impact (SA). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubsequentSystemAvailabilityImpact() {
+    return subsequentSystemAvailabilityImpact;
+  }
+
+  /**
+   * Subsequent System Availability Impact (SA). Defined in CVSS v4.
+   * @param subsequentSystemAvailabilityImpact subsequentSystemAvailabilityImpact or {@code null} for none
+   */
+  public CVSS setSubsequentSystemAvailabilityImpact(java.lang.String subsequentSystemAvailabilityImpact) {
+    this.subsequentSystemAvailabilityImpact = subsequentSystemAvailabilityImpact;
+    return this;
+  }
+
+  /**
+   * Subsequent System Confidentiality Impact (SC). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubsequentSystemConfidentialityImpact() {
+    return subsequentSystemConfidentialityImpact;
+  }
+
+  /**
+   * Subsequent System Confidentiality Impact (SC). Defined in CVSS v4.
+   * @param subsequentSystemConfidentialityImpact subsequentSystemConfidentialityImpact or {@code null} for none
+   */
+  public CVSS setSubsequentSystemConfidentialityImpact(java.lang.String subsequentSystemConfidentialityImpact) {
+    this.subsequentSystemConfidentialityImpact = subsequentSystemConfidentialityImpact;
+    return this;
+  }
+
+  /**
+   * Subsequent System Integrity Impact (SI). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubsequentSystemIntegrityImpact() {
+    return subsequentSystemIntegrityImpact;
+  }
+
+  /**
+   * Subsequent System Integrity Impact (SI). Defined in CVSS v4.
+   * @param subsequentSystemIntegrityImpact subsequentSystemIntegrityImpact or {@code null} for none
+   */
+  public CVSS setSubsequentSystemIntegrityImpact(java.lang.String subsequentSystemIntegrityImpact) {
+    this.subsequentSystemIntegrityImpact = subsequentSystemIntegrityImpact;
+    return this;
+  }
+
+  /**
+   * User Interaction (UI). Defined in CVSS v3, v4.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserInteraction() {
@@ -286,10 +423,62 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * User Interaction (UI). Defined in CVSS v3, v4.
    * @param userInteraction userInteraction or {@code null} for none
    */
   public CVSS setUserInteraction(java.lang.String userInteraction) {
     this.userInteraction = userInteraction;
+    return this;
+  }
+
+  /**
+   * Vulnerable System Availability Impact (VA). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVulnerableSystemAvailabilityImpact() {
+    return vulnerableSystemAvailabilityImpact;
+  }
+
+  /**
+   * Vulnerable System Availability Impact (VA). Defined in CVSS v4.
+   * @param vulnerableSystemAvailabilityImpact vulnerableSystemAvailabilityImpact or {@code null} for none
+   */
+  public CVSS setVulnerableSystemAvailabilityImpact(java.lang.String vulnerableSystemAvailabilityImpact) {
+    this.vulnerableSystemAvailabilityImpact = vulnerableSystemAvailabilityImpact;
+    return this;
+  }
+
+  /**
+   * Vulnerable System Confidentiality Impact (VC). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVulnerableSystemConfidentialityImpact() {
+    return vulnerableSystemConfidentialityImpact;
+  }
+
+  /**
+   * Vulnerable System Confidentiality Impact (VC). Defined in CVSS v4.
+   * @param vulnerableSystemConfidentialityImpact vulnerableSystemConfidentialityImpact or {@code null} for none
+   */
+  public CVSS setVulnerableSystemConfidentialityImpact(java.lang.String vulnerableSystemConfidentialityImpact) {
+    this.vulnerableSystemConfidentialityImpact = vulnerableSystemConfidentialityImpact;
+    return this;
+  }
+
+  /**
+   * Vulnerable System Integrity Impact (VI). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVulnerableSystemIntegrityImpact() {
+    return vulnerableSystemIntegrityImpact;
+  }
+
+  /**
+   * Vulnerable System Integrity Impact (VI). Defined in CVSS v4.
+   * @param vulnerableSystemIntegrityImpact vulnerableSystemIntegrityImpact or {@code null} for none
+   */
+  public CVSS setVulnerableSystemIntegrityImpact(java.lang.String vulnerableSystemIntegrityImpact) {
+    this.vulnerableSystemIntegrityImpact = vulnerableSystemIntegrityImpact;
     return this;
   }
 

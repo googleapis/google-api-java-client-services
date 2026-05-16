@@ -33,7 +33,7 @@ public final class HeartRateVariability extends com.google.api.client.json.Gener
 
   /**
    * Optional. The root mean square of successive differences between normal heartbeats. This is a
-   * measure of heart rate variability used by Fitbit.
+   * measure of heart rate variability used by Google Health.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class HeartRateVariability extends com.google.api.client.json.Gener
 
   /**
    * Optional. The root mean square of successive differences between normal heartbeats. This is a
-   * measure of heart rate variability used by Fitbit.
+   * measure of heart rate variability used by Google Health.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRootMeanSquareOfSuccessiveDifferencesMilliseconds() {
@@ -64,7 +64,7 @@ public final class HeartRateVariability extends com.google.api.client.json.Gener
 
   /**
    * Optional. The root mean square of successive differences between normal heartbeats. This is a
-   * measure of heart rate variability used by Fitbit.
+   * measure of heart rate variability used by Google Health.
    * @param rootMeanSquareOfSuccessiveDifferencesMilliseconds rootMeanSquareOfSuccessiveDifferencesMilliseconds or {@code null} for none
    */
   public HeartRateVariability setRootMeanSquareOfSuccessiveDifferencesMilliseconds(java.lang.Double rootMeanSquareOfSuccessiveDifferencesMilliseconds) {

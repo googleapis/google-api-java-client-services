@@ -37,7 +37,8 @@ public final class VolumeQuantity extends com.google.api.client.json.GenericJson
   private java.lang.Double milliliters;
 
   /**
-   * Optional. Value representing the user provided unit.
+   * Optional. Value representing the user provided unit, used only for user-facing input and
+   * display purposes. In the API format, all volume quantities are converted to milliliters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class VolumeQuantity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Value representing the user provided unit.
+   * Optional. Value representing the user provided unit, used only for user-facing input and
+   * display purposes. In the API format, all volume quantities are converted to milliliters.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserProvidedUnit() {
@@ -69,7 +71,8 @@ public final class VolumeQuantity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Value representing the user provided unit.
+   * Optional. Value representing the user provided unit, used only for user-facing input and
+   * display purposes. In the API format, all volume quantities are converted to milliliters.
    * @param userProvidedUnit userProvidedUnit or {@code null} for none
    */
   public VolumeQuantity setUserProvidedUnit(java.lang.String userProvidedUnit) {

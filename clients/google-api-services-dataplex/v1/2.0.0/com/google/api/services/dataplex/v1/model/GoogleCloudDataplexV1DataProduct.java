@@ -31,6 +31,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProduct extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for access approval for the data product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProductAccessApprovalConfig accessApprovalConfig;
+
+  /**
    * Optional. Data product access groups by access group id as key. If data product is used only
    * for packaging data assets, then access groups may be empty. However, if a data product is used
    * for sharing data assets, then at least one access group must be specified.Example: { "analyst":
@@ -125,6 +132,23 @@ public final class GoogleCloudDataplexV1DataProduct extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Configuration for access approval for the data product.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProductAccessApprovalConfig getAccessApprovalConfig() {
+    return accessApprovalConfig;
+  }
+
+  /**
+   * Optional. Configuration for access approval for the data product.
+   * @param accessApprovalConfig accessApprovalConfig or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProduct setAccessApprovalConfig(GoogleCloudDataplexV1DataProductAccessApprovalConfig accessApprovalConfig) {
+    this.accessApprovalConfig = accessApprovalConfig;
+    return this;
+  }
 
   /**
    * Optional. Data product access groups by access group id as key. If data product is used only

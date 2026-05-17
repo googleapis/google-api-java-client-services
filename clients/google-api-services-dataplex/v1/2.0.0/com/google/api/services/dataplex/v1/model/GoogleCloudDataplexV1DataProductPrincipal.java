@@ -39,6 +39,14 @@ public final class GoogleCloudDataplexV1DataProductPrincipal extends com.google.
   private java.lang.String googleGroup;
 
   /**
+   * Optional. Specifies the email of the producer service account, as per
+   * https://cloud.google.com/iam/docs/principals-overview#service-account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. Email of the Google Group, as per https://cloud.google.com/iam/docs/principals-
    * overview#google-group.
    * @return value or {@code null} for none
@@ -54,6 +62,25 @@ public final class GoogleCloudDataplexV1DataProductPrincipal extends com.google.
    */
   public GoogleCloudDataplexV1DataProductPrincipal setGoogleGroup(java.lang.String googleGroup) {
     this.googleGroup = googleGroup;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the email of the producer service account, as per
+   * https://cloud.google.com/iam/docs/principals-overview#service-account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. Specifies the email of the producer service account, as per
+   * https://cloud.google.com/iam/docs/principals-overview#service-account.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProductPrincipal setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

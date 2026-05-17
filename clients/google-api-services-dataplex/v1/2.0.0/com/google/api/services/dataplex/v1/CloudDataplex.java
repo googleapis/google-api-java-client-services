@@ -8791,6 +8791,150 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Requests access to a data product. This will trigger an access approval workflow, and the
+         * requester will need to wait for the approval to be granted before they will be able to access the
+         * data product assets.
+         *
+         * Create a request for the method "dataProducts.requestAccess".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link RequestAccess#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the data product. Format:
+         *        projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessRequest}
+         * @return the request
+         */
+        public RequestAccess requestAccess(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessRequest content) throws java.io.IOException {
+          RequestAccess result = new RequestAccess(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RequestAccess extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:requestAccess";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+
+          /**
+           * Requests access to a data product. This will trigger an access approval workflow, and the
+           * requester will need to wait for the approval to be granted before they will be able to access
+           * the data product assets.
+           *
+           * Create a request for the method "dataProducts.requestAccess".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link RequestAccess#execute()} method to invoke the remote
+           * operation. <p> {@link RequestAccess#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The resource name of the data product. Format:
+         *        projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessRequest}
+           * @since 1.13
+           */
+          protected RequestAccess(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestDataProductAccessResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+          }
+
+          @Override
+          public RequestAccess set$Xgafv(java.lang.String $Xgafv) {
+            return (RequestAccess) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RequestAccess setAccessToken(java.lang.String accessToken) {
+            return (RequestAccess) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RequestAccess setAlt(java.lang.String alt) {
+            return (RequestAccess) super.setAlt(alt);
+          }
+
+          @Override
+          public RequestAccess setCallback(java.lang.String callback) {
+            return (RequestAccess) super.setCallback(callback);
+          }
+
+          @Override
+          public RequestAccess setFields(java.lang.String fields) {
+            return (RequestAccess) super.setFields(fields);
+          }
+
+          @Override
+          public RequestAccess setKey(java.lang.String key) {
+            return (RequestAccess) super.setKey(key);
+          }
+
+          @Override
+          public RequestAccess setOauthToken(java.lang.String oauthToken) {
+            return (RequestAccess) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RequestAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RequestAccess) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RequestAccess setQuotaUser(java.lang.String quotaUser) {
+            return (RequestAccess) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RequestAccess setUploadType(java.lang.String uploadType) {
+            return (RequestAccess) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RequestAccess setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RequestAccess) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the data product. Format:
+           * projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the data product. Format:
+         projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the data product. Format:
+           * projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+           */
+          public RequestAccess setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataProducts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public RequestAccess set(String parameterName, Object value) {
+            return (RequestAccess) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
          * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *

@@ -64,6 +64,13 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> fieldPathsPendingUpdate;
 
   /**
+   * Optional. This is a gateway that can apply specialized processing to traffic going through it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Gateway gateway;
+
+  /**
    * Optional. The name of the group that this spoke is associated with.
    * The value may be {@code null}.
    */
@@ -235,6 +242,23 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
    */
   public Spoke setFieldPathsPendingUpdate(java.util.List<java.lang.String> fieldPathsPendingUpdate) {
     this.fieldPathsPendingUpdate = fieldPathsPendingUpdate;
+    return this;
+  }
+
+  /**
+   * Optional. This is a gateway that can apply specialized processing to traffic going through it.
+   * @return value or {@code null} for none
+   */
+  public Gateway getGateway() {
+    return gateway;
+  }
+
+  /**
+   * Optional. This is a gateway that can apply specialized processing to traffic going through it.
+   * @param gateway gateway or {@code null} for none
+   */
+  public Spoke setGateway(Gateway gateway) {
+    this.gateway = gateway;
     return this;
   }
 

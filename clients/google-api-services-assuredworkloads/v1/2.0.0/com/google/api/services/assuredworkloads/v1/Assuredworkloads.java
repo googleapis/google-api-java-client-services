@@ -134,6 +134,231 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the AssuredworkloadsOperations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+   *   {@code Assuredworkloads.AssuredworkloadsOperations.List request = assuredworkloads.assuredworkloads().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AssuredworkloadsOperations assuredworkloads() {
+    return new AssuredworkloadsOperations();
+  }
+
+  /**
+   * The "assuredworkloads" collection of methods.
+   */
+  public class AssuredworkloadsOperations {
+
+    /**
+     * Finds orphan ResourceEvents matching the criteria and moves them to the ArchivedResourceEvents
+     * table.
+     *
+     * Create a request for the method "assuredworkloads.archiveResourceEvents".
+     *
+     * This request holds the parameters needed by the assuredworkloads server.  After setting any
+     * optional parameters, call the {@link ArchiveResourceEvents#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsRequest}
+     * @return the request
+     */
+    public ArchiveResourceEvents archiveResourceEvents(com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsRequest content) throws java.io.IOException {
+      ArchiveResourceEvents result = new ArchiveResourceEvents(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ArchiveResourceEvents extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsResponse> {
+
+      private static final String REST_PATH = "v1/assuredworkloads:archiveResourceEvents";
+
+      /**
+       * Finds orphan ResourceEvents matching the criteria and moves them to the ArchivedResourceEvents
+       * table.
+       *
+       * Create a request for the method "assuredworkloads.archiveResourceEvents".
+       *
+       * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+       * optional parameters, call the {@link ArchiveResourceEvents#execute()} method to invoke the
+       * remote operation. <p> {@link ArchiveResourceEvents#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsRequest}
+       * @since 1.13
+       */
+      protected ArchiveResourceEvents(com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsRequest content) {
+        super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ArchiveResourceEventsResponse.class);
+      }
+
+      @Override
+      public ArchiveResourceEvents set$Xgafv(java.lang.String $Xgafv) {
+        return (ArchiveResourceEvents) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ArchiveResourceEvents setAccessToken(java.lang.String accessToken) {
+        return (ArchiveResourceEvents) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ArchiveResourceEvents setAlt(java.lang.String alt) {
+        return (ArchiveResourceEvents) super.setAlt(alt);
+      }
+
+      @Override
+      public ArchiveResourceEvents setCallback(java.lang.String callback) {
+        return (ArchiveResourceEvents) super.setCallback(callback);
+      }
+
+      @Override
+      public ArchiveResourceEvents setFields(java.lang.String fields) {
+        return (ArchiveResourceEvents) super.setFields(fields);
+      }
+
+      @Override
+      public ArchiveResourceEvents setKey(java.lang.String key) {
+        return (ArchiveResourceEvents) super.setKey(key);
+      }
+
+      @Override
+      public ArchiveResourceEvents setOauthToken(java.lang.String oauthToken) {
+        return (ArchiveResourceEvents) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ArchiveResourceEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ArchiveResourceEvents) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ArchiveResourceEvents setQuotaUser(java.lang.String quotaUser) {
+        return (ArchiveResourceEvents) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ArchiveResourceEvents setUploadType(java.lang.String uploadType) {
+        return (ArchiveResourceEvents) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ArchiveResourceEvents setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ArchiveResourceEvents) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ArchiveResourceEvents set(String parameterName, Object value) {
+        return (ArchiveResourceEvents) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Finds matching ArchivedResourceEvents and moves them back to the ResourceEvents table.
+     *
+     * Create a request for the method "assuredworkloads.revertArchivedResourceEvents".
+     *
+     * This request holds the parameters needed by the assuredworkloads server.  After setting any
+     * optional parameters, call the {@link RevertArchivedResourceEvents#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsRequest}
+     * @return the request
+     */
+    public RevertArchivedResourceEvents revertArchivedResourceEvents(com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsRequest content) throws java.io.IOException {
+      RevertArchivedResourceEvents result = new RevertArchivedResourceEvents(content);
+      initialize(result);
+      return result;
+    }
+
+    public class RevertArchivedResourceEvents extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsResponse> {
+
+      private static final String REST_PATH = "v1/assuredworkloads:revertArchivedResourceEvents";
+
+      /**
+       * Finds matching ArchivedResourceEvents and moves them back to the ResourceEvents table.
+       *
+       * Create a request for the method "assuredworkloads.revertArchivedResourceEvents".
+       *
+       * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+       * optional parameters, call the {@link RevertArchivedResourceEvents#execute()} method to invoke
+       * the remote operation. <p> {@link RevertArchivedResourceEvents#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsRequest}
+       * @since 1.13
+       */
+      protected RevertArchivedResourceEvents(com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsRequest content) {
+        super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1RevertArchivedResourceEventsResponse.class);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents set$Xgafv(java.lang.String $Xgafv) {
+        return (RevertArchivedResourceEvents) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setAccessToken(java.lang.String accessToken) {
+        return (RevertArchivedResourceEvents) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setAlt(java.lang.String alt) {
+        return (RevertArchivedResourceEvents) super.setAlt(alt);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setCallback(java.lang.String callback) {
+        return (RevertArchivedResourceEvents) super.setCallback(callback);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setFields(java.lang.String fields) {
+        return (RevertArchivedResourceEvents) super.setFields(fields);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setKey(java.lang.String key) {
+        return (RevertArchivedResourceEvents) super.setKey(key);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setOauthToken(java.lang.String oauthToken) {
+        return (RevertArchivedResourceEvents) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RevertArchivedResourceEvents) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setQuotaUser(java.lang.String quotaUser) {
+        return (RevertArchivedResourceEvents) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setUploadType(java.lang.String uploadType) {
+        return (RevertArchivedResourceEvents) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RevertArchivedResourceEvents) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public RevertArchivedResourceEvents set(String parameterName, Object value) {
+        return (RevertArchivedResourceEvents) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>

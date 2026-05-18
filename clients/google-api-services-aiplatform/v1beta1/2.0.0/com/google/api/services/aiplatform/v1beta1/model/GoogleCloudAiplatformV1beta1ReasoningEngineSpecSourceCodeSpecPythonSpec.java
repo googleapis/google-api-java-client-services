@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * Specification for running a Python application from source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -57,7 +57,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   private java.lang.String requirementsFile;
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * Optional. The version of Python to use. Supported versions include 3.10, 3.11, 3.12, 3.13,
    * 3.14. If not specified, default value is 3.10.
    * The value may be {@code null}.
    */
@@ -128,7 +128,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   }
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * Optional. The version of Python to use. Supported versions include 3.10, 3.11, 3.12, 3.13,
    * 3.14. If not specified, default value is 3.10.
    * @return value or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   }
 
   /**
-   * Optional. The version of Python to use. Support version includes 3.9, 3.10, 3.11, 3.12, 3.13,
+   * Optional. The version of Python to use. Supported versions include 3.10, 3.11, 3.12, 3.13,
    * 3.14. If not specified, default value is 3.10.
    * @param version version or {@code null} for none
    */

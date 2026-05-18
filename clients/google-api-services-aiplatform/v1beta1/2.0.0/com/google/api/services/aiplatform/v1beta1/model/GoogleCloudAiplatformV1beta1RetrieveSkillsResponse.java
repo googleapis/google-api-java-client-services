@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for VertexRagService.RetrieveContexts.
+ * Response message for SkillRegistryService.RetrieveSkills.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1RetrieveContextsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RetrieveSkillsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contexts of the query.
+   * Skills ranked by similarity if applicable; otherwise, the order is undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1RagContexts contexts;
+  private java.util.List<GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill> retrievedSkills;
 
   /**
-   * The contexts of the query.
+   * Skills ranked by similarity if applicable; otherwise, the order is undefined.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RagContexts getContexts() {
-    return contexts;
+  public java.util.List<GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill> getRetrievedSkills() {
+    return retrievedSkills;
   }
 
   /**
-   * The contexts of the query.
-   * @param contexts contexts or {@code null} for none
+   * Skills ranked by similarity if applicable; otherwise, the order is undefined.
+   * @param retrievedSkills retrievedSkills or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse setContexts(GoogleCloudAiplatformV1beta1RagContexts contexts) {
-    this.contexts = contexts;
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponse setRetrievedSkills(java.util.List<GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill> retrievedSkills) {
+    this.retrievedSkills = retrievedSkills;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1RetrieveContextsResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RetrieveSkillsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse clone() {
-    return (GoogleCloudAiplatformV1beta1RetrieveContextsResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponse clone() {
+    return (GoogleCloudAiplatformV1beta1RetrieveSkillsResponse) super.clone();
   }
 
 }

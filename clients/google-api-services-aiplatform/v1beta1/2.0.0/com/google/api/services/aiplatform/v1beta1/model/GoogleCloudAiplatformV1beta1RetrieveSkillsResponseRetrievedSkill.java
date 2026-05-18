@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Defines criteria based on a specific property.
+ * A retrieved skill.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,19 +27,24 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1RubricContentProperty extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill extends com.google.api.client.json.GenericJson {
 
   /**
-   * Description of the property being evaluated. Example: "The model's response is grammatically
-   * correct."
+   * The skill description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Description of the property being evaluated. Example: "The model's response is grammatically
-   * correct."
+   * The skill resource name. Format: projects/{project}/locations/{location}/skills/{skill}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String skillName;
+
+  /**
+   * The skill description.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -47,23 +52,39 @@ public final class GoogleCloudAiplatformV1beta1RubricContentProperty extends com
   }
 
   /**
-   * Description of the property being evaluated. Example: "The model's response is grammatically
-   * correct."
+   * The skill description.
    * @param description description or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RubricContentProperty setDescription(java.lang.String description) {
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
 
-  @Override
-  public GoogleCloudAiplatformV1beta1RubricContentProperty set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1RubricContentProperty) super.set(fieldName, value);
+  /**
+   * The skill resource name. Format: projects/{project}/locations/{location}/skills/{skill}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSkillName() {
+    return skillName;
+  }
+
+  /**
+   * The skill resource name. Format: projects/{project}/locations/{location}/skills/{skill}
+   * @param skillName skillName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill setSkillName(java.lang.String skillName) {
+    this.skillName = skillName;
+    return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RubricContentProperty clone() {
-    return (GoogleCloudAiplatformV1beta1RubricContentProperty) super.clone();
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill clone() {
+    return (GoogleCloudAiplatformV1beta1RetrieveSkillsResponseRetrievedSkill) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for VertexRagService.RetrieveContexts.
+ * Response message for ExpressModeService.RetrieveExpressProject.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1RetrieveContextsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contexts of the query.
+   * The project for Vertex AI Express Mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1RagContexts contexts;
+  private GoogleCloudAiplatformV1beta1ExpressProject expressProject;
 
   /**
-   * The contexts of the query.
+   * The project for Vertex AI Express Mode.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RagContexts getContexts() {
-    return contexts;
+  public GoogleCloudAiplatformV1beta1ExpressProject getExpressProject() {
+    return expressProject;
   }
 
   /**
-   * The contexts of the query.
-   * @param contexts contexts or {@code null} for none
+   * The project for Vertex AI Express Mode.
+   * @param expressProject expressProject or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse setContexts(GoogleCloudAiplatformV1beta1RagContexts contexts) {
-    this.contexts = contexts;
+  public GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse setExpressProject(GoogleCloudAiplatformV1beta1ExpressProject expressProject) {
+    this.expressProject = expressProject;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1RetrieveContextsResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RetrieveContextsResponse clone() {
-    return (GoogleCloudAiplatformV1beta1RetrieveContextsResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse clone() {
+    return (GoogleCloudAiplatformV1beta1RetrieveExpressProjectResponse) super.clone();
   }
 
 }

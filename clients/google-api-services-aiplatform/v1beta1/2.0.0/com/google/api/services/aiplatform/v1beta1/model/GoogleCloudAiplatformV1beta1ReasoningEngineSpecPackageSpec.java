@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * User-provided package specification, containing pickled object and package requirements.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecPackageSpec ex
   private java.lang.String pickleObjectGcsUri;
 
   /**
-   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13, 3.14. If not
+   * Optional. The Python version. Supported values are 3.10, 3.11, 3.12, 3.13, 3.14. If not
    * specified, the default value is 3.10.
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecPackageSpec ex
   }
 
   /**
-   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13, 3.14. If not
+   * Optional. The Python version. Supported values are 3.10, 3.11, 3.12, 3.13, 3.14. If not
    * specified, the default value is 3.10.
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecPackageSpec ex
   }
 
   /**
-   * Optional. The Python version. Supported values are 3.9, 3.10, 3.11, 3.12, 3.13, 3.14. If not
+   * Optional. The Python version. Supported values are 3.10, 3.11, 3.12, 3.13, 3.14. If not
    * specified, the default value is 3.10.
    * @param pythonVersion pythonVersion or {@code null} for none
    */

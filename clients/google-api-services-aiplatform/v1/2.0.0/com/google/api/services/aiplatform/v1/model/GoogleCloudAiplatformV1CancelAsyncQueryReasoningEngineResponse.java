@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Request message for JobService.CancelCustomJob.
+ * Response message for ReasoningEngineExecutionService.CancelAsyncQueryReasoningEngine.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,16 +27,16 @@ package com.google.api.services.aiplatform.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1CancelCustomJobRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1CancelAsyncQueryReasoningEngineResponse extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleCloudAiplatformV1CancelCustomJobRequest set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1CancelCustomJobRequest) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1CancelAsyncQueryReasoningEngineResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1CancelAsyncQueryReasoningEngineResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1CancelCustomJobRequest clone() {
-    return (GoogleCloudAiplatformV1CancelCustomJobRequest) super.clone();
+  public GoogleCloudAiplatformV1CancelAsyncQueryReasoningEngineResponse clone() {
+    return (GoogleCloudAiplatformV1CancelAsyncQueryReasoningEngineResponse) super.clone();
   }
 
 }

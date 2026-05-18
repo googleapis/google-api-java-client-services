@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1.model;
  * Request message for ModelService.CopyModel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,19 @@ package com.google.api.services.aiplatform.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1CopyModelRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. The user-provided custom service account to use to do the copy model. If empty,
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the destination project where the model is copied to, i.e., the project
+   * specified in the `parent` field of this request and have the Vertex AI Service Agent role in
+   * the source project. Requires the user copying the Model to have the `iam.serviceAccounts.actAs`
+   * permission on this service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customServiceAccount;
 
   /**
    * Customer-managed encryption key options. If this is set, then the Model copy will be encrypted
@@ -61,6 +74,35 @@ public final class GoogleCloudAiplatformV1CopyModelRequest extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceModel;
+
+  /**
+   * Optional. The user-provided custom service account to use to do the copy model. If empty,
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the destination project where the model is copied to, i.e., the project
+   * specified in the `parent` field of this request and have the Vertex AI Service Agent role in
+   * the source project. Requires the user copying the Model to have the `iam.serviceAccounts.actAs`
+   * permission on this service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomServiceAccount() {
+    return customServiceAccount;
+  }
+
+  /**
+   * Optional. The user-provided custom service account to use to do the copy model. If empty,
+   * [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload the model. This
+   * account must belong to the destination project where the model is copied to, i.e., the project
+   * specified in the `parent` field of this request and have the Vertex AI Service Agent role in
+   * the source project. Requires the user copying the Model to have the `iam.serviceAccounts.actAs`
+   * permission on this service account.
+   * @param customServiceAccount customServiceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CopyModelRequest setCustomServiceAccount(java.lang.String customServiceAccount) {
+    this.customServiceAccount = customServiceAccount;
+    return this;
+  }
 
   /**
    * Customer-managed encryption key options. If this is set, then the Model copy will be encrypted

@@ -57,8 +57,8 @@ public final class SearchMcpServersRequest extends com.google.api.client.json.Ge
    * `OR`, and `()`. Searchable fields: | Field | `=` | `:` | `*` | Keyword Search |
    * |--------------------|-----|-----|-----|----------------| | mcpServerId | Yes | Yes | Yes |
    * Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes | Included |
-   * Examples: * `mcpServerId=urn:mcp:projects-123:projects:123:locations:us-
-   * central1:agentregistry:services:service-id` to find the MCP Server with the specified MCP
+   * Examples: * `mcpServerId="urn:mcp:projects-123:projects:123:locations:us-
+   * central1:agentregistry:services:service-id"` to find the MCP Server with the specified MCP
    * Server ID. * `name:important` to find MCP Servers whose name contains `important` as a word. *
    * `displayName:works*` to find MCP Servers whose display name contains words that start with
    * `works`. * `planner OR booking` to find MCP Servers whose metadata contains the words `planner`
@@ -123,8 +123,8 @@ public final class SearchMcpServersRequest extends com.google.api.client.json.Ge
    * `OR`, and `()`. Searchable fields: | Field | `=` | `:` | `*` | Keyword Search |
    * |--------------------|-----|-----|-----|----------------| | mcpServerId | Yes | Yes | Yes |
    * Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes | Included |
-   * Examples: * `mcpServerId=urn:mcp:projects-123:projects:123:locations:us-
-   * central1:agentregistry:services:service-id` to find the MCP Server with the specified MCP
+   * Examples: * `mcpServerId="urn:mcp:projects-123:projects:123:locations:us-
+   * central1:agentregistry:services:service-id"` to find the MCP Server with the specified MCP
    * Server ID. * `name:important` to find MCP Servers whose name contains `important` as a word. *
    * `displayName:works*` to find MCP Servers whose display name contains words that start with
    * `works`. * `planner OR booking` to find MCP Servers whose metadata contains the words `planner`
@@ -146,8 +146,8 @@ public final class SearchMcpServersRequest extends com.google.api.client.json.Ge
    * `OR`, and `()`. Searchable fields: | Field | `=` | `:` | `*` | Keyword Search |
    * |--------------------|-----|-----|-----|----------------| | mcpServerId | Yes | Yes | Yes |
    * Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes | Included |
-   * Examples: * `mcpServerId=urn:mcp:projects-123:projects:123:locations:us-
-   * central1:agentregistry:services:service-id` to find the MCP Server with the specified MCP
+   * Examples: * `mcpServerId="urn:mcp:projects-123:projects:123:locations:us-
+   * central1:agentregistry:services:service-id"` to find the MCP Server with the specified MCP
    * Server ID. * `name:important` to find MCP Servers whose name contains `important` as a word. *
    * `displayName:works*` to find MCP Servers whose display name contains words that start with
    * `works`. * `planner OR booking` to find MCP Servers whose metadata contains the words `planner`

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Filters returning list of deteceted labels, scores, and bounding boxes.
+ * Model definition for GenaiVertexV1beta1FunctionCallDelta.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,64 +27,58 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1FunctionCallDelta extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of detected entities for the rai signal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities;
+  private GenaiStruct arguments;
 
   /**
-   * The RAI category for the deteceted labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String raiCategory;
+  private java.lang.String name;
 
   /**
-   * The list of detected entities for the rai signal.
    * @return value or {@code null} for none
    */
-  public java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> getEntities() {
-    return entities;
+  public GenaiStruct getArguments() {
+    return arguments;
   }
 
   /**
-   * The list of detected entities for the rai signal.
-   * @param entities entities or {@code null} for none
+   * @param arguments arguments or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setEntities(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities) {
-    this.entities = entities;
+  public GenaiVertexV1beta1FunctionCallDelta setArguments(GenaiStruct arguments) {
+    this.arguments = arguments;
     return this;
   }
 
   /**
-   * The RAI category for the deteceted labels.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRaiCategory() {
-    return raiCategory;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * The RAI category for the deteceted labels.
-   * @param raiCategory raiCategory or {@code null} for none
+   * @param name name or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setRaiCategory(java.lang.String raiCategory) {
-    this.raiCategory = raiCategory;
+  public GenaiVertexV1beta1FunctionCallDelta setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.set(fieldName, value);
+  public GenaiVertexV1beta1FunctionCallDelta set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1FunctionCallDelta) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels clone() {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.clone();
+  public GenaiVertexV1beta1FunctionCallDelta clone() {
+    return (GenaiVertexV1beta1FunctionCallDelta) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Filters returning list of deteceted labels, scores, and bounding boxes.
+ * The configuration for allowed tools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1AllowedTools extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of detected entities for the rai signal.
+   * The mode of the tool choice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities;
+  private java.lang.String mode;
 
   /**
-   * The RAI category for the deteceted labels.
+   * The names of the allowed tools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String raiCategory;
+  private java.util.List<java.lang.String> tools;
 
   /**
-   * The list of detected entities for the rai signal.
+   * The mode of the tool choice.
    * @return value or {@code null} for none
    */
-  public java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> getEntities() {
-    return entities;
+  public java.lang.String getMode() {
+    return mode;
   }
 
   /**
-   * The list of detected entities for the rai signal.
-   * @param entities entities or {@code null} for none
+   * The mode of the tool choice.
+   * @param mode mode or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setEntities(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities) {
-    this.entities = entities;
+  public GenaiVertexV1beta1AllowedTools setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 
   /**
-   * The RAI category for the deteceted labels.
+   * The names of the allowed tools.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRaiCategory() {
-    return raiCategory;
+  public java.util.List<java.lang.String> getTools() {
+    return tools;
   }
 
   /**
-   * The RAI category for the deteceted labels.
-   * @param raiCategory raiCategory or {@code null} for none
+   * The names of the allowed tools.
+   * @param tools tools or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setRaiCategory(java.lang.String raiCategory) {
-    this.raiCategory = raiCategory;
+  public GenaiVertexV1beta1AllowedTools setTools(java.util.List<java.lang.String> tools) {
+    this.tools = tools;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.set(fieldName, value);
+  public GenaiVertexV1beta1AllowedTools set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1AllowedTools) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels clone() {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.clone();
+  public GenaiVertexV1beta1AllowedTools clone() {
+    return (GenaiVertexV1beta1AllowedTools) super.clone();
   }
 
 }

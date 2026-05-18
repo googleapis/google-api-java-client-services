@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Filters returning list of deteceted labels, scores, and bounding boxes.
+ * The number of grounding tool counts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1InteractionUsageGroundingToolCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of detected entities for the rai signal.
+   * The number of grounding tool counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities;
+  private java.lang.Integer count;
 
   /**
-   * The RAI category for the deteceted labels.
+   * The grounding tool type associated with the count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String raiCategory;
+  private java.lang.String type;
 
   /**
-   * The list of detected entities for the rai signal.
+   * The number of grounding tool counts.
    * @return value or {@code null} for none
    */
-  public java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> getEntities() {
-    return entities;
+  public java.lang.Integer getCount() {
+    return count;
   }
 
   /**
-   * The list of detected entities for the rai signal.
-   * @param entities entities or {@code null} for none
+   * The number of grounding tool counts.
+   * @param count count or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setEntities(java.util.List<CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity> entities) {
-    this.entities = entities;
+  public GenaiVertexV1beta1InteractionUsageGroundingToolCount setCount(java.lang.Integer count) {
+    this.count = count;
     return this;
   }
 
   /**
-   * The RAI category for the deteceted labels.
+   * The grounding tool type associated with the count.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRaiCategory() {
-    return raiCategory;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * The RAI category for the deteceted labels.
-   * @param raiCategory raiCategory or {@code null} for none
+   * The grounding tool type associated with the count.
+   * @param type type or {@code null} for none
    */
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels setRaiCategory(java.lang.String raiCategory) {
-    this.raiCategory = raiCategory;
+  public GenaiVertexV1beta1InteractionUsageGroundingToolCount setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.set(fieldName, value);
+  public GenaiVertexV1beta1InteractionUsageGroundingToolCount set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1InteractionUsageGroundingToolCount) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionRaiInfoDetectedLabels clone() {
-    return (CloudAiLargeModelsVisionRaiInfoDetectedLabels) super.clone();
+  public GenaiVertexV1beta1InteractionUsageGroundingToolCount clone() {
+    return (GenaiVertexV1beta1InteractionUsageGroundingToolCount) super.clone();
   }
 
 }

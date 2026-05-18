@@ -33,6 +33,21 @@ package com.google.api.services.compute.model;
 public final class LicenseCode extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies licenseCodes of licenses that can replace this license. Note: such replacements are
+   * allowed even if removable_from_disk is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedReplacementLicenses;
+
+  /**
+   * If true, this license can be appended to an existing disk's set of licenses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean appendableToDisk;
+
+  /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
@@ -55,6 +70,14 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
+   * Specifies licenseCodes of licenses that are incompatible with this license. If a license is
+   * incompatible with this license, it cannot be attached to the same disk or image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> incompatibleLicenses;
+
+  /**
    * Output only. [Output Only] Type of resource. Always compute#licenseCode for licenses.
    * The value may be {@code null}.
    */
@@ -69,6 +92,21 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   private java.util.List<LicenseCodeLicenseAlias> licenseAlias;
 
   /**
+   * If set, this license will be unable to be removed or replaced once attached to a disk until the
+   * minimum_retention period has passed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration minimumRetention;
+
+  /**
+   * If true, this license can only be used on VMs on multi tenant nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multiTenantOnly;
+
+  /**
    * Output only. [Output Only] Name of the resource. The name is 1-20 characters long and must be a
    * valid 64 bit integer.
    * The value may be {@code null}.
@@ -77,11 +115,43 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * If true, indicates this is an OS license. Only one OS license can be attached to a disk or
+   * image at a time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean osLicense;
+
+  /**
+   * If true, this license can be removed from a disk's set of licenses, with no replacement license
+   * needed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean removableFromDisk;
+
+  /**
+   * Specifies the set of permissible coattached licenseCodes of licenses that satisfy the
+   * coattachment requirement of this license. At least one license from the set must be attached to
+   * the same disk or image as this license.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> requiredCoattachedLicenses;
+
+  /**
    * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * If true, this license can only be used on VMs on sole tenant nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean soleTenantOnly;
 
   /**
    * Output only. [Output Only] Current state of this License Code.
@@ -97,6 +167,49 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transferable;
+
+  /**
+   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updateTimestamp;
+
+  /**
+   * Specifies licenseCodes of licenses that can replace this license. Note: such replacements are
+   * allowed even if removable_from_disk is false.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedReplacementLicenses() {
+    return allowedReplacementLicenses;
+  }
+
+  /**
+   * Specifies licenseCodes of licenses that can replace this license. Note: such replacements are
+   * allowed even if removable_from_disk is false.
+   * @param allowedReplacementLicenses allowedReplacementLicenses or {@code null} for none
+   */
+  public LicenseCode setAllowedReplacementLicenses(java.util.List<java.lang.String> allowedReplacementLicenses) {
+    this.allowedReplacementLicenses = allowedReplacementLicenses;
+    return this;
+  }
+
+  /**
+   * If true, this license can be appended to an existing disk's set of licenses.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAppendableToDisk() {
+    return appendableToDisk;
+  }
+
+  /**
+   * If true, this license can be appended to an existing disk's set of licenses.
+   * @param appendableToDisk appendableToDisk or {@code null} for none
+   */
+  public LicenseCode setAppendableToDisk(java.lang.Boolean appendableToDisk) {
+    this.appendableToDisk = appendableToDisk;
+    return this;
+  }
 
   /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.
@@ -152,6 +265,25 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Specifies licenseCodes of licenses that are incompatible with this license. If a license is
+   * incompatible with this license, it cannot be attached to the same disk or image.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncompatibleLicenses() {
+    return incompatibleLicenses;
+  }
+
+  /**
+   * Specifies licenseCodes of licenses that are incompatible with this license. If a license is
+   * incompatible with this license, it cannot be attached to the same disk or image.
+   * @param incompatibleLicenses incompatibleLicenses or {@code null} for none
+   */
+  public LicenseCode setIncompatibleLicenses(java.util.List<java.lang.String> incompatibleLicenses) {
+    this.incompatibleLicenses = incompatibleLicenses;
+    return this;
+  }
+
+  /**
    * Output only. [Output Only] Type of resource. Always compute#licenseCode for licenses.
    * @return value or {@code null} for none
    */
@@ -186,6 +318,42 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If set, this license will be unable to be removed or replaced once attached to a disk until the
+   * minimum_retention period has passed.
+   * @return value or {@code null} for none
+   */
+  public Duration getMinimumRetention() {
+    return minimumRetention;
+  }
+
+  /**
+   * If set, this license will be unable to be removed or replaced once attached to a disk until the
+   * minimum_retention period has passed.
+   * @param minimumRetention minimumRetention or {@code null} for none
+   */
+  public LicenseCode setMinimumRetention(Duration minimumRetention) {
+    this.minimumRetention = minimumRetention;
+    return this;
+  }
+
+  /**
+   * If true, this license can only be used on VMs on multi tenant nodes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultiTenantOnly() {
+    return multiTenantOnly;
+  }
+
+  /**
+   * If true, this license can only be used on VMs on multi tenant nodes.
+   * @param multiTenantOnly multiTenantOnly or {@code null} for none
+   */
+  public LicenseCode setMultiTenantOnly(java.lang.Boolean multiTenantOnly) {
+    this.multiTenantOnly = multiTenantOnly;
+    return this;
+  }
+
+  /**
    * Output only. [Output Only] Name of the resource. The name is 1-20 characters long and must be a
    * valid 64 bit integer.
    * @return value or {@code null} for none
@@ -205,6 +373,65 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * If true, indicates this is an OS license. Only one OS license can be attached to a disk or
+   * image at a time.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOsLicense() {
+    return osLicense;
+  }
+
+  /**
+   * If true, indicates this is an OS license. Only one OS license can be attached to a disk or
+   * image at a time.
+   * @param osLicense osLicense or {@code null} for none
+   */
+  public LicenseCode setOsLicense(java.lang.Boolean osLicense) {
+    this.osLicense = osLicense;
+    return this;
+  }
+
+  /**
+   * If true, this license can be removed from a disk's set of licenses, with no replacement license
+   * needed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRemovableFromDisk() {
+    return removableFromDisk;
+  }
+
+  /**
+   * If true, this license can be removed from a disk's set of licenses, with no replacement license
+   * needed.
+   * @param removableFromDisk removableFromDisk or {@code null} for none
+   */
+  public LicenseCode setRemovableFromDisk(java.lang.Boolean removableFromDisk) {
+    this.removableFromDisk = removableFromDisk;
+    return this;
+  }
+
+  /**
+   * Specifies the set of permissible coattached licenseCodes of licenses that satisfy the
+   * coattachment requirement of this license. At least one license from the set must be attached to
+   * the same disk or image as this license.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRequiredCoattachedLicenses() {
+    return requiredCoattachedLicenses;
+  }
+
+  /**
+   * Specifies the set of permissible coattached licenseCodes of licenses that satisfy the
+   * coattachment requirement of this license. At least one license from the set must be attached to
+   * the same disk or image as this license.
+   * @param requiredCoattachedLicenses requiredCoattachedLicenses or {@code null} for none
+   */
+  public LicenseCode setRequiredCoattachedLicenses(java.util.List<java.lang.String> requiredCoattachedLicenses) {
+    this.requiredCoattachedLicenses = requiredCoattachedLicenses;
+    return this;
+  }
+
+  /**
    * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
@@ -218,6 +445,23 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
    */
   public LicenseCode setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * If true, this license can only be used on VMs on sole tenant nodes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSoleTenantOnly() {
+    return soleTenantOnly;
+  }
+
+  /**
+   * If true, this license can only be used on VMs on sole tenant nodes.
+   * @param soleTenantOnly soleTenantOnly or {@code null} for none
+   */
+  public LicenseCode setSoleTenantOnly(java.lang.Boolean soleTenantOnly) {
+    this.soleTenantOnly = soleTenantOnly;
     return this;
   }
 
@@ -254,6 +498,23 @@ public final class LicenseCode extends com.google.api.client.json.GenericJson {
    */
   public LicenseCode setTransferable(java.lang.Boolean transferable) {
     this.transferable = transferable;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdateTimestamp() {
+    return updateTimestamp;
+  }
+
+  /**
+   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * @param updateTimestamp updateTimestamp or {@code null} for none
+   */
+  public LicenseCode setUpdateTimestamp(java.lang.String updateTimestamp) {
+    this.updateTimestamp = updateTimestamp;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * The redirect action to be taken when the chart is clicked.
+ * Google Sheets destination configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.contactcenterinsights.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudContactcenterinsightsV1RedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The query params to be added to the redirect path.
+   * Optional. The sheet name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> queryParams;
+  private java.lang.String sheet;
 
   /**
-   * The relative path to redirect to.
+   * Optional. An existing Google Sheets ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String relativePath;
+  private java.lang.String spreadsheetId;
 
   /**
-   * The query params to be added to the redirect path.
+   * Optional. The sheet name.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getQueryParams() {
-    return queryParams;
+  public java.lang.String getSheet() {
+    return sheet;
   }
 
   /**
-   * The query params to be added to the redirect path.
-   * @param queryParams queryParams or {@code null} for none
+   * Optional. The sheet name.
+   * @param sheet sheet or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setQueryParams(java.util.Map<String, java.lang.String> queryParams) {
-    this.queryParams = queryParams;
+  public GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination setSheet(java.lang.String sheet) {
+    this.sheet = sheet;
     return this;
   }
 
   /**
-   * The relative path to redirect to.
+   * Optional. An existing Google Sheets ID.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRelativePath() {
-    return relativePath;
+  public java.lang.String getSpreadsheetId() {
+    return spreadsheetId;
   }
 
   /**
-   * The relative path to redirect to.
-   * @param relativePath relativePath or {@code null} for none
+   * Optional. An existing Google Sheets ID.
+   * @param spreadsheetId spreadsheetId or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setRelativePath(java.lang.String relativePath) {
-    this.relativePath = relativePath;
+  public GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination setSpreadsheetId(java.lang.String spreadsheetId) {
+    this.spreadsheetId = spreadsheetId;
     return this;
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.set(fieldName, value);
+  public GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination set(String fieldName, Object value) {
+    return (GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction clone() {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.clone();
+  public GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination clone() {
+    return (GoogleCloudContactcenterinsightsV1OutputConfigGoogleSheetsDestination) super.clone();
   }
 
 }

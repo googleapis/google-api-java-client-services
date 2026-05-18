@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * The redirect action to be taken when the chart is clicked.
+ * A tool call from the agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.contactcenterinsights.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudContactcenterinsightsV1RedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudContactcenterinsightsV1mainToolCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * The query params to be added to the redirect path.
+   * Output only. The input arguments to the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> queryParams;
+  private java.util.Map<String, java.lang.Object> input;
 
   /**
-   * The relative path to redirect to.
+   * Output only. The name of the tool being called.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String relativePath;
+  private java.lang.String toolName;
 
   /**
-   * The query params to be added to the redirect path.
+   * Output only. The input arguments to the tool.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getQueryParams() {
-    return queryParams;
+  public java.util.Map<String, java.lang.Object> getInput() {
+    return input;
   }
 
   /**
-   * The query params to be added to the redirect path.
-   * @param queryParams queryParams or {@code null} for none
+   * Output only. The input arguments to the tool.
+   * @param input input or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setQueryParams(java.util.Map<String, java.lang.String> queryParams) {
-    this.queryParams = queryParams;
+  public GoogleCloudContactcenterinsightsV1mainToolCall setInput(java.util.Map<String, java.lang.Object> input) {
+    this.input = input;
     return this;
   }
 
   /**
-   * The relative path to redirect to.
+   * Output only. The name of the tool being called.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRelativePath() {
-    return relativePath;
+  public java.lang.String getToolName() {
+    return toolName;
   }
 
   /**
-   * The relative path to redirect to.
-   * @param relativePath relativePath or {@code null} for none
+   * Output only. The name of the tool being called.
+   * @param toolName toolName or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setRelativePath(java.lang.String relativePath) {
-    this.relativePath = relativePath;
+  public GoogleCloudContactcenterinsightsV1mainToolCall setToolName(java.lang.String toolName) {
+    this.toolName = toolName;
     return this;
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.set(fieldName, value);
+  public GoogleCloudContactcenterinsightsV1mainToolCall set(String fieldName, Object value) {
+    return (GoogleCloudContactcenterinsightsV1mainToolCall) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction clone() {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.clone();
+  public GoogleCloudContactcenterinsightsV1mainToolCall clone() {
+    return (GoogleCloudContactcenterinsightsV1mainToolCall) super.clone();
   }
 
 }

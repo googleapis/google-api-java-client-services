@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Details of operations that delete Feature values.
+ * Runtime operation metadata for ServingProfileService.CreateServingProfile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,17 +27,17 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Operation metadata for Featurestore delete Features values.
+   * Output only. The standard operation metadata for Vertex AI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata;
 
   /**
-   * Operation metadata for Featurestore delete Features values.
+   * Output only. The standard operation metadata for Vertex AI.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenericOperationMetadata getGenericMetadata() {
@@ -45,22 +45,22 @@ public final class GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetad
   }
 
   /**
-   * Operation metadata for Featurestore delete Features values.
+   * Output only. The standard operation metadata for Vertex AI.
    * @param genericMetadata genericMetadata or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata) {
+  public GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1beta1GenericOperationMetadata genericMetadata) {
     this.genericMetadata = genericMetadata;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata clone() {
-    return (GoogleCloudAiplatformV1beta1DeleteFeatureValuesOperationMetadata) super.clone();
+  public GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata clone() {
+    return (GoogleCloudAiplatformV1beta1CreateServingProfileOperationMetadata) super.clone();
   }
 
 }

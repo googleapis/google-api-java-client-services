@@ -134,6 +134,598 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Backupdr backupdr = new Backupdr(...);}
+   *   {@code Backupdr.Folders.List request = backupdr.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Backupdr backupdr = new Backupdr(...);}
+     *   {@code Backupdr.Locations.List request = backupdr.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ResourceBackupConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.ResourceBackupConfigs.List request = backupdr.resourceBackupConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ResourceBackupConfigs resourceBackupConfigs() {
+        return new ResourceBackupConfigs();
+      }
+
+      /**
+       * The "resourceBackupConfigs" collection of methods.
+       */
+      public class ResourceBackupConfigs {
+
+        /**
+         * Fetches ResourceBackupConfigs.
+         *
+         * Create a request for the method "resourceBackupConfigs.fetch".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+         * @return the request
+         */
+        public Fetch fetch(java.lang.String parent) throws java.io.IOException {
+          Fetch result = new Fetch(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Fetch extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/resourceBackupConfigs:fetch";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Fetches ResourceBackupConfigs.
+           *
+           * Create a request for the method "resourceBackupConfigs.fetch".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+           * @since 1.13
+           */
+          protected Fetch(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Fetch set$Xgafv(java.lang.String $Xgafv) {
+            return (Fetch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Fetch setAccessToken(java.lang.String accessToken) {
+            return (Fetch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Fetch setAlt(java.lang.String alt) {
+            return (Fetch) super.setAlt(alt);
+          }
+
+          @Override
+          public Fetch setCallback(java.lang.String callback) {
+            return (Fetch) super.setCallback(callback);
+          }
+
+          @Override
+          public Fetch setFields(java.lang.String fields) {
+            return (Fetch) super.setFields(fields);
+          }
+
+          @Override
+          public Fetch setKey(java.lang.String key) {
+            return (Fetch) super.setKey(key);
+          }
+
+          @Override
+          public Fetch setOauthToken(java.lang.String oauthToken) {
+            return (Fetch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Fetch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Fetch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Fetch setQuotaUser(java.lang.String quotaUser) {
+            return (Fetch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Fetch setUploadType(java.lang.String uploadType) {
+            return (Fetch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Fetch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Fetch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project, folder or organization and location for which to retrieve resource backup
+         configs. Format: 'projects/{project_id}/locations/{location}',
+         'folders/{folder_id}/locations/{location}', or
+         'organizations/{organization_id}/locations/{location}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          public Fetch setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results. */
+          public Fetch setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public Fetch setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will use 100 as default. Maximum value is 500 and values above 500 will be coerced to 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          public Fetch setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public Fetch setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Fetch set(String parameterName, Object value) {
+            return (Fetch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Backupdr backupdr = new Backupdr(...);}
+   *   {@code Backupdr.Organizations.List request = backupdr.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Backupdr backupdr = new Backupdr(...);}
+     *   {@code Backupdr.Locations.List request = backupdr.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ResourceBackupConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.ResourceBackupConfigs.List request = backupdr.resourceBackupConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ResourceBackupConfigs resourceBackupConfigs() {
+        return new ResourceBackupConfigs();
+      }
+
+      /**
+       * The "resourceBackupConfigs" collection of methods.
+       */
+      public class ResourceBackupConfigs {
+
+        /**
+         * Fetches ResourceBackupConfigs.
+         *
+         * Create a request for the method "resourceBackupConfigs.fetch".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+         * @return the request
+         */
+        public Fetch fetch(java.lang.String parent) throws java.io.IOException {
+          Fetch result = new Fetch(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Fetch extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/resourceBackupConfigs:fetch";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Fetches ResourceBackupConfigs.
+           *
+           * Create a request for the method "resourceBackupConfigs.fetch".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+           * @since 1.13
+           */
+          protected Fetch(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Fetch set$Xgafv(java.lang.String $Xgafv) {
+            return (Fetch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Fetch setAccessToken(java.lang.String accessToken) {
+            return (Fetch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Fetch setAlt(java.lang.String alt) {
+            return (Fetch) super.setAlt(alt);
+          }
+
+          @Override
+          public Fetch setCallback(java.lang.String callback) {
+            return (Fetch) super.setCallback(callback);
+          }
+
+          @Override
+          public Fetch setFields(java.lang.String fields) {
+            return (Fetch) super.setFields(fields);
+          }
+
+          @Override
+          public Fetch setKey(java.lang.String key) {
+            return (Fetch) super.setKey(key);
+          }
+
+          @Override
+          public Fetch setOauthToken(java.lang.String oauthToken) {
+            return (Fetch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Fetch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Fetch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Fetch setQuotaUser(java.lang.String quotaUser) {
+            return (Fetch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Fetch setUploadType(java.lang.String uploadType) {
+            return (Fetch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Fetch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Fetch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project, folder or organization and location for which to retrieve resource backup
+         configs. Format: 'projects/{project_id}/locations/{location}',
+         'folders/{folder_id}/locations/{location}', or
+         'organizations/{organization_id}/locations/{location}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          public Fetch setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results. */
+          public Fetch setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public Fetch setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will use 100 as default. Maximum value is 500 and values above 500 will be coerced to 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          public Fetch setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public Fetch setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Fetch set(String parameterName, Object value) {
+            return (Fetch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -461,7 +1053,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -492,7 +1084,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -608,22 +1200,22 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -10677,6 +11269,237 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
        */
       public class ResourceBackupConfigs {
 
+        /**
+         * Fetches ResourceBackupConfigs.
+         *
+         * Create a request for the method "resourceBackupConfigs.fetch".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+         * @return the request
+         */
+        public Fetch fetch(java.lang.String parent) throws java.io.IOException {
+          Fetch result = new Fetch(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Fetch extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/resourceBackupConfigs:fetch";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Fetches ResourceBackupConfigs.
+           *
+           * Create a request for the method "resourceBackupConfigs.fetch".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project, folder or organization and location for which to retrieve resource backup
+         *        configs. Format: 'projects/{project_id}/locations/{location}',
+         *        'folders/{folder_id}/locations/{location}', or
+         *        'organizations/{organization_id}/locations/{location}'.
+           * @since 1.13
+           */
+          protected Fetch(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.FetchResourceBackupConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Fetch set$Xgafv(java.lang.String $Xgafv) {
+            return (Fetch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Fetch setAccessToken(java.lang.String accessToken) {
+            return (Fetch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Fetch setAlt(java.lang.String alt) {
+            return (Fetch) super.setAlt(alt);
+          }
+
+          @Override
+          public Fetch setCallback(java.lang.String callback) {
+            return (Fetch) super.setCallback(callback);
+          }
+
+          @Override
+          public Fetch setFields(java.lang.String fields) {
+            return (Fetch) super.setFields(fields);
+          }
+
+          @Override
+          public Fetch setKey(java.lang.String key) {
+            return (Fetch) super.setKey(key);
+          }
+
+          @Override
+          public Fetch setOauthToken(java.lang.String oauthToken) {
+            return (Fetch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Fetch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Fetch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Fetch setQuotaUser(java.lang.String quotaUser) {
+            return (Fetch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Fetch setUploadType(java.lang.String uploadType) {
+            return (Fetch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Fetch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Fetch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project, folder or organization and location for which to retrieve resource backup
+         configs. Format: 'projects/{project_id}/locations/{location}',
+         'folders/{folder_id}/locations/{location}', or
+         'organizations/{organization_id}/locations/{location}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project, folder or organization and location for which to retrieve
+           * resource backup configs. Format: 'projects/{project_id}/locations/{location}',
+           * 'folders/{folder_id}/locations/{location}', or
+           * 'organizations/{organization_id}/locations/{location}'.
+           */
+          public Fetch setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results. */
+          public Fetch setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public Fetch setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will use 100 as default. Maximum value is 500 and values above 500 will be coerced to 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will use 100 as default. Maximum value is 500 and values above 500
+           * will be coerced to 500.
+           */
+          public Fetch setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public Fetch setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Fetch set(String parameterName, Object value) {
+            return (Fetch) super.set(parameterName, value);
+          }
+        }
         /**
          * Lists ResourceBackupConfigs.
          *

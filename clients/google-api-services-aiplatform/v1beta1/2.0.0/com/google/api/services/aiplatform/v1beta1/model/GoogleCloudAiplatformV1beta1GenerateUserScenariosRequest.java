@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * Request message for DataFoundryService.GenerateUserScenarios.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -42,6 +42,17 @@ public final class GoogleCloudAiplatformV1beta1GenerateUserScenariosRequest exte
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1AgentConfig.class);
   }
+
+  /**
+   * Optional. Allows the scenario generation to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowCrossRegionModel;
 
   /**
    * Required. The agent id to identify the root agent.
@@ -73,6 +84,31 @@ public final class GoogleCloudAiplatformV1beta1GenerateUserScenariosRequest exte
    */
   public GoogleCloudAiplatformV1beta1GenerateUserScenariosRequest setAgents(java.util.Map<String, GoogleCloudAiplatformV1beta1AgentConfig> agents) {
     this.agents = agents;
+    return this;
+  }
+
+  /**
+   * Optional. Allows the scenario generation to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowCrossRegionModel() {
+    return allowCrossRegionModel;
+  }
+
+  /**
+   * Optional. Allows the scenario generation to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * @param allowCrossRegionModel allowCrossRegionModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateUserScenariosRequest setAllowCrossRegionModel(java.lang.Boolean allowCrossRegionModel) {
+    this.allowCrossRegionModel = allowCrossRegionModel;
     return this;
   }
 

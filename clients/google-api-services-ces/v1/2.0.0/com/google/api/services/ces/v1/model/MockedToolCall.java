@@ -48,7 +48,7 @@ public final class MockedToolCall extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.Object> mockResponse;
 
   /**
-   * Required. Deprecated. Use tool_identifier instead.
+   * Optional. Deprecated. Use tool_identifier instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class MockedToolCall extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Deprecated. Use tool_identifier instead.
+   * Optional. Deprecated. Use tool_identifier instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -116,7 +116,7 @@ public final class MockedToolCall extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Deprecated. Use tool_identifier instead.
+   * Optional. Deprecated. Use tool_identifier instead.
    * @param tool tool or {@code null} for none
    */
   public MockedToolCall setTool(java.lang.String tool) {

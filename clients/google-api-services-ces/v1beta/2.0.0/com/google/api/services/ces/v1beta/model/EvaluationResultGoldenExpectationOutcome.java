@@ -52,6 +52,14 @@ public final class EvaluationResultGoldenExpectationOutcome extends com.google.a
   private AgentTransfer observedAgentTransfer;
 
   /**
+   * Output only. An observed custom payload. There are no expectations for custom payloads. This is
+   * only used for metrics calculation. The outcome is always SKIPPED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> observedPayload;
+
+  /**
    * Output only. The result of the tool call expectation.
    * The value may be {@code null}.
    */
@@ -134,6 +142,25 @@ public final class EvaluationResultGoldenExpectationOutcome extends com.google.a
    */
   public EvaluationResultGoldenExpectationOutcome setObservedAgentTransfer(AgentTransfer observedAgentTransfer) {
     this.observedAgentTransfer = observedAgentTransfer;
+    return this;
+  }
+
+  /**
+   * Output only. An observed custom payload. There are no expectations for custom payloads. This is
+   * only used for metrics calculation. The outcome is always SKIPPED.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getObservedPayload() {
+    return observedPayload;
+  }
+
+  /**
+   * Output only. An observed custom payload. There are no expectations for custom payloads. This is
+   * only used for metrics calculation. The outcome is always SKIPPED.
+   * @param observedPayload observedPayload or {@code null} for none
+   */
+  public EvaluationResultGoldenExpectationOutcome setObservedPayload(java.util.Map<String, java.lang.Object> observedPayload) {
+    this.observedPayload = observedPayload;
     return this;
   }
 

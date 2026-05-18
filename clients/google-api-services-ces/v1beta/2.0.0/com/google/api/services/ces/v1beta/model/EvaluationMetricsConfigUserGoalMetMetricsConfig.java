@@ -17,7 +17,10 @@
 package com.google.api.services.ces.v1beta.model;
 
 /**
- * Routing config specify how/who to route app events to a subscriber.
+ * Configuration for the user goal met metrics for the evaluation. To disable the metric, set the
+ * message but do not set the `enable_user_goal_met_metrics` field to true (or explicitly set it to
+ * false). To unset the configuration and fallback to the default behavior, omit the message
+ * entirely.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a
@@ -28,40 +31,40 @@ package com.google.api.services.ces.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OmnichannelIntegrationConfigRoutingConfig extends com.google.api.client.json.GenericJson {
+public final class EvaluationMetricsConfigUserGoalMetMetricsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key of the subscriber.
+   * Optional. Whether to calculate the user goal met metrics for the evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String subscriberKey;
+  private java.lang.Boolean enableUserGoalMetMetrics;
 
   /**
-   * The key of the subscriber.
+   * Optional. Whether to calculate the user goal met metrics for the evaluation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSubscriberKey() {
-    return subscriberKey;
+  public java.lang.Boolean getEnableUserGoalMetMetrics() {
+    return enableUserGoalMetMetrics;
   }
 
   /**
-   * The key of the subscriber.
-   * @param subscriberKey subscriberKey or {@code null} for none
+   * Optional. Whether to calculate the user goal met metrics for the evaluation.
+   * @param enableUserGoalMetMetrics enableUserGoalMetMetrics or {@code null} for none
    */
-  public OmnichannelIntegrationConfigRoutingConfig setSubscriberKey(java.lang.String subscriberKey) {
-    this.subscriberKey = subscriberKey;
+  public EvaluationMetricsConfigUserGoalMetMetricsConfig setEnableUserGoalMetMetrics(java.lang.Boolean enableUserGoalMetMetrics) {
+    this.enableUserGoalMetMetrics = enableUserGoalMetMetrics;
     return this;
   }
 
   @Override
-  public OmnichannelIntegrationConfigRoutingConfig set(String fieldName, Object value) {
-    return (OmnichannelIntegrationConfigRoutingConfig) super.set(fieldName, value);
+  public EvaluationMetricsConfigUserGoalMetMetricsConfig set(String fieldName, Object value) {
+    return (EvaluationMetricsConfigUserGoalMetMetricsConfig) super.set(fieldName, value);
   }
 
   @Override
-  public OmnichannelIntegrationConfigRoutingConfig clone() {
-    return (OmnichannelIntegrationConfigRoutingConfig) super.clone();
+  public EvaluationMetricsConfigUserGoalMetMetricsConfig clone() {
+    return (EvaluationMetricsConfigUserGoalMetMetricsConfig) super.clone();
   }
 
 }

@@ -46,6 +46,13 @@ public final class EvaluationSettings extends com.google.api.client.json.Generic
   private java.lang.String goldenRunMethod;
 
   /**
+   * Optional. Configures the default metrics for evaluations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsConfig metricsConfig;
+
+  /**
    * Optional. Who starts the conversation in a scenario evaluation.
    * The value may be {@code null}.
    */
@@ -92,6 +99,23 @@ public final class EvaluationSettings extends com.google.api.client.json.Generic
    */
   public EvaluationSettings setGoldenRunMethod(java.lang.String goldenRunMethod) {
     this.goldenRunMethod = goldenRunMethod;
+    return this;
+  }
+
+  /**
+   * Optional. Configures the default metrics for evaluations.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsConfig getMetricsConfig() {
+    return metricsConfig;
+  }
+
+  /**
+   * Optional. Configures the default metrics for evaluations.
+   * @param metricsConfig metricsConfig or {@code null} for none
+   */
+  public EvaluationSettings setMetricsConfig(EvaluationMetricsConfig metricsConfig) {
+    this.metricsConfig = metricsConfig;
     return this;
   }
 

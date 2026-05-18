@@ -213,6 +213,13 @@ public final class Agent extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Misconfigurations or errors in the agent that may affect agent quality.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> validationErrors;
+
+  /**
    * Optional. The callbacks to execute after the agent is called. The provided callbacks are
    * executed sequentially in the exact order they are given in the list. If a callback returns an
    * overridden response, execution stops and any remaining callbacks are skipped.
@@ -637,6 +644,23 @@ public final class Agent extends com.google.api.client.json.GenericJson {
    */
   public Agent setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Misconfigurations or errors in the agent that may affect agent quality.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getValidationErrors() {
+    return validationErrors;
+  }
+
+  /**
+   * Output only. Misconfigurations or errors in the agent that may affect agent quality.
+   * @param validationErrors validationErrors or {@code null} for none
+   */
+  public Agent setValidationErrors(java.util.List<java.lang.String> validationErrors) {
+    this.validationErrors = validationErrors;
     return this;
   }
 

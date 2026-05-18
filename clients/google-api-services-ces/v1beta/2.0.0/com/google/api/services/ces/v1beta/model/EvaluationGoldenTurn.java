@@ -31,7 +31,15 @@ package com.google.api.services.ces.v1beta.model;
 public final class EvaluationGoldenTurn extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Override for turn-level hallucination metric behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hallucinationMetricBehaviorOverride;
+
+  /**
    * Optional. The root span of the golden turn for processing and maintaining audio information.
+   * The uri for the audio must contain audio saved in 16Khz sample rate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +53,32 @@ public final class EvaluationGoldenTurn extends com.google.api.client.json.Gener
   private java.util.List<EvaluationStep> steps;
 
   /**
+   * Optional. Overrides for turn-level metric thresholds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsTurnLevelMetricsThresholds turnLevelMetricsThresholdsOverride;
+
+  /**
+   * Optional. Override for turn-level hallucination metric behavior.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHallucinationMetricBehaviorOverride() {
+    return hallucinationMetricBehaviorOverride;
+  }
+
+  /**
+   * Optional. Override for turn-level hallucination metric behavior.
+   * @param hallucinationMetricBehaviorOverride hallucinationMetricBehaviorOverride or {@code null} for none
+   */
+  public EvaluationGoldenTurn setHallucinationMetricBehaviorOverride(java.lang.String hallucinationMetricBehaviorOverride) {
+    this.hallucinationMetricBehaviorOverride = hallucinationMetricBehaviorOverride;
+    return this;
+  }
+
+  /**
    * Optional. The root span of the golden turn for processing and maintaining audio information.
+   * The uri for the audio must contain audio saved in 16Khz sample rate.
    * @return value or {@code null} for none
    */
   public Span getRootSpan() {
@@ -54,6 +87,7 @@ public final class EvaluationGoldenTurn extends com.google.api.client.json.Gener
 
   /**
    * Optional. The root span of the golden turn for processing and maintaining audio information.
+   * The uri for the audio must contain audio saved in 16Khz sample rate.
    * @param rootSpan rootSpan or {@code null} for none
    */
   public EvaluationGoldenTurn setRootSpan(Span rootSpan) {
@@ -75,6 +109,23 @@ public final class EvaluationGoldenTurn extends com.google.api.client.json.Gener
    */
   public EvaluationGoldenTurn setSteps(java.util.List<EvaluationStep> steps) {
     this.steps = steps;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides for turn-level metric thresholds.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsTurnLevelMetricsThresholds getTurnLevelMetricsThresholdsOverride() {
+    return turnLevelMetricsThresholdsOverride;
+  }
+
+  /**
+   * Optional. Overrides for turn-level metric thresholds.
+   * @param turnLevelMetricsThresholdsOverride turnLevelMetricsThresholdsOverride or {@code null} for none
+   */
+  public EvaluationGoldenTurn setTurnLevelMetricsThresholdsOverride(EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsTurnLevelMetricsThresholds turnLevelMetricsThresholdsOverride) {
+    this.turnLevelMetricsThresholdsOverride = turnLevelMetricsThresholdsOverride;
     return this;
   }
 

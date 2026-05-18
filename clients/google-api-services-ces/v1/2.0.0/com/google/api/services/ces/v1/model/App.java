@@ -216,11 +216,25 @@ public final class App extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. Misconfigurations or warnings in the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> validationErrors;
+
+  /**
    * Optional. The declarations of the variables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AppVariableDeclaration> variableDeclarations;
+
+  /**
+   * Optional. VPC-SC settings for the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcScSettings vpcScSettings;
 
   /**
    * Optional. Audio processing configuration of the app.
@@ -664,6 +678,23 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Misconfigurations or warnings in the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getValidationErrors() {
+    return validationErrors;
+  }
+
+  /**
+   * Output only. Misconfigurations or warnings in the app.
+   * @param validationErrors validationErrors or {@code null} for none
+   */
+  public App setValidationErrors(java.util.List<java.lang.String> validationErrors) {
+    this.validationErrors = validationErrors;
+    return this;
+  }
+
+  /**
    * Optional. The declarations of the variables.
    * @return value or {@code null} for none
    */
@@ -677,6 +708,23 @@ public final class App extends com.google.api.client.json.GenericJson {
    */
   public App setVariableDeclarations(java.util.List<AppVariableDeclaration> variableDeclarations) {
     this.variableDeclarations = variableDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. VPC-SC settings for the app.
+   * @return value or {@code null} for none
+   */
+  public VpcScSettings getVpcScSettings() {
+    return vpcScSettings;
+  }
+
+  /**
+   * Optional. VPC-SC settings for the app.
+   * @param vpcScSettings vpcScSettings or {@code null} for none
+   */
+  public App setVpcScSettings(VpcScSettings vpcScSettings) {
+    this.vpcScSettings = vpcScSettings;
     return this;
   }
 

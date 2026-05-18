@@ -39,11 +39,32 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
   private Message agentResponse;
 
   /**
+   * Optional. Overrides for agent_response hallucination metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsConfigHallucinationMetricsConfig agentResponseHallucinationMetricsConfigOverride;
+
+  /**
+   * Optional. Overrides for agent_response semantic similarity metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsConfigSemanticSimilarityMetricsConfig agentResponseSemanticSimilarityMetricsConfigOverride;
+
+  /**
    * Optional. Check that the agent transferred the conversation to a different agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AgentTransfer agentTransfer;
+
+  /**
+   * Optional. Overrides metrics at the step level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsExpectationLevelMetricsThresholds expectationLevelMetricsThresholdsOverride;
 
   /**
    * Optional. The tool response to mock, with the parameters of interest specified. Any parameters
@@ -60,6 +81,13 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String note;
+
+  /**
+   * Optional. If set to true, this specific expectation will not be evaluated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipEvaluation;
 
   /**
    * Optional. Check that a specific tool was called with the parameters.
@@ -103,6 +131,40 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
   }
 
   /**
+   * Optional. Overrides for agent_response hallucination metrics.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsConfigHallucinationMetricsConfig getAgentResponseHallucinationMetricsConfigOverride() {
+    return agentResponseHallucinationMetricsConfigOverride;
+  }
+
+  /**
+   * Optional. Overrides for agent_response hallucination metrics.
+   * @param agentResponseHallucinationMetricsConfigOverride agentResponseHallucinationMetricsConfigOverride or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setAgentResponseHallucinationMetricsConfigOverride(EvaluationMetricsConfigHallucinationMetricsConfig agentResponseHallucinationMetricsConfigOverride) {
+    this.agentResponseHallucinationMetricsConfigOverride = agentResponseHallucinationMetricsConfigOverride;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides for agent_response semantic similarity metrics.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsConfigSemanticSimilarityMetricsConfig getAgentResponseSemanticSimilarityMetricsConfigOverride() {
+    return agentResponseSemanticSimilarityMetricsConfigOverride;
+  }
+
+  /**
+   * Optional. Overrides for agent_response semantic similarity metrics.
+   * @param agentResponseSemanticSimilarityMetricsConfigOverride agentResponseSemanticSimilarityMetricsConfigOverride or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setAgentResponseSemanticSimilarityMetricsConfigOverride(EvaluationMetricsConfigSemanticSimilarityMetricsConfig agentResponseSemanticSimilarityMetricsConfigOverride) {
+    this.agentResponseSemanticSimilarityMetricsConfigOverride = agentResponseSemanticSimilarityMetricsConfigOverride;
+    return this;
+  }
+
+  /**
    * Optional. Check that the agent transferred the conversation to a different agent.
    * @return value or {@code null} for none
    */
@@ -116,6 +178,23 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
    */
   public EvaluationGoldenExpectation setAgentTransfer(AgentTransfer agentTransfer) {
     this.agentTransfer = agentTransfer;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides metrics at the step level.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsExpectationLevelMetricsThresholds getExpectationLevelMetricsThresholdsOverride() {
+    return expectationLevelMetricsThresholdsOverride;
+  }
+
+  /**
+   * Optional. Overrides metrics at the step level.
+   * @param expectationLevelMetricsThresholdsOverride expectationLevelMetricsThresholdsOverride or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setExpectationLevelMetricsThresholdsOverride(EvaluationMetricsThresholdsGoldenEvaluationMetricsThresholdsExpectationLevelMetricsThresholds expectationLevelMetricsThresholdsOverride) {
+    this.expectationLevelMetricsThresholdsOverride = expectationLevelMetricsThresholdsOverride;
     return this;
   }
 
@@ -154,6 +233,23 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
    */
   public EvaluationGoldenExpectation setNote(java.lang.String note) {
     this.note = note;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, this specific expectation will not be evaluated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipEvaluation() {
+    return skipEvaluation;
+  }
+
+  /**
+   * Optional. If set to true, this specific expectation will not be evaluated.
+   * @param skipEvaluation skipEvaluation or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setSkipEvaluation(java.lang.Boolean skipEvaluation) {
+    this.skipEvaluation = skipEvaluation;
     return this;
   }
 

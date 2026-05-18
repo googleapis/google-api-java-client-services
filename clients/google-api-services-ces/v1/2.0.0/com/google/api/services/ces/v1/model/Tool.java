@@ -144,11 +144,26 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   private PythonFunction pythonFunction;
 
   /**
+   * Optional. The remote agent tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoteAgentTool remoteAgentTool;
+
+  /**
    * Optional. The system tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SystemTool systemTool;
+
+  /**
+   * Optional. The timeout for the tool execution. If not set, the default timeout is 30 seconds for
+   * `SYNCHRONOUS` tools and 60 seconds for `ASYNCHRONOUS` tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timeout;
 
   /**
    * Optional. Configuration for tool behavior in fake mode.
@@ -443,6 +458,23 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The remote agent tool.
+   * @return value or {@code null} for none
+   */
+  public RemoteAgentTool getRemoteAgentTool() {
+    return remoteAgentTool;
+  }
+
+  /**
+   * Optional. The remote agent tool.
+   * @param remoteAgentTool remoteAgentTool or {@code null} for none
+   */
+  public Tool setRemoteAgentTool(RemoteAgentTool remoteAgentTool) {
+    this.remoteAgentTool = remoteAgentTool;
+    return this;
+  }
+
+  /**
    * Optional. The system tool.
    * @return value or {@code null} for none
    */
@@ -456,6 +488,25 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   public Tool setSystemTool(SystemTool systemTool) {
     this.systemTool = systemTool;
+    return this;
+  }
+
+  /**
+   * Optional. The timeout for the tool execution. If not set, the default timeout is 30 seconds for
+   * `SYNCHRONOUS` tools and 60 seconds for `ASYNCHRONOUS` tools.
+   * @return value or {@code null} for none
+   */
+  public String getTimeout() {
+    return timeout;
+  }
+
+  /**
+   * Optional. The timeout for the tool execution. If not set, the default timeout is 30 seconds for
+   * `SYNCHRONOUS` tools and 60 seconds for `ASYNCHRONOUS` tools.
+   * @param timeout timeout or {@code null} for none
+   */
+  public Tool setTimeout(String timeout) {
+    this.timeout = timeout;
     return this;
   }
 

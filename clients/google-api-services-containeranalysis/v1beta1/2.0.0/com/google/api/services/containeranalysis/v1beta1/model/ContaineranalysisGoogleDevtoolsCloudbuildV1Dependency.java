@@ -38,6 +38,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency extends
   private java.lang.Boolean empty;
 
   /**
+   * Represents a generic artifact as a build dependency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGenericArtifactDependency genericArtifact;
+
+  /**
    * Represents a git repository as a build dependency.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency extends
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency setEmpty(java.lang.Boolean empty) {
     this.empty = empty;
+    return this;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGenericArtifactDependency getGenericArtifact() {
+    return genericArtifact;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @param genericArtifact genericArtifact or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency setGenericArtifact(ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGenericArtifactDependency genericArtifact) {
+    this.genericArtifact = genericArtifact;
     return this;
   }
 

@@ -63,6 +63,26 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   private java.util.List<java.lang.String> buildStepOutputs;
 
   /**
+   * Results for build steps. step_id ->
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStepResults> buildStepResults;
+
+  static {
+    // hack to force ProGuard to consider ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStepResults used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStepResults.class);
+  }
+
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGenericArtifact> genericArtifacts;
+
+  /**
    * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
    * The value may be {@code null}.
    */
@@ -184,6 +204,40 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {
     this.buildStepOutputs = buildStepOutputs;
+    return this;
+  }
+
+  /**
+   * Results for build steps. step_id ->
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStepResults> getBuildStepResults() {
+    return buildStepResults;
+  }
+
+  /**
+   * Results for build steps. step_id ->
+   * @param buildStepResults buildStepResults or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setBuildStepResults(java.util.Map<String, ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStepResults> buildStepResults) {
+    this.buildStepResults = buildStepResults;
+    return this;
+  }
+
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGenericArtifact> getGenericArtifacts() {
+    return genericArtifacts;
+  }
+
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * @param genericArtifacts genericArtifacts or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setGenericArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGenericArtifact> genericArtifacts) {
+    this.genericArtifacts = genericArtifacts;
     return this;
   }
 

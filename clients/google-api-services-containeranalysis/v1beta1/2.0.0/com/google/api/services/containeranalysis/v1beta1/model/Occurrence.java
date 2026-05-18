@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Occurrence extends com.google.api.client.json.GenericJson {
 
   /**
+   * Describes a specific AI Skill Analysis occurrence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AISkillAnalysisOccurrence aiSkillAnalysis;
+
+  /**
    * Describes an attestation of an artifact.
    * The value may be {@code null}.
    */
@@ -186,6 +193,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GrafeasV1beta1VulnerabilityDetails vulnerability;
+
+  /**
+   * Describes a specific AI Skill Analysis occurrence.
+   * @return value or {@code null} for none
+   */
+  public AISkillAnalysisOccurrence getAiSkillAnalysis() {
+    return aiSkillAnalysis;
+  }
+
+  /**
+   * Describes a specific AI Skill Analysis occurrence.
+   * @param aiSkillAnalysis aiSkillAnalysis or {@code null} for none
+   */
+  public Occurrence setAiSkillAnalysis(AISkillAnalysisOccurrence aiSkillAnalysis) {
+    this.aiSkillAnalysis = aiSkillAnalysis;
+    return this;
+  }
 
   /**
    * Describes an attestation of an artifact.

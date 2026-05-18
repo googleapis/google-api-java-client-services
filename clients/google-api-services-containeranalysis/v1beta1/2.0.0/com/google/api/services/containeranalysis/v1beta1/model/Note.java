@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class Note extends com.google.api.client.json.GenericJson {
 
   /**
+   * A note describing an AI Skill analysis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AISkillAnalysisNote aiSkillAnalysis;
+
+  /**
    * A note describing an attestation role.
    * The value may be {@code null}.
    */
@@ -199,6 +206,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VulnerabilityAssessmentNote vulnerabilityAssessment;
+
+  /**
+   * A note describing an AI Skill analysis.
+   * @return value or {@code null} for none
+   */
+  public AISkillAnalysisNote getAiSkillAnalysis() {
+    return aiSkillAnalysis;
+  }
+
+  /**
+   * A note describing an AI Skill analysis.
+   * @param aiSkillAnalysis aiSkillAnalysis or {@code null} for none
+   */
+  public Note setAiSkillAnalysis(AISkillAnalysisNote aiSkillAnalysis) {
+    this.aiSkillAnalysis = aiSkillAnalysis;
+    return this;
+  }
 
   /**
    * A note describing an attestation role.

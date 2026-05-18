@@ -32,6 +32,14 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsGenericArtifact> genericArtifacts;
+
+  /**
    * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion
    * of all build steps. If any objects fail to be pushed, the build is marked FAILURE.
    * The value may be {@code null}.
@@ -98,6 +106,25 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
    */
   @com.google.api.client.util.Key
   private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage> pythonPackages;
+
+  /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsGenericArtifact> getGenericArtifacts() {
+    return genericArtifacts;
+  }
+
+  /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * @param genericArtifacts genericArtifacts or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setGenericArtifacts(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsGenericArtifact> genericArtifacts) {
+    this.genericArtifacts = genericArtifacts;
+    return this;
+  }
 
   /**
    * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion

@@ -49,6 +49,15 @@ public final class DataflowPackage extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Optional. The hex-encoded SHA256 checksum of the package. If the checksum is provided, the
+   * worker will verify the checksum of the package before using it. If the checksum does not match,
+   * the worker will fail to start.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sha256;
+
+  /**
    * The resource to read the package from. The supported resource type is: Google Cloud Storage:
    * storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
    * @return value or {@code null} for none
@@ -81,6 +90,27 @@ public final class DataflowPackage extends com.google.api.client.json.GenericJso
    */
   public DataflowPackage setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The hex-encoded SHA256 checksum of the package. If the checksum is provided, the
+   * worker will verify the checksum of the package before using it. If the checksum does not match,
+   * the worker will fail to start.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha256() {
+    return sha256;
+  }
+
+  /**
+   * Optional. The hex-encoded SHA256 checksum of the package. If the checksum is provided, the
+   * worker will verify the checksum of the package before using it. If the checksum does not match,
+   * the worker will fail to start.
+   * @param sha256 sha256 or {@code null} for none
+   */
+  public DataflowPackage setSha256(java.lang.String sha256) {
+    this.sha256 = sha256;
     return this;
   }
 

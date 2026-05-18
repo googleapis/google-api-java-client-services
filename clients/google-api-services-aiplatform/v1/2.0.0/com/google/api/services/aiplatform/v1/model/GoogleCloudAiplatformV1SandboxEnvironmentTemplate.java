@@ -21,7 +21,7 @@ package com.google.api.services.aiplatform.v1.model;
  * template for creating SandboxEnvironments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -59,6 +59,13 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends com
   private java.lang.String displayName;
 
   /**
+   * Optional. The configuration for egress control of this template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig egressControlConfig;
+
+  /**
    * Identifier. The resource name of the SandboxEnvironmentTemplate. Format: `projects/{project}/lo
    * cations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironmentTemplates/{sandbox_env
    * ironment_template}`
@@ -80,13 +87,6 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends com
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Optional. The configuration for the warm pool of this template.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig warmPoolConfig;
 
   /**
    * Output only. The timestamp when this SandboxEnvironmentTemplate was created.
@@ -157,6 +157,23 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends com
   }
 
   /**
+   * Optional. The configuration for egress control of this template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig getEgressControlConfig() {
+    return egressControlConfig;
+  }
+
+  /**
+   * Optional. The configuration for egress control of this template.
+   * @param egressControlConfig egressControlConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplate setEgressControlConfig(GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig egressControlConfig) {
+    this.egressControlConfig = egressControlConfig;
+    return this;
+  }
+
+  /**
    * Identifier. The resource name of the SandboxEnvironmentTemplate. Format: `projects/{project}/lo
    * cations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironmentTemplates/{sandbox_env
    * ironment_template}`
@@ -208,23 +225,6 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplate extends com
    */
   public GoogleCloudAiplatformV1SandboxEnvironmentTemplate setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
-    return this;
-  }
-
-  /**
-   * Optional. The configuration for the warm pool of this template.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig getWarmPoolConfig() {
-    return warmPoolConfig;
-  }
-
-  /**
-   * Optional. The configuration for the warm pool of this template.
-   * @param warmPoolConfig warmPoolConfig or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1SandboxEnvironmentTemplate setWarmPoolConfig(GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig warmPoolConfig) {
-    this.warmPoolConfig = warmPoolConfig;
     return this;
   }
 

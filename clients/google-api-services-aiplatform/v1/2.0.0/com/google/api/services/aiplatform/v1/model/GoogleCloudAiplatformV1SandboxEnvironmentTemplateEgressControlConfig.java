@@ -17,50 +17,50 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Configuration for a warm pool of sandbox instances.
+ * Configuration for egress control of sandbox instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The target number of pre-warmed instances to maintain.
+   * Optional. Whether to allow internet access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer targetInstanceCount;
+  private java.lang.Boolean internetAccess;
 
   /**
-   * Optional. The target number of pre-warmed instances to maintain.
+   * Optional. Whether to allow internet access.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getTargetInstanceCount() {
-    return targetInstanceCount;
+  public java.lang.Boolean getInternetAccess() {
+    return internetAccess;
   }
 
   /**
-   * Optional. The target number of pre-warmed instances to maintain.
-   * @param targetInstanceCount targetInstanceCount or {@code null} for none
+   * Optional. Whether to allow internet access.
+   * @param internetAccess internetAccess or {@code null} for none
    */
-  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig setTargetInstanceCount(java.lang.Integer targetInstanceCount) {
-    this.targetInstanceCount = targetInstanceCount;
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig setInternetAccess(java.lang.Boolean internetAccess) {
+    this.internetAccess = internetAccess;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig clone() {
-    return (GoogleCloudAiplatformV1SandboxEnvironmentTemplateWarmPoolConfig) super.clone();
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig clone() {
+    return (GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig) super.clone();
   }
 
 }

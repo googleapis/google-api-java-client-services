@@ -21,7 +21,7 @@ package com.google.api.services.aiplatform.v1.model;
  * runtime for AI agents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -60,11 +60,44 @@ public final class GoogleCloudAiplatformV1SandboxEnvironment extends com.google.
   private String expireTime;
 
   /**
+   * Output only. The resource name of the latest snapshot taken for this SandboxEnvironment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestSandboxEnvironmentSnapshot;
+
+  /**
    * Identifier. The name of the SandboxEnvironment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Owner information for this sandbox environment. A Sandbox can only be restored from a
+   * snapshot that belongs to the same owner. If not set, sandbox will be created as the default
+   * owner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String owner;
+
+  /**
+   * Optional. The resource name of the SandboxEnvironmentSnapshot to use for creating this
+   * SandboxEnvironment. Format: `projects/{project}/locations/{location}/reasoningEngines/{reasonin
+   * g_engine}/sandboxEnvironmentSnapshots/{sandbox_environment_snapshot}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sandboxEnvironmentSnapshot;
+
+  /**
+   * Optional. The name of the SandboxEnvironmentTemplate specified in the parent Agent Engine
+   * resource that this SandboxEnvironment is created from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sandboxEnvironmentTemplate;
 
   /**
    * Optional. The configuration of the SandboxEnvironment.
@@ -166,6 +199,23 @@ public final class GoogleCloudAiplatformV1SandboxEnvironment extends com.google.
   }
 
   /**
+   * Output only. The resource name of the latest snapshot taken for this SandboxEnvironment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestSandboxEnvironmentSnapshot() {
+    return latestSandboxEnvironmentSnapshot;
+  }
+
+  /**
+   * Output only. The resource name of the latest snapshot taken for this SandboxEnvironment.
+   * @param latestSandboxEnvironmentSnapshot latestSandboxEnvironmentSnapshot or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironment setLatestSandboxEnvironmentSnapshot(java.lang.String latestSandboxEnvironmentSnapshot) {
+    this.latestSandboxEnvironmentSnapshot = latestSandboxEnvironmentSnapshot;
+    return this;
+  }
+
+  /**
    * Identifier. The name of the SandboxEnvironment.
    * @return value or {@code null} for none
    */
@@ -179,6 +229,67 @@ public final class GoogleCloudAiplatformV1SandboxEnvironment extends com.google.
    */
   public GoogleCloudAiplatformV1SandboxEnvironment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Owner information for this sandbox environment. A Sandbox can only be restored from a
+   * snapshot that belongs to the same owner. If not set, sandbox will be created as the default
+   * owner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOwner() {
+    return owner;
+  }
+
+  /**
+   * Optional. Owner information for this sandbox environment. A Sandbox can only be restored from a
+   * snapshot that belongs to the same owner. If not set, sandbox will be created as the default
+   * owner.
+   * @param owner owner or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironment setOwner(java.lang.String owner) {
+    this.owner = owner;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the SandboxEnvironmentSnapshot to use for creating this
+   * SandboxEnvironment. Format: `projects/{project}/locations/{location}/reasoningEngines/{reasonin
+   * g_engine}/sandboxEnvironmentSnapshots/{sandbox_environment_snapshot}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSandboxEnvironmentSnapshot() {
+    return sandboxEnvironmentSnapshot;
+  }
+
+  /**
+   * Optional. The resource name of the SandboxEnvironmentSnapshot to use for creating this
+   * SandboxEnvironment. Format: `projects/{project}/locations/{location}/reasoningEngines/{reasonin
+   * g_engine}/sandboxEnvironmentSnapshots/{sandbox_environment_snapshot}`
+   * @param sandboxEnvironmentSnapshot sandboxEnvironmentSnapshot or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironment setSandboxEnvironmentSnapshot(java.lang.String sandboxEnvironmentSnapshot) {
+    this.sandboxEnvironmentSnapshot = sandboxEnvironmentSnapshot;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the SandboxEnvironmentTemplate specified in the parent Agent Engine
+   * resource that this SandboxEnvironment is created from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSandboxEnvironmentTemplate() {
+    return sandboxEnvironmentTemplate;
+  }
+
+  /**
+   * Optional. The name of the SandboxEnvironmentTemplate specified in the parent Agent Engine
+   * resource that this SandboxEnvironment is created from.
+   * @param sandboxEnvironmentTemplate sandboxEnvironmentTemplate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironment setSandboxEnvironmentTemplate(java.lang.String sandboxEnvironmentTemplate) {
+    this.sandboxEnvironmentTemplate = sandboxEnvironmentTemplate;
     return this;
   }
 

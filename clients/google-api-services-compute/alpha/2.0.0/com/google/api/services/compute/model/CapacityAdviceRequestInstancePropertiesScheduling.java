@@ -37,7 +37,7 @@ public final class CapacityAdviceRequestInstancePropertiesScheduling extends com
   private String maxRunDuration;
 
   /**
-   * Specifies the provisioning model of the instance.
+   * Specifies the provisioning model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class CapacityAdviceRequestInstancePropertiesScheduling extends com
   }
 
   /**
-   * Specifies the provisioning model of the instance.
+   * Specifies the provisioning model.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvisioningModel() {
@@ -69,7 +69,7 @@ public final class CapacityAdviceRequestInstancePropertiesScheduling extends com
   }
 
   /**
-   * Specifies the provisioning model of the instance.
+   * Specifies the provisioning model.
    * @param provisioningModel provisioningModel or {@code null} for none
    */
   public CapacityAdviceRequestInstancePropertiesScheduling setProvisioningModel(java.lang.String provisioningModel) {

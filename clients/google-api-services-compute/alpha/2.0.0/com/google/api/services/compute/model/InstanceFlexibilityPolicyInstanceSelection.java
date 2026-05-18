@@ -55,6 +55,13 @@ public final class InstanceFlexibilityPolicyInstanceSelection extends com.google
   private java.util.List<java.lang.String> machineTypes;
 
   /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minCpuPlatform;
+
+  /**
    * Rank when prioritizing the shape flexibilities. The instance selections with rank are
    * considered first, in the ascending order of the rank. If not set, defaults to 0.
    * The value may be {@code null}.
@@ -99,6 +106,23 @@ public final class InstanceFlexibilityPolicyInstanceSelection extends com.google
    */
   public InstanceFlexibilityPolicyInstanceSelection setMachineTypes(java.util.List<java.lang.String> machineTypes) {
     this.machineTypes = machineTypes;
+    return this;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinCpuPlatform() {
+    return minCpuPlatform;
+  }
+
+  /**
+   * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
+   * @param minCpuPlatform minCpuPlatform or {@code null} for none
+   */
+  public InstanceFlexibilityPolicyInstanceSelection setMinCpuPlatform(java.lang.String minCpuPlatform) {
+    this.minCpuPlatform = minCpuPlatform;
     return this;
   }
 

@@ -30,6 +30,22 @@ package com.google.api.services.compute.model;
 public final class MachineImageParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
+   * new machine image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedDisks;
+
+  /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
+   * new machine image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includedDisks;
+
+  /**
    * Input only. Resource manager tags to be bound to the machine image. Tag keys and values have
    * the same definition as resource manager tags. Keys and values can be either in numeric format,
    * such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as
@@ -39,6 +55,44 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
+   * new machine image.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedDisks() {
+    return excludedDisks;
+  }
+
+  /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
+   * new machine image.
+   * @param excludedDisks excludedDisks or {@code null} for none
+   */
+  public MachineImageParams setExcludedDisks(java.util.List<java.lang.String> excludedDisks) {
+    this.excludedDisks = excludedDisks;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
+   * new machine image.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludedDisks() {
+    return includedDisks;
+  }
+
+  /**
+   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
+   * new machine image.
+   * @param includedDisks includedDisks or {@code null} for none
+   */
+  public MachineImageParams setIncludedDisks(java.util.List<java.lang.String> includedDisks) {
+    this.includedDisks = includedDisks;
+    return this;
+  }
 
   /**
    * Input only. Resource manager tags to be bound to the machine image. Tag keys and values have

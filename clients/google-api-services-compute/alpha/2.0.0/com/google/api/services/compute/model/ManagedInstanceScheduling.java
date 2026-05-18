@@ -30,12 +30,39 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceScheduling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output Only] The timestamp at which the underlying instance will be triggered for
+   * graceful shutdown if it is configured. This is in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String gracefulShutdownTimestamp;
+
+  /**
    * Output only. [Output Only] The timestamp at which the managed instance will be terminated. This
    * is in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String terminationTimestamp;
+
+  /**
+   * Output only. [Output Only] The timestamp at which the underlying instance will be triggered for
+   * graceful shutdown if it is configured. This is in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public String getGracefulShutdownTimestamp() {
+    return gracefulShutdownTimestamp;
+  }
+
+  /**
+   * Output only. [Output Only] The timestamp at which the underlying instance will be triggered for
+   * graceful shutdown if it is configured. This is in RFC3339 text format.
+   * @param gracefulShutdownTimestamp gracefulShutdownTimestamp or {@code null} for none
+   */
+  public ManagedInstanceScheduling setGracefulShutdownTimestamp(String gracefulShutdownTimestamp) {
+    this.gracefulShutdownTimestamp = gracefulShutdownTimestamp;
+    return this;
+  }
 
   /**
    * Output only. [Output Only] The timestamp at which the managed instance will be terminated. This

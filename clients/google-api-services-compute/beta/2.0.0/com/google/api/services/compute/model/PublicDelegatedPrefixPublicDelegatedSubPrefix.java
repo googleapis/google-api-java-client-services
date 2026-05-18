@@ -95,6 +95,14 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String name;
 
   /**
+   * Output only. [Output Only] The purpose of the sub public delegated prefix. Inherited from
+   * parent prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
    * Output only. [Output Only] The region of the sub public delegated prefix if it is regional. If
    * absent, the sub prefix is global.
    * The value may be {@code null}.
@@ -263,6 +271,25 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The purpose of the sub public delegated prefix. Inherited from
+   * parent prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * Output only. [Output Only] The purpose of the sub public delegated prefix. Inherited from
+   * parent prefix.
+   * @param purpose purpose or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
     return this;
   }
 

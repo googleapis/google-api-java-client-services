@@ -47,6 +47,23 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   private java.lang.String ipCidrRange;
 
   /**
+   * Reference to a Public Delegated Prefix (PDP) for BYOIP. This field should be specified for
+   * configuring BYOGUA internal IPv6 secondary range. When specified along with the ip_cidr_range,
+   * the ip_cidr_range must lie within the PDP referenced by the `ipCollection` field. When
+   * specified without the ip_cidr_range, the range is auto-allocated from the PDP referenced by the
+   * `ipCollection` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipVersion;
+
+  /**
    * The name associated with this subnetwork secondary range, used when adding an alias IP/IPv6
    * range to a VM instance. The name must be 1-63 characters long, and comply withRFC1035. The name
    * must be unique within the subnetwork.
@@ -96,6 +113,46 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
    */
   public SubnetworkSecondaryRange setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * Reference to a Public Delegated Prefix (PDP) for BYOIP. This field should be specified for
+   * configuring BYOGUA internal IPv6 secondary range. When specified along with the ip_cidr_range,
+   * the ip_cidr_range must lie within the PDP referenced by the `ipCollection` field. When
+   * specified without the ip_cidr_range, the range is auto-allocated from the PDP referenced by the
+   * `ipCollection` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Reference to a Public Delegated Prefix (PDP) for BYOIP. This field should be specified for
+   * configuring BYOGUA internal IPv6 secondary range. When specified along with the ip_cidr_range,
+   * the ip_cidr_range must lie within the PDP referenced by the `ipCollection` field. When
+   * specified without the ip_cidr_range, the range is auto-allocated from the PDP referenced by the
+   * `ipCollection` field.
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public SubnetworkSecondaryRange setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpVersion() {
+    return ipVersion;
+  }
+
+  /**
+   * @param ipVersion ipVersion or {@code null} for none
+   */
+  public SubnetworkSecondaryRange setIpVersion(java.lang.String ipVersion) {
+    this.ipVersion = ipVersion;
     return this;
   }
 

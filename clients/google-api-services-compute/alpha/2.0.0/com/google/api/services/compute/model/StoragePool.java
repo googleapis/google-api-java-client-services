@@ -179,6 +179,13 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * Share settings for the storage pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoragePoolShareSettings shareSettings;
+
+  /**
    * DEPRECATED -- use "pool provisioned capacity gb".
    * The value may be {@code null}.
    */
@@ -608,6 +615,23 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Share settings for the storage pool.
+   * @return value or {@code null} for none
+   */
+  public StoragePoolShareSettings getShareSettings() {
+    return shareSettings;
+  }
+
+  /**
+   * Share settings for the storage pool.
+   * @param shareSettings shareSettings or {@code null} for none
+   */
+  public StoragePool setShareSettings(StoragePoolShareSettings shareSettings) {
+    this.shareSettings = shareSettings;
     return this;
   }
 

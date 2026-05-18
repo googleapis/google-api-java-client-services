@@ -19,7 +19,6 @@ package com.google.api.services.compute.model;
 /**
  * Specifies the reservations that this instance can consume from. This message should be an exact
  * copy of the Instances representation of AllocationAffinity.
- * LINT.IfChange(HaControllerAllocationAffinityMixer)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

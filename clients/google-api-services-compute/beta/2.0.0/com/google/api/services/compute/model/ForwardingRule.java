@@ -74,6 +74,12 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String iPAddress;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("IPAddresses")
+  private java.util.List<java.lang.String> iPAddresses;
+
+  /**
    * The IP protocol to which this rule applies.
    *
    * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
@@ -124,6 +130,22 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowPscGlobalAccess;
 
   /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ForwardingRuleAttachedExtension> attachedExtensions;
+
+  /**
+   * [Output Only] Specifies the availability group of the forwarding rule. This field is for use by
+   * global external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is
+   * set for the child forwarding rules only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String availabilityGroup;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * internal and external passthrough Network Load Balancers; must be omitted for all other load
    * balancer types.
@@ -141,6 +163,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String baseForwardingRule;
+
+  /**
+   * Output only. [Output Only] Applicable only to the parent forwarding rule of global external
+   * passthrough load balancers. This field contains the list of child forwarding rule URLs
+   * associated with the parent forwarding rule: one for each availability group.
+   * AVAILABILITY_GROUP0 will be the first element, and AVAILABILITY_GROUP1 will be the second
+   * element.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> childForwardingRules;
 
   /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.
@@ -352,6 +385,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noAutomateDnsZone;
+
+  /**
+   * Output only. [Output Only] Applicable only to the child forwarding rules of global external
+   * passthrough load balancers. This field contains the URL of the parent forwarding rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentForwardingRule;
 
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
@@ -580,6 +621,21 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIPAddresses() {
+    return iPAddresses;
+  }
+
+  /**
+   * @param iPAddresses iPAddresses or {@code null} for none
+   */
+  public ForwardingRule setIPAddresses(java.util.List<java.lang.String> iPAddresses) {
+    this.iPAddresses = iPAddresses;
+    return this;
+  }
+
+  /**
    * The IP protocol to which this rule applies.
    *
    * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
@@ -692,6 +748,44 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ForwardingRuleAttachedExtension> getAttachedExtensions() {
+    return attachedExtensions;
+  }
+
+  /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * @param attachedExtensions attachedExtensions or {@code null} for none
+   */
+  public ForwardingRule setAttachedExtensions(java.util.List<ForwardingRuleAttachedExtension> attachedExtensions) {
+    this.attachedExtensions = attachedExtensions;
+    return this;
+  }
+
+  /**
+   * [Output Only] Specifies the availability group of the forwarding rule. This field is for use by
+   * global external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is
+   * set for the child forwarding rules only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAvailabilityGroup() {
+    return availabilityGroup;
+  }
+
+  /**
+   * [Output Only] Specifies the availability group of the forwarding rule. This field is for use by
+   * global external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is
+   * set for the child forwarding rules only.
+   * @param availabilityGroup availabilityGroup or {@code null} for none
+   */
+  public ForwardingRule setAvailabilityGroup(java.lang.String availabilityGroup) {
+    this.availabilityGroup = availabilityGroup;
+    return this;
+  }
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * internal and external passthrough Network Load Balancers; must be omitted for all other load
    * balancer types.
@@ -732,6 +826,31 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setBaseForwardingRule(java.lang.String baseForwardingRule) {
     this.baseForwardingRule = baseForwardingRule;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Applicable only to the parent forwarding rule of global external
+   * passthrough load balancers. This field contains the list of child forwarding rule URLs
+   * associated with the parent forwarding rule: one for each availability group.
+   * AVAILABILITY_GROUP0 will be the first element, and AVAILABILITY_GROUP1 will be the second
+   * element.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getChildForwardingRules() {
+    return childForwardingRules;
+  }
+
+  /**
+   * Output only. [Output Only] Applicable only to the parent forwarding rule of global external
+   * passthrough load balancers. This field contains the list of child forwarding rule URLs
+   * associated with the parent forwarding rule: one for each availability group.
+   * AVAILABILITY_GROUP0 will be the first element, and AVAILABILITY_GROUP1 will be the second
+   * element.
+   * @param childForwardingRules childForwardingRules or {@code null} for none
+   */
+  public ForwardingRule setChildForwardingRules(java.util.List<java.lang.String> childForwardingRules) {
+    this.childForwardingRules = childForwardingRules;
     return this;
   }
 
@@ -1286,6 +1405,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setNoAutomateDnsZone(java.lang.Boolean noAutomateDnsZone) {
     this.noAutomateDnsZone = noAutomateDnsZone;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Applicable only to the child forwarding rules of global external
+   * passthrough load balancers. This field contains the URL of the parent forwarding rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentForwardingRule() {
+    return parentForwardingRule;
+  }
+
+  /**
+   * Output only. [Output Only] Applicable only to the child forwarding rules of global external
+   * passthrough load balancers. This field contains the URL of the parent forwarding rule.
+   * @param parentForwardingRule parentForwardingRule or {@code null} for none
+   */
+  public ForwardingRule setParentForwardingRule(java.lang.String parentForwardingRule) {
+    this.parentForwardingRule = parentForwardingRule;
     return this;
   }
 

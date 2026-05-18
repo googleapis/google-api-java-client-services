@@ -19,7 +19,6 @@ package com.google.api.services.compute.model;
 /**
  * Node Affinity: the configuration of desired nodes onto which the  Instance could be scheduled.
  * This message should be an exact copy of the Instances representation  of NodeAffinity.
- * LINT.IfChange(HaControllerNodeAffinityMixer)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

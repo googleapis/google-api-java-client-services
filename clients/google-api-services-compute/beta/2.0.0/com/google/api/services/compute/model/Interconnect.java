@@ -100,6 +100,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
+   * connection is to be provisioned. By default it will be the same as the location field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveLocation;
+
+  /**
    * Output only. [Output Only] A list of outages expected for this Interconnect.
    * The value may be {@code null}.
    */
@@ -505,6 +513,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
+   * connection is to be provisioned. By default it will be the same as the location field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveLocation() {
+    return effectiveLocation;
+  }
+
+  /**
+   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
+   * connection is to be provisioned. By default it will be the same as the location field.
+   * @param effectiveLocation effectiveLocation or {@code null} for none
+   */
+  public Interconnect setEffectiveLocation(java.lang.String effectiveLocation) {
+    this.effectiveLocation = effectiveLocation;
     return this;
   }
 

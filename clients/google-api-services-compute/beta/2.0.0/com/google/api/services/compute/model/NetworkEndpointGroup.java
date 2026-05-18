@@ -130,8 +130,11 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,8 +423,11 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -429,8 +435,11 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.
    * @param network network or {@code null} for none
    */
   public NetworkEndpointGroup setNetwork(java.lang.String network) {

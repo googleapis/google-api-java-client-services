@@ -119,6 +119,19 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules;
 
   /**
+   * The number of seconds that autoscaler waits for load stabilization before making scale-in
+   * decisions. This is referred to as the [stabilization
+   * period](/compute/docs/autoscaler#stabilization_period). This might appear as a delay in scaling
+   * in but it is an important mechanism for your application to not have fluctuating size due to
+   * short term load fluctuations.
+   *
+   * The default stabilization period is 600 seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer stabilizationPeriodSec;
+
+  /**
    * The number of seconds that your application takes to initialize on a VM instance. This is
    * referred to as the [initialization period](/compute/docs/autoscaler#cool_down_period).
    * Specifying an accurate initialization period improves autoscaler decisions. For example, when
@@ -323,6 +336,35 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setScalingSchedules(java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules) {
     this.scalingSchedules = scalingSchedules;
+    return this;
+  }
+
+  /**
+   * The number of seconds that autoscaler waits for load stabilization before making scale-in
+   * decisions. This is referred to as the [stabilization
+   * period](/compute/docs/autoscaler#stabilization_period). This might appear as a delay in scaling
+   * in but it is an important mechanism for your application to not have fluctuating size due to
+   * short term load fluctuations.
+   *
+   * The default stabilization period is 600 seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getStabilizationPeriodSec() {
+    return stabilizationPeriodSec;
+  }
+
+  /**
+   * The number of seconds that autoscaler waits for load stabilization before making scale-in
+   * decisions. This is referred to as the [stabilization
+   * period](/compute/docs/autoscaler#stabilization_period). This might appear as a delay in scaling
+   * in but it is an important mechanism for your application to not have fluctuating size due to
+   * short term load fluctuations.
+   *
+   * The default stabilization period is 600 seconds.
+   * @param stabilizationPeriodSec stabilizationPeriodSec or {@code null} for none
+   */
+  public AutoscalingPolicy setStabilizationPeriodSec(java.lang.Integer stabilizationPeriodSec) {
+    this.stabilizationPeriodSec = stabilizationPeriodSec;
     return this;
   }
 

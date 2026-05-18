@@ -30,24 +30,21 @@ package com.google.api.services.compute.model;
 public final class GetVersionOperationMetadataSbomInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * SBOM versions currently applied to the resource. The key is the component name and the value is
-   * the version.
+   * A mapping of components to their currently-applied versions or other appropriate identifiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> currentComponentVersions;
 
   /**
-   * SBOM versions scheduled for the next maintenance. The key is the component name and the value
-   * is the version.
+   * A mapping of components to their target versions or other appropriate identifiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> targetComponentVersions;
 
   /**
-   * SBOM versions currently applied to the resource. The key is the component name and the value is
-   * the version.
+   * A mapping of components to their currently-applied versions or other appropriate identifiers.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCurrentComponentVersions() {
@@ -55,8 +52,7 @@ public final class GetVersionOperationMetadataSbomInfo extends com.google.api.cl
   }
 
   /**
-   * SBOM versions currently applied to the resource. The key is the component name and the value is
-   * the version.
+   * A mapping of components to their currently-applied versions or other appropriate identifiers.
    * @param currentComponentVersions currentComponentVersions or {@code null} for none
    */
   public GetVersionOperationMetadataSbomInfo setCurrentComponentVersions(java.util.Map<String, java.lang.String> currentComponentVersions) {
@@ -65,8 +61,7 @@ public final class GetVersionOperationMetadataSbomInfo extends com.google.api.cl
   }
 
   /**
-   * SBOM versions scheduled for the next maintenance. The key is the component name and the value
-   * is the version.
+   * A mapping of components to their target versions or other appropriate identifiers.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTargetComponentVersions() {
@@ -74,8 +69,7 @@ public final class GetVersionOperationMetadataSbomInfo extends com.google.api.cl
   }
 
   /**
-   * SBOM versions scheduled for the next maintenance. The key is the component name and the value
-   * is the version.
+   * A mapping of components to their target versions or other appropriate identifiers.
    * @param targetComponentVersions targetComponentVersions or {@code null} for none
    */
   public GetVersionOperationMetadataSbomInfo setTargetComponentVersions(java.util.Map<String, java.lang.String> targetComponentVersions) {

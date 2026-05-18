@@ -59,6 +59,20 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * An array of alias IPv6 ranges for this network interface. You can only specify this field for
+   * network interfaces in VPC networks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AliasIpRange> aliasIpv6Ranges;
+
+  static {
+    // hack to force ProGuard to consider AliasIpRange used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AliasIpRange.class);
+  }
+
+  /**
    * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
    * network_attachment.
    * The value may be {@code null}.
@@ -280,6 +294,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setAliasIpRanges(java.util.List<AliasIpRange> aliasIpRanges) {
     this.aliasIpRanges = aliasIpRanges;
+    return this;
+  }
+
+  /**
+   * An array of alias IPv6 ranges for this network interface. You can only specify this field for
+   * network interfaces in VPC networks.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AliasIpRange> getAliasIpv6Ranges() {
+    return aliasIpv6Ranges;
+  }
+
+  /**
+   * An array of alias IPv6 ranges for this network interface. You can only specify this field for
+   * network interfaces in VPC networks.
+   * @param aliasIpv6Ranges aliasIpv6Ranges or {@code null} for none
+   */
+  public NetworkInterface setAliasIpv6Ranges(java.util.List<AliasIpRange> aliasIpv6Ranges) {
+    this.aliasIpv6Ranges = aliasIpv6Ranges;
     return this;
   }
 

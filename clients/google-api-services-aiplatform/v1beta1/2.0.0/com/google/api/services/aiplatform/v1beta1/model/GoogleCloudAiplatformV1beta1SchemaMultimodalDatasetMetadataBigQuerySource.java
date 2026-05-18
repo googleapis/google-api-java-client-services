@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * One point viewable on a scalar metric plot.
+ * Specifies the BigQuery source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1Scalar extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value of the point at this step / timestamp.
+   * The URI of a BigQuery table. e.g. bq://project.bqDataset.bqTable
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Double value;
+  private java.lang.String uri;
 
   /**
-   * Value of the point at this step / timestamp.
+   * The URI of a BigQuery table. e.g. bq://project.bqDataset.bqTable
    * @return value or {@code null} for none
    */
-  public java.lang.Double getValue() {
-    return value;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * Value of the point at this step / timestamp.
-   * @param value value or {@code null} for none
+   * The URI of a BigQuery table. e.g. bq://project.bqDataset.bqTable
+   * @param uri uri or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1Scalar setValue(java.lang.Double value) {
-    this.value = value;
+  public GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1Scalar set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1Scalar) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1Scalar clone() {
-    return (GoogleCloudAiplatformV1beta1Scalar) super.clone();
+  public GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource clone() {
+    return (GoogleCloudAiplatformV1beta1SchemaMultimodalDatasetMetadataBigQuerySource) super.clone();
   }
 
 }

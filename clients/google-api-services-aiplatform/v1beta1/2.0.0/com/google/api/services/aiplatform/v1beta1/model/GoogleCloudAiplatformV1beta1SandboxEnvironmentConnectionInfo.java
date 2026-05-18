@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * The connection information of the SandboxEnvironment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -44,11 +44,11 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo 
   private java.lang.String loadBalancerIp;
 
   /**
-   * Output only. The hostname of the SandboxEnvironment.
+   * Output only. The routing token for the SandboxEnvironment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String sandboxHostname;
+  private java.lang.String routingToken;
 
   /**
    * Output only. The internal IP address of the SandboxEnvironment.
@@ -92,19 +92,19 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo 
   }
 
   /**
-   * Output only. The hostname of the SandboxEnvironment.
+   * Output only. The routing token for the SandboxEnvironment.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSandboxHostname() {
-    return sandboxHostname;
+  public java.lang.String getRoutingToken() {
+    return routingToken;
   }
 
   /**
-   * Output only. The hostname of the SandboxEnvironment.
-   * @param sandboxHostname sandboxHostname or {@code null} for none
+   * Output only. The routing token for the SandboxEnvironment.
+   * @param routingToken routingToken or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo setSandboxHostname(java.lang.String sandboxHostname) {
-    this.sandboxHostname = sandboxHostname;
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo setRoutingToken(java.lang.String routingToken) {
+    this.routingToken = routingToken;
     return this;
   }
 

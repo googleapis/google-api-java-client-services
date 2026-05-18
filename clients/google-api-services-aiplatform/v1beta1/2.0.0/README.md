@@ -1,14 +1,14 @@
-# Vertex AI API Client Library for Java
+# Agent Platform API Client Library for Java
 
-Train high-quality custom machine learning models with minimal machine learning expertise and effort.
+Build, scale, govern, and optimize sophisticated agents and models.
 
-This page contains information about getting started with the Vertex AI API
+This page contains information about getting started with the Agent Platform API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Vertex AI API][javadoc]
+* Browse the [Javadoc reference for the Agent Platform API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Vertex AI API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Agent Platform API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-aiplatform</artifactId>
-      <version>v1beta1-rev20260410-2.0.0</version>
+      <version>v1beta1-rev20260515-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-aiplatform:v1beta1-rev20260410-2.0.0'
+  implementation 'com.google.apis:google-api-services-aiplatform:v1beta1-rev20260515-2.0.0'
 }
 ```
 

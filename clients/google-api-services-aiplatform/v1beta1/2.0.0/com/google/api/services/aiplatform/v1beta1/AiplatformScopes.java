@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Vertex AI API.
+ * Available OAuth 2.0 scopes for use with the Agent Platform API.
  *
  * @since 1.4
  */

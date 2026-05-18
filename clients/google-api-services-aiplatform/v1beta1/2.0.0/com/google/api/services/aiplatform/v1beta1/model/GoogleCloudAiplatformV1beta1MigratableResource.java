@@ -21,7 +21,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * ml.googleapis.com.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1beta1MigratableResource extends com.go
   private GoogleCloudAiplatformV1beta1MigratableResourceAutomlModel automlModel;
 
   /**
-   * Output only. Represents one Dataset in datalabeling.googleapis.com.
+   * Output only. Deprecated: Data Labeling Dataset migration is no longer supported. Represents one
+   * Dataset in datalabeling.googleapis.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +109,8 @@ public final class GoogleCloudAiplatformV1beta1MigratableResource extends com.go
   }
 
   /**
-   * Output only. Represents one Dataset in datalabeling.googleapis.com.
+   * Output only. Deprecated: Data Labeling Dataset migration is no longer supported. Represents one
+   * Dataset in datalabeling.googleapis.com.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MigratableResourceDataLabelingDataset getDataLabelingDataset() {
@@ -116,7 +118,8 @@ public final class GoogleCloudAiplatformV1beta1MigratableResource extends com.go
   }
 
   /**
-   * Output only. Represents one Dataset in datalabeling.googleapis.com.
+   * Output only. Deprecated: Data Labeling Dataset migration is no longer supported. Represents one
+   * Dataset in datalabeling.googleapis.com.
    * @param dataLabelingDataset dataLabelingDataset or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MigratableResource setDataLabelingDataset(GoogleCloudAiplatformV1beta1MigratableResourceDataLabelingDataset dataLabelingDataset) {

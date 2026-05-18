@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * Represents a TuningJob that runs with Google owned models.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -265,6 +265,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Tuning Spec for Veo LoRA Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VeoLoraTuningSpec veoLoraTuningSpec;
 
   /**
    * Tuning Spec for Veo Tuning.
@@ -822,6 +829,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Veo LoRA Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec getVeoLoraTuningSpec() {
+    return veoLoraTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for Veo LoRA Tuning.
+   * @param veoLoraTuningSpec veoLoraTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setVeoLoraTuningSpec(GoogleCloudAiplatformV1beta1VeoLoraTuningSpec veoLoraTuningSpec) {
+    this.veoLoraTuningSpec = veoLoraTuningSpec;
     return this;
   }
 

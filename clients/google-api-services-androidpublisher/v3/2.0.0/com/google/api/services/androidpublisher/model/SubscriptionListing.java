@@ -39,7 +39,7 @@ public final class SubscriptionListing extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> benefits;
 
   /**
-   * The description of this subscription in the language of this listing. Maximum length - 80
+   * The description of this subscription in the language of this listing. Maximum length - 200
    * characters. Plain text.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class SubscriptionListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The description of this subscription in the language of this listing. Maximum length - 80
+   * The description of this subscription in the language of this listing. Maximum length - 200
    * characters. Plain text.
    * @return value or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class SubscriptionListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * The description of this subscription in the language of this listing. Maximum length - 80
+   * The description of this subscription in the language of this listing. Maximum length - 200
    * characters. Plain text.
    * @param description description or {@code null} for none
    */

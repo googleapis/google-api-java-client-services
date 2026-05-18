@@ -18,7 +18,7 @@ package com.google.api.services.androidpublisher.model;
 
 /**
  * Download metadata for split, standalone and universal APKs, as well as asset pack slices, signed
- * with a given key.
+ * with a given key. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -84,6 +84,26 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private TargetingInfo targetingInfo;
+
+  /**
+   * List of generated split APKs without automatic protection, signed with a key corresponding to
+   * certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_split_apks` contains APKs with automatic protection enabled, whereas this
+   * field contains APKs without automatic protection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeneratedSplitApk> unprotectedGeneratedSplitApks;
+
+  /**
+   * List of generated standalone APKs without automatic protection, signed with a key corresponding
+   * to certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_standalone_apks` contains APKs with automatic protection enabled, whereas
+   * this field contains APKs without automatic protection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GeneratedStandaloneApk> unprotectedGeneratedStandaloneApks;
 
   /**
    * SHA256 hash of the APK signing public key certificate.
@@ -211,6 +231,52 @@ public final class GeneratedApksPerSigningKey extends com.google.api.client.json
    */
   public GeneratedApksPerSigningKey setTargetingInfo(TargetingInfo targetingInfo) {
     this.targetingInfo = targetingInfo;
+    return this;
+  }
+
+  /**
+   * List of generated split APKs without automatic protection, signed with a key corresponding to
+   * certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_split_apks` contains APKs with automatic protection enabled, whereas this
+   * field contains APKs without automatic protection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeneratedSplitApk> getUnprotectedGeneratedSplitApks() {
+    return unprotectedGeneratedSplitApks;
+  }
+
+  /**
+   * List of generated split APKs without automatic protection, signed with a key corresponding to
+   * certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_split_apks` contains APKs with automatic protection enabled, whereas this
+   * field contains APKs without automatic protection.
+   * @param unprotectedGeneratedSplitApks unprotectedGeneratedSplitApks or {@code null} for none
+   */
+  public GeneratedApksPerSigningKey setUnprotectedGeneratedSplitApks(java.util.List<GeneratedSplitApk> unprotectedGeneratedSplitApks) {
+    this.unprotectedGeneratedSplitApks = unprotectedGeneratedSplitApks;
+    return this;
+  }
+
+  /**
+   * List of generated standalone APKs without automatic protection, signed with a key corresponding
+   * to certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_standalone_apks` contains APKs with automatic protection enabled, whereas
+   * this field contains APKs without automatic protection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GeneratedStandaloneApk> getUnprotectedGeneratedStandaloneApks() {
+    return unprotectedGeneratedStandaloneApks;
+  }
+
+  /**
+   * List of generated standalone APKs without automatic protection, signed with a key corresponding
+   * to certificate_sha256_hash. This field is only present if the app uses automatic protection. In
+   * this case, `generated_standalone_apks` contains APKs with automatic protection enabled, whereas
+   * this field contains APKs without automatic protection.
+   * @param unprotectedGeneratedStandaloneApks unprotectedGeneratedStandaloneApks or {@code null} for none
+   */
+  public GeneratedApksPerSigningKey setUnprotectedGeneratedStandaloneApks(java.util.List<GeneratedStandaloneApk> unprotectedGeneratedStandaloneApks) {
+    this.unprotectedGeneratedStandaloneApks = unprotectedGeneratedStandaloneApks;
     return this;
   }
 

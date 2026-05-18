@@ -57,6 +57,15 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
   private String disableTime;
 
   /**
+   * Optional. Immutable. Indicates whether key portability is enabled for the
+   * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
+   * disabled by default and not yet available in GA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean keyPortabilityEnabled;
+
+  /**
    * Identifier. The resource name for this SingleTenantHsmInstance in the format
    * `projects/locations/singleTenantHsmInstances`.
    * The value may be {@code null}.
@@ -80,7 +89,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
 
   /**
    * Output only. The system-defined duration that an instance can remain unrefreshed until it is
-   * automatically disabled. This will have a value of 120 days.
+   * automatically disabled. This will have a value of 730 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,6 +153,27 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. Immutable. Indicates whether key portability is enabled for the
+   * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
+   * disabled by default and not yet available in GA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKeyPortabilityEnabled() {
+    return keyPortabilityEnabled;
+  }
+
+  /**
+   * Optional. Immutable. Indicates whether key portability is enabled for the
+   * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
+   * disabled by default and not yet available in GA.
+   * @param keyPortabilityEnabled keyPortabilityEnabled or {@code null} for none
+   */
+  public SingleTenantHsmInstance setKeyPortabilityEnabled(java.lang.Boolean keyPortabilityEnabled) {
+    this.keyPortabilityEnabled = keyPortabilityEnabled;
+    return this;
+  }
+
+  /**
    * Identifier. The resource name for this SingleTenantHsmInstance in the format
    * `projects/locations/singleTenantHsmInstances`.
    * @return value or {@code null} for none
@@ -198,7 +228,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
 
   /**
    * Output only. The system-defined duration that an instance can remain unrefreshed until it is
-   * automatically disabled. This will have a value of 120 days.
+   * automatically disabled. This will have a value of 730 days.
    * @return value or {@code null} for none
    */
   public String getUnrefreshedDurationUntilDisable() {
@@ -207,7 +237,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
 
   /**
    * Output only. The system-defined duration that an instance can remain unrefreshed until it is
-   * automatically disabled. This will have a value of 120 days.
+   * automatically disabled. This will have a value of 730 days.
    * @param unrefreshedDurationUntilDisable unrefreshedDurationUntilDisable or {@code null} for none
    */
   public SingleTenantHsmInstance setUnrefreshedDurationUntilDisable(String unrefreshedDurationUntilDisable) {

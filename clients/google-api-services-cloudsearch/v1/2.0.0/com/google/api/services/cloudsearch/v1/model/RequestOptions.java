@@ -30,6 +30,14 @@ package com.google.api.services.cloudsearch.v1.model;
 public final class RequestOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * The BCP-47 language code, such as "pt" or "en". It represents the user's preferred Display
+   * Language.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientDisplayLanguageCode;
+
+  /**
    * Debug options of the request
    * The value may be {@code null}.
    */
@@ -67,6 +75,25 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
+
+  /**
+   * The BCP-47 language code, such as "pt" or "en". It represents the user's preferred Display
+   * Language.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientDisplayLanguageCode() {
+    return clientDisplayLanguageCode;
+  }
+
+  /**
+   * The BCP-47 language code, such as "pt" or "en". It represents the user's preferred Display
+   * Language.
+   * @param clientDisplayLanguageCode clientDisplayLanguageCode or {@code null} for none
+   */
+  public RequestOptions setClientDisplayLanguageCode(java.lang.String clientDisplayLanguageCode) {
+    this.clientDisplayLanguageCode = clientDisplayLanguageCode;
+    return this;
+  }
 
   /**
    * Debug options of the request

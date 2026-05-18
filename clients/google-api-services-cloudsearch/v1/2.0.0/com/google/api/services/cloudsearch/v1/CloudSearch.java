@@ -4416,6 +4416,29 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
+         * The BCP-47 language code, such as "pt" or "en". It represents the user's preferred
+         * Display Language.
+         */
+        @com.google.api.client.util.Key("requestOptions.clientDisplayLanguageCode")
+        private java.lang.String requestOptionsClientDisplayLanguageCode;
+
+        /** The BCP-47 language code, such as "pt" or "en". It represents the user's preferred Display
+       Language.
+         */
+        public java.lang.String getRequestOptionsClientDisplayLanguageCode() {
+          return requestOptionsClientDisplayLanguageCode;
+        }
+
+        /**
+         * The BCP-47 language code, such as "pt" or "en". It represents the user's preferred
+         * Display Language.
+         */
+        public List setRequestOptionsClientDisplayLanguageCode(java.lang.String requestOptionsClientDisplayLanguageCode) {
+          this.requestOptionsClientDisplayLanguageCode = requestOptionsClientDisplayLanguageCode;
+          return this;
+        }
+
+        /**
          * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this
          * field.
          */

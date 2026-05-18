@@ -45,6 +45,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private java.lang.String cgroupMode;
 
   /**
+   * Optional. Allow users to run arbitrary bash script or container on the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomNodeInit customNodeInit;
+
+  /**
    * Optional. Amounts for 2M and 1G hugepages
    * The value may be {@code null}.
    */
@@ -141,6 +148,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setCgroupMode(java.lang.String cgroupMode) {
     this.cgroupMode = cgroupMode;
+    return this;
+  }
+
+  /**
+   * Optional. Allow users to run arbitrary bash script or container on the node.
+   * @return value or {@code null} for none
+   */
+  public CustomNodeInit getCustomNodeInit() {
+    return customNodeInit;
+  }
+
+  /**
+   * Optional. Allow users to run arbitrary bash script or container on the node.
+   * @param customNodeInit customNodeInit or {@code null} for none
+   */
+  public LinuxNodeConfig setCustomNodeInit(CustomNodeInit customNodeInit) {
+    this.customNodeInit = customNodeInit;
     return this;
   }
 

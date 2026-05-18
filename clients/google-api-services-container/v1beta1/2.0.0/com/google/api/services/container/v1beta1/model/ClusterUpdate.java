@@ -475,6 +475,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private NodePoolLoggingConfig desiredNodePoolLoggingConfig;
 
   /**
+   * The desired node pool upgrade concurrency configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolUpgradeConcurrencyConfig desiredNodePoolUpgradeConcurrencyConfig;
+
+  /**
    * The Kubernetes version to change the nodes to (typically an upgrade). Users may specify either
    * explicit versions offered by Kubernetes Engine or version aliases, which have the following
    * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
@@ -1773,6 +1780,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodePoolLoggingConfig(NodePoolLoggingConfig desiredNodePoolLoggingConfig) {
     this.desiredNodePoolLoggingConfig = desiredNodePoolLoggingConfig;
+    return this;
+  }
+
+  /**
+   * The desired node pool upgrade concurrency configuration.
+   * @return value or {@code null} for none
+   */
+  public NodePoolUpgradeConcurrencyConfig getDesiredNodePoolUpgradeConcurrencyConfig() {
+    return desiredNodePoolUpgradeConcurrencyConfig;
+  }
+
+  /**
+   * The desired node pool upgrade concurrency configuration.
+   * @param desiredNodePoolUpgradeConcurrencyConfig desiredNodePoolUpgradeConcurrencyConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodePoolUpgradeConcurrencyConfig(NodePoolUpgradeConcurrencyConfig desiredNodePoolUpgradeConcurrencyConfig) {
+    this.desiredNodePoolUpgradeConcurrencyConfig = desiredNodePoolUpgradeConcurrencyConfig;
     return this;
   }
 

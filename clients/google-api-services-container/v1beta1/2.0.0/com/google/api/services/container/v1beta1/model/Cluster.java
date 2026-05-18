@@ -543,6 +543,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private NodePoolDefaults nodePoolDefaults;
 
   /**
+   * The node pool upgrade concurrency config of the cluster. This field is used for auto upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolUpgradeConcurrencyConfig nodePoolUpgradeConcurrencyConfig;
+
+  /**
    * The node pools associated with this cluster. This field should not be set if "node_config" or
    * "initial_node_count" are specified.
    * The value may be {@code null}.
@@ -2005,6 +2012,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodePoolDefaults(NodePoolDefaults nodePoolDefaults) {
     this.nodePoolDefaults = nodePoolDefaults;
+    return this;
+  }
+
+  /**
+   * The node pool upgrade concurrency config of the cluster. This field is used for auto upgrade.
+   * @return value or {@code null} for none
+   */
+  public NodePoolUpgradeConcurrencyConfig getNodePoolUpgradeConcurrencyConfig() {
+    return nodePoolUpgradeConcurrencyConfig;
+  }
+
+  /**
+   * The node pool upgrade concurrency config of the cluster. This field is used for auto upgrade.
+   * @param nodePoolUpgradeConcurrencyConfig nodePoolUpgradeConcurrencyConfig or {@code null} for none
+   */
+  public Cluster setNodePoolUpgradeConcurrencyConfig(NodePoolUpgradeConcurrencyConfig nodePoolUpgradeConcurrencyConfig) {
+    this.nodePoolUpgradeConcurrencyConfig = nodePoolUpgradeConcurrencyConfig;
     return this;
   }
 

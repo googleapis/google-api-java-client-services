@@ -45,6 +45,15 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   private java.util.Map<String, TimeWindow> maintenanceExclusions;
 
   /**
+   * RecurringMaintenanceWindow specifies some number of recurring time periods for maintenance to
+   * occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can
+   * occur at any time. Alternative to RecurringWindow, with renamed fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RecurringMaintenanceWindow recurringMaintenanceWindow;
+
+  /**
    * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The
    * time windows may be overlapping. If no maintenance windows are set, maintenance can occur at
    * any time.
@@ -84,6 +93,27 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
    */
   public MaintenanceWindow setMaintenanceExclusions(java.util.Map<String, TimeWindow> maintenanceExclusions) {
     this.maintenanceExclusions = maintenanceExclusions;
+    return this;
+  }
+
+  /**
+   * RecurringMaintenanceWindow specifies some number of recurring time periods for maintenance to
+   * occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can
+   * occur at any time. Alternative to RecurringWindow, with renamed fields.
+   * @return value or {@code null} for none
+   */
+  public RecurringMaintenanceWindow getRecurringMaintenanceWindow() {
+    return recurringMaintenanceWindow;
+  }
+
+  /**
+   * RecurringMaintenanceWindow specifies some number of recurring time periods for maintenance to
+   * occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can
+   * occur at any time. Alternative to RecurringWindow, with renamed fields.
+   * @param recurringMaintenanceWindow recurringMaintenanceWindow or {@code null} for none
+   */
+  public MaintenanceWindow setRecurringMaintenanceWindow(RecurringMaintenanceWindow recurringMaintenanceWindow) {
+    this.recurringMaintenanceWindow = recurringMaintenanceWindow;
     return this;
   }
 

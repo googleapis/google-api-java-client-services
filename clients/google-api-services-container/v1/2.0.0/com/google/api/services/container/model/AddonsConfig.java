@@ -131,6 +131,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NetworkPolicyConfig networkPolicyConfig;
 
   /**
+   * Optional. Configuration for NodeReadinessController add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeReadinessConfig nodeReadinessConfig;
+
+  /**
    * Configuration for the Cloud Storage Parallelstore CSI driver.
    * The value may be {@code null}.
    */
@@ -157,6 +164,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SliceControllerConfig sliceControllerConfig;
+
+  /**
+   * Configuration for the Slurm Operator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SlurmOperatorConfig slurmOperatorConfig;
 
   /**
    * Optional. Configuration for the StatefulHA add-on.
@@ -403,6 +417,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Configuration for NodeReadinessController add-on.
+   * @return value or {@code null} for none
+   */
+  public NodeReadinessConfig getNodeReadinessConfig() {
+    return nodeReadinessConfig;
+  }
+
+  /**
+   * Optional. Configuration for NodeReadinessController add-on.
+   * @param nodeReadinessConfig nodeReadinessConfig or {@code null} for none
+   */
+  public AddonsConfig setNodeReadinessConfig(NodeReadinessConfig nodeReadinessConfig) {
+    this.nodeReadinessConfig = nodeReadinessConfig;
+    return this;
+  }
+
+  /**
    * Configuration for the Cloud Storage Parallelstore CSI driver.
    * @return value or {@code null} for none
    */
@@ -467,6 +498,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setSliceControllerConfig(SliceControllerConfig sliceControllerConfig) {
     this.sliceControllerConfig = sliceControllerConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the Slurm Operator.
+   * @return value or {@code null} for none
+   */
+  public SlurmOperatorConfig getSlurmOperatorConfig() {
+    return slurmOperatorConfig;
+  }
+
+  /**
+   * Configuration for the Slurm Operator.
+   * @param slurmOperatorConfig slurmOperatorConfig or {@code null} for none
+   */
+  public AddonsConfig setSlurmOperatorConfig(SlurmOperatorConfig slurmOperatorConfig) {
+    this.slurmOperatorConfig = slurmOperatorConfig;
     return this;
   }
 

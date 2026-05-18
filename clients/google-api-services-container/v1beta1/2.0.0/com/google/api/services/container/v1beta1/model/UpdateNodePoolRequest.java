@@ -298,6 +298,13 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private NetworkTags tags;
 
   /**
+   * The taint configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TaintConfig taintConfig;
+
+  /**
    * The desired node taints to be applied to all nodes in the node pool. If this field is not
    * present, the taints will not be changed. Otherwise, the existing node taints will be *replaced*
    * with the provided taints.
@@ -951,6 +958,23 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setTags(NetworkTags tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * The taint configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public TaintConfig getTaintConfig() {
+    return taintConfig;
+  }
+
+  /**
+   * The taint configuration for the node pool.
+   * @param taintConfig taintConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setTaintConfig(TaintConfig taintConfig) {
+    this.taintConfig = taintConfig;
     return this;
   }
 

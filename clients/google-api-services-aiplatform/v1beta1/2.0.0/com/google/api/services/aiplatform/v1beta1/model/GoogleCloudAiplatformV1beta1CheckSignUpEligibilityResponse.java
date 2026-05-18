@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Request message for PipelineService.CancelPipelineJob.
+ * Response message for ExpressModeService.CheckSignUpEligibility.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,16 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1CancelPipelineJobRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse extends com.google.api.client.json.GenericJson {
 
-  @Override
-  public GoogleCloudAiplatformV1beta1CancelPipelineJobRequest set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1CancelPipelineJobRequest) super.set(fieldName, value);
+  /**
+   * The eligibility status of the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eligibility;
+
+  /**
+   * The eligibility status of the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEligibility() {
+    return eligibility;
+  }
+
+  /**
+   * The eligibility status of the user.
+   * @param eligibility eligibility or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse setEligibility(java.lang.String eligibility) {
+    this.eligibility = eligibility;
+    return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1CancelPipelineJobRequest clone() {
-    return (GoogleCloudAiplatformV1beta1CancelPipelineJobRequest) super.clone();
+  public GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse clone() {
+    return (GoogleCloudAiplatformV1beta1CheckSignUpEligibilityResponse) super.clone();
   }
 
 }

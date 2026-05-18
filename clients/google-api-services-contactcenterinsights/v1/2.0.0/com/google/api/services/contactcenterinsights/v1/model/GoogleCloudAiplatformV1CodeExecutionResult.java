@@ -17,7 +17,7 @@
 package com.google.api.services.contactcenterinsights.v1.model;
 
 /**
- * The redirect action to be taken when the chart is clicked.
+ * Result of executing the ExecutableCode. Generated only when the `CodeExecution` tool is used.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Contact Center AI Insights API. For a detailed
@@ -28,64 +28,67 @@ package com.google.api.services.contactcenterinsights.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudContactcenterinsightsV1RedirectAction extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1CodeExecutionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The query params to be added to the redirect path.
+   * Required. Outcome of the code execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> queryParams;
+  private java.lang.String outcome;
 
   /**
-   * The relative path to redirect to.
+   * Optional. Contains stdout when code execution is successful, stderr or other description
+   * otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String relativePath;
+  private java.lang.String output;
 
   /**
-   * The query params to be added to the redirect path.
+   * Required. Outcome of the code execution.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getQueryParams() {
-    return queryParams;
+  public java.lang.String getOutcome() {
+    return outcome;
   }
 
   /**
-   * The query params to be added to the redirect path.
-   * @param queryParams queryParams or {@code null} for none
+   * Required. Outcome of the code execution.
+   * @param outcome outcome or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setQueryParams(java.util.Map<String, java.lang.String> queryParams) {
-    this.queryParams = queryParams;
+  public GoogleCloudAiplatformV1CodeExecutionResult setOutcome(java.lang.String outcome) {
+    this.outcome = outcome;
     return this;
   }
 
   /**
-   * The relative path to redirect to.
+   * Optional. Contains stdout when code execution is successful, stderr or other description
+   * otherwise.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRelativePath() {
-    return relativePath;
+  public java.lang.String getOutput() {
+    return output;
   }
 
   /**
-   * The relative path to redirect to.
-   * @param relativePath relativePath or {@code null} for none
+   * Optional. Contains stdout when code execution is successful, stderr or other description
+   * otherwise.
+   * @param output output or {@code null} for none
    */
-  public GoogleCloudContactcenterinsightsV1RedirectAction setRelativePath(java.lang.String relativePath) {
-    this.relativePath = relativePath;
+  public GoogleCloudAiplatformV1CodeExecutionResult setOutput(java.lang.String output) {
+    this.output = output;
     return this;
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction set(String fieldName, Object value) {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1CodeExecutionResult set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1CodeExecutionResult) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudContactcenterinsightsV1RedirectAction clone() {
-    return (GoogleCloudContactcenterinsightsV1RedirectAction) super.clone();
+  public GoogleCloudAiplatformV1CodeExecutionResult clone() {
+    return (GoogleCloudAiplatformV1CodeExecutionResult) super.clone();
   }
 
 }

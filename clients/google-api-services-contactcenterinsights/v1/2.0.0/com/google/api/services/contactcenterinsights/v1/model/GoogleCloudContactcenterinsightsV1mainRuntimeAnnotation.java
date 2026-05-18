@@ -53,6 +53,20 @@ public final class GoogleCloudContactcenterinsightsV1mainRuntimeAnnotation exten
   private GoogleCloudContactcenterinsightsV1mainArticleSuggestionData articleSuggestion;
 
   /**
+   * The CES end session annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1mainCesEndSessionAnnotation cesEndSessionAnnotation;
+
+  /**
+   * The CES turn annotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1mainCesTurnAnnotation cesTurnAnnotation;
+
+  /**
    * Conversation summarization suggestion data.
    * The value may be {@code null}.
    */
@@ -165,6 +179,40 @@ public final class GoogleCloudContactcenterinsightsV1mainRuntimeAnnotation exten
    */
   public GoogleCloudContactcenterinsightsV1mainRuntimeAnnotation setArticleSuggestion(GoogleCloudContactcenterinsightsV1mainArticleSuggestionData articleSuggestion) {
     this.articleSuggestion = articleSuggestion;
+    return this;
+  }
+
+  /**
+   * The CES end session annotation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainCesEndSessionAnnotation getCesEndSessionAnnotation() {
+    return cesEndSessionAnnotation;
+  }
+
+  /**
+   * The CES end session annotation.
+   * @param cesEndSessionAnnotation cesEndSessionAnnotation or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainRuntimeAnnotation setCesEndSessionAnnotation(GoogleCloudContactcenterinsightsV1mainCesEndSessionAnnotation cesEndSessionAnnotation) {
+    this.cesEndSessionAnnotation = cesEndSessionAnnotation;
+    return this;
+  }
+
+  /**
+   * The CES turn annotation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainCesTurnAnnotation getCesTurnAnnotation() {
+    return cesTurnAnnotation;
+  }
+
+  /**
+   * The CES turn annotation.
+   * @param cesTurnAnnotation cesTurnAnnotation or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainRuntimeAnnotation setCesTurnAnnotation(GoogleCloudContactcenterinsightsV1mainCesTurnAnnotation cesTurnAnnotation) {
+    this.cesTurnAnnotation = cesTurnAnnotation;
     return this;
   }
 

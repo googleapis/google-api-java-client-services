@@ -58,6 +58,13 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private String createTime;
 
   /**
+   * Optional. Configuration for diagnostic metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig diagnosticMetricConfig;
+
+  /**
    * A language code to be applied to each transcript segment unless the segment already specifies a
    * language code. Language code defaults to "en-US" if it is neither specified on the segment nor
    * here.
@@ -190,6 +197,23 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Settings setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for diagnostic metrics.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig getDiagnosticMetricConfig() {
+    return diagnosticMetricConfig;
+  }
+
+  /**
+   * Optional. Configuration for diagnostic metrics.
+   * @param diagnosticMetricConfig diagnosticMetricConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Settings setDiagnosticMetricConfig(GoogleCloudContactcenterinsightsV1SettingsDiagnosticMetricConfig diagnosticMetricConfig) {
+    this.diagnosticMetricConfig = diagnosticMetricConfig;
     return this;
   }
 

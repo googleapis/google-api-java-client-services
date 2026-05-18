@@ -31,6 +31,13 @@ package com.google.api.services.bigquerydatapolicy.v2.model;
 public final class DataPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Data Governance tag bound to the Data Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataGovernanceTag dataGovernanceTag;
+
+  /**
    * Optional. The data masking policy that specifies the data masking rule to use. It must be set
    * if the data policy type is DATA_MASKING_POLICY.
    * The value may be {@code null}.
@@ -97,6 +104,23 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Optional. Data Governance tag bound to the Data Policy.
+   * @return value or {@code null} for none
+   */
+  public DataGovernanceTag getDataGovernanceTag() {
+    return dataGovernanceTag;
+  }
+
+  /**
+   * Optional. Data Governance tag bound to the Data Policy.
+   * @param dataGovernanceTag dataGovernanceTag or {@code null} for none
+   */
+  public DataPolicy setDataGovernanceTag(DataGovernanceTag dataGovernanceTag) {
+    this.dataGovernanceTag = dataGovernanceTag;
+    return this;
+  }
 
   /**
    * Optional. The data masking policy that specifies the data masking rule to use. It must be set

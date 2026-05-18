@@ -128,6 +128,15 @@ public final class Course extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
+   * Optional. Levels for the course. Examples: "9th grade", "Middle school", "4th - 5th", "K-2",
+   * "3000". If set, this field must be a valid UTF-8 string and fewer than 1000 characters. This
+   * field can only be cleared using the `PatchCourse` method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String levels;
+
+  /**
    * Name of the course. For example, "10th Grade Biology". The name is required. It must be between
    * 1 and 750 characters and a valid UTF-8 string.
    * The value may be {@code null}.
@@ -422,6 +431,27 @@ public final class Course extends com.google.api.client.json.GenericJson {
    */
   public Course setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. Levels for the course. Examples: "9th grade", "Middle school", "4th - 5th", "K-2",
+   * "3000". If set, this field must be a valid UTF-8 string and fewer than 1000 characters. This
+   * field can only be cleared using the `PatchCourse` method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLevels() {
+    return levels;
+  }
+
+  /**
+   * Optional. Levels for the course. Examples: "9th grade", "Middle school", "4th - 5th", "K-2",
+   * "3000". If set, this field must be a valid UTF-8 string and fewer than 1000 characters. This
+   * field can only be cleared using the `PatchCourse` method.
+   * @param levels levels or {@code null} for none
+   */
+  public Course setLevels(java.lang.String levels) {
+    this.levels = levels;
     return this;
   }
 

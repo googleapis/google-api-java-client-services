@@ -777,22 +777,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Restricts returned courses to those in one of the specified states The default value is
-       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
+       * Restricts returned courses to those in one of the specified states. If unspecified, Courses
+       * in any state are returned.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> courseStates;
 
-      /** Restricts returned courses to those in one of the specified states The default value is ACTIVE,
-     ARCHIVED, PROVISIONED, DECLINED.
+      /** Restricts returned courses to those in one of the specified states. If unspecified, Courses in any
+     state are returned.
        */
       public java.util.List<java.lang.String> getCourseStates() {
         return courseStates;
       }
 
       /**
-       * Restricts returned courses to those in one of the specified states The default value is
-       * ACTIVE, ARCHIVED, PROVISIONED, DECLINED.
+       * Restricts returned courses to those in one of the specified states. If unspecified, Courses
+       * in any state are returned.
        */
       public List setCourseStates(java.util.List<java.lang.String> courseStates) {
         this.courseStates = courseStates;
@@ -1047,7 +1047,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
        * valid: * `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room`
-       * * `section` * `subject` Note: patches to ownerId are treated as being effective
+       * * `section` * `subject` * `levels` Note: patches to ownerId are treated as being effective
        * immediately, but in practice it may take some time for the ownership transfer of all
        * affected resources to complete. When set in a query parameter, this field should be
        * specified as `updateMask=,,...`
@@ -1058,9 +1058,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /** Mask that identifies which fields on the course to update. This field is required to do an update.
      The update will fail if invalid fields are specified. The following fields are valid: *
      `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room` * `section` *
-     `subject` Note: patches to ownerId are treated as being effective immediately, but in practice it
-     may take some time for the ownership transfer of all affected resources to complete. When set in a
-     query parameter, this field should be specified as `updateMask=,,...`
+     `subject` * `levels` Note: patches to ownerId are treated as being effective immediately, but in
+     practice it may take some time for the ownership transfer of all affected resources to complete.
+     When set in a query parameter, this field should be specified as `updateMask=,,...`
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1070,7 +1070,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
        * valid: * `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room`
-       * * `section` * `subject` Note: patches to ownerId are treated as being effective
+       * * `section` * `subject` * `levels` Note: patches to ownerId are treated as being effective
        * immediately, but in practice it may take some time for the ownership transfer of all
        * affected resources to complete. When set in a query parameter, this field should be
        * specified as `updateMask=,,...`
@@ -1086,10 +1086,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
-     * requesting user is not permitted to modify the requested course or for access errors. *
-     * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the following
-     * request errors: * CourseNotModifiable * CourseTitleCannotContainUrl
+     * Updates a course. Note: Unlike other fields, `levels` is not cleared if omitted from the request.
+     * The `UpdateCourse` method only modifies `levels` if it is explicitly provided; otherwise, the
+     * existing value is preserved. Use the `PatchCourse` method to clear the `levels` field. This
+     * method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not
+     * permitted to modify the requested course or for access errors. * `NOT_FOUND` if no course exists
+     * with the requested ID. * `FAILED_PRECONDITION` for the following request errors: *
+     * CourseNotModifiable * CourseTitleCannotContainUrl
      *
      * Create a request for the method "courses.update".
      *
@@ -1112,10 +1115,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses/{id}";
 
       /**
-       * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
-       * requesting user is not permitted to modify the requested course or for access errors. *
-       * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the
-       * following request errors: * CourseNotModifiable * CourseTitleCannotContainUrl
+       * Updates a course. Note: Unlike other fields, `levels` is not cleared if omitted from the
+       * request. The `UpdateCourse` method only modifies `levels` if it is explicitly provided;
+       * otherwise, the existing value is preserved. Use the `PatchCourse` method to clear the `levels`
+       * field. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+       * user is not permitted to modify the requested course or for access errors. * `NOT_FOUND` if no
+       * course exists with the requested ID. * `FAILED_PRECONDITION` for the following request errors:
+       * * CourseNotModifiable * CourseTitleCannotContainUrl
        *
        * Create a request for the method "courses.update".
        *

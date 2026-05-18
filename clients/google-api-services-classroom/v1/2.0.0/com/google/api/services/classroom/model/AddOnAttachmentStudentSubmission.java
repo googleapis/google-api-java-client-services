@@ -30,6 +30,22 @@ package com.google.api.services.classroom.model;
 public final class AddOnAttachmentStudentSubmission extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Identifier of the course work submission under which this attachment submission
+   * was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String courseWorkSubmissionId;
+
+  /**
+   * Output only. Classroom-assigned identifier for this student submission. This is unique among
+   * submissions for the relevant course work and add-on attachment combination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Student grade on this attachment. If unset, no grade was set.
    * The value may be {@code null}.
    */
@@ -50,6 +66,44 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
+
+  /**
+   * Output only. Identifier of the course work submission under which this attachment submission
+   * was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCourseWorkSubmissionId() {
+    return courseWorkSubmissionId;
+  }
+
+  /**
+   * Output only. Identifier of the course work submission under which this attachment submission
+   * was made.
+   * @param courseWorkSubmissionId courseWorkSubmissionId or {@code null} for none
+   */
+  public AddOnAttachmentStudentSubmission setCourseWorkSubmissionId(java.lang.String courseWorkSubmissionId) {
+    this.courseWorkSubmissionId = courseWorkSubmissionId;
+    return this;
+  }
+
+  /**
+   * Output only. Classroom-assigned identifier for this student submission. This is unique among
+   * submissions for the relevant course work and add-on attachment combination.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Output only. Classroom-assigned identifier for this student submission. This is unique among
+   * submissions for the relevant course work and add-on attachment combination.
+   * @param id id or {@code null} for none
+   */
+  public AddOnAttachmentStudentSubmission setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
 
   /**
    * Student grade on this attachment. If unset, no grade was set.

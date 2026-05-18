@@ -285,6 +285,14 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private User sender;
 
   /**
+   * Output only. Whether this is a silent message. Silent messages are messages where Chat
+   * suppresses push notifications for recipients.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean silent;
+
+  /**
    * Output only. Slash command information, if applicable.
    * The value may be {@code null}.
    */
@@ -816,6 +824,25 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setSender(User sender) {
     this.sender = sender;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this is a silent message. Silent messages are messages where Chat
+   * suppresses push notifications for recipients.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSilent() {
+    return silent;
+  }
+
+  /**
+   * Output only. Whether this is a silent message. Silent messages are messages where Chat
+   * suppresses push notifications for recipients.
+   * @param silent silent or {@code null} for none
+   */
+  public Message setSilent(java.lang.Boolean silent) {
+    this.silent = silent;
     return this;
   }
 

@@ -1920,10 +1920,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * [Developer Preview](https://developers.google.com/workspace/preview): Returns all spaces with
-     * `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the
-     * users specified in `FindGroupChatsRequest.users`. Only members that have joined the conversation
-     * are supported. For an example, see [Find group
+     * Returns all spaces with `spaceType == GROUP_CHAT`, whose human memberships contain exactly the
+     * calling user, and the users specified in `FindGroupChatsRequest.users`. Only members that have
+     * joined the conversation are supported. For an example, see [Find group
      * chats](https://developers.google.com/workspace/chat/find-group-chats). If the calling user
      * blocks, or is blocked by, some users, and no spaces with the entire specified set of users are
      * found, this method returns spaces that don't include the blocked or blocking users. The specified
@@ -1953,10 +1952,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1/spaces:findGroupChats";
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Returns all spaces with
-       * `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the
-       * users specified in `FindGroupChatsRequest.users`. Only members that have joined the
-       * conversation are supported. For an example, see [Find group
+       * Returns all spaces with `spaceType == GROUP_CHAT`, whose human memberships contain exactly the
+       * calling user, and the users specified in `FindGroupChatsRequest.users`. Only members that have
+       * joined the conversation are supported. For an example, see [Find group
        * chats](https://developers.google.com/workspace/chat/find-group-chats). If the calling user
        * blocks, or is blocked by, some users, and no spaces with the entire specified set of users are
        * found, this method returns spaces that don't include the blocked or blocking users. The
@@ -3178,9 +3176,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. A search query. You can search by using the following parameters: - `create_time`
-       * - `customer` - `display_name` - `external_user_allowed` - `last_active_time` -
-       * `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
+       * Required. A search query. You can search by using the following parameters : -
+       * `create_time` - `customer` - `display_name` - `external_user_allowed` - `last_active_time`
+       * - `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
        * timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported
        * comparison operators are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to
        * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
@@ -3213,7 +3211,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. A search query. You can search by using the following parameters: - `create_time` -
+      /** Required. A search query. You can search by using the following parameters : - `create_time` -
      `customer` - `display_name` - `external_user_allowed` - `last_active_time` - `space_history_state`
      - `space_type` `create_time` and `last_active_time` accept a timestamp in
      [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported comparison operators
@@ -3248,9 +3246,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. A search query. You can search by using the following parameters: - `create_time`
-       * - `customer` - `display_name` - `external_user_allowed` - `last_active_time` -
-       * `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
+       * Required. A search query. You can search by using the following parameters : -
+       * `create_time` - `customer` - `display_name` - `external_user_allowed` - `last_active_time`
+       * - `space_history_state` - `space_type` `create_time` and `last_active_time` accept a
        * timestamp in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported
        * comparison operators are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to
        * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
@@ -5027,6 +5025,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
                 "^spaces/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /** The notification type for the message. */
+        @com.google.api.client.util.Key("createMessageNotificationOptions.notificationType")
+        private java.lang.String createMessageNotificationOptionsNotificationType;
+
+        /** The notification type for the message.
+         */
+        public java.lang.String getCreateMessageNotificationOptionsNotificationType() {
+          return createMessageNotificationOptionsNotificationType;
+        }
+
+        /** The notification type for the message. */
+        public Create setCreateMessageNotificationOptionsNotificationType(java.lang.String createMessageNotificationOptionsNotificationType) {
+          this.createMessageNotificationOptionsNotificationType = createMessageNotificationOptionsNotificationType;
           return this;
         }
 

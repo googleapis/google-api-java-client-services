@@ -217,7 +217,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The edition of the instance.
+   * Optional. The edition type of the Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -820,7 +820,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The edition of the instance.
+   * Optional. The edition type of the Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -828,7 +828,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The edition of the instance.
+   * Optional. The edition type of the Cloud SQL instance.
    * @param edition edition or {@code null} for none
    */
   public Settings setEdition(java.lang.String edition) {

@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * Hyperparameters for Veo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. The adapter size for LoRA tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adapterSize;
 
   /**
    * Optional. Number of complete passes the model makes over the entire training dataset during
@@ -45,14 +52,14 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   private java.lang.Double learningRateMultiplier;
 
   /**
-   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * The speed of the tuning job. Only supported for Veo 3.0 models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tuningSpeed;
 
   /**
-   * Optional. The tuning task. Either I2V or T2V.
+   * The tuning task for Veo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,6 +73,23 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.Double veoDataMixtureRatio;
+
+  /**
+   * Optional. The adapter size for LoRA tuning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdapterSize() {
+    return adapterSize;
+  }
+
+  /**
+   * Optional. The adapter size for LoRA tuning.
+   * @param adapterSize adapterSize or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoHyperParameters setAdapterSize(java.lang.String adapterSize) {
+    this.adapterSize = adapterSize;
+    return this;
+  }
 
   /**
    * Optional. Number of complete passes the model makes over the entire training dataset during
@@ -104,7 +128,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   }
 
   /**
-   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * The speed of the tuning job. Only supported for Veo 3.0 models.
    * @return value or {@code null} for none
    */
   public java.lang.String getTuningSpeed() {
@@ -112,7 +136,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   }
 
   /**
-   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * The speed of the tuning job. Only supported for Veo 3.0 models.
    * @param tuningSpeed tuningSpeed or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VeoHyperParameters setTuningSpeed(java.lang.String tuningSpeed) {
@@ -121,7 +145,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   }
 
   /**
-   * Optional. The tuning task. Either I2V or T2V.
+   * The tuning task for Veo.
    * @return value or {@code null} for none
    */
   public java.lang.String getTuningTask() {
@@ -129,7 +153,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   }
 
   /**
-   * Optional. The tuning task. Either I2V or T2V.
+   * The tuning task for Veo.
    * @param tuningTask tuningTask or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VeoHyperParameters setTuningTask(java.lang.String tuningTask) {

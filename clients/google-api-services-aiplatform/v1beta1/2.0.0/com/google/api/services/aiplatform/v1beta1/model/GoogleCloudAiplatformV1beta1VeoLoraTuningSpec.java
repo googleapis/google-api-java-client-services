@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Tuning Spec for Veo Model Tuning.
+ * Tuning Spec for Veo LoRA Model Tuning.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,10 +27,10 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1VeoTuningSpec extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1VeoLoraTuningSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Hyperparameters for Veo.
+   * Optional. Hyperparameters for Veo LoRA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,14 @@ public final class GoogleCloudAiplatformV1beta1VeoTuningSpec extends com.google.
   private java.lang.String validationDatasetUri;
 
   /**
-   * Optional. Hyperparameters for Veo.
+   * Optional. The orientation of the video. Defaults to LANDSCAPE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoOrientation;
+
+  /**
+   * Optional. Hyperparameters for Veo LoRA.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VeoHyperParameters getHyperParameters() {
@@ -61,10 +68,10 @@ public final class GoogleCloudAiplatformV1beta1VeoTuningSpec extends com.google.
   }
 
   /**
-   * Optional. Hyperparameters for Veo.
+   * Optional. Hyperparameters for Veo LoRA.
    * @param hyperParameters hyperParameters or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1VeoTuningSpec setHyperParameters(GoogleCloudAiplatformV1beta1VeoHyperParameters hyperParameters) {
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec setHyperParameters(GoogleCloudAiplatformV1beta1VeoHyperParameters hyperParameters) {
     this.hyperParameters = hyperParameters;
     return this;
   }
@@ -83,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1VeoTuningSpec extends com.google.
    * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @param trainingDatasetUri trainingDatasetUri or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1VeoTuningSpec setTrainingDatasetUri(java.lang.String trainingDatasetUri) {
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec setTrainingDatasetUri(java.lang.String trainingDatasetUri) {
     this.trainingDatasetUri = trainingDatasetUri;
     return this;
   }
@@ -102,19 +109,36 @@ public final class GoogleCloudAiplatformV1beta1VeoTuningSpec extends com.google.
    * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @param validationDatasetUri validationDatasetUri or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1VeoTuningSpec setValidationDatasetUri(java.lang.String validationDatasetUri) {
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec setValidationDatasetUri(java.lang.String validationDatasetUri) {
     this.validationDatasetUri = validationDatasetUri;
     return this;
   }
 
-  @Override
-  public GoogleCloudAiplatformV1beta1VeoTuningSpec set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1VeoTuningSpec) super.set(fieldName, value);
+  /**
+   * Optional. The orientation of the video. Defaults to LANDSCAPE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoOrientation() {
+    return videoOrientation;
+  }
+
+  /**
+   * Optional. The orientation of the video. Defaults to LANDSCAPE.
+   * @param videoOrientation videoOrientation or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec setVideoOrientation(java.lang.String videoOrientation) {
+    this.videoOrientation = videoOrientation;
+    return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1VeoTuningSpec clone() {
-    return (GoogleCloudAiplatformV1beta1VeoTuningSpec) super.clone();
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1VeoLoraTuningSpec) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleCloudAiplatformV1beta1VeoLoraTuningSpec clone() {
+    return (GoogleCloudAiplatformV1beta1VeoLoraTuningSpec) super.clone();
   }
 
 }

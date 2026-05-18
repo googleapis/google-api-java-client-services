@@ -30,6 +30,13 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class ConnectionPoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The number of running AuthProxy poolers per instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer authproxyPoolerCount;
+
+  /**
    * Optional. Whether to enable Managed Connection Pool (MCP).
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Integer poolerCount;
+
+  /**
+   * Output only. The number of running AuthProxy poolers per instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAuthproxyPoolerCount() {
+    return authproxyPoolerCount;
+  }
+
+  /**
+   * Output only. The number of running AuthProxy poolers per instance.
+   * @param authproxyPoolerCount authproxyPoolerCount or {@code null} for none
+   */
+  public ConnectionPoolConfig setAuthproxyPoolerCount(java.lang.Integer authproxyPoolerCount) {
+    this.authproxyPoolerCount = authproxyPoolerCount;
+    return this;
+  }
 
   /**
    * Optional. Whether to enable Managed Connection Pool (MCP).

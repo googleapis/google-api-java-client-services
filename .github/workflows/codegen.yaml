@@ -1,41 +1,18 @@
 on:
   schedule:
-  # Runs at 12:18, 1:18, 2:18 and 3:18.
-  # See https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule
-  - cron: '18 0-3 * * *'
+  # Runs daily at 00:18 UTC.
+  - cron: '18 0 * * *'
   workflow_dispatch:
-    inputs:
-      batch_index:
-        type: number
-        description: Index of the batch ([0-3]). You must call this workflow one time per index in order to confirm the generation in all the jobs.
 
 name: codegen
 jobs:
   discovery:
-    # As of November 2023, it returns 269 service names.
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
-  total_service_size_check:
-    runs-on: 'ubuntu-24.04'
-    needs: discovery
-    steps:
-      - uses: actions/github-script@v5
-        id: chunk
-        with:
-          script: |
-            console.log('checking size of services')
-            const MAX_SERVICE_SIZE = 400 // 00:18 to 03:18 implies 4 batches of size 100
-            const services = ${{ needs.discovery.outputs.services }}
-            if (services.length > MAX_SERVICE_SIZE) {
-              throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
-            }
   batch:
     runs-on: 'ubuntu-24.04'
     needs: discovery
     outputs:
-      # As of November 2023, the output of batch job is a 3-element array, which contains a chunk of 100 service names
-      # at the index 0, a chunk of other 100 service names at the index 1, and a chunk of remaining 69 service names
-      # at the index 2.
-      services: ${{ steps.chunk.outputs.result }}
+      batches: ${{ steps.chunk.outputs.result }}
     steps:
       - uses: actions/github-script@v5
         id: chunk
@@ -45,29 +22,24 @@ jobs:
             const services = ${{ needs.discovery.outputs.services }}
             const excludedServices = ['contentwarehouse']
             const filteredServices = services.filter(service => !excludedServices.includes(service))
-            const hour = new Date().getHours()
             const MAX_BATCH_SIZE = 100
-            const result = {
-              batches: [],
-              hour: new Date().getHours(),
-            };
+            const batches = []
+            const indices = []
             for (let i = 0; i < filteredServices.length; i += MAX_BATCH_SIZE) {
-              result.batches.push(filteredServices.slice(i, i + MAX_BATCH_SIZE))
+              batches.push(filteredServices.slice(i, i + MAX_BATCH_SIZE))
+              indices.push(indices.length)
             }
-            return result
+            return {
+              batches,
+              indices
+            }
   generate:
     uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
     needs: batch
     secrets: inherit
-    # The size of the batch is implicitly decided by the hour of the day.
-    # For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
-    if: ${{ github.event_name != 'workflow_dispatch' && !!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour] }}
+    strategy:
+      fail-fast: false
+      matrix:
+        index: ${{ fromJson(needs.batch.outputs.batches).indices }}
     with: 
-      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}
-  generate_dispatch:
-    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
-    needs: batch
-    secrets: inherit
-    if: github.event_name == 'workflow_dispatch'
-    with: 
-      services: ${{toJson(fromJson(needs.batch.outputs.services).batches[inputs.batch_index])}}
+      services: ${{ toJson(fromJson(needs.batch.outputs.batches).batches[matrix.index]) }}

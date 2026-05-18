@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * Experimental parameters for video generation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -28,6 +28,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. Video codec to use for output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String codec;
 
   /**
    * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
@@ -67,6 +74,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionPromptInputs promptInputs;
 
   /**
+   * Optional tag for tracking the source of this request. Allowed values: "colab", "comfyui",
+   * "curl", "flowresearch", "vertexstudio". Unrecognized tags are recorded as "unknown" in metrics.
+   * Tags do not affect video generation behavior. Up to 16 characters, ASCII alphanumeric, hyphens,
+   * and underscores only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestOriginTag;
+
+  /**
+   * If true (default), truncate input videos that exceed the model's maximum frame count by
+   * applying a frame_selection_config to __video_file__ inputs. Set to false to preserve the
+   * existing fail-fast behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean truncateInputVideo;
+
+  /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to
    * sdedit_video_tmax_scale_map
    * The value may be {@code null}.
@@ -80,6 +106,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Float videoTransformStrength;
+
+  /**
+   * Optional. Video codec to use for output.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCodec() {
+    return codec;
+  }
+
+  /**
+   * Optional. Video codec to use for output.
+   * @param codec codec or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setCodec(java.lang.String codec) {
+    this.codec = codec;
+    return this;
+  }
 
   /**
    * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
@@ -167,6 +210,50 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setPromptInputs(CloudAiLargeModelsVisionPromptInputs promptInputs) {
     this.promptInputs = promptInputs;
+    return this;
+  }
+
+  /**
+   * Optional tag for tracking the source of this request. Allowed values: "colab", "comfyui",
+   * "curl", "flowresearch", "vertexstudio". Unrecognized tags are recorded as "unknown" in metrics.
+   * Tags do not affect video generation behavior. Up to 16 characters, ASCII alphanumeric, hyphens,
+   * and underscores only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestOriginTag() {
+    return requestOriginTag;
+  }
+
+  /**
+   * Optional tag for tracking the source of this request. Allowed values: "colab", "comfyui",
+   * "curl", "flowresearch", "vertexstudio". Unrecognized tags are recorded as "unknown" in metrics.
+   * Tags do not affect video generation behavior. Up to 16 characters, ASCII alphanumeric, hyphens,
+   * and underscores only.
+   * @param requestOriginTag requestOriginTag or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setRequestOriginTag(java.lang.String requestOriginTag) {
+    this.requestOriginTag = requestOriginTag;
+    return this;
+  }
+
+  /**
+   * If true (default), truncate input videos that exceed the model's maximum frame count by
+   * applying a frame_selection_config to __video_file__ inputs. Set to false to preserve the
+   * existing fail-fast behavior.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTruncateInputVideo() {
+    return truncateInputVideo;
+  }
+
+  /**
+   * If true (default), truncate input videos that exceed the model's maximum frame count by
+   * applying a frame_selection_config to __video_file__ inputs. Set to false to preserve the
+   * existing fail-fast behavior.
+   * @param truncateInputVideo truncateInputVideo or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setTruncateInputVideo(java.lang.Boolean truncateInputVideo) {
+    this.truncateInputVideo = truncateInputVideo;
     return this;
   }
 

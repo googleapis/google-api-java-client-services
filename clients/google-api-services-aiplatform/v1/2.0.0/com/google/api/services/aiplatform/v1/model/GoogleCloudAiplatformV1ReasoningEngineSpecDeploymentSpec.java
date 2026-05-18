@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1.model;
  * The specification of a Reasoning Engine deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1. Range: [0, 10].
+   * Defaults to 1. Range: [0, 75].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1. Range: [0, 10].
+   * Defaults to 1. Range: [0, 75].
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinInstances() {
@@ -196,7 +196,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
 
   /**
    * Optional. The minimum number of application instances that will be kept running at all times.
-   * Defaults to 1. Range: [0, 10].
+   * Defaults to 1. Range: [0, 75].
    * @param minInstances minInstances or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec setMinInstances(java.lang.Integer minInstances) {

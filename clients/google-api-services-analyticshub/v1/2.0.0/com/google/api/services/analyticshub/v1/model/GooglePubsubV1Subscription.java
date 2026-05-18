@@ -18,8 +18,9 @@ package com.google.api.services.analyticshub.v1.model;
 
 /**
  * Defines the destination Pub/Sub subscription. If none of `push_config`, `bigquery_config`,
- * `cloud_storage_config`, `pubsub_export_config`, or `pubsublite_export_config` is set, then the
- * subscriber will pull and ack messages using API methods. At most one of these fields may be set.
+ * `cloud_storage_config`, `bigtable_config`, `pubsub_export_config`, or `pubsublite_export_config`
+ * is set, then the subscriber will pull and ack messages using API methods. At most one of these
+ * fields may be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:

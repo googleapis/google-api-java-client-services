@@ -53,7 +53,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   private String lastRefreshTime;
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +146,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   }
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -154,7 +154,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   }
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * @param location location or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setLocation(java.lang.String location) {

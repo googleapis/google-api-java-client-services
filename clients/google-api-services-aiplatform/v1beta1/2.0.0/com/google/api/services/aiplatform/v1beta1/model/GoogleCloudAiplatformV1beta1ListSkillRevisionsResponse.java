@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for VertexRagDataService.ListRagCorpora.
+ * Response message for SkillRegistryService.ListSkillRevisions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,26 +27,26 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ListRagCorporaResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve the next page of results. Pass to ListRagCorporaRequest.page_token to
-   * obtain that page.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of RagCorpora in the requested page.
+   * The list of Skill Revisions in the request page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAiplatformV1beta1RagCorpus> ragCorpora;
+  private java.util.List<GoogleCloudAiplatformV1beta1SkillRevision> skillRevisions;
 
   /**
-   * A token to retrieve the next page of results. Pass to ListRagCorporaRequest.page_token to
-   * obtain that page.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,40 +54,40 @@ public final class GoogleCloudAiplatformV1beta1ListRagCorporaResponse extends co
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListRagCorporaRequest.page_token to
-   * obtain that page.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ListRagCorporaResponse setNextPageToken(java.lang.String nextPageToken) {
+  public GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * List of RagCorpora in the requested page.
+   * The list of Skill Revisions in the request page.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudAiplatformV1beta1RagCorpus> getRagCorpora() {
-    return ragCorpora;
+  public java.util.List<GoogleCloudAiplatformV1beta1SkillRevision> getSkillRevisions() {
+    return skillRevisions;
   }
 
   /**
-   * List of RagCorpora in the requested page.
-   * @param ragCorpora ragCorpora or {@code null} for none
+   * The list of Skill Revisions in the request page.
+   * @param skillRevisions skillRevisions or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ListRagCorporaResponse setRagCorpora(java.util.List<GoogleCloudAiplatformV1beta1RagCorpus> ragCorpora) {
-    this.ragCorpora = ragCorpora;
+  public GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse setSkillRevisions(java.util.List<GoogleCloudAiplatformV1beta1SkillRevision> skillRevisions) {
+    this.skillRevisions = skillRevisions;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ListRagCorporaResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ListRagCorporaResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ListRagCorporaResponse clone() {
-    return (GoogleCloudAiplatformV1beta1ListRagCorporaResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse clone() {
+    return (GoogleCloudAiplatformV1beta1ListSkillRevisionsResponse) super.clone();
   }
 
 }

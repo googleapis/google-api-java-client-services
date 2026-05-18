@@ -162,7 +162,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.util.List<PublicDelegatedPrefixPublicDelegatedSubPrefix> publicDelegatedSubPrefixs;
 
   /**
-   * The purpose of the public delegated prefix.
+   * Immutable. The purpose of the public delegated prefix.
    *
    * This field can only be set for the top-level global public delegated prefix. It is an output-
    * only field for the sub-delegates that inherit the value from the top-level global public
@@ -564,7 +564,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * The purpose of the public delegated prefix.
+   * Immutable. The purpose of the public delegated prefix.
    *
    * This field can only be set for the top-level global public delegated prefix. It is an output-
    * only field for the sub-delegates that inherit the value from the top-level global public
@@ -588,7 +588,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * The purpose of the public delegated prefix.
+   * Immutable. The purpose of the public delegated prefix.
    *
    * This field can only be set for the top-level global public delegated prefix. It is an output-
    * only field for the sub-delegates that inherit the value from the top-level global public

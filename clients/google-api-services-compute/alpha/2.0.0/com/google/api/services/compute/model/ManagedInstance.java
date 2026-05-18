@@ -159,6 +159,14 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceScheduling scheduling;
 
   /**
+   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
+   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedInstanceShutdownDetails shutdownDetails;
+
+  /**
    * Output only. [Output only] The size of the VM represented by this Managed Instance. This is how
    * much this Managed Instance contributes to the size of the group.
    * The value may be {@code null}.
@@ -488,6 +496,25 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
    */
   public ManagedInstance setScheduling(ManagedInstanceScheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
+   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * @return value or {@code null} for none
+   */
+  public ManagedInstanceShutdownDetails getShutdownDetails() {
+    return shutdownDetails;
+  }
+
+  /**
+   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
+   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * @param shutdownDetails shutdownDetails or {@code null} for none
+   */
+  public ManagedInstance setShutdownDetails(ManagedInstanceShutdownDetails shutdownDetails) {
+    this.shutdownDetails = shutdownDetails;
     return this;
   }
 

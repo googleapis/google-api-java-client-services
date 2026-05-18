@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * The Scores message groups information about a shard of capacity.
+ * Groups information about a shard of capacity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,7 +31,7 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
 
   /**
    * The estimated run time of the majority of Spot VMs in the request before preemption. The
-   * estimate is best-effort only. It is based on history data and current conditions.
+   * estimate is best-effort only. It is based on historical data and current conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
 
   /**
    * The estimated run time of the majority of Spot VMs in the request before preemption. The
-   * estimate is best-effort only. It is based on history data and current conditions.
+   * estimate is best-effort only. It is based on historical data and current conditions.
    * @return value or {@code null} for none
    */
   public String getEstimatedUptime() {
@@ -73,7 +73,7 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
 
   /**
    * The estimated run time of the majority of Spot VMs in the request before preemption. The
-   * estimate is best-effort only. It is based on history data and current conditions.
+   * estimate is best-effort only. It is based on historical data and current conditions.
    * @param estimatedUptime estimatedUptime or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationScores setEstimatedUptime(String estimatedUptime) {

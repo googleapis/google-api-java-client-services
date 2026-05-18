@@ -64,7 +64,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private HttpFaultInjection faultInjectionPolicy;
 
   /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
    * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
    * bucket serving the route, or cache policy must be configured on the same route
    * The value may be {@code null}.
@@ -229,7 +229,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
    * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
    * bucket serving the route, or cache policy must be configured on the same route
    * @return value or {@code null} for none
@@ -239,7 +239,7 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
    * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
    * bucket serving the route, or cache policy must be configured on the same route
    * @param imageOptimizationPolicy imageOptimizationPolicy or {@code null} for none

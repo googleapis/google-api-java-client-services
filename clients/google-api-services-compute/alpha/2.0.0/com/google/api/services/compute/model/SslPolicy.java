@@ -111,13 +111,12 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer allows negotiating
+   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer negotiates
    * X25519MLKEM768 key exchange when clients advertise support for it. When set to DEFAULT, or if
    * no SSL Policy is attached to the target proxy, the load balancer disallows X25519MLKEM768 key
-   * exchange until it is enabled by default on load balancers. When set toENABLED, the load
-   * balancer can negotiate X25519MLKEM768 key exchange. When set to DEFERRED, temporarily opts out
-   * the load balancer from negotiating X25519MLKEM768 beyond the point where it is enabled by
-   * default on load balancers.
+   * exchange before October 2026, and allows it afterward. When set to ENABLED, the load balancer
+   * allows X25519MLKEM768 key exchange. When set toDEFERRED, the load balancer disallows
+   * X25519MLKEM768 key exchange until October 2027, and allows it afterward.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -397,13 +396,12 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer allows negotiating
+   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer negotiates
    * X25519MLKEM768 key exchange when clients advertise support for it. When set to DEFAULT, or if
    * no SSL Policy is attached to the target proxy, the load balancer disallows X25519MLKEM768 key
-   * exchange until it is enabled by default on load balancers. When set toENABLED, the load
-   * balancer can negotiate X25519MLKEM768 key exchange. When set to DEFERRED, temporarily opts out
-   * the load balancer from negotiating X25519MLKEM768 beyond the point where it is enabled by
-   * default on load balancers.
+   * exchange before October 2026, and allows it afterward. When set to ENABLED, the load balancer
+   * allows X25519MLKEM768 key exchange. When set toDEFERRED, the load balancer disallows
+   * X25519MLKEM768 key exchange until October 2027, and allows it afterward.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostQuantumKeyExchange() {
@@ -411,13 +409,12 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer allows negotiating
+   * One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer negotiates
    * X25519MLKEM768 key exchange when clients advertise support for it. When set to DEFAULT, or if
    * no SSL Policy is attached to the target proxy, the load balancer disallows X25519MLKEM768 key
-   * exchange until it is enabled by default on load balancers. When set toENABLED, the load
-   * balancer can negotiate X25519MLKEM768 key exchange. When set to DEFERRED, temporarily opts out
-   * the load balancer from negotiating X25519MLKEM768 beyond the point where it is enabled by
-   * default on load balancers.
+   * exchange before October 2026, and allows it afterward. When set to ENABLED, the load balancer
+   * allows X25519MLKEM768 key exchange. When set toDEFERRED, the load balancer disallows
+   * X25519MLKEM768 key exchange until October 2027, and allows it afterward.
    * @param postQuantumKeyExchange postQuantumKeyExchange or {@code null} for none
    */
   public SslPolicy setPostQuantumKeyExchange(java.lang.String postQuantumKeyExchange) {

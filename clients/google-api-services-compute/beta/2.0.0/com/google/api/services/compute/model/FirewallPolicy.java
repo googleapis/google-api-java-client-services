@@ -130,7 +130,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String policySource;
 
   /**
-   * The type of the firewall policy. This field can be eitherVPC_POLICY or RDMA_ROCE_POLICY.
+   * The type of the firewall policy. This field can be one of VPC_POLICY, RDMA_ROCE_POLICY or
+   * ULL_POLICY.
    *
    * Note: if not specified then VPC_POLICY will be used.
    * The value may be {@code null}.
@@ -465,7 +466,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of the firewall policy. This field can be eitherVPC_POLICY or RDMA_ROCE_POLICY.
+   * The type of the firewall policy. This field can be one of VPC_POLICY, RDMA_ROCE_POLICY or
+   * ULL_POLICY.
    *
    * Note: if not specified then VPC_POLICY will be used.
    * @return value or {@code null} for none
@@ -475,7 +477,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of the firewall policy. This field can be eitherVPC_POLICY or RDMA_ROCE_POLICY.
+   * The type of the firewall policy. This field can be one of VPC_POLICY, RDMA_ROCE_POLICY or
+   * ULL_POLICY.
    *
    * Note: if not specified then VPC_POLICY will be used.
    * @param policyType policyType or {@code null} for none

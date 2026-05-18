@@ -40,8 +40,11 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   private java.lang.Integer defaultPort;
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified. [Deprecated] This field is deprecated.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.  [Deprecated] This field is deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +90,11 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified. [Deprecated] This field is deprecated.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.  [Deprecated] This field is deprecated.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -96,8 +102,11 @@ public final class NetworkEndpointGroupLbNetworkEndpointGroup extends com.google
   }
 
   /**
-   * The URL of the network to which all network endpoints in the NEG belong. Uses default project
-   * network if unspecified. [Deprecated] This field is deprecated.
+   * The URL of the network to which all network endpoints in the NEG belong. For
+   * networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field
+   * is not specified, a default network will be used. This field cannot be set for NEGs with
+   * networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all
+   * other network endpoint types, this field is required.  [Deprecated] This field is deprecated.
    * @param network network or {@code null} for none
    */
   public NetworkEndpointGroupLbNetworkEndpointGroup setNetwork(java.lang.String network) {

@@ -73,6 +73,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * If true, this network interface is eligible for DNS64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dns64Eligible;
+
+  /**
    * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
    * network_attachment.
    * The value may be {@code null}.
@@ -162,6 +170,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * If true, this network interface is eligible for NAT64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nat64Eligible;
 
   /**
    * URL of the VPC network resource for this instance. When creating an instance, if neither the
@@ -322,6 +338,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setAliasIpv6Ranges(java.util.List<AliasIpRange> aliasIpv6Ranges) {
     this.aliasIpv6Ranges = aliasIpv6Ranges;
+    return this;
+  }
+
+  /**
+   * If true, this network interface is eligible for DNS64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDns64Eligible() {
+    return dns64Eligible;
+  }
+
+  /**
+   * If true, this network interface is eligible for DNS64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * @param dns64Eligible dns64Eligible or {@code null} for none
+   */
+  public NetworkInterface setDns64Eligible(java.lang.Boolean dns64Eligible) {
+    this.dns64Eligible = dns64Eligible;
     return this;
   }
 
@@ -556,6 +591,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * If true, this network interface is eligible for NAT64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNat64Eligible() {
+    return nat64Eligible;
+  }
+
+  /**
+   * If true, this network interface is eligible for NAT64. This field is only supported for dual-
+   * stack (IPV4_IPV6) network interfaces.
+   * @param nat64Eligible nat64Eligible or {@code null} for none
+   */
+  public NetworkInterface setNat64Eligible(java.lang.Boolean nat64Eligible) {
+    this.nat64Eligible = nat64Eligible;
     return this;
   }
 

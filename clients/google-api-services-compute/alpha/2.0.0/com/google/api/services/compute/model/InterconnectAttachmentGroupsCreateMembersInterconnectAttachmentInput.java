@@ -17,9 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * LINT.IfChange Parameters used to create an InterconnectAttachment. This is similar to
- * InterconnectAttachment, but the region field used here is not output only and all other output
- * only fields are excluded.
+ * Parameters used to create an InterconnectAttachment. This is similar to InterconnectAttachment,
+ * but the region field used here is not output only and all other output only fields are excluded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

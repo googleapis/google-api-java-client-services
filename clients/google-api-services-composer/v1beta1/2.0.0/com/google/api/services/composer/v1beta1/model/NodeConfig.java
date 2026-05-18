@@ -185,6 +185,15 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * Optional. Configures how the environment routes traffic to other services. This field is
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TrafficRoutingConfig trafficRoutingConfig;
+
+  /**
    * Optional. The IP range in CIDR notation to use internally by Cloud Composer. IP addresses are
    * not reserved - and the same range can be used by multiple Cloud Composer environments. In case
    * of overlap, IPs from this range will not be accessible in the user's VPC network. Cannot be
@@ -528,6 +537,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Optional. Configures how the environment routes traffic to other services. This field is
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
+   * @return value or {@code null} for none
+   */
+  public TrafficRoutingConfig getTrafficRoutingConfig() {
+    return trafficRoutingConfig;
+  }
+
+  /**
+   * Optional. Configures how the environment routes traffic to other services. This field is
+   * supported for Cloud Composer environments in versions composer-3-airflow-*.*.*-build.* and
+   * newer.
+   * @param trafficRoutingConfig trafficRoutingConfig or {@code null} for none
+   */
+  public NodeConfig setTrafficRoutingConfig(TrafficRoutingConfig trafficRoutingConfig) {
+    this.trafficRoutingConfig = trafficRoutingConfig;
     return this;
   }
 

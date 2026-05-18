@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for DatasetService.ListDatasets.
+ * Response message for AgentService.ListAgents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,47 +27,49 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ListDatasetsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Datasets that matches the specified filter in the request.
+   * A list of agents matching the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudAiplatformV1beta1Dataset> datasets;
+  private java.util.List<GoogleCloudAiplatformV1beta1Agent> agents;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Dataset used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1Agent used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Dataset.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1Agent.class);
   }
 
   /**
-   * The standard List next-page token.
+   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
+   * of this field indicates there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of Datasets that matches the specified filter in the request.
+   * A list of agents matching the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudAiplatformV1beta1Dataset> getDatasets() {
-    return datasets;
+  public java.util.List<GoogleCloudAiplatformV1beta1Agent> getAgents() {
+    return agents;
   }
 
   /**
-   * A list of Datasets that matches the specified filter in the request.
-   * @param datasets datasets or {@code null} for none
+   * A list of agents matching the request.
+   * @param agents agents or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ListDatasetsResponse setDatasets(java.util.List<GoogleCloudAiplatformV1beta1Dataset> datasets) {
-    this.datasets = datasets;
+  public GoogleCloudAiplatformV1beta1ListAgentsResponse setAgents(java.util.List<GoogleCloudAiplatformV1beta1Agent> agents) {
+    this.agents = agents;
     return this;
   }
 
   /**
-   * The standard List next-page token.
+   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
+   * of this field indicates there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,22 +77,23 @@ public final class GoogleCloudAiplatformV1beta1ListDatasetsResponse extends com.
   }
 
   /**
-   * The standard List next-page token.
+   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
+   * of this field indicates there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ListDatasetsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public GoogleCloudAiplatformV1beta1ListAgentsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ListDatasetsResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ListDatasetsResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1ListAgentsResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1ListAgentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ListDatasetsResponse clone() {
-    return (GoogleCloudAiplatformV1beta1ListDatasetsResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1ListAgentsResponse clone() {
+    return (GoogleCloudAiplatformV1beta1ListAgentsResponse) super.clone();
   }
 
 }

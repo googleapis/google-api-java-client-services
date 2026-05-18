@@ -114,6 +114,15 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
   private java.lang.Long lastModifiedAt;
 
   /**
+   * Output only. Whether this proxy revision is detected as an MCP (Model Context Protocol) proxy.
+   * A proxy revision is identified as MCP if it has a proxy endpoint with the `/mcp` base path that
+   * routes to the MCP target URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mcp;
+
+  /**
    * Name of the API proxy.
    * The value may be {@code null}.
    */
@@ -416,6 +425,27 @@ public final class GoogleCloudApigeeV1ApiProxyRevision extends com.google.api.cl
    */
   public GoogleCloudApigeeV1ApiProxyRevision setLastModifiedAt(java.lang.Long lastModifiedAt) {
     this.lastModifiedAt = lastModifiedAt;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this proxy revision is detected as an MCP (Model Context Protocol) proxy.
+   * A proxy revision is identified as MCP if it has a proxy endpoint with the `/mcp` base path that
+   * routes to the MCP target URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMcp() {
+    return mcp;
+  }
+
+  /**
+   * Output only. Whether this proxy revision is detected as an MCP (Model Context Protocol) proxy.
+   * A proxy revision is identified as MCP if it has a proxy endpoint with the `/mcp` base path that
+   * routes to the MCP target URL.
+   * @param mcp mcp or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProxyRevision setMcp(java.lang.Boolean mcp) {
+    this.mcp = mcp;
     return this;
   }
 

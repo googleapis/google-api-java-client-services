@@ -5479,7 +5479,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * updating them, as well as any optional values that you are updating. The API product name
        * required in the request URL is the internal name of the product, not the display name. While they
        * may be the same, it depends on whether the API product was created via UI or API. View the list
-       * of API products to identify their internal names.
+       * of API products to identify their internal names. **Note:** We recommend that you avoid making
+       * concurrent update requests for the same resource. Near-simultaneous writes to the same entity can
+       * result in conflicts and unexpected behavior. Ensure operations are sequential when modifying a
+       * single resource.
        *
        * Create a request for the method "apiproducts.update".
        *
@@ -5512,7 +5515,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * updating them, as well as any optional values that you are updating. The API product name
          * required in the request URL is the internal name of the product, not the display name. While
          * they may be the same, it depends on whether the API product was created via UI or API. View the
-         * list of API products to identify their internal names.
+         * list of API products to identify their internal names. **Note:** We recommend that you avoid
+         * making concurrent update requests for the same resource. Near-simultaneous writes to the same
+         * entity can result in conflicts and unexpected behavior. Ensure operations are sequential when
+         * modifying a single resource.
          *
          * Create a request for the method "apiproducts.update".
          *
@@ -12160,6 +12166,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * Updates an AppGroup. This API replaces the existing AppGroup details with those specified in the
        * request. Include or exclude any existing details that you want to retain or delete, respectively.
        * Note that the state of the AppGroup should be updated using `action`, and not via AppGroup.
+       * **Note:** We recommend that you avoid making concurrent update requests for the same resource.
+       * Near-simultaneous writes to the same entity can result in conflicts and unexpected behavior.
+       * Ensure operations are sequential when modifying a single resource.
        *
        * Create a request for the method "appgroups.update".
        *
@@ -12188,7 +12197,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * Updates an AppGroup. This API replaces the existing AppGroup details with those specified in
          * the request. Include or exclude any existing details that you want to retain or delete,
          * respectively. Note that the state of the AppGroup should be updated using `action`, and not via
-         * AppGroup.
+         * AppGroup. **Note:** We recommend that you avoid making concurrent update requests for the same
+         * resource. Near-simultaneous writes to the same entity can result in conflicts and unexpected
+         * behavior. Ensure operations are sequential when modifying a single resource.
          *
          * Create a request for the method "appgroups.update".
          *
@@ -12324,7 +12335,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Updates the monetization configuration for the AppGroup.
+       * Updates the monetization configuration for the AppGroup. **Note:** We recommend that you avoid
+       * making concurrent update requests for the same resource. Near-simultaneous writes to the same
+       * entity can result in conflicts and unexpected behavior. Ensure operations are sequential when
+       * modifying a single resource.
        *
        * Create a request for the method "appgroups.updateMonetizationConfig".
        *
@@ -12351,7 +12365,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
 
         /**
-         * Updates the monetization configuration for the AppGroup.
+         * Updates the monetization configuration for the AppGroup. **Note:** We recommend that you avoid
+         * making concurrent update requests for the same resource. Near-simultaneous writes to the same
+         * entity can result in conflicts and unexpected behavior. Ensure operations are sequential when
+         * modifying a single resource.
          *
          * Create a request for the method "appgroups.updateMonetizationConfig".
          *
@@ -13122,7 +13139,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * API key using the UpdateAppGroupAppKey API. Using this API, you cannot update the app name, as it
          * is the primary key used to identify the app and cannot be changed. This API replaces the existing
          * attributes with those specified in the request. Include or exclude any existing attributes that
-         * you want to retain or delete, respectively.
+         * you want to retain or delete, respectively. **Note:** We recommend that you avoid making
+         * concurrent update requests for the same resource. Near-simultaneous writes to the same entity can
+         * result in conflicts and unexpected behavior. Ensure operations are sequential when modifying a
+         * single resource.
          *
          * Create a request for the method "apps.update".
          *
@@ -13154,7 +13174,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * API key using the UpdateAppGroupAppKey API. Using this API, you cannot update the app name, as
            * it is the primary key used to identify the app and cannot be changed. This API replaces the
            * existing attributes with those specified in the request. Include or exclude any existing
-           * attributes that you want to retain or delete, respectively.
+           * attributes that you want to retain or delete, respectively. **Note:** We recommend that you
+           * avoid making concurrent update requests for the same resource. Near-simultaneous writes to the
+           * same entity can result in conflicts and unexpected behavior. Ensure operations are sequential
+           * when modifying a single resource.
            *
            * Create a request for the method "apps.update".
            *
@@ -18139,7 +18162,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
        * entities (apps, developers, and API products) are cached for 180 seconds (current default). Any
        * custom attributes associated with these entities are cached for at least 180 seconds after the
        * entity is accessed at runtime. Therefore, an `ExpiresIn` element on the OAuthV2 policy won't be
-       * able to expire an access token in less than 180 seconds.
+       * able to expire an access token in less than 180 seconds. **Note:** We recommend that you avoid
+       * making concurrent update requests for the same resource. Near-simultaneous writes to the same
+       * entity can result in conflicts and unexpected behavior. Ensure operations are sequential when
+       * modifying a single resource.
        *
        * Create a request for the method "developers.update".
        *
@@ -18172,6 +18198,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * seconds (current default). Any custom attributes associated with these entities are cached for
          * at least 180 seconds after the entity is accessed at runtime. Therefore, an `ExpiresIn` element
          * on the OAuthV2 policy won't be able to expire an access token in less than 180 seconds.
+         * **Note:** We recommend that you avoid making concurrent update requests for the same resource.
+         * Near-simultaneous writes to the same entity can result in conflicts and unexpected behavior.
+         * Ensure operations are sequential when modifying a single resource.
          *
          * Create a request for the method "developers.update".
          *
@@ -19541,7 +19570,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          * App name as it is the primary key used to identify the app and cannot be changed. * Scopes
          * associated with the app. Instead, use the ReplaceDeveloperAppKey API. This API replaces the
          * existing attributes with those specified in the request. Include or exclude any existing
-         * attributes that you want to retain or delete, respectively.
+         * attributes that you want to retain or delete, respectively. **Note:** We recommend that you avoid
+         * making concurrent update requests for the same resource. Near-simultaneous writes to the same
+         * entity can result in conflicts and unexpected behavior. Ensure operations are sequential when
+         * modifying a single resource.
          *
          * Create a request for the method "apps.update".
          *
@@ -19574,7 +19606,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * App name as it is the primary key used to identify the app and cannot be changed. * Scopes
            * associated with the app. Instead, use the ReplaceDeveloperAppKey API. This API replaces the
            * existing attributes with those specified in the request. Include or exclude any existing
-           * attributes that you want to retain or delete, respectively.
+           * attributes that you want to retain or delete, respectively. **Note:** We recommend that you
+           * avoid making concurrent update requests for the same resource. Near-simultaneous writes to the
+           * same entity can result in conflicts and unexpected behavior. Ensure operations are sequential
+           * when modifying a single resource.
            *
            * Create a request for the method "apps.update".
            *

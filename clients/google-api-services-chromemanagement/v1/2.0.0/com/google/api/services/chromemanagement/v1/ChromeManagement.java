@@ -2352,6 +2352,794 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
       }
     }
     /**
+     * An accessor for creating requests from the ConnectorConfigs collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.ConnectorConfigs.List request = chromemanagement.connectorConfigs().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ConnectorConfigs connectorConfigs() {
+      return new ConnectorConfigs();
+    }
+
+    /**
+     * The "connectorConfigs" collection of methods.
+     */
+    public class ConnectorConfigs {
+
+      /**
+       * Creates a connector config.
+       *
+       * Create a request for the method "connectorConfigs.create".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: customers/{customer}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig> {
+
+        private static final String REST_PATH = "v1/{+parent}/connectorConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Creates a connector config.
+         *
+         * Create a request for the method "connectorConfigs.create".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: customers/{customer}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig content) {
+          super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: customers/{customer}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: customers/{customer} */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. ID to use for the connector config, which becomes the final component of the
+         * connector config's resource name. If provided, the ID must be 1-63 characters long, and
+         * contain only lowercase letters, digits, and hyphens. It must start with a letter, and end
+         * with a letter or number. If not provided, the connector config will be assigned a random
+         * UUID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String connectorConfigId;
+
+        /** Optional. ID to use for the connector config, which becomes the final component of the connector
+       config's resource name. If provided, the ID must be 1-63 characters long, and contain only
+       lowercase letters, digits, and hyphens. It must start with a letter, and end with a letter or
+       number. If not provided, the connector config will be assigned a random UUID.
+         */
+        public java.lang.String getConnectorConfigId() {
+          return connectorConfigId;
+        }
+
+        /**
+         * Optional. ID to use for the connector config, which becomes the final component of the
+         * connector config's resource name. If provided, the ID must be 1-63 characters long, and
+         * contain only lowercase letters, digits, and hyphens. It must start with a letter, and end
+         * with a letter or number. If not provided, the connector config will be assigned a random
+         * UUID.
+         */
+        public Create setConnectorConfigId(java.lang.String connectorConfigId) {
+          this.connectorConfigId = connectorConfigId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a connector config.
+       *
+       * Create a request for the method "connectorConfigs.delete".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/connectorConfigs/[^/]+$");
+
+        /**
+         * Deletes a connector config.
+         *
+         * Create a request for the method "connectorConfigs.delete".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(ChromeManagement.this, "DELETE", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a connector config with customer ID and config ID.
+       *
+       * Create a request for the method "connectorConfigs.get".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/connectorConfigs/[^/]+$");
+
+        /**
+         * Gets a connector config with customer ID and config ID.
+         *
+         * Create a request for the method "connectorConfigs.get".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists connector configs of a customer.
+       *
+       * Create a request for the method "connectorConfigs.list".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: customers/{customer}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListConnectorConfigsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/connectorConfigs";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Lists connector configs of a customer.
+         *
+         * Create a request for the method "connectorConfigs.list".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: customers/{customer}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListConnectorConfigsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: customers/{customer}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: customers/{customer} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of connector configs to return. The default page size is 50
+         * if page_size is unspecified, and the maximum page size allowed is 100. Values above 100
+         * will be capped at 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of connector configs to return. The default page size is 50 if
+       page_size is unspecified, and the maximum page size allowed is 100. Values above 100 will be capped
+       at 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of connector configs to return. The default page size is 50
+         * if page_size is unspecified, and the maximum page size allowed is 100. Values above 100
+         * will be capped at 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListConnectorConfigs` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListConnectorConfigs` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListConnectorConfigs` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListConnectorConfigs` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListConnectorConfigs` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListConnectorConfigs` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a connector config.
+       *
+       * Create a request for the method "connectorConfigs.patch".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Format: customers/{customer}/connectorConfigs/{connector_config}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/connectorConfigs/[^/]+$");
+
+        /**
+         * Updates a connector config.
+         *
+         * Create a request for the method "connectorConfigs.patch".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Format: customers/{customer}/connectorConfigs/{connector_config}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig content) {
+          super(ChromeManagement.this, "PATCH", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ConnectorConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Identifier. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Format: customers/{customer}/connectorConfigs/{connector_config}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Identifier. Format: customers/{customer}/connectorConfigs/{connector_config} */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/connectorConfigs/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The update mask that can be used to specify which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The update mask that can be used to specify which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The update mask that can be used to specify which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Profiles collection.
      *
      * <p>The typical use is:</p>
@@ -6506,6 +7294,297 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         @Override
         public FindInstalledAppDevices set(String parameterName, Object value) {
           return (FindInstalledAppDevices) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Generate report of managed Chrome profiles that have a specified app installed.
+       *
+       * Create a request for the method "reports.findInstalledAppProfiles".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FindInstalledAppProfiles#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+       * @return the request
+       */
+      public FindInstalledAppProfiles findInstalledAppProfiles(java.lang.String customer) throws java.io.IOException {
+        FindInstalledAppProfiles result = new FindInstalledAppProfiles(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FindInstalledAppProfiles extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindInstalledAppProfilesResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:findInstalledAppProfiles";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Generate report of managed Chrome profiles that have a specified app installed.
+         *
+         * Create a request for the method "reports.findInstalledAppProfiles".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FindInstalledAppProfiles#execute()} method to invoke the
+         * remote operation. <p> {@link FindInstalledAppProfiles#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+         * @since 1.13
+         */
+        protected FindInstalledAppProfiles(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindInstalledAppProfilesResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FindInstalledAppProfiles set$Xgafv(java.lang.String $Xgafv) {
+          return (FindInstalledAppProfiles) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setAccessToken(java.lang.String accessToken) {
+          return (FindInstalledAppProfiles) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setAlt(java.lang.String alt) {
+          return (FindInstalledAppProfiles) super.setAlt(alt);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setCallback(java.lang.String callback) {
+          return (FindInstalledAppProfiles) super.setCallback(callback);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setFields(java.lang.String fields) {
+          return (FindInstalledAppProfiles) super.setFields(fields);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setKey(java.lang.String key) {
+          return (FindInstalledAppProfiles) super.setKey(key);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setOauthToken(java.lang.String oauthToken) {
+          return (FindInstalledAppProfiles) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FindInstalledAppProfiles) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setQuotaUser(java.lang.String quotaUser) {
+          return (FindInstalledAppProfiles) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setUploadType(java.lang.String uploadType) {
+          return (FindInstalledAppProfiles) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FindInstalledAppProfiles setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FindInstalledAppProfiles) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Customer id or "my_customer" to use the customer associated to the account making the
+       request.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        public FindInstalledAppProfiles setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Required. Unique identifier of the app. For Chrome apps and extensions, the 32-character
+         * id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g.
+         * com.evernote).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String appId;
+
+        /** Required. Unique identifier of the app. For Chrome apps and extensions, the 32-character id (e.g.
+       ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g. com.evernote).
+         */
+        public java.lang.String getAppId() {
+          return appId;
+        }
+
+        /**
+         * Required. Unique identifier of the app. For Chrome apps and extensions, the 32-character
+         * id (e.g. ehoadneljpdggcbbknedodolkkjodefl). For Android apps, the package name (e.g.
+         * com.evernote).
+         */
+        public FindInstalledAppProfiles setAppId(java.lang.String appId) {
+          this.appId = appId;
+          return this;
+        }
+
+        /**
+         * Type of the app. Optional. If not provided, an app type will be inferred from the format
+         * of the app ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String appType;
+
+        /** Type of the app. Optional. If not provided, an app type will be inferred from the format of the app
+       ID.
+         */
+        public java.lang.String getAppType() {
+          return appType;
+        }
+
+        /**
+         * Type of the app. Optional. If not provided, an app type will be inferred from the format
+         * of the app ID.
+         */
+        public FindInstalledAppProfiles setAppType(java.lang.String appType) {
+          this.appType = appType;
+          return this;
+        }
+
+        /**
+         * Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR
+         * operations are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
+       are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR
+         * operations are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        public FindInstalledAppProfiles setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Field used to order results. Supported order by fields: * email * profile_id *
+         * profile_permanent_id
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Field used to order results. Supported order by fields: * email * profile_id *
+       profile_permanent_id
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. Field used to order results. Supported order by fields: * email * profile_id *
+         * profile_permanent_id
+         */
+        public FindInstalledAppProfiles setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** Optional. The ID of the organizational unit. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** Optional. The ID of the organizational unit.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** Optional. The ID of the organizational unit. */
+        public FindInstalledAppProfiles setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        public FindInstalledAppProfiles setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Token to specify the page of the request to be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify the page of the request to be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Token to specify the page of the request to be returned. */
+        public FindInstalledAppProfiles setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FindInstalledAppProfiles set(String parameterName, Object value) {
+          return (FindInstalledAppProfiles) super.set(parameterName, value);
         }
       }
 

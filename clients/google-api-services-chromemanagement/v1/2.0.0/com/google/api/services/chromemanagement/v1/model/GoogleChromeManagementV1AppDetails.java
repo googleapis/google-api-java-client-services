@@ -47,6 +47,14 @@ public final class GoogleChromeManagementV1AppDetails extends com.google.api.cli
   private java.lang.String appId;
 
   /**
+   * Output only. The category IDs of the app, which are the same as stored in the Web Store item.
+   * It's expected that there is only one category ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> categoryIds;
+
+  /**
    * Output only. Chrome Web Store app information.
    * The value may be {@code null}.
    */
@@ -205,6 +213,25 @@ public final class GoogleChromeManagementV1AppDetails extends com.google.api.cli
    */
   public GoogleChromeManagementV1AppDetails setAppId(java.lang.String appId) {
     this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Output only. The category IDs of the app, which are the same as stored in the Web Store item.
+   * It's expected that there is only one category ID.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCategoryIds() {
+    return categoryIds;
+  }
+
+  /**
+   * Output only. The category IDs of the app, which are the same as stored in the Web Store item.
+   * It's expected that there is only one category ID.
+   * @param categoryIds categoryIds or {@code null} for none
+   */
+  public GoogleChromeManagementV1AppDetails setCategoryIds(java.util.List<java.lang.String> categoryIds) {
+    this.categoryIds = categoryIds;
     return this;
   }
 

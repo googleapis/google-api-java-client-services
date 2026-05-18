@@ -134,6 +134,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autoTimeRequired;
 
   /**
+   * Optional. The policy for the autofill service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autofillPolicy;
+
+  /**
    * This field has no effect.
    * The value may be {@code null}.
    */
@@ -1104,6 +1111,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setAutoTimeRequired(java.lang.Boolean autoTimeRequired) {
     this.autoTimeRequired = autoTimeRequired;
+    return this;
+  }
+
+  /**
+   * Optional. The policy for the autofill service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutofillPolicy() {
+    return autofillPolicy;
+  }
+
+  /**
+   * Optional. The policy for the autofill service.
+   * @param autofillPolicy autofillPolicy or {@code null} for none
+   */
+  public Policy setAutofillPolicy(java.lang.String autofillPolicy) {
+    this.autofillPolicy = autofillPolicy;
     return this;
   }
 

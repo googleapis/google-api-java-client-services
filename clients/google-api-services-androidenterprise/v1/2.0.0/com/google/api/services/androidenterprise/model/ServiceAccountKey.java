@@ -31,7 +31,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The body of the private key credentials file, in string format. This is only populated when the
-   * ServiceAccountKey is created, and is not stored by Google.
+   * ServiceAccountKey is created, and is not stored by Google. When type is "pkcs12", the contents
+   * of the data field is base64 encoded and has the password "notasecret".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The body of the private key credentials file, in string format. This is only populated when the
-   * ServiceAccountKey is created, and is not stored by Google.
+   * ServiceAccountKey is created, and is not stored by Google. When type is "pkcs12", the contents
+   * of the data field is base64 encoded and has the password "notasecret".
    * @return value or {@code null} for none
    */
   public java.lang.String getData() {
@@ -71,7 +73,8 @@ public final class ServiceAccountKey extends com.google.api.client.json.GenericJ
 
   /**
    * The body of the private key credentials file, in string format. This is only populated when the
-   * ServiceAccountKey is created, and is not stored by Google.
+   * ServiceAccountKey is created, and is not stored by Google. When type is "pkcs12", the contents
+   * of the data field is base64 encoded and has the password "notasecret".
    * @param data data or {@code null} for none
    */
   public ServiceAccountKey setData(java.lang.String data) {

@@ -44,26 +44,28 @@ public final class WasmPlugin extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. The name of the customer managed Cloud KMS key to be used to encrypt the `WasmPlugin`
+   * Optional. The name of the customer-managed [CryptoKey](https://cloud.google.com/kms/docs/refere
+   * nce/rest/v1/projects.locations.keyRings.cryptoKeys) to be used to encrypt the `WasmPlugin`
    * image (provided by image_uri) and configuration (provided by plugin_config_data or
    * plugin_config_uri) that are stored by the `Service Extensions` product at rest. Format:
-   * "projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}" By default,
+   * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` By default,
    * Google Cloud automatically encrypts all data at rest using Google-owned and Google-managed
    * encryption keys. If you need ownership and control of the keys that protect your data at rest,
    * you can specify a customer-managed encryption key (CMEK) to encrypt your `WasmPlugin` data. For
    * more information, see [Using customer-managed encryption
-   * keys](https://cloud.google.com/kms/docs/cmek).
+   * keys](https://cloud.google.com/service-extensions/docs/cmek).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * Output only. The name of the specific CryptoKeyVersion used to encrypt the `WasmPlugin` data,
-   * if the kms_key_name field is set. Format: "projects/{project}/locations/{location}/keyRings/{ke
-   * yring}/cryptoKeys/{key}/cryptoKeyVersions/{version}" This is a read-only field. `WasmPlugin`
-   * data is automatically encrypted using the most recent `CryptoKeyVersion` of the `CryptoKey`
-   * provided in the `kms_key_name` field. See [Cloud KMS
+   * Output only. The name of the specific [CryptoKeyVersion](https://cloud.google.com/kms/docs/refe
+   * rence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) used to encrypt the
+   * `WasmPlugin` data, if the kms_key_name field is set. Format: `projects/{project}/locations/{loc
+   * ation}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}` This is a read-only
+   * field. `WasmPlugin` data is automatically encrypted using the most recent `CryptoKeyVersion` of
+   * the `CryptoKey` provided in the `kms_key_name` field. See [Cloud KMS
    * resources](https://cloud.google.com/kms/docs/resource-hierarchy) for more information.
    * The value may be {@code null}.
    */
@@ -168,15 +170,16 @@ public final class WasmPlugin extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the customer managed Cloud KMS key to be used to encrypt the `WasmPlugin`
+   * Optional. The name of the customer-managed [CryptoKey](https://cloud.google.com/kms/docs/refere
+   * nce/rest/v1/projects.locations.keyRings.cryptoKeys) to be used to encrypt the `WasmPlugin`
    * image (provided by image_uri) and configuration (provided by plugin_config_data or
    * plugin_config_uri) that are stored by the `Service Extensions` product at rest. Format:
-   * "projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}" By default,
+   * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` By default,
    * Google Cloud automatically encrypts all data at rest using Google-owned and Google-managed
    * encryption keys. If you need ownership and control of the keys that protect your data at rest,
    * you can specify a customer-managed encryption key (CMEK) to encrypt your `WasmPlugin` data. For
    * more information, see [Using customer-managed encryption
-   * keys](https://cloud.google.com/kms/docs/cmek).
+   * keys](https://cloud.google.com/service-extensions/docs/cmek).
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -184,15 +187,16 @@ public final class WasmPlugin extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the customer managed Cloud KMS key to be used to encrypt the `WasmPlugin`
+   * Optional. The name of the customer-managed [CryptoKey](https://cloud.google.com/kms/docs/refere
+   * nce/rest/v1/projects.locations.keyRings.cryptoKeys) to be used to encrypt the `WasmPlugin`
    * image (provided by image_uri) and configuration (provided by plugin_config_data or
    * plugin_config_uri) that are stored by the `Service Extensions` product at rest. Format:
-   * "projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}" By default,
+   * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` By default,
    * Google Cloud automatically encrypts all data at rest using Google-owned and Google-managed
    * encryption keys. If you need ownership and control of the keys that protect your data at rest,
    * you can specify a customer-managed encryption key (CMEK) to encrypt your `WasmPlugin` data. For
    * more information, see [Using customer-managed encryption
-   * keys](https://cloud.google.com/kms/docs/cmek).
+   * keys](https://cloud.google.com/service-extensions/docs/cmek).
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public WasmPlugin setKmsKeyName(java.lang.String kmsKeyName) {
@@ -201,11 +205,12 @@ public final class WasmPlugin extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the specific CryptoKeyVersion used to encrypt the `WasmPlugin` data,
-   * if the kms_key_name field is set. Format: "projects/{project}/locations/{location}/keyRings/{ke
-   * yring}/cryptoKeys/{key}/cryptoKeyVersions/{version}" This is a read-only field. `WasmPlugin`
-   * data is automatically encrypted using the most recent `CryptoKeyVersion` of the `CryptoKey`
-   * provided in the `kms_key_name` field. See [Cloud KMS
+   * Output only. The name of the specific [CryptoKeyVersion](https://cloud.google.com/kms/docs/refe
+   * rence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) used to encrypt the
+   * `WasmPlugin` data, if the kms_key_name field is set. Format: `projects/{project}/locations/{loc
+   * ation}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}` This is a read-only
+   * field. `WasmPlugin` data is automatically encrypted using the most recent `CryptoKeyVersion` of
+   * the `CryptoKey` provided in the `kms_key_name` field. See [Cloud KMS
    * resources](https://cloud.google.com/kms/docs/resource-hierarchy) for more information.
    * @return value or {@code null} for none
    */
@@ -214,11 +219,12 @@ public final class WasmPlugin extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The name of the specific CryptoKeyVersion used to encrypt the `WasmPlugin` data,
-   * if the kms_key_name field is set. Format: "projects/{project}/locations/{location}/keyRings/{ke
-   * yring}/cryptoKeys/{key}/cryptoKeyVersions/{version}" This is a read-only field. `WasmPlugin`
-   * data is automatically encrypted using the most recent `CryptoKeyVersion` of the `CryptoKey`
-   * provided in the `kms_key_name` field. See [Cloud KMS
+   * Output only. The name of the specific [CryptoKeyVersion](https://cloud.google.com/kms/docs/refe
+   * rence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions) used to encrypt the
+   * `WasmPlugin` data, if the kms_key_name field is set. Format: `projects/{project}/locations/{loc
+   * ation}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}` This is a read-only
+   * field. `WasmPlugin` data is automatically encrypted using the most recent `CryptoKeyVersion` of
+   * the `CryptoKey` provided in the `kms_key_name` field. See [Cloud KMS
    * resources](https://cloud.google.com/kms/docs/resource-hierarchy) for more information.
    * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
    */

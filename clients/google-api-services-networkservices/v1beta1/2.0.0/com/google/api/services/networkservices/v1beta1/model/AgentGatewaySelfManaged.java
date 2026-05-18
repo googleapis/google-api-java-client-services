@@ -38,14 +38,6 @@ public final class AgentGatewaySelfManaged extends com.google.api.client.json.Ge
   private java.lang.String resourceUri;
 
   /**
-   * Optional. List of supported Google Cloud networking proxies in the Project and Location.
-   * resource_uris is mutually exclusive with resource_uri.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> resourceUris;
-
-  /**
    * Optional. A supported Google Cloud networking proxy in the Project and Location
    * @return value or {@code null} for none
    */
@@ -59,25 +51,6 @@ public final class AgentGatewaySelfManaged extends com.google.api.client.json.Ge
    */
   public AgentGatewaySelfManaged setResourceUri(java.lang.String resourceUri) {
     this.resourceUri = resourceUri;
-    return this;
-  }
-
-  /**
-   * Optional. List of supported Google Cloud networking proxies in the Project and Location.
-   * resource_uris is mutually exclusive with resource_uri.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getResourceUris() {
-    return resourceUris;
-  }
-
-  /**
-   * Optional. List of supported Google Cloud networking proxies in the Project and Location.
-   * resource_uris is mutually exclusive with resource_uri.
-   * @param resourceUris resourceUris or {@code null} for none
-   */
-  public AgentGatewaySelfManaged setResourceUris(java.util.List<java.lang.String> resourceUris) {
-    this.resourceUris = resourceUris;
     return this;
   }
 

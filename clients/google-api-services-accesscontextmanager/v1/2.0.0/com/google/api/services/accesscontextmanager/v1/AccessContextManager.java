@@ -1163,7 +1163,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
     /**
      * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
      * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
-     * support other resources.
+     * support other resources. **IAM Permissions**: No specific IAM permission is required to call this
+     * method. It returns the subset of the requested permissions that the caller possesses.
      *
      * Create a request for the method "accessPolicies.testIamPermissions".
      *
@@ -1193,7 +1194,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       /**
        * Returns the IAM permissions that the caller has on the specified Access Context Manager
        * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
-       * does not support other resources.
+       * does not support other resources. **IAM Permissions**: No specific IAM permission is required
+       * to call this method. It returns the subset of the requested permissions that the caller
+       * possesses.
        *
        * Create a request for the method "accessPolicies.testIamPermissions".
        *
@@ -2333,7 +2336,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       /**
        * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
        * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
-       * support other resources.
+       * support other resources. **IAM Permissions**: No specific IAM permission is required to call this
+       * method. It returns the subset of the requested permissions that the caller possesses.
        *
        * Create a request for the method "accessLevels.testIamPermissions".
        *
@@ -2363,7 +2367,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Returns the IAM permissions that the caller has on the specified Access Context Manager
          * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
-         * does not support other resources.
+         * does not support other resources. **IAM Permissions**: No specific IAM permission is required
+         * to call this method. It returns the subset of the requested permissions that the caller
+         * possesses.
          *
          * Create a request for the method "accessLevels.testIamPermissions".
          *
@@ -4271,7 +4277,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Replace all existing service perimeters in an access policy with the service perimeters provided.
        * This is done atomically. The long-running operation from this RPC has a successful status after
        * all replacements propagate to long-lasting storage. Replacements containing errors result in an
-       * error response for the first error encountered. Upon an error, replacement are cancelled and
+       * error response for the first error encountered. Upon an error, replacements are cancelled and
        * existing service perimeters are not affected. The Operation.response field contains
        * ReplaceServicePerimetersResponse.
        *
@@ -4302,7 +4308,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Replace all existing service perimeters in an access policy with the service perimeters
          * provided. This is done atomically. The long-running operation from this RPC has a successful
          * status after all replacements propagate to long-lasting storage. Replacements containing errors
-         * result in an error response for the first error encountered. Upon an error, replacement are
+         * result in an error response for the first error encountered. Upon an error, replacements are
          * cancelled and existing service perimeters are not affected. The Operation.response field
          * contains ReplaceServicePerimetersResponse.
          *
@@ -4420,7 +4426,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       /**
        * Returns the IAM permissions that the caller has on the specified Access Context Manager resource.
        * The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method does not
-       * support other resources.
+       * support other resources. **IAM Permissions**: No specific IAM permission is required to call this
+       * method. It returns the subset of the requested permissions that the caller possesses.
        *
        * Create a request for the method "servicePerimeters.testIamPermissions".
        *
@@ -4450,7 +4457,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Returns the IAM permissions that the caller has on the specified Access Context Manager
          * resource. The resource can be an AccessPolicy, AccessLevel, or ServicePerimeter. This method
-         * does not support other resources.
+         * does not support other resources. **IAM Permissions**: No specific IAM permission is required
+         * to call this method. It returns the subset of the requested permissions that the caller
+         * possesses.
          *
          * Create a request for the method "servicePerimeters.testIamPermissions".
          *
@@ -6114,7 +6123,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Permissions {
 
     /**
-     * Lists all supported permissions in VPCSC Granular Controls.
+     * Lists all supported permissions in VPC Service Controls ingress and egress rules for Granular
+     * Controls.
      *
      * Create a request for the method "permissions.list".
      *
@@ -6134,7 +6144,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/permissions";
 
       /**
-       * Lists all supported permissions in VPCSC Granular Controls.
+       * Lists all supported permissions in VPC Service Controls ingress and egress rules for Granular
+       * Controls.
        *
        * Create a request for the method "permissions.list".
        *
@@ -6216,38 +6227,43 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. This flag specifies the maximum number of services to return per page. Default is
-       * 100.
+       * Optional. This flag specifies the maximum number of services to return per page. Default
+       * value is 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. This flag specifies the maximum number of services to return per page. Default is 100.
+      /** Optional. This flag specifies the maximum number of services to return per page. Default value is
+     100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. This flag specifies the maximum number of services to return per page. Default is
-       * 100.
+       * Optional. This flag specifies the maximum number of services to return per page. Default
+       * value is 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** Optional. Token to start on a later page. Default is the first page. */
+      /**
+       * Optional. Use this token to retrieve a specific page of results. Default is the first page.
+       */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. Token to start on a later page. Default is the first page.
+      /** Optional. Use this token to retrieve a specific page of results. Default is the first page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Optional. Token to start on a later page. Default is the first page. */
+      /**
+       * Optional. Use this token to retrieve a specific page of results. Default is the first page.
+       */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -6282,7 +6298,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Services {
 
     /**
-     * Returns a VPC-SC supported service based on the service name.
+     * Returns a VPC-SC supported service based on the service name. **IAM Permissions**: Requires the
+     * following IAM permissions to use this method: - `serviceusage.services.use` on the project.
      *
      * Create a request for the method "services.get".
      *
@@ -6304,7 +6321,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/services/{name}";
 
       /**
-       * Returns a VPC-SC supported service based on the service name.
+       * Returns a VPC-SC supported service based on the service name. **IAM Permissions**: Requires the
+       * following IAM permissions to use this method: - `serviceusage.services.use` on the project.
        *
        * Create a request for the method "services.get".
        *
@@ -6417,7 +6435,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Lists all VPC-SC supported services.
+     * Lists all VPC-SC supported services. **IAM Permissions**: Requires the following IAM permissions
+     * to use this method: - `serviceusage.services.use` on the project.
      *
      * Create a request for the method "services.list".
      *
@@ -6437,7 +6456,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/services";
 
       /**
-       * Lists all VPC-SC supported services.
+       * Lists all VPC-SC supported services. **IAM Permissions**: Requires the following IAM
+       * permissions to use this method: - `serviceusage.services.use` on the project.
        *
        * Create a request for the method "services.list".
        *
@@ -6518,33 +6538,39 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** This flag specifies the maximum number of services to return per page. Default is 100. */
+      /**
+       * This flag specifies the maximum number of services to return per page. Default value is
+       * 100.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** This flag specifies the maximum number of services to return per page. Default is 100.
+      /** This flag specifies the maximum number of services to return per page. Default value is 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** This flag specifies the maximum number of services to return per page. Default is 100. */
+      /**
+       * This flag specifies the maximum number of services to return per page. Default value is
+       * 100.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** Token to start on a later page. Default is the first page. */
+      /** Use this token to retrieve a specific page of results. Default is the first page. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to start on a later page. Default is the first page.
+      /** Use this token to retrieve a specific page of results. Default is the first page.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to start on a later page. Default is the first page. */
+      /** Use this token to retrieve a specific page of results. Default is the first page. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;

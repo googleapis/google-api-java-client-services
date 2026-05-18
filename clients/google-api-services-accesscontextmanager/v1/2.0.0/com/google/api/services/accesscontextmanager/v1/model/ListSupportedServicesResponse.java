@@ -31,8 +31,8 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class ListSupportedServicesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class ListSupportedServicesResponse extends com.google.api.client.j
   private java.util.List<SupportedService> supportedServices;
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListSupportedServicesResponse extends com.google.api.client.j
   }
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSupportedServicesResponse setNextPageToken(java.lang.String nextPageToken) {

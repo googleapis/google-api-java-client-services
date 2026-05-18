@@ -31,23 +31,23 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class ListSupportedPermissionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of VPC-SC supported permissions.
+   * List of VPC Service Controls supported permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedPermissions;
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -55,8 +55,8 @@ public final class ListSupportedPermissionsResponse extends com.google.api.clien
   }
 
   /**
-   * The pagination token to retrieve the next page of results. If the value is empty, no further
-   * results remain.
+   * Use this pagination token to retrieve the next page of results. An empty value indicates that
+   * no further results are available.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSupportedPermissionsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -65,7 +65,7 @@ public final class ListSupportedPermissionsResponse extends com.google.api.clien
   }
 
   /**
-   * List of VPC-SC supported permissions.
+   * List of VPC Service Controls supported permissions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedPermissions() {
@@ -73,7 +73,7 @@ public final class ListSupportedPermissionsResponse extends com.google.api.clien
   }
 
   /**
-   * List of VPC-SC supported permissions.
+   * List of VPC Service Controls supported permissions.
    * @param supportedPermissions supportedPermissions or {@code null} for none
    */
   public ListSupportedPermissionsResponse setSupportedPermissions(java.util.List<java.lang.String> supportedPermissions) {

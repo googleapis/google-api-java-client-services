@@ -30,8 +30,8 @@ package com.google.api.services.directory.model;
 public final class UserLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Textual location. This is most useful for display purposes to concisely describe the location.
-   * For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
+   * Required. Textual location. This is most useful for display purposes to concisely describe the
+   * location. For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +84,8 @@ public final class UserLocation extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Textual location. This is most useful for display purposes to concisely describe the location.
-   * For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
+   * Required. Textual location. This is most useful for display purposes to concisely describe the
+   * location. For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
    * @return value or {@code null} for none
    */
   public java.lang.String getArea() {
@@ -93,8 +93,8 @@ public final class UserLocation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Textual location. This is most useful for display purposes to concisely describe the location.
-   * For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
+   * Required. Textual location. This is most useful for display purposes to concisely describe the
+   * location. For example 'Mountain View, CA', 'Near Seattle', 'US-NYC-9TH 9A209A.''
    * @param area area or {@code null} for none
    */
   public UserLocation setArea(java.lang.String area) {

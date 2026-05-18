@@ -21,7 +21,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * prompts, model responses, evaluation configuration and the resulting metrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,7 +66,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRun extends com.google.
   private GoogleRpcStatus error;
 
   /**
-   * Required. The configuration used for the evaluation.
+   * Optional. The configuration used for the evaluation. Optional when analysis_configs is
+   * provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +214,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRun extends com.google.
   }
 
   /**
-   * Required. The configuration used for the evaluation.
+   * Optional. The configuration used for the evaluation. Optional when analysis_configs is
+   * provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig getEvaluationConfig() {
@@ -221,7 +223,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRun extends com.google.
   }
 
   /**
-   * Required. The configuration used for the evaluation.
+   * Optional. The configuration used for the evaluation. Optional when analysis_configs is
+   * provided.
    * @param evaluationConfig evaluationConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationRun setEvaluationConfig(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig evaluationConfig) {

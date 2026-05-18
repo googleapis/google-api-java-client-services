@@ -70,6 +70,13 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Experiment configuration for the deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExperimentConfig experimentConfig;
+
+  /**
    * Identifier. The resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * The value may be {@code null}.
@@ -172,6 +179,23 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   public Deployment setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Experiment configuration for the deployment.
+   * @return value or {@code null} for none
+   */
+  public ExperimentConfig getExperimentConfig() {
+    return experimentConfig;
+  }
+
+  /**
+   * Optional. Experiment configuration for the deployment.
+   * @param experimentConfig experimentConfig or {@code null} for none
+   */
+  public Deployment setExperimentConfig(ExperimentConfig experimentConfig) {
+    this.experimentConfig = experimentConfig;
     return this;
   }
 

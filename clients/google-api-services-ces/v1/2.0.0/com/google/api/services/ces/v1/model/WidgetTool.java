@@ -62,6 +62,13 @@ public final class WidgetTool extends com.google.api.client.json.GenericJson {
   private Schema parameters;
 
   /**
+   * Optional. Configuration for always-included text responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WidgetToolTextResponseConfig textResponseConfig;
+
+  /**
    * Optional. Configuration for rendering the widget.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class WidgetTool extends com.google.api.client.json.GenericJson {
    */
   public WidgetTool setParameters(Schema parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for always-included text responses.
+   * @return value or {@code null} for none
+   */
+  public WidgetToolTextResponseConfig getTextResponseConfig() {
+    return textResponseConfig;
+  }
+
+  /**
+   * Optional. Configuration for always-included text responses.
+   * @param textResponseConfig textResponseConfig or {@code null} for none
+   */
+  public WidgetTool setTextResponseConfig(WidgetToolTextResponseConfig textResponseConfig) {
+    this.textResponseConfig = textResponseConfig;
     return this;
   }
 

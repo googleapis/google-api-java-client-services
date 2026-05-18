@@ -461,7 +461,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -492,7 +492,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -608,22 +608,22 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -7757,6 +7757,145 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
           /**
+           * Exports evaluations runs.
+           *
+           * Create a request for the method "evaluationRuns.export".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the app to export evaluation runs from. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.ExportEvaluationRunsRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String parent, com.google.api.services.ces.v1beta.model.ExportEvaluationRunsRequest content) throws java.io.IOException {
+            Export result = new Export(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/evaluationRuns:export";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+            /**
+             * Exports evaluations runs.
+             *
+             * Create a request for the method "evaluationRuns.export".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link Export#execute()} method to invoke the remote operation. <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the app to export evaluation runs from. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.ExportEvaluationRunsRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String parent, com.google.api.services.ces.v1beta.model.ExportEvaluationRunsRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the app to export evaluation runs from. Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the app to export evaluation runs from. Format:
+           `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the app to export evaluation runs from. Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public Export setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets details of the specified evaluation run.
            *
            * Create a request for the method "evaluationRuns.get".
@@ -9534,6 +9673,147 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               @Override
               public Delete set(String parameterName, Object value) {
                 return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Exports evaluations results.
+             *
+             * Create a request for the method "results.export".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the evaluation to export evaluation results from. Format:
+             *        `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.ExportEvaluationResultsRequest}
+             * @return the request
+             */
+            public Export export(java.lang.String parent, com.google.api.services.ces.v1beta.model.ExportEvaluationResultsRequest content) throws java.io.IOException {
+              Export result = new Export(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Export extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.Operation> {
+
+              private static final String REST_PATH = "v1beta/{+parent}/results:export";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+
+              /**
+               * Exports evaluations results.
+               *
+               * Create a request for the method "results.export".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link Export#execute()} method to invoke the remote operation. <p> {@link
+               * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the evaluation to export evaluation results from. Format:
+             *        `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+               * @param content the {@link com.google.api.services.ces.v1beta.model.ExportEvaluationResultsRequest}
+               * @since 1.13
+               */
+              protected Export(java.lang.String parent, com.google.api.services.ces.v1beta.model.ExportEvaluationResultsRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Export set$Xgafv(java.lang.String $Xgafv) {
+                return (Export) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Export setAccessToken(java.lang.String accessToken) {
+                return (Export) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Export setAlt(java.lang.String alt) {
+                return (Export) super.setAlt(alt);
+              }
+
+              @Override
+              public Export setCallback(java.lang.String callback) {
+                return (Export) super.setCallback(callback);
+              }
+
+              @Override
+              public Export setFields(java.lang.String fields) {
+                return (Export) super.setFields(fields);
+              }
+
+              @Override
+              public Export setKey(java.lang.String key) {
+                return (Export) super.setKey(key);
+              }
+
+              @Override
+              public Export setOauthToken(java.lang.String oauthToken) {
+                return (Export) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Export) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Export setQuotaUser(java.lang.String quotaUser) {
+                return (Export) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Export setUploadType(java.lang.String uploadType) {
+                return (Export) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Export setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Export) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the evaluation to export evaluation results from.
+               * Format:
+               * `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the evaluation to export evaluation results from. Format:
+             `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the evaluation to export evaluation results from.
+               * Format:
+               * `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+               */
+              public Export setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Export set(String parameterName, Object value) {
+                return (Export) super.set(parameterName, value);
               }
             }
             /**

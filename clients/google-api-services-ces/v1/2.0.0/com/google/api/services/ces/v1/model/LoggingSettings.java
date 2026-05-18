@@ -83,6 +83,15 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   private RedactionConfig redactionConfig;
 
   /**
+   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
+   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * purposes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AudioRecordingConfig unredactedAudioRecordingConfig;
+
+  /**
    * Optional. Configuration for how audio interactions should be recorded.
    * @return value or {@code null} for none
    */
@@ -204,6 +213,27 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
    */
   public LoggingSettings setRedactionConfig(RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
+   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * purposes.
+   * @return value or {@code null} for none
+   */
+  public AudioRecordingConfig getUnredactedAudioRecordingConfig() {
+    return unredactedAudioRecordingConfig;
+  }
+
+  /**
+   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
+   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * purposes.
+   * @param unredactedAudioRecordingConfig unredactedAudioRecordingConfig or {@code null} for none
+   */
+  public LoggingSettings setUnredactedAudioRecordingConfig(AudioRecordingConfig unredactedAudioRecordingConfig) {
+    this.unredactedAudioRecordingConfig = unredactedAudioRecordingConfig;
     return this;
   }
 

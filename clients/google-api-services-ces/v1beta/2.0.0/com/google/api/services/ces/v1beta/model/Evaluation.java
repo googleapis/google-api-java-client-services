@@ -82,6 +82,20 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> evaluationDatasets;
 
   /**
+   * Optional. Overrides metrics config for this specific evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsConfig evaluationMetricsConfigOverride;
+
+  /**
+   * Optional. Overrides metrics thresholds for this specific evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationMetricsThresholds evaluationMetricsThresholdOverride;
+
+  /**
    * Output only. The EvaluationRuns that this Evaluation is associated with.
    * The value may be {@code null}.
    */
@@ -274,6 +288,40 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
    */
   public Evaluation setEvaluationDatasets(java.util.List<java.lang.String> evaluationDatasets) {
     this.evaluationDatasets = evaluationDatasets;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides metrics config for this specific evaluation.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsConfig getEvaluationMetricsConfigOverride() {
+    return evaluationMetricsConfigOverride;
+  }
+
+  /**
+   * Optional. Overrides metrics config for this specific evaluation.
+   * @param evaluationMetricsConfigOverride evaluationMetricsConfigOverride or {@code null} for none
+   */
+  public Evaluation setEvaluationMetricsConfigOverride(EvaluationMetricsConfig evaluationMetricsConfigOverride) {
+    this.evaluationMetricsConfigOverride = evaluationMetricsConfigOverride;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides metrics thresholds for this specific evaluation.
+   * @return value or {@code null} for none
+   */
+  public EvaluationMetricsThresholds getEvaluationMetricsThresholdOverride() {
+    return evaluationMetricsThresholdOverride;
+  }
+
+  /**
+   * Optional. Overrides metrics thresholds for this specific evaluation.
+   * @param evaluationMetricsThresholdOverride evaluationMetricsThresholdOverride or {@code null} for none
+   */
+  public Evaluation setEvaluationMetricsThresholdOverride(EvaluationMetricsThresholds evaluationMetricsThresholdOverride) {
+    this.evaluationMetricsThresholdOverride = evaluationMetricsThresholdOverride;
     return this;
   }
 

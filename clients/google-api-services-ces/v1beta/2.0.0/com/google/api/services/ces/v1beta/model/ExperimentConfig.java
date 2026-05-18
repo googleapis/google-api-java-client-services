@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.ces.v1.model;
+package com.google.api.services.ces.v1beta.model;
 
 /**
- * Routing config specify how/who to route app events to a subscriber.
+ * Experiment for the deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a
@@ -28,40 +28,40 @@ package com.google.api.services.ces.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OmnichannelIntegrationConfigRoutingConfig extends com.google.api.client.json.GenericJson {
+public final class ExperimentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The key of the subscriber.
+   * Optional. Version release for the experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String subscriberKey;
+  private ExperimentConfigVersionRelease versionRelease;
 
   /**
-   * The key of the subscriber.
+   * Optional. Version release for the experiment.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSubscriberKey() {
-    return subscriberKey;
+  public ExperimentConfigVersionRelease getVersionRelease() {
+    return versionRelease;
   }
 
   /**
-   * The key of the subscriber.
-   * @param subscriberKey subscriberKey or {@code null} for none
+   * Optional. Version release for the experiment.
+   * @param versionRelease versionRelease or {@code null} for none
    */
-  public OmnichannelIntegrationConfigRoutingConfig setSubscriberKey(java.lang.String subscriberKey) {
-    this.subscriberKey = subscriberKey;
+  public ExperimentConfig setVersionRelease(ExperimentConfigVersionRelease versionRelease) {
+    this.versionRelease = versionRelease;
     return this;
   }
 
   @Override
-  public OmnichannelIntegrationConfigRoutingConfig set(String fieldName, Object value) {
-    return (OmnichannelIntegrationConfigRoutingConfig) super.set(fieldName, value);
+  public ExperimentConfig set(String fieldName, Object value) {
+    return (ExperimentConfig) super.set(fieldName, value);
   }
 
   @Override
-  public OmnichannelIntegrationConfigRoutingConfig clone() {
-    return (OmnichannelIntegrationConfigRoutingConfig) super.clone();
+  public ExperimentConfig clone() {
+    return (ExperimentConfig) super.clone();
   }
 
 }

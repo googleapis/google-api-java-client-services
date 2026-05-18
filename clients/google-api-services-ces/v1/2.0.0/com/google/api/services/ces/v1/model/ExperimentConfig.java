@@ -17,7 +17,7 @@
 package com.google.api.services.ces.v1.model;
 
 /**
- * Configs of subscribers.
+ * Experiment for the deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a
@@ -28,40 +28,40 @@ package com.google.api.services.ces.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OmnichannelIntegrationConfigSubscriberConfig extends com.google.api.client.json.GenericJson {
+public final class ExperimentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ces app config.
+   * Optional. Version release for the experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private OmnichannelIntegrationConfigCesAppConfig cesAppConfig;
+  private ExperimentConfigVersionRelease versionRelease;
 
   /**
-   * Ces app config.
+   * Optional. Version release for the experiment.
    * @return value or {@code null} for none
    */
-  public OmnichannelIntegrationConfigCesAppConfig getCesAppConfig() {
-    return cesAppConfig;
+  public ExperimentConfigVersionRelease getVersionRelease() {
+    return versionRelease;
   }
 
   /**
-   * Ces app config.
-   * @param cesAppConfig cesAppConfig or {@code null} for none
+   * Optional. Version release for the experiment.
+   * @param versionRelease versionRelease or {@code null} for none
    */
-  public OmnichannelIntegrationConfigSubscriberConfig setCesAppConfig(OmnichannelIntegrationConfigCesAppConfig cesAppConfig) {
-    this.cesAppConfig = cesAppConfig;
+  public ExperimentConfig setVersionRelease(ExperimentConfigVersionRelease versionRelease) {
+    this.versionRelease = versionRelease;
     return this;
   }
 
   @Override
-  public OmnichannelIntegrationConfigSubscriberConfig set(String fieldName, Object value) {
-    return (OmnichannelIntegrationConfigSubscriberConfig) super.set(fieldName, value);
+  public ExperimentConfig set(String fieldName, Object value) {
+    return (ExperimentConfig) super.set(fieldName, value);
   }
 
   @Override
-  public OmnichannelIntegrationConfigSubscriberConfig clone() {
-    return (OmnichannelIntegrationConfigSubscriberConfig) super.clone();
+  public ExperimentConfig clone() {
+    return (ExperimentConfig) super.clone();
   }
 
 }

@@ -20,7 +20,7 @@ package com.google.api.services.aiplatform.v1.model;
  * The metric source used for evaluation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1MetricSource extends com.google.api.cl
   private GoogleCloudAiplatformV1Metric metric;
 
   /**
-   * Resource name for registered metric.
+   * Optional. Resource name for registered metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1MetricSource extends com.google.api.cl
   }
 
   /**
-   * Resource name for registered metric.
+   * Optional. Resource name for registered metric.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricResourceName() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1MetricSource extends com.google.api.cl
   }
 
   /**
-   * Resource name for registered metric.
+   * Optional. Resource name for registered metric.
    * @param metricResourceName metricResourceName or {@code null} for none
    */
   public GoogleCloudAiplatformV1MetricSource setMetricResourceName(java.lang.String metricResourceName) {

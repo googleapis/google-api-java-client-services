@@ -24,7 +24,7 @@ package com.google.api.services.aiplatform.v1.model;
  * client.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,6 +32,15 @@ package com.google.api.services.aiplatform.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String behavior;
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
@@ -89,6 +98,27 @@ public final class GoogleCloudAiplatformV1FunctionDeclaration extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Object responseJsonSchema;
+
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBehavior() {
+    return behavior;
+  }
+
+  /**
+   * Optional. Specifies the function Behavior. If not specified, the system keeps the current
+   * function call behavior. This field is currently only supported by the BidiGenerateContent
+   * method.
+   * @param behavior behavior or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FunctionDeclaration setBehavior(java.lang.String behavior) {
+    this.behavior = behavior;
+    return this;
+  }
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to

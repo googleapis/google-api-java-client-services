@@ -41,6 +41,19 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private AndroidAttributes androidSpecificAttributes;
 
   /**
+   * Output only. Anti-virus information for the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AntivirusInfo> antivirusInfo;
+
+  static {
+    // hack to force ProGuard to consider AntivirusInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AntivirusInfo.class);
+  }
+
+  /**
    * Asset tag of the device.
    * The value may be {@code null}.
    */
@@ -226,6 +239,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String networkOperator;
 
   /**
+   * Output only. OS firewall status of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String osFirewallStatus;
+
+  /**
    * Output only. OS version of the device. Example: Android 8.1.0.
    * The value may be {@code null}.
    */
@@ -285,6 +305,13 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> wifiMacAddresses;
 
   /**
+   * Output only. Attributes specific to Windows devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WindowsSpecificDeviceAttributes windowsSpecificDeviceAttributes;
+
+  /**
    * Output only. Attributes specific to Android devices.
    * @return value or {@code null} for none
    */
@@ -298,6 +325,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setAndroidSpecificAttributes(AndroidAttributes androidSpecificAttributes) {
     this.androidSpecificAttributes = androidSpecificAttributes;
+    return this;
+  }
+
+  /**
+   * Output only. Anti-virus information for the device.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AntivirusInfo> getAntivirusInfo() {
+    return antivirusInfo;
+  }
+
+  /**
+   * Output only. Anti-virus information for the device.
+   * @param antivirusInfo antivirusInfo or {@code null} for none
+   */
+  public Device setAntivirusInfo(java.util.List<AntivirusInfo> antivirusInfo) {
+    this.antivirusInfo = antivirusInfo;
     return this;
   }
 
@@ -735,6 +779,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. OS firewall status of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOsFirewallStatus() {
+    return osFirewallStatus;
+  }
+
+  /**
+   * Output only. OS firewall status of the device.
+   * @param osFirewallStatus osFirewallStatus or {@code null} for none
+   */
+  public Device setOsFirewallStatus(java.lang.String osFirewallStatus) {
+    this.osFirewallStatus = osFirewallStatus;
+    return this;
+  }
+
+  /**
    * Output only. OS version of the device. Example: Android 8.1.0.
    * @return value or {@code null} for none
    */
@@ -873,6 +934,23 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setWifiMacAddresses(java.util.List<java.lang.String> wifiMacAddresses) {
     this.wifiMacAddresses = wifiMacAddresses;
+    return this;
+  }
+
+  /**
+   * Output only. Attributes specific to Windows devices.
+   * @return value or {@code null} for none
+   */
+  public WindowsSpecificDeviceAttributes getWindowsSpecificDeviceAttributes() {
+    return windowsSpecificDeviceAttributes;
+  }
+
+  /**
+   * Output only. Attributes specific to Windows devices.
+   * @param windowsSpecificDeviceAttributes windowsSpecificDeviceAttributes or {@code null} for none
+   */
+  public Device setWindowsSpecificDeviceAttributes(WindowsSpecificDeviceAttributes windowsSpecificDeviceAttributes) {
+    this.windowsSpecificDeviceAttributes = windowsSpecificDeviceAttributes;
     return this;
   }
 

@@ -51,6 +51,13 @@ public final class ListToolsPostRequest extends com.google.api.client.json.Gener
   private java.lang.String pageToken;
 
   /**
+   * List of tool names to for selective tool fetching.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> toolNames;
+
+  /**
    * List of tool specifications.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class ListToolsPostRequest extends com.google.api.client.json.Gener
    */
   public ListToolsPostRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * List of tool names to for selective tool fetching.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getToolNames() {
+    return toolNames;
+  }
+
+  /**
+   * List of tool names to for selective tool fetching.
+   * @param toolNames toolNames or {@code null} for none
+   */
+  public ListToolsPostRequest setToolNames(java.util.List<java.lang.String> toolNames) {
+    this.toolNames = toolNames;
     return this;
   }
 

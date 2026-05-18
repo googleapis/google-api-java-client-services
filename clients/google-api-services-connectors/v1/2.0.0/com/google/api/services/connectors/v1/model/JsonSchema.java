@@ -30,12 +30,103 @@ package com.google.api.services.connectors.v1.model;
 public final class JsonSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * A comment on the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String $comment;
+
+  /**
+   * Definitions for the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, JsonSchema> $defs;
+
+  /**
+   * The URI defining the core schema meta-schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String $id;
+
+  /**
+   * A reference to another schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String $ref;
+
+  /**
+   * The URI defining the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String $schema;
+
+  /**
    * Additional details apart from standard json schema fields, this gives flexibility to store
    * metadata about the schema
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalDetails;
+
+  /**
+   * Schema for additional items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema additionalItems;
+
+  /**
+   * Schema for additional properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema additionalProperties;
+
+  /**
+   * Schema that must be valid against all of the sub-schemas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<JsonSchema> allOf;
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<JsonSchema> anyOf;
+
+  /**
+   * Const value that the data must match.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("const")
+  private java.lang.Object const__;
+
+  /**
+   * Schema that applies to at least one item in an array.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema contains;
+
+  /**
+   * Encoding of the content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentEncoding;
+
+  /**
+   * Media type of the content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentMediaType;
 
   /**
    * The default value of the field or object described by this schema.
@@ -45,11 +136,32 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.Object default__;
 
   /**
+   * Definitions for the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, JsonSchema> definitions;
+
+  /**
+   * Dependencies for the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> dependencies;
+
+  /**
    * A description of this schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Schema that must be valid if the "if" schema is invalid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("else")
+  private JsonSchema else__;
 
   /**
    * Possible values for an enumeration. This works in conjunction with `type` to represent types
@@ -60,18 +172,25 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Object> enum__;
 
   /**
+   * Examples of the value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Object> examples;
+
+  /**
    * Whether the maximum number value is exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean exclusiveMaximum;
+  private java.lang.Object exclusiveMaximum;
 
   /**
    * Whether the minimum number value is exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean exclusiveMinimum;
+  private java.lang.Object exclusiveMinimum;
 
   /**
    * Format of the value as per https://json-schema.org/understanding-json-
@@ -80,6 +199,13 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String format;
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("if")
+  private JsonSchema if__;
 
   /**
    * Schema that applies to array values, applicable only if this is of type `array`.
@@ -110,6 +236,13 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxLength;
 
   /**
+   * Maximum number of properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxProperties;
+
+  /**
    * Maximum value of the number field.
    * The value may be {@code null}.
    */
@@ -131,11 +264,39 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.Integer minLength;
 
   /**
+   * Minimum number of properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minProperties;
+
+  /**
    * Minimum value of the number field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object minimum;
+
+  /**
+   * Number must be a multiple of this value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double multipleOf;
+
+  /**
+   * Schema that must not be valid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema not;
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<JsonSchema> oneOf;
 
   /**
    * Regex pattern of the string field. This is a string value that describes the regular expression
@@ -146,6 +307,13 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.String pattern;
 
   /**
+   * Pattern properties for the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, JsonSchema> patternProperties;
+
+  /**
    * The child schemas, applicable only if this is of type `object`. The key is the name of the
    * property and the value is the json schema that describes that property
    * The value may be {@code null}.
@@ -154,11 +322,39 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, JsonSchema> properties;
 
   /**
+   * Schema for property names.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema propertyNames;
+
+  /**
+   * Whether the value is read-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readOnly;
+
+  /**
    * Whether this property is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> required;
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonSchema then;
+
+  /**
+   * A title of the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
 
   /**
    * JSON Schema Validation: A Vocabulary for Structural Validation of JSON
@@ -173,6 +369,98 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean uniqueItems;
+
+  /**
+   * Whether the value is write-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean writeOnly;
+
+  /**
+   * A comment on the schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String get$comment() {
+    return $comment;
+  }
+
+  /**
+   * A comment on the schema.
+   * @param $comment $comment or {@code null} for none
+   */
+  public JsonSchema set$comment(java.lang.String $comment) {
+    this.$comment = $comment;
+    return this;
+  }
+
+  /**
+   * Definitions for the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, JsonSchema> get$defs() {
+    return $defs;
+  }
+
+  /**
+   * Definitions for the schema.
+   * @param $defs $defs or {@code null} for none
+   */
+  public JsonSchema set$defs(java.util.Map<String, JsonSchema> $defs) {
+    this.$defs = $defs;
+    return this;
+  }
+
+  /**
+   * The URI defining the core schema meta-schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String get$id() {
+    return $id;
+  }
+
+  /**
+   * The URI defining the core schema meta-schema.
+   * @param $id $id or {@code null} for none
+   */
+  public JsonSchema set$id(java.lang.String $id) {
+    this.$id = $id;
+    return this;
+  }
+
+  /**
+   * A reference to another schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String get$ref() {
+    return $ref;
+  }
+
+  /**
+   * A reference to another schema.
+   * @param $ref $ref or {@code null} for none
+   */
+  public JsonSchema set$ref(java.lang.String $ref) {
+    this.$ref = $ref;
+    return this;
+  }
+
+  /**
+   * The URI defining the schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String get$schema() {
+    return $schema;
+  }
+
+  /**
+   * The URI defining the schema.
+   * @param $schema $schema or {@code null} for none
+   */
+  public JsonSchema set$schema(java.lang.String $schema) {
+    this.$schema = $schema;
+    return this;
+  }
 
   /**
    * Additional details apart from standard json schema fields, this gives flexibility to store
@@ -194,6 +482,142 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Schema for additional items.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getAdditionalItems() {
+    return additionalItems;
+  }
+
+  /**
+   * Schema for additional items.
+   * @param additionalItems additionalItems or {@code null} for none
+   */
+  public JsonSchema setAdditionalItems(JsonSchema additionalItems) {
+    this.additionalItems = additionalItems;
+    return this;
+  }
+
+  /**
+   * Schema for additional properties.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Schema for additional properties.
+   * @param additionalProperties additionalProperties or {@code null} for none
+   */
+  public JsonSchema setAdditionalProperties(JsonSchema additionalProperties) {
+    this.additionalProperties = additionalProperties;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid against all of the sub-schemas.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<JsonSchema> getAllOf() {
+    return allOf;
+  }
+
+  /**
+   * Schema that must be valid against all of the sub-schemas.
+   * @param allOf allOf or {@code null} for none
+   */
+  public JsonSchema setAllOf(java.util.List<JsonSchema> allOf) {
+    this.allOf = allOf;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<JsonSchema> getAnyOf() {
+    return anyOf;
+  }
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * @param anyOf anyOf or {@code null} for none
+   */
+  public JsonSchema setAnyOf(java.util.List<JsonSchema> anyOf) {
+    this.anyOf = anyOf;
+    return this;
+  }
+
+  /**
+   * Const value that the data must match.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getConst() {
+    return const__;
+  }
+
+  /**
+   * Const value that the data must match.
+   * @param const__ const__ or {@code null} for none
+   */
+  public JsonSchema setConst(java.lang.Object const__) {
+    this.const__ = const__;
+    return this;
+  }
+
+  /**
+   * Schema that applies to at least one item in an array.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getContains() {
+    return contains;
+  }
+
+  /**
+   * Schema that applies to at least one item in an array.
+   * @param contains contains or {@code null} for none
+   */
+  public JsonSchema setContains(JsonSchema contains) {
+    this.contains = contains;
+    return this;
+  }
+
+  /**
+   * Encoding of the content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentEncoding() {
+    return contentEncoding;
+  }
+
+  /**
+   * Encoding of the content.
+   * @param contentEncoding contentEncoding or {@code null} for none
+   */
+  public JsonSchema setContentEncoding(java.lang.String contentEncoding) {
+    this.contentEncoding = contentEncoding;
+    return this;
+  }
+
+  /**
+   * Media type of the content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentMediaType() {
+    return contentMediaType;
+  }
+
+  /**
+   * Media type of the content.
+   * @param contentMediaType contentMediaType or {@code null} for none
+   */
+  public JsonSchema setContentMediaType(java.lang.String contentMediaType) {
+    this.contentMediaType = contentMediaType;
+    return this;
+  }
+
+  /**
    * The default value of the field or object described by this schema.
    * @return value or {@code null} for none
    */
@@ -211,6 +635,40 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Definitions for the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, JsonSchema> getDefinitions() {
+    return definitions;
+  }
+
+  /**
+   * Definitions for the schema.
+   * @param definitions definitions or {@code null} for none
+   */
+  public JsonSchema setDefinitions(java.util.Map<String, JsonSchema> definitions) {
+    this.definitions = definitions;
+    return this;
+  }
+
+  /**
+   * Dependencies for the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getDependencies() {
+    return dependencies;
+  }
+
+  /**
+   * Dependencies for the schema.
+   * @param dependencies dependencies or {@code null} for none
+   */
+  public JsonSchema setDependencies(java.util.Map<String, java.lang.Object> dependencies) {
+    this.dependencies = dependencies;
+    return this;
+  }
+
+  /**
    * A description of this schema.
    * @return value or {@code null} for none
    */
@@ -224,6 +682,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is invalid.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getElse() {
+    return else__;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is invalid.
+   * @param else__ else__ or {@code null} for none
+   */
+  public JsonSchema setElse(JsonSchema else__) {
+    this.else__ = else__;
     return this;
   }
 
@@ -247,10 +722,27 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Examples of the value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Object> getExamples() {
+    return examples;
+  }
+
+  /**
+   * Examples of the value.
+   * @param examples examples or {@code null} for none
+   */
+  public JsonSchema setExamples(java.util.List<java.lang.Object> examples) {
+    this.examples = examples;
+    return this;
+  }
+
+  /**
    * Whether the maximum number value is exclusive.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getExclusiveMaximum() {
+  public java.lang.Object getExclusiveMaximum() {
     return exclusiveMaximum;
   }
 
@@ -258,7 +750,7 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    * Whether the maximum number value is exclusive.
    * @param exclusiveMaximum exclusiveMaximum or {@code null} for none
    */
-  public JsonSchema setExclusiveMaximum(java.lang.Boolean exclusiveMaximum) {
+  public JsonSchema setExclusiveMaximum(java.lang.Object exclusiveMaximum) {
     this.exclusiveMaximum = exclusiveMaximum;
     return this;
   }
@@ -267,7 +759,7 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    * Whether the minimum number value is exclusive.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getExclusiveMinimum() {
+  public java.lang.Object getExclusiveMinimum() {
     return exclusiveMinimum;
   }
 
@@ -275,7 +767,7 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    * Whether the minimum number value is exclusive.
    * @param exclusiveMinimum exclusiveMinimum or {@code null} for none
    */
-  public JsonSchema setExclusiveMinimum(java.lang.Boolean exclusiveMinimum) {
+  public JsonSchema setExclusiveMinimum(java.lang.Object exclusiveMinimum) {
     this.exclusiveMinimum = exclusiveMinimum;
     return this;
   }
@@ -296,6 +788,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setFormat(java.lang.String format) {
     this.format = format;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getIf() {
+    return if__;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * @param if__ if__ or {@code null} for none
+   */
+  public JsonSchema setIf(JsonSchema if__) {
+    this.if__ = if__;
     return this;
   }
 
@@ -368,6 +877,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum number of properties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxProperties() {
+    return maxProperties;
+  }
+
+  /**
+   * Maximum number of properties.
+   * @param maxProperties maxProperties or {@code null} for none
+   */
+  public JsonSchema setMaxProperties(java.lang.Integer maxProperties) {
+    this.maxProperties = maxProperties;
+    return this;
+  }
+
+  /**
    * Maximum value of the number field.
    * @return value or {@code null} for none
    */
@@ -419,6 +945,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Minimum number of properties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinProperties() {
+    return minProperties;
+  }
+
+  /**
+   * Minimum number of properties.
+   * @param minProperties minProperties or {@code null} for none
+   */
+  public JsonSchema setMinProperties(java.lang.Integer minProperties) {
+    this.minProperties = minProperties;
+    return this;
+  }
+
+  /**
    * Minimum value of the number field.
    * @return value or {@code null} for none
    */
@@ -432,6 +975,57 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setMinimum(java.lang.Object minimum) {
     this.minimum = minimum;
+    return this;
+  }
+
+  /**
+   * Number must be a multiple of this value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getMultipleOf() {
+    return multipleOf;
+  }
+
+  /**
+   * Number must be a multiple of this value.
+   * @param multipleOf multipleOf or {@code null} for none
+   */
+  public JsonSchema setMultipleOf(java.lang.Double multipleOf) {
+    this.multipleOf = multipleOf;
+    return this;
+  }
+
+  /**
+   * Schema that must not be valid.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getNot() {
+    return not;
+  }
+
+  /**
+   * Schema that must not be valid.
+   * @param not not or {@code null} for none
+   */
+  public JsonSchema setNot(JsonSchema not) {
+    this.not = not;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<JsonSchema> getOneOf() {
+    return oneOf;
+  }
+
+  /**
+   * Schema that must be valid against at least one of the sub-schemas.
+   * @param oneOf oneOf or {@code null} for none
+   */
+  public JsonSchema setOneOf(java.util.List<JsonSchema> oneOf) {
+    this.oneOf = oneOf;
     return this;
   }
 
@@ -455,6 +1049,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Pattern properties for the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, JsonSchema> getPatternProperties() {
+    return patternProperties;
+  }
+
+  /**
+   * Pattern properties for the schema.
+   * @param patternProperties patternProperties or {@code null} for none
+   */
+  public JsonSchema setPatternProperties(java.util.Map<String, JsonSchema> patternProperties) {
+    this.patternProperties = patternProperties;
+    return this;
+  }
+
+  /**
    * The child schemas, applicable only if this is of type `object`. The key is the name of the
    * property and the value is the json schema that describes that property
    * @return value or {@code null} for none
@@ -474,6 +1085,40 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Schema for property names.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getPropertyNames() {
+    return propertyNames;
+  }
+
+  /**
+   * Schema for property names.
+   * @param propertyNames propertyNames or {@code null} for none
+   */
+  public JsonSchema setPropertyNames(JsonSchema propertyNames) {
+    this.propertyNames = propertyNames;
+    return this;
+  }
+
+  /**
+   * Whether the value is read-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadOnly() {
+    return readOnly;
+  }
+
+  /**
+   * Whether the value is read-only.
+   * @param readOnly readOnly or {@code null} for none
+   */
+  public JsonSchema setReadOnly(java.lang.Boolean readOnly) {
+    this.readOnly = readOnly;
+    return this;
+  }
+
+  /**
    * Whether this property is required.
    * @return value or {@code null} for none
    */
@@ -487,6 +1132,40 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setRequired(java.util.List<java.lang.String> required) {
     this.required = required;
+    return this;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * @return value or {@code null} for none
+   */
+  public JsonSchema getThen() {
+    return then;
+  }
+
+  /**
+   * Schema that must be valid if the "if" schema is valid.
+   * @param then then or {@code null} for none
+   */
+  public JsonSchema setThen(JsonSchema then) {
+    this.then = then;
+    return this;
+  }
+
+  /**
+   * A title of the schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * A title of the schema.
+   * @param title title or {@code null} for none
+   */
+  public JsonSchema setTitle(java.lang.String title) {
+    this.title = title;
     return this;
   }
 
@@ -521,6 +1200,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setUniqueItems(java.lang.Boolean uniqueItems) {
     this.uniqueItems = uniqueItems;
+    return this;
+  }
+
+  /**
+   * Whether the value is write-only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWriteOnly() {
+    return writeOnly;
+  }
+
+  /**
+   * Whether the value is write-only.
+   * @param writeOnly writeOnly or {@code null} for none
+   */
+  public JsonSchema setWriteOnly(java.lang.Boolean writeOnly) {
+    this.writeOnly = writeOnly;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.connectors.v1.model;
 public final class ToolspecOverride extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. Represents the base version of the toolspec for which admin has added overrides.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baseVersion;
+
+  /**
    * Output only. Created time.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class ToolspecOverride extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Required. Represents the base version of the toolspec for which admin has added overrides.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaseVersion() {
+    return baseVersion;
+  }
+
+  /**
+   * Required. Represents the base version of the toolspec for which admin has added overrides.
+   * @param baseVersion baseVersion or {@code null} for none
+   */
+  public ToolspecOverride setBaseVersion(java.lang.String baseVersion) {
+    this.baseVersion = baseVersion;
+    return this;
+  }
 
   /**
    * Output only. Created time.

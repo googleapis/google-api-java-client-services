@@ -30,6 +30,19 @@ package com.google.api.services.connectors.v1.model;
 public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Admin filters for the connection. These are used by Gemini Enterprise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdminFilters> adminFilters;
+
+  static {
+    // hack to force ProGuard to consider AdminFilters used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdminFilters.class);
+  }
+
+  /**
    * Optional. Async operations enabled for the connection. If Async Operations is enabled,
    * Connection allows the customers to initiate async long running operations using the actions
    * API.
@@ -297,6 +310,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Admin filters for the connection. These are used by Gemini Enterprise.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdminFilters> getAdminFilters() {
+    return adminFilters;
+  }
+
+  /**
+   * Optional. Admin filters for the connection. These are used by Gemini Enterprise.
+   * @param adminFilters adminFilters or {@code null} for none
+   */
+  public Connection setAdminFilters(java.util.List<AdminFilters> adminFilters) {
+    this.adminFilters = adminFilters;
+    return this;
+  }
 
   /**
    * Optional. Async operations enabled for the connection. If Async Operations is enabled,

@@ -74,7 +74,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
-   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
+   * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
+   * service, for example deleted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +189,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
-   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
+   * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
+   * service, for example deleted users.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -202,7 +206,9 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
-   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
+   * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
+   * service, for example deleted users.
    * @param principal principal or {@code null} for none
    */
   public Assignment setPrincipal(java.lang.String principal) {

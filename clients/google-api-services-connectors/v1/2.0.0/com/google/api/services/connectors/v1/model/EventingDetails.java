@@ -79,6 +79,13 @@ public final class EventingDetails extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> searchTags;
 
   /**
+   * The webhook model supported by this connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subscriptionType;
+
+  /**
    * Output only. The type of the event listener for a specific connector.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class EventingDetails extends com.google.api.client.json.GenericJso
    */
   public EventingDetails setSearchTags(java.util.List<java.lang.String> searchTags) {
     this.searchTags = searchTags;
+    return this;
+  }
+
+  /**
+   * The webhook model supported by this connector.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubscriptionType() {
+    return subscriptionType;
+  }
+
+  /**
+   * The webhook model supported by this connector.
+   * @param subscriptionType subscriptionType or {@code null} for none
+   */
+  public EventingDetails setSubscriptionType(java.lang.String subscriptionType) {
+    this.subscriptionType = subscriptionType;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v1.model;
 public final class RegionalSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Client type for the regional settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String client;
+
+  /**
    * Optional. Regional encryption config to hold CMEK details.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class RegionalSettings extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean provisioned;
+
+  /**
+   * Optional. Client type for the regional settings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClient() {
+    return client;
+  }
+
+  /**
+   * Optional. Client type for the regional settings.
+   * @param client client or {@code null} for none
+   */
+  public RegionalSettings setClient(java.lang.String client) {
+    this.client = client;
+    return this;
+  }
 
   /**
    * Optional. Regional encryption config to hold CMEK details.

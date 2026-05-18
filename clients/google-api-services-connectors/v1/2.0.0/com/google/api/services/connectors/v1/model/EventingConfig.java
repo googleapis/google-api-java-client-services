@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Eventing Configuration of a connection next: 20
+ * Eventing Configuration of a connection next: 21
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -84,6 +84,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String eventsListenerIngressEndpoint;
+
+  /**
+   * Optional. Filter to be applied on the events to be received by the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String globalEventFilter;
 
   /**
    * Optional. Auth details for the event listener.
@@ -246,6 +253,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setEventsListenerIngressEndpoint(java.lang.String eventsListenerIngressEndpoint) {
     this.eventsListenerIngressEndpoint = eventsListenerIngressEndpoint;
+    return this;
+  }
+
+  /**
+   * Optional. Filter to be applied on the events to be received by the connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGlobalEventFilter() {
+    return globalEventFilter;
+  }
+
+  /**
+   * Optional. Filter to be applied on the events to be received by the connection.
+   * @param globalEventFilter globalEventFilter or {@code null} for none
+   */
+  public EventingConfig setGlobalEventFilter(java.lang.String globalEventFilter) {
+    this.globalEventFilter = globalEventFilter;
     return this;
   }
 

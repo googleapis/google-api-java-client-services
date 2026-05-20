@@ -293,6 +293,16 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Double displayAdsValue;
 
   /**
+   * Optional. Contains a list of PDF [document
+   * URLs](https://support.google.com/merchants/answer/17084656) for the product. Examples are
+   * training manuals, user guides, assembly instructions, package inserts, etc. Must start with
+   * "http://" or "https://"), ASCII characters only, and RFC 3986 compliant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> documentLinks;
+
+  /**
    * The [electric range](https://support.google.com/google-ads/answer/15162232) of the vehicle in
    * miles/kms.
    * The value may be {@code null}.
@@ -474,6 +484,18 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String itemGroupId;
+
+  /**
+   * Optional. Represents the [product group
+   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * belongs. This can be used along with the [item group
+   * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
+   * grouping of variant products, and helps identifying common product characteristics more
+   * efficiently.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String itemGroupTitle;
 
   /**
    * Additional URLs of lifestyle images of the item, used to explicitly identify images that
@@ -660,6 +682,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String pickupSla;
 
   /**
+   * Optional. Indicates the [popularity](https://support.google.com/merchants/answer/17085297) of
+   * the product in a merchant's inventory. Using a scale of 0.0 (lowest) to 100.0 (highest).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float popularityRank;
+
+  /**
    * Price of the item.
    * The value may be {@code null}.
    */
@@ -727,6 +757,24 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> promotionIds;
+
+  /**
+   * Optional. Contains merchant authored [questions and
+   * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
+   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * characters. Each answer can have max 1000 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QuestionAndAnswer> questionsAndAnswers;
+
+  /**
+   * Optional. Specifies how other [products are
+   * related](https://support.google.com/merchants/answer/17085213) to this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RelatedProduct> relatedProducts;
 
   /**
    * The return label of the product, used to group products in account-level return policies. Max.
@@ -920,6 +968,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private UnitPricingMeasure unitPricingMeasure;
+
+  /**
+   * Optional. Contains a list of [additional
+   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VariantOption> variantOptions;
 
   /**
    * The all-in advertised price for a vehicle, which includes costs for the following – any
@@ -1607,6 +1663,29 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Contains a list of PDF [document
+   * URLs](https://support.google.com/merchants/answer/17084656) for the product. Examples are
+   * training manuals, user guides, assembly instructions, package inserts, etc. Must start with
+   * "http://" or "https://"), ASCII characters only, and RFC 3986 compliant.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDocumentLinks() {
+    return documentLinks;
+  }
+
+  /**
+   * Optional. Contains a list of PDF [document
+   * URLs](https://support.google.com/merchants/answer/17084656) for the product. Examples are
+   * training manuals, user guides, assembly instructions, package inserts, etc. Must start with
+   * "http://" or "https://"), ASCII characters only, and RFC 3986 compliant.
+   * @param documentLinks documentLinks or {@code null} for none
+   */
+  public ProductAttributes setDocumentLinks(java.util.List<java.lang.String> documentLinks) {
+    this.documentLinks = documentLinks;
+    return this;
+  }
+
+  /**
    * The [electric range](https://support.google.com/google-ads/answer/15162232) of the vehicle in
    * miles/kms.
    * @return value or {@code null} for none
@@ -2008,6 +2087,33 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setItemGroupId(java.lang.String itemGroupId) {
     this.itemGroupId = itemGroupId;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the [product group
+   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * belongs. This can be used along with the [item group
+   * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
+   * grouping of variant products, and helps identifying common product characteristics more
+   * efficiently.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getItemGroupTitle() {
+    return itemGroupTitle;
+  }
+
+  /**
+   * Optional. Represents the [product group
+   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * belongs. This can be used along with the [item group
+   * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
+   * grouping of variant products, and helps identifying common product characteristics more
+   * efficiently.
+   * @param itemGroupTitle itemGroupTitle or {@code null} for none
+   */
+  public ProductAttributes setItemGroupTitle(java.lang.String itemGroupTitle) {
+    this.itemGroupTitle = itemGroupTitle;
     return this;
   }
 
@@ -2437,6 +2543,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Indicates the [popularity](https://support.google.com/merchants/answer/17085297) of
+   * the product in a merchant's inventory. Using a scale of 0.0 (lowest) to 100.0 (highest).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getPopularityRank() {
+    return popularityRank;
+  }
+
+  /**
+   * Optional. Indicates the [popularity](https://support.google.com/merchants/answer/17085297) of
+   * the product in a merchant's inventory. Using a scale of 0.0 (lowest) to 100.0 (highest).
+   * @param popularityRank popularityRank or {@code null} for none
+   */
+  public ProductAttributes setPopularityRank(java.lang.Float popularityRank) {
+    this.popularityRank = popularityRank;
+    return this;
+  }
+
+  /**
    * Price of the item.
    * @return value or {@code null} for none
    */
@@ -2598,6 +2723,48 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setPromotionIds(java.util.List<java.lang.String> promotionIds) {
     this.promotionIds = promotionIds;
+    return this;
+  }
+
+  /**
+   * Optional. Contains merchant authored [questions and
+   * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
+   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * characters. Each answer can have max 1000 characters.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QuestionAndAnswer> getQuestionsAndAnswers() {
+    return questionsAndAnswers;
+  }
+
+  /**
+   * Optional. Contains merchant authored [questions and
+   * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
+   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * characters. Each answer can have max 1000 characters.
+   * @param questionsAndAnswers questionsAndAnswers or {@code null} for none
+   */
+  public ProductAttributes setQuestionsAndAnswers(java.util.List<QuestionAndAnswer> questionsAndAnswers) {
+    this.questionsAndAnswers = questionsAndAnswers;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies how other [products are
+   * related](https://support.google.com/merchants/answer/17085213) to this product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RelatedProduct> getRelatedProducts() {
+    return relatedProducts;
+  }
+
+  /**
+   * Optional. Specifies how other [products are
+   * related](https://support.google.com/merchants/answer/17085213) to this product.
+   * @param relatedProducts relatedProducts or {@code null} for none
+   */
+  public ProductAttributes setRelatedProducts(java.util.List<RelatedProduct> relatedProducts) {
+    this.relatedProducts = relatedProducts;
     return this;
   }
 
@@ -3059,6 +3226,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setUnitPricingMeasure(UnitPricingMeasure unitPricingMeasure) {
     this.unitPricingMeasure = unitPricingMeasure;
+    return this;
+  }
+
+  /**
+   * Optional. Contains a list of [additional
+   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VariantOption> getVariantOptions() {
+    return variantOptions;
+  }
+
+  /**
+   * Optional. Contains a list of [additional
+   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * @param variantOptions variantOptions or {@code null} for none
+   */
+  public ProductAttributes setVariantOptions(java.util.List<VariantOption> variantOptions) {
+    this.variantOptions = variantOptions;
     return this;
   }
 

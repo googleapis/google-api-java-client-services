@@ -65,6 +65,15 @@ public final class AgentRemoteDialogflowAgent extends com.google.api.client.json
   private java.util.Map<String, java.lang.String> inputVariableMapping;
 
   /**
+   * Optional. The name of the variable that contains the language code to be used for the
+   * Dialogflow session. If unspecified, the default language code of the Dialogflow agent will be
+   * used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCodeVariable;
+
+  /**
    * Optional. The mapping of the Dialogflow session parameters names to the app variables names to
    * be sent back to the CES agent after the Dialogflow agent execution ends.
    * The value may be {@code null}.
@@ -155,6 +164,27 @@ public final class AgentRemoteDialogflowAgent extends com.google.api.client.json
    */
   public AgentRemoteDialogflowAgent setInputVariableMapping(java.util.Map<String, java.lang.String> inputVariableMapping) {
     this.inputVariableMapping = inputVariableMapping;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the variable that contains the language code to be used for the
+   * Dialogflow session. If unspecified, the default language code of the Dialogflow agent will be
+   * used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCodeVariable() {
+    return languageCodeVariable;
+  }
+
+  /**
+   * Optional. The name of the variable that contains the language code to be used for the
+   * Dialogflow session. If unspecified, the default language code of the Dialogflow agent will be
+   * used.
+   * @param languageCodeVariable languageCodeVariable or {@code null} for none
+   */
+  public AgentRemoteDialogflowAgent setLanguageCodeVariable(java.lang.String languageCodeVariable) {
+    this.languageCodeVariable = languageCodeVariable;
     return this;
   }
 

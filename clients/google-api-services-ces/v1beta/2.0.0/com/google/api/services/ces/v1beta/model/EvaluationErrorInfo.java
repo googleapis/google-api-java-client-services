@@ -52,6 +52,13 @@ public final class EvaluationErrorInfo extends com.google.api.client.json.Generi
   private java.lang.String sessionId;
 
   /**
+   * Output only. The user facing error message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userFacingErrorMessage;
+
+  /**
    * Output only. The error message.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class EvaluationErrorInfo extends com.google.api.client.json.Generi
    */
   public EvaluationErrorInfo setSessionId(java.lang.String sessionId) {
     this.sessionId = sessionId;
+    return this;
+  }
+
+  /**
+   * Output only. The user facing error message.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserFacingErrorMessage() {
+    return userFacingErrorMessage;
+  }
+
+  /**
+   * Output only. The user facing error message.
+   * @param userFacingErrorMessage userFacingErrorMessage or {@code null} for none
+   */
+  public EvaluationErrorInfo setUserFacingErrorMessage(java.lang.String userFacingErrorMessage) {
+    this.userFacingErrorMessage = userFacingErrorMessage;
     return this;
   }
 

@@ -77,6 +77,20 @@ public final class McpToolset extends com.google.api.client.json.GenericJson {
   private TlsConfig tlsConfig;
 
   /**
+   * Optional. Overrides for individual tools within this toolset. This allows overriding specific
+   * details like descriptions, names, or pinning the tools' states so they aren't fully dynamic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<McpToolOverride> toolOverrides;
+
+  static {
+    // hack to force ProGuard to consider McpToolOverride used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(McpToolOverride.class);
+  }
+
+  /**
    * Optional. Authentication information required to access tools and execute a tool against the
    * MCP server. For bearer token authentication, the token applies only to tool execution, not to
    * listing tools. This requires that tools can be listed without authentication.
@@ -180,6 +194,25 @@ public final class McpToolset extends com.google.api.client.json.GenericJson {
    */
   public McpToolset setTlsConfig(TlsConfig tlsConfig) {
     this.tlsConfig = tlsConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides for individual tools within this toolset. This allows overriding specific
+   * details like descriptions, names, or pinning the tools' states so they aren't fully dynamic.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<McpToolOverride> getToolOverrides() {
+    return toolOverrides;
+  }
+
+  /**
+   * Optional. Overrides for individual tools within this toolset. This allows overriding specific
+   * details like descriptions, names, or pinning the tools' states so they aren't fully dynamic.
+   * @param toolOverrides toolOverrides or {@code null} for none
+   */
+  public McpToolset setToolOverrides(java.util.List<McpToolOverride> toolOverrides) {
+    this.toolOverrides = toolOverrides;
     return this;
   }
 

@@ -166,6 +166,14 @@ public final class EvaluationRun extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Output only. The operation that created this evaluation run. Format:
+   * `projects/{project}/locations/{location}/operations/{operation}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operation;
+
+  /**
    * Optional. Configuration for running the optimization step after the evaluation run. If not set,
    * the optimization step will not be run.
    * The value may be {@code null}.
@@ -532,6 +540,25 @@ public final class EvaluationRun extends com.google.api.client.json.GenericJson 
    */
   public EvaluationRun setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The operation that created this evaluation run. Format:
+   * `projects/{project}/locations/{location}/operations/{operation}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperation() {
+    return operation;
+  }
+
+  /**
+   * Output only. The operation that created this evaluation run. Format:
+   * `projects/{project}/locations/{location}/operations/{operation}`
+   * @param operation operation or {@code null} for none
+   */
+  public EvaluationRun setOperation(java.lang.String operation) {
+    this.operation = operation;
     return this;
   }
 

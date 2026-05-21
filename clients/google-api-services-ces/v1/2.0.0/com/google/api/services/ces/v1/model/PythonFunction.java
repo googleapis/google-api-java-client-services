@@ -54,6 +54,13 @@ public final class PythonFunction extends com.google.api.client.json.GenericJson
   private java.lang.String pythonCode;
 
   /**
+   * Optional. Service Directory configuration for the tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceDirectoryConfig serviceDirectoryConfig;
+
+  /**
    * Output only. The description of the Python function, parsed from the python code's docstring.
    * @return value or {@code null} for none
    */
@@ -105,6 +112,23 @@ public final class PythonFunction extends com.google.api.client.json.GenericJson
    */
   public PythonFunction setPythonCode(java.lang.String pythonCode) {
     this.pythonCode = pythonCode;
+    return this;
+  }
+
+  /**
+   * Optional. Service Directory configuration for the tool.
+   * @return value or {@code null} for none
+   */
+  public ServiceDirectoryConfig getServiceDirectoryConfig() {
+    return serviceDirectoryConfig;
+  }
+
+  /**
+   * Optional. Service Directory configuration for the tool.
+   * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
+   */
+  public PythonFunction setServiceDirectoryConfig(ServiceDirectoryConfig serviceDirectoryConfig) {
+    this.serviceDirectoryConfig = serviceDirectoryConfig;
     return this;
   }
 

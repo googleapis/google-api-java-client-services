@@ -31,12 +31,39 @@ package com.google.api.services.ces.v1beta.model;
 public final class RetrieveToolsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the returned tools will contain raw descriptions and schemas directly from
+   * the server, bypassing any stored persistence configurations (overrides/snapshots).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bypassPersistenceConfig;
+
+  /**
    * Optional. The identifiers of the tools to retrieve from the toolset. If empty, all tools in the
    * toolset will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> toolIds;
+
+  /**
+   * Optional. If true, the returned tools will contain raw descriptions and schemas directly from
+   * the server, bypassing any stored persistence configurations (overrides/snapshots).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBypassPersistenceConfig() {
+    return bypassPersistenceConfig;
+  }
+
+  /**
+   * Optional. If true, the returned tools will contain raw descriptions and schemas directly from
+   * the server, bypassing any stored persistence configurations (overrides/snapshots).
+   * @param bypassPersistenceConfig bypassPersistenceConfig or {@code null} for none
+   */
+  public RetrieveToolsRequest setBypassPersistenceConfig(java.lang.Boolean bypassPersistenceConfig) {
+    this.bypassPersistenceConfig = bypassPersistenceConfig;
+    return this;
+  }
 
   /**
    * Optional. The identifiers of the tools to retrieve from the toolset. If empty, all tools in the

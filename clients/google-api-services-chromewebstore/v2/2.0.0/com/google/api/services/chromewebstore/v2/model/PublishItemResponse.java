@@ -51,6 +51,13 @@ public final class PublishItemResponse extends com.google.api.client.json.Generi
   private java.lang.String state;
 
   /**
+   * Output only. Non-blocking warnings encountered during the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WarningsInfo warningInfo;
+
+  /**
    * Output only. The ID of the item.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class PublishItemResponse extends com.google.api.client.json.Generi
    */
   public PublishItemResponse setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Non-blocking warnings encountered during the request.
+   * @return value or {@code null} for none
+   */
+  public WarningsInfo getWarningInfo() {
+    return warningInfo;
+  }
+
+  /**
+   * Output only. Non-blocking warnings encountered during the request.
+   * @param warningInfo warningInfo or {@code null} for none
+   */
+  public PublishItemResponse setWarningInfo(WarningsInfo warningInfo) {
+    this.warningInfo = warningInfo;
     return this;
   }
 

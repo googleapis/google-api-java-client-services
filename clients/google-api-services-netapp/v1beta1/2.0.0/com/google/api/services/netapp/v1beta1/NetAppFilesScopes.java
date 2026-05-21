@@ -23,6 +23,9 @@ package com.google.api.services.netapp.v1beta1;
  */
 public class NetAppFilesScopes {
 
+  /** See, edit, configure, and delete your Google Cloud NetApp data and see the email address for your Google Account. */
+  public static final String CLOUD_NETAPP = "https://www.googleapis.com/auth/cloud-netapp";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +36,7 @@ public class NetAppFilesScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_NETAPP);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

@@ -14380,13 +14380,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick an appropriate default.
+           * than requested. If unspecified, the server will pick a default of page_size = 50.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of TeamFolders to return. The server may return fewer items than
-         requested. If unspecified, the server will pick an appropriate default.
+         requested. If unspecified, the server will pick a default of page_size = 50.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -14394,7 +14394,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick an appropriate default.
+           * than requested. If unspecified, the server will pick a default of page_size = 50.
            */
           public Search setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

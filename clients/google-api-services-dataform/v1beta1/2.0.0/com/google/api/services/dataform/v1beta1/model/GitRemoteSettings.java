@@ -38,12 +38,19 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String authenticationTokenSecretVersion;
 
   /**
-   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
-   * the repository.
+   * Optional. The Git remote's default branch name. If not set `main` will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultBranch;
+
+  /**
+   * Output only. The Git remote's effective default branch name. This is the default branch name of
+   * the Git remote if it is set, otherwise it is `main`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveDefaultBranch;
 
   /**
    * Optional. Authentication fields for remote uris using SSH protocol.
@@ -88,8 +95,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
-   * the repository.
+   * Optional. The Git remote's default branch name. If not set `main` will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBranch() {
@@ -97,12 +103,30 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The Git remote's default branch name. If not set, `main` will be used and stored for
-   * the repository.
+   * Optional. The Git remote's default branch name. If not set `main` will be used.
    * @param defaultBranch defaultBranch or {@code null} for none
    */
   public GitRemoteSettings setDefaultBranch(java.lang.String defaultBranch) {
     this.defaultBranch = defaultBranch;
+    return this;
+  }
+
+  /**
+   * Output only. The Git remote's effective default branch name. This is the default branch name of
+   * the Git remote if it is set, otherwise it is `main`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveDefaultBranch() {
+    return effectiveDefaultBranch;
+  }
+
+  /**
+   * Output only. The Git remote's effective default branch name. This is the default branch name of
+   * the Git remote if it is set, otherwise it is `main`.
+   * @param effectiveDefaultBranch effectiveDefaultBranch or {@code null} for none
+   */
+  public GitRemoteSettings setEffectiveDefaultBranch(java.lang.String effectiveDefaultBranch) {
+    this.effectiveDefaultBranch = effectiveDefaultBranch;
     return this;
   }
 

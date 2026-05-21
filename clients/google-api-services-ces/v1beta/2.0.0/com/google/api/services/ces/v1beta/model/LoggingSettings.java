@@ -31,15 +31,16 @@ package com.google.api.services.ces.v1beta.model;
 public final class LoggingSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Configuration for how audio interactions should be recorded.
+   * Optional. Configuration for how audio interactions should be recorded. The audio is subject to
+   * redaction as configured in RedactionConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AudioRecordingConfig audioRecordingConfig;
 
   /**
-   * Optional. Settings to describe the BigQuery export behaviors for the app. The conversation data
-   * will be exported to BigQuery tables if it is enabled.
+   * Optional. Configures the BigQuery export behaviors for the app. The conversation data is
+   * subject to redaction as configured in RedactionConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +84,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   private RedactionConfig redactionConfig;
 
   /**
-   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
-   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * Optional. Configures an additional recording of unredacted audio. This can be used to maintain
+   * a raw audio copy when audio redaction is enabled, typically for auditing or monitoring
    * purposes.
    * The value may be {@code null}.
    */
@@ -92,7 +93,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   private AudioRecordingConfig unredactedAudioRecordingConfig;
 
   /**
-   * Optional. Configuration for how audio interactions should be recorded.
+   * Optional. Configuration for how audio interactions should be recorded. The audio is subject to
+   * redaction as configured in RedactionConfig.
    * @return value or {@code null} for none
    */
   public AudioRecordingConfig getAudioRecordingConfig() {
@@ -100,7 +102,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Configuration for how audio interactions should be recorded.
+   * Optional. Configuration for how audio interactions should be recorded. The audio is subject to
+   * redaction as configured in RedactionConfig.
    * @param audioRecordingConfig audioRecordingConfig or {@code null} for none
    */
   public LoggingSettings setAudioRecordingConfig(AudioRecordingConfig audioRecordingConfig) {
@@ -109,8 +112,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Settings to describe the BigQuery export behaviors for the app. The conversation data
-   * will be exported to BigQuery tables if it is enabled.
+   * Optional. Configures the BigQuery export behaviors for the app. The conversation data is
+   * subject to redaction as configured in RedactionConfig.
    * @return value or {@code null} for none
    */
   public BigQueryExportSettings getBigqueryExportSettings() {
@@ -118,8 +121,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Settings to describe the BigQuery export behaviors for the app. The conversation data
-   * will be exported to BigQuery tables if it is enabled.
+   * Optional. Configures the BigQuery export behaviors for the app. The conversation data is
+   * subject to redaction as configured in RedactionConfig.
    * @param bigqueryExportSettings bigqueryExportSettings or {@code null} for none
    */
   public LoggingSettings setBigqueryExportSettings(BigQueryExportSettings bigqueryExportSettings) {
@@ -217,8 +220,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
-   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * Optional. Configures an additional recording of unredacted audio. This can be used to maintain
+   * a raw audio copy when audio redaction is enabled, typically for auditing or monitoring
    * purposes.
    * @return value or {@code null} for none
    */
@@ -227,8 +230,8 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Configures recording of unredacted audio. Use this to maintain a raw backup with
-   * restricted access when audio redaction is enabled, typically for auditing or monitoring
+   * Optional. Configures an additional recording of unredacted audio. This can be used to maintain
+   * a raw audio copy when audio redaction is enabled, typically for auditing or monitoring
    * purposes.
    * @param unredactedAudioRecordingConfig unredactedAudioRecordingConfig or {@code null} for none
    */

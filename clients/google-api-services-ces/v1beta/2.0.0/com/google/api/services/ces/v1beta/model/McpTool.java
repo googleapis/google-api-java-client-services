@@ -72,6 +72,14 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The name override of the MCP tool. This is populated if the name was overridden by a
+   * Toolset override.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nameOverride;
+
+  /**
    * Optional. The schema of the output arguments of the MCP tool.
    * The value may be {@code null}.
    */
@@ -97,6 +105,13 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ServiceDirectoryConfig serviceDirectoryConfig;
+
+  /**
+   * Output only. The dynamic availability state of the tool on the external server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Optional. The TLS configuration. Includes the custom server certificates that the client should
@@ -202,6 +217,25 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The name override of the MCP tool. This is populated if the name was overridden by a
+   * Toolset override.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNameOverride() {
+    return nameOverride;
+  }
+
+  /**
+   * Optional. The name override of the MCP tool. This is populated if the name was overridden by a
+   * Toolset override.
+   * @param nameOverride nameOverride or {@code null} for none
+   */
+  public McpTool setNameOverride(java.lang.String nameOverride) {
+    this.nameOverride = nameOverride;
+    return this;
+  }
+
+  /**
    * Optional. The schema of the output arguments of the MCP tool.
    * @return value or {@code null} for none
    */
@@ -261,6 +295,23 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
    */
   public McpTool setServiceDirectoryConfig(ServiceDirectoryConfig serviceDirectoryConfig) {
     this.serviceDirectoryConfig = serviceDirectoryConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The dynamic availability state of the tool on the external server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The dynamic availability state of the tool on the external server.
+   * @param state state or {@code null} for none
+   */
+  public McpTool setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

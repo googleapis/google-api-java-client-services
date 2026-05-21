@@ -45,8 +45,8 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   private java.lang.String offerId;
 
   /**
-   * The pricing phase for the billing period funded by this order. Deprecated. Use
-   * offer_phase_details instead.
+   * Deprecated: Use offer_phase_details instead. The pricing phase for the billing period funded by
+   * this order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +113,8 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The pricing phase for the billing period funded by this order. Deprecated. Use
-   * offer_phase_details instead.
+   * Deprecated: Use offer_phase_details instead. The pricing phase for the billing period funded by
+   * this order.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferPhase() {
@@ -122,8 +122,8 @@ public final class SubscriptionDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The pricing phase for the billing period funded by this order. Deprecated. Use
-   * offer_phase_details instead.
+   * Deprecated: Use offer_phase_details instead. The pricing phase for the billing period funded by
+   * this order.
    * @param offerPhase offerPhase or {@code null} for none
    */
   public SubscriptionDetails setOfferPhase(java.lang.String offerPhase) {

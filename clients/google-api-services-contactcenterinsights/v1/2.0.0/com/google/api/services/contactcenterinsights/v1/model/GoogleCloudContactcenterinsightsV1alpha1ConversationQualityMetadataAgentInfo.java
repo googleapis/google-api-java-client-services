@@ -80,6 +80,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMe
   private java.lang.String entrySubagentDisplayName;
 
   /**
+   * The entry subagent's ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entrySubagentId;
+
+  /**
    * The agent's location.
    * The value may be {@code null}.
    */
@@ -231,6 +238,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMe
    */
   public GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo setEntrySubagentDisplayName(java.lang.String entrySubagentDisplayName) {
     this.entrySubagentDisplayName = entrySubagentDisplayName;
+    return this;
+  }
+
+  /**
+   * The entry subagent's ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntrySubagentId() {
+    return entrySubagentId;
+  }
+
+  /**
+   * The entry subagent's ID.
+   * @param entrySubagentId entrySubagentId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo setEntrySubagentId(java.lang.String entrySubagentId) {
+    this.entrySubagentId = entrySubagentId;
     return this;
   }
 

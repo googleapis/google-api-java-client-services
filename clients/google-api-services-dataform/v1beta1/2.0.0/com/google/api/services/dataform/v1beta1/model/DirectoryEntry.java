@@ -30,14 +30,16 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class DirectoryEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * A child directory in the directory.
+   * A child directory in the directory. The path is returned including the full folder structure
+   * from the root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String directory;
 
   /**
-   * A file in the directory.
+   * A file in the directory. The path is returned including the full folder structure from the
+   * root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +53,8 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
   private FilesystemEntryMetadata metadata;
 
   /**
-   * A child directory in the directory.
+   * A child directory in the directory. The path is returned including the full folder structure
+   * from the root.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirectory() {
@@ -59,7 +62,8 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A child directory in the directory.
+   * A child directory in the directory. The path is returned including the full folder structure
+   * from the root.
    * @param directory directory or {@code null} for none
    */
   public DirectoryEntry setDirectory(java.lang.String directory) {
@@ -68,7 +72,8 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A file in the directory.
+   * A file in the directory. The path is returned including the full folder structure from the
+   * root.
    * @return value or {@code null} for none
    */
   public java.lang.String getFile() {
@@ -76,7 +81,8 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A file in the directory.
+   * A file in the directory. The path is returned including the full folder structure from the
+   * root.
    * @param file file or {@code null} for none
    */
   public DirectoryEntry setFile(java.lang.String file) {

@@ -3993,6 +3993,137 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Deletes a single Repository asynchronously.
+         *
+         * Create a request for the method "repositories.deleteLongRunning".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link DeleteLongRunning#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The repository's name.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteRepositoryLongRunningRequest}
+         * @return the request
+         */
+        public DeleteLongRunning deleteLongRunning(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteRepositoryLongRunningRequest content) throws java.io.IOException {
+          DeleteLongRunning result = new DeleteLongRunning(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DeleteLongRunning extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:deleteLongRunning";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Deletes a single Repository asynchronously.
+           *
+           * Create a request for the method "repositories.deleteLongRunning".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link DeleteLongRunning#execute()} method to invoke the remote
+           * operation. <p> {@link DeleteLongRunning#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The repository's name.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteRepositoryLongRunningRequest}
+           * @since 1.13
+           */
+          protected DeleteLongRunning(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteRepositoryLongRunningRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public DeleteLongRunning set$Xgafv(java.lang.String $Xgafv) {
+            return (DeleteLongRunning) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DeleteLongRunning setAccessToken(java.lang.String accessToken) {
+            return (DeleteLongRunning) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DeleteLongRunning setAlt(java.lang.String alt) {
+            return (DeleteLongRunning) super.setAlt(alt);
+          }
+
+          @Override
+          public DeleteLongRunning setCallback(java.lang.String callback) {
+            return (DeleteLongRunning) super.setCallback(callback);
+          }
+
+          @Override
+          public DeleteLongRunning setFields(java.lang.String fields) {
+            return (DeleteLongRunning) super.setFields(fields);
+          }
+
+          @Override
+          public DeleteLongRunning setKey(java.lang.String key) {
+            return (DeleteLongRunning) super.setKey(key);
+          }
+
+          @Override
+          public DeleteLongRunning setOauthToken(java.lang.String oauthToken) {
+            return (DeleteLongRunning) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DeleteLongRunning setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DeleteLongRunning) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DeleteLongRunning setQuotaUser(java.lang.String quotaUser) {
+            return (DeleteLongRunning) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DeleteLongRunning setUploadType(java.lang.String uploadType) {
+            return (DeleteLongRunning) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DeleteLongRunning setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DeleteLongRunning) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The repository's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The repository's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The repository's name. */
+          public DeleteLongRunning setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DeleteLongRunning set(String parameterName, Object value) {
+            return (DeleteLongRunning) super.set(parameterName, value);
+          }
+        }
+        /**
          * Fetches a Repository's history of commits. The Repository must not have a value for
          * `git_remote_settings.url`.
          *
@@ -14430,13 +14561,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick an appropriate default.
+           * than requested. If unspecified, the server will pick a default of page_size = 50.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Maximum number of TeamFolders to return. The server may return fewer items than
-         requested. If unspecified, the server will pick an appropriate default.
+         requested. If unspecified, the server will pick a default of page_size = 50.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -14444,7 +14575,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick an appropriate default.
+           * than requested. If unspecified, the server will pick a default of page_size = 50.
            */
           public Search setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

@@ -599,6 +599,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleTypeTimeZone timeZone;
 
   /**
+   * The transit station information for the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1TransitStation transitStation;
+
+  /**
    * A set of type tags for this result. For example, "political" and "locality". For the complete
    * list of possible values, see Table A and Table B at
    * https://developers.google.com/maps/documentation/places/web-service/place-types
@@ -1979,6 +1986,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setTimeZone(GoogleTypeTimeZone timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * The transit station information for the place.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1TransitStation getTransitStation() {
+    return transitStation;
+  }
+
+  /**
+   * The transit station information for the place.
+   * @param transitStation transitStation or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setTransitStation(GoogleMapsPlacesV1TransitStation transitStation) {
+    this.transitStation = transitStation;
     return this;
   }
 

@@ -62,6 +62,14 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   private ExternalAccountIdentifiers externalAccountIdentifiers;
 
   /**
+   * Optional. Additional context around subscriptions in IN_GRACE_PERIOD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_IN_GRACE_PERIOD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InGracePeriodStateContext inGracePeriodStateContext;
+
+  /**
    * This kind represents a SubscriptionPurchaseV2 object in the androidpublisher service.
    * The value may be {@code null}.
    */
@@ -102,6 +110,14 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String linkedPurchaseToken;
+
+  /**
+   * Optional. Additional context around subscriptions in ON_HOLD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_ON_HOLD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OnHoldStateContext onHoldStateContext;
 
   /**
    * Additional context for out of app purchases. This information is only present for re-
@@ -233,6 +249,25 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. Additional context around subscriptions in IN_GRACE_PERIOD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_IN_GRACE_PERIOD.
+   * @return value or {@code null} for none
+   */
+  public InGracePeriodStateContext getInGracePeriodStateContext() {
+    return inGracePeriodStateContext;
+  }
+
+  /**
+   * Optional. Additional context around subscriptions in IN_GRACE_PERIOD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_IN_GRACE_PERIOD.
+   * @param inGracePeriodStateContext inGracePeriodStateContext or {@code null} for none
+   */
+  public SubscriptionPurchaseV2 setInGracePeriodStateContext(InGracePeriodStateContext inGracePeriodStateContext) {
+    this.inGracePeriodStateContext = inGracePeriodStateContext;
+    return this;
+  }
+
+  /**
    * This kind represents a SubscriptionPurchaseV2 object in the androidpublisher service.
    * @return value or {@code null} for none
    */
@@ -313,6 +348,25 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
    */
   public SubscriptionPurchaseV2 setLinkedPurchaseToken(java.lang.String linkedPurchaseToken) {
     this.linkedPurchaseToken = linkedPurchaseToken;
+    return this;
+  }
+
+  /**
+   * Optional. Additional context around subscriptions in ON_HOLD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_ON_HOLD.
+   * @return value or {@code null} for none
+   */
+  public OnHoldStateContext getOnHoldStateContext() {
+    return onHoldStateContext;
+  }
+
+  /**
+   * Optional. Additional context around subscriptions in ON_HOLD state. Only present if the
+   * subscription currently has subscription_state SUBSCRIPTION_STATE_ON_HOLD.
+   * @param onHoldStateContext onHoldStateContext or {@code null} for none
+   */
+  public SubscriptionPurchaseV2 setOnHoldStateContext(OnHoldStateContext onHoldStateContext) {
+    this.onHoldStateContext = onHoldStateContext;
     return this;
   }
 

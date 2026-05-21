@@ -20253,8 +20253,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-       * Newer version is available at purchases.subscriptionsv2.cancel for better client library support.
+       * Deprecated: Use purchases.subscriptionsv2.cancel instead. Cancels a user's subscription purchase.
+       * The subscription remains valid until its expiration time. Newer version is available at
+       * purchases.subscriptionsv2.cancel for better client library support.
        *
        * Create a request for the method "subscriptions.cancel".
        *
@@ -20279,9 +20280,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel";
 
         /**
-         * Cancels a user's subscription purchase. The subscription remains valid until its expiration
-         * time. Newer version is available at purchases.subscriptionsv2.cancel for better client library
-         * support.
+         * Deprecated: Use purchases.subscriptionsv2.cancel instead. Cancels a user's subscription
+         * purchase. The subscription remains valid until its expiration time. Newer version is available
+         * at purchases.subscriptionsv2.cancel for better client library support.
          *
          * Create a request for the method "subscriptions.cancel".
          *
@@ -20428,7 +20429,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Defers a user's subscription purchase until a specified future expiration time.
+       * Deprecated: Use purchases.subscriptionsv2.defer instead. Defers a user's subscription purchase
+       * until a specified future expiration time.
        *
        * Create a request for the method "subscriptions.defer".
        *
@@ -20453,7 +20455,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer";
 
         /**
-         * Defers a user's subscription purchase until a specified future expiration time.
+         * Deprecated: Use purchases.subscriptionsv2.defer instead. Defers a user's subscription purchase
+         * until a specified future expiration time.
          *
          * Create a request for the method "subscriptions.defer".
          *

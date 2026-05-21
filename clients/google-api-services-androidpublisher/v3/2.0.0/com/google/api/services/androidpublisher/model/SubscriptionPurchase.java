@@ -17,7 +17,8 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * A SubscriptionPurchase resource indicates the status of a user's subscription purchase.
+ * Deprecated: Use SubscriptionPurchaseV2 instead. A SubscriptionPurchase resource indicates the
+ * status of a user's subscription purchase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

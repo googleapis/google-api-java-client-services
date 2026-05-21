@@ -31,11 +31,59 @@ package com.google.api.services.container.model;
 public final class NodeDrainConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The duration of the grace termination period for node drain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String graceTerminationDuration;
+
+  /**
+   * The duration of the PDB timeout period for node drain.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String pdbTimeoutDuration;
+
+  /**
    * Whether to respect PDB during node pool deletion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean respectPdbDuringNodePoolDeletion;
+
+  /**
+   * The duration of the grace termination period for node drain.
+   * @return value or {@code null} for none
+   */
+  public String getGraceTerminationDuration() {
+    return graceTerminationDuration;
+  }
+
+  /**
+   * The duration of the grace termination period for node drain.
+   * @param graceTerminationDuration graceTerminationDuration or {@code null} for none
+   */
+  public NodeDrainConfig setGraceTerminationDuration(String graceTerminationDuration) {
+    this.graceTerminationDuration = graceTerminationDuration;
+    return this;
+  }
+
+  /**
+   * The duration of the PDB timeout period for node drain.
+   * @return value or {@code null} for none
+   */
+  public String getPdbTimeoutDuration() {
+    return pdbTimeoutDuration;
+  }
+
+  /**
+   * The duration of the PDB timeout period for node drain.
+   * @param pdbTimeoutDuration pdbTimeoutDuration or {@code null} for none
+   */
+  public NodeDrainConfig setPdbTimeoutDuration(String pdbTimeoutDuration) {
+    this.pdbTimeoutDuration = pdbTimeoutDuration;
+    return this;
+  }
 
   /**
    * Whether to respect PDB during node pool deletion.

@@ -388,6 +388,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private NetworkTierConfig desiredNetworkTierConfig;
 
   /**
+   * Optional. The desired NodeCreationConfig for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeCreationConfig desiredNodeCreationConfig;
+
+  /**
    * The desired node kubelet config for the cluster.
    * The value may be {@code null}.
    */
@@ -1483,6 +1490,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNetworkTierConfig(NetworkTierConfig desiredNetworkTierConfig) {
     this.desiredNetworkTierConfig = desiredNetworkTierConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The desired NodeCreationConfig for the cluster.
+   * @return value or {@code null} for none
+   */
+  public NodeCreationConfig getDesiredNodeCreationConfig() {
+    return desiredNodeCreationConfig;
+  }
+
+  /**
+   * Optional. The desired NodeCreationConfig for the cluster.
+   * @param desiredNodeCreationConfig desiredNodeCreationConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNodeCreationConfig(NodeCreationConfig desiredNodeCreationConfig) {
+    this.desiredNodeCreationConfig = desiredNodeCreationConfig;
     return this;
   }
 

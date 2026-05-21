@@ -4835,6 +4835,2859 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
+       * An accessor for creating requests from the NetworkMonitoringProviders collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkManagement networkmanagement = new NetworkManagement(...);}
+       *   {@code NetworkManagement.NetworkMonitoringProviders.List request = networkmanagement.networkMonitoringProviders().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public NetworkMonitoringProviders networkMonitoringProviders() {
+        return new NetworkMonitoringProviders();
+      }
+
+      /**
+       * The "networkMonitoringProviders" collection of methods.
+       */
+      public class NetworkMonitoringProviders {
+
+        /**
+         * Creates a NetworkMonitoringProvider resource.
+         *
+         * Create a request for the method "networkMonitoringProviders.create".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for CreateNetworkMonitoringProviderRequest. Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/networkMonitoringProviders";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a NetworkMonitoringProvider resource.
+           *
+           * Create a request for the method "networkMonitoringProviders.create".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for CreateNetworkMonitoringProviderRequest. Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider content) {
+            super(NetworkManagement.this, "POST", REST_PATH, content, com.google.api.services.networkmanagement.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent value for CreateNetworkMonitoringProviderRequest. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for CreateNetworkMonitoringProviderRequest. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent value for CreateNetworkMonitoringProviderRequest. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the NetworkMonitoringProvider resource, which will become
+           * the final component of the NetworkMonitoringProvider resource's name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String networkMonitoringProviderId;
+
+          /** Required. The ID to use for the NetworkMonitoringProvider resource, which will become the final
+         component of the NetworkMonitoringProvider resource's name.
+           */
+          public java.lang.String getNetworkMonitoringProviderId() {
+            return networkMonitoringProviderId;
+          }
+
+          /**
+           * Required. The ID to use for the NetworkMonitoringProvider resource, which will become
+           * the final component of the NetworkMonitoringProvider resource's name.
+           */
+          public Create setNetworkMonitoringProviderId(java.lang.String networkMonitoringProviderId) {
+            this.networkMonitoringProviderId = networkMonitoringProviderId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a NetworkMonitoringProvider resource and all of its child resources.
+         *
+         * Create a request for the method "networkMonitoringProviders.delete".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+          /**
+           * Deletes a NetworkMonitoringProvider resource and all of its child resources.
+           *
+           * Create a request for the method "networkMonitoringProviders.delete".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkManagement.this, "DELETE", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource. Format:
+         projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any nested MonitoringPoints, NetworkPaths and WebPaths
+           * resources from this NetworkMonitoringProvider will also be deleted. Otherwise, the
+           * request will only work if there are no nested resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any nested MonitoringPoints, NetworkPaths and WebPaths resources from
+         this NetworkMonitoringProvider will also be deleted. Otherwise, the request will only work if there
+         are no nested resources.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any nested MonitoringPoints, NetworkPaths and WebPaths
+           * resources from this NetworkMonitoringProvider will also be deleted. Otherwise, the
+           * request will only work if there are no nested resources.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generates Monitoring Point configuration of a NetworkMonitoringProvider resource.
+         *
+         * Create a request for the method "networkMonitoringProviders.generateMonitoringPointConfig".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link GenerateMonitoringPointConfig#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+         * @return the request
+         */
+        public GenerateMonitoringPointConfig generateMonitoringPointConfig(java.lang.String name) throws java.io.IOException {
+          GenerateMonitoringPointConfig result = new GenerateMonitoringPointConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateMonitoringPointConfig extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.GenerateMonitoringPointConfigResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateMonitoringPointConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+          /**
+           * Generates Monitoring Point configuration of a NetworkMonitoringProvider resource.
+           *
+           * Create a request for the method "networkMonitoringProviders.generateMonitoringPointConfig".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link GenerateMonitoringPointConfig#execute()} method to
+           * invoke the remote operation. <p> {@link GenerateMonitoringPointConfig#initialize(com.google.api
+           * .client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+           * @since 1.13
+           */
+          protected GenerateMonitoringPointConfig(java.lang.String name) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.GenerateMonitoringPointConfigResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateMonitoringPointConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setAccessToken(java.lang.String accessToken) {
+            return (GenerateMonitoringPointConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setAlt(java.lang.String alt) {
+            return (GenerateMonitoringPointConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setCallback(java.lang.String callback) {
+            return (GenerateMonitoringPointConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setFields(java.lang.String fields) {
+            return (GenerateMonitoringPointConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setKey(java.lang.String key) {
+            return (GenerateMonitoringPointConfig) super.setKey(key);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setOauthToken(java.lang.String oauthToken) {
+            return (GenerateMonitoringPointConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateMonitoringPointConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateMonitoringPointConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setUploadType(java.lang.String uploadType) {
+            return (GenerateMonitoringPointConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateMonitoringPointConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource. Format:
+         projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          public GenerateMonitoringPointConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateMonitoringPointConfig set(String parameterName, Object value) {
+            return (GenerateMonitoringPointConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generates a provider access token for a given Google access token. Provider access token is a
+         * short-lived token that is used to access resources in the provider's platform.
+         *
+         * Create a request for the method "networkMonitoringProviders.generateProviderAccessToken".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link GenerateProviderAccessToken#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+         * @return the request
+         */
+        public GenerateProviderAccessToken generateProviderAccessToken(java.lang.String name) throws java.io.IOException {
+          GenerateProviderAccessToken result = new GenerateProviderAccessToken(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateProviderAccessToken extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.GenerateProviderAccessTokenResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateProviderAccessToken";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+          /**
+           * Generates a provider access token for a given Google access token. Provider access token is a
+           * short-lived token that is used to access resources in the provider's platform.
+           *
+           * Create a request for the method "networkMonitoringProviders.generateProviderAccessToken".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link GenerateProviderAccessToken#execute()} method to
+           * invoke the remote operation. <p> {@link GenerateProviderAccessToken#initialize(com.google.api.c
+           * lient.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource. Format:
+         *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+         *        vider}
+           * @since 1.13
+           */
+          protected GenerateProviderAccessToken(java.lang.String name) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.GenerateProviderAccessTokenResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GenerateProviderAccessToken set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateProviderAccessToken) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setAccessToken(java.lang.String accessToken) {
+            return (GenerateProviderAccessToken) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setAlt(java.lang.String alt) {
+            return (GenerateProviderAccessToken) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setCallback(java.lang.String callback) {
+            return (GenerateProviderAccessToken) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setFields(java.lang.String fields) {
+            return (GenerateProviderAccessToken) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setKey(java.lang.String key) {
+            return (GenerateProviderAccessToken) super.setKey(key);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setOauthToken(java.lang.String oauthToken) {
+            return (GenerateProviderAccessToken) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateProviderAccessToken) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateProviderAccessToken) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setUploadType(java.lang.String uploadType) {
+            return (GenerateProviderAccessToken) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateProviderAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateProviderAccessToken) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource. Format:
+         projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the resource. Format: projects/{project}/locations/{location}/network
+           * MonitoringProviders/{network_monitoring_provider}
+           */
+          public GenerateProviderAccessToken setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. Google access token. */
+          @com.google.api.client.util.Key
+          private java.lang.String gcpAccessToken;
+
+          /** Required. Google access token.
+           */
+          public java.lang.String getGcpAccessToken() {
+            return gcpAccessToken;
+          }
+
+          /** Required. Google access token. */
+          public GenerateProviderAccessToken setGcpAccessToken(java.lang.String gcpAccessToken) {
+            this.gcpAccessToken = gcpAccessToken;
+            return this;
+          }
+
+          @Override
+          public GenerateProviderAccessToken set(String parameterName, Object value) {
+            return (GenerateProviderAccessToken) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the NetworkMonitoringProvider resource.
+         *
+         * Create a request for the method "networkMonitoringProviders.get".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource. Format:
+         *        `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pr
+         *        ovider}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+          /**
+           * Gets the NetworkMonitoringProvider resource.
+           *
+           * Create a request for the method "networkMonitoringProviders.get".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource. Format:
+         *        `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pr
+         *        ovider}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.NetworkMonitoringProvider.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the resource. Format: `projects/{project}/locations/{location}/networ
+           * kMonitoringProviders/{network_monitoring_provider}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource. Format:
+         `projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the resource. Format: `projects/{project}/locations/{location}/networ
+           * kMonitoringProviders/{network_monitoring_provider}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists NetworkMonitoringProviders for a given project and location.
+         *
+         * Create a request for the method "networkMonitoringProviders.list".
+         *
+         * This request holds the parameters needed by the networkmanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ListNetworkMonitoringProvidersResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/networkMonitoringProviders";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists NetworkMonitoringProviders for a given project and location.
+           *
+           * Create a request for the method "networkMonitoringProviders.list".
+           *
+           * This request holds the parameters needed by the the networkmanagement server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ListNetworkMonitoringProvidersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent value for ListNetworkMonitoringProvidersRequest. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of monitoring points to return. The service may return
+           * fewer than this value. If unspecified, at most 20 monitoring points will be returned.
+           * The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of monitoring points to return. The service may return fewer than this
+         value. If unspecified, at most 20 monitoring points will be returned. The maximum value is 1000;
+         values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of monitoring points to return. The service may return
+           * fewer than this value. If unspecified, at most 20 monitoring points will be returned.
+           * The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListMonitoringPoints` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListMonitoringPoints` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListMonitoringPoints` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the MonitoringPoints collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetworkManagement networkmanagement = new NetworkManagement(...);}
+         *   {@code NetworkManagement.MonitoringPoints.List request = networkmanagement.monitoringPoints().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public MonitoringPoints monitoringPoints() {
+          return new MonitoringPoints();
+        }
+
+        /**
+         * The "monitoringPoints" collection of methods.
+         */
+        public class MonitoringPoints {
+
+          /**
+           * Downloads an install script for MonitoringPoints for a given network monitoring provider.
+           *
+           * Create a request for the method "monitoringPoints.downloadInstallScript".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link DownloadInstallScript#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. Parent value for DownloadInstallScriptRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+           * @return the request
+           */
+          public DownloadInstallScript downloadInstallScript(java.lang.String parent) throws java.io.IOException {
+            DownloadInstallScript result = new DownloadInstallScript(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class DownloadInstallScript extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+parent}/monitoringPoints:downloadInstallScript";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+            /**
+             * Downloads an install script for MonitoringPoints for a given network monitoring provider.
+             *
+             * Create a request for the method "monitoringPoints.downloadInstallScript".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link DownloadInstallScript#execute()} method to invoke the
+             * remote operation. <p> {@link DownloadInstallScript#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for DownloadInstallScriptRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+             * @since 1.13
+             */
+            protected DownloadInstallScript(java.lang.String parent) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.HttpBody.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public DownloadInstallScript set$Xgafv(java.lang.String $Xgafv) {
+              return (DownloadInstallScript) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DownloadInstallScript setAccessToken(java.lang.String accessToken) {
+              return (DownloadInstallScript) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DownloadInstallScript setAlt(java.lang.String alt) {
+              return (DownloadInstallScript) super.setAlt(alt);
+            }
+
+            @Override
+            public DownloadInstallScript setCallback(java.lang.String callback) {
+              return (DownloadInstallScript) super.setCallback(callback);
+            }
+
+            @Override
+            public DownloadInstallScript setFields(java.lang.String fields) {
+              return (DownloadInstallScript) super.setFields(fields);
+            }
+
+            @Override
+            public DownloadInstallScript setKey(java.lang.String key) {
+              return (DownloadInstallScript) super.setKey(key);
+            }
+
+            @Override
+            public DownloadInstallScript setOauthToken(java.lang.String oauthToken) {
+              return (DownloadInstallScript) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DownloadInstallScript setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DownloadInstallScript) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DownloadInstallScript setQuotaUser(java.lang.String quotaUser) {
+              return (DownloadInstallScript) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DownloadInstallScript setUploadType(java.lang.String uploadType) {
+              return (DownloadInstallScript) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DownloadInstallScript setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DownloadInstallScript) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent value for DownloadInstallScriptRequest. Format: projects/{project}/l
+             * ocations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for DownloadInstallScriptRequest. Format:
+           projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent value for DownloadInstallScriptRequest. Format: projects/{project}/l
+             * ocations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public DownloadInstallScript setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Password for logging into the MonitoringPoint. */
+            @com.google.api.client.util.Key("_password")
+            private java.lang.String password;
+
+            /** Optional. Password for logging into the MonitoringPoint.
+             */
+            public java.lang.String getPassword() {
+              return password;
+            }
+
+            /** Optional. Password for logging into the MonitoringPoint. */
+            public DownloadInstallScript setPassword(java.lang.String password) {
+              this.password = password;
+              return this;
+            }
+
+            /** Required. The hostname of the MonitoringPoint, e.g. "test-vm" */
+            @com.google.api.client.util.Key
+            private java.lang.String hostname;
+
+            /** Required. The hostname of the MonitoringPoint, e.g. "test-vm"
+             */
+            public java.lang.String getHostname() {
+              return hostname;
+            }
+
+            /** Required. The hostname of the MonitoringPoint, e.g. "test-vm" */
+            public DownloadInstallScript setHostname(java.lang.String hostname) {
+              this.hostname = hostname;
+              return this;
+            }
+
+            /** Required. The type of the monitoring point. */
+            @com.google.api.client.util.Key
+            private java.lang.String monitoringPointType;
+
+            /** Required. The type of the monitoring point.
+             */
+            public java.lang.String getMonitoringPointType() {
+              return monitoringPointType;
+            }
+
+            /** Required. The type of the monitoring point. */
+            public DownloadInstallScript setMonitoringPointType(java.lang.String monitoringPointType) {
+              this.monitoringPointType = monitoringPointType;
+              return this;
+            }
+
+            /**
+             * Optional. Network Time Protocol a user can configure. If the user omits the field,
+             * the default is either NTP servers provided in the DHCP lease or a set of well-known
+             * NTP servers pre-configured on the monitoring point. This field can be an IP address
+             * or FQDN.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ntpServerAddress;
+
+            /** Optional. Network Time Protocol a user can configure. If the user omits the field, the default is
+           either NTP servers provided in the DHCP lease or a set of well-known NTP servers pre-configured on
+           the monitoring point. This field can be an IP address or FQDN.
+             */
+            public java.lang.String getNtpServerAddress() {
+              return ntpServerAddress;
+            }
+
+            /**
+             * Optional. Network Time Protocol a user can configure. If the user omits the field,
+             * the default is either NTP servers provided in the DHCP lease or a set of well-known
+             * NTP servers pre-configured on the monitoring point. This field can be an IP address
+             * or FQDN.
+             */
+            public DownloadInstallScript setNtpServerAddress(java.lang.String ntpServerAddress) {
+              this.ntpServerAddress = ntpServerAddress;
+              return this;
+            }
+
+            /** Optional. Second NTP server. */
+            @com.google.api.client.util.Key
+            private java.lang.String ntpServerSecondaryAddress;
+
+            /** Optional. Second NTP server.
+             */
+            public java.lang.String getNtpServerSecondaryAddress() {
+              return ntpServerSecondaryAddress;
+            }
+
+            /** Optional. Second NTP server. */
+            public DownloadInstallScript setNtpServerSecondaryAddress(java.lang.String ntpServerSecondaryAddress) {
+              this.ntpServerSecondaryAddress = ntpServerSecondaryAddress;
+              return this;
+            }
+
+            /** Required. DNS server. */
+            @com.google.api.client.util.Key("staticIpAddress.dnsServerAddress")
+            private java.lang.String staticIpAddressDnsServerAddress;
+
+            /** Required. DNS server.
+             */
+            public java.lang.String getStaticIpAddressDnsServerAddress() {
+              return staticIpAddressDnsServerAddress;
+            }
+
+            /** Required. DNS server. */
+            public DownloadInstallScript setStaticIpAddressDnsServerAddress(java.lang.String staticIpAddressDnsServerAddress) {
+              this.staticIpAddressDnsServerAddress = staticIpAddressDnsServerAddress;
+              return this;
+            }
+
+            /** Optional. Second DNS server. */
+            @com.google.api.client.util.Key("staticIpAddress.dnsServerSecondaryAddress")
+            private java.lang.String staticIpAddressDnsServerSecondaryAddress;
+
+            /** Optional. Second DNS server.
+             */
+            public java.lang.String getStaticIpAddressDnsServerSecondaryAddress() {
+              return staticIpAddressDnsServerSecondaryAddress;
+            }
+
+            /** Optional. Second DNS server. */
+            public DownloadInstallScript setStaticIpAddressDnsServerSecondaryAddress(java.lang.String staticIpAddressDnsServerSecondaryAddress) {
+              this.staticIpAddressDnsServerSecondaryAddress = staticIpAddressDnsServerSecondaryAddress;
+              return this;
+            }
+
+            /** Optional. Domain name of the MonitoringPoint. */
+            @com.google.api.client.util.Key("staticIpAddress.domain")
+            private java.lang.String staticIpAddressDomain;
+
+            /** Optional. Domain name of the MonitoringPoint.
+             */
+            public java.lang.String getStaticIpAddressDomain() {
+              return staticIpAddressDomain;
+            }
+
+            /** Optional. Domain name of the MonitoringPoint. */
+            public DownloadInstallScript setStaticIpAddressDomain(java.lang.String staticIpAddressDomain) {
+              this.staticIpAddressDomain = staticIpAddressDomain;
+              return this;
+            }
+
+            /** Required. Gateway IP address. Example: "100.80.40.1". */
+            @com.google.api.client.util.Key("staticIpAddress.gatewayAddress")
+            private java.lang.String staticIpAddressGatewayAddress;
+
+            /** Required. Gateway IP address. Example: "100.80.40.1".
+             */
+            public java.lang.String getStaticIpAddressGatewayAddress() {
+              return staticIpAddressGatewayAddress;
+            }
+
+            /** Required. Gateway IP address. Example: "100.80.40.1". */
+            public DownloadInstallScript setStaticIpAddressGatewayAddress(java.lang.String staticIpAddressGatewayAddress) {
+              this.staticIpAddressGatewayAddress = staticIpAddressGatewayAddress;
+              return this;
+            }
+
+            /** Required. IP address of the MonitoringPoint. */
+            @com.google.api.client.util.Key("staticIpAddress.ipAddress")
+            private java.lang.String staticIpAddressIpAddress;
+
+            /** Required. IP address of the MonitoringPoint.
+             */
+            public java.lang.String getStaticIpAddressIpAddress() {
+              return staticIpAddressIpAddress;
+            }
+
+            /** Required. IP address of the MonitoringPoint. */
+            public DownloadInstallScript setStaticIpAddressIpAddress(java.lang.String staticIpAddressIpAddress) {
+              this.staticIpAddressIpAddress = staticIpAddressIpAddress;
+              return this;
+            }
+
+            /** Optional. Networkmask and CIDR range. Example: "255.255.255.0/24" */
+            @com.google.api.client.util.Key("staticIpAddress.netmask")
+            private java.lang.String staticIpAddressNetmask;
+
+            /** Optional. Networkmask and CIDR range. Example: "255.255.255.0/24"
+             */
+            public java.lang.String getStaticIpAddressNetmask() {
+              return staticIpAddressNetmask;
+            }
+
+            /** Optional. Networkmask and CIDR range. Example: "255.255.255.0/24" */
+            public DownloadInstallScript setStaticIpAddressNetmask(java.lang.String staticIpAddressNetmask) {
+              this.staticIpAddressNetmask = staticIpAddressNetmask;
+              return this;
+            }
+
+            /** IANA Time Zone Database time zone. For example "America/New_York". */
+            @com.google.api.client.util.Key("timeZone.id")
+            private java.lang.String timeZoneId;
+
+            /** IANA Time Zone Database time zone. For example "America/New_York".
+             */
+            public java.lang.String getTimeZoneId() {
+              return timeZoneId;
+            }
+
+            /** IANA Time Zone Database time zone. For example "America/New_York". */
+            public DownloadInstallScript setTimeZoneId(java.lang.String timeZoneId) {
+              this.timeZoneId = timeZoneId;
+              return this;
+            }
+
+            /** Optional. IANA Time Zone Database version number. For example "2019a". */
+            @com.google.api.client.util.Key("timeZone.version")
+            private java.lang.String timeZoneVersion;
+
+            /** Optional. IANA Time Zone Database version number. For example "2019a".
+             */
+            public java.lang.String getTimeZoneVersion() {
+              return timeZoneVersion;
+            }
+
+            /** Optional. IANA Time Zone Database version number. For example "2019a". */
+            public DownloadInstallScript setTimeZoneVersion(java.lang.String timeZoneVersion) {
+              this.timeZoneVersion = timeZoneVersion;
+              return this;
+            }
+
+            /**
+             * Optional. Dynamic Host Configuration Protocol, is a network management protocol that
+             * automatically assigns IP addresses and other network configuration parameters to
+             * devices connecting to a network.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean useDhcp;
+
+            /** Optional. Dynamic Host Configuration Protocol, is a network management protocol that automatically
+           assigns IP addresses and other network configuration parameters to devices connecting to a network.
+             */
+            public java.lang.Boolean getUseDhcp() {
+              return useDhcp;
+            }
+
+            /**
+             * Optional. Dynamic Host Configuration Protocol, is a network management protocol that
+             * automatically assigns IP addresses and other network configuration parameters to
+             * devices connecting to a network.
+             */
+            public DownloadInstallScript setUseDhcp(java.lang.Boolean useDhcp) {
+              this.useDhcp = useDhcp;
+              return this;
+            }
+
+            @Override
+            public DownloadInstallScript set(String parameterName, Object value) {
+              return (DownloadInstallScript) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Downloads an install script for a specific Container MonitoringPoint.
+           *
+           * Create a request for the method "monitoringPoints.downloadRecreateInstallScript".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link DownloadRecreateInstallScript#execute()} method to invoke
+           * the remote operation.
+           *
+           * @param name Required. Resource name of the MonitoringPoint. Format: projects/{project}/locations/{location}/netw
+           *        orkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+           * @return the request
+           */
+          public DownloadRecreateInstallScript downloadRecreateInstallScript(java.lang.String name) throws java.io.IOException {
+            DownloadRecreateInstallScript result = new DownloadRecreateInstallScript(name);
+            initialize(result);
+            return result;
+          }
+
+          public class DownloadRecreateInstallScript extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+name}:downloadRecreateInstallScript";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+
+            /**
+             * Downloads an install script for a specific Container MonitoringPoint.
+             *
+             * Create a request for the method "monitoringPoints.downloadRecreateInstallScript".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link DownloadRecreateInstallScript#execute()} method to
+             * invoke the remote operation. <p> {@link DownloadRecreateInstallScript#initialize(com.google.api
+             * .client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+             * instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the MonitoringPoint. Format: projects/{project}/locations/{location}/netw
+           *        orkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+             * @since 1.13
+             */
+            protected DownloadRecreateInstallScript(java.lang.String name) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.HttpBody.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public DownloadRecreateInstallScript set$Xgafv(java.lang.String $Xgafv) {
+              return (DownloadRecreateInstallScript) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setAccessToken(java.lang.String accessToken) {
+              return (DownloadRecreateInstallScript) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setAlt(java.lang.String alt) {
+              return (DownloadRecreateInstallScript) super.setAlt(alt);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setCallback(java.lang.String callback) {
+              return (DownloadRecreateInstallScript) super.setCallback(callback);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setFields(java.lang.String fields) {
+              return (DownloadRecreateInstallScript) super.setFields(fields);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setKey(java.lang.String key) {
+              return (DownloadRecreateInstallScript) super.setKey(key);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setOauthToken(java.lang.String oauthToken) {
+              return (DownloadRecreateInstallScript) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DownloadRecreateInstallScript) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setQuotaUser(java.lang.String quotaUser) {
+              return (DownloadRecreateInstallScript) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setUploadType(java.lang.String uploadType) {
+              return (DownloadRecreateInstallScript) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DownloadRecreateInstallScript setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DownloadRecreateInstallScript) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the MonitoringPoint. Format: projects/{project}/locations/
+             * {location}/networkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/
+             * {monitoring_point}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the MonitoringPoint. Format: projects/{project}/locations/{location}/net
+           workMonitoringProviders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the MonitoringPoint. Format: projects/{project}/locations/
+             * {location}/networkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/
+             * {monitoring_point}
+             */
+            public DownloadRecreateInstallScript setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. The hostname of the MonitoringPoint, e.g. "test-vm" */
+            @com.google.api.client.util.Key
+            private java.lang.String hostname;
+
+            /** Optional. The hostname of the MonitoringPoint, e.g. "test-vm"
+             */
+            public java.lang.String getHostname() {
+              return hostname;
+            }
+
+            /** Optional. The hostname of the MonitoringPoint, e.g. "test-vm" */
+            public DownloadRecreateInstallScript setHostname(java.lang.String hostname) {
+              this.hostname = hostname;
+              return this;
+            }
+
+            @Override
+            public DownloadRecreateInstallScript set(String parameterName, Object value) {
+              return (DownloadRecreateInstallScript) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Downloads the server connect configuration for a given network monitoring provider.
+           *
+           * Create a request for the method "monitoringPoints.downloadServerConnectConfig".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link DownloadServerConnectConfig#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent Required. Parent value for DownloadServerConnectConfigRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+           * @return the request
+           */
+          public DownloadServerConnectConfig downloadServerConnectConfig(java.lang.String parent) throws java.io.IOException {
+            DownloadServerConnectConfig result = new DownloadServerConnectConfig(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class DownloadServerConnectConfig extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+parent}/monitoringPoints:downloadServerConnectConfig";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+            /**
+             * Downloads the server connect configuration for a given network monitoring provider.
+             *
+             * Create a request for the method "monitoringPoints.downloadServerConnectConfig".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link DownloadServerConnectConfig#execute()} method to
+             * invoke the remote operation. <p> {@link DownloadServerConnectConfig#initialize(com.google.api.c
+             * lient.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+             * instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for DownloadServerConnectConfigRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+             * @since 1.13
+             */
+            protected DownloadServerConnectConfig(java.lang.String parent) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.HttpBody.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public DownloadServerConnectConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (DownloadServerConnectConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setAccessToken(java.lang.String accessToken) {
+              return (DownloadServerConnectConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setAlt(java.lang.String alt) {
+              return (DownloadServerConnectConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setCallback(java.lang.String callback) {
+              return (DownloadServerConnectConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setFields(java.lang.String fields) {
+              return (DownloadServerConnectConfig) super.setFields(fields);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setKey(java.lang.String key) {
+              return (DownloadServerConnectConfig) super.setKey(key);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setOauthToken(java.lang.String oauthToken) {
+              return (DownloadServerConnectConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DownloadServerConnectConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setQuotaUser(java.lang.String quotaUser) {
+              return (DownloadServerConnectConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setUploadType(java.lang.String uploadType) {
+              return (DownloadServerConnectConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DownloadServerConnectConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DownloadServerConnectConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent value for DownloadServerConnectConfigRequest. Format: projects/{proj
+             * ect}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for DownloadServerConnectConfigRequest. Format:
+           projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent value for DownloadServerConnectConfigRequest. Format: projects/{proj
+             * ect}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public DownloadServerConnectConfig setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DownloadServerConnectConfig set(String parameterName, Object value) {
+              return (DownloadServerConnectConfig) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the MonitoringPoint resource.
+           *
+           * Create a request for the method "monitoringPoints.get".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPro
+           *        viders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.MonitoringPoint> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+
+            /**
+             * Gets the MonitoringPoint resource.
+             *
+             * Create a request for the method "monitoringPoints.get".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPro
+           *        viders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.MonitoringPoint.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the resource. Format: projects/{project}/locations/{location}/netwo
+             * rkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/{monitoring_poin
+             * t}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPr
+           oviders/{network_monitoring_provider}/monitoringPoints/{monitoring_point}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the resource. Format: projects/{project}/locations/{location}/netwo
+             * rkMonitoringProviders/{network_monitoring_provider}/monitoringPoints/{monitoring_poin
+             * t}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/monitoringPoints/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists MonitoringPoints for a given network monitoring provider.
+           *
+           * Create a request for the method "monitoringPoints.list".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent value for ListMonitoringPointsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ListMonitoringPointsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/monitoringPoints";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+            /**
+             * Lists MonitoringPoints for a given network monitoring provider.
+             *
+             * Create a request for the method "monitoringPoints.list".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for ListMonitoringPointsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ListMonitoringPointsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent value for ListMonitoringPointsRequest. Format: projects/{project}/lo
+             * cations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for ListMonitoringPointsRequest. Format:
+           projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent value for ListMonitoringPointsRequest. Format: projects/{project}/lo
+             * cations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of monitoring points to return. The service may return
+             * fewer than this value. If unspecified, at most 20 monitoring points will be returned.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of monitoring points to return. The service may return fewer than this
+           value. If unspecified, at most 20 monitoring points will be returned. The maximum value is 1000;
+           values above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of monitoring points to return. The service may return
+             * fewer than this value. If unspecified, at most 20 monitoring points will be returned.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMonitoringPoints` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListMonitoringPoints` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListMonitoringPoints` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMonitoringPoints` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the NetworkPaths collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetworkManagement networkmanagement = new NetworkManagement(...);}
+         *   {@code NetworkManagement.NetworkPaths.List request = networkmanagement.networkPaths().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public NetworkPaths networkPaths() {
+          return new NetworkPaths();
+        }
+
+        /**
+         * The "networkPaths" collection of methods.
+         */
+        public class NetworkPaths {
+
+          /**
+           * Gets the NetworkPath resource.
+           *
+           * Create a request for the method "networkPaths.get".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPro
+           *        viders/{network_monitoring_provider}/networkPaths/{network_path}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.NetworkPath> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/networkPaths/[^/]+$");
+
+            /**
+             * Gets the NetworkPath resource.
+             *
+             * Create a request for the method "networkPaths.get".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPro
+           *        viders/{network_monitoring_provider}/networkPaths/{network_path}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.NetworkPath.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/networkPaths/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the resource. Format: projects/{project}/locations/{location}/netwo
+             * rkMonitoringProviders/{network_monitoring_provider}/networkPaths/{network_path}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource. Format: projects/{project}/locations/{location}/networkMonitoringPr
+           oviders/{network_monitoring_provider}/networkPaths/{network_path}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the resource. Format: projects/{project}/locations/{location}/netwo
+             * rkMonitoringProviders/{network_monitoring_provider}/networkPaths/{network_path}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/networkPaths/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists NetworkPaths for a given network monitoring provider.
+           *
+           * Create a request for the method "networkPaths.list".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent value for ListNetworkPathsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ListNetworkPathsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/networkPaths";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+            /**
+             * Lists NetworkPaths for a given network monitoring provider.
+             *
+             * Create a request for the method "networkPaths.list".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for ListNetworkPathsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ListNetworkPathsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent value for ListNetworkPathsRequest. Format: projects/{project}/locati
+             * ons/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for ListNetworkPathsRequest. Format:
+           projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent value for ListNetworkPathsRequest. Format: projects/{project}/locati
+             * ons/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of network paths to return. The service may return fewer
+             * than this value. If unspecified, at most 20 network pathswill be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of network paths to return. The service may return fewer than this
+           value. If unspecified, at most 20 network pathswill be returned. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of network paths to return. The service may return fewer
+             * than this value. If unspecified, at most 20 network pathswill be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListNetworkPaths` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListNetworkPaths` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListNetworkPaths` call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to `ListNetworkPaths` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListNetworkPaths` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListNetworkPaths` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the WebPaths collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetworkManagement networkmanagement = new NetworkManagement(...);}
+         *   {@code NetworkManagement.WebPaths.List request = networkmanagement.webPaths().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public WebPaths webPaths() {
+          return new WebPaths();
+        }
+
+        /**
+         * The "webPaths" collection of methods.
+         */
+        public class WebPaths {
+
+          /**
+           * Gets the WebPath resource.
+           *
+           * Create a request for the method "webPaths.get".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource.. Format: projects/{project}/locations/{location}/networkMonitoringPr
+           *        oviders/{network_monitoring_provider}/webPaths/{web_path}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.WebPath> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/webPaths/[^/]+$");
+
+            /**
+             * Gets the WebPath resource.
+             *
+             * Create a request for the method "webPaths.get".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource.. Format: projects/{project}/locations/{location}/networkMonitoringPr
+           *        oviders/{network_monitoring_provider}/webPaths/{web_path}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.WebPath.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/webPaths/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the resource.. Format: projects/{project}/locations/{location}/netw
+             * orkMonitoringProviders/{network_monitoring_provider}/webPaths/{web_path}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource.. Format: projects/{project}/locations/{location}/networkMonitoringP
+           roviders/{network_monitoring_provider}/webPaths/{web_path}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the resource.. Format: projects/{project}/locations/{location}/netw
+             * orkMonitoringProviders/{network_monitoring_provider}/webPaths/{web_path}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+/webPaths/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists WebPaths for a given network monitoring provider.
+           *
+           * Create a request for the method "webPaths.list".
+           *
+           * This request holds the parameters needed by the networkmanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent value for ListWebPathsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1.model.ListWebPathsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/webPaths";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+
+            /**
+             * Lists WebPaths for a given network monitoring provider.
+             *
+             * Create a request for the method "webPaths.list".
+             *
+             * This request holds the parameters needed by the the networkmanagement server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for ListWebPathsRequest. Format:
+           *        projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_pro
+           *        vider}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(NetworkManagement.this, "GET", REST_PATH, null, com.google.api.services.networkmanagement.v1.model.ListWebPathsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent value for ListWebPathsRequest. Format: projects/{project}/locations/
+             * {location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for ListWebPathsRequest. Format:
+           projects/{project}/locations/{location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent value for ListWebPathsRequest. Format: projects/{project}/locations/
+             * {location}/networkMonitoringProviders/{network_monitoring_provider}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/networkMonitoringProviders/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of web paths to return. The service may return fewer
+             * than this value. If unspecified, at most 20 web paths will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of web paths to return. The service may return fewer than this value.
+           If unspecified, at most 20 web paths will be returned. The maximum value is 1000; values above 1000
+           will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of web paths to return. The service may return fewer
+             * than this value. If unspecified, at most 20 web paths will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListWebPaths` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListWebPaths` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListWebPaths` call. Provide this to retrieve the
+           subsequent page. When paginating, all other parameters provided to `ListWebPaths` must match the
+           call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListWebPaths` call. Provide this to
+             * retrieve the subsequent page. When paginating, all other parameters provided to
+             * `ListWebPaths` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the VpcFlowLogsConfigs collection.
        *
        * <p>The typical use is:</p>

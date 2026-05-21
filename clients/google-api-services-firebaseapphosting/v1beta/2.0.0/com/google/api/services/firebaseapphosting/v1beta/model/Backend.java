@@ -47,6 +47,13 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.String appId;
 
   /**
+   * Optional. automatic_base_image_updates_disabled acts as a way for users to opt out of ABIU.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean automaticBaseImageUpdatesDisabled;
+
+  /**
    * Optional. If specified, the connection to an external source repository to watch for event-
    * driven updates to the backend.
    * The value may be {@code null}.
@@ -144,6 +151,14 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean requestLogsDisabled;
 
   /**
+   * Optional. The runtime that the backend will be built on. A default base_image will be chosen
+   * for a given runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendRuntime runtime;
+
+  /**
    * Required. The name of the service account used for Cloud Build and Cloud Run. Should have the
    * role roles/firebaseapphosting.computeRunner or equivalent permissions.
    * The value may be {@code null}.
@@ -216,6 +231,23 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setAppId(java.lang.String appId) {
     this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Optional. automatic_base_image_updates_disabled acts as a way for users to opt out of ABIU.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutomaticBaseImageUpdatesDisabled() {
+    return automaticBaseImageUpdatesDisabled;
+  }
+
+  /**
+   * Optional. automatic_base_image_updates_disabled acts as a way for users to opt out of ABIU.
+   * @param automaticBaseImageUpdatesDisabled automaticBaseImageUpdatesDisabled or {@code null} for none
+   */
+  public Backend setAutomaticBaseImageUpdatesDisabled(java.lang.Boolean automaticBaseImageUpdatesDisabled) {
+    this.automaticBaseImageUpdatesDisabled = automaticBaseImageUpdatesDisabled;
     return this;
   }
 
@@ -449,6 +481,25 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setRequestLogsDisabled(java.lang.Boolean requestLogsDisabled) {
     this.requestLogsDisabled = requestLogsDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. The runtime that the backend will be built on. A default base_image will be chosen
+   * for a given runtime.
+   * @return value or {@code null} for none
+   */
+  public BackendRuntime getRuntime() {
+    return runtime;
+  }
+
+  /**
+   * Optional. The runtime that the backend will be built on. A default base_image will be chosen
+   * for a given runtime.
+   * @param runtime runtime or {@code null} for none
+   */
+  public Backend setRuntime(BackendRuntime runtime) {
+    this.runtime = runtime;
     return this;
   }
 

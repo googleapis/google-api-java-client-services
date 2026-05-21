@@ -56,8 +56,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
    * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
-   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
-   * "foo/bar/excluded” type: GLOB }
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ``` ignored_paths: {
+   * pattern: "foo/bar/excluded", type: "GLOB" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
    * policy will default to triggering on all paths if both ignored_paths and required_paths are not
-   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
+   * populated. Limited to 100 paths. Example: ``` required_paths: { pattern: "foo/bar", type:
+   * "GLOB" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +144,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
    * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
-   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
-   * "foo/bar/excluded” type: GLOB }
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ``` ignored_paths: {
+   * pattern: "foo/bar/excluded", type: "GLOB" } ```
    * @return value or {@code null} for none
    */
   public java.util.List<Path> getIgnoredPaths() {
@@ -154,8 +155,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
    * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
-   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
-   * "foo/bar/excluded” type: GLOB }
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ``` ignored_paths: {
+   * pattern: "foo/bar/excluded", type: "GLOB" } ```
    * @param ignoredPaths ignoredPaths or {@code null} for none
    */
   public RolloutPolicy setIgnoredPaths(java.util.List<Path> ignoredPaths) {
@@ -167,7 +168,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
    * policy will default to triggering on all paths if both ignored_paths and required_paths are not
-   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
+   * populated. Limited to 100 paths. Example: ``` required_paths: { pattern: "foo/bar", type:
+   * "GLOB" } ```
    * @return value or {@code null} for none
    */
   public java.util.List<Path> getRequiredPaths() {
@@ -178,7 +180,8 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
    * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
    * changed files in the commit are present in this list. This field is optional; the rollout
    * policy will default to triggering on all paths if both ignored_paths and required_paths are not
-   * populated. Limited to 100 paths. Example: “required_paths: { pattern: "foo/bar” type: GLOB }
+   * populated. Limited to 100 paths. Example: ``` required_paths: { pattern: "foo/bar", type:
+   * "GLOB" } ```
    * @param requiredPaths requiredPaths or {@code null} for none
    */
   public RolloutPolicy setRequiredPaths(java.util.List<Path> requiredPaths) {

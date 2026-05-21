@@ -90,6 +90,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OntapSource ontapSource;
+
+  /**
    * Output only. Reserved for future use
    * The value may be {@code null}.
    */
@@ -285,6 +293,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * @return value or {@code null} for none
+   */
+  public OntapSource getOntapSource() {
+    return ontapSource;
+  }
+
+  /**
+   * Optional. Represents source details for ONTAP backups. Either source_volume or ontap_source
+   * should be provided.
+   * @param ontapSource ontapSource or {@code null} for none
+   */
+  public Backup setOntapSource(OntapSource ontapSource) {
+    this.ontapSource = ontapSource;
     return this;
   }
 

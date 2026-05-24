@@ -30,39 +30,12 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated: Use semantic_inference_enabled instead. Specifies whether deeper entity
-   * inference over the objects' contents using GenAI is enabled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean entityInferenceEnabled;
-
-  /**
    * Optional. Specifies whether deeper semantic inference over the objects' contents using GenAI is
    * enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean semanticInferenceEnabled;
-
-  /**
-   * Optional. Deprecated: Use semantic_inference_enabled instead. Specifies whether deeper entity
-   * inference over the objects' contents using GenAI is enabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEntityInferenceEnabled() {
-    return entityInferenceEnabled;
-  }
-
-  /**
-   * Optional. Deprecated: Use semantic_inference_enabled instead. Specifies whether deeper entity
-   * inference over the objects' contents using GenAI is enabled.
-   * @param entityInferenceEnabled entityInferenceEnabled or {@code null} for none
-   */
-  public GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions setEntityInferenceEnabled(java.lang.Boolean entityInferenceEnabled) {
-    this.entityInferenceEnabled = entityInferenceEnabled;
-    return this;
-  }
 
   /**
    * Optional. Specifies whether deeper semantic inference over the objects' contents using GenAI is

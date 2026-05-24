@@ -31,11 +31,39 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1Diagnostic extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The display name of the agent associated with the diagnostic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentDisplayName;
+
+  /**
+   * Output only. The ID of the agent associated with the diagnostic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentId;
+
+  /**
    * Output only. The complete sequence of thoughts and actions taken by the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String analysisSummary;
+
+  /**
+   * Output only. The application ID associated with the diagnostic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appId;
+
+  /**
+   * Output only. The application version associated with the diagnostic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appVersion;
 
   /**
    * Output only. The filter used to select the conversations that were included in the diagnostic.
@@ -52,6 +80,13 @@ public final class GoogleCloudContactcenterinsightsV1Diagnostic extends com.goog
   private String createTime;
 
   /**
+   * Output only. The timestamp when the group was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String groupCreateTime;
+
+  /**
    * Immutable. Identifier. The resource name of the diagnostic.
    * The value may be {@code null}.
    */
@@ -64,6 +99,40 @@ public final class GoogleCloudContactcenterinsightsV1Diagnostic extends com.goog
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1DiagnosticReport report;
+
+  /**
+   * Output only. The display name of the agent associated with the diagnostic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentDisplayName() {
+    return agentDisplayName;
+  }
+
+  /**
+   * Output only. The display name of the agent associated with the diagnostic.
+   * @param agentDisplayName agentDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Diagnostic setAgentDisplayName(java.lang.String agentDisplayName) {
+    this.agentDisplayName = agentDisplayName;
+    return this;
+  }
+
+  /**
+   * Output only. The ID of the agent associated with the diagnostic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentId() {
+    return agentId;
+  }
+
+  /**
+   * Output only. The ID of the agent associated with the diagnostic.
+   * @param agentId agentId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Diagnostic setAgentId(java.lang.String agentId) {
+    this.agentId = agentId;
+    return this;
+  }
 
   /**
    * Output only. The complete sequence of thoughts and actions taken by the agent.
@@ -79,6 +148,40 @@ public final class GoogleCloudContactcenterinsightsV1Diagnostic extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1Diagnostic setAnalysisSummary(java.lang.String analysisSummary) {
     this.analysisSummary = analysisSummary;
+    return this;
+  }
+
+  /**
+   * Output only. The application ID associated with the diagnostic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppId() {
+    return appId;
+  }
+
+  /**
+   * Output only. The application ID associated with the diagnostic.
+   * @param appId appId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Diagnostic setAppId(java.lang.String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Output only. The application version associated with the diagnostic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppVersion() {
+    return appVersion;
+  }
+
+  /**
+   * Output only. The application version associated with the diagnostic.
+   * @param appVersion appVersion or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Diagnostic setAppVersion(java.lang.String appVersion) {
+    this.appVersion = appVersion;
     return this;
   }
 
@@ -113,6 +216,23 @@ public final class GoogleCloudContactcenterinsightsV1Diagnostic extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1Diagnostic setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the group was created.
+   * @return value or {@code null} for none
+   */
+  public String getGroupCreateTime() {
+    return groupCreateTime;
+  }
+
+  /**
+   * Output only. The timestamp when the group was created.
+   * @param groupCreateTime groupCreateTime or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Diagnostic setGroupCreateTime(String groupCreateTime) {
+    this.groupCreateTime = groupCreateTime;
     return this;
   }
 

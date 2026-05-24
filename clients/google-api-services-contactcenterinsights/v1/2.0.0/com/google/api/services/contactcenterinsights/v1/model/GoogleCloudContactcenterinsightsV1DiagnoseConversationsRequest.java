@@ -32,6 +32,36 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * ces agent display name (e.g., "Steering", "Billing").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentDisplayName;
+
+  /**
+   * ces agent id to diagnose.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentId;
+
+  /**
+   * Required. The CES App ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appId;
+
+  /**
+   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
+   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
+   * of instruction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appVersion;
+
+  /**
    * Optional. Deprecated: If true, the request will be validated and a simulation of the analysis
    * will be performed without actually executing the task. This field is unused. Use validate_only
    * instead.
@@ -57,7 +87,16 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   private java.lang.Boolean fullReport;
 
   /**
-   * Optional. Specific instructions for the agent.
+   * Optional. A unique identifier used to group multiple diagnostic requests triggered under the
+   * same run batch or cron job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String groupId;
+
+  /**
+   * Optional. Deprecated: Specific instructions for the agent. Use app_id and subagent fields
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,6 +160,78 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   private java.lang.Boolean validateOnly;
 
   /**
+   * ces agent display name (e.g., "Steering", "Billing").
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentDisplayName() {
+    return agentDisplayName;
+  }
+
+  /**
+   * ces agent display name (e.g., "Steering", "Billing").
+   * @param agentDisplayName agentDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setAgentDisplayName(java.lang.String agentDisplayName) {
+    this.agentDisplayName = agentDisplayName;
+    return this;
+  }
+
+  /**
+   * ces agent id to diagnose.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentId() {
+    return agentId;
+  }
+
+  /**
+   * ces agent id to diagnose.
+   * @param agentId agentId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setAgentId(java.lang.String agentId) {
+    this.agentId = agentId;
+    return this;
+  }
+
+  /**
+   * Required. The CES App ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppId() {
+    return appId;
+  }
+
+  /**
+   * Required. The CES App ID.
+   * @param appId appId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setAppId(java.lang.String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
+   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
+   * of instruction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppVersion() {
+    return appVersion;
+  }
+
+  /**
+   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
+   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
+   * of instruction.
+   * @param appVersion appVersion or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setAppVersion(java.lang.String appVersion) {
+    this.appVersion = appVersion;
+    return this;
+  }
+
+  /**
    * Optional. Deprecated: If true, the request will be validated and a simulation of the analysis
    * will be performed without actually executing the task. This field is unused. Use validate_only
    * instead.
@@ -180,7 +291,27 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   }
 
   /**
-   * Optional. Specific instructions for the agent.
+   * Optional. A unique identifier used to group multiple diagnostic requests triggered under the
+   * same run batch or cron job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroupId() {
+    return groupId;
+  }
+
+  /**
+   * Optional. A unique identifier used to group multiple diagnostic requests triggered under the
+   * same run batch or cron job.
+   * @param groupId groupId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setGroupId(java.lang.String groupId) {
+    this.groupId = groupId;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: Specific instructions for the agent. Use app_id and subagent fields
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstructions() {
@@ -188,7 +319,8 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   }
 
   /**
-   * Optional. Specific instructions for the agent.
+   * Optional. Deprecated: Specific instructions for the agent. Use app_id and subagent fields
+   * instead.
    * @param instructions instructions or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setInstructions(java.lang.String instructions) {

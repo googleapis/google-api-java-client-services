@@ -22573,6 +22573,38 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return this;
           }
 
+          /** Optional. The CES App ID to filter diagnostics by. */
+          @com.google.api.client.util.Key
+          private java.lang.String appId;
+
+          /** Optional. The CES App ID to filter diagnostics by.
+           */
+          public java.lang.String getAppId() {
+            return appId;
+          }
+
+          /** Optional. The CES App ID to filter diagnostics by. */
+          public List setAppId(java.lang.String appId) {
+            this.appId = appId;
+            return this;
+          }
+
+          /** Optional. The CES App version to filter diagnostics by. */
+          @com.google.api.client.util.Key
+          private java.lang.String appVersion;
+
+          /** Optional. The CES App version to filter diagnostics by.
+           */
+          public java.lang.String getAppVersion() {
+            return appVersion;
+          }
+
+          /** Optional. The CES App version to filter diagnostics by. */
+          public List setAppVersion(java.lang.String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+          }
+
           /**
            * Optional. A filter to apply to the list (e.g. `create_time > "2023-01-01T00:00:00Z"`).
            */

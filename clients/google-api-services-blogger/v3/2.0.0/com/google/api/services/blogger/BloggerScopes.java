@@ -17,7 +17,7 @@
 package com.google.api.services.blogger;
 
 /**
- * Available OAuth 2.0 scopes for use with the Blogger API.
+ * Available OAuth 2.0 scopes for use with the blogger API.
  *
  * @since 1.4
  */

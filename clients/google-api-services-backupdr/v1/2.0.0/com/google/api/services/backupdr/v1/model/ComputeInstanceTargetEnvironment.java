@@ -39,6 +39,13 @@ public final class ComputeInstanceTargetEnvironment extends com.google.api.clien
   private java.lang.String project;
 
   /**
+   * Optional. Whether to use the project service account for the Compute Engine instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useProjectServiceAccount;
+
+  /**
    * Required. The zone of the Compute Engine instance.
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class ComputeInstanceTargetEnvironment extends com.google.api.clien
    */
   public ComputeInstanceTargetEnvironment setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the Compute Engine instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseProjectServiceAccount() {
+    return useProjectServiceAccount;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the Compute Engine instance.
+   * @param useProjectServiceAccount useProjectServiceAccount or {@code null} for none
+   */
+  public ComputeInstanceTargetEnvironment setUseProjectServiceAccount(java.lang.Boolean useProjectServiceAccount) {
+    this.useProjectServiceAccount = useProjectServiceAccount;
     return this;
   }
 

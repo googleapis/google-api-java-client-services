@@ -52,6 +52,13 @@ public final class RegionDiskTargetEnvironment extends com.google.api.client.jso
   private java.util.List<java.lang.String> replicaZones;
 
   /**
+   * Optional. Whether to use the project service account for the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useProjectServiceAccount;
+
+  /**
    * Required. Target project for the disk.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class RegionDiskTargetEnvironment extends com.google.api.client.jso
    */
   public RegionDiskTargetEnvironment setReplicaZones(java.util.List<java.lang.String> replicaZones) {
     this.replicaZones = replicaZones;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseProjectServiceAccount() {
+    return useProjectServiceAccount;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   * @param useProjectServiceAccount useProjectServiceAccount or {@code null} for none
+   */
+  public RegionDiskTargetEnvironment setUseProjectServiceAccount(java.lang.Boolean useProjectServiceAccount) {
+    this.useProjectServiceAccount = useProjectServiceAccount;
     return this;
   }
 

@@ -3140,6 +3140,457 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
     }
     /**
+     * An accessor for creating requests from the Enterprise collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.Enterprise.List request = chromemanagement.enterprise().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Enterprise enterprise() {
+      return new Enterprise();
+    }
+
+    /**
+     * The "enterprise" collection of methods.
+     */
+    public class Enterprise {
+
+      /**
+       * An accessor for creating requests from the SecurityInsights collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+       *   {@code ChromeManagement.SecurityInsights.List request = chromemanagement.securityInsights().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SecurityInsights securityInsights() {
+        return new SecurityInsights();
+      }
+
+      /**
+       * The "securityInsights" collection of methods.
+       */
+      public class SecurityInsights {
+
+        /**
+         * Gets the setting state of the insights feature for the customer.
+         *
+         * Create a request for the method "securityInsights.checkEnablementStatus".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CheckEnablementStatus#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customer Required. The customer to check the enablement status for. Format: customers/{customer_id}
+         * @return the request
+         */
+        public CheckEnablementStatus checkEnablementStatus(java.lang.String customer) throws java.io.IOException {
+          CheckEnablementStatus result = new CheckEnablementStatus(customer);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckEnablementStatus extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1CheckEnablementStatusResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:checkEnablementStatus";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Gets the setting state of the insights feature for the customer.
+           *
+           * Create a request for the method "securityInsights.checkEnablementStatus".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link CheckEnablementStatus#execute()} method to invoke the
+           * remote operation. <p> {@link CheckEnablementStatus#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer to check the enablement status for. Format: customers/{customer_id}
+           * @since 1.13
+           */
+          protected CheckEnablementStatus(java.lang.String customer) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1CheckEnablementStatusResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CheckEnablementStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckEnablementStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckEnablementStatus setAccessToken(java.lang.String accessToken) {
+            return (CheckEnablementStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckEnablementStatus setAlt(java.lang.String alt) {
+            return (CheckEnablementStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckEnablementStatus setCallback(java.lang.String callback) {
+            return (CheckEnablementStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckEnablementStatus setFields(java.lang.String fields) {
+            return (CheckEnablementStatus) super.setFields(fields);
+          }
+
+          @Override
+          public CheckEnablementStatus setKey(java.lang.String key) {
+            return (CheckEnablementStatus) super.setKey(key);
+          }
+
+          @Override
+          public CheckEnablementStatus setOauthToken(java.lang.String oauthToken) {
+            return (CheckEnablementStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckEnablementStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckEnablementStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckEnablementStatus setQuotaUser(java.lang.String quotaUser) {
+            return (CheckEnablementStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckEnablementStatus setUploadType(java.lang.String uploadType) {
+            return (CheckEnablementStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckEnablementStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckEnablementStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The customer to check the enablement status for. Format:
+           * customers/{customer_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer to check the enablement status for. Format: customers/{customer_id}
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. The customer to check the enablement status for. Format:
+           * customers/{customer_id}
+           */
+          public CheckEnablementStatus setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public CheckEnablementStatus set(String parameterName, Object value) {
+            return (CheckEnablementStatus) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Disables insights for the customer.
+         *
+         * Create a request for the method "securityInsights.disable".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer to disable insights for. Format: customers/{customer}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsRequest}
+         * @return the request
+         */
+        public Disable disable(java.lang.String customer, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsRequest content) throws java.io.IOException {
+          Disable result = new Disable(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Disable extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:disable";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Disables insights for the customer.
+           *
+           * Create a request for the method "securityInsights.disable".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer to disable insights for. Format: customers/{customer}
+           * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsRequest}
+           * @since 1.13
+           */
+          protected Disable(java.lang.String customer, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsRequest content) {
+            super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1DisableInsightsResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Disable set$Xgafv(java.lang.String $Xgafv) {
+            return (Disable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Disable setAccessToken(java.lang.String accessToken) {
+            return (Disable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Disable setAlt(java.lang.String alt) {
+            return (Disable) super.setAlt(alt);
+          }
+
+          @Override
+          public Disable setCallback(java.lang.String callback) {
+            return (Disable) super.setCallback(callback);
+          }
+
+          @Override
+          public Disable setFields(java.lang.String fields) {
+            return (Disable) super.setFields(fields);
+          }
+
+          @Override
+          public Disable setKey(java.lang.String key) {
+            return (Disable) super.setKey(key);
+          }
+
+          @Override
+          public Disable setOauthToken(java.lang.String oauthToken) {
+            return (Disable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Disable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Disable setQuotaUser(java.lang.String quotaUser) {
+            return (Disable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Disable setUploadType(java.lang.String uploadType) {
+            return (Disable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Disable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer to disable insights for. Format: customers/{customer} */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer to disable insights for. Format: customers/{customer}
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer to disable insights for. Format: customers/{customer} */
+          public Disable setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public Disable set(String parameterName, Object value) {
+            return (Disable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enables insights for the customer and sets up required chrome connectors.
+         *
+         * Create a request for the method "securityInsights.enable".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+         *
+         * @param customer Required. The customer to enable insights for. Format: customers/{customer}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsRequest}
+         * @return the request
+         */
+        public Enable enable(java.lang.String customer, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsRequest content) throws java.io.IOException {
+          Enable result = new Enable(customer, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Enable extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:enable";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Enables insights for the customer and sets up required chrome connectors.
+           *
+           * Create a request for the method "securityInsights.enable".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer to enable insights for. Format: customers/{customer}
+           * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsRequest}
+           * @since 1.13
+           */
+          protected Enable(java.lang.String customer, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsRequest content) {
+            super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnableInsightsResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Enable set$Xgafv(java.lang.String $Xgafv) {
+            return (Enable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Enable setAccessToken(java.lang.String accessToken) {
+            return (Enable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Enable setAlt(java.lang.String alt) {
+            return (Enable) super.setAlt(alt);
+          }
+
+          @Override
+          public Enable setCallback(java.lang.String callback) {
+            return (Enable) super.setCallback(callback);
+          }
+
+          @Override
+          public Enable setFields(java.lang.String fields) {
+            return (Enable) super.setFields(fields);
+          }
+
+          @Override
+          public Enable setKey(java.lang.String key) {
+            return (Enable) super.setKey(key);
+          }
+
+          @Override
+          public Enable setOauthToken(java.lang.String oauthToken) {
+            return (Enable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Enable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Enable setQuotaUser(java.lang.String quotaUser) {
+            return (Enable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Enable setUploadType(java.lang.String uploadType) {
+            return (Enable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Enable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer to enable insights for. Format: customers/{customer} */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer to enable insights for. Format: customers/{customer}
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer to enable insights for. Format: customers/{customer} */
+          public Enable setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public Enable set(String parameterName, Object value) {
+            return (Enable) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Profiles collection.
      *
      * <p>The typical use is:</p>

@@ -160,10 +160,10 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * by this endpoint are valid for at least six months. When a classification is deactivated, this
      * endpoint immediately stops returning it. After six months, `case.create` requests using the
      * classification will fail. EXAMPLES: cURL: ```shell curl \ --header "Authorization: Bearer
-     * $(gcloud auth print-access-token)" \ 'https://cloudsupport.googleapis.com/v2/caseClassifications:
-     * search?query=display_name:"*Compute%20Engine*"' ``` Python: ```python import
+     * $(gcloud auth print-access-token)" \ 'https://cloudsupport.googleapis.com/v2beta/caseClassificati
+     * ons:search?query=display_name:"*Compute%20Engine*"' ``` Python: ```python import
      * googleapiclient.discovery supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version="v2",
+     * serviceName="cloudsupport", version="v2beta",
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version=v2", ) request
      * = supportApiService.caseClassifications().search( query='display_name:"*Compute Engine*"' )
      * print(request.execute()) ```
@@ -193,9 +193,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * deactivated, this endpoint immediately stops returning it. After six months, `case.create`
        * requests using the classification will fail. EXAMPLES: cURL: ```shell curl \ --header
        * "Authorization: Bearer $(gcloud auth print-access-token)" \ 'https://cloudsupport.googleapis.co
-       * m/v2/caseClassifications:search?query=display_name:"*Compute%20Engine*"' ``` Python: ```python
-       * import googleapiclient.discovery supportApiService = googleapiclient.discovery.build(
-       * serviceName="cloudsupport", version="v2",
+       * m/v2beta/caseClassifications:search?query=display_name:"*Compute%20Engine*"' ``` Python:
+       * ```python import googleapiclient.discovery supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version="v2beta",
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version=v2", )
        * request = supportApiService.caseClassifications().search( query='display_name:"*Compute
        * Engine*"' ) print(request.execute()) ```
@@ -387,9 +387,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     /**
      * Close a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \
      * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$case:close" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * "https://cloudsupport.googleapis.com/v2beta/$case:close" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().close( name="projects/some-project/cases/43595344" )
      * print(request.execute()) ```
@@ -419,8 +419,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * Close a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \
        * --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$case:close" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * "https://cloudsupport.googleapis.com/v2beta/$case:close" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().close( name="projects/some-project/cases/43595344" )
@@ -539,8 +539,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS36CPJ786L2T
      * BFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, "time_zone": "-07:00",
      * "subscriber_email_addresses": [ "foo@domain.com", "bar@domain.com" ], "testCase": true,
-     * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
-     * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+     * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2beta/$parent/cases" ``` Python:
+     * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
      * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().create( parent="projects/some-project", body={
@@ -581,8 +581,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * close", "classification": { "id": "100IK2AKCLHMGRJ9CDGMOCGP8DM6UTB4BT262T31BT1M2T31DHNMENPO6KS3
        * 6CPJ786L2TBFEHGN6NPI64R3CDHN8880G08I1H3MURR7DHII0GRCDTQM8" }, "time_zone": "-07:00",
        * "subscriber_email_addresses": [ "foo@domain.com", "bar@domain.com" ], "testCase": true,
-       * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
-       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * "priority": "P3" }' \ "https://cloudsupport.googleapis.com/v2beta/$parent/cases" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().create( parent="projects/some-project", body={ "displayName": "A
@@ -700,8 +700,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * EXAMPLES: cURL: ```shell case="projects/some-project/cases/43595344" curl \ --request POST \
      * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-Type:
      * application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT", "justification": "This
-     * is a test escalation." } }' \ "https://cloudsupport.googleapis.com/v2/$case:escalate" ``` Python:
-     * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+     * is a test escalation." } }' \ "https://cloudsupport.googleapis.com/v2beta/$case:escalate" ```
+     * Python: ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
      * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().escalate( name="projects/some-project/cases/43595344",
@@ -738,8 +738,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header "Content-
        * Type: application/json" \ --data '{ "escalation": { "reason": "BUSINESS_IMPACT",
        * "justification": "This is a test escalation." } }' \
-       * "https://cloudsupport.googleapis.com/v2/$case:escalate" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * "https://cloudsupport.googleapis.com/v2beta/$case:escalate" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().escalate( name="projects/some-project/cases/43595344", body={
@@ -852,9 +852,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     /**
      * Retrieve a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/16033687" curl \
      * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$case" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * "https://cloudsupport.googleapis.com/v2beta/$case" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().get( name="projects/some-project/cases/43595344", )
      * print(request.execute()) ```
@@ -883,8 +883,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * Retrieve a case. EXAMPLES: cURL: ```shell case="projects/some-project/cases/16033687" curl \
        * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$case" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * "https://cloudsupport.googleapis.com/v2beta/$case" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().get( name="projects/some-project/cases/43595344", )
@@ -1006,9 +1006,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * organization only returns the cases that are directly parented by that organization. To retrieve
      * cases under an organization and its projects, use `cases.search`. EXAMPLES: cURL: ```shell
      * parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-     * token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * token)" \ "https://cloudsupport.googleapis.com/v2beta/$parent/cases" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().list(parent="projects/some-project")
      * print(request.execute()) ```
@@ -1039,8 +1039,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * organization only returns the cases that are directly parented by that organization. To
        * retrieve cases under an organization and its projects, use `cases.search`. EXAMPLES: cURL:
        * ```shell parent="projects/some-project" curl \ --header "Authorization: Bearer $(gcloud auth
-       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$parent/cases" ``` Python:
-       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2beta/$parent/cases" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().list(parent="projects/some-project") print(request.execute()) ```
@@ -1260,9 +1260,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * Update a case. Only some fields can be updated. EXAMPLES: cURL: ```shell case="projects/some-
      * project/cases/43595344" curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth
      * print-access-token)" \ --header "Content-Type: application/json" \ --data '{ "priority": "P1" }'
-     * \ "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * \ "https://cloudsupport.googleapis.com/v2beta/$case?updateMask=priority" ``` Python: ```python
+     * import googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().patch( name="projects/some-project/cases/43112854", body={
      * "displayName": "This is Now a New Title", "priority": "P2", }, ) print(request.execute()) ```
@@ -1293,8 +1293,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Update a case. Only some fields can be updated. EXAMPLES: cURL: ```shell case="projects/some-
        * project/cases/43595344" curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth
        * print-access-token)" \ --header "Content-Type: application/json" \ --data '{ "priority": "P1"
-       * }' \ "https://cloudsupport.googleapis.com/v2/$case?updateMask=priority" ``` Python: ```python
-       * import googleapiclient.discovery api_version = "v2" supportApiService =
+       * }' \ "https://cloudsupport.googleapis.com/v2beta/$case?updateMask=priority" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().patch( name="projects/some-project/cases/43112854", body={
@@ -1440,9 +1440,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
     /**
      * Search for cases using a query. EXAMPLES: cURL: ```shell parent="projects/some-project" curl \
      * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * "https://cloudsupport.googleapis.com/v2beta/$parent/cases:search" ``` Python: ```python import
+     * googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.cases().search( parent="projects/some-project", query="state=OPEN"
      * ) print(request.execute()) ```
@@ -1467,8 +1467,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * Search for cases using a query. EXAMPLES: cURL: ```shell parent="projects/some-project" curl \
        * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$parent/cases:search" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * "https://cloudsupport.googleapis.com/v2beta/$parent/cases:search" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.cases().search( parent="projects/some-project", query="state=OPEN" )
@@ -1924,7 +1924,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Retrieve an attachment associated with a support case. EXAMPLES: cURL: ```shell
        * attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB" curl \ --header
        * "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$attachment" ``` Python: ```python import
+       * "https://cloudsupport.googleapis.com/v2beta/$attachment" ``` Python: ```python import
        * googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
@@ -1956,7 +1956,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * Retrieve an attachment associated with a support case. EXAMPLES: cURL: ```shell
          * attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB" curl \
          * --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-         * "https://cloudsupport.googleapis.com/v2/$attachment" ``` Python: ```python import
+         * "https://cloudsupport.googleapis.com/v2beta/$attachment" ``` Python: ```python import
          * googleapiclient.discovery api_version = "v2beta" supportApiService =
          * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
          * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
@@ -2077,8 +2077,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell
        * case="projects/some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud auth
-       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ``` Python:
-       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2beta/$case/attachments" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = ( supportApiService.cases() .attachments() .list(parent="projects/some-
@@ -2108,8 +2108,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         /**
          * List all the attachments associated with a support case. EXAMPLES: cURL: ```shell
          * case="projects/some-project/cases/23598314" curl \ --header "Authorization: Bearer $(gcloud
-         * auth print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$case/attachments" ```
-         * Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * auth print-access-token)" \ "https://cloudsupport.googleapis.com/v2beta/$case/attachments" ```
+         * Python: ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
          * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
          * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
          * = ( supportApiService.cases() .attachments() .list(parent="projects/some-
@@ -2304,9 +2304,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * cURL: ```shell case="projects/some-project/cases/43591344" curl \ --request POST \ --header
        * "Authorization: Bearer $(gcloud auth print-access-token)" \ --header 'Content-Type:
        * application/json' \ --data '{ "body": "This is a test comment." }' \
-       * "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-       * serviceName="cloudsupport", version=api_version,
+       * "https://cloudsupport.googleapis.com/v2beta/$case/comments" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = ( supportApiService.cases() .comments() .create( parent="projects/some-
        * project/cases/43595344", body={"body": "This is a test comment."}, ) ) print(request.execute())
@@ -2339,8 +2339,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
          * cURL: ```shell case="projects/some-project/cases/43591344" curl \ --request POST \ --header
          * "Authorization: Bearer $(gcloud auth print-access-token)" \ --header 'Content-Type:
          * application/json' \ --data '{ "body": "This is a test comment." }' \
-         * "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
-         * googleapiclient.discovery api_version = "v2" supportApiService =
+         * "https://cloudsupport.googleapis.com/v2beta/$case/comments" ``` Python: ```python import
+         * googleapiclient.discovery api_version = "v2beta" supportApiService =
          * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
          * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
          * = ( supportApiService.cases() .comments() .create( parent="projects/some-
@@ -2453,8 +2453,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * Retrieve a comment. EXAMPLES: cURL: ```shell comment="projects/some-
        * project/cases/43595344/comments/234567890" curl \ --header "Authorization: Bearer $(gcloud auth
-       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$comment" ``` Python: ```python
-       * import googleapiclient.discovery api_version = "v2beta" supportApiService =
+       * print-access-token)" \ "https://cloudsupport.googleapis.com/v2beta/$comment" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = supportApiService.cases().comments().get( name="projects/some-
@@ -2484,8 +2484,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         /**
          * Retrieve a comment. EXAMPLES: cURL: ```shell comment="projects/some-
          * project/cases/43595344/comments/234567890" curl \ --header "Authorization: Bearer $(gcloud auth
-         * print-access-token)" \ "https://cloudsupport.googleapis.com/v2/$comment" ``` Python: ```python
-         * import googleapiclient.discovery api_version = "v2beta" supportApiService =
+         * print-access-token)" \ "https://cloudsupport.googleapis.com/v2beta/$comment" ``` Python:
+         * ```python import googleapiclient.discovery api_version = "v2beta" supportApiService =
          * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
          * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
          * = supportApiService.cases().comments().get( name="projects/some-
@@ -2605,9 +2605,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
       /**
        * List all the comments associated with a case. EXAMPLES: cURL: ```shell case="projects/some-
        * project/cases/43595344" curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)"
-       * \ "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-       * serviceName="cloudsupport", version=api_version,
+       * \ "https://cloudsupport.googleapis.com/v2beta/$case/comments" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2beta" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
        * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
        * ) request = ( supportApiService.cases() .comments() .list(parent="projects/some-
        * project/cases/43595344") ) print(request.execute()) ```
@@ -2636,8 +2636,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         /**
          * List all the comments associated with a case. EXAMPLES: cURL: ```shell case="projects/some-
          * project/cases/43595344" curl \ --header "Authorization: Bearer $(gcloud auth print-access-
-         * token)" \ "https://cloudsupport.googleapis.com/v2/$case/comments" ``` Python: ```python import
-         * googleapiclient.discovery api_version = "v2" supportApiService =
+         * token)" \ "https://cloudsupport.googleapis.com/v2beta/$case/comments" ``` Python: ```python
+         * import googleapiclient.discovery api_version = "v2beta" supportApiService =
          * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
          * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
          * = ( supportApiService.cases() .comments() .list(parent="projects/some-project/cases/43595344")
@@ -2822,9 +2822,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * "?alt=media" to the URL. EXAMPLES: cURL: ```shell name="projects/some-
      * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
      * $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
+     * "https://cloudsupport.googleapis.com/v2beta/$name:download?alt=media" ``` Python: ```python
+     * import googleapiclient.discovery api_version = "v2beta" supportApiService =
+     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
      * ) request = supportApiService.media().download( name="projects/some-
      * project/cases/43595344/attachments/0684M00000Pw6pHQAR" ) request.uri = request.uri.split("?")[0]
@@ -2857,8 +2857,8 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * "?alt=media" to the URL. EXAMPLES: cURL: ```shell name="projects/some-
        * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
        * $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import
-       * googleapiclient.discovery api_version = "v2" supportApiService =
+       * "https://cloudsupport.googleapis.com/v2beta/$name:download?alt=media" ``` Python: ```python
+       * import googleapiclient.discovery api_version = "v2beta" supportApiService =
        * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
        * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
        * = supportApiService.media().download( name="projects/some-
@@ -3007,7 +3007,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \ --header
      * "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary @"./example_file.txt" \
      * "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded
-     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2beta"
      * supportApiService = googleapiclient.discovery.build( serviceName="cloudsupport",
      * version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
@@ -3038,7 +3038,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * CSAPI." \ > "./example_file.txt" case="projects/some-project/cases/43594844" curl \ --header
      * "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary @"./example_file.txt" \
      * "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?attachment.filename=uploaded
-     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2"
+     * _via_curl.txt" ``` Python: ```python import googleapiclient.discovery api_version = "v2beta"
      * supportApiService = googleapiclient.discovery.build( serviceName="cloudsupport",
      * version=api_version,
      * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
@@ -3083,7 +3083,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary
        * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?at
        * tachment.filename=uploaded_via_curl.txt" ``` Python: ```python import googleapiclient.discovery
-       * api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * api_version = "v2beta" supportApiService = googleapiclient.discovery.build(
        * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https://cloudsupport.goo
        * gleapis.com/$discovery/rest?version={api_version}", ) file_path = "./example_file.txt" with
        * open(file_path, "w") as file: file.write( "This text is inside a file I'm going to upload using
@@ -3120,7 +3120,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --data-binary
        * @"./example_file.txt" \ "https://cloudsupport.googleapis.com/upload/v2beta/$case/attachments?at
        * tachment.filename=uploaded_via_curl.txt" ``` Python: ```python import googleapiclient.discovery
-       * api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * api_version = "v2beta" supportApiService = googleapiclient.discovery.build(
        * serviceName="cloudsupport", version=api_version, discoveryServiceUrl=f"https://cloudsupport.goo
        * gleapis.com/$discovery/rest?version={api_version}", ) file_path = "./example_file.txt" with
        * open(file_path, "w") as file: file.write( "This text is inside a file I'm going to upload using

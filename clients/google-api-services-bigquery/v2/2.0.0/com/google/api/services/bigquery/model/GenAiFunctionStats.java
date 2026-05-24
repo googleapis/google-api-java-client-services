@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class GenAiFunctionStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cache stats for the function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenAiFunctionCacheStats cacheStats;
+
+  /**
    * Cost optimization stats if applied on the rows processed by the function.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class GenAiFunctionStats extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String prompt;
+
+  /**
+   * Cache stats for the function.
+   * @return value or {@code null} for none
+   */
+  public GenAiFunctionCacheStats getCacheStats() {
+    return cacheStats;
+  }
+
+  /**
+   * Cache stats for the function.
+   * @param cacheStats cacheStats or {@code null} for none
+   */
+  public GenAiFunctionStats setCacheStats(GenAiFunctionCacheStats cacheStats) {
+    this.cacheStats = cacheStats;
+    return this;
+  }
 
   /**
    * Cost optimization stats if applied on the rows processed by the function.

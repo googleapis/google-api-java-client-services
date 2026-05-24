@@ -54,6 +54,14 @@ public final class PerformanceInsights extends com.google.api.client.json.Generi
   private java.util.List<StagePerformanceStandaloneInsight> stagePerformanceStandaloneInsights;
 
   /**
+   * Output only. Performance insights for table-level attributes that changed compared to previous
+   * runs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TableChangeInsight> tableChangeInsights;
+
+  /**
    * Output only. Average execution ms of previous runs. Indicates the job ran slow compared to
    * previous executions. To find previous executions, use INFORMATION_SCHEMA tables and filter jobs
    * with same query hash.
@@ -107,6 +115,25 @@ public final class PerformanceInsights extends com.google.api.client.json.Generi
    */
   public PerformanceInsights setStagePerformanceStandaloneInsights(java.util.List<StagePerformanceStandaloneInsight> stagePerformanceStandaloneInsights) {
     this.stagePerformanceStandaloneInsights = stagePerformanceStandaloneInsights;
+    return this;
+  }
+
+  /**
+   * Output only. Performance insights for table-level attributes that changed compared to previous
+   * runs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TableChangeInsight> getTableChangeInsights() {
+    return tableChangeInsights;
+  }
+
+  /**
+   * Output only. Performance insights for table-level attributes that changed compared to previous
+   * runs.
+   * @param tableChangeInsights tableChangeInsights or {@code null} for none
+   */
+  public PerformanceInsights setTableChangeInsights(java.util.List<TableChangeInsight> tableChangeInsights) {
+    this.tableChangeInsights = tableChangeInsights;
     return this;
   }
 

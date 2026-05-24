@@ -87,6 +87,22 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   }
 
   /**
+   * Optional. A list of SNIs to match against. The match can be one of exact, prefix, suffix, or
+   * contains (substring match). If there is no SNI (i.e. plaintext HTTP traffic), the request will
+   * be denied. Matches are always case sensitive unless the ignoreCase is set. Limited to 10 SNIs
+   * per Authorization Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuthzPolicyAuthzRuleStringMatch> snis;
+
+  static {
+    // hack to force ProGuard to consider AuthzPolicyAuthzRuleStringMatch used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AuthzPolicyAuthzRuleStringMatch.class);
+  }
+
+  /**
    * Optional. A list of headers to match against in http header.
    * @return value or {@code null} for none
    */
@@ -188,6 +204,29 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
    */
   public AuthzPolicyAuthzRuleToRequestOperation setPaths(java.util.List<AuthzPolicyAuthzRuleStringMatch> paths) {
     this.paths = paths;
+    return this;
+  }
+
+  /**
+   * Optional. A list of SNIs to match against. The match can be one of exact, prefix, suffix, or
+   * contains (substring match). If there is no SNI (i.e. plaintext HTTP traffic), the request will
+   * be denied. Matches are always case sensitive unless the ignoreCase is set. Limited to 10 SNIs
+   * per Authorization Policy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuthzPolicyAuthzRuleStringMatch> getSnis() {
+    return snis;
+  }
+
+  /**
+   * Optional. A list of SNIs to match against. The match can be one of exact, prefix, suffix, or
+   * contains (substring match). If there is no SNI (i.e. plaintext HTTP traffic), the request will
+   * be denied. Matches are always case sensitive unless the ignoreCase is set. Limited to 10 SNIs
+   * per Authorization Policy.
+   * @param snis snis or {@code null} for none
+   */
+  public AuthzPolicyAuthzRuleToRequestOperation setSnis(java.util.List<AuthzPolicyAuthzRuleStringMatch> snis) {
+    this.snis = snis;
     return this;
   }
 

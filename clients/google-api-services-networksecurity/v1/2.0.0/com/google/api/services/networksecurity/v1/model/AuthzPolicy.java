@@ -95,6 +95,16 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. A list of authorization network rules to match against the incoming request. A policy
+   * match occurs when at least one network rule matches the request. At least one network rule is
+   * required for Allow or Deny Action if no HTTP rules are provided. Network rules are mutually
+   * exclusive with HTTP rules. Limited to 5 rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuthzPolicyAuthzRule> networkRules;
+
+  /**
    * Optional. Immutable. Defines the type of authorization being performed. If not specified,
    * `REQUEST_AUTHZ` is applied. This field cannot be changed once AuthzPolicy is created.
    * The value may be {@code null}.
@@ -262,6 +272,29 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
    */
   public AuthzPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. A list of authorization network rules to match against the incoming request. A policy
+   * match occurs when at least one network rule matches the request. At least one network rule is
+   * required for Allow or Deny Action if no HTTP rules are provided. Network rules are mutually
+   * exclusive with HTTP rules. Limited to 5 rules.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuthzPolicyAuthzRule> getNetworkRules() {
+    return networkRules;
+  }
+
+  /**
+   * Optional. A list of authorization network rules to match against the incoming request. A policy
+   * match occurs when at least one network rule matches the request. At least one network rule is
+   * required for Allow or Deny Action if no HTTP rules are provided. Network rules are mutually
+   * exclusive with HTTP rules. Limited to 5 rules.
+   * @param networkRules networkRules or {@code null} for none
+   */
+  public AuthzPolicy setNetworkRules(java.util.List<AuthzPolicyAuthzRule> networkRules) {
+    this.networkRules = networkRules;
     return this;
   }
 

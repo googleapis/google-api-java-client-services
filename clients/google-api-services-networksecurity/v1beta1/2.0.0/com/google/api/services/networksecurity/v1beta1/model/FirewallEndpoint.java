@@ -30,9 +30,9 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class FirewallEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of networks that are associated with this endpoint in the local zone. This is
-   * a projection of the FirewallEndpointAssociations pointing at this endpoint. A network will only
-   * appear in this list after traffic routing is fully configured. Format:
+   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
+   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
+   * network will only appear in this list after traffic routing is fully configured. Format:
    * projects/{project}/global/networks/{name}.
    * The value may be {@code null}.
    */
@@ -126,9 +126,9 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
-   * Output only. List of networks that are associated with this endpoint in the local zone. This is
-   * a projection of the FirewallEndpointAssociations pointing at this endpoint. A network will only
-   * appear in this list after traffic routing is fully configured. Format:
+   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
+   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
+   * network will only appear in this list after traffic routing is fully configured. Format:
    * projects/{project}/global/networks/{name}.
    * @return value or {@code null} for none
    */
@@ -137,9 +137,9 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of networks that are associated with this endpoint in the local zone. This is
-   * a projection of the FirewallEndpointAssociations pointing at this endpoint. A network will only
-   * appear in this list after traffic routing is fully configured. Format:
+   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
+   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
+   * network will only appear in this list after traffic routing is fully configured. Format:
    * projects/{project}/global/networks/{name}.
    * @param associatedNetworks associatedNetworks or {@code null} for none
    */

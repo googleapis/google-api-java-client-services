@@ -38,6 +38,13 @@ public final class DiskTargetEnvironment extends com.google.api.client.json.Gene
   private java.lang.String project;
 
   /**
+   * Optional. Whether to use the project service account for the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useProjectServiceAccount;
+
+  /**
    * Required. Target zone for the disk.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class DiskTargetEnvironment extends com.google.api.client.json.Gene
    */
   public DiskTargetEnvironment setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseProjectServiceAccount() {
+    return useProjectServiceAccount;
+  }
+
+  /**
+   * Optional. Whether to use the project service account for the disk.
+   * @param useProjectServiceAccount useProjectServiceAccount or {@code null} for none
+   */
+  public DiskTargetEnvironment setUseProjectServiceAccount(java.lang.Boolean useProjectServiceAccount) {
+    this.useProjectServiceAccount = useProjectServiceAccount;
     return this;
   }
 

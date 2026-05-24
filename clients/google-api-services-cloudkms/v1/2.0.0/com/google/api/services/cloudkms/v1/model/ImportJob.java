@@ -125,6 +125,14 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
   private WrappingPublicKey publicKey;
 
   /**
+   * Output only. Specifies the WrappingPublicKey format provided by the customer in the
+   * KeyManagementService.GetImportJob request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicKeyFormat;
+
+  /**
    * Output only. The current state of the ImportJob, indicating if it can be used.
    * The value may be {@code null}.
    */
@@ -320,6 +328,25 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
    */
   public ImportJob setPublicKey(WrappingPublicKey publicKey) {
     this.publicKey = publicKey;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the WrappingPublicKey format provided by the customer in the
+   * KeyManagementService.GetImportJob request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicKeyFormat() {
+    return publicKeyFormat;
+  }
+
+  /**
+   * Output only. Specifies the WrappingPublicKey format provided by the customer in the
+   * KeyManagementService.GetImportJob request.
+   * @param publicKeyFormat publicKeyFormat or {@code null} for none
+   */
+  public ImportJob setPublicKeyFormat(java.lang.String publicKeyFormat) {
+    this.publicKeyFormat = publicKeyFormat;
     return this;
   }
 

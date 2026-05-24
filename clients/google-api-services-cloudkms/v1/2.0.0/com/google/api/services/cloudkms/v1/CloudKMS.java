@@ -10998,6 +10998,40 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /**
+             * Optional. Specifies the WrappingPublicKey format. If not specified: * For RSA-based
+             * import methods, the wrapping key will be returned in PEM format * For pure ML-KEM-
+             * based import methods, the wrapping key will be returned in the raw bytes format
+             * specified in FIPS-203 * For X-Wing-based import methods, the wrapping key will be
+             * returned in the raw bytes format specified in https://datatracker.ietf.org/doc/draft-
+             * connolly-cfrg-xwing-kem.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String publicKeyFormat;
+
+            /** Optional. Specifies the WrappingPublicKey format. If not specified: * For RSA-based import methods,
+           the wrapping key will be returned in PEM format * For pure ML-KEM-based import methods, the
+           wrapping key will be returned in the raw bytes format specified in FIPS-203 * For X-Wing-based
+           import methods, the wrapping key will be returned in the raw bytes format specified in
+           https://datatracker.ietf.org/doc/draft-connolly-cfrg-xwing-kem.
+             */
+            public java.lang.String getPublicKeyFormat() {
+              return publicKeyFormat;
+            }
+
+            /**
+             * Optional. Specifies the WrappingPublicKey format. If not specified: * For RSA-based
+             * import methods, the wrapping key will be returned in PEM format * For pure ML-KEM-
+             * based import methods, the wrapping key will be returned in the raw bytes format
+             * specified in FIPS-203 * For X-Wing-based import methods, the wrapping key will be
+             * returned in the raw bytes format specified in https://datatracker.ietf.org/doc/draft-
+             * connolly-cfrg-xwing-kem.
+             */
+            public Get setPublicKeyFormat(java.lang.String publicKeyFormat) {
+              this.publicKeyFormat = publicKeyFormat;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);

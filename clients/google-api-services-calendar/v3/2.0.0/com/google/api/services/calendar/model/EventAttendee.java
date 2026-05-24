@@ -37,6 +37,16 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
   private java.lang.Integer additionalGuests;
 
   /**
+   * If present, indicates the status of an asynchronous operation ongoing for this attendee (e.g.
+   * listing of members of large attendee groups). Read-only. The default is to not be present.
+   * Possible values are:   - "inProgress" - The asynchronous operation is in progress.  - (not
+   * present) - Otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String asyncOperation;
+
+  /**
    * The attendee's response comment. Optional.
    * The value may be {@code null}.
    */
@@ -124,6 +134,29 @@ public final class EventAttendee extends com.google.api.client.json.GenericJson 
    */
   public EventAttendee setAdditionalGuests(java.lang.Integer additionalGuests) {
     this.additionalGuests = additionalGuests;
+    return this;
+  }
+
+  /**
+   * If present, indicates the status of an asynchronous operation ongoing for this attendee (e.g.
+   * listing of members of large attendee groups). Read-only. The default is to not be present.
+   * Possible values are:   - "inProgress" - The asynchronous operation is in progress.  - (not
+   * present) - Otherwise.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAsyncOperation() {
+    return asyncOperation;
+  }
+
+  /**
+   * If present, indicates the status of an asynchronous operation ongoing for this attendee (e.g.
+   * listing of members of large attendee groups). Read-only. The default is to not be present.
+   * Possible values are:   - "inProgress" - The asynchronous operation is in progress.  - (not
+   * present) - Otherwise.
+   * @param asyncOperation asyncOperation or {@code null} for none
+   */
+  public EventAttendee setAsyncOperation(java.lang.String asyncOperation) {
+    this.asyncOperation = asyncOperation;
     return this;
   }
 

@@ -26,6 +26,12 @@ public class DatalineageScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** See, edit, configure, and delete your Google Cloud Data Lineage data and see the email address for your Google Account. */
+  public static final String DATALINEAGE_READ_WRITE = "https://www.googleapis.com/auth/datalineage.read-write";
+
+  /** See your Google Cloud Data Lineage data and the email address of your Google Account. */
+  public static final String DATALINEAGE_READONLY = "https://www.googleapis.com/auth/datalineage.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +40,8 @@ public class DatalineageScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(DATALINEAGE_READ_WRITE);
+    set.add(DATALINEAGE_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

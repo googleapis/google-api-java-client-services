@@ -105,6 +105,12 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SipConfig sipConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig;
 
   /**
@@ -308,6 +314,21 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setSecuritySettings(java.lang.String securitySettings) {
     this.securitySettings = securitySettings;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SipConfig getSipConfig() {
+    return sipConfig;
+  }
+
+  /**
+   * @param sipConfig sipConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationProfile setSipConfig(GoogleCloudDialogflowV2beta1SipConfig sipConfig) {
+    this.sipConfig = sipConfig;
     return this;
   }
 

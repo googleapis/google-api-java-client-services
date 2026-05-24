@@ -5152,6 +5152,444 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class ChangeRequests {
 
         /**
+         * Approves a ChangeRequest.
+         *
+         * Create a request for the method "changeRequests.approve".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ChangeRequest to approve.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ApproveChangeRequestRequest}
+         * @return the request
+         */
+        public Approve approve(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ApproveChangeRequestRequest content) throws java.io.IOException {
+          Approve result = new Approve(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Approve extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest> {
+
+          private static final String REST_PATH = "v1/{+name}:approve";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+
+          /**
+           * Approves a ChangeRequest.
+           *
+           * Create a request for the method "changeRequests.approve".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ChangeRequest to approve.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ApproveChangeRequestRequest}
+           * @since 1.13
+           */
+          protected Approve(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ApproveChangeRequestRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+          }
+
+          @Override
+          public Approve set$Xgafv(java.lang.String $Xgafv) {
+            return (Approve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Approve setAccessToken(java.lang.String accessToken) {
+            return (Approve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Approve setAlt(java.lang.String alt) {
+            return (Approve) super.setAlt(alt);
+          }
+
+          @Override
+          public Approve setCallback(java.lang.String callback) {
+            return (Approve) super.setCallback(callback);
+          }
+
+          @Override
+          public Approve setFields(java.lang.String fields) {
+            return (Approve) super.setFields(fields);
+          }
+
+          @Override
+          public Approve setKey(java.lang.String key) {
+            return (Approve) super.setKey(key);
+          }
+
+          @Override
+          public Approve setOauthToken(java.lang.String oauthToken) {
+            return (Approve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Approve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Approve setQuotaUser(java.lang.String quotaUser) {
+            return (Approve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Approve setUploadType(java.lang.String uploadType) {
+            return (Approve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Approve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ChangeRequest to approve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ChangeRequest to approve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ChangeRequest to approve. */
+          public Approve setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Approve set(String parameterName, Object value) {
+            return (Approve) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a ChangeRequest.Behavior depends on the caller's permissions and the resource's state: 1.
+         * Callers with dataplex.changeRequests.delete can only delete ChangeRequests in the NEW state. 2.
+         * Callers with the dataplex.changeRequests.adminDelete permission can delete ChangeRequests
+         * regardless of their state.
+         *
+         * Create a request for the method "changeRequests.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ChangeRequest to delete. Format:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+
+          /**
+           * Deletes a ChangeRequest.Behavior depends on the caller's permissions and the resource's state:
+           * 1. Callers with dataplex.changeRequests.delete can only delete ChangeRequests in the NEW state.
+           * 2. Callers with the dataplex.changeRequests.adminDelete permission can delete ChangeRequests
+           * regardless of their state.
+           *
+           * Create a request for the method "changeRequests.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ChangeRequest to delete. Format:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the ChangeRequest to delete. Format:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ChangeRequest to delete. Format:
+         projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the ChangeRequest to delete. Format:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The etag of the ChangeRequest. */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The etag of the ChangeRequest.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /** Optional. The etag of the ChangeRequest. */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a ChangeRequest.
+         *
+         * Create a request for the method "changeRequests.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ChangeRequest to retrieve. Format:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+
+          /**
+           * Gets a ChangeRequest.
+           *
+           * Create a request for the method "changeRequests.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ChangeRequest to retrieve. Format:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the ChangeRequest to retrieve. Format:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ChangeRequest to retrieve. Format:
+         projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the ChangeRequest to retrieve. Format:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -5346,6 +5784,514 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ChangeRequests.
+         *
+         * Create a request for the method "changeRequests.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of ChangeRequests. Format:
+         *        projects/{project_number}/locations/{location_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListChangeRequestsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/changeRequests";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists ChangeRequests.
+           *
+           * Create a request for the method "changeRequests.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of ChangeRequests. Format:
+         *        projects/{project_number}/locations/{location_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListChangeRequestsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of ChangeRequests. Format:
+           * projects/{project_number}/locations/{location_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of ChangeRequests. Format:
+         projects/{project_number}/locations/{location_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of ChangeRequests. Format:
+           * projects/{project_number}/locations/{location_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter request. Supports filtering by: state, author, resource, create_time,
+           * update_time.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter request. Supports filtering by: state, author, resource, create_time, update_time.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter request. Supports filtering by: state, author, resource, create_time,
+           * update_time.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Order by fields for the result. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by fields for the result.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Order by fields for the result. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of ChangeRequests to return. The service may return fewer.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of ChangeRequests to return. The service may return fewer.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of ChangeRequests to return. The service may return fewer.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page token received from a previous ListChangeRequests call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous ListChangeRequests call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page token received from a previous ListChangeRequests call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a ChangeRequest. Only allowed when the state is NEW.
+         *
+         * Create a request for the method "changeRequests.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The relative resource name of the ChangeRequest, of the form:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+
+          /**
+           * Updates a ChangeRequest. Only allowed when the state is NEW.
+           *
+           * Create a request for the method "changeRequests.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The relative resource name of the ChangeRequest, of the form:
+         *        projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The relative resource name of the ChangeRequest, of the form:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The relative resource name of the ChangeRequest, of the form:
+         projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The relative resource name of the ChangeRequest, of the form:
+           * projects/{project_number}/locations/{location_id}/changeRequests/{change_request_id}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Rejects a ChangeRequest.
+         *
+         * Create a request for the method "changeRequests.reject".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ChangeRequest to reject.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RejectChangeRequestRequest}
+         * @return the request
+         */
+        public Reject reject(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RejectChangeRequestRequest content) throws java.io.IOException {
+          Reject result = new Reject(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reject extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest> {
+
+          private static final String REST_PATH = "v1/{+name}:reject";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+
+          /**
+           * Rejects a ChangeRequest.
+           *
+           * Create a request for the method "changeRequests.reject".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ChangeRequest to reject.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RejectChangeRequestRequest}
+           * @since 1.13
+           */
+          protected Reject(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RejectChangeRequestRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ChangeRequest.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reject set$Xgafv(java.lang.String $Xgafv) {
+            return (Reject) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reject setAccessToken(java.lang.String accessToken) {
+            return (Reject) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reject setAlt(java.lang.String alt) {
+            return (Reject) super.setAlt(alt);
+          }
+
+          @Override
+          public Reject setCallback(java.lang.String callback) {
+            return (Reject) super.setCallback(callback);
+          }
+
+          @Override
+          public Reject setFields(java.lang.String fields) {
+            return (Reject) super.setFields(fields);
+          }
+
+          @Override
+          public Reject setKey(java.lang.String key) {
+            return (Reject) super.setKey(key);
+          }
+
+          @Override
+          public Reject setOauthToken(java.lang.String oauthToken) {
+            return (Reject) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reject setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reject) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reject setQuotaUser(java.lang.String quotaUser) {
+            return (Reject) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reject setUploadType(java.lang.String uploadType) {
+            return (Reject) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reject setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reject) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ChangeRequest to reject. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ChangeRequest to reject.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ChangeRequest to reject. */
+          public Reject setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/changeRequests/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reject set(String parameterName, Object value) {
+            return (Reject) super.set(parameterName, value);
           }
         }
         /**

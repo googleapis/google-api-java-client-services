@@ -94,6 +94,13 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
   private String createTime;
 
   /**
+   * Payload for Data Product access request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProductAccessRequest dataProductAccessRequest;
+
+  /**
    * Payload for deleting an Entry.
    * The value may be {@code null}.
    */
@@ -376,6 +383,23 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
    */
   public GoogleCloudDataplexV1ChangeRequest setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Payload for Data Product access request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProductAccessRequest getDataProductAccessRequest() {
+    return dataProductAccessRequest;
+  }
+
+  /**
+   * Payload for Data Product access request.
+   * @param dataProductAccessRequest dataProductAccessRequest or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ChangeRequest setDataProductAccessRequest(GoogleCloudDataplexV1DataProductAccessRequest dataProductAccessRequest) {
+    this.dataProductAccessRequest = dataProductAccessRequest;
     return this;
   }
 

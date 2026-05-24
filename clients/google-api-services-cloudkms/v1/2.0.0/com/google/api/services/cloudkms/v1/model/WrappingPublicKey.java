@@ -32,20 +32,85 @@ package com.google.api.services.cloudkms.v1.model;
 public final class WrappingPublicKey extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Contains the public key, formatted according to the PublicKey.PublicKeyFormat
+   * specified in the KeyManagementService.GetImportJob request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String data;
+
+  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject
-   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
+   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13). This field gets populated by
+   * default for RSA-based import methods, if no public_key_format is specified in the request. If
+   * you want to retrieve the wrapping key of an ImportJob in some other format, use
+   * KeyManagementService.GetImportJob and set the public_key_format to the desired public key
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pem;
 
   /**
+   * Output only. Contains the public key, formatted according to the PublicKey.PublicKeyFormat
+   * specified in the KeyManagementService.GetImportJob request.
+   * @see #decodeData()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getData() {
+    return data;
+  }
+
+  /**
+   * Output only. Contains the public key, formatted according to the PublicKey.PublicKeyFormat
+   * specified in the KeyManagementService.GetImportJob request.
+   * @see #getData()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeData() {
+    return com.google.api.client.util.Base64.decodeBase64(data);
+  }
+
+  /**
+   * Output only. Contains the public key, formatted according to the PublicKey.PublicKeyFormat
+   * specified in the KeyManagementService.GetImportJob request.
+   * @see #encodeData()
+   * @param data data or {@code null} for none
+   */
+  public WrappingPublicKey setData(java.lang.String data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Output only. Contains the public key, formatted according to the PublicKey.PublicKeyFormat
+   * specified in the KeyManagementService.GetImportJob request.
+   * @see #setData()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public WrappingPublicKey encodeData(byte[] data) {
+    this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
+    return this;
+  }
+
+  /**
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject
-   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
+   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13). This field gets populated by
+   * default for RSA-based import methods, if no public_key_format is specified in the request. If
+   * you want to retrieve the wrapping key of an ImportJob in some other format, use
+   * KeyManagementService.GetImportJob and set the public_key_format to the desired public key
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPem() {
@@ -56,7 +121,11 @@ public final class WrappingPublicKey extends com.google.api.client.json.GenericJ
    * The public key, encoded in PEM format. For more information, see the [RFC
    * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
    * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual Encoding of Subject
-   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13).
+   * Public Key Info] (https://tools.ietf.org/html/rfc7468#section-13). This field gets populated by
+   * default for RSA-based import methods, if no public_key_format is specified in the request. If
+   * you want to retrieve the wrapping key of an ImportJob in some other format, use
+   * KeyManagementService.GetImportJob and set the public_key_format to the desired public key
+   * format.
    * @param pem pem or {@code null} for none
    */
   public WrappingPublicKey setPem(java.lang.String pem) {

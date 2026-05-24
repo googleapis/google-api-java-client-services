@@ -58,6 +58,13 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
   private java.lang.String containerVersion;
 
   /**
+   * Location within a conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ConversationLocation conversationLocation;
+
+  /**
    * Location data for document files.
    * The value may be {@code null}.
    */
@@ -145,6 +152,23 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    */
   public GooglePrivacyDlpV2ContentLocation setContainerVersion(java.lang.String containerVersion) {
     this.containerVersion = containerVersion;
+    return this;
+  }
+
+  /**
+   * Location within a conversation.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ConversationLocation getConversationLocation() {
+    return conversationLocation;
+  }
+
+  /**
+   * Location within a conversation.
+   * @param conversationLocation conversationLocation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentLocation setConversationLocation(GooglePrivacyDlpV2ConversationLocation conversationLocation) {
+    this.conversationLocation = conversationLocation;
     return this;
   }
 

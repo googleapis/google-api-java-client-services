@@ -45,6 +45,14 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   private GooglePrivacyDlpV2ContentMetadata contentMetadata;
 
   /**
+   * Represents a conversation (either complete or a slice). It is assumed that all included
+   * messages are contiguous and ordered in chronological order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2Conversation conversation;
+
+  /**
    * Structured content for inspection. See https://cloud.google.com/sensitive-data-
    * protection/docs/inspecting-text#inspecting_a_table to learn more.
    * The value may be {@code null}.
@@ -90,6 +98,25 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
    */
   public GooglePrivacyDlpV2ContentItem setContentMetadata(GooglePrivacyDlpV2ContentMetadata contentMetadata) {
     this.contentMetadata = contentMetadata;
+    return this;
+  }
+
+  /**
+   * Represents a conversation (either complete or a slice). It is assumed that all included
+   * messages are contiguous and ordered in chronological order.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Conversation getConversation() {
+    return conversation;
+  }
+
+  /**
+   * Represents a conversation (either complete or a slice). It is assumed that all included
+   * messages are contiguous and ordered in chronological order.
+   * @param conversation conversation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentItem setConversation(GooglePrivacyDlpV2Conversation conversation) {
+    this.conversation = conversation;
     return this;
   }
 

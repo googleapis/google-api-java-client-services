@@ -87,13 +87,20 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   private java.lang.String packageSha256Hash;
 
   /**
-   * The SHA-1 hash of each android.content.pm.Signature
+   * Deprecated. Use signingKeyCerts instead. The SHA-1 hash of each android.content.pm.Signature
    * (https://developer.android.com/reference/android/content/pm/Signature.html) associated with the
    * app package. Each byte of each hash value is represented as a two-digit hexadecimal number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> signingKeyCertFingerprints;
+
+  /**
+   * Output only. Signing key certificates of the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ApplicationSigningKeyCert> signingKeyCerts;
 
   /**
    * Application state.
@@ -246,7 +253,7 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The SHA-1 hash of each android.content.pm.Signature
+   * Deprecated. Use signingKeyCerts instead. The SHA-1 hash of each android.content.pm.Signature
    * (https://developer.android.com/reference/android/content/pm/Signature.html) associated with the
    * app package. Each byte of each hash value is represented as a two-digit hexadecimal number.
    * @return value or {@code null} for none
@@ -256,13 +263,30 @@ public final class ApplicationReport extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The SHA-1 hash of each android.content.pm.Signature
+   * Deprecated. Use signingKeyCerts instead. The SHA-1 hash of each android.content.pm.Signature
    * (https://developer.android.com/reference/android/content/pm/Signature.html) associated with the
    * app package. Each byte of each hash value is represented as a two-digit hexadecimal number.
    * @param signingKeyCertFingerprints signingKeyCertFingerprints or {@code null} for none
    */
   public ApplicationReport setSigningKeyCertFingerprints(java.util.List<java.lang.String> signingKeyCertFingerprints) {
     this.signingKeyCertFingerprints = signingKeyCertFingerprints;
+    return this;
+  }
+
+  /**
+   * Output only. Signing key certificates of the app.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ApplicationSigningKeyCert> getSigningKeyCerts() {
+    return signingKeyCerts;
+  }
+
+  /**
+   * Output only. Signing key certificates of the app.
+   * @param signingKeyCerts signingKeyCerts or {@code null} for none
+   */
+  public ApplicationReport setSigningKeyCerts(java.util.List<ApplicationSigningKeyCert> signingKeyCerts) {
+    this.signingKeyCerts = signingKeyCerts;
     return this;
   }
 

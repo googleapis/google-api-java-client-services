@@ -11473,27 +11473,31 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Optional. A CEL expression for filtering the results. Policies can be filtered by
        * application with this expression: setting.type.matches('^settings/gmail\\..*$') Policies
        * can be filtered by setting type with this expression:
-       * setting.type.matches('^.*\\.service_status$') A maximum of one of the above setting.type
-       * clauses can be used. Policies can be filtered by customer with this expression: customer ==
-       * "customers/{customer}" Where `customer` is the `id` from the [Admin SDK `Customer`
-       * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
-       * You may use `customers/my_customer` to specify your own organization. When no customer is
-       * mentioned it will be default to customers/my_customer. A maximum of one customer clause can
-       * be used. The above clauses can only be combined together in a single filter expression with
-       * the `&&` operator.
+       * setting.type.matches('^.*\\.service_status$') Policies can be filtered by customer with
+       * this expression: customer == "customers/{customer}" Where `customer` is the `id` from the
+       * [Admin SDK `Customer` resource](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/customers). You may use `customers/my_customer` to specify
+       * your own organization. When no customer is mentioned it will be default to
+       * customers/my_customer. You may only filter on policies for a single customer at a time. The
+       * above clauses can be combined together in a single filter expression with the `&&` and `||`
+       * operators, like in the following example: customer == "customers/my_customer" && (
+       * setting.type.matches('^settings/gmail\\..*$') ||
+       * setting.type.matches('^.*\\.service_status$') )
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. A CEL expression for filtering the results. Policies can be filtered by application with
      this expression: setting.type.matches('^settings/gmail\\..*$') Policies can be filtered by setting
-     type with this expression: setting.type.matches('^.*\\.service_status$') A maximum of one of the
-     above setting.type clauses can be used. Policies can be filtered by customer with this expression:
-     customer == "customers/{customer}" Where `customer` is the `id` from the [Admin SDK `Customer`
-     resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers). You may
-     use `customers/my_customer` to specify your own organization. When no customer is mentioned it will
-     be default to customers/my_customer. A maximum of one customer clause can be used. The above
-     clauses can only be combined together in a single filter expression with the `&&` operator.
+     type with this expression: setting.type.matches('^.*\\.service_status$') Policies can be filtered
+     by customer with this expression: customer == "customers/{customer}" Where `customer` is the `id`
+     from the [Admin SDK `Customer` resource](https://developers.google.com/admin-
+     sdk/directory/reference/rest/v1/customers). You may use `customers/my_customer` to specify your own
+     organization. When no customer is mentioned it will be default to customers/my_customer. You may
+     only filter on policies for a single customer at a time. The above clauses can be combined together
+     in a single filter expression with the `&&` and `||` operators, like in the following example:
+     customer == "customers/my_customer" && ( setting.type.matches('^settings/gmail\\..*$') ||
+     setting.type.matches('^.*\\.service_status$') )
        */
       public java.lang.String getFilter() {
         return filter;
@@ -11503,14 +11507,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Optional. A CEL expression for filtering the results. Policies can be filtered by
        * application with this expression: setting.type.matches('^settings/gmail\\..*$') Policies
        * can be filtered by setting type with this expression:
-       * setting.type.matches('^.*\\.service_status$') A maximum of one of the above setting.type
-       * clauses can be used. Policies can be filtered by customer with this expression: customer ==
-       * "customers/{customer}" Where `customer` is the `id` from the [Admin SDK `Customer`
-       * resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/customers).
-       * You may use `customers/my_customer` to specify your own organization. When no customer is
-       * mentioned it will be default to customers/my_customer. A maximum of one customer clause can
-       * be used. The above clauses can only be combined together in a single filter expression with
-       * the `&&` operator.
+       * setting.type.matches('^.*\\.service_status$') Policies can be filtered by customer with
+       * this expression: customer == "customers/{customer}" Where `customer` is the `id` from the
+       * [Admin SDK `Customer` resource](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/customers). You may use `customers/my_customer` to specify
+       * your own organization. When no customer is mentioned it will be default to
+       * customers/my_customer. You may only filter on policies for a single customer at a time. The
+       * above clauses can be combined together in a single filter expression with the `&&` and `||`
+       * operators, like in the following example: customer == "customers/my_customer" && (
+       * setting.type.matches('^settings/gmail\\..*$') ||
+       * setting.type.matches('^.*\\.service_status$') )
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

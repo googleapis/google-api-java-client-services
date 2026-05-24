@@ -518,6 +518,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private NodeConfig nodeConfig;
 
   /**
+   * Optional. Configuration for Node Creation Mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeCreationConfig nodeCreationConfig;
+
+  /**
    * Output only. The size of the address space on each node for hosting containers. This is
    * provisioned from within the `container_ipv4_cidr` range. This field will only be set when
    * cluster is in route-based network mode.
@@ -1953,6 +1960,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodeConfig(NodeConfig nodeConfig) {
     this.nodeConfig = nodeConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Node Creation Mode.
+   * @return value or {@code null} for none
+   */
+  public NodeCreationConfig getNodeCreationConfig() {
+    return nodeCreationConfig;
+  }
+
+  /**
+   * Optional. Configuration for Node Creation Mode.
+   * @param nodeCreationConfig nodeCreationConfig or {@code null} for none
+   */
+  public Cluster setNodeCreationConfig(NodeCreationConfig nodeCreationConfig) {
+    this.nodeCreationConfig = nodeCreationConfig;
     return this;
   }
 

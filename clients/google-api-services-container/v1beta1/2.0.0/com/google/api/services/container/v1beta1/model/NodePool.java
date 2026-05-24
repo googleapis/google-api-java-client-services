@@ -112,6 +112,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> locations;
 
   /**
+   * Optional. Specifies the maintenance policy for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolMaintenancePolicy maintenancePolicy;
+
+  /**
    * NodeManagement configuration for this NodePool.
    * The value may be {@code null}.
    */
@@ -392,6 +399,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setLocations(java.util.List<java.lang.String> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the maintenance policy for the node pool.
+   * @return value or {@code null} for none
+   */
+  public NodePoolMaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Optional. Specifies the maintenance policy for the node pool.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public NodePool setMaintenancePolicy(NodePoolMaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
     return this;
   }
 

@@ -236,6 +236,13 @@ public final class Media extends com.google.api.client.json.GenericJson {
    * # gdata.* are outside protos with mising documentation
    * The value may be {@code null}.
    */
+  @com.google.api.client.util.Key
+  private java.lang.String sha512Hash;
+
+  /**
+   * # gdata.* are outside protos with mising documentation
+   * The value may be {@code null}.
+   */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger timestamp;
 
@@ -943,6 +950,51 @@ public final class Media extends com.google.api.client.json.GenericJson {
    */
   public Media encodeSha256Hash(byte[] sha256Hash) {
     this.sha256Hash = com.google.api.client.util.Base64.encodeBase64URLSafeString(sha256Hash);
+    return this;
+  }
+
+  /**
+   * # gdata.* are outside protos with mising documentation
+   * @see #decodeSha512Hash()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSha512Hash() {
+    return sha512Hash;
+  }
+
+  /**
+   * # gdata.* are outside protos with mising documentation
+   * @see #getSha512Hash()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeSha512Hash() {
+    return com.google.api.client.util.Base64.decodeBase64(sha512Hash);
+  }
+
+  /**
+   * # gdata.* are outside protos with mising documentation
+   * @see #encodeSha512Hash()
+   * @param sha512Hash sha512Hash or {@code null} for none
+   */
+  public Media setSha512Hash(java.lang.String sha512Hash) {
+    this.sha512Hash = sha512Hash;
+    return this;
+  }
+
+  /**
+   * # gdata.* are outside protos with mising documentation
+   * @see #setSha512Hash()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Media encodeSha512Hash(byte[] sha512Hash) {
+    this.sha512Hash = com.google.api.client.util.Base64.encodeBase64URLSafeString(sha512Hash);
     return this;
   }
 

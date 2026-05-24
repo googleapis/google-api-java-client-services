@@ -58,6 +58,13 @@ public final class GoogleCloudDiscoveryengineV1betaStreamAssistResponse extends 
   private java.util.List<java.lang.String> invocationTools;
 
   /**
+   * The skills executed during the turn.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaStreamAssistResponseInvokedSkill> invokedSkills;
+
+  /**
    * Session information. Only included in the final StreamAssistResponse of the response stream.
    * The value may be {@code null}.
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudDiscoveryengineV1betaStreamAssistResponse extends 
    */
   public GoogleCloudDiscoveryengineV1betaStreamAssistResponse setInvocationTools(java.util.List<java.lang.String> invocationTools) {
     this.invocationTools = invocationTools;
+    return this;
+  }
+
+  /**
+   * The skills executed during the turn.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaStreamAssistResponseInvokedSkill> getInvokedSkills() {
+    return invokedSkills;
+  }
+
+  /**
+   * The skills executed during the turn.
+   * @param invokedSkills invokedSkills or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaStreamAssistResponse setInvokedSkills(java.util.List<GoogleCloudDiscoveryengineV1betaStreamAssistResponseInvokedSkill> invokedSkills) {
+    this.invokedSkills = invokedSkills;
     return this;
   }
 

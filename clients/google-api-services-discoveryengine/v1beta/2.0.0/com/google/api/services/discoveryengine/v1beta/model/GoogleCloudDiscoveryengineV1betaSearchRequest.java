@@ -327,7 +327,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * `document_age`: The time in hours elapsed since the document was last updated, a floating-point
    * number (e.g., 0.25 means 15 minutes). * `topicality_rank`: topicality adjustment as a rank.
    * Uses proprietary Google model to determine the keyword-based overlap between the query and the
-   * document. * `base_rank`: the default rank of the result
+   * document. * `base_rank`: the default rank of the result * `media_actor_match`: whether the
+   * media actor matches the query * `media_director_match`: whether the media director matches the
+   * query * `media_genre_match`: whether the media genre matches the query *
+   * `media_language_match`: whether the media language matches the query * `media_title_match`:
+   * whether the media title matches the query * `media_prefix_similarity_rank`: prefix similarity
+   * rank for media results * `media_semantic_similarity_rank`: semantic similarity rank for media
+   * results
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1109,7 +1115,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * `document_age`: The time in hours elapsed since the document was last updated, a floating-point
    * number (e.g., 0.25 means 15 minutes). * `topicality_rank`: topicality adjustment as a rank.
    * Uses proprietary Google model to determine the keyword-based overlap between the query and the
-   * document. * `base_rank`: the default rank of the result
+   * document. * `base_rank`: the default rank of the result * `media_actor_match`: whether the
+   * media actor matches the query * `media_director_match`: whether the media director matches the
+   * query * `media_genre_match`: whether the media genre matches the query *
+   * `media_language_match`: whether the media language matches the query * `media_title_match`:
+   * whether the media title matches the query * `media_prefix_similarity_rank`: prefix similarity
+   * rank for media results * `media_semantic_similarity_rank`: semantic similarity rank for media
+   * results
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingExpression() {
@@ -1158,7 +1170,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    * `document_age`: The time in hours elapsed since the document was last updated, a floating-point
    * number (e.g., 0.25 means 15 minutes). * `topicality_rank`: topicality adjustment as a rank.
    * Uses proprietary Google model to determine the keyword-based overlap between the query and the
-   * document. * `base_rank`: the default rank of the result
+   * document. * `base_rank`: the default rank of the result * `media_actor_match`: whether the
+   * media actor matches the query * `media_director_match`: whether the media director matches the
+   * query * `media_genre_match`: whether the media genre matches the query *
+   * `media_language_match`: whether the media language matches the query * `media_title_match`:
+   * whether the media title matches the query * `media_prefix_similarity_rank`: prefix similarity
+   * rank for media results * `media_semantic_similarity_rank`: semantic similarity rank for media
+   * results
    * @param rankingExpression rankingExpression or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setRankingExpression(java.lang.String rankingExpression) {

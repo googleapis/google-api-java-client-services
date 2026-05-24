@@ -486,8 +486,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String itemGroupId;
 
   /**
-   * Optional. Represents the [product group
-   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * Optional. Represents the [title of the product
+   * group](https://support.google.com/merchants/answer/17085146) to which this variant product
    * belongs. This can be used along with the [item group
    * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
    * grouping of variant products, and helps identifying common product characteristics more
@@ -759,7 +759,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> promotionIds;
 
   /**
-   * Optional. Contains merchant authored [questions and
+   * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
    * question and answer pairs. Max 5000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
@@ -970,8 +970,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private UnitPricingMeasure unitPricingMeasure;
 
   /**
-   * Optional. Contains a list of [additional
-   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * Optional. Contains the [list of all variant-identifying
+   * options](https://support.google.com/merchants/answer/17085214) of this product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2091,8 +2091,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Represents the [product group
-   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * Optional. Represents the [title of the product
+   * group](https://support.google.com/merchants/answer/17085146) to which this variant product
    * belongs. This can be used along with the [item group
    * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
    * grouping of variant products, and helps identifying common product characteristics more
@@ -2104,8 +2104,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Represents the [product group
-   * title](https://support.google.com/merchants/answer/17085146) to which this variant product
+   * Optional. Represents the [title of the product
+   * group](https://support.google.com/merchants/answer/17085146) to which this variant product
    * belongs. This can be used along with the [item group
    * id](https://support.google.com/merchants/answer/6324507) attribute. It lets you perform better
    * grouping of variant products, and helps identifying common product characteristics more
@@ -2727,7 +2727,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Contains merchant authored [questions and
+   * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
    * question and answer pairs. Max 5000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
@@ -2738,7 +2738,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Contains merchant authored [questions and
+   * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
    * question and answer pairs. Max 5000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
@@ -3230,8 +3230,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Contains a list of [additional
-   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * Optional. Contains the [list of all variant-identifying
+   * options](https://support.google.com/merchants/answer/17085214) of this product.
    * @return value or {@code null} for none
    */
   public java.util.List<VariantOption> getVariantOptions() {
@@ -3239,8 +3239,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Contains a list of [additional
-   * variants](https://support.google.com/merchants/answer/17085214) for the product.
+   * Optional. Contains the [list of all variant-identifying
+   * options](https://support.google.com/merchants/answer/17085214) of this product.
    * @param variantOptions variantOptions or {@code null} for none
    */
   public ProductAttributes setVariantOptions(java.util.List<VariantOption> variantOptions) {

@@ -61,13 +61,6 @@ public final class ContainerTask extends com.google.api.client.json.GenericJson 
   private java.lang.String image;
 
   /**
-   * Optional. Shell script to execute. If provided then command and args cannot be specified.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String script;
-
-  /**
    * Optional. Args is the container arguments to use. This overrides the default arguments defined
    * in the container image.
    * @return value or {@code null} for none
@@ -136,23 +129,6 @@ public final class ContainerTask extends com.google.api.client.json.GenericJson 
    */
   public ContainerTask setImage(java.lang.String image) {
     this.image = image;
-    return this;
-  }
-
-  /**
-   * Optional. Shell script to execute. If provided then command and args cannot be specified.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getScript() {
-    return script;
-  }
-
-  /**
-   * Optional. Shell script to execute. If provided then command and args cannot be specified.
-   * @param script script or {@code null} for none
-   */
-  public ContainerTask setScript(java.lang.String script) {
-    this.script = script;
     return this;
   }
 

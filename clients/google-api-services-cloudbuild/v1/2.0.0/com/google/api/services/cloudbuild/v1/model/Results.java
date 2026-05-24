@@ -62,6 +62,19 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> buildStepOutputs;
 
   /**
+   * Results for build steps. step_id ->
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, BuildStepResults> buildStepResults;
+
+  static {
+    // hack to force ProGuard to consider BuildStepResults used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BuildStepResults.class);
+  }
+
+  /**
    * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
    * The value may be {@code null}.
    */
@@ -190,6 +203,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {
     this.buildStepOutputs = buildStepOutputs;
+    return this;
+  }
+
+  /**
+   * Results for build steps. step_id ->
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, BuildStepResults> getBuildStepResults() {
+    return buildStepResults;
+  }
+
+  /**
+   * Results for build steps. step_id ->
+   * @param buildStepResults buildStepResults or {@code null} for none
+   */
+  public Results setBuildStepResults(java.util.Map<String, BuildStepResults> buildStepResults) {
+    this.buildStepResults = buildStepResults;
     return this;
   }
 

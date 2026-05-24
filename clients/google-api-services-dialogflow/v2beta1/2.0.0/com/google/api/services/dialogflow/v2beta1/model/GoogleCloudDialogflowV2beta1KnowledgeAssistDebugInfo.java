@@ -33,6 +33,12 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> cesDebugInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String datastoreResponseReason;
 
   /**
@@ -57,6 +63,12 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo queryGenerationDebugInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String queryGenerationFailureReason;
 
   /**
@@ -64,6 +76,21 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends 
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ServiceLatency serviceLatency;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCesDebugInfo() {
+    return cesDebugInfo;
+  }
+
+  /**
+   * @param cesDebugInfo cesDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo setCesDebugInfo(java.util.Map<String, java.lang.Object> cesDebugInfo) {
+    this.cesDebugInfo = cesDebugInfo;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -122,6 +149,21 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo extends 
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo setQueryCategorizationFailureReason(java.lang.String queryCategorizationFailureReason) {
     this.queryCategorizationFailureReason = queryCategorizationFailureReason;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo getQueryGenerationDebugInfo() {
+    return queryGenerationDebugInfo;
+  }
+
+  /**
+   * @param queryGenerationDebugInfo queryGenerationDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo setQueryGenerationDebugInfo(GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfoQueryGenerationDebugInfo queryGenerationDebugInfo) {
+    this.queryGenerationDebugInfo = queryGenerationDebugInfo;
     return this;
   }
 

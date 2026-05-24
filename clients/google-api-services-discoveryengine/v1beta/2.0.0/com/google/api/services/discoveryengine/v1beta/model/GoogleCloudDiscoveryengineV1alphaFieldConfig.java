@@ -152,7 +152,9 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    * Optional. Specifies the importance of the field when `searchable_option` is
    * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
    * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
-   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`. For more
+   * information, see [Weight searchable fields](https://cloud.google.com/generative-ai-app-
+   * builder/docs/configure-field-settings#weight-search).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -445,7 +447,9 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    * Optional. Specifies the importance of the field when `searchable_option` is
    * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
    * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
-   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`. For more
+   * information, see [Weight searchable fields](https://cloud.google.com/generative-ai-app-
+   * builder/docs/configure-field-settings#weight-search).
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchableFieldImportance() {
@@ -456,7 +460,9 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    * Optional. Specifies the importance of the field when `searchable_option` is
    * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
    * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
-   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`. For more
+   * information, see [Weight searchable fields](https://cloud.google.com/generative-ai-app-
+   * builder/docs/configure-field-settings#weight-search).
    * @param searchableFieldImportance searchableFieldImportance or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaFieldConfig setSearchableFieldImportance(java.lang.String searchableFieldImportance) {

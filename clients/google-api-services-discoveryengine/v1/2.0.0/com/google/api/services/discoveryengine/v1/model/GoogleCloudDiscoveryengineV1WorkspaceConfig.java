@@ -30,7 +30,8 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1WorkspaceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Obfuscated Dasher customer ID.
+   * Output only. Obfuscated Dasher customer ID. Derived by the server from the project's GCP
+   * organization at data store creation time; any value supplied in the request payload is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,8 @@ public final class GoogleCloudDiscoveryengineV1WorkspaceConfig extends com.googl
   private java.lang.String type;
 
   /**
-   * Obfuscated Dasher customer ID.
+   * Output only. Obfuscated Dasher customer ID. Derived by the server from the project's GCP
+   * organization at data store creation time; any value supplied in the request payload is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getDasherCustomerId() {
@@ -68,7 +70,8 @@ public final class GoogleCloudDiscoveryengineV1WorkspaceConfig extends com.googl
   }
 
   /**
-   * Obfuscated Dasher customer ID.
+   * Output only. Obfuscated Dasher customer ID. Derived by the server from the project's GCP
+   * organization at data store creation time; any value supplied in the request payload is ignored.
    * @param dasherCustomerId dasherCustomerId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WorkspaceConfig setDasherCustomerId(java.lang.String dasherCustomerId) {

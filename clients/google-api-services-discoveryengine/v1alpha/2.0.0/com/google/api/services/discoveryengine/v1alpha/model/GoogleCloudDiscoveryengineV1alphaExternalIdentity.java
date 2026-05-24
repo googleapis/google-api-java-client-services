@@ -52,6 +52,15 @@ public final class GoogleCloudDiscoveryengineV1alphaExternalIdentity extends com
   private GoogleCloudDiscoveryengineV1alphaExternalIdentityGroupMetadata groupMetadata;
 
   /**
+   * Output only. Represents the canonical IAM subject identifier (for users) or group identifier
+   * (for groups), derived from the workforce-pool claim mapping. Falls back to custom logic if not
+   * set. This must be used for IAM bindings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subject;
+
+  /**
    * Metadata corresponding to the external user.
    * The value may be {@code null}.
    */
@@ -106,6 +115,27 @@ public final class GoogleCloudDiscoveryengineV1alphaExternalIdentity extends com
    */
   public GoogleCloudDiscoveryengineV1alphaExternalIdentity setGroupMetadata(GoogleCloudDiscoveryengineV1alphaExternalIdentityGroupMetadata groupMetadata) {
     this.groupMetadata = groupMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the canonical IAM subject identifier (for users) or group identifier
+   * (for groups), derived from the workforce-pool claim mapping. Falls back to custom logic if not
+   * set. This must be used for IAM bindings.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubject() {
+    return subject;
+  }
+
+  /**
+   * Output only. Represents the canonical IAM subject identifier (for users) or group identifier
+   * (for groups), derived from the workforce-pool claim mapping. Falls back to custom logic if not
+   * set. This must be used for IAM bindings.
+   * @param subject subject or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaExternalIdentity setSubject(java.lang.String subject) {
+    this.subject = subject;
     return this;
   }
 

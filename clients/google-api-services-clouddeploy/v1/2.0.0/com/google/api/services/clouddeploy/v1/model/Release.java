@@ -117,10 +117,10 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
-   * must meet the following constraints: * Keys and values can contain only lowercase letters,
-   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
-   * international characters are allowed. * Keys must start with a lowercase letter or
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * The value may be {@code null}.
@@ -396,10 +396,10 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
-   * must meet the following constraints: * Keys and values can contain only lowercase letters,
-   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
-   * international characters are allowed. * Keys must start with a lowercase letter or
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @return value or {@code null} for none
@@ -409,10 +409,10 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels are attributes that can be set and used by both the user and by Cloud Deploy. Labels
-   * must meet the following constraints: * Keys and values can contain only lowercase letters,
-   * numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and
-   * international characters are allowed. * Keys must start with a lowercase letter or
+   * Optional. Labels are attributes that can be set and used by both the user and by Cloud Deploy.
+   * Labels must meet the following constraints: * Keys and values can contain only lowercase
+   * letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding,
+   * and international characters are allowed. * Keys must start with a lowercase letter or
    * international character. * Each resource is limited to a maximum of 64 labels. Both keys and
    * values are additionally constrained to be <= 128 bytes.
    * @param labels labels or {@code null} for none

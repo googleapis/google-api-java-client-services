@@ -50,6 +50,14 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String containerMemory;
 
   /**
+   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
+   * absent or if `0`, a default concurrency is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long containerRequestConcurrency;
+
+  /**
    * Optional. Maximum number of rows in each batch sent to the external runtime. If absent or if 0,
    * BigQuery dynamically decides the number of rows in a batch.
    * The value may be {@code null}.
@@ -116,6 +124,25 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
    */
   public ExternalRuntimeOptions setContainerMemory(java.lang.String containerMemory) {
     this.containerMemory = containerMemory;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
+   * absent or if `0`, a default concurrency is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getContainerRequestConcurrency() {
+    return containerRequestConcurrency;
+  }
+
+  /**
+   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
+   * absent or if `0`, a default concurrency is used.
+   * @param containerRequestConcurrency containerRequestConcurrency or {@code null} for none
+   */
+  public ExternalRuntimeOptions setContainerRequestConcurrency(java.lang.Long containerRequestConcurrency) {
+    this.containerRequestConcurrency = containerRequestConcurrency;
     return this;
   }
 

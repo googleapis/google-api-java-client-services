@@ -29,6 +29,42 @@ package com.google.api.services.notebooks.v2.model;
 @SuppressWarnings("javadoc")
 public final class UpgradeInstanceRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The Compute Engine image family resource name to upgrade to. Format:
+   * `projects/{project_id}/global/images/family/{image_family}` If specified, the instance will be
+   * upgraded to the latest image in the specified image family, allowing upgrades across image
+   * families. If not specified, the instance will be upgraded to the latest image in its current
+   * image family.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageFamily;
+
+  /**
+   * Optional. The Compute Engine image family resource name to upgrade to. Format:
+   * `projects/{project_id}/global/images/family/{image_family}` If specified, the instance will be
+   * upgraded to the latest image in the specified image family, allowing upgrades across image
+   * families. If not specified, the instance will be upgraded to the latest image in its current
+   * image family.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageFamily() {
+    return imageFamily;
+  }
+
+  /**
+   * Optional. The Compute Engine image family resource name to upgrade to. Format:
+   * `projects/{project_id}/global/images/family/{image_family}` If specified, the instance will be
+   * upgraded to the latest image in the specified image family, allowing upgrades across image
+   * families. If not specified, the instance will be upgraded to the latest image in its current
+   * image family.
+   * @param imageFamily imageFamily or {@code null} for none
+   */
+  public UpgradeInstanceRequest setImageFamily(java.lang.String imageFamily) {
+    this.imageFamily = imageFamily;
+    return this;
+  }
+
   @Override
   public UpgradeInstanceRequest set(String fieldName, Object value) {
     return (UpgradeInstanceRequest) super.set(fieldName, value);

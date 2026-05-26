@@ -31,8 +31,8 @@ package com.google.api.services.mybusinessverifications.v1.model;
 public final class GenerateInstantVerificationTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The address and other details of the location to generate an instant verification
-   * token for.
+   * Immutable. Deprecated: Please use location_id instead. The address and other details of the
+   * location to generate an instant verification token for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class GenerateInstantVerificationTokenRequest extends com.google.ap
   private java.lang.String locationId;
 
   /**
-   * Immutable. The address and other details of the location to generate an instant verification
-   * token for.
+   * Immutable. Deprecated: Please use location_id instead. The address and other details of the
+   * location to generate an instant verification token for.
    * @return value or {@code null} for none
    */
   public LocationData getLocationData() {
@@ -60,8 +60,8 @@ public final class GenerateInstantVerificationTokenRequest extends com.google.ap
   }
 
   /**
-   * Immutable. The address and other details of the location to generate an instant verification
-   * token for.
+   * Immutable. Deprecated: Please use location_id instead. The address and other details of the
+   * location to generate an instant verification token for.
    * @param locationData locationData or {@code null} for none
    */
   public GenerateInstantVerificationTokenRequest setLocationData(LocationData locationData) {

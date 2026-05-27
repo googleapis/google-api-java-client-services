@@ -5329,6 +5329,29 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /**
+           * Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is
+           * deployed in a Private Service Connect deployment. Not used for non-Google Cloud MPs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean privateConnectivityEnabled;
+
+          /** Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is deployed in a
+         Private Service Connect deployment. Not used for non-Google Cloud MPs.
+           */
+          public java.lang.Boolean getPrivateConnectivityEnabled() {
+            return privateConnectivityEnabled;
+          }
+
+          /**
+           * Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is
+           * deployed in a Private Service Connect deployment. Not used for non-Google Cloud MPs.
+           */
+          public GenerateMonitoringPointConfig setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
+            this.privateConnectivityEnabled = privateConnectivityEnabled;
+            return this;
+          }
+
           @Override
           public GenerateMonitoringPointConfig set(String parameterName, Object value) {
             return (GenerateMonitoringPointConfig) super.set(parameterName, value);
@@ -6109,6 +6132,29 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             /** Optional. Second NTP server. */
             public DownloadInstallScript setNtpServerSecondaryAddress(java.lang.String ntpServerSecondaryAddress) {
               this.ntpServerSecondaryAddress = ntpServerSecondaryAddress;
+              return this;
+            }
+
+            /**
+             * Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is
+             * deployed in a Private Service Connect deployment. Not used for non-Google Cloud MPs.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean privateConnectivityEnabled;
+
+            /** Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is deployed in a
+           Private Service Connect deployment. Not used for non-Google Cloud MPs.
+             */
+            public java.lang.Boolean getPrivateConnectivityEnabled() {
+              return privateConnectivityEnabled;
+            }
+
+            /**
+             * Optional. For Google Cloud MPs, this field indicates whether the Monitoring Point is
+             * deployed in a Private Service Connect deployment. Not used for non-Google Cloud MPs.
+             */
+            public DownloadInstallScript setPrivateConnectivityEnabled(java.lang.Boolean privateConnectivityEnabled) {
+              this.privateConnectivityEnabled = privateConnectivityEnabled;
               return this;
             }
 

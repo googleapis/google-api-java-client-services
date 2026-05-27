@@ -17,9 +17,8 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Experimental: See https://developers.google.com/maps/documentation/places/web-
- * service/experimental/places-generative for more details. BusinessAvailabilityAttributes
- * justifications. This shows some attributes a business has that could interest an end user.
+ * BusinessAvailabilityAttributes justifications. This shows some attributes a business has that
+ * could interest an end user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:

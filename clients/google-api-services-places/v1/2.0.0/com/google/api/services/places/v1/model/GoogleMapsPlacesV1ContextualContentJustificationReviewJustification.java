@@ -17,11 +17,9 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Experimental: See https://developers.google.com/maps/documentation/places/web-
- * service/experimental/places-generative for more details. User review justifications. This
- * highlights a section of the user review that would interest an end user. For instance, if the
- * search query is "firewood pizza", the review justification highlights the text relevant to the
- * search query.
+ * User review justifications. This highlights a section of the user review that would interest an
+ * end user. For instance, if the search query is "firewood pizza", the review justification
+ * highlights the text relevant to the search query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:

@@ -30,21 +30,23 @@ package com.google.api.services.directory.model;
 public final class DirectoryUsersCreateGuestRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable ID of the Google Workspace account.
+   * Optional. Immutable ID of the Google Workspace account. Only required when request is created
+   * by a service account. Defaults to the authenticated user's customer ID otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customer;
 
   /**
-   * Immutable. External email of the guest user being created.
+   * Required. External email of the guest user being created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryGuestEmail;
 
   /**
-   * Optional. Immutable ID of the Google Workspace account.
+   * Optional. Immutable ID of the Google Workspace account. Only required when request is created
+   * by a service account. Defaults to the authenticated user's customer ID otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -52,7 +54,8 @@ public final class DirectoryUsersCreateGuestRequest extends com.google.api.clien
   }
 
   /**
-   * Optional. Immutable ID of the Google Workspace account.
+   * Optional. Immutable ID of the Google Workspace account. Only required when request is created
+   * by a service account. Defaults to the authenticated user's customer ID otherwise.
    * @param customer customer or {@code null} for none
    */
   public DirectoryUsersCreateGuestRequest setCustomer(java.lang.String customer) {
@@ -61,7 +64,7 @@ public final class DirectoryUsersCreateGuestRequest extends com.google.api.clien
   }
 
   /**
-   * Immutable. External email of the guest user being created.
+   * Required. External email of the guest user being created.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryGuestEmail() {
@@ -69,7 +72,7 @@ public final class DirectoryUsersCreateGuestRequest extends com.google.api.clien
   }
 
   /**
-   * Immutable. External email of the guest user being created.
+   * Required. External email of the guest user being created.
    * @param primaryGuestEmail primaryGuestEmail or {@code null} for none
    */
   public DirectoryUsersCreateGuestRequest setPrimaryGuestEmail(java.lang.String primaryGuestEmail) {

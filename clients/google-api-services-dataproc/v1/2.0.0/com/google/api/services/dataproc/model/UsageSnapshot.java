@@ -30,7 +30,8 @@ package com.google.api.services.dataproc.model;
 public final class UsageSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,11 +39,36 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * (https://cloud.google.com/dataproc-serverless/pricing)) Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long milliAccelerator;
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-40 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorA10040;
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-80 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorA10080;
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for L4 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorL4;
 
   /**
    * Optional. Milli (one-thousandth) Dataproc Compute Units (DCUs) (see Dataproc Serverless pricing
@@ -84,7 +110,8 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
   private String snapshotTime;
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -92,7 +119,8 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public UsageSnapshot setAcceleratorType(java.lang.String acceleratorType) {
@@ -102,7 +130,8 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * (https://cloud.google.com/dataproc-serverless/pricing)) Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMilliAccelerator() {
@@ -111,11 +140,69 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Milli (one-thousandth) accelerator. (see Dataproc Serverless pricing
-   * (https://cloud.google.com/dataproc-serverless/pricing))
+   * (https://cloud.google.com/dataproc-serverless/pricing)) Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * @param milliAccelerator milliAccelerator or {@code null} for none
    */
   public UsageSnapshot setMilliAccelerator(java.lang.Long milliAccelerator) {
     this.milliAccelerator = milliAccelerator;
+    return this;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-40 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorA10040() {
+    return milliAcceleratorA10040;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-40 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @param milliAcceleratorA10040 milliAcceleratorA10040 or {@code null} for none
+   */
+  public UsageSnapshot setMilliAcceleratorA10040(java.lang.Long milliAcceleratorA10040) {
+    this.milliAcceleratorA10040 = milliAcceleratorA10040;
+    return this;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-80 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorA10080() {
+    return milliAcceleratorA10080;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for A100-80 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @param milliAcceleratorA10080 milliAcceleratorA10080 or {@code null} for none
+   */
+  public UsageSnapshot setMilliAcceleratorA10080(java.lang.Long milliAcceleratorA10080) {
+    this.milliAcceleratorA10080 = milliAcceleratorA10080;
+    return this;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for L4 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorL4() {
+    return milliAcceleratorL4;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) accelerator for L4 accelerators. (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing))
+   * @param milliAcceleratorL4 milliAcceleratorL4 or {@code null} for none
+   */
+  public UsageSnapshot setMilliAcceleratorL4(java.lang.Long milliAcceleratorL4) {
+    this.milliAcceleratorL4 = milliAcceleratorL4;
     return this;
   }
 

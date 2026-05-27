@@ -32,6 +32,13 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class RuleViolationInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent type that triggered the rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentType;
+
+  /**
    * Source of the data.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String triggeringUserEmail;
+
+  /**
+   * Optional. Agent type that triggered the rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentType() {
+    return agentType;
+  }
+
+  /**
+   * Optional. Agent type that triggered the rule.
+   * @param agentType agentType or {@code null} for none
+   */
+  public RuleViolationInfo setAgentType(java.lang.String agentType) {
+    this.agentType = agentType;
+    return this;
+  }
 
   /**
    * Source of the data.

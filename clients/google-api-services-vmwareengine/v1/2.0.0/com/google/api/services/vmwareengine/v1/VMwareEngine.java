@@ -628,22 +628,22 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -8834,6 +8834,159 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Migrates the management VMs of the PC from the current management cluster to a workload cluster.
+         * Post this migration, the provided workload cluster becomes the management cluster
+         *
+         * Create a request for the method "privateClouds.migrateManagementVms".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link MigrateManagementVms#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the private cloud whose management vms are getting migrated. Resource
+         *        names are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1-a/privateClouds/my-cloud`
+         * @param content the {@link com.google.api.services.vmwareengine.v1.model.MigrateManagementVmsRequest}
+         * @return the request
+         */
+        public MigrateManagementVms migrateManagementVms(java.lang.String name, com.google.api.services.vmwareengine.v1.model.MigrateManagementVmsRequest content) throws java.io.IOException {
+          MigrateManagementVms result = new MigrateManagementVms(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MigrateManagementVms extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:migrateManagementVms";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+
+          /**
+           * Migrates the management VMs of the PC from the current management cluster to a workload
+           * cluster. Post this migration, the provided workload cluster becomes the management cluster
+           *
+           * Create a request for the method "privateClouds.migrateManagementVms".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link MigrateManagementVms#execute()} method to invoke the
+           * remote operation. <p> {@link MigrateManagementVms#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the private cloud whose management vms are getting migrated. Resource
+         *        names are schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1-a/privateClouds/my-cloud`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.MigrateManagementVmsRequest}
+           * @since 1.13
+           */
+          protected MigrateManagementVms(java.lang.String name, com.google.api.services.vmwareengine.v1.model.MigrateManagementVmsRequest content) {
+            super(VMwareEngine.this, "POST", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+            }
+          }
+
+          @Override
+          public MigrateManagementVms set$Xgafv(java.lang.String $Xgafv) {
+            return (MigrateManagementVms) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MigrateManagementVms setAccessToken(java.lang.String accessToken) {
+            return (MigrateManagementVms) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MigrateManagementVms setAlt(java.lang.String alt) {
+            return (MigrateManagementVms) super.setAlt(alt);
+          }
+
+          @Override
+          public MigrateManagementVms setCallback(java.lang.String callback) {
+            return (MigrateManagementVms) super.setCallback(callback);
+          }
+
+          @Override
+          public MigrateManagementVms setFields(java.lang.String fields) {
+            return (MigrateManagementVms) super.setFields(fields);
+          }
+
+          @Override
+          public MigrateManagementVms setKey(java.lang.String key) {
+            return (MigrateManagementVms) super.setKey(key);
+          }
+
+          @Override
+          public MigrateManagementVms setOauthToken(java.lang.String oauthToken) {
+            return (MigrateManagementVms) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MigrateManagementVms setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MigrateManagementVms) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MigrateManagementVms setQuotaUser(java.lang.String quotaUser) {
+            return (MigrateManagementVms) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MigrateManagementVms setUploadType(java.lang.String uploadType) {
+            return (MigrateManagementVms) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MigrateManagementVms setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MigrateManagementVms) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the private cloud whose management vms are getting
+           * migrated. Resource names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the private cloud whose management vms are getting migrated.
+         Resource names are schemeless URIs that follow the conventions in
+         https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the private cloud whose management vms are getting
+           * migrated. Resource names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a/privateClouds/my-cloud`
+           */
+          public MigrateManagementVms setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public MigrateManagementVms set(String parameterName, Object value) {
+            return (MigrateManagementVms) super.set(parameterName, value);
           }
         }
         /**

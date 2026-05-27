@@ -60,6 +60,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private CloudFunctionInfo cloudFunction;
 
   /**
+   * Display information of a Cloud Run job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudRunJobInfo cloudRunJob;
+
+  /**
    * Display information of a Cloud Run revision.
    * The value may be {@code null}.
    */
@@ -394,6 +401,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setCloudFunction(CloudFunctionInfo cloudFunction) {
     this.cloudFunction = cloudFunction;
+    return this;
+  }
+
+  /**
+   * Display information of a Cloud Run job.
+   * @return value or {@code null} for none
+   */
+  public CloudRunJobInfo getCloudRunJob() {
+    return cloudRunJob;
+  }
+
+  /**
+   * Display information of a Cloud Run job.
+   * @param cloudRunJob cloudRunJob or {@code null} for none
+   */
+  public Step setCloudRunJob(CloudRunJobInfo cloudRunJob) {
+    this.cloudRunJob = cloudRunJob;
     return this;
   }
 

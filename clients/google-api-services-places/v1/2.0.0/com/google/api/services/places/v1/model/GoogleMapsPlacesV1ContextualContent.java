@@ -17,9 +17,7 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Experimental: See https://developers.google.com/maps/documentation/places/web-
- * service/experimental/places-generative for more details. Content that is contextual to the place
- * query.
+ * Content that is contextual to the place query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:
@@ -32,8 +30,7 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. Justifications for the place.
+   * Justifications for the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +51,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   private java.util.List<GoogleMapsPlacesV1Review> reviews;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. Justifications for the place.
+   * Justifications for the place.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1ContextualContentJustification> getJustifications() {
@@ -63,8 +59,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. Justifications for the place.
+   * Justifications for the place.
    * @param justifications justifications or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContent setJustifications(java.util.List<GoogleMapsPlacesV1ContextualContentJustification> justifications) {

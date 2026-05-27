@@ -17,9 +17,8 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Experimental: See https://developers.google.com/maps/documentation/places/web-
- * service/experimental/places-generative for more details. Justifications for the place.
- * Justifications answers the question of why a place could interest an end user.
+ * Justifications for the place. Justifications answers the question of why a place could interest
+ * an end user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:
@@ -32,24 +31,18 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1ContextualContentJustification extends com.google.api.client.json.GenericJson {
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1ContextualContentJustificationBusinessAvailabilityAttributesJustification businessAvailabilityAttributesJustification;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleMapsPlacesV1ContextualContentJustificationReviewJustification reviewJustification;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContentJustificationBusinessAvailabilityAttributesJustification getBusinessAvailabilityAttributesJustification() {
@@ -57,8 +50,6 @@ public final class GoogleMapsPlacesV1ContextualContentJustification extends com.
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * @param businessAvailabilityAttributesJustification businessAvailabilityAttributesJustification or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContentJustification setBusinessAvailabilityAttributesJustification(GoogleMapsPlacesV1ContextualContentJustificationBusinessAvailabilityAttributesJustification businessAvailabilityAttributesJustification) {
@@ -67,8 +58,6 @@ public final class GoogleMapsPlacesV1ContextualContentJustification extends com.
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContentJustificationReviewJustification getReviewJustification() {
@@ -76,8 +65,6 @@ public final class GoogleMapsPlacesV1ContextualContentJustification extends com.
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details.
    * @param reviewJustification reviewJustification or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContentJustification setReviewJustification(GoogleMapsPlacesV1ContextualContentJustificationReviewJustification reviewJustification) {

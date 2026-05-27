@@ -30,19 +30,45 @@ package com.google.api.services.dataproc.model;
 public final class UsageMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. DEPRECATED Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorType;
 
   /**
-   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
-   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)). Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long milliAcceleratorSeconds;
+
+  /**
+   * Optional. A100-40 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorSecondsA10040;
+
+  /**
+   * Optional. A100-80 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorSecondsA10080;
+
+  /**
+   * Optional. L4 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliAcceleratorSecondsL4;
 
   /**
    * Optional. DCU (Dataproc Compute Units) usage in (milliDCU x seconds) (see Dataproc Serverless
@@ -68,7 +94,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. DEPRECATED Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -76,7 +103,8 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. DEPRECATED Accelerator type being used, if any
+   * Optional. Accelerator type being used, if any Deprecated: This field is only used in runtime
+   * versions below 3.0.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public UsageMetrics setAcceleratorType(java.lang.String acceleratorType) {
@@ -85,8 +113,9 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
-   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)). Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMilliAcceleratorSeconds() {
@@ -94,12 +123,70 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. DEPRECATED Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
-   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * Optional. Accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)). Deprecated: This field is only used in
+   * runtime versions below 3.0.
    * @param milliAcceleratorSeconds milliAcceleratorSeconds or {@code null} for none
    */
   public UsageMetrics setMilliAcceleratorSeconds(java.lang.Long milliAcceleratorSeconds) {
     this.milliAcceleratorSeconds = milliAcceleratorSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. A100-40 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorSecondsA10040() {
+    return milliAcceleratorSecondsA10040;
+  }
+
+  /**
+   * Optional. A100-40 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @param milliAcceleratorSecondsA10040 milliAcceleratorSecondsA10040 or {@code null} for none
+   */
+  public UsageMetrics setMilliAcceleratorSecondsA10040(java.lang.Long milliAcceleratorSecondsA10040) {
+    this.milliAcceleratorSecondsA10040 = milliAcceleratorSecondsA10040;
+    return this;
+  }
+
+  /**
+   * Optional. A100-80 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorSecondsA10080() {
+    return milliAcceleratorSecondsA10080;
+  }
+
+  /**
+   * Optional. A100-80 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless
+   * pricing (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @param milliAcceleratorSecondsA10080 milliAcceleratorSecondsA10080 or {@code null} for none
+   */
+  public UsageMetrics setMilliAcceleratorSecondsA10080(java.lang.Long milliAcceleratorSecondsA10080) {
+    this.milliAcceleratorSecondsA10080 = milliAcceleratorSecondsA10080;
+    return this;
+  }
+
+  /**
+   * Optional. L4 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliAcceleratorSecondsL4() {
+    return milliAcceleratorSecondsL4;
+  }
+
+  /**
+   * Optional. L4 accelerator usage in (milliAccelerator x seconds) (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).
+   * @param milliAcceleratorSecondsL4 milliAcceleratorSecondsL4 or {@code null} for none
+   */
+  public UsageMetrics setMilliAcceleratorSecondsL4(java.lang.Long milliAcceleratorSecondsL4) {
+    this.milliAcceleratorSecondsL4 = milliAcceleratorSecondsL4;
     return this;
   }
 

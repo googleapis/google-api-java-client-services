@@ -30,21 +30,21 @@ package com.google.api.services.vmmigration.v1.model;
 public final class PersistentDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URI of the Persistent Disk.
+   * Output only. The URI of the Persistent Disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskUri;
 
   /**
-   * The ordinal number of the source VM disk.
+   * Output only. The ordinal number of the source VM disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sourceDiskNumber;
 
   /**
-   * The URI of the Persistent Disk.
+   * Output only. The URI of the Persistent Disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskUri() {
@@ -52,7 +52,7 @@ public final class PersistentDisk extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The URI of the Persistent Disk.
+   * Output only. The URI of the Persistent Disk.
    * @param diskUri diskUri or {@code null} for none
    */
   public PersistentDisk setDiskUri(java.lang.String diskUri) {
@@ -61,7 +61,7 @@ public final class PersistentDisk extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ordinal number of the source VM disk.
+   * Output only. The ordinal number of the source VM disk.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSourceDiskNumber() {
@@ -69,7 +69,7 @@ public final class PersistentDisk extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ordinal number of the source VM disk.
+   * Output only. The ordinal number of the source VM disk.
    * @param sourceDiskNumber sourceDiskNumber or {@code null} for none
    */
   public PersistentDisk setSourceDiskNumber(java.lang.Integer sourceDiskNumber) {

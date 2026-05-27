@@ -100,6 +100,13 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.String diskType;
 
   /**
+   * Optional. The details of each disk to create.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PersistentDiskDefaults> disks;
+
+  /**
    * Optional. Defines whether the instance has integrity monitoring enabled. This can be set to
    * true only if the VM boot option is EFI, and vTPM is enabled.
    * The value may be {@code null}.
@@ -372,6 +379,23 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
    */
   public ComputeEngineTargetDefaults setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Optional. The details of each disk to create.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PersistentDiskDefaults> getDisks() {
+    return disks;
+  }
+
+  /**
+   * Optional. The details of each disk to create.
+   * @param disks disks or {@code null} for none
+   */
+  public ComputeEngineTargetDefaults setDisks(java.util.List<PersistentDiskDefaults> disks) {
+    this.disks = disks;
     return this;
   }
 

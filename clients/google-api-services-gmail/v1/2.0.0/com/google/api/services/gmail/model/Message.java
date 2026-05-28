@@ -88,6 +88,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
    * `messages.get` and `drafts.get` responses when the `format=RAW` parameter is supplied.
+   * @required gmail.users.drafts.create gmail.users.drafts.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,6 +240,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
    * `messages.get` and `drafts.get` responses when the `format=RAW` parameter is supplied.
+   * @required gmail.users.drafts.create gmail.users.drafts.update
    * @see #decodeRaw()
    * @return value or {@code null} for none
    */
@@ -249,6 +251,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
    * `messages.get` and `drafts.get` responses when the `format=RAW` parameter is supplied.
+   * @required gmail.users.drafts.create gmail.users.drafts.update
    * @see #getRaw()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -261,6 +264,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
    * `messages.get` and `drafts.get` responses when the `format=RAW` parameter is supplied.
+   * @required gmail.users.drafts.create gmail.users.drafts.update
    * @see #encodeRaw()
    * @param raw raw or {@code null} for none
    */
@@ -272,6 +276,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * The entire email message in an RFC 2822 formatted and base64url encoded string. Returned in
    * `messages.get` and `drafts.get` responses when the `format=RAW` parameter is supplied.
+   * @required gmail.users.drafts.create gmail.users.drafts.update
    * @see #setRaw()
    *
    * <p>

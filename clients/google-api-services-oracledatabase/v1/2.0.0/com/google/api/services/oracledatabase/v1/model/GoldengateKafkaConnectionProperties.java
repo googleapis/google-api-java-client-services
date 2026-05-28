@@ -47,14 +47,14 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   private java.lang.String clusterId;
 
   /**
-   * Optional. The content of the consumer.properties file.
+   * Optional. The base64 encoded content of the consumer.properties file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumerPropertiesFile;
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   private java.lang.String passwordSecretVersion;
 
   /**
-   * Optional. The content of the producer.properties file.
+   * Optional. The base64 encoded content of the producer.properties file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   private java.lang.String technologyType;
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +212,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the consumer.properties file.
+   * Optional. The base64 encoded content of the consumer.properties file.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerPropertiesFile() {
@@ -220,7 +220,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the consumer.properties file.
+   * Optional. The base64 encoded content of the consumer.properties file.
    * @param consumerPropertiesFile consumerPropertiesFile or {@code null} for none
    */
   public GoldengateKafkaConnectionProperties setConsumerPropertiesFile(java.lang.String consumerPropertiesFile) {
@@ -229,7 +229,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyStoreFile() {
@@ -237,7 +237,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * @param keyStoreFile keyStoreFile or {@code null} for none
    */
   public GoldengateKafkaConnectionProperties setKeyStoreFile(java.lang.String keyStoreFile) {
@@ -320,7 +320,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the producer.properties file.
+   * Optional. The base64 encoded content of the producer.properties file.
    * @return value or {@code null} for none
    */
   public java.lang.String getProducerPropertiesFile() {
@@ -328,7 +328,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the producer.properties file.
+   * Optional. The base64 encoded content of the producer.properties file.
    * @param producerPropertiesFile producerPropertiesFile or {@code null} for none
    */
   public GoldengateKafkaConnectionProperties setProducerPropertiesFile(java.lang.String producerPropertiesFile) {
@@ -426,7 +426,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustStoreFile() {
@@ -434,7 +434,7 @@ public final class GoldengateKafkaConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * @param trustStoreFile trustStoreFile or {@code null} for none
    */
   public GoldengateKafkaConnectionProperties setTrustStoreFile(java.lang.String trustStoreFile) {

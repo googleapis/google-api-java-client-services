@@ -45,7 +45,7 @@ public final class GoogleCloudStorageIcebergStorage extends com.google.api.clien
   private java.lang.String projectId;
 
   /**
-   * Optional. The service account key file of Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file of Google Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class GoogleCloudStorageIcebergStorage extends com.google.api.clien
   }
 
   /**
-   * Optional. The service account key file of Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file of Google Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyFile() {
@@ -94,7 +94,7 @@ public final class GoogleCloudStorageIcebergStorage extends com.google.api.clien
   }
 
   /**
-   * Optional. The service account key file of Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file of Google Cloud Storage.
    * @param serviceAccountKeyFile serviceAccountKeyFile or {@code null} for none
    */
   public GoogleCloudStorageIcebergStorage setServiceAccountKeyFile(java.lang.String serviceAccountKeyFile) {

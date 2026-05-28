@@ -38,7 +38,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   private java.lang.String authenticationType;
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   private java.lang.String technologyType;
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   }
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyStoreFile() {
@@ -161,7 +161,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   }
 
   /**
-   * Optional. The content of the KeyStore file.
+   * Optional. The base64 encoded content of the KeyStore file.
    * @param keyStoreFile keyStoreFile or {@code null} for none
    */
   public GoldengateKafkaSchemaRegistryConnectionProperties setKeyStoreFile(java.lang.String keyStoreFile) {
@@ -299,7 +299,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   }
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustStoreFile() {
@@ -307,7 +307,7 @@ public final class GoldengateKafkaSchemaRegistryConnectionProperties extends com
   }
 
   /**
-   * Optional. The content of the TrustStore file.
+   * Optional. The base64 encoded content of the TrustStore file.
    * @param trustStoreFile trustStoreFile or {@code null} for none
    */
   public GoldengateKafkaSchemaRegistryConnectionProperties setTrustStoreFile(java.lang.String trustStoreFile) {

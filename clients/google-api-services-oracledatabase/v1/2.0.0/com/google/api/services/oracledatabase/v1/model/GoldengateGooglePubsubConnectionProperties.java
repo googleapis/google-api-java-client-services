@@ -31,8 +31,8 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class GoldengateGooglePubsubConnectionProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the service account key file containing the credentials required to
-   * use Google Pub/Sub.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Pub/Sub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoldengateGooglePubsubConnectionProperties extends com.google
   private java.lang.String technologyType;
 
   /**
-   * Optional. The content of the service account key file containing the credentials required to
-   * use Google Pub/Sub.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Pub/Sub.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyFile() {
@@ -55,8 +55,8 @@ public final class GoldengateGooglePubsubConnectionProperties extends com.google
   }
 
   /**
-   * Optional. The content of the service account key file containing the credentials required to
-   * use Google Pub/Sub.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Pub/Sub.
    * @param serviceAccountKeyFile serviceAccountKeyFile or {@code null} for none
    */
   public GoldengateGooglePubsubConnectionProperties setServiceAccountKeyFile(java.lang.String serviceAccountKeyFile) {

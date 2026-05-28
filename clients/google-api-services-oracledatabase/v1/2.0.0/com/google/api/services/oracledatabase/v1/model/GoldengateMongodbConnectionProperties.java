@@ -77,16 +77,16 @@ public final class GoldengateMongodbConnectionProperties extends com.google.api.
   private java.lang.String technologyType;
 
   /**
-   * Optional. Database Certificate - The content of a .pem file, containing the server public key
-   * (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem file, containing the
+   * server public key (for 1 and 2-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tlsCaFile;
 
   /**
-   * Optional. Client Certificate - The content of a .pem file, containing the client public key
-   * (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem file, containing the client
+   * public key (for 2-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,8 +226,8 @@ public final class GoldengateMongodbConnectionProperties extends com.google.api.
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem file, containing the server public key
-   * (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem file, containing the
+   * server public key (for 1 and 2-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getTlsCaFile() {
@@ -235,8 +235,8 @@ public final class GoldengateMongodbConnectionProperties extends com.google.api.
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem file, containing the server public key
-   * (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem file, containing the
+   * server public key (for 1 and 2-way SSL).
    * @param tlsCaFile tlsCaFile or {@code null} for none
    */
   public GoldengateMongodbConnectionProperties setTlsCaFile(java.lang.String tlsCaFile) {
@@ -245,8 +245,8 @@ public final class GoldengateMongodbConnectionProperties extends com.google.api.
   }
 
   /**
-   * Optional. Client Certificate - The content of a .pem file, containing the client public key
-   * (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem file, containing the client
+   * public key (for 2-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getTlsCertificateKeyFile() {
@@ -254,8 +254,8 @@ public final class GoldengateMongodbConnectionProperties extends com.google.api.
   }
 
   /**
-   * Optional. Client Certificate - The content of a .pem file, containing the client public key
-   * (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem file, containing the client
+   * public key (for 2-way SSL).
    * @param tlsCertificateKeyFile tlsCertificateKeyFile or {@code null} for none
    */
   public GoldengateMongodbConnectionProperties setTlsCertificateKeyFile(java.lang.String tlsCertificateKeyFile) {

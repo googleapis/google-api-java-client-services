@@ -91,28 +91,30 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   private java.lang.String securityProtocol;
 
   /**
-   * Optional. The certificate of the trusted certificate authorities (Trusted CA) for PostgreSQL.
+   * Optional. The base64 encoded certificate of the trusted certificate authorities (Trusted CA)
+   * for PostgreSQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCaFile;
 
   /**
-   * Optional. The certificate of the PostgreSQL server.
+   * Optional. The base64 encoded certificate of the PostgreSQL server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCertFile;
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCrlFile;
 
   /**
-   * Optional. The private key of the PostgreSQL server.
+   * Optional. The base64 encoded private key of the PostgreSQL server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +287,8 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The certificate of the trusted certificate authorities (Trusted CA) for PostgreSQL.
+   * Optional. The base64 encoded certificate of the trusted certificate authorities (Trusted CA)
+   * for PostgreSQL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCaFile() {
@@ -293,7 +296,8 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The certificate of the trusted certificate authorities (Trusted CA) for PostgreSQL.
+   * Optional. The base64 encoded certificate of the trusted certificate authorities (Trusted CA)
+   * for PostgreSQL.
    * @param sslCaFile sslCaFile or {@code null} for none
    */
   public GoldengatePostgresqlConnectionProperties setSslCaFile(java.lang.String sslCaFile) {
@@ -302,7 +306,7 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The certificate of the PostgreSQL server.
+   * Optional. The base64 encoded certificate of the PostgreSQL server.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCertFile() {
@@ -310,7 +314,7 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The certificate of the PostgreSQL server.
+   * Optional. The base64 encoded certificate of the PostgreSQL server.
    * @param sslCertFile sslCertFile or {@code null} for none
    */
   public GoldengatePostgresqlConnectionProperties setSslCertFile(java.lang.String sslCertFile) {
@@ -319,7 +323,8 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCrlFile() {
@@ -327,7 +332,8 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * @param sslCrlFile sslCrlFile or {@code null} for none
    */
   public GoldengatePostgresqlConnectionProperties setSslCrlFile(java.lang.String sslCrlFile) {
@@ -336,7 +342,7 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The private key of the PostgreSQL server.
+   * Optional. The base64 encoded private key of the PostgreSQL server.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslKeyFile() {
@@ -344,7 +350,7 @@ public final class GoldengatePostgresqlConnectionProperties extends com.google.a
   }
 
   /**
-   * Optional. The private key of the PostgreSQL server.
+   * Optional. The base64 encoded private key of the PostgreSQL server.
    * @param sslKeyFile sslKeyFile or {@code null} for none
    */
   public GoldengatePostgresqlConnectionProperties setSslKeyFile(java.lang.String sslKeyFile) {

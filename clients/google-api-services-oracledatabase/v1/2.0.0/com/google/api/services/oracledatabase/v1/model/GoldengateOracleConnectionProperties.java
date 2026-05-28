@@ -90,7 +90,8 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   private java.lang.String username;
 
   /**
-   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database.
+   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database. This
+   * attribute is expected to be base64 encoded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,7 +240,8 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database.
+   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database. This
+   * attribute is expected to be base64 encoded.
    * @return value or {@code null} for none
    */
   public java.lang.String getWalletFile() {
@@ -247,7 +249,8 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   }
 
   /**
-   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database.
+   * Optional. The wallet contents Oracle Goldengate uses to make connections to a database. This
+   * attribute is expected to be base64 encoded.
    * @param walletFile walletFile or {@code null} for none
    */
   public GoldengateOracleConnectionProperties setWalletFile(java.lang.String walletFile) {

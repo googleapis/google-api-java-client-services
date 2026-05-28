@@ -53,10 +53,11 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
    * org_unit.org_unit_id == orgUnitId('{orgUnitId}')) The Group the Policy applies to are
    * represented by a clause like so: entity.groups.exists(group, group.group_id ==
    * groupId('{groupId}')) The Licenses the Policy applies to are represented by a clause like so:
-   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) The above
-   * clauses can be present in any combination, and used in conjunction with the &&, || and !
-   * operators. The org_unit and group fields below are helper fields that contain the corresponding
-   * value(s) as the query to make the query easier to use.
+   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) **Note:** The
+   * licenses clause is not supported in mutate endpoints. The above clauses can be present in any
+   * combination, and used in conjunction with the &&, || and ! operators. The org_unit and group
+   * fields below are helper fields that contain the corresponding value(s) as the query to make the
+   * query easier to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,10 +119,11 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
    * org_unit.org_unit_id == orgUnitId('{orgUnitId}')) The Group the Policy applies to are
    * represented by a clause like so: entity.groups.exists(group, group.group_id ==
    * groupId('{groupId}')) The Licenses the Policy applies to are represented by a clause like so:
-   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) The above
-   * clauses can be present in any combination, and used in conjunction with the &&, || and !
-   * operators. The org_unit and group fields below are helper fields that contain the corresponding
-   * value(s) as the query to make the query easier to use.
+   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) **Note:** The
+   * licenses clause is not supported in mutate endpoints. The above clauses can be present in any
+   * combination, and used in conjunction with the &&, || and ! operators. The org_unit and group
+   * fields below are helper fields that contain the corresponding value(s) as the query to make the
+   * query easier to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -135,10 +137,11 @@ public final class PolicyQuery extends com.google.api.client.json.GenericJson {
    * org_unit.org_unit_id == orgUnitId('{orgUnitId}')) The Group the Policy applies to are
    * represented by a clause like so: entity.groups.exists(group, group.group_id ==
    * groupId('{groupId}')) The Licenses the Policy applies to are represented by a clause like so:
-   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) The above
-   * clauses can be present in any combination, and used in conjunction with the &&, || and !
-   * operators. The org_unit and group fields below are helper fields that contain the corresponding
-   * value(s) as the query to make the query easier to use.
+   * entity.licenses.exists(license, license in ['/product/{productId}/sku/{skuId}']) **Note:** The
+   * licenses clause is not supported in mutate endpoints. The above clauses can be present in any
+   * combination, and used in conjunction with the &&, || and ! operators. The org_unit and group
+   * fields below are helper fields that contain the corresponding value(s) as the query to make the
+   * query easier to use.
    * @param query query or {@code null} for none
    */
   public PolicyQuery setQuery(java.lang.String query) {

@@ -936,6 +936,791 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
         }
       }
 
+      /**
+       * An accessor for creating requests from the Subscriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+       *   {@code GoogleHealthAPI.Subscriptions.List request = health.subscriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Subscriptions subscriptions() {
+        return new Subscriptions();
+      }
+
+      /**
+       * The "subscriptions" collection of methods.
+       */
+      public class Subscriptions {
+
+        /**
+         * Creates a subscription for a specific user to a specific subscriber. This method requires the
+         * subscriber to have a `SubscriptionCreatePolicy` set to `MANUAL` for the given data types.
+         *
+         * Create a request for the method "subscriptions.create".
+         *
+         * This request holds the parameters needed by the health server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise.
+         * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriptionPayload}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.health.v4.model.CreateSubscriptionPayload content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Subscription> {
+
+          private static final String REST_PATH = "v4/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+$");
+
+          /**
+           * Creates a subscription for a specific user to a specific subscriber. This method requires the
+           * subscriber to have a `SubscriptionCreatePolicy` set to `MANUAL` for the given data types.
+           *
+           * Create a request for the method "subscriptions.create".
+           *
+           * This request holds the parameters needed by the the health server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise.
+           * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriptionPayload}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.health.v4.model.CreateSubscriptionPayload content) {
+            super(GoogleHealthAPI.this, "POST", REST_PATH, content, com.google.api.services.health.v4.model.Subscription.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber}
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         {subscriber} ID is user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if
+         provided during creation, or system-generated otherwise.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber}
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The {subscription_id} is user-settable (4-36 chars, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise. If provided, the ID
+           * must be unique within the parent subscriber.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String subscriptionId;
+
+          /** Optional. The {subscription_id} is user-settable (4-36 chars, matching
+         /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise. If provided, the ID must be unique
+         within the parent subscriber.
+           */
+          public java.lang.String getSubscriptionId() {
+            return subscriptionId;
+          }
+
+          /**
+           * Optional. The {subscription_id} is user-settable (4-36 chars, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise. If provided, the ID
+           * must be unique within the parent subscriber.
+           */
+          public Create setSubscriptionId(java.lang.String subscriptionId) {
+            this.subscriptionId = subscriptionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a specific user subscription, stopping notifications for this user to this subscriber.
+         *
+         * Create a request for the method "subscriptions.delete".
+         *
+         * This request holds the parameters needed by the health server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the subscription to delete. Format:
+         *        `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+         *        `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise. The {subscription} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Empty> {
+
+          private static final String REST_PATH = "v4/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Deletes a specific user subscription, stopping notifications for this user to this subscriber.
+           *
+           * Create a request for the method "subscriptions.delete".
+           *
+           * This request holds the parameters needed by the the health server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the subscription to delete. Format:
+         *        `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+         *        `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise. The {subscription} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(GoogleHealthAPI.this, "DELETE", REST_PATH, null, com.google.api.services.health.v4.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the subscription to delete. Format:
+           * `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+           * `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise. The {subscription} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the subscription to delete. Format:
+         `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example: `projects/my-
+         project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The {subscriber} ID is
+         user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during
+         creation, or system-generated otherwise. The {subscription} ID is user-settable (4-36 characters,
+         matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the subscription to delete. Format:
+           * `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+           * `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise. The {subscription} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided during creation.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all active subscriptions for a given subscriber. This can be filtered, for example, by user
+         * or data type.
+         *
+         * Create a request for the method "subscriptions.list".
+         *
+         * This request holds the parameters needed by the health server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.ListSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v4/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+$");
+
+          /**
+           * Lists all active subscriptions for a given subscriber. This can be filtered, for example, by
+           * user or data type.
+           *
+           * Create a request for the method "subscriptions.list".
+           *
+           * This request holds the parameters needed by the the health server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         *        {subscriber} ID is user-settable (4-36 characters, matching
+         *        /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+         *        otherwise.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.ListSubscriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber}
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber} The
+         {subscriber} ID is user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if
+         provided during creation, or system-generated otherwise.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent subscriber. Format: projects/{project}/subscribers/{subscriber}
+           * The {subscriber} ID is user-settable (4-36 characters, matching
+           * /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-generated
+           * otherwise.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter to apply to the list of subscriptions. The filter syntax is
+           * described in https://google.aip.dev/160. The filter can be applied to the following
+           * fields: - `user` - `data_type` The `user` identifier (e.g., `user1` in `users/user1`)
+           * refers to the public `healthUserId` Example: user = "users/user1" Example: user =
+           * "users/user1" OR user = "users/user2" Example: user = "users/user1" AND (data_type =
+           * "sleep" OR data_type = "weight")
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter to apply to the list of subscriptions. The filter syntax is described in
+         https://google.aip.dev/160. The filter can be applied to the following fields: - `user` -
+         `data_type` The `user` identifier (e.g., `user1` in `users/user1`) refers to the public
+         `healthUserId` Example: user = "users/user1" Example: user = "users/user1" OR user = "users/user2"
+         Example: user = "users/user1" AND (data_type = "sleep" OR data_type = "weight")
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter to apply to the list of subscriptions. The filter syntax is
+           * described in https://google.aip.dev/160. The filter can be applied to the following
+           * fields: - `user` - `data_type` The `user` identifier (e.g., `user1` in `users/user1`)
+           * refers to the public `healthUserId` Example: user = "users/user1" Example: user =
+           * "users/user1" OR user = "users/user2" Example: user = "users/user1" AND (data_type =
+           * "sleep" OR data_type = "weight")
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 50 subscriptions will be returned. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of subscriptions to return. The service may return fewer than this
+         value. If unspecified, at most 50 subscriptions will be returned. The maximum value is 1000; values
+         above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 50 subscriptions will be returned. The maximum
+           * value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListSubscriptions` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSubscriptions` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListSubscriptions` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `ListSubscriptions` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListSubscriptions` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSubscriptions` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the data types for an existing user subscription.
+         *
+         * Create a request for the method "subscriptions.patch".
+         *
+         * This request holds the parameters needed by the health server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the Subscription. Format:
+         *        `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+         *        `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The
+         *        {project} ID is mandatory (6-30 characters, matching /a-z{6,30}/) The {subscriber} ID is
+         *        user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided
+         *        during creation, or system-generated otherwise. The {subscription} ID is user-settable
+         *        (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise.
+         * @param content the {@link com.google.api.services.health.v4.model.Subscription}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.health.v4.model.Subscription content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.Subscription> {
+
+          private static final String REST_PATH = "v4/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Updates the data types for an existing user subscription.
+           *
+           * Create a request for the method "subscriptions.patch".
+           *
+           * This request holds the parameters needed by the the health server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the Subscription. Format:
+         *        `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+         *        `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The
+         *        {project} ID is mandatory (6-30 characters, matching /a-z{6,30}/) The {subscriber} ID is
+         *        user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided
+         *        during creation, or system-generated otherwise. The {subscription} ID is user-settable
+         *        (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise.
+           * @param content the {@link com.google.api.services.health.v4.model.Subscription}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.health.v4.model.Subscription content) {
+            super(GoogleHealthAPI.this, "PATCH", REST_PATH, content, com.google.api.services.health.v4.model.Subscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the Subscription. Format:
+           * `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+           * `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+           * The {project} ID is mandatory (6-30 characters, matching /a-z{6,30}/) The {subscriber}
+           * ID is user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if
+           * provided during creation, or system-generated otherwise. The {subscription} ID is user-
+           * settable (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+           * otherwise.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the Subscription. Format:
+         `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example: `projects/my-
+         project/subscribers/my-subscriber-123/subscriptions/my-subscription-456` The {project} ID is
+         mandatory (6-30 characters, matching /a-z{6,30}/) The {subscriber} ID is user-settable (4-36
+         characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or system-
+         generated otherwise. The {subscription} ID is user-settable (4-36 chars, matching
+         /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated otherwise.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the Subscription. Format:
+           * `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}` Example:
+           * `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+           * The {project} ID is mandatory (6-30 characters, matching /a-z{6,30}/) The {subscriber}
+           * ID is user-settable (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if
+           * provided during creation, or system-generated otherwise. The {subscription} ID is user-
+           * settable (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+           * otherwise.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/subscribers/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
@@ -1098,6 +1883,168 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
       @Override
       public GetIdentity set(String parameterName, Object value) {
         return (GetIdentity) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns user's IRN Profile details.
+     *
+     * Create a request for the method "users.getIrnProfile".
+     *
+     * This request holds the parameters needed by the health server.  After setting any optional
+     * parameters, call the {@link GetIrnProfile#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the IRN Profile. Format: `users/{user}/irnProfile` Example:
+     *        `users/1234567890/irnProfile` or `users/me/irnProfile` The {user} ID is a system-generated
+     *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
+     *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
+     *        authenticated user.
+     * @return the request
+     */
+    public GetIrnProfile getIrnProfile(java.lang.String name) throws java.io.IOException {
+      GetIrnProfile result = new GetIrnProfile(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIrnProfile extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.IrnProfile> {
+
+      private static final String REST_PATH = "v4/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^users/[^/]+/irnProfile$");
+
+      /**
+       * Returns user's IRN Profile details.
+       *
+       * Create a request for the method "users.getIrnProfile".
+       *
+       * This request holds the parameters needed by the the health server.  After setting any optional
+       * parameters, call the {@link GetIrnProfile#execute()} method to invoke the remote operation. <p>
+       * {@link GetIrnProfile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientR
+       * equest)} must be called to initialize this instance immediately after invoking the constructor.
+       * </p>
+       *
+       * @param name Required. The resource name of the IRN Profile. Format: `users/{user}/irnProfile` Example:
+     *        `users/1234567890/irnProfile` or `users/me/irnProfile` The {user} ID is a system-generated
+     *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
+     *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
+     *        authenticated user.
+       * @since 1.13
+       */
+      protected GetIrnProfile(java.lang.String name) {
+        super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.IrnProfile.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^users/[^/]+/irnProfile$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIrnProfile set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIrnProfile) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIrnProfile setAccessToken(java.lang.String accessToken) {
+        return (GetIrnProfile) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIrnProfile setAlt(java.lang.String alt) {
+        return (GetIrnProfile) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIrnProfile setCallback(java.lang.String callback) {
+        return (GetIrnProfile) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIrnProfile setFields(java.lang.String fields) {
+        return (GetIrnProfile) super.setFields(fields);
+      }
+
+      @Override
+      public GetIrnProfile setKey(java.lang.String key) {
+        return (GetIrnProfile) super.setKey(key);
+      }
+
+      @Override
+      public GetIrnProfile setOauthToken(java.lang.String oauthToken) {
+        return (GetIrnProfile) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIrnProfile setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIrnProfile) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIrnProfile setQuotaUser(java.lang.String quotaUser) {
+        return (GetIrnProfile) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIrnProfile setUploadType(java.lang.String uploadType) {
+        return (GetIrnProfile) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIrnProfile setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIrnProfile) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the IRN Profile. Format: `users/{user}/irnProfile` Example:
+       * `users/1234567890/irnProfile` or `users/me/irnProfile` The {user} ID is a system-generated
+       * Google Health API user ID, a string of 1-63 characters consisting of lowercase and
+       * uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
+       * authenticated user.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the IRN Profile. Format: `users/{user}/irnProfile` Example:
+     `users/1234567890/irnProfile` or `users/me/irnProfile` The {user} ID is a system-generated Google
+     Health API user ID, a string of 1-63 characters consisting of lowercase and uppercase letters,
+     numbers, and hyphens. The literal `me` can also be used to refer to the authenticated user.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the IRN Profile. Format: `users/{user}/irnProfile` Example:
+       * `users/1234567890/irnProfile` or `users/me/irnProfile` The {user} ID is a system-generated
+       * Google Health API user ID, a string of 1-63 characters consisting of lowercase and
+       * uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
+       * authenticated user.
+       */
+      public GetIrnProfile setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^users/[^/]+/irnProfile$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetIrnProfile set(String parameterName, Object value) {
+        return (GetIrnProfile) super.set(parameterName, value);
       }
     }
     /**
@@ -2757,28 +3704,28 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * summary date: - Pattern: `{daily_summary_data_type}.date` - Supported comparison
            * operators: `>=`, `<` - Date literal expected in ISO 8601 `YYYY-MM-DD` format -
            * Supported logical operators: `AND` - Example: - `daily_heart_rate_variability.date <
-           * "2024-08-15"` - Session start time (**ECG specific**): - Pattern:
-           * `electrocardiogram.interval.start_time` - Supported comparison operators: `>=` -
-           * Timestamp literal expected in RFC-3339 format - Example: -
+           * "2024-08-15"` - Session civil start time (**Excluding Sleep and ECG**): - Pattern:
+           * `{session_data_type}.interval.civil_start_time` - Supported comparison operators: `>=`,
+           * `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-DD[THH:mm:ss]`
+           * format - Supported logical operators: `AND` - Example: -
+           * `exercise.interval.civil_start_time >= "2023-11-24" AND
+           * exercise.interval.civil_start_time < "2023-11-25"` -
+           * `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session start time
+           * (**ECG specific**): - Pattern: `electrocardiogram.interval.start_time` - Supported
+           * comparison operators: `>=` - Timestamp literal expected in RFC-3339 format - Example: -
            * `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"` - Note: Only
            * filtering by start time is supported for ECG. Filtering by end time (e.g.,
-           * `electrocardiogram.interval.end_time`) is not supported. - Session civil start time
-           * (**Excluding Sleep**): - Pattern: `{session_data_type}.interval.civil_start_time` -
-           * Supported comparison operators: `>=`, `<` - Date with optional time literal expected in
-           * ISO 8601 `YYYY-MM-DD[THH:mm:ss]` format - Supported logical operators: `AND` - Example:
-           * - `exercise.interval.civil_start_time >= "2023-11-24" AND
-           * exercise.interval.civil_start_time < "2023-11-25"` -
-           * `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session end time
-           * (**Sleep specific**): - Pattern: `sleep.interval.end_time` - Supported comparison
-           * operators: `>=`, `<` - Timestamp literal expected in RFC-3339 format - Supported
-           * logical operators: `AND`, `OR` - Example: - `sleep.interval.end_time >=
-           * "2023-11-24T00:00:00Z" AND sleep.interval.end_time < "2023-11-25T00:00:00Z"` - Session
-           * civil end time (**Sleep specific**): - Pattern: `sleep.interval.civil_end_time` -
-           * Supported comparison operators: `>=`, `<` - Date with optional time literal expected in
-           * ISO 8601 `YYYY-MM-DD[THH:mm:ss]` format - Supported logical operators: `AND`, `OR` -
-           * Example: - `sleep.interval.civil_end_time >= "2023-11-24" AND
-           * sleep.interval.civil_end_time < "2023-11-25"` Data points in the response will be
-           * ordered by the interval start time in descending order.
+           * `electrocardiogram.interval.end_time`) is not supported. - Session end time (**Sleep
+           * specific**): - Pattern: `sleep.interval.end_time` - Supported comparison operators:
+           * `>=`, `<` - Timestamp literal expected in RFC-3339 format - Supported logical
+           * operators: `AND`, `OR` - Example: - `sleep.interval.end_time >= "2023-11-24T00:00:00Z"
+           * AND sleep.interval.end_time < "2023-11-25T00:00:00Z"` - Session civil end time (**Sleep
+           * specific**): - Pattern: `sleep.interval.civil_end_time` - Supported comparison
+           * operators: `>=`, `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-
+           * DD[THH:mm:ss]` format - Supported logical operators: `AND`, `OR` - Example: -
+           * `sleep.interval.civil_end_time >= "2023-11-24" AND sleep.interval.civil_end_time <
+           * "2023-11-25"` Data points in the response will be ordered by the interval start time in
+           * descending order.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2805,25 +3752,25 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          `weight.sample_time.civil_time >= "2024-08-14T12:34:56"` - Daily summary date: - Pattern:
          `{daily_summary_data_type}.date` - Supported comparison operators: `>=`, `<` - Date literal
          expected in ISO 8601 `YYYY-MM-DD` format - Supported logical operators: `AND` - Example: -
-         `daily_heart_rate_variability.date < "2024-08-15"` - Session start time (**ECG specific**): -
-         Pattern: `electrocardiogram.interval.start_time` - Supported comparison operators: `>=` - Timestamp
-         literal expected in RFC-3339 format - Example: - `electrocardiogram.interval.start_time >=
-         "2024-08-14T12:34:56Z"` - Note: Only filtering by start time is supported for ECG. Filtering by end
-         time (e.g., `electrocardiogram.interval.end_time`) is not supported. - Session civil start time
-         (**Excluding Sleep**): - Pattern: `{session_data_type}.interval.civil_start_time` - Supported
-         comparison operators: `>=`, `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-
-         DD[THH:mm:ss]` format - Supported logical operators: `AND` - Example: -
-         `exercise.interval.civil_start_time >= "2023-11-24" AND exercise.interval.civil_start_time <
-         "2023-11-25"` - `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session end time
-         (**Sleep specific**): - Pattern: `sleep.interval.end_time` - Supported comparison operators: `>=`,
-         `<` - Timestamp literal expected in RFC-3339 format - Supported logical operators: `AND`, `OR` -
-         Example: - `sleep.interval.end_time >= "2023-11-24T00:00:00Z" AND sleep.interval.end_time <
-         "2023-11-25T00:00:00Z"` - Session civil end time (**Sleep specific**): - Pattern:
-         `sleep.interval.civil_end_time` - Supported comparison operators: `>=`, `<` - Date with optional
-         time literal expected in ISO 8601 `YYYY-MM-DD[THH:mm:ss]` format - Supported logical operators:
-         `AND`, `OR` - Example: - `sleep.interval.civil_end_time >= "2023-11-24" AND
-         sleep.interval.civil_end_time < "2023-11-25"` Data points in the response will be ordered by the
-         interval start time in descending order.
+         `daily_heart_rate_variability.date < "2024-08-15"` - Session civil start time (**Excluding Sleep
+         and ECG**): - Pattern: `{session_data_type}.interval.civil_start_time` - Supported comparison
+         operators: `>=`, `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-DD[THH:mm:ss]`
+         format - Supported logical operators: `AND` - Example: - `exercise.interval.civil_start_time >=
+         "2023-11-24" AND exercise.interval.civil_start_time < "2023-11-25"` -
+         `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session start time (**ECG
+         specific**): - Pattern: `electrocardiogram.interval.start_time` - Supported comparison operators:
+         `>=` - Timestamp literal expected in RFC-3339 format - Example: -
+         `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"` - Note: Only filtering by start
+         time is supported for ECG. Filtering by end time (e.g., `electrocardiogram.interval.end_time`) is
+         not supported. - Session end time (**Sleep specific**): - Pattern: `sleep.interval.end_time` -
+         Supported comparison operators: `>=`, `<` - Timestamp literal expected in RFC-3339 format -
+         Supported logical operators: `AND`, `OR` - Example: - `sleep.interval.end_time >=
+         "2023-11-24T00:00:00Z" AND sleep.interval.end_time < "2023-11-25T00:00:00Z"` - Session civil end
+         time (**Sleep specific**): - Pattern: `sleep.interval.civil_end_time` - Supported comparison
+         operators: `>=`, `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-DD[THH:mm:ss]`
+         format - Supported logical operators: `AND`, `OR` - Example: - `sleep.interval.civil_end_time >=
+         "2023-11-24" AND sleep.interval.civil_end_time < "2023-11-25"` Data points in the response will be
+         ordered by the interval start time in descending order.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -2856,28 +3803,28 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * summary date: - Pattern: `{daily_summary_data_type}.date` - Supported comparison
            * operators: `>=`, `<` - Date literal expected in ISO 8601 `YYYY-MM-DD` format -
            * Supported logical operators: `AND` - Example: - `daily_heart_rate_variability.date <
-           * "2024-08-15"` - Session start time (**ECG specific**): - Pattern:
-           * `electrocardiogram.interval.start_time` - Supported comparison operators: `>=` -
-           * Timestamp literal expected in RFC-3339 format - Example: -
+           * "2024-08-15"` - Session civil start time (**Excluding Sleep and ECG**): - Pattern:
+           * `{session_data_type}.interval.civil_start_time` - Supported comparison operators: `>=`,
+           * `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-DD[THH:mm:ss]`
+           * format - Supported logical operators: `AND` - Example: -
+           * `exercise.interval.civil_start_time >= "2023-11-24" AND
+           * exercise.interval.civil_start_time < "2023-11-25"` -
+           * `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session start time
+           * (**ECG specific**): - Pattern: `electrocardiogram.interval.start_time` - Supported
+           * comparison operators: `>=` - Timestamp literal expected in RFC-3339 format - Example: -
            * `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"` - Note: Only
            * filtering by start time is supported for ECG. Filtering by end time (e.g.,
-           * `electrocardiogram.interval.end_time`) is not supported. - Session civil start time
-           * (**Excluding Sleep**): - Pattern: `{session_data_type}.interval.civil_start_time` -
-           * Supported comparison operators: `>=`, `<` - Date with optional time literal expected in
-           * ISO 8601 `YYYY-MM-DD[THH:mm:ss]` format - Supported logical operators: `AND` - Example:
-           * - `exercise.interval.civil_start_time >= "2023-11-24" AND
-           * exercise.interval.civil_start_time < "2023-11-25"` -
-           * `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"` - Session end time
-           * (**Sleep specific**): - Pattern: `sleep.interval.end_time` - Supported comparison
-           * operators: `>=`, `<` - Timestamp literal expected in RFC-3339 format - Supported
-           * logical operators: `AND`, `OR` - Example: - `sleep.interval.end_time >=
-           * "2023-11-24T00:00:00Z" AND sleep.interval.end_time < "2023-11-25T00:00:00Z"` - Session
-           * civil end time (**Sleep specific**): - Pattern: `sleep.interval.civil_end_time` -
-           * Supported comparison operators: `>=`, `<` - Date with optional time literal expected in
-           * ISO 8601 `YYYY-MM-DD[THH:mm:ss]` format - Supported logical operators: `AND`, `OR` -
-           * Example: - `sleep.interval.civil_end_time >= "2023-11-24" AND
-           * sleep.interval.civil_end_time < "2023-11-25"` Data points in the response will be
-           * ordered by the interval start time in descending order.
+           * `electrocardiogram.interval.end_time`) is not supported. - Session end time (**Sleep
+           * specific**): - Pattern: `sleep.interval.end_time` - Supported comparison operators:
+           * `>=`, `<` - Timestamp literal expected in RFC-3339 format - Supported logical
+           * operators: `AND`, `OR` - Example: - `sleep.interval.end_time >= "2023-11-24T00:00:00Z"
+           * AND sleep.interval.end_time < "2023-11-25T00:00:00Z"` - Session civil end time (**Sleep
+           * specific**): - Pattern: `sleep.interval.civil_end_time` - Supported comparison
+           * operators: `>=`, `<` - Date with optional time literal expected in ISO 8601 `YYYY-MM-
+           * DD[THH:mm:ss]` format - Supported logical operators: `AND`, `OR` - Example: -
+           * `sleep.interval.civil_end_time >= "2023-11-24" AND sleep.interval.civil_end_time <
+           * "2023-11-25"` Data points in the response will be ordered by the interval start time in
+           * descending order.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3522,6 +4469,356 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
         }
 
       }
+    }
+    /**
+     * An accessor for creating requests from the PairedDevices collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+     *   {@code GoogleHealthAPI.PairedDevices.List request = health.pairedDevices().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public PairedDevices pairedDevices() {
+      return new PairedDevices();
+    }
+
+    /**
+     * The "pairedDevices" collection of methods.
+     */
+    public class PairedDevices {
+
+      /**
+       * Returns user's Device.
+       *
+       * Create a request for the method "pairedDevices.get".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the device to retrieve. Format: users/{user}/devices/{device}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.PairedDevice> {
+
+        private static final String REST_PATH = "v4/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/pairedDevices/[^/]+$");
+
+        /**
+         * Returns user's Device.
+         *
+         * Create a request for the method "pairedDevices.get".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the device to retrieve. Format: users/{user}/devices/{device}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.PairedDevice.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/pairedDevices/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the device to retrieve. Format: users/{user}/devices/{device} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the device to retrieve. Format: users/{user}/devices/{device}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the device to retrieve. Format: users/{user}/devices/{device} */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/pairedDevices/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns the user's list of paired 1P trackers and smartwatches.
+       *
+       * Create a request for the method "pairedDevices.list".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which owns this collection of devices. Format: users/{user}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.ListPairedDevicesResponse> {
+
+        private static final String REST_PATH = "v4/{+parent}/pairedDevices";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+$");
+
+        /**
+         * Returns the user's list of paired 1P trackers and smartwatches.
+         *
+         * Create a request for the method "pairedDevices.list".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which owns this collection of devices. Format: users/{user}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.ListPairedDevicesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent, which owns this collection of devices. Format: users/{user} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which owns this collection of devices. Format: users/{user}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent, which owns this collection of devices. Format: users/{user} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of devices to return. The service may return fewer than this
+         * value. If unspecified, at most 5 devices will be returned. The maximum value is 100.
+         * values above 100 will be coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of devices to return. The service may return fewer than this value. If
+       unspecified, at most 5 devices will be returned. The maximum value is 100. values above 100 will be
+       coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of devices to return. The service may return fewer than this
+         * value. If unspecified, at most 5 devices will be returned. The maximum value is 100.
+         * values above 100 will be coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListPairedDevices` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListPairedDevices` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListPairedDevices` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListPairedDevices` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListPairedDevices` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListPairedDevices` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 

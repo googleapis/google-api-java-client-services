@@ -30,6 +30,13 @@ package com.google.api.services.health.v4.model;
 public final class DataPoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Data for points in the `active-energy-burned` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ActiveEnergyBurned activeEnergyBurned;
+
+  /**
    * Optional. Data for points in the `active-minutes` interval data type collection.
    * The value may be {@code null}.
    */
@@ -66,11 +73,25 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private BasalEnergyBurned basalEnergyBurned;
 
   /**
+   * Optional. Data for points in the `blood-glucose` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BloodGlucose bloodGlucose;
+
+  /**
    * Optional. Data for points in the `body-fat` sample data type collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BodyFat bodyFat;
+
+  /**
+   * Optional. Data for points in the `core-body-temperature` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CoreBodyTemperature coreBodyTemperature;
 
   /**
    * Optional. Data for points in the `daily-heart-rate-variability` daily data type collection.
@@ -137,6 +158,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private Distance distance;
 
   /**
+   * Optional. Data for points in the `electrocardiogram` session data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Electrocardiogram electrocardiogram;
+
+  /**
    * Optional. Data for points in the `exercise` session data type collection.
    * The value may be {@code null}.
    */
@@ -149,6 +177,20 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Floors floors;
+
+  /**
+   * Optional. The food details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Food food;
+
+  /**
+   * Optional. The food measurement unit details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FoodMeasurementUnit foodMeasurementUnit;
 
   /**
    * Optional. Data for points in the `heart-rate` sample data type collection.
@@ -179,6 +221,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private HydrationLog hydrationLog;
 
   /**
+   * Optional. Data for points in the `irregular-rhythm-notification` session data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IrregularRhythmNotification irregularRhythmNotification;
+
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable data types. For the
    * majority of the data types, individual data points do not need to be identified and this field
    * would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
@@ -192,6 +241,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Data for points in the `nutrition-log` session data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NutritionLog nutritionLog;
 
   /**
    * Optional. Data for points in the `oxygen-saturation` sample data type collection.
@@ -262,6 +318,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Weight weight;
+
+  /**
+   * Optional. Data for points in the `active-energy-burned` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public ActiveEnergyBurned getActiveEnergyBurned() {
+    return activeEnergyBurned;
+  }
+
+  /**
+   * Optional. Data for points in the `active-energy-burned` interval data type collection.
+   * @param activeEnergyBurned activeEnergyBurned or {@code null} for none
+   */
+  public DataPoint setActiveEnergyBurned(ActiveEnergyBurned activeEnergyBurned) {
+    this.activeEnergyBurned = activeEnergyBurned;
+    return this;
+  }
 
   /**
    * Optional. Data for points in the `active-minutes` interval data type collection.
@@ -351,6 +424,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Data for points in the `blood-glucose` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public BloodGlucose getBloodGlucose() {
+    return bloodGlucose;
+  }
+
+  /**
+   * Optional. Data for points in the `blood-glucose` sample data type collection.
+   * @param bloodGlucose bloodGlucose or {@code null} for none
+   */
+  public DataPoint setBloodGlucose(BloodGlucose bloodGlucose) {
+    this.bloodGlucose = bloodGlucose;
+    return this;
+  }
+
+  /**
    * Optional. Data for points in the `body-fat` sample data type collection.
    * @return value or {@code null} for none
    */
@@ -364,6 +454,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setBodyFat(BodyFat bodyFat) {
     this.bodyFat = bodyFat;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `core-body-temperature` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public CoreBodyTemperature getCoreBodyTemperature() {
+    return coreBodyTemperature;
+  }
+
+  /**
+   * Optional. Data for points in the `core-body-temperature` sample data type collection.
+   * @param coreBodyTemperature coreBodyTemperature or {@code null} for none
+   */
+  public DataPoint setCoreBodyTemperature(CoreBodyTemperature coreBodyTemperature) {
+    this.coreBodyTemperature = coreBodyTemperature;
     return this;
   }
 
@@ -523,6 +630,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Data for points in the `electrocardiogram` session data type collection.
+   * @return value or {@code null} for none
+   */
+  public Electrocardiogram getElectrocardiogram() {
+    return electrocardiogram;
+  }
+
+  /**
+   * Optional. Data for points in the `electrocardiogram` session data type collection.
+   * @param electrocardiogram electrocardiogram or {@code null} for none
+   */
+  public DataPoint setElectrocardiogram(Electrocardiogram electrocardiogram) {
+    this.electrocardiogram = electrocardiogram;
+    return this;
+  }
+
+  /**
    * Optional. Data for points in the `exercise` session data type collection.
    * @return value or {@code null} for none
    */
@@ -553,6 +677,40 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setFloors(Floors floors) {
     this.floors = floors;
+    return this;
+  }
+
+  /**
+   * Optional. The food details.
+   * @return value or {@code null} for none
+   */
+  public Food getFood() {
+    return food;
+  }
+
+  /**
+   * Optional. The food details.
+   * @param food food or {@code null} for none
+   */
+  public DataPoint setFood(Food food) {
+    this.food = food;
+    return this;
+  }
+
+  /**
+   * Optional. The food measurement unit details.
+   * @return value or {@code null} for none
+   */
+  public FoodMeasurementUnit getFoodMeasurementUnit() {
+    return foodMeasurementUnit;
+  }
+
+  /**
+   * Optional. The food measurement unit details.
+   * @param foodMeasurementUnit foodMeasurementUnit or {@code null} for none
+   */
+  public DataPoint setFoodMeasurementUnit(FoodMeasurementUnit foodMeasurementUnit) {
+    this.foodMeasurementUnit = foodMeasurementUnit;
     return this;
   }
 
@@ -625,6 +783,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Data for points in the `irregular-rhythm-notification` session data type collection.
+   * @return value or {@code null} for none
+   */
+  public IrregularRhythmNotification getIrregularRhythmNotification() {
+    return irregularRhythmNotification;
+  }
+
+  /**
+   * Optional. Data for points in the `irregular-rhythm-notification` session data type collection.
+   * @param irregularRhythmNotification irregularRhythmNotification or {@code null} for none
+   */
+  public DataPoint setIrregularRhythmNotification(IrregularRhythmNotification irregularRhythmNotification) {
+    this.irregularRhythmNotification = irregularRhythmNotification;
+    return this;
+  }
+
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable data types. For the
    * majority of the data types, individual data points do not need to be identified and this field
    * would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
@@ -654,6 +829,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `nutrition-log` session data type collection.
+   * @return value or {@code null} for none
+   */
+  public NutritionLog getNutritionLog() {
+    return nutritionLog;
+  }
+
+  /**
+   * Optional. Data for points in the `nutrition-log` session data type collection.
+   * @param nutritionLog nutritionLog or {@code null} for none
+   */
+  public DataPoint setNutritionLog(NutritionLog nutritionLog) {
+    this.nutritionLog = nutritionLog;
     return this;
   }
 

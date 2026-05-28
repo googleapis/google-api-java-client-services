@@ -306,13 +306,6 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private GoogleCloudRunV2Condition terminalCondition;
 
   /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String timeout;
-
-  /**
    * Output only. Server assigned unique identifier for the trigger. The value is a UUID4 string and
    * guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -961,23 +954,6 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Instance setTerminalCondition(GoogleCloudRunV2Condition terminalCondition) {
     this.terminalCondition = terminalCondition;
-    return this;
-  }
-
-  /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * @return value or {@code null} for none
-   */
-  public String getTimeout() {
-    return timeout;
-  }
-
-  /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * @param timeout timeout or {@code null} for none
-   */
-  public GoogleCloudRunV2Instance setTimeout(String timeout) {
-    this.timeout = timeout;
     return this;
   }
 

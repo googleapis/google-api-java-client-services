@@ -30,14 +30,14 @@ package com.google.api.services.homegraph.v1.model;
 public final class TraitData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Home API trait payload.
+   * The Provider Home API trait payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> trait;
 
   /**
-   * Optional. The Home API trait payload.
+   * The Provider Home API trait payload.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getTrait() {
@@ -45,7 +45,7 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Home API trait payload.
+   * The Provider Home API trait payload.
    * @param trait trait or {@code null} for none
    */
   public TraitData setTrait(java.util.Map<String, java.lang.Object> trait) {

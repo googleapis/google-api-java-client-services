@@ -12916,17 +12916,17 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** Filter on resources belonging to this channelId. */
+      /** Filter on resources belonging to this channelId. (Force TAP rebuild) */
       @com.google.api.client.util.Key
       private java.lang.String channelId;
 
-      /** Filter on resources belonging to this channelId.
+      /** Filter on resources belonging to this channelId. (Force TAP rebuild)
        */
       public java.lang.String getChannelId() {
         return channelId;
       }
 
-      /** Filter on resources belonging to this channelId. */
+      /** Filter on resources belonging to this channelId. (Force TAP rebuild) */
       public List setChannelId(java.lang.String channelId) {
         this.channelId = channelId;
         return this;

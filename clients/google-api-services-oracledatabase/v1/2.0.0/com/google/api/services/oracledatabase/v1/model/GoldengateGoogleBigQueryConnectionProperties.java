@@ -31,8 +31,8 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class GoldengateGoogleBigQueryConnectionProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The service account key file Cloud Storage containing the credentials required to use
-   * Google BigQuery.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google BigQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoldengateGoogleBigQueryConnectionProperties extends com.goog
   private java.lang.String technologyType;
 
   /**
-   * Optional. The service account key file Cloud Storage containing the credentials required to use
-   * Google BigQuery.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google BigQuery.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyFile() {
@@ -55,8 +55,8 @@ public final class GoldengateGoogleBigQueryConnectionProperties extends com.goog
   }
 
   /**
-   * Optional. The service account key file Cloud Storage containing the credentials required to use
-   * Google BigQuery.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google BigQuery.
    * @param serviceAccountKeyFile serviceAccountKeyFile or {@code null} for none
    */
   public GoldengateGoogleBigQueryConnectionProperties setServiceAccountKeyFile(java.lang.String serviceAccountKeyFile) {

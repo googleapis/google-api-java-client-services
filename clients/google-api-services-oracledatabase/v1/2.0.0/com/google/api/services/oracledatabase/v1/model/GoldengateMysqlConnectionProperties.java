@@ -90,31 +90,32 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   private java.lang.String securityProtocol;
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1 and 2-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCaFile;
 
   /**
-   * Optional. Client Certificate - The content of a .pem or .crt file containing the client public
-   * key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem or .crt file containing the
+   * client public key (for 2-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCertFile;
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCrlFile;
 
   /**
-   * Optional. Client Key - The content of a .pem or .crt file containing the client private key
-   * (for 2-way SSL).
+   * Optional. Client Key - The base64 encoded content of a .pem or .crt file containing the client
+   * private key (for 2-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,8 +286,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1 and 2-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCaFile() {
@@ -294,8 +295,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1 and 2-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1 and 2-way SSL).
    * @param sslCaFile sslCaFile or {@code null} for none
    */
   public GoldengateMysqlConnectionProperties setSslCaFile(java.lang.String sslCaFile) {
@@ -304,8 +305,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Client Certificate - The content of a .pem or .crt file containing the client public
-   * key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem or .crt file containing the
+   * client public key (for 2-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCertFile() {
@@ -313,8 +314,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Client Certificate - The content of a .pem or .crt file containing the client public
-   * key (for 2-way SSL).
+   * Optional. Client Certificate - The base64 encoded content of a .pem or .crt file containing the
+   * client public key (for 2-way SSL).
    * @param sslCertFile sslCertFile or {@code null} for none
    */
   public GoldengateMysqlConnectionProperties setSslCertFile(java.lang.String sslCertFile) {
@@ -323,7 +324,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCrlFile() {
@@ -331,7 +333,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. The list of certificates revoked by the trusted certificate authorities (Trusted CA).
+   * Optional. The base64 encoded list of certificates revoked by the trusted certificate
+   * authorities (Trusted CA).
    * @param sslCrlFile sslCrlFile or {@code null} for none
    */
   public GoldengateMysqlConnectionProperties setSslCrlFile(java.lang.String sslCrlFile) {
@@ -340,8 +343,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Client Key - The content of a .pem or .crt file containing the client private key
-   * (for 2-way SSL).
+   * Optional. Client Key - The base64 encoded content of a .pem or .crt file containing the client
+   * private key (for 2-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslKeyFile() {
@@ -349,8 +352,8 @@ public final class GoldengateMysqlConnectionProperties extends com.google.api.cl
   }
 
   /**
-   * Optional. Client Key - The content of a .pem or .crt file containing the client private key
-   * (for 2-way SSL).
+   * Optional. Client Key - The base64 encoded content of a .pem or .crt file containing the client
+   * private key (for 2-way SSL).
    * @param sslKeyFile sslKeyFile or {@code null} for none
    */
   public GoldengateMysqlConnectionProperties setSslKeyFile(java.lang.String sslKeyFile) {

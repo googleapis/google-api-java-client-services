@@ -92,8 +92,8 @@ public final class GoldengateMicrosoftSqlserverConnectionProperties extends com.
   private java.lang.Boolean serverCertificateValidationRequired;
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1-way SSL).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,8 +260,8 @@ public final class GoldengateMicrosoftSqlserverConnectionProperties extends com.
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1-way SSL).
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCaFile() {
@@ -269,8 +269,8 @@ public final class GoldengateMicrosoftSqlserverConnectionProperties extends com.
   }
 
   /**
-   * Optional. Database Certificate - The content of a .pem or .crt file containing the server
-   * public key (for 1-way SSL).
+   * Optional. Database Certificate - The base64 encoded content of a .pem or .crt file containing
+   * the server public key (for 1-way SSL).
    * @param sslCaFile sslCaFile or {@code null} for none
    */
   public GoldengateMicrosoftSqlserverConnectionProperties setSslCaFile(java.lang.String sslCaFile) {

@@ -31,8 +31,8 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class RestIcebergCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the configuration file containing additional properties for the REST
-   * catalog.
+   * Optional. The base64 encoded content of the configuration file containing additional properties
+   * for the REST catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class RestIcebergCatalog extends com.google.api.client.json.Generic
   private java.lang.String uri;
 
   /**
-   * Optional. The content of the configuration file containing additional properties for the REST
-   * catalog.
+   * Optional. The base64 encoded content of the configuration file containing additional properties
+   * for the REST catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getProperties() {
@@ -55,8 +55,8 @@ public final class RestIcebergCatalog extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The content of the configuration file containing additional properties for the REST
-   * catalog.
+   * Optional. The base64 encoded content of the configuration file containing additional properties
+   * for the REST catalog.
    * @param properties properties or {@code null} for none
    */
   public RestIcebergCatalog setProperties(java.lang.String properties) {

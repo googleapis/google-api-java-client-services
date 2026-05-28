@@ -31,8 +31,8 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class GoldengateGoogleCloudStorageConnectionProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The service account key Cloud Storage file containing the credentials required to use
-   * Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoldengateGoogleCloudStorageConnectionProperties extends com.
   private java.lang.String technologyType;
 
   /**
-   * Optional. The service account key Cloud Storage file containing the credentials required to use
-   * Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Cloud Storage.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountKeyFile() {
@@ -55,8 +55,8 @@ public final class GoldengateGoogleCloudStorageConnectionProperties extends com.
   }
 
   /**
-   * Optional. The service account key Cloud Storage file containing the credentials required to use
-   * Google Cloud Storage.
+   * Optional. The base64 encoded content of the service account key file containing the credentials
+   * required to use Google Cloud Storage.
    * @param serviceAccountKeyFile serviceAccountKeyFile or {@code null} for none
    */
   public GoldengateGoogleCloudStorageConnectionProperties setServiceAccountKeyFile(java.lang.String serviceAccountKeyFile) {

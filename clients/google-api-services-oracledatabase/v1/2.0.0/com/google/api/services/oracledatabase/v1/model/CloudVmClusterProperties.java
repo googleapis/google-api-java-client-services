@@ -201,14 +201,14 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   private java.util.List<java.lang.String> scanIpIds;
 
   /**
-   * Output only. SCAN listener port - TCP
+   * Optional. SCAN listener port - TCP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer scanListenerPortTcp;
 
   /**
-   * Output only. SCAN listener port - TLS
+   * Optional. SCAN listener port - TLS
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -676,7 +676,7 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. SCAN listener port - TCP
+   * Optional. SCAN listener port - TCP
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScanListenerPortTcp() {
@@ -684,7 +684,7 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. SCAN listener port - TCP
+   * Optional. SCAN listener port - TCP
    * @param scanListenerPortTcp scanListenerPortTcp or {@code null} for none
    */
   public CloudVmClusterProperties setScanListenerPortTcp(java.lang.Integer scanListenerPortTcp) {
@@ -693,7 +693,7 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. SCAN listener port - TLS
+   * Optional. SCAN listener port - TLS
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScanListenerPortTcpSsl() {
@@ -701,7 +701,7 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. SCAN listener port - TLS
+   * Optional. SCAN listener port - TLS
    * @param scanListenerPortTcpSsl scanListenerPortTcpSsl or {@code null} for none
    */
   public CloudVmClusterProperties setScanListenerPortTcpSsl(java.lang.Integer scanListenerPortTcpSsl) {

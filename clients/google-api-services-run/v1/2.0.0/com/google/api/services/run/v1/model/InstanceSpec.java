@@ -60,13 +60,6 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountName;
 
   /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String timeout;
-
-  /**
    * Optional. List of volumes that can be mounted by containers belonging to the Instance.
    * The value may be {@code null}.
    */
@@ -127,23 +120,6 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
    */
   public InstanceSpec setServiceAccountName(java.lang.String serviceAccountName) {
     this.serviceAccountName = serviceAccountName;
-    return this;
-  }
-
-  /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * @return value or {@code null} for none
-   */
-  public String getTimeout() {
-    return timeout;
-  }
-
-  /**
-   * Optional. Duration the instance may be active before the system will shut it down.
-   * @param timeout timeout or {@code null} for none
-   */
-  public InstanceSpec setTimeout(String timeout) {
-    this.timeout = timeout;
     return this;
   }
 

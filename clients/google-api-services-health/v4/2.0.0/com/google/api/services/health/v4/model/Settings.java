@@ -46,6 +46,16 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String distanceUnit;
 
   /**
+   * Output only. The food language code derived from the user's food database. Possible values:
+   * `'en-US'`, `'en-GB'`, `'de-DE'`, `'es-ES'`, `'fr-FR'`, `'zh-CN'`, `'zh-TW'`, `'ja-JP'`, `'en-
+   * AU'`, `'en-CA'`, `'it-IT'`, `'ko-KR'`, `'es-MX'`, `'en-IN'`, `'en-SG'`, `'en-PH'`, `'en-IE'`,
+   * `'fr-CA'`. Updates to this field are currently not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String foodLanguageCode;
+
+  /**
    * Optional. The measurement unit defined in the user's account settings.
    * The value may be {@code null}.
    */
@@ -173,6 +183,29 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setDistanceUnit(java.lang.String distanceUnit) {
     this.distanceUnit = distanceUnit;
+    return this;
+  }
+
+  /**
+   * Output only. The food language code derived from the user's food database. Possible values:
+   * `'en-US'`, `'en-GB'`, `'de-DE'`, `'es-ES'`, `'fr-FR'`, `'zh-CN'`, `'zh-TW'`, `'ja-JP'`, `'en-
+   * AU'`, `'en-CA'`, `'it-IT'`, `'ko-KR'`, `'es-MX'`, `'en-IN'`, `'en-SG'`, `'en-PH'`, `'en-IE'`,
+   * `'fr-CA'`. Updates to this field are currently not supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFoodLanguageCode() {
+    return foodLanguageCode;
+  }
+
+  /**
+   * Output only. The food language code derived from the user's food database. Possible values:
+   * `'en-US'`, `'en-GB'`, `'de-DE'`, `'es-ES'`, `'fr-FR'`, `'zh-CN'`, `'zh-TW'`, `'ja-JP'`, `'en-
+   * AU'`, `'en-CA'`, `'it-IT'`, `'ko-KR'`, `'es-MX'`, `'en-IN'`, `'en-SG'`, `'en-PH'`, `'en-IE'`,
+   * `'fr-CA'`. Updates to this field are currently not supported.
+   * @param foodLanguageCode foodLanguageCode or {@code null} for none
+   */
+  public Settings setFoodLanguageCode(java.lang.String foodLanguageCode) {
+    this.foodLanguageCode = foodLanguageCode;
     return this;
   }
 

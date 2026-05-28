@@ -32,6 +32,13 @@ package com.google.api.services.health.v4.model;
 public final class RollupDataPoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Returned by default when rolling up data points from the `active-energy-burned` data type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ActiveEnergyBurnedRollupValue activeEnergyBurned;
+
+  /**
    * Returned by default when rolling up data points from the `active-minutes` data type, or when
    * requested explicitly using the `active-minutes` rollup type identifier.
    * The value may be {@code null}.
@@ -64,6 +71,13 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
   private AltitudeRollupValue altitude;
 
   /**
+   * Returned by default when rolling up data points from the `blood-glucose` data type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BloodGlucoseRollupValue bloodGlucose;
+
+  /**
    * Returned by default when rolling up data points from the `body-fat` data type, or when
    * requested explicitly using the `body-fat` rollup type identifier.
    * The value may be {@code null}.
@@ -79,6 +93,14 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private CaloriesInHeartRateZoneRollupValue caloriesInHeartRateZone;
+
+  /**
+   * Returned by default when rolling up data points from the `core-body-temperature` data type, or
+   * when requested explicitly using the `core-body-temperature` rollup type identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CoreBodyTemperatureRollupValue coreBodyTemperature;
 
   /**
    * Returned by default when rolling up data points from the `distance` data type, or when
@@ -118,6 +140,14 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private HydrationLogRollupValue hydrationLog;
+
+  /**
+   * Returned by default when rolling up data points from the `nutrition-log` data type, or when
+   * requested explicitly using the `nutrition-log` rollup type identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NutritionLogRollupValue nutritionLog;
 
   /**
    * Returned by default when rolling up data points from the `run-vo2-max` data type, or when
@@ -181,6 +211,23 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private WeightRollupValue weight;
+
+  /**
+   * Returned by default when rolling up data points from the `active-energy-burned` data type.
+   * @return value or {@code null} for none
+   */
+  public ActiveEnergyBurnedRollupValue getActiveEnergyBurned() {
+    return activeEnergyBurned;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `active-energy-burned` data type.
+   * @param activeEnergyBurned activeEnergyBurned or {@code null} for none
+   */
+  public RollupDataPoint setActiveEnergyBurned(ActiveEnergyBurnedRollupValue activeEnergyBurned) {
+    this.activeEnergyBurned = activeEnergyBurned;
+    return this;
+  }
 
   /**
    * Returned by default when rolling up data points from the `active-minutes` data type, or when
@@ -259,6 +306,23 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Returned by default when rolling up data points from the `blood-glucose` data type.
+   * @return value or {@code null} for none
+   */
+  public BloodGlucoseRollupValue getBloodGlucose() {
+    return bloodGlucose;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `blood-glucose` data type.
+   * @param bloodGlucose bloodGlucose or {@code null} for none
+   */
+  public RollupDataPoint setBloodGlucose(BloodGlucoseRollupValue bloodGlucose) {
+    this.bloodGlucose = bloodGlucose;
+    return this;
+  }
+
+  /**
    * Returned by default when rolling up data points from the `body-fat` data type, or when
    * requested explicitly using the `body-fat` rollup type identifier.
    * @return value or {@code null} for none
@@ -295,6 +359,25 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   public RollupDataPoint setCaloriesInHeartRateZone(CaloriesInHeartRateZoneRollupValue caloriesInHeartRateZone) {
     this.caloriesInHeartRateZone = caloriesInHeartRateZone;
+    return this;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `core-body-temperature` data type, or
+   * when requested explicitly using the `core-body-temperature` rollup type identifier.
+   * @return value or {@code null} for none
+   */
+  public CoreBodyTemperatureRollupValue getCoreBodyTemperature() {
+    return coreBodyTemperature;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `core-body-temperature` data type, or
+   * when requested explicitly using the `core-body-temperature` rollup type identifier.
+   * @param coreBodyTemperature coreBodyTemperature or {@code null} for none
+   */
+  public RollupDataPoint setCoreBodyTemperature(CoreBodyTemperatureRollupValue coreBodyTemperature) {
+    this.coreBodyTemperature = coreBodyTemperature;
     return this;
   }
 
@@ -388,6 +471,25 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   public RollupDataPoint setHydrationLog(HydrationLogRollupValue hydrationLog) {
     this.hydrationLog = hydrationLog;
+    return this;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `nutrition-log` data type, or when
+   * requested explicitly using the `nutrition-log` rollup type identifier.
+   * @return value or {@code null} for none
+   */
+  public NutritionLogRollupValue getNutritionLog() {
+    return nutritionLog;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `nutrition-log` data type, or when
+   * requested explicitly using the `nutrition-log` rollup type identifier.
+   * @param nutritionLog nutritionLog or {@code null} for none
+   */
+  public RollupDataPoint setNutritionLog(NutritionLogRollupValue nutritionLog) {
+    this.nutritionLog = nutritionLog;
     return this;
   }
 

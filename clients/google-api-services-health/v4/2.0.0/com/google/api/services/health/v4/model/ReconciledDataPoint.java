@@ -30,6 +30,13 @@ package com.google.api.services.health.v4.model;
 public final class ReconciledDataPoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Data for points in the `active-energy-burned` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ActiveEnergyBurned activeEnergyBurned;
+
+  /**
    * Data for points in the `active-minutes` interval data type collection.
    * The value may be {@code null}.
    */
@@ -66,11 +73,25 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
   private BasalEnergyBurned basalEnergyBurned;
 
   /**
+   * Data for points in the `blood-glucose` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BloodGlucose bloodGlucose;
+
+  /**
    * Data for points in the `body-fat` sample data type collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BodyFat bodyFat;
+
+  /**
+   * Data for points in the `core-body-temperature` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CoreBodyTemperature coreBodyTemperature;
 
   /**
    * Data for points in the `daily-heart-rate-variability` daily data type collection.
@@ -186,6 +207,13 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
   private HydrationLog hydrationLog;
 
   /**
+   * Data for points in the `nutrition-log` session data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NutritionLog nutritionLog;
+
+  /**
    * Data for points in the `oxygen-saturation` sample data type collection.
    * The value may be {@code null}.
    */
@@ -254,6 +282,23 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private Weight weight;
+
+  /**
+   * Data for points in the `active-energy-burned` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public ActiveEnergyBurned getActiveEnergyBurned() {
+    return activeEnergyBurned;
+  }
+
+  /**
+   * Data for points in the `active-energy-burned` interval data type collection.
+   * @param activeEnergyBurned activeEnergyBurned or {@code null} for none
+   */
+  public ReconciledDataPoint setActiveEnergyBurned(ActiveEnergyBurned activeEnergyBurned) {
+    this.activeEnergyBurned = activeEnergyBurned;
+    return this;
+  }
 
   /**
    * Data for points in the `active-minutes` interval data type collection.
@@ -343,6 +388,23 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
   }
 
   /**
+   * Data for points in the `blood-glucose` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public BloodGlucose getBloodGlucose() {
+    return bloodGlucose;
+  }
+
+  /**
+   * Data for points in the `blood-glucose` sample data type collection.
+   * @param bloodGlucose bloodGlucose or {@code null} for none
+   */
+  public ReconciledDataPoint setBloodGlucose(BloodGlucose bloodGlucose) {
+    this.bloodGlucose = bloodGlucose;
+    return this;
+  }
+
+  /**
    * Data for points in the `body-fat` sample data type collection.
    * @return value or {@code null} for none
    */
@@ -356,6 +418,23 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
    */
   public ReconciledDataPoint setBodyFat(BodyFat bodyFat) {
     this.bodyFat = bodyFat;
+    return this;
+  }
+
+  /**
+   * Data for points in the `core-body-temperature` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public CoreBodyTemperature getCoreBodyTemperature() {
+    return coreBodyTemperature;
+  }
+
+  /**
+   * Data for points in the `core-body-temperature` sample data type collection.
+   * @param coreBodyTemperature coreBodyTemperature or {@code null} for none
+   */
+  public ReconciledDataPoint setCoreBodyTemperature(CoreBodyTemperature coreBodyTemperature) {
+    this.coreBodyTemperature = coreBodyTemperature;
     return this;
   }
 
@@ -627,6 +706,23 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
    */
   public ReconciledDataPoint setHydrationLog(HydrationLog hydrationLog) {
     this.hydrationLog = hydrationLog;
+    return this;
+  }
+
+  /**
+   * Data for points in the `nutrition-log` session data type collection.
+   * @return value or {@code null} for none
+   */
+  public NutritionLog getNutritionLog() {
+    return nutritionLog;
+  }
+
+  /**
+   * Data for points in the `nutrition-log` session data type collection.
+   * @param nutritionLog nutritionLog or {@code null} for none
+   */
+  public ReconciledDataPoint setNutritionLog(NutritionLog nutritionLog) {
+    this.nutritionLog = nutritionLog;
     return this;
   }
 

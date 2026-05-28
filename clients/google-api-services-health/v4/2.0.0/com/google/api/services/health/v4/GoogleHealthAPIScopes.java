@@ -32,6 +32,9 @@ public class GoogleHealthAPIScopes {
   /** See your Google Health health metrics and measurement data. */
   public static final String GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY = "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
 
+  /** See your Google Health Irregular Rhythm Notifications data. */
+  public static final String GOOGLEHEALTH_IRN_READONLY = "https://www.googleapis.com/auth/googlehealth.irn.readonly";
+
   /** See exercise GPS location data in Google Health. */
   public static final String GOOGLEHEALTH_LOCATION_READONLY = "https://www.googleapis.com/auth/googlehealth.location.readonly";
 
@@ -54,6 +57,7 @@ public class GoogleHealthAPIScopes {
     set.add(CLOUD_PLATFORM);
     set.add(GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY);
     set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY);
+    set.add(GOOGLEHEALTH_IRN_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_READONLY);
     set.add(GOOGLEHEALTH_PROFILE_READONLY);
     set.add(GOOGLEHEALTH_SETTINGS_READONLY);

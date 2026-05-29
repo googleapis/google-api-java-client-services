@@ -38,6 +38,20 @@ public final class Answer extends com.google.api.client.json.GenericJson {
   private java.lang.String answerText;
 
   /**
+   * Output only. Contains citations for the answer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AnswerCitation> citations;
+
+  /**
+   * Output only. Contains references for the answer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AnswerReference> references;
+
+  /**
    * Contains the text of the answer.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class Answer extends com.google.api.client.json.GenericJson {
    */
   public Answer setAnswerText(java.lang.String answerText) {
     this.answerText = answerText;
+    return this;
+  }
+
+  /**
+   * Output only. Contains citations for the answer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AnswerCitation> getCitations() {
+    return citations;
+  }
+
+  /**
+   * Output only. Contains citations for the answer.
+   * @param citations citations or {@code null} for none
+   */
+  public Answer setCitations(java.util.List<AnswerCitation> citations) {
+    this.citations = citations;
+    return this;
+  }
+
+  /**
+   * Output only. Contains references for the answer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AnswerReference> getReferences() {
+    return references;
+  }
+
+  /**
+   * Output only. Contains references for the answer.
+   * @param references references or {@code null} for none
+   */
+  public Answer setReferences(java.util.List<AnswerReference> references) {
+    this.references = references;
     return this;
   }
 

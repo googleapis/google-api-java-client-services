@@ -29,6 +29,9 @@ public class GoogleHealthAPIScopes {
   /** See your Google Health activity and fitness data. */
   public static final String GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY = "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly";
 
+  /** See your Google Health ECG data. */
+  public static final String GOOGLEHEALTH_ECG_READONLY = "https://www.googleapis.com/auth/googlehealth.ecg.readonly";
+
   /** See your Google Health health metrics and measurement data. */
   public static final String GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY = "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
 
@@ -56,6 +59,7 @@ public class GoogleHealthAPIScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY);
+    set.add(GOOGLEHEALTH_ECG_READONLY);
     set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY);
     set.add(GOOGLEHEALTH_IRN_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_READONLY);

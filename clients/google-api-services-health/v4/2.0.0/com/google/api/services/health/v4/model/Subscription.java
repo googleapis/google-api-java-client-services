@@ -32,7 +32,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Data types subscribed to. A subscriber will only receive notifications for data types
    * that are declared here. A subscription can only subscribe to the data types of the subscriber.
-   * Supported data types are: "altitude", "distance", "floors", "sleep", "steps", "weight".
+   * The values should be in the format "users/{health_user_id}/dataTypes/{data_type}" where
+   * `{data_type}` is one of "altitude", "distance", "floors", "sleep", "steps", "weight".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Data types subscribed to. A subscriber will only receive notifications for data types
    * that are declared here. A subscription can only subscribe to the data types of the subscriber.
-   * Supported data types are: "altitude", "distance", "floors", "sleep", "steps", "weight".
+   * The values should be in the format "users/{health_user_id}/dataTypes/{data_type}" where
+   * `{data_type}` is one of "altitude", "distance", "floors", "sleep", "steps", "weight".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataTypes() {
@@ -74,7 +76,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Data types subscribed to. A subscriber will only receive notifications for data types
    * that are declared here. A subscription can only subscribe to the data types of the subscriber.
-   * Supported data types are: "altitude", "distance", "floors", "sleep", "steps", "weight".
+   * The values should be in the format "users/{health_user_id}/dataTypes/{data_type}" where
+   * `{data_type}` is one of "altitude", "distance", "floors", "sleep", "steps", "weight".
    * @param dataTypes dataTypes or {@code null} for none
    */
   public Subscription setDataTypes(java.util.List<java.lang.String> dataTypes) {

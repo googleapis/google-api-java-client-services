@@ -59,6 +59,15 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
+   * If included when updating a configuration, this should be set to the current etag of the
+   * configuration. If the etags do not match, the update will be rejected and an ABORTED error will
+   * be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Identifier. Server generated name for the configuration. format is
    * projects/{project}/configurations/{configuration}
    * The value may be {@code null}.
@@ -152,6 +161,27 @@ public final class Configuration extends com.google.api.client.json.GenericJson 
    */
   public Configuration setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * If included when updating a configuration, this should be set to the current etag of the
+   * configuration. If the etags do not match, the update will be rejected and an ABORTED error will
+   * be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * If included when updating a configuration, this should be set to the current etag of the
+   * configuration. If the etags do not match, the update will be rejected and an ABORTED error will
+   * be returned.
+   * @param etag etag or {@code null} for none
+   */
+  public Configuration setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

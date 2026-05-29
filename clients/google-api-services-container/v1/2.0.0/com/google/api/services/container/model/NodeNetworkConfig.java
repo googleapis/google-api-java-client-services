@@ -88,6 +88,13 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enablePrivateNodes;
 
   /**
+   * Optional. Immutable. The VPC network for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Network bandwidth tier configuration.
    * The value may be {@code null}.
    */
@@ -262,6 +269,23 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setEnablePrivateNodes(java.lang.Boolean enablePrivateNodes) {
     this.enablePrivateNodes = enablePrivateNodes;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The VPC network for the node pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Optional. Immutable. The VPC network for the node pool.
+   * @param network network or {@code null} for none
+   */
+  public NodeNetworkConfig setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

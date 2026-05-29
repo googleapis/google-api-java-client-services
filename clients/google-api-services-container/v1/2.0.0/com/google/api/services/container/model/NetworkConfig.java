@@ -39,6 +39,13 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String datapathProvider;
 
   /**
+   * Optional. DataplaneV2Config specifies the DPv2 configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataplaneV2Config dataplaneV2Config;
+
+  /**
    * Controls whether by default nodes have private IP addresses only. It is invalid to specify both
    * PrivateClusterConfig.enablePrivateNodes and this field at the same time. To update the default
    * setting, use ClusterUpdate.desired_default_enable_private_nodes
@@ -176,6 +183,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   public NetworkConfig setDatapathProvider(java.lang.String datapathProvider) {
     this.datapathProvider = datapathProvider;
+    return this;
+  }
+
+  /**
+   * Optional. DataplaneV2Config specifies the DPv2 configuration.
+   * @return value or {@code null} for none
+   */
+  public DataplaneV2Config getDataplaneV2Config() {
+    return dataplaneV2Config;
+  }
+
+  /**
+   * Optional. DataplaneV2Config specifies the DPv2 configuration.
+   * @param dataplaneV2Config dataplaneV2Config or {@code null} for none
+   */
+  public NetworkConfig setDataplaneV2Config(DataplaneV2Config dataplaneV2Config) {
+    this.dataplaneV2Config = dataplaneV2Config;
     return this;
   }
 

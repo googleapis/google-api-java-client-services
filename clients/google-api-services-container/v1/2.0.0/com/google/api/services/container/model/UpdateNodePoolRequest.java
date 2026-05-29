@@ -139,6 +139,22 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private VirtualNIC gvnic;
 
   /**
+   * The desired name of the image name to use for this node. This is used to create clusters using
+   * a custom image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String image;
+
+  /**
+   * The project containing the desired image to use for this node pool. This is used to create
+   * clusters using a custom image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageProject;
+
+  /**
    * Required. The desired image type for the node pool. Please see
    * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for available image types.
    * The value may be {@code null}.
@@ -587,6 +603,44 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setGvnic(VirtualNIC gvnic) {
     this.gvnic = gvnic;
+    return this;
+  }
+
+  /**
+   * The desired name of the image name to use for this node. This is used to create clusters using
+   * a custom image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImage() {
+    return image;
+  }
+
+  /**
+   * The desired name of the image name to use for this node. This is used to create clusters using
+   * a custom image.
+   * @param image image or {@code null} for none
+   */
+  public UpdateNodePoolRequest setImage(java.lang.String image) {
+    this.image = image;
+    return this;
+  }
+
+  /**
+   * The project containing the desired image to use for this node pool. This is used to create
+   * clusters using a custom image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageProject() {
+    return imageProject;
+  }
+
+  /**
+   * The project containing the desired image to use for this node pool. This is used to create
+   * clusters using a custom image.
+   * @param imageProject imageProject or {@code null} for none
+   */
+  public UpdateNodePoolRequest setImageProject(java.lang.String imageProject) {
+    this.imageProject = imageProject;
     return this;
   }
 

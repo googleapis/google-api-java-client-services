@@ -18,7 +18,7 @@ package com.google.api.services.androidpublisher.model;
 
 /**
  * Download metadata for split, standalone and universal APKs, as well as asset pack slices, signed
- * with a given key. Next ID: 10
+ * with a given key.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

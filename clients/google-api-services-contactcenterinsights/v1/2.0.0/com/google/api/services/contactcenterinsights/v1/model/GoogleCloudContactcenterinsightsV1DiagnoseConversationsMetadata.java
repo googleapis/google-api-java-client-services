@@ -31,6 +31,13 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The list of conversation IDs that were selected for this diagnosis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> conversationIds;
+
+  /**
    * Output only. The time the operation was created.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsMetada
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest request;
+
+  /**
+   * Output only. The list of conversation IDs that were selected for this diagnosis.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConversationIds() {
+    return conversationIds;
+  }
+
+  /**
+   * Output only. The list of conversation IDs that were selected for this diagnosis.
+   * @param conversationIds conversationIds or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1DiagnoseConversationsMetadata setConversationIds(java.util.List<java.lang.String> conversationIds) {
+    this.conversationIds = conversationIds;
+    return this;
+  }
 
   /**
    * Output only. The time the operation was created.

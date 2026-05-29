@@ -53,9 +53,9 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   private java.lang.String appId;
 
   /**
-   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
-   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
-   * of instruction.
+   * Required. The CES App version of the agent. Setting to "-" uses the latest draft version. Note
+   * that the agent active during the conversation history may have different instructions or tool
+   * definitions compared with the latest draft version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,9 +211,9 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   }
 
   /**
-   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
-   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
-   * of instruction.
+   * Required. The CES App version of the agent. Setting to "-" uses the latest draft version. Note
+   * that the agent active during the conversation history may have different instructions or tool
+   * definitions compared with the latest draft version.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppVersion() {
@@ -221,9 +221,9 @@ public final class GoogleCloudContactcenterinsightsV1DiagnoseConversationsReques
   }
 
   /**
-   * Optional. Optional but highly recommended. ces app version. If provided, specific version of
-   * agent instruction will be retrieved. If empty or set to '-', will use the latest draft version
-   * of instruction.
+   * Required. The CES App version of the agent. Setting to "-" uses the latest draft version. Note
+   * that the agent active during the conversation history may have different instructions or tool
+   * definitions compared with the latest draft version.
    * @param appVersion appVersion or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1DiagnoseConversationsRequest setAppVersion(java.lang.String appVersion) {

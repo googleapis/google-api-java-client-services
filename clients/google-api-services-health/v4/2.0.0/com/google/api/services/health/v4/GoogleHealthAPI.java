@@ -1450,7 +1450,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * Optional. A filter to apply to the list of subscriptions. The filter syntax is
            * described in https://google.aip.dev/160. The filter can be applied to the following
            * fields: - `user` - `data_type` The `user` identifier (e.g., `user1` in `users/user1`)
-           * refers to the public `healthUserId` Example: user = "users/user1" Example: user =
+           * refers to the public `health_user_id` Example: user = "users/user1" Example: user =
            * "users/user1" OR user = "users/user2" Example: user = "users/user1" AND (data_type =
            * "sleep" OR data_type = "weight")
            */
@@ -1460,8 +1460,8 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /** Optional. A filter to apply to the list of subscriptions. The filter syntax is described in
          https://google.aip.dev/160. The filter can be applied to the following fields: - `user` -
          `data_type` The `user` identifier (e.g., `user1` in `users/user1`) refers to the public
-         `healthUserId` Example: user = "users/user1" Example: user = "users/user1" OR user = "users/user2"
-         Example: user = "users/user1" AND (data_type = "sleep" OR data_type = "weight")
+         `health_user_id` Example: user = "users/user1" Example: user = "users/user1" OR user =
+         "users/user2" Example: user = "users/user1" AND (data_type = "sleep" OR data_type = "weight")
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1471,7 +1471,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * Optional. A filter to apply to the list of subscriptions. The filter syntax is
            * described in https://google.aip.dev/160. The filter can be applied to the following
            * fields: - `user` - `data_type` The `user` identifier (e.g., `user1` in `users/user1`)
-           * refers to the public `healthUserId` Example: user = "users/user1" Example: user =
+           * refers to the public `health_user_id` Example: user = "users/user1" Example: user =
            * "users/user1" OR user = "users/user2" Example: user = "users/user1" AND (data_type =
            * "sleep" OR data_type = "weight")
            */

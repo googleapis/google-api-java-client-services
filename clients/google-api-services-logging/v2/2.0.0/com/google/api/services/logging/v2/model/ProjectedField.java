@@ -100,6 +100,16 @@ public final class ProjectedField extends com.google.api.client.json.GenericJson
   private java.lang.String truncationGranularity;
 
   /**
+   * Optional. A virtual field definition, used in place of field to define a field that is computed
+   * from other fields rather than being directly present in the data schema.For example, a virtual
+   * field can be defined using COALESCE to select the first non-null value from a list of fields.If
+   * virtual_field is set, field must not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VirtualField virtualField;
+
+  /**
    * The alias name for the field. Valid alias examples are: - single word alias: TestAlias -
    * numbers in an alias: Alias123 - multi word alias should be enclosed in quotes: "Test Alias"
    * Invalid alias examples are: - alias containing keywords: WHERE, SELECT, FROM, etc. - alias
@@ -245,6 +255,29 @@ public final class ProjectedField extends com.google.api.client.json.GenericJson
    */
   public ProjectedField setTruncationGranularity(java.lang.String truncationGranularity) {
     this.truncationGranularity = truncationGranularity;
+    return this;
+  }
+
+  /**
+   * Optional. A virtual field definition, used in place of field to define a field that is computed
+   * from other fields rather than being directly present in the data schema.For example, a virtual
+   * field can be defined using COALESCE to select the first non-null value from a list of fields.If
+   * virtual_field is set, field must not be set.
+   * @return value or {@code null} for none
+   */
+  public VirtualField getVirtualField() {
+    return virtualField;
+  }
+
+  /**
+   * Optional. A virtual field definition, used in place of field to define a field that is computed
+   * from other fields rather than being directly present in the data schema.For example, a virtual
+   * field can be defined using COALESCE to select the first non-null value from a list of fields.If
+   * virtual_field is set, field must not be set.
+   * @param virtualField virtualField or {@code null} for none
+   */
+  public ProjectedField setVirtualField(VirtualField virtualField) {
+    this.virtualField = virtualField;
     return this;
   }
 

@@ -2546,6 +2546,20 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
         private java.lang.Integer numNewerVersions;
 
         /**
+         * Objects having a size greater than this value in bytes will be matched.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+        private java.lang.Long sizeAboveBytes;
+
+        /**
+         * Objects having a size less than this value in bytes will be matched.
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+        private java.lang.Long sizeBelowBytes;
+
+        /**
          * Age of an object (in days). This condition is satisfied when an object reaches the specified
          * age.
          * @return value or {@code null} for none
@@ -2784,6 +2798,40 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
          */
         public Condition setNumNewerVersions(java.lang.Integer numNewerVersions) {
           this.numNewerVersions = numNewerVersions;
+          return this;
+        }
+
+        /**
+         * Objects having a size greater than this value in bytes will be matched.
+         * @return value or {@code null} for none
+         */
+        public java.lang.Long getSizeAboveBytes() {
+          return sizeAboveBytes;
+        }
+
+        /**
+         * Objects having a size greater than this value in bytes will be matched.
+         * @param sizeAboveBytes sizeAboveBytes or {@code null} for none
+         */
+        public Condition setSizeAboveBytes(java.lang.Long sizeAboveBytes) {
+          this.sizeAboveBytes = sizeAboveBytes;
+          return this;
+        }
+
+        /**
+         * Objects having a size less than this value in bytes will be matched.
+         * @return value or {@code null} for none
+         */
+        public java.lang.Long getSizeBelowBytes() {
+          return sizeBelowBytes;
+        }
+
+        /**
+         * Objects having a size less than this value in bytes will be matched.
+         * @param sizeBelowBytes sizeBelowBytes or {@code null} for none
+         */
+        public Condition setSizeBelowBytes(java.lang.Long sizeBelowBytes) {
+          this.sizeBelowBytes = sizeBelowBytes;
           return this;
         }
 

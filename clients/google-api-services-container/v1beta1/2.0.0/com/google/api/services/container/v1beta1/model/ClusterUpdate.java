@@ -265,6 +265,22 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private IdentityServiceConfig desiredIdentityServiceConfig;
 
   /**
+   * The desired name of the image to use for this node. This is used to create clusters using a
+   * custom image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredImage;
+
+  /**
+   * The project containing the desired image to use for this node. This is used to create clusters
+   * using a custom image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredImageProject;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -1289,6 +1305,44 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredIdentityServiceConfig(IdentityServiceConfig desiredIdentityServiceConfig) {
     this.desiredIdentityServiceConfig = desiredIdentityServiceConfig;
+    return this;
+  }
+
+  /**
+   * The desired name of the image to use for this node. This is used to create clusters using a
+   * custom image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredImage() {
+    return desiredImage;
+  }
+
+  /**
+   * The desired name of the image to use for this node. This is used to create clusters using a
+   * custom image.
+   * @param desiredImage desiredImage or {@code null} for none
+   */
+  public ClusterUpdate setDesiredImage(java.lang.String desiredImage) {
+    this.desiredImage = desiredImage;
+    return this;
+  }
+
+  /**
+   * The project containing the desired image to use for this node. This is used to create clusters
+   * using a custom image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredImageProject() {
+    return desiredImageProject;
+  }
+
+  /**
+   * The project containing the desired image to use for this node. This is used to create clusters
+   * using a custom image.
+   * @param desiredImageProject desiredImageProject or {@code null} for none
+   */
+  public ClusterUpdate setDesiredImageProject(java.lang.String desiredImageProject) {
+    this.desiredImageProject = desiredImageProject;
     return this;
   }
 

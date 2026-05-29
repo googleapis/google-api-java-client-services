@@ -307,6 +307,14 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String nodeGroup;
 
   /**
+   * The node image configuration to use for this node pool. Note that this is only applicable for
+   * node pools using image_type=CUSTOM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomImageConfig nodeImageConfig;
+
+  /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
    * service account. The following scopes are recommended, but not required, and by default are not
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
@@ -1079,6 +1087,25 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setNodeGroup(java.lang.String nodeGroup) {
     this.nodeGroup = nodeGroup;
+    return this;
+  }
+
+  /**
+   * The node image configuration to use for this node pool. Note that this is only applicable for
+   * node pools using image_type=CUSTOM.
+   * @return value or {@code null} for none
+   */
+  public CustomImageConfig getNodeImageConfig() {
+    return nodeImageConfig;
+  }
+
+  /**
+   * The node image configuration to use for this node pool. Note that this is only applicable for
+   * node pools using image_type=CUSTOM.
+   * @param nodeImageConfig nodeImageConfig or {@code null} for none
+   */
+  public NodeConfig setNodeImageConfig(CustomImageConfig nodeImageConfig) {
+    this.nodeImageConfig = nodeImageConfig;
     return this;
   }
 

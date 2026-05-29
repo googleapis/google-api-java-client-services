@@ -22589,17 +22589,30 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** Optional. The CES App version to filter diagnostics by. */
+          /**
+           * Optional. The CES App version to filter diagnostics by. Setting to "-" filters to
+           * diagnostics created using "-" (the latest draft version). Note that reports created at
+           * different times may correspond to different draft instructions. Setting to "" (empty)
+           * retrieves all diagnostics for the app_id regardless of version.
+           */
           @com.google.api.client.util.Key
           private java.lang.String appVersion;
 
-          /** Optional. The CES App version to filter diagnostics by.
+          /** Optional. The CES App version to filter diagnostics by. Setting to "-" filters to diagnostics
+         created using "-" (the latest draft version). Note that reports created at different times may
+         correspond to different draft instructions. Setting to "" (empty) retrieves all diagnostics for the
+         app_id regardless of version.
            */
           public java.lang.String getAppVersion() {
             return appVersion;
           }
 
-          /** Optional. The CES App version to filter diagnostics by. */
+          /**
+           * Optional. The CES App version to filter diagnostics by. Setting to "-" filters to
+           * diagnostics created using "-" (the latest draft version). Note that reports created at
+           * different times may correspond to different draft instructions. Setting to "" (empty)
+           * retrieves all diagnostics for the app_id regardless of version.
+           */
           public List setAppVersion(java.lang.String appVersion) {
             this.appVersion = appVersion;
             return this;

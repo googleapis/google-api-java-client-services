@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents an ADC application associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceAdcApplication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Consumer provided attributes for the AppHub application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes attributes;
 
   /**
-   * The resource name of an ADC Application. Format:
-   * projects/{project}/locations/{location}/spaces/{space}/applications/{application}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Consumer provided attributes for the AppHub application.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes getAttributes() {
@@ -54,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extend
   }
 
   /**
-   * Consumer provided attributes for the AppHub application.
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcApplication setAttributes(GoogleCloudSecuritycenterV2IssueResourceApplicationAttributes attributes) {
@@ -63,8 +58,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extend
   }
 
   /**
-   * The resource name of an ADC Application. Format:
-   * projects/{project}/locations/{location}/spaces/{space}/applications/{application}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,8 +65,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAdcApplication extend
   }
 
   /**
-   * The resource name of an ADC Application. Format:
-   * projects/{project}/locations/{location}/spaces/{space}/applications/{application}
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcApplication setName(java.lang.String name) {

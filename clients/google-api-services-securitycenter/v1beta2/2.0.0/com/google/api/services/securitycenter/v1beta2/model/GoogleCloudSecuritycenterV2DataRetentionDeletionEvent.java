@@ -17,13 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details about data retention deletion violations, in which the data is non-compliant based on
- * their retention or deletion time, as defined in the applicable data security policy. The Data
- * Retention Deletion (DRD) control is a control of the DSPM (Data Security Posture Management)
- * suite that enables organizations to manage data retention and deletion policies in compliance
- * with regulations, such as GDPR and CRPA. DRD supports two primary policy types: maximum storage
- * length (max TTL) and minimum storage length (min TTL). Both are aimed at helping organizations
- * meet regulatory and data management commitments.
+ * Model definition for GoogleCloudSecuritycenterV2DataRetentionDeletionEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -37,51 +31,36 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of objects that violated the policy for this resource. If the number is less than 1,000,
-   * then the value of this field is the exact number. If the number of objects that violated the
-   * policy is greater than or equal to 1,000, then the value of this field is 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long dataObjectCount;
 
   /**
-   * Timestamp indicating when the event was detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventDetectionTime;
 
   /**
-   * Type of the DRD event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
-   * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
-   * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
-   * max_retention_allowed is 90 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String maxRetentionAllowed;
 
   /**
-   * Min duration of retention allowed from the DSPM retention control. This field is only populated
-   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String minRetentionAllowed;
 
   /**
-   * Number of objects that violated the policy for this resource. If the number is less than 1,000,
-   * then the value of this field is the exact number. If the number of objects that violated the
-   * policy is greater than or equal to 1,000, then the value of this field is 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDataObjectCount() {
@@ -89,9 +68,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Number of objects that violated the policy for this resource. If the number is less than 1,000,
-   * then the value of this field is the exact number. If the number of objects that violated the
-   * policy is greater than or equal to 1,000, then the value of this field is 1000.
    * @param dataObjectCount dataObjectCount or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DataRetentionDeletionEvent setDataObjectCount(java.lang.Long dataObjectCount) {
@@ -100,7 +76,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Timestamp indicating when the event was detected.
    * @return value or {@code null} for none
    */
   public String getEventDetectionTime() {
@@ -108,7 +83,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Timestamp indicating when the event was detected.
    * @param eventDetectionTime eventDetectionTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DataRetentionDeletionEvent setEventDetectionTime(String eventDetectionTime) {
@@ -117,7 +91,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Type of the DRD event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -125,7 +98,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Type of the DRD event.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DataRetentionDeletionEvent setEventType(java.lang.String eventType) {
@@ -134,11 +106,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
-   * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
-   * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
-   * max_retention_allowed is 90 days.
    * @return value or {@code null} for none
    */
   public String getMaxRetentionAllowed() {
@@ -146,11 +113,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
-   * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
-   * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
-   * max_retention_allowed is 90 days.
    * @param maxRetentionAllowed maxRetentionAllowed or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DataRetentionDeletionEvent setMaxRetentionAllowed(String maxRetentionAllowed) {
@@ -159,8 +121,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Min duration of retention allowed from the DSPM retention control. This field is only populated
-   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
    * @return value or {@code null} for none
    */
   public String getMinRetentionAllowed() {
@@ -168,8 +128,6 @@ public final class GoogleCloudSecuritycenterV2DataRetentionDeletionEvent extends
   }
 
   /**
-   * Min duration of retention allowed from the DSPM retention control. This field is only populated
-   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
    * @param minRetentionAllowed minRetentionAllowed or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DataRetentionDeletionEvent setMinRetentionAllowed(String minRetentionAllowed) {

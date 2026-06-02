@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents an Azure management group.
+ * Model definition for GoogleCloudSecuritycenterV2AzureManagementGroup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2AzureManagementGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the Azure management group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The display name of the Azure management group.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2AzureManagementGroup extends com.g
   }
 
   /**
-   * The display name of the Azure management group.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AzureManagementGroup setDisplayName(java.lang.String displayName) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2AzureManagementGroup extends com.g
   }
 
   /**
-   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2AzureManagementGroup extends com.g
   }
 
   /**
-   * The UUID of the Azure management group, for example, `20000000-0001-0000-0000-000000000000`.
    * @param id id or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AzureManagementGroup setId(java.lang.String id) {

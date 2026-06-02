@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details about resources affected by this finding.
+ * Model definition for GoogleCloudSecuritycenterV2AffectedResources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2AffectedResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * The count of resources affected by the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * The count of resources affected by the finding.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2AffectedResources extends com.goog
   }
 
   /**
-   * The count of resources affected by the finding.
    * @param count count or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AffectedResources setCount(java.lang.Long count) {

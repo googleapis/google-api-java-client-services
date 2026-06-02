@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Allowed IP rule.
+ * Model definition for GoogleCloudSecuritycenterV2Allowed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Allowed extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional list of allowed IP rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2IpRule> ipRules;
 
   /**
-   * Optional. Optional list of allowed IP rules.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2IpRule> getIpRules() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2Allowed extends com.google.api.cli
   }
 
   /**
-   * Optional. Optional list of allowed IP rules.
    * @param ipRules ipRules or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Allowed setIpRules(java.util.List<GoogleCloudSecuritycenterV2IpRule> ipRules) {

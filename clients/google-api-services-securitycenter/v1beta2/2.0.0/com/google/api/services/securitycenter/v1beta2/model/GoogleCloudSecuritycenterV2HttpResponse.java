@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The http response returned by the web application.
+ * Model definition for GoogleCloudSecuritycenterV2HttpResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,23 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2HttpResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The http path for which response code was returned by web application, for example,
-   * "https://test-app.a.run.app/test".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * The http response code returned by the web application, for example, 200.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String statusCode;
 
   /**
-   * The http path for which response code was returned by web application, for example,
-   * "https://test-app.a.run.app/test".
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -55,8 +50,6 @@ public final class GoogleCloudSecuritycenterV2HttpResponse extends com.google.ap
   }
 
   /**
-   * The http path for which response code was returned by web application, for example,
-   * "https://test-app.a.run.app/test".
    * @param path path or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2HttpResponse setPath(java.lang.String path) {
@@ -65,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2HttpResponse extends com.google.ap
   }
 
   /**
-   * The http response code returned by the web application, for example, 200.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusCode() {
@@ -73,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2HttpResponse extends com.google.ap
   }
 
   /**
-   * The http response code returned by the web application, for example, 200.
    * @param statusCode statusCode or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2HttpResponse setStatusCode(java.lang.String statusCode) {

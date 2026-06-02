@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents a Kubernetes RoleBinding or ClusterRoleBinding.
+ * Model definition for GoogleCloudSecuritycenterV2Binding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,36 +31,30 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name for the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Namespace for the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * The Role or ClusterRole referenced by the binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Role role;
 
   /**
-   * Represents one or more subjects that are bound to the role. Not always available for PATCH
-   * requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Subject> subjects;
 
   /**
-   * Name for the binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -68,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * Name for the binding.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Binding setName(java.lang.String name) {
@@ -77,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * Namespace for the binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -85,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * Namespace for the binding.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Binding setNs(java.lang.String ns) {
@@ -94,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * The Role or ClusterRole referenced by the binding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Role getRole() {
@@ -102,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * The Role or ClusterRole referenced by the binding.
    * @param role role or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Binding setRole(GoogleCloudSecuritycenterV2Role role) {
@@ -111,8 +100,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * Represents one or more subjects that are bound to the role. Not always available for PATCH
-   * requests.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Subject> getSubjects() {
@@ -120,8 +107,6 @@ public final class GoogleCloudSecuritycenterV2Binding extends com.google.api.cli
   }
 
   /**
-   * Represents one or more subjects that are bound to the role. Not always available for PATCH
-   * requests.
    * @param subjects subjects or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Binding setSubjects(java.util.List<GoogleCloudSecuritycenterV2Subject> subjects) {

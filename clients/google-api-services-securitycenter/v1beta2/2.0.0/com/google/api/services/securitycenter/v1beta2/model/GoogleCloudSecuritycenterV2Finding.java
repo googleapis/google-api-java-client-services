@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Security Command Center finding. A finding is a record of assessment data like security, risk,
- * health, or privacy, that is ingested into Security Command Center for presentation, notification,
- * analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS)
- * vulnerability in an App Engine application is a finding.
+ * Model definition for GoogleCloudSecuritycenterV2Finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Access access;
 
   /**
-   * AffectedResources associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2AffectedResources affectedResources;
 
   /**
-   * Agent data access events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,99 +55,78 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The AI model associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2AiModel aiModel;
 
   /**
-   * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Application application;
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2ArtifactGuardPolicies artifactGuardPolicies;
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2AttackExposure attackExposure;
 
   /**
-   * Fields related to Backup and DR findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2BackupDisasterRecovery backupDisasterRecovery;
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
-   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
-   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
-   * prefix is the closest CRM ancestor of the resource associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String canonicalName;
 
   /**
-   * Immutable. The additional taxonomy group within findings from a given source. Example:
-   * "XSS_FLASH_INJECTION"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Chokepoint chokepoint;
 
   /**
-   * Fields related to Cloud Armor findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2CloudArmor cloudArmor;
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2CloudDlpDataProfile cloudDlpDataProfile;
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2CloudDlpInspection cloudDlpInspection;
 
   /**
-   * Details about the compliance implications of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2ComplianceDetails complianceDetails;
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +139,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,11 +151,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,8 +163,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,21 +175,18 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The time at which the finding was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyName;
 
   /**
-   * Data access events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,7 +199,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data flow events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +211,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,61 +223,48 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Database associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Database database;
 
   /**
-   * Contains more details about the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2DiscoveredWorkload discoveredWorkload;
 
   /**
-   * Disk associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Disk disk;
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * Represents exfiltrations associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Exfiltration exfiltration;
 
   /**
-   * External exposure associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2ExternalExposure externalExposure;
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,16 +277,12 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalUri;
 
   /**
-   * File associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -353,288 +295,216 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The class of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingClass;
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2GroupMembership> groupMemberships;
 
   /**
-   * Represents IAM bindings associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2IamBinding> iamBindings;
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Indicator indicator;
 
   /**
-   * IP rules associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IpRules ipRules;
 
   /**
-   * Job associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Job job;
 
   /**
-   * Signature of the kernel rootkit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2KernelRootkit kernelRootkit;
 
   /**
-   * Kubernetes resources associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Kubernetes kubernetes;
 
   /**
-   * The load balancers associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2LoadBalancer> loadBalancers;
 
   /**
-   * Log entries that are relevant to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2LogEntry> logEntries;
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2MitreAttack mitreAttack;
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String moduleName;
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mute;
 
   /**
-   * Output only. The mute information regarding this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2MuteInfo muteInfo;
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](https://cloud.google.com/security-command-center/docs/how-to-mute-findings) that
-   * muted the finding and the user who muted the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteInitiator;
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String muteUpdateTime;
 
   /**
-   * Identifier. The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Network> networks;
 
   /**
-   * Steps to address the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextSteps;
 
   /**
-   * Notebook associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Notebook notebook;
 
   /**
-   * Contains information about the org policies associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2OrgPolicy> orgPolicies;
 
   /**
-   * The relative resource name of the source and location the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}` +
-   * `folders/{folders_id}/sources/{source_id}` + `projects/{projects_id}/sources/{source_id}` +
-   * `organizations/{organization_id}/sources/{source_id}/locations/{location_id}` +
-   * `folders/{folders_id}/sources/{source_id}/locations/{location_id}` +
-   * `projects/{projects_id}/sources/{source_id}/locations/{location_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentDisplayName;
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2PolicyViolationSummary policyViolationSummary;
 
   /**
-   * Represents operating system processes associated with the Finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Process> processes;
 
   /**
-   * Immutable. For findings on Google Cloud resources, the full resource name of the Google Cloud
-   * resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Secret associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Secret secret;
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SecurityMarks securityMarks;
 
   /**
-   * The security posture associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SecurityPosture securityPosture;
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> sourceProperties;
 
   /**
-   * Output only. The state of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2ToxicCombination toxicCombination;
 
   /**
-   * VertexAi associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2VertexAi vertexAi;
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Vulnerability vulnerability;
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Access getAccess() {
@@ -642,8 +512,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * @param access access or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setAccess(GoogleCloudSecuritycenterV2Access access) {
@@ -652,7 +520,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * AffectedResources associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AffectedResources getAffectedResources() {
@@ -660,7 +527,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * AffectedResources associated with the finding.
    * @param affectedResources affectedResources or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources affectedResources) {
@@ -669,7 +535,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Agent data access events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> getAgentDataAccessEvents() {
@@ -677,7 +542,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Agent data access events associated with the finding.
    * @param agentDataAccessEvents agentDataAccessEvents or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setAgentDataAccessEvents(java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> agentDataAccessEvents) {
@@ -686,7 +550,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The AI model associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel getAiModel() {
@@ -694,7 +557,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The AI model associated with the finding.
    * @param aiModel aiModel or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setAiModel(GoogleCloudSecuritycenterV2AiModel aiModel) {
@@ -703,7 +565,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents an application associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Application getApplication() {
@@ -711,7 +572,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents an application associated with the finding.
    * @param application application or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setApplication(GoogleCloudSecuritycenterV2Application application) {
@@ -720,7 +580,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicies getArtifactGuardPolicies() {
@@ -728,7 +587,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * @param artifactGuardPolicies artifactGuardPolicies or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setArtifactGuardPolicies(GoogleCloudSecuritycenterV2ArtifactGuardPolicies artifactGuardPolicies) {
@@ -737,7 +595,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AttackExposure getAttackExposure() {
@@ -745,7 +602,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * @param attackExposure attackExposure or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setAttackExposure(GoogleCloudSecuritycenterV2AttackExposure attackExposure) {
@@ -754,7 +610,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Fields related to Backup and DR findings.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BackupDisasterRecovery getBackupDisasterRecovery() {
@@ -762,7 +617,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Fields related to Backup and DR findings.
    * @param backupDisasterRecovery backupDisasterRecovery or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setBackupDisasterRecovery(GoogleCloudSecuritycenterV2BackupDisasterRecovery backupDisasterRecovery) {
@@ -771,11 +625,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
-   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
-   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
-   * prefix is the closest CRM ancestor of the resource associated with the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalName() {
@@ -783,11 +632,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The canonical name of the finding. The following list shows some examples: + `orga
-   * nizations/{organization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
-   * + `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` The
-   * prefix is the closest CRM ancestor of the resource associated with the finding.
    * @param canonicalName canonicalName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCanonicalName(java.lang.String canonicalName) {
@@ -796,8 +640,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Immutable. The additional taxonomy group within findings from a given source. Example:
-   * "XSS_FLASH_INJECTION"
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -805,8 +647,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Immutable. The additional taxonomy group within findings from a given source. Example:
-   * "XSS_FLASH_INJECTION"
    * @param category category or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCategory(java.lang.String category) {
@@ -815,10 +655,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Chokepoint getChokepoint() {
@@ -826,10 +662,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * @param chokepoint chokepoint or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setChokepoint(GoogleCloudSecuritycenterV2Chokepoint chokepoint) {
@@ -838,7 +670,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Fields related to Cloud Armor findings.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudArmor getCloudArmor() {
@@ -846,7 +677,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Fields related to Cloud Armor findings.
    * @param cloudArmor cloudArmor or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCloudArmor(GoogleCloudSecuritycenterV2CloudArmor cloudArmor) {
@@ -855,7 +685,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudDlpDataProfile getCloudDlpDataProfile() {
@@ -863,7 +692,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * @param cloudDlpDataProfile cloudDlpDataProfile or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCloudDlpDataProfile(GoogleCloudSecuritycenterV2CloudDlpDataProfile cloudDlpDataProfile) {
@@ -872,7 +700,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudDlpInspection getCloudDlpInspection() {
@@ -880,7 +707,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @param cloudDlpInspection cloudDlpInspection or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCloudDlpInspection(GoogleCloudSecuritycenterV2CloudDlpInspection cloudDlpInspection) {
@@ -889,7 +715,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Details about the compliance implications of the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ComplianceDetails getComplianceDetails() {
@@ -897,7 +722,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Details about the compliance implications of the finding.
    * @param complianceDetails complianceDetails or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setComplianceDetails(GoogleCloudSecuritycenterV2ComplianceDetails complianceDetails) {
@@ -906,7 +730,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Compliance> getCompliances() {
@@ -914,7 +737,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * @param compliances compliances or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCompliances(java.util.List<GoogleCloudSecuritycenterV2Compliance> compliances) {
@@ -923,7 +745,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Connection> getConnections() {
@@ -931,7 +752,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * @param connections connections or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setConnections(java.util.List<GoogleCloudSecuritycenterV2Connection> connections) {
@@ -940,11 +760,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudSecuritycenterV2ContactDetails> getContacts() {
@@ -952,11 +767,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * @param contacts contacts or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setContacts(java.util.Map<String, GoogleCloudSecuritycenterV2ContactDetails> contacts) {
@@ -965,8 +775,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Container> getContainers() {
@@ -974,8 +782,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * @param containers containers or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setContainers(java.util.List<GoogleCloudSecuritycenterV2Container> containers) {
@@ -984,7 +790,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The time at which the finding was created in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -992,7 +797,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The time at which the finding was created in Security Command Center.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCreateTime(String createTime) {
@@ -1001,7 +805,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -1009,7 +812,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The name of the Cloud KMS key used to encrypt this finding, if any.
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setCryptoKeyName(java.lang.String cryptoKeyName) {
@@ -1018,7 +820,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data access events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2DataAccessEvent> getDataAccessEvents() {
@@ -1026,7 +827,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data access events associated with the finding.
    * @param dataAccessEvents dataAccessEvents or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDataAccessEvents(java.util.List<GoogleCloudSecuritycenterV2DataAccessEvent> dataAccessEvents) {
@@ -1035,7 +835,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data flow events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> getDataFlowEvents() {
@@ -1043,7 +842,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data flow events associated with the finding.
    * @param dataFlowEvents dataFlowEvents or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDataFlowEvents(java.util.List<GoogleCloudSecuritycenterV2DataFlowEvent> dataFlowEvents) {
@@ -1052,7 +850,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2DataRetentionDeletionEvent> getDataRetentionDeletionEvents() {
@@ -1060,7 +857,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * @param dataRetentionDeletionEvents dataRetentionDeletionEvents or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDataRetentionDeletionEvents(java.util.List<GoogleCloudSecuritycenterV2DataRetentionDeletionEvent> dataRetentionDeletionEvents) {
@@ -1069,7 +865,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Database associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Database getDatabase() {
@@ -1077,7 +872,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Database associated with the finding.
    * @param database database or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDatabase(GoogleCloudSecuritycenterV2Database database) {
@@ -1086,7 +880,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains more details about the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -1094,7 +887,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains more details about the finding.
    * @param description description or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDescription(java.lang.String description) {
@@ -1103,7 +895,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload getDiscoveredWorkload() {
@@ -1111,7 +902,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * @param discoveredWorkload discoveredWorkload or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDiscoveredWorkload(GoogleCloudSecuritycenterV2DiscoveredWorkload discoveredWorkload) {
@@ -1120,7 +910,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Disk associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Disk getDisk() {
@@ -1128,7 +917,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Disk associated with the finding.
    * @param disk disk or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setDisk(GoogleCloudSecuritycenterV2Disk disk) {
@@ -1137,11 +925,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -1149,11 +932,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @param eventTime eventTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setEventTime(String eventTime) {
@@ -1162,7 +940,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents exfiltrations associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Exfiltration getExfiltration() {
@@ -1170,7 +947,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents exfiltrations associated with the finding.
    * @param exfiltration exfiltration or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setExfiltration(GoogleCloudSecuritycenterV2Exfiltration exfiltration) {
@@ -1179,7 +955,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * External exposure associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalExposure getExternalExposure() {
@@ -1187,7 +962,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * External exposure associated with the finding.
    * @param externalExposure externalExposure or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setExternalExposure(GoogleCloudSecuritycenterV2ExternalExposure externalExposure) {
@@ -1196,8 +970,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudSecuritycenterV2ExternalSystem> getExternalSystems() {
@@ -1205,8 +977,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * @param externalSystems externalSystems or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setExternalSystems(java.util.Map<String, GoogleCloudSecuritycenterV2ExternalSystem> externalSystems) {
@@ -1215,9 +985,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUri() {
@@ -1225,9 +992,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * @param externalUri externalUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setExternalUri(java.lang.String externalUri) {
@@ -1236,7 +1000,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * File associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2File> getFiles() {
@@ -1244,7 +1007,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * File associated with the finding.
    * @param files files or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setFiles(java.util.List<GoogleCloudSecuritycenterV2File> files) {
@@ -1253,7 +1015,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The class of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingClass() {
@@ -1261,7 +1022,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The class of the finding.
    * @param findingClass findingClass or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setFindingClass(java.lang.String findingClass) {
@@ -1270,9 +1030,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2GroupMembership> getGroupMemberships() {
@@ -1280,9 +1037,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * @param groupMemberships groupMemberships or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setGroupMemberships(java.util.List<GoogleCloudSecuritycenterV2GroupMembership> groupMemberships) {
@@ -1291,7 +1045,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents IAM bindings associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2IamBinding> getIamBindings() {
@@ -1299,7 +1052,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents IAM bindings associated with the finding.
    * @param iamBindings iamBindings or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setIamBindings(java.util.List<GoogleCloudSecuritycenterV2IamBinding> iamBindings) {
@@ -1308,10 +1060,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Indicator getIndicator() {
@@ -1319,10 +1067,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @param indicator indicator or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setIndicator(GoogleCloudSecuritycenterV2Indicator indicator) {
@@ -1331,7 +1075,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * IP rules associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IpRules getIpRules() {
@@ -1339,7 +1082,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * IP rules associated with the finding.
    * @param ipRules ipRules or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setIpRules(GoogleCloudSecuritycenterV2IpRules ipRules) {
@@ -1348,7 +1090,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Job associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Job getJob() {
@@ -1356,7 +1097,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Job associated with the finding.
    * @param job job or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setJob(GoogleCloudSecuritycenterV2Job job) {
@@ -1365,7 +1105,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Signature of the kernel rootkit.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2KernelRootkit getKernelRootkit() {
@@ -1373,7 +1112,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Signature of the kernel rootkit.
    * @param kernelRootkit kernelRootkit or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setKernelRootkit(GoogleCloudSecuritycenterV2KernelRootkit kernelRootkit) {
@@ -1382,7 +1120,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Kubernetes resources associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Kubernetes getKubernetes() {
@@ -1390,7 +1127,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Kubernetes resources associated with the finding.
    * @param kubernetes kubernetes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setKubernetes(GoogleCloudSecuritycenterV2Kubernetes kubernetes) {
@@ -1399,7 +1135,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The load balancers associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2LoadBalancer> getLoadBalancers() {
@@ -1407,7 +1142,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The load balancers associated with the finding.
    * @param loadBalancers loadBalancers or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setLoadBalancers(java.util.List<GoogleCloudSecuritycenterV2LoadBalancer> loadBalancers) {
@@ -1416,7 +1150,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Log entries that are relevant to the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2LogEntry> getLogEntries() {
@@ -1424,7 +1157,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Log entries that are relevant to the finding.
    * @param logEntries logEntries or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setLogEntries(java.util.List<GoogleCloudSecuritycenterV2LogEntry> logEntries) {
@@ -1433,7 +1165,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MitreAttack getMitreAttack() {
@@ -1441,7 +1172,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @param mitreAttack mitreAttack or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMitreAttack(GoogleCloudSecuritycenterV2MitreAttack mitreAttack) {
@@ -1450,8 +1180,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * @return value or {@code null} for none
    */
   public java.lang.String getModuleName() {
@@ -1459,8 +1187,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * @param moduleName moduleName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setModuleName(java.lang.String moduleName) {
@@ -1469,8 +1195,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @return value or {@code null} for none
    */
   public java.lang.String getMute() {
@@ -1478,8 +1202,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @param mute mute or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMute(java.lang.String mute) {
@@ -1488,7 +1210,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The mute information regarding this finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2MuteInfo getMuteInfo() {
@@ -1496,7 +1217,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The mute information regarding this finding.
    * @param muteInfo muteInfo or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMuteInfo(GoogleCloudSecuritycenterV2MuteInfo muteInfo) {
@@ -1505,9 +1225,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](https://cloud.google.com/security-command-center/docs/how-to-mute-findings) that
-   * muted the finding and the user who muted the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteInitiator() {
@@ -1515,9 +1232,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](https://cloud.google.com/security-command-center/docs/how-to-mute-findings) that
-   * muted the finding and the user who muted the finding.
    * @param muteInitiator muteInitiator or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMuteInitiator(java.lang.String muteInitiator) {
@@ -1526,7 +1240,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * @return value or {@code null} for none
    */
   public String getMuteUpdateTime() {
@@ -1534,7 +1247,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * @param muteUpdateTime muteUpdateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setMuteUpdateTime(String muteUpdateTime) {
@@ -1543,15 +1255,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Identifier. The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1559,15 +1262,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Identifier. The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
-   * rganization_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}` +
-   * `folders/{folder_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/findings/{finding_id}` +
-   * `projects/{project_id}/sources/{source_id}/locations/{location_id}/findings/{finding_id}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setName(java.lang.String name) {
@@ -1576,7 +1270,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Network> getNetworks() {
@@ -1584,7 +1277,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * @param networks networks or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setNetworks(java.util.List<GoogleCloudSecuritycenterV2Network> networks) {
@@ -1593,7 +1285,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Steps to address the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextSteps() {
@@ -1601,7 +1292,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Steps to address the finding.
    * @param nextSteps nextSteps or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setNextSteps(java.lang.String nextSteps) {
@@ -1610,7 +1300,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Notebook associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Notebook getNotebook() {
@@ -1618,7 +1307,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Notebook associated with the finding.
    * @param notebook notebook or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setNotebook(GoogleCloudSecuritycenterV2Notebook notebook) {
@@ -1627,7 +1315,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains information about the org policies associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2OrgPolicy> getOrgPolicies() {
@@ -1635,7 +1322,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains information about the org policies associated with the finding.
    * @param orgPolicies orgPolicies or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setOrgPolicies(java.util.List<GoogleCloudSecuritycenterV2OrgPolicy> orgPolicies) {
@@ -1644,14 +1330,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The relative resource name of the source and location the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}` +
-   * `folders/{folders_id}/sources/{source_id}` + `projects/{projects_id}/sources/{source_id}` +
-   * `organizations/{organization_id}/sources/{source_id}/locations/{location_id}` +
-   * `folders/{folders_id}/sources/{source_id}/locations/{location_id}` +
-   * `projects/{projects_id}/sources/{source_id}/locations/{location_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -1659,14 +1337,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The relative resource name of the source and location the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. The following list shows some examples: +
-   * `organizations/{organization_id}/sources/{source_id}` +
-   * `folders/{folders_id}/sources/{source_id}` + `projects/{projects_id}/sources/{source_id}` +
-   * `organizations/{organization_id}/sources/{source_id}/locations/{location_id}` +
-   * `folders/{folders_id}/sources/{source_id}/locations/{location_id}` +
-   * `projects/{projects_id}/sources/{source_id}/locations/{location_id}`
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setParent(java.lang.String parent) {
@@ -1675,8 +1345,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -1684,8 +1352,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setParentDisplayName(java.lang.String parentDisplayName) {
@@ -1694,7 +1360,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2PolicyViolationSummary getPolicyViolationSummary() {
@@ -1702,7 +1367,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * @param policyViolationSummary policyViolationSummary or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setPolicyViolationSummary(GoogleCloudSecuritycenterV2PolicyViolationSummary policyViolationSummary) {
@@ -1711,7 +1375,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents operating system processes associated with the Finding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Process> getProcesses() {
@@ -1719,7 +1382,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents operating system processes associated with the Finding.
    * @param processes processes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setProcesses(java.util.List<GoogleCloudSecuritycenterV2Process> processes) {
@@ -1728,10 +1390,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Immutable. For findings on Google Cloud resources, the full resource name of the Google Cloud
-   * resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -1739,10 +1397,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Immutable. For findings on Google Cloud resources, the full resource name of the Google Cloud
-   * resource this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string.
    * @param resourceName resourceName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setResourceName(java.lang.String resourceName) {
@@ -1751,7 +1405,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Secret associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Secret getSecret() {
@@ -1759,7 +1412,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Secret associated with the finding.
    * @param secret secret or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setSecret(GoogleCloudSecuritycenterV2Secret secret) {
@@ -1768,8 +1420,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityMarks getSecurityMarks() {
@@ -1777,8 +1427,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * @param securityMarks securityMarks or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setSecurityMarks(GoogleCloudSecuritycenterV2SecurityMarks securityMarks) {
@@ -1787,7 +1435,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The security posture associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPosture getSecurityPosture() {
@@ -1795,7 +1442,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The security posture associated with the finding.
    * @param securityPosture securityPosture or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setSecurityPosture(GoogleCloudSecuritycenterV2SecurityPosture securityPosture) {
@@ -1804,7 +1450,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -1812,7 +1457,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setSeverity(java.lang.String severity) {
@@ -1821,9 +1465,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getSourceProperties() {
@@ -1831,9 +1472,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * @param sourceProperties sourceProperties or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setSourceProperties(java.util.Map<String, java.lang.Object> sourceProperties) {
@@ -1842,7 +1480,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The state of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1850,7 +1487,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Output only. The state of the finding.
    * @param state state or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setState(java.lang.String state) {
@@ -1859,10 +1495,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ToxicCombination getToxicCombination() {
@@ -1870,10 +1502,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * @param toxicCombination toxicCombination or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setToxicCombination(GoogleCloudSecuritycenterV2ToxicCombination toxicCombination) {
@@ -1882,7 +1510,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * VertexAi associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2VertexAi getVertexAi() {
@@ -1890,7 +1517,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * VertexAi associated with the finding.
    * @param vertexAi vertexAi or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setVertexAi(GoogleCloudSecuritycenterV2VertexAi vertexAi) {
@@ -1899,8 +1525,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Vulnerability getVulnerability() {
@@ -1908,8 +1532,6 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @param vulnerability vulnerability or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Finding setVulnerability(GoogleCloudSecuritycenterV2Vulnerability vulnerability) {

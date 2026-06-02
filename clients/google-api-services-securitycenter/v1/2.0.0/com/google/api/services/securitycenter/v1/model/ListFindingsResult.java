@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Result containing the Finding and its StateChange.
+ * Model definition for ListFindingsResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListFindingsResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Finding matching the search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Finding finding;
 
   /**
-   * Output only. Resource that is associated with this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Resource resource;
 
   /**
-   * State change of the finding between the points in time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stateChange;
 
   /**
-   * Finding matching the search request.
    * @return value or {@code null} for none
    */
   public Finding getFinding() {
@@ -60,7 +56,6 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   }
 
   /**
-   * Finding matching the search request.
    * @param finding finding or {@code null} for none
    */
   public ListFindingsResult setFinding(Finding finding) {
@@ -69,7 +64,6 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Resource that is associated with this finding.
    * @return value or {@code null} for none
    */
   public Resource getResource() {
@@ -77,7 +71,6 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Resource that is associated with this finding.
    * @param resource resource or {@code null} for none
    */
   public ListFindingsResult setResource(Resource resource) {
@@ -86,7 +79,6 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   }
 
   /**
-   * State change of the finding between the points in time.
    * @return value or {@code null} for none
    */
   public java.lang.String getStateChange() {
@@ -94,7 +86,6 @@ public final class ListFindingsResult extends com.google.api.client.json.Generic
   }
 
   /**
-   * State change of the finding between the points in time.
    * @param stateChange stateChange or {@code null} for none
    */
   public ListFindingsResult setStateChange(java.lang.String stateChange) {

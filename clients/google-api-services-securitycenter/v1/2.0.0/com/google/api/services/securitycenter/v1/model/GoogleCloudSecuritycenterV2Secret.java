@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Details about a secret or credential associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2Secret.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.client.json.GenericJson {
 
   /**
-   * The environment variable containing the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SecretEnvironmentVariable environmentVariable;
 
   /**
-   * The file containing the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SecretFilePath filePath;
 
   /**
-   * The status of the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SecretStatus status;
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The environment variable containing the secret.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecretEnvironmentVariable getEnvironmentVariable() {
@@ -67,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The environment variable containing the secret.
    * @param environmentVariable environmentVariable or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Secret setEnvironmentVariable(GoogleCloudSecuritycenterV2SecretEnvironmentVariable environmentVariable) {
@@ -76,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The file containing the secret.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecretFilePath getFilePath() {
@@ -84,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The file containing the secret.
    * @param filePath filePath or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Secret setFilePath(GoogleCloudSecuritycenterV2SecretFilePath filePath) {
@@ -93,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The status of the secret.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecretStatus getStatus() {
@@ -101,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The status of the secret.
    * @param status status or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Secret setStatus(GoogleCloudSecuritycenterV2SecretStatus status) {
@@ -110,7 +100,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -118,7 +107,6 @@ public final class GoogleCloudSecuritycenterV2Secret extends com.google.api.clie
   }
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Secret setType(java.lang.String type) {

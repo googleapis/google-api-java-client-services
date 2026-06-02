@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Describes a job
+ * Model definition for GoogleCloudSecuritycenterV2Job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If the job did not complete successfully, this field describes why.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer errorCode;
 
   /**
-   * Optional. Gives the location where the job ran, such as `US` or `europe-west1`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The fully-qualified name for a job. e.g. `projects//jobs/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. State of the job, such as `RUNNING` or `PENDING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. If the job did not complete successfully, this field describes why.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getErrorCode() {
@@ -67,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * Optional. If the job did not complete successfully, this field describes why.
    * @param errorCode errorCode or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Job setErrorCode(java.lang.Integer errorCode) {
@@ -76,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * Optional. Gives the location where the job ran, such as `US` or `europe-west1`
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -84,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * Optional. Gives the location where the job ran, such as `US` or `europe-west1`
    * @param location location or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Job setLocation(java.lang.String location) {
@@ -93,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * The fully-qualified name for a job. e.g. `projects//jobs/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * The fully-qualified name for a job. e.g. `projects//jobs/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Job setName(java.lang.String name) {
@@ -110,7 +100,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * Output only. State of the job, such as `RUNNING` or `PENDING`.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -118,7 +107,6 @@ public final class GoogleCloudSecuritycenterV2Job extends com.google.api.client.
   }
 
   /**
-   * Output only. State of the job, such as `RUNNING` or `PENDING`.
    * @param state state or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Job setState(java.lang.String state) {

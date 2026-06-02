@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for listing BigQuery exports.
+ * Model definition for ListBigQueryExportsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListBigQueryExportsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BigQuery exports from the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +43,12 @@ public final class ListBigQueryExportsResponse extends com.google.api.client.jso
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The BigQuery exports from the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1BigQueryExport> getBigQueryExports() {
@@ -60,7 +56,6 @@ public final class ListBigQueryExportsResponse extends com.google.api.client.jso
   }
 
   /**
-   * The BigQuery exports from the specified parent.
    * @param bigQueryExports bigQueryExports or {@code null} for none
    */
   public ListBigQueryExportsResponse setBigQueryExports(java.util.List<GoogleCloudSecuritycenterV1BigQueryExport> bigQueryExports) {
@@ -69,8 +64,6 @@ public final class ListBigQueryExportsResponse extends com.google.api.client.jso
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,8 +71,6 @@ public final class ListBigQueryExportsResponse extends com.google.api.client.jso
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListBigQueryExportsResponse setNextPageToken(java.lang.String nextPageToken) {

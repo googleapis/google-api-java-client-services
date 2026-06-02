@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * The Azure subscription of the resource associated with the issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Azure subscription display name of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The Azure subscription ID of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The Azure subscription display name of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSub
   }
 
   /**
-   * The Azure subscription display name of the resource associated with the issue.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription setDisplayName(java.lang.String displayName) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSub
   }
 
   /**
-   * The Azure subscription ID of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSub
   }
 
   /**
-   * The Azure subscription ID of the resource associated with the issue.
    * @param id id or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription setId(java.lang.String id) {

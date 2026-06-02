@@ -5790,6 +5790,226 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Generate report of installed Chrome versions on managed profiles.
+       *
+       * Create a request for the method "reports.countChromeProfileVersions".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link CountChromeProfileVersions#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+       * @return the request
+       */
+      public CountChromeProfileVersions countChromeProfileVersions(java.lang.String customer) throws java.io.IOException {
+        CountChromeProfileVersions result = new CountChromeProfileVersions(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class CountChromeProfileVersions extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeProfileVersionsResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:countChromeProfileVersions";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Generate report of installed Chrome versions on managed profiles.
+         *
+         * Create a request for the method "reports.countChromeProfileVersions".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link CountChromeProfileVersions#execute()} method to invoke the
+         * remote operation. <p> {@link CountChromeProfileVersions#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param customer Required. Customer id or "my_customer" to use the customer associated to the account making the
+       *        request.
+         * @since 1.13
+         */
+        protected CountChromeProfileVersions(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1CountChromeProfileVersionsResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public CountChromeProfileVersions set$Xgafv(java.lang.String $Xgafv) {
+          return (CountChromeProfileVersions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CountChromeProfileVersions setAccessToken(java.lang.String accessToken) {
+          return (CountChromeProfileVersions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CountChromeProfileVersions setAlt(java.lang.String alt) {
+          return (CountChromeProfileVersions) super.setAlt(alt);
+        }
+
+        @Override
+        public CountChromeProfileVersions setCallback(java.lang.String callback) {
+          return (CountChromeProfileVersions) super.setCallback(callback);
+        }
+
+        @Override
+        public CountChromeProfileVersions setFields(java.lang.String fields) {
+          return (CountChromeProfileVersions) super.setFields(fields);
+        }
+
+        @Override
+        public CountChromeProfileVersions setKey(java.lang.String key) {
+          return (CountChromeProfileVersions) super.setKey(key);
+        }
+
+        @Override
+        public CountChromeProfileVersions setOauthToken(java.lang.String oauthToken) {
+          return (CountChromeProfileVersions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CountChromeProfileVersions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CountChromeProfileVersions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CountChromeProfileVersions setQuotaUser(java.lang.String quotaUser) {
+          return (CountChromeProfileVersions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CountChromeProfileVersions setUploadType(java.lang.String uploadType) {
+          return (CountChromeProfileVersions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CountChromeProfileVersions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CountChromeProfileVersions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Customer id or "my_customer" to use the customer associated to the account making the
+       request.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Customer id or "my_customer" to use the customer associated to the account
+         * making the request.
+         */
+        public CountChromeProfileVersions setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR
+         * operations are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations
+       are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Query string to filter results, AND-separated fields in EBNF syntax. Note: OR
+         * operations are not supported in this filter. Supported filter fields: * last_active_date
+         */
+        public CountChromeProfileVersions setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The ID of the organizational unit. If omitted, all data will be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String orgUnitId;
+
+        /** The ID of the organizational unit. If omitted, all data will be returned.
+         */
+        public java.lang.String getOrgUnitId() {
+          return orgUnitId;
+        }
+
+        /** The ID of the organizational unit. If omitted, all data will be returned. */
+        public CountChromeProfileVersions setOrgUnitId(java.lang.String orgUnitId) {
+          this.orgUnitId = orgUnitId;
+          return this;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        public CountChromeProfileVersions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Token to specify the page of the request to be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify the page of the request to be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Token to specify the page of the request to be returned. */
+        public CountChromeProfileVersions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public CountChromeProfileVersions set(String parameterName, Object value) {
+          return (CountChromeProfileVersions) super.set(parameterName, value);
+        }
+      }
+      /**
        * Generate report of installed Chrome versions.
        *
        * Create a request for the method "reports.countChromeVersions".

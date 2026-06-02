@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.json.GenericJson {
 
   /**
+   * Represents a batch of items to inspect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2BatchContentItem batchContentItem;
+
+  /**
    * Content data to inspect or redact. Replaces `type` and `data`.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
+
+  /**
+   * Represents a batch of items to inspect.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BatchContentItem getBatchContentItem() {
+    return batchContentItem;
+  }
+
+  /**
+   * Represents a batch of items to inspect.
+   * @param batchContentItem batchContentItem or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentItem setBatchContentItem(GooglePrivacyDlpV2BatchContentItem batchContentItem) {
+    this.batchContentItem = batchContentItem;
+    return this;
+  }
 
   /**
    * Content data to inspect or redact. Replaces `type` and `data`.

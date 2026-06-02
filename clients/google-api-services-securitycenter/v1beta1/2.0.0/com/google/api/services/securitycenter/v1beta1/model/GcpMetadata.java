@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Google Cloud metadata associated with the resource. Only applicable if the finding's cloud
- * provider is Google Cloud.
+ * Model definition for GcpMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,53 +31,42 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GcpMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Folder> folders;
 
   /**
-   * The name of the organization that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String organization;
 
   /**
-   * The full resource name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * The human readable name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentDisplayName;
 
   /**
-   * The full resource name of project that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The project ID that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectDisplayName;
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Folder> getFolders() {
@@ -86,9 +74,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * @param folders folders or {@code null} for none
    */
   public GcpMetadata setFolders(java.util.List<GoogleCloudSecuritycenterV2Folder> folders) {
@@ -97,7 +82,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the organization that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -105,7 +89,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the organization that the resource belongs to.
    * @param organization organization or {@code null} for none
    */
   public GcpMetadata setOrganization(java.lang.String organization) {
@@ -114,7 +97,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -122,7 +104,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of resource's parent.
    * @param parent parent or {@code null} for none
    */
   public GcpMetadata setParent(java.lang.String parent) {
@@ -131,7 +112,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -139,7 +119,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of resource's parent.
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public GcpMetadata setParentDisplayName(java.lang.String parentDisplayName) {
@@ -148,7 +127,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -156,7 +134,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @param project project or {@code null} for none
    */
   public GcpMetadata setProject(java.lang.String project) {
@@ -165,7 +142,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDisplayName() {
@@ -173,7 +149,6 @@ public final class GcpMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @param projectDisplayName projectDisplayName or {@code null} for none
    */
   public GcpMetadata setProjectDisplayName(java.lang.String projectDisplayName) {

@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Details about a data access attempt made by a principal not authorized under applicable data
- * security policy.
+ * Model definition for DataAccessEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,36 +31,30 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class DataAccessEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique identifier for data access event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventId;
 
   /**
-   * Timestamp of data access event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * The operation performed by the principal to access the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operation;
 
   /**
-   * The email address of the principal that accessed the data. The principal could be a user
-   * account, service account, Google group, or other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalEmail;
 
   /**
-   * Unique identifier for data access event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventId() {
@@ -69,7 +62,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Unique identifier for data access event.
    * @param eventId eventId or {@code null} for none
    */
   public DataAccessEvent setEventId(java.lang.String eventId) {
@@ -78,7 +70,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Timestamp of data access event.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -86,7 +77,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Timestamp of data access event.
    * @param eventTime eventTime or {@code null} for none
    */
   public DataAccessEvent setEventTime(String eventTime) {
@@ -95,7 +85,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The operation performed by the principal to access the data.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -103,7 +92,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The operation performed by the principal to access the data.
    * @param operation operation or {@code null} for none
    */
   public DataAccessEvent setOperation(java.lang.String operation) {
@@ -112,8 +100,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The email address of the principal that accessed the data. The principal could be a user
-   * account, service account, Google group, or other.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalEmail() {
@@ -121,8 +107,6 @@ public final class DataAccessEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The email address of the principal that accessed the data. The principal could be a user
-   * account, service account, Google group, or other.
    * @param principalEmail principalEmail or {@code null} for none
    */
   public DataAccessEvent setPrincipalEmail(java.lang.String principalEmail) {

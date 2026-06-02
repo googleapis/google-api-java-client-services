@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * A mute config is a Cloud SCC resource that contains the configuration to mute create/update
- * events of findings.
+ * Model definition for GoogleCloudSecuritycenterV1MuteConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,90 +31,60 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time at which the mute config was created. This field is set by the server and
-   * will be ignored if provided on config creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * A description of the mute config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The human readable name to be displayed for the mute config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
-   * set, when the config expires, it is removed from all findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expiryTime;
 
   /**
-   * Required. An expression that defines the filter to apply across create/update events of
-   * findings. While creating a filter string, be mindful of the scope in which the mute
-   * configuration is being created. E.g., If a filter contains project = X but is created under the
-   * project = Y scope, it might not match any findings. The following field and operator
-   * combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:`
-   * * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` *
-   * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` *
-   * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` *
-   * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Output only. Email address of the user who last edited the mute config. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mostRecentEditor;
 
   /**
-   * This field will be ignored if provided on config creation. Format
-   * `organizations/{organization}/muteConfigs/{mute_config}`
-   * `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-   * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-   * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-   * `projects/{project}/locations/global/muteConfigs/{mute_config}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The type of the mute config, which determines what type of mute state the config
-   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
-   * creation. STATIC by default if not set during creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Output only. The most recent time at which the mute config was updated. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time at which the mute config was created. This field is set by the server and
-   * will be ignored if provided on config creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -123,8 +92,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Output only. The time at which the mute config was created. This field is set by the server and
-   * will be ignored if provided on config creation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setCreateTime(String createTime) {
@@ -133,7 +100,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * A description of the mute config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -141,7 +107,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * A description of the mute config.
    * @param description description or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setDescription(java.lang.String description) {
@@ -150,7 +115,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * The human readable name to be displayed for the mute config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -158,7 +122,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * The human readable name to be displayed for the mute config.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setDisplayName(java.lang.String displayName) {
@@ -167,8 +130,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
-   * set, when the config expires, it is removed from all findings.
    * @return value or {@code null} for none
    */
   public String getExpiryTime() {
@@ -176,8 +137,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Optional. The expiry of the mute config. Only applicable for dynamic configs. If the expiry is
-   * set, when the config expires, it is removed from all findings.
    * @param expiryTime expiryTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setExpiryTime(String expiryTime) {
@@ -186,15 +145,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Required. An expression that defines the filter to apply across create/update events of
-   * findings. While creating a filter string, be mindful of the scope in which the mute
-   * configuration is being created. E.g., If a filter contains project = X but is created under the
-   * project = Y scope, it might not match any findings. The following field and operator
-   * combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:`
-   * * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` *
-   * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` *
-   * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` *
-   * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -202,15 +152,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Required. An expression that defines the filter to apply across create/update events of
-   * findings. While creating a filter string, be mindful of the scope in which the mute
-   * configuration is being created. E.g., If a filter contains project = X but is created under the
-   * project = Y scope, it might not match any findings. The following field and operator
-   * combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:`
-   * * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` *
-   * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` *
-   * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` *
-   * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setFilter(java.lang.String filter) {
@@ -219,8 +160,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Output only. Email address of the user who last edited the mute config. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * @return value or {@code null} for none
    */
   public java.lang.String getMostRecentEditor() {
@@ -228,8 +167,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Output only. Email address of the user who last edited the mute config. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * @param mostRecentEditor mostRecentEditor or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setMostRecentEditor(java.lang.String mostRecentEditor) {
@@ -238,12 +175,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * This field will be ignored if provided on config creation. Format
-   * `organizations/{organization}/muteConfigs/{mute_config}`
-   * `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-   * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-   * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-   * `projects/{project}/locations/global/muteConfigs/{mute_config}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -251,12 +182,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * This field will be ignored if provided on config creation. Format
-   * `organizations/{organization}/muteConfigs/{mute_config}`
-   * `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-   * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-   * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-   * `projects/{project}/locations/global/muteConfigs/{mute_config}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setName(java.lang.String name) {
@@ -265,9 +190,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Optional. The type of the mute config, which determines what type of mute state the config
-   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
-   * creation. STATIC by default if not set during creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -275,9 +197,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Optional. The type of the mute config, which determines what type of mute state the config
-   * affects. The static mute state takes precedence over the dynamic mute state. Immutable after
-   * creation. STATIC by default if not set during creation.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setType(java.lang.String type) {
@@ -286,8 +205,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Output only. The most recent time at which the mute config was updated. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -295,8 +212,6 @@ public final class GoogleCloudSecuritycenterV1MuteConfig extends com.google.api.
   }
 
   /**
-   * Output only. The most recent time at which the mute config was updated. This field is set by
-   * the server and will be ignored if provided on config creation or update.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1MuteConfig setUpdateTime(String updateTime) {

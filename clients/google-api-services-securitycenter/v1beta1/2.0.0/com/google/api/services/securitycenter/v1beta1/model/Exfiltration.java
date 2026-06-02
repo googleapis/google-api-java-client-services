@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Exfiltration represents a data exfiltration attempt from one or more sources to one or more
- * targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets`
- * attribute lists the destinations the data was copied to.
+ * Model definition for Exfiltration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,8 +31,6 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Exfiltration extends com.google.api.client.json.GenericJson {
 
   /**
-   * If there are multiple sources, then the data is considered "joined" between them. For instance,
-   * BigQuery can join multiple tables, and each table would be considered a source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +43,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If there are multiple targets, each target would get a complete copy of the "joined" source
-   * data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,15 +55,12 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total exfiltrated bytes processed for the entire job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalExfiltratedBytes;
 
   /**
-   * If there are multiple sources, then the data is considered "joined" between them. For instance,
-   * BigQuery can join multiple tables, and each table would be considered a source.
    * @return value or {@code null} for none
    */
   public java.util.List<ExfilResource> getSources() {
@@ -77,8 +68,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If there are multiple sources, then the data is considered "joined" between them. For instance,
-   * BigQuery can join multiple tables, and each table would be considered a source.
    * @param sources sources or {@code null} for none
    */
   public Exfiltration setSources(java.util.List<ExfilResource> sources) {
@@ -87,8 +76,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If there are multiple targets, each target would get a complete copy of the "joined" source
-   * data.
    * @return value or {@code null} for none
    */
   public java.util.List<ExfilResource> getTargets() {
@@ -96,8 +83,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If there are multiple targets, each target would get a complete copy of the "joined" source
-   * data.
    * @param targets targets or {@code null} for none
    */
   public Exfiltration setTargets(java.util.List<ExfilResource> targets) {
@@ -106,7 +91,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total exfiltrated bytes processed for the entire job.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalExfiltratedBytes() {
@@ -114,7 +98,6 @@ public final class Exfiltration extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total exfiltrated bytes processed for the entire job.
    * @param totalExfiltratedBytes totalExfiltratedBytes or {@code null} for none
    */
   public Exfiltration setTotalExfiltratedBytes(java.lang.Long totalExfiltratedBytes) {

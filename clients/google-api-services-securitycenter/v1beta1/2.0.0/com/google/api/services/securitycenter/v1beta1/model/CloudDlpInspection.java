@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Details about the Cloud Data Loss Prevention (Cloud DLP) [inspection
- * job](https://cloud.google.com/dlp/docs/concepts-job-triggers) that produced the finding.
+ * Model definition for CloudDlpInspection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,36 +31,30 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class CloudDlpInspection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether Cloud DLP scanned the complete resource or a sampled subset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean fullScan;
 
   /**
-   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
-   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String infoType;
 
   /**
-   * The number of times Cloud DLP found this infoType within this job and resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long infoTypeCount;
 
   /**
-   * Name of the inspection job, for example, `projects/123/locations/europe/dlpJobs/i-8383929`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inspectJob;
 
   /**
-   * Whether Cloud DLP scanned the complete resource or a sampled subset.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFullScan() {
@@ -69,7 +62,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * Whether Cloud DLP scanned the complete resource or a sampled subset.
    * @param fullScan fullScan or {@code null} for none
    */
   public CloudDlpInspection setFullScan(java.lang.Boolean fullScan) {
@@ -78,8 +70,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
-   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInfoType() {
@@ -87,8 +77,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-
-   * reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
    * @param infoType infoType or {@code null} for none
    */
   public CloudDlpInspection setInfoType(java.lang.String infoType) {
@@ -97,7 +85,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The number of times Cloud DLP found this infoType within this job and resource.
    * @return value or {@code null} for none
    */
   public java.lang.Long getInfoTypeCount() {
@@ -105,7 +92,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * The number of times Cloud DLP found this infoType within this job and resource.
    * @param infoTypeCount infoTypeCount or {@code null} for none
    */
   public CloudDlpInspection setInfoTypeCount(java.lang.Long infoTypeCount) {
@@ -114,7 +100,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the inspection job, for example, `projects/123/locations/europe/dlpJobs/i-8383929`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInspectJob() {
@@ -122,7 +107,6 @@ public final class CloudDlpInspection extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the inspection job, for example, `projects/123/locations/europe/dlpJobs/i-8383929`.
    * @param inspectJob inspectJob or {@code null} for none
    */
   public CloudDlpInspection setInspectJob(java.lang.String inspectJob) {

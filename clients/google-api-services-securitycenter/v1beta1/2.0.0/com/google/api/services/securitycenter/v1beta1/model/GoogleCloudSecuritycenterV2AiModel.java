@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Contains information about the AI model associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2AiModel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,63 +31,54 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * The platform on which the model is deployed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deploymentPlatform;
 
   /**
-   * The user defined display name of model. Ex. baseline-classification-model
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The domain of the model, for example, “image-classification”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * The name of the model library, for example, “transformers”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String library;
 
   /**
-   * The region in which the model is used, for example, “us-central1”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The name of the AI model, for example, "gemini:1.0.0".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The publisher of the model, for example, “google” or “nvidia”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publisher;
 
   /**
-   * The purpose of the model, for example, "Inteference" or "Training".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String usageCategory;
 
   /**
-   * The platform on which the model is deployed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentPlatform() {
@@ -95,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The platform on which the model is deployed.
    * @param deploymentPlatform deploymentPlatform or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setDeploymentPlatform(java.lang.String deploymentPlatform) {
@@ -104,7 +94,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The user defined display name of model. Ex. baseline-classification-model
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -112,7 +101,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The user defined display name of model. Ex. baseline-classification-model
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setDisplayName(java.lang.String displayName) {
@@ -121,7 +109,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The domain of the model, for example, “image-classification”.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -129,7 +116,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The domain of the model, for example, “image-classification”.
    * @param domain domain or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setDomain(java.lang.String domain) {
@@ -138,7 +124,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The name of the model library, for example, “transformers”.
    * @return value or {@code null} for none
    */
   public java.lang.String getLibrary() {
@@ -146,7 +131,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The name of the model library, for example, “transformers”.
    * @param library library or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setLibrary(java.lang.String library) {
@@ -155,7 +139,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The region in which the model is used, for example, “us-central1”.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -163,7 +146,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The region in which the model is used, for example, “us-central1”.
    * @param location location or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setLocation(java.lang.String location) {
@@ -172,7 +154,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The name of the AI model, for example, "gemini:1.0.0".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -180,7 +161,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The name of the AI model, for example, "gemini:1.0.0".
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setName(java.lang.String name) {
@@ -189,7 +169,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The publisher of the model, for example, “google” or “nvidia”.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublisher() {
@@ -197,7 +176,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The publisher of the model, for example, “google” or “nvidia”.
    * @param publisher publisher or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setPublisher(java.lang.String publisher) {
@@ -206,7 +184,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The purpose of the model, for example, "Inteference" or "Training".
    * @return value or {@code null} for none
    */
   public java.lang.String getUsageCategory() {
@@ -214,7 +191,6 @@ public final class GoogleCloudSecuritycenterV2AiModel extends com.google.api.cli
   }
 
   /**
-   * The purpose of the model, for example, "Inteference" or "Training".
    * @param usageCategory usageCategory or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AiModel setUsageCategory(java.lang.String usageCategory) {

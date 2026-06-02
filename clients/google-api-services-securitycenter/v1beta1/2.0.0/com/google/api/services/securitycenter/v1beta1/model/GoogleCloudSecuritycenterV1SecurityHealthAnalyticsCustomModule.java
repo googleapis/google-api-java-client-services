@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Represents an instance of a Security Health Analytics custom module, including its full module
- * name, display name, enablement state, and last updated time. You can create a custom module at
- * the organization, folder, or project level. Custom modules that you create at the organization or
- * folder level are inherited by the child folders and projects.
+ * Model definition for GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,75 +31,54 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. If empty, indicates that the custom module was created in the organization,
-   * folder, or project in which you are viewing the custom module. Otherwise, `ancestor_module`
-   * specifies the organization or folder from which the custom module is inherited.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ancestorModule;
 
   /**
-   * The cloud provider of the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * The user specified custom configuration for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1CustomConfig customConfig;
 
   /**
-   * The display name of the Security Health Analytics custom module. This display name becomes the
-   * finding category for all findings that are returned by this custom module. The display name
-   * must be between 1 and 128 characters, start with a lowercase letter, and contain alphanumeric
-   * characters or underscores only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The enablement state of the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enablementState;
 
   /**
-   * Output only. The editor that last updated the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastEditor;
 
   /**
-   * Immutable. The resource name of the custom module. Its format is
-   * "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-   * {customModule} is server-generated and is not user settable. It will be a numeric id containing
-   * 1-20 digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The time at which the custom module was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. If empty, indicates that the custom module was created in the organization,
-   * folder, or project in which you are viewing the custom module. Otherwise, `ancestor_module`
-   * specifies the organization or folder from which the custom module is inherited.
    * @return value or {@code null} for none
    */
   public java.lang.String getAncestorModule() {
@@ -110,9 +86,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Output only. If empty, indicates that the custom module was created in the organization,
-   * folder, or project in which you are viewing the custom module. Otherwise, `ancestor_module`
-   * specifies the organization or folder from which the custom module is inherited.
    * @param ancestorModule ancestorModule or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setAncestorModule(java.lang.String ancestorModule) {
@@ -121,7 +94,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The cloud provider of the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -129,7 +101,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The cloud provider of the custom module.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setCloudProvider(java.lang.String cloudProvider) {
@@ -138,7 +109,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The user specified custom configuration for the module.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1CustomConfig getCustomConfig() {
@@ -146,7 +116,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The user specified custom configuration for the module.
    * @param customConfig customConfig or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setCustomConfig(GoogleCloudSecuritycenterV1CustomConfig customConfig) {
@@ -155,10 +124,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The display name of the Security Health Analytics custom module. This display name becomes the
-   * finding category for all findings that are returned by this custom module. The display name
-   * must be between 1 and 128 characters, start with a lowercase letter, and contain alphanumeric
-   * characters or underscores only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -166,10 +131,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The display name of the Security Health Analytics custom module. This display name becomes the
-   * finding category for all findings that are returned by this custom module. The display name
-   * must be between 1 and 128 characters, start with a lowercase letter, and contain alphanumeric
-   * characters or underscores only.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setDisplayName(java.lang.String displayName) {
@@ -178,7 +139,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The enablement state of the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnablementState() {
@@ -186,7 +146,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * The enablement state of the custom module.
    * @param enablementState enablementState or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setEnablementState(java.lang.String enablementState) {
@@ -195,7 +154,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Output only. The editor that last updated the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastEditor() {
@@ -203,7 +161,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Output only. The editor that last updated the custom module.
    * @param lastEditor lastEditor or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setLastEditor(java.lang.String lastEditor) {
@@ -212,12 +169,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Immutable. The resource name of the custom module. Its format is
-   * "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-   * {customModule} is server-generated and is not user settable. It will be a numeric id containing
-   * 1-20 digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -225,12 +176,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Immutable. The resource name of the custom module. Its format is
-   * "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-   * {customModule} is server-generated and is not user settable. It will be a numeric id containing
-   * 1-20 digits.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setName(java.lang.String name) {
@@ -239,7 +184,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Output only. The time at which the custom module was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -247,7 +191,6 @@ public final class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModul
   }
 
   /**
-   * Output only. The time at which the custom module was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule setUpdateTime(String updateTime) {

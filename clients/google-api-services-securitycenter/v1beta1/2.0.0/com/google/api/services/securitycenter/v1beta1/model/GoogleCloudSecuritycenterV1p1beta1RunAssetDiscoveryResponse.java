@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Response of asset discovery run
+ * Model definition for GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The duration between asset discovery run start and end
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String duration;
 
   /**
-   * The state of an asset discovery run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The duration between asset discovery run start and end
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse e
   }
 
   /**
-   * The duration between asset discovery run start and end
    * @param duration duration or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse setDuration(String duration) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse e
   }
 
   /**
-   * The state of an asset discovery run.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse e
   }
 
   /**
-   * The state of an asset discovery run.
    * @param state state or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1RunAssetDiscoveryResponse setState(java.lang.String state) {

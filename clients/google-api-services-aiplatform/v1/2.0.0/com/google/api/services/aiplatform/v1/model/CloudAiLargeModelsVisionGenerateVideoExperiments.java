@@ -66,6 +66,15 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.Integer numDiffusionSteps;
 
   /**
+   * The original REST API request JSON sent by the user, in the instances/parameters format.
+   * Preserved for saving alongside output artifacts so users can reproduce their requests. This
+   * field is populated by the API handler and is not user-settable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originalRequestJson;
+
+  /**
    * Prompt chunks for "ProModel" prompting. If set, the prompt will not be rewritten, and top-level
    * prompt ignored.
    * The value may be {@code null}.
@@ -191,6 +200,27 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setNumDiffusionSteps(java.lang.Integer numDiffusionSteps) {
     this.numDiffusionSteps = numDiffusionSteps;
+    return this;
+  }
+
+  /**
+   * The original REST API request JSON sent by the user, in the instances/parameters format.
+   * Preserved for saving alongside output artifacts so users can reproduce their requests. This
+   * field is populated by the API handler and is not user-settable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginalRequestJson() {
+    return originalRequestJson;
+  }
+
+  /**
+   * The original REST API request JSON sent by the user, in the instances/parameters format.
+   * Preserved for saving alongside output artifacts so users can reproduce their requests. This
+   * field is populated by the API handler and is not user-settable.
+   * @param originalRequestJson originalRequestJson or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setOriginalRequestJson(java.lang.String originalRequestJson) {
+    this.originalRequestJson = originalRequestJson;
     return this;
   }
 

@@ -32,21 +32,21 @@ public final class GenaiVertexV1beta1ArgumentsDelta extends com.google.api.clien
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("partial_arguments")
-  private java.lang.String partialArguments;
+  @com.google.api.client.util.Key
+  private java.lang.String arguments;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getPartialArguments() {
-    return partialArguments;
+  public java.lang.String getArguments() {
+    return arguments;
   }
 
   /**
-   * @param partialArguments partialArguments or {@code null} for none
+   * @param arguments arguments or {@code null} for none
    */
-  public GenaiVertexV1beta1ArgumentsDelta setPartialArguments(java.lang.String partialArguments) {
-    this.partialArguments = partialArguments;
+  public GenaiVertexV1beta1ArgumentsDelta setArguments(java.lang.String arguments) {
+    this.arguments = arguments;
     return this;
   }
 

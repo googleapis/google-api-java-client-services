@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Represents the spec of persistent disk options.
+ * Represents the spec of persistent disk and hyperdisk options.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -39,7 +39,10 @@ public final class GoogleCloudAiplatformV1PersistentDiskSpec extends com.google.
   /**
    * Type of the disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) "pd-standard" (Persistent Disk Hard Disk Drive) "pd-balanced" (Balanced Persistent
-   * Disk) "pd-extreme" (Extreme Persistent Disk)
+   * Disk) "pd-extreme" (Extreme Persistent Disk) "hyperdisk-balanced" (Hyperdisk Balanced)
+   * "hyperdisk-extreme" (Hyperdisk Extreme) "hyperdisk-balanced-high-availability" (Hyperdisk
+   * Balanced High Availability) "hyperdisk-ml" (Hyperdisk ML) "hyperdisk-throughput" (Hyperdisk
+   * Throughput)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +68,10 @@ public final class GoogleCloudAiplatformV1PersistentDiskSpec extends com.google.
   /**
    * Type of the disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) "pd-standard" (Persistent Disk Hard Disk Drive) "pd-balanced" (Balanced Persistent
-   * Disk) "pd-extreme" (Extreme Persistent Disk)
+   * Disk) "pd-extreme" (Extreme Persistent Disk) "hyperdisk-balanced" (Hyperdisk Balanced)
+   * "hyperdisk-extreme" (Hyperdisk Extreme) "hyperdisk-balanced-high-availability" (Hyperdisk
+   * Balanced High Availability) "hyperdisk-ml" (Hyperdisk ML) "hyperdisk-throughput" (Hyperdisk
+   * Throughput)
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -75,7 +81,10 @@ public final class GoogleCloudAiplatformV1PersistentDiskSpec extends com.google.
   /**
    * Type of the disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) "pd-standard" (Persistent Disk Hard Disk Drive) "pd-balanced" (Balanced Persistent
-   * Disk) "pd-extreme" (Extreme Persistent Disk)
+   * Disk) "pd-extreme" (Extreme Persistent Disk) "hyperdisk-balanced" (Hyperdisk Balanced)
+   * "hyperdisk-extreme" (Hyperdisk Extreme) "hyperdisk-balanced-high-availability" (Hyperdisk
+   * Balanced High Availability) "hyperdisk-ml" (Hyperdisk ML) "hyperdisk-throughput" (Hyperdisk
+   * Throughput)
    * @param diskType diskType or {@code null} for none
    */
   public GoogleCloudAiplatformV1PersistentDiskSpec setDiskType(java.lang.String diskType) {

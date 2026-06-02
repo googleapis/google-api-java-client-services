@@ -51,7 +51,25 @@ public final class GenaiVertexV1beta1StepDeltaData extends com.google.api.client
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GenaiVertexV1beta1FunctionResultDelta functionResult;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1ImageDelta image;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1ServerToolCallDelta serverToolCall;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1ServerToolResultDelta serverToolResult;
 
   /**
    * The value may be {@code null}.
@@ -131,6 +149,21 @@ public final class GenaiVertexV1beta1StepDeltaData extends com.google.api.client
   /**
    * @return value or {@code null} for none
    */
+  public GenaiVertexV1beta1FunctionResultDelta getFunctionResult() {
+    return functionResult;
+  }
+
+  /**
+   * @param functionResult functionResult or {@code null} for none
+   */
+  public GenaiVertexV1beta1StepDeltaData setFunctionResult(GenaiVertexV1beta1FunctionResultDelta functionResult) {
+    this.functionResult = functionResult;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public GenaiVertexV1beta1ImageDelta getImage() {
     return image;
   }
@@ -140,6 +173,36 @@ public final class GenaiVertexV1beta1StepDeltaData extends com.google.api.client
    */
   public GenaiVertexV1beta1StepDeltaData setImage(GenaiVertexV1beta1ImageDelta image) {
     this.image = image;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1ServerToolCallDelta getServerToolCall() {
+    return serverToolCall;
+  }
+
+  /**
+   * @param serverToolCall serverToolCall or {@code null} for none
+   */
+  public GenaiVertexV1beta1StepDeltaData setServerToolCall(GenaiVertexV1beta1ServerToolCallDelta serverToolCall) {
+    this.serverToolCall = serverToolCall;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1ServerToolResultDelta getServerToolResult() {
+    return serverToolResult;
+  }
+
+  /**
+   * @param serverToolResult serverToolResult or {@code null} for none
+   */
+  public GenaiVertexV1beta1StepDeltaData setServerToolResult(GenaiVertexV1beta1ServerToolResultDelta serverToolResult) {
+    this.serverToolResult = serverToolResult;
     return this;
   }
 

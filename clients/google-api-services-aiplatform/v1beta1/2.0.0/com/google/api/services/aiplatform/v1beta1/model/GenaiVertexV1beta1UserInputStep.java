@@ -30,29 +30,50 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1UserInputStep extends com.google.api.client.json.GenericJson {
 
   /**
+   * The content of the step. An array of Content objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1Content> content;
-
-  static {
-    // hack to force ProGuard to consider GenaiVertexV1beta1Content used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GenaiVertexV1beta1Content.class);
-  }
+  private GenaiVertexV1beta1ContentList contentList;
 
   /**
+   * The content of the step. A single string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contentString;
+
+  /**
+   * The content of the step. An array of Content objects.
    * @return value or {@code null} for none
    */
-  public java.util.List<GenaiVertexV1beta1Content> getContent() {
-    return content;
+  public GenaiVertexV1beta1ContentList getContentList() {
+    return contentList;
   }
 
   /**
-   * @param content content or {@code null} for none
+   * The content of the step. An array of Content objects.
+   * @param contentList contentList or {@code null} for none
    */
-  public GenaiVertexV1beta1UserInputStep setContent(java.util.List<GenaiVertexV1beta1Content> content) {
-    this.content = content;
+  public GenaiVertexV1beta1UserInputStep setContentList(GenaiVertexV1beta1ContentList contentList) {
+    this.contentList = contentList;
+    return this;
+  }
+
+  /**
+   * The content of the step. A single string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContentString() {
+    return contentString;
+  }
+
+  /**
+   * The content of the step. A single string.
+   * @param contentString contentString or {@code null} for none
+   */
+  public GenaiVertexV1beta1UserInputStep setContentString(java.lang.String contentString) {
+    this.contentString = contentString;
     return this;
   }
 

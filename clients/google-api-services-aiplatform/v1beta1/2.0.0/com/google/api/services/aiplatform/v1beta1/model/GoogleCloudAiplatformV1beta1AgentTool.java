@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A tool provides a list of actions that are available for the Agent during the process of
- * executing the task.
+ * A tool provides a list of actions available to the Agent during the process of executing a task.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -31,38 +30,38 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Headers for the MCP server (e.g., authentication). Only applicable when `type` is
-   * "mcp".
+   * Optional. The headers for the MCP server, such as for authentication. Only applicable when
+   * `type` is `mcp_server`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> headers;
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is "mcp".
+   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Type of the tool. Supported types: - "code_execution" - "filesystem" -
-   * "google_search" - "mcp" - "url_context"
+   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
+   * `google_search` * `mcp_server` * `url_context`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. The full URL for the MCP server endpoint. Only applicable when `type` is "mcp".
+   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * Optional. Headers for the MCP server (e.g., authentication). Only applicable when `type` is
-   * "mcp".
+   * Optional. The headers for the MCP server, such as for authentication. Only applicable when
+   * `type` is `mcp_server`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getHeaders() {
@@ -70,8 +69,8 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. Headers for the MCP server (e.g., authentication). Only applicable when `type` is
-   * "mcp".
+   * Optional. The headers for the MCP server, such as for authentication. Only applicable when
+   * `type` is `mcp_server`.
    * @param headers headers or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentTool setHeaders(java.util.Map<String, java.lang.String> headers) {
@@ -80,7 +79,7 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is "mcp".
+   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -88,7 +87,7 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is "mcp".
+   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentTool setName(java.lang.String name) {
@@ -97,8 +96,8 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Required. Type of the tool. Supported types: - "code_execution" - "filesystem" -
-   * "google_search" - "mcp" - "url_context"
+   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
+   * `google_search` * `mcp_server` * `url_context`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -106,8 +105,8 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Required. Type of the tool. Supported types: - "code_execution" - "filesystem" -
-   * "google_search" - "mcp" - "url_context"
+   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
+   * `google_search` * `mcp_server` * `url_context`
    * @param type type or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentTool setType(java.lang.String type) {
@@ -116,7 +115,7 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. The full URL for the MCP server endpoint. Only applicable when `type` is "mcp".
+   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -124,7 +123,7 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. The full URL for the MCP server endpoint. Only applicable when `type` is "mcp".
+   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
    * @param url url or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentTool setUrl(java.lang.String url) {

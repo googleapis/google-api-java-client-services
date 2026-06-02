@@ -45,8 +45,7 @@ public final class GoogleCloudAiplatformV1beta1SkillRevision extends com.google.
   private java.lang.String name;
 
   /**
-   * Output only. The state of the Skill at this revision. TODO(b/503772996) Use a different proto
-   * for skill data included in skill revision
+   * Output only. The state of the Skill at this revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +95,7 @@ public final class GoogleCloudAiplatformV1beta1SkillRevision extends com.google.
   }
 
   /**
-   * Output only. The state of the Skill at this revision. TODO(b/503772996) Use a different proto
-   * for skill data included in skill revision
+   * Output only. The state of the Skill at this revision.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Skill getSkill() {
@@ -105,8 +103,7 @@ public final class GoogleCloudAiplatformV1beta1SkillRevision extends com.google.
   }
 
   /**
-   * Output only. The state of the Skill at this revision. TODO(b/503772996) Use a different proto
-   * for skill data included in skill revision
+   * Output only. The state of the Skill at this revision.
    * @param skill skill or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SkillRevision setSkill(GoogleCloudAiplatformV1beta1Skill skill) {

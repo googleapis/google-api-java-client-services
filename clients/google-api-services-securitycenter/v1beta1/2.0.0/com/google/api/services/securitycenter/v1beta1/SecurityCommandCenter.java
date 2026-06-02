@@ -154,16 +154,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Organizations {
 
     /**
-     * Gets the settings for an organization.
-     *
      * Create a request for the method "organizations.getOrganizationSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetOrganizationSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        "organizations/[organization_id]/organizationSettings".
+     * @param name
      * @return the request
      */
     public GetOrganizationSettings getOrganizationSettings(java.lang.String name) throws java.io.IOException {
@@ -180,8 +177,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/organizationSettings$");
 
       /**
-       * Gets the settings for an organization.
-       *
        * Create a request for the method "organizations.getOrganizationSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -190,8 +185,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        "organizations/[organization_id]/organizationSettings".
+       * @param name
        * @since 1.13
        */
       protected GetOrganizationSettings(java.lang.String name) {
@@ -269,24 +263,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetOrganizationSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. Name of the organization to get organization settings for. Its format is
-       * "organizations/[organization_id]/organizationSettings".
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the organization to get organization settings for. Its format is
-     "organizations/[organization_id]/organizationSettings".
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. Name of the organization to get organization settings for. Its format is
-       * "organizations/[organization_id]/organizationSettings".
-       */
       public GetOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -303,17 +289,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Updates an organization's settings.
-     *
      * Create a request for the method "organizations.updateOrganizationSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateOrganizationSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     *        "organizations/{organization_id}/organizationSettings".
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
      * @return the request
      */
@@ -331,8 +313,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/organizationSettings$");
 
       /**
-       * Updates an organization's settings.
-       *
        * Create a request for the method "organizations.updateOrganizationSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -341,9 +321,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     *        "organizations/{organization_id}/organizationSettings".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
        * @since 1.13
        */
@@ -412,27 +390,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateOrganizationSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The relative resource name of the settings. See:
-       * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/{organization_id}/organizationSettings".
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The relative resource name of the settings. See:
-     https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     "organizations/{organization_id}/organizationSettings".
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The relative resource name of the settings. See:
-       * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/{organization_id}/organizationSettings".
-       */
       public UpdateOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -443,17 +410,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The FieldMask to use when updating the settings resource. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The FieldMask to use when updating the settings resource.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The FieldMask to use when updating the settings resource. */
       public UpdateOrganizationSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -486,14 +452,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Assets {
 
       /**
-       * Filters an organization's assets and groups them by their specified properties.
-       *
        * Create a request for the method "assets.group".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -511,8 +475,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Filters an organization's assets and groups them by their specified properties.
-         *
          * Create a request for the method "assets.group".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -521,7 +483,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -590,23 +552,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Group) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of the organization to groupBy. Its format is
-         * "organizations/[organization_id]".
-         */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -623,15 +578,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists an organization's assets.
-       *
        * Create a request for the method "assets.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization assets should belong to. Its format is
-       *        "organizations/[organization_id]".
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -648,8 +600,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists an organization's assets.
-         *
          * Create a request for the method "assets.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -657,8 +607,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization assets should belong to. Its format is
-       *        "organizations/[organization_id]".
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -736,24 +685,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the organization assets should belong to. Its format is
-         * "organizations/[organization_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization assets should belong to. Its format is
-       "organizations/[organization_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of the organization assets should belong to. Its format is
-         * "organizations/[organization_id]".
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -764,240 +705,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetResult's "state" attribute is updated to
-         * indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state value is derived based on the
-         * presence of the asset at the two points in time. Intermediate state changes between the
-         * two times don't affect the result. For example, the results aren't affected if the asset
-         * is removed and re-created again. Possible "state" values when compare_duration is
-         * specified: * "ADDED": indicates that the asset was not present before compare_duration,
-         * but present at read_time. * "REMOVED": indicates that the asset was present at the start
-         * of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
-         * was present at both the start and the end of the time period defined by compare_duration
-         * and read_time. If compare_duration is not specified, then the only possible state is
-         * "UNUSED", which indicates that the asset is present at read_time.
-         */
         @com.google.api.client.util.Key
         private String compareDuration;
 
-        /** When compare_duration is set, the ListAssetResult's "state" attribute is updated to indicate
-       whether the asset was added, removed, or remained present during the compare_duration period of
-       time that precedes the read_time. This is the time between (read_time - compare_duration) and
-       read_time. The state value is derived based on the presence of the asset at the two points in time.
-       Intermediate state changes between the two times don't affect the result. For example, the results
-       aren't affected if the asset is removed and re-created again. Possible "state" values when
-       compare_duration is specified: * "ADDED": indicates that the asset was not present before
-       compare_duration, but present at read_time. * "REMOVED": indicates that the asset was present at
-       the start of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
-       was present at both the start and the end of the time period defined by compare_duration and
-       read_time. If compare_duration is not specified, then the only possible state is "UNUSED", which
-       indicates that the asset is present at read_time.
+        /**
+
          */
         public String getCompareDuration() {
           return compareDuration;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetResult's "state" attribute is updated to
-         * indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state value is derived based on the
-         * presence of the asset at the two points in time. Intermediate state changes between the
-         * two times don't affect the result. For example, the results aren't affected if the asset
-         * is removed and re-created again. Possible "state" values when compare_duration is
-         * specified: * "ADDED": indicates that the asset was not present before compare_duration,
-         * but present at read_time. * "REMOVED": indicates that the asset was present at the start
-         * of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
-         * was present at both the start and the end of the time period defined by compare_duration
-         * and read_time. If compare_duration is not specified, then the only possible state is
-         * "UNUSED", which indicates that the asset is present at read_time.
-         */
         public List setCompareDuration(String compareDuration) {
           this.compareDuration = compareDuration;
           return this;
         }
 
-        /**
-         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
-         * response. An empty field mask will list all fields.
-         */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** Optional. A field mask to specify the ListAssetsResult fields to be listed in the response. An
-       empty field mask will list all fields.
+        /**
+
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
-        /**
-         * Optional. A field mask to specify the ListAssetsResult fields to be listed in the
-         * response. An empty field mask will list all fields.
-         */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
           return this;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * not supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` `
-         * and may have a `-` character in front of them to indicate negation. The fields map to
-         * those defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. For example,
-         * `resource_properties.size = 100` is a valid filter string.
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
-       restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported, and `OR`
-       has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in
-       front of them to indicate negation. The fields map to those defined in the Asset resource. Examples
-       include: * name * security_center_properties.resource_name * resource_properties.a_property *
-       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-       `true` and `false` without quotes. For example, `resource_properties.size = 100` is a valid filter
-       string.
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * not supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` `
-         * and may have a `-` character in front of them to indicate negation. The fields map to
-         * those defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. For example,
-         * `resource_properties.size = 100` is a valid filter string.
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent.
-         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Expression that defines what fields and order to use for sorting. The string value should follow
-       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-       should be appended to the field name. For example: "name desc,resource_properties.a_property".
-       Redundant space characters in the syntax are insignificant. "name
-       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
-       equivalent.
+        /**
+
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent.
-         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
-       prior `ListAssets` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         @com.google.api.client.util.Key
         private String readTime;
 
-        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
-       the supplied time and their values are those at that specific time. Absence of this field will
-       default to the API's version of NOW.
+        /**
+
          */
         public String getReadTime() {
           return readTime;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         public List setReadTime(String readTime) {
           this.readTime = readTime;
           return this;
@@ -1009,18 +816,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
-       * be called with limited frequency for an organization. If it is called too frequently the caller
-       * will receive a TOO_MANY_REQUESTS error.
-       *
        * Create a request for the method "assets.runDiscovery".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link RunDiscovery#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        "organizations/[organization_id]".
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.RunAssetDiscoveryRequest}
        * @return the request
        */
@@ -1038,10 +840,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
-         * be called with limited frequency for an organization. If it is called too frequently the caller
-         * will receive a TOO_MANY_REQUESTS error.
-         *
          * Create a request for the method "assets.runDiscovery".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1050,8 +848,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * RunDiscovery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        "organizations/[organization_id]".
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.RunAssetDiscoveryRequest}
          * @since 1.13
          */
@@ -1120,24 +917,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (RunDiscovery) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the organization to run asset discovery for. Its format is
-         * "organizations/[organization_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to run asset discovery for. Its format is
-       "organizations/[organization_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of the organization to run asset discovery for. Its format is
-         * "organizations/[organization_id]".
-         */
         public RunDiscovery setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1154,18 +943,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates security marks.
-       *
        * Create a request for the method "assets.updateSecurityMarks".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
        * @return the request
        */
@@ -1183,8 +967,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/assets/[^/]+/securityMarks$");
 
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "assets.updateSecurityMarks".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1193,10 +975,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
          * @since 1.13
          */
@@ -1265,30 +1044,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of the SecurityMarks. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         public UpdateSecurityMarks setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1299,33 +1064,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The time at which the updated SecurityMarks take effect. */
         @com.google.api.client.util.Key
         private String startTime;
 
-        /** The time at which the updated SecurityMarks take effect.
+        /**
+
          */
         public String getStartTime() {
           return startTime;
         }
 
-        /** The time at which the updated SecurityMarks take effect. */
         public UpdateSecurityMarks setStartTime(String startTime) {
           this.startTime = startTime;
           return this;
         }
 
-        /** The FieldMask to use when updating the security marks resource. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the security marks resource.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The FieldMask to use when updating the security marks resource. */
         public UpdateSecurityMarks setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -1359,20 +1122,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Operations {
 
       /**
-       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-       * methods to check whether the cancellation succeeded or whether the operation completed despite
-       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-       * `Code.CANCELLED`.
-       *
        * Create a request for the method "operations.cancel".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource to be cancelled.
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.CancelOperationRequest}
        * @return the request
        */
@@ -1390,14 +1145,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-         * methods to check whether the cancellation succeeded or whether the operation completed despite
-         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-         * `Code.CANCELLED`.
-         *
          * Create a request for the method "operations.cancel".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1406,7 +1153,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource to be cancelled.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.CancelOperationRequest}
          * @since 1.13
          */
@@ -1475,17 +1222,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Cancel) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource to be cancelled. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource to be cancelled.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource to be cancelled. */
         public Cancel setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1502,16 +1248,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a long-running operation. This method indicates that the client is no longer interested
-       * in the operation result. It does not cancel the operation. If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-       *
        * Create a request for the method "operations.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource to be deleted.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1528,10 +1270,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Deletes a long-running operation. This method indicates that the client is no longer interested
-         * in the operation result. It does not cancel the operation. If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1540,7 +1278,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource to be deleted.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1608,17 +1346,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource to be deleted.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource to be deleted. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1635,15 +1372,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
        * Create a request for the method "operations.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1660,9 +1394,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation. Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
-         *
          * Create a request for the method "operations.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1670,7 +1401,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1748,17 +1479,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1775,15 +1505,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
        * Create a request for the method "operations.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation's parent resource.
+       * @param name
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1800,9 +1527,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations$");
 
         /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1810,7 +1534,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation's parent resource.
+         * @param name
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -1888,17 +1612,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation's parent resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation's parent resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation's parent resource. */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1909,84 +1632,61 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean returnPartialSuccess;
 
-        /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-       when reading across collections. For example, when `parent` is set to
-       `"projects/example/locations/-"`. This field is not supported by default and will result in an
-       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-       documentation.
+        /**
+
          */
         public java.lang.Boolean getReturnPartialSuccess() {
           return returnPartialSuccess;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
           this.returnPartialSuccess = returnPartialSuccess;
           return this;
@@ -2020,15 +1720,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Sources {
 
       /**
-       * Creates a source.
-       *
        * Create a request for the method "sources.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        "organizations/[organization_id]".
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
        * @return the request
        */
@@ -2046,8 +1743,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a source.
-         *
          * Create a request for the method "sources.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2056,8 +1751,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        "organizations/[organization_id]".
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
          * @since 1.13
          */
@@ -2126,24 +1820,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new source's parent. Its format should be
-         * "organizations/[organization_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new source's parent. Its format should be
-       "organizations/[organization_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new source's parent. Its format should be
-         * "organizations/[organization_id]".
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2160,15 +1846,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a source.
-       *
        * Create a request for the method "sources.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Relative resource name of the source. Its format is
-       *        "organizations/[organization_id]/source/[source_id]".
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2185,8 +1868,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Gets a source.
-         *
          * Create a request for the method "sources.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2194,8 +1875,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Relative resource name of the source. Its format is
-       *        "organizations/[organization_id]/source/[source_id]".
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2273,24 +1953,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Relative resource name of the source. Its format is
-         * "organizations/[organization_id]/source/[source_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Relative resource name of the source. Its format is
-       "organizations/[organization_id]/source/[source_id]".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Relative resource name of the source. Its format is
-         * "organizations/[organization_id]/source/[source_id]".
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2307,17 +1979,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets the access control policy on the specified Source.
-       *
        * Create a request for the method "sources.getIamPolicy".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GetIamPolicyRequest}
        * @return the request
        */
@@ -2335,8 +2003,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Gets the access control policy on the specified Source.
-         *
          * Create a request for the method "sources.getIamPolicy".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2345,9 +2011,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GetIamPolicyRequest}
          * @since 1.13
          */
@@ -2416,27 +2080,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -2453,15 +2106,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists all sources belonging to an organization.
-       *
        * Create a request for the method "sources.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]".
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2478,8 +2128,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists all sources belonging to an organization.
-         *
          * Create a request for the method "sources.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2487,8 +2135,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        "organizations/[organization_id]".
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2566,24 +2213,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent of sources to list. Its format should be
-       "organizations/[organization_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * "organizations/[organization_id]".
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2594,49 +2233,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
-       prior `ListSources` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -2648,16 +2269,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a source.
-       *
        * Create a request for the method "sources.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/sources/{source_id}"
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
        * @return the request
        */
@@ -2675,8 +2292,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Updates a source.
-         *
          * Create a request for the method "sources.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2685,9 +2300,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/sources/{source_id}"
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
          * @since 1.13
          */
@@ -2756,27 +2369,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this source. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/sources/{source_id}"
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this source. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/sources/{source_id}"
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this source. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/sources/{source_id}"
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2787,17 +2389,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The FieldMask to use when updating the source resource. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the source resource.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The FieldMask to use when updating the source resource. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -2809,17 +2410,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Sets the access control policy on the specified Source.
-       *
        * Create a request for the method "sources.setIamPolicy".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -2837,8 +2434,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified Source.
-         *
          * Create a request for the method "sources.setIamPolicy".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2847,9 +2442,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -2918,27 +2511,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being specified. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being specified. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -2955,17 +2537,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Returns the permissions that a caller has on the specified source.
-       *
        * Create a request for the method "sources.testIamPermissions".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -2983,8 +2561,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Returns the permissions that a caller has on the specified source.
-         *
          * Create a request for the method "sources.testIamPermissions".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2993,9 +2569,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -3064,27 +2638,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -3122,15 +2685,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Findings {
 
         /**
-         * Creates a finding. The corresponding source must exist for finding creation to succeed.
-         *
          * Create a request for the method "findings.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        "organizations/[organization_id]/sources/[source_id]".
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
          * @return the request
          */
@@ -3148,8 +2708,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Creates a finding. The corresponding source must exist for finding creation to succeed.
-           *
            * Create a request for the method "findings.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3158,8 +2716,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        "organizations/[organization_id]/sources/[source_id]".
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
            * @since 1.13
            */
@@ -3228,24 +2785,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the new finding's parent. Its format should be
-           * "organizations/[organization_id]/sources/[source_id]".
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the new finding's parent. Its format should be
-         "organizations/[organization_id]/sources/[source_id]".
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of the new finding's parent. Its format should be
-           * "organizations/[organization_id]/sources/[source_id]".
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3256,26 +2805,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
           @com.google.api.client.util.Key
           private java.lang.String findingId;
 
-          /** Required. Unique identifier provided by the client within the parent scope. It must be alphanumeric
-         and less than or equal to 32 characters and greater than 0 characters in length.
+          /**
+
            */
           public java.lang.String getFindingId() {
             return findingId;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
           public Create setFindingId(java.lang.String findingId) {
             this.findingId = findingId;
             return this;
@@ -3287,18 +2826,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Filters an organization or source's findings and groups them by their specified properties. To
-         * group across all sources provide a `-` as the source id. Example:
-         * /v1beta1/organizations/{organization_id}/sources/-/findings
-         *
          * Create a request for the method "findings.group".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -3316,10 +2849,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Filters an organization or source's findings and groups them by their specified properties. To
-           * group across all sources provide a `-` as the source id. Example:
-           * /v1beta1/organizations/{organization_id}/sources/-/findings
-           *
            * Create a request for the method "findings.group".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3328,9 +2857,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -3399,27 +2926,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Group) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source to groupBy. Its format is
-         "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources provide a
-         source_id of `-`. For example: organizations/{organization_id}/sources/-
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-           */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3436,17 +2952,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists an organization or source's findings. To list across all sources provide a `-` as the
-         * source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
-         *
          * Create a request for the method "findings.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
-         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3463,9 +2974,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Lists an organization or source's findings. To list across all sources provide a `-` as the
-           * source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
-           *
            * Create a request for the method "findings.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3473,9 +2981,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
-         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3553,27 +3059,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source the findings belong to. Its format is
-         "organizations/[organization_id]/sources/[source_id]". To list across all sources provide a
-         source_id of `-`. For example: organizations/{organization_id}/sources/-
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * "organizations/[organization_id]/sources/[source_id]". To list across all sources
-           * provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3584,181 +3079,91 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * Optional. A field mask to specify the Finding fields to be listed in the response. An
-           * empty field mask will list all fields.
-           */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** Optional. A field mask to specify the Finding fields to be listed in the response. An empty field
-         mask will list all fields.
+          /**
+
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
-          /**
-           * Optional. A field mask to specify the Finding fields to be listed in the response. An
-           * empty field mask will list all fields.
-           */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;
             return this;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are not supported, and `OR` has higher precedence than `AND`. Restrictions have the
-           * form ` ` and may have a `-` character in front of them to indicate negation. Examples
-           * include: * name * source_properties.a_property * security_marks.marks.marka The
-           * supported operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer
-           * values. * `:`, meaning substring matching, for strings. The supported value types are:
-           * * string literals in quotes. * integer literals without quotes. * boolean literals
-           * `true` and `false` without quotes. For example, `source_properties.size = 100` is a
-           * valid filter string.
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Expression that defines the filter to apply across findings. The expression is a list of one or
-         more restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported, and
-         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
-         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
-         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-         `true` and `false` without quotes. For example, `source_properties.size = 100` is a valid filter
-         string.
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are not supported, and `OR` has higher precedence than `AND`. Restrictions have the
-           * form ` ` and may have a `-` character in front of them to indicate negation. Examples
-           * include: * name * source_properties.a_property * security_marks.marks.marka The
-           * supported operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer
-           * values. * `:`, meaning substring matching, for strings. The supported value types are:
-           * * string literals in quotes. * integer literals without quotes. * boolean literals
-           * `true` and `false` without quotes. For example, `source_properties.size = 100` is a
-           * valid filter string.
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent.
-           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Expression that defines what fields and order to use for sorting. The string value should follow
-         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be appended to the field name. For example: "name desc,source_properties.a_property".
-         Redundant space characters in the syntax are insignificant. "name
-         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
+          /**
+
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent.
-           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
-         prior `ListFindings` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
-         at the supplied time and their values are those at that specific time. Absence of this field will
-         default to the API's version of NOW.
+          /**
+
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -3770,17 +3175,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates or updates a finding. The corresponding source must exist for a finding creation to
-         * succeed.
-         *
          * Create a request for the method "findings.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
          * @return the request
          */
@@ -3798,9 +3198,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Creates or updates a finding. The corresponding source must exist for a finding creation to
-           * succeed.
-           *
            * Create a request for the method "findings.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3809,9 +3206,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
            * @since 1.13
            */
@@ -3880,27 +3275,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of this finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The relative resource name of this finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3911,24 +3295,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the finding resource. This field should not be specified when
-         creating a finding.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -3940,16 +3316,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the state of a finding.
-         *
          * Create a request for the method "findings.setState".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -3967,8 +3339,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the state of a finding.
-           *
            * Create a request for the method "findings.setState".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3977,9 +3347,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -4048,27 +3416,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of the finding. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The relative resource name of the finding. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-           * "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4085,18 +3442,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "findings.updateSecurityMarks".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
          * @return the request
          */
@@ -4114,8 +3466,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
 
           /**
-           * Updates security marks.
-           *
            * Create a request for the method "findings.updateSecurityMarks".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4124,10 +3474,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
            * @since 1.13
            */
@@ -4196,30 +3543,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the SecurityMarks. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           public UpdateSecurityMarks setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4230,33 +3563,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The time at which the updated SecurityMarks take effect. */
           @com.google.api.client.util.Key
           private String startTime;
 
-          /** The time at which the updated SecurityMarks take effect.
+          /**
+
            */
           public String getStartTime() {
             return startTime;
           }
 
-          /** The time at which the updated SecurityMarks take effect. */
           public UpdateSecurityMarks setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
           }
 
-          /** The FieldMask to use when updating the security marks resource. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the security marks resource.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The FieldMask to use when updating the security marks resource. */
           public UpdateSecurityMarks setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

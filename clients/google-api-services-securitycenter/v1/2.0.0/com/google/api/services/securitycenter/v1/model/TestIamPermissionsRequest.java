@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for `TestIamPermissions` method.
+ * Model definition for TestIamPermissionsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,18 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class TestIamPermissionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
-   * `storage.*`) are not allowed. For more information see [IAM
-   * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> permissions;
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
-   * `storage.*`) are not allowed. For more information see [IAM
-   * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermissions() {
@@ -50,9 +44,6 @@ public final class TestIamPermissionsRequest extends com.google.api.client.json.
   }
 
   /**
-   * The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
-   * `storage.*`) are not allowed. For more information see [IAM
-   * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @param permissions permissions or {@code null} for none
    */
   public TestIamPermissionsRequest setPermissions(java.util.List<java.lang.String> permissions) {

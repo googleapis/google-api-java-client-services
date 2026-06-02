@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Security Command Center representation of a Google Cloud resource. The Asset is a Security
- * Command Center resource that captures information about a single Google Cloud resource. All
- * modifications to an Asset are only within the context of Security Command Center and don't affect
- * the referenced Google Cloud resource.
+ * Model definition for Asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,54 +31,42 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Asset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time at which the asset was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The relative resource name of this asset. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/assets/{asset_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Resource managed properties. These properties are managed and defined by the Google Cloud
-   * resource and cannot be modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> resourceProperties;
 
   /**
-   * Security Command Center managed properties. These properties are managed by Security Command
-   * Center and cannot be modified by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityCenterProperties securityCenterProperties;
 
   /**
-   * User specified security marks. These marks are entirely managed by the user and come from the
-   * SecurityMarks resource that belongs to the asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks;
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The time at which the asset was created in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -89,7 +74,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the asset was created in Security Command Center.
    * @param createTime createTime or {@code null} for none
    */
   public Asset setCreateTime(String createTime) {
@@ -98,9 +82,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this asset. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/assets/{asset_id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -108,9 +89,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this asset. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/assets/{asset_id}".
    * @param name name or {@code null} for none
    */
   public Asset setName(java.lang.String name) {
@@ -119,8 +97,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource managed properties. These properties are managed and defined by the Google Cloud
-   * resource and cannot be modified by the user.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResourceProperties() {
@@ -128,8 +104,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource managed properties. These properties are managed and defined by the Google Cloud
-   * resource and cannot be modified by the user.
    * @param resourceProperties resourceProperties or {@code null} for none
    */
   public Asset setResourceProperties(java.util.Map<String, java.lang.Object> resourceProperties) {
@@ -138,8 +112,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security Command Center managed properties. These properties are managed by Security Command
-   * Center and cannot be modified by the user.
    * @return value or {@code null} for none
    */
   public SecurityCenterProperties getSecurityCenterProperties() {
@@ -147,8 +119,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Security Command Center managed properties. These properties are managed by Security Command
-   * Center and cannot be modified by the user.
    * @param securityCenterProperties securityCenterProperties or {@code null} for none
    */
   public Asset setSecurityCenterProperties(SecurityCenterProperties securityCenterProperties) {
@@ -157,8 +127,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified security marks. These marks are entirely managed by the user and come from the
-   * SecurityMarks resource that belongs to the asset.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1beta1SecurityMarks getSecurityMarks() {
@@ -166,8 +134,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User specified security marks. These marks are entirely managed by the user and come from the
-   * SecurityMarks resource that belongs to the asset.
    * @param securityMarks securityMarks or {@code null} for none
    */
   public Asset setSecurityMarks(GoogleCloudSecuritycenterV1beta1SecurityMarks securityMarks) {
@@ -176,7 +142,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -184,7 +149,6 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
    * @param updateTime updateTime or {@code null} for none
    */
   public Asset setUpdateTime(String updateTime) {

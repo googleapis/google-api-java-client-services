@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for listing the valued resources for a given simulation.
+ * Model definition for ListValuedResourcesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListValuedResourcesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The estimated total number of results matching the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
 
   /**
-   * The valued resources that the attack path simulation identified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ValuedResource> valuedResources;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -60,7 +56,6 @@ public final class ListValuedResourcesResponse extends com.google.api.client.jso
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListValuedResourcesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -69,7 +64,6 @@ public final class ListValuedResourcesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The estimated total number of results matching the query.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -77,7 +71,6 @@ public final class ListValuedResourcesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The estimated total number of results matching the query.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListValuedResourcesResponse setTotalSize(java.lang.Integer totalSize) {
@@ -86,7 +79,6 @@ public final class ListValuedResourcesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The valued resources that the attack path simulation identified.
    * @return value or {@code null} for none
    */
   public java.util.List<ValuedResource> getValuedResources() {
@@ -94,7 +86,6 @@ public final class ListValuedResourcesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The valued resources that the attack path simulation identified.
    * @param valuedResources valuedResources or {@code null} for none
    */
   public ListValuedResourcesResponse setValuedResources(java.util.List<ValuedResource> valuedResources) {

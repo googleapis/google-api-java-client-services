@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request to validate an Event Threat Detection custom module.
+ * Model definition for ValidateEventThreatDetectionCustomModuleRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ValidateEventThreatDetectionCustomModuleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The raw text of the module's contents. Used to generate error messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rawText;
 
   /**
-   * Required. The type of the module (e.g. CONFIGURABLE_BAD_IP).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. The raw text of the module's contents. Used to generate error messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getRawText() {
@@ -53,7 +50,6 @@ public final class ValidateEventThreatDetectionCustomModuleRequest extends com.g
   }
 
   /**
-   * Required. The raw text of the module's contents. Used to generate error messages.
    * @param rawText rawText or {@code null} for none
    */
   public ValidateEventThreatDetectionCustomModuleRequest setRawText(java.lang.String rawText) {
@@ -62,7 +58,6 @@ public final class ValidateEventThreatDetectionCustomModuleRequest extends com.g
   }
 
   /**
-   * Required. The type of the module (e.g. CONFIGURABLE_BAD_IP).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -70,7 +65,6 @@ public final class ValidateEventThreatDetectionCustomModuleRequest extends com.g
   }
 
   /**
-   * Required. The type of the module (e.g. CONFIGURABLE_BAD_IP).
    * @param type type or {@code null} for none
    */
   public ValidateEventThreatDetectionCustomModuleRequest setType(java.lang.String type) {

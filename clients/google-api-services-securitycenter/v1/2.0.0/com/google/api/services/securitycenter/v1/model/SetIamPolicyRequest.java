@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for `SetIamPolicy` method.
+ * Model definition for SetIamPolicyRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,27 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SetIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Policy policy;
 
   /**
-   * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
-   * "bindings, etag"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
    * @return value or {@code null} for none
    */
   public Policy getPolicy() {
@@ -59,9 +50,6 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is
-   * limited to a few 10s of KB. An empty policy is a valid policy but certain Google Cloud services
-   * (such as Projects) might reject them.
    * @param policy policy or {@code null} for none
    */
   public SetIamPolicyRequest setPolicy(Policy policy) {
@@ -70,9 +58,6 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
-   * "bindings, etag"`
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -80,9 +65,6 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
-   * "bindings, etag"`
    * @param updateMask updateMask or {@code null} for none
    */
   public SetIamPolicyRequest setUpdateMask(String updateMask) {

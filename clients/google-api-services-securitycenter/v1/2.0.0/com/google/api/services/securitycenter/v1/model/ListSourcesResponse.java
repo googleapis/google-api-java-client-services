@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for listing sources.
+ * Model definition for ListSourcesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListSourcesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Sources belonging to the requested parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Source> sources;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -53,7 +50,6 @@ public final class ListSourcesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSourcesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -62,7 +58,6 @@ public final class ListSourcesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Sources belonging to the requested parent.
    * @return value or {@code null} for none
    */
   public java.util.List<Source> getSources() {
@@ -70,7 +65,6 @@ public final class ListSourcesResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Sources belonging to the requested parent.
    * @param sources sources or {@code null} for none
    */
   public ListSourcesResponse setSources(java.util.List<Source> sources) {

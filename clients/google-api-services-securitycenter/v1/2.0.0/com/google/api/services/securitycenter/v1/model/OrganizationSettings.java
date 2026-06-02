@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * User specified settings that are attached to the Security Command Center organization.
+ * Model definition for OrganizationSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,32 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class OrganizationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration used for Asset Discovery runs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AssetDiscoveryConfig assetDiscoveryConfig;
 
   /**
-   * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
-   * discovery of future assets will not occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAssetDiscovery;
 
   /**
-   * The relative resource name of the settings. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/organizationSettings".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The configuration used for Asset Discovery runs.
    * @return value or {@code null} for none
    */
   public AssetDiscoveryConfig getAssetDiscoveryConfig() {
@@ -64,7 +56,6 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * The configuration used for Asset Discovery runs.
    * @param assetDiscoveryConfig assetDiscoveryConfig or {@code null} for none
    */
   public OrganizationSettings setAssetDiscoveryConfig(AssetDiscoveryConfig assetDiscoveryConfig) {
@@ -73,9 +64,6 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
-   * discovery of future assets will not occur.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAssetDiscovery() {
@@ -83,9 +71,6 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * A flag that indicates if Asset Discovery should be enabled. If the flag is set to `true`, then
-   * discovery of assets will occur. If it is set to `false`, all historical assets will remain, but
-   * discovery of future assets will not occur.
    * @param enableAssetDiscovery enableAssetDiscovery or {@code null} for none
    */
   public OrganizationSettings setEnableAssetDiscovery(java.lang.Boolean enableAssetDiscovery) {
@@ -94,9 +79,6 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * The relative resource name of the settings. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/organizationSettings".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,9 +86,6 @@ public final class OrganizationSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * The relative resource name of the settings. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/organizationSettings".
    * @param name name or {@code null} for none
    */
   public OrganizationSettings setName(java.lang.String name) {

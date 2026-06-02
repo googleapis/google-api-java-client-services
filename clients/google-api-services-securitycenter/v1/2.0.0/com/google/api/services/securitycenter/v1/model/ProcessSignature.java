@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Indicates what signature matched this process.
+ * Model definition for ProcessSignature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ProcessSignature extends com.google.api.client.json.GenericJson {
 
   /**
-   * Signature indicating that a binary family was matched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MemoryHashSignature memoryHashSignature;
 
   /**
-   * Describes the type of resource associated with the signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signatureType;
 
   /**
-   * Signature indicating that a YARA rule was matched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YaraRuleSignature yaraRuleSignature;
 
   /**
-   * Signature indicating that a binary family was matched.
    * @return value or {@code null} for none
    */
   public MemoryHashSignature getMemoryHashSignature() {
@@ -60,7 +56,6 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Signature indicating that a binary family was matched.
    * @param memoryHashSignature memoryHashSignature or {@code null} for none
    */
   public ProcessSignature setMemoryHashSignature(MemoryHashSignature memoryHashSignature) {
@@ -69,7 +64,6 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Describes the type of resource associated with the signature.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignatureType() {
@@ -77,7 +71,6 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Describes the type of resource associated with the signature.
    * @param signatureType signatureType or {@code null} for none
    */
   public ProcessSignature setSignatureType(java.lang.String signatureType) {
@@ -86,7 +79,6 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Signature indicating that a YARA rule was matched.
    * @return value or {@code null} for none
    */
   public YaraRuleSignature getYaraRuleSignature() {
@@ -94,7 +86,6 @@ public final class ProcessSignature extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Signature indicating that a YARA rule was matched.
    * @param yaraRuleSignature yaraRuleSignature or {@code null} for none
    */
   public ProcessSignature setYaraRuleSignature(YaraRuleSignature yaraRuleSignature) {

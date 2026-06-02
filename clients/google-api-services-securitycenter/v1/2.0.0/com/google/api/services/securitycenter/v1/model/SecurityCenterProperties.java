@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center managed properties. These properties are managed by Security Command
- * Center and cannot be modified by the user.
+ * Model definition for SecurityCenterProperties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,8 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SecurityCenterProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,70 +43,54 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceDisplayName;
 
   /**
-   * The full resource name of the Google Cloud resource this asset represents. This field is
-   * immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Owners of the Google Cloud resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceOwners;
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceParent;
 
   /**
-   * The user defined display name for the parent of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceParentDisplayName;
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceProject;
 
   /**
-   * The user defined display name for the project of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceProjectDisplayName;
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * @return value or {@code null} for none
    */
   public java.util.List<Folder> getFolders() {
@@ -117,8 +98,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * @param folders folders or {@code null} for none
    */
   public SecurityCenterProperties setFolders(java.util.List<Folder> folders) {
@@ -127,7 +106,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceDisplayName() {
@@ -135,7 +113,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for this resource.
    * @param resourceDisplayName resourceDisplayName or {@code null} for none
    */
   public SecurityCenterProperties setResourceDisplayName(java.lang.String resourceDisplayName) {
@@ -144,9 +121,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the Google Cloud resource this asset represents. This field is
-   * immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -154,9 +128,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the Google Cloud resource this asset represents. This field is
-   * immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceName resourceName or {@code null} for none
    */
   public SecurityCenterProperties setResourceName(java.lang.String resourceName) {
@@ -165,7 +136,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Owners of the Google Cloud resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceOwners() {
@@ -173,7 +143,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Owners of the Google Cloud resource.
    * @param resourceOwners resourceOwners or {@code null} for none
    */
   public SecurityCenterProperties setResourceOwners(java.util.List<java.lang.String> resourceOwners) {
@@ -182,8 +151,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceParent() {
@@ -191,8 +158,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceParent resourceParent or {@code null} for none
    */
   public SecurityCenterProperties setResourceParent(java.lang.String resourceParent) {
@@ -201,7 +166,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for the parent of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceParentDisplayName() {
@@ -209,7 +173,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for the parent of this resource.
    * @param resourceParentDisplayName resourceParentDisplayName or {@code null} for none
    */
   public SecurityCenterProperties setResourceParentDisplayName(java.lang.String resourceParentDisplayName) {
@@ -218,8 +181,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceProject() {
@@ -227,8 +188,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceProject resourceProject or {@code null} for none
    */
   public SecurityCenterProperties setResourceProject(java.lang.String resourceProject) {
@@ -237,7 +196,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for the project of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceProjectDisplayName() {
@@ -245,7 +203,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The user defined display name for the project of this resource.
    * @param resourceProjectDisplayName resourceProjectDisplayName or {@code null} for none
    */
   public SecurityCenterProperties setResourceProjectDisplayName(java.lang.String resourceProjectDisplayName) {
@@ -254,9 +211,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -264,9 +218,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * @param resourceType resourceType or {@code null} for none
    */
   public SecurityCenterProperties setResourceType(java.lang.String resourceType) {

@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Manually constructed resource name. If the custom module evaluates against only the resource
- * data, you can omit the `iam_policy_data` field. If it evaluates only the `iam_policy_data` field,
- * you can omit the resource data.
+ * Model definition for SimulatedResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,29 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SimulatedResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A representation of the IAM policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Policy iamPolicyData;
 
   /**
-   * Optional. A representation of the Google Cloud resource. Should match the Google Cloud resource
-   * JSON format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> resourceData;
 
   /**
-   * Required. The type of the resource, for example, `compute.googleapis.com/Disk`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Optional. A representation of the IAM policy.
    * @return value or {@code null} for none
    */
   public Policy getIamPolicyData() {
@@ -63,7 +56,6 @@ public final class SimulatedResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A representation of the IAM policy.
    * @param iamPolicyData iamPolicyData or {@code null} for none
    */
   public SimulatedResource setIamPolicyData(Policy iamPolicyData) {
@@ -72,8 +64,6 @@ public final class SimulatedResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A representation of the Google Cloud resource. Should match the Google Cloud resource
-   * JSON format.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResourceData() {
@@ -81,8 +71,6 @@ public final class SimulatedResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. A representation of the Google Cloud resource. Should match the Google Cloud resource
-   * JSON format.
    * @param resourceData resourceData or {@code null} for none
    */
   public SimulatedResource setResourceData(java.util.Map<String, java.lang.Object> resourceData) {
@@ -91,7 +79,6 @@ public final class SimulatedResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The type of the resource, for example, `compute.googleapis.com/Disk`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -99,7 +86,6 @@ public final class SimulatedResource extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The type of the resource, for example, `compute.googleapis.com/Disk`.
    * @param resourceType resourceType or {@code null} for none
    */
   public SimulatedResource setResourceType(java.lang.String resourceType) {

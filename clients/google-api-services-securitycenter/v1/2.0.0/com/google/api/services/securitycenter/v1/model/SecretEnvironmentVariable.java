@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Environment variable containing the secret.
+ * Model definition for SecretEnvironmentVariable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,16 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SecretEnvironmentVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Environment variable name as a JSON encoded string. Note that value is not included since the
-   * value contains the secret data, which is sensitive core content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Environment variable name as a JSON encoded string. Note that value is not included since the
-   * value contains the secret data, which is sensitive core content.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -48,8 +44,6 @@ public final class SecretEnvironmentVariable extends com.google.api.client.json.
   }
 
   /**
-   * Environment variable name as a JSON encoded string. Note that value is not included since the
-   * value contains the secret data, which is sensitive core content.
    * @param key key or {@code null} for none
    */
   public SecretEnvironmentVariable setKey(java.lang.String key) {

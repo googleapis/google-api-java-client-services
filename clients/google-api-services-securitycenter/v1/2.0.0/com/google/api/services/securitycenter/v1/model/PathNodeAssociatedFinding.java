@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * A finding that is associated with this node in the attack path.
+ * Model definition for PathNodeAssociatedFinding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class PathNodeAssociatedFinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Canonical name of the associated findings. Example:
-   * `organizations/123/sources/456/findings/789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String canonicalFinding;
 
   /**
-   * The additional taxonomy group within findings from a given source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingCategory;
 
   /**
-   * Full resource name of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Canonical name of the associated findings. Example:
-   * `organizations/123/sources/456/findings/789`
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalFinding() {
@@ -62,8 +56,6 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * Canonical name of the associated findings. Example:
-   * `organizations/123/sources/456/findings/789`
    * @param canonicalFinding canonicalFinding or {@code null} for none
    */
   public PathNodeAssociatedFinding setCanonicalFinding(java.lang.String canonicalFinding) {
@@ -72,7 +64,6 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * The additional taxonomy group within findings from a given source.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingCategory() {
@@ -80,7 +71,6 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * The additional taxonomy group within findings from a given source.
    * @param findingCategory findingCategory or {@code null} for none
    */
   public PathNodeAssociatedFinding setFindingCategory(java.lang.String findingCategory) {
@@ -89,7 +79,6 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * Full resource name of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -97,7 +86,6 @@ public final class PathNodeAssociatedFinding extends com.google.api.client.json.
   }
 
   /**
-   * Full resource name of the finding.
    * @param name name or {@code null} for none
    */
   public PathNodeAssociatedFinding setName(java.lang.String name) {

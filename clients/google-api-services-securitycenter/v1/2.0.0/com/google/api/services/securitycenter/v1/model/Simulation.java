@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Attack path simulation
+ * Model definition for Simulation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Simulation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates which cloud provider was used in this simulation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * Output only. Time simulation was created
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Resource value configurations' metadata used in this simulation. Maximum of 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +61,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which cloud provider was used in this simulation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -73,7 +68,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which cloud provider was used in this simulation.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public Simulation setCloudProvider(java.lang.String cloudProvider) {
@@ -82,7 +76,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time simulation was created
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -90,7 +83,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Time simulation was created
    * @param createTime createTime or {@code null} for none
    */
   public Simulation setCreateTime(String createTime) {
@@ -99,7 +91,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,7 +98,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full resource name of the Simulation: `organizations/123/simulations/456`
    * @param name name or {@code null} for none
    */
   public Simulation setName(java.lang.String name) {
@@ -116,7 +106,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource value configurations' metadata used in this simulation. Maximum of 100.
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceValueConfigMetadata> getResourceValueConfigsMetadata() {
@@ -124,7 +113,6 @@ public final class Simulation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource value configurations' metadata used in this simulation. Maximum of 100.
    * @param resourceValueConfigsMetadata resourceValueConfigsMetadata or {@code null} for none
    */
   public Simulation setResourceValueConfigsMetadata(java.util.List<ResourceValueConfigMetadata> resourceValueConfigsMetadata) {

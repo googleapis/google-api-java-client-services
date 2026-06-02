@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * The config for streaming-based notifications, which send each event as soon as it is detected.
+ * Model definition for StreamingConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class StreamingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Expression that defines the filter to apply across create/update events of assets or findings
-   * as specified by the event type. The expression is a list of zero or more restrictions combined
-   * via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has higher precedence
-   * than `AND`. Restrictions have the form ` ` and may have a `-` character in front of them to
-   * indicate negation. The fields map to those defined in the corresponding resource. The supported
-   * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`,
-   * meaning substring matching, for strings. The supported value types are: * string literals in
-   * quotes. * integer literals without quotes. * boolean literals `true` and `false` without
-   * quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Expression that defines the filter to apply across create/update events of assets or findings
-   * as specified by the event type. The expression is a list of zero or more restrictions combined
-   * via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has higher precedence
-   * than `AND`. Restrictions have the form ` ` and may have a `-` character in front of them to
-   * indicate negation. The fields map to those defined in the corresponding resource. The supported
-   * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`,
-   * meaning substring matching, for strings. The supported value types are: * string literals in
-   * quotes. * integer literals without quotes. * boolean literals `true` and `false` without
-   * quotes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -62,15 +44,6 @@ public final class StreamingConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Expression that defines the filter to apply across create/update events of assets or findings
-   * as specified by the event type. The expression is a list of zero or more restrictions combined
-   * via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has higher precedence
-   * than `AND`. Restrictions have the form ` ` and may have a `-` character in front of them to
-   * indicate negation. The fields map to those defined in the corresponding resource. The supported
-   * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`,
-   * meaning substring matching, for strings. The supported value types are: * string literals in
-   * quotes. * integer literals without quotes. * boolean literals `true` and `false` without
-   * quotes.
    * @param filter filter or {@code null} for none
    */
   public StreamingConfig setFilter(java.lang.String filter) {

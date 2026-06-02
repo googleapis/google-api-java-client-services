@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * An organization is a collection of accounts that are centrally managed together using
- * consolidated billing, organized hierarchically with organizational units (OUs), and controlled
- * with policies.
+ * Model definition for AwsOrganization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,16 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class AwsOrganization extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier (ID) for the organization. The regex pattern for an organization ID
-   * string requires "o-" followed by from 10 to 32 lowercase letters or digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The unique identifier (ID) for the organization. The regex pattern for an organization ID
-   * string requires "o-" followed by from 10 to 32 lowercase letters or digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -50,8 +44,6 @@ public final class AwsOrganization extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The unique identifier (ID) for the organization. The regex pattern for an organization ID
-   * string requires "o-" followed by from 10 to 32 lowercase letters or digits.
    * @param id id or {@code null} for none
    */
   public AwsOrganization setId(java.lang.String id) {

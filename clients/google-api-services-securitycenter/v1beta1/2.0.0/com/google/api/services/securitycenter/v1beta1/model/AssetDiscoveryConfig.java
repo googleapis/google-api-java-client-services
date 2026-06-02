@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * The configuration used for Asset Discovery runs.
+ * Model definition for AssetDiscoveryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class AssetDiscoveryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The mode to use for filtering asset discovery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inclusionMode;
 
   /**
-   * The project ids to use for filtering asset discovery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> projectIds;
 
   /**
-   * The mode to use for filtering asset discovery.
    * @return value or {@code null} for none
    */
   public java.lang.String getInclusionMode() {
@@ -53,7 +50,6 @@ public final class AssetDiscoveryConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The mode to use for filtering asset discovery.
    * @param inclusionMode inclusionMode or {@code null} for none
    */
   public AssetDiscoveryConfig setInclusionMode(java.lang.String inclusionMode) {
@@ -62,7 +58,6 @@ public final class AssetDiscoveryConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The project ids to use for filtering asset discovery.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjectIds() {
@@ -70,7 +65,6 @@ public final class AssetDiscoveryConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * The project ids to use for filtering asset discovery.
    * @param projectIds projectIds or {@code null} for none
    */
   public AssetDiscoveryConfig setProjectIds(java.util.List<java.lang.String> projectIds) {

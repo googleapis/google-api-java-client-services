@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Possible test result.
+ * Model definition for SimulatedResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SimulatedResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Error encountered during the test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status error;
 
   /**
-   * Finding that would be published for the test case, if a violation is detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Finding finding;
 
   /**
-   * Indicates that the test case does not trigger any violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Empty noViolation;
 
   /**
-   * Error encountered during the test.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -60,7 +56,6 @@ public final class SimulatedResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Error encountered during the test.
    * @param error error or {@code null} for none
    */
   public SimulatedResult setError(Status error) {
@@ -69,7 +64,6 @@ public final class SimulatedResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Finding that would be published for the test case, if a violation is detected.
    * @return value or {@code null} for none
    */
   public Finding getFinding() {
@@ -77,7 +71,6 @@ public final class SimulatedResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Finding that would be published for the test case, if a violation is detected.
    * @param finding finding or {@code null} for none
    */
   public SimulatedResult setFinding(Finding finding) {
@@ -86,7 +79,6 @@ public final class SimulatedResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Indicates that the test case does not trigger any violation.
    * @return value or {@code null} for none
    */
   public Empty getNoViolation() {
@@ -94,7 +86,6 @@ public final class SimulatedResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Indicates that the test case does not trigger any violation.
    * @param noViolation noViolation or {@code null} for none
    */
   public SimulatedResult setNoViolation(Empty noViolation) {

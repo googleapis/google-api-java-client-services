@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * AWS metadata associated with the resource, only applicable if the finding's cloud provider is
- * Amazon Web Services.
+ * Model definition for AwsMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,29 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class AwsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The AWS account associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsAccount account;
 
   /**
-   * The AWS organization associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsOrganization organization;
 
   /**
-   * A list of AWS organizational units associated with the resource, ordered from lowest level
-   * (closest to the account) to highest level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AwsOrganizationalUnit> organizationalUnits;
 
   /**
-   * The AWS account associated with the resource.
    * @return value or {@code null} for none
    */
   public AwsAccount getAccount() {
@@ -62,7 +56,6 @@ public final class AwsMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AWS account associated with the resource.
    * @param account account or {@code null} for none
    */
   public AwsMetadata setAccount(AwsAccount account) {
@@ -71,7 +64,6 @@ public final class AwsMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AWS organization associated with the resource.
    * @return value or {@code null} for none
    */
   public AwsOrganization getOrganization() {
@@ -79,7 +71,6 @@ public final class AwsMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AWS organization associated with the resource.
    * @param organization organization or {@code null} for none
    */
   public AwsMetadata setOrganization(AwsOrganization organization) {
@@ -88,8 +79,6 @@ public final class AwsMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of AWS organizational units associated with the resource, ordered from lowest level
-   * (closest to the account) to highest level.
    * @return value or {@code null} for none
    */
   public java.util.List<AwsOrganizationalUnit> getOrganizationalUnits() {
@@ -97,8 +86,6 @@ public final class AwsMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of AWS organizational units associated with the resource, ordered from lowest level
-   * (closest to the account) to highest level.
    * @param organizationalUnits organizationalUnits or {@code null} for none
    */
   public AwsMetadata setOrganizationalUnits(java.util.List<AwsOrganizationalUnit> organizationalUnits) {

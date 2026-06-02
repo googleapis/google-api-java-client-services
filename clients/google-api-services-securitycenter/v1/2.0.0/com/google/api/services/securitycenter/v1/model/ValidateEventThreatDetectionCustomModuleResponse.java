@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response to validating an Event Threat Detection custom module.
+ * Model definition for ValidateEventThreatDetectionCustomModuleResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ValidateEventThreatDetectionCustomModuleResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of errors returned by the validator. If the list is empty, there were no errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomModuleValidationErrors errors;
 
   /**
-   * A list of errors returned by the validator. If the list is empty, there were no errors.
    * @return value or {@code null} for none
    */
   public CustomModuleValidationErrors getErrors() {
@@ -46,7 +44,6 @@ public final class ValidateEventThreatDetectionCustomModuleResponse extends com.
   }
 
   /**
-   * A list of errors returned by the validator. If the list is empty, there were no errors.
    * @param errors errors or {@code null} for none
    */
   public ValidateEventThreatDetectionCustomModuleResponse setErrors(CustomModuleValidationErrors errors) {

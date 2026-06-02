@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * A resource that is determined to have value to a user's system
+ * Model definition for ValuedResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,54 +31,42 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ValuedResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human-readable name of the valued resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Exposed score for this valued resource. A value of 0 means no exposure was detected exposure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double exposedScore;
 
   /**
-   * Valued resource name, for example, e.g.:
-   * `organizations/123/simulations/456/valuedResources/789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the valued
-   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The [resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-types) of the
-   * valued resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * How valuable this resource is.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceValue;
 
   /**
-   * List of resource value configurations' metadata used to determine the value of this resource.
-   * Maximum of 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +79,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Human-readable name of the valued resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -99,7 +86,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Human-readable name of the valued resource.
    * @param displayName displayName or {@code null} for none
    */
   public ValuedResource setDisplayName(java.lang.String displayName) {
@@ -108,7 +94,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Exposed score for this valued resource. A value of 0 means no exposure was detected exposure.
    * @return value or {@code null} for none
    */
   public java.lang.Double getExposedScore() {
@@ -116,7 +101,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Exposed score for this valued resource. A value of 0 means no exposure was detected exposure.
    * @param exposedScore exposedScore or {@code null} for none
    */
   public ValuedResource setExposedScore(java.lang.Double exposedScore) {
@@ -125,8 +109,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Valued resource name, for example, e.g.:
-   * `organizations/123/simulations/456/valuedResources/789`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -134,8 +116,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Valued resource name, for example, e.g.:
-   * `organizations/123/simulations/456/valuedResources/789`
    * @param name name or {@code null} for none
    */
   public ValuedResource setName(java.lang.String name) {
@@ -144,9 +124,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the valued
-   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -154,9 +131,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the valued
-   * resource.
    * @param resource resource or {@code null} for none
    */
   public ValuedResource setResource(java.lang.String resource) {
@@ -165,8 +139,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-types) of the
-   * valued resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -174,8 +146,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-types) of the
-   * valued resource.
    * @param resourceType resourceType or {@code null} for none
    */
   public ValuedResource setResourceType(java.lang.String resourceType) {
@@ -184,7 +154,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How valuable this resource is.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceValue() {
@@ -192,7 +161,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * How valuable this resource is.
    * @param resourceValue resourceValue or {@code null} for none
    */
   public ValuedResource setResourceValue(java.lang.String resourceValue) {
@@ -201,8 +169,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of resource value configurations' metadata used to determine the value of this resource.
-   * Maximum of 100.
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceValueConfigMetadata> getResourceValueConfigsUsed() {
@@ -210,8 +176,6 @@ public final class ValuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of resource value configurations' metadata used to determine the value of this resource.
-   * Maximum of 100.
    * @param resourceValueConfigsUsed resourceValueConfigsUsed or {@code null} for none
    */
   public ValuedResource setResourceValueConfigsUsed(java.util.List<ResourceValueConfigMetadata> resourceValueConfigsUsed) {

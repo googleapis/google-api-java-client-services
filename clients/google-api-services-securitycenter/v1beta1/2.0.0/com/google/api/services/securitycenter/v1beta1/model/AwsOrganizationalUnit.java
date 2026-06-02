@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * An Organizational Unit (OU) is a container of AWS accounts within a root of an organization.
- * Policies that are attached to an OU apply to all accounts contained in that OU and in any child
- * OUs.
+ * Model definition for AwsOrganizationalUnit.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,27 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class AwsOrganizationalUnit extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier (ID) associated with this OU. The regex pattern for an organizational
-   * unit ID string requires "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of
-   * the root that contains the OU). This string is followed by a second "-" dash and from 8 to 32
-   * additional lowercase letters or digits. For example, "ou-ab12-cd34ef56".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The friendly name of the OU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The unique identifier (ID) associated with this OU. The regex pattern for an organizational
-   * unit ID string requires "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of
-   * the root that contains the OU). This string is followed by a second "-" dash and from 8 to 32
-   * additional lowercase letters or digits. For example, "ou-ab12-cd34ef56".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -61,10 +50,6 @@ public final class AwsOrganizationalUnit extends com.google.api.client.json.Gene
   }
 
   /**
-   * The unique identifier (ID) associated with this OU. The regex pattern for an organizational
-   * unit ID string requires "ou-" followed by from 4 to 32 lowercase letters or digits (the ID of
-   * the root that contains the OU). This string is followed by a second "-" dash and from 8 to 32
-   * additional lowercase letters or digits. For example, "ou-ab12-cd34ef56".
    * @param id id or {@code null} for none
    */
   public AwsOrganizationalUnit setId(java.lang.String id) {
@@ -73,7 +58,6 @@ public final class AwsOrganizationalUnit extends com.google.api.client.json.Gene
   }
 
   /**
-   * The friendly name of the OU.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -81,7 +65,6 @@ public final class AwsOrganizationalUnit extends com.google.api.client.json.Gene
   }
 
   /**
-   * The friendly name of the OU.
    * @param name name or {@code null} for none
    */
   public AwsOrganizationalUnit setName(java.lang.String name) {

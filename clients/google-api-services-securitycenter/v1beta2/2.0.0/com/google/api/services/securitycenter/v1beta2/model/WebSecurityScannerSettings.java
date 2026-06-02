@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Resource capturing the settings for the Web Security Scanner service.
+ * Model definition for WebSecurityScannerSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,9 +31,6 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class WebSecurityScannerSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's
-   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,33 +43,24 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-   * organizations/{organization}/webSecurityScannerSettings *
-   * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The state of enablement for the service at its level of the resource hierarchy. A DISABLED
-   * state will override all module enablement_states to DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceEnablementState;
 
   /**
-   * Output only. The time the settings were last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's
-   * configuration.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Config> getModules() {
@@ -80,9 +68,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The configurations including the state of enablement for the service's different modules. The
-   * absence of a module in the map implies its configuration is inherited from its parent's
-   * configuration.
    * @param modules modules or {@code null} for none
    */
   public WebSecurityScannerSettings setModules(java.util.Map<String, Config> modules) {
@@ -91,9 +76,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-   * organizations/{organization}/webSecurityScannerSettings *
-   * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -101,9 +83,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-   * organizations/{organization}/webSecurityScannerSettings *
-   * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
    * @param name name or {@code null} for none
    */
   public WebSecurityScannerSettings setName(java.lang.String name) {
@@ -112,8 +91,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The state of enablement for the service at its level of the resource hierarchy. A DISABLED
-   * state will override all module enablement_states to DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceEnablementState() {
@@ -121,8 +98,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * The state of enablement for the service at its level of the resource hierarchy. A DISABLED
-   * state will override all module enablement_states to DISABLED.
    * @param serviceEnablementState serviceEnablementState or {@code null} for none
    */
   public WebSecurityScannerSettings setServiceEnablementState(java.lang.String serviceEnablementState) {
@@ -131,7 +106,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time the settings were last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -139,7 +113,6 @@ public final class WebSecurityScannerSettings extends com.google.api.client.json
   }
 
   /**
-   * Output only. The time the settings were last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public WebSecurityScannerSettings setUpdateTime(String updateTime) {

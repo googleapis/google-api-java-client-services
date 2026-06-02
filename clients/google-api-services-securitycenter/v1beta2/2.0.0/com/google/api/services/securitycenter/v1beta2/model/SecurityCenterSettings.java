@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Resource capturing the settings for Security Center.
+ * Model definition for SecurityCenterSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,50 +31,36 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class SecurityCenterSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The KMS key name used for CMEK encryption. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyName;
 
   /**
-   * The resource name of the project to send logs to. This project must be part of the organization
-   * this resource resides in. The format is `projects/{project_id}`. An empty value disables
-   * logging. This value is only referenced by services that support log sink. Please refer to the
-   * documentation for an updated list of compatible services. This may only be specified for
-   * organization level onboarding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logSinkProject;
 
   /**
-   * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings Format:
-   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Timestamp of when the customer organization was onboarded to SCC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String onboardingTime;
 
   /**
-   * Output only. The organization level service account to be used for security center components.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orgServiceAccount;
 
   /**
-   * The KMS key name used for CMEK encryption. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -82,8 +68,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The KMS key name used for CMEK encryption. Format:
-   * projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key_name}
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public SecurityCenterSettings setCryptoKeyName(java.lang.String cryptoKeyName) {
@@ -92,11 +76,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the project to send logs to. This project must be part of the organization
-   * this resource resides in. The format is `projects/{project_id}`. An empty value disables
-   * logging. This value is only referenced by services that support log sink. Please refer to the
-   * documentation for an updated list of compatible services. This may only be specified for
-   * organization level onboarding.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogSinkProject() {
@@ -104,11 +83,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the project to send logs to. This project must be part of the organization
-   * this resource resides in. The format is `projects/{project_id}`. An empty value disables
-   * logging. This value is only referenced by services that support log sink. Please refer to the
-   * documentation for an updated list of compatible services. This may only be specified for
-   * organization level onboarding.
    * @param logSinkProject logSinkProject or {@code null} for none
    */
   public SecurityCenterSettings setLogSinkProject(java.lang.String logSinkProject) {
@@ -117,9 +91,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings Format:
-   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,9 +98,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The resource name of the SecurityCenterSettings. Format:
-   * organizations/{organization}/securityCenterSettings Format:
-   * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
    * @param name name or {@code null} for none
    */
   public SecurityCenterSettings setName(java.lang.String name) {
@@ -138,7 +106,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Timestamp of when the customer organization was onboarded to SCC.
    * @return value or {@code null} for none
    */
   public String getOnboardingTime() {
@@ -146,7 +113,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Timestamp of when the customer organization was onboarded to SCC.
    * @param onboardingTime onboardingTime or {@code null} for none
    */
   public SecurityCenterSettings setOnboardingTime(String onboardingTime) {
@@ -155,7 +121,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The organization level service account to be used for security center components.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgServiceAccount() {
@@ -163,7 +128,6 @@ public final class SecurityCenterSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The organization level service account to be used for security center components.
    * @param orgServiceAccount orgServiceAccount or {@code null} for none
    */
   public SecurityCenterSettings setOrgServiceAccount(java.lang.String orgServiceAccount) {

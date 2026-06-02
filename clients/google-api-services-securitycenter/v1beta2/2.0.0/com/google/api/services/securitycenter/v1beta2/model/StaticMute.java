@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Information about the static mute state. A static mute state overrides any dynamic mute rules
- * that apply to this finding. The static mute state can be set by a static mute rule or by muting
- * the finding directly.
+ * Model definition for StaticMute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class StaticMute extends com.google.api.client.json.GenericJson {
 
   /**
-   * When the static mute was applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String applyTime;
 
   /**
-   * The static mute state. If the value is `MUTED` or `UNMUTED`, then the finding's overall mute
-   * state will have the same value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * When the static mute was applied.
    * @return value or {@code null} for none
    */
   public String getApplyTime() {
@@ -56,7 +50,6 @@ public final class StaticMute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When the static mute was applied.
    * @param applyTime applyTime or {@code null} for none
    */
   public StaticMute setApplyTime(String applyTime) {
@@ -65,8 +58,6 @@ public final class StaticMute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The static mute state. If the value is `MUTED` or `UNMUTED`, then the finding's overall mute
-   * state will have the same value.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -74,8 +65,6 @@ public final class StaticMute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The static mute state. If the value is `MUTED` or `UNMUTED`, then the finding's overall mute
-   * state will have the same value.
    * @param state state or {@code null} for none
    */
   public StaticMute setState(java.lang.String state) {

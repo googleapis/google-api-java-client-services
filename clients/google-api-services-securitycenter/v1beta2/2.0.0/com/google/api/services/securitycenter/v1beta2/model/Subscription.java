@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Resource capturing the state of an organization's subscription.
+ * Model definition for Subscription.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * The details of the most recent active subscription. If there has never been a subscription this
-   * will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Details details;
 
   /**
-   * The resource name of the subscription. Format: organizations/{organization}/subscription
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The tier of SCC features this organization currently has access to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
 
   /**
-   * The details of the most recent active subscription. If there has never been a subscription this
-   * will be empty.
    * @return value or {@code null} for none
    */
   public Details getDetails() {
@@ -62,8 +56,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The details of the most recent active subscription. If there has never been a subscription this
-   * will be empty.
    * @param details details or {@code null} for none
    */
   public Subscription setDetails(Details details) {
@@ -72,7 +64,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the subscription. Format: organizations/{organization}/subscription
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +71,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the subscription. Format: organizations/{organization}/subscription
    * @param name name or {@code null} for none
    */
   public Subscription setName(java.lang.String name) {
@@ -89,7 +79,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of SCC features this organization currently has access to.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -97,7 +86,6 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of SCC features this organization currently has access to.
    * @param tier tier or {@code null} for none
    */
   public Subscription setTier(java.lang.String tier) {

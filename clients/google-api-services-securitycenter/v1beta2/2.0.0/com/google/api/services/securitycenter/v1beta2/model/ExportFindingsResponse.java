@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The response to a ExportFindings request. Contains the LRO information.
+ * Model definition for ExportFindingsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Fields related to Google Cloud Armor findings.
+ * Model definition for CloudArmor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,54 +31,42 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class CloudArmor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information about potential Layer 7 DDoS attacks identified by [Google Cloud Armor Adaptive
-   * Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdaptiveProtection adaptiveProtection;
 
   /**
-   * Information about DDoS attack volume and classification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Attack attack;
 
   /**
-   * Duration of attack from the start until the current moment (updated every 5 minutes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String duration;
 
   /**
-   * Information about incoming requests evaluated by [Google Cloud Armor security
-   * policies](https://cloud.google.com/armor/docs/security-policy-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Requests requests;
 
   /**
-   * Information about the [Google Cloud Armor security
-   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityPolicy securityPolicy;
 
   /**
-   * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String threatVector;
 
   /**
-   * Information about potential Layer 7 DDoS attacks identified by [Google Cloud Armor Adaptive
-   * Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview).
    * @return value or {@code null} for none
    */
   public AdaptiveProtection getAdaptiveProtection() {
@@ -86,8 +74,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about potential Layer 7 DDoS attacks identified by [Google Cloud Armor Adaptive
-   * Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview).
    * @param adaptiveProtection adaptiveProtection or {@code null} for none
    */
   public CloudArmor setAdaptiveProtection(AdaptiveProtection adaptiveProtection) {
@@ -96,7 +82,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about DDoS attack volume and classification.
    * @return value or {@code null} for none
    */
   public Attack getAttack() {
@@ -104,7 +89,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about DDoS attack volume and classification.
    * @param attack attack or {@code null} for none
    */
   public CloudArmor setAttack(Attack attack) {
@@ -113,7 +97,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of attack from the start until the current moment (updated every 5 minutes).
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -121,7 +104,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Duration of attack from the start until the current moment (updated every 5 minutes).
    * @param duration duration or {@code null} for none
    */
   public CloudArmor setDuration(String duration) {
@@ -130,8 +112,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about incoming requests evaluated by [Google Cloud Armor security
-   * policies](https://cloud.google.com/armor/docs/security-policy-overview).
    * @return value or {@code null} for none
    */
   public Requests getRequests() {
@@ -139,8 +119,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about incoming requests evaluated by [Google Cloud Armor security
-   * policies](https://cloud.google.com/armor/docs/security-policy-overview).
    * @param requests requests or {@code null} for none
    */
   public CloudArmor setRequests(Requests requests) {
@@ -149,8 +127,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the [Google Cloud Armor security
-   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * @return value or {@code null} for none
    */
   public SecurityPolicy getSecurityPolicy() {
@@ -158,8 +134,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Information about the [Google Cloud Armor security
-   * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
    * @param securityPolicy securityPolicy or {@code null} for none
    */
   public CloudArmor setSecurityPolicy(SecurityPolicy securityPolicy) {
@@ -168,8 +142,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreatVector() {
@@ -177,8 +149,6 @@ public final class CloudArmor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguish between volumetric & protocol DDoS attack and application layer attacks. For
-   * example, "L3_4" for Layer 3 and Layer 4 DDoS attacks, or "L_7" for Layer 7 DDoS attacks.
    * @param threatVector threatVector or {@code null} for none
    */
   public CloudArmor setThreatVector(java.lang.String threatVector) {

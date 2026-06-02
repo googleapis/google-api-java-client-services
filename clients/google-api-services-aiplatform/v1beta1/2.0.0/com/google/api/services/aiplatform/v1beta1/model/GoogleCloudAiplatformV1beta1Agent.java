@@ -30,22 +30,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The base agent of the agent. Supported values: - "antigravity-preview-05-2026"
+   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("base_agent")
   private java.lang.String baseAgent;
 
   /**
-   * Optional. The environment config of the agent. Valid types are: - string value for
-   * environment_id, or 'remote' for default - struct value for EnvironmentConfig.
+   * Optional. The base environment configuration for the agent. Valid types: * A string value for
+   * the environment ID, or `remote` for the default. * A struct value for the `environment_config`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("base_environment")
   private java.lang.Object baseEnvironment;
 
   /**
-   * Output only. Timestamp when the agent was created.
+   * Output only. The time the agent was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,24 +59,23 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.lang.String description;
 
   /**
-   * Immutable. The ID to use for agent, which will become the final component of the agent resource
-   * name. If not provided, Vertex AI will generate a value for this ID. This value may be up to 63
-   * characters, and valid characters are `[a-z0-9-]`. The first character must be a letter, the
-   * last character must be a letter or number.
+   * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
+   * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
+   * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. The metadata of the agent.
+   * Optional. The metadata for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Identifier. The resource name of the Agent. Format:
+   * Identifier. The resource name of the agent. Format:
    * `projects/{project}/locations/{location}/agents/{agent}`.
    * The value may be {@code null}.
    */
@@ -84,37 +83,36 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * Output only. The object type of this resource. Always set to "agent" in this case.
+   * Output only. The object type of the resource. For agents, the value is `agent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("object")
   private java.lang.String object__;
 
   /**
-   * Optional. The detailed struction that the agent should follow. The instruction is passed to LLM
-   * as system instruction.
+   * Optional. The instructions for the agent to follow. These instructions are passed to the LLM as
+   * a system instruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("system_instruction")
   private java.lang.String systemInstruction;
 
   /**
-   * Optional. A list of tools that are available for the agent during the process of execucting the
-   * task.
+   * Optional. The tools available to the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1AgentTool> tools;
 
   /**
-   * Output only. Timestamp when the agent was last updated.
+   * Output only. The time the agent was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updated;
 
   /**
-   * Required. The base agent of the agent. Supported values: - "antigravity-preview-05-2026"
+   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseAgent() {
@@ -122,7 +120,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The base agent of the agent. Supported values: - "antigravity-preview-05-2026"
+   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
    * @param baseAgent baseAgent or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setBaseAgent(java.lang.String baseAgent) {
@@ -131,8 +129,8 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The environment config of the agent. Valid types are: - string value for
-   * environment_id, or 'remote' for default - struct value for EnvironmentConfig.
+   * Optional. The base environment configuration for the agent. Valid types: * A string value for
+   * the environment ID, or `remote` for the default. * A struct value for the `environment_config`.
    * @return value or {@code null} for none
    */
   public java.lang.Object getBaseEnvironment() {
@@ -140,8 +138,8 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The environment config of the agent. Valid types are: - string value for
-   * environment_id, or 'remote' for default - struct value for EnvironmentConfig.
+   * Optional. The base environment configuration for the agent. Valid types: * A string value for
+   * the environment ID, or `remote` for the default. * A struct value for the `environment_config`.
    * @param baseEnvironment baseEnvironment or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setBaseEnvironment(java.lang.Object baseEnvironment) {
@@ -150,7 +148,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. Timestamp when the agent was created.
+   * Output only. The time the agent was created.
    * @return value or {@code null} for none
    */
   public String getCreated() {
@@ -158,7 +156,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. Timestamp when the agent was created.
+   * Output only. The time the agent was created.
    * @param created created or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setCreated(String created) {
@@ -184,10 +182,9 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Immutable. The ID to use for agent, which will become the final component of the agent resource
-   * name. If not provided, Vertex AI will generate a value for this ID. This value may be up to 63
-   * characters, and valid characters are `[a-z0-9-]`. The first character must be a letter, the
-   * last character must be a letter or number.
+   * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
+   * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
+   * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -195,10 +192,9 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Immutable. The ID to use for agent, which will become the final component of the agent resource
-   * name. If not provided, Vertex AI will generate a value for this ID. This value may be up to 63
-   * characters, and valid characters are `[a-z0-9-]`. The first character must be a letter, the
-   * last character must be a letter or number.
+   * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
+   * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
+   * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
    * @param id id or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setId(java.lang.String id) {
@@ -207,7 +203,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The metadata of the agent.
+   * Optional. The metadata for the agent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -215,7 +211,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The metadata of the agent.
+   * Optional. The metadata for the agent.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -224,7 +220,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Identifier. The resource name of the Agent. Format:
+   * Identifier. The resource name of the agent. Format:
    * `projects/{project}/locations/{location}/agents/{agent}`.
    * @return value or {@code null} for none
    */
@@ -233,7 +229,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Identifier. The resource name of the Agent. Format:
+   * Identifier. The resource name of the agent. Format:
    * `projects/{project}/locations/{location}/agents/{agent}`.
    * @param name name or {@code null} for none
    */
@@ -243,7 +239,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. The object type of this resource. Always set to "agent" in this case.
+   * Output only. The object type of the resource. For agents, the value is `agent`.
    * @return value or {@code null} for none
    */
   public java.lang.String getObject() {
@@ -251,7 +247,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. The object type of this resource. Always set to "agent" in this case.
+   * Output only. The object type of the resource. For agents, the value is `agent`.
    * @param object__ object__ or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setObject(java.lang.String object__) {
@@ -260,8 +256,8 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The detailed struction that the agent should follow. The instruction is passed to LLM
-   * as system instruction.
+   * Optional. The instructions for the agent to follow. These instructions are passed to the LLM as
+   * a system instruction.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemInstruction() {
@@ -269,8 +265,8 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The detailed struction that the agent should follow. The instruction is passed to LLM
-   * as system instruction.
+   * Optional. The instructions for the agent to follow. These instructions are passed to the LLM as
+   * a system instruction.
    * @param systemInstruction systemInstruction or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setSystemInstruction(java.lang.String systemInstruction) {
@@ -279,8 +275,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. A list of tools that are available for the agent during the process of execucting the
-   * task.
+   * Optional. The tools available to the agent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1AgentTool> getTools() {
@@ -288,8 +283,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. A list of tools that are available for the agent during the process of execucting the
-   * task.
+   * Optional. The tools available to the agent.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setTools(java.util.List<GoogleCloudAiplatformV1beta1AgentTool> tools) {
@@ -298,7 +292,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. Timestamp when the agent was last updated.
+   * Output only. The time the agent was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdated() {
@@ -306,7 +300,7 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Output only. Timestamp when the agent was last updated.
+   * Output only. The time the agent was last updated.
    * @param updated updated or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Agent setUpdated(String updated) {

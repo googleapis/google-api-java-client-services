@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of agents matching the request.
+   * The agents matching the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.go
   }
 
   /**
-   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
-   * of this field indicates there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value as ListAgentsRequest.page_token
+   * in a subsequent call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of agents matching the request.
+   * The agents matching the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Agent> getAgents() {
@@ -59,7 +59,7 @@ public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.go
   }
 
   /**
-   * A list of agents matching the request.
+   * The agents matching the request.
    * @param agents agents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAgentsResponse setAgents(java.util.List<GoogleCloudAiplatformV1beta1Agent> agents) {
@@ -68,8 +68,8 @@ public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.go
   }
 
   /**
-   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
-   * of this field indicates there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value as ListAgentsRequest.page_token
+   * in a subsequent call.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -77,8 +77,8 @@ public final class GoogleCloudAiplatformV1beta1ListAgentsResponse extends com.go
   }
 
   /**
-   * A token, which can be sent as ListAgentsRequest.page_token to retrieve the next page. Absence
-   * of this field indicates there are no subsequent pages.
+   * A token to retrieve the next page of results. Pass this value as ListAgentsRequest.page_token
+   * in a subsequent call.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAgentsResponse setNextPageToken(java.lang.String nextPageToken) {

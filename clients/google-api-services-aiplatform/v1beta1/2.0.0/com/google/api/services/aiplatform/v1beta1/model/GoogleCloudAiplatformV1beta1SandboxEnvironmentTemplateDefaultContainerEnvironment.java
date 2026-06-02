@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateDefault
   private java.lang.String defaultContainerCategory;
 
   /**
+   * Optional. Resource requests and limits for the default container.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateResourceRequirements resources;
+
+  /**
    * Required. The category of the default container image.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateDefault
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateDefaultContainerEnvironment setDefaultContainerCategory(java.lang.String defaultContainerCategory) {
     this.defaultContainerCategory = defaultContainerCategory;
+    return this;
+  }
+
+  /**
+   * Optional. Resource requests and limits for the default container.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateResourceRequirements getResources() {
+    return resources;
+  }
+
+  /**
+   * Optional. Resource requests and limits for the default container.
+   * @param resources resources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateDefaultContainerEnvironment setResources(GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateResourceRequirements resources) {
+    this.resources = resources;
     return this;
   }
 

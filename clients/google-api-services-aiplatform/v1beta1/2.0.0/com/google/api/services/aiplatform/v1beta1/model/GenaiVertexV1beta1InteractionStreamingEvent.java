@@ -100,6 +100,13 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   private GenaiVertexV1beta1InteractionStatusUpdate interactionStatusUpdate;
 
   /**
+   * Optional metadata accompanying ANY streamed event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1StreamMetadata metadata;
+
+  /**
    * The step delta data, used for step.delta events.
    * The value may be {@code null}.
    */
@@ -287,6 +294,23 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setInteractionStatusUpdate(GenaiVertexV1beta1InteractionStatusUpdate interactionStatusUpdate) {
     this.interactionStatusUpdate = interactionStatusUpdate;
+    return this;
+  }
+
+  /**
+   * Optional metadata accompanying ANY streamed event.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1StreamMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional metadata accompanying ANY streamed event.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionStreamingEvent setMetadata(GenaiVertexV1beta1StreamMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

@@ -59,6 +59,21 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String created;
 
   /**
+   * The environment ID for the interaction. Can be 'remote' for default environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("env_id")
+  private java.lang.String envId;
+
+  /**
+   * Output only. The environment ID for the interaction. Only populated if environment config is
+   * set in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("environment_id")
+  private java.lang.String environmentId;
+
+  /**
    * Required. Output only. A unique identifier for the interaction completion.
    * The value may be {@code null}.
    */
@@ -91,6 +106,12 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key("previous_interaction_id")
   private java.lang.String previousInteractionId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1EnvironmentConfig remoteEnvironment;
 
   /**
    * The value may be {@code null}.
@@ -148,7 +169,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1StepList stepList;
 
   /**
-   * Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,6 +289,42 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
+   * The environment ID for the interaction. Can be 'remote' for default environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvId() {
+    return envId;
+  }
+
+  /**
+   * The environment ID for the interaction. Can be 'remote' for default environment.
+   * @param envId envId or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setEnvId(java.lang.String envId) {
+    this.envId = envId;
+    return this;
+  }
+
+  /**
+   * Output only. The environment ID for the interaction. Only populated if environment config is
+   * set in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironmentId() {
+    return environmentId;
+  }
+
+  /**
+   * Output only. The environment ID for the interaction. Only populated if environment config is
+   * set in the request.
+   * @param environmentId environmentId or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setEnvironmentId(java.lang.String environmentId) {
+    this.environmentId = environmentId;
+    return this;
+  }
+
+  /**
    * Required. Output only. A unique identifier for the interaction completion.
    * @return value or {@code null} for none
    */
@@ -332,6 +389,21 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setPreviousInteractionId(java.lang.String previousInteractionId) {
     this.previousInteractionId = previousInteractionId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1EnvironmentConfig getRemoteEnvironment() {
+    return remoteEnvironment;
+  }
+
+  /**
+   * @param remoteEnvironment remoteEnvironment or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setRemoteEnvironment(GenaiVertexV1beta1EnvironmentConfig remoteEnvironment) {
+    this.remoteEnvironment = remoteEnvironment;
     return this;
   }
 
@@ -470,7 +542,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction.
    * @return value or {@code null} for none
    */
   public java.util.List<GenaiVertexV1beta1Step> getSteps() {
@@ -478,7 +550,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction.
    * @param steps steps or {@code null} for none
    */
   public GenaiVertexV1beta1Interaction setSteps(java.util.List<GenaiVertexV1beta1Step> steps) {

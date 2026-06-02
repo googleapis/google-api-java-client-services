@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Kubernetes Role or ClusterRole.
+ * Model definition for GoogleCloudSecuritycenterV2Role.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client.json.GenericJson {
 
   /**
-   * Role type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Role name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Role namespace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * Role type.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -60,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client
   }
 
   /**
-   * Role type.
    * @param kind kind or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Role setKind(java.lang.String kind) {
@@ -69,7 +64,6 @@ public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client
   }
 
   /**
-   * Role name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +71,6 @@ public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client
   }
 
   /**
-   * Role name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Role setName(java.lang.String name) {
@@ -86,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client
   }
 
   /**
-   * Role namespace.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -94,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2Role extends com.google.api.client
   }
 
   /**
-   * Role namespace.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Role setNs(java.lang.String ns) {

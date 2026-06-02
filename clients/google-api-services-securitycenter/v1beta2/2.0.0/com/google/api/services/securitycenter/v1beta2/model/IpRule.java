@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * IP rule information.
+ * Model definition for IpRule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,27 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class IpRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An optional list of ports to which this rule applies. This field is only applicable
-   * for the UDP or (S)TCP protocols. Each entry must be either an integer or a range including a
-   * min and max port number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PortRange> portRanges;
 
   /**
-   * The IP protocol this rule applies to. This value can either be one of the following well known
-   * protocol strings (TCP, UDP, ICMP, ESP, AH, IPIP, SCTP) or a string representation of the
-   * integer value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * Optional. An optional list of ports to which this rule applies. This field is only applicable
-   * for the UDP or (S)TCP protocols. Each entry must be either an integer or a range including a
-   * min and max port number.
    * @return value or {@code null} for none
    */
   public java.util.List<PortRange> getPortRanges() {
@@ -59,9 +50,6 @@ public final class IpRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An optional list of ports to which this rule applies. This field is only applicable
-   * for the UDP or (S)TCP protocols. Each entry must be either an integer or a range including a
-   * min and max port number.
    * @param portRanges portRanges or {@code null} for none
    */
   public IpRule setPortRanges(java.util.List<PortRange> portRanges) {
@@ -70,9 +58,6 @@ public final class IpRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP protocol this rule applies to. This value can either be one of the following well known
-   * protocol strings (TCP, UDP, ICMP, ESP, AH, IPIP, SCTP) or a string representation of the
-   * integer value.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -80,9 +65,6 @@ public final class IpRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP protocol this rule applies to. This value can either be one of the following well known
-   * protocol strings (TCP, UDP, ICMP, ESP, AH, IPIP, SCTP) or a string representation of the
-   * integer value.
    * @param protocol protocol or {@code null} for none
    */
   public IpRule setProtocol(java.lang.String protocol) {

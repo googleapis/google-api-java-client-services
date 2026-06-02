@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A Kubernetes Pod.
+ * Model definition for GoogleCloudSecuritycenterV2Pod.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Pod containers associated with this finding, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +43,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Pod labels. For Kubernetes containers, these are applied to the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,21 +55,18 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Kubernetes Pod name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Kubernetes Pod namespace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * Pod containers associated with this finding, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Container> getContainers() {
@@ -79,7 +74,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Pod containers associated with this finding, if any.
    * @param containers containers or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Pod setContainers(java.util.List<GoogleCloudSecuritycenterV2Container> containers) {
@@ -88,7 +82,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Pod labels. For Kubernetes containers, these are applied to the container.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Label> getLabels() {
@@ -96,7 +89,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Pod labels. For Kubernetes containers, these are applied to the container.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Pod setLabels(java.util.List<GoogleCloudSecuritycenterV2Label> labels) {
@@ -105,7 +97,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Kubernetes Pod name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -113,7 +104,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Kubernetes Pod name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Pod setName(java.lang.String name) {
@@ -122,7 +112,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Kubernetes Pod namespace.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -130,7 +119,6 @@ public final class GoogleCloudSecuritycenterV2Pod extends com.google.api.client.
   }
 
   /**
-   * Kubernetes Pod namespace.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Pod setNs(java.lang.String ns) {

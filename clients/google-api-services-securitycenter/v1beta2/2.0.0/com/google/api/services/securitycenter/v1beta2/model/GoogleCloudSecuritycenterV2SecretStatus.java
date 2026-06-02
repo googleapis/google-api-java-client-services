@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The status of the secret.
+ * Model definition for GoogleCloudSecuritycenterV2SecretStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2SecretStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Time that the secret was found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastUpdatedTime;
 
   /**
-   * The validity of the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String validity;
 
   /**
-   * Time that the secret was found.
    * @return value or {@code null} for none
    */
   public String getLastUpdatedTime() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2SecretStatus extends com.google.ap
   }
 
   /**
-   * Time that the secret was found.
    * @param lastUpdatedTime lastUpdatedTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecretStatus setLastUpdatedTime(String lastUpdatedTime) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2SecretStatus extends com.google.ap
   }
 
   /**
-   * The validity of the secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidity() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2SecretStatus extends com.google.ap
   }
 
   /**
-   * The validity of the secret.
    * @param validity validity or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecretStatus setValidity(java.lang.String validity) {

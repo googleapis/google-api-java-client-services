@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Google Cloud metadata of a resource associated with an issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The project ID that the resource associated with the issue belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The project ID that the resource associated with the issue belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata e
   }
 
   /**
-   * The project ID that the resource associated with the issue belongs to.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata setProjectId(java.lang.String projectId) {

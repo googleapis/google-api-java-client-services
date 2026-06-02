@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details about a secret or credential associated with the finding.
+ * Model definition for Secret.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
-   * The environment variable containing the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretEnvironmentVariable environmentVariable;
 
   /**
-   * The file containing the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretFilePath filePath;
 
   /**
-   * The status of the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecretStatus status;
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The environment variable containing the secret.
    * @return value or {@code null} for none
    */
   public SecretEnvironmentVariable getEnvironmentVariable() {
@@ -67,7 +62,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The environment variable containing the secret.
    * @param environmentVariable environmentVariable or {@code null} for none
    */
   public Secret setEnvironmentVariable(SecretEnvironmentVariable environmentVariable) {
@@ -76,7 +70,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file containing the secret.
    * @return value or {@code null} for none
    */
   public SecretFilePath getFilePath() {
@@ -84,7 +77,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The file containing the secret.
    * @param filePath filePath or {@code null} for none
    */
   public Secret setFilePath(SecretFilePath filePath) {
@@ -93,7 +85,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the secret.
    * @return value or {@code null} for none
    */
   public SecretStatus getStatus() {
@@ -101,7 +92,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of the secret.
    * @param status status or {@code null} for none
    */
   public Secret setStatus(SecretStatus status) {
@@ -110,7 +100,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -118,7 +107,6 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of secret, for example, GCP_API_KEY.
    * @param type type or {@code null} for none
    */
   public Secret setType(java.lang.String type) {

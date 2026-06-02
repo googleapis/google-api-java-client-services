@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A node within the resource path. Each node represents a resource within the resource hierarchy.
+ * Model definition for ResourcePathNode.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class ResourcePathNode extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the resource this node represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The ID of the resource this node represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The type of resource this node represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nodeType;
 
   /**
-   * The display name of the resource this node represents.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -60,7 +56,6 @@ public final class ResourcePathNode extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The display name of the resource this node represents.
    * @param displayName displayName or {@code null} for none
    */
   public ResourcePathNode setDisplayName(java.lang.String displayName) {
@@ -69,7 +64,6 @@ public final class ResourcePathNode extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ID of the resource this node represents.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -77,7 +71,6 @@ public final class ResourcePathNode extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The ID of the resource this node represents.
    * @param id id or {@code null} for none
    */
   public ResourcePathNode setId(java.lang.String id) {
@@ -86,7 +79,6 @@ public final class ResourcePathNode extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of resource this node represents.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeType() {
@@ -94,7 +86,6 @@ public final class ResourcePathNode extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of resource this node represents.
    * @param nodeType nodeType or {@code null} for none
    */
   public ResourcePathNode setNodeType(java.lang.String nodeType) {

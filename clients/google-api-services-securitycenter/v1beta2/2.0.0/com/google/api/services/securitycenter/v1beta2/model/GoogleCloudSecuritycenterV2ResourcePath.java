@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents the path of resources leading up to the resource this finding is about.
+ * Model definition for GoogleCloudSecuritycenterV2ResourcePath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2ResourcePath extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of nodes that make the up resource path, ordered from lowest level to highest level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2ResourcePathNode> nodes;
 
   /**
-   * The list of nodes that make the up resource path, ordered from lowest level to highest level.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2ResourcePathNode> getNodes() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2ResourcePath extends com.google.ap
   }
 
   /**
-   * The list of nodes that make the up resource path, ordered from lowest level to highest level.
    * @param nodes nodes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourcePath setNodes(java.util.List<GoogleCloudSecuritycenterV2ResourcePathNode> nodes) {

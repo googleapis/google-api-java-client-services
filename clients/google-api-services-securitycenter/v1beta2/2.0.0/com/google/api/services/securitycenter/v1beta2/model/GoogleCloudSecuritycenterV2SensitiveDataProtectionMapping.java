@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Resource value mapping for Sensitive Data Protection findings If any of these mappings have a
- * resource value that is not unspecified, the resource_value field will be ignored when reading
- * this configuration.
+ * Model definition for GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource value mapping for high-sensitivity Sensitive Data Protection findings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String highSensitivityMapping;
 
   /**
-   * Resource value mapping for medium-sensitivity Sensitive Data Protection findings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediumSensitivityMapping;
 
   /**
-   * Resource value mapping for high-sensitivity Sensitive Data Protection findings
    * @return value or {@code null} for none
    */
   public java.lang.String getHighSensitivityMapping() {
@@ -55,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping ext
   }
 
   /**
-   * Resource value mapping for high-sensitivity Sensitive Data Protection findings
    * @param highSensitivityMapping highSensitivityMapping or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping setHighSensitivityMapping(java.lang.String highSensitivityMapping) {
@@ -64,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping ext
   }
 
   /**
-   * Resource value mapping for medium-sensitivity Sensitive Data Protection findings
    * @return value or {@code null} for none
    */
   public java.lang.String getMediumSensitivityMapping() {
@@ -72,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping ext
   }
 
   /**
-   * Resource value mapping for medium-sensitivity Sensitive Data Protection findings
    * @param mediumSensitivityMapping mediumSensitivityMapping or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping setMediumSensitivityMapping(java.lang.String mediumSensitivityMapping) {

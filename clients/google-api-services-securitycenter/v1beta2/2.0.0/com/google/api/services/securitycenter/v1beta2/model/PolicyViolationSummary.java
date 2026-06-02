@@ -17,11 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Metadata summarizing policy violations of child resources of the affected resource.
- * `finding_category` and `resource` determine the exact semantics of the counts. For example, when
- * category=DATA_SECURITY_POSTURE_OBJECT_PUBLIC_ACCESS_VIOLATION and
- * resource='storage.googleapis.com/buckets/my-bucket-name' then this counts the number of Cloud
- * Storage objects in my-bucket-name which violate a Public Access control.
+ * Model definition for PolicyViolationSummary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -35,36 +31,30 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class PolicyViolationSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Total number of child resources that conform to the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long conformantResourcesCount;
 
   /**
-   * Number of child resources for which errors during evaluation occurred. The evaluation result
-   * for these child resources is effectively "unknown".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long evaluationErrorsCount;
 
   /**
-   * Total count of child resources which were not in scope for evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long outOfScopeResourcesCount;
 
   /**
-   * Count of child resources in violation of the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long policyViolationsCount;
 
   /**
-   * Total number of child resources that conform to the policy.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConformantResourcesCount() {
@@ -72,7 +62,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Total number of child resources that conform to the policy.
    * @param conformantResourcesCount conformantResourcesCount or {@code null} for none
    */
   public PolicyViolationSummary setConformantResourcesCount(java.lang.Long conformantResourcesCount) {
@@ -81,8 +70,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Number of child resources for which errors during evaluation occurred. The evaluation result
-   * for these child resources is effectively "unknown".
    * @return value or {@code null} for none
    */
   public java.lang.Long getEvaluationErrorsCount() {
@@ -90,8 +77,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Number of child resources for which errors during evaluation occurred. The evaluation result
-   * for these child resources is effectively "unknown".
    * @param evaluationErrorsCount evaluationErrorsCount or {@code null} for none
    */
   public PolicyViolationSummary setEvaluationErrorsCount(java.lang.Long evaluationErrorsCount) {
@@ -100,7 +85,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Total count of child resources which were not in scope for evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOutOfScopeResourcesCount() {
@@ -108,7 +92,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Total count of child resources which were not in scope for evaluation.
    * @param outOfScopeResourcesCount outOfScopeResourcesCount or {@code null} for none
    */
   public PolicyViolationSummary setOutOfScopeResourcesCount(java.lang.Long outOfScopeResourcesCount) {
@@ -117,7 +100,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Count of child resources in violation of the policy.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPolicyViolationsCount() {
@@ -125,7 +107,6 @@ public final class PolicyViolationSummary extends com.google.api.client.json.Gen
   }
 
   /**
-   * Count of child resources in violation of the policy.
    * @param policyViolationsCount policyViolationsCount or {@code null} for none
    */
   public PolicyViolationSummary setPolicyViolationsCount(java.lang.Long policyViolationsCount) {

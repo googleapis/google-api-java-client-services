@@ -161,8 +161,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
      * @return the request
      */
     public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
@@ -189,8 +189,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        * @since 1.13
        */
       protected GetAutokeyConfig(java.lang.String name) {
@@ -269,22 +269,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+       * `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+       * `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public GetAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -452,8 +452,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
      * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
      * @return the request
      */
@@ -485,8 +485,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
        * @since 1.13
        */
@@ -557,13 +557,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`, `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+       * `projects/{PROJECT_ID}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
@@ -571,7 +572,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`, `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+       * `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public UpdateAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1111,8 +1113,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
      * @return the request
      */
     public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
@@ -1139,8 +1141,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        * @since 1.13
        */
       protected GetAutokeyConfig(java.lang.String name) {
@@ -1219,22 +1221,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+       * `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
-       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+       * `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public GetAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1861,8 +1863,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
      * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
      * @return the request
      */
@@ -1894,8 +1896,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
        * @since 1.13
        */
@@ -1966,13 +1968,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`, `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+       * `projects/{PROJECT_ID}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
-     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`,
+     `projects/{PROJECT_NUMBER}/autokeyConfig`, or `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
@@ -1980,7 +1983,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`, `projects/{PROJECT_NUMBER}/autokeyConfig`, or
+       * `projects/{PROJECT_ID}/autokeyConfig`.
        */
       public UpdateAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

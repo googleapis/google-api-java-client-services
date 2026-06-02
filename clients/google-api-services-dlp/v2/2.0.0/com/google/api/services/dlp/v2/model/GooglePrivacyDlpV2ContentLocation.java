@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Location within a batch of content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2BatchContentLocation batchContentLocation;
+
+  /**
    * Name of the container where the finding is located. The top level name is the source file name
    * or table name. Names of some common storage containers are formatted as follows: * BigQuery
    * tables: `{project_id}:{dataset_id}.{table_id}` * Cloud Storage files: `gs://{bucket}/{path}` *
@@ -91,6 +98,23 @@ public final class GooglePrivacyDlpV2ContentLocation extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2RecordLocation recordLocation;
+
+  /**
+   * Location within a batch of content.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BatchContentLocation getBatchContentLocation() {
+    return batchContentLocation;
+  }
+
+  /**
+   * Location within a batch of content.
+   * @param batchContentLocation batchContentLocation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentLocation setBatchContentLocation(GooglePrivacyDlpV2BatchContentLocation batchContentLocation) {
+    this.batchContentLocation = batchContentLocation;
+    return this;
+  }
 
   /**
    * Name of the container where the finding is located. The top level name is the source file name

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Context of a security context.
+ * Model definition for GoogleCloudSecuritycenterV2IssueSecurityContextContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2IssueSecurityContextContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Context type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Context values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> values;
 
   /**
-   * Context type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextContext extend
   }
 
   /**
-   * Context type.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextContext setType(java.lang.String type) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextContext extend
   }
 
   /**
-   * Context values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextContext extend
   }
 
   /**
-   * Context values.
    * @param values values or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextContext setValues(java.util.List<java.lang.String> values) {

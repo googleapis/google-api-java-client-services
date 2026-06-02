@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * An individual entry in a log.
+ * Model definition for GoogleCloudSecuritycenterV2LogEntry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * An individual entry in a log stored in Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2CloudLoggingEntry cloudLoggingEntry;
 
   /**
-   * An individual entry in a log stored in Cloud Logging.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudLoggingEntry getCloudLoggingEntry() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2LogEntry extends com.google.api.cl
   }
 
   /**
-   * An individual entry in a log stored in Cloud Logging.
    * @param cloudLoggingEntry cloudLoggingEntry or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2LogEntry setCloudLoggingEntry(GoogleCloudSecuritycenterV2CloudLoggingEntry cloudLoggingEntry) {

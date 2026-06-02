@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Configures how to deliver Findings to BigQuery Instance.
+ * Model definition for GoogleCloudSecuritycenterV2BigQueryExport.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,91 +31,60 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The time at which the BigQuery export was created. This field is set by the server
-   * and will be ignored if provided on export on creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
-   * configuration's data, if configured during Security Command Center activation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cryptoKeyName;
 
   /**
-   * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
-   * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * The description of the export (max of 1024 characters).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Expression that defines the filter to apply across create/update events of findings. The
-   * expression is a list of zero or more restrictions combined via logical operators `AND` and
-   * `OR`. Parentheses are supported, and `OR` has higher precedence than `AND`. Restrictions have
-   * the form ` ` and may have a `-` character in front of them to indicate negation. The fields map
-   * to those defined in the corresponding resource. The supported operators are: * `=` for all
-   * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
-   * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Output only. Email address of the user who last edited the BigQuery export. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mostRecentEditor;
 
   /**
-   * Identifier. The relative resource name of this export. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
-   * shows some examples: +
-   * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `folders/{folder_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `projects/{project_id}/locations/{location_id}/bigQueryExports/{export_id}` This field is
-   * provided in responses, and is ignored when provided in create requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The service account that needs permission to create table and upload data to the
-   * BigQuery dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * Output only. The most recent time at which the BigQuery export was updated. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The time at which the BigQuery export was created. This field is set by the server
-   * and will be ignored if provided on export on creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -123,8 +92,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The time at which the BigQuery export was created. This field is set by the server
-   * and will be ignored if provided on export on creation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setCreateTime(String createTime) {
@@ -133,8 +100,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
-   * configuration's data, if configured during Security Command Center activation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyName() {
@@ -142,8 +107,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The resource name of the Cloud KMS `CryptoKey` used to protect this
-   * configuration's data, if configured during Security Command Center activation.
    * @param cryptoKeyName cryptoKeyName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setCryptoKeyName(java.lang.String cryptoKeyName) {
@@ -152,9 +115,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
-   * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -162,9 +122,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The dataset to write findings' updates to. Its format is
-   * "projects/[project_id]/datasets/[bigquery_dataset_id]". BigQuery dataset unique ID must contain
-   * only letters (a-z, A-Z), numbers (0-9), or underscores (_).
    * @param dataset dataset or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setDataset(java.lang.String dataset) {
@@ -173,7 +130,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The description of the export (max of 1024 characters).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -181,7 +137,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * The description of the export (max of 1024 characters).
    * @param description description or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setDescription(java.lang.String description) {
@@ -190,14 +145,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Expression that defines the filter to apply across create/update events of findings. The
-   * expression is a list of zero or more restrictions combined via logical operators `AND` and
-   * `OR`. Parentheses are supported, and `OR` has higher precedence than `AND`. Restrictions have
-   * the form ` ` and may have a `-` character in front of them to indicate negation. The fields map
-   * to those defined in the corresponding resource. The supported operators are: * `=` for all
-   * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
-   * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -205,14 +152,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Expression that defines the filter to apply across create/update events of findings. The
-   * expression is a list of zero or more restrictions combined via logical operators `AND` and
-   * `OR`. Parentheses are supported, and `OR` has higher precedence than `AND`. Restrictions have
-   * the form ` ` and may have a `-` character in front of them to indicate negation. The fields map
-   * to those defined in the corresponding resource. The supported operators are: * `=` for all
-   * value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for
-   * strings. The supported value types are: * string literals in quotes. * integer literals without
-   * quotes. * boolean literals `true` and `false` without quotes.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setFilter(java.lang.String filter) {
@@ -221,8 +160,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. Email address of the user who last edited the BigQuery export. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * @return value or {@code null} for none
    */
   public java.lang.String getMostRecentEditor() {
@@ -230,8 +167,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. Email address of the user who last edited the BigQuery export. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * @param mostRecentEditor mostRecentEditor or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setMostRecentEditor(java.lang.String mostRecentEditor) {
@@ -240,13 +175,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Identifier. The relative resource name of this export. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
-   * shows some examples: +
-   * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `folders/{folder_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `projects/{project_id}/locations/{location_id}/bigQueryExports/{export_id}` This field is
-   * provided in responses, and is ignored when provided in create requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -254,13 +182,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Identifier. The relative resource name of this export. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name. The following list
-   * shows some examples: +
-   * `organizations/{organization_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `folders/{folder_id}/locations/{location_id}/bigQueryExports/{export_id}` +
-   * `projects/{project_id}/locations/{location_id}/bigQueryExports/{export_id}` This field is
-   * provided in responses, and is ignored when provided in create requests.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setName(java.lang.String name) {
@@ -269,8 +190,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The service account that needs permission to create table and upload data to the
-   * BigQuery dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -278,8 +197,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The service account that needs permission to create table and upload data to the
-   * BigQuery dataset.
    * @param principal principal or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setPrincipal(java.lang.String principal) {
@@ -288,8 +205,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The most recent time at which the BigQuery export was updated. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -297,8 +212,6 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
   }
 
   /**
-   * Output only. The most recent time at which the BigQuery export was updated. This field is set
-   * by the server and will be ignored if provided on export creation or update.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setUpdateTime(String updateTime) {

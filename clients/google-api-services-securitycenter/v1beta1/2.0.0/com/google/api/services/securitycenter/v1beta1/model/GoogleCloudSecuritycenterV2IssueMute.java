@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * The mute information of the issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueMute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email address of the user who last changed the mute state of the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteInitiator;
 
   /**
-   * The user-provided reason for muting the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteReason;
 
   /**
-   * Output only. The mute state of the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteState;
 
   /**
-   * The time the issue was muted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String muteUpdateTime;
 
   /**
-   * The email address of the user who last changed the mute state of the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteInitiator() {
@@ -67,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * The email address of the user who last changed the mute state of the issue.
    * @param muteInitiator muteInitiator or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueMute setMuteInitiator(java.lang.String muteInitiator) {
@@ -76,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * The user-provided reason for muting the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteReason() {
@@ -84,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * The user-provided reason for muting the issue.
    * @param muteReason muteReason or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueMute setMuteReason(java.lang.String muteReason) {
@@ -93,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * Output only. The mute state of the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteState() {
@@ -101,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * Output only. The mute state of the issue.
    * @param muteState muteState or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueMute setMuteState(java.lang.String muteState) {
@@ -110,7 +100,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * The time the issue was muted.
    * @return value or {@code null} for none
    */
   public String getMuteUpdateTime() {
@@ -118,7 +107,6 @@ public final class GoogleCloudSecuritycenterV2IssueMute extends com.google.api.c
   }
 
   /**
-   * The time the issue was muted.
    * @param muteUpdateTime muteUpdateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueMute setMuteUpdateTime(String muteUpdateTime) {

@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusPhysicalHostTopology extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output Only] Additional location information of the running instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusPhysicalHostTopologyAdditionalAttributes additionalAttributes;
+
+  /**
    * [Output Only] The ID of the block in which the running instance is located. Instances within
    * the same block experience low network latency.
    * The value may be {@code null}.
@@ -60,6 +67,23 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String subblock;
+
+  /**
+   * Output only. [Output Only] Additional location information of the running instance.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusPhysicalHostTopologyAdditionalAttributes getAdditionalAttributes() {
+    return additionalAttributes;
+  }
+
+  /**
+   * Output only. [Output Only] Additional location information of the running instance.
+   * @param additionalAttributes additionalAttributes or {@code null} for none
+   */
+  public ResourceStatusPhysicalHostTopology setAdditionalAttributes(ResourceStatusPhysicalHostTopologyAdditionalAttributes additionalAttributes) {
+    this.additionalAttributes = additionalAttributes;
+    return this;
+  }
 
   /**
    * [Output Only] The ID of the block in which the running instance is located. Instances within

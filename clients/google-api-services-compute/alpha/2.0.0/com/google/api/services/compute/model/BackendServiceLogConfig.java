@@ -38,6 +38,20 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
   private java.lang.Boolean enable;
 
   /**
+   * The list of request headers that will be logged to Stackdriver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceLogConfigLoggingHttpHeader> loggingHttpRequestHeaders;
+
+  /**
+   * The list of response headers that will be logged to Stackdriver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BackendServiceLogConfigLoggingHttpHeader> loggingHttpResponseHeaders;
+
+  /**
    * Deprecated in favor of optionalMode. This field can only be specified if logging is enabled for
    * this backend service. Configures whether all, none or a subset of optional fields should be
    * added to the reported logs. One of [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM].
@@ -92,6 +106,40 @@ public final class BackendServiceLogConfig extends com.google.api.client.json.Ge
    */
   public BackendServiceLogConfig setEnable(java.lang.Boolean enable) {
     this.enable = enable;
+    return this;
+  }
+
+  /**
+   * The list of request headers that will be logged to Stackdriver.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceLogConfigLoggingHttpHeader> getLoggingHttpRequestHeaders() {
+    return loggingHttpRequestHeaders;
+  }
+
+  /**
+   * The list of request headers that will be logged to Stackdriver.
+   * @param loggingHttpRequestHeaders loggingHttpRequestHeaders or {@code null} for none
+   */
+  public BackendServiceLogConfig setLoggingHttpRequestHeaders(java.util.List<BackendServiceLogConfigLoggingHttpHeader> loggingHttpRequestHeaders) {
+    this.loggingHttpRequestHeaders = loggingHttpRequestHeaders;
+    return this;
+  }
+
+  /**
+   * The list of response headers that will be logged to Stackdriver.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BackendServiceLogConfigLoggingHttpHeader> getLoggingHttpResponseHeaders() {
+    return loggingHttpResponseHeaders;
+  }
+
+  /**
+   * The list of response headers that will be logged to Stackdriver.
+   * @param loggingHttpResponseHeaders loggingHttpResponseHeaders or {@code null} for none
+   */
+  public BackendServiceLogConfig setLoggingHttpResponseHeaders(java.util.List<BackendServiceLogConfigLoggingHttpHeader> loggingHttpResponseHeaders) {
+    this.loggingHttpResponseHeaders = loggingHttpResponseHeaders;
     return this;
   }
 

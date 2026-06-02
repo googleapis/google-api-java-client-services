@@ -66,8 +66,8 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue
-   * is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed
-   * value is 500. This field has the same meaning as [rate in
+   * is created, Cloud Tasks will pick the default. For App Engine queues, the maximum allowed value
+   * is 500. This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
    * The value may be {@code null}.
    */
@@ -148,8 +148,8 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue
-   * is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed
-   * value is 500. This field has the same meaning as [rate in
+   * is created, Cloud Tasks will pick the default. For App Engine queues, the maximum allowed value
+   * is 500. This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
    * @return value or {@code null} for none
    */
@@ -159,8 +159,8 @@ public final class RateLimits extends com.google.api.client.json.GenericJson {
 
   /**
    * The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue
-   * is created, Cloud Tasks will pick the default. * For App Engine queues, the maximum allowed
-   * value is 500. This field has the same meaning as [rate in
+   * is created, Cloud Tasks will pick the default. For App Engine queues, the maximum allowed value
+   * is 500. This field has the same meaning as [rate in
    * queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
    * @param maxDispatchesPerSecond maxDispatchesPerSecond or {@code null} for none
    */

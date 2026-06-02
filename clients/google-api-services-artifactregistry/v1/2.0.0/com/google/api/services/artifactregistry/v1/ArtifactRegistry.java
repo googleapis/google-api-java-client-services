@@ -900,7 +900,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -931,7 +931,7 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -1047,22 +1047,22 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1790,6 +1790,152 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
        */
       public class Repositories {
 
+        /**
+         * Checks an artifact streaming.
+         *
+         * Create a request for the method "repositories.checkPrewarmedArtifact".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link CheckPrewarmedArtifact#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param repository Required. The name of the repository, for example: `projects/p1/locations/us-
+         *        central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+         *        slashes are escaped.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactRequest}
+         * @return the request
+         */
+        public CheckPrewarmedArtifact checkPrewarmedArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactRequest content) throws java.io.IOException {
+          CheckPrewarmedArtifact result = new CheckPrewarmedArtifact(repository, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckPrewarmedArtifact extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactResponse> {
+
+          private static final String REST_PATH = "v1/{+repository}:checkPrewarmedArtifact";
+
+          private final java.util.regex.Pattern REPOSITORY_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Checks an artifact streaming.
+           *
+           * Create a request for the method "repositories.checkPrewarmedArtifact".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link CheckPrewarmedArtifact#execute()} method to invoke the
+           * remote operation. <p> {@link CheckPrewarmedArtifact#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param repository Required. The name of the repository, for example: `projects/p1/locations/us-
+         *        central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+         *        slashes are escaped.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactRequest}
+           * @since 1.13
+           */
+          protected CheckPrewarmedArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.CheckPrewarmedArtifactResponse.class);
+            this.repository = com.google.api.client.util.Preconditions.checkNotNull(repository, "Required parameter repository must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckPrewarmedArtifact set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckPrewarmedArtifact) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setAccessToken(java.lang.String accessToken) {
+            return (CheckPrewarmedArtifact) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setAlt(java.lang.String alt) {
+            return (CheckPrewarmedArtifact) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setCallback(java.lang.String callback) {
+            return (CheckPrewarmedArtifact) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setFields(java.lang.String fields) {
+            return (CheckPrewarmedArtifact) super.setFields(fields);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setKey(java.lang.String key) {
+            return (CheckPrewarmedArtifact) super.setKey(key);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setOauthToken(java.lang.String oauthToken) {
+            return (CheckPrewarmedArtifact) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckPrewarmedArtifact) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setQuotaUser(java.lang.String quotaUser) {
+            return (CheckPrewarmedArtifact) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setUploadType(java.lang.String uploadType) {
+            return (CheckPrewarmedArtifact) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckPrewarmedArtifact setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckPrewarmedArtifact) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the repository, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+           * slashes are escaped.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String repository;
+
+          /** Required. The name of the repository, for example: `projects/p1/locations/us-
+         central1/repositories/repo1`. If the package or version ID parts contain slashes, the slashes are
+         escaped.
+           */
+          public java.lang.String getRepository() {
+            return repository;
+          }
+
+          /**
+           * Required. The name of the repository, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+           * slashes are escaped.
+           */
+          public CheckPrewarmedArtifact setRepository(java.lang.String repository) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.repository = repository;
+            return this;
+          }
+
+          @Override
+          public CheckPrewarmedArtifact set(String parameterName, Object value) {
+            return (CheckPrewarmedArtifact) super.set(parameterName, value);
+          }
+        }
         /**
          * Creates a repository. The returned Operation will finish once the repository has been created.
          * Its response will be the created Repository.
@@ -2942,6 +3088,287 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Prewarms an artifact for streaming.
+         *
+         * Create a request for the method "repositories.prewarmArtifact".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link PrewarmArtifact#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param repository Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         *        If the package or version ID parts contain slashes, the slashes are escaped.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.PrewarmArtifactRequest}
+         * @return the request
+         */
+        public PrewarmArtifact prewarmArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.PrewarmArtifactRequest content) throws java.io.IOException {
+          PrewarmArtifact result = new PrewarmArtifact(repository, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PrewarmArtifact extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+repository}:prewarmArtifact";
+
+          private final java.util.regex.Pattern REPOSITORY_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Prewarms an artifact for streaming.
+           *
+           * Create a request for the method "repositories.prewarmArtifact".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link PrewarmArtifact#execute()} method to invoke the remote
+           * operation. <p> {@link PrewarmArtifact#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param repository Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         *        If the package or version ID parts contain slashes, the slashes are escaped.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.PrewarmArtifactRequest}
+           * @since 1.13
+           */
+          protected PrewarmArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.PrewarmArtifactRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Operation.class);
+            this.repository = com.google.api.client.util.Preconditions.checkNotNull(repository, "Required parameter repository must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public PrewarmArtifact set$Xgafv(java.lang.String $Xgafv) {
+            return (PrewarmArtifact) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PrewarmArtifact setAccessToken(java.lang.String accessToken) {
+            return (PrewarmArtifact) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PrewarmArtifact setAlt(java.lang.String alt) {
+            return (PrewarmArtifact) super.setAlt(alt);
+          }
+
+          @Override
+          public PrewarmArtifact setCallback(java.lang.String callback) {
+            return (PrewarmArtifact) super.setCallback(callback);
+          }
+
+          @Override
+          public PrewarmArtifact setFields(java.lang.String fields) {
+            return (PrewarmArtifact) super.setFields(fields);
+          }
+
+          @Override
+          public PrewarmArtifact setKey(java.lang.String key) {
+            return (PrewarmArtifact) super.setKey(key);
+          }
+
+          @Override
+          public PrewarmArtifact setOauthToken(java.lang.String oauthToken) {
+            return (PrewarmArtifact) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PrewarmArtifact setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PrewarmArtifact) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PrewarmArtifact setQuotaUser(java.lang.String quotaUser) {
+            return (PrewarmArtifact) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PrewarmArtifact setUploadType(java.lang.String uploadType) {
+            return (PrewarmArtifact) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PrewarmArtifact setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PrewarmArtifact) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The repository name, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+           * slashes are escaped.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String repository;
+
+          /** Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         If the package or version ID parts contain slashes, the slashes are escaped.
+           */
+          public java.lang.String getRepository() {
+            return repository;
+          }
+
+          /**
+           * Required. The repository name, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`. If the package or version ID parts contain slashes, the
+           * slashes are escaped.
+           */
+          public PrewarmArtifact setRepository(java.lang.String repository) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.repository = repository;
+            return this;
+          }
+
+          @Override
+          public PrewarmArtifact set(String parameterName, Object value) {
+            return (PrewarmArtifact) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes an artifact from streaming.
+         *
+         * Create a request for the method "repositories.removePrewarmedArtifact".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link RemovePrewarmedArtifact#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param repository Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactRequest}
+         * @return the request
+         */
+        public RemovePrewarmedArtifact removePrewarmedArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactRequest content) throws java.io.IOException {
+          RemovePrewarmedArtifact result = new RemovePrewarmedArtifact(repository, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemovePrewarmedArtifact extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactResponse> {
+
+          private static final String REST_PATH = "v1/{+repository}:removePrewarmedArtifact";
+
+          private final java.util.regex.Pattern REPOSITORY_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Removes an artifact from streaming.
+           *
+           * Create a request for the method "repositories.removePrewarmedArtifact".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link RemovePrewarmedArtifact#execute()} method to invoke the
+           * remote operation. <p> {@link RemovePrewarmedArtifact#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param repository Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactRequest}
+           * @since 1.13
+           */
+          protected RemovePrewarmedArtifact(java.lang.String repository, com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.RemovePrewarmedArtifactResponse.class);
+            this.repository = com.google.api.client.util.Preconditions.checkNotNull(repository, "Required parameter repository must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemovePrewarmedArtifact set$Xgafv(java.lang.String $Xgafv) {
+            return (RemovePrewarmedArtifact) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setAccessToken(java.lang.String accessToken) {
+            return (RemovePrewarmedArtifact) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setAlt(java.lang.String alt) {
+            return (RemovePrewarmedArtifact) super.setAlt(alt);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setCallback(java.lang.String callback) {
+            return (RemovePrewarmedArtifact) super.setCallback(callback);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setFields(java.lang.String fields) {
+            return (RemovePrewarmedArtifact) super.setFields(fields);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setKey(java.lang.String key) {
+            return (RemovePrewarmedArtifact) super.setKey(key);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setOauthToken(java.lang.String oauthToken) {
+            return (RemovePrewarmedArtifact) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemovePrewarmedArtifact) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setQuotaUser(java.lang.String quotaUser) {
+            return (RemovePrewarmedArtifact) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setUploadType(java.lang.String uploadType) {
+            return (RemovePrewarmedArtifact) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemovePrewarmedArtifact setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemovePrewarmedArtifact) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The repository name, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String repository;
+
+          /** Required. The repository name, for example: `projects/p1/locations/us-central1/repositories/repo1`.
+           */
+          public java.lang.String getRepository() {
+            return repository;
+          }
+
+          /**
+           * Required. The repository name, for example: `projects/p1/locations/us-
+           * central1/repositories/repo1`.
+           */
+          public RemovePrewarmedArtifact setRepository(java.lang.String repository) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(REPOSITORY_PATTERN.matcher(repository).matches(),
+                  "Parameter repository must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.repository = repository;
+            return this;
+          }
+
+          @Override
+          public RemovePrewarmedArtifact set(String parameterName, Object value) {
+            return (RemovePrewarmedArtifact) super.set(parameterName, value);
           }
         }
         /**
@@ -9805,6 +10232,241 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
             }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the PrewarmedArtifacts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ArtifactRegistry artifactregistry = new ArtifactRegistry(...);}
+         *   {@code ArtifactRegistry.PrewarmedArtifacts.List request = artifactregistry.prewarmedArtifacts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PrewarmedArtifacts prewarmedArtifacts() {
+          return new PrewarmedArtifacts();
+        }
+
+        /**
+         * The "prewarmedArtifacts" collection of methods.
+         */
+        public class PrewarmedArtifacts {
+
+          /**
+           * Lists all streamed artifacts in a repository.
+           *
+           * Create a request for the method "prewarmedArtifacts.list".
+           *
+           * This request holds the parameters needed by the artifactregistry server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The repository of the artifact to list. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ListPrewarmedArtifactsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/prewarmedArtifacts";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Lists all streamed artifacts in a repository.
+             *
+             * Create a request for the method "prewarmedArtifacts.list".
+             *
+             * This request holds the parameters needed by the the artifactregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The repository of the artifact to list. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ListPrewarmedArtifactsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The repository of the artifact to list. Format:
+             * projects/{project}/locations/{location}/repositories/{repository}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The repository of the artifact to list. Format:
+           projects/{project}/locations/{location}/repositories/{repository}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The repository of the artifact to list. Format:
+             * projects/{project}/locations/{location}/repositories/{repository}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter should only support The location of the prewarmed artifacts. multi-
+             * region is not supported for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter should only support The location of the prewarmed artifacts. multi-region is not
+           supported for this field.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter should only support The location of the prewarmed artifacts. multi-
+             * region is not supported for this field.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of prewarmed artifacts to return. Maximum page size is
+             * 1,000. Default page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of prewarmed artifacts to return. Maximum page size is 1,000. Default
+           page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of prewarmed artifacts to return. Maximum page size is
+             * 1,000. Default page size is 100.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous list request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous list request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
         }
         /**
          * An accessor for creating requests from the PythonPackages collection.

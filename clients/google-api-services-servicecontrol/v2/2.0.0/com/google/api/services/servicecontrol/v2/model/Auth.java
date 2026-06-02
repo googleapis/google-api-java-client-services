@@ -68,6 +68,15 @@ public final class Auth extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> claims;
 
   /**
+   * Identifies the client credential id used for authentication. credential_id is in the format of
+   * AUTH_METHOD:IDENTIFIER, e.g. "serviceaccount:XXXXX, apikey:XXXXX" where the format of the
+   * IDENTIFIER can vary for different AUTH_METHODs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialId;
+
+  /**
    * Attributes of the OAuth token associated with the request.
    * The value may be {@code null}.
    */
@@ -173,6 +182,27 @@ public final class Auth extends com.google.api.client.json.GenericJson {
    */
   public Auth setClaims(java.util.Map<String, java.lang.Object> claims) {
     this.claims = claims;
+    return this;
+  }
+
+  /**
+   * Identifies the client credential id used for authentication. credential_id is in the format of
+   * AUTH_METHOD:IDENTIFIER, e.g. "serviceaccount:XXXXX, apikey:XXXXX" where the format of the
+   * IDENTIFIER can vary for different AUTH_METHODs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialId() {
+    return credentialId;
+  }
+
+  /**
+   * Identifies the client credential id used for authentication. credential_id is in the format of
+   * AUTH_METHOD:IDENTIFIER, e.g. "serviceaccount:XXXXX, apikey:XXXXX" where the format of the
+   * IDENTIFIER can vary for different AUTH_METHODs.
+   * @param credentialId credentialId or {@code null} for none
+   */
+  public Auth setCredentialId(java.lang.String credentialId) {
+    this.credentialId = credentialId;
     return this;
   }
 

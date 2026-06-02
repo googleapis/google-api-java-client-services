@@ -126,6 +126,13 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
+   * Optional. Settings for WildFire analysis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FirewallEndpointWildfireSettings wildfireSettings;
+
+  /**
    * Output only. Deprecated: List of networks that are associated with this endpoint in the local
    * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
    * network will only appear in this list after traffic routing is fully configured. Format:
@@ -353,6 +360,23 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for WildFire analysis.
+   * @return value or {@code null} for none
+   */
+  public FirewallEndpointWildfireSettings getWildfireSettings() {
+    return wildfireSettings;
+  }
+
+  /**
+   * Optional. Settings for WildFire analysis.
+   * @param wildfireSettings wildfireSettings or {@code null} for none
+   */
+  public FirewallEndpoint setWildfireSettings(FirewallEndpointWildfireSettings wildfireSettings) {
+    this.wildfireSettings = wildfireSettings;
     return this;
   }
 

@@ -50,6 +50,14 @@ public final class UserWorkloadsSecret extends com.google.api.client.json.Generi
   private java.lang.String name;
 
   /**
+   * Optional. The "type" field of Kubernetes Secret. For details see:
+   * https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Optional. The "data" field of Kubernetes Secret, organized in key-value pairs, which can
    * contain sensitive values such as a password, a token, or a key. The values for all keys have to
    * be base64-encoded strings. For details see:
@@ -90,6 +98,25 @@ public final class UserWorkloadsSecret extends com.google.api.client.json.Generi
    */
   public UserWorkloadsSecret setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The "type" field of Kubernetes Secret. For details see:
+   * https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The "type" field of Kubernetes Secret. For details see:
+   * https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
+   * @param type type or {@code null} for none
+   */
+  public UserWorkloadsSecret setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

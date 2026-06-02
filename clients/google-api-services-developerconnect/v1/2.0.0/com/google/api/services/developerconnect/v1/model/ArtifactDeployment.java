@@ -69,6 +69,14 @@ public final class ArtifactDeployment extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
+   * Output only. The URIs of the source code, if available. For Cloud Run source deploy for
+   * example: `gs://my-bucket/my-folder/1234567890.abcde-fdbe.zip#1234567890`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sourceCodeUris;
+
+  /**
    * Output only. The source commits at which this artifact was built. Extracted from provenance.
    * The value may be {@code null}.
    */
@@ -169,6 +177,25 @@ public final class ArtifactDeployment extends com.google.api.client.json.Generic
    */
   public ArtifactDeployment setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. The URIs of the source code, if available. For Cloud Run source deploy for
+   * example: `gs://my-bucket/my-folder/1234567890.abcde-fdbe.zip#1234567890`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSourceCodeUris() {
+    return sourceCodeUris;
+  }
+
+  /**
+   * Output only. The URIs of the source code, if available. For Cloud Run source deploy for
+   * example: `gs://my-bucket/my-folder/1234567890.abcde-fdbe.zip#1234567890`
+   * @param sourceCodeUris sourceCodeUris or {@code null} for none
+   */
+  public ArtifactDeployment setSourceCodeUris(java.util.List<java.lang.String> sourceCodeUris) {
+    this.sourceCodeUris = sourceCodeUris;
     return this;
   }
 

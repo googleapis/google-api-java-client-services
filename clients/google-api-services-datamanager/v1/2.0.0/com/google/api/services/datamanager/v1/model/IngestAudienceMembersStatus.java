@@ -30,6 +30,13 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestAudienceMembersStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The status of the composite data ingestion to the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestCompositeDataStatus compositeDataIngestionStatus;
+
+  /**
    * The status of the mobile data ingestion to the destination.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private IngestUserIdDataStatus userIdDataIngestionStatus;
+
+  /**
+   * The status of the composite data ingestion to the destination.
+   * @return value or {@code null} for none
+   */
+  public IngestCompositeDataStatus getCompositeDataIngestionStatus() {
+    return compositeDataIngestionStatus;
+  }
+
+  /**
+   * The status of the composite data ingestion to the destination.
+   * @param compositeDataIngestionStatus compositeDataIngestionStatus or {@code null} for none
+   */
+  public IngestAudienceMembersStatus setCompositeDataIngestionStatus(IngestCompositeDataStatus compositeDataIngestionStatus) {
+    this.compositeDataIngestionStatus = compositeDataIngestionStatus;
+    return this;
+  }
 
   /**
    * The status of the mobile data ingestion to the destination.

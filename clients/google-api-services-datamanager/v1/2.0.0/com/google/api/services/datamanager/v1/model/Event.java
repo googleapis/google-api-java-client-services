@@ -76,6 +76,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private Consent consent;
 
   /**
+   * Optional. The conversion quantity associated with the event, for counting-based conversions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversionCount;
+
+  /**
    * Optional. The conversion value associated with the event, for value-based conversions.
    * The value may be {@code null}.
    */
@@ -305,6 +312,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setConsent(Consent consent) {
     this.consent = consent;
+    return this;
+  }
+
+  /**
+   * Optional. The conversion quantity associated with the event, for counting-based conversions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversionCount() {
+    return conversionCount;
+  }
+
+  /**
+   * Optional. The conversion quantity associated with the event, for counting-based conversions.
+   * @param conversionCount conversionCount or {@code null} for none
+   */
+  public Event setConversionCount(java.lang.Double conversionCount) {
+    this.conversionCount = conversionCount;
     return this;
   }
 

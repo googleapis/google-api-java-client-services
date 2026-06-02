@@ -31,6 +31,20 @@ package com.google.api.services.datamanager.v1.model;
 public final class AdIdentifiers extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The display click ID associated with this event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dclid;
+
+  /**
+   * Optional. Any number of encrypted user IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EncryptedUserId> encryptedUserIds;
+
+  /**
    * Optional. The click identifier for clicks associated with app events and originating from iOS
    * devices starting with iOS14.
    * The value may be {@code null}.
@@ -46,12 +60,26 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   private java.lang.String gclid;
 
   /**
+   * Optional. The impression ID associated with this event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String impressionId;
+
+  /**
    * Optional. Information gathered about the device being used (if any) at the time of landing onto
    * the advertiser’s site after interacting with the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceInfo landingPageDeviceInfo;
+
+  /**
+   * Optional. The match ID field used to join this event with a previous event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchId;
 
   /**
    * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
@@ -75,6 +103,40 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String wbraid;
+
+  /**
+   * Optional. The display click ID associated with this event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDclid() {
+    return dclid;
+  }
+
+  /**
+   * Optional. The display click ID associated with this event.
+   * @param dclid dclid or {@code null} for none
+   */
+  public AdIdentifiers setDclid(java.lang.String dclid) {
+    this.dclid = dclid;
+    return this;
+  }
+
+  /**
+   * Optional. Any number of encrypted user IDs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EncryptedUserId> getEncryptedUserIds() {
+    return encryptedUserIds;
+  }
+
+  /**
+   * Optional. Any number of encrypted user IDs.
+   * @param encryptedUserIds encryptedUserIds or {@code null} for none
+   */
+  public AdIdentifiers setEncryptedUserIds(java.util.List<EncryptedUserId> encryptedUserIds) {
+    this.encryptedUserIds = encryptedUserIds;
+    return this;
+  }
 
   /**
    * Optional. The click identifier for clicks associated with app events and originating from iOS
@@ -113,6 +175,23 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. The impression ID associated with this event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImpressionId() {
+    return impressionId;
+  }
+
+  /**
+   * Optional. The impression ID associated with this event.
+   * @param impressionId impressionId or {@code null} for none
+   */
+  public AdIdentifiers setImpressionId(java.lang.String impressionId) {
+    this.impressionId = impressionId;
+    return this;
+  }
+
+  /**
    * Optional. Information gathered about the device being used (if any) at the time of landing onto
    * the advertiser’s site after interacting with the ad.
    * @return value or {@code null} for none
@@ -128,6 +207,23 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
    */
   public AdIdentifiers setLandingPageDeviceInfo(DeviceInfo landingPageDeviceInfo) {
     this.landingPageDeviceInfo = landingPageDeviceInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The match ID field used to join this event with a previous event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchId() {
+    return matchId;
+  }
+
+  /**
+   * Optional. The match ID field used to join this event with a previous event.
+   * @param matchId matchId or {@code null} for none
+   */
+  public AdIdentifiers setMatchId(java.lang.String matchId) {
+    this.matchId = matchId;
     return this;
   }
 

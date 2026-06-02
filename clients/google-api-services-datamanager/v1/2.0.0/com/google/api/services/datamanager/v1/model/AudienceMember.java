@@ -30,6 +30,13 @@ package com.google.api.services.datamanager.v1.model;
 public final class AudienceMember extends com.google.api.client.json.GenericJson {
 
   /**
+   * Group of multiple identifier types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompositeData compositeData;
+
+  /**
    * Optional. The consent setting for the user.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private UserIdData userIdData;
+
+  /**
+   * Group of multiple identifier types.
+   * @return value or {@code null} for none
+   */
+  public CompositeData getCompositeData() {
+    return compositeData;
+  }
+
+  /**
+   * Group of multiple identifier types.
+   * @param compositeData compositeData or {@code null} for none
+   */
+  public AudienceMember setCompositeData(CompositeData compositeData) {
+    this.compositeData = compositeData;
+    return this;
+  }
 
   /**
    * Optional. The consent setting for the user.

@@ -174,15 +174,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Assets {
 
       /**
-       * Filters an organization's assets and groups them by their specified properties.
-       *
        * Create a request for the method "assets.group".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -200,8 +197,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Filters an organization's assets and groups them by their specified properties.
-         *
          * Create a request for the method "assets.group".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -210,8 +205,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -280,24 +274,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Group) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent to group the assets by. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -314,17 +300,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists an organization's assets.
-       *
        * Create a request for the method "assets.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -341,8 +322,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists an organization's assets.
-         *
          * Create a request for the method "assets.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -350,10 +329,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -431,29 +407,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource that contains the assets. The value that you can specify
-       on parent depends on the method in which you specify parent. You can specify one of the following
-       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -464,310 +427,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         @com.google.api.client.util.Key
         private String compareDuration;
 
-        /** When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated to
-       indicate whether the asset was added, removed, or remained present during the compare_duration
-       period of time that precedes the read_time. This is the time between (read_time - compare_duration)
-       and read_time. The state_change value is derived based on the presence of the asset at the two
-       points in time. Intermediate state changes between the two times don't affect the result. For
-       example, the results aren't affected if the asset is removed and re-created again. Possible
-       "state_change" values when compare_duration is specified: * "ADDED": indicates that the asset was
-       not present at the start of compare_duration, but present at read_time. * "REMOVED": indicates that
-       the asset was present at the start of compare_duration, but not present at read_time. * "ACTIVE":
-       indicates that the asset was present at both the start and the end of the time period defined by
-       compare_duration and read_time. If compare_duration is not specified, then the only possible
-       state_change is "UNUSED", which will be the state_change set for all assets present at read_time.
+        /**
+
          */
         public String getCompareDuration() {
           return compareDuration;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         public List setCompareDuration(String compareDuration) {
           this.compareDuration = compareDuration;
           return this;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
-       mask will list all fields.
+        /**
+
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
           return this;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
-       restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
-       higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in front
-       of them to indicate negation. The fields map to those defined in the Asset resource. Examples
-       include: * name * security_center_properties.resource_name * resource_properties.a_property *
-       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-       `true` and `false` without quotes. The following are the allowed field and operator combinations: *
-       name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch
-       or an RFC3339 string. Examples: `update_time = "2019-06-10T16:07:18-07:00"` `update_time =
-       1560208038000` * create_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since
-       epoch or an RFC3339 string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-       1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`,
-       `<=` * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
-       security_center_properties.resource_display_name: `=`, `:` *
-       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
-       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
-       security_center_properties.resource_project: `=`, `:` *
-       security_center_properties.resource_project_display_name: `=`, `:` *
-       security_center_properties.resource_owners: `=`, `:` For example, `resource_properties.size = 100`
-       is a valid filter string. Use a partial match on the empty string to filter based on a property
-       existing: `resource_properties.my_property : ""` Use a negated partial match on the empty string to
-       filter based on a property not existing: `-resource_properties.my_property : ""`
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Expression that defines what fields and order to use for sorting. The string value should follow
-       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-       should be appended to the field name. For example: "name desc,resource_properties.a_property".
-       Redundant space characters in the syntax are insignificant. "name
-       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
-       equivalent. The following fields are supported: name update_time resource_properties
-       security_marks.marks security_center_properties.resource_name
-       security_center_properties.resource_display_name security_center_properties.resource_parent
-       security_center_properties.resource_parent_display_name security_center_properties.resource_project
-       security_center_properties.resource_project_display_name security_center_properties.resource_type
+        /**
+
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
-       prior `ListAssets` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         @com.google.api.client.util.Key
         private String readTime;
 
-        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
-       the supplied time and their values are those at that specific time. Absence of this field will
-       default to the API's version of NOW.
+        /**
+
          */
         public String getReadTime() {
           return readTime;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         public List setReadTime(String readTime) {
           this.readTime = readTime;
           return this;
@@ -779,18 +538,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates security marks.
-       *
        * Create a request for the method "assets.updateSecurityMarks".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
        * @return the request
        */
@@ -808,8 +562,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/assets/[^/]+/securityMarks$");
 
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "assets.updateSecurityMarks".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -818,10 +570,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @since 1.13
          */
@@ -890,30 +639,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of the SecurityMarks. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         public UpdateSecurityMarks setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -924,53 +659,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         @com.google.api.client.util.Key
         private String startTime;
 
-        /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-       Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-       be earlier or equal to the server time.
+        /**
+
          */
         public String getStartTime() {
           return startTime;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         public UpdateSecurityMarks setStartTime(String startTime) {
           this.startTime = startTime;
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-       duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-       updated using "marks.".
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         public UpdateSecurityMarks setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -1004,15 +717,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -1030,8 +740,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1040,8 +748,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -1110,24 +817,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1138,27 +837,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
           return this;
@@ -1170,17 +858,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1197,8 +880,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1207,10 +888,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1278,29 +956,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the BigQuery export to delete. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1317,17 +982,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1344,8 +1004,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1353,10 +1011,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1434,29 +1089,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to retrieve. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1473,18 +1115,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-       * BigQuery exports immediately under the folder plus the ones created under the projects within the
-       * folder are returned.
-       *
        * Create a request for the method "bigQueryExports.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1501,11 +1137,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-         * BigQuery exports immediately under the folder plus the ones created under the projects within
-         * the folder are returned.
-         *
          * Create a request for the method "bigQueryExports.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1513,8 +1144,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1592,24 +1222,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1620,53 +1242,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
-       the call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1678,19 +1278,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -1708,8 +1301,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Updates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1718,12 +1309,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -1792,36 +1378,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this export. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
-       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
-       ignored when provided in create requests.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1832,17 +1398,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -1876,18 +1441,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Validates the given Event Threat Detection custom module.
-       *
        * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link ValidateCustomModule#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -1905,8 +1465,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Validates the given Event Threat Detection custom module.
-         *
          * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1915,10 +1473,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -1987,30 +1542,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (ValidateCustomModule) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       `organizations/{organization}/eventThreatDetectionSettings`. *
-       `folders/{folder}/eventThreatDetectionSettings`. *
-       `projects/{project}/eventThreatDetectionSettings`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2048,19 +1589,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-         * Manager parent, and also creates inherited custom modules for all descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -2078,10 +1612,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-           * Manager parent, and also creates inherited custom modules for all descendants of the given
-           * parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2090,10 +1620,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -2162,30 +1689,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The new custom module's parent. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2202,18 +1715,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-         * Resource Manager hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2230,9 +1737,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-           * Resource Manager hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2241,10 +1745,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2312,30 +1813,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2352,17 +1839,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets an Event Threat Detection custom module.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2379,8 +1861,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Gets an Event Threat Detection custom module.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2388,10 +1868,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2469,30 +1946,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2509,19 +1972,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-         * includes resident modules defined at the scope of the parent along with modules inherited from
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2538,10 +1994,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-           * includes resident modules defined at the scope of the parent along with modules inherited from
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2549,10 +2001,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2630,30 +2079,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2664,55 +2099,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEventThreatDetectionCustomModules` call. Provide this
-         to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -2724,19 +2135,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all resident Event Threat Detection custom modules under the given Resource Manager parent
-         * and its descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -2753,9 +2158,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all resident Event Threat Detection custom modules under the given Resource Manager
-           * parent and its descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2764,10 +2166,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -2845,30 +2244,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2879,57 +2264,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListDescendantEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -2941,21 +2300,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the Event Threat Detection custom module with the given name based on the given update
-         * mask. Updating the enablement state is supported for both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name or
-         * configuration of a module is supported for resident modules only. The type of a module cannot be
-         * changed.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -2973,12 +2323,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Updates the Event Threat Detection custom module with the given name based on the given update
-           * mask. Updating the enablement state is supported for both resident and inherited modules
-           * (though resident modules cannot have an enablement state of "inherited"). Updating the display
-           * name or configuration of a module is supported for resident modules only. The type of a module
-           * cannot be changed.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2987,10 +2331,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -3059,32 +2400,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3095,17 +2420,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -3139,17 +2463,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Gets an effective Event Threat Detection custom module at the given level.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3166,8 +2485,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Gets an effective Event Threat Detection custom module at the given level.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3175,10 +2492,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3256,32 +2570,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3298,19 +2596,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-         * resident modules defined at the scope of the parent along with modules inherited from its
-         * ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3327,10 +2618,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-           * resident modules defined at the scope of the parent along with modules inherited from its
-           * ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3338,10 +2625,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3419,30 +2703,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules for. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3453,55 +2723,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEffectiveEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -3536,17 +2782,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Findings {
 
       /**
-       * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-       * an organization, folder or project. The findings matched by the filter will be muted after the
-       * LRO is done.
-       *
        * Create a request for the method "findings.bulkMute".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -3564,10 +2805,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-         * an organization, folder or project. The findings matched by the filter will be muted after the
-         * LRO is done.
-         *
          * Create a request for the method "findings.bulkMute".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3576,8 +2813,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * BulkMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -3646,24 +2882,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (BulkMute) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, at which bulk action needs to be applied. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3722,19 +2950,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3751,8 +2972,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Deletes an existing mute config.
-           *
            * Create a request for the method "muteConfigs.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3761,12 +2980,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3834,38 +3048,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to delete. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3882,19 +3074,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3911,8 +3096,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Gets a mute config.
-           *
            * Create a request for the method "muteConfigs.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3920,12 +3103,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4003,38 +3181,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to retrieve. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4051,20 +3207,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -4082,8 +3230,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Updates a mute config.
-           *
            * Create a request for the method "muteConfigs.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4092,13 +3238,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -4167,38 +3307,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** This field will be ignored if provided on config creation. Format
-         `organizations/{organization}/muteConfigs/{mute_config}`
-         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         `projects/{project}/locations/global/muteConfigs/{mute_config}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4209,17 +3327,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -4254,15 +3371,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class MuteConfigs {
 
       /**
-       * Creates a mute config.
-       *
        * Create a request for the method "muteConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -4280,8 +3394,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a mute config.
-         *
          * Create a request for the method "muteConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4290,8 +3402,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -4360,24 +3471,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new mute configs's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4388,27 +3491,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;
           return this;
@@ -4420,19 +3512,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing mute config.
-       *
        * Create a request for the method "muteConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4449,8 +3534,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4459,12 +3542,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4532,36 +3610,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to delete. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4578,19 +3636,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a mute config.
-       *
        * Create a request for the method "muteConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4607,8 +3658,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4616,12 +3665,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4699,36 +3743,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to retrieve. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4745,15 +3769,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists mute configs.
-       *
        * Create a request for the method "muteConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4770,8 +3791,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists mute configs.
-         *
          * Create a request for the method "muteConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4779,8 +3798,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4858,24 +3876,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of mute configs. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4886,53 +3896,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
-       call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -4944,20 +3932,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a mute config.
-       *
        * Create a request for the method "muteConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -4975,8 +3955,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4985,13 +3963,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -5060,38 +4032,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** This field will be ignored if provided on config creation. Format
-       `organizations/{organization}/muteConfigs/{mute_config}`
-       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       `projects/{project}/locations/global/muteConfigs/{mute_config}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5102,17 +4052,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -5146,15 +4095,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class NotificationConfigs {
 
       /**
-       * Creates a notification config.
-       *
        * Create a request for the method "notificationConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -5172,8 +4118,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Creates a notification config.
-         *
          * Create a request for the method "notificationConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5182,8 +4126,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -5252,24 +4195,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new notification config's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5280,26 +4215,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
+        /**
+
          */
         public java.lang.String getConfigId() {
           return configId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
           return this;
@@ -5311,17 +4236,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a notification config.
-       *
        * Create a request for the method "notificationConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5338,8 +4258,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Deletes a notification config.
-         *
          * Create a request for the method "notificationConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5348,10 +4266,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -5419,30 +4334,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to delete. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5459,17 +4360,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a notification config.
-       *
        * Create a request for the method "notificationConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5486,8 +4382,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Gets a notification config.
-         *
          * Create a request for the method "notificationConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5495,10 +4389,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5576,30 +4467,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to get. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5616,15 +4493,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists notification configs.
-       *
        * Create a request for the method "notificationConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5641,8 +4515,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists notification configs.
-         *
          * Create a request for the method "notificationConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5650,8 +4522,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5729,26 +4600,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent in which to list the notification configurations. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5759,50 +4620,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListNotificationConfigsResponse`; indicates that this is a
-       continuation of a prior `ListNotificationConfigs` call, and that the system should return the next
-       page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -5814,19 +4656,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a notification config. The following update fields are allowed: description,
-       * pubsub_topic, streaming_config.filter
-       *
        * Create a request for the method "notificationConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -5844,9 +4679,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Updates a notification config. The following update fields are allowed: description,
-         * pubsub_topic, streaming_config.filter
-         *
          * Create a request for the method "notificationConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5855,11 +4687,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -5928,33 +4756,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this notification config. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       "projects/{project_id}/notificationConfigs/notify_public_bucket".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5965,24 +4776,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the notification config. If empty all mutable fields will be
-       updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -6036,19 +4839,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and
-         * also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -6066,10 +4862,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent,
-           * and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the
-           * given parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6078,10 +4870,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -6150,30 +4939,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the new custom module's parent. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6190,18 +4965,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-         * hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6218,9 +4987,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-           * hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6229,10 +4995,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6300,30 +5063,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6340,17 +5089,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Retrieves a SecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6367,8 +5111,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Retrieves a SecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6376,10 +5118,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6457,30 +5196,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6497,19 +5222,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-         * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6526,10 +5244,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-           * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6537,10 +5251,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6618,30 +5329,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6652,40 +5349,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -6697,19 +5385,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-         * and all of the parent’s CRM descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -6726,9 +5408,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-           * and all of the parent’s CRM descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6737,10 +5416,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -6818,30 +5494,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list descendant custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6852,40 +5514,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -6897,22 +5550,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-         * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-         * custom config of a module is supported on resident modules only.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -6930,11 +5573,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-           * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-           * custom config of a module is supported on resident modules only.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6943,12 +5581,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -7017,36 +5650,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the custom module. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         {customModule} is server-generated and is not user settable. It will be a numeric id containing
-         1-20 digits.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7057,27 +5670,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. The only fields that can be updated are `enablement_state` and
-         `custom_config`. If empty or set to the wildcard value `*`, both `enablement_state` and
-         `custom_config` are updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -7089,17 +5691,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-         *
          * Create a request for the method "customModules.simulate".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -7117,8 +5714,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-           *
            * Create a request for the method "customModules.simulate".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7127,10 +5722,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -7199,30 +5791,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Simulate) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. For more information
-         about relative resource names, see [Relative Resource
-         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         `organizations/{organization_id}`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7261,18 +5839,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7289,8 +5861,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7298,11 +5868,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7380,32 +5946,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7422,19 +5972,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-         * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-         * from CRM ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7451,10 +5994,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-           * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-           * from CRM ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7462,10 +6001,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7543,30 +6079,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list effective custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7577,40 +6099,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -7645,15 +6158,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Sources {
 
       /**
-       * Lists all sources belonging to an organization.
-       *
        * Create a request for the method "sources.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -7670,8 +6180,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists all sources belonging to an organization.
-         *
          * Create a request for the method "sources.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7679,8 +6187,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -7758,24 +6265,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent of sources to list. Its format should be
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7786,49 +6285,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
-       prior `ListSources` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -7861,22 +6342,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Findings {
 
         /**
-         * Filters an organization or source's findings and groups them by their specified properties. To
-         * group across all sources provide a `-` as the source id. Example:
-         * /v1/organizations/{organization_id}/sources/-/findings,
-         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-         *
          * Create a request for the method "findings.group".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -7894,11 +6365,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+$");
 
           /**
-           * Filters an organization or source's findings and groups them by their specified properties. To
-           * group across all sources provide a `-` as the source id. Example:
-           * /v1/organizations/{organization_id}/sources/-/findings,
-           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-           *
            * Create a request for the method "findings.group".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7907,12 +6373,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -7981,35 +6442,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Group) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source to groupBy. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
-         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         `projects/{project_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8026,20 +6468,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists an organization or source's findings. To list across all sources provide a `-` as the
-         * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-         *
          * Create a request for the method "findings.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -8056,9 +6490,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+$");
 
           /**
-           * Lists an organization or source's findings. To list across all sources provide a `-` as the
-           * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-           *
            * Create a request for the method "findings.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8066,12 +6497,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -8149,35 +6575,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source the findings belong to. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
-         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         `projects/{projects_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8188,290 +6595,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           @com.google.api.client.util.Key
           private String compareDuration;
 
-          /** When compare_duration is set, the ListFindingsResult's "state_change" attribute is updated to
-         indicate whether the finding had its state changed, the finding's state remained unchanged, or if
-         the finding was added in any state during the compare_duration period of time that precedes the
-         read_time. This is the time between (read_time - compare_duration) and read_time. The state_change
-         value is derived based on the presence and state of the finding at the two points in time.
-         Intermediate state changes between the two times don't affect the result. For example, the results
-         aren't affected if the finding is made inactive and then active again. Possible "state_change"
-         values when compare_duration is specified: * "CHANGED": indicates that the finding was present and
-         matched the given filter at the start of compare_duration, but changed its state at read_time. *
-         "UNCHANGED": indicates that the finding was present and matched the given filter at the start of
-         compare_duration and did not change state at read_time. * "ADDED": indicates that the finding did
-         not match the given filter or was not present at the start of compare_duration, but was present at
-         read_time. * "REMOVED": indicates that the finding was present and matched the filter at the start
-         of compare_duration, but did not match the filter at read_time. If compare_duration is not
-         specified, then the only possible state_change is "UNUSED", which will be the state_change set for
-         all findings present at read_time.
+          /**
+
            */
           public String getCompareDuration() {
             return compareDuration;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           public List setCompareDuration(String compareDuration) {
             this.compareDuration = compareDuration;
             return this;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
-         list all fields.
+          /**
+
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;
             return this;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Expression that defines the filter to apply across findings. The expression is a list of one or
-         more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
-         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
-         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-         `true` and `false` without quotes. The following field and operator combinations are supported: *
-         name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:` *
-         external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds
-         since epoch or an RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time
-         = 1560208038000` * severity: `=`, `:` * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` *
-         source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a
-         valid filter string. Use a partial match on the empty string to filter based on a property
-         existing: `source_properties.my_property : ""` Use a negated partial match on the empty string to
-         filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
-         resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
-         resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Expression that defines what fields and order to use for sorting. The string value should follow
-         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be appended to the field name. For example: "name desc,source_properties.a_property".
-         Redundant space characters in the syntax are insignificant. "name
-         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
-         The following fields are supported: name parent state category resource_name event_time
-         source_properties security_marks.marks
+          /**
+
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
-         prior `ListFindings` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
-         at the supplied time and their values are those at that specific time. Absence of this field will
-         default to the API's version of NOW.
+          /**
+
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -8483,20 +6706,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates or updates a finding. The corresponding source must exist for a finding creation to
-         * succeed.
-         *
          * Create a request for the method "findings.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -8514,9 +6729,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Creates or updates a finding. The corresponding source must exist for a finding creation to
-           * succeed.
-           *
            * Create a request for the method "findings.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8525,12 +6737,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -8599,35 +6806,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8638,30 +6826,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the finding resource. This field should not be specified when
-         creating a finding. When updating a finding, an empty mask is treated as updating all mutable
-         fields and replacing source_properties. Individual source_properties can be added/updated by using
-         "source_properties." in the field mask.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -8673,19 +6847,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the mute state of a finding.
-         *
          * Create a request for the method "findings.setMute".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -8703,8 +6870,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the mute state of a finding.
-           *
            * Create a request for the method "findings.setMute".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8713,12 +6878,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -8787,35 +6947,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetMute) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8832,19 +6973,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the state of a finding.
-         *
          * Create a request for the method "findings.setState".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -8862,8 +6996,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the state of a finding.
-           *
            * Create a request for the method "findings.setState".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8872,12 +7004,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -8946,35 +7073,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8991,18 +7099,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "findings.updateSecurityMarks".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @return the request
          */
@@ -9020,8 +7123,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
 
           /**
-           * Updates security marks.
-           *
            * Create a request for the method "findings.updateSecurityMarks".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9030,10 +7131,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
            * @since 1.13
            */
@@ -9102,30 +7200,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the SecurityMarks. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           public UpdateSecurityMarks setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9136,53 +7220,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           @com.google.api.client.util.Key
           private String startTime;
 
-          /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-         Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-         be earlier or equal to the server time.
+          /**
+
            */
           public String getStartTime() {
             return startTime;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           public UpdateSecurityMarks setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-         duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-         updated using "marks.".
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           public UpdateSecurityMarks setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -9215,17 +7277,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class ExternalSystems {
 
           /**
-           * Updates external system. This is for a given finding.
-           *
            * Create a request for the method "externalSystems.patch".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -9243,8 +7300,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^folders/[^/]+/sources/[^/]+/findings/[^/]+/externalSystems/[^/]+$");
 
             /**
-             * Updates external system. This is for a given finding.
-             *
              * Create a request for the method "externalSystems.patch".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9253,10 +7308,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+             * @param name
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -9325,30 +7377,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Full resource name of the external system, for example:
-           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9359,24 +7397,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The FieldMask to use when updating the external system resource. If empty all mutable fields will
-           be updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -9414,16 +7444,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Organizations {
 
     /**
-     * Gets the settings for an organization.
-     *
      * Create a request for the method "organizations.getOrganizationSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetOrganizationSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        `organizations/[organization_id]/organizationSettings`.
+     * @param name
      * @return the request
      */
     public GetOrganizationSettings getOrganizationSettings(java.lang.String name) throws java.io.IOException {
@@ -9440,8 +7467,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/organizationSettings$");
 
       /**
-       * Gets the settings for an organization.
-       *
        * Create a request for the method "organizations.getOrganizationSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9450,8 +7475,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Required. Name of the organization to get organization settings for. Its format is
-     *        `organizations/[organization_id]/organizationSettings`.
+       * @param name
        * @since 1.13
        */
       protected GetOrganizationSettings(java.lang.String name) {
@@ -9529,24 +7553,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetOrganizationSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. Name of the organization to get organization settings for. Its format is
-       * `organizations/[organization_id]/organizationSettings`.
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the organization to get organization settings for. Its format is
-     `organizations/[organization_id]/organizationSettings`.
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. Name of the organization to get organization settings for. Its format is
-       * `organizations/[organization_id]/organizationSettings`.
-       */
       public GetOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9563,17 +7579,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Updates an organization's settings.
-     *
      * Create a request for the method "organizations.updateOrganizationSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateOrganizationSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     *        "organizations/{organization_id}/organizationSettings".
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1.model.OrganizationSettings}
      * @return the request
      */
@@ -9591,8 +7603,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/organizationSettings$");
 
       /**
-       * Updates an organization's settings.
-       *
        * Create a request for the method "organizations.updateOrganizationSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9601,9 +7611,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     *        "organizations/{organization_id}/organizationSettings".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.OrganizationSettings}
        * @since 1.13
        */
@@ -9672,27 +7680,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateOrganizationSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The relative resource name of the settings. See:
-       * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/{organization_id}/organizationSettings".
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The relative resource name of the settings. See:
-     https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-     "organizations/{organization_id}/organizationSettings".
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The relative resource name of the settings. See:
-       * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       * "organizations/{organization_id}/organizationSettings".
-       */
       public UpdateOrganizationSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9703,24 +7700,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /**
-       * The FieldMask to use when updating the settings resource. If empty all mutable fields will
-       * be updated.
-       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The FieldMask to use when updating the settings resource. If empty all mutable fields will be
-     updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /**
-       * The FieldMask to use when updating the settings resource. If empty all mutable fields will
-       * be updated.
-       */
       public UpdateOrganizationSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -9753,15 +7742,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Assets {
 
       /**
-       * Filters an organization's assets and groups them by their specified properties.
-       *
        * Create a request for the method "assets.group".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -9779,8 +7765,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Filters an organization's assets and groups them by their specified properties.
-         *
          * Create a request for the method "assets.group".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9789,8 +7773,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -9859,24 +7842,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Group) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent to group the assets by. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9893,17 +7868,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists an organization's assets.
-       *
        * Create a request for the method "assets.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9920,8 +7890,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists an organization's assets.
-         *
          * Create a request for the method "assets.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9929,10 +7897,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10010,29 +7975,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource that contains the assets. The value that you can specify
-       on parent depends on the method in which you specify parent. You can specify one of the following
-       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10043,310 +7995,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         @com.google.api.client.util.Key
         private String compareDuration;
 
-        /** When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated to
-       indicate whether the asset was added, removed, or remained present during the compare_duration
-       period of time that precedes the read_time. This is the time between (read_time - compare_duration)
-       and read_time. The state_change value is derived based on the presence of the asset at the two
-       points in time. Intermediate state changes between the two times don't affect the result. For
-       example, the results aren't affected if the asset is removed and re-created again. Possible
-       "state_change" values when compare_duration is specified: * "ADDED": indicates that the asset was
-       not present at the start of compare_duration, but present at read_time. * "REMOVED": indicates that
-       the asset was present at the start of compare_duration, but not present at read_time. * "ACTIVE":
-       indicates that the asset was present at both the start and the end of the time period defined by
-       compare_duration and read_time. If compare_duration is not specified, then the only possible
-       state_change is "UNUSED", which will be the state_change set for all assets present at read_time.
+        /**
+
          */
         public String getCompareDuration() {
           return compareDuration;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         public List setCompareDuration(String compareDuration) {
           this.compareDuration = compareDuration;
           return this;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
-       mask will list all fields.
+        /**
+
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
           return this;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
-       restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
-       higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in front
-       of them to indicate negation. The fields map to those defined in the Asset resource. Examples
-       include: * name * security_center_properties.resource_name * resource_properties.a_property *
-       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-       `true` and `false` without quotes. The following are the allowed field and operator combinations: *
-       name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch
-       or an RFC3339 string. Examples: `update_time = "2019-06-10T16:07:18-07:00"` `update_time =
-       1560208038000` * create_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since
-       epoch or an RFC3339 string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-       1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`,
-       `<=` * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
-       security_center_properties.resource_display_name: `=`, `:` *
-       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
-       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
-       security_center_properties.resource_project: `=`, `:` *
-       security_center_properties.resource_project_display_name: `=`, `:` *
-       security_center_properties.resource_owners: `=`, `:` For example, `resource_properties.size = 100`
-       is a valid filter string. Use a partial match on the empty string to filter based on a property
-       existing: `resource_properties.my_property : ""` Use a negated partial match on the empty string to
-       filter based on a property not existing: `-resource_properties.my_property : ""`
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Expression that defines what fields and order to use for sorting. The string value should follow
-       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-       should be appended to the field name. For example: "name desc,resource_properties.a_property".
-       Redundant space characters in the syntax are insignificant. "name
-       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
-       equivalent. The following fields are supported: name update_time resource_properties
-       security_marks.marks security_center_properties.resource_name
-       security_center_properties.resource_display_name security_center_properties.resource_parent
-       security_center_properties.resource_parent_display_name security_center_properties.resource_project
-       security_center_properties.resource_project_display_name security_center_properties.resource_type
+        /**
+
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
-       prior `ListAssets` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         @com.google.api.client.util.Key
         private String readTime;
 
-        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
-       the supplied time and their values are those at that specific time. Absence of this field will
-       default to the API's version of NOW.
+        /**
+
          */
         public String getReadTime() {
           return readTime;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         public List setReadTime(String readTime) {
           this.readTime = readTime;
           return this;
@@ -10358,18 +8106,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
-       * be called with limited frequency for an organization. If it is called too frequently the caller
-       * will receive a TOO_MANY_REQUESTS error.
-       *
        * Create a request for the method "assets.runDiscovery".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link RunDiscovery#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        `organizations/[organization_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.RunAssetDiscoveryRequest}
        * @return the request
        */
@@ -10387,10 +8130,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
-         * be called with limited frequency for an organization. If it is called too frequently the caller
-         * will receive a TOO_MANY_REQUESTS error.
-         *
          * Create a request for the method "assets.runDiscovery".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10399,8 +8138,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * RunDiscovery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to run asset discovery for. Its format is
-       *        `organizations/[organization_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.RunAssetDiscoveryRequest}
          * @since 1.13
          */
@@ -10469,24 +8207,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (RunDiscovery) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the organization to run asset discovery for. Its format is
-         * `organizations/[organization_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the organization to run asset discovery for. Its format is
-       `organizations/[organization_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of the organization to run asset discovery for. Its format is
-         * `organizations/[organization_id]`.
-         */
         public RunDiscovery setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10503,18 +8233,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates security marks.
-       *
        * Create a request for the method "assets.updateSecurityMarks".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
        * @return the request
        */
@@ -10532,8 +8257,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/assets/[^/]+/securityMarks$");
 
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "assets.updateSecurityMarks".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10542,10 +8265,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @since 1.13
          */
@@ -10614,30 +8334,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of the SecurityMarks. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         public UpdateSecurityMarks setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10648,53 +8354,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         @com.google.api.client.util.Key
         private String startTime;
 
-        /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-       Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-       be earlier or equal to the server time.
+        /**
+
          */
         public String getStartTime() {
           return startTime;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         public UpdateSecurityMarks setStartTime(String startTime) {
           this.startTime = startTime;
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-       duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-       updated using "marks.".
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         public UpdateSecurityMarks setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -10728,17 +8412,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class AttackPaths {
 
       /**
-       * Lists the attack paths for a set of simulation results or valued resources and filter.
-       *
        * Create a request for the method "attackPaths.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-       *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -10755,8 +8434,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists the attack paths for a set of simulation results or valued resources and filter.
-         *
          * Create a request for the method "attackPaths.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10764,10 +8441,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-       *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -10845,32 +8519,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of parent to list attack paths. Valid formats:
-         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
-         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
-         * ure_result_v2}`
-         * `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-       `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-       simulation}/attackExposureResults/{attack_exposure_result_v2}`
-       `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of parent to list attack paths. Valid formats:
-         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
-         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
-         * ure_result_v2}`
-         * `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10881,72 +8539,46 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The filter expression that filters the attack path in the response. Supported fields: *
-         * `valued_resources` supports =
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The filter expression that filters the attack path in the response. Supported fields: *
-       `valued_resources` supports =
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * The filter expression that filters the attack path in the response. Supported fields: *
-         * `valued_resources` supports =
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-         * continuation of a prior `ListAttackPaths` call, and that the system should return the
-         * next page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
-       a prior `ListAttackPaths` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-         * continuation of a prior `ListAttackPaths` call, and that the system should return the
-         * next page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -10980,15 +8612,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -11006,8 +8635,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11016,8 +8643,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -11086,24 +8712,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11114,27 +8732,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
           return this;
@@ -11146,17 +8753,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11173,8 +8775,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11183,10 +8783,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -11254,29 +8851,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the BigQuery export to delete. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11293,17 +8877,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -11320,8 +8899,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11329,10 +8906,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -11410,29 +8984,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to retrieve. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11449,18 +9010,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-       * BigQuery exports immediately under the folder plus the ones created under the projects within the
-       * folder are returned.
-       *
        * Create a request for the method "bigQueryExports.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -11477,11 +9032,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-         * BigQuery exports immediately under the folder plus the ones created under the projects within
-         * the folder are returned.
-         *
          * Create a request for the method "bigQueryExports.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11489,8 +9039,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -11568,24 +9117,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11596,53 +9137,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
-       the call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -11654,19 +9173,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -11684,8 +9196,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Updates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11694,12 +9204,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -11768,36 +9273,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this export. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
-       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
-       ignored when provided in create requests.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11808,17 +9293,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -11852,18 +9336,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Validates the given Event Threat Detection custom module.
-       *
        * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link ValidateCustomModule#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -11881,8 +9360,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Validates the given Event Threat Detection custom module.
-         *
          * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11891,10 +9368,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -11963,30 +9437,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (ValidateCustomModule) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       `organizations/{organization}/eventThreatDetectionSettings`. *
-       `folders/{folder}/eventThreatDetectionSettings`. *
-       `projects/{project}/eventThreatDetectionSettings`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12024,19 +9484,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-         * Manager parent, and also creates inherited custom modules for all descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -12054,10 +9507,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-           * Manager parent, and also creates inherited custom modules for all descendants of the given
-           * parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12066,10 +9515,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -12138,30 +9584,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The new custom module's parent. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12178,18 +9610,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-         * Resource Manager hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12206,9 +9632,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-           * Resource Manager hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12217,10 +9640,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -12288,30 +9708,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12328,17 +9734,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets an Event Threat Detection custom module.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -12355,8 +9756,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Gets an Event Threat Detection custom module.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12364,10 +9763,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -12445,30 +9841,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12485,19 +9867,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-         * includes resident modules defined at the scope of the parent along with modules inherited from
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -12514,10 +9889,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-           * includes resident modules defined at the scope of the parent along with modules inherited from
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12525,10 +9896,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -12606,30 +9974,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12640,55 +9994,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEventThreatDetectionCustomModules` call. Provide this
-         to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -12700,19 +10030,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all resident Event Threat Detection custom modules under the given Resource Manager parent
-         * and its descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -12729,9 +10053,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all resident Event Threat Detection custom modules under the given Resource Manager
-           * parent and its descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12740,10 +10061,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -12821,30 +10139,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12855,57 +10159,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListDescendantEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -12917,21 +10195,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the Event Threat Detection custom module with the given name based on the given update
-         * mask. Updating the enablement state is supported for both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name or
-         * configuration of a module is supported for resident modules only. The type of a module cannot be
-         * changed.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -12949,12 +10218,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Updates the Event Threat Detection custom module with the given name based on the given update
-           * mask. Updating the enablement state is supported for both resident and inherited modules
-           * (though resident modules cannot have an enablement state of "inherited"). Updating the display
-           * name or configuration of a module is supported for resident modules only. The type of a module
-           * cannot be changed.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -12963,10 +10226,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -13035,32 +10295,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13071,17 +10315,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -13115,17 +10358,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Gets an effective Event Threat Detection custom module at the given level.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -13142,8 +10380,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Gets an effective Event Threat Detection custom module at the given level.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -13151,10 +10387,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13232,32 +10465,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13274,19 +10491,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-         * resident modules defined at the scope of the parent along with modules inherited from its
-         * ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -13303,10 +10513,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-           * resident modules defined at the scope of the parent along with modules inherited from its
-           * ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -13314,10 +10520,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -13395,30 +10598,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules for. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13429,55 +10618,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEffectiveEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -13512,17 +10677,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Findings {
 
       /**
-       * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-       * an organization, folder or project. The findings matched by the filter will be muted after the
-       * LRO is done.
-       *
        * Create a request for the method "findings.bulkMute".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -13540,10 +10700,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-         * an organization, folder or project. The findings matched by the filter will be muted after the
-         * LRO is done.
-         *
          * Create a request for the method "findings.bulkMute".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -13552,8 +10708,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * BulkMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -13622,24 +10777,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (BulkMute) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, at which bulk action needs to be applied. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13698,19 +10845,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -13727,8 +10867,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Deletes an existing mute config.
-           *
            * Create a request for the method "muteConfigs.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -13737,12 +10875,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -13810,38 +10943,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to delete. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13858,19 +10969,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -13887,8 +10991,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Gets a mute config.
-           *
            * Create a request for the method "muteConfigs.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -13896,12 +10998,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -13979,38 +11076,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to retrieve. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14027,20 +11102,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -14058,8 +11125,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Updates a mute config.
-           *
            * Create a request for the method "muteConfigs.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14068,13 +11133,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -14143,38 +11202,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** This field will be ignored if provided on config creation. Format
-         `organizations/{organization}/muteConfigs/{mute_config}`
-         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         `projects/{project}/locations/global/muteConfigs/{mute_config}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14185,17 +11222,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -14230,15 +11266,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class MuteConfigs {
 
       /**
-       * Creates a mute config.
-       *
        * Create a request for the method "muteConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -14256,8 +11289,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a mute config.
-         *
          * Create a request for the method "muteConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14266,8 +11297,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -14336,24 +11366,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new mute configs's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14364,27 +11386,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;
           return this;
@@ -14396,19 +11407,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing mute config.
-       *
        * Create a request for the method "muteConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14425,8 +11429,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14435,12 +11437,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -14508,36 +11505,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to delete. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14554,19 +11531,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a mute config.
-       *
        * Create a request for the method "muteConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -14583,8 +11553,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14592,12 +11560,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -14675,36 +11638,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to retrieve. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14721,15 +11664,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists mute configs.
-       *
        * Create a request for the method "muteConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -14746,8 +11686,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists mute configs.
-         *
          * Create a request for the method "muteConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14755,8 +11693,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -14834,24 +11771,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of mute configs. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14862,53 +11791,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
-       call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -14920,20 +11827,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a mute config.
-       *
        * Create a request for the method "muteConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -14951,8 +11850,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -14961,13 +11858,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -15036,38 +11927,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** This field will be ignored if provided on config creation. Format
-       `organizations/{organization}/muteConfigs/{mute_config}`
-       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       `projects/{project}/locations/global/muteConfigs/{mute_config}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15078,17 +11947,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -15122,15 +11990,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class NotificationConfigs {
 
       /**
-       * Creates a notification config.
-       *
        * Create a request for the method "notificationConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -15148,8 +12013,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a notification config.
-         *
          * Create a request for the method "notificationConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -15158,8 +12021,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -15228,24 +12090,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new notification config's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15256,26 +12110,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
+        /**
+
          */
         public java.lang.String getConfigId() {
           return configId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
           return this;
@@ -15287,17 +12131,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a notification config.
-       *
        * Create a request for the method "notificationConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15314,8 +12153,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Deletes a notification config.
-         *
          * Create a request for the method "notificationConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -15324,10 +12161,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -15395,30 +12229,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to delete. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15435,17 +12255,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a notification config.
-       *
        * Create a request for the method "notificationConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -15462,8 +12277,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Gets a notification config.
-         *
          * Create a request for the method "notificationConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -15471,10 +12284,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -15552,30 +12362,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to get. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15592,15 +12388,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists notification configs.
-       *
        * Create a request for the method "notificationConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -15617,8 +12410,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists notification configs.
-         *
          * Create a request for the method "notificationConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -15626,8 +12417,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -15705,26 +12495,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent in which to list the notification configurations. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15735,50 +12515,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListNotificationConfigsResponse`; indicates that this is a
-       continuation of a prior `ListNotificationConfigs` call, and that the system should return the next
-       page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -15790,19 +12551,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a notification config. The following update fields are allowed: description,
-       * pubsub_topic, streaming_config.filter
-       *
        * Create a request for the method "notificationConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -15820,9 +12574,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Updates a notification config. The following update fields are allowed: description,
-         * pubsub_topic, streaming_config.filter
-         *
          * Create a request for the method "notificationConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -15831,11 +12582,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -15904,33 +12651,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this notification config. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       "projects/{project_id}/notificationConfigs/notify_public_bucket".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15941,24 +12671,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the notification config. If empty all mutable fields will be
-       updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -15992,20 +12714,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Operations {
 
       /**
-       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-       * methods to check whether the cancellation succeeded or whether the operation completed despite
-       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-       * `Code.CANCELLED`.
-       *
        * Create a request for the method "operations.cancel".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource to be cancelled.
+       * @param name
        * @return the request
        */
       public Cancel cancel(java.lang.String name) throws java.io.IOException {
@@ -16022,14 +12736,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-         * methods to check whether the cancellation succeeded or whether the operation completed despite
-         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-         * `Code.CANCELLED`.
-         *
          * Create a request for the method "operations.cancel".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16038,7 +12744,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource to be cancelled.
+         * @param name
          * @since 1.13
          */
         protected Cancel(java.lang.String name) {
@@ -16106,17 +12812,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Cancel) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource to be cancelled. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource to be cancelled.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource to be cancelled. */
         public Cancel setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16133,16 +12838,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a long-running operation. This method indicates that the client is no longer interested
-       * in the operation result. It does not cancel the operation. If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-       *
        * Create a request for the method "operations.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource to be deleted.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -16159,10 +12860,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Deletes a long-running operation. This method indicates that the client is no longer interested
-         * in the operation result. It does not cancel the operation. If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16171,7 +12868,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource to be deleted.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -16239,17 +12936,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource to be deleted.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource to be deleted. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16266,15 +12962,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
        * Create a request for the method "operations.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -16291,9 +12984,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation. Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
-         *
          * Create a request for the method "operations.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16301,7 +12991,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -16379,17 +13069,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16406,15 +13095,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
        * Create a request for the method "operations.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation's parent resource.
+       * @param name
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -16431,9 +13117,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations$");
 
         /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16441,7 +13124,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation's parent resource.
+         * @param name
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -16519,17 +13202,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation's parent resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation's parent resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation's parent resource. */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16540,84 +13222,61 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean returnPartialSuccess;
 
-        /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-       when reading across collections. For example, when `parent` is set to
-       `"projects/example/locations/-"`. This field is not supported by default and will result in an
-       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-       documentation.
+        /**
+
          */
         public java.lang.Boolean getReturnPartialSuccess() {
           return returnPartialSuccess;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
           this.returnPartialSuccess = returnPartialSuccess;
           return this;
@@ -16651,17 +13310,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class ResourceValueConfigs {
 
       /**
-       * Creates a ResourceValueConfig for an organization. Maps user's tags to difference resource values
-       * for use by the attack path simulation.
-       *
        * Create a request for the method "resourceValueConfigs.batchCreate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
-       *        CreateResourceValueConfigRequest messages must either be empty or match this field.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest}
        * @return the request
        */
@@ -16679,9 +13334,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a ResourceValueConfig for an organization. Maps user's tags to difference resource
-         * values for use by the attack path simulation.
-         *
          * Create a request for the method "resourceValueConfigs.batchCreate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16690,8 +13342,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
-       *        CreateResourceValueConfigRequest messages must either be empty or match this field.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BatchCreateResourceValueConfigsRequest}
          * @since 1.13
          */
@@ -16760,24 +13411,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (BatchCreate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
-         * CreateResourceValueConfigRequest messages must either be empty or match this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
-       CreateResourceValueConfigRequest messages must either be empty or match this field.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new ResourceValueConfig's parent. The parent field in the
-         * CreateResourceValueConfigRequest messages must either be empty or match this field.
-         */
         public BatchCreate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16794,14 +13437,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a ResourceValueConfig.
-       *
        * Create a request for the method "resourceValueConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the ResourceValueConfig to delete
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -16818,8 +13459,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
 
         /**
-         * Deletes a ResourceValueConfig.
-         *
          * Create a request for the method "resourceValueConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16828,7 +13467,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the ResourceValueConfig to delete
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -16896,17 +13535,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Name of the ResourceValueConfig to delete */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the ResourceValueConfig to delete
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Name of the ResourceValueConfig to delete */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16923,15 +13561,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a ResourceValueConfig.
-       *
        * Create a request for the method "resourceValueConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the resource value config to retrieve. Its format is
-       *        `organizations/{organization}/resourceValueConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -16948,8 +13583,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
 
         /**
-         * Gets a ResourceValueConfig.
-         *
          * Create a request for the method "resourceValueConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -16957,8 +13590,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the resource value config to retrieve. Its format is
-       *        `organizations/{organization}/resourceValueConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -17036,24 +13668,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the resource value config to retrieve. Its format is
-         * `organizations/{organization}/resourceValueConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the resource value config to retrieve. Its format is
-       `organizations/{organization}/resourceValueConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the resource value config to retrieve. Its format is
-         * `organizations/{organization}/resourceValueConfigs/{config_id}`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17070,15 +13694,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists all ResourceValueConfigs.
-       *
        * Create a request for the method "resourceValueConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
-       *        `organizations/[organization_id]`
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -17095,8 +13716,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists all ResourceValueConfigs.
-         *
          * Create a request for the method "resourceValueConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17104,8 +13723,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of resource value configs. Its format is
-       *        `organizations/[organization_id]`
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -17183,24 +13801,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of resource value configs. Its format is
-         * `organizations/[organization_id]`
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of resource value configs. Its format is
-       `organizations/[organization_id]`
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of resource value configs. Its format is
-         * `organizations/[organization_id]`
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17211,56 +13821,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The number of results to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The number of results to return. The service may return fewer than this value. If unspecified, at
-       most 10 configs will be returned. The maximum value is 1000; values above 1000 will be coerced to
-       1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The number of results to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListResourceValueConfigs` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListResourceValueConfigs` must match the call that provided the page token. page_size
-         * can be specified, and the new page_size will be used.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListResourceValueConfigs` call. Provide this to retrieve
-       the subsequent page. When paginating, all other parameters provided to `ListResourceValueConfigs`
-       must match the call that provided the page token. page_size can be specified, and the new page_size
-       will be used.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListResourceValueConfigs` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListResourceValueConfigs` must match the call that provided the page token. page_size
-         * can be specified, and the new page_size will be used.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -17272,14 +13857,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates an existing ResourceValueConfigs with new rules.
-       *
        * Create a request for the method "resourceValueConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Name for the resource value configuration
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
        * @return the request
        */
@@ -17297,8 +13880,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/resourceValueConfigs/[^/]+$");
 
         /**
-         * Updates an existing ResourceValueConfigs with new rules.
-         *
          * Create a request for the method "resourceValueConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17307,7 +13888,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name for the resource value configuration
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ResourceValueConfig}
          * @since 1.13
          */
@@ -17376,17 +13957,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Name for the resource value configuration */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Name for the resource value configuration
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Name for the resource value configuration */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17397,17 +13977,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -17461,19 +14040,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and
-         * also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -17491,10 +14063,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent,
-           * and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the
-           * given parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17503,10 +14071,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -17575,30 +14140,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the new custom module's parent. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17615,18 +14166,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-         * hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -17643,9 +14188,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-           * hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17654,10 +14196,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -17725,30 +14264,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17765,17 +14290,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Retrieves a SecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -17792,8 +14312,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Retrieves a SecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17801,10 +14319,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -17882,30 +14397,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17922,19 +14423,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-         * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -17951,10 +14445,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-           * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -17962,10 +14452,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18043,30 +14530,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18077,40 +14550,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -18122,19 +14586,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-         * and all of the parent’s CRM descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -18151,9 +14609,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-           * and all of the parent’s CRM descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -18162,10 +14617,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -18243,30 +14695,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list descendant custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18277,40 +14715,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -18322,22 +14751,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-         * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-         * custom config of a module is supported on resident modules only.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -18355,11 +14774,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-           * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-           * custom config of a module is supported on resident modules only.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -18368,12 +14782,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -18442,36 +14851,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the custom module. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         {customModule} is server-generated and is not user settable. It will be a numeric id containing
-         1-20 digits.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18482,27 +14871,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. The only fields that can be updated are `enablement_state` and
-         `custom_config`. If empty or set to the wildcard value `*`, both `enablement_state` and
-         `custom_config` are updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -18514,17 +14892,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-         *
          * Create a request for the method "customModules.simulate".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -18542,8 +14915,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-           *
            * Create a request for the method "customModules.simulate".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -18552,10 +14923,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -18624,30 +14992,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Simulate) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. For more information
-         about relative resource names, see [Relative Resource
-         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         `organizations/{organization_id}`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18686,18 +15040,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -18714,8 +15062,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -18723,11 +15069,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -18805,32 +15147,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18847,19 +15173,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-         * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-         * from CRM ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -18876,10 +15195,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-           * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-           * from CRM ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -18887,10 +15202,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -18968,30 +15280,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list effective custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19002,40 +15300,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -19070,16 +15359,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Simulations {
 
       /**
-       * Get the simulation by name or the latest simulation for the given organization.
-       *
        * Create a request for the method "simulations.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The organization name or simulation name of this simulation Valid format:
-       *        `organizations/{organization}/simulations/latest`
-       *        `organizations/{organization}/simulations/{simulation}`
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -19096,8 +15381,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
 
         /**
-         * Get the simulation by name or the latest simulation for the given organization.
-         *
          * Create a request for the method "simulations.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -19105,9 +15388,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The organization name or simulation name of this simulation Valid format:
-       *        `organizations/{organization}/simulations/latest`
-       *        `organizations/{organization}/simulations/{simulation}`
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -19185,27 +15466,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The organization name or simulation name of this simulation Valid format:
-         * `organizations/{organization}/simulations/latest`
-         * `organizations/{organization}/simulations/{simulation}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The organization name or simulation name of this simulation Valid format:
-       `organizations/{organization}/simulations/latest`
-       `organizations/{organization}/simulations/{simulation}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The organization name or simulation name of this simulation Valid format:
-         * `organizations/{organization}/simulations/latest`
-         * `organizations/{organization}/simulations/{simulation}`
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19263,17 +15533,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class AttackPaths {
 
           /**
-           * Lists the attack paths for a set of simulation results or valued resources and filter.
-           *
            * Create a request for the method "attackPaths.list".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19290,8 +15555,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
 
             /**
-             * Lists the attack paths for a set of simulation results or valued resources and filter.
-             *
              * Create a request for the method "attackPaths.list".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -19299,10 +15562,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19380,32 +15640,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. Name of parent to list attack paths. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. Name of parent to list attack paths. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19416,72 +15660,46 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The filter expression that filters the attack path in the response. Supported fields:
-             * * `valued_resources` supports =
-             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** The filter expression that filters the attack path in the response. Supported fields: *
-           `valued_resources` supports =
+            /**
+
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * The filter expression that filters the attack path in the response. Supported fields:
-             * * `valued_resources` supports =
-             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-           is 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /**
-             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-             * continuation of a prior `ListAttackPaths` call, and that the system should return the
-             * next page of data.
-             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
-           a prior `ListAttackPaths` call, and that the system should return the next page of data.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /**
-             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-             * continuation of a prior `ListAttackPaths` call, and that the system should return the
-             * next page of data.
-             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -19515,16 +15733,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class ValuedResources {
 
           /**
-           * Lists the valued resources for a set of simulation results and filter.
-           *
            * Create a request for the method "valuedResources.list".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19541,8 +15755,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/attackExposureResults/[^/]+$");
 
             /**
-             * Lists the valued resources for a set of simulation results and filter.
-             *
              * Create a request for the method "valuedResources.list".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -19550,9 +15762,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19630,29 +15840,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. Name of parent to list valued resources. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}`
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. Name of parent to list valued resources. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19663,106 +15860,61 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The filter expression that filters the valued resources in the response. Supported
-             * fields: * `resource_value` supports = * `resource_type` supports =
-             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** The filter expression that filters the valued resources in the response. Supported fields: *
-           `resource_value` supports = * `resource_type` supports =
+            /**
+
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * The filter expression that filters the valued resources in the response. Supported
-             * fields: * `resource_value` supports = * `resource_type` supports =
-             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /**
-             * Optional. The fields by which to order the valued resources response. Supported
-             * fields: * `exposed_score` * `resource_value` * `resource_type` * `resource` *
-             * `display_name` Values should be a comma separated list of fields. For example:
-             * `exposed_score,resource_value`. The default sorting order is descending. To specify
-             * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
-             * respectively; for example: `exposed_score DESC`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. The fields by which to order the valued resources response. Supported fields: *
-           `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
-           a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
-           order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
-           DESC` suffix, respectively; for example: `exposed_score DESC`.
+            /**
+
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /**
-             * Optional. The fields by which to order the valued resources response. Supported
-             * fields: * `exposed_score` * `resource_value` * `resource_type` * `resource` *
-             * `display_name` Values should be a comma separated list of fields. For example:
-             * `exposed_score,resource_value`. The default sorting order is descending. To specify
-             * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
-             * respectively; for example: `exposed_score DESC`.
-             */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-           is 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /**
-             * The value returned by the last `ListValuedResourcesResponse`; indicates that this is
-             * a continuation of a prior `ListValuedResources` call, and that the system should
-             * return the next page of data.
-             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
-           of a prior `ListValuedResources` call, and that the system should return the next page of data.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /**
-             * The value returned by the last `ListValuedResourcesResponse`; indicates that this is
-             * a continuation of a prior `ListValuedResources` call, and that the system should
-             * return the next page of data.
-             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -19797,17 +15949,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class AttackPaths {
 
         /**
-         * Lists the attack paths for a set of simulation results or valued resources and filter.
-         *
          * Create a request for the method "attackPaths.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -19824,8 +15971,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
 
           /**
-           * Lists the attack paths for a set of simulation results or valued resources and filter.
-           *
            * Create a request for the method "attackPaths.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -19833,10 +15978,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -19914,32 +16056,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list attack paths. Valid formats:
-           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
-           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}` `organizations/{organization}/simulations/{simulation}/valuedResourc
-           * es/{valued_resource}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-         `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-         simulation}/attackExposureResults/{attack_exposure_result_v2}`
-         `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list attack paths. Valid formats:
-           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
-           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}` `organizations/{organization}/simulations/{simulation}/valuedResourc
-           * es/{valued_resource}`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19950,72 +16076,46 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The filter expression that filters the attack path in the response. Supported fields: *
-           * `valued_resources` supports =
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The filter expression that filters the attack path in the response. Supported fields: *
-         `valued_resources` supports =
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * The filter expression that filters the attack path in the response. Supported fields: *
-           * `valued_resources` supports =
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-           * continuation of a prior `ListAttackPaths` call, and that the system should return the
-           * next page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
-         a prior `ListAttackPaths` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-           * continuation of a prior `ListAttackPaths` call, and that the system should return the
-           * next page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -20049,15 +16149,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class ValuedResources {
 
         /**
-         * Get the valued resource by name
-         *
          * Create a request for the method "valuedResources.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of this valued resource Valid format:
-         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -20074,8 +16171,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/valuedResources/[^/]+$");
 
           /**
-           * Get the valued resource by name
-           *
            * Create a request for the method "valuedResources.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -20083,8 +16178,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of this valued resource Valid format:
-         *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -20162,24 +16256,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The name of this valued resource Valid format: `organizations/{organization}/
-           * simulations/{simulation}/valuedResources/{valued_resource}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of this valued resource Valid format:
-         `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The name of this valued resource Valid format: `organizations/{organization}/
-           * simulations/{simulation}/valuedResources/{valued_resource}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20196,16 +16282,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists the valued resources for a set of simulation results and filter.
-         *
          * Create a request for the method "valuedResources.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -20222,8 +16304,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+$");
 
           /**
-           * Lists the valued resources for a set of simulation results and filter.
-           *
            * Create a request for the method "valuedResources.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -20231,9 +16311,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-         *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-         *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -20311,29 +16389,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list valued resources. Valid formats:
-           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
-           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-         `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-         simulation}/attackExposureResults/{attack_exposure_result_v2}`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list valued resources. Valid formats:
-           * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}`
-           * `organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_ex
-           * posure_result_v2}`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20344,106 +16409,61 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The filter expression that filters the valued resources in the response. Supported
-           * fields: * `resource_value` supports = * `resource_type` supports =
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The filter expression that filters the valued resources in the response. Supported fields: *
-         `resource_value` supports = * `resource_type` supports =
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * The filter expression that filters the valued resources in the response. Supported
-           * fields: * `resource_value` supports = * `resource_type` supports =
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * Optional. The fields by which to order the valued resources response. Supported fields:
-           * * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name`
-           * Values should be a comma separated list of fields. For example:
-           * `exposed_score,resource_value`. The default sorting order is descending. To specify
-           * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
-           * respectively; for example: `exposed_score DESC`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. The fields by which to order the valued resources response. Supported fields: *
-         `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
-         a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
-         order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
-         DESC` suffix, respectively; for example: `exposed_score DESC`.
+          /**
+
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /**
-           * Optional. The fields by which to order the valued resources response. Supported fields:
-           * * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name`
-           * Values should be a comma separated list of fields. For example:
-           * `exposed_score,resource_value`. The default sorting order is descending. To specify
-           * ascending or descending order for a field, append a ` ASC` or a ` DESC` suffix,
-           * respectively; for example: `exposed_score DESC`.
-           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
-           * continuation of a prior `ListValuedResources` call, and that the system should return
-           * the next page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
-         of a prior `ListValuedResources` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
-           * continuation of a prior `ListValuedResources` call, and that the system should return
-           * the next page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -20476,17 +16496,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class AttackPaths {
 
           /**
-           * Lists the attack paths for a set of simulation results or valued resources and filter.
-           *
            * Create a request for the method "attackPaths.list".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -20503,8 +16518,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^organizations/[^/]+/simulations/[^/]+/valuedResources/[^/]+$");
 
             /**
-             * Lists the attack paths for a set of simulation results or valued resources and filter.
-             *
              * Create a request for the method "attackPaths.list".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -20512,10 +16525,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-           *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           *        `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -20593,32 +16603,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. Name of parent to list attack paths. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Name of parent to list attack paths. Valid formats: `organizations/{organization}`,
-           `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-           simulation}/attackExposureResults/{attack_exposure_result_v2}`
-           `organizations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. Name of parent to list attack paths. Valid formats:
-             * `organizations/{organization}`,
-             * `organizations/{organization}/simulations/{simulation}` `organizations/{organization}
-             * /simulations/{simulation}/attackExposureResults/{attack_exposure_result_v2}` `organiz
-             * ations/{organization}/simulations/{simulation}/valuedResources/{valued_resource}`
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20629,72 +16623,46 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The filter expression that filters the attack path in the response. Supported fields:
-             * * `valued_resources` supports =
-             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** The filter expression that filters the attack path in the response. Supported fields: *
-           `valued_resources` supports =
+            /**
+
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * The filter expression that filters the attack path in the response. Supported fields:
-             * * `valued_resources` supports =
-             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-           is 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of results to return in a single response. Default is 10, minimum
-             * is 1, maximum is 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /**
-             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-             * continuation of a prior `ListAttackPaths` call, and that the system should return the
-             * next page of data.
-             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value returned by the last `ListAttackPathsResponse`; indicates that this is a continuation of
-           a prior `ListAttackPaths` call, and that the system should return the next page of data.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /**
-             * The value returned by the last `ListAttackPathsResponse`; indicates that this is a
-             * continuation of a prior `ListAttackPaths` call, and that the system should return the
-             * next page of data.
-             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -20730,15 +16698,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Sources {
 
       /**
-       * Creates a source.
-       *
        * Create a request for the method "sources.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        `organizations/[organization_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
        * @return the request
        */
@@ -20756,8 +16721,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Creates a source.
-         *
          * Create a request for the method "sources.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -20766,8 +16729,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new source's parent. Its format should be
-       *        `organizations/[organization_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
          * @since 1.13
          */
@@ -20836,24 +16798,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new source's parent. Its format should be
-         * `organizations/[organization_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new source's parent. Its format should be
-       `organizations/[organization_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new source's parent. Its format should be
-         * `organizations/[organization_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20870,15 +16824,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a source.
-       *
        * Create a request for the method "sources.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Relative resource name of the source. Its format is
-       *        `organizations/[organization_id]/source/[source_id]`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -20895,8 +16846,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Gets a source.
-         *
          * Create a request for the method "sources.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -20904,8 +16853,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Relative resource name of the source. Its format is
-       *        `organizations/[organization_id]/source/[source_id]`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -20983,24 +16931,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Relative resource name of the source. Its format is
-         * `organizations/[organization_id]/source/[source_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Relative resource name of the source. Its format is
-       `organizations/[organization_id]/source/[source_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Relative resource name of the source. Its format is
-         * `organizations/[organization_id]/source/[source_id]`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -21017,17 +16957,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets the access control policy on the specified Source.
-       *
        * Create a request for the method "sources.getIamPolicy".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GetIamPolicyRequest}
        * @return the request
        */
@@ -21045,8 +16981,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Gets the access control policy on the specified Source.
-         *
          * Create a request for the method "sources.getIamPolicy".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21055,9 +16989,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GetIamPolicyRequest}
          * @since 1.13
          */
@@ -21126,27 +17058,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being requested. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public GetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -21163,15 +17084,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists all sources belonging to an organization.
-       *
        * Create a request for the method "sources.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -21188,8 +17106,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists all sources belonging to an organization.
-         *
          * Create a request for the method "sources.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21197,8 +17113,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -21276,24 +17191,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent of sources to list. Its format should be
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21304,49 +17211,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
-       prior `ListSources` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -21358,16 +17247,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a source.
-       *
        * Create a request for the method "sources.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/sources/{source_id}"
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
        * @return the request
        */
@@ -21385,8 +17270,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Updates a source.
-         *
          * Create a request for the method "sources.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21395,9 +17278,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/sources/{source_id}"
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Source}
          * @since 1.13
          */
@@ -21466,27 +17347,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this source. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/sources/{source_id}"
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this source. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/sources/{source_id}"
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this source. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/sources/{source_id}"
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -21497,24 +17367,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the source resource. If empty all mutable fields will
-         * be updated.
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the source resource. If empty all mutable fields will be
-       updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the source resource. If empty all mutable fields will
-         * be updated.
-         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -21526,17 +17388,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Sets the access control policy on the specified Source.
-       *
        * Create a request for the method "sources.setIamPolicy".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1.model.SetIamPolicyRequest}
        * @return the request
        */
@@ -21554,8 +17412,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified Source.
-         *
          * Create a request for the method "sources.setIamPolicy".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21564,9 +17420,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetIamPolicyRequest}
          * @since 1.13
          */
@@ -21635,27 +17489,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being specified. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy is being specified. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy is being specified. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public SetIamPolicy setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -21672,17 +17515,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Returns the permissions that a caller has on the specified source.
-       *
        * Create a request for the method "sources.testIamPermissions".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+       * @param resource
        * @param content the {@link com.google.api.services.securitycenter.v1.model.TestIamPermissionsRequest}
        * @return the request
        */
@@ -21700,8 +17539,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
         /**
-         * Returns the permissions that a caller has on the specified source.
-         *
          * Create a request for the method "sources.testIamPermissions".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21710,9 +17547,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-       *        this field.
+         * @param resource
          * @param content the {@link com.google.api.services.securitycenter.v1.model.TestIamPermissionsRequest}
          * @since 1.13
          */
@@ -21781,27 +17616,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
-        /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
-       names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
-       field.
+        /**
+
          */
         public java.lang.String getResource() {
           return resource;
         }
 
-        /**
-         * REQUIRED: The resource for which the policy detail is being requested. See [Resource
-         * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
-         * this field.
-         */
         public TestIamPermissions setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -21839,15 +17663,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Findings {
 
         /**
-         * Creates a finding. The corresponding source must exist for finding creation to succeed.
-         *
          * Create a request for the method "findings.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        `organizations/[organization_id]/sources/[source_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -21865,8 +17686,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Creates a finding. The corresponding source must exist for finding creation to succeed.
-           *
            * Create a request for the method "findings.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -21875,8 +17694,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the new finding's parent. Its format should be
-         *        `organizations/[organization_id]/sources/[source_id]`.
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -21945,24 +17763,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the new finding's parent. Its format should be
-           * `organizations/[organization_id]/sources/[source_id]`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the new finding's parent. Its format should be
-         `organizations/[organization_id]/sources/[source_id]`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of the new finding's parent. Its format should be
-           * `organizations/[organization_id]/sources/[source_id]`.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21973,26 +17783,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
           @com.google.api.client.util.Key
           private java.lang.String findingId;
 
-          /** Required. Unique identifier provided by the client within the parent scope. It must be alphanumeric
-         and less than or equal to 32 characters and greater than 0 characters in length.
+          /**
+
            */
           public java.lang.String getFindingId() {
             return findingId;
           }
 
-          /**
-           * Required. Unique identifier provided by the client within the parent scope. It must be
-           * alphanumeric and less than or equal to 32 characters and greater than 0 characters in
-           * length.
-           */
           public Create setFindingId(java.lang.String findingId) {
             this.findingId = findingId;
             return this;
@@ -22004,22 +17804,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Filters an organization or source's findings and groups them by their specified properties. To
-         * group across all sources provide a `-` as the source id. Example:
-         * /v1/organizations/{organization_id}/sources/-/findings,
-         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-         *
          * Create a request for the method "findings.group".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -22037,11 +17827,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Filters an organization or source's findings and groups them by their specified properties. To
-           * group across all sources provide a `-` as the source id. Example:
-           * /v1/organizations/{organization_id}/sources/-/findings,
-           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-           *
            * Create a request for the method "findings.group".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -22050,12 +17835,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -22124,35 +17904,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Group) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source to groupBy. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
-         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         `projects/{project_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -22169,20 +17930,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists an organization or source's findings. To list across all sources provide a `-` as the
-         * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-         *
          * Create a request for the method "findings.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -22199,9 +17952,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Lists an organization or source's findings. To list across all sources provide a `-` as the
-           * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-           *
            * Create a request for the method "findings.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -22209,12 +17959,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -22292,35 +18037,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source the findings belong to. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
-         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         `projects/{projects_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -22331,290 +18057,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           @com.google.api.client.util.Key
           private String compareDuration;
 
-          /** When compare_duration is set, the ListFindingsResult's "state_change" attribute is updated to
-         indicate whether the finding had its state changed, the finding's state remained unchanged, or if
-         the finding was added in any state during the compare_duration period of time that precedes the
-         read_time. This is the time between (read_time - compare_duration) and read_time. The state_change
-         value is derived based on the presence and state of the finding at the two points in time.
-         Intermediate state changes between the two times don't affect the result. For example, the results
-         aren't affected if the finding is made inactive and then active again. Possible "state_change"
-         values when compare_duration is specified: * "CHANGED": indicates that the finding was present and
-         matched the given filter at the start of compare_duration, but changed its state at read_time. *
-         "UNCHANGED": indicates that the finding was present and matched the given filter at the start of
-         compare_duration and did not change state at read_time. * "ADDED": indicates that the finding did
-         not match the given filter or was not present at the start of compare_duration, but was present at
-         read_time. * "REMOVED": indicates that the finding was present and matched the filter at the start
-         of compare_duration, but did not match the filter at read_time. If compare_duration is not
-         specified, then the only possible state_change is "UNUSED", which will be the state_change set for
-         all findings present at read_time.
+          /**
+
            */
           public String getCompareDuration() {
             return compareDuration;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           public List setCompareDuration(String compareDuration) {
             this.compareDuration = compareDuration;
             return this;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
-         list all fields.
+          /**
+
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;
             return this;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Expression that defines the filter to apply across findings. The expression is a list of one or
-         more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
-         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
-         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-         `true` and `false` without quotes. The following field and operator combinations are supported: *
-         name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:` *
-         external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds
-         since epoch or an RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time
-         = 1560208038000` * severity: `=`, `:` * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` *
-         source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a
-         valid filter string. Use a partial match on the empty string to filter based on a property
-         existing: `source_properties.my_property : ""` Use a negated partial match on the empty string to
-         filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
-         resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
-         resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Expression that defines what fields and order to use for sorting. The string value should follow
-         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be appended to the field name. For example: "name desc,source_properties.a_property".
-         Redundant space characters in the syntax are insignificant. "name
-         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
-         The following fields are supported: name parent state category resource_name event_time
-         source_properties security_marks.marks
+          /**
+
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
-         prior `ListFindings` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
-         at the supplied time and their values are those at that specific time. Absence of this field will
-         default to the API's version of NOW.
+          /**
+
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -22626,20 +18168,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates or updates a finding. The corresponding source must exist for a finding creation to
-         * succeed.
-         *
          * Create a request for the method "findings.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -22657,9 +18191,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Creates or updates a finding. The corresponding source must exist for a finding creation to
-           * succeed.
-           *
            * Create a request for the method "findings.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -22668,12 +18199,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -22742,35 +18268,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -22781,30 +18288,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the finding resource. This field should not be specified when
-         creating a finding. When updating a finding, an empty mask is treated as updating all mutable
-         fields and replacing source_properties. Individual source_properties can be added/updated by using
-         "source_properties." in the field mask.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -22816,19 +18309,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the mute state of a finding.
-         *
          * Create a request for the method "findings.setMute".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -22846,8 +18332,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the mute state of a finding.
-           *
            * Create a request for the method "findings.setMute".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -22856,12 +18340,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -22930,35 +18409,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetMute) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -22975,19 +18435,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the state of a finding.
-         *
          * Create a request for the method "findings.setState".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -23005,8 +18458,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the state of a finding.
-           *
            * Create a request for the method "findings.setState".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -23015,12 +18466,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -23089,35 +18535,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23134,18 +18561,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "findings.updateSecurityMarks".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @return the request
          */
@@ -23163,8 +18585,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
 
           /**
-           * Updates security marks.
-           *
            * Create a request for the method "findings.updateSecurityMarks".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -23173,10 +18593,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
            * @since 1.13
            */
@@ -23245,30 +18662,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the SecurityMarks. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           public UpdateSecurityMarks setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23279,53 +18682,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           @com.google.api.client.util.Key
           private String startTime;
 
-          /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-         Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-         be earlier or equal to the server time.
+          /**
+
            */
           public String getStartTime() {
             return startTime;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           public UpdateSecurityMarks setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-         duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-         updated using "marks.".
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           public UpdateSecurityMarks setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -23358,17 +18739,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class ExternalSystems {
 
           /**
-           * Updates external system. This is for a given finding.
-           *
            * Create a request for the method "externalSystems.patch".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -23386,8 +18762,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+/findings/[^/]+/externalSystems/[^/]+$");
 
             /**
-             * Updates external system. This is for a given finding.
-             *
              * Create a request for the method "externalSystems.patch".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -23396,10 +18770,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+             * @param name
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -23468,30 +18839,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Full resource name of the external system, for example:
-           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23502,24 +18859,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The FieldMask to use when updating the external system resource. If empty all mutable fields will
-           be updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -23555,16 +18904,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class ValuedResources {
 
       /**
-       * Lists the valued resources for a set of simulation results and filter.
-       *
        * Create a request for the method "valuedResources.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -23581,8 +18926,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists the valued resources for a set of simulation results and filter.
-         *
          * Create a request for the method "valuedResources.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -23590,9 +18933,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-       *        `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simu
-       *        lations/{simulation}/attackExposureResults/{attack_exposure_result_v2}`
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -23670,29 +19011,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of parent to list valued resources. Valid formats:
-         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
-         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
-         * ure_result_v2}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of parent to list valued resources. Valid formats: `organizations/{organization}`,
-       `organizations/{organization}/simulations/{simulation}` `organizations/{organization}/simulations/{
-       simulation}/attackExposureResults/{attack_exposure_result_v2}`
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Name of parent to list valued resources. Valid formats:
-         * `organizations/{organization}`, `organizations/{organization}/simulations/{simulation}` `
-         * organizations/{organization}/simulations/{simulation}/attackExposureResults/{attack_expos
-         * ure_result_v2}`
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23703,106 +19031,61 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The filter expression that filters the valued resources in the response. Supported
-         * fields: * `resource_value` supports = * `resource_type` supports =
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The filter expression that filters the valued resources in the response. Supported fields: *
-       `resource_value` supports = * `resource_type` supports =
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * The filter expression that filters the valued resources in the response. Supported
-         * fields: * `resource_value` supports = * `resource_type` supports =
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * Optional. The fields by which to order the valued resources response. Supported fields: *
-         * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values
-         * should be a comma separated list of fields. For example: `exposed_score,resource_value`.
-         * The default sorting order is descending. To specify ascending or descending order for a
-         * field, append a ` ASC` or a ` DESC` suffix, respectively; for example: `exposed_score
-         * DESC`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. The fields by which to order the valued resources response. Supported fields: *
-       `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values should be
-       a comma separated list of fields. For example: `exposed_score,resource_value`. The default sorting
-       order is descending. To specify ascending or descending order for a field, append a ` ASC` or a `
-       DESC` suffix, respectively; for example: `exposed_score DESC`.
+        /**
+
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /**
-         * Optional. The fields by which to order the valued resources response. Supported fields: *
-         * `exposed_score` * `resource_value` * `resource_type` * `resource` * `display_name` Values
-         * should be a comma separated list of fields. For example: `exposed_score,resource_value`.
-         * The default sorting order is descending. To specify ascending or descending order for a
-         * field, append a ` ASC` or a ` DESC` suffix, respectively; for example: `exposed_score
-         * DESC`.
-         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
-         * continuation of a prior `ListValuedResources` call, and that the system should return the
-         * next page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListValuedResourcesResponse`; indicates that this is a continuation
-       of a prior `ListValuedResources` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListValuedResourcesResponse`; indicates that this is a
-         * continuation of a prior `ListValuedResources` call, and that the system should return the
-         * next page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -23858,15 +19141,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Assets {
 
       /**
-       * Filters an organization's assets and groups them by their specified properties.
-       *
        * Create a request for the method "assets.group".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -23884,8 +19164,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Filters an organization's assets and groups them by their specified properties.
-         *
          * Create a request for the method "assets.group".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -23894,8 +19172,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent to group the assets by. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -23964,24 +19241,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Group) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent to group the assets by. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent to group the assets by. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Group setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23998,17 +19267,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists an organization's assets.
-       *
        * Create a request for the method "assets.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -24025,8 +19289,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists an organization's assets.
-         *
          * Create a request for the method "assets.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -24034,10 +19296,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource that contains the assets. The value that you can specify
-       *        on parent depends on the method in which you specify parent. You can specify one of the
-       *        following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-       *        `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -24115,29 +19374,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource that contains the assets. The value that you can specify
-       on parent depends on the method in which you specify parent. You can specify one of the following
-       values: `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource that contains the assets. The value that you
-         * can specify on parent depends on the method in which you specify parent. You can specify
-         * one of the following values: `organizations/[organization_id]`, `folders/[folder_id]`, or
-         * `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24148,310 +19394,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         @com.google.api.client.util.Key
         private String compareDuration;
 
-        /** When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated to
-       indicate whether the asset was added, removed, or remained present during the compare_duration
-       period of time that precedes the read_time. This is the time between (read_time - compare_duration)
-       and read_time. The state_change value is derived based on the presence of the asset at the two
-       points in time. Intermediate state changes between the two times don't affect the result. For
-       example, the results aren't affected if the asset is removed and re-created again. Possible
-       "state_change" values when compare_duration is specified: * "ADDED": indicates that the asset was
-       not present at the start of compare_duration, but present at read_time. * "REMOVED": indicates that
-       the asset was present at the start of compare_duration, but not present at read_time. * "ACTIVE":
-       indicates that the asset was present at both the start and the end of the time period defined by
-       compare_duration and read_time. If compare_duration is not specified, then the only possible
-       state_change is "UNUSED", which will be the state_change set for all assets present at read_time.
+        /**
+
          */
         public String getCompareDuration() {
           return compareDuration;
         }
 
-        /**
-         * When compare_duration is set, the ListAssetsResult's "state_change" attribute is updated
-         * to indicate whether the asset was added, removed, or remained present during the
-         * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time. The state_change value is derived based on
-         * the presence of the asset at the two points in time. Intermediate state changes between
-         * the two times don't affect the result. For example, the results aren't affected if the
-         * asset is removed and re-created again. Possible "state_change" values when
-         * compare_duration is specified: * "ADDED": indicates that the asset was not present at the
-         * start of compare_duration, but present at read_time. * "REMOVED": indicates that the
-         * asset was present at the start of compare_duration, but not present at read_time. *
-         * "ACTIVE": indicates that the asset was present at both the start and the end of the time
-         * period defined by compare_duration and read_time. If compare_duration is not specified,
-         * then the only possible state_change is "UNUSED", which will be the state_change set for
-         * all assets present at read_time.
-         */
         public List setCompareDuration(String compareDuration) {
           this.compareDuration = compareDuration;
           return this;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         @com.google.api.client.util.Key
         private String fieldMask;
 
-        /** A field mask to specify the ListAssetsResult fields to be listed in the response. An empty field
-       mask will list all fields.
+        /**
+
          */
         public String getFieldMask() {
           return fieldMask;
         }
 
-        /**
-         * A field mask to specify the ListAssetsResult fields to be listed in the response. An
-         * empty field mask will list all fields.
-         */
         public List setFieldMask(String fieldMask) {
           this.fieldMask = fieldMask;
           return this;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
-       restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and `OR` has
-       higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in front
-       of them to indicate negation. The fields map to those defined in the Asset resource. Examples
-       include: * name * security_center_properties.resource_name * resource_properties.a_property *
-       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-       `true` and `false` without quotes. The following are the allowed field and operator combinations: *
-       name: `=` * update_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch
-       or an RFC3339 string. Examples: `update_time = "2019-06-10T16:07:18-07:00"` `update_time =
-       1560208038000` * create_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since
-       epoch or an RFC3339 string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-       1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`, `<`, `>=`,
-       `<=` * security_marks.marks: `=`, `:` * security_center_properties.resource_name: `=`, `:` *
-       security_center_properties.resource_display_name: `=`, `:` *
-       security_center_properties.resource_type: `=`, `:` * security_center_properties.resource_parent:
-       `=`, `:` * security_center_properties.resource_parent_display_name: `=`, `:` *
-       security_center_properties.resource_project: `=`, `:` *
-       security_center_properties.resource_project_display_name: `=`, `:` *
-       security_center_properties.resource_owners: `=`, `:` For example, `resource_properties.size = 100`
-       is a valid filter string. Use a partial match on the empty string to filter based on a property
-       existing: `resource_properties.my_property : ""` Use a negated partial match on the empty string to
-       filter based on a property not existing: `-resource_properties.my_property : ""`
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * Expression that defines the filter to apply across assets. The expression is a list of
-         * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` ` and
-         * may have a `-` character in front of them to indicate negation. The fields map to those
-         * defined in the Asset resource. Examples include: * name *
-         * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
-         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
-         * supported value types are: * string literals in quotes. * integer literals without
-         * quotes. * boolean literals `true` and `false` without quotes. The following are the
-         * allowed field and operator combinations: * name: `=` * update_time: `=`, `>`, `<`, `>=`,
-         * `<=` Usage: This should be milliseconds since epoch or an RFC3339 string. Examples:
-         * `update_time = "2019-06-10T16:07:18-07:00"` `update_time = 1560208038000` * create_time:
-         * `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds since epoch or an RFC3339
-         * string. Examples: `create_time = "2019-06-10T16:07:18-07:00"` `create_time =
-         * 1560208038000` * iam_policy.policy_blob: `=`, `:` * resource_properties: `=`, `:`, `>`,
-         * `<`, `>=`, `<=` * security_marks.marks: `=`, `:` *
-         * security_center_properties.resource_name: `=`, `:` *
-         * security_center_properties.resource_display_name: `=`, `:` *
-         * security_center_properties.resource_type: `=`, `:` *
-         * security_center_properties.resource_parent: `=`, `:` *
-         * security_center_properties.resource_parent_display_name: `=`, `:` *
-         * security_center_properties.resource_project: `=`, `:` *
-         * security_center_properties.resource_project_display_name: `=`, `:` *
-         * security_center_properties.resource_owners: `=`, `:` For example,
-         * `resource_properties.size = 100` is a valid filter string. Use a partial match on the
-         * empty string to filter based on a property existing: `resource_properties.my_property :
-         * ""` Use a negated partial match on the empty string to filter based on a property not
-         * existing: `-resource_properties.my_property : ""`
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Expression that defines what fields and order to use for sorting. The string value should follow
-       SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-       default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-       should be appended to the field name. For example: "name desc,resource_properties.a_property".
-       Redundant space characters in the syntax are insignificant. "name
-       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
-       equivalent. The following fields are supported: name update_time resource_properties
-       security_marks.marks security_center_properties.resource_name
-       security_center_properties.resource_display_name security_center_properties.resource_parent
-       security_center_properties.resource_parent_display_name security_center_properties.resource_project
-       security_center_properties.resource_project_display_name security_center_properties.resource_type
+        /**
+
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /**
-         * Expression that defines what fields and order to use for sorting. The string value should
-         * follow SQL syntax: comma separated list of fields. For example:
-         * "name,resource_properties.a_property". The default sorting order is ascending. To specify
-         * descending order for a field, a suffix " desc" should be appended to the field name. For
-         * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
-         * resource_properties.a_property " are equivalent. The following fields are supported: name
-         * update_time resource_properties security_marks.marks
-         * security_center_properties.resource_name security_center_properties.resource_display_name
-         * security_center_properties.resource_parent
-         * security_center_properties.resource_parent_display_name
-         * security_center_properties.resource_project
-         * security_center_properties.resource_project_display_name
-         * security_center_properties.resource_type
-         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListAssetsResponse`; indicates that this is a continuation of a
-       prior `ListAssets` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListAssetsResponse`; indicates that this is a
-         * continuation of a prior `ListAssets` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         @com.google.api.client.util.Key
         private String readTime;
 
-        /** Time used as a reference point when filtering assets. The filter is limited to assets existing at
-       the supplied time and their values are those at that specific time. Absence of this field will
-       default to the API's version of NOW.
+        /**
+
          */
         public String getReadTime() {
           return readTime;
         }
 
-        /**
-         * Time used as a reference point when filtering assets. The filter is limited to assets
-         * existing at the supplied time and their values are those at that specific time. Absence
-         * of this field will default to the API's version of NOW.
-         */
         public List setReadTime(String readTime) {
           this.readTime = readTime;
           return this;
@@ -24463,18 +19505,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates security marks.
-       *
        * Create a request for the method "assets.updateSecurityMarks".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
        * operation.
        *
-       * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
        * @return the request
        */
@@ -24492,8 +19529,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/assets/[^/]+/securityMarks$");
 
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "assets.updateSecurityMarks".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -24502,10 +19537,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @since 1.13
          */
@@ -24574,30 +19606,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of the SecurityMarks. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-       "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-       "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of the SecurityMarks. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organiz
-         * ation_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-         */
         public UpdateSecurityMarks setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24608,53 +19626,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         @com.google.api.client.util.Key
         private String startTime;
 
-        /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-       Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-       be earlier or equal to the server time.
+        /**
+
          */
         public String getStartTime() {
           return startTime;
         }
 
-        /**
-         * The time at which the updated SecurityMarks take effect. If not set uses current server
-         * time. Updates will be applied to the SecurityMarks that are active immediately preceding
-         * this time. Must be earlier or equal to the server time.
-         */
         public UpdateSecurityMarks setStartTime(String startTime) {
           this.startTime = startTime;
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-       duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-       updated using "marks.".
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the security marks resource. The field mask must not
-         * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-         * Individual marks can be updated using "marks.".
-         */
         public UpdateSecurityMarks setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -24688,15 +19684,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class BigQueryExports {
 
       /**
-       * Creates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -24714,8 +19707,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -24724,8 +19715,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent resource of the new BigQuery export. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -24794,24 +19784,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent resource of the new BigQuery export. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent resource of the new BigQuery export. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24822,27 +19804,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String bigQueryExportId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getBigQueryExportId() {
           return bigQueryExportId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setBigQueryExportId(java.lang.String bigQueryExportId) {
           this.bigQueryExportId = bigQueryExportId;
           return this;
@@ -24854,17 +19825,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -24881,8 +19847,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Deletes an existing BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -24891,10 +19855,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the BigQuery export to delete. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -24962,29 +19923,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the BigQuery export to delete. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the BigQuery export to delete. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25001,17 +19949,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -25028,8 +19971,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Gets a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25037,10 +19978,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the BigQuery export to retrieve. Its format is
-       *        `organizations/{organization}/bigQueryExports/{export_id}`,
-       *        `folders/{folder}/bigQueryExports/{export_id}`, or
-       *        `projects/{project}/bigQueryExports/{export_id}`
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -25118,29 +20056,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the BigQuery export to retrieve. Its format is
-       `organizations/{organization}/bigQueryExports/{export_id}`,
-       `folders/{folder}/bigQueryExports/{export_id}`, or `projects/{project}/bigQueryExports/{export_id}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the BigQuery export to retrieve. Its format is
-         * `organizations/{organization}/bigQueryExports/{export_id}`,
-         * `folders/{folder}/bigQueryExports/{export_id}`, or
-         * `projects/{project}/bigQueryExports/{export_id}`
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25157,18 +20082,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-       * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-       * BigQuery exports immediately under the folder plus the ones created under the projects within the
-       * folder are returned.
-       *
        * Create a request for the method "bigQueryExports.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -25185,11 +20104,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports
-         * under that level are also returned e.g. if requesting BigQuery exports under a folder, then all
-         * BigQuery exports immediately under the folder plus the ones created under the projects within
-         * the folder are returned.
-         *
          * Create a request for the method "bigQueryExports.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25197,8 +20111,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of BigQuery exports. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -25276,24 +20189,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of BigQuery exports. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of BigQuery exports. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -25304,53 +20209,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListBigQueryExports` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListBigQueryExports` must match
-       the call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListBigQueryExports` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
-         * `ListBigQueryExports` must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -25362,19 +20245,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a BigQuery export.
-       *
        * Create a request for the method "bigQueryExports.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
        * @return the request
        */
@@ -25392,8 +20268,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/bigQueryExports/[^/]+$");
 
         /**
-         * Updates a BigQuery export.
-         *
          * Create a request for the method "bigQueryExports.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25402,12 +20276,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this export. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-       *        format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       *        "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       *        "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-       *        and is ignored when provided in create requests.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1BigQueryExport}
          * @since 1.13
          */
@@ -25476,36 +20345,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this export. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example format:
-       "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-       "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-       "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses, and is
-       ignored when provided in create requests.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this export. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name. Example
-         * format: "organizations/{organization_id}/bigQueryExports/{export_id}" Example format:
-         * "folders/{folder_id}/bigQueryExports/{export_id}" Example format:
-         * "projects/{project_id}/bigQueryExports/{export_id}" This field is provided in responses,
-         * and is ignored when provided in create requests.
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25516,17 +20365,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -25560,18 +20408,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Validates the given Event Threat Detection custom module.
-       *
        * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link ValidateCustomModule#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
        * @return the request
        */
@@ -25589,8 +20432,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Validates the given Event Threat Detection custom module.
-         *
          * Create a request for the method "eventThreatDetectionSettings.validateCustomModule".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25599,10 +20440,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       *        `organizations/{organization}/eventThreatDetectionSettings`. *
-       *        `folders/{folder}/eventThreatDetectionSettings`. *
-       *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.ValidateEventThreatDetectionCustomModuleRequest}
          * @since 1.13
          */
@@ -25671,30 +20509,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (ValidateCustomModule) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent to validate the Custom Module under. Its format is: *
-       `organizations/{organization}/eventThreatDetectionSettings`. *
-       `folders/{folder}/eventThreatDetectionSettings`. *
-       `projects/{project}/eventThreatDetectionSettings`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent to validate the Custom Module under. Its format is:
-         * * `organizations/{organization}/eventThreatDetectionSettings`. *
-         * `folders/{folder}/eventThreatDetectionSettings`. *
-         * `projects/{project}/eventThreatDetectionSettings`.
-         */
         public ValidateCustomModule setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -25732,19 +20556,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-         * Manager parent, and also creates inherited custom modules for all descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -25762,10 +20579,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Creates a resident Event Threat Detection custom module at the scope of the given Resource
-           * Manager parent, and also creates inherited custom modules for all descendants of the given
-           * parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25774,10 +20587,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The new custom module's parent. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -25846,30 +20656,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The new custom module's parent. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The new custom module's parent. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -25886,18 +20682,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-         * Resource Manager hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -25914,9 +20704,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified Event Threat Detection custom module and all of its descendants in the
-           * Resource Manager hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -25925,10 +20712,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -25996,30 +20780,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26036,17 +20806,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets an Event Threat Detection custom module.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -26063,8 +20828,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Gets an Event Threat Detection custom module.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -26072,10 +20835,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -26153,30 +20913,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26193,19 +20939,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-         * includes resident modules defined at the scope of the parent along with modules inherited from
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -26222,10 +20961,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all Event Threat Detection custom modules for the given Resource Manager parent. This
-           * includes resident modules defined at the scope of the parent along with modules inherited from
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -26233,10 +20968,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -26314,30 +21046,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26348,55 +21066,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEventThreatDetectionCustomModules` call. Provide this
-         to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEventThreatDetectionCustomModules` call.
-           * Provide this to retrieve the subsequent page. When paginating, all other parameters
-           * provided to `ListEventThreatDetectionCustomModules` must match the call that provided
-           * the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -26408,19 +21102,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all resident Event Threat Detection custom modules under the given Resource Manager parent
-         * and its descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -26437,9 +21125,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all resident Event Threat Detection custom modules under the given Resource Manager
-           * parent and its descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -26448,10 +21133,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules under. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -26529,30 +21211,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules under. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules under. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26563,57 +21231,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListDescendantEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous
-           * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to retrieve the
-           * subsequent page. When paginating, all other parameters provided to
-           * `ListDescendantEventThreatDetectionCustomModules` must match the call that provided the
-           * page token.
-           */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -26625,21 +21267,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the Event Threat Detection custom module with the given name based on the given update
-         * mask. Updating the enablement state is supported for both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name or
-         * configuration of a module is supported for resident modules only. The type of a module cannot be
-         * changed.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
          * @return the request
          */
@@ -26657,12 +21290,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings/customModules/[^/]+$");
 
           /**
-           * Updates the Event Threat Detection custom module with the given name based on the given update
-           * mask. Updating the enablement state is supported for both resident and inherited modules
-           * (though resident modules cannot have an enablement state of "inherited"). Updating the display
-           * name or configuration of a module is supported for resident modules only. The type of a module
-           * cannot be changed.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -26671,10 +21298,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.EventThreatDetectionCustomModule}
            * @since 1.13
            */
@@ -26743,32 +21367,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the Event Threat Detection custom module. Its format
-           * is: *
-           * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26779,17 +21387,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -26823,17 +21430,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Gets an effective Event Threat Detection custom module at the given level.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -26850,8 +21452,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Gets an effective Event Threat Detection custom module at the given level.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -26859,10 +21459,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}
-         *        `. * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         *        `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -26940,32 +21537,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the effective Event Threat Detection custom module. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-         `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The resource name of the effective Event Threat Detection custom module. Its
-           * format is: * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustom
-           * Modules/{module}`. *
-           * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-           * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26982,19 +21563,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-         * resident modules defined at the scope of the parent along with modules inherited from its
-         * ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -27011,10 +21585,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
           /**
-           * Lists all effective Event Threat Detection custom modules for the given parent. This includes
-           * resident modules defined at the scope of the parent along with modules inherited from its
-           * ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27022,10 +21592,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the parent to list custom modules for. Its format is: *
-         *        `organizations/{organization}/eventThreatDetectionSettings`. *
-         *        `folders/{folder}/eventThreatDetectionSettings`. *
-         *        `projects/{project}/eventThreatDetectionSettings`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -27103,30 +21670,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the parent to list custom modules for. Its format is: *
-         `organizations/{organization}/eventThreatDetectionSettings`. *
-         `folders/{folder}/eventThreatDetectionSettings`. *
-         `projects/{project}/eventThreatDetectionSettings`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the parent to list custom modules for. Its format is: *
-           * `organizations/{organization}/eventThreatDetectionSettings`. *
-           * `folders/{folder}/eventThreatDetectionSettings`. *
-           * `projects/{project}/eventThreatDetectionSettings`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -27137,55 +21690,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of modules to return. The service may return fewer than this value. If
-         unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-         be coerced to 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of modules to return. The service may return fewer than this value.
-           * If unspecified, at most 10 configs will be returned. The maximum value is 1000; values
-           * above 1000 will be coerced to 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules` call.
-         Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
-         `ListEffectiveEventThreatDetectionCustomModules` must match the call that provided the page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * A page token, received from a previous `ListEffectiveEventThreatDetectionCustomModules`
-           * call. Provide this to retrieve the subsequent page. When paginating, all other
-           * parameters provided to `ListEffectiveEventThreatDetectionCustomModules` must match the
-           * call that provided the page token.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -27220,17 +21749,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Findings {
 
       /**
-       * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-       * an organization, folder or project. The findings matched by the filter will be muted after the
-       * LRO is done.
-       *
        * Create a request for the method "findings.bulkMute".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link BulkMute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
        * @return the request
        */
@@ -27248,10 +21772,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either
-         * an organization, folder or project. The findings matched by the filter will be muted after the
-         * LRO is done.
-         *
          * Create a request for the method "findings.bulkMute".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27260,8 +21780,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * BulkMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, at which bulk action needs to be applied. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.BulkMuteFindingsRequest}
          * @since 1.13
          */
@@ -27330,24 +21849,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (BulkMute) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, at which bulk action needs to be applied. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, at which bulk action needs to be applied. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public BulkMute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -27406,19 +21917,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class MuteConfigs {
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -27435,8 +21939,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Deletes an existing mute config.
-           *
            * Create a request for the method "muteConfigs.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27445,12 +21947,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to delete. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -27518,38 +22015,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to delete. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to delete. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27566,19 +22041,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -27595,8 +22063,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Gets a mute config.
-           *
            * Create a request for the method "muteConfigs.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27604,12 +22070,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the mute config to retrieve. Its format is
-         *        `organizations/{organization}/muteConfigs/{config_id}`,
-         *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -27687,38 +22148,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the mute config to retrieve. Its format is
-         `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-         `projects/{project}/muteConfigs/{config_id}`,
-         `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         `projects/{project}/locations/global/muteConfigs/{config_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the mute config to retrieve. Its format is
-           * `organizations/{organization}/muteConfigs/{config_id}`,
-           * `folders/{folder}/muteConfigs/{config_id}`,
-           * `projects/{project}/muteConfigs/{config_id}`,
-           * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-           * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-           * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27735,20 +22174,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @return the request
          */
@@ -27766,8 +22197,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/muteConfigs/[^/]+$");
 
           /**
-           * Updates a mute config.
-           *
            * Create a request for the method "muteConfigs.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27776,13 +22205,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name This field will be ignored if provided on config creation. Format
-         *        `organizations/{organization}/muteConfigs/{mute_config}`
-         *        `folders/{folder}/muteConfigs/{mute_config}`
-         *        `projects/{project}/muteConfigs/{mute_config}`
-         *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
            * @since 1.13
            */
@@ -27851,38 +22274,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** This field will be ignored if provided on config creation. Format
-         `organizations/{organization}/muteConfigs/{mute_config}`
-         `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-         `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         `projects/{project}/locations/global/muteConfigs/{mute_config}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * This field will be ignored if provided on config creation. Format
-           * `organizations/{organization}/muteConfigs/{mute_config}`
-           * `folders/{folder}/muteConfigs/{mute_config}`
-           * `projects/{project}/muteConfigs/{mute_config}`
-           * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-           * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-           * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27893,17 +22294,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. If empty all mutable fields will be updated. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -27938,15 +22338,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class MuteConfigs {
 
       /**
-       * Creates a mute config.
-       *
        * Create a request for the method "muteConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -27964,8 +22361,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a mute config.
-         *
          * Create a request for the method "muteConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -27974,8 +22369,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new mute configs's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -28044,24 +22438,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new mute configs's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new mute configs's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -28072,27 +22458,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         @com.google.api.client.util.Key
         private java.lang.String muteConfigId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must consist of only
-       lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or
-       a number, and must be 63 characters or less.
+        /**
+
          */
         public java.lang.String getMuteConfigId() {
           return muteConfigId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must
-         * consist of only lowercase letters, numbers, and hyphens, must start with a letter, must
-         * end with either a letter or a number, and must be 63 characters or less.
-         */
         public Create setMuteConfigId(java.lang.String muteConfigId) {
           this.muteConfigId = muteConfigId;
           return this;
@@ -28104,19 +22479,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes an existing mute config.
-       *
        * Create a request for the method "muteConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -28133,8 +22501,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Deletes an existing mute config.
-         *
          * Create a request for the method "muteConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -28143,12 +22509,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to delete. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -28216,36 +22577,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to delete. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to delete. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -28262,19 +22603,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a mute config.
-       *
        * Create a request for the method "muteConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -28291,8 +22625,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Gets a mute config.
-         *
          * Create a request for the method "muteConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -28300,12 +22632,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the mute config to retrieve. Its format is
-       *        `organizations/{organization}/muteConfigs/{config_id}`,
-       *        `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-       *        `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       *        `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       *        `projects/{project}/locations/global/muteConfigs/{config_id}`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -28383,36 +22710,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the mute config to retrieve. Its format is
-       `organizations/{organization}/muteConfigs/{config_id}`, `folders/{folder}/muteConfigs/{config_id}`,
-       `projects/{project}/muteConfigs/{config_id}`,
-       `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-       `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-       `projects/{project}/locations/global/muteConfigs/{config_id}`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the mute config to retrieve. Its format is
-         * `organizations/{organization}/muteConfigs/{config_id}`,
-         * `folders/{folder}/muteConfigs/{config_id}`, `projects/{project}/muteConfigs/{config_id}`,
-         * `organizations/{organization}/locations/global/muteConfigs/{config_id}`,
-         * `folders/{folder}/locations/global/muteConfigs/{config_id}`, or
-         * `projects/{project}/locations/global/muteConfigs/{config_id}`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -28429,15 +22736,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists mute configs.
-       *
        * Create a request for the method "muteConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -28454,8 +22758,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists mute configs.
-         *
          * Create a request for the method "muteConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -28463,8 +22765,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent, which owns the collection of mute configs. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -28542,24 +22843,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent, which owns the collection of mute configs. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent, which owns the collection of mute configs. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -28570,53 +22863,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of configs to return. The service may return fewer than this value. If
-       unspecified, at most 10 configs will be returned. The maximum value is 1000; values above 1000 will
-       be coerced to 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of configs to return. The service may return fewer than this value. If
-         * unspecified, at most 10 configs will be returned. The maximum value is 1000; values above
-         * 1000 will be coerced to 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListMuteConfigs` must match the
-       call that provided the page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token, received from a previous `ListMuteConfigs` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to `ListMuteConfigs`
-         * must match the call that provided the page token.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -28628,20 +22899,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a mute config.
-       *
        * Create a request for the method "muteConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
        * @return the request
        */
@@ -28659,8 +22922,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/muteConfigs/[^/]+$");
 
         /**
-         * Updates a mute config.
-         *
          * Create a request for the method "muteConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -28669,13 +22930,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name This field will be ignored if provided on config creation. Format
-       *        `organizations/{organization}/muteConfigs/{mute_config}`
-       *        `folders/{folder}/muteConfigs/{mute_config}`
-       *        `projects/{project}/muteConfigs/{mute_config}`
-       *        `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       *        `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       *        `projects/{project}/locations/global/muteConfigs/{mute_config}`
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1MuteConfig}
          * @since 1.13
          */
@@ -28744,38 +22999,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** This field will be ignored if provided on config creation. Format
-       `organizations/{organization}/muteConfigs/{mute_config}`
-       `folders/{folder}/muteConfigs/{mute_config}` `projects/{project}/muteConfigs/{mute_config}`
-       `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-       `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-       `projects/{project}/locations/global/muteConfigs/{mute_config}`
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * This field will be ignored if provided on config creation. Format
-         * `organizations/{organization}/muteConfigs/{mute_config}`
-         * `folders/{folder}/muteConfigs/{mute_config}`
-         * `projects/{project}/muteConfigs/{mute_config}`
-         * `organizations/{organization}/locations/global/muteConfigs/{mute_config}`
-         * `folders/{folder}/locations/global/muteConfigs/{mute_config}`
-         * `projects/{project}/locations/global/muteConfigs/{mute_config}`
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -28786,17 +23019,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** The list of fields to be updated. If empty all mutable fields will be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -28830,15 +23062,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class NotificationConfigs {
 
       /**
-       * Creates a notification config.
-       *
        * Create a request for the method "notificationConfigs.create".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -28856,8 +23085,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a notification config.
-         *
          * Create a request for the method "notificationConfigs.create".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -28866,8 +23093,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the new notification config's parent. Its format is
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -28936,24 +23162,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the new notification config's parent. Its format is
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the new notification config's parent. Its format is
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -28964,26 +23182,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
-        /** Required. Unique identifier provided by the client within the parent scope. It must be between 1
-       and 128 characters and contain alphanumeric characters, underscores, or hyphens only.
+        /**
+
          */
         public java.lang.String getConfigId() {
           return configId;
         }
 
-        /**
-         * Required. Unique identifier provided by the client within the parent scope. It must be
-         * between 1 and 128 characters and contain alphanumeric characters, underscores, or hyphens
-         * only.
-         */
         public Create setConfigId(java.lang.String configId) {
           this.configId = configId;
           return this;
@@ -28995,17 +23203,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Deletes a notification config.
-       *
        * Create a request for the method "notificationConfigs.delete".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -29022,8 +23225,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Deletes a notification config.
-         *
          * Create a request for the method "notificationConfigs.delete".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29032,10 +23233,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to delete. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -29103,30 +23301,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to delete. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to delete. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -29143,17 +23327,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets a notification config.
-       *
        * Create a request for the method "notificationConfigs.get".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -29170,8 +23349,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Gets a notification config.
-         *
          * Create a request for the method "notificationConfigs.get".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29179,10 +23356,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the notification config to get. Its format is
-       *        `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       *        `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       *        `projects/[project_id]/notificationConfigs/[config_id]`.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -29260,30 +23434,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the notification config to get. Its format is
-       `organizations/[organization_id]/notificationConfigs/[config_id]`,
-       `folders/[folder_id]/notificationConfigs/[config_id]`, or
-       `projects/[project_id]/notificationConfigs/[config_id]`.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. Name of the notification config to get. Its format is
-         * `organizations/[organization_id]/notificationConfigs/[config_id]`,
-         * `folders/[folder_id]/notificationConfigs/[config_id]`, or
-         * `projects/[project_id]/notificationConfigs/[config_id]`.
-         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -29300,15 +23460,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Lists notification configs.
-       *
        * Create a request for the method "notificationConfigs.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -29325,8 +23482,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists notification configs.
-         *
          * Create a request for the method "notificationConfigs.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29334,8 +23489,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the parent in which to list the notification configurations. Its format is
-       *        "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -29413,26 +23567,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the parent in which to list the notification configurations. Its format is
-       "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The name of the parent in which to list the notification configurations. Its
-         * format is "organizations/[organization_id]", "folders/[folder_id]", or
-         * "projects/[project_id]".
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -29443,50 +23587,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListNotificationConfigsResponse`; indicates that this is a
-       continuation of a prior `ListNotificationConfigs` call, and that the system should return the next
-       page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListNotificationConfigsResponse`; indicates that this is
-         * a continuation of a prior `ListNotificationConfigs` call, and that the system should
-         * return the next page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -29498,19 +23623,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Updates a notification config. The following update fields are allowed: description,
-       * pubsub_topic, streaming_config.filter
-       *
        * Create a request for the method "notificationConfigs.patch".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
        * @return the request
        */
@@ -29528,9 +23646,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/notificationConfigs/[^/]+$");
 
         /**
-         * Updates a notification config. The following update fields are allowed: description,
-         * pubsub_topic, streaming_config.filter
-         *
          * Create a request for the method "notificationConfigs.patch".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29539,11 +23654,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The relative resource name of this notification config. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       *        "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       *        "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       *        "projects/{project_id}/notificationConfigs/notify_public_bucket".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.NotificationConfig}
          * @since 1.13
          */
@@ -29612,33 +23723,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The relative resource name of this notification config. See:
-       https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-       "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-       "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-       "projects/{project_id}/notificationConfigs/notify_public_bucket".
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The relative resource name of this notification config. See:
-         * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-         * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-         * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-         * "projects/{project_id}/notificationConfigs/notify_public_bucket".
-         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -29649,24 +23743,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** The FieldMask to use when updating the notification config. If empty all mutable fields will be
-       updated.
+        /**
+
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /**
-         * The FieldMask to use when updating the notification config. If empty all mutable fields
-         * will be updated.
-         */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -29720,19 +23806,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class CustomModules {
 
         /**
-         * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and
-         * also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given
-         * parent. These modules are enabled by default.
-         *
          * Create a request for the method "customModules.create".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -29750,10 +23829,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent,
-           * and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the
-           * given parent. These modules are enabled by default.
-           *
            * Create a request for the method "customModules.create".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29762,10 +23837,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the new custom module's parent. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -29834,30 +23906,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the new custom module's parent. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Resource name of the new custom module's parent. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -29874,18 +23932,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-         * hierarchy. This method is only supported for resident custom modules.
-         *
          * Create a request for the method "customModules.delete".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -29902,9 +23954,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM
-           * hierarchy. This method is only supported for resident custom modules.
-           *
            * Create a request for the method "customModules.delete".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -29913,10 +23962,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to delete. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -29984,30 +24030,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to delete. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to delete. Its format is `organizations/{organizati
-           * on}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -30024,17 +24056,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Retrieves a SecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "customModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -30051,8 +24078,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Retrieves a SecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "customModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30060,10 +24085,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the custom module to get. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        `, `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -30141,30 +24163,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the custom module to get. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the custom module to get. Its format is `organizations/{organization}
-           * /securityHealthAnalyticsSettings/customModules/{customModule}`,
-           * `folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}`, or
-           * `projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -30181,19 +24189,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-         * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-         * ancestors.
-         *
          * Create a request for the method "customModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -30210,10 +24211,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes
-           * resident modules defined at the scope of the parent, and inherited modules, inherited from CRM
-           * ancestors.
-           *
            * Create a request for the method "customModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30221,10 +24218,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -30302,30 +24296,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -30336,40 +24316,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -30381,19 +24352,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-         * and all of the parent’s CRM descendants.
-         *
          * Create a request for the method "customModules.listDescendant".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link ListDescendant#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public ListDescendant listDescendant(java.lang.String parent) throws java.io.IOException {
@@ -30410,9 +24375,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent
-           * and all of the parent’s CRM descendants.
-           *
            * Create a request for the method "customModules.listDescendant".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30421,10 +24383,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. Name of parent to list descendant custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected ListDescendant(java.lang.String parent) {
@@ -30502,30 +24461,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (ListDescendant) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list descendant custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list descendant custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public ListDescendant setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -30536,40 +24481,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public ListDescendant setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public ListDescendant setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -30581,22 +24517,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-         * mask. Updating the enablement state is supported on both resident and inherited modules (though
-         * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-         * custom config of a module is supported on resident modules only.
-         *
          * Create a request for the method "customModules.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
          * @return the request
          */
@@ -30614,11 +24540,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings/customModules/[^/]+$");
 
           /**
-           * Updates the SecurityHealthAnalyticsCustomModule under the given name based on the given update
-           * mask. Updating the enablement state is supported on both resident and inherited modules (though
-           * resident modules cannot have an enablement state of "inherited"). Updating the display name and
-           * custom config of a module is supported on resident modules only.
-           *
            * Create a request for the method "customModules.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30627,12 +24548,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name of the custom module. Its format is
-         *        "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}
-         *        ", or "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         *        "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         *        {customModule} is server-generated and is not user settable. It will be a numeric id
-         *        containing 1-20 digits.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule}
            * @since 1.13
            */
@@ -30701,36 +24617,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name of the custom module. Its format is
-         "organizations/{organization}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-         "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The id
-         {customModule} is server-generated and is not user settable. It will be a numeric id containing
-         1-20 digits.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Immutable. The resource name of the custom module. Its format is "organizations/{organi
-           * zation}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "folders/{folder}/securityHealthAnalyticsSettings/customModules/{customModule}", or
-           * "projects/{project}/securityHealthAnalyticsSettings/customModules/{customModule}" The
-           * id {customModule} is server-generated and is not user settable. It will be a numeric id
-           * containing 1-20 digits.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -30741,27 +24637,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. The only fields that can be updated are `enablement_state` and
-         `custom_config`. If empty or set to the wildcard value `*`, both `enablement_state` and
-         `custom_config` are updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The list of fields to be updated. The only fields that can be updated are
-           * `enablement_state` and `custom_config`. If empty or set to the wildcard value `*`, both
-           * `enablement_state` and `custom_config` are updated.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -30773,17 +24658,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-         *
          * Create a request for the method "customModules.simulate".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Simulate#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
          * @return the request
          */
@@ -30801,8 +24681,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Simulates a given SecurityHealthAnalyticsCustomModule and Resource.
-           *
            * Create a request for the method "customModules.simulate".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30811,10 +24689,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Simulate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The relative resource name of the organization, project, or folder. For more information
-         *        about relative resource names, see [Relative Resource
-         *        Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         *        `organizations/{organization_id}`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SimulateSecurityHealthAnalyticsCustomModuleRequest}
            * @since 1.13
            */
@@ -30883,30 +24758,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Simulate) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The relative resource name of the organization, project, or folder. For more information
-         about relative resource names, see [Relative Resource
-         Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) Example:
-         `organizations/{organization_id}`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The relative resource name of the organization, project, or folder. For more
-           * information about relative resource names, see [Relative Resource
-           * Name](https://cloud.google.com/apis/design/resource_names#relative_resource_name)
-           * Example: `organizations/{organization_id}`
-           */
           public Simulate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -30945,18 +24806,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class EffectiveCustomModules {
 
         /**
-         * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-         *
          * Create a request for the method "effectiveCustomModules.get".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -30973,8 +24828,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings/effectiveCustomModules/[^/]+$");
 
           /**
-           * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
-           *
            * Create a request for the method "effectiveCustomModules.get".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -30982,11 +24835,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the effective custom module to get. Its format is `organizations/{organization}/se
-         *        curityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         *        or
-         *        `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -31064,32 +24913,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the effective custom module to get. Its format is `organizations/{organization}/s
-         ecurityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-         `folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, or
-         `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Name of the effective custom module to get. Its format is `organizations/{org
-           * anization}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`, `fol
-           * ders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}`,
-           * or `projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customMo
-           * dule}`
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -31106,19 +24939,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-         * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-         * from CRM ancestors.
-         *
          * Create a request for the method "effectiveCustomModules.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -31135,10 +24961,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
           /**
-           * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This
-           * includes resident modules defined at the scope of the parent, and inherited modules, inherited
-           * from CRM ancestors.
-           *
            * Create a request for the method "effectiveCustomModules.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -31146,10 +24968,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of parent to list effective custom modules. Its format is
-         *        `organizations/{organization}/securityHealthAnalyticsSettings`,
-         *        `folders/{folder}/securityHealthAnalyticsSettings`, or
-         *        `projects/{project}/securityHealthAnalyticsSettings`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -31227,30 +25046,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of parent to list effective custom modules. Its format is
-         `organizations/{organization}/securityHealthAnalyticsSettings`,
-         `folders/{folder}/securityHealthAnalyticsSettings`, or
-         `projects/{project}/securityHealthAnalyticsSettings`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of parent to list effective custom modules. Its format is
-           * `organizations/{organization}/securityHealthAnalyticsSettings`,
-           * `folders/{folder}/securityHealthAnalyticsSettings`, or
-           * `projects/{project}/securityHealthAnalyticsSettings`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -31261,40 +25066,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The value returned by the last call indicating a continuation */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last call indicating a continuation
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The value returned by the last call indicating a continuation */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -31329,15 +25125,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Sources {
 
       /**
-       * Lists all sources belonging to an organization.
-       *
        * Create a request for the method "sources.list".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+       * @param parent
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -31354,8 +25147,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists all sources belonging to an organization.
-         *
          * Create a request for the method "sources.list".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -31363,8 +25154,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the parent of sources to list. Its format should be
-       *        `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+         * @param parent
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -31442,24 +25232,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the parent of sources to list. Its format should be
-       `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
+        /**
+
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. Resource name of the parent of sources to list. Its format should be
-         * `organizations/[organization_id]`, `folders/[folder_id]`, or `projects/[project_id]`.
-         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -31470,49 +25252,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-       is 1000.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /**
-         * The maximum number of results to return in a single response. Default is 10, minimum is
-         * 1, maximum is 1000.
-         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The value returned by the last `ListSourcesResponse`; indicates that this is a continuation of a
-       prior `ListSources` call, and that the system should return the next page of data.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * The value returned by the last `ListSourcesResponse`; indicates that this is a
-         * continuation of a prior `ListSources` call, and that the system should return the next
-         * page of data.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -31545,22 +25309,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Findings {
 
         /**
-         * Filters an organization or source's findings and groups them by their specified properties. To
-         * group across all sources provide a `-` as the source id. Example:
-         * /v1/organizations/{organization_id}/sources/-/findings,
-         * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-         *
          * Create a request for the method "findings.group".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+         * @param parent
          * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -31578,11 +25332,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+$");
 
           /**
-           * Filters an organization or source's findings and groups them by their specified properties. To
-           * group across all sources provide a `-` as the source id. Example:
-           * /v1/organizations/{organization_id}/sources/-/findings,
-           * /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
-           *
            * Create a request for the method "findings.group".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -31591,12 +25340,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source to groupBy. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To groupBy across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         *        `projects/{project_id}/sources/-`
+           * @param parent
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -31665,35 +25409,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Group) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source to groupBy. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a source_id
-         of `-`. For example: `organizations/{organization_id}/sources/-, folders/{folder_id}/sources/-`, or
-         `projects/{project_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source to groupBy. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To groupBy across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-,
-           * folders/{folder_id}/sources/-`, or `projects/{project_id}/sources/-`
-           */
           public Group setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -31710,20 +25435,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists an organization or source's findings. To list across all sources provide a `-` as the
-         * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-         *
          * Create a request for the method "findings.list".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -31740,9 +25457,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+$");
 
           /**
-           * Lists an organization or source's findings. To list across all sources provide a `-` as the
-           * source id. Example: /v1/organizations/{organization_id}/sources/-/findings
-           *
            * Create a request for the method "findings.list".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -31750,12 +25464,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of the source the findings belong to. Its format is
-         *        `organizations/[organization_id]/sources/[source_id]`,
-         *        `folders/[folder_id]/sources/[source_id]`, or `projects/[project_id]/sources/[source_id]`.
-         *        To list across all sources provide a source_id of `-`. For example:
-         *        `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         *        `projects/{projects_id}/sources/-`
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -31833,35 +25542,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Name of the source the findings belong to. Its format is
-         `organizations/[organization_id]/sources/[source_id]`, `folders/[folder_id]/sources/[source_id]`,
-         or `projects/[project_id]/sources/[source_id]`. To list across all sources provide a source_id of
-         `-`. For example: `organizations/{organization_id}/sources/-`, `folders/{folder_id}/sources/-` or
-         `projects/{projects_id}/sources/-`
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. Name of the source the findings belong to. Its format is
-           * `organizations/[organization_id]/sources/[source_id]`,
-           * `folders/[folder_id]/sources/[source_id]`, or
-           * `projects/[project_id]/sources/[source_id]`. To list across all sources provide a
-           * source_id of `-`. For example: `organizations/{organization_id}/sources/-`,
-           * `folders/{folder_id}/sources/-` or `projects/{projects_id}/sources/-`
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -31872,290 +25562,106 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           @com.google.api.client.util.Key
           private String compareDuration;
 
-          /** When compare_duration is set, the ListFindingsResult's "state_change" attribute is updated to
-         indicate whether the finding had its state changed, the finding's state remained unchanged, or if
-         the finding was added in any state during the compare_duration period of time that precedes the
-         read_time. This is the time between (read_time - compare_duration) and read_time. The state_change
-         value is derived based on the presence and state of the finding at the two points in time.
-         Intermediate state changes between the two times don't affect the result. For example, the results
-         aren't affected if the finding is made inactive and then active again. Possible "state_change"
-         values when compare_duration is specified: * "CHANGED": indicates that the finding was present and
-         matched the given filter at the start of compare_duration, but changed its state at read_time. *
-         "UNCHANGED": indicates that the finding was present and matched the given filter at the start of
-         compare_duration and did not change state at read_time. * "ADDED": indicates that the finding did
-         not match the given filter or was not present at the start of compare_duration, but was present at
-         read_time. * "REMOVED": indicates that the finding was present and matched the filter at the start
-         of compare_duration, but did not match the filter at read_time. If compare_duration is not
-         specified, then the only possible state_change is "UNUSED", which will be the state_change set for
-         all findings present at read_time.
+          /**
+
            */
           public String getCompareDuration() {
             return compareDuration;
           }
 
-          /**
-           * When compare_duration is set, the ListFindingsResult's "state_change" attribute is
-           * updated to indicate whether the finding had its state changed, the finding's state
-           * remained unchanged, or if the finding was added in any state during the
-           * compare_duration period of time that precedes the read_time. This is the time between
-           * (read_time - compare_duration) and read_time. The state_change value is derived based
-           * on the presence and state of the finding at the two points in time. Intermediate state
-           * changes between the two times don't affect the result. For example, the results aren't
-           * affected if the finding is made inactive and then active again. Possible "state_change"
-           * values when compare_duration is specified: * "CHANGED": indicates that the finding was
-           * present and matched the given filter at the start of compare_duration, but changed its
-           * state at read_time. * "UNCHANGED": indicates that the finding was present and matched
-           * the given filter at the start of compare_duration and did not change state at
-           * read_time. * "ADDED": indicates that the finding did not match the given filter or was
-           * not present at the start of compare_duration, but was present at read_time. *
-           * "REMOVED": indicates that the finding was present and matched the filter at the start
-           * of compare_duration, but did not match the filter at read_time. If compare_duration is
-           * not specified, then the only possible state_change is "UNUSED", which will be the
-           * state_change set for all findings present at read_time.
-           */
           public List setCompareDuration(String compareDuration) {
             this.compareDuration = compareDuration;
             return this;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           @com.google.api.client.util.Key
           private String fieldMask;
 
-          /** A field mask to specify the Finding fields to be listed in the response. An empty field mask will
-         list all fields.
+          /**
+
            */
           public String getFieldMask() {
             return fieldMask;
           }
 
-          /**
-           * A field mask to specify the Finding fields to be listed in the response. An empty field
-           * mask will list all fields.
-           */
           public List setFieldMask(String fieldMask) {
             this.fieldMask = fieldMask;
             return this;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Expression that defines the filter to apply across findings. The expression is a list of one or
-         more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
-         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
-         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
-         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
-         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
-         `true` and `false` without quotes. The following field and operator combinations are supported: *
-         name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category: `=`, `:` *
-         external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This should be milliseconds
-         since epoch or an RFC3339 string. Examples: `event_time = "2019-06-10T16:07:18-07:00"` `event_time
-         = 1560208038000` * severity: `=`, `:` * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` *
-         source_properties: `=`, `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a
-         valid filter string. Use a partial match on the empty string to filter based on a property
-         existing: `source_properties.my_property : ""` Use a negated partial match on the empty string to
-         filter based on a property not existing: `-source_properties.my_property : ""` * resource: *
-         resource.name: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` *
-         resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.type: `=`, `:`
-         * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /**
-           * Expression that defines the filter to apply across findings. The expression is a list
-           * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are supported, and `OR` has higher precedence than `AND`. Restrictions have the form `
-           * ` and may have a `-` character in front of them to indicate negation. Examples include:
-           * * name * source_properties.a_property * security_marks.marks.marka The supported
-           * operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. *
-           * `:`, meaning substring matching, for strings. The supported value types are: * string
-           * literals in quotes. * integer literals without quotes. * boolean literals `true` and
-           * `false` without quotes. The following field and operator combinations are supported: *
-           * name: `=` * parent: `=`, `:` * resource_name: `=`, `:` * state: `=`, `:` * category:
-           * `=`, `:` * external_uri: `=`, `:` * event_time: `=`, `>`, `<`, `>=`, `<=` Usage: This
-           * should be milliseconds since epoch or an RFC3339 string. Examples: `event_time =
-           * "2019-06-10T16:07:18-07:00"` `event_time = 1560208038000` * severity: `=`, `:` *
-           * workflow_state: `=`, `:` * security_marks.marks: `=`, `:` * source_properties: `=`,
-           * `:`, `>`, `<`, `>=`, `<=` For example, `source_properties.size = 100` is a valid filter
-           * string. Use a partial match on the empty string to filter based on a property existing:
-           * `source_properties.my_property : ""` Use a negated partial match on the empty string to
-           * filter based on a property not existing: `-source_properties.my_property : ""` *
-           * resource: * resource.name: `=`, `:` * resource.parent_name: `=`, `:` *
-           * resource.parent_display_name: `=`, `:` * resource.project_name: `=`, `:` *
-           * resource.project_display_name: `=`, `:` * resource.type: `=`, `:` *
-           * resource.folders.resource_folder: `=`, `:` * resource.display_name: `=`, `:`
-           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Expression that defines what fields and order to use for sorting. The string value should follow
-         SQL syntax: comma separated list of fields. For example: "name,resource_properties.a_property". The
-         default sorting order is ascending. To specify descending order for a field, a suffix " desc"
-         should be appended to the field name. For example: "name desc,source_properties.a_property".
-         Redundant space characters in the syntax are insignificant. "name
-         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
-         The following fields are supported: name parent state category resource_name event_time
-         source_properties security_marks.marks
+          /**
+
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /**
-           * Expression that defines what fields and order to use for sorting. The string value
-           * should follow SQL syntax: comma separated list of fields. For example:
-           * "name,resource_properties.a_property". The default sorting order is ascending. To
-           * specify descending order for a field, a suffix " desc" should be appended to the field
-           * name. For example: "name desc,source_properties.a_property". Redundant space characters
-           * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc , source_properties.a_property " are equivalent. The following fields are
-           * supported: name parent state category resource_name event_time source_properties
-           * security_marks.marks
-           */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of results to return in a single response. Default is 10, minimum is 1, maximum
-         is 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of results to return in a single response. Default is 10, minimum is
-           * 1, maximum is 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListFindingsResponse`; indicates that this is a continuation of a
-         prior `ListFindings` call, and that the system should return the next page of data.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /**
-           * The value returned by the last `ListFindingsResponse`; indicates that this is a
-           * continuation of a prior `ListFindings` call, and that the system should return the next
-           * page of data.
-           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           @com.google.api.client.util.Key
           private String readTime;
 
-          /** Time used as a reference point when filtering findings. The filter is limited to findings existing
-         at the supplied time and their values are those at that specific time. Absence of this field will
-         default to the API's version of NOW.
+          /**
+
            */
           public String getReadTime() {
             return readTime;
           }
 
-          /**
-           * Time used as a reference point when filtering findings. The filter is limited to
-           * findings existing at the supplied time and their values are those at that specific
-           * time. Absence of this field will default to the API's version of NOW.
-           */
           public List setReadTime(String readTime) {
             this.readTime = readTime;
             return this;
@@ -32167,20 +25673,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Creates or updates a finding. The corresponding source must exist for a finding creation to
-         * succeed.
-         *
          * Create a request for the method "findings.patch".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
          * @return the request
          */
@@ -32198,9 +25696,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Creates or updates a finding. The corresponding source must exist for a finding creation to
-           * succeed.
-           *
            * Create a request for the method "findings.patch".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -32209,12 +25704,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         *        "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         *        "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.Finding}
            * @since 1.13
            */
@@ -32283,35 +25773,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-         "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-         "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-           * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-           * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -32322,30 +25793,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the finding resource. This field should not be specified when
-         creating a finding. When updating a finding, an empty mask is treated as updating all mutable
-         fields and replacing source_properties. Individual source_properties can be added/updated by using
-         "source_properties." in the field mask.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the finding resource. This field should not be
-           * specified when creating a finding. When updating a finding, an empty mask is treated as
-           * updating all mutable fields and replacing source_properties. Individual
-           * source_properties can be added/updated by using "source_properties." in the field mask.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -32357,19 +25814,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the mute state of a finding.
-         *
          * Create a request for the method "findings.setMute".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetMute#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
          * @return the request
          */
@@ -32387,8 +25837,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the mute state of a finding.
-           *
            * Create a request for the method "findings.setMute".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -32397,12 +25845,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetMute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetMuteRequest}
            * @since 1.13
            */
@@ -32471,35 +25914,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetMute) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetMute setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -32516,19 +25940,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates the state of a finding.
-         *
          * Create a request for the method "findings.setState".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
          * @return the request
          */
@@ -32546,8 +25963,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+$");
 
           /**
-           * Updates the state of a finding.
-           *
            * Create a request for the method "findings.setState".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -32556,12 +25971,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * SetState#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [relative resource
-         *        name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-         *        finding. Example:
-         *        `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         *        `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SetFindingStateRequest}
            * @since 1.13
            */
@@ -32630,35 +26040,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (SetState) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [relative resource
-         name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding.
-         Example: `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-         `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-         `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The [relative resource
-           * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of
-           * the finding. Example:
-           * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}`,
-           * `folders/{folder_id}/sources/{source_id}/findings/{finding_id}`,
-           * `projects/{project_id}/sources/{source_id}/findings/{finding_id}`.
-           */
           public SetState setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -32675,18 +26066,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Updates security marks.
-         *
          * Create a request for the method "findings.updateSecurityMarks".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link UpdateSecurityMarks#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
          * @return the request
          */
@@ -32704,8 +26090,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+/securityMarks$");
 
           /**
-           * Updates security marks.
-           *
            * Create a request for the method "findings.updateSecurityMarks".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -32714,10 +26098,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.SecurityMarks}
            * @since 1.13
            */
@@ -32786,30 +26167,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (UpdateSecurityMarks) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The relative resource name of the SecurityMarks. See:
-         https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-         "organizations/{organization_id}/assets/{asset_id}/securityMarks"
-         "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The relative resource name of the SecurityMarks. See:
-           * https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
-           * "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organ
-           * ization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
-           */
           public UpdateSecurityMarks setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -32820,53 +26187,31 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           @com.google.api.client.util.Key
           private String startTime;
 
-          /** The time at which the updated SecurityMarks take effect. If not set uses current server time.
-         Updates will be applied to the SecurityMarks that are active immediately preceding this time. Must
-         be earlier or equal to the server time.
+          /**
+
            */
           public String getStartTime() {
             return startTime;
           }
 
-          /**
-           * The time at which the updated SecurityMarks take effect. If not set uses current server
-           * time. Updates will be applied to the SecurityMarks that are active immediately
-           * preceding this time. Must be earlier or equal to the server time.
-           */
           public UpdateSecurityMarks setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The FieldMask to use when updating the security marks resource. The field mask must not contain
-         duplicate fields. If empty or set to "marks", all marks will be replaced. Individual marks can be
-         updated using "marks.".
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The FieldMask to use when updating the security marks resource. The field mask must not
-           * contain duplicate fields. If empty or set to "marks", all marks will be replaced.
-           * Individual marks can be updated using "marks.".
-           */
           public UpdateSecurityMarks setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -32899,17 +26244,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class ExternalSystems {
 
           /**
-           * Updates external system. This is for a given finding.
-           *
            * Create a request for the method "externalSystems.patch".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
            * @return the request
            */
@@ -32927,8 +26267,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^projects/[^/]+/sources/[^/]+/findings/[^/]+/externalSystems/[^/]+$");
 
             /**
-             * Updates external system. This is for a given finding.
-             *
              * Create a request for the method "externalSystems.patch".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -32937,10 +26275,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Full resource name of the external system, for example:
-           *        "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           *        "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+             * @param name
              * @param content the {@link com.google.api.services.securitycenter.v1.model.GoogleCloudSecuritycenterV1ExternalSystem}
              * @since 1.13
              */
@@ -33009,30 +26344,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Full resource name of the external system, for example:
-           "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-           "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-           "projects/1234/sources/5678/findings/123456/externalSystems/jira"
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Full resource name of the external system, for example:
-             * "organizations/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "folders/1234/sources/5678/findings/123456/externalSystems/jira",
-             * "projects/1234/sources/5678/findings/123456/externalSystems/jira"
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -33043,24 +26364,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The FieldMask to use when updating the external system resource. If empty all mutable fields will
-           be updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The FieldMask to use when updating the external system resource. If empty all mutable
-             * fields will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;

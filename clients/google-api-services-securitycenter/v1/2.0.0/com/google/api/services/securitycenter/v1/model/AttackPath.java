@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * A path that an attacker could take to reach an exposed resource.
+ * Model definition for AttackPath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,29 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AttackPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of the edges between nodes in this attack path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AttackPathEdge> edges;
 
   /**
-   * The attack path name, for example,
-   * `organizations/12/simulation/34/valuedResources/56/attackPaths/78`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * A list of nodes that exist in this attack path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AttackPathNode> pathNodes;
 
   /**
-   * A list of the edges between nodes in this attack path.
    * @return value or {@code null} for none
    */
   public java.util.List<AttackPathEdge> getEdges() {
@@ -61,7 +56,6 @@ public final class AttackPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of the edges between nodes in this attack path.
    * @param edges edges or {@code null} for none
    */
   public AttackPath setEdges(java.util.List<AttackPathEdge> edges) {
@@ -70,8 +64,6 @@ public final class AttackPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The attack path name, for example,
-   * `organizations/12/simulation/34/valuedResources/56/attackPaths/78`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -79,8 +71,6 @@ public final class AttackPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The attack path name, for example,
-   * `organizations/12/simulation/34/valuedResources/56/attackPaths/78`
    * @param name name or {@code null} for none
    */
   public AttackPath setName(java.lang.String name) {
@@ -89,7 +79,6 @@ public final class AttackPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of nodes that exist in this attack path.
    * @return value or {@code null} for none
    */
   public java.util.List<AttackPathNode> getPathNodes() {
@@ -97,7 +86,6 @@ public final class AttackPath extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of nodes that exist in this attack path.
    * @param pathNodes pathNodes or {@code null} for none
    */
   public AttackPath setPathNodes(java.util.List<AttackPathNode> pathNodes) {

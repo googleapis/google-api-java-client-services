@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An individual name-value pair that defines a custom source property.
+ * Model definition for GoogleCloudSecuritycenterV1Property.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1Property extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the property for the custom output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The CEL expression for the custom output. A resource property can be specified to return the
-   * value of the property or a text string enclosed in quotation marks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Expr valueExpression;
 
   /**
-   * Name of the property for the custom output.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -54,7 +50,6 @@ public final class GoogleCloudSecuritycenterV1Property extends com.google.api.cl
   }
 
   /**
-   * Name of the property for the custom output.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Property setName(java.lang.String name) {
@@ -63,8 +58,6 @@ public final class GoogleCloudSecuritycenterV1Property extends com.google.api.cl
   }
 
   /**
-   * The CEL expression for the custom output. A resource property can be specified to return the
-   * value of the property or a text string enclosed in quotation marks.
    * @return value or {@code null} for none
    */
   public Expr getValueExpression() {
@@ -72,8 +65,6 @@ public final class GoogleCloudSecuritycenterV1Property extends com.google.api.cl
   }
 
   /**
-   * The CEL expression for the custom output. A resource property can be specified to return the
-   * value of the property or a text string enclosed in quotation marks.
    * @param valueExpression valueExpression or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Property setValueExpression(Expr valueExpression) {

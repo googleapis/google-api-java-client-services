@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * The LRO metadata for a ExportFindings request.
+ * Model definition for ExportFindingsMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ExportFindingsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The destination BigQuery dataset to export findings to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigQueryDestination bigQueryDestination;
 
   /**
-   * Optional. Timestamp at which export was started
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String exportStartTime;
 
   /**
-   * Required. The destination BigQuery dataset to export findings to.
    * @return value or {@code null} for none
    */
   public BigQueryDestination getBigQueryDestination() {
@@ -53,7 +50,6 @@ public final class ExportFindingsMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The destination BigQuery dataset to export findings to.
    * @param bigQueryDestination bigQueryDestination or {@code null} for none
    */
   public ExportFindingsMetadata setBigQueryDestination(BigQueryDestination bigQueryDestination) {
@@ -62,7 +58,6 @@ public final class ExportFindingsMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Timestamp at which export was started
    * @return value or {@code null} for none
    */
   public String getExportStartTime() {
@@ -70,7 +65,6 @@ public final class ExportFindingsMetadata extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Timestamp at which export was started
    * @param exportStartTime exportStartTime or {@code null} for none
    */
   public ExportFindingsMetadata setExportStartTime(String exportStartTime) {

@@ -17,13 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An EffectiveSecurityHealthAnalyticsCustomModule is the representation of a Security Health
- * Analytics custom module at a specified level of the resource hierarchy: organization, folder, or
- * project. If a custom module is inherited from a parent organization or folder, the value of the
- * `enablementState` property in EffectiveSecurityHealthAnalyticsCustomModule is set to the value
- * that is effective in the parent, instead of `INHERITED`. For example, if the module is enabled in
- * a parent organization or folder, the effective enablement_state for the module in all child
- * folders or projects is also `enabled`. EffectiveSecurityHealthAnalyticsCustomModule is read-only.
+ * Model definition for GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -37,48 +31,36 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cloud provider of the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * Output only. The user-specified configuration for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1CustomConfig customConfig;
 
   /**
-   * Output only. The display name for the custom module. The name must be between 1 and 128
-   * characters, start with a lowercase letter, and contain alphanumeric characters or underscores
-   * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enablementState;
 
   /**
-   * Output only. The resource name of the custom module. Its format is "organizations/{organization
-   * }/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The cloud provider of the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -86,7 +68,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * The cloud provider of the custom module.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule setCloudProvider(java.lang.String cloudProvider) {
@@ -95,7 +76,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The user-specified configuration for the module.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1CustomConfig getCustomConfig() {
@@ -103,7 +83,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The user-specified configuration for the module.
    * @param customConfig customConfig or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule setCustomConfig(GoogleCloudSecuritycenterV1CustomConfig customConfig) {
@@ -112,9 +91,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The display name for the custom module. The name must be between 1 and 128
-   * characters, start with a lowercase letter, and contain alphanumeric characters or underscores
-   * only.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -122,9 +98,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The display name for the custom module. The name must be between 1 and 128
-   * characters, start with a lowercase letter, and contain alphanumeric characters or underscores
-   * only.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule setDisplayName(java.lang.String displayName) {
@@ -133,8 +106,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnablementState() {
@@ -142,8 +113,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * @param enablementState enablementState or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule setEnablementState(java.lang.String enablementState) {
@@ -152,10 +121,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The resource name of the custom module. Its format is "organizations/{organization
-   * }/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -163,10 +128,6 @@ public final class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCu
   }
 
   /**
-   * Output only. The resource name of the custom module. Its format is "organizations/{organization
-   * }/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "folders/{folder}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}", or
-   * "projects/{project}/securityHealthAnalyticsSettings/effectiveCustomModules/{customModule}"
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule setName(java.lang.String name) {

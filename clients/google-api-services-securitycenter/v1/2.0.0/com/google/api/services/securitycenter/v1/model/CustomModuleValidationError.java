@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An error encountered while validating the uploaded configuration of an Event Threat Detection
- * Custom Module.
+ * Model definition for CustomModuleValidationError.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,38 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class CustomModuleValidationError extends com.google.api.client.json.GenericJson {
 
   /**
-   * A description of the error, suitable for human consumption. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Position end;
 
   /**
-   * The path, in RFC 8901 JSON Pointer format, to the field that failed validation. This may be
-   * left empty if no specific field is affected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldPath;
 
   /**
-   * The initial position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Position start;
 
   /**
-   * A description of the error, suitable for human consumption. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -71,7 +62,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * A description of the error, suitable for human consumption. Required.
    * @param description description or {@code null} for none
    */
   public CustomModuleValidationError setDescription(java.lang.String description) {
@@ -80,8 +70,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * @return value or {@code null} for none
    */
   public Position getEnd() {
@@ -89,8 +77,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * @param end end or {@code null} for none
    */
   public CustomModuleValidationError setEnd(Position end) {
@@ -99,8 +85,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The path, in RFC 8901 JSON Pointer format, to the field that failed validation. This may be
-   * left empty if no specific field is affected.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldPath() {
@@ -108,8 +92,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The path, in RFC 8901 JSON Pointer format, to the field that failed validation. This may be
-   * left empty if no specific field is affected.
    * @param fieldPath fieldPath or {@code null} for none
    */
   public CustomModuleValidationError setFieldPath(java.lang.String fieldPath) {
@@ -118,8 +100,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The initial position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * @return value or {@code null} for none
    */
   public Position getStart() {
@@ -127,8 +107,6 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
   }
 
   /**
-   * The initial position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed.
    * @param start start or {@code null} for none
    */
   public CustomModuleValidationError setStart(Position start) {

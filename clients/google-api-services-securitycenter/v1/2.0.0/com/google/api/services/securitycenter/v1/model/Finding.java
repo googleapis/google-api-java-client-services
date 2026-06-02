@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center finding. A finding is a record of assessment data like security, risk,
- * health, or privacy, that is ingested into Security Command Center for presentation, notification,
- * analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS)
- * vulnerability in an App Engine application is a finding.
+ * Model definition for Finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,22 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Access access;
 
   /**
-   * AffectedResources associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AffectedResources affectedResources;
 
   /**
-   * Agent data access events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,99 +55,78 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AI model associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AiModel aiModel;
 
   /**
-   * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Application application;
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ArtifactGuardPolicies artifactGuardPolicies;
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AttackExposure attackExposure;
 
   /**
-   * Fields related to Backup and DR findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackupDisasterRecovery backupDisasterRecovery;
 
   /**
-   * The canonical name of the finding. It's either
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
-   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
-   * CRM ancestor of the resource associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String canonicalName;
 
   /**
-   * The additional taxonomy group within findings from a given source. This field is immutable
-   * after creation time. Example: "XSS_FLASH_INJECTION"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Chokepoint chokepoint;
 
   /**
-   * Fields related to Cloud Armor findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudArmor cloudArmor;
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudDlpDataProfile cloudDlpDataProfile;
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudDlpInspection cloudDlpInspection;
 
   /**
-   * Details about the compliance implications of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ComplianceDetails complianceDetails;
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +139,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,11 +151,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,8 +163,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,14 +175,12 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the finding was created in Security Command Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Data access events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +193,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data flow events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +205,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,77 +217,60 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Database associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Database database;
 
   /**
-   * Contains more details about the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiscoveredWorkload discoveredWorkload;
 
   /**
-   * Disk associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Disk disk;
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * Represents exfiltrations associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Exfiltration exfiltration;
 
   /**
-   * External exposure associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExternalExposure externalExposure;
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems;
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalUri;
 
   /**
-   * File associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -340,281 +283,216 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The class of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingClass;
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GroupMembership> groupMemberships;
 
   /**
-   * Represents IAM bindings associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<IamBinding> iamBindings;
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Indicator indicator;
 
   /**
-   * IP rules associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IpRules ipRules;
 
   /**
-   * Job associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Job job;
 
   /**
-   * Signature of the kernel rootkit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KernelRootkit kernelRootkit;
 
   /**
-   * Kubernetes resources associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Kubernetes kubernetes;
 
   /**
-   * The load balancers associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LoadBalancer> loadBalancers;
 
   /**
-   * Log entries that are relevant to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<LogEntry> logEntries;
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MitreAttack mitreAttack;
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String moduleName;
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mute;
 
   /**
-   * Output only. The mute information regarding this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MuteInfo muteInfo;
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
-   * the user who muted the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteInitiator;
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String muteUpdateTime;
 
   /**
-   * The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Network> networks;
 
   /**
-   * Steps to address the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextSteps;
 
   /**
-   * Notebook associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Notebook notebook;
 
   /**
-   * Contains information about the org policies associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OrgPolicy> orgPolicies;
 
   /**
-   * The relative resource name of the source the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentDisplayName;
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PolicyViolationSummary policyViolationSummary;
 
   /**
-   * Represents operating system processes associated with the Finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Process> processes;
 
   /**
-   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
-   * this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
-   * field is immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Secret associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret secret;
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityMarks securityMarks;
 
   /**
-   * The security posture associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SecurityPosture securityPosture;
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> sourceProperties;
 
   /**
-   * The state of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ToxicCombination toxicCombination;
 
   /**
-   * VertexAi associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VertexAi vertexAi;
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Vulnerability vulnerability;
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * @return value or {@code null} for none
    */
   public Access getAccess() {
@@ -622,8 +500,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Access details associated with the finding, such as more information on the caller, which
-   * method was accessed, and from where.
    * @param access access or {@code null} for none
    */
   public Finding setAccess(Access access) {
@@ -632,7 +508,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AffectedResources associated with the finding.
    * @return value or {@code null} for none
    */
   public AffectedResources getAffectedResources() {
@@ -640,7 +515,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AffectedResources associated with the finding.
    * @param affectedResources affectedResources or {@code null} for none
    */
   public Finding setAffectedResources(AffectedResources affectedResources) {
@@ -649,7 +523,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Agent data access events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<AgentDataAccessEvent> getAgentDataAccessEvents() {
@@ -657,7 +530,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Agent data access events associated with the finding.
    * @param agentDataAccessEvents agentDataAccessEvents or {@code null} for none
    */
   public Finding setAgentDataAccessEvents(java.util.List<AgentDataAccessEvent> agentDataAccessEvents) {
@@ -666,7 +538,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AI model associated with the finding.
    * @return value or {@code null} for none
    */
   public AiModel getAiModel() {
@@ -674,7 +545,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AI model associated with the finding.
    * @param aiModel aiModel or {@code null} for none
    */
   public Finding setAiModel(AiModel aiModel) {
@@ -683,7 +553,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents an application associated with the finding.
    * @return value or {@code null} for none
    */
   public Application getApplication() {
@@ -691,7 +560,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents an application associated with the finding.
    * @param application application or {@code null} for none
    */
   public Finding setApplication(Application application) {
@@ -700,7 +568,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * @return value or {@code null} for none
    */
   public ArtifactGuardPolicies getArtifactGuardPolicies() {
@@ -708,7 +575,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ArtifactGuardPolicies associated with the finding.
    * @param artifactGuardPolicies artifactGuardPolicies or {@code null} for none
    */
   public Finding setArtifactGuardPolicies(ArtifactGuardPolicies artifactGuardPolicies) {
@@ -717,7 +583,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * @return value or {@code null} for none
    */
   public AttackExposure getAttackExposure() {
@@ -725,7 +590,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The results of an attack path simulation relevant to this finding.
    * @param attackExposure attackExposure or {@code null} for none
    */
   public Finding setAttackExposure(AttackExposure attackExposure) {
@@ -734,7 +598,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields related to Backup and DR findings.
    * @return value or {@code null} for none
    */
   public BackupDisasterRecovery getBackupDisasterRecovery() {
@@ -742,7 +605,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields related to Backup and DR findings.
    * @param backupDisasterRecovery backupDisasterRecovery or {@code null} for none
    */
   public Finding setBackupDisasterRecovery(BackupDisasterRecovery backupDisasterRecovery) {
@@ -751,11 +613,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical name of the finding. It's either
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
-   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
-   * CRM ancestor of the resource associated with the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalName() {
@@ -763,11 +620,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical name of the finding. It's either
-   * "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}" or
-   * "projects/{project_number}/sources/{source_id}/findings/{finding_id}", depending on the closest
-   * CRM ancestor of the resource associated with the finding.
    * @param canonicalName canonicalName or {@code null} for none
    */
   public Finding setCanonicalName(java.lang.String canonicalName) {
@@ -776,8 +628,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The additional taxonomy group within findings from a given source. This field is immutable
-   * after creation time. Example: "XSS_FLASH_INJECTION"
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -785,8 +635,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The additional taxonomy group within findings from a given source. This field is immutable
-   * after creation time. Example: "XSS_FLASH_INJECTION"
    * @param category category or {@code null} for none
    */
   public Finding setCategory(java.lang.String category) {
@@ -795,10 +643,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * @return value or {@code null} for none
    */
   public Chokepoint getChokepoint() {
@@ -806,10 +650,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about a chokepoint, which is a resource or resource group where high-risk
-   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
-   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
-   * updated. Its value is ignored in all update requests.
    * @param chokepoint chokepoint or {@code null} for none
    */
   public Finding setChokepoint(Chokepoint chokepoint) {
@@ -818,7 +658,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields related to Cloud Armor findings.
    * @return value or {@code null} for none
    */
   public CloudArmor getCloudArmor() {
@@ -826,7 +665,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Fields related to Cloud Armor findings.
    * @param cloudArmor cloudArmor or {@code null} for none
    */
   public Finding setCloudArmor(CloudArmor cloudArmor) {
@@ -835,7 +673,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * @return value or {@code null} for none
    */
   public CloudDlpDataProfile getCloudDlpDataProfile() {
@@ -843,7 +680,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud DLP data profile that is associated with the finding.
    * @param cloudDlpDataProfile cloudDlpDataProfile or {@code null} for none
    */
   public Finding setCloudDlpDataProfile(CloudDlpDataProfile cloudDlpDataProfile) {
@@ -852,7 +688,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @return value or {@code null} for none
    */
   public CloudDlpInspection getCloudDlpInspection() {
@@ -860,7 +695,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud Data Loss Prevention (Cloud DLP) inspection results that are associated with the finding.
    * @param cloudDlpInspection cloudDlpInspection or {@code null} for none
    */
   public Finding setCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
@@ -869,7 +703,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about the compliance implications of the finding.
    * @return value or {@code null} for none
    */
   public ComplianceDetails getComplianceDetails() {
@@ -877,7 +710,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about the compliance implications of the finding.
    * @param complianceDetails complianceDetails or {@code null} for none
    */
   public Finding setComplianceDetails(ComplianceDetails complianceDetails) {
@@ -886,7 +718,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<Compliance> getCompliances() {
@@ -894,7 +725,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains compliance information for security standards associated to the finding.
    * @param compliances compliances or {@code null} for none
    */
   public Finding setCompliances(java.util.List<Compliance> compliances) {
@@ -903,7 +733,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<Connection> getConnections() {
@@ -911,7 +740,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains information about the IP connection associated with the finding.
    * @param connections connections or {@code null} for none
    */
   public Finding setConnections(java.util.List<Connection> connections) {
@@ -920,11 +748,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ContactDetails> getContacts() {
@@ -932,11 +755,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Map containing the points of contact for the given finding. The key represents the
-   * type of contact, while the value contains a list of all the contacts that pertain. Please refer
-   * to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-
-   * categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email":
-   * "person2@company.com" } ] } }
    * @param contacts contacts or {@code null} for none
    */
   public Finding setContacts(java.util.Map<String, ContactDetails> contacts) {
@@ -945,8 +763,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -954,8 +770,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Containers associated with the finding. This field provides information for both Kubernetes and
-   * non-Kubernetes containers.
    * @param containers containers or {@code null} for none
    */
   public Finding setContainers(java.util.List<Container> containers) {
@@ -964,7 +778,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the finding was created in Security Command Center.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -972,7 +785,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the finding was created in Security Command Center.
    * @param createTime createTime or {@code null} for none
    */
   public Finding setCreateTime(String createTime) {
@@ -981,7 +793,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data access events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<DataAccessEvent> getDataAccessEvents() {
@@ -989,7 +800,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data access events associated with the finding.
    * @param dataAccessEvents dataAccessEvents or {@code null} for none
    */
   public Finding setDataAccessEvents(java.util.List<DataAccessEvent> dataAccessEvents) {
@@ -998,7 +808,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data flow events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<DataFlowEvent> getDataFlowEvents() {
@@ -1006,7 +815,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data flow events associated with the finding.
    * @param dataFlowEvents dataFlowEvents or {@code null} for none
    */
   public Finding setDataFlowEvents(java.util.List<DataFlowEvent> dataFlowEvents) {
@@ -1015,7 +823,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<DataRetentionDeletionEvent> getDataRetentionDeletionEvents() {
@@ -1023,7 +830,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Data retention deletion events associated with the finding.
    * @param dataRetentionDeletionEvents dataRetentionDeletionEvents or {@code null} for none
    */
   public Finding setDataRetentionDeletionEvents(java.util.List<DataRetentionDeletionEvent> dataRetentionDeletionEvents) {
@@ -1032,7 +838,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Database associated with the finding.
    * @return value or {@code null} for none
    */
   public Database getDatabase() {
@@ -1040,7 +845,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Database associated with the finding.
    * @param database database or {@code null} for none
    */
   public Finding setDatabase(Database database) {
@@ -1049,7 +853,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains more details about the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -1057,7 +860,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains more details about the finding.
    * @param description description or {@code null} for none
    */
   public Finding setDescription(java.lang.String description) {
@@ -1066,7 +868,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * @return value or {@code null} for none
    */
   public DiscoveredWorkload getDiscoveredWorkload() {
@@ -1074,7 +875,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DiscoveredWorkload associated with the finding.
    * @param discoveredWorkload discoveredWorkload or {@code null} for none
    */
   public Finding setDiscoveredWorkload(DiscoveredWorkload discoveredWorkload) {
@@ -1083,7 +883,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk associated with the finding.
    * @return value or {@code null} for none
    */
   public Disk getDisk() {
@@ -1091,7 +890,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Disk associated with the finding.
    * @param disk disk or {@code null} for none
    */
   public Finding setDisk(Disk disk) {
@@ -1100,11 +898,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -1112,11 +905,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the finding was first detected. If an existing finding is updated, then this is the
-   * time the update occurred. For example, if the finding represents an open firewall, this
-   * property captures the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector. If the finding is later resolved, then this time reflects when the
-   * finding was resolved. This must not be set to a value greater than the current timestamp.
    * @param eventTime eventTime or {@code null} for none
    */
   public Finding setEventTime(String eventTime) {
@@ -1125,7 +913,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltrations associated with the finding.
    * @return value or {@code null} for none
    */
   public Exfiltration getExfiltration() {
@@ -1133,7 +920,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents exfiltrations associated with the finding.
    * @param exfiltration exfiltration or {@code null} for none
    */
   public Finding setExfiltration(Exfiltration exfiltration) {
@@ -1142,7 +928,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * External exposure associated with the finding.
    * @return value or {@code null} for none
    */
   public ExternalExposure getExternalExposure() {
@@ -1150,7 +935,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * External exposure associated with the finding.
    * @param externalExposure externalExposure or {@code null} for none
    */
   public Finding setExternalExposure(ExternalExposure externalExposure) {
@@ -1159,8 +943,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> getExternalSystems() {
@@ -1168,8 +950,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
-   * external system finding fields.
    * @param externalSystems externalSystems or {@code null} for none
    */
   public Finding setExternalSystems(java.util.Map<String, GoogleCloudSecuritycenterV1ExternalSystem> externalSystems) {
@@ -1178,9 +958,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUri() {
@@ -1188,9 +965,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI that, if available, points to a web page outside of Security Command Center where
-   * additional information about the finding can be found. This field is guaranteed to be either
-   * empty or a well formed URL.
    * @param externalUri externalUri or {@code null} for none
    */
   public Finding setExternalUri(java.lang.String externalUri) {
@@ -1199,7 +973,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<File> getFiles() {
@@ -1207,7 +980,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File associated with the finding.
    * @param files files or {@code null} for none
    */
   public Finding setFiles(java.util.List<File> files) {
@@ -1216,7 +988,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The class of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingClass() {
@@ -1224,7 +995,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The class of the finding.
    * @param findingClass findingClass or {@code null} for none
    */
   public Finding setFindingClass(java.lang.String findingClass) {
@@ -1233,9 +1003,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * @return value or {@code null} for none
    */
   public java.util.List<GroupMembership> getGroupMemberships() {
@@ -1243,9 +1010,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about groups of which this finding is a member. A group is a collection of
-   * findings that are related in some way. This field cannot be updated. Its value is ignored in
-   * all update requests.
    * @param groupMemberships groupMemberships or {@code null} for none
    */
   public Finding setGroupMemberships(java.util.List<GroupMembership> groupMemberships) {
@@ -1254,7 +1018,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents IAM bindings associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<IamBinding> getIamBindings() {
@@ -1262,7 +1025,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents IAM bindings associated with the finding.
    * @param iamBindings iamBindings or {@code null} for none
    */
   public Finding setIamBindings(java.util.List<IamBinding> iamBindings) {
@@ -1271,10 +1033,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @return value or {@code null} for none
    */
   public Indicator getIndicator() {
@@ -1282,10 +1040,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents what's commonly known as an *indicator of compromise* (IoC) in computer forensics.
-   * This is an artifact observed on a network or in an operating system that, with high confidence,
-   * indicates a computer intrusion. For more information, see [Indicator of
-   * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
    * @param indicator indicator or {@code null} for none
    */
   public Finding setIndicator(Indicator indicator) {
@@ -1294,7 +1048,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP rules associated with the finding.
    * @return value or {@code null} for none
    */
   public IpRules getIpRules() {
@@ -1302,7 +1055,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * IP rules associated with the finding.
    * @param ipRules ipRules or {@code null} for none
    */
   public Finding setIpRules(IpRules ipRules) {
@@ -1311,7 +1063,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job associated with the finding.
    * @return value or {@code null} for none
    */
   public Job getJob() {
@@ -1319,7 +1070,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job associated with the finding.
    * @param job job or {@code null} for none
    */
   public Finding setJob(Job job) {
@@ -1328,7 +1078,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Signature of the kernel rootkit.
    * @return value or {@code null} for none
    */
   public KernelRootkit getKernelRootkit() {
@@ -1336,7 +1085,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Signature of the kernel rootkit.
    * @param kernelRootkit kernelRootkit or {@code null} for none
    */
   public Finding setKernelRootkit(KernelRootkit kernelRootkit) {
@@ -1345,7 +1093,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes resources associated with the finding.
    * @return value or {@code null} for none
    */
   public Kubernetes getKubernetes() {
@@ -1353,7 +1100,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes resources associated with the finding.
    * @param kubernetes kubernetes or {@code null} for none
    */
   public Finding setKubernetes(Kubernetes kubernetes) {
@@ -1362,7 +1108,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The load balancers associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<LoadBalancer> getLoadBalancers() {
@@ -1370,7 +1115,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The load balancers associated with the finding.
    * @param loadBalancers loadBalancers or {@code null} for none
    */
   public Finding setLoadBalancers(java.util.List<LoadBalancer> loadBalancers) {
@@ -1379,7 +1123,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entries that are relevant to the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<LogEntry> getLogEntries() {
@@ -1387,7 +1130,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Log entries that are relevant to the finding.
    * @param logEntries logEntries or {@code null} for none
    */
   public Finding setLogEntries(java.util.List<LogEntry> logEntries) {
@@ -1396,7 +1138,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @return value or {@code null} for none
    */
   public MitreAttack getMitreAttack() {
@@ -1404,7 +1145,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
    * @param mitreAttack mitreAttack or {@code null} for none
    */
   public Finding setMitreAttack(MitreAttack mitreAttack) {
@@ -1413,8 +1153,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * @return value or {@code null} for none
    */
   public java.lang.String getModuleName() {
@@ -1422,8 +1160,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Unique identifier of the module which generated the finding. Example:
-   * folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
    * @param moduleName moduleName or {@code null} for none
    */
   public Finding setModuleName(java.lang.String moduleName) {
@@ -1432,8 +1168,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @return value or {@code null} for none
    */
   public java.lang.String getMute() {
@@ -1441,8 +1175,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other
-   * attributes of a finding, a finding provider shouldn't set the value of mute.
    * @param mute mute or {@code null} for none
    */
   public Finding setMute(java.lang.String mute) {
@@ -1451,7 +1183,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The mute information regarding this finding.
    * @return value or {@code null} for none
    */
   public MuteInfo getMuteInfo() {
@@ -1459,7 +1190,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The mute information regarding this finding.
    * @param muteInfo muteInfo or {@code null} for none
    */
   public Finding setMuteInfo(MuteInfo muteInfo) {
@@ -1468,9 +1198,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
-   * the user who muted the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteInitiator() {
@@ -1478,9 +1205,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records additional information about the mute operation, for example, the [mute
-   * configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and
-   * the user who muted the finding.
    * @param muteInitiator muteInitiator or {@code null} for none
    */
   public Finding setMuteInitiator(java.lang.String muteInitiator) {
@@ -1489,7 +1213,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * @return value or {@code null} for none
    */
   public String getMuteUpdateTime() {
@@ -1497,7 +1220,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The most recent time this finding was muted or unmuted.
    * @param muteUpdateTime muteUpdateTime or {@code null} for none
    */
   public Finding setMuteUpdateTime(String muteUpdateTime) {
@@ -1506,11 +1228,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -1518,11 +1235,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [relative resource
-   * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
-   * finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}",
-   * "folders/{folder_id}/sources/{source_id}/findings/{finding_id}",
-   * "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
    * @param name name or {@code null} for none
    */
   public Finding setName(java.lang.String name) {
@@ -1531,7 +1243,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * @return value or {@code null} for none
    */
   public java.util.List<Network> getNetworks() {
@@ -1539,7 +1250,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents the VPC networks that the resource is attached to.
    * @param networks networks or {@code null} for none
    */
   public Finding setNetworks(java.util.List<Network> networks) {
@@ -1548,7 +1258,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Steps to address the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextSteps() {
@@ -1556,7 +1265,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Steps to address the finding.
    * @param nextSteps nextSteps or {@code null} for none
    */
   public Finding setNextSteps(java.lang.String nextSteps) {
@@ -1565,7 +1273,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notebook associated with the finding.
    * @return value or {@code null} for none
    */
   public Notebook getNotebook() {
@@ -1573,7 +1280,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notebook associated with the finding.
    * @param notebook notebook or {@code null} for none
    */
   public Finding setNotebook(Notebook notebook) {
@@ -1582,7 +1288,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains information about the org policies associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<OrgPolicy> getOrgPolicies() {
@@ -1590,7 +1295,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains information about the org policies associated with the finding.
    * @param orgPolicies orgPolicies or {@code null} for none
    */
   public Finding setOrgPolicies(java.util.List<OrgPolicy> orgPolicies) {
@@ -1599,10 +1303,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of the source the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -1610,10 +1310,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of the source the finding belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is
-   * immutable after creation time. For example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * @param parent parent or {@code null} for none
    */
   public Finding setParent(java.lang.String parent) {
@@ -1622,8 +1318,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -1631,8 +1325,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The human readable display name of the finding source such as "Event Threat
-   * Detection" or "Security Health Analytics".
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public Finding setParentDisplayName(java.lang.String parentDisplayName) {
@@ -1641,7 +1333,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * @return value or {@code null} for none
    */
   public PolicyViolationSummary getPolicyViolationSummary() {
@@ -1649,7 +1340,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * PolicyViolationSummary associated with the finding.
    * @param policyViolationSummary policyViolationSummary or {@code null} for none
    */
   public Finding setPolicyViolationSummary(PolicyViolationSummary policyViolationSummary) {
@@ -1658,7 +1348,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents operating system processes associated with the Finding.
    * @return value or {@code null} for none
    */
   public java.util.List<Process> getProcesses() {
@@ -1666,7 +1355,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents operating system processes associated with the Finding.
    * @param processes processes or {@code null} for none
    */
   public Finding setProcesses(java.util.List<Process> processes) {
@@ -1675,11 +1363,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
-   * this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
-   * field is immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -1687,11 +1370,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For findings on Google Cloud resources, the full resource name of the Google Cloud resource
-   * this finding is for. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name When the finding is for
-   * a non-Google Cloud resource, the resourceName can be a customer or partner defined string. This
-   * field is immutable after creation time.
    * @param resourceName resourceName or {@code null} for none
    */
   public Finding setResourceName(java.lang.String resourceName) {
@@ -1700,7 +1378,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secret associated with the finding.
    * @return value or {@code null} for none
    */
   public Secret getSecret() {
@@ -1708,7 +1385,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secret associated with the finding.
    * @param secret secret or {@code null} for none
    */
   public Finding setSecret(Secret secret) {
@@ -1717,8 +1393,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * @return value or {@code null} for none
    */
   public SecurityMarks getSecurityMarks() {
@@ -1726,8 +1400,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. User specified security marks. These marks are entirely managed by the user and
-   * come from the SecurityMarks resource that belongs to the finding.
    * @param securityMarks securityMarks or {@code null} for none
    */
   public Finding setSecurityMarks(SecurityMarks securityMarks) {
@@ -1736,7 +1408,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The security posture associated with the finding.
    * @return value or {@code null} for none
    */
   public SecurityPosture getSecurityPosture() {
@@ -1744,7 +1415,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The security posture associated with the finding.
    * @param securityPosture securityPosture or {@code null} for none
    */
   public Finding setSecurityPosture(SecurityPosture securityPosture) {
@@ -1753,7 +1423,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -1761,7 +1430,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The severity of the finding. This field is managed by the source that writes the finding.
    * @param severity severity or {@code null} for none
    */
   public Finding setSeverity(java.lang.String severity) {
@@ -1770,9 +1438,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getSourceProperties() {
@@ -1780,9 +1445,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source specific properties. These properties are managed by the source that writes the finding.
-   * The key names in the source_properties map must be between 1 and 255 characters, and must start
-   * with a letter and contain alphanumeric characters or underscores only.
    * @param sourceProperties sourceProperties or {@code null} for none
    */
   public Finding setSourceProperties(java.util.Map<String, java.lang.Object> sourceProperties) {
@@ -1791,7 +1453,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1799,7 +1460,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of the finding.
    * @param state state or {@code null} for none
    */
   public Finding setState(java.lang.String state) {
@@ -1808,10 +1468,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * @return value or {@code null} for none
    */
   public ToxicCombination getToxicCombination() {
@@ -1819,10 +1475,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains details about a group of security issues that, when the issues occur together,
-   * represent a greater risk than when the issues occur independently. A group of such issues is
-   * referred to as a toxic combination. This field cannot be updated. Its value is ignored in all
-   * update requests.
    * @param toxicCombination toxicCombination or {@code null} for none
    */
   public Finding setToxicCombination(ToxicCombination toxicCombination) {
@@ -1831,7 +1483,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * VertexAi associated with the finding.
    * @return value or {@code null} for none
    */
   public VertexAi getVertexAi() {
@@ -1839,7 +1490,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * VertexAi associated with the finding.
    * @param vertexAi vertexAi or {@code null} for none
    */
   public Finding setVertexAi(VertexAi vertexAi) {
@@ -1848,8 +1498,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @return value or {@code null} for none
    */
   public Vulnerability getVulnerability() {
@@ -1857,8 +1505,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
-   * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * @param vulnerability vulnerability or {@code null} for none
    */
   public Finding setVulnerability(Vulnerability vulnerability) {

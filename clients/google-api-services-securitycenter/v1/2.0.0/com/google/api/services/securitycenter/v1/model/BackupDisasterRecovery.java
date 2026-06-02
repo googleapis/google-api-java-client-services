@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Information related to Google Cloud Backup and DR Service findings.
+ * Model definition for BackupDisasterRecovery.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,99 +31,66 @@ package com.google.api.services.securitycenter.v1.model;
 public final class BackupDisasterRecovery extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Backup and DR appliance that captures, moves, and manages the lifecycle of
-   * backup data. For example, `backup-server-57137`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appliance;
 
   /**
-   * The names of Backup and DR applications. An application is a VM, database, or file system on a
-   * managed host monitored by a backup and recovery appliance. For example, `centos7-01-vol00`,
-   * `centos7-01-vol01`, `centos7-01-vol02`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> applications;
 
   /**
-   * The timestamp at which the Backup and DR backup was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String backupCreateTime;
 
   /**
-   * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupTemplate;
 
   /**
-   * The backup type of the Backup and DR image. For example, `Snapshot`, `Remote Snapshot`,
-   * `OnVault`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupType;
 
   /**
-   * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
-   * known to the management console. The host can be of type Generic (for example, Compute Engine,
-   * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String host;
 
   /**
-   * The names of Backup and DR policies that are associated with a template and that define when to
-   * run a backup, how frequently to run a backup, and how long to retain the backup image. For
-   * example, `onvaults`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> policies;
 
   /**
-   * The names of Backup and DR advanced policy options of a policy applying to an application. See
-   * the [Backup and DR documentation on policy options](https://cloud.google.com/backup-disaster-
-   * recovery/docs/create-plan/policy-settings). For example, `skipofflineappsincongrp, nounmap`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> policyOptions;
 
   /**
-   * The name of the Backup and DR resource profile that specifies the storage media for backups of
-   * application and VM data. See the [Backup and DR documentation on
-   * profiles](https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-plan#profile).
-   * For example, `GCP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profile;
 
   /**
-   * The name of the Backup and DR storage pool that the backup and recovery appliance is storing
-   * data in. The storage pool could be of type Cloud, Primary, Snapshot, or OnVault. See the
-   * [Backup and DR documentation on storage pools](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/storage-pools). For example, `DiskPoolOne`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storagePool;
 
   /**
-   * The name of the Backup and DR appliance that captures, moves, and manages the lifecycle of
-   * backup data. For example, `backup-server-57137`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppliance() {
@@ -131,8 +98,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the Backup and DR appliance that captures, moves, and manages the lifecycle of
-   * backup data. For example, `backup-server-57137`.
    * @param appliance appliance or {@code null} for none
    */
   public BackupDisasterRecovery setAppliance(java.lang.String appliance) {
@@ -141,9 +106,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR applications. An application is a VM, database, or file system on a
-   * managed host monitored by a backup and recovery appliance. For example, `centos7-01-vol00`,
-   * `centos7-01-vol01`, `centos7-01-vol02`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getApplications() {
@@ -151,9 +113,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR applications. An application is a VM, database, or file system on a
-   * managed host monitored by a backup and recovery appliance. For example, `centos7-01-vol00`,
-   * `centos7-01-vol01`, `centos7-01-vol02`.
    * @param applications applications or {@code null} for none
    */
   public BackupDisasterRecovery setApplications(java.util.List<java.lang.String> applications) {
@@ -162,7 +121,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The timestamp at which the Backup and DR backup was created.
    * @return value or {@code null} for none
    */
   public String getBackupCreateTime() {
@@ -170,7 +128,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The timestamp at which the Backup and DR backup was created.
    * @param backupCreateTime backupCreateTime or {@code null} for none
    */
   public BackupDisasterRecovery setBackupCreateTime(String backupCreateTime) {
@@ -179,9 +136,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupTemplate() {
@@ -189,9 +143,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of a Backup and DR template which comprises one or more backup policies. See the
-   * [Backup and DR documentation](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/backup-plan#temp) for more information. For example, `snap-ov`.
    * @param backupTemplate backupTemplate or {@code null} for none
    */
   public BackupDisasterRecovery setBackupTemplate(java.lang.String backupTemplate) {
@@ -200,8 +151,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The backup type of the Backup and DR image. For example, `Snapshot`, `Remote Snapshot`,
-   * `OnVault`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupType() {
@@ -209,8 +158,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The backup type of the Backup and DR image. For example, `Snapshot`, `Remote Snapshot`,
-   * `OnVault`.
    * @param backupType backupType or {@code null} for none
    */
   public BackupDisasterRecovery setBackupType(java.lang.String backupType) {
@@ -219,12 +166,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
-   * known to the management console. The host can be of type Generic (for example, Compute Engine,
-   * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -232,12 +173,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of a Backup and DR host, which is managed by the backup and recovery appliance and
-   * known to the management console. The host can be of type Generic (for example, Compute Engine,
-   * SQL Server, Oracle DB, SMB file system, etc.), vCenter, or an ESX server. See the [Backup and
-   * DR documentation on hosts](https://cloud.google.com/backup-disaster-
-   * recovery/docs/configuration/manage-hosts-and-their-applications) for more information. For
-   * example, `centos7-01`.
    * @param host host or {@code null} for none
    */
   public BackupDisasterRecovery setHost(java.lang.String host) {
@@ -246,9 +181,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR policies that are associated with a template and that define when to
-   * run a backup, how frequently to run a backup, and how long to retain the backup image. For
-   * example, `onvaults`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPolicies() {
@@ -256,9 +188,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR policies that are associated with a template and that define when to
-   * run a backup, how frequently to run a backup, and how long to retain the backup image. For
-   * example, `onvaults`.
    * @param policies policies or {@code null} for none
    */
   public BackupDisasterRecovery setPolicies(java.util.List<java.lang.String> policies) {
@@ -267,9 +196,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR advanced policy options of a policy applying to an application. See
-   * the [Backup and DR documentation on policy options](https://cloud.google.com/backup-disaster-
-   * recovery/docs/create-plan/policy-settings). For example, `skipofflineappsincongrp, nounmap`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPolicyOptions() {
@@ -277,9 +203,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The names of Backup and DR advanced policy options of a policy applying to an application. See
-   * the [Backup and DR documentation on policy options](https://cloud.google.com/backup-disaster-
-   * recovery/docs/create-plan/policy-settings). For example, `skipofflineappsincongrp, nounmap`.
    * @param policyOptions policyOptions or {@code null} for none
    */
   public BackupDisasterRecovery setPolicyOptions(java.util.List<java.lang.String> policyOptions) {
@@ -288,10 +211,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the Backup and DR resource profile that specifies the storage media for backups of
-   * application and VM data. See the [Backup and DR documentation on
-   * profiles](https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-plan#profile).
-   * For example, `GCP`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfile() {
@@ -299,10 +218,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the Backup and DR resource profile that specifies the storage media for backups of
-   * application and VM data. See the [Backup and DR documentation on
-   * profiles](https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-plan#profile).
-   * For example, `GCP`.
    * @param profile profile or {@code null} for none
    */
   public BackupDisasterRecovery setProfile(java.lang.String profile) {
@@ -311,10 +226,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the Backup and DR storage pool that the backup and recovery appliance is storing
-   * data in. The storage pool could be of type Cloud, Primary, Snapshot, or OnVault. See the
-   * [Backup and DR documentation on storage pools](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/storage-pools). For example, `DiskPoolOne`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoragePool() {
@@ -322,10 +233,6 @@ public final class BackupDisasterRecovery extends com.google.api.client.json.Gen
   }
 
   /**
-   * The name of the Backup and DR storage pool that the backup and recovery appliance is storing
-   * data in. The storage pool could be of type Cloud, Primary, Snapshot, or OnVault. See the
-   * [Backup and DR documentation on storage pools](https://cloud.google.com/backup-disaster-
-   * recovery/docs/concepts/storage-pools). For example, `DiskPoolOne`.
    * @param storagePool storagePool or {@code null} for none
    */
   public BackupDisasterRecovery setStoragePool(java.lang.String storagePool) {

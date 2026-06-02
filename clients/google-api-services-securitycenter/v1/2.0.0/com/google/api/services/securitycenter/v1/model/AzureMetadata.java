@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Azure metadata associated with the resource, only applicable if the finding's cloud provider is
- * Microsoft Azure.
+ * Model definition for AzureMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,8 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AzureMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Azure management groups associated with the resource, ordered from lowest level
-   * (closest to the subscription) to highest level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,29 +43,24 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure resource group associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureResourceGroup resourceGroup;
 
   /**
-   * The Azure subscription associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureSubscription subscription;
 
   /**
-   * The Azure Entra tenant associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureTenant tenant;
 
   /**
-   * A list of Azure management groups associated with the resource, ordered from lowest level
-   * (closest to the subscription) to highest level.
    * @return value or {@code null} for none
    */
   public java.util.List<AzureManagementGroup> getManagementGroups() {
@@ -76,8 +68,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A list of Azure management groups associated with the resource, ordered from lowest level
-   * (closest to the subscription) to highest level.
    * @param managementGroups managementGroups or {@code null} for none
    */
   public AzureMetadata setManagementGroups(java.util.List<AzureManagementGroup> managementGroups) {
@@ -86,7 +76,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure resource group associated with the resource.
    * @return value or {@code null} for none
    */
   public AzureResourceGroup getResourceGroup() {
@@ -94,7 +83,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure resource group associated with the resource.
    * @param resourceGroup resourceGroup or {@code null} for none
    */
   public AzureMetadata setResourceGroup(AzureResourceGroup resourceGroup) {
@@ -103,7 +91,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure subscription associated with the resource.
    * @return value or {@code null} for none
    */
   public AzureSubscription getSubscription() {
@@ -111,7 +98,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure subscription associated with the resource.
    * @param subscription subscription or {@code null} for none
    */
   public AzureMetadata setSubscription(AzureSubscription subscription) {
@@ -120,7 +106,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure Entra tenant associated with the resource.
    * @return value or {@code null} for none
    */
   public AzureTenant getTenant() {
@@ -128,7 +113,6 @@ public final class AzureMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Azure Entra tenant associated with the resource.
    * @param tenant tenant or {@code null} for none
    */
   public AzureMetadata setTenant(AzureTenant tenant) {

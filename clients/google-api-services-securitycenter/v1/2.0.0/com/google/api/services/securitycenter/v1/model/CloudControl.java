@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * CloudControl associated with the finding.
+ * Model definition for CloudControl.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class CloudControl extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the CloudControl associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudControlName;
 
   /**
-   * Policy type of the CloudControl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyType;
 
   /**
-   * Type of cloud control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Version of the Cloud Control
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer version;
 
   /**
-   * Name of the CloudControl associated with the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudControlName() {
@@ -67,7 +62,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the CloudControl associated with the finding.
    * @param cloudControlName cloudControlName or {@code null} for none
    */
   public CloudControl setCloudControlName(java.lang.String cloudControlName) {
@@ -76,7 +70,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy type of the CloudControl
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyType() {
@@ -84,7 +77,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Policy type of the CloudControl
    * @param policyType policyType or {@code null} for none
    */
   public CloudControl setPolicyType(java.lang.String policyType) {
@@ -93,7 +85,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of cloud control.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -101,7 +92,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of cloud control.
    * @param type type or {@code null} for none
    */
   public CloudControl setType(java.lang.String type) {
@@ -110,7 +100,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version of the Cloud Control
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -118,7 +107,6 @@ public final class CloudControl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Version of the Cloud Control
    * @param version version or {@code null} for none
    */
   public CloudControl setVersion(java.lang.Integer version) {

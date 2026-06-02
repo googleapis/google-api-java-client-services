@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for bulk findings update. Note: 1. If multiple bulk update requests match the
- * same resource, the order in which they get executed is not defined. 2. Once a bulk operation is
- * started, there is no way to stop it.
+ * Model definition for BulkMuteFindingsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,45 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class BulkMuteFindingsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Expression that identifies findings that should be updated. The expression is a list of zero or
-   * more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-   * `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
-   * character in front of them to indicate negation. The fields map to those defined in the
-   * corresponding resource. The supported operators are: * `=` for all value types. * `>`, `<`,
-   * `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported
-   * value types are: * string literals in quotes. * integer literals without quotes. * boolean
-   * literals `true` and `false` without quotes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * This can be a mute configuration name or any identifier for mute/unmute of findings based on
-   * the filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteAnnotation;
 
   /**
-   * Optional. All findings matching the given filter will have their mute state set to this value.
-   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
-   * matching findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteState;
 
   /**
-   * Expression that identifies findings that should be updated. The expression is a list of zero or
-   * more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-   * `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
-   * character in front of them to indicate negation. The fields map to those defined in the
-   * corresponding resource. The supported operators are: * `=` for all value types. * `>`, `<`,
-   * `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported
-   * value types are: * string literals in quotes. * integer literals without quotes. * boolean
-   * literals `true` and `false` without quotes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -79,14 +56,6 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Expression that identifies findings that should be updated. The expression is a list of zero or
-   * more restrictions combined via logical operators `AND` and `OR`. Parentheses are supported, and
-   * `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-`
-   * character in front of them to indicate negation. The fields map to those defined in the
-   * corresponding resource. The supported operators are: * `=` for all value types. * `>`, `<`,
-   * `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported
-   * value types are: * string literals in quotes. * integer literals without quotes. * boolean
-   * literals `true` and `false` without quotes.
    * @param filter filter or {@code null} for none
    */
   public BulkMuteFindingsRequest setFilter(java.lang.String filter) {
@@ -95,8 +64,6 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * This can be a mute configuration name or any identifier for mute/unmute of findings based on
-   * the filter.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteAnnotation() {
@@ -104,8 +71,6 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * This can be a mute configuration name or any identifier for mute/unmute of findings based on
-   * the filter.
    * @param muteAnnotation muteAnnotation or {@code null} for none
    */
   public BulkMuteFindingsRequest setMuteAnnotation(java.lang.String muteAnnotation) {
@@ -114,9 +79,6 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. All findings matching the given filter will have their mute state set to this value.
-   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
-   * matching findings.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteState() {
@@ -124,9 +86,6 @@ public final class BulkMuteFindingsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. All findings matching the given filter will have their mute state set to this value.
-   * The default value is `MUTED`. Setting this to `UNDEFINED` will clear the mute state on all
-   * matching findings.
    * @param muteState muteState or {@code null} for none
    */
   public BulkMuteFindingsRequest setMuteState(java.lang.String muteState) {

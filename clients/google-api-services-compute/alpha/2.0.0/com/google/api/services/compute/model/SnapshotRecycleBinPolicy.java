@@ -48,6 +48,14 @@ public final class SnapshotRecycleBinPolicy extends com.google.api.client.json.G
   private java.util.Map<String, SnapshotRecycleBinPolicyRule> rules;
 
   /**
+   * Output only. The system rules for snapshot recycle bin policy. Defines the default rule that
+   * applies if no customer-defined rule matches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, SnapshotRecycleBinPolicyRule> systemRules;
+
+  /**
    * The rules for the snapshot recycle bin policy. The key is either 'default' or namespacedName of
    * the TagValue which can be in the format:
    * `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or
@@ -71,6 +79,25 @@ public final class SnapshotRecycleBinPolicy extends com.google.api.client.json.G
    */
   public SnapshotRecycleBinPolicy setRules(java.util.Map<String, SnapshotRecycleBinPolicyRule> rules) {
     this.rules = rules;
+    return this;
+  }
+
+  /**
+   * Output only. The system rules for snapshot recycle bin policy. Defines the default rule that
+   * applies if no customer-defined rule matches.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, SnapshotRecycleBinPolicyRule> getSystemRules() {
+    return systemRules;
+  }
+
+  /**
+   * Output only. The system rules for snapshot recycle bin policy. Defines the default rule that
+   * applies if no customer-defined rule matches.
+   * @param systemRules systemRules or {@code null} for none
+   */
+  public SnapshotRecycleBinPolicy setSystemRules(java.util.Map<String, SnapshotRecycleBinPolicyRule> systemRules) {
+    this.systemRules = systemRules;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   private java.lang.Boolean allInstances;
 
   /**
+   * Actions that are allowed to update instances within MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedActions;
+
+  /**
    * Whether the boot disk is allowed to be updated with restart.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
    */
   public InstanceGroupManagersApplyUpdatesRequest setAllInstances(java.lang.Boolean allInstances) {
     this.allInstances = allInstances;
+    return this;
+  }
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedActions() {
+    return allowedActions;
+  }
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @param allowedActions allowedActions or {@code null} for none
+   */
+  public InstanceGroupManagersApplyUpdatesRequest setAllowedActions(java.util.List<java.lang.String> allowedActions) {
+    this.allowedActions = allowedActions;
     return this;
   }
 

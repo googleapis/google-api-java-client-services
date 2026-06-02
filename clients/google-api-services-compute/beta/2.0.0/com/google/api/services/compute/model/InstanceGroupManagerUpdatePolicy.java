@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerUpdatePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Actions that are allowed to update instances within MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedActions;
+
+  /**
    * The instance redistribution policy for regional managed instance groups. Valid values are:
    * - PROACTIVE (default): The group attempts to maintain an    even distribution of VM instances
    * across zones in the region.    - NONE: For non-autoscaled groups, proactive    redistribution
@@ -123,6 +130,23 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedActions() {
+    return allowedActions;
+  }
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @param allowedActions allowedActions or {@code null} for none
+   */
+  public InstanceGroupManagerUpdatePolicy setAllowedActions(java.util.List<java.lang.String> allowedActions) {
+    this.allowedActions = allowedActions;
+    return this;
+  }
 
   /**
    * The instance redistribution policy for regional managed instance groups. Valid values are:

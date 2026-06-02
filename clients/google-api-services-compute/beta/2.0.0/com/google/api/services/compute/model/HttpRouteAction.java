@@ -64,6 +64,15 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private HttpFaultInjection faultInjectionPolicy;
 
   /**
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
+   * bucket serving the route, or cache policy must be configured on the same route
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageOptimizationPolicy imageOptimizationPolicy;
+
+  /**
    * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
    * field where the timeout duration starts from the time the request has been fully processed
    * (known as*end-of-stream*), the duration in this field is computed from the beginning of the
@@ -216,6 +225,27 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   public HttpRouteAction setFaultInjectionPolicy(HttpFaultInjection faultInjectionPolicy) {
     this.faultInjectionPolicy = faultInjectionPolicy;
+    return this;
+  }
+
+  /**
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
+   * bucket serving the route, or cache policy must be configured on the same route
+   * @return value or {@code null} for none
+   */
+  public ImageOptimizationPolicy getImageOptimizationPolicy() {
+    return imageOptimizationPolicy;
+  }
+
+  /**
+   * Image optimization policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
+   * bucket serving the route, or cache policy must be configured on the same route
+   * @param imageOptimizationPolicy imageOptimizationPolicy or {@code null} for none
+   */
+  public HttpRouteAction setImageOptimizationPolicy(ImageOptimizationPolicy imageOptimizationPolicy) {
+    this.imageOptimizationPolicy = imageOptimizationPolicy;
     return this;
   }
 

@@ -49,6 +49,15 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> drainNatIps;
 
   /**
+   * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
+   * The field is output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer effectiveTcpTimeWaitTimeoutSec;
+
+  /**
    * Enable Dynamic Port Allocation.
    *
    * If not specified, it is disabled by default.
@@ -266,6 +275,27 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setDrainNatIps(java.util.List<java.lang.String> drainNatIps) {
     this.drainNatIps = drainNatIps;
+    return this;
+  }
+
+  /**
+   * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
+   * The field is output only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEffectiveTcpTimeWaitTimeoutSec() {
+    return effectiveTcpTimeWaitTimeoutSec;
+  }
+
+  /**
+   * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
+   * The field is output only.
+   * @param effectiveTcpTimeWaitTimeoutSec effectiveTcpTimeWaitTimeoutSec or {@code null} for none
+   */
+  public RouterNat setEffectiveTcpTimeWaitTimeoutSec(java.lang.Integer effectiveTcpTimeWaitTimeoutSec) {
+    this.effectiveTcpTimeWaitTimeoutSec = effectiveTcpTimeWaitTimeoutSec;
     return this;
   }
 

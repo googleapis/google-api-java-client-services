@@ -112,6 +112,14 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
 
   /**
    * Output only. The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer restartingInPlace;
+
+  /**
+   * Output only. The number of instances in the managed instance group that are scheduled to be
    * resumed or are currently being resumed.
    * The value may be {@code null}.
    */
@@ -336,6 +344,25 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
    */
   public InstanceGroupManagerActionsSummary setRestarting(java.lang.Integer restarting) {
     this.restarting = restarting;
+    return this;
+  }
+
+  /**
+   * Output only. The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRestartingInPlace() {
+    return restartingInPlace;
+  }
+
+  /**
+   * Output only. The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
+   * @param restartingInPlace restartingInPlace or {@code null} for none
+   */
+  public InstanceGroupManagerActionsSummary setRestartingInPlace(java.lang.Integer restartingInPlace) {
+    this.restartingInPlace = restartingInPlace;
     return this;
   }
 

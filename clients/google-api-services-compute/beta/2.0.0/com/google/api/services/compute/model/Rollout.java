@@ -101,6 +101,20 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The timestamp at which the Rollout was paused.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pauseTime;
+
+  /**
+   * Output only. The timestamp at which the Rollout was resumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resumeTime;
+
+  /**
    * Required. The resource being rolled out.
    * The value may be {@code null}.
    */
@@ -303,6 +317,40 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp at which the Rollout was paused.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPauseTime() {
+    return pauseTime;
+  }
+
+  /**
+   * Output only. The timestamp at which the Rollout was paused.
+   * @param pauseTime pauseTime or {@code null} for none
+   */
+  public Rollout setPauseTime(java.lang.String pauseTime) {
+    this.pauseTime = pauseTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp at which the Rollout was resumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResumeTime() {
+    return resumeTime;
+  }
+
+  /**
+   * Output only. The timestamp at which the Rollout was resumed.
+   * @param resumeTime resumeTime or {@code null} for none
+   */
+  public Rollout setResumeTime(java.lang.String resumeTime) {
+    this.resumeTime = resumeTime;
     return this;
   }
 

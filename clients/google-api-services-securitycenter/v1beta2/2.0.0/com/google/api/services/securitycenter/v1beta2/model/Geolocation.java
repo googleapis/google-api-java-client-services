@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents a geographical location for a given access.
+ * Model definition for Geolocation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Geolocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * A CLDR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * A CLDR.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -46,7 +44,6 @@ public final class Geolocation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A CLDR.
    * @param regionCode regionCode or {@code null} for none
    */
   public Geolocation setRegionCode(java.lang.String regionCode) {

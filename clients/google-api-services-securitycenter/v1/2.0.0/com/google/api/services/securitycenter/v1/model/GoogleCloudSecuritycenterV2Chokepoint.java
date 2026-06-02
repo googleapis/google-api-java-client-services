@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Contains details about a chokepoint, which is a resource or resource group where high-risk attack
- * paths converge, based on [attack path simulations] (https://cloud.google.com/security-command-
- * center/docs/attack-exposure-learn#attack_path_simulations).
+ * Model definition for GoogleCloudSecuritycenterV2Chokepoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,16 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Chokepoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of resource names of findings associated with this chokepoint. For example,
-   * organizations/123/sources/456/findings/789. This list will have at most 100 findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedFindings;
 
   /**
-   * List of resource names of findings associated with this chokepoint. For example,
-   * organizations/123/sources/456/findings/789. This list will have at most 100 findings.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedFindings() {
@@ -50,8 +44,6 @@ public final class GoogleCloudSecuritycenterV2Chokepoint extends com.google.api.
   }
 
   /**
-   * List of resource names of findings associated with this chokepoint. For example,
-   * organizations/123/sources/456/findings/789. This list will have at most 100 findings.
    * @param relatedFindings relatedFindings or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Chokepoint setRelatedFindings(java.util.List<java.lang.String> relatedFindings) {

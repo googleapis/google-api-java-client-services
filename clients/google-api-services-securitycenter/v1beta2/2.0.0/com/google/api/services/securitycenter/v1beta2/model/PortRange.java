@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A port range which is inclusive of the min and max values. Values are between 0 and 2^16-1. The
- * max can be equal / must be not smaller than the min value. If min and max are equal this
- * indicates that it is a single port.
+ * Model definition for PortRange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class PortRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum port value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long max;
 
   /**
-   * Minimum port value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long min;
 
   /**
-   * Maximum port value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMax() {
@@ -55,7 +50,6 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum port value.
    * @param max max or {@code null} for none
    */
   public PortRange setMax(java.lang.Long max) {
@@ -64,7 +58,6 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum port value.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMin() {
@@ -72,7 +65,6 @@ public final class PortRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum port value.
    * @param min min or {@code null} for none
    */
   public PortRange setMin(java.lang.Long min) {

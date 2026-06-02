@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Contains details about a group of security issues that, when the issues occur together, represent
- * a greater risk than when the issues occur independently. A group of such issues is referred to as
- * a toxic combination.
+ * Model definition for GoogleCloudSecuritycenterV2ToxicCombination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,26 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2ToxicCombination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The [Attack exposure score](https://cloud.google.com/security-command-center/docs/attack-
-   * exposure-learn#attack_exposure_scores) of this toxic combination. The score is a measure of how
-   * much this toxic combination exposes one or more high-value resources to potential attack.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double attackExposureScore;
 
   /**
-   * List of resource names of findings associated with this toxic combination. For example,
-   * `organizations/123/sources/456/findings/789`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedFindings;
 
   /**
-   * The [Attack exposure score](https://cloud.google.com/security-command-center/docs/attack-
-   * exposure-learn#attack_exposure_scores) of this toxic combination. The score is a measure of how
-   * much this toxic combination exposes one or more high-value resources to potential attack.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAttackExposureScore() {
@@ -60,9 +50,6 @@ public final class GoogleCloudSecuritycenterV2ToxicCombination extends com.googl
   }
 
   /**
-   * The [Attack exposure score](https://cloud.google.com/security-command-center/docs/attack-
-   * exposure-learn#attack_exposure_scores) of this toxic combination. The score is a measure of how
-   * much this toxic combination exposes one or more high-value resources to potential attack.
    * @param attackExposureScore attackExposureScore or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ToxicCombination setAttackExposureScore(java.lang.Double attackExposureScore) {
@@ -71,8 +58,6 @@ public final class GoogleCloudSecuritycenterV2ToxicCombination extends com.googl
   }
 
   /**
-   * List of resource names of findings associated with this toxic combination. For example,
-   * `organizations/123/sources/456/findings/789`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedFindings() {
@@ -80,8 +65,6 @@ public final class GoogleCloudSecuritycenterV2ToxicCombination extends com.googl
   }
 
   /**
-   * List of resource names of findings associated with this toxic combination. For example,
-   * `organizations/123/sources/456/findings/789`.
    * @param relatedFindings relatedFindings or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ToxicCombination setRelatedFindings(java.util.List<java.lang.String> relatedFindings) {

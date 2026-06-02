@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * File information about the related binary/library used by an executable, or the script used by a
- * script interpreter
+ * Model definition for File.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,72 +31,60 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class File extends com.google.api.client.json.GenericJson {
 
   /**
-   * Prefix of the file contents as a JSON-encoded string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contents;
 
   /**
-   * Path of the file in terms of underlying disk/partition identifiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiskPath diskPath;
 
   /**
-   * The load state of the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileLoadState;
 
   /**
-   * The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes
-   * reported represent the entire file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long hashedSize;
 
   /**
-   * Operation(s) performed on a file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<FileOperation> operations;
 
   /**
-   * True when the hash covers only a prefix of the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean partiallyHashed;
 
   /**
-   * Absolute path of the file as a JSON encoded string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, sha256 represents the SHA256 hash of the entire file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sha256;
 
   /**
-   * Size of the file in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long size;
 
   /**
-   * Prefix of the file contents as a JSON-encoded string.
    * @return value or {@code null} for none
    */
   public java.lang.String getContents() {
@@ -105,7 +92,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Prefix of the file contents as a JSON-encoded string.
    * @param contents contents or {@code null} for none
    */
   public File setContents(java.lang.String contents) {
@@ -114,7 +100,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path of the file in terms of underlying disk/partition identifiers.
    * @return value or {@code null} for none
    */
   public DiskPath getDiskPath() {
@@ -122,7 +107,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path of the file in terms of underlying disk/partition identifiers.
    * @param diskPath diskPath or {@code null} for none
    */
   public File setDiskPath(DiskPath diskPath) {
@@ -131,7 +115,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The load state of the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileLoadState() {
@@ -139,7 +122,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The load state of the file.
    * @param fileLoadState fileLoadState or {@code null} for none
    */
   public File setFileLoadState(java.lang.String fileLoadState) {
@@ -148,8 +130,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes
-   * reported represent the entire file.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHashedSize() {
@@ -157,8 +137,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes
-   * reported represent the entire file.
    * @param hashedSize hashedSize or {@code null} for none
    */
   public File setHashedSize(java.lang.Long hashedSize) {
@@ -167,7 +145,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Operation(s) performed on a file.
    * @return value or {@code null} for none
    */
   public java.util.List<FileOperation> getOperations() {
@@ -175,7 +152,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Operation(s) performed on a file.
    * @param operations operations or {@code null} for none
    */
   public File setOperations(java.util.List<FileOperation> operations) {
@@ -184,7 +160,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True when the hash covers only a prefix of the file.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPartiallyHashed() {
@@ -192,7 +167,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True when the hash covers only a prefix of the file.
    * @param partiallyHashed partiallyHashed or {@code null} for none
    */
   public File setPartiallyHashed(java.lang.Boolean partiallyHashed) {
@@ -201,7 +175,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute path of the file as a JSON encoded string.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -209,7 +182,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Absolute path of the file as a JSON encoded string.
    * @param path path or {@code null} for none
    */
   public File setPath(java.lang.String path) {
@@ -218,8 +190,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, sha256 represents the SHA256 hash of the entire file.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha256() {
@@ -227,8 +197,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SHA256 hash of the first hashed_size bytes of the file encoded as a hex string. If hashed_size
-   * == size, sha256 represents the SHA256 hash of the entire file.
    * @param sha256 sha256 or {@code null} for none
    */
   public File setSha256(java.lang.String sha256) {
@@ -237,7 +205,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the file in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -245,7 +212,6 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Size of the file in bytes.
    * @param size size or {@code null} for none
    */
   public File setSize(java.lang.Long size) {

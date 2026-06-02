@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * A name-value pair representing an environment variable used in an operating system process.
+ * Model definition for EnvironmentVariable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class EnvironmentVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Environment variable name as a JSON encoded string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Environment variable value as a JSON encoded string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String val;
 
   /**
-   * Environment variable name as a JSON encoded string.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -53,7 +50,6 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Environment variable name as a JSON encoded string.
    * @param name name or {@code null} for none
    */
   public EnvironmentVariable setName(java.lang.String name) {
@@ -62,7 +58,6 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Environment variable value as a JSON encoded string.
    * @return value or {@code null} for none
    */
   public java.lang.String getVal() {
@@ -70,7 +65,6 @@ public final class EnvironmentVariable extends com.google.api.client.json.Generi
   }
 
   /**
-   * Environment variable value as a JSON encoded string.
    * @param val val or {@code null} for none
    */
   public EnvironmentVariable setVal(java.lang.String val) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Result containing the Asset and its State.
+ * Model definition for ListAssetsResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class ListAssetsResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Asset matching the search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Asset asset;
 
   /**
-   * State of the asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Asset matching the search request.
    * @return value or {@code null} for none
    */
   public Asset getAsset() {
@@ -53,7 +50,6 @@ public final class ListAssetsResult extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Asset matching the search request.
    * @param asset asset or {@code null} for none
    */
   public ListAssetsResult setAsset(Asset asset) {
@@ -62,7 +58,6 @@ public final class ListAssetsResult extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * State of the asset.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +65,6 @@ public final class ListAssetsResult extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * State of the asset.
    * @param state state or {@code null} for none
    */
   public ListAssetsResult setState(java.lang.String state) {

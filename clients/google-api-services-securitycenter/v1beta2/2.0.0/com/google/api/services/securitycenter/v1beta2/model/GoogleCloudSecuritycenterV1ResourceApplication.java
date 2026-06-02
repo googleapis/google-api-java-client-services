@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The App Hub Application associated with the finding's resource.
+ * Model definition for GoogleCloudSecuritycenterV1ResourceApplication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV1ResourceApplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Consumer provided attributes for the application
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceApplicationAttributes attributes;
 
   /**
-   * The resource name of an Application. Format: `projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Consumer provided attributes for the application
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes getAttributes() {
@@ -54,7 +50,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplication extends com.go
   }
 
   /**
-   * Consumer provided attributes for the application
    * @param attributes attributes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplication setAttributes(GoogleCloudSecuritycenterV1ResourceApplicationAttributes attributes) {
@@ -63,8 +58,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplication extends com.go
   }
 
   /**
-   * The resource name of an Application. Format: `projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,8 +65,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplication extends com.go
   }
 
   /**
-   * The resource name of an Application. Format: `projects/{host-project-
-   * id}/locations/{location}/applications/{application-id}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplication setName(java.lang.String name) {

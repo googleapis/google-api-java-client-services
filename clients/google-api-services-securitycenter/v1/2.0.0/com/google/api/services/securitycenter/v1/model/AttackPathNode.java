@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents one point that an attacker passes through in this attack path.
+ * Model definition for AttackPathNode.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,52 +31,42 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AttackPathNode extends com.google.api.client.json.GenericJson {
 
   /**
-   * The findings associated with this node in the attack path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<PathNodeAssociatedFinding> associatedFindings;
 
   /**
-   * A list of attack step nodes that exist in this attack path node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AttackStepNode> attackSteps;
 
   /**
-   * Human-readable name of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Unique id of the attack path node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uuid;
 
   /**
-   * The findings associated with this node in the attack path.
    * @return value or {@code null} for none
    */
   public java.util.List<PathNodeAssociatedFinding> getAssociatedFindings() {
@@ -84,7 +74,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The findings associated with this node in the attack path.
    * @param associatedFindings associatedFindings or {@code null} for none
    */
   public AttackPathNode setAssociatedFindings(java.util.List<PathNodeAssociatedFinding> associatedFindings) {
@@ -93,7 +82,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of attack step nodes that exist in this attack path node.
    * @return value or {@code null} for none
    */
   public java.util.List<AttackStepNode> getAttackSteps() {
@@ -101,7 +89,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A list of attack step nodes that exist in this attack path node.
    * @param attackSteps attackSteps or {@code null} for none
    */
   public AttackPathNode setAttackSteps(java.util.List<AttackStepNode> attackSteps) {
@@ -110,7 +97,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Human-readable name of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -118,7 +104,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Human-readable name of this resource.
    * @param displayName displayName or {@code null} for none
    */
   public AttackPathNode setDisplayName(java.lang.String displayName) {
@@ -127,9 +112,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format)
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -137,9 +119,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the resource at this point in the attack path. The format of the name follows the
-   * Cloud Asset Inventory [resource name format](https://cloud.google.com/asset-
-   * inventory/docs/resource-name-format)
    * @param resource resource or {@code null} for none
    */
   public AttackPathNode setResource(java.lang.String resource) {
@@ -148,8 +127,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -157,8 +134,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The [supported resource type](https://cloud.google.com/asset-inventory/docs/supported-asset-
-   * types)
    * @param resourceType resourceType or {@code null} for none
    */
   public AttackPathNode setResourceType(java.lang.String resourceType) {
@@ -167,7 +142,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unique id of the attack path node.
    * @return value or {@code null} for none
    */
   public java.lang.String getUuid() {
@@ -175,7 +149,6 @@ public final class AttackPathNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unique id of the attack path node.
    * @param uuid uuid or {@code null} for none
    */
   public AttackPathNode setUuid(java.lang.String uuid) {

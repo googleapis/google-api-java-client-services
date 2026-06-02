@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Message that contains the resource name and display name of a folder resource.
+ * Model definition for GoogleCloudSecuritycenterV2Folder.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,23 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Folder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Full resource name of this folder. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceFolder;
 
   /**
-   * The user defined display name for this folder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceFolderDisplayName;
 
   /**
-   * Full resource name of this folder. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceFolder() {
@@ -55,8 +50,6 @@ public final class GoogleCloudSecuritycenterV2Folder extends com.google.api.clie
   }
 
   /**
-   * Full resource name of this folder. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceFolder resourceFolder or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Folder setResourceFolder(java.lang.String resourceFolder) {
@@ -65,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2Folder extends com.google.api.clie
   }
 
   /**
-   * The user defined display name for this folder.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceFolderDisplayName() {
@@ -73,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2Folder extends com.google.api.clie
   }
 
   /**
-   * The user defined display name for this folder.
    * @param resourceFolderDisplayName resourceFolderDisplayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Folder setResourceFolderDisplayName(java.lang.String resourceFolderDisplayName) {

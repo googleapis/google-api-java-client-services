@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Kubernetes object related to the finding, uniquely identified by GKNN. Used if the object Kind is
- * not one of Pod, Node, NodePool, Binding, or AccessReview.
+ * Model definition for GoogleCloudSecuritycenterV2Object.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,7 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Object extends com.google.api.client.json.GenericJson {
 
   /**
-   * Pod containers associated with this finding, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,38 +43,30 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object group, such as "policy.k8s.io/v1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String group;
 
   /**
-   * Kubernetes object kind, such as "Namespace".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Kubernetes object name. For details see https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/names/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Kubernetes object namespace. Must be a valid DNS label. Named "ns" to avoid collision with C++
-   * namespace keyword. For details see https://kubernetes.io/docs/tasks/administer-
-   * cluster/namespaces/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * Pod containers associated with this finding, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Container> getContainers() {
@@ -84,7 +74,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Pod containers associated with this finding, if any.
    * @param containers containers or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Object setContainers(java.util.List<GoogleCloudSecuritycenterV2Container> containers) {
@@ -93,7 +82,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object group, such as "policy.k8s.io/v1".
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -101,7 +89,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object group, such as "policy.k8s.io/v1".
    * @param group group or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Object setGroup(java.lang.String group) {
@@ -110,7 +97,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object kind, such as "Namespace".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -118,7 +104,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object kind, such as "Namespace".
    * @param kind kind or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Object setKind(java.lang.String kind) {
@@ -127,8 +112,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object name. For details see https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/names/.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -136,8 +119,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object name. For details see https://kubernetes.io/docs/concepts/overview/working-
-   * with-objects/names/.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Object setName(java.lang.String name) {
@@ -146,9 +127,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object namespace. Must be a valid DNS label. Named "ns" to avoid collision with C++
-   * namespace keyword. For details see https://kubernetes.io/docs/tasks/administer-
-   * cluster/namespaces/.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -156,9 +134,6 @@ public final class GoogleCloudSecuritycenterV2Object extends com.google.api.clie
   }
 
   /**
-   * Kubernetes object namespace. Must be a valid DNS label. Named "ns" to avoid collision with C++
-   * namespace keyword. For details see https://kubernetes.io/docs/tasks/administer-
-   * cluster/namespaces/.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Object setNs(java.lang.String ns) {

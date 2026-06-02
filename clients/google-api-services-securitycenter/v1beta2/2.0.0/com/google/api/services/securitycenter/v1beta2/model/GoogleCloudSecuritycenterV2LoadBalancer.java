@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Contains information related to the load balancer associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2LoadBalancer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2LoadBalancer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the load balancer associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the load balancer associated with the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2LoadBalancer extends com.google.ap
   }
 
   /**
-   * The name of the load balancer associated with the finding.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2LoadBalancer setName(java.lang.String name) {

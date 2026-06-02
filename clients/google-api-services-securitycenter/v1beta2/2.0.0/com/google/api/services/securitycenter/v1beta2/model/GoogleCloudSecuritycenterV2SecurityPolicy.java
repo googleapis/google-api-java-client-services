@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Information about the [Google Cloud Armor security
- * policy](https://cloud.google.com/armor/docs/security-policy-overview) relevant to the finding.
+ * Model definition for GoogleCloudSecuritycenterV2SecurityPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,29 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Google Cloud Armor security policy, for example, "my-security-policy".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Whether or not the associated rule or policy is in preview mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preview;
 
   /**
-   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
-   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The name of the Google Cloud Armor security policy, for example, "my-security-policy".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * The name of the Google Cloud Armor security policy, for example, "my-security-policy".
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPolicy setName(java.lang.String name) {
@@ -71,7 +64,6 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * Whether or not the associated rule or policy is in preview mode.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreview() {
@@ -79,7 +71,6 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * Whether or not the associated rule or policy is in preview mode.
    * @param preview preview or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPolicy setPreview(java.lang.Boolean preview) {
@@ -88,8 +79,6 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
-   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -97,8 +86,6 @@ public final class GoogleCloudSecuritycenterV2SecurityPolicy extends com.google.
   }
 
   /**
-   * The type of Google Cloud Armor security policy for example, 'backend security policy', 'edge
-   * security policy', 'network edge security policy', or 'always-on DDoS protection'.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SecurityPolicy setType(java.lang.String type) {

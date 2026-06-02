@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details about a data flow event, in which either the data is moved to or is accessed from a non-
- * compliant geo-location, as defined in the applicable data security policy.
+ * Model definition for DataFlowEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,43 +31,36 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class DataFlowEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique identifier for data flow event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventId;
 
   /**
-   * Timestamp of data flow event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * The operation performed by the principal for the data flow event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operation;
 
   /**
-   * The email address of the principal that initiated the data flow event. The principal could be a
-   * user account, service account, Google group, or other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalEmail;
 
   /**
-   * Non-compliant location of the principal or the data destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String violatedLocation;
 
   /**
-   * Unique identifier for data flow event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventId() {
@@ -76,7 +68,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Unique identifier for data flow event.
    * @param eventId eventId or {@code null} for none
    */
   public DataFlowEvent setEventId(java.lang.String eventId) {
@@ -85,7 +76,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timestamp of data flow event.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -93,7 +83,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timestamp of data flow event.
    * @param eventTime eventTime or {@code null} for none
    */
   public DataFlowEvent setEventTime(String eventTime) {
@@ -102,7 +91,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The operation performed by the principal for the data flow event.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -110,7 +98,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The operation performed by the principal for the data flow event.
    * @param operation operation or {@code null} for none
    */
   public DataFlowEvent setOperation(java.lang.String operation) {
@@ -119,8 +106,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The email address of the principal that initiated the data flow event. The principal could be a
-   * user account, service account, Google group, or other.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalEmail() {
@@ -128,8 +113,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The email address of the principal that initiated the data flow event. The principal could be a
-   * user account, service account, Google group, or other.
    * @param principalEmail principalEmail or {@code null} for none
    */
   public DataFlowEvent setPrincipalEmail(java.lang.String principalEmail) {
@@ -138,7 +121,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Non-compliant location of the principal or the data destination.
    * @return value or {@code null} for none
    */
   public java.lang.String getViolatedLocation() {
@@ -146,7 +128,6 @@ public final class DataFlowEvent extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Non-compliant location of the principal or the data destination.
    * @param violatedLocation violatedLocation or {@code null} for none
    */
   public DataFlowEvent setViolatedLocation(java.lang.String violatedLocation) {

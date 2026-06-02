@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Representation of third party SIEM/SOAR fields within SCC.
+ * Model definition for GoogleCloudSecuritycenterV2ExternalSystem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,91 +31,72 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.api.client.json.GenericJson {
 
   /**
-   * References primary/secondary etc assignees in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> assignees;
 
   /**
-   * The time when the case was closed, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String caseCloseTime;
 
   /**
-   * The time when the case was created, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String caseCreateTime;
 
   /**
-   * The priority of the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String casePriority;
 
   /**
-   * The SLA of the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String caseSla;
 
   /**
-   * The link to the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String caseUri;
 
   /**
-   * The time when the case was last updated, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String externalSystemUpdateTime;
 
   /**
-   * The identifier that's used to track the finding's corresponding case in the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalUid;
 
   /**
-   * Full resource name of the external system. The following list shows some examples: +
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `organizations/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The most recent status of the finding's corresponding case, as reported by the external system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Information about the ticket, if any, that is being used to track the resolution of the issue
-   * that is identified by this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2TicketInfo ticketInfo;
 
   /**
-   * References primary/secondary etc assignees in the external system.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssignees() {
@@ -123,7 +104,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * References primary/secondary etc assignees in the external system.
    * @param assignees assignees or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setAssignees(java.util.List<java.lang.String> assignees) {
@@ -132,7 +112,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was closed, as reported by the external system.
    * @return value or {@code null} for none
    */
   public String getCaseCloseTime() {
@@ -140,7 +119,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was closed, as reported by the external system.
    * @param caseCloseTime caseCloseTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setCaseCloseTime(String caseCloseTime) {
@@ -149,7 +127,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was created, as reported by the external system.
    * @return value or {@code null} for none
    */
   public String getCaseCreateTime() {
@@ -157,7 +134,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was created, as reported by the external system.
    * @param caseCreateTime caseCreateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setCaseCreateTime(String caseCreateTime) {
@@ -166,7 +142,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The priority of the finding's corresponding case in the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getCasePriority() {
@@ -174,7 +149,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The priority of the finding's corresponding case in the external system.
    * @param casePriority casePriority or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setCasePriority(java.lang.String casePriority) {
@@ -183,7 +157,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The SLA of the finding's corresponding case in the external system.
    * @return value or {@code null} for none
    */
   public String getCaseSla() {
@@ -191,7 +164,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The SLA of the finding's corresponding case in the external system.
    * @param caseSla caseSla or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setCaseSla(String caseSla) {
@@ -200,7 +172,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The link to the finding's corresponding case in the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getCaseUri() {
@@ -208,7 +179,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The link to the finding's corresponding case in the external system.
    * @param caseUri caseUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setCaseUri(java.lang.String caseUri) {
@@ -217,7 +187,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was last updated, as reported by the external system.
    * @return value or {@code null} for none
    */
   public String getExternalSystemUpdateTime() {
@@ -225,7 +194,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The time when the case was last updated, as reported by the external system.
    * @param externalSystemUpdateTime externalSystemUpdateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setExternalSystemUpdateTime(String externalSystemUpdateTime) {
@@ -234,7 +202,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The identifier that's used to track the finding's corresponding case in the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUid() {
@@ -242,7 +209,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The identifier that's used to track the finding's corresponding case in the external system.
    * @param externalUid externalUid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setExternalUid(java.lang.String externalUid) {
@@ -251,13 +217,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * Full resource name of the external system. The following list shows some examples: +
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `organizations/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -265,13 +224,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * Full resource name of the external system. The following list shows some examples: +
-   * `organizations/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `organizations/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `folders/1234/sources/5678/locations/us/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/findings/123456/externalSystems/jira` +
-   * `projects/1234/sources/5678/locations/us/findings/123456/externalSystems/jira`
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setName(java.lang.String name) {
@@ -280,7 +232,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The most recent status of the finding's corresponding case, as reported by the external system.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -288,7 +239,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * The most recent status of the finding's corresponding case, as reported by the external system.
    * @param status status or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setStatus(java.lang.String status) {
@@ -297,8 +247,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * Information about the ticket, if any, that is being used to track the resolution of the issue
-   * that is identified by this finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo getTicketInfo() {
@@ -306,8 +254,6 @@ public final class GoogleCloudSecuritycenterV2ExternalSystem extends com.google.
   }
 
   /**
-   * Information about the ticket, if any, that is being used to track the resolution of the issue
-   * that is identified by this finding.
    * @param ticketInfo ticketInfo or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ExternalSystem setTicketInfo(GoogleCloudSecuritycenterV2TicketInfo ticketInfo) {

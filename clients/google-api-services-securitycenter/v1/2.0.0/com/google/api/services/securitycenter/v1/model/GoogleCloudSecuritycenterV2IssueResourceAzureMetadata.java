@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * The Azure metadata of a resource associated with an issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceAzureMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Azure subscription of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription subscription;
 
   /**
-   * The Azure subscription of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription getSubscription() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAzureMetadata extends
   }
 
   /**
-   * The Azure subscription of the resource associated with the issue.
    * @param subscription subscription or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAzureMetadata setSubscription(GoogleCloudSecuritycenterV2IssueResourceAzureMetadataAzureSubscription subscription) {

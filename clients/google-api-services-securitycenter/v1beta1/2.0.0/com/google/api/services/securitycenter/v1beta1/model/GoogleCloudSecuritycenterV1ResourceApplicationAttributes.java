@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Consumer provided attributes for the application
+ * Model definition for GoogleCloudSecuritycenterV1ResourceApplicationAttributes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,42 +31,36 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Business team that ensures user needs are met and value is delivered
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> businessOwners;
 
   /**
-   * User-defined criticality information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceApplicationAttributesCriticality criticality;
 
   /**
-   * Developer team that owns development and coding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> developerOwners;
 
   /**
-   * User-defined environment information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceApplicationAttributesEnvironment environment;
 
   /**
-   * Operator team that ensures runtime and operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> operatorOwners;
 
   /**
-   * Business team that ensures user needs are met and value is delivered
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> getBusinessOwners() {
@@ -74,7 +68,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * Business team that ensures user needs are met and value is delivered
    * @param businessOwners businessOwners or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes setBusinessOwners(java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> businessOwners) {
@@ -83,7 +76,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * User-defined criticality information.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributesCriticality getCriticality() {
@@ -91,7 +83,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * User-defined criticality information.
    * @param criticality criticality or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes setCriticality(GoogleCloudSecuritycenterV1ResourceApplicationAttributesCriticality criticality) {
@@ -100,7 +91,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * Developer team that owns development and coding.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> getDeveloperOwners() {
@@ -108,7 +98,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * Developer team that owns development and coding.
    * @param developerOwners developerOwners or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes setDeveloperOwners(java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> developerOwners) {
@@ -117,7 +106,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * User-defined environment information.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributesEnvironment getEnvironment() {
@@ -125,7 +113,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * User-defined environment information.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes setEnvironment(GoogleCloudSecuritycenterV1ResourceApplicationAttributesEnvironment environment) {
@@ -134,7 +121,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * Operator team that ensures runtime and operations.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> getOperatorOwners() {
@@ -142,7 +128,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributes exte
   }
 
   /**
-   * Operator team that ensures runtime and operations.
    * @param operatorOwners operatorOwners or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributes setOperatorOwners(java.util.List<GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo> operatorOwners) {

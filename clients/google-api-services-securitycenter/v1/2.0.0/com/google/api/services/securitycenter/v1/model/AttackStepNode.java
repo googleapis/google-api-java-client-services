@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Detailed steps the attack can take between path nodes.
+ * Model definition for AttackStepNode.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,42 +31,36 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AttackStepNode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attack step description
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * User friendly name of the attack step
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Attack step labels for metadata
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Attack step type. Can be either AND, OR or DEFENSE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Unique ID for one Node
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uuid;
 
   /**
-   * Attack step description
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -74,7 +68,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attack step description
    * @param description description or {@code null} for none
    */
   public AttackStepNode setDescription(java.lang.String description) {
@@ -83,7 +76,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User friendly name of the attack step
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -91,7 +83,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User friendly name of the attack step
    * @param displayName displayName or {@code null} for none
    */
   public AttackStepNode setDisplayName(java.lang.String displayName) {
@@ -100,7 +91,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attack step labels for metadata
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -108,7 +98,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attack step labels for metadata
    * @param labels labels or {@code null} for none
    */
   public AttackStepNode setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -117,7 +106,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attack step type. Can be either AND, OR or DEFENSE
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -125,7 +113,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attack step type. Can be either AND, OR or DEFENSE
    * @param type type or {@code null} for none
    */
   public AttackStepNode setType(java.lang.String type) {
@@ -134,7 +121,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unique ID for one Node
    * @return value or {@code null} for none
    */
   public java.lang.String getUuid() {
@@ -142,7 +128,6 @@ public final class AttackStepNode extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Unique ID for one Node
    * @param uuid uuid or {@code null} for none
    */
   public AttackStepNode setUuid(java.lang.String uuid) {

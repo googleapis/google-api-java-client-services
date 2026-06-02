@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Resource where data was exfiltrated from or exfiltrated to.
+ * Model definition for ExfilResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ExfilResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Subcomponents of the asset that was exfiltrated, like URIs used during exfiltration, table
-   * names, databases, and filenames. For example, multiple tables might have been exfiltrated from
-   * the same Cloud SQL instance, or multiple files might have been exfiltrated from the same Cloud
-   * Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> components;
 
   /**
-   * The resource's [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Subcomponents of the asset that was exfiltrated, like URIs used during exfiltration, table
-   * names, databases, and filenames. For example, multiple tables might have been exfiltrated from
-   * the same Cloud SQL instance, or multiple files might have been exfiltrated from the same Cloud
-   * Storage bucket.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getComponents() {
@@ -60,10 +50,6 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Subcomponents of the asset that was exfiltrated, like URIs used during exfiltration, table
-   * names, databases, and filenames. For example, multiple tables might have been exfiltrated from
-   * the same Cloud SQL instance, or multiple files might have been exfiltrated from the same Cloud
-   * Storage bucket.
    * @param components components or {@code null} for none
    */
   public ExfilResource setComponents(java.util.List<java.lang.String> components) {
@@ -72,8 +58,6 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The resource's [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -81,8 +65,6 @@ public final class ExfilResource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The resource's [full resource
-   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
    * @param name name or {@code null} for none
    */
   public ExfilResource setName(java.lang.String name) {

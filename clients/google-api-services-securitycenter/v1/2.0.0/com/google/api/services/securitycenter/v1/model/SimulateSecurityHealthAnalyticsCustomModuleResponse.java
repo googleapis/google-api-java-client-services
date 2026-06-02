@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for simulating a `SecurityHealthAnalyticsCustomModule` against a given resource.
+ * Model definition for SimulateSecurityHealthAnalyticsCustomModuleResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SimulateSecurityHealthAnalyticsCustomModuleResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Result for test case in the corresponding request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SimulatedResult result;
 
   /**
-   * Result for test case in the corresponding request.
    * @return value or {@code null} for none
    */
   public SimulatedResult getResult() {
@@ -46,7 +44,6 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleResponse extends c
   }
 
   /**
-   * Result for test case in the corresponding request.
    * @param result result or {@code null} for none
    */
   public SimulateSecurityHealthAnalyticsCustomModuleResponse setResult(SimulatedResult result) {

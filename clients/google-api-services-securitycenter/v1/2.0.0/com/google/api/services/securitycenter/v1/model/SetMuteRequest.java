@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for updating a finding's mute status.
+ * Model definition for SetMuteRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SetMuteRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The desired state of the Mute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mute;
 
   /**
-   * Required. The desired state of the Mute.
    * @return value or {@code null} for none
    */
   public java.lang.String getMute() {
@@ -46,7 +44,6 @@ public final class SetMuteRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The desired state of the Mute.
    * @param mute mute or {@code null} for none
    */
   public SetMuteRequest setMute(java.lang.String mute) {

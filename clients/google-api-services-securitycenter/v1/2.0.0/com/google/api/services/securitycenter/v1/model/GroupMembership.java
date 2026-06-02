@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Contains details about groups of which this finding is a member. A group is a collection of
- * findings that are related in some way.
+ * Model definition for GroupMembership.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GroupMembership extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupId;
 
   /**
-   * Type of group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupType;
 
   /**
-   * ID of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupId() {
@@ -54,7 +50,6 @@ public final class GroupMembership extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * ID of the group.
    * @param groupId groupId or {@code null} for none
    */
   public GroupMembership setGroupId(java.lang.String groupId) {
@@ -63,7 +58,6 @@ public final class GroupMembership extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Type of group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupType() {
@@ -71,7 +65,6 @@ public final class GroupMembership extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Type of group.
    * @param groupType groupType or {@code null} for none
    */
   public GroupMembership setGroupType(java.lang.String groupType) {

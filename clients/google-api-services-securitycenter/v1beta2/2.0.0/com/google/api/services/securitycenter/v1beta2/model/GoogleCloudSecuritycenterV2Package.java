@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Package is a generic definition of a package.
+ * Model definition for GoogleCloudSecuritycenterV2Package.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Package extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CPE URI where the vulnerability was detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpeUri;
 
   /**
-   * The name of the package where the vulnerability was detected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageName;
 
   /**
-   * Type of package, for example, os, maven, or go.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageType;
 
   /**
-   * The version of the package.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String packageVersion;
 
   /**
-   * The CPE URI where the vulnerability was detected.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpeUri() {
@@ -67,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * The CPE URI where the vulnerability was detected.
    * @param cpeUri cpeUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Package setCpeUri(java.lang.String cpeUri) {
@@ -76,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * The name of the package where the vulnerability was detected.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageName() {
@@ -84,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * The name of the package where the vulnerability was detected.
    * @param packageName packageName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Package setPackageName(java.lang.String packageName) {
@@ -93,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * Type of package, for example, os, maven, or go.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageType() {
@@ -101,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * Type of package, for example, os, maven, or go.
    * @param packageType packageType or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Package setPackageType(java.lang.String packageType) {
@@ -110,7 +100,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * The version of the package.
    * @return value or {@code null} for none
    */
   public java.lang.String getPackageVersion() {
@@ -118,7 +107,6 @@ public final class GoogleCloudSecuritycenterV2Package extends com.google.api.cli
   }
 
   /**
-   * The version of the package.
    * @param packageVersion packageVersion or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Package setPackageVersion(java.lang.String packageVersion) {

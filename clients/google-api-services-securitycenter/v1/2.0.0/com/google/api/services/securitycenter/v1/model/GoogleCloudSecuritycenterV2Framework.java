@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Compliance framework associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2Framework.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,15 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.client.json.GenericJson {
 
   /**
-   * Category of the framework associated with the finding. E.g. Security Benchmark, or Assured
-   * Workloads
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> category;
 
   /**
-   * The controls associated with the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,32 +49,24 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Display name of the framework. For a standard framework, this will look like e.g. PCI DSS
-   * 3.2.1, whereas for a custom framework it can be a user defined string like MyFramework
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Name of the framework associated with the finding
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Type of the framework associated with the finding, to specify whether the framework is built-in
-   * (pre-defined and immutable) or a custom framework defined by the customer (equivalent to
-   * security posture)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Category of the framework associated with the finding. E.g. Security Benchmark, or Assured
-   * Workloads
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategory() {
@@ -85,8 +74,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Category of the framework associated with the finding. E.g. Security Benchmark, or Assured
-   * Workloads
    * @param category category or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Framework setCategory(java.util.List<java.lang.String> category) {
@@ -95,7 +82,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * The controls associated with the framework.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Control> getControls() {
@@ -103,7 +89,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * The controls associated with the framework.
    * @param controls controls or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Framework setControls(java.util.List<GoogleCloudSecuritycenterV2Control> controls) {
@@ -112,8 +97,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Display name of the framework. For a standard framework, this will look like e.g. PCI DSS
-   * 3.2.1, whereas for a custom framework it can be a user defined string like MyFramework
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -121,8 +104,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Display name of the framework. For a standard framework, this will look like e.g. PCI DSS
-   * 3.2.1, whereas for a custom framework it can be a user defined string like MyFramework
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Framework setDisplayName(java.lang.String displayName) {
@@ -131,7 +112,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Name of the framework associated with the finding
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -139,7 +119,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Name of the framework associated with the finding
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Framework setName(java.lang.String name) {
@@ -148,9 +127,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Type of the framework associated with the finding, to specify whether the framework is built-in
-   * (pre-defined and immutable) or a custom framework defined by the customer (equivalent to
-   * security posture)
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -158,9 +134,6 @@ public final class GoogleCloudSecuritycenterV2Framework extends com.google.api.c
   }
 
   /**
-   * Type of the framework associated with the finding, to specify whether the framework is built-in
-   * (pre-defined and immutable) or a custom framework defined by the customer (equivalent to
-   * security posture)
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Framework setType(java.lang.String type) {

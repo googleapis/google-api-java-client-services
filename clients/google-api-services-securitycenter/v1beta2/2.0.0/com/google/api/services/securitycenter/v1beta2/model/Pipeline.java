@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Vertex AI training pipeline associated with the finding.
+ * Model definition for Pipeline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Pipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -54,7 +50,6 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
    * @param displayName displayName or {@code null} for none
    */
   public Pipeline setDisplayName(java.lang.String displayName) {
@@ -63,8 +58,6 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,8 +65,6 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @param name name or {@code null} for none
    */
   public Pipeline setName(java.lang.String name) {

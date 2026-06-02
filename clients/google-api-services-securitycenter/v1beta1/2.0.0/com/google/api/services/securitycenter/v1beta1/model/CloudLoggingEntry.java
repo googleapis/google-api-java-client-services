@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Metadata taken from a [Cloud Logging
- * LogEntry](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry)
+ * Model definition for CloudLoggingEntry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,37 +31,30 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class CloudLoggingEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * A unique identifier for the log entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String insertId;
 
   /**
-   * The type of the log (part of `log_name`. `log_name` is the resource name of the log to which
-   * this log entry belongs). For example: `cloudresourcemanager.googleapis.com/activity`. Note that
-   * this field is not URL-encoded, unlike the `LOG_ID` field in `LogEntry`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logId;
 
   /**
-   * The organization, folder, or project of the monitored resource that produced this log entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceContainer;
 
   /**
-   * The time the event described by the log entry occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * A unique identifier for the log entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertId() {
@@ -70,7 +62,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * A unique identifier for the log entry.
    * @param insertId insertId or {@code null} for none
    */
   public CloudLoggingEntry setInsertId(java.lang.String insertId) {
@@ -79,9 +70,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The type of the log (part of `log_name`. `log_name` is the resource name of the log to which
-   * this log entry belongs). For example: `cloudresourcemanager.googleapis.com/activity`. Note that
-   * this field is not URL-encoded, unlike the `LOG_ID` field in `LogEntry`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogId() {
@@ -89,9 +77,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The type of the log (part of `log_name`. `log_name` is the resource name of the log to which
-   * this log entry belongs). For example: `cloudresourcemanager.googleapis.com/activity`. Note that
-   * this field is not URL-encoded, unlike the `LOG_ID` field in `LogEntry`.
    * @param logId logId or {@code null} for none
    */
   public CloudLoggingEntry setLogId(java.lang.String logId) {
@@ -100,7 +85,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The organization, folder, or project of the monitored resource that produced this log entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -108,7 +92,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The organization, folder, or project of the monitored resource that produced this log entry.
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public CloudLoggingEntry setResourceContainer(java.lang.String resourceContainer) {
@@ -117,7 +100,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The time the event described by the log entry occurred.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -125,7 +107,6 @@ public final class CloudLoggingEntry extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The time the event described by the log entry occurred.
    * @param timestamp timestamp or {@code null} for none
    */
   public CloudLoggingEntry setTimestamp(String timestamp) {

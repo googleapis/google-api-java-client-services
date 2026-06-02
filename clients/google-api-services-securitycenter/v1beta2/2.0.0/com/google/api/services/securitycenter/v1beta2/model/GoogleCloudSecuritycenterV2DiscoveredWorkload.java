@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents discovered, customer managed workload that is not registered with the respective GCP
- * service.
+ * Model definition for GoogleCloudSecuritycenterV2DiscoveredWorkload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,42 +31,36 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence in detection of this workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String confidence;
 
   /**
-   * A boolean flag set to true if associated hardware strongly predicts the workload type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean detectedRelevantHardware;
 
   /**
-   * A boolean flag set to true if associated keywords strongly predict the workload type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean detectedRelevantKeywords;
 
   /**
-   * A boolean flag set to true if installed packages strongly predict the workload type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean detectedRelevantPackages;
 
   /**
-   * The type of workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadType;
 
   /**
-   * The confidence in detection of this workload.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidence() {
@@ -75,7 +68,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * The confidence in detection of this workload.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload setConfidence(java.lang.String confidence) {
@@ -84,7 +76,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if associated hardware strongly predicts the workload type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDetectedRelevantHardware() {
@@ -92,7 +83,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if associated hardware strongly predicts the workload type.
    * @param detectedRelevantHardware detectedRelevantHardware or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload setDetectedRelevantHardware(java.lang.Boolean detectedRelevantHardware) {
@@ -101,7 +91,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if associated keywords strongly predict the workload type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDetectedRelevantKeywords() {
@@ -109,7 +98,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if associated keywords strongly predict the workload type.
    * @param detectedRelevantKeywords detectedRelevantKeywords or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload setDetectedRelevantKeywords(java.lang.Boolean detectedRelevantKeywords) {
@@ -118,7 +106,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if installed packages strongly predict the workload type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDetectedRelevantPackages() {
@@ -126,7 +113,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * A boolean flag set to true if installed packages strongly predict the workload type.
    * @param detectedRelevantPackages detectedRelevantPackages or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload setDetectedRelevantPackages(java.lang.Boolean detectedRelevantPackages) {
@@ -135,7 +121,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * The type of workload.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkloadType() {
@@ -143,7 +128,6 @@ public final class GoogleCloudSecuritycenterV2DiscoveredWorkload extends com.goo
   }
 
   /**
-   * The type of workload.
    * @param workloadType workloadType or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiscoveredWorkload setWorkloadType(java.lang.String workloadType) {

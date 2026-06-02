@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Contact information of stakeholders.
+ * Model definition for GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Email address of the contacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * Email address of the contacts.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV1ResourceApplicationAttributesConta
   }
 
   /**
-   * Email address of the contacts.
    * @param email email or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplicationAttributesContactInfo setEmail(java.lang.String email) {

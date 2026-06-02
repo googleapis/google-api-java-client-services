@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Configuration of a module.
+ * Model definition for Config.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Config extends com.google.api.client.json.GenericJson {
 
   /**
-   * The state of enablement for the module at its level of the resource hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String moduleEnablementState;
 
   /**
-   * The configuration value for the module. The absence of this field implies its inheritance from
-   * the parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> value;
 
   /**
-   * The state of enablement for the module at its level of the resource hierarchy.
    * @return value or {@code null} for none
    */
   public java.lang.String getModuleEnablementState() {
@@ -54,7 +50,6 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The state of enablement for the module at its level of the resource hierarchy.
    * @param moduleEnablementState moduleEnablementState or {@code null} for none
    */
   public Config setModuleEnablementState(java.lang.String moduleEnablementState) {
@@ -63,8 +58,6 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration value for the module. The absence of this field implies its inheritance from
-   * the parent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getValue() {
@@ -72,8 +65,6 @@ public final class Config extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration value for the module. The absence of this field implies its inheritance from
-   * the parent.
    * @param value value or {@code null} for none
    */
   public Config setValue(java.util.Map<String, java.lang.Object> value) {

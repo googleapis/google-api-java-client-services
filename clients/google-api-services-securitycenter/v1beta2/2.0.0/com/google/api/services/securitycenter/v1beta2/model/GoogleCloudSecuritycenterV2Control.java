@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Compliance control associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2Control.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Control extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the Control
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String controlName;
 
   /**
-   * Display name of the control. For example, AU-02.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Name of the Control
    * @return value or {@code null} for none
    */
   public java.lang.String getControlName() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2Control extends com.google.api.cli
   }
 
   /**
-   * Name of the Control
    * @param controlName controlName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Control setControlName(java.lang.String controlName) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2Control extends com.google.api.cli
   }
 
   /**
-   * Display name of the control. For example, AU-02.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2Control extends com.google.api.cli
   }
 
   /**
-   * Display name of the control. For example, AU-02.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Control setDisplayName(java.lang.String displayName) {

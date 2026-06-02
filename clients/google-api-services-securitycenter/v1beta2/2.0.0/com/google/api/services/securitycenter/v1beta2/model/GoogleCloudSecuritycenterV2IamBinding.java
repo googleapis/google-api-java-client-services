@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents a particular IAM binding, which captures a member's role addition, removal, or state.
+ * Model definition for GoogleCloudSecuritycenterV2IamBinding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action that was performed on a Binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, for example,
-   * "foo@google.com".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String member;
 
   /**
-   * Role that is assigned to "members". For example, "roles/viewer", "roles/editor", or
-   * "roles/owner".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * The action that was performed on a Binding.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -62,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.
   }
 
   /**
-   * The action that was performed on a Binding.
    * @param action action or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IamBinding setAction(java.lang.String action) {
@@ -71,8 +64,6 @@ public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, for example,
-   * "foo@google.com".
    * @return value or {@code null} for none
    */
   public java.lang.String getMember() {
@@ -80,8 +71,6 @@ public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.
   }
 
   /**
-   * A single identity requesting access for a Cloud Platform resource, for example,
-   * "foo@google.com".
    * @param member member or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IamBinding setMember(java.lang.String member) {
@@ -90,8 +79,6 @@ public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.
   }
 
   /**
-   * Role that is assigned to "members". For example, "roles/viewer", "roles/editor", or
-   * "roles/owner".
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -99,8 +86,6 @@ public final class GoogleCloudSecuritycenterV2IamBinding extends com.google.api.
   }
 
   /**
-   * Role that is assigned to "members". For example, "roles/viewer", "roles/editor", or
-   * "roles/owner".
    * @param role role or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IamBinding setRole(java.lang.String role) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message to create multiple resource value configs
+ * Model definition for BatchCreateResourceValueConfigsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class BatchCreateResourceValueConfigsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource value configs to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CreateResourceValueConfigRequest> requests;
 
   /**
-   * Required. The resource value configs to be created.
    * @return value or {@code null} for none
    */
   public java.util.List<CreateResourceValueConfigRequest> getRequests() {
@@ -46,7 +44,6 @@ public final class BatchCreateResourceValueConfigsRequest extends com.google.api
   }
 
   /**
-   * Required. The resource value configs to be created.
    * @param requests requests or {@code null} for none
    */
   public BatchCreateResourceValueConfigsRequest setRequests(java.util.List<CreateResourceValueConfigRequest> requests) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Memory hash detection contributing to the binary family match.
+ * Model definition for Detection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Detection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the binary associated with the memory hash signature detection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String binary;
 
   /**
-   * The percentage of memory page hashes in the signature that were matched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double percentPagesMatched;
 
   /**
-   * The name of the binary associated with the memory hash signature detection.
    * @return value or {@code null} for none
    */
   public java.lang.String getBinary() {
@@ -53,7 +50,6 @@ public final class Detection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the binary associated with the memory hash signature detection.
    * @param binary binary or {@code null} for none
    */
   public Detection setBinary(java.lang.String binary) {
@@ -62,7 +58,6 @@ public final class Detection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The percentage of memory page hashes in the signature that were matched.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentPagesMatched() {
@@ -70,7 +65,6 @@ public final class Detection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The percentage of memory page hashes in the signature that were matched.
    * @param percentPagesMatched percentPagesMatched or {@code null} for none
    */
   public Detection setPercentPagesMatched(java.lang.Double percentPagesMatched) {

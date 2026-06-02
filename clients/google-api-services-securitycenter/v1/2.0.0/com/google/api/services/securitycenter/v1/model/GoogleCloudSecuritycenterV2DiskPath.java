@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Path of the file in terms of underlying disk/partition identifiers.
+ * Model definition for GoogleCloudSecuritycenterV2DiskPath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,24 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * UUID of the partition (format
-   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partitionUuid;
 
   /**
-   * Relative path of the file in the partition as a JSON encoded string. Example:
-   * /home/user1/executable_file.sh
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String relativePath;
 
   /**
-   * UUID of the partition (format
-   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * @return value or {@code null} for none
    */
   public java.lang.String getPartitionUuid() {
@@ -56,8 +50,6 @@ public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.cl
   }
 
   /**
-   * UUID of the partition (format
-   * https://wiki.archlinux.org/title/persistent_block_device_naming#by-uuid)
    * @param partitionUuid partitionUuid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiskPath setPartitionUuid(java.lang.String partitionUuid) {
@@ -66,8 +58,6 @@ public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.cl
   }
 
   /**
-   * Relative path of the file in the partition as a JSON encoded string. Example:
-   * /home/user1/executable_file.sh
    * @return value or {@code null} for none
    */
   public java.lang.String getRelativePath() {
@@ -75,8 +65,6 @@ public final class GoogleCloudSecuritycenterV2DiskPath extends com.google.api.cl
   }
 
   /**
-   * Relative path of the file in the partition as a JSON encoded string. Example:
-   * /home/user1/executable_file.sh
    * @param relativePath relativePath or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DiskPath setRelativePath(java.lang.String relativePath) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Contains information about the org policies associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2OrgPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,16 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2OrgPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier. The resource name of the org policy. Example:
-   * "organizations/{organization_id}/policies/{constraint_name}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Identifier. The resource name of the org policy. Example:
-   * "organizations/{organization_id}/policies/{constraint_name}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +44,6 @@ public final class GoogleCloudSecuritycenterV2OrgPolicy extends com.google.api.c
   }
 
   /**
-   * Identifier. The resource name of the org policy. Example:
-   * "organizations/{organization_id}/policies/{constraint_name}"
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2OrgPolicy setName(java.lang.String name) {

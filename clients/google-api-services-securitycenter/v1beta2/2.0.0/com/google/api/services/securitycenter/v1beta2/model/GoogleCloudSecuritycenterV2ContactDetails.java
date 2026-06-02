@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details about specific contacts
+ * Model definition for GoogleCloudSecuritycenterV2ContactDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2ContactDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of contacts
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +43,6 @@ public final class GoogleCloudSecuritycenterV2ContactDetails extends com.google.
   }
 
   /**
-   * A list of contacts
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Contact> getContacts() {
@@ -52,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2ContactDetails extends com.google.
   }
 
   /**
-   * A list of contacts
    * @param contacts contacts or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ContactDetails setContacts(java.util.List<GoogleCloudSecuritycenterV2Contact> contacts) {

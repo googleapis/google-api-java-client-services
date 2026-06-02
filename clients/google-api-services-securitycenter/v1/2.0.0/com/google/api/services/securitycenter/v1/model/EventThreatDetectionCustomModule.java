@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents an instance of an Event Threat Detection custom module, including its full module
- * name, display name, enablement state, and last updated time. You can create a custom module at
- * the organization, folder, or project level. Custom modules that you create at the organization or
- * folder level are inherited by child folders and projects.
+ * Model definition for EventThreatDetectionCustomModule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,83 +31,66 @@ package com.google.api.services.securitycenter.v1.model;
 public final class EventThreatDetectionCustomModule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The closest ancestor module that this module inherits the enablement state from.
-   * The format is the same as the EventThreatDetectionCustomModule resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ancestorModule;
 
   /**
-   * The cloud provider of the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * Config for the module. For the resident module, its config value is defined at this level. For
-   * the inherited module, its config value is inherited from the ancestor module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> config;
 
   /**
-   * The description for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The human readable name to be displayed for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The state of enablement for the module at the given level of the hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enablementState;
 
   /**
-   * Output only. The editor the module was last updated by.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastEditor;
 
   /**
-   * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Output only. The time the module was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The closest ancestor module that this module inherits the enablement state from.
-   * The format is the same as the EventThreatDetectionCustomModule resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getAncestorModule() {
@@ -118,8 +98,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Output only. The closest ancestor module that this module inherits the enablement state from.
-   * The format is the same as the EventThreatDetectionCustomModule resource name.
    * @param ancestorModule ancestorModule or {@code null} for none
    */
   public EventThreatDetectionCustomModule setAncestorModule(java.lang.String ancestorModule) {
@@ -128,7 +106,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The cloud provider of the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -136,7 +113,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The cloud provider of the custom module.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public EventThreatDetectionCustomModule setCloudProvider(java.lang.String cloudProvider) {
@@ -145,8 +121,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Config for the module. For the resident module, its config value is defined at this level. For
-   * the inherited module, its config value is inherited from the ancestor module.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getConfig() {
@@ -154,8 +128,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Config for the module. For the resident module, its config value is defined at this level. For
-   * the inherited module, its config value is inherited from the ancestor module.
    * @param config config or {@code null} for none
    */
   public EventThreatDetectionCustomModule setConfig(java.util.Map<String, java.lang.Object> config) {
@@ -164,7 +136,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The description for the module.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -172,7 +143,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The description for the module.
    * @param description description or {@code null} for none
    */
   public EventThreatDetectionCustomModule setDescription(java.lang.String description) {
@@ -181,7 +151,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The human readable name to be displayed for the module.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -189,7 +158,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The human readable name to be displayed for the module.
    * @param displayName displayName or {@code null} for none
    */
   public EventThreatDetectionCustomModule setDisplayName(java.lang.String displayName) {
@@ -198,7 +166,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The state of enablement for the module at the given level of the hierarchy.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnablementState() {
@@ -206,7 +173,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * The state of enablement for the module at the given level of the hierarchy.
    * @param enablementState enablementState or {@code null} for none
    */
   public EventThreatDetectionCustomModule setEnablementState(java.lang.String enablementState) {
@@ -215,7 +181,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Output only. The editor the module was last updated by.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastEditor() {
@@ -223,7 +188,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Output only. The editor the module was last updated by.
    * @param lastEditor lastEditor or {@code null} for none
    */
   public EventThreatDetectionCustomModule setLastEditor(java.lang.String lastEditor) {
@@ -232,10 +196,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -243,10 +203,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Immutable. The resource name of the Event Threat Detection custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/customModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/customModules/{module}`.
    * @param name name or {@code null} for none
    */
   public EventThreatDetectionCustomModule setName(java.lang.String name) {
@@ -255,7 +211,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -263,7 +218,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * @param type type or {@code null} for none
    */
   public EventThreatDetectionCustomModule setType(java.lang.String type) {
@@ -272,7 +226,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Output only. The time the module was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -280,7 +233,6 @@ public final class EventThreatDetectionCustomModule extends com.google.api.clien
   }
 
   /**
-   * Output only. The time the module was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public EventThreatDetectionCustomModule setUpdateTime(String updateTime) {

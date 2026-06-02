@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A signature corresponding to memory page hashes.
+ * Model definition for MemoryHashSignature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class MemoryHashSignature extends com.google.api.client.json.GenericJson {
 
   /**
-   * The binary family.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String binaryFamily;
 
   /**
-   * The list of memory hash detections contributing to the binary family match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +49,6 @@ public final class MemoryHashSignature extends com.google.api.client.json.Generi
   }
 
   /**
-   * The binary family.
    * @return value or {@code null} for none
    */
   public java.lang.String getBinaryFamily() {
@@ -59,7 +56,6 @@ public final class MemoryHashSignature extends com.google.api.client.json.Generi
   }
 
   /**
-   * The binary family.
    * @param binaryFamily binaryFamily or {@code null} for none
    */
   public MemoryHashSignature setBinaryFamily(java.lang.String binaryFamily) {
@@ -68,7 +64,6 @@ public final class MemoryHashSignature extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of memory hash detections contributing to the binary family match.
    * @return value or {@code null} for none
    */
   public java.util.List<Detection> getDetections() {
@@ -76,7 +71,6 @@ public final class MemoryHashSignature extends com.google.api.client.json.Generi
   }
 
   /**
-   * The list of memory hash detections contributing to the binary family match.
    * @param detections detections or {@code null} for none
    */
   public MemoryHashSignature setDetections(java.util.List<Detection> detections) {

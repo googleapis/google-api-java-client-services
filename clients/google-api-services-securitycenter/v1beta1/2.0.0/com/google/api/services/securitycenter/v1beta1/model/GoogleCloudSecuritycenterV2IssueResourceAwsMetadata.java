@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * The AWS metadata of a resource associated with an issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceAwsMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceAwsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The AWS account of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAwsMetadataAwsAccount account;
 
   /**
-   * The AWS account of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAwsMetadataAwsAccount getAccount() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAwsMetadata extends c
   }
 
   /**
-   * The AWS account of the resource associated with the issue.
    * @param account account or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAwsMetadata setAccount(GoogleCloudSecuritycenterV2IssueResourceAwsMetadataAwsAccount account) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Security context associated with an issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueSecurityContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2IssueSecurityContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aggregated count of the security context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount aggregatedCount;
 
   /**
-   * The context of the security context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueSecurityContextContext context;
 
   /**
-   * The aggregated count of the security context.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount getAggregatedCount() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContext extends com.g
   }
 
   /**
-   * The aggregated count of the security context.
    * @param aggregatedCount aggregatedCount or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContext setAggregatedCount(GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount aggregatedCount) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContext extends com.g
   }
 
   /**
-   * The context of the security context.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextContext getContext() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContext extends com.g
   }
 
   /**
-   * The context of the security context.
    * @param context context or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContext setContext(GoogleCloudSecuritycenterV2IssueSecurityContextContext context) {

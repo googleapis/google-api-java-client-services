@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message to list resource value configs
+ * Model definition for ListResourceValueConfigsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,15 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListResourceValueConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
-   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The resource value configs from the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +49,6 @@ public final class ListResourceValueConfigsResponse extends com.google.api.clien
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
-   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -61,8 +56,6 @@ public final class ListResourceValueConfigsResponse extends com.google.api.clien
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is empty,
-   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListResourceValueConfigsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -71,7 +64,6 @@ public final class ListResourceValueConfigsResponse extends com.google.api.clien
   }
 
   /**
-   * The resource value configs from the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1ResourceValueConfig> getResourceValueConfigs() {
@@ -79,7 +71,6 @@ public final class ListResourceValueConfigsResponse extends com.google.api.clien
   }
 
   /**
-   * The resource value configs from the specified parent.
    * @param resourceValueConfigs resourceValueConfigs or {@code null} for none
    */
   public ListResourceValueConfigsResponse setResourceValueConfigs(java.util.List<GoogleCloudSecuritycenterV1ResourceValueConfig> resourceValueConfigs) {

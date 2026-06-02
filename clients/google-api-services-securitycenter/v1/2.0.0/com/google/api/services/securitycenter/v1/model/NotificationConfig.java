@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Cloud Security Command Center (Cloud SCC) notification configs. A notification config is a Cloud
- * SCC resource that contains the configuration to send notifications for create/update events of
- * findings, assets and etc.
+ * Model definition for NotificationConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,48 +31,36 @@ package com.google.api.services.securitycenter.v1.model;
 public final class NotificationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the notification config (max of 1024 characters).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The relative resource name of this notification config. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The Pub/Sub topic to send notifications to. Its format is
-   * "projects/[project_id]/topics/[topic]".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pubsubTopic;
 
   /**
-   * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the Pub/Sub topic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * The config for triggering streaming-based notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StreamingConfig streamingConfig;
 
   /**
-   * The description of the notification config (max of 1024 characters).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -82,7 +68,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The description of the notification config (max of 1024 characters).
    * @param description description or {@code null} for none
    */
   public NotificationConfig setDescription(java.lang.String description) {
@@ -91,11 +76,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The relative resource name of this notification config. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,11 +83,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The relative resource name of this notification config. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/notificationConfigs/notify_public_bucket",
-   * "folders/{folder_id}/notificationConfigs/notify_public_bucket", or
-   * "projects/{project_id}/notificationConfigs/notify_public_bucket".
    * @param name name or {@code null} for none
    */
   public NotificationConfig setName(java.lang.String name) {
@@ -116,8 +91,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Pub/Sub topic to send notifications to. Its format is
-   * "projects/[project_id]/topics/[topic]".
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -125,8 +98,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The Pub/Sub topic to send notifications to. Its format is
-   * "projects/[project_id]/topics/[topic]".
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public NotificationConfig setPubsubTopic(java.lang.String pubsubTopic) {
@@ -135,8 +106,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the Pub/Sub topic.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -144,8 +113,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The service account that needs "pubsub.topics.publish" permission to publish to
-   * the Pub/Sub topic.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public NotificationConfig setServiceAccount(java.lang.String serviceAccount) {
@@ -154,7 +121,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The config for triggering streaming-based notifications.
    * @return value or {@code null} for none
    */
   public StreamingConfig getStreamingConfig() {
@@ -162,7 +128,6 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The config for triggering streaming-based notifications.
    * @param streamingConfig streamingConfig or {@code null} for none
    */
   public NotificationConfig setStreamingConfig(StreamingConfig streamingConfig) {

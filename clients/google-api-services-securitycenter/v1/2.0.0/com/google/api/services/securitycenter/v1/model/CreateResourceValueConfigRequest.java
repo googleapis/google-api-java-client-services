@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message to create single resource value config
+ * Model definition for CreateResourceValueConfigRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class CreateResourceValueConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Resource name of the new ResourceValueConfig's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Required. The resource value config being created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceValueConfig resourceValueConfig;
 
   /**
-   * Required. Resource name of the new ResourceValueConfig's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -53,7 +50,6 @@ public final class CreateResourceValueConfigRequest extends com.google.api.clien
   }
 
   /**
-   * Required. Resource name of the new ResourceValueConfig's parent.
    * @param parent parent or {@code null} for none
    */
   public CreateResourceValueConfigRequest setParent(java.lang.String parent) {
@@ -62,7 +58,6 @@ public final class CreateResourceValueConfigRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The resource value config being created.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceValueConfig getResourceValueConfig() {
@@ -70,7 +65,6 @@ public final class CreateResourceValueConfigRequest extends com.google.api.clien
   }
 
   /**
-   * Required. The resource value config being created.
    * @param resourceValueConfig resourceValueConfig or {@code null} for none
    */
   public CreateResourceValueConfigRequest setResourceValueConfig(GoogleCloudSecuritycenterV1ResourceValueConfig resourceValueConfig) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Information related to the Google Cloud resource.
+ * Model definition for GoogleCloudSecuritycenterV1Resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,65 +31,54 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ADC application associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcApplication adcApplication;
 
   /**
-   * The ADC template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcApplicationTemplateRevision adcApplicationTemplate;
 
   /**
-   * The ADC shared template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcSharedTemplateRevision adcSharedTemplate;
 
   /**
-   * The App Hub application this resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceApplication application;
 
   /**
-   * The AWS metadata associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsMetadata awsMetadata;
 
   /**
-   * The Azure metadata associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureMetadata azureMetadata;
 
   /**
-   * Indicates which cloud provider the resource resides in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * The human readable name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,91 +91,72 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The region or location of the service (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Indicates which organization or tenant in the cloud provider the finding applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String organization;
 
   /**
-   * The full resource name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * The human readable name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentDisplayName;
 
   /**
-   * The full resource name of project that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * The project ID that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectDisplayName;
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePath resourcePath;
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
-   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
-   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
-   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
-   * can be any number of management groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourcePathString;
 
   /**
-   * The parent service or product from which the resource is provided, for example, GKE or SNS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * The full resource type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The ADC application associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcApplication getAdcApplication() {
@@ -194,7 +164,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The ADC application associated with the finding.
    * @param adcApplication adcApplication or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setAdcApplication(AdcApplication adcApplication) {
@@ -203,7 +172,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The ADC template associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcApplicationTemplateRevision getAdcApplicationTemplate() {
@@ -211,7 +179,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The ADC template associated with the finding.
    * @param adcApplicationTemplate adcApplicationTemplate or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setAdcApplicationTemplate(AdcApplicationTemplateRevision adcApplicationTemplate) {
@@ -220,7 +187,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcSharedTemplateRevision getAdcSharedTemplate() {
@@ -228,7 +194,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @param adcSharedTemplate adcSharedTemplate or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setAdcSharedTemplate(AdcSharedTemplateRevision adcSharedTemplate) {
@@ -237,7 +202,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The App Hub application this resource belongs to.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplication getApplication() {
@@ -245,7 +209,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The App Hub application this resource belongs to.
    * @param application application or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setApplication(GoogleCloudSecuritycenterV1ResourceApplication application) {
@@ -254,7 +217,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The AWS metadata associated with the finding.
    * @return value or {@code null} for none
    */
   public AwsMetadata getAwsMetadata() {
@@ -262,7 +224,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The AWS metadata associated with the finding.
    * @param awsMetadata awsMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setAwsMetadata(AwsMetadata awsMetadata) {
@@ -271,7 +232,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The Azure metadata associated with the finding.
    * @return value or {@code null} for none
    */
   public AzureMetadata getAzureMetadata() {
@@ -279,7 +239,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The Azure metadata associated with the finding.
    * @param azureMetadata azureMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setAzureMetadata(AzureMetadata azureMetadata) {
@@ -288,7 +247,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Indicates which cloud provider the resource resides in.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -296,7 +254,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Indicates which cloud provider the resource resides in.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setCloudProvider(java.lang.String cloudProvider) {
@@ -305,7 +262,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The human readable name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -313,7 +269,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The human readable name of the resource.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setDisplayName(java.lang.String displayName) {
@@ -322,9 +277,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * @return value or {@code null} for none
    */
   public java.util.List<Folder> getFolders() {
@@ -332,9 +284,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Output only. Contains a Folder message for each folder in the assets ancestry. The first folder
-   * is the deepest nested folder, and the last folder is the folder directly under the
-   * Organization.
    * @param folders folders or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setFolders(java.util.List<Folder> folders) {
@@ -343,7 +292,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The region or location of the service (if applicable).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -351,7 +299,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The region or location of the service (if applicable).
    * @param location location or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setLocation(java.lang.String location) {
@@ -360,8 +307,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -369,8 +314,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setName(java.lang.String name) {
@@ -379,7 +322,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Indicates which organization or tenant in the cloud provider the finding applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -387,7 +329,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Indicates which organization or tenant in the cloud provider the finding applies to.
    * @param organization organization or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setOrganization(java.lang.String organization) {
@@ -396,7 +337,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -404,7 +344,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of resource's parent.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setParent(java.lang.String parent) {
@@ -413,7 +352,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The human readable name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -421,7 +359,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The human readable name of resource's parent.
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setParentDisplayName(java.lang.String parentDisplayName) {
@@ -430,7 +367,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -438,7 +374,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @param project project or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setProject(java.lang.String project) {
@@ -447,7 +382,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDisplayName() {
@@ -455,7 +389,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @param projectDisplayName projectDisplayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setProjectDisplayName(java.lang.String projectDisplayName) {
@@ -464,7 +397,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * @return value or {@code null} for none
    */
   public ResourcePath getResourcePath() {
@@ -472,7 +404,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * @param resourcePath resourcePath or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setResourcePath(ResourcePath resourcePath) {
@@ -481,13 +412,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
-   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
-   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
-   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
-   * can be any number of management groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourcePathString() {
@@ -495,13 +419,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `organizations/{organization_id}/folders/{folder_id}/folders/{folder_id}/projects/{project_id}`
-   * where there can be any number of folders. For AWS, it has the format of `org/{organization_id}/
-   * ou/{organizational_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can
-   * be any number of organizational units. For Azure, it has the format of `mg/{management_group_id
-   * }/mg/{management_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there
-   * can be any number of management groups.
    * @param resourcePathString resourcePathString or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setResourcePathString(java.lang.String resourcePathString) {
@@ -510,7 +427,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The parent service or product from which the resource is provided, for example, GKE or SNS.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -518,7 +434,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The parent service or product from which the resource is provided, for example, GKE or SNS.
    * @param service service or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setService(java.lang.String service) {
@@ -527,7 +442,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -535,7 +449,6 @@ public final class GoogleCloudSecuritycenterV1Resource extends com.google.api.cl
   }
 
   /**
-   * The full resource type of the resource.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1Resource setType(java.lang.String type) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Identity delegation history of an authenticated service account.
+ * Model definition for ServiceAccountDelegationInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,26 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class ServiceAccountDelegationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email address of a Google account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalEmail;
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principalSubject;
 
   /**
-   * The email address of a Google account.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalEmail() {
@@ -58,7 +50,6 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   }
 
   /**
-   * The email address of a Google account.
    * @param principalEmail principalEmail or {@code null} for none
    */
   public ServiceAccountDelegationInfo setPrincipalEmail(java.lang.String principalEmail) {
@@ -67,12 +58,6 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipalSubject() {
@@ -80,12 +65,6 @@ public final class ServiceAccountDelegationInfo extends com.google.api.client.js
   }
 
   /**
-   * A string representing the principal_subject associated with the identity. As compared to
-   * `principal_email`, supports principals that aren't associated with email addresses, such as
-   * third party principals. For most identities, the format will be
-   * `principal://iam.googleapis.com/{identity pool name}/subjects/{subject}` except for some GKE
-   * identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy format
-   * `serviceAccount:{identity pool name}[{subject}]`
    * @param principalSubject principalSubject or {@code null} for none
    */
   public ServiceAccountDelegationInfo setPrincipalSubject(java.lang.String principalSubject) {

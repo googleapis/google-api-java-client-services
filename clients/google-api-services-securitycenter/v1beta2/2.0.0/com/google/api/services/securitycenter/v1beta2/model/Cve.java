@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * CVE stands for Common Vulnerabilities and Exposures. Information from the [CVE
- * record](https://www.cve.org/ResourcesSupport/Glossary) that describes this vulnerability.
+ * Model definition for Cve.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,80 +31,66 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Cve extends com.google.api.client.json.GenericJson {
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Cvssv3 cvssv3;
 
   /**
-   * Date the first publicly available exploit or PoC was released.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String exploitReleaseDate;
 
   /**
-   * The exploitation activity of the vulnerability in the wild.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exploitationActivity;
 
   /**
-   * Date of the earliest known exploitation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String firstExploitationDate;
 
   /**
-   * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The potential impact of the vulnerability if it was to be exploited.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String impact;
 
   /**
-   * Whether or not the vulnerability has been observed in the wild.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean observedInTheWild;
 
   /**
-   * Additional information about the CVE. e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Reference> references;
 
   /**
-   * Whether upstream fix is available for the CVE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean upstreamFixAvailable;
 
   /**
-   * Whether or not the vulnerability was zero day when the finding was published.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean zeroDay;
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
    * @return value or {@code null} for none
    */
   public Cvssv3 getCvssv3() {
@@ -113,8 +98,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Describe Common Vulnerability Scoring System specified at
-   * https://www.first.org/cvss/v3.1/specification-document
    * @param cvssv3 cvssv3 or {@code null} for none
    */
   public Cve setCvssv3(Cvssv3 cvssv3) {
@@ -123,7 +106,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date the first publicly available exploit or PoC was released.
    * @return value or {@code null} for none
    */
   public String getExploitReleaseDate() {
@@ -131,7 +113,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date the first publicly available exploit or PoC was released.
    * @param exploitReleaseDate exploitReleaseDate or {@code null} for none
    */
   public Cve setExploitReleaseDate(String exploitReleaseDate) {
@@ -140,7 +121,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The exploitation activity of the vulnerability in the wild.
    * @return value or {@code null} for none
    */
   public java.lang.String getExploitationActivity() {
@@ -148,7 +128,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The exploitation activity of the vulnerability in the wild.
    * @param exploitationActivity exploitationActivity or {@code null} for none
    */
   public Cve setExploitationActivity(java.lang.String exploitationActivity) {
@@ -157,7 +136,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date of the earliest known exploitation.
    * @return value or {@code null} for none
    */
   public String getFirstExploitationDate() {
@@ -165,7 +143,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date of the earliest known exploitation.
    * @param firstExploitationDate firstExploitationDate or {@code null} for none
    */
   public Cve setFirstExploitationDate(String firstExploitationDate) {
@@ -174,7 +151,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -182,7 +158,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for the vulnerability. e.g. CVE-2021-34527
    * @param id id or {@code null} for none
    */
   public Cve setId(java.lang.String id) {
@@ -191,7 +166,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The potential impact of the vulnerability if it was to be exploited.
    * @return value or {@code null} for none
    */
   public java.lang.String getImpact() {
@@ -199,7 +173,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The potential impact of the vulnerability if it was to be exploited.
    * @param impact impact or {@code null} for none
    */
   public Cve setImpact(java.lang.String impact) {
@@ -208,7 +181,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not the vulnerability has been observed in the wild.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getObservedInTheWild() {
@@ -216,7 +188,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not the vulnerability has been observed in the wild.
    * @param observedInTheWild observedInTheWild or {@code null} for none
    */
   public Cve setObservedInTheWild(java.lang.Boolean observedInTheWild) {
@@ -225,8 +196,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional information about the CVE. e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527
    * @return value or {@code null} for none
    */
   public java.util.List<Reference> getReferences() {
@@ -234,8 +203,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional information about the CVE. e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527
    * @param references references or {@code null} for none
    */
   public Cve setReferences(java.util.List<Reference> references) {
@@ -244,7 +211,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether upstream fix is available for the CVE.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUpstreamFixAvailable() {
@@ -252,7 +218,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether upstream fix is available for the CVE.
    * @param upstreamFixAvailable upstreamFixAvailable or {@code null} for none
    */
   public Cve setUpstreamFixAvailable(java.lang.Boolean upstreamFixAvailable) {
@@ -261,7 +226,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not the vulnerability was zero day when the finding was published.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getZeroDay() {
@@ -269,7 +233,6 @@ public final class Cve extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether or not the vulnerability was zero day when the finding was published.
    * @param zeroDay zeroDay or {@code null} for none
    */
   public Cve setZeroDay(java.lang.Boolean zeroDay) {

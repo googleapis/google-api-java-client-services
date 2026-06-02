@@ -154,23 +154,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Folders {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateContainerThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "folders.getContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetContainerThreatDetectionSettings getContainerThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -187,12 +177,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "folders.getContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -201,11 +185,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetContainerThreatDetectionSettings(java.lang.String name) {
@@ -283,33 +263,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public GetContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -326,22 +289,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateEventThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "folders.getEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetEventThreatDetectionSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetEventThreatDetectionSettings getEventThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -358,12 +312,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
-       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-       * use CalculateEventThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "folders.getEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -372,10 +320,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetEventThreatDetectionSettings(java.lang.String name) {
@@ -453,29 +398,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public GetEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -492,22 +424,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
-     * effective service settings for the resource, which accounts for inherited settings and defaults.
-     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-     *
      * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @return the request
      */
     public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -524,12 +447,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-       *
        * Create a request for the method "folders.getRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -538,10 +455,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
@@ -619,30 +533,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -659,17 +559,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityCenterSettings resource.
-     *
      * Create a request for the method "folders.getSecurityCenterSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+     * @param name
      * @return the request
      */
     public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
@@ -686,8 +582,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/securityCenterSettings$");
 
       /**
-       * Get the SecurityCenterSettings resource.
-       *
        * Create a request for the method "folders.getSecurityCenterSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -696,9 +590,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityCenterSettings(java.lang.String name) {
@@ -776,27 +668,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityCenterSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityCenterSettings to retrieve. Format:
-     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
-     Format: projects/{project}/securityCenterSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       public GetSecurityCenterSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -813,22 +694,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
-     *
      * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @return the request
      */
     public GetSecurityHealthAnalyticsSettings getSecurityHealthAnalyticsSettings(java.lang.String name) throws java.io.IOException {
@@ -845,12 +717,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
-       *
        * Create a request for the method "folders.getSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -859,10 +725,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityHealthAnalyticsSettings(java.lang.String name) {
@@ -940,30 +803,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public GetSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -980,22 +829,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-     * the effective service settings for the resource, which accounts for inherited settings and
-     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -1012,12 +852,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "folders.getVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1026,10 +860,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
@@ -1107,30 +938,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1147,22 +964,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateWebSecurityScannerSettings for this purpose.
-     *
      * Create a request for the method "folders.getWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @return the request
      */
     public GetWebSecurityScannerSettings getWebSecurityScannerSettings(java.lang.String name) throws java.io.IOException {
@@ -1179,12 +987,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-       * only indicates that it was not explicitly set, so no assumption should be made about these
-       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-       * CalculateWebSecurityScannerSettings for this purpose.
-       *
        * Create a request for the method "folders.getWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1193,10 +995,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @since 1.13
        */
       protected GetWebSecurityScannerSettings(java.lang.String name) {
@@ -1274,27 +1073,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public GetWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1311,19 +1099,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the ContainerThreatDetectionSettings resource.
-     *
      * Create a request for the method "folders.updateContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
      * @return the request
      */
@@ -1341,8 +1123,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Update the ContainerThreatDetectionSettings resource.
-       *
        * Create a request for the method "folders.updateContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1351,11 +1131,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
        * @since 1.13
        */
@@ -1424,33 +1200,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public UpdateContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1461,17 +1220,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateContainerThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1483,18 +1241,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the EventThreatDetectionSettings resource.
-     *
      * Create a request for the method "folders.updateEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
      * @return the request
      */
@@ -1512,8 +1265,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Update the EventThreatDetectionSettings resource.
-       *
        * Create a request for the method "folders.updateEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1522,10 +1273,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
        * @since 1.13
        */
@@ -1594,29 +1342,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public UpdateEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1627,17 +1362,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateEventThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1649,18 +1383,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the RapidVulnerabilityDetectionSettings resource.
-     *
      * Create a request for the method "folders.updateRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
      * @return the request
      */
@@ -1678,8 +1407,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Update the RapidVulnerabilityDetectionSettings resource.
-       *
        * Create a request for the method "folders.updateRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1688,10 +1415,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
        * to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
        * @since 1.13
        */
@@ -1760,30 +1484,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1794,17 +1504,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1816,18 +1525,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the SecurityHealthAnalyticsSettings resource.
-     *
      * Create a request for the method "folders.updateSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
      * @return the request
      */
@@ -1845,8 +1549,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Update the SecurityHealthAnalyticsSettings resource.
-       *
        * Create a request for the method "folders.updateSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -1855,10 +1557,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
        * @since 1.13
        */
@@ -1927,30 +1626,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public UpdateSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1961,17 +1646,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateSecurityHealthAnalyticsSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1983,18 +1667,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the VirtualMachineThreatDetectionSettings resource.
-     *
      * Create a request for the method "folders.updateVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
      * @return the request
      */
@@ -2012,8 +1691,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Update the VirtualMachineThreatDetectionSettings resource.
-       *
        * Create a request for the method "folders.updateVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2022,10 +1699,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
        * @since 1.13
        */
@@ -2094,30 +1768,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2128,17 +1788,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -2150,18 +1809,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the WebSecurityScannerSettings resource.
-     *
      * Create a request for the method "folders.updateWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
      * @return the request
      */
@@ -2179,8 +1833,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^folders/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Update the WebSecurityScannerSettings resource.
-       *
        * Create a request for the method "folders.updateWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2189,10 +1841,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
        * @since 1.13
        */
@@ -2261,27 +1910,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public UpdateWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2292,17 +1930,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateWebSecurityScannerSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -2335,23 +1972,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class ContainerThreatDetectionSettings {
 
       /**
-       * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -2368,13 +1994,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/containerThreatDetectionSettings$");
 
         /**
-         * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2383,11 +2002,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -2465,33 +2080,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/containerThreatDetectionSettings *
-       folders/{folder}/containerThreatDetectionSettings *
-       projects/{project}/containerThreatDetectionSettings *
-       projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2502,24 +2100,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -2553,22 +2143,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -2585,13 +2165,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2600,10 +2173,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -2681,29 +2251,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/eventThreatDetectionSettings *
-       folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2714,24 +2271,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -2765,22 +2314,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class RapidVulnerabilityDetectionSettings {
 
       /**
-       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -2797,13 +2336,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/rapidVulnerabilityDetectionSettings$");
 
         /**
-         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -2812,10 +2344,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -2893,30 +2422,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       folders/{folder}/rapidVulnerabilityDetectionSettings *
-       projects/{project}/rapidVulnerabilityDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2955,22 +2470,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class SecurityHealthAnalyticsSettings {
 
       /**
-       * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -2987,13 +2492,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/securityHealthAnalyticsSettings$");
 
         /**
-         * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3002,10 +2500,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -3083,30 +2578,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       organizations/{organization}/securityHealthAnalyticsSettings *
-       folders/{folder}/securityHealthAnalyticsSettings *
-       projects/{project}/securityHealthAnalyticsSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3117,24 +2598,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -3168,22 +2641,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class VirtualMachineThreatDetectionSettings {
 
       /**
-       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -3200,13 +2663,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/virtualMachineThreatDetectionSettings$");
 
         /**
-         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings. Settings provided closer to the target resource take
-         * precedence over those further away (e.g. folder will override organization level settings). The
-         * default SCC setting for the detector service defaults can be overridden at organization, folder
-         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3215,10 +2671,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -3296,30 +2749,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/virtualMachineThreatDetectionSettings *
-       folders/{folder}/virtualMachineThreatDetectionSettings *
-       projects/{project}/virtualMachineThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3330,24 +2769,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -3381,22 +2812,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class WebSecurityScannerSettings {
 
       /**
-       * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings. Settings provided closer to the target resource take precedence over those
-       * further away (e.g. folder will override organization level settings). The default SCC setting for
-       * the detector service defaults can be overridden at organization, folder and project levels. No
-       * assumptions should be made about the SCC defaults as it is considered an internal implementation
-       * detail.
-       *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -3413,13 +2834,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^folders/[^/]+/webSecurityScannerSettings$");
 
         /**
-         * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3428,10 +2842,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -3509,29 +2920,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       organizations/{organization}/webSecurityScannerSettings *
-       folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3542,24 +2940,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -3595,23 +2985,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Organizations {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateContainerThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "organizations.getContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetContainerThreatDetectionSettings getContainerThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -3628,12 +3008,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "organizations.getContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3642,11 +3016,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetContainerThreatDetectionSettings(java.lang.String name) {
@@ -3724,33 +3094,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public GetContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3767,22 +3120,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateEventThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "organizations.getEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetEventThreatDetectionSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetEventThreatDetectionSettings getEventThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -3799,12 +3143,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
-       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-       * use CalculateEventThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "organizations.getEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3813,10 +3151,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetEventThreatDetectionSettings(java.lang.String name) {
@@ -3894,29 +3229,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public GetEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3933,22 +3255,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
-     * effective service settings for the resource, which accounts for inherited settings and defaults.
-     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-     *
      * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @return the request
      */
     public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -3965,12 +3278,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-       *
        * Create a request for the method "organizations.getRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -3979,10 +3286,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
@@ -4060,30 +3364,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4100,17 +3390,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityCenterSettings resource.
-     *
      * Create a request for the method "organizations.getSecurityCenterSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+     * @param name
      * @return the request
      */
     public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
@@ -4127,8 +3413,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/securityCenterSettings$");
 
       /**
-       * Get the SecurityCenterSettings resource.
-       *
        * Create a request for the method "organizations.getSecurityCenterSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4137,9 +3421,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityCenterSettings(java.lang.String name) {
@@ -4217,27 +3499,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityCenterSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityCenterSettings to retrieve. Format:
-     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
-     Format: projects/{project}/securityCenterSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       public GetSecurityCenterSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4254,22 +3525,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
-     *
      * Create a request for the method "organizations.getSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @return the request
      */
     public GetSecurityHealthAnalyticsSettings getSecurityHealthAnalyticsSettings(java.lang.String name) throws java.io.IOException {
@@ -4286,12 +3548,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
-       *
        * Create a request for the method "organizations.getSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4300,10 +3556,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityHealthAnalyticsSettings(java.lang.String name) {
@@ -4381,30 +3634,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public GetSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4421,16 +3660,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the Subscription resource.
-     *
      * Create a request for the method "organizations.getSubscription".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSubscription#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. The name of the subscription to retrieve. Format:
-     *        organizations/{organization}/subscription
+     * @param name
      * @return the request
      */
     public GetSubscription getSubscription(java.lang.String name) throws java.io.IOException {
@@ -4447,8 +3683,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/subscription$");
 
       /**
-       * Get the Subscription resource.
-       *
        * Create a request for the method "organizations.getSubscription".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4457,8 +3691,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param name Required. The name of the subscription to retrieve. Format:
-     *        organizations/{organization}/subscription
+       * @param name
        * @since 1.13
        */
       protected GetSubscription(java.lang.String name) {
@@ -4536,24 +3769,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSubscription) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the subscription to retrieve. Format:
-       * organizations/{organization}/subscription
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the subscription to retrieve. Format:
-     organizations/{organization}/subscription
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the subscription to retrieve. Format:
-       * organizations/{organization}/subscription
-       */
       public GetSubscription setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4570,22 +3795,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-     * the effective service settings for the resource, which accounts for inherited settings and
-     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -4602,12 +3818,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "organizations.getVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4616,10 +3826,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
@@ -4697,30 +3904,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4737,22 +3930,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateWebSecurityScannerSettings for this purpose.
-     *
      * Create a request for the method "organizations.getWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @return the request
      */
     public GetWebSecurityScannerSettings getWebSecurityScannerSettings(java.lang.String name) throws java.io.IOException {
@@ -4769,12 +3953,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-       * only indicates that it was not explicitly set, so no assumption should be made about these
-       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-       * CalculateWebSecurityScannerSettings for this purpose.
-       *
        * Create a request for the method "organizations.getWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4783,10 +3961,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @since 1.13
        */
       protected GetWebSecurityScannerSettings(java.lang.String name) {
@@ -4864,27 +4039,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public GetWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4901,19 +4065,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the ContainerThreatDetectionSettings resource.
-     *
      * Create a request for the method "organizations.updateContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
      * @return the request
      */
@@ -4931,8 +4089,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Update the ContainerThreatDetectionSettings resource.
-       *
        * Create a request for the method "organizations.updateContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -4941,11 +4097,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
        * @since 1.13
        */
@@ -5014,33 +4166,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public UpdateContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5051,17 +4186,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateContainerThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5073,18 +4207,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the EventThreatDetectionSettings resource.
-     *
      * Create a request for the method "organizations.updateEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
      * @return the request
      */
@@ -5102,8 +4231,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Update the EventThreatDetectionSettings resource.
-       *
        * Create a request for the method "organizations.updateEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5112,10 +4239,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
        * @since 1.13
        */
@@ -5184,29 +4308,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public UpdateEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5217,17 +4328,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateEventThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5239,18 +4349,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the RapidVulnerabilityDetectionSettings resource.
-     *
      * Create a request for the method "organizations.updateRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
      * @return the request
      */
@@ -5268,8 +4373,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Update the RapidVulnerabilityDetectionSettings resource.
-       *
        * Create a request for the method "organizations.updateRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5278,10 +4381,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
        * to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
        * @since 1.13
        */
@@ -5350,30 +4450,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5384,17 +4470,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5406,18 +4491,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the SecurityHealthAnalyticsSettings resource.
-     *
      * Create a request for the method "organizations.updateSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
      * @return the request
      */
@@ -5435,8 +4515,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Update the SecurityHealthAnalyticsSettings resource.
-       *
        * Create a request for the method "organizations.updateSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5445,10 +4523,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
        * @since 1.13
        */
@@ -5517,30 +4592,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public UpdateSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5551,17 +4612,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateSecurityHealthAnalyticsSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5573,18 +4633,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the VirtualMachineThreatDetectionSettings resource.
-     *
      * Create a request for the method "organizations.updateVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
      * @return the request
      */
@@ -5602,8 +4657,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Update the VirtualMachineThreatDetectionSettings resource.
-       *
        * Create a request for the method "organizations.updateVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5612,10 +4665,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
        * @since 1.13
        */
@@ -5684,30 +4734,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5718,17 +4754,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5740,18 +4775,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the WebSecurityScannerSettings resource.
-     *
      * Create a request for the method "organizations.updateWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
      * @return the request
      */
@@ -5769,8 +4799,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^organizations/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Update the WebSecurityScannerSettings resource.
-       *
        * Create a request for the method "organizations.updateWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5779,10 +4807,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
        * @since 1.13
        */
@@ -5851,27 +4876,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public UpdateWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5882,17 +4896,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateWebSecurityScannerSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5925,23 +4938,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class ContainerThreatDetectionSettings {
 
       /**
-       * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -5958,13 +4960,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/containerThreatDetectionSettings$");
 
         /**
-         * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -5973,11 +4968,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -6055,33 +5046,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/containerThreatDetectionSettings *
-       folders/{folder}/containerThreatDetectionSettings *
-       projects/{project}/containerThreatDetectionSettings *
-       projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6092,24 +5066,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -6143,22 +5109,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -6175,13 +5131,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6190,10 +5139,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -6271,29 +5217,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/eventThreatDetectionSettings *
-       folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6304,24 +5237,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -6355,22 +5280,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class RapidVulnerabilityDetectionSettings {
 
       /**
-       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -6387,13 +5302,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/rapidVulnerabilityDetectionSettings$");
 
         /**
-         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6402,10 +5310,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -6483,30 +5388,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       folders/{folder}/rapidVulnerabilityDetectionSettings *
-       projects/{project}/rapidVulnerabilityDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6545,22 +5436,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class SecurityHealthAnalyticsSettings {
 
       /**
-       * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -6577,13 +5458,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/securityHealthAnalyticsSettings$");
 
         /**
-         * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6592,10 +5466,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -6673,30 +5544,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       organizations/{organization}/securityHealthAnalyticsSettings *
-       folders/{folder}/securityHealthAnalyticsSettings *
-       projects/{project}/securityHealthAnalyticsSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6707,24 +5564,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -6758,22 +5607,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class VirtualMachineThreatDetectionSettings {
 
       /**
-       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -6790,13 +5629,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/virtualMachineThreatDetectionSettings$");
 
         /**
-         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings. Settings provided closer to the target resource take
-         * precedence over those further away (e.g. folder will override organization level settings). The
-         * default SCC setting for the detector service defaults can be overridden at organization, folder
-         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -6805,10 +5637,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -6886,30 +5715,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/virtualMachineThreatDetectionSettings *
-       folders/{folder}/virtualMachineThreatDetectionSettings *
-       projects/{project}/virtualMachineThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6920,24 +5735,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -6971,22 +5778,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class WebSecurityScannerSettings {
 
       /**
-       * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings. Settings provided closer to the target resource take precedence over those
-       * further away (e.g. folder will override organization level settings). The default SCC setting for
-       * the detector service defaults can be overridden at organization, folder and project levels. No
-       * assumptions should be made about the SCC defaults as it is considered an internal implementation
-       * detail.
-       *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -7003,13 +5800,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/webSecurityScannerSettings$");
 
         /**
-         * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7018,10 +5808,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -7099,29 +5886,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       organizations/{organization}/webSecurityScannerSettings *
-       folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7132,24 +5906,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -7185,23 +5951,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
   public class Projects {
 
     /**
-     * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateContainerThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "projects.getContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetContainerThreatDetectionSettings getContainerThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -7218,12 +5974,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "projects.getContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7232,11 +5982,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetContainerThreatDetectionSettings(java.lang.String name) {
@@ -7314,33 +6060,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public GetContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7357,22 +6086,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetEventThreatDetectionSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateEventThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "projects.getEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetEventThreatDetectionSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetEventThreatDetectionSettings getEventThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -7389,12 +6109,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Get the EventThreatDetectionSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetEventThreatDetectionSettings does not calculate the effective
-       * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-       * use CalculateEventThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "projects.getEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7403,10 +6117,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetEventThreatDetectionSettings(java.lang.String name) {
@@ -7484,29 +6195,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the EventThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public GetEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7523,22 +6221,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate the
-     * effective service settings for the resource, which accounts for inherited settings and defaults.
-     * Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-     *
      * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetRapidVulnerabilityDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @return the request
      */
     public GetRapidVulnerabilityDetectionSettings getRapidVulnerabilityDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -7555,12 +6244,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Get the RapidVulnerabilityDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetRapidVulnerabilityDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateRapidVulnerabilityDetectionSettings for this purpose.
-       *
        * Create a request for the method "projects.getRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7569,10 +6252,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetRapidVulnerabilityDetectionSettings(java.lang.String name) {
@@ -7650,30 +6330,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the RapidVulnerabilityDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public GetRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7690,17 +6356,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityCenterSettings resource.
-     *
      * Create a request for the method "projects.getSecurityCenterSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityCenterSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+     * @param name
      * @return the request
      */
     public GetSecurityCenterSettings getSecurityCenterSettings(java.lang.String name) throws java.io.IOException {
@@ -7717,8 +6379,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/securityCenterSettings$");
 
       /**
-       * Get the SecurityCenterSettings resource.
-       *
        * Create a request for the method "projects.getSecurityCenterSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7727,9 +6387,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityCenterSettings to retrieve. Format:
-     *        organizations/{organization}/securityCenterSettings Format:
-     *        folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityCenterSettings(java.lang.String name) {
@@ -7807,27 +6465,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityCenterSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityCenterSettings to retrieve. Format:
-     organizations/{organization}/securityCenterSettings Format: folders/{folder}/securityCenterSettings
-     Format: projects/{project}/securityCenterSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityCenterSettings to retrieve. Format:
-       * organizations/{organization}/securityCenterSettings Format:
-       * folders/{folder}/securityCenterSettings Format: projects/{project}/securityCenterSettings
-       */
       public GetSecurityCenterSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7844,22 +6491,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-     * field only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the effective
-     * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-     * use CalculateSecurityHealthAnalyticsSettings for this purpose.
-     *
      * Create a request for the method "projects.getSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @return the request
      */
     public GetSecurityHealthAnalyticsSettings getSecurityHealthAnalyticsSettings(java.lang.String name) throws java.io.IOException {
@@ -7876,12 +6514,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Get the SecurityHealthAnalyticsSettings resource. In the returned settings response, a missing
-       * field only indicates that it was not explicitly set, so no assumption should be made about
-       * these fields. In other words, GetSecurityHealthAnalyticsSettings does not calculate the
-       * effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateSecurityHealthAnalyticsSettings for this purpose.
-       *
        * Create a request for the method "projects.getSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -7890,10 +6522,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @since 1.13
        */
       protected GetSecurityHealthAnalyticsSettings(java.lang.String name) {
@@ -7971,30 +6600,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the SecurityHealthAnalyticsSettings to retrieve. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public GetSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8011,22 +6626,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-     * missing field only indicates that it was not explicitly set, so no assumption should be made
-     * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-     * the effective service settings for the resource, which accounts for inherited settings and
-     * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-     *
      * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetVirtualMachineThreatDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @return the request
      */
     public GetVirtualMachineThreatDetectionSettings getVirtualMachineThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -8043,12 +6649,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Get the VirtualMachineThreatDetectionSettings resource. In the returned settings response, a
-       * missing field only indicates that it was not explicitly set, so no assumption should be made
-       * about these fields. In other words, GetVirtualMachineThreatDetectionSettings does not calculate
-       * the effective service settings for the resource, which accounts for inherited settings and
-       * defaults. Instead, use CalculateVirtualMachineThreatDetectionSettings for this purpose.
-       *
        * Create a request for the method "projects.getVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8057,10 +6657,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @since 1.13
        */
       protected GetVirtualMachineThreatDetectionSettings(java.lang.String name) {
@@ -8138,30 +6735,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the VirtualMachineThreatDetectionSettings to retrieve. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public GetVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8178,22 +6761,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-     * only indicates that it was not explicitly set, so no assumption should be made about these
-     * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-     * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-     * CalculateWebSecurityScannerSettings for this purpose.
-     *
      * Create a request for the method "projects.getWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link GetWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @return the request
      */
     public GetWebSecurityScannerSettings getWebSecurityScannerSettings(java.lang.String name) throws java.io.IOException {
@@ -8210,12 +6784,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Get the WebSecurityScannerSettings resource. In the returned settings response, a missing field
-       * only indicates that it was not explicitly set, so no assumption should be made about these
-       * fields. In other words, GetWebSecurityScannerSettings does not calculate the effective service
-       * settings for the resource, which accounts for inherited settings and defaults. Instead, use
-       * CalculateWebSecurityScannerSettings for this purpose.
-       *
        * Create a request for the method "projects.getWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8224,10 +6792,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @since 1.13
        */
       protected GetWebSecurityScannerSettings(java.lang.String name) {
@@ -8305,27 +6870,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (GetWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The name of the WebSecurityScannerSettings to retrieve. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public GetWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8342,19 +6896,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the ContainerThreatDetectionSettings resource.
-     *
      * Create a request for the method "projects.updateContainerThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
      * @return the request
      */
@@ -8372,8 +6920,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/containerThreatDetectionSettings$");
 
       /**
-       * Update the ContainerThreatDetectionSettings resource.
-       *
        * Create a request for the method "projects.updateContainerThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8382,11 +6928,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
        * initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/containerThreatDetectionSettings *
-     *        folders/{folder}/containerThreatDetectionSettings *
-     *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-     *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
        * @since 1.13
        */
@@ -8455,33 +6997,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-     organizations/{organization}/containerThreatDetectionSettings *
-     folders/{folder}/containerThreatDetectionSettings *
-     projects/{project}/containerThreatDetectionSettings *
-     projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-       * organizations/{organization}/containerThreatDetectionSettings *
-       * folders/{folder}/containerThreatDetectionSettings *
-       * projects/{project}/containerThreatDetectionSettings *
-       * projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
-       */
       public UpdateContainerThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8492,17 +7017,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateContainerThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -8514,18 +7038,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the EventThreatDetectionSettings resource.
-     *
      * Create a request for the method "projects.updateEventThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateEventThreatDetectionSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
      * @return the request
      */
@@ -8543,8 +7062,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
       /**
-       * Update the EventThreatDetectionSettings resource.
-       *
        * Create a request for the method "projects.updateEventThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8553,10 +7070,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/eventThreatDetectionSettings *
-     *        folders/{folder}/eventThreatDetectionSettings *
-     *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.EventThreatDetectionSettings}
        * @since 1.13
        */
@@ -8625,29 +7139,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateEventThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-     organizations/{organization}/eventThreatDetectionSettings *
-     folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the EventThreatDetectionSettings. Formats: *
-       * organizations/{organization}/eventThreatDetectionSettings *
-       * folders/{folder}/eventThreatDetectionSettings *
-       * projects/{project}/eventThreatDetectionSettings
-       */
       public UpdateEventThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8658,17 +7159,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateEventThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -8680,18 +7180,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the RapidVulnerabilityDetectionSettings resource.
-     *
      * Create a request for the method "projects.updateRapidVulnerabilityDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateRapidVulnerabilityDetectionSettings#execute()} method
      * to invoke the remote operation.
      *
-     * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
      * @return the request
      */
@@ -8709,8 +7204,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
 
       /**
-       * Update the RapidVulnerabilityDetectionSettings resource.
-       *
        * Create a request for the method "projects.updateRapidVulnerabilityDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8719,10 +7212,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * tialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called
        * to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-     *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.RapidVulnerabilityDetectionSettings}
        * @since 1.13
        */
@@ -8791,30 +7281,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateRapidVulnerabilityDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-     organizations/{organization}/rapidVulnerabilityDetectionSettings *
-     folders/{folder}/rapidVulnerabilityDetectionSettings *
-     projects/{project}/rapidVulnerabilityDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * The resource name of the RapidVulnerabilityDetectionSettings. Formats: *
-       * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       * folders/{folder}/rapidVulnerabilityDetectionSettings *
-       * projects/{project}/rapidVulnerabilityDetectionSettings
-       */
       public UpdateRapidVulnerabilityDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8825,17 +7301,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateRapidVulnerabilityDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -8847,18 +7322,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the SecurityHealthAnalyticsSettings resource.
-     *
      * Create a request for the method "projects.updateSecurityHealthAnalyticsSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateSecurityHealthAnalyticsSettings#execute()} method to
      * invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
      * @return the request
      */
@@ -8876,8 +7346,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
       /**
-       * Update the SecurityHealthAnalyticsSettings resource.
-       *
        * Create a request for the method "projects.updateSecurityHealthAnalyticsSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -8886,10 +7354,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * ogle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     *        organizations/{organization}/securityHealthAnalyticsSettings *
-     *        folders/{folder}/securityHealthAnalyticsSettings *
-     *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.SecurityHealthAnalyticsSettings}
        * @since 1.13
        */
@@ -8958,30 +7423,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateSecurityHealthAnalyticsSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-     organizations/{organization}/securityHealthAnalyticsSettings *
-     folders/{folder}/securityHealthAnalyticsSettings *
-     projects/{project}/securityHealthAnalyticsSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the SecurityHealthAnalyticsSettings. Formats: *
-       * organizations/{organization}/securityHealthAnalyticsSettings *
-       * folders/{folder}/securityHealthAnalyticsSettings *
-       * projects/{project}/securityHealthAnalyticsSettings
-       */
       public UpdateSecurityHealthAnalyticsSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8992,17 +7443,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateSecurityHealthAnalyticsSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -9014,18 +7464,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the VirtualMachineThreatDetectionSettings resource.
-     *
      * Create a request for the method "projects.updateVirtualMachineThreatDetectionSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateVirtualMachineThreatDetectionSettings#execute()}
      * method to invoke the remote operation.
      *
-     * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
      * @return the request
      */
@@ -9043,8 +7488,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
 
       /**
-       * Update the VirtualMachineThreatDetectionSettings resource.
-       *
        * Create a request for the method "projects.updateVirtualMachineThreatDetectionSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9053,10 +7496,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * nitialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-     *        folders/{folder}/virtualMachineThreatDetectionSettings *
-     *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.VirtualMachineThreatDetectionSettings}
        * @since 1.13
        */
@@ -9125,30 +7565,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateVirtualMachineThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-     organizations/{organization}/virtualMachineThreatDetectionSettings *
-     folders/{folder}/virtualMachineThreatDetectionSettings *
-     projects/{project}/virtualMachineThreatDetectionSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the VirtualMachineThreatDetectionSettings. Formats: *
-       * organizations/{organization}/virtualMachineThreatDetectionSettings *
-       * folders/{folder}/virtualMachineThreatDetectionSettings *
-       * projects/{project}/virtualMachineThreatDetectionSettings
-       */
       public UpdateVirtualMachineThreatDetectionSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9159,17 +7585,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateVirtualMachineThreatDetectionSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -9181,18 +7606,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Update the WebSecurityScannerSettings resource.
-     *
      * Create a request for the method "projects.updateWebSecurityScannerSettings".
      *
      * This request holds the parameters needed by the securitycenter server.  After setting any
      * optional parameters, call the {@link UpdateWebSecurityScannerSettings#execute()} method to invoke
      * the remote operation.
      *
-     * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+     * @param name
      * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
      * @return the request
      */
@@ -9210,8 +7630,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           java.util.regex.Pattern.compile("^projects/[^/]+/webSecurityScannerSettings$");
 
       /**
-       * Update the WebSecurityScannerSettings resource.
-       *
        * Create a request for the method "projects.updateWebSecurityScannerSettings".
        *
        * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9220,10 +7638,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     *        organizations/{organization}/webSecurityScannerSettings *
-     *        folders/{folder}/webSecurityScannerSettings *
-     *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.WebSecurityScannerSettings}
        * @since 1.13
        */
@@ -9292,27 +7707,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return (UpdateWebSecurityScannerSettings) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-     organizations/{organization}/webSecurityScannerSettings *
-     folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+      /**
+
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Identifier. The resource name of the WebSecurityScannerSettings. Formats: *
-       * organizations/{organization}/webSecurityScannerSettings *
-       * folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
-       */
       public UpdateWebSecurityScannerSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9323,17 +7727,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         return this;
       }
 
-      /** The list of fields to be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields to be updated.
+      /**
+
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** The list of fields to be updated. */
       public UpdateWebSecurityScannerSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -9366,23 +7769,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class ContainerThreatDetectionSettings {
 
       /**
-       * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "containerThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -9399,13 +7791,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/containerThreatDetectionSettings$");
 
         /**
-         * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "containerThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9414,11 +7799,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/containerThreatDetectionSettings *
-       *        folders/{folder}/containerThreatDetectionSettings *
-       *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-       *        on}/clusters/{cluster}/containerThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -9496,33 +7877,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/containerThreatDetectionSettings *
-       folders/{folder}/containerThreatDetectionSettings *
-       projects/{project}/containerThreatDetectionSettings *
-       projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/containerThreatDetectionSettings *
-         * folders/{folder}/containerThreatDetectionSettings *
-         * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locat
-         * ion}/clusters/{cluster}/containerThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9533,24 +7897,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -9584,22 +7940,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class EventThreatDetectionSettings {
 
       /**
-       * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "eventThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -9616,13 +7962,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/eventThreatDetectionSettings$");
 
         /**
-         * Calculates the effective EventThreatDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "eventThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9631,10 +7970,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/eventThreatDetectionSettings *
-       *        folders/{folder}/eventThreatDetectionSettings *
-       *        projects/{project}/eventThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -9712,29 +8048,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/eventThreatDetectionSettings *
-       folders/{folder}/eventThreatDetectionSettings * projects/{project}/eventThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the EventThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/eventThreatDetectionSettings *
-         * folders/{folder}/eventThreatDetectionSettings *
-         * projects/{project}/eventThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9745,24 +8068,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -9816,23 +8131,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       public class Clusters {
 
         /**
-         * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-         * field only indicates that it was not explicitly set, so no assumption should be made about these
-         * fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective
-         * service settings for the resource, which accounts for inherited settings and defaults. Instead,
-         * use CalculateContainerThreatDetectionSettings for this purpose.
-         *
          * Create a request for the method "clusters.getContainerThreatDetectionSettings".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link GetContainerThreatDetectionSettings#execute()} method to
          * invoke the remote operation.
          *
-         * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-         *        organizations/{organization}/containerThreatDetectionSettings *
-         *        folders/{folder}/containerThreatDetectionSettings *
-         *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-         *        on}/clusters/{cluster}/containerThreatDetectionSettings
+         * @param name
          * @return the request
          */
         public GetContainerThreatDetectionSettings getContainerThreatDetectionSettings(java.lang.String name) throws java.io.IOException {
@@ -9849,12 +8154,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/containerThreatDetectionSettings$");
 
           /**
-           * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing
-           * field only indicates that it was not explicitly set, so no assumption should be made about
-           * these fields. In other words, GetContainerThreatDetectionSettings does not calculate the
-           * effective service settings for the resource, which accounts for inherited settings and
-           * defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-           *
            * Create a request for the method "clusters.getContainerThreatDetectionSettings".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -9863,11 +8162,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * le.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
            * this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-         *        organizations/{organization}/containerThreatDetectionSettings *
-         *        folders/{folder}/containerThreatDetectionSettings *
-         *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-         *        on}/clusters/{cluster}/containerThreatDetectionSettings
+           * @param name
            * @since 1.13
            */
           protected GetContainerThreatDetectionSettings(java.lang.String name) {
@@ -9945,33 +8240,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (GetContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-           * organizations/{organization}/containerThreatDetectionSettings *
-           * folders/{folder}/containerThreatDetectionSettings *
-           * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc
-           * ation}/clusters/{cluster}/containerThreatDetectionSettings
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-         organizations/{organization}/containerThreatDetectionSettings *
-         folders/{folder}/containerThreatDetectionSettings *
-         projects/{project}/containerThreatDetectionSettings *
-         projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The name of the ContainerThreatDetectionSettings to retrieve. Formats: *
-           * organizations/{organization}/containerThreatDetectionSettings *
-           * folders/{folder}/containerThreatDetectionSettings *
-           * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc
-           * ation}/clusters/{cluster}/containerThreatDetectionSettings
-           */
           public GetContainerThreatDetectionSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9988,19 +8266,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Update the ContainerThreatDetectionSettings resource.
-         *
          * Create a request for the method "clusters.updateContainerThreatDetectionSettings".
          *
          * This request holds the parameters needed by the securitycenter server.  After setting any
          * optional parameters, call the {@link UpdateContainerThreatDetectionSettings#execute()} method to
          * invoke the remote operation.
          *
-         * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-         *        organizations/{organization}/containerThreatDetectionSettings *
-         *        folders/{folder}/containerThreatDetectionSettings *
-         *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-         *        on}/clusters/{cluster}/containerThreatDetectionSettings
+         * @param name
          * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
          * @return the request
          */
@@ -10018,8 +8290,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/containerThreatDetectionSettings$");
 
           /**
-           * Update the ContainerThreatDetectionSettings resource.
-           *
            * Create a request for the method "clusters.updateContainerThreatDetectionSettings".
            *
            * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10028,11 +8298,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
            * initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-         *        organizations/{organization}/containerThreatDetectionSettings *
-         *        folders/{folder}/containerThreatDetectionSettings *
-         *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-         *        on}/clusters/{cluster}/containerThreatDetectionSettings
+           * @param name
            * @param content the {@link com.google.api.services.securitycenter.v1beta2.model.ContainerThreatDetectionSettings}
            * @since 1.13
            */
@@ -10101,33 +8367,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return (UpdateContainerThreatDetectionSettings) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-           * organizations/{organization}/containerThreatDetectionSettings *
-           * folders/{folder}/containerThreatDetectionSettings *
-           * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc
-           * ation}/clusters/{cluster}/containerThreatDetectionSettings
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-         organizations/{organization}/containerThreatDetectionSettings *
-         folders/{folder}/containerThreatDetectionSettings *
-         projects/{project}/containerThreatDetectionSettings *
-         projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Identifier. The resource name of the ContainerThreatDetectionSettings. Formats: *
-           * organizations/{organization}/containerThreatDetectionSettings *
-           * folders/{folder}/containerThreatDetectionSettings *
-           * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{loc
-           * ation}/clusters/{cluster}/containerThreatDetectionSettings
-           */
           public UpdateContainerThreatDetectionSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10138,17 +8387,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             return this;
           }
 
-          /** The list of fields to be updated. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. */
           public UpdateContainerThreatDetectionSettings setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -10181,23 +8429,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         public class ContainerThreatDetectionSettings {
 
           /**
-           * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-           * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-           * those further away (e.g. folder will override organization level settings). The default SCC
-           * setting for the detector service defaults can be overridden at organization, folder and project
-           * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-           * implementation detail.
-           *
            * Create a request for the method "containerThreatDetectionSettings.calculate".
            *
            * This request holds the parameters needed by the securitycenter server.  After setting any
            * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-           *        organizations/{organization}/containerThreatDetectionSettings *
-           *        folders/{folder}/containerThreatDetectionSettings *
-           *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-           *        on}/clusters/{cluster}/containerThreatDetectionSettings
+           * @param name
            * @return the request
            */
           public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -10214,13 +8451,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/containerThreatDetectionSettings$");
 
             /**
-             * Calculates the effective ContainerThreatDetectionSettings based on its level in the resource
-             * hierarchy and its settings. Settings provided closer to the target resource take precedence
-             * over those further away (e.g. folder will override organization level settings). The default
-             * SCC setting for the detector service defaults can be overridden at organization, folder and
-             * project levels. No assumptions should be made about the SCC defaults as it is considered an
-             * internal implementation detail.
-             *
              * Create a request for the method "containerThreatDetectionSettings.calculate".
              *
              * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10229,11 +8459,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
              * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-           *        organizations/{organization}/containerThreatDetectionSettings *
-           *        folders/{folder}/containerThreatDetectionSettings *
-           *        projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{locati
-           *        on}/clusters/{cluster}/containerThreatDetectionSettings
+             * @param name
              * @since 1.13
              */
             protected Calculate(java.lang.String name) {
@@ -10311,33 +8537,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return (Calculate) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-             * organizations/{organization}/containerThreatDetectionSettings *
-             * folders/{folder}/containerThreatDetectionSettings *
-             * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{l
-             * ocation}/clusters/{cluster}/containerThreatDetectionSettings
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-           organizations/{organization}/containerThreatDetectionSettings *
-           folders/{folder}/containerThreatDetectionSettings *
-           projects/{project}/containerThreatDetectionSettings *
-           projects/{project}/locations/{location}/clusters/{cluster}/containerThreatDetectionSettings
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the ContainerThreatDetectionSettings to calculate. Formats: *
-             * organizations/{organization}/containerThreatDetectionSettings *
-             * folders/{folder}/containerThreatDetectionSettings *
-             * projects/{project}/containerThreatDetectionSettings * projects/{project}/locations/{l
-             * ocation}/clusters/{cluster}/containerThreatDetectionSettings
-             */
             public Calculate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10348,24 +8557,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               return this;
             }
 
-            /**
-             * Optional. When set, will only retrieve the modules that are in scope. By default, all
-             * modules will be shown.
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean showEligibleModulesOnly;
 
-            /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-           be shown.
+            /**
+
              */
             public java.lang.Boolean getShowEligibleModulesOnly() {
               return showEligibleModulesOnly;
             }
 
-            /**
-             * Optional. When set, will only retrieve the modules that are in scope. By default, all
-             * modules will be shown.
-             */
             public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
               this.showEligibleModulesOnly = showEligibleModulesOnly;
               return this;
@@ -10401,22 +8602,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class RapidVulnerabilityDetectionSettings {
 
       /**
-       * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -10433,13 +8624,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/rapidVulnerabilityDetectionSettings$");
 
         /**
-         * Calculates the effective RapidVulnerabilityDetectionSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "rapidVulnerabilityDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10448,10 +8632,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       *        folders/{folder}/rapidVulnerabilityDetectionSettings *
-       *        projects/{project}/rapidVulnerabilityDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -10529,30 +8710,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-       organizations/{organization}/rapidVulnerabilityDetectionSettings *
-       folders/{folder}/rapidVulnerabilityDetectionSettings *
-       projects/{project}/rapidVulnerabilityDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the RapidVulnerabilityDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/rapidVulnerabilityDetectionSettings *
-         * folders/{folder}/rapidVulnerabilityDetectionSettings *
-         * projects/{project}/rapidVulnerabilityDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10591,22 +8758,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class SecurityHealthAnalyticsSettings {
 
       /**
-       * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "securityHealthAnalyticsSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -10623,13 +8780,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/securityHealthAnalyticsSettings$");
 
         /**
-         * Calculates the effective SecurityHealthAnalyticsSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "securityHealthAnalyticsSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10638,10 +8788,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       *        organizations/{organization}/securityHealthAnalyticsSettings *
-       *        folders/{folder}/securityHealthAnalyticsSettings *
-       *        projects/{project}/securityHealthAnalyticsSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -10719,30 +8866,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-       organizations/{organization}/securityHealthAnalyticsSettings *
-       folders/{folder}/securityHealthAnalyticsSettings *
-       projects/{project}/securityHealthAnalyticsSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the SecurityHealthAnalyticsSettings to calculate. Formats: *
-         * organizations/{organization}/securityHealthAnalyticsSettings *
-         * folders/{folder}/securityHealthAnalyticsSettings *
-         * projects/{project}/securityHealthAnalyticsSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10753,24 +8886,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -10804,22 +8929,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class VirtualMachineThreatDetectionSettings {
 
       /**
-       * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the resource
-       * hierarchy and its settings. Settings provided closer to the target resource take precedence over
-       * those further away (e.g. folder will override organization level settings). The default SCC
-       * setting for the detector service defaults can be overridden at organization, folder and project
-       * levels. No assumptions should be made about the SCC defaults as it is considered an internal
-       * implementation detail.
-       *
        * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -10836,13 +8951,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/virtualMachineThreatDetectionSettings$");
 
         /**
-         * Calculates the effective VirtualMachineThreatDetectionSettings based on its level in the
-         * resource hierarchy and its settings. Settings provided closer to the target resource take
-         * precedence over those further away (e.g. folder will override organization level settings). The
-         * default SCC setting for the detector service defaults can be overridden at organization, folder
-         * and project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "virtualMachineThreatDetectionSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -10851,10 +8959,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       *        organizations/{organization}/virtualMachineThreatDetectionSettings *
-       *        folders/{folder}/virtualMachineThreatDetectionSettings *
-       *        projects/{project}/virtualMachineThreatDetectionSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -10932,30 +9037,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-       organizations/{organization}/virtualMachineThreatDetectionSettings *
-       folders/{folder}/virtualMachineThreatDetectionSettings *
-       projects/{project}/virtualMachineThreatDetectionSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the VirtualMachineThreatDetectionSettings to calculate. Formats: *
-         * organizations/{organization}/virtualMachineThreatDetectionSettings *
-         * folders/{folder}/virtualMachineThreatDetectionSettings *
-         * projects/{project}/virtualMachineThreatDetectionSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10966,24 +9057,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;
@@ -11017,22 +9100,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class WebSecurityScannerSettings {
 
       /**
-       * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy
-       * and its settings. Settings provided closer to the target resource take precedence over those
-       * further away (e.g. folder will override organization level settings). The default SCC setting for
-       * the detector service defaults can be overridden at organization, folder and project levels. No
-       * assumptions should be made about the SCC defaults as it is considered an internal implementation
-       * detail.
-       *
        * Create a request for the method "webSecurityScannerSettings.calculate".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Calculate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+       * @param name
        * @return the request
        */
       public Calculate calculate(java.lang.String name) throws java.io.IOException {
@@ -11049,13 +9122,6 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^projects/[^/]+/webSecurityScannerSettings$");
 
         /**
-         * Calculates the effective WebSecurityScannerSettings based on its level in the resource
-         * hierarchy and its settings. Settings provided closer to the target resource take precedence
-         * over those further away (e.g. folder will override organization level settings). The default
-         * SCC setting for the detector service defaults can be overridden at organization, folder and
-         * project levels. No assumptions should be made about the SCC defaults as it is considered an
-         * internal implementation detail.
-         *
          * Create a request for the method "webSecurityScannerSettings.calculate".
          *
          * This request holds the parameters needed by the the securitycenter server.  After setting any
@@ -11064,10 +9130,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Calculate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       *        organizations/{organization}/webSecurityScannerSettings *
-       *        folders/{folder}/webSecurityScannerSettings *
-       *        projects/{project}/webSecurityScannerSettings
+         * @param name
          * @since 1.13
          */
         protected Calculate(java.lang.String name) {
@@ -11145,29 +9208,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return (Calculate) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-       organizations/{organization}/webSecurityScannerSettings *
-       folders/{folder}/webSecurityScannerSettings * projects/{project}/webSecurityScannerSettings
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The name of the WebSecurityScannerSettings to calculate. Formats: *
-         * organizations/{organization}/webSecurityScannerSettings *
-         * folders/{folder}/webSecurityScannerSettings *
-         * projects/{project}/webSecurityScannerSettings
-         */
         public Calculate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11178,24 +9228,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           return this;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showEligibleModulesOnly;
 
-        /** Optional. When set, will only retrieve the modules that are in scope. By default, all modules will
-       be shown.
+        /**
+
          */
         public java.lang.Boolean getShowEligibleModulesOnly() {
           return showEligibleModulesOnly;
         }
 
-        /**
-         * Optional. When set, will only retrieve the modules that are in scope. By default, all
-         * modules will be shown.
-         */
         public Calculate setShowEligibleModulesOnly(java.lang.Boolean showEligibleModulesOnly) {
           this.showEligibleModulesOnly = showEligibleModulesOnly;
           return this;

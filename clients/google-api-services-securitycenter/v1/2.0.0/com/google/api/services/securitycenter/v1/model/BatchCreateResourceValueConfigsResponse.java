@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for BatchCreateResourceValueConfigs
+ * Model definition for BatchCreateResourceValueConfigsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class BatchCreateResourceValueConfigsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource value configs created
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV1ResourceValueConfig> resourceValueConfigs;
 
   /**
-   * The resource value configs created
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1ResourceValueConfig> getResourceValueConfigs() {
@@ -46,7 +44,6 @@ public final class BatchCreateResourceValueConfigsResponse extends com.google.ap
   }
 
   /**
-   * The resource value configs created
    * @param resourceValueConfigs resourceValueConfigs or {@code null} for none
    */
   public BatchCreateResourceValueConfigsResponse setResourceValueConfigs(java.util.List<GoogleCloudSecuritycenterV1ResourceValueConfig> resourceValueConfigs) {

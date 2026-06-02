@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents a generic name-value label. A label has separate name and value fields to support
- * filtering with the `contains()` function. For more information, see [Filtering on array-type
- * fields](https://cloud.google.com/security-command-center/docs/how-to-api-list-findings#array-
- * contains-filtering).
+ * Model definition for GoogleCloudSecuritycenterV2Label.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Label extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Value that corresponds to the label's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Name of the label.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -56,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2Label extends com.google.api.clien
   }
 
   /**
-   * Name of the label.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Label setName(java.lang.String name) {
@@ -65,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2Label extends com.google.api.clien
   }
 
   /**
-   * Value that corresponds to the label's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -73,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2Label extends com.google.api.clien
   }
 
   /**
-   * Value that corresponds to the label's name.
    * @param value value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Label setValue(java.lang.String value) {

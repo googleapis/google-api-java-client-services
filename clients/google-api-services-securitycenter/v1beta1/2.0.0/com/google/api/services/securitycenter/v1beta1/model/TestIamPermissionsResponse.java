@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Response message for `TestIamPermissions` method.
+ * Model definition for TestIamPermissionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class TestIamPermissionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> permissions;
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermissions() {
@@ -46,7 +44,6 @@ public final class TestIamPermissionsResponse extends com.google.api.client.json
   }
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
    * @param permissions permissions or {@code null} for none
    */
   public TestIamPermissionsResponse setPermissions(java.util.List<java.lang.String> permissions) {

@@ -17,13 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An EffectiveEventThreatDetectionCustomModule is the representation of an Event Threat Detection
- * custom module at a specified level of the resource hierarchy: organization, folder, or project.
- * If a custom module is inherited from a parent organization or folder, the value of the
- * `enablement_state` property in EffectiveEventThreatDetectionCustomModule is set to the value that
- * is effective in the parent, instead of `INHERITED`. For example, if the module is enabled in a
- * parent organization or folder, the effective `enablement_state` for the module in all child
- * folders or projects is also `enabled`. EffectiveEventThreatDetectionCustomModule is read-only.
+ * Model definition for EffectiveEventThreatDetectionCustomModule.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -37,60 +31,48 @@ package com.google.api.services.securitycenter.v1.model;
 public final class EffectiveEventThreatDetectionCustomModule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The cloud provider of the custom module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * Output only. Config for the effective module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> config;
 
   /**
-   * Output only. The description for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. The human readable name to be displayed for the module.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String enablementState;
 
   /**
-   * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The cloud provider of the custom module.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -98,7 +80,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * The cloud provider of the custom module.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setCloudProvider(java.lang.String cloudProvider) {
@@ -107,7 +88,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. Config for the effective module.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getConfig() {
@@ -115,7 +95,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. Config for the effective module.
    * @param config config or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setConfig(java.util.Map<String, java.lang.Object> config) {
@@ -124,7 +103,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The description for the module.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -132,7 +110,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The description for the module.
    * @param description description or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setDescription(java.lang.String description) {
@@ -141,7 +118,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The human readable name to be displayed for the module.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -149,7 +125,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The human readable name to be displayed for the module.
    * @param displayName displayName or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setDisplayName(java.lang.String displayName) {
@@ -158,8 +133,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnablementState() {
@@ -167,8 +140,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The effective state of enablement for the module at the given level of the
-   * hierarchy.
    * @param enablementState enablementState or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setEnablementState(java.lang.String enablementState) {
@@ -177,10 +148,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -188,10 +155,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. The resource name of the effective ETD custom module. Its format is: *
-   * `organizations/{organization}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `folders/{folder}/eventThreatDetectionSettings/effectiveCustomModules/{module}`. *
-   * `projects/{project}/eventThreatDetectionSettings/effectiveCustomModules/{module}`.
    * @param name name or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setName(java.lang.String name) {
@@ -200,7 +163,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -208,7 +170,6 @@ public final class EffectiveEventThreatDetectionCustomModule extends com.google.
   }
 
   /**
-   * Output only. Type for the module. e.g. CONFIGURABLE_BAD_IP.
    * @param type type or {@code null} for none
    */
   public EffectiveEventThreatDetectionCustomModule setType(java.lang.String type) {

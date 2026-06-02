@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents a connection between a source node and a destination node in this attack path.
+ * Model definition for AttackPathEdge.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AttackPathEdge extends com.google.api.client.json.GenericJson {
 
   /**
-   * The attack node uuid of the destination node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
 
   /**
-   * The attack node uuid of the source node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * The attack node uuid of the destination node.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -53,7 +50,6 @@ public final class AttackPathEdge extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The attack node uuid of the destination node.
    * @param destination destination or {@code null} for none
    */
   public AttackPathEdge setDestination(java.lang.String destination) {
@@ -62,7 +58,6 @@ public final class AttackPathEdge extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The attack node uuid of the source node.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -70,7 +65,6 @@ public final class AttackPathEdge extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The attack node uuid of the source node.
    * @param source source or {@code null} for none
    */
   public AttackPathEdge setSource(java.lang.String source) {

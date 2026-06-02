@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Information about [Google Cloud Armor Adaptive
- * Protection](https://cloud.google.com/armor/docs/cloud-armor-overview#google-cloud-armor-adaptive-
- * protection).
+ * Model definition for GoogleCloudSecuritycenterV2AdaptiveProtection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,20 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2AdaptiveProtection extends com.google.api.client.json.GenericJson {
 
   /**
-   * A score of 0 means that there is low confidence that the detected event is an actual attack. A
-   * score of 1 means that there is high confidence that the detected event is an attack. See the
-   * [Adaptive Protection documentation](https://cloud.google.com/armor/docs/adaptive-protection-
-   * overview#configure-alert-tuning) for further explanation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double confidence;
 
   /**
-   * A score of 0 means that there is low confidence that the detected event is an actual attack. A
-   * score of 1 means that there is high confidence that the detected event is an attack. See the
-   * [Adaptive Protection documentation](https://cloud.google.com/armor/docs/adaptive-protection-
-   * overview#configure-alert-tuning) for further explanation.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConfidence() {
@@ -54,10 +44,6 @@ public final class GoogleCloudSecuritycenterV2AdaptiveProtection extends com.goo
   }
 
   /**
-   * A score of 0 means that there is low confidence that the detected event is an actual attack. A
-   * score of 1 means that there is high confidence that the detected event is an attack. See the
-   * [Adaptive Protection documentation](https://cloud.google.com/armor/docs/adaptive-protection-
-   * overview#configure-alert-tuning) for further explanation.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AdaptiveProtection setConfidence(java.lang.Double confidence) {

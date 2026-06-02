@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * The record of a dynamic mute rule that matches the finding.
+ * Model definition for GoogleCloudSecuritycenterV2DynamicMuteRecord.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,23 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2DynamicMuteRecord extends com.google.api.client.json.GenericJson {
 
   /**
-   * When the dynamic mute rule first matched the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String matchTime;
 
   /**
-   * The relative resource name of the mute rule, represented by a mute config, that created this
-   * record, for example `organizations/123/muteConfigs/mymuteconfig` or
-   * `organizations/123/locations/global/muteConfigs/mymuteconfig`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String muteConfig;
 
   /**
-   * When the dynamic mute rule first matched the finding.
    * @return value or {@code null} for none
    */
   public String getMatchTime() {
@@ -55,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2DynamicMuteRecord extends com.goog
   }
 
   /**
-   * When the dynamic mute rule first matched the finding.
    * @param matchTime matchTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DynamicMuteRecord setMatchTime(String matchTime) {
@@ -64,9 +58,6 @@ public final class GoogleCloudSecuritycenterV2DynamicMuteRecord extends com.goog
   }
 
   /**
-   * The relative resource name of the mute rule, represented by a mute config, that created this
-   * record, for example `organizations/123/muteConfigs/mymuteconfig` or
-   * `organizations/123/locations/global/muteConfigs/mymuteconfig`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMuteConfig() {
@@ -74,9 +65,6 @@ public final class GoogleCloudSecuritycenterV2DynamicMuteRecord extends com.goog
   }
 
   /**
-   * The relative resource name of the mute rule, represented by a mute config, that created this
-   * record, for example `organizations/123/muteConfigs/mymuteconfig` or
-   * `organizations/123/locations/global/muteConfigs/mymuteconfig`.
    * @param muteConfig muteConfig or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2DynamicMuteRecord setMuteConfig(java.lang.String muteConfig) {

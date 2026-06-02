@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Response message for listing assets.
+ * Model definition for ListAssetsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,35 +31,30 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class ListAssetsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Assets matching the list request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ListAssetsResult> listAssetsResults;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Time used for executing the list request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String readTime;
 
   /**
-   * The total number of assets matching the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
 
   /**
-   * Assets matching the list request.
    * @return value or {@code null} for none
    */
   public java.util.List<ListAssetsResult> getListAssetsResults() {
@@ -67,7 +62,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Assets matching the list request.
    * @param listAssetsResults listAssetsResults or {@code null} for none
    */
   public ListAssetsResponse setListAssetsResults(java.util.List<ListAssetsResult> listAssetsResults) {
@@ -76,7 +70,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -84,7 +77,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAssetsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -93,7 +85,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Time used for executing the list request.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -101,7 +92,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Time used for executing the list request.
    * @param readTime readTime or {@code null} for none
    */
   public ListAssetsResponse setReadTime(String readTime) {
@@ -110,7 +100,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The total number of assets matching the query.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -118,7 +107,6 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The total number of assets matching the query.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListAssetsResponse setTotalSize(java.lang.Integer totalSize) {

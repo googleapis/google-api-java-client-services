@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents an operating system process.
+ * Model definition for GoogleCloudSecuritycenterV2Process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Process extends com.google.api.client.json.GenericJson {
 
   /**
-   * Process arguments as JSON encoded strings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> args;
 
   /**
-   * True if `args` is incomplete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean argumentsTruncated;
 
   /**
-   * File information for the process executable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2File binary;
 
   /**
-   * Process environment variables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,14 +61,12 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * True if `env_variables` is incomplete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean envVariablesTruncated;
 
   /**
-   * File information for libraries loaded by the process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,46 +79,36 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
-   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The parent process ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long parentPid;
 
   /**
-   * The process ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long pid;
 
   /**
-   * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter, while `script` provides information about the script file provided to the
-   * interpreter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2File script;
 
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user this will always be
-   * 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userId;
 
   /**
-   * Process arguments as JSON encoded strings.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -132,7 +116,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * Process arguments as JSON encoded strings.
    * @param args args or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setArgs(java.util.List<java.lang.String> args) {
@@ -141,7 +124,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * True if `args` is incomplete.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getArgumentsTruncated() {
@@ -149,7 +131,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * True if `args` is incomplete.
    * @param argumentsTruncated argumentsTruncated or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setArgumentsTruncated(java.lang.Boolean argumentsTruncated) {
@@ -158,7 +139,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * File information for the process executable.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2File getBinary() {
@@ -166,7 +146,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * File information for the process executable.
    * @param binary binary or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setBinary(GoogleCloudSecuritycenterV2File binary) {
@@ -175,7 +154,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * Process environment variables.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2EnvironmentVariable> getEnvVariables() {
@@ -183,7 +161,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * Process environment variables.
    * @param envVariables envVariables or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setEnvVariables(java.util.List<GoogleCloudSecuritycenterV2EnvironmentVariable> envVariables) {
@@ -192,7 +169,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * True if `env_variables` is incomplete.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnvVariablesTruncated() {
@@ -200,7 +176,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * True if `env_variables` is incomplete.
    * @param envVariablesTruncated envVariablesTruncated or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setEnvVariablesTruncated(java.lang.Boolean envVariablesTruncated) {
@@ -209,7 +184,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * File information for libraries loaded by the process.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2File> getLibraries() {
@@ -217,7 +191,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * File information for libraries loaded by the process.
    * @param libraries libraries or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setLibraries(java.util.List<GoogleCloudSecuritycenterV2File> libraries) {
@@ -226,8 +199,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
-   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -235,8 +206,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The process name, as displayed in utilities like `top` and `ps`. This name can be accessed
-   * through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setName(java.lang.String name) {
@@ -245,7 +214,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The parent process ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getParentPid() {
@@ -253,7 +221,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The parent process ID.
    * @param parentPid parentPid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setParentPid(java.lang.Long parentPid) {
@@ -262,7 +229,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The process ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPid() {
@@ -270,7 +236,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The process ID.
    * @param pid pid or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setPid(java.lang.Long pid) {
@@ -279,9 +244,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter, while `script` provides information about the script file provided to the
-   * interpreter.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2File getScript() {
@@ -289,9 +251,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * When the process represents the invocation of a script, `binary` provides information about the
-   * interpreter, while `script` provides information about the script file provided to the
-   * interpreter.
    * @param script script or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setScript(GoogleCloudSecuritycenterV2File script) {
@@ -300,8 +259,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user this will always be
-   * 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserId() {
@@ -309,8 +266,6 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   }
 
   /**
-   * The ID of the user that executed the process. E.g. If this is the root user this will always be
-   * 0.
    * @param userId userId or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Process setUserId(java.lang.Long userId) {

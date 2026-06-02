@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Encapsulates settings provided to GetIamPolicy.
+ * Model definition for GetPolicyOptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GetPolicyOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The maximum policy version that will be used to format the policy. Valid values are
-   * 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with
-   * any conditional role bindings must specify version 3. Policies with no conditional role
-   * bindings may specify any valid value or leave the field unset. The policy in the response might
-   * use the policy version that you specified, or it might use a lower policy version. For example,
-   * if you specify version 3, but the policy has no conditional role bindings, the response uses
-   * version 1. To learn which resources support conditions in their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer requestedPolicyVersion;
 
   /**
-   * Optional. The maximum policy version that will be used to format the policy. Valid values are
-   * 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with
-   * any conditional role bindings must specify version 3. Policies with no conditional role
-   * bindings may specify any valid value or leave the field unset. The policy in the response might
-   * use the policy version that you specified, or it might use a lower policy version. For example,
-   * if you specify version 3, but the policy has no conditional role bindings, the response uses
-   * version 1. To learn which resources support conditions in their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRequestedPolicyVersion() {
@@ -60,14 +44,6 @@ public final class GetPolicyOptions extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The maximum policy version that will be used to format the policy. Valid values are
-   * 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests for policies with
-   * any conditional role bindings must specify version 3. Policies with no conditional role
-   * bindings may specify any valid value or leave the field unset. The policy in the response might
-   * use the policy version that you specified, or it might use a lower policy version. For example,
-   * if you specify version 3, but the policy has no conditional role bindings, the response uses
-   * version 1. To learn which resources support conditions in their IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param requestedPolicyVersion requestedPolicyVersion or {@code null} for none
    */
   public GetPolicyOptions setRequestedPolicyVersion(java.lang.Integer requestedPolicyVersion) {

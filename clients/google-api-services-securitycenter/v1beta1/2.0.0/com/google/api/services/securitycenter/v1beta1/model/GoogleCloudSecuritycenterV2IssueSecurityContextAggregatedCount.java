@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Aggregated count of a security context.
+ * Model definition for GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Aggregation key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Aggregation value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer value;
 
   /**
-   * Aggregation key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCoun
   }
 
   /**
-   * Aggregation key.
    * @param key key or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount setKey(java.lang.String key) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCoun
   }
 
   /**
-   * Aggregation value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getValue() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCoun
   }
 
   /**
-   * Aggregation value.
    * @param value value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueSecurityContextAggregatedCount setValue(java.lang.Integer value) {

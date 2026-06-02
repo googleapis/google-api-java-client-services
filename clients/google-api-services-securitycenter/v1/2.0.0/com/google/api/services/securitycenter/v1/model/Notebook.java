@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents a Jupyter notebook IPYNB file, such as a [Colab Enterprise
- * notebook](https://cloud.google.com/colab/docs/introduction) file, that is associated with a
- * finding.
+ * Model definition for Notebook.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,35 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Notebook extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user ID of the latest author to modify the notebook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastAuthor;
 
   /**
-   * The name of the notebook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The most recent time the notebook was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String notebookUpdateTime;
 
   /**
-   * The source notebook service, for example, "Colab Enterprise".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * The user ID of the latest author to modify the notebook.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastAuthor() {
@@ -69,7 +62,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user ID of the latest author to modify the notebook.
    * @param lastAuthor lastAuthor or {@code null} for none
    */
   public Notebook setLastAuthor(java.lang.String lastAuthor) {
@@ -78,7 +70,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the notebook.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -86,7 +77,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the notebook.
    * @param name name or {@code null} for none
    */
   public Notebook setName(java.lang.String name) {
@@ -95,7 +85,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The most recent time the notebook was updated.
    * @return value or {@code null} for none
    */
   public String getNotebookUpdateTime() {
@@ -103,7 +92,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The most recent time the notebook was updated.
    * @param notebookUpdateTime notebookUpdateTime or {@code null} for none
    */
   public Notebook setNotebookUpdateTime(String notebookUpdateTime) {
@@ -112,7 +100,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source notebook service, for example, "Colab Enterprise".
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -120,7 +107,6 @@ public final class Notebook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source notebook service, for example, "Colab Enterprise".
    * @param service service or {@code null} for none
    */
   public Notebook setService(java.lang.String service) {

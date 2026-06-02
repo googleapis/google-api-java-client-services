@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Conveys information about a Kubernetes access review (such as one returned by a [`kubectl auth
- * can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-
- * access) command) that was involved in a finding.
+ * Model definition for GoogleCloudSecuritycenterV2AccessReview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,58 +31,48 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API group of the resource. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String group;
 
   /**
-   * The name of the resource being requested. Empty means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Namespace of the action being requested. Currently, there is no distinction between no
-   * namespace and all namespaces. Both are represented by "" (empty).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * The optional resource type requested. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The optional subresource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subresource;
 
   /**
-   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
-   * all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String verb;
 
   /**
-   * The API version of the resource. "*" means all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The API group of the resource. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -92,7 +80,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The API group of the resource. "*" means all.
    * @param group group or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setGroup(java.lang.String group) {
@@ -101,7 +88,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The name of the resource being requested. Empty means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,7 +95,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The name of the resource being requested. Empty means all.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setName(java.lang.String name) {
@@ -118,8 +103,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * Namespace of the action being requested. Currently, there is no distinction between no
-   * namespace and all namespaces. Both are represented by "" (empty).
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -127,8 +110,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * Namespace of the action being requested. Currently, there is no distinction between no
-   * namespace and all namespaces. Both are represented by "" (empty).
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setNs(java.lang.String ns) {
@@ -137,7 +118,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The optional resource type requested. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -145,7 +125,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The optional resource type requested. "*" means all.
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setResource(java.lang.String resource) {
@@ -154,7 +133,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The optional subresource type.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubresource() {
@@ -162,7 +140,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The optional subresource type.
    * @param subresource subresource or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setSubresource(java.lang.String subresource) {
@@ -171,8 +148,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
-   * all.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerb() {
@@ -180,8 +155,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means
-   * all.
    * @param verb verb or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setVerb(java.lang.String verb) {
@@ -190,7 +163,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The API version of the resource. "*" means all.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -198,7 +170,6 @@ public final class GoogleCloudSecuritycenterV2AccessReview extends com.google.ap
   }
 
   /**
-   * The API version of the resource. "*" means all.
    * @param version version or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2AccessReview setVersion(java.lang.String version) {

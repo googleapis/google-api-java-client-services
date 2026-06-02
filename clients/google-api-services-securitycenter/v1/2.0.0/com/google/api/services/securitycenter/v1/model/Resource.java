@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Information related to the Google Cloud resource that is associated with this finding.
+ * Model definition for Resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,64 +31,54 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ADC application associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcApplication adcApplication;
 
   /**
-   * The ADC template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcApplicationTemplateRevision adcApplicationTemplate;
 
   /**
-   * The ADC shared template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdcSharedTemplateRevision adcSharedTemplate;
 
   /**
-   * The App Hub application this resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1ResourceApplication application;
 
   /**
-   * The AWS metadata associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsMetadata awsMetadata;
 
   /**
-   * The Azure metadata associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AzureMetadata azureMetadata;
 
   /**
-   * Indicates which cloud provider the finding is from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * The human readable name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,91 +91,72 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The region or location of the service (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Indicates which organization / tenant the finding is for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String organization;
 
   /**
-   * The human readable name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentDisplayName;
 
   /**
-   * The full resource name of resource's parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentName;
 
   /**
-   * The project ID that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectDisplayName;
 
   /**
-   * The full resource name of project that the resource belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectName;
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePath resourcePath;
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id}` where there
-   * can be any number of folders. For AWS, it has the format of `org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can be any number
-   * of organizational units. For Azure, it has the format of `mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there can be any
-   * number of management groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourcePathString;
 
   /**
-   * The service or resource provider associated with the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * The full resource type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The ADC application associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcApplication getAdcApplication() {
@@ -193,7 +164,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ADC application associated with the finding.
    * @param adcApplication adcApplication or {@code null} for none
    */
   public Resource setAdcApplication(AdcApplication adcApplication) {
@@ -202,7 +172,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ADC template associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcApplicationTemplateRevision getAdcApplicationTemplate() {
@@ -210,7 +179,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ADC template associated with the finding.
    * @param adcApplicationTemplate adcApplicationTemplate or {@code null} for none
    */
   public Resource setAdcApplicationTemplate(AdcApplicationTemplateRevision adcApplicationTemplate) {
@@ -219,7 +187,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @return value or {@code null} for none
    */
   public AdcSharedTemplateRevision getAdcSharedTemplate() {
@@ -227,7 +194,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @param adcSharedTemplate adcSharedTemplate or {@code null} for none
    */
   public Resource setAdcSharedTemplate(AdcSharedTemplateRevision adcSharedTemplate) {
@@ -236,7 +202,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Hub application this resource belongs to.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceApplication getApplication() {
@@ -244,7 +209,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The App Hub application this resource belongs to.
    * @param application application or {@code null} for none
    */
   public Resource setApplication(GoogleCloudSecuritycenterV1ResourceApplication application) {
@@ -253,7 +217,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AWS metadata associated with the finding.
    * @return value or {@code null} for none
    */
   public AwsMetadata getAwsMetadata() {
@@ -261,7 +224,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The AWS metadata associated with the finding.
    * @param awsMetadata awsMetadata or {@code null} for none
    */
   public Resource setAwsMetadata(AwsMetadata awsMetadata) {
@@ -270,7 +232,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Azure metadata associated with the finding.
    * @return value or {@code null} for none
    */
   public AzureMetadata getAzureMetadata() {
@@ -278,7 +239,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Azure metadata associated with the finding.
    * @param azureMetadata azureMetadata or {@code null} for none
    */
   public Resource setAzureMetadata(AzureMetadata azureMetadata) {
@@ -287,7 +247,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which cloud provider the finding is from.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -295,7 +254,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which cloud provider the finding is from.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public Resource setCloudProvider(java.lang.String cloudProvider) {
@@ -304,7 +262,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -312,7 +269,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of the resource.
    * @param displayName displayName or {@code null} for none
    */
   public Resource setDisplayName(java.lang.String displayName) {
@@ -321,8 +277,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * @return value or {@code null} for none
    */
   public java.util.List<Folder> getFolders() {
@@ -330,8 +284,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Contains a Folder message for each folder in the assets ancestry. The first folder is the
-   * deepest nested folder, and the last folder is the folder directly under the Organization.
    * @param folders folders or {@code null} for none
    */
   public Resource setFolders(java.util.List<Folder> folders) {
@@ -340,7 +292,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The region or location of the service (if applicable).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -348,7 +299,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The region or location of the service (if applicable).
    * @param location location or {@code null} for none
    */
   public Resource setLocation(java.lang.String location) {
@@ -357,8 +307,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -366,8 +314,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param name name or {@code null} for none
    */
   public Resource setName(java.lang.String name) {
@@ -376,7 +322,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which organization / tenant the finding is for.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -384,7 +329,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates which organization / tenant the finding is for.
    * @param organization organization or {@code null} for none
    */
   public Resource setOrganization(java.lang.String organization) {
@@ -393,7 +337,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentDisplayName() {
@@ -401,7 +344,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human readable name of resource's parent.
    * @param parentDisplayName parentDisplayName or {@code null} for none
    */
   public Resource setParentDisplayName(java.lang.String parentDisplayName) {
@@ -410,7 +352,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of resource's parent.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentName() {
@@ -418,7 +359,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of resource's parent.
    * @param parentName parentName or {@code null} for none
    */
   public Resource setParentName(java.lang.String parentName) {
@@ -427,7 +367,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectDisplayName() {
@@ -435,7 +374,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project ID that the resource belongs to.
    * @param projectDisplayName projectDisplayName or {@code null} for none
    */
   public Resource setProjectDisplayName(java.lang.String projectDisplayName) {
@@ -444,7 +382,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectName() {
@@ -452,7 +389,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource name of project that the resource belongs to.
    * @param projectName projectName or {@code null} for none
    */
   public Resource setProjectName(java.lang.String projectName) {
@@ -461,7 +397,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * @return value or {@code null} for none
    */
   public ResourcePath getResourcePath() {
@@ -469,7 +404,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides the path to the resource within the resource hierarchy.
    * @param resourcePath resourcePath or {@code null} for none
    */
   public Resource setResourcePath(ResourcePath resourcePath) {
@@ -478,13 +412,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id}` where there
-   * can be any number of folders. For AWS, it has the format of `org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can be any number
-   * of organizational units. For Azure, it has the format of `mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there can be any
-   * number of management groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourcePathString() {
@@ -492,13 +419,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representation of the resource path. For Google Cloud, it has the format of
-   * `org/{organization_id}/folder/{folder_id}/folder/{folder_id}/project/{project_id}` where there
-   * can be any number of folders. For AWS, it has the format of `org/{organization_id}/ou/{organiza
-   * tional_unit_id}/ou/{organizational_unit_id}/account/{account_id}` where there can be any number
-   * of organizational units. For Azure, it has the format of `mg/{management_group_id}/mg/{manageme
-   * nt_group_id}/subscription/{subscription_id}/rg/{resource_group_name}` where there can be any
-   * number of management groups.
    * @param resourcePathString resourcePathString or {@code null} for none
    */
   public Resource setResourcePathString(java.lang.String resourcePathString) {
@@ -507,7 +427,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service or resource provider associated with the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -515,7 +434,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The service or resource provider associated with the resource.
    * @param service service or {@code null} for none
    */
   public Resource setService(java.lang.String service) {
@@ -524,7 +442,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -532,7 +449,6 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full resource type of the resource.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

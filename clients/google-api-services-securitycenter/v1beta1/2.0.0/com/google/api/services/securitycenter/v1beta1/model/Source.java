@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Security Command Center finding source. A finding source is an entity or a mechanism that can
- * produce a finding. A source is like a container of findings that come from the same scanner,
- * logger, monitor, etc.
+ * Model definition for Source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,38 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
-   * security scanner for common vulnerabilities in App Engine applications. It can automatically
-   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
-   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The source's display name. A source's display name must be unique amongst its siblings, for
-   * example, two sources with the same parent can't share the same display name. The display name
-   * must have a length between 1 and 64 characters (inclusive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The relative resource name of this source. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
-   * security scanner for common vulnerabilities in App Engine applications. It can automatically
-   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
-   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -72,10 +56,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the source (max of 1024 characters). Example: "Web Security Scanner is a web
-   * security scanner for common vulnerabilities in App Engine applications. It can automatically
-   * scan and detect four common vulnerabilities, including cross-site-scripting (XSS), Flash
-   * injection, mixed content (HTTP in HTTPS), and outdated/insecure libraries."
    * @param description description or {@code null} for none
    */
   public Source setDescription(java.lang.String description) {
@@ -84,9 +64,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source's display name. A source's display name must be unique amongst its siblings, for
-   * example, two sources with the same parent can't share the same display name. The display name
-   * must have a length between 1 and 64 characters (inclusive).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -94,9 +71,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The source's display name. A source's display name must be unique amongst its siblings, for
-   * example, two sources with the same parent can't share the same display name. The display name
-   * must have a length between 1 and 64 characters (inclusive).
    * @param displayName displayName or {@code null} for none
    */
   public Source setDisplayName(java.lang.String displayName) {
@@ -105,9 +79,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this source. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,9 +86,6 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of this source. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
-   * "organizations/{organization_id}/sources/{source_id}"
    * @param name name or {@code null} for none
    */
   public Source setName(java.lang.String name) {

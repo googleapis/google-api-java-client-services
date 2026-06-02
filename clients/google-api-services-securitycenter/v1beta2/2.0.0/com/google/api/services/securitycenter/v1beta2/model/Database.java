@@ -17,12 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents database access information, such as queries. A database may be a sub-resource of an
- * instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database
- * instance itself. Some database resources might not have the [full resource
- * name](https://google.aip.dev/122#full-resource-names) populated because these resource types,
- * such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only
- * the display name is provided.
+ * Model definition for Database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -36,56 +31,42 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
-   * The human-readable name of the database that the user connected to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The target usernames, roles, or groups of an SQL privilege grant, which is not an IAM policy
-   * change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> grantees;
 
   /**
-   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
-   * resource-names) populated because these resource types are not yet supported by Cloud Asset
-   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
-   * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
-   * the user connected to, if it is supported by Cloud Asset Inventory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The SQL statement that is associated with the database access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * The username used to connect to the database. The username might not be an IAM principal and
-   * does not have a set format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userName;
 
   /**
-   * The version of the database, for example, POSTGRES_14. See [the complete
-   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The human-readable name of the database that the user connected to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -93,7 +74,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The human-readable name of the database that the user connected to.
    * @param displayName displayName or {@code null} for none
    */
   public Database setDisplayName(java.lang.String displayName) {
@@ -102,8 +82,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target usernames, roles, or groups of an SQL privilege grant, which is not an IAM policy
-   * change.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGrantees() {
@@ -111,8 +89,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The target usernames, roles, or groups of an SQL privilege grant, which is not an IAM policy
-   * change.
    * @param grantees grantees or {@code null} for none
    */
   public Database setGrantees(java.util.List<java.lang.String> grantees) {
@@ -121,11 +97,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
-   * resource-names) populated because these resource types are not yet supported by Cloud Asset
-   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
-   * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
-   * the user connected to, if it is supported by Cloud Asset Inventory.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -133,11 +104,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Some database resources may not have the [full resource name](https://google.aip.dev/122#full-
-   * resource-names) populated because these resource types are not yet supported by Cloud Asset
-   * Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
-   * The [full resource name](https://google.aip.dev/122#full-resource-names) of the database that
-   * the user connected to, if it is supported by Cloud Asset Inventory.
    * @param name name or {@code null} for none
    */
   public Database setName(java.lang.String name) {
@@ -146,7 +112,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The SQL statement that is associated with the database access.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -154,7 +119,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The SQL statement that is associated with the database access.
    * @param query query or {@code null} for none
    */
   public Database setQuery(java.lang.String query) {
@@ -163,8 +127,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The username used to connect to the database. The username might not be an IAM principal and
-   * does not have a set format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserName() {
@@ -172,8 +134,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The username used to connect to the database. The username might not be an IAM principal and
-   * does not have a set format.
    * @param userName userName or {@code null} for none
    */
   public Database setUserName(java.lang.String userName) {
@@ -182,8 +142,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the database, for example, POSTGRES_14. See [the complete
-   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -191,8 +149,6 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the database, for example, POSTGRES_14. See [the complete
-   * list](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1/SqlDatabaseVersion).
    * @param version version or {@code null} for none
    */
   public Database setVersion(java.lang.String version) {

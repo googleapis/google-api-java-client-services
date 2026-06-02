@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Details of a subscription.
+ * Model definition for Details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Details extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time the subscription has or will end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The time the subscription has or will start.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The type of subscription
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The time the subscription has or will end.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -60,7 +56,6 @@ public final class Details extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the subscription has or will end.
    * @param endTime endTime or {@code null} for none
    */
   public Details setEndTime(String endTime) {
@@ -69,7 +64,6 @@ public final class Details extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the subscription has or will start.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -77,7 +71,6 @@ public final class Details extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time the subscription has or will start.
    * @param startTime startTime or {@code null} for none
    */
   public Details setStartTime(String startTime) {
@@ -86,7 +79,6 @@ public final class Details extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of subscription
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -94,7 +86,6 @@ public final class Details extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of subscription
    * @param type type or {@code null} for none
    */
   public Details setType(java.lang.String type) {

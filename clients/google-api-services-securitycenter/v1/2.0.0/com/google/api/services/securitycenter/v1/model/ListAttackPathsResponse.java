@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for listing the attack paths for a given simulation or valued resource.
+ * Model definition for ListAttackPathsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListAttackPathsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The attack paths that the attack path simulation identified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +43,12 @@ public final class ListAttackPathsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The attack paths that the attack path simulation identified.
    * @return value or {@code null} for none
    */
   public java.util.List<AttackPath> getAttackPaths() {
@@ -59,7 +56,6 @@ public final class ListAttackPathsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The attack paths that the attack path simulation identified.
    * @param attackPaths attackPaths or {@code null} for none
    */
   public ListAttackPathsResponse setAttackPaths(java.util.List<AttackPath> attackPaths) {
@@ -68,7 +64,6 @@ public final class ListAttackPathsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +71,6 @@ public final class ListAttackPathsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAttackPathsResponse setNextPageToken(java.lang.String nextPageToken) {

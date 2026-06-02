@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Represents an Azure resource group.
+ * Model definition for AzureResourceGroup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class AzureResourceGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the Azure resource group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The name of the Azure resource group. This is not a UUID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The ID of the Azure resource group.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +50,6 @@ public final class AzureResourceGroup extends com.google.api.client.json.Generic
   }
 
   /**
-   * The ID of the Azure resource group.
    * @param id id or {@code null} for none
    */
   public AzureResourceGroup setId(java.lang.String id) {
@@ -62,7 +58,6 @@ public final class AzureResourceGroup extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the Azure resource group. This is not a UUID.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +65,6 @@ public final class AzureResourceGroup extends com.google.api.client.json.Generic
   }
 
   /**
-   * The name of the Azure resource group. This is not a UUID.
    * @param name name or {@code null} for none
    */
   public AzureResourceGroup setName(java.lang.String name) {

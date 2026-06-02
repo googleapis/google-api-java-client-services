@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Resource for selecting resource type.
+ * Model definition for GoogleCloudSecuritycenterV1ResourceSelector.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1ResourceSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource types to run the detector on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceTypes;
 
   /**
-   * The resource types to run the detector on.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV1ResourceSelector extends com.googl
   }
 
   /**
-   * The resource types to run the detector on.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1ResourceSelector setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

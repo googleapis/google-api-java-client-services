@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Type of information detected by the API.
+ * Model definition for GoogleCloudSecuritycenterV2InfoType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,34 +31,24 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
-   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
-   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2SensitivityScore sensitivityScore;
 
   /**
-   * Optional version name for this InfoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
-   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
-   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -66,10 +56,6 @@ public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.cl
   }
 
   /**
-   * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or
-   * one of the names listed at https://cloud.google.com/sensitive-data-protection/docs/infotypes-
-   * reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog,
-   * infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2InfoType setName(java.lang.String name) {
@@ -78,7 +64,6 @@ public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.cl
   }
 
   /**
-   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2SensitivityScore getSensitivityScore() {
@@ -86,7 +71,6 @@ public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.cl
   }
 
   /**
-   * Optional custom sensitivity for this InfoType. This only applies to data profiling.
    * @param sensitivityScore sensitivityScore or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2InfoType setSensitivityScore(GoogleCloudSecuritycenterV2SensitivityScore sensitivityScore) {
@@ -95,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.cl
   }
 
   /**
-   * Optional version name for this InfoType.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -103,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2InfoType extends com.google.api.cl
   }
 
   /**
-   * Optional version name for this InfoType.
    * @param version version or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2InfoType setVersion(java.lang.String version) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message for `GetIamPolicy` method.
+ * Model definition for GetIamPolicyRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GetIamPolicyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GetPolicyOptions options;
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @return value or {@code null} for none
    */
   public GetPolicyOptions getOptions() {
@@ -46,7 +44,6 @@ public final class GetIamPolicyRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * OPTIONAL: A `GetPolicyOptions` object for specifying options to `GetIamPolicy`.
    * @param options options or {@code null} for none
    */
   public GetIamPolicyRequest setOptions(GetPolicyOptions options) {

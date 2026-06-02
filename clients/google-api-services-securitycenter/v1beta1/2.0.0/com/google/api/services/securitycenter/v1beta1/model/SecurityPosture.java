@@ -17,9 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Represents a posture that is deployed on Google Cloud by the Security Command Center Posture
- * Management service. A posture contains one or more policy sets. A policy set is a group of
- * policies that enforce a set of security rules on Google Cloud.
+ * Model definition for SecurityPosture.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -33,29 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SecurityPosture extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the updated policy, for example,
-   * `projects/{project_id}/policies/{constraint_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String changedPolicy;
 
   /**
-   * Name of the posture, for example, `CIS-Posture`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The ID of the updated policy, for example, `compute-policy-1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policy;
 
   /**
-   * The details about a change in an updated policy that violates the deployed posture.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,38 +61,30 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the updated policyset, for example, `cis-policyset`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policySet;
 
   /**
-   * The name of the posture deployment, for example,
-   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postureDeployment;
 
   /**
-   * The project, folder, or organization on which the posture is deployed, for example,
-   * `projects/{project_number}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postureDeploymentResource;
 
   /**
-   * The version of the posture, for example, `c7cfa2a8`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String revisionId;
 
   /**
-   * The name of the updated policy, for example,
-   * `projects/{project_id}/policies/{constraint_name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getChangedPolicy() {
@@ -107,8 +92,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the updated policy, for example,
-   * `projects/{project_id}/policies/{constraint_name}`.
    * @param changedPolicy changedPolicy or {@code null} for none
    */
   public SecurityPosture setChangedPolicy(java.lang.String changedPolicy) {
@@ -117,7 +100,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Name of the posture, for example, `CIS-Posture`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,7 +107,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Name of the posture, for example, `CIS-Posture`.
    * @param name name or {@code null} for none
    */
   public SecurityPosture setName(java.lang.String name) {
@@ -134,7 +115,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID of the updated policy, for example, `compute-policy-1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicy() {
@@ -142,7 +122,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The ID of the updated policy, for example, `compute-policy-1`.
    * @param policy policy or {@code null} for none
    */
   public SecurityPosture setPolicy(java.lang.String policy) {
@@ -151,7 +130,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The details about a change in an updated policy that violates the deployed posture.
    * @return value or {@code null} for none
    */
   public java.util.List<PolicyDriftDetails> getPolicyDriftDetails() {
@@ -159,7 +137,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The details about a change in an updated policy that violates the deployed posture.
    * @param policyDriftDetails policyDriftDetails or {@code null} for none
    */
   public SecurityPosture setPolicyDriftDetails(java.util.List<PolicyDriftDetails> policyDriftDetails) {
@@ -168,7 +145,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the updated policyset, for example, `cis-policyset`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicySet() {
@@ -176,7 +152,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the updated policyset, for example, `cis-policyset`.
    * @param policySet policySet or {@code null} for none
    */
   public SecurityPosture setPolicySet(java.lang.String policySet) {
@@ -185,8 +160,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the posture deployment, for example,
-   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostureDeployment() {
@@ -194,8 +167,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the posture deployment, for example,
-   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
    * @param postureDeployment postureDeployment or {@code null} for none
    */
   public SecurityPosture setPostureDeployment(java.lang.String postureDeployment) {
@@ -204,8 +175,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The project, folder, or organization on which the posture is deployed, for example,
-   * `projects/{project_number}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostureDeploymentResource() {
@@ -213,8 +182,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The project, folder, or organization on which the posture is deployed, for example,
-   * `projects/{project_number}`.
    * @param postureDeploymentResource postureDeploymentResource or {@code null} for none
    */
   public SecurityPosture setPostureDeploymentResource(java.lang.String postureDeploymentResource) {
@@ -223,7 +190,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The version of the posture, for example, `c7cfa2a8`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -231,7 +197,6 @@ public final class SecurityPosture extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The version of the posture, for example, `c7cfa2a8`.
    * @param revisionId revisionId or {@code null} for none
    */
   public SecurityPosture setRevisionId(java.lang.String revisionId) {

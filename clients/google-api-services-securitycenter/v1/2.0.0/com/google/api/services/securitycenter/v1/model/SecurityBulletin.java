@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * SecurityBulletin are notifications of vulnerabilities of Google products.
+ * Model definition for SecurityBulletin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,29 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SecurityBulletin extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of the bulletin corresponding to the vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bulletinId;
 
   /**
-   * Submission time of this Security Bulletin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String submissionTime;
 
   /**
-   * This represents a version that the cluster receiving this notification should be upgraded to,
-   * based on its current version. For example, 1.15.0
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suggestedUpgradeVersion;
 
   /**
-   * ID of the bulletin corresponding to the vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getBulletinId() {
@@ -61,7 +56,6 @@ public final class SecurityBulletin extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * ID of the bulletin corresponding to the vulnerability.
    * @param bulletinId bulletinId or {@code null} for none
    */
   public SecurityBulletin setBulletinId(java.lang.String bulletinId) {
@@ -70,7 +64,6 @@ public final class SecurityBulletin extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Submission time of this Security Bulletin.
    * @return value or {@code null} for none
    */
   public String getSubmissionTime() {
@@ -78,7 +71,6 @@ public final class SecurityBulletin extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Submission time of this Security Bulletin.
    * @param submissionTime submissionTime or {@code null} for none
    */
   public SecurityBulletin setSubmissionTime(String submissionTime) {
@@ -87,8 +79,6 @@ public final class SecurityBulletin extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This represents a version that the cluster receiving this notification should be upgraded to,
-   * based on its current version. For example, 1.15.0
    * @return value or {@code null} for none
    */
   public java.lang.String getSuggestedUpgradeVersion() {
@@ -96,8 +86,6 @@ public final class SecurityBulletin extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This represents a version that the cluster receiving this notification should be upgraded to,
-   * based on its current version. For example, 1.15.0
    * @param suggestedUpgradeVersion suggestedUpgradeVersion or {@code null} for none
    */
   public SecurityBulletin setSuggestedUpgradeVersion(java.lang.String suggestedUpgradeVersion) {

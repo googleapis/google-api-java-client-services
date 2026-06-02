@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Mute information about the finding, including whether the finding has a static mute or any
- * matching dynamic mute rules.
+ * Model definition for MuteInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,7 +31,6 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class MuteInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of dynamic mute rules that currently match the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,15 +43,12 @@ public final class MuteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the static mute applied to this finding. Static mutes override dynamic mutes. If unset,
-   * there is no static mute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StaticMute staticMute;
 
   /**
-   * The list of dynamic mute rules that currently match the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<DynamicMuteRecord> getDynamicMuteRecords() {
@@ -61,7 +56,6 @@ public final class MuteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of dynamic mute rules that currently match the finding.
    * @param dynamicMuteRecords dynamicMuteRecords or {@code null} for none
    */
   public MuteInfo setDynamicMuteRecords(java.util.List<DynamicMuteRecord> dynamicMuteRecords) {
@@ -70,8 +64,6 @@ public final class MuteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the static mute applied to this finding. Static mutes override dynamic mutes. If unset,
-   * there is no static mute.
    * @return value or {@code null} for none
    */
   public StaticMute getStaticMute() {
@@ -79,8 +71,6 @@ public final class MuteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set, the static mute applied to this finding. Static mutes override dynamic mutes. If unset,
-   * there is no static mute.
    * @param staticMute staticMute or {@code null} for none
    */
   public MuteInfo setStaticMute(StaticMute staticMute) {

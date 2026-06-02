@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * The destination BigQuery dataset to export findings to.
+ * Model definition for BigQueryDestination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,16 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class BigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The relative resource name of the destination dataset, in the form
-   * projects/{projectId}/datasets/{datasetId}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * Required. The relative resource name of the destination dataset, in the form
-   * projects/{projectId}/datasets/{datasetId}.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -48,8 +44,6 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The relative resource name of the destination dataset, in the form
-   * projects/{projectId}/datasets/{datasetId}.
    * @param dataset dataset or {@code null} for none
    */
   public BigQueryDestination setDataset(java.lang.String dataset) {

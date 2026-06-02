@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response for listing Event Threat Detection custom modules.
+ * Model definition for ListEventThreatDetectionCustomModulesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListEventThreatDetectionCustomModulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom modules belonging to the requested parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +43,12 @@ public final class ListEventThreatDetectionCustomModulesResponse extends com.goo
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Custom modules belonging to the requested parent.
    * @return value or {@code null} for none
    */
   public java.util.List<EventThreatDetectionCustomModule> getEventThreatDetectionCustomModules() {
@@ -60,7 +56,6 @@ public final class ListEventThreatDetectionCustomModulesResponse extends com.goo
   }
 
   /**
-   * Custom modules belonging to the requested parent.
    * @param eventThreatDetectionCustomModules eventThreatDetectionCustomModules or {@code null} for none
    */
   public ListEventThreatDetectionCustomModulesResponse setEventThreatDetectionCustomModules(java.util.List<EventThreatDetectionCustomModule> eventThreatDetectionCustomModules) {
@@ -69,8 +64,6 @@ public final class ListEventThreatDetectionCustomModulesResponse extends com.goo
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,8 +71,6 @@ public final class ListEventThreatDetectionCustomModulesResponse extends com.goo
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListEventThreatDetectionCustomModulesResponse setNextPageToken(java.lang.String nextPageToken) {

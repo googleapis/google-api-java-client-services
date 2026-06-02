@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Request message for updating a finding's state.
+ * Model definition for SetFindingStateRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SetFindingStateRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Required. The desired State of the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -53,7 +50,6 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The time at which the updated state takes effect. If not set uses the current time.
    * @param startTime startTime or {@code null} for none
    */
   public SetFindingStateRequest setStartTime(String startTime) {
@@ -62,7 +58,6 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The desired State of the finding.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +65,6 @@ public final class SetFindingStateRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The desired State of the finding.
    * @param state state or {@code null} for none
    */
   public SetFindingStateRequest setState(java.lang.String state) {

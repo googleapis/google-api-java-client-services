@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * File path containing the secret.
+ * Model definition for SecretFilePath.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SecretFilePath extends com.google.api.client.json.GenericJson {
 
   /**
-   * Path to the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Path to the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -46,7 +44,6 @@ public final class SecretFilePath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Path to the file.
    * @param path path or {@code null} for none
    */
   public SecretFilePath setPath(java.lang.String path) {

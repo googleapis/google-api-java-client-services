@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Contains information about the disk associated with the finding.
+ * Model definition for Disk.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,16 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Disk extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the disk, for example, "https://www.googleapis.com/compute/v1/projects/{project-
-   * id}/zones/{zone-id}/disks/{disk-id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name of the disk, for example, "https://www.googleapis.com/compute/v1/projects/{project-
-   * id}/zones/{zone-id}/disks/{disk-id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +44,6 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the disk, for example, "https://www.googleapis.com/compute/v1/projects/{project-
-   * id}/zones/{zone-id}/disks/{disk-id}".
    * @param name name or {@code null} for none
    */
   public Disk setName(java.lang.String name) {

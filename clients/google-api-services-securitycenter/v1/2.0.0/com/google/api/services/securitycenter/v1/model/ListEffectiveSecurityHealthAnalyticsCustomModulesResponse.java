@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Response message for listing effective Security Health Analytics custom modules.
+ * Model definition for ListEffectiveSecurityHealthAnalyticsCustomModulesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,7 +31,6 @@ package com.google.api.services.securitycenter.v1.model;
 public final class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Effective custom modules belonging to the requested parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +43,12 @@ public final class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ext
   }
 
   /**
-   * If not empty, indicates that there may be more effective custom modules to be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Effective custom modules belonging to the requested parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule> getEffectiveSecurityHealthAnalyticsCustomModules() {
@@ -59,7 +56,6 @@ public final class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ext
   }
 
   /**
-   * Effective custom modules belonging to the requested parent.
    * @param effectiveSecurityHealthAnalyticsCustomModules effectiveSecurityHealthAnalyticsCustomModules or {@code null} for none
    */
   public ListEffectiveSecurityHealthAnalyticsCustomModulesResponse setEffectiveSecurityHealthAnalyticsCustomModules(java.util.List<GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule> effectiveSecurityHealthAnalyticsCustomModules) {
@@ -68,7 +64,6 @@ public final class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ext
   }
 
   /**
-   * If not empty, indicates that there may be more effective custom modules to be returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +71,6 @@ public final class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse ext
   }
 
   /**
-   * If not empty, indicates that there may be more effective custom modules to be returned.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListEffectiveSecurityHealthAnalyticsCustomModulesResponse setNextPageToken(java.lang.String nextPageToken) {

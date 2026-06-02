@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An AWS account that is a member of an organization.
+ * Model definition for AwsAccount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AwsAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier (ID) of the account, containing exactly 12 digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The friendly name of this account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The unique identifier (ID) of the account, containing exactly 12 digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +50,6 @@ public final class AwsAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier (ID) of the account, containing exactly 12 digits.
    * @param id id or {@code null} for none
    */
   public AwsAccount setId(java.lang.String id) {
@@ -62,7 +58,6 @@ public final class AwsAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The friendly name of this account.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +65,6 @@ public final class AwsAccount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The friendly name of this account.
    * @param name name or {@code null} for none
    */
   public AwsAccount setName(java.lang.String name) {

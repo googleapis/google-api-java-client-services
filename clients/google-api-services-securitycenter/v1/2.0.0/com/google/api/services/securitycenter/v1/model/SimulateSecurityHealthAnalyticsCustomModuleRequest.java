@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Request message to simulate a CustomConfig against a given test resource. Maximum size of the
- * request is 4 MB by default.
+ * Model definition for SimulateSecurityHealthAnalyticsCustomModuleRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The custom configuration that you need to test.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1CustomConfig customConfig;
 
   /**
-   * Required. Resource data to simulate custom module against.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SimulatedResource resource;
 
   /**
-   * Required. The custom configuration that you need to test.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1CustomConfig getCustomConfig() {
@@ -54,7 +50,6 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends co
   }
 
   /**
-   * Required. The custom configuration that you need to test.
    * @param customConfig customConfig or {@code null} for none
    */
   public SimulateSecurityHealthAnalyticsCustomModuleRequest setCustomConfig(GoogleCloudSecuritycenterV1CustomConfig customConfig) {
@@ -63,7 +58,6 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends co
   }
 
   /**
-   * Required. Resource data to simulate custom module against.
    * @return value or {@code null} for none
    */
   public SimulatedResource getResource() {
@@ -71,7 +65,6 @@ public final class SimulateSecurityHealthAnalyticsCustomModuleRequest extends co
   }
 
   /**
-   * Required. Resource data to simulate custom module against.
    * @param resource resource or {@code null} for none
    */
   public SimulateSecurityHealthAnalyticsCustomModuleRequest setResource(SimulatedResource resource) {

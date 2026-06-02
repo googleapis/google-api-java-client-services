@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * IP rules associated with the finding.
+ * Model definition for IpRules.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,54 +31,42 @@ package com.google.api.services.securitycenter.v1.model;
 public final class IpRules extends com.google.api.client.json.GenericJson {
 
   /**
-   * Tuple with allowed rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Allowed allowed;
 
   /**
-   * Tuple with denied rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Denied denied;
 
   /**
-   * If destination IP ranges are specified, the firewall rule applies only to traffic that has a
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * supports IPv4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> destinationIpRanges;
 
   /**
-   * The direction that the rule is applicable to, one of ingress or egress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String direction;
 
   /**
-   * Name of the network protocol service, such as FTP, that is exposed by the open port. Follows
-   * the naming convention available at: https://www.iana.org/assignments/service-names-port-
-   * numbers/service-names-port-numbers.xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> exposedServices;
 
   /**
-   * If source IP ranges are specified, the firewall rule applies only to traffic that has a source
-   * IP address in these ranges. These ranges must be expressed in CIDR format. Only supports IPv4.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sourceIpRanges;
 
   /**
-   * Tuple with allowed rules.
    * @return value or {@code null} for none
    */
   public Allowed getAllowed() {
@@ -86,7 +74,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tuple with allowed rules.
    * @param allowed allowed or {@code null} for none
    */
   public IpRules setAllowed(Allowed allowed) {
@@ -95,7 +82,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tuple with denied rules.
    * @return value or {@code null} for none
    */
   public Denied getDenied() {
@@ -103,7 +89,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tuple with denied rules.
    * @param denied denied or {@code null} for none
    */
   public IpRules setDenied(Denied denied) {
@@ -112,9 +97,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If destination IP ranges are specified, the firewall rule applies only to traffic that has a
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * supports IPv4.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinationIpRanges() {
@@ -122,9 +104,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If destination IP ranges are specified, the firewall rule applies only to traffic that has a
-   * destination IP address in these ranges. These ranges must be expressed in CIDR format. Only
-   * supports IPv4.
    * @param destinationIpRanges destinationIpRanges or {@code null} for none
    */
   public IpRules setDestinationIpRanges(java.util.List<java.lang.String> destinationIpRanges) {
@@ -133,7 +112,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The direction that the rule is applicable to, one of ingress or egress.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -141,7 +119,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The direction that the rule is applicable to, one of ingress or egress.
    * @param direction direction or {@code null} for none
    */
   public IpRules setDirection(java.lang.String direction) {
@@ -150,9 +127,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the network protocol service, such as FTP, that is exposed by the open port. Follows
-   * the naming convention available at: https://www.iana.org/assignments/service-names-port-
-   * numbers/service-names-port-numbers.xhtml.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExposedServices() {
@@ -160,9 +134,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the network protocol service, such as FTP, that is exposed by the open port. Follows
-   * the naming convention available at: https://www.iana.org/assignments/service-names-port-
-   * numbers/service-names-port-numbers.xhtml.
    * @param exposedServices exposedServices or {@code null} for none
    */
   public IpRules setExposedServices(java.util.List<java.lang.String> exposedServices) {
@@ -171,8 +142,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source IP ranges are specified, the firewall rule applies only to traffic that has a source
-   * IP address in these ranges. These ranges must be expressed in CIDR format. Only supports IPv4.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSourceIpRanges() {
@@ -180,8 +149,6 @@ public final class IpRules extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If source IP ranges are specified, the firewall rule applies only to traffic that has a source
-   * IP address in these ranges. These ranges must be expressed in CIDR format. Only supports IPv4.
    * @param sourceIpRanges sourceIpRanges or {@code null} for none
    */
   public IpRules setSourceIpRanges(java.util.List<java.lang.String> sourceIpRanges) {

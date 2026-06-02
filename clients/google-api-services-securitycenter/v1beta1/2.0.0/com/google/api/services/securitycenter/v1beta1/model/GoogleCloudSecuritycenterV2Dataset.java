@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Vertex AI dataset associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2Dataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,29 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user defined display name of dataset, e.g. plants-dataset
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Resource name of the dataset, e.g.
-   * projects/{project}/locations/{location}/datasets/2094040236064505856
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * The user defined display name of dataset, e.g. plants-dataset
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -61,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * The user defined display name of dataset, e.g. plants-dataset
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Dataset setDisplayName(java.lang.String displayName) {
@@ -70,8 +64,6 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Resource name of the dataset, e.g.
-   * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -79,8 +71,6 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Resource name of the dataset, e.g.
-   * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Dataset setName(java.lang.String name) {
@@ -89,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -97,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * @param source source or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Dataset setSource(java.lang.String source) {

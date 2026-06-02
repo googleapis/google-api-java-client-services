@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Information about the requests relevant to the finding.
+ * Model definition for Requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,37 +31,30 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class Requests extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allowed RPS (requests per second) over the long term.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer longTermAllowed;
 
   /**
-   * Denied RPS (requests per second) over the long term.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer longTermDenied;
 
   /**
-   * For 'Increasing deny ratio', the ratio is the denied traffic divided by the allowed traffic.
-   * For 'Allowed traffic spike', the ratio is the allowed traffic in the short term divided by
-   * allowed traffic in the long term.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double ratio;
 
   /**
-   * Allowed RPS (requests per second) in the short term.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer shortTermAllowed;
 
   /**
-   * Allowed RPS (requests per second) over the long term.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLongTermAllowed() {
@@ -69,7 +62,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allowed RPS (requests per second) over the long term.
    * @param longTermAllowed longTermAllowed or {@code null} for none
    */
   public Requests setLongTermAllowed(java.lang.Integer longTermAllowed) {
@@ -78,7 +70,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Denied RPS (requests per second) over the long term.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLongTermDenied() {
@@ -86,7 +77,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Denied RPS (requests per second) over the long term.
    * @param longTermDenied longTermDenied or {@code null} for none
    */
   public Requests setLongTermDenied(java.lang.Integer longTermDenied) {
@@ -95,9 +85,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For 'Increasing deny ratio', the ratio is the denied traffic divided by the allowed traffic.
-   * For 'Allowed traffic spike', the ratio is the allowed traffic in the short term divided by
-   * allowed traffic in the long term.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRatio() {
@@ -105,9 +92,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For 'Increasing deny ratio', the ratio is the denied traffic divided by the allowed traffic.
-   * For 'Allowed traffic spike', the ratio is the allowed traffic in the short term divided by
-   * allowed traffic in the long term.
    * @param ratio ratio or {@code null} for none
    */
   public Requests setRatio(java.lang.Double ratio) {
@@ -116,7 +100,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allowed RPS (requests per second) in the short term.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getShortTermAllowed() {
@@ -124,7 +107,6 @@ public final class Requests extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Allowed RPS (requests per second) in the short term.
    * @param shortTermAllowed shortTermAllowed or {@code null} for none
    */
   public Requests setShortTermAllowed(java.lang.Integer shortTermAllowed) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Contains information about the IP connection associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2Connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,42 +31,36 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Destination IP address. Not present for sockets that are listening and not connected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationIp;
 
   /**
-   * Destination port. Not present for sockets that are listening and not connected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer destinationPort;
 
   /**
-   * IANA Internet Protocol Number such as TCP(6) and UDP(17).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * Source IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceIp;
 
   /**
-   * Source port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sourcePort;
 
   /**
-   * Destination IP address. Not present for sockets that are listening and not connected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationIp() {
@@ -74,7 +68,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Destination IP address. Not present for sockets that are listening and not connected.
    * @param destinationIp destinationIp or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Connection setDestinationIp(java.lang.String destinationIp) {
@@ -83,7 +76,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Destination port. Not present for sockets that are listening and not connected.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDestinationPort() {
@@ -91,7 +83,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Destination port. Not present for sockets that are listening and not connected.
    * @param destinationPort destinationPort or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Connection setDestinationPort(java.lang.Integer destinationPort) {
@@ -100,7 +91,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * IANA Internet Protocol Number such as TCP(6) and UDP(17).
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -108,7 +98,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * IANA Internet Protocol Number such as TCP(6) and UDP(17).
    * @param protocol protocol or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Connection setProtocol(java.lang.String protocol) {
@@ -117,7 +106,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Source IP address.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceIp() {
@@ -125,7 +113,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Source IP address.
    * @param sourceIp sourceIp or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Connection setSourceIp(java.lang.String sourceIp) {
@@ -134,7 +121,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Source port.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSourcePort() {
@@ -142,7 +128,6 @@ public final class GoogleCloudSecuritycenterV2Connection extends com.google.api.
   }
 
   /**
-   * Source port.
    * @param sourcePort sourcePort or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Connection setSourcePort(java.lang.Integer sourcePort) {

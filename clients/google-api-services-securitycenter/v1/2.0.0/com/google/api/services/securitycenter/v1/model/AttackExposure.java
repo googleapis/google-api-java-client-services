@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * An attack exposure contains the results of an attack path simulation run.
+ * Model definition for AttackExposure.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,60 +31,48 @@ package com.google.api.services.securitycenter.v1.model;
 public final class AttackExposure extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackExposureResult;
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer exposedHighValueResourcesCount;
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer exposedLowValueResourcesCount;
 
   /**
-   * The number of medium value resources that are exposed as a result of this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer exposedMediumValueResourcesCount;
 
   /**
-   * The most recent time the attack exposure was updated on this finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String latestCalculationTime;
 
   /**
-   * A number between 0 (inclusive) and infinity that represents how important this finding is to
-   * remediate. The higher the score, the more important it is to remediate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double score;
 
   /**
-   * What state this AttackExposure is in. This captures whether or not an attack exposure has been
-   * calculated or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackExposureResult() {
@@ -92,8 +80,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The resource name of the attack path simulation result that contains the details regarding this
-   * attack exposure score. Example: `organizations/123/simulations/456/attackExposureResults/789`
    * @param attackExposureResult attackExposureResult or {@code null} for none
    */
   public AttackExposure setAttackExposureResult(java.lang.String attackExposureResult) {
@@ -102,7 +88,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExposedHighValueResourcesCount() {
@@ -110,7 +95,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * @param exposedHighValueResourcesCount exposedHighValueResourcesCount or {@code null} for none
    */
   public AttackExposure setExposedHighValueResourcesCount(java.lang.Integer exposedHighValueResourcesCount) {
@@ -119,7 +103,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExposedLowValueResourcesCount() {
@@ -127,7 +110,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of high value resources that are exposed as a result of this finding.
    * @param exposedLowValueResourcesCount exposedLowValueResourcesCount or {@code null} for none
    */
   public AttackExposure setExposedLowValueResourcesCount(java.lang.Integer exposedLowValueResourcesCount) {
@@ -136,7 +118,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of medium value resources that are exposed as a result of this finding.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExposedMediumValueResourcesCount() {
@@ -144,7 +125,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The number of medium value resources that are exposed as a result of this finding.
    * @param exposedMediumValueResourcesCount exposedMediumValueResourcesCount or {@code null} for none
    */
   public AttackExposure setExposedMediumValueResourcesCount(java.lang.Integer exposedMediumValueResourcesCount) {
@@ -153,7 +133,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The most recent time the attack exposure was updated on this finding.
    * @return value or {@code null} for none
    */
   public String getLatestCalculationTime() {
@@ -161,7 +140,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The most recent time the attack exposure was updated on this finding.
    * @param latestCalculationTime latestCalculationTime or {@code null} for none
    */
   public AttackExposure setLatestCalculationTime(String latestCalculationTime) {
@@ -170,8 +148,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A number between 0 (inclusive) and infinity that represents how important this finding is to
-   * remediate. The higher the score, the more important it is to remediate.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScore() {
@@ -179,8 +155,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A number between 0 (inclusive) and infinity that represents how important this finding is to
-   * remediate. The higher the score, the more important it is to remediate.
    * @param score score or {@code null} for none
    */
   public AttackExposure setScore(java.lang.Double score) {
@@ -189,8 +163,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * What state this AttackExposure is in. This captures whether or not an attack exposure has been
-   * calculated or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -198,8 +170,6 @@ public final class AttackExposure extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * What state this AttackExposure is in. This captures whether or not an attack exposure has been
-   * calculated or not.
    * @param state state or {@code null} for none
    */
   public AttackExposure setState(java.lang.String state) {

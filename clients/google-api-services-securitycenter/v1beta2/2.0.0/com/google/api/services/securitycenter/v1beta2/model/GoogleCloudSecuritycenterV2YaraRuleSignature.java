@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * A signature corresponding to a YARA rule.
+ * Model definition for GoogleCloudSecuritycenterV2YaraRuleSignature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2YaraRuleSignature extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the YARA rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String yaraRule;
 
   /**
-   * The name of the YARA rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getYaraRule() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2YaraRuleSignature extends com.goog
   }
 
   /**
-   * The name of the YARA rule.
    * @param yaraRule yaraRule or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2YaraRuleSignature setYaraRule(java.lang.String yaraRule) {

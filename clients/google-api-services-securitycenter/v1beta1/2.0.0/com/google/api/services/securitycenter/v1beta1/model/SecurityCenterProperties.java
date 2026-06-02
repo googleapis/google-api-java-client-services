@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Security Command Center managed properties. These properties are managed by Security Command
- * Center and cannot be modified by the user.
+ * Model definition for SecurityCenterProperties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,50 +31,36 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class SecurityCenterProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The full resource name of the Google Cloud resource this asset represents. This
-   * field is immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Owners of the Google Cloud resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceOwners;
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceParent;
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceProject;
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Immutable. The full resource name of the Google Cloud resource this asset represents. This
-   * field is immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -83,9 +68,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Immutable. The full resource name of the Google Cloud resource this asset represents. This
-   * field is immutable after create time. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceName resourceName or {@code null} for none
    */
   public SecurityCenterProperties setResourceName(java.lang.String resourceName) {
@@ -94,7 +76,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Owners of the Google Cloud resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceOwners() {
@@ -102,7 +83,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * Owners of the Google Cloud resource.
    * @param resourceOwners resourceOwners or {@code null} for none
    */
   public SecurityCenterProperties setResourceOwners(java.util.List<java.lang.String> resourceOwners) {
@@ -111,8 +91,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceParent() {
@@ -120,8 +98,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the immediate parent of the resource. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceParent resourceParent or {@code null} for none
    */
   public SecurityCenterProperties setResourceParent(java.lang.String resourceParent) {
@@ -130,8 +106,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceProject() {
@@ -139,8 +113,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The full resource name of the project the resource belongs to. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name
    * @param resourceProject resourceProject or {@code null} for none
    */
   public SecurityCenterProperties setResourceProject(java.lang.String resourceProject) {
@@ -149,9 +121,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -159,9 +128,6 @@ public final class SecurityCenterProperties extends com.google.api.client.json.G
   }
 
   /**
-   * The type of the Google Cloud resource. Examples include: APPLICATION, PROJECT, and
-   * ORGANIZATION. This is a case insensitive field defined by Security Command Center and/or the
-   * producer of the resource and is immutable after create time.
    * @param resourceType resourceType or {@code null} for none
    */
   public SecurityCenterProperties setResourceType(java.lang.String resourceType) {

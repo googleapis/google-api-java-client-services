@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * The response message for Operations.ListOperations.
+ * Model definition for ListOperationsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class ListOperationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The standard List next-page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Operation> operations;
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The standard List next-page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -62,7 +56,6 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The standard List next-page token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListOperationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -71,7 +64,6 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<Operation> getOperations() {
@@ -79,7 +71,6 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * @param operations operations or {@code null} for none
    */
   public ListOperationsResponse setOperations(java.util.List<Operation> operations) {
@@ -88,9 +79,6 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -98,9 +86,6 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListOperationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

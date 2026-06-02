@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Additional Links
+ * Model definition for Reference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,22 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Reference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Source of the reference e.g. NVD
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Uri for the mentioned source e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Source of the reference e.g. NVD
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -54,7 +50,6 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source of the reference e.g. NVD
    * @param source source or {@code null} for none
    */
   public Reference setSource(java.lang.String source) {
@@ -63,8 +58,6 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri for the mentioned source e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -72,8 +65,6 @@ public final class Reference extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri for the mentioned source e.g. https://cve.mitre.org/cgi-
-   * bin/cvename.cgi?name=CVE-2021-34527.
    * @param uri uri or {@code null} for none
    */
   public Reference setUri(java.lang.String uri) {

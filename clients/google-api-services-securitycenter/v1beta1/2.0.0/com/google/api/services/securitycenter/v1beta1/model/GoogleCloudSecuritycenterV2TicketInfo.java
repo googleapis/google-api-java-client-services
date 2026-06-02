@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Information about the ticket, if any, that is being used to track the resolution of the issue
- * that is identified by this finding.
+ * Model definition for GoogleCloudSecuritycenterV2TicketInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,49 +31,42 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The assignee of the ticket in the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assignee;
 
   /**
-   * The description of the ticket in the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The identifier of the ticket in the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The latest status of the ticket, as reported by the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The time when the ticket was last updated, as reported by the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The link to the ticket in the ticket system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The assignee of the ticket in the ticket system.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssignee() {
@@ -82,7 +74,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The assignee of the ticket in the ticket system.
    * @param assignee assignee or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setAssignee(java.lang.String assignee) {
@@ -91,7 +82,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The description of the ticket in the ticket system.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -99,7 +89,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The description of the ticket in the ticket system.
    * @param description description or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setDescription(java.lang.String description) {
@@ -108,7 +97,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The identifier of the ticket in the ticket system.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -116,7 +104,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The identifier of the ticket in the ticket system.
    * @param id id or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setId(java.lang.String id) {
@@ -125,7 +112,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The latest status of the ticket, as reported by the ticket system.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -133,7 +119,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The latest status of the ticket, as reported by the ticket system.
    * @param status status or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setStatus(java.lang.String status) {
@@ -142,7 +127,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The time when the ticket was last updated, as reported by the ticket system.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -150,7 +134,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The time when the ticket was last updated, as reported by the ticket system.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setUpdateTime(String updateTime) {
@@ -159,7 +142,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The link to the ticket in the ticket system.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -167,7 +149,6 @@ public final class GoogleCloudSecuritycenterV2TicketInfo extends com.google.api.
   }
 
   /**
-   * The link to the ticket in the ticket system.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2TicketInfo setUri(java.lang.String uri) {

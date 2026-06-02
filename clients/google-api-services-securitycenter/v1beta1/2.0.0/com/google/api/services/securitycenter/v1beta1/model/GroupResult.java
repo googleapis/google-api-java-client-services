@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Result containing the properties and count of a groupBy request.
+ * Model definition for GroupResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GroupResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Total count of resources for the given properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * Properties matching the groupBy fields in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> properties;
 
   /**
-   * Total count of resources for the given properties.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -53,7 +50,6 @@ public final class GroupResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total count of resources for the given properties.
    * @param count count or {@code null} for none
    */
   public GroupResult setCount(java.lang.Long count) {
@@ -62,7 +58,6 @@ public final class GroupResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties matching the groupBy fields in the request.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getProperties() {
@@ -70,7 +65,6 @@ public final class GroupResult extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Properties matching the groupBy fields in the request.
    * @param properties properties or {@code null} for none
    */
   public GroupResult setProperties(java.util.Map<String, java.lang.Object> properties) {

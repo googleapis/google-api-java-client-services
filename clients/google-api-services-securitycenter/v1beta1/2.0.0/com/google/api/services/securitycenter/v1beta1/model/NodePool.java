@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Provides GKE node pool information.
+ * Model definition for NodePool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Kubernetes node pool name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Nodes associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +49,6 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes node pool name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,7 +56,6 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes node pool name.
    * @param name name or {@code null} for none
    */
   public NodePool setName(java.lang.String name) {
@@ -68,7 +64,6 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nodes associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<Node> getNodes() {
@@ -76,7 +71,6 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Nodes associated with the finding.
    * @param nodes nodes or {@code null} for none
    */
   public NodePool setNodes(java.util.List<Node> nodes) {

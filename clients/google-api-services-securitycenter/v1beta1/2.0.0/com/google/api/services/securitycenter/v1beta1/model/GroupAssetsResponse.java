@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Response message for grouping by assets.
+ * Model definition for GroupAssetsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,30 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GroupAssetsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Group results. There exists an element for each existing unique combination of property/values.
-   * The element contains a count for the number of times those specific property/values appear.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GroupResult> groupByResults;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Time used for executing the groupBy request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String readTime;
 
   /**
-   * Group results. There exists an element for each existing unique combination of property/values.
-   * The element contains a count for the number of times those specific property/values appear.
    * @return value or {@code null} for none
    */
   public java.util.List<GroupResult> getGroupByResults() {
@@ -62,8 +56,6 @@ public final class GroupAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Group results. There exists an element for each existing unique combination of property/values.
-   * The element contains a count for the number of times those specific property/values appear.
    * @param groupByResults groupByResults or {@code null} for none
    */
   public GroupAssetsResponse setGroupByResults(java.util.List<GroupResult> groupByResults) {
@@ -72,7 +64,6 @@ public final class GroupAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -80,7 +71,6 @@ public final class GroupAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GroupAssetsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -89,7 +79,6 @@ public final class GroupAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Time used for executing the groupBy request.
    * @return value or {@code null} for none
    */
   public String getReadTime() {
@@ -97,7 +86,6 @@ public final class GroupAssetsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * Time used for executing the groupBy request.
    * @param readTime readTime or {@code null} for none
    */
   public GroupAssetsResponse setReadTime(String readTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Kubernetes-related attributes.
+ * Model definition for Kubernetes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,8 +31,6 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class Kubernetes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Provides information on any Kubernetes access reviews (privilege checks) relevant to the
-   * finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +43,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes role binding information for findings that involve [RoleBindings or
-   * ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,49 +55,36 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools)
-   * associated with the finding. This field contains node pool information for each node, when it
-   * is available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NodePool> nodePools;
 
   /**
-   * Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-
-   * architecture#nodes) information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Node> nodes;
 
   /**
-   * Kubernetes objects related to the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SecurityCommandCenterObject> objects;
 
   /**
-   * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with
-   * the finding. This field contains Pod records for each container that is owned by a Pod.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Pod> pods;
 
   /**
-   * Provides Kubernetes role information for findings that involve [Roles or
-   * ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Role> roles;
 
   /**
-   * Provides information on any Kubernetes access reviews (privilege checks) relevant to the
-   * finding.
    * @return value or {@code null} for none
    */
   public java.util.List<AccessReview> getAccessReviews() {
@@ -110,8 +92,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides information on any Kubernetes access reviews (privilege checks) relevant to the
-   * finding.
    * @param accessReviews accessReviews or {@code null} for none
    */
   public Kubernetes setAccessReviews(java.util.List<AccessReview> accessReviews) {
@@ -120,9 +100,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes role binding information for findings that involve [RoleBindings or
-   * ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV1Binding> getBindings() {
@@ -130,9 +107,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes role binding information for findings that involve [RoleBindings or
-   * ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * @param bindings bindings or {@code null} for none
    */
   public Kubernetes setBindings(java.util.List<GoogleCloudSecuritycenterV1Binding> bindings) {
@@ -141,9 +115,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools)
-   * associated with the finding. This field contains node pool information for each node, when it
-   * is available.
    * @return value or {@code null} for none
    */
   public java.util.List<NodePool> getNodePools() {
@@ -151,9 +122,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools)
-   * associated with the finding. This field contains node pool information for each node, when it
-   * is available.
    * @param nodePools nodePools or {@code null} for none
    */
   public Kubernetes setNodePools(java.util.List<NodePool> nodePools) {
@@ -162,8 +130,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-
-   * architecture#nodes) information.
    * @return value or {@code null} for none
    */
   public java.util.List<Node> getNodes() {
@@ -171,8 +137,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-
-   * architecture#nodes) information.
    * @param nodes nodes or {@code null} for none
    */
   public Kubernetes setNodes(java.util.List<Node> nodes) {
@@ -181,7 +145,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes objects related to the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<SecurityCommandCenterObject> getObjects() {
@@ -189,7 +152,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes objects related to the finding.
    * @param objects objects or {@code null} for none
    */
   public Kubernetes setObjects(java.util.List<SecurityCommandCenterObject> objects) {
@@ -198,8 +160,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with
-   * the finding. This field contains Pod records for each container that is owned by a Pod.
    * @return value or {@code null} for none
    */
   public java.util.List<Pod> getPods() {
@@ -207,8 +167,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with
-   * the finding. This field contains Pod records for each container that is owned by a Pod.
    * @param pods pods or {@code null} for none
    */
   public Kubernetes setPods(java.util.List<Pod> pods) {
@@ -217,9 +175,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes role information for findings that involve [Roles or
-   * ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * @return value or {@code null} for none
    */
   public java.util.List<Role> getRoles() {
@@ -227,9 +182,6 @@ public final class Kubernetes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Provides Kubernetes role information for findings that involve [Roles or
-   * ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-
-   * control).
    * @param roles roles or {@code null} for none
    */
   public Kubernetes setRoles(java.util.List<Role> roles) {

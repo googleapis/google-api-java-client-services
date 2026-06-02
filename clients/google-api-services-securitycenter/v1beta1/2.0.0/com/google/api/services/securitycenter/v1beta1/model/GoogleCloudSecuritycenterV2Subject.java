@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Represents a Kubernetes subject.
+ * Model definition for GoogleCloudSecuritycenterV2Subject.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Authentication type for the subject.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Name for the subject.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Namespace for the subject.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ns;
 
   /**
-   * Authentication type for the subject.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -60,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.cli
   }
 
   /**
-   * Authentication type for the subject.
    * @param kind kind or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Subject setKind(java.lang.String kind) {
@@ -69,7 +64,6 @@ public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.cli
   }
 
   /**
-   * Name for the subject.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +71,6 @@ public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.cli
   }
 
   /**
-   * Name for the subject.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Subject setName(java.lang.String name) {
@@ -86,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.cli
   }
 
   /**
-   * Namespace for the subject.
    * @return value or {@code null} for none
    */
   public java.lang.String getNs() {
@@ -94,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2Subject extends com.google.api.cli
   }
 
   /**
-   * Namespace for the subject.
    * @param ns ns or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Subject setNs(java.lang.String ns) {

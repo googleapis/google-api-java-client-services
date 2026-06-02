@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1beta1.model;
 
 /**
- * Environment of the Application, Service, or Workload
+ * Model definition for GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvironment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,14 +31,12 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvironment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Environment Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Environment Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -46,7 +44,6 @@ public final class GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvir
   }
 
   /**
-   * Environment Type.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ResourceApplicationAttributesEnvironment setType(java.lang.String type) {

@@ -30,6 +30,13 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveAudienceMembersStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The status of the composite data removal from the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoveCompositeDataStatus compositeDataRemovalStatus;
+
+  /**
    * The status of the mobile data removal from the destination.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private RemoveUserIdDataStatus userIdDataRemovalStatus;
+
+  /**
+   * The status of the composite data removal from the destination.
+   * @return value or {@code null} for none
+   */
+  public RemoveCompositeDataStatus getCompositeDataRemovalStatus() {
+    return compositeDataRemovalStatus;
+  }
+
+  /**
+   * The status of the composite data removal from the destination.
+   * @param compositeDataRemovalStatus compositeDataRemovalStatus or {@code null} for none
+   */
+  public RemoveAudienceMembersStatus setCompositeDataRemovalStatus(RemoveCompositeDataStatus compositeDataRemovalStatus) {
+    this.compositeDataRemovalStatus = compositeDataRemovalStatus;
+    return this;
+  }
 
   /**
    * The status of the mobile data removal from the destination.

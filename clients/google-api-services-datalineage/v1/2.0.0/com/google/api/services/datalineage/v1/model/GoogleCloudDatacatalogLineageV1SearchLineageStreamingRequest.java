@@ -51,7 +51,8 @@ public final class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest 
   private GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestSearchLimits limits;
 
   /**
-   * Required. The locations to search in.
+   * Required. The locations to search in. This list should contain the location from the `parent`
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +117,8 @@ public final class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest 
   }
 
   /**
-   * Required. The locations to search in.
+   * Required. The locations to search in. This list should contain the location from the `parent`
+   * field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -124,7 +126,8 @@ public final class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest 
   }
 
   /**
-   * Required. The locations to search in.
+   * Required. The locations to search in. This list should contain the location from the `parent`
+   * field.
    * @param locations locations or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequest setLocations(java.util.List<java.lang.String> locations) {

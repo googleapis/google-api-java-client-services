@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents the result of evaluating artifact guard policies.
+ * Model definition for GoogleCloudSecuritycenterV2ArtifactGuardPolicies.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,21 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicies extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of failing policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2ArtifactGuardPolicy> failingPolicies;
 
   /**
-   * The ID of the resource that has policies configured for it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceId;
 
   /**
-   * A list of failing policies.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2ArtifactGuardPolicy> getFailingPolicies() {
@@ -53,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicies extends com.
   }
 
   /**
-   * A list of failing policies.
    * @param failingPolicies failingPolicies or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicies setFailingPolicies(java.util.List<GoogleCloudSecuritycenterV2ArtifactGuardPolicy> failingPolicies) {
@@ -62,7 +58,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicies extends com.
   }
 
   /**
-   * The ID of the resource that has policies configured for it.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -70,7 +65,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicies extends com.
   }
 
   /**
-   * The ID of the resource that has policies configured for it.
    * @param resourceId resourceId or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicies setResourceId(java.lang.String resourceId) {

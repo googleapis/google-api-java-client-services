@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center's Notification
+ * Model definition for GoogleCloudSecuritycenterV1p1beta1NotificationMessage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,28 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * If it's a Finding based notification config, this field will be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1p1beta1Finding finding;
 
   /**
-   * Name of the notification config that generated current notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notificationConfigName;
 
   /**
-   * The Cloud resource tied to the notification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1p1beta1Resource resource;
 
   /**
-   * If it's a Finding based notification config, this field will be populated.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Finding getFinding() {
@@ -60,7 +56,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   }
 
   /**
-   * If it's a Finding based notification config, this field will be populated.
    * @param finding finding or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setFinding(GoogleCloudSecuritycenterV1p1beta1Finding finding) {
@@ -69,7 +64,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   }
 
   /**
-   * Name of the notification config that generated current notification.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationConfigName() {
@@ -77,7 +71,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   }
 
   /**
-   * Name of the notification config that generated current notification.
    * @param notificationConfigName notificationConfigName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setNotificationConfigName(java.lang.String notificationConfigName) {
@@ -86,7 +79,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   }
 
   /**
-   * The Cloud resource tied to the notification.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1Resource getResource() {
@@ -94,7 +86,6 @@ public final class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends
   }
 
   /**
-   * The Cloud resource tied to the notification.
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudSecuritycenterV1p1beta1NotificationMessage setResource(GoogleCloudSecuritycenterV1p1beta1Resource resource) {

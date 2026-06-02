@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * A resource associated with the an issue.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,87 +31,72 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ADC application associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAdcApplication adcApplication;
 
   /**
-   * The ADC template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision adcApplicationTemplate;
 
   /**
-   * The ADC shared template associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision adcSharedTemplate;
 
   /**
-   * The AppHub application associated with the resource, if any. Only populated for the primary
-   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceApplication application;
 
   /**
-   * The AWS metadata of the resource associated with the issue. Only populated for AWS resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAwsMetadata awsMetadata;
 
   /**
-   * The Azure metadata of the resource associated with the issue. Only populated for Azure
-   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceAzureMetadata azureMetadata;
 
   /**
-   * The cloud provider of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudProvider;
 
   /**
-   * The resource-type specific display name of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The Google Cloud metadata of the resource associated with the issue. Only populated for Google
-   * Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata googleCloudMetadata;
 
   /**
-   * The full resource name of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The type of the resource associated with the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The ADC application associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcApplication getAdcApplication() {
@@ -119,7 +104,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The ADC application associated with the finding.
    * @param adcApplication adcApplication or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setAdcApplication(GoogleCloudSecuritycenterV2IssueResourceAdcApplication adcApplication) {
@@ -128,7 +112,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The ADC template associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision getAdcApplicationTemplate() {
@@ -136,7 +119,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The ADC template associated with the finding.
    * @param adcApplicationTemplate adcApplicationTemplate or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setAdcApplicationTemplate(GoogleCloudSecuritycenterV2IssueResourceAdcApplicationTemplateRevision adcApplicationTemplate) {
@@ -145,7 +127,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision getAdcSharedTemplate() {
@@ -153,7 +134,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The ADC shared template associated with the finding.
    * @param adcSharedTemplate adcSharedTemplate or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setAdcSharedTemplate(GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision adcSharedTemplate) {
@@ -162,8 +142,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The AppHub application associated with the resource, if any. Only populated for the primary
-   * resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceApplication getApplication() {
@@ -171,8 +149,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The AppHub application associated with the resource, if any. Only populated for the primary
-   * resource.
    * @param application application or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setApplication(GoogleCloudSecuritycenterV2IssueResourceApplication application) {
@@ -181,7 +157,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The AWS metadata of the resource associated with the issue. Only populated for AWS resources.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAwsMetadata getAwsMetadata() {
@@ -189,7 +164,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The AWS metadata of the resource associated with the issue. Only populated for AWS resources.
    * @param awsMetadata awsMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setAwsMetadata(GoogleCloudSecuritycenterV2IssueResourceAwsMetadata awsMetadata) {
@@ -198,8 +172,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The Azure metadata of the resource associated with the issue. Only populated for Azure
-   * resources.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAzureMetadata getAzureMetadata() {
@@ -207,8 +179,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The Azure metadata of the resource associated with the issue. Only populated for Azure
-   * resources.
    * @param azureMetadata azureMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setAzureMetadata(GoogleCloudSecuritycenterV2IssueResourceAzureMetadata azureMetadata) {
@@ -217,7 +187,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The cloud provider of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudProvider() {
@@ -225,7 +194,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The cloud provider of the resource associated with the issue.
    * @param cloudProvider cloudProvider or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setCloudProvider(java.lang.String cloudProvider) {
@@ -234,7 +202,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The resource-type specific display name of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -242,7 +209,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The resource-type specific display name of the resource associated with the issue.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setDisplayName(java.lang.String displayName) {
@@ -251,8 +217,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The Google Cloud metadata of the resource associated with the issue. Only populated for Google
-   * Cloud resources.
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata getGoogleCloudMetadata() {
@@ -260,8 +224,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The Google Cloud metadata of the resource associated with the issue. Only populated for Google
-   * Cloud resources.
    * @param googleCloudMetadata googleCloudMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setGoogleCloudMetadata(GoogleCloudSecuritycenterV2IssueResourceGoogleCloudMetadata googleCloudMetadata) {
@@ -270,7 +232,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The full resource name of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -278,7 +239,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The full resource name of the resource associated with the issue.
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setName(java.lang.String name) {
@@ -287,7 +247,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The type of the resource associated with the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -295,7 +254,6 @@ public final class GoogleCloudSecuritycenterV2IssueResource extends com.google.a
   }
 
   /**
-   * The type of the resource associated with the issue.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResource setType(java.lang.String type) {

@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents an ADC shared template associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,16 +31,12 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of an ADC Shared Template Revision. Format: projects/{project}/locations/{loc
-   * ation}/spaces/{space}/applicationTemplates/{application_template}/revisions/{revision}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The resource name of an ADC Shared Template Revision. Format: projects/{project}/locations/{loc
-   * ation}/spaces/{space}/applicationTemplates/{application_template}/revisions/{revision}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +44,6 @@ public final class GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevi
   }
 
   /**
-   * The resource name of an ADC Shared Template Revision. Format: projects/{project}/locations/{loc
-   * ation}/spaces/{space}/applicationTemplates/{application_template}/revisions/{revision}
    * @param name name or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2IssueResourceAdcSharedTemplateRevision setName(java.lang.String name) {

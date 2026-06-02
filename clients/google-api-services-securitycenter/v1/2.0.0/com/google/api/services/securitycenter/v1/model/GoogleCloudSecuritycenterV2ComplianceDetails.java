@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Compliance Details associated with the finding.
+ * Model definition for GoogleCloudSecuritycenterV2ComplianceDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,29 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * CloudControl associated with the finding
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2CloudControl cloudControl;
 
   /**
-   * Cloud Control Deployments associated with the finding. For example,
-   * organizations/123/locations/global/cloudControlDeployments/deploymentIdentifier
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> cloudControlDeploymentNames;
 
   /**
-   * Details of Frameworks associated with the finding
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Framework> frameworks;
 
   /**
-   * CloudControl associated with the finding
    * @return value or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2CloudControl getCloudControl() {
@@ -61,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.goog
   }
 
   /**
-   * CloudControl associated with the finding
    * @param cloudControl cloudControl or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ComplianceDetails setCloudControl(GoogleCloudSecuritycenterV2CloudControl cloudControl) {
@@ -70,8 +64,6 @@ public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.goog
   }
 
   /**
-   * Cloud Control Deployments associated with the finding. For example,
-   * organizations/123/locations/global/cloudControlDeployments/deploymentIdentifier
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCloudControlDeploymentNames() {
@@ -79,8 +71,6 @@ public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.goog
   }
 
   /**
-   * Cloud Control Deployments associated with the finding. For example,
-   * organizations/123/locations/global/cloudControlDeployments/deploymentIdentifier
    * @param cloudControlDeploymentNames cloudControlDeploymentNames or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ComplianceDetails setCloudControlDeploymentNames(java.util.List<java.lang.String> cloudControlDeploymentNames) {
@@ -89,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.goog
   }
 
   /**
-   * Details of Frameworks associated with the finding
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Framework> getFrameworks() {
@@ -97,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2ComplianceDetails extends com.goog
   }
 
   /**
-   * Details of Frameworks associated with the finding
    * @param frameworks frameworks or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ComplianceDetails setFrameworks(java.util.List<GoogleCloudSecuritycenterV2Framework> frameworks) {

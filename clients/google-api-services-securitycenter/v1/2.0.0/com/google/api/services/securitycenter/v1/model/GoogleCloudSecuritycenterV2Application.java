@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents an application associated with a finding.
+ * Model definition for GoogleCloudSecuritycenterV2Application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,24 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Application extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base URI that identifies the network location of the application in which the vulnerability
-   * was detected. For example, `http://example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baseUri;
 
   /**
-   * The full URI with payload that could be used to reproduce the vulnerability. For example,
-   * `http://example.com?p=aMmYgI6H`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullUri;
 
   /**
-   * The base URI that identifies the network location of the application in which the vulnerability
-   * was detected. For example, `http://example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseUri() {
@@ -56,8 +50,6 @@ public final class GoogleCloudSecuritycenterV2Application extends com.google.api
   }
 
   /**
-   * The base URI that identifies the network location of the application in which the vulnerability
-   * was detected. For example, `http://example.com`.
    * @param baseUri baseUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Application setBaseUri(java.lang.String baseUri) {
@@ -66,8 +58,6 @@ public final class GoogleCloudSecuritycenterV2Application extends com.google.api
   }
 
   /**
-   * The full URI with payload that could be used to reproduce the vulnerability. For example,
-   * `http://example.com?p=aMmYgI6H`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFullUri() {
@@ -75,8 +65,6 @@ public final class GoogleCloudSecuritycenterV2Application extends com.google.api
   }
 
   /**
-   * The full URI with payload that could be used to reproduce the vulnerability. For example,
-   * `http://example.com?p=aMmYgI6H`.
    * @param fullUri fullUri or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Application setFullUri(java.lang.String fullUri) {

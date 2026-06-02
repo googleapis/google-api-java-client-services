@@ -17,8 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * CWE stands for Common Weakness Enumeration. Information about this weakness, as described by
- * [CWE](https://cwe.mitre.org/).
+ * Model definition for GoogleCloudSecuritycenterV2Cwe.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -32,22 +31,18 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Cwe extends com.google.api.client.json.GenericJson {
 
   /**
-   * The CWE identifier, e.g. CWE-94
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Any reference to the details on the CWE, for example,
-   * https://cwe.mitre.org/data/definitions/94.html
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2Reference> references;
 
   /**
-   * The CWE identifier, e.g. CWE-94
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -55,7 +50,6 @@ public final class GoogleCloudSecuritycenterV2Cwe extends com.google.api.client.
   }
 
   /**
-   * The CWE identifier, e.g. CWE-94
    * @param id id or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cwe setId(java.lang.String id) {
@@ -64,8 +58,6 @@ public final class GoogleCloudSecuritycenterV2Cwe extends com.google.api.client.
   }
 
   /**
-   * Any reference to the details on the CWE, for example,
-   * https://cwe.mitre.org/data/definitions/94.html
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2Reference> getReferences() {
@@ -73,8 +65,6 @@ public final class GoogleCloudSecuritycenterV2Cwe extends com.google.api.client.
   }
 
   /**
-   * Any reference to the details on the CWE, for example,
-   * https://cwe.mitre.org/data/definitions/94.html
    * @param references references or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cwe setReferences(java.util.List<GoogleCloudSecuritycenterV2Reference> references) {

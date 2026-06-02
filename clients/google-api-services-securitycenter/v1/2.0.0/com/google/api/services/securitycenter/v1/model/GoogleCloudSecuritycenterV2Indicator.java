@@ -17,10 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents what's commonly known as an _indicator of compromise_ (IoC) in computer forensics.
- * This is an artifact observed on a network or in an operating system that, with high confidence,
- * indicates a computer intrusion. For more information, see [Indicator of
- * compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
+ * Model definition for GoogleCloudSecuritycenterV2Indicator.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -34,35 +31,30 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of domains associated to the Finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> domains;
 
   /**
-   * The list of IP addresses that are associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ipAddresses;
 
   /**
-   * The list of matched signatures indicating that the given process is present in the environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2ProcessSignature> signatures;
 
   /**
-   * The list of URIs associated to the Findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> uris;
 
   /**
-   * List of domains associated to the Finding.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomains() {
@@ -70,7 +62,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * List of domains associated to the Finding.
    * @param domains domains or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Indicator setDomains(java.util.List<java.lang.String> domains) {
@@ -79,7 +70,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of IP addresses that are associated with the finding.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIpAddresses() {
@@ -87,7 +77,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of IP addresses that are associated with the finding.
    * @param ipAddresses ipAddresses or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Indicator setIpAddresses(java.util.List<java.lang.String> ipAddresses) {
@@ -96,7 +85,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of matched signatures indicating that the given process is present in the environment.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudSecuritycenterV2ProcessSignature> getSignatures() {
@@ -104,7 +92,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of matched signatures indicating that the given process is present in the environment.
    * @param signatures signatures or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Indicator setSignatures(java.util.List<GoogleCloudSecuritycenterV2ProcessSignature> signatures) {
@@ -113,7 +100,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of URIs associated to the Findings.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUris() {
@@ -121,7 +107,6 @@ public final class GoogleCloudSecuritycenterV2Indicator extends com.google.api.c
   }
 
   /**
-   * The list of URIs associated to the Findings.
    * @param uris uris or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Indicator setUris(java.util.List<java.lang.String> uris) {

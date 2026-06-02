@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Common Vulnerability Scoring System version 3.
+ * Model definition for GoogleCloudSecuritycenterV2Cvssv3.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,79 +31,60 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.client.json.GenericJson {
 
   /**
-   * This metric describes the conditions beyond the attacker's control that must exist in order to
-   * exploit the vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackComplexity;
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments. This metric reflects the context by which vulnerability
-   * exploitation is possible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attackVector;
 
   /**
-   * This metric measures the impact to the availability of the impacted component resulting from a
-   * successfully exploited vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String availabilityImpact;
 
   /**
-   * The base score is a function of the base metric scores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double baseScore;
 
   /**
-   * This metric measures the impact to the confidentiality of the information resources managed by
-   * a software component due to a successfully exploited vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String confidentialityImpact;
 
   /**
-   * This metric measures the impact to integrity of a successfully exploited vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrityImpact;
 
   /**
-   * This metric describes the level of privileges an attacker must possess before successfully
-   * exploiting the vulnerability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privilegesRequired;
 
   /**
-   * The Scope metric captures whether a vulnerability in one vulnerable component impacts resources
-   * in components beyond its security scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scope;
 
   /**
-   * This metric captures the requirement for a human user, other than the attacker, to participate
-   * in the successful compromise of the vulnerable component.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userInteraction;
 
   /**
-   * This metric describes the conditions beyond the attacker's control that must exist in order to
-   * exploit the vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackComplexity() {
@@ -111,8 +92,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric describes the conditions beyond the attacker's control that must exist in order to
-   * exploit the vulnerability.
    * @param attackComplexity attackComplexity or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setAttackComplexity(java.lang.String attackComplexity) {
@@ -121,9 +100,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments. This metric reflects the context by which vulnerability
-   * exploitation is possible.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttackVector() {
@@ -131,9 +107,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over
-   * time and across user environments. This metric reflects the context by which vulnerability
-   * exploitation is possible.
    * @param attackVector attackVector or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setAttackVector(java.lang.String attackVector) {
@@ -142,8 +115,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to the availability of the impacted component resulting from a
-   * successfully exploited vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityImpact() {
@@ -151,8 +122,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to the availability of the impacted component resulting from a
-   * successfully exploited vulnerability.
    * @param availabilityImpact availabilityImpact or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setAvailabilityImpact(java.lang.String availabilityImpact) {
@@ -161,7 +130,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * The base score is a function of the base metric scores.
    * @return value or {@code null} for none
    */
   public java.lang.Double getBaseScore() {
@@ -169,7 +137,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * The base score is a function of the base metric scores.
    * @param baseScore baseScore or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setBaseScore(java.lang.Double baseScore) {
@@ -178,8 +145,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to the confidentiality of the information resources managed by
-   * a software component due to a successfully exploited vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidentialityImpact() {
@@ -187,8 +152,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to the confidentiality of the information resources managed by
-   * a software component due to a successfully exploited vulnerability.
    * @param confidentialityImpact confidentialityImpact or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setConfidentialityImpact(java.lang.String confidentialityImpact) {
@@ -197,7 +160,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to integrity of a successfully exploited vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrityImpact() {
@@ -205,7 +167,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric measures the impact to integrity of a successfully exploited vulnerability.
    * @param integrityImpact integrityImpact or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setIntegrityImpact(java.lang.String integrityImpact) {
@@ -214,8 +175,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric describes the level of privileges an attacker must possess before successfully
-   * exploiting the vulnerability.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivilegesRequired() {
@@ -223,8 +182,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric describes the level of privileges an attacker must possess before successfully
-   * exploiting the vulnerability.
    * @param privilegesRequired privilegesRequired or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setPrivilegesRequired(java.lang.String privilegesRequired) {
@@ -233,8 +190,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * The Scope metric captures whether a vulnerability in one vulnerable component impacts resources
-   * in components beyond its security scope.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -242,8 +197,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * The Scope metric captures whether a vulnerability in one vulnerable component impacts resources
-   * in components beyond its security scope.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setScope(java.lang.String scope) {
@@ -252,8 +205,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric captures the requirement for a human user, other than the attacker, to participate
-   * in the successful compromise of the vulnerable component.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserInteraction() {
@@ -261,8 +212,6 @@ public final class GoogleCloudSecuritycenterV2Cvssv3 extends com.google.api.clie
   }
 
   /**
-   * This metric captures the requirement for a human user, other than the attacker, to participate
-   * in the successful compromise of the vulnerable component.
    * @param userInteraction userInteraction or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Cvssv3 setUserInteraction(java.lang.String userInteraction) {

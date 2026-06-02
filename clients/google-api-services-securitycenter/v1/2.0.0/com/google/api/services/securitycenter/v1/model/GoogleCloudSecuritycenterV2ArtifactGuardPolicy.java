@@ -17,7 +17,7 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Represents an artifact guard policy.
+ * Model definition for GoogleCloudSecuritycenterV2ArtifactGuardPolicy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -31,29 +31,24 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reason for the policy failure, for example, "severity=HIGH AND max_vuln_count=2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String failureReason;
 
   /**
-   * The ID of the failing policy, for example,
-   * "organizations/3392779/locations/global/policies/prod-policy".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyId;
 
   /**
-   * The type of the policy evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The reason for the policy failure, for example, "severity=HIGH AND max_vuln_count=2".
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureReason() {
@@ -61,7 +56,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.go
   }
 
   /**
-   * The reason for the policy failure, for example, "severity=HIGH AND max_vuln_count=2".
    * @param failureReason failureReason or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicy setFailureReason(java.lang.String failureReason) {
@@ -70,8 +64,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.go
   }
 
   /**
-   * The ID of the failing policy, for example,
-   * "organizations/3392779/locations/global/policies/prod-policy".
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyId() {
@@ -79,8 +71,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.go
   }
 
   /**
-   * The ID of the failing policy, for example,
-   * "organizations/3392779/locations/global/policies/prod-policy".
    * @param policyId policyId or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicy setPolicyId(java.lang.String policyId) {
@@ -89,7 +79,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.go
   }
 
   /**
-   * The type of the policy evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -97,7 +86,6 @@ public final class GoogleCloudSecuritycenterV2ArtifactGuardPolicy extends com.go
   }
 
   /**
-   * The type of the policy evaluation.
    * @param type type or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2ArtifactGuardPolicy setType(java.lang.String type) {

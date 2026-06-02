@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 32
+ * Common model for database resource instance metadata. Next ID: 35
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -29,6 +29,13 @@ package com.google.api.services.redis.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DatabaseResourceMetadata extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Field to ingest additional metadata whichd does not support proto format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> additionalMetadata;
 
   /**
    * Availability configuration for this instance
@@ -123,6 +130,20 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceType;
+
+  /**
+   * Field to ingest additional metadata which support proto format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> internalAdditionalMetadata;
+
+  /**
+   * Optional. Private and public IP address of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IpAddress ipAddress;
 
   /**
    * Optional. Whether deletion protection is enabled for this resource.
@@ -244,6 +265,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Field to ingest additional metadata whichd does not support proto format.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getAdditionalMetadata() {
+    return additionalMetadata;
+  }
+
+  /**
+   * Field to ingest additional metadata whichd does not support proto format.
+   * @param additionalMetadata additionalMetadata or {@code null} for none
+   */
+  public DatabaseResourceMetadata setAdditionalMetadata(java.util.Map<String, java.lang.Object> additionalMetadata) {
+    this.additionalMetadata = additionalMetadata;
+    return this;
+  }
 
   /**
    * Availability configuration for this instance
@@ -469,6 +507,40 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setInstanceType(java.lang.String instanceType) {
     this.instanceType = instanceType;
+    return this;
+  }
+
+  /**
+   * Field to ingest additional metadata which support proto format.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getInternalAdditionalMetadata() {
+    return internalAdditionalMetadata;
+  }
+
+  /**
+   * Field to ingest additional metadata which support proto format.
+   * @param internalAdditionalMetadata internalAdditionalMetadata or {@code null} for none
+   */
+  public DatabaseResourceMetadata setInternalAdditionalMetadata(java.util.Map<String, java.lang.Object> internalAdditionalMetadata) {
+    this.internalAdditionalMetadata = internalAdditionalMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Private and public IP address of the resource.
+   * @return value or {@code null} for none
+   */
+  public IpAddress getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * Optional. Private and public IP address of the resource.
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public DatabaseResourceMetadata setIpAddress(IpAddress ipAddress) {
+    this.ipAddress = ipAddress;
     return this;
   }
 

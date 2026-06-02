@@ -4654,6 +4654,22 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /** List of tool names for selective tool fetching. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> toolNames;
+
+            /** List of tool names for selective tool fetching.
+             */
+            public java.util.List<java.lang.String> getToolNames() {
+              return toolNames;
+            }
+
+            /** List of tool names for selective tool fetching. */
+            public List setToolNames(java.util.List<java.lang.String> toolNames) {
+              this.toolNames = toolNames;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

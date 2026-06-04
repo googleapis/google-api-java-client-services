@@ -31,28 +31,28 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class AggregatedData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Number of custom ranges in the RegistryBook.
+   * Output only. Number of CustomRanges in the RegistryBook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer customRangesCount;
 
   /**
-   * Output only. Number of custom realms in the RegistryBook.
+   * Output only. Number of custom Realms in the RegistryBook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer customRealmsCount;
 
   /**
-   * Output only. Number of discovered ranges in the RegistryBook.
+   * Output only. Number of DiscoveredRanges in the RegistryBook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer discoveredRangesCount;
 
   /**
-   * Output only. Number of discovered realms in the RegistryBook.
+   * Output only. Number of discovered Realms in the RegistryBook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   private java.lang.Integer uniqueScopesCount;
 
   /**
-   * Output only. Number of custom ranges in the RegistryBook.
+   * Output only. Number of CustomRanges in the RegistryBook.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCustomRangesCount() {
@@ -74,7 +74,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of custom ranges in the RegistryBook.
+   * Output only. Number of CustomRanges in the RegistryBook.
    * @param customRangesCount customRangesCount or {@code null} for none
    */
   public AggregatedData setCustomRangesCount(java.lang.Integer customRangesCount) {
@@ -83,7 +83,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of custom realms in the RegistryBook.
+   * Output only. Number of custom Realms in the RegistryBook.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCustomRealmsCount() {
@@ -91,7 +91,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of custom realms in the RegistryBook.
+   * Output only. Number of custom Realms in the RegistryBook.
    * @param customRealmsCount customRealmsCount or {@code null} for none
    */
   public AggregatedData setCustomRealmsCount(java.lang.Integer customRealmsCount) {
@@ -100,7 +100,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of discovered ranges in the RegistryBook.
+   * Output only. Number of DiscoveredRanges in the RegistryBook.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiscoveredRangesCount() {
@@ -108,7 +108,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of discovered ranges in the RegistryBook.
+   * Output only. Number of DiscoveredRanges in the RegistryBook.
    * @param discoveredRangesCount discoveredRangesCount or {@code null} for none
    */
   public AggregatedData setDiscoveredRangesCount(java.lang.Integer discoveredRangesCount) {
@@ -117,7 +117,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of discovered realms in the RegistryBook.
+   * Output only. Number of discovered Realms in the RegistryBook.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiscoveredRealmsCount() {
@@ -125,7 +125,7 @@ public final class AggregatedData extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Number of discovered realms in the RegistryBook.
+   * Output only. Number of discovered Realms in the RegistryBook.
    * @param discoveredRealmsCount discoveredRealmsCount or {@code null} for none
    */
   public AggregatedData setDiscoveredRealmsCount(java.lang.Integer discoveredRealmsCount) {

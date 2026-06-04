@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing Attribute object
+ * A key-value pair representing a custom attribute associated with a resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class Attribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Key of attribute
+   * Required. The key of the attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Required. Value of attribute
+   * Required. The value of the attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. Key of attribute
+   * Required. The key of the attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -53,7 +53,7 @@ public final class Attribute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Key of attribute
+   * Required. The key of the attribute.
    * @param key key or {@code null} for none
    */
   public Attribute setKey(java.lang.String key) {
@@ -62,7 +62,7 @@ public final class Attribute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Value of attribute
+   * Required. The value of the attribute.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -70,7 +70,7 @@ public final class Attribute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Value of attribute
+   * Required. The value of the attribute.
    * @param value value or {@code null} for none
    */
   public Attribute setValue(java.lang.String value) {

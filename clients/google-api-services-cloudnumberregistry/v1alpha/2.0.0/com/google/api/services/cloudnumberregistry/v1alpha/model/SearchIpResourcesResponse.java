@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for response to searching IP resources
+ * Response message for the CloudNumberRegistry.SearchIpResources method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class SearchIpResourcesResponse extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
-   * Deprecated: Use results field instead. The list of ranges matching the search query.
+   * Deprecated: Use results field instead. The list of Ranges matching the search query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class SearchIpResourcesResponse extends com.google.api.client.json.
   }
 
   /**
-   * Deprecated: Use results field instead. The list of ranges matching the search query.
+   * Deprecated: Use results field instead. The list of Ranges matching the search query.
    * @return value or {@code null} for none
    */
   public java.util.List<Range> getRanges() {
@@ -90,7 +90,7 @@ public final class SearchIpResourcesResponse extends com.google.api.client.json.
   }
 
   /**
-   * Deprecated: Use results field instead. The list of ranges matching the search query.
+   * Deprecated: Use results field instead. The list of Ranges matching the search query.
    * @param ranges ranges or {@code null} for none
    */
   public SearchIpResourcesResponse setRanges(java.util.List<Range> ranges) {

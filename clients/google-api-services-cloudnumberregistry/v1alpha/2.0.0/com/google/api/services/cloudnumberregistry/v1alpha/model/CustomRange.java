@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing CustomRange object
+ * A CustomRange represents a user-defined IP address range.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -44,7 +44,7 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Description of the CustomRange.
+   * Optional. The description of the CustomRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,41 +65,43 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   private java.lang.String ipv6CidrRange;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The parent range of the CustomRange. Do not allow setting parent range if realm is
-   * specified. Format must follow this pattern:
-   * projects/{project}/locations/{location}/customRanges/{custom_range}
+   * Optional. The resource name of the parent CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`. If specified, the parent
+   * CustomRange must be in the same RegistryBook. This field is mutually exclusive with the `realm`
+   * field, as the Realm is inherited from the parent CustomRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentRange;
 
   /**
-   * Optional. The realm of the CustomRange. The realm must be in the same project as the custom
-   * range. Do not allow setting realm if parent range is specified, since the realm should be
-   * inherited from the parent range. Format must follow this pattern:
-   * projects/{project}/locations/{location}/realms/{realm}
+   * Optional. The resource name of the Realm associated with the CustomRange, in the format
+   * `projects/{project}/locations/{location}/realms/{realm}`. The Realm must be in the same project
+   * as the CustomRange. This field must not be set if the `parent_range` field is set, as the Realm
+   * will be inherited from the parent CustomRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String realm;
 
   /**
-   * Output only. The registry book of the CustomRange. This field is inherited from the realm or
-   * parent range depending on which one is specified.
+   * Output only. The RegistryBook of the CustomRange. This field is inherited from the Realm or
+   * parent CustomRange depending on which one is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +125,7 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Description of the CustomRange.
+   * Optional. The description of the CustomRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -131,7 +133,7 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Description of the CustomRange.
+   * Optional. The description of the CustomRange.
    * @param description description or {@code null} for none
    */
   public CustomRange setDescription(java.lang.String description) {
@@ -174,7 +176,7 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -182,7 +184,7 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @param labels labels or {@code null} for none
    */
   public CustomRange setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -191,7 +193,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,7 +202,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
    * @param name name or {@code null} for none
    */
   public CustomRange setName(java.lang.String name) {
@@ -208,9 +212,10 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The parent range of the CustomRange. Do not allow setting parent range if realm is
-   * specified. Format must follow this pattern:
-   * projects/{project}/locations/{location}/customRanges/{custom_range}
+   * Optional. The resource name of the parent CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`. If specified, the parent
+   * CustomRange must be in the same RegistryBook. This field is mutually exclusive with the `realm`
+   * field, as the Realm is inherited from the parent CustomRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentRange() {
@@ -218,9 +223,10 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The parent range of the CustomRange. Do not allow setting parent range if realm is
-   * specified. Format must follow this pattern:
-   * projects/{project}/locations/{location}/customRanges/{custom_range}
+   * Optional. The resource name of the parent CustomRange, in the format
+   * `projects/{project}/locations/{location}/customRanges/{custom_range}`. If specified, the parent
+   * CustomRange must be in the same RegistryBook. This field is mutually exclusive with the `realm`
+   * field, as the Realm is inherited from the parent CustomRange.
    * @param parentRange parentRange or {@code null} for none
    */
   public CustomRange setParentRange(java.lang.String parentRange) {
@@ -229,10 +235,10 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The realm of the CustomRange. The realm must be in the same project as the custom
-   * range. Do not allow setting realm if parent range is specified, since the realm should be
-   * inherited from the parent range. Format must follow this pattern:
-   * projects/{project}/locations/{location}/realms/{realm}
+   * Optional. The resource name of the Realm associated with the CustomRange, in the format
+   * `projects/{project}/locations/{location}/realms/{realm}`. The Realm must be in the same project
+   * as the CustomRange. This field must not be set if the `parent_range` field is set, as the Realm
+   * will be inherited from the parent CustomRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getRealm() {
@@ -240,10 +246,10 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The realm of the CustomRange. The realm must be in the same project as the custom
-   * range. Do not allow setting realm if parent range is specified, since the realm should be
-   * inherited from the parent range. Format must follow this pattern:
-   * projects/{project}/locations/{location}/realms/{realm}
+   * Optional. The resource name of the Realm associated with the CustomRange, in the format
+   * `projects/{project}/locations/{location}/realms/{realm}`. The Realm must be in the same project
+   * as the CustomRange. This field must not be set if the `parent_range` field is set, as the Realm
+   * will be inherited from the parent CustomRange.
    * @param realm realm or {@code null} for none
    */
   public CustomRange setRealm(java.lang.String realm) {
@@ -252,8 +258,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The registry book of the CustomRange. This field is inherited from the realm or
-   * parent range depending on which one is specified.
+   * Output only. The RegistryBook of the CustomRange. This field is inherited from the Realm or
+   * parent CustomRange depending on which one is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegistryBook() {
@@ -261,8 +267,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The registry book of the CustomRange. This field is inherited from the realm or
-   * parent range depending on which one is specified.
+   * Output only. The RegistryBook of the CustomRange. This field is inherited from the Realm or
+   * parent CustomRange depending on which one is specified.
    * @param registryBook registryBook or {@code null} for none
    */
   public CustomRange setRegistryBook(java.lang.String registryBook) {

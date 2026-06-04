@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing either a CustomRange or a DiscoveredRange.
+ * Represents either a CustomRange or a DiscoveredRange.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,28 +31,28 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class Range extends com.google.api.client.json.GenericJson {
 
   /**
-   * A custom range.
+   * A CustomRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomRange customRange;
 
   /**
-   * A discovered range.
+   * A DiscoveredRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiscoveredRange discoveredRange;
 
   /**
-   * The utilization of the range.
+   * The utilization of the Range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RangeUtilization utilization;
 
   /**
-   * A custom range.
+   * A CustomRange.
    * @return value or {@code null} for none
    */
   public CustomRange getCustomRange() {
@@ -60,7 +60,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom range.
+   * A CustomRange.
    * @param customRange customRange or {@code null} for none
    */
   public Range setCustomRange(CustomRange customRange) {
@@ -69,7 +69,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A discovered range.
+   * A DiscoveredRange.
    * @return value or {@code null} for none
    */
   public DiscoveredRange getDiscoveredRange() {
@@ -77,7 +77,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A discovered range.
+   * A DiscoveredRange.
    * @param discoveredRange discoveredRange or {@code null} for none
    */
   public Range setDiscoveredRange(DiscoveredRange discoveredRange) {
@@ -86,7 +86,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The utilization of the range.
+   * The utilization of the Range.
    * @return value or {@code null} for none
    */
   public RangeUtilization getUtilization() {
@@ -94,7 +94,7 @@ public final class Range extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The utilization of the range.
+   * The utilization of the Range.
    * @param utilization utilization or {@code null} for none
    */
   public Range setUtilization(RangeUtilization utilization) {

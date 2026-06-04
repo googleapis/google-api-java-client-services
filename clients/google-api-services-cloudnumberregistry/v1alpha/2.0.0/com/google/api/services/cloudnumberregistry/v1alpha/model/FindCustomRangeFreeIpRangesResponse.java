@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for the response to finding free IP ranges.
+ * Response message for the CloudNumberRegistry.FindCustomRangeFreeIpRanges method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class FindCustomRangeFreeIpRangesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Free IP CIDR ranges found in the CustomRange.
+   * Output only. The free IP CIDR ranges found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> freeIpCidrRanges;
 
   /**
-   * Output only. Free IP CIDR ranges found in the CustomRange.
+   * Output only. The free IP CIDR ranges found.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFreeIpCidrRanges() {
@@ -46,7 +46,7 @@ public final class FindCustomRangeFreeIpRangesResponse extends com.google.api.cl
   }
 
   /**
-   * Output only. Free IP CIDR ranges found in the CustomRange.
+   * Output only. The free IP CIDR ranges found.
    * @param freeIpCidrRanges freeIpCidrRanges or {@code null} for none
    */
   public FindCustomRangeFreeIpRangesResponse setFreeIpCidrRanges(java.util.List<java.lang.String> freeIpCidrRanges) {

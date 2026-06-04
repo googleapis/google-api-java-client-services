@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for response to listing Realms
+ * Response message for the CloudNumberRegistry.ListRealms method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Realm
+   * The list of Realms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of Realm
+   * The list of Realms.
    * @return value or {@code null} for none
    */
   public java.util.List<Realm> getRealms() {
@@ -77,7 +77,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of Realm
+   * The list of Realms.
    * @param realms realms or {@code null} for none
    */
   public ListRealmsResponse setRealms(java.util.List<Realm> realms) {

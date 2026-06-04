@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * A result matching the search query, which can be either a range or a realm.
+ * A result matching the search query, which can be either a Range or a Realm.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class SearchIpResourcesResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * A range matching the search query.
+   * A Range matching the search query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Range range;
 
   /**
-   * A realm matching the search query.
+   * A Realm matching the search query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Realm realm;
 
   /**
-   * A range matching the search query.
+   * A Range matching the search query.
    * @return value or {@code null} for none
    */
   public Range getRange() {
@@ -53,7 +53,7 @@ public final class SearchIpResourcesResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * A range matching the search query.
+   * A Range matching the search query.
    * @param range range or {@code null} for none
    */
   public SearchIpResourcesResult setRange(Range range) {
@@ -62,7 +62,7 @@ public final class SearchIpResourcesResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * A realm matching the search query.
+   * A Realm matching the search query.
    * @return value or {@code null} for none
    */
   public Realm getRealm() {
@@ -70,7 +70,7 @@ public final class SearchIpResourcesResult extends com.google.api.client.json.Ge
   }
 
   /**
-   * A realm matching the search query.
+   * A Realm matching the search query.
    * @param realm realm or {@code null} for none
    */
   public SearchIpResourcesResult setRealm(Realm realm) {

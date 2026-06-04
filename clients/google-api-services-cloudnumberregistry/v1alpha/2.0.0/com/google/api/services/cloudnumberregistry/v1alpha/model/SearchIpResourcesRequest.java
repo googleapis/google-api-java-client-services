@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for searching IP resources
+ * Request message for the CloudNumberRegistry.SearchIpResources method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,7 +31,11 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class SearchIpResourcesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Hint for how to order the results
+   * Optional. Hint for how to order the results. Supported sort fields are: - `name`: Sort
+   * alphabetically by the resource name. - `create_time`: Sort by the creation timestamp of the
+   * resource. - `update_time`: Sort by the last update timestamp of the resource. Supported
+   * directions are `asc` (ascending) and `desc` (descending). If unspecified, direction defaults to
+   * `asc`. Only sorting by a single field is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,37 +60,43 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for ranges are: - `realm`: The realm name to search in. - `ip_address`: The IP address to
-   * search for within ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent range of the range to search for. - `attribute_text`: The attribute
-   * text to search for within ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for realms are: - `ip_version`: The IP version to search for. Only one
-   * of attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-
-   * realm` - `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
+   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
+   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
+   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
+   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
+   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
+   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
+   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
-   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range`
+   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -
+   * `management_type=CNR`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
 
   /**
-   * Optional. The type of resources to search for. If not specified, the server will return ranges.
+   * Optional. The type of resources to search for. If not specified, the server will return Ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> searchResourceTypes;
 
   /**
-   * Optional. Whether to show the utilization of the ranges in the response.
+   * Optional. Whether to show the utilization of the Ranges in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean showUtilization;
 
   /**
-   * Optional. Hint for how to order the results
+   * Optional. Hint for how to order the results. Supported sort fields are: - `name`: Sort
+   * alphabetically by the resource name. - `create_time`: Sort by the creation timestamp of the
+   * resource. - `update_time`: Sort by the last update timestamp of the resource. Supported
+   * directions are `asc` (ascending) and `desc` (descending). If unspecified, direction defaults to
+   * `asc`. Only sorting by a single field is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -94,7 +104,11 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Hint for how to order the results
+   * Optional. Hint for how to order the results. Supported sort fields are: - `name`: Sort
+   * alphabetically by the resource name. - `create_time`: Sort by the creation timestamp of the
+   * resource. - `update_time`: Sort by the last update timestamp of the resource. Supported
+   * directions are `asc` (ascending) and `desc` (descending). If unspecified, direction defaults to
+   * `asc`. Only sorting by a single field is supported.
    * @param orderBy orderBy or {@code null} for none
    */
   public SearchIpResourcesRequest setOrderBy(java.lang.String orderBy) {
@@ -142,16 +156,18 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for ranges are: - `realm`: The realm name to search in. - `ip_address`: The IP address to
-   * search for within ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent range of the range to search for. - `attribute_text`: The attribute
-   * text to search for within ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for realms are: - `ip_version`: The IP version to search for. Only one
-   * of attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-
-   * realm` - `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
+   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
+   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
+   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
+   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
+   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
+   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
+   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
-   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range`
+   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -
+   * `management_type=CNR`
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -162,16 +178,18 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for ranges are: - `realm`: The realm name to search in. - `ip_address`: The IP address to
-   * search for within ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent range of the range to search for. - `attribute_text`: The attribute
-   * text to search for within ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for realms are: - `ip_version`: The IP version to search for. Only one
-   * of attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-
-   * realm` - `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
+   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
+   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
+   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
+   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
+   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
+   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
+   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
-   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range`
+   * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -
+   * `management_type=CNR`
    * @param query query or {@code null} for none
    */
   public SearchIpResourcesRequest setQuery(java.lang.String query) {
@@ -180,7 +198,7 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The type of resources to search for. If not specified, the server will return ranges.
+   * Optional. The type of resources to search for. If not specified, the server will return Ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSearchResourceTypes() {
@@ -188,7 +206,7 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The type of resources to search for. If not specified, the server will return ranges.
+   * Optional. The type of resources to search for. If not specified, the server will return Ranges.
    * @param searchResourceTypes searchResourceTypes or {@code null} for none
    */
   public SearchIpResourcesRequest setSearchResourceTypes(java.util.List<java.lang.String> searchResourceTypes) {
@@ -197,7 +215,7 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Whether to show the utilization of the ranges in the response.
+   * Optional. Whether to show the utilization of the Ranges in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShowUtilization() {
@@ -205,7 +223,7 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Whether to show the utilization of the ranges in the response.
+   * Optional. Whether to show the utilization of the Ranges in the response.
    * @param showUtilization showUtilization or {@code null} for none
    */
   public SearchIpResourcesRequest setShowUtilization(java.lang.Boolean showUtilization) {

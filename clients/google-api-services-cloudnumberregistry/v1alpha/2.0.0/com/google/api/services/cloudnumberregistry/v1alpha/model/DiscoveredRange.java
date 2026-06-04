@@ -17,7 +17,8 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing DiscoveredRange object
+ * A DiscoveredRange represents an IP address range automatically detected by the discovery
+ * pipeline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -44,14 +45,15 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. If true, allow child ranges of this range to overlap with each other.
+   * Output only. If true, allows child DiscoveredRanges of this DiscoveredRange to overlap with
+   * each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean childCidrOverlapAllowed;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the DiscoveredRange was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,42 +92,44 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   private java.lang.String ipv6CidrRange;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Identifier. Name of the DiscoveredRange.
+   * Required. Identifier. The resource name of the DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The parent range of the DiscoveredRange.
+   * Optional. The resource name of the parent DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentRange;
 
   /**
-   * Optional. The realm of the DiscoveredRange.
+   * Optional. The Realm of the DiscoveredRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String realm;
 
   /**
-   * Output only. The registry book of the DiscoveredRange.
+   * Output only. The RegistryBook of the DiscoveredRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String registryBook;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the DiscoveredRange was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +153,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. If true, allow child ranges of this range to overlap with each other.
+   * Output only. If true, allows child DiscoveredRanges of this DiscoveredRange to overlap with
+   * each other.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getChildCidrOverlapAllowed() {
@@ -157,7 +162,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. If true, allow child ranges of this range to overlap with each other.
+   * Output only. If true, allows child DiscoveredRanges of this DiscoveredRange to overlap with
+   * each other.
    * @param childCidrOverlapAllowed childCidrOverlapAllowed or {@code null} for none
    */
   public DiscoveredRange setChildCidrOverlapAllowed(java.lang.Boolean childCidrOverlapAllowed) {
@@ -166,7 +172,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the DiscoveredRange was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -174,7 +180,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the DiscoveredRange was created.
    * @param createTime createTime or {@code null} for none
    */
   public DiscoveredRange setCreateTime(String createTime) {
@@ -259,7 +265,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -267,7 +273,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @param labels labels or {@code null} for none
    */
   public DiscoveredRange setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -276,7 +282,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Identifier. Name of the DiscoveredRange.
+   * Required. Identifier. The resource name of the DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -284,7 +291,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Identifier. Name of the DiscoveredRange.
+   * Required. Identifier. The resource name of the DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * @param name name or {@code null} for none
    */
   public DiscoveredRange setName(java.lang.String name) {
@@ -293,7 +301,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The parent range of the DiscoveredRange.
+   * Optional. The resource name of the parent DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentRange() {
@@ -301,7 +310,8 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The parent range of the DiscoveredRange.
+   * Optional. The resource name of the parent DiscoveredRange, in the format
+   * `projects/{project}/locations/{location}/discoveredRanges/{discovered_range}`.
    * @param parentRange parentRange or {@code null} for none
    */
   public DiscoveredRange setParentRange(java.lang.String parentRange) {
@@ -310,7 +320,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The realm of the DiscoveredRange.
+   * Optional. The Realm of the DiscoveredRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getRealm() {
@@ -318,7 +328,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The realm of the DiscoveredRange.
+   * Optional. The Realm of the DiscoveredRange.
    * @param realm realm or {@code null} for none
    */
   public DiscoveredRange setRealm(java.lang.String realm) {
@@ -327,7 +337,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The registry book of the DiscoveredRange.
+   * Output only. The RegistryBook of the DiscoveredRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegistryBook() {
@@ -335,7 +345,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. The registry book of the DiscoveredRange.
+   * Output only. The RegistryBook of the DiscoveredRange.
    * @param registryBook registryBook or {@code null} for none
    */
   public DiscoveredRange setRegistryBook(java.lang.String registryBook) {
@@ -344,7 +354,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the DiscoveredRange was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -352,7 +362,7 @@ public final class DiscoveredRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the DiscoveredRange was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public DiscoveredRange setUpdateTime(String updateTime) {

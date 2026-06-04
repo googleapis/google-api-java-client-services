@@ -31,21 +31,21 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class RealmAggregatedData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Number of custom ranges in the Realm.
+   * Output only. Number of CustomRanges in the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer customRangesCount;
 
   /**
-   * Output only. Number of discovered ranges in the Realm.
+   * Output only. Number of DiscoveredRanges in the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer discoveredRangesCount;
 
   /**
-   * Output only. Number of custom ranges in the Realm.
+   * Output only. Number of CustomRanges in the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCustomRangesCount() {
@@ -53,7 +53,7 @@ public final class RealmAggregatedData extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Number of custom ranges in the Realm.
+   * Output only. Number of CustomRanges in the Realm.
    * @param customRangesCount customRangesCount or {@code null} for none
    */
   public RealmAggregatedData setCustomRangesCount(java.lang.Integer customRangesCount) {
@@ -62,7 +62,7 @@ public final class RealmAggregatedData extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Number of discovered ranges in the Realm.
+   * Output only. Number of DiscoveredRanges in the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiscoveredRangesCount() {
@@ -70,7 +70,7 @@ public final class RealmAggregatedData extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Number of discovered ranges in the Realm.
+   * Output only. Number of DiscoveredRanges in the Realm.
    * @param discoveredRangesCount discoveredRangesCount or {@code null} for none
    */
   public RealmAggregatedData setDiscoveredRangesCount(java.lang.Integer discoveredRangesCount) {

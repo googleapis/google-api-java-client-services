@@ -17,8 +17,8 @@
 package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
- * Definition of a Unit. Units belonging to the same UnitKind are managed together; for example they
- * follow the same release model (blueprints, versions etc.) and are typically rolled out together.
+ * UnitGroup represents a set of Units to be used by a Tenant. In pooling scenarios, the UnitGroup
+ * may be created and provisioned before the Tenant is created.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
@@ -29,7 +29,7 @@ package com.google.api.services.saasservicemgmt.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UnitKind extends com.google.api.client.json.GenericJson {
+public final class UnitGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations is an unstructured key-value map stored with a resource that may be set
@@ -42,49 +42,11 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String boundaryType;
-
-  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> defaultFlagRevisions;
-
-  /**
-   * Optional. A reference to the Release object to use as default for creating new units of this
-   * UnitKind (optional). If not specified, a new unit must explicitly reference which release to
-   * use for its creation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String defaultRelease;
-
-  /**
-   * Optional. Immutable. List of other unit kinds that this release will depend on. Dependencies
-   * will be automatically provisioned if not found. Maximum 10.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Dependency> dependencies;
-
-  static {
-    // hack to force ProGuard to consider Dependency used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Dependency.class);
-  }
 
   /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
@@ -96,15 +58,6 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
-   * 100.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<VariableMapping> inputVariableMappings;
-
-  /**
    * Optional. The labels on the resource, which can be used for categorization. similar to
    * Kubernetes resource labels.
    * The value may be {@code null}.
@@ -114,28 +67,32 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. List of outputVariables for this unit kind will be passed to this unit's
-   * outputVariables. Maximum 100.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<VariableMapping> outputVariableMappings;
-
-  /**
-   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
-   * common data model. Immutable once set.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String saas;
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String saasRelease;
+
+  /**
+   * Optional. Output only. State of the UnitGroup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Output only. The unique identifier of the resource. UID is unique in the time and space for
@@ -174,25 +131,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * guide/annotations
    * @param annotations annotations or {@code null} for none
    */
-  public UnitKind setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+  public UnitGroup setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
-    return this;
-  }
-
-  /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBoundaryType() {
-    return boundaryType;
-  }
-
-  /**
-   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
-   * @param boundaryType boundaryType or {@code null} for none
-   */
-  public UnitKind setBoundaryType(java.lang.String boundaryType) {
-    this.boundaryType = boundaryType;
     return this;
   }
 
@@ -208,67 +148,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * Output only. The timestamp when the resource was created.
    * @param createTime createTime or {@code null} for none
    */
-  public UnitKind setCreateTime(String createTime) {
+  public UnitGroup setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getDefaultFlagRevisions() {
-    return defaultFlagRevisions;
-  }
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * @param defaultFlagRevisions defaultFlagRevisions or {@code null} for none
-   */
-  public UnitKind setDefaultFlagRevisions(java.util.List<java.lang.String> defaultFlagRevisions) {
-    this.defaultFlagRevisions = defaultFlagRevisions;
-    return this;
-  }
-
-  /**
-   * Optional. A reference to the Release object to use as default for creating new units of this
-   * UnitKind (optional). If not specified, a new unit must explicitly reference which release to
-   * use for its creation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDefaultRelease() {
-    return defaultRelease;
-  }
-
-  /**
-   * Optional. A reference to the Release object to use as default for creating new units of this
-   * UnitKind (optional). If not specified, a new unit must explicitly reference which release to
-   * use for its creation.
-   * @param defaultRelease defaultRelease or {@code null} for none
-   */
-  public UnitKind setDefaultRelease(java.lang.String defaultRelease) {
-    this.defaultRelease = defaultRelease;
-    return this;
-  }
-
-  /**
-   * Optional. Immutable. List of other unit kinds that this release will depend on. Dependencies
-   * will be automatically provisioned if not found. Maximum 10.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Dependency> getDependencies() {
-    return dependencies;
-  }
-
-  /**
-   * Optional. Immutable. List of other unit kinds that this release will depend on. Dependencies
-   * will be automatically provisioned if not found. Maximum 10.
-   * @param dependencies dependencies or {@code null} for none
-   */
-  public UnitKind setDependencies(java.util.List<Dependency> dependencies) {
-    this.dependencies = dependencies;
     return this;
   }
 
@@ -288,29 +169,8 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * written.
    * @param etag etag or {@code null} for none
    */
-  public UnitKind setEtag(java.lang.String etag) {
+  public UnitGroup setEtag(java.lang.String etag) {
     this.etag = etag;
-    return this;
-  }
-
-  /**
-   * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
-   * 100.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<VariableMapping> getInputVariableMappings() {
-    return inputVariableMappings;
-  }
-
-  /**
-   * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
-   * 100.
-   * @param inputVariableMappings inputVariableMappings or {@code null} for none
-   */
-  public UnitKind setInputVariableMappings(java.util.List<VariableMapping> inputVariableMappings) {
-    this.inputVariableMappings = inputVariableMappings;
     return this;
   }
 
@@ -328,14 +188,14 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * Kubernetes resource labels.
    * @param labels labels or {@code null} for none
    */
-  public UnitKind setLabels(java.util.Map<String, java.lang.String> labels) {
+  public UnitGroup setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -344,37 +204,16 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/unitKinds/{unitKind}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * @param name name or {@code null} for none
    */
-  public UnitKind setName(java.lang.String name) {
+  public UnitGroup setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Optional. List of outputVariables for this unit kind will be passed to this unit's
-   * outputVariables. Maximum 100.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<VariableMapping> getOutputVariableMappings() {
-    return outputVariableMappings;
-  }
-
-  /**
-   * Optional. List of outputVariables for this unit kind will be passed to this unit's
-   * outputVariables. Maximum 100.
-   * @param outputVariableMappings outputVariableMappings or {@code null} for none
-   */
-  public UnitKind setOutputVariableMappings(java.util.List<VariableMapping> outputVariableMappings) {
-    this.outputVariableMappings = outputVariableMappings;
-    return this;
-  }
-
-  /**
-   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
-   * common data model. Immutable once set.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
    * @return value or {@code null} for none
    */
   public java.lang.String getSaas() {
@@ -382,13 +221,45 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
-   * the producer wants to manage with App Lifecycle Manager. Part of the App Lifecycle Manager
-   * common data model. Immutable once set.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
    * @param saas saas or {@code null} for none
    */
-  public UnitKind setSaas(java.lang.String saas) {
+  public UnitGroup setSaas(java.lang.String saas) {
     this.saas = saas;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSaasRelease() {
+    return saasRelease;
+  }
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * @param saasRelease saasRelease or {@code null} for none
+   */
+  public UnitGroup setSaasRelease(java.lang.String saasRelease) {
+    this.saasRelease = saasRelease;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. State of the UnitGroup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Optional. Output only. State of the UnitGroup.
+   * @param state state or {@code null} for none
+   */
+  public UnitGroup setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
@@ -410,7 +281,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * resources with resource name reuses. This should be a UUID4.
    * @param uid uid or {@code null} for none
    */
-  public UnitKind setUid(java.lang.String uid) {
+  public UnitGroup setUid(java.lang.String uid) {
     this.uid = uid;
     return this;
   }
@@ -431,19 +302,19 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    * value.
    * @param updateTime updateTime or {@code null} for none
    */
-  public UnitKind setUpdateTime(String updateTime) {
+  public UnitGroup setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public UnitKind set(String fieldName, Object value) {
-    return (UnitKind) super.set(fieldName, value);
+  public UnitGroup set(String fieldName, Object value) {
+    return (UnitGroup) super.set(fieldName, value);
   }
 
   @Override
-  public UnitKind clone() {
-    return (UnitKind) super.clone();
+  public UnitGroup clone() {
+    return (UnitGroup) super.clone();
   }
 
 }

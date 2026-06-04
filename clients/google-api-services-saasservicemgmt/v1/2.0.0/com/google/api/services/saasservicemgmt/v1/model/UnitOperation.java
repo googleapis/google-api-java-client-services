@@ -138,6 +138,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   private java.lang.String parentUnitOperation;
 
   /**
+   * Optional. Provision operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,6 +443,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Provision operation.
    * @return value or {@code null} for none
    */
   public Provision getProvision() {
@@ -449,6 +451,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Provision operation.
    * @param provision provision or {@code null} for none
    */
   public UnitOperation setProvision(Provision provision) {

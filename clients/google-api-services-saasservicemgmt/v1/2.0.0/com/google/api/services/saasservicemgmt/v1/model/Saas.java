@@ -102,8 +102,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
-   * empty.
+   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
+   * is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,8 +283,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
-   * empty.
+   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
+   * is empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -292,8 +292,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
-   * empty.
+   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
+   * is empty.
    * @param state state or {@code null} for none
    */
   public Saas setState(java.lang.String state) {

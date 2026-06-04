@@ -110,6 +110,13 @@ public final class GoogleChromeManagementV1InstalledApp extends com.google.api.c
   private java.util.List<java.lang.String> permissions;
 
   /**
+   * Output only. Count of Chrome Profiles with this app installed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long profileCount;
+
+  /**
    * Output only. If available, the risk assessment data about this extension.
    * The value may be {@code null}.
    */
@@ -304,6 +311,23 @@ public final class GoogleChromeManagementV1InstalledApp extends com.google.api.c
    */
   public GoogleChromeManagementV1InstalledApp setPermissions(java.util.List<java.lang.String> permissions) {
     this.permissions = permissions;
+    return this;
+  }
+
+  /**
+   * Output only. Count of Chrome Profiles with this app installed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProfileCount() {
+    return profileCount;
+  }
+
+  /**
+   * Output only. Count of Chrome Profiles with this app installed.
+   * @param profileCount profileCount or {@code null} for none
+   */
+  public GoogleChromeManagementV1InstalledApp setProfileCount(java.lang.Long profileCount) {
+    this.profileCount = profileCount;
     return this;
   }
 

@@ -89,6 +89,12 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ZoneResourceStatus resourceStatus;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -242,6 +248,21 @@ public final class Zone extends com.google.api.client.json.GenericJson {
    */
   public Zone setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public ZoneResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public Zone setResourceStatus(ZoneResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

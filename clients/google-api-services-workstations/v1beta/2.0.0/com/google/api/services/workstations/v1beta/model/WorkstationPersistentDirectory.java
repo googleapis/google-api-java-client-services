@@ -32,13 +32,6 @@ package com.google.api.services.workstations.v1beta.model;
 public final class WorkstationPersistentDirectory extends com.google.api.client.json.GenericJson {
 
   /**
-   * A PersistentDirectory backed by a Compute Engine persistent disk.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private WorkstationGceRegionalPersistentDisk gcePd;
-
-  /**
    * Optional. The mount path of the persistent directory.
    * The value may be {@code null}.
    */
@@ -52,23 +45,6 @@ public final class WorkstationPersistentDirectory extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sizeGb;
-
-  /**
-   * A PersistentDirectory backed by a Compute Engine persistent disk.
-   * @return value or {@code null} for none
-   */
-  public WorkstationGceRegionalPersistentDisk getGcePd() {
-    return gcePd;
-  }
-
-  /**
-   * A PersistentDirectory backed by a Compute Engine persistent disk.
-   * @param gcePd gcePd or {@code null} for none
-   */
-  public WorkstationPersistentDirectory setGcePd(WorkstationGceRegionalPersistentDisk gcePd) {
-    this.gcePd = gcePd;
-    return this;
-  }
 
   /**
    * Optional. The mount path of the persistent directory.

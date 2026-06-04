@@ -31,23 +31,31 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class ObjectRetention extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The time when the object will be retained until. UNSET will clear the retention. Must
-   * be specified in RFC 3339 format e.g. YYYY-MM-DD'T'HH:MM:SS.SS'Z' or YYYY-MM-DD'T'HH:MM:SS'Z'.
+   * Required. The object's retention expiration time, during which, the object is protected from
+   * being deleted or overwritten. The time must be specified in RFC 3339 format, for example `YYYY-
+   * MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retainUntilTime;
 
   /**
-   * Required. The retention mode of the object.
+   * Required. The retention mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retentionMode;
 
   /**
-   * Required. The time when the object will be retained until. UNSET will clear the retention. Must
-   * be specified in RFC 3339 format e.g. YYYY-MM-DD'T'HH:MM:SS.SS'Z' or YYYY-MM-DD'T'HH:MM:SS'Z'.
+   * Required. The object's retention expiration time, during which, the object is protected from
+   * being deleted or overwritten. The time must be specified in RFC 3339 format, for example `YYYY-
+   * MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetainUntilTime() {
@@ -55,8 +63,12 @@ public final class ObjectRetention extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The time when the object will be retained until. UNSET will clear the retention. Must
-   * be specified in RFC 3339 format e.g. YYYY-MM-DD'T'HH:MM:SS.SS'Z' or YYYY-MM-DD'T'HH:MM:SS'Z'.
+   * Required. The object's retention expiration time, during which, the object is protected from
+   * being deleted or overwritten. The time must be specified in RFC 3339 format, for example `YYYY-
+   * MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings.
    * @param retainUntilTime retainUntilTime or {@code null} for none
    */
   public ObjectRetention setRetainUntilTime(java.lang.String retainUntilTime) {
@@ -65,7 +77,7 @@ public final class ObjectRetention extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The retention mode of the object.
+   * Required. The retention mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetentionMode() {
@@ -73,7 +85,7 @@ public final class ObjectRetention extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The retention mode of the object.
+   * Required. The retention mode.
    * @param retentionMode retentionMode or {@code null} for none
    */
   public ObjectRetention setRetentionMode(java.lang.String retentionMode) {

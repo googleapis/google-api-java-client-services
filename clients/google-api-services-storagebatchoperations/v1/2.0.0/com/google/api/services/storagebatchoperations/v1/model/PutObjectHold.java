@@ -32,7 +32,7 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Updates object event based holds state. When object event based hold is set, object
-   * cannot be deleted or replaced. Resets object's time in the bucket for the purposes of the
+   * can't be deleted or replaced. Resets object's time in the bucket for the purposes of the
    * retention period.
    * The value may be {@code null}.
    */
@@ -40,8 +40,8 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
   private java.lang.String eventBasedHold;
 
   /**
-   * Required. Updates object temporary holds state. When object temporary hold is set, object
-   * cannot be deleted or replaced.
+   * Required. Updates object temporary holds state. When object temporary hold is set, object can't
+   * be deleted or replaced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Updates object event based holds state. When object event based hold is set, object
-   * cannot be deleted or replaced. Resets object's time in the bucket for the purposes of the
+   * can't be deleted or replaced. Resets object's time in the bucket for the purposes of the
    * retention period.
    * @return value or {@code null} for none
    */
@@ -59,7 +59,7 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Updates object event based holds state. When object event based hold is set, object
-   * cannot be deleted or replaced. Resets object's time in the bucket for the purposes of the
+   * can't be deleted or replaced. Resets object's time in the bucket for the purposes of the
    * retention period.
    * @param eventBasedHold eventBasedHold or {@code null} for none
    */
@@ -69,8 +69,8 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Updates object temporary holds state. When object temporary hold is set, object
-   * cannot be deleted or replaced.
+   * Required. Updates object temporary holds state. When object temporary hold is set, object can't
+   * be deleted or replaced.
    * @return value or {@code null} for none
    */
   public java.lang.String getTemporaryHold() {
@@ -78,8 +78,8 @@ public final class PutObjectHold extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Updates object temporary holds state. When object temporary hold is set, object
-   * cannot be deleted or replaced.
+   * Required. Updates object temporary holds state. When object temporary hold is set, object can't
+   * be deleted or replaced.
    * @param temporaryHold temporaryHold or {@code null} for none
    */
   public PutObjectHold setTemporaryHold(java.lang.String temporaryHold) {

@@ -31,85 +31,90 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class PutMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Updates objects Cache-Control fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Additionally, the value for Custom-Time cannot decrease. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#caching_data.
+   * Optional. Updates the objects `Cache-Control` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. Additionally, the value for `Custom-Time`
+   * can't decrease. For details, see [Cache-
+   * Control](https://cloud.google.com/storage/docs/metadata#caching_data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cacheControl;
 
   /**
-   * Optional. Updates objects Content-Disposition fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer
-   * https://cloud.google.com/storage/docs/metadata#content-disposition for additional
-   * documentation.
+   * Optional. Updates objects `Content-Disposition` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Disposition](https://cloud.google.com/storage/docs/metadata#content-disposition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentDisposition;
 
   /**
-   * Optional. Updates objects Content-Encoding fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-encoding.
+   * Optional. Updates the objects `Content-Encoding` fixed metadata. Unset values in the request
+   * are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Encoding](https://cloud.google.com/storage/docs/metadata#content-encoding).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentEncoding;
 
   /**
-   * Optional. Updates objects Content-Language fixed metadata. Refer to ISO 639-1 language codes
-   * for typical values of this metadata. Max length 100 characters. Unset values will be ignored.
-   * Set empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-language.
+   * Optional. Updates the objects `Content-Language` fixed metadata. Metadata values must use ISO
+   * 639-1 language codes. The maximum length for metadata values is 100 characters. Unset values in
+   * the request are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Language](https://cloud.google.com/storage/docs/metadata#content-language).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentLanguage;
 
   /**
-   * Optional. Updates objects Content-Type fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-type
+   * Optional. Updates objects `Content-Type` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Type](https://cloud.google.com/storage/docs/metadata#content-type).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentType;
 
   /**
-   * Optional. Updates objects custom metadata. Adds or sets individual custom metadata key value
-   * pairs on objects. Keys that are set with empty custom metadata values will have its value
-   * cleared. Existing custom metadata not specified with this flag is not changed. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#custom-metadata
+   * Optional. Updates the object's custom metadata. This operation adds or sets individual custom
+   * metadata key-value pairs. Keys specified with empty values have their values cleared. Existing
+   * custom metadata keys not included in the request remain unchanged. For details, see [Custom
+   * metadata](https://cloud.google.com/storage/docs/metadata#custom-metadata).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> customMetadata;
 
   /**
-   * Optional. Updates objects Custom-Time fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#custom-time.
+   * Optional. Updates the objects `Custom-Time` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. The time must be specified in RFC 3339
+   * format, for example `YYYY-MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. For details,
+   * see [Custom-Time](https://cloud.google.com/storage/docs/metadata#custom-time).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customTime;
 
   /**
-   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
-   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
-   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
-   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * Optional. Updates an object's retention configuration. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings. An object with `LOCKED` retention mode can't have its retention
+   * cleared or its `retainUntilTime` reduced. For more information, see [Object
+   * retention](https://cloud.google.com/storage/docs/batch-operations/create-manage-batch-
+   * operation-jobs#retain-until-time).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectRetention objectRetention;
 
   /**
-   * Optional. Updates objects Cache-Control fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Additionally, the value for Custom-Time cannot decrease. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#caching_data.
+   * Optional. Updates the objects `Cache-Control` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. Additionally, the value for `Custom-Time`
+   * can't decrease. For details, see [Cache-
+   * Control](https://cloud.google.com/storage/docs/metadata#caching_data).
    * @return value or {@code null} for none
    */
   public java.lang.String getCacheControl() {
@@ -117,9 +122,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Cache-Control fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Additionally, the value for Custom-Time cannot decrease. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#caching_data.
+   * Optional. Updates the objects `Cache-Control` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. Additionally, the value for `Custom-Time`
+   * can't decrease. For details, see [Cache-
+   * Control](https://cloud.google.com/storage/docs/metadata#caching_data).
    * @param cacheControl cacheControl or {@code null} for none
    */
   public PutMetadata setCacheControl(java.lang.String cacheControl) {
@@ -128,10 +134,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Disposition fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer
-   * https://cloud.google.com/storage/docs/metadata#content-disposition for additional
-   * documentation.
+   * Optional. Updates objects `Content-Disposition` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Disposition](https://cloud.google.com/storage/docs/metadata#content-disposition).
    * @return value or {@code null} for none
    */
   public java.lang.String getContentDisposition() {
@@ -139,10 +144,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Disposition fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer
-   * https://cloud.google.com/storage/docs/metadata#content-disposition for additional
-   * documentation.
+   * Optional. Updates objects `Content-Disposition` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Disposition](https://cloud.google.com/storage/docs/metadata#content-disposition).
    * @param contentDisposition contentDisposition or {@code null} for none
    */
   public PutMetadata setContentDisposition(java.lang.String contentDisposition) {
@@ -151,9 +155,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Encoding fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-encoding.
+   * Optional. Updates the objects `Content-Encoding` fixed metadata. Unset values in the request
+   * are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Encoding](https://cloud.google.com/storage/docs/metadata#content-encoding).
    * @return value or {@code null} for none
    */
   public java.lang.String getContentEncoding() {
@@ -161,9 +165,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Encoding fixed metadata. Unset values will be ignored. Set
-   * empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-encoding.
+   * Optional. Updates the objects `Content-Encoding` fixed metadata. Unset values in the request
+   * are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Encoding](https://cloud.google.com/storage/docs/metadata#content-encoding).
    * @param contentEncoding contentEncoding or {@code null} for none
    */
   public PutMetadata setContentEncoding(java.lang.String contentEncoding) {
@@ -172,10 +176,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Language fixed metadata. Refer to ISO 639-1 language codes
-   * for typical values of this metadata. Max length 100 characters. Unset values will be ignored.
-   * Set empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-language.
+   * Optional. Updates the objects `Content-Language` fixed metadata. Metadata values must use ISO
+   * 639-1 language codes. The maximum length for metadata values is 100 characters. Unset values in
+   * the request are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Language](https://cloud.google.com/storage/docs/metadata#content-language).
    * @return value or {@code null} for none
    */
   public java.lang.String getContentLanguage() {
@@ -183,10 +187,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Language fixed metadata. Refer to ISO 639-1 language codes
-   * for typical values of this metadata. Max length 100 characters. Unset values will be ignored.
-   * Set empty values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-language.
+   * Optional. Updates the objects `Content-Language` fixed metadata. Metadata values must use ISO
+   * 639-1 language codes. The maximum length for metadata values is 100 characters. Unset values in
+   * the request are ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Language](https://cloud.google.com/storage/docs/metadata#content-language).
    * @param contentLanguage contentLanguage or {@code null} for none
    */
   public PutMetadata setContentLanguage(java.lang.String contentLanguage) {
@@ -195,9 +199,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Type fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-type
+   * Optional. Updates objects `Content-Type` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Type](https://cloud.google.com/storage/docs/metadata#content-type).
    * @return value or {@code null} for none
    */
   public java.lang.String getContentType() {
@@ -205,9 +209,9 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Content-Type fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#content-type
+   * Optional. Updates objects `Content-Type` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. For details, see [Content-
+   * Type](https://cloud.google.com/storage/docs/metadata#content-type).
    * @param contentType contentType or {@code null} for none
    */
   public PutMetadata setContentType(java.lang.String contentType) {
@@ -216,10 +220,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects custom metadata. Adds or sets individual custom metadata key value
-   * pairs on objects. Keys that are set with empty custom metadata values will have its value
-   * cleared. Existing custom metadata not specified with this flag is not changed. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#custom-metadata
+   * Optional. Updates the object's custom metadata. This operation adds or sets individual custom
+   * metadata key-value pairs. Keys specified with empty values have their values cleared. Existing
+   * custom metadata keys not included in the request remain unchanged. For details, see [Custom
+   * metadata](https://cloud.google.com/storage/docs/metadata#custom-metadata).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomMetadata() {
@@ -227,10 +231,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects custom metadata. Adds or sets individual custom metadata key value
-   * pairs on objects. Keys that are set with empty custom metadata values will have its value
-   * cleared. Existing custom metadata not specified with this flag is not changed. Refer to
-   * documentation in https://cloud.google.com/storage/docs/metadata#custom-metadata
+   * Optional. Updates the object's custom metadata. This operation adds or sets individual custom
+   * metadata key-value pairs. Keys specified with empty values have their values cleared. Existing
+   * custom metadata keys not included in the request remain unchanged. For details, see [Custom
+   * metadata](https://cloud.google.com/storage/docs/metadata#custom-metadata).
    * @param customMetadata customMetadata or {@code null} for none
    */
   public PutMetadata setCustomMetadata(java.util.Map<String, java.lang.String> customMetadata) {
@@ -239,9 +243,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Custom-Time fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#custom-time.
+   * Optional. Updates the objects `Custom-Time` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. The time must be specified in RFC 3339
+   * format, for example `YYYY-MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. For details,
+   * see [Custom-Time](https://cloud.google.com/storage/docs/metadata#custom-time).
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomTime() {
@@ -249,9 +254,10 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects Custom-Time fixed metadata. Unset values will be ignored. Set empty
-   * values to clear the metadata. Refer to documentation in
-   * https://cloud.google.com/storage/docs/metadata#custom-time.
+   * Optional. Updates the objects `Custom-Time` fixed metadata. Unset values in the request are
+   * ignored. To clear the metadata, set an empty value. The time must be specified in RFC 3339
+   * format, for example `YYYY-MM-DD'T'HH:MM:SS'Z'` or `YYYY-MM-DD'T'HH:MM:SS.SS'Z'`. For details,
+   * see [Custom-Time](https://cloud.google.com/storage/docs/metadata#custom-time).
    * @param customTime customTime or {@code null} for none
    */
   public PutMetadata setCustomTime(java.lang.String customTime) {
@@ -260,10 +266,13 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
-   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
-   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
-   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * Optional. Updates an object's retention configuration. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings. An object with `LOCKED` retention mode can't have its retention
+   * cleared or its `retainUntilTime` reduced. For more information, see [Object
+   * retention](https://cloud.google.com/storage/docs/batch-operations/create-manage-batch-
+   * operation-jobs#retain-until-time).
    * @return value or {@code null} for none
    */
   public ObjectRetention getObjectRetention() {
@@ -271,10 +280,13 @@ public final class PutMetadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Updates objects retention lock configuration. Unset values will be ignored. Set empty
-   * values to clear the retention for the object with existing `Unlocked` retention mode. Object
-   * with existing `Locked` retention mode cannot be cleared or reduce retain_until_time. Refer to
-   * documentation in https://cloud.google.com/storage/docs/object-lock
+   * Optional. Updates an object's retention configuration. To clear an object's retention, both
+   * `retentionMode` and `retainUntilTime` must be left unset (omitted). Setting `retentionMode` to
+   * `RETENTION_MODE_UNSPECIFIED` is treated as a no-op. Unlike an unset field, it doesn't modify or
+   * clear the retention settings. An object with `LOCKED` retention mode can't have its retention
+   * cleared or its `retainUntilTime` reduced. For more information, see [Object
+   * retention](https://cloud.google.com/storage/docs/batch-operations/create-manage-batch-
+   * operation-jobs#retain-until-time).
    * @param objectRetention objectRetention or {@code null} for none
    */
   public PutMetadata setObjectRetention(ObjectRetention objectRetention) {

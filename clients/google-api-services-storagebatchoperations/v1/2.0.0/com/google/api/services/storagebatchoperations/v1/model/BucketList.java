@@ -31,8 +31,8 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class BucketList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. List of buckets and their objects to be transformed. Currently, only one bucket
-   * configuration is supported. If multiple buckets are specified, an error will be returned.
+   * Required. List of buckets and their objects to be transformed. You can specify only one bucket
+   * per job. If multiple buckets are specified, an error occurs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class BucketList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of buckets and their objects to be transformed. Currently, only one bucket
-   * configuration is supported. If multiple buckets are specified, an error will be returned.
+   * Required. List of buckets and their objects to be transformed. You can specify only one bucket
+   * per job. If multiple buckets are specified, an error occurs.
    * @return value or {@code null} for none
    */
   public java.util.List<Bucket> getBuckets() {
@@ -54,8 +54,8 @@ public final class BucketList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of buckets and their objects to be transformed. Currently, only one bucket
-   * configuration is supported. If multiple buckets are specified, an error will be returned.
+   * Required. List of buckets and their objects to be transformed. You can specify only one bucket
+   * per job. If multiple buckets are specified, an error occurs.
    * @param buckets buckets or {@code null} for none
    */
   public BucketList setBuckets(java.util.List<Bucket> buckets) {

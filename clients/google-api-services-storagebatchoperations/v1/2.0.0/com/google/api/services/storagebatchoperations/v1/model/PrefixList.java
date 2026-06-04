@@ -31,18 +31,18 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class PrefixList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Include prefixes of the objects to be transformed. * Supports full object name *
-   * Supports prefix of the object name * Wildcards are not supported * Supports empty string for
-   * all objects in a bucket.
+   * Optional. Specify one or more object prefixes. For example: * To match one object, use a single
+   * prefix, `prefix1`. * To match multiple objects, use comma-separated prefixes, `prefix1,
+   * prefix2`. * To match all objects, use an empty prefix, `''`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> includedObjectPrefixes;
 
   /**
-   * Optional. Include prefixes of the objects to be transformed. * Supports full object name *
-   * Supports prefix of the object name * Wildcards are not supported * Supports empty string for
-   * all objects in a bucket.
+   * Optional. Specify one or more object prefixes. For example: * To match one object, use a single
+   * prefix, `prefix1`. * To match multiple objects, use comma-separated prefixes, `prefix1,
+   * prefix2`. * To match all objects, use an empty prefix, `''`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedObjectPrefixes() {
@@ -50,9 +50,9 @@ public final class PrefixList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Include prefixes of the objects to be transformed. * Supports full object name *
-   * Supports prefix of the object name * Wildcards are not supported * Supports empty string for
-   * all objects in a bucket.
+   * Optional. Specify one or more object prefixes. For example: * To match one object, use a single
+   * prefix, `prefix1`. * To match multiple objects, use comma-separated prefixes, `prefix1,
+   * prefix2`. * To match all objects, use an empty prefix, `''`
    * @param includedObjectPrefixes includedObjectPrefixes or {@code null} for none
    */
   public PrefixList setIncludedObjectPrefixes(java.util.List<java.lang.String> includedObjectPrefixes) {

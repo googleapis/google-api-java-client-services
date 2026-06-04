@@ -32,9 +32,9 @@ public final class CancelJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID in case you
-   * need to retry your request. Requests with same `request_id` will be ignored for at least 60
-   * minutes since the first request. The request ID must be a valid UUID with the exception that
-   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+   * need to retry your request. Requests with same `request_id` are ignored for at least 60 minutes
+   * since the first request. The request ID must be a valid UUID with the exception that zero UUID
+   * isn't supported (00000000-0000-0000-0000-000000000000).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,9 +42,9 @@ public final class CancelJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID in case you
-   * need to retry your request. Requests with same `request_id` will be ignored for at least 60
-   * minutes since the first request. The request ID must be a valid UUID with the exception that
-   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+   * need to retry your request. Requests with same `request_id` are ignored for at least 60 minutes
+   * since the first request. The request ID must be a valid UUID with the exception that zero UUID
+   * isn't supported (00000000-0000-0000-0000-000000000000).
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -53,9 +53,9 @@ public final class CancelJobRequest extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID in case you
-   * need to retry your request. Requests with same `request_id` will be ignored for at least 60
-   * minutes since the first request. The request ID must be a valid UUID with the exception that
-   * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+   * need to retry your request. Requests with same `request_id` are ignored for at least 60 minutes
+   * since the first request. The request ID must be a valid UUID with the exception that zero UUID
+   * isn't supported (00000000-0000-0000-0000-000000000000).
    * @param requestId requestId or {@code null} for none
    */
   public CancelJobRequest setRequestId(java.lang.String requestId) {

@@ -31,7 +31,7 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class CustomContextUpdates extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Custom contexts to clear by key. A key cannot be present in both `updates` and
+   * Optional. Custom contexts to clear by key. A key can't be present in both `updates` and
    * `keys_to_clear`.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class CustomContextUpdates extends com.google.api.client.json.Gener
   private java.util.Map<String, ObjectCustomContextPayload> updates;
 
   /**
-   * Optional. Custom contexts to clear by key. A key cannot be present in both `updates` and
+   * Optional. Custom contexts to clear by key. A key can't be present in both `updates` and
    * `keys_to_clear`.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class CustomContextUpdates extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Custom contexts to clear by key. A key cannot be present in both `updates` and
+   * Optional. Custom contexts to clear by key. A key can't be present in both `updates` and
    * `keys_to_clear`.
    * @param keysToClear keysToClear or {@code null} for none
    */

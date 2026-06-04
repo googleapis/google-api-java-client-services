@@ -17,7 +17,7 @@
 package com.google.api.services.storagebatchoperations.v1.model;
 
 /**
- * The Storage Batch Operations Job description.
+ * The storage batch operations job description.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Batch Operations API. For a detailed
@@ -66,17 +66,17 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private DeleteObject deleteObject;
 
   /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
+   * Optional. A user-provided description for the job. Maximum length: 1024 bytes when unicode-
+   * encoded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
+   * Optional. If true, the job runs in dry run mode, returning the total object count and, if the
+   * object configuration is a prefix list, the bytes found from source. No transformations are
+   * performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
+   * Output only. If true, this job operates on multiple buckets. Multi-bucket jobs are subject to
    * different quota limits than single-bucket jobs.
    * The value may be {@code null}.
    */
@@ -111,19 +111,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private LoggingConfig loggingConfig;
 
   /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the job. Format:
+   * `projects/{project_id}/locations/global/jobs/{job_id}`. For example:
+   * `projects/123456/locations/global/jobs/job01`. `job_id` is unique in a given project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Updates object metadata. Allows updating fixed-key and custom metadata and fixed-key metadata
-   * i.e. Cache-Control, Content-Disposition, Content-Encoding, Content-Language, Content-Type,
-   * Custom-Time.
+   * Specifies a project source and filters to identify objects to be transformed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProjectSource projectSource;
+
+  /**
+   * Updates object metadata. Allows updating fixed-key and custom metadata. For example, `Cache-
+   * Control`, `Content-Disposition`, `Content-Encoding`, `Content-Language`, `Content-Type`,
+   * `Custom-Time`, and `Retention configuration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +155,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String scheduleTime;
+
+  /**
+   * Updates object ACLs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SetObjectAcls setObjectAcls;
 
   /**
    * Output only. State of the job.
@@ -250,8 +263,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
+   * Optional. A user-provided description for the job. Maximum length: 1024 bytes when unicode-
+   * encoded.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -259,8 +272,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
+   * Optional. A user-provided description for the job. Maximum length: 1024 bytes when unicode-
+   * encoded.
    * @param description description or {@code null} for none
    */
   public Job setDescription(java.lang.String description) {
@@ -269,9 +282,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
+   * Optional. If true, the job runs in dry run mode, returning the total object count and, if the
+   * object configuration is a prefix list, the bytes found from source. No transformations are
+   * performed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDryRun() {
@@ -279,9 +292,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
+   * Optional. If true, the job runs in dry run mode, returning the total object count and, if the
+   * object configuration is a prefix list, the bytes found from source. No transformations are
+   * performed.
    * @param dryRun dryRun or {@code null} for none
    */
   public Job setDryRun(java.lang.Boolean dryRun) {
@@ -307,7 +320,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
+   * Output only. If true, this job operates on multiple buckets. Multi-bucket jobs are subject to
    * different quota limits than single-bucket jobs.
    * @return value or {@code null} for none
    */
@@ -316,7 +329,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
+   * Output only. If true, this job operates on multiple buckets. Multi-bucket jobs are subject to
    * different quota limits than single-bucket jobs.
    * @param isMultiBucketJob isMultiBucketJob or {@code null} for none
    */
@@ -343,10 +356,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the job. Format:
+   * `projects/{project_id}/locations/global/jobs/{job_id}`. For example:
+   * `projects/123456/locations/global/jobs/job01`. `job_id` is unique in a given project.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -354,10 +366,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the job. Format:
+   * `projects/{project_id}/locations/global/jobs/{job_id}`. For example:
+   * `projects/123456/locations/global/jobs/job01`. `job_id` is unique in a given project.
    * @param name name or {@code null} for none
    */
   public Job setName(java.lang.String name) {
@@ -366,9 +377,26 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates object metadata. Allows updating fixed-key and custom metadata and fixed-key metadata
-   * i.e. Cache-Control, Content-Disposition, Content-Encoding, Content-Language, Content-Type,
-   * Custom-Time.
+   * Specifies a project source and filters to identify objects to be transformed.
+   * @return value or {@code null} for none
+   */
+  public ProjectSource getProjectSource() {
+    return projectSource;
+  }
+
+  /**
+   * Specifies a project source and filters to identify objects to be transformed.
+   * @param projectSource projectSource or {@code null} for none
+   */
+  public Job setProjectSource(ProjectSource projectSource) {
+    this.projectSource = projectSource;
+    return this;
+  }
+
+  /**
+   * Updates object metadata. Allows updating fixed-key and custom metadata. For example, `Cache-
+   * Control`, `Content-Disposition`, `Content-Encoding`, `Content-Language`, `Content-Type`,
+   * `Custom-Time`, and `Retention configuration`.
    * @return value or {@code null} for none
    */
   public PutMetadata getPutMetadata() {
@@ -376,9 +404,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates object metadata. Allows updating fixed-key and custom metadata and fixed-key metadata
-   * i.e. Cache-Control, Content-Disposition, Content-Encoding, Content-Language, Content-Type,
-   * Custom-Time.
+   * Updates object metadata. Allows updating fixed-key and custom metadata. For example, `Cache-
+   * Control`, `Content-Disposition`, `Content-Encoding`, `Content-Language`, `Content-Type`,
+   * `Custom-Time`, and `Retention configuration`.
    * @param putMetadata putMetadata or {@code null} for none
    */
   public Job setPutMetadata(PutMetadata putMetadata) {
@@ -434,6 +462,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setScheduleTime(String scheduleTime) {
     this.scheduleTime = scheduleTime;
+    return this;
+  }
+
+  /**
+   * Updates object ACLs.
+   * @return value or {@code null} for none
+   */
+  public SetObjectAcls getSetObjectAcls() {
+    return setObjectAcls;
+  }
+
+  /**
+   * Updates object ACLs.
+   * @param setObjectAcls setObjectAcls or {@code null} for none
+   */
+  public Job setSetObjectAcls(SetObjectAcls setObjectAcls) {
+    this.setObjectAcls = setObjectAcls;
     return this;
   }
 

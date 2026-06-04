@@ -60,7 +60,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. The unique operation resource name. Format:
-   * projects/{project}/locations/global/operations/{operation}.
+   * projects/{project_id}/locations/global/operations/{operation}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. The unique operation resource name. Format:
-   * projects/{project}/locations/global/operations/{operation}.
+   * projects/{project_id}/locations/global/operations/{operation}.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -154,7 +154,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
 
   /**
    * Output only. The unique operation resource name. Format:
-   * projects/{project}/locations/global/operations/{operation}.
+   * projects/{project_id}/locations/global/operations/{operation}.
    * @param operation operation or {@code null} for none
    */
   public OperationMetadata setOperation(java.lang.String operation) {

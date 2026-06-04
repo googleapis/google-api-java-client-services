@@ -17,7 +17,8 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing IpamAdminScope object
+ * An IpamAdminScope defines the administrative boundary for IP address discovery and management. It
+ * configures which platforms and organizational scopes are enabled for IP tracking.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,29 +32,29 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class IpamAdminScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the IpamAdminScope was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. Addon platforms that are enabled for this IPAM admin scope. Cloud Number Registry
-   * only discovers the IP addresses from the enabled platforms.
+   * Required. Add-on platforms that are enabled for this IpamAdminScope. Cloud Number Registry only
+   * discovers the IP addresses from the enabled platforms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> enabledAddonPlatforms;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the IpamAdminScope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,14 +77,14 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the IpamAdminScope was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the IpamAdminScope was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -91,7 +92,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the IpamAdminScope was created.
    * @param createTime createTime or {@code null} for none
    */
   public IpamAdminScope setCreateTime(String createTime) {
@@ -100,8 +101,8 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Addon platforms that are enabled for this IPAM admin scope. Cloud Number Registry
-   * only discovers the IP addresses from the enabled platforms.
+   * Required. Add-on platforms that are enabled for this IpamAdminScope. Cloud Number Registry only
+   * discovers the IP addresses from the enabled platforms.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledAddonPlatforms() {
@@ -109,8 +110,8 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Addon platforms that are enabled for this IPAM admin scope. Cloud Number Registry
-   * only discovers the IP addresses from the enabled platforms.
+   * Required. Add-on platforms that are enabled for this IpamAdminScope. Cloud Number Registry only
+   * discovers the IP addresses from the enabled platforms.
    * @param enabledAddonPlatforms enabledAddonPlatforms or {@code null} for none
    */
   public IpamAdminScope setEnabledAddonPlatforms(java.util.List<java.lang.String> enabledAddonPlatforms) {
@@ -119,7 +120,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -127,7 +128,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @param labels labels or {@code null} for none
    */
   public IpamAdminScope setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -136,7 +137,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the IpamAdminScope.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -144,7 +145,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the IpamAdminScope.
    * @param name name or {@code null} for none
    */
   public IpamAdminScope setName(java.lang.String name) {
@@ -191,7 +192,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the IpamAdminScope was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -199,7 +200,7 @@ public final class IpamAdminScope extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the IpamAdminScope was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public IpamAdminScope setUpdateTime(String updateTime) {

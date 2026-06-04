@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for the utilization of an IP range
+ * Utilization metrics for an IP Range, including consumed and produced address counts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class RangeUtilization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The total number of IP addresses consumed in the range.
+   * Output only. The total number of IP addresses consumed in the Range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String totalConsumed;
 
   /**
-   * Output only. The total number of IP addresses produced in the range.
+   * Output only. The total number of IP addresses produced in the Range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String totalProduced;
 
   /**
-   * Output only. The usage of the range as a percentage. This is marked as optional so that we have
+   * Output only. The usage of the Range as a percentage. This is marked as optional so that we have
    * presence tracking and API responses show 0.0 instead of NULL.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   private java.lang.Double usage;
 
   /**
-   * Output only. The total number of IP addresses consumed in the range.
+   * Output only. The total number of IP addresses consumed in the Range.
    * @return value or {@code null} for none
    */
   public java.lang.String getTotalConsumed() {
@@ -61,7 +61,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The total number of IP addresses consumed in the range.
+   * Output only. The total number of IP addresses consumed in the Range.
    * @param totalConsumed totalConsumed or {@code null} for none
    */
   public RangeUtilization setTotalConsumed(java.lang.String totalConsumed) {
@@ -70,7 +70,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The total number of IP addresses produced in the range.
+   * Output only. The total number of IP addresses produced in the Range.
    * @return value or {@code null} for none
    */
   public java.lang.String getTotalProduced() {
@@ -78,7 +78,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The total number of IP addresses produced in the range.
+   * Output only. The total number of IP addresses produced in the Range.
    * @param totalProduced totalProduced or {@code null} for none
    */
   public RangeUtilization setTotalProduced(java.lang.String totalProduced) {
@@ -87,7 +87,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The usage of the range as a percentage. This is marked as optional so that we have
+   * Output only. The usage of the Range as a percentage. This is marked as optional so that we have
    * presence tracking and API responses show 0.0 instead of NULL.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class RangeUtilization extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The usage of the range as a percentage. This is marked as optional so that we have
+   * Output only. The usage of the Range as a percentage. This is marked as optional so that we have
    * presence tracking and API responses show 0.0 instead of NULL.
    * @param usage usage or {@code null} for none
    */

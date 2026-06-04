@@ -17,7 +17,9 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing Realm object
+ * A Realm represents a distinct network domain or security zone. It groups Ranges that share the
+ * same traffic and management characteristics. All the ranges in a Realm are routable to each
+ * other, meaning that they cannot overlap.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -38,63 +40,63 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private RealmAggregatedData aggregatedData;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the Realm was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Discovery metadata of the realm.
+   * Output only. Discovery metadata of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DiscoveryMetadata discoveryMetadata;
 
   /**
-   * Optional. IP version of the realm.
+   * Optional. IP version of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipVersion;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Management type of realm.
+   * Required. Management type of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String managementType;
 
   /**
-   * Required. Identifier. Unique name/ID of the realm
+   * Required. Identifier. The resource name of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. URI of the registry book that claims the realm.
+   * Required. Name of the RegistryBook that claims the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String registryBook;
 
   /**
-   * Required. Traffic type of realm.
+   * Required. Traffic type of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trafficType;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the Realm was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +120,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the Realm was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -126,7 +128,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the Realm was created.
    * @param createTime createTime or {@code null} for none
    */
   public Realm setCreateTime(String createTime) {
@@ -135,7 +137,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Discovery metadata of the realm.
+   * Output only. Discovery metadata of the Realm.
    * @return value or {@code null} for none
    */
   public DiscoveryMetadata getDiscoveryMetadata() {
@@ -143,7 +145,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Discovery metadata of the realm.
+   * Output only. Discovery metadata of the Realm.
    * @param discoveryMetadata discoveryMetadata or {@code null} for none
    */
   public Realm setDiscoveryMetadata(DiscoveryMetadata discoveryMetadata) {
@@ -152,7 +154,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. IP version of the realm.
+   * Optional. IP version of the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpVersion() {
@@ -160,7 +162,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. IP version of the realm.
+   * Optional. IP version of the Realm.
    * @param ipVersion ipVersion or {@code null} for none
    */
   public Realm setIpVersion(java.lang.String ipVersion) {
@@ -169,7 +171,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -177,7 +179,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @param labels labels or {@code null} for none
    */
   public Realm setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -186,7 +188,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Management type of realm.
+   * Required. Management type of the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -194,7 +196,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Management type of realm.
+   * Required. Management type of the Realm.
    * @param managementType managementType or {@code null} for none
    */
   public Realm setManagementType(java.lang.String managementType) {
@@ -203,7 +205,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. Unique name/ID of the realm
+   * Required. Identifier. The resource name of the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -211,7 +213,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. Unique name/ID of the realm
+   * Required. Identifier. The resource name of the Realm.
    * @param name name or {@code null} for none
    */
   public Realm setName(java.lang.String name) {
@@ -220,7 +222,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the registry book that claims the realm.
+   * Required. Name of the RegistryBook that claims the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegistryBook() {
@@ -228,7 +230,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the registry book that claims the realm.
+   * Required. Name of the RegistryBook that claims the Realm.
    * @param registryBook registryBook or {@code null} for none
    */
   public Realm setRegistryBook(java.lang.String registryBook) {
@@ -237,7 +239,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Traffic type of realm.
+   * Required. Traffic type of the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrafficType() {
@@ -245,7 +247,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Traffic type of realm.
+   * Required. Traffic type of the Realm.
    * @param trafficType trafficType or {@code null} for none
    */
   public Realm setTrafficType(java.lang.String trafficType) {
@@ -254,7 +256,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the Realm was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -262,7 +264,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the Realm was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Realm setUpdateTime(String updateTime) {

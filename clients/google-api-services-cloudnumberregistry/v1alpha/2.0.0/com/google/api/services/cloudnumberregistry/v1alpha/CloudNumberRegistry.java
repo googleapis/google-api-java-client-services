@@ -582,7 +582,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource name where the CustomRange will be created.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CustomRange}
          * @return the request
          */
@@ -610,7 +610,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource name where the CustomRange will be created.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CustomRange}
            * @since 1.13
            */
@@ -679,17 +679,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the CustomRange will be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource name where the CustomRange will be created.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the CustomRange will be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -700,17 +700,24 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the CustomRange, which will become the final segment of the
+           * resource name.
+           */
           @com.google.api.client.util.Key
           private java.lang.String customRangeId;
 
-          /** Required. Id of the requesting object.
+          /** Required. The ID to use for the CustomRange, which will become the final segment of the resource
+         name.
            */
           public java.lang.String getCustomRangeId() {
             return customRangeId;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the CustomRange, which will become the final segment of the
+           * resource name.
+           */
           public Create setCustomRangeId(java.lang.String customRangeId) {
             this.customRangeId = customRangeId;
             return this;
@@ -772,7 +779,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the CustomRange to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -799,7 +806,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the CustomRange to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -867,17 +874,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the CustomRange to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -961,7 +968,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link FindFreeIpRanges#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Name of the CustomRange.
+         * @param name Required. The resource name of the CustomRange to search within.
          * @return the request
          */
         public FindFreeIpRanges findFreeIpRanges(java.lang.String name) throws java.io.IOException {
@@ -988,7 +995,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Name of the CustomRange.
+           * @param name Required. The resource name of the CustomRange to search within.
            * @since 1.13
            */
           protected FindFreeIpRanges(java.lang.String name) {
@@ -1066,17 +1073,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (FindFreeIpRanges) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the CustomRange. */
+          /** Required. The resource name of the CustomRange to search within. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the CustomRange.
+          /** Required. The resource name of the CustomRange to search within.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the CustomRange. */
+          /** Required. The resource name of the CustomRange to search within. */
           public FindFreeIpRanges setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1175,7 +1182,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the CustomRange to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1202,7 +1209,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the CustomRange to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1280,17 +1287,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the CustomRange to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1314,7 +1321,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListCustomRangesRequest
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1341,7 +1348,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListCustomRangesRequest
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1419,17 +1426,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListCustomRangesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListCustomRangesRequest
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListCustomRangesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1440,17 +1447,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results. */
+          /** Optional. Filter expression to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results.
+          /** Optional. Filter expression to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results. */
+          /** Optional. Filter expression to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1524,7 +1531,8 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Identifier. name of resource
+         * @param name Required. Identifier. The resource name of the CustomRange, in the format
+         *        `projects/{project}/locations/{location}/customRanges/{custom_range}`.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CustomRange}
          * @return the request
          */
@@ -1552,7 +1560,8 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Identifier. name of resource
+           * @param name Required. Identifier. The resource name of the CustomRange, in the format
+         *        `projects/{project}/locations/{location}/customRanges/{custom_range}`.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CustomRange}
            * @since 1.13
            */
@@ -1621,17 +1630,24 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Identifier. name of resource */
+          /**
+           * Required. Identifier. The resource name of the CustomRange, in the format
+           * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Identifier. name of resource
+          /** Required. Identifier. The resource name of the CustomRange, in the format
+         `projects/{project}/locations/{location}/customRanges/{custom_range}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Identifier. name of resource */
+          /**
+           * Required. Identifier. The resource name of the CustomRange, in the format
+           * `projects/{project}/locations/{location}/customRanges/{custom_range}`.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1728,7 +1744,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link ShowUtilization#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the CustomRange.
          * @return the request
          */
         public ShowUtilization showUtilization(java.lang.String name) throws java.io.IOException {
@@ -1755,7 +1771,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the CustomRange.
            * @since 1.13
            */
           protected ShowUtilization(java.lang.String name) {
@@ -1833,17 +1849,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (ShowUtilization) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the CustomRange.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the CustomRange. */
           public ShowUtilization setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1890,7 +1906,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link FindFreeIpRanges#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Name of the DiscoveredRange.
+         * @param name Required. The resource name of the DiscoveredRange to search within.
          * @return the request
          */
         public FindFreeIpRanges findFreeIpRanges(java.lang.String name) throws java.io.IOException {
@@ -1917,7 +1933,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Name of the DiscoveredRange.
+           * @param name Required. The resource name of the DiscoveredRange to search within.
            * @since 1.13
            */
           protected FindFreeIpRanges(java.lang.String name) {
@@ -1995,17 +2011,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (FindFreeIpRanges) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the DiscoveredRange. */
+          /** Required. The resource name of the DiscoveredRange to search within. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the DiscoveredRange.
+          /** Required. The resource name of the DiscoveredRange to search within.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the DiscoveredRange. */
+          /** Required. The resource name of the DiscoveredRange to search within. */
           public FindFreeIpRanges setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2104,7 +2120,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the DiscoveredRange to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2131,7 +2147,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the DiscoveredRange to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2209,17 +2225,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the DiscoveredRange to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the DiscoveredRange to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the DiscoveredRange to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2243,7 +2259,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListDiscoveredRangesRequest
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2270,7 +2286,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListDiscoveredRangesRequest
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2348,17 +2364,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListDiscoveredRangesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListDiscoveredRangesRequest
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListDiscoveredRangesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2369,17 +2385,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results. */
+          /** Optional. Filter expression to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results.
+          /** Optional. Filter expression to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results. */
+          /** Optional. Filter expression to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -2454,7 +2470,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link ShowUtilization#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the DiscoveredRange.
          * @return the request
          */
         public ShowUtilization showUtilization(java.lang.String name) throws java.io.IOException {
@@ -2481,7 +2497,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the DiscoveredRange.
            * @since 1.13
            */
           protected ShowUtilization(java.lang.String name) {
@@ -2559,17 +2575,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (ShowUtilization) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the DiscoveredRange. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the DiscoveredRange.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the DiscoveredRange. */
           public ShowUtilization setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2608,7 +2624,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
       public class IpamAdminScopes {
 
         /**
-         * Checks the availability of IPAM admin scopes in a given project and location.
+         * Checks the availability of IpamAdminScopes in a given project and location.
          *
          * Create a request for the method "ipamAdminScopes.checkAvailability".
          *
@@ -2616,7 +2632,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link CheckAvailability#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. Parent value for the IpamAdminScopes.
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public CheckAvailability checkAvailability(java.lang.String parent) throws java.io.IOException {
@@ -2633,7 +2649,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Checks the availability of IPAM admin scopes in a given project and location.
+           * Checks the availability of IpamAdminScopes in a given project and location.
            *
            * Create a request for the method "ipamAdminScopes.checkAvailability".
            *
@@ -2643,7 +2659,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for the IpamAdminScopes.
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected CheckAvailability(java.lang.String parent) {
@@ -2721,17 +2737,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (CheckAvailability) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for the IpamAdminScopes. */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for the IpamAdminScopes.
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for the IpamAdminScopes. */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public CheckAvailability setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2742,17 +2758,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. The scopes of the IpamAdminScopes to look for. */
+          /** Required. The administrative scopes to check for availability. */
           @com.google.api.client.util.Key
           private java.util.List<java.lang.String> scopes;
 
-          /** Required. The scopes of the IpamAdminScopes to look for.
+          /** Required. The administrative scopes to check for availability.
            */
           public java.util.List<java.lang.String> getScopes() {
             return scopes;
           }
 
-          /** Required. The scopes of the IpamAdminScopes to look for. */
+          /** Required. The administrative scopes to check for availability. */
           public CheckAvailability setScopes(java.util.List<java.lang.String> scopes) {
             this.scopes = scopes;
             return this;
@@ -2771,7 +2787,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Cleanup#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the IpamAdminScope to clean up.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CleanupIpamAdminScopeRequest}
          * @return the request
          */
@@ -2799,7 +2815,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Cleanup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the IpamAdminScope to clean up.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.CleanupIpamAdminScopeRequest}
            * @since 1.13
            */
@@ -2868,17 +2884,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Cleanup) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to clean up. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the IpamAdminScope to clean up.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to clean up. */
           public Cleanup setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2902,7 +2918,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource name where the IpamAdminScope will be created.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.IpamAdminScope}
          * @return the request
          */
@@ -2930,7 +2946,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource name where the IpamAdminScope will be created.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.IpamAdminScope}
            * @since 1.13
            */
@@ -2999,17 +3015,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the IpamAdminScope will be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource name where the IpamAdminScope will be created.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the IpamAdminScope will be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3020,17 +3036,24 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the IpamAdminScope, which will become the final segment of
+           * the resource name.
+           */
           @com.google.api.client.util.Key
           private java.lang.String ipamAdminScopeId;
 
-          /** Required. Id of the requesting object.
+          /** Required. The ID to use for the IpamAdminScope, which will become the final segment of the resource
+         name.
            */
           public java.lang.String getIpamAdminScopeId() {
             return ipamAdminScopeId;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the IpamAdminScope, which will become the final segment of
+           * the resource name.
+           */
           public Create setIpamAdminScopeId(java.lang.String ipamAdminScopeId) {
             this.ipamAdminScopeId = ipamAdminScopeId;
             return this;
@@ -3092,7 +3115,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the IpamAdminScope to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3119,7 +3142,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the IpamAdminScope to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3187,17 +3210,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the IpamAdminScope to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3280,7 +3303,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the IpamAdminScope to disable.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.DisableIpamAdminScopeRequest}
          * @return the request
          */
@@ -3308,7 +3331,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the IpamAdminScope to disable.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.DisableIpamAdminScopeRequest}
            * @since 1.13
            */
@@ -3377,17 +3400,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Disable) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to disable. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the IpamAdminScope to disable.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to disable. */
           public Disable setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3411,7 +3434,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the IpamAdminScope to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3438,7 +3461,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the IpamAdminScope to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3516,17 +3539,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the IpamAdminScope to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the IpamAdminScope to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3543,14 +3566,14 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * List all IPAM admin scopes in a given project and location.
+         * Lists IpamAdminScopes in a given project and location.
          *
          * Create a request for the method "ipamAdminScopes.list".
          *
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListIpamAdminScopesRequest
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3567,7 +3590,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List all IPAM admin scopes in a given project and location.
+           * Lists IpamAdminScopes in a given project and location.
            *
            * Create a request for the method "ipamAdminScopes.list".
            *
@@ -3577,7 +3600,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListIpamAdminScopesRequest
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3655,17 +3678,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListIpamAdminScopesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListIpamAdminScopesRequest
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListIpamAdminScopesRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3676,33 +3699,33 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filter expression to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -3760,7 +3783,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Identifier. name of resource
+         * @param name Required. Identifier. The resource name of the IpamAdminScope.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.IpamAdminScope}
          * @return the request
          */
@@ -3788,7 +3811,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Identifier. name of resource
+           * @param name Required. Identifier. The resource name of the IpamAdminScope.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.IpamAdminScope}
            * @since 1.13
            */
@@ -3857,17 +3880,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Identifier. name of resource */
+          /** Required. Identifier. The resource name of the IpamAdminScope. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Identifier. name of resource
+          /** Required. Identifier. The resource name of the IpamAdminScope.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Identifier. name of resource */
+          /** Required. Identifier. The resource name of the IpamAdminScope. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4648,7 +4671,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource name where the Realm will be created.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.Realm}
          * @return the request
          */
@@ -4676,7 +4699,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource name where the Realm will be created.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.Realm}
            * @since 1.13
            */
@@ -4745,17 +4768,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the Realm will be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource name where the Realm will be created.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the Realm will be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4766,17 +4789,23 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the Realm, which will become the final segment of the
+           * resource name.
+           */
           @com.google.api.client.util.Key
           private java.lang.String realmId;
 
-          /** Required. Id of the requesting object.
+          /** Required. The ID to use for the Realm, which will become the final segment of the resource name.
            */
           public java.lang.String getRealmId() {
             return realmId;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the Realm, which will become the final segment of the
+           * resource name.
+           */
           public Create setRealmId(java.lang.String realmId) {
             this.realmId = realmId;
             return this;
@@ -4823,7 +4852,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the Realm to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4850,7 +4879,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the Realm to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4918,17 +4947,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the Realm to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the Realm to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the Realm to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4996,7 +5025,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the Realm to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5023,7 +5052,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the Realm to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5101,17 +5130,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the Realm to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the Realm to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the Realm to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5122,17 +5151,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. The view of the Realm. */
+          /** Optional. The view of the Realm to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the Realm.
+          /** Optional. The view of the Realm to retrieve.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. The view of the Realm. */
+          /** Optional. The view of the Realm to retrieve. */
           public Get setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -5151,7 +5180,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListRealmsRequest
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5178,7 +5207,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListRealmsRequest
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5256,17 +5285,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListRealmsRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListRealmsRequest
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListRealmsRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5277,33 +5306,33 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filter expression to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -5348,17 +5377,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. The view of the Realm. */
+          /** Optional. The view of the Realm to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the Realm.
+          /** Optional. The view of the Realm to retrieve.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. The view of the Realm. */
+          /** Optional. The view of the Realm to retrieve. */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -5377,7 +5406,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Identifier. Unique name/ID of the realm
+         * @param name Required. Identifier. The resource name of the Realm.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.Realm}
          * @return the request
          */
@@ -5405,7 +5434,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Identifier. Unique name/ID of the realm
+           * @param name Required. Identifier. The resource name of the Realm.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.Realm}
            * @since 1.13
            */
@@ -5474,17 +5503,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Identifier. Unique name/ID of the realm */
+          /** Required. Identifier. The resource name of the Realm. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Identifier. Unique name/ID of the realm
+          /** Required. Identifier. The resource name of the Realm.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Identifier. Unique name/ID of the realm */
+          /** Required. Identifier. The resource name of the Realm. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5581,7 +5610,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource name where the RegistryBook will be created.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.RegistryBook}
          * @return the request
          */
@@ -5609,7 +5638,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource name where the RegistryBook will be created.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.RegistryBook}
            * @since 1.13
            */
@@ -5678,17 +5707,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the RegistryBook will be created. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource name where the RegistryBook will be created.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent resource name where the RegistryBook will be created. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5699,17 +5728,24 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the RegistryBook, which will become the final segment of
+           * the resource name.
+           */
           @com.google.api.client.util.Key
           private java.lang.String registryBookId;
 
-          /** Required. Id of the requesting object.
+          /** Required. The ID to use for the RegistryBook, which will become the final segment of the resource
+         name.
            */
           public java.lang.String getRegistryBookId() {
             return registryBookId;
           }
 
-          /** Required. Id of the requesting object. */
+          /**
+           * Required. The ID to use for the RegistryBook, which will become the final segment of
+           * the resource name.
+           */
           public Create setRegistryBookId(java.lang.String registryBookId) {
             this.registryBookId = registryBookId;
             return this;
@@ -5771,7 +5807,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the RegistryBook to delete.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5798,7 +5834,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the RegistryBook to delete.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -5866,17 +5902,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the RegistryBook to delete. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the RegistryBook to delete.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the RegistryBook to delete. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5959,7 +5995,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the RegistryBook to retrieve.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5986,7 +6022,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the RegistryBook to retrieve.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6064,17 +6100,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the RegistryBook to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the RegistryBook to retrieve.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the RegistryBook to retrieve. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6085,17 +6121,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. The view of the RegistryBook. */
+          /** Optional. The view of the RegistryBook to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the RegistryBook.
+          /** Optional. The view of the RegistryBook to retrieve.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. The view of the RegistryBook. */
+          /** Optional. The view of the RegistryBook to retrieve. */
           public Get setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -6114,7 +6150,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListRegistryBooksRequest
+         * @param parent Required. The parent resource name, for example `projects/locations`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6141,7 +6177,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListRegistryBooksRequest
+           * @param parent Required. The parent resource name, for example `projects/locations`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6219,17 +6255,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListRegistryBooksRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListRegistryBooksRequest
+          /** Required. The parent resource name, for example `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListRegistryBooksRequest */
+          /** Required. The parent resource name, for example `projects/locations`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6240,33 +6276,33 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filter expression to filter the results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filter expression to filter the results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -6311,17 +6347,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Optional. The view of the RegistryBook. */
+          /** Optional. The view of the RegistryBook to retrieve. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the RegistryBook.
+          /** Optional. The view of the RegistryBook to retrieve.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. The view of the RegistryBook. */
+          /** Optional. The view of the RegistryBook to retrieve. */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -6340,7 +6376,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the cloudnumberregistry server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Identifier. name of resource
+         * @param name Required. Identifier. The resource name of the RegistryBook.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.RegistryBook}
          * @return the request
          */
@@ -6368,7 +6404,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Identifier. name of resource
+           * @param name Required. Identifier. The resource name of the RegistryBook.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.RegistryBook}
            * @since 1.13
            */
@@ -6437,17 +6473,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Identifier. name of resource */
+          /** Required. Identifier. The resource name of the RegistryBook. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Identifier. name of resource
+          /** Required. Identifier. The resource name of the RegistryBook.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Identifier. name of resource */
+          /** Required. Identifier. The resource name of the RegistryBook. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6544,7 +6580,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link SearchIpResources#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The name of the RegistryBook to search in.
+         * @param name Required. The resource name of the RegistryBook to search in.
          * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.SearchIpResourcesRequest}
          * @return the request
          */
@@ -6572,7 +6608,7 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
            * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The name of the RegistryBook to search in.
+           * @param name Required. The resource name of the RegistryBook to search in.
            * @param content the {@link com.google.api.services.cloudnumberregistry.v1alpha.model.SearchIpResourcesRequest}
            * @since 1.13
            */
@@ -6641,17 +6677,17 @@ public class CloudNumberRegistry extends com.google.api.client.googleapis.servic
             return (SearchIpResources) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the RegistryBook to search in. */
+          /** Required. The resource name of the RegistryBook to search in. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the RegistryBook to search in.
+          /** Required. The resource name of the RegistryBook to search in.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the RegistryBook to search in. */
+          /** Required. The resource name of the RegistryBook to search in. */
           public SearchIpResources setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

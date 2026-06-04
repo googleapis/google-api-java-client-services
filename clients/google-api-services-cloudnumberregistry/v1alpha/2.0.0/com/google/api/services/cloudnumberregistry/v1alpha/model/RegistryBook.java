@@ -17,7 +17,8 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message describing RegistryBook object
+ * A RegistryBook organizes and manages IP address space. It claims specific scopes (such as
+ * projects) and groups related Realms and Ranges.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -47,7 +48,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> claimedScopes;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the RegistryBook was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,21 +62,21 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isDefault;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the RegistryBook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the RegistryBook was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the RegistryBook was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -128,7 +129,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The time at which the RegistryBook was created.
    * @param createTime createTime or {@code null} for none
    */
   public RegistryBook setCreateTime(String createTime) {
@@ -154,7 +155,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -162,7 +163,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. User-defined labels.
    * @param labels labels or {@code null} for none
    */
   public RegistryBook setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -171,7 +172,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the RegistryBook.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -179,7 +180,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. name of resource
+   * Required. Identifier. The resource name of the RegistryBook.
    * @param name name or {@code null} for none
    */
   public RegistryBook setName(java.lang.String name) {
@@ -188,7 +189,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the RegistryBook was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -196,7 +197,7 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The time at which the RegistryBook was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public RegistryBook setUpdateTime(String updateTime) {

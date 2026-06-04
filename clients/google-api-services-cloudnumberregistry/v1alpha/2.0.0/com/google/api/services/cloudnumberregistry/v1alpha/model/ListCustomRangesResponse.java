@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for response to listing CustomRanges
+ * Response message for the CloudNumberRegistry.ListCustomRanges method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class ListCustomRangesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of CustomRange
+   * The list of CustomRanges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,8 @@ public final class ListCustomRangesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,7 @@ public final class ListCustomRangesResponse extends com.google.api.client.json.G
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of CustomRange
+   * The list of CustomRanges.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomRange> getCustomRanges() {
@@ -66,7 +67,7 @@ public final class ListCustomRangesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The list of CustomRange
+   * The list of CustomRanges.
    * @param customRanges customRanges or {@code null} for none
    */
   public ListCustomRangesResponse setCustomRanges(java.util.List<CustomRange> customRanges) {
@@ -75,7 +76,8 @@ public final class ListCustomRangesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -83,7 +85,8 @@ public final class ListCustomRangesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListCustomRangesResponse setNextPageToken(java.lang.String nextPageToken) {

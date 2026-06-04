@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for the response to getting the utilization of a DiscoveredRange
+ * Response message for the CloudNumberRegistry.ShowDiscoveredRangeUtilization method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -38,7 +38,7 @@ public final class ShowDiscoveredRangeUtilizationResponse extends com.google.api
   private DiscoveredRange discoveredRange;
 
   /**
-   * The utilization of the DiscoveredRange.
+   * The utilization details of the DiscoveredRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ShowDiscoveredRangeUtilizationResponse extends com.google.api
   }
 
   /**
-   * The utilization of the DiscoveredRange.
+   * The utilization details of the DiscoveredRange.
    * @return value or {@code null} for none
    */
   public RangeUtilization getRangeUtilization() {
@@ -70,7 +70,7 @@ public final class ShowDiscoveredRangeUtilizationResponse extends com.google.api
   }
 
   /**
-   * The utilization of the DiscoveredRange.
+   * The utilization details of the DiscoveredRange.
    * @param rangeUtilization rangeUtilization or {@code null} for none
    */
   public ShowDiscoveredRangeUtilizationResponse setRangeUtilization(RangeUtilization rangeUtilization) {

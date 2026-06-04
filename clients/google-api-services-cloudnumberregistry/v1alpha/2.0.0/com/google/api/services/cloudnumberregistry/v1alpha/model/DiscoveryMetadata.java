@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Discovery metadata of the discovered resource.
+ * Metadata about a discovered resource, tracking event times, state, and source information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -69,7 +69,7 @@ public final class DiscoveryMetadata extends com.google.api.client.json.GenericJ
   /**
    * Output only. A single source resource can be the source of multiple CNR resources. This sub_id
    * is used to distinguish between the different CNR resources derived from the same upstream
-   * resource. For example, a single subnetwork can be the source of multiple ranges, one for each
+   * resource. For example, a single subnetwork can be the source of multiple Ranges, one for each
    * protocol. In this case, the sub_id could be "private-ipv4" or "private-ipv6".
    * The value may be {@code null}.
    */
@@ -180,7 +180,7 @@ public final class DiscoveryMetadata extends com.google.api.client.json.GenericJ
   /**
    * Output only. A single source resource can be the source of multiple CNR resources. This sub_id
    * is used to distinguish between the different CNR resources derived from the same upstream
-   * resource. For example, a single subnetwork can be the source of multiple ranges, one for each
+   * resource. For example, a single subnetwork can be the source of multiple Ranges, one for each
    * protocol. In this case, the sub_id could be "private-ipv4" or "private-ipv6".
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class DiscoveryMetadata extends com.google.api.client.json.GenericJ
   /**
    * Output only. A single source resource can be the source of multiple CNR resources. This sub_id
    * is used to distinguish between the different CNR resources derived from the same upstream
-   * resource. For example, a single subnetwork can be the source of multiple ranges, one for each
+   * resource. For example, a single subnetwork can be the source of multiple Ranges, one for each
    * protocol. In this case, the sub_id could be "private-ipv4" or "private-ipv6".
    * @param sourceSubId sourceSubId or {@code null} for none
    */

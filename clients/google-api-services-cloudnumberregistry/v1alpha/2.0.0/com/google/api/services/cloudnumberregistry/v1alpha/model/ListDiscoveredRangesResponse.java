@@ -17,7 +17,7 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * Message for response to listing DiscoveredRanges
+ * Response message for the CloudNumberRegistry.ListDiscoveredRanges method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.cloudnumberregistry.v1alpha.model;
 public final class ListDiscoveredRangesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of DiscoveredRange
+   * The list of DiscoveredRanges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,8 @@ public final class ListDiscoveredRangesResponse extends com.google.api.client.js
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,7 @@ public final class ListDiscoveredRangesResponse extends com.google.api.client.js
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of DiscoveredRange
+   * The list of DiscoveredRanges.
    * @return value or {@code null} for none
    */
   public java.util.List<DiscoveredRange> getDiscoveredRanges() {
@@ -66,7 +67,7 @@ public final class ListDiscoveredRangesResponse extends com.google.api.client.js
   }
 
   /**
-   * The list of DiscoveredRange
+   * The list of DiscoveredRanges.
    * @param discoveredRanges discoveredRanges or {@code null} for none
    */
   public ListDiscoveredRangesResponse setDiscoveredRanges(java.util.List<DiscoveredRange> discoveredRanges) {
@@ -75,7 +76,8 @@ public final class ListDiscoveredRangesResponse extends com.google.api.client.js
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -83,7 +85,8 @@ public final class ListDiscoveredRangesResponse extends com.google.api.client.js
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token to retrieve the next page of results, or empty if there are no more results in the
+   * list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListDiscoveredRangesResponse setNextPageToken(java.lang.String nextPageToken) {

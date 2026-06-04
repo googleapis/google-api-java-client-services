@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudnumberregistry</artifactId>
-  <version>v1alpha-rev20260506-2.0.0</version>
-  <name>Cloud Number Registry API v1alpha-rev20260506-2.0.0</name>
+  <version>v1alpha-rev20260527-2.0.0</version>
+  <name>Cloud Number Registry API v1alpha-rev20260527-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

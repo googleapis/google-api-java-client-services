@@ -239,6 +239,13 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
+   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String unitGroup;
+
+  /**
    * Optional. Reference to the UnitKind this Unit belongs to. Immutable once set.
    * The value may be {@code null}.
    */
@@ -741,6 +748,23 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setUid(java.lang.String uid) {
     this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUnitGroup() {
+    return unitGroup;
+  }
+
+  /**
+   * Optional. Output only. Reference to the UnitGroup this unit belongs to.
+   * @param unitGroup unitGroup or {@code null} for none
+   */
+  public Unit setUnitGroup(java.lang.String unitGroup) {
+    this.unitGroup = unitGroup;
     return this;
   }
 

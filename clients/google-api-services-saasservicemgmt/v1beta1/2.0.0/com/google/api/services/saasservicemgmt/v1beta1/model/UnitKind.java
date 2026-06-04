@@ -56,6 +56,13 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private ComponentRef applicationTemplateComponent;
 
   /**
+   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String boundaryType;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -217,6 +224,23 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setApplicationTemplateComponent(ComponentRef applicationTemplateComponent) {
     this.applicationTemplateComponent = applicationTemplateComponent;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBoundaryType() {
+    return boundaryType;
+  }
+
+  /**
+   * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
+   * @param boundaryType boundaryType or {@code null} for none
+   */
+  public UnitKind setBoundaryType(java.lang.String boundaryType) {
+    this.boundaryType = boundaryType;
     return this;
   }
 

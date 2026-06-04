@@ -17,7 +17,8 @@
 package com.google.api.services.saasservicemgmt.v1beta1.model;
 
 /**
- * Saas is a representation of a SaaS service managed by the Producer.
+ * UnitGroup represents a set of Units to be used by a Tenant. In pooling scenarios, the UnitGroup
+ * may be created and provisioned before the Tenant is created.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
@@ -28,7 +29,7 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Saas extends com.google.api.client.json.GenericJson {
+public final class UnitGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations is an unstructured key-value map stored with a resource that may be set
@@ -41,44 +42,11 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Reference to composite ApplicationTemplate. When specified, the template components will be
-   * imported into their equivalent UnitKind, Release and Blueprint resources. Deleted references
-   * will not delete imported resources. Should only be specified on source regions, and be
-   * unspecified on replica regions.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CompositeRef applicationTemplate;
-
-  /**
-   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
-   * Blueprints of imported ApplicationTemplates.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String blueprintRepo;
-
-  /**
-   * Output only. A set of conditions which indicate the various conditions this resource can have.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<SaasCondition> conditions;
-
-  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
-
-  /**
-   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
-   * code=OK for all other states.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Status error;
 
   /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
@@ -98,30 +66,29 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. List of locations that the service is available in. Rollout refers to the list to
-   * generate a rollout plan.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Location> locations;
-
-  static {
-    // hack to force ProGuard to consider Location used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Location.class);
-  }
-
-  /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/saas/{saas}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
-   * is empty.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String saas;
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String saasRelease;
+
+  /**
+   * Optional. Output only. State of the UnitGroup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,67 +131,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * guide/annotations
    * @param annotations annotations or {@code null} for none
    */
-  public Saas setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+  public UnitGroup setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
-    return this;
-  }
-
-  /**
-   * Reference to composite ApplicationTemplate. When specified, the template components will be
-   * imported into their equivalent UnitKind, Release and Blueprint resources. Deleted references
-   * will not delete imported resources. Should only be specified on source regions, and be
-   * unspecified on replica regions.
-   * @return value or {@code null} for none
-   */
-  public CompositeRef getApplicationTemplate() {
-    return applicationTemplate;
-  }
-
-  /**
-   * Reference to composite ApplicationTemplate. When specified, the template components will be
-   * imported into their equivalent UnitKind, Release and Blueprint resources. Deleted references
-   * will not delete imported resources. Should only be specified on source regions, and be
-   * unspecified on replica regions.
-   * @param applicationTemplate applicationTemplate or {@code null} for none
-   */
-  public Saas setApplicationTemplate(CompositeRef applicationTemplate) {
-    this.applicationTemplate = applicationTemplate;
-    return this;
-  }
-
-  /**
-   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
-   * Blueprints of imported ApplicationTemplates.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getBlueprintRepo() {
-    return blueprintRepo;
-  }
-
-  /**
-   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
-   * Blueprints of imported ApplicationTemplates.
-   * @param blueprintRepo blueprintRepo or {@code null} for none
-   */
-  public Saas setBlueprintRepo(java.lang.String blueprintRepo) {
-    this.blueprintRepo = blueprintRepo;
-    return this;
-  }
-
-  /**
-   * Output only. A set of conditions which indicate the various conditions this resource can have.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<SaasCondition> getConditions() {
-    return conditions;
-  }
-
-  /**
-   * Output only. A set of conditions which indicate the various conditions this resource can have.
-   * @param conditions conditions or {@code null} for none
-   */
-  public Saas setConditions(java.util.List<SaasCondition> conditions) {
-    this.conditions = conditions;
     return this;
   }
 
@@ -240,27 +148,8 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * Output only. The timestamp when the resource was created.
    * @param createTime createTime or {@code null} for none
    */
-  public Saas setCreateTime(String createTime) {
+  public UnitGroup setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
-   * code=OK for all other states.
-   * @return value or {@code null} for none
-   */
-  public Status getError() {
-    return error;
-  }
-
-  /**
-   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
-   * code=OK for all other states.
-   * @param error error or {@code null} for none
-   */
-  public Saas setError(Status error) {
-    this.error = error;
     return this;
   }
 
@@ -280,7 +169,7 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * written.
    * @param etag etag or {@code null} for none
    */
-  public Saas setEtag(java.lang.String etag) {
+  public UnitGroup setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -299,33 +188,14 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * Kubernetes resource labels.
    * @param labels labels or {@code null} for none
    */
-  public Saas setLabels(java.util.Map<String, java.lang.String> labels) {
+  public UnitGroup setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
-   * Optional. List of locations that the service is available in. Rollout refers to the list to
-   * generate a rollout plan.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Location> getLocations() {
-    return locations;
-  }
-
-  /**
-   * Optional. List of locations that the service is available in. Rollout refers to the list to
-   * generate a rollout plan.
-   * @param locations locations or {@code null} for none
-   */
-  public Saas setLocations(java.util.List<Location> locations) {
-    this.locations = locations;
-    return this;
-  }
-
-  /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/saas/{saas}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -334,17 +204,50 @@ public final class Saas extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/saas/{saas}"
+   * "projects/{project}/locations/{location}/unitGroups/{unitGroup}"
    * @param name name or {@code null} for none
    */
-  public Saas setName(java.lang.String name) {
+  public UnitGroup setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
-   * is empty.
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSaas() {
+    return saas;
+  }
+
+  /**
+   * Required. Immutable. The SaaS that this UnitGroup is created for.
+   * @param saas saas or {@code null} for none
+   */
+  public UnitGroup setSaas(java.lang.String saas) {
+    this.saas = saas;
+    return this;
+  }
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSaasRelease() {
+    return saasRelease;
+  }
+
+  /**
+   * Required. Immutable. Current SaasRelease that the UnitGroup is provisioned with.
+   * @param saasRelease saasRelease or {@code null} for none
+   */
+  public UnitGroup setSaasRelease(java.lang.String saasRelease) {
+    this.saasRelease = saasRelease;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. State of the UnitGroup.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -352,11 +255,10 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. State of the Saas. It is always in STATE_ACTIVE state if the application_template
-   * is empty.
+   * Optional. Output only. State of the UnitGroup.
    * @param state state or {@code null} for none
    */
-  public Saas setState(java.lang.String state) {
+  public UnitGroup setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -379,7 +281,7 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * resources with resource name reuses. This should be a UUID4.
    * @param uid uid or {@code null} for none
    */
-  public Saas setUid(java.lang.String uid) {
+  public UnitGroup setUid(java.lang.String uid) {
     this.uid = uid;
     return this;
   }
@@ -400,19 +302,19 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    * value.
    * @param updateTime updateTime or {@code null} for none
    */
-  public Saas setUpdateTime(String updateTime) {
+  public UnitGroup setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public Saas set(String fieldName, Object value) {
-    return (Saas) super.set(fieldName, value);
+  public UnitGroup set(String fieldName, Object value) {
+    return (UnitGroup) super.set(fieldName, value);
   }
 
   @Override
-  public Saas clone() {
-    return (Saas) super.clone();
+  public UnitGroup clone() {
+    return (UnitGroup) super.clone();
   }
 
 }

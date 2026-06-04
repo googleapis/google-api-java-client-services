@@ -57,6 +57,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> aliases;
 
   /**
+   * Output only. User's account archival time. (Read-only)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String archivalTime;
+
+  /**
    * Indicates if user is archived.
    * The value may be {@code null}.
    */
@@ -398,6 +405,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String suspensionReason;
 
   /**
+   * Output only. User's account suspension time. (Read-only)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suspensionTime;
+
+  /**
    * Output only. ETag of the user's photo (Read-only)
    * The value may be {@code null}.
    */
@@ -468,6 +482,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setAliases(java.util.List<java.lang.String> aliases) {
     this.aliases = aliases;
+    return this;
+  }
+
+  /**
+   * Output only. User's account archival time. (Read-only)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getArchivalTime() {
+    return archivalTime;
+  }
+
+  /**
+   * Output only. User's account archival time. (Read-only)
+   * @param archivalTime archivalTime or {@code null} for none
+   */
+  public User setArchivalTime(java.lang.String archivalTime) {
+    this.archivalTime = archivalTime;
     return this;
   }
 
@@ -1276,6 +1307,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setSuspensionReason(java.lang.String suspensionReason) {
     this.suspensionReason = suspensionReason;
+    return this;
+  }
+
+  /**
+   * Output only. User's account suspension time. (Read-only)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuspensionTime() {
+    return suspensionTime;
+  }
+
+  /**
+   * Output only. User's account suspension time. (Read-only)
+   * @param suspensionTime suspensionTime or {@code null} for none
+   */
+  public User setSuspensionTime(java.lang.String suspensionTime) {
+    this.suspensionTime = suspensionTime;
     return this;
   }
 

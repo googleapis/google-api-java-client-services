@@ -761,7 +761,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   /**
    * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
-   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * question and answer pairs. Max 10000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
    * The value may be {@code null}.
    */
@@ -2729,7 +2729,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   /**
    * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
-   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * question and answer pairs. Max 10000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
    * @return value or {@code null} for none
    */
@@ -2740,7 +2740,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   /**
    * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
    * answers](https://support.google.com/merchants/answer/17085211) about the product. Max 30
-   * question and answer pairs. Max 5000 characters total. Each question can have max 1000
+   * question and answer pairs. Max 10000 characters total. Each question can have max 1000
    * characters. Each answer can have max 1000 characters.
    * @param questionsAndAnswers questionsAndAnswers or {@code null} for none
    */

@@ -31,7 +31,7 @@ public final class PublishItemRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. When set to true the request will fail if there are any warnings during validation
-   * and the details will be included in the error_details. Otherwise warnings are treated as non-
+   * and the details will be included in the `error.details`. Otherwise warnings are treated as non-
    * blocking and will be ignored for validation but will be included in the response for
    * inspection. Defaults to `false` if unset.
    * The value may be {@code null}.
@@ -71,7 +71,7 @@ public final class PublishItemRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. When set to true the request will fail if there are any warnings during validation
-   * and the details will be included in the error_details. Otherwise warnings are treated as non-
+   * and the details will be included in the `error.details`. Otherwise warnings are treated as non-
    * blocking and will be ignored for validation but will be included in the response for
    * inspection. Defaults to `false` if unset.
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class PublishItemRequest extends com.google.api.client.json.Generic
 
   /**
    * Optional. When set to true the request will fail if there are any warnings during validation
-   * and the details will be included in the error_details. Otherwise warnings are treated as non-
+   * and the details will be included in the `error.details`. Otherwise warnings are treated as non-
    * blocking and will be ignored for validation but will be included in the response for
    * inspection. Defaults to `false` if unset.
    * @param blockOnWarnings blockOnWarnings or {@code null} for none

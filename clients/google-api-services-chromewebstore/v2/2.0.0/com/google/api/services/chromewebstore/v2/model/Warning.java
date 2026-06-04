@@ -39,8 +39,7 @@ public final class Warning extends com.google.api.client.json.GenericJson {
 
   /**
    * The reason for the warning. This is a constant value that identifies the proximate cause of the
-   * warning. This should be at most 63 characters and match a regular expression of `A-Z+[A-Z0-9]`,
-   * which represents UPPER_SNAKE_CASE.
+   * warning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +66,7 @@ public final class Warning extends com.google.api.client.json.GenericJson {
 
   /**
    * The reason for the warning. This is a constant value that identifies the proximate cause of the
-   * warning. This should be at most 63 characters and match a regular expression of `A-Z+[A-Z0-9]`,
-   * which represents UPPER_SNAKE_CASE.
+   * warning.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -77,8 +75,7 @@ public final class Warning extends com.google.api.client.json.GenericJson {
 
   /**
    * The reason for the warning. This is a constant value that identifies the proximate cause of the
-   * warning. This should be at most 63 characters and match a regular expression of `A-Z+[A-Z0-9]`,
-   * which represents UPPER_SNAKE_CASE.
+   * warning.
    * @param reason reason or {@code null} for none
    */
   public Warning setReason(java.lang.String reason) {

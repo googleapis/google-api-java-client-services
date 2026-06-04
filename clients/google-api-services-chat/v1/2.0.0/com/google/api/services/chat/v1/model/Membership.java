@@ -31,6 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class Membership extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A user's relationship to the Workspace organization that owns the space. In spaces
+   * owned by consumer accounts, the affiliation of all members is `EXTERNAL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String affiliation;
+
+  /**
    * Optional. Immutable. The creation time of the membership, such as when a member joined or was
    * invited to join a space. This field is output only, except when used to import historical
    * memberships in import mode spaces.
@@ -90,6 +98,25 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. A user's relationship to the Workspace organization that owns the space. In spaces
+   * owned by consumer accounts, the affiliation of all members is `EXTERNAL`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAffiliation() {
+    return affiliation;
+  }
+
+  /**
+   * Output only. A user's relationship to the Workspace organization that owns the space. In spaces
+   * owned by consumer accounts, the affiliation of all members is `EXTERNAL`.
+   * @param affiliation affiliation or {@code null} for none
+   */
+  public Membership setAffiliation(java.lang.String affiliation) {
+    this.affiliation = affiliation;
+    return this;
+  }
 
   /**
    * Optional. Immutable. The creation time of the membership, such as when a member joined or was

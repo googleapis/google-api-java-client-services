@@ -53,6 +53,14 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String effectiveDefaultBranch;
 
   /**
+   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
+   * format `projects/locations/connections/gitRepositoryLinks`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gitRepositoryLink;
+
+  /**
    * Optional. Authentication fields for remote uris using SSH protocol.
    * The value may be {@code null}.
    */
@@ -125,6 +133,25 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
    */
   public GitRemoteSettings setEffectiveDefaultBranch(java.lang.String effectiveDefaultBranch) {
     this.effectiveDefaultBranch = effectiveDefaultBranch;
+    return this;
+  }
+
+  /**
+   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
+   * format `projects/locations/connections/gitRepositoryLinks`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGitRepositoryLink() {
+    return gitRepositoryLink;
+  }
+
+  /**
+   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
+   * format `projects/locations/connections/gitRepositoryLinks`
+   * @param gitRepositoryLink gitRepositoryLink or {@code null} for none
+   */
+  public GitRemoteSettings setGitRepositoryLink(java.lang.String gitRepositoryLink) {
+    this.gitRepositoryLink = gitRepositoryLink;
     return this;
   }
 

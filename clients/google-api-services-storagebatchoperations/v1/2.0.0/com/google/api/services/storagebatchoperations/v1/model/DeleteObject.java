@@ -32,13 +32,12 @@ public final class DeleteObject extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls deletion behavior when versioning is enabled for the object's bucket. If
-   * true both live and noncurrent objects will be permanently deleted. Otherwise live objects in
+   * true, both live and noncurrent objects will be permanently deleted. Otherwise live objects in
    * versioned buckets will become noncurrent and objects that were already noncurrent will be
    * skipped. This setting doesn't have any impact on the Soft Delete feature. All objects deleted
    * by this service can be be restored for the duration of the Soft Delete retention duration if
    * enabled. If enabled and the manifest doesn't specify an object's generation, a
-   * GetObjectMetadata call (a Class B operation) will be made to determine the live object
-   * generation.
+   * `GetObjectMetadata` call is made to determine the live object generation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,13 +45,12 @@ public final class DeleteObject extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls deletion behavior when versioning is enabled for the object's bucket. If
-   * true both live and noncurrent objects will be permanently deleted. Otherwise live objects in
+   * true, both live and noncurrent objects will be permanently deleted. Otherwise live objects in
    * versioned buckets will become noncurrent and objects that were already noncurrent will be
    * skipped. This setting doesn't have any impact on the Soft Delete feature. All objects deleted
    * by this service can be be restored for the duration of the Soft Delete retention duration if
    * enabled. If enabled and the manifest doesn't specify an object's generation, a
-   * GetObjectMetadata call (a Class B operation) will be made to determine the live object
-   * generation.
+   * `GetObjectMetadata` call is made to determine the live object generation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPermanentObjectDeletionEnabled() {
@@ -61,13 +59,12 @@ public final class DeleteObject extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Controls deletion behavior when versioning is enabled for the object's bucket. If
-   * true both live and noncurrent objects will be permanently deleted. Otherwise live objects in
+   * true, both live and noncurrent objects will be permanently deleted. Otherwise live objects in
    * versioned buckets will become noncurrent and objects that were already noncurrent will be
    * skipped. This setting doesn't have any impact on the Soft Delete feature. All objects deleted
    * by this service can be be restored for the duration of the Soft Delete retention duration if
    * enabled. If enabled and the manifest doesn't specify an object's generation, a
-   * GetObjectMetadata call (a Class B operation) will be made to determine the live object
-   * generation.
+   * `GetObjectMetadata` call is made to determine the live object generation.
    * @param permanentObjectDeletionEnabled permanentObjectDeletionEnabled or {@code null} for none
    */
   public DeleteObject setPermanentObjectDeletionEnabled(java.lang.Boolean permanentObjectDeletionEnabled) {

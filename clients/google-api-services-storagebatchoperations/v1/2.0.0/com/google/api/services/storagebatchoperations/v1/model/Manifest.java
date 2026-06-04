@@ -31,28 +31,40 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class Manifest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. `manifest_location` must contain the manifest source file that is a CSV file in a
-   * Google Cloud Storage bucket. Each row in the file must include the object details i.e. BucketId
-   * and Name. Generation may optionally be specified. When it is not specified the live object is
-   * acted upon. `manifest_location` should either be 1) An absolute path to the object in the
-   * format of `gs://bucket_name/path/file_name.csv`. 2) An absolute path with a single wildcard
-   * character in the file name, for example `gs://bucket_name/path/file_name*.csv`. If manifest
-   * location is specified with a wildcard, objects in all manifest files matching the pattern will
-   * be acted upon.
+   * Required. Specify the manifest file location. The format of manifest location can be an
+   * absolute path to the object in the format of `gs://bucket_name/path/object_name`. For example,
+   * `gs://bucket_name/path/object_name.csv`. Alternatively, you can specify an absolute path with a
+   * single wildcard character in the file name, for example `gs://bucket_name/path/file_name*.csv`.
+   * If the manifest location is specified with a wildcard, objects in all manifest files matching
+   * the pattern will be acted upon. The manifest is a CSV file, uploaded to Cloud Storage, that
+   * contains one object or a list of objects that you want to process. Each row in the manifest
+   * must include the `bucket` and `name` of the object. You can optionally specify the `generation`
+   * of the object. If you don't specify the `generation`, the current version of the object is
+   * used. You can optionally include a header row with the following format:
+   * `bucket,name,generation`. For example, bucket,name,generation bucket_1,object_1,generation_1
+   * bucket_1,object_2,generation_2 bucket_1,object_3,generation_3 Note: The manifest file must
+   * specify only objects within the bucket provided to the job. Rows referencing objects in other
+   * buckets are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String manifestLocation;
 
   /**
-   * Required. `manifest_location` must contain the manifest source file that is a CSV file in a
-   * Google Cloud Storage bucket. Each row in the file must include the object details i.e. BucketId
-   * and Name. Generation may optionally be specified. When it is not specified the live object is
-   * acted upon. `manifest_location` should either be 1) An absolute path to the object in the
-   * format of `gs://bucket_name/path/file_name.csv`. 2) An absolute path with a single wildcard
-   * character in the file name, for example `gs://bucket_name/path/file_name*.csv`. If manifest
-   * location is specified with a wildcard, objects in all manifest files matching the pattern will
-   * be acted upon.
+   * Required. Specify the manifest file location. The format of manifest location can be an
+   * absolute path to the object in the format of `gs://bucket_name/path/object_name`. For example,
+   * `gs://bucket_name/path/object_name.csv`. Alternatively, you can specify an absolute path with a
+   * single wildcard character in the file name, for example `gs://bucket_name/path/file_name*.csv`.
+   * If the manifest location is specified with a wildcard, objects in all manifest files matching
+   * the pattern will be acted upon. The manifest is a CSV file, uploaded to Cloud Storage, that
+   * contains one object or a list of objects that you want to process. Each row in the manifest
+   * must include the `bucket` and `name` of the object. You can optionally specify the `generation`
+   * of the object. If you don't specify the `generation`, the current version of the object is
+   * used. You can optionally include a header row with the following format:
+   * `bucket,name,generation`. For example, bucket,name,generation bucket_1,object_1,generation_1
+   * bucket_1,object_2,generation_2 bucket_1,object_3,generation_3 Note: The manifest file must
+   * specify only objects within the bucket provided to the job. Rows referencing objects in other
+   * buckets are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getManifestLocation() {
@@ -60,14 +72,20 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. `manifest_location` must contain the manifest source file that is a CSV file in a
-   * Google Cloud Storage bucket. Each row in the file must include the object details i.e. BucketId
-   * and Name. Generation may optionally be specified. When it is not specified the live object is
-   * acted upon. `manifest_location` should either be 1) An absolute path to the object in the
-   * format of `gs://bucket_name/path/file_name.csv`. 2) An absolute path with a single wildcard
-   * character in the file name, for example `gs://bucket_name/path/file_name*.csv`. If manifest
-   * location is specified with a wildcard, objects in all manifest files matching the pattern will
-   * be acted upon.
+   * Required. Specify the manifest file location. The format of manifest location can be an
+   * absolute path to the object in the format of `gs://bucket_name/path/object_name`. For example,
+   * `gs://bucket_name/path/object_name.csv`. Alternatively, you can specify an absolute path with a
+   * single wildcard character in the file name, for example `gs://bucket_name/path/file_name*.csv`.
+   * If the manifest location is specified with a wildcard, objects in all manifest files matching
+   * the pattern will be acted upon. The manifest is a CSV file, uploaded to Cloud Storage, that
+   * contains one object or a list of objects that you want to process. Each row in the manifest
+   * must include the `bucket` and `name` of the object. You can optionally specify the `generation`
+   * of the object. If you don't specify the `generation`, the current version of the object is
+   * used. You can optionally include a header row with the following format:
+   * `bucket,name,generation`. For example, bucket,name,generation bucket_1,object_1,generation_1
+   * bucket_1,object_2,generation_2 bucket_1,object_3,generation_3 Note: The manifest file must
+   * specify only objects within the bucket provided to the job. Rows referencing objects in other
+   * buckets are ignored.
    * @param manifestLocation manifestLocation or {@code null} for none
    */
   public Manifest setManifestLocation(java.lang.String manifestLocation) {

@@ -583,7 +583,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
          * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param name Required. The `name` of the job to cancel. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id}.
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
          * @param content the {@link com.google.api.services.storagebatchoperations.v1.model.CancelJobRequest}
          * @return the request
          */
@@ -612,7 +612,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The `name` of the job to cancel. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id}.
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
            * @param content the {@link com.google.api.services.storagebatchoperations.v1.model.CancelJobRequest}
            * @since 1.13
            */
@@ -683,13 +683,13 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Required. The `name` of the job to cancel. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id}.
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The `name` of the job to cancel. Format:
-         projects/{project_id}/locations/global/jobs/{job_id}.
+         `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -697,7 +697,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Required. The `name` of the job to cancel. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id}.
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public Cancel setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -722,7 +722,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
          * This request holds the parameters needed by the storagebatchoperations server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The value for parent.
          * @param content the {@link com.google.api.services.storagebatchoperations.v1.model.Job}
          * @return the request
          */
@@ -750,7 +750,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The value for parent.
            * @param content the {@link com.google.api.services.storagebatchoperations.v1.model.Job}
            * @since 1.13
            */
@@ -819,17 +819,17 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The value for parent. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The value for parent.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The value for parent. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -841,25 +841,22 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
           }
 
           /**
-           * Required. The optional `job_id` for this Job . If not specified, an id is generated.
-           * `job_id` should be no more than 128 characters and must include only characters
-           * available in DNS names, as defined by RFC-1123.
+           * Required. A unique identifier for the job. `job_id` must be up to 128 characters and
+           * must include only characters available in DNS names, as defined by RFC-1123.
            */
           @com.google.api.client.util.Key
           private java.lang.String jobId;
 
-          /** Required. The optional `job_id` for this Job . If not specified, an id is generated. `job_id`
-         should be no more than 128 characters and must include only characters available in DNS names, as
-         defined by RFC-1123.
+          /** Required. A unique identifier for the job. `job_id` must be up to 128 characters and must include
+         only characters available in DNS names, as defined by RFC-1123.
            */
           public java.lang.String getJobId() {
             return jobId;
           }
 
           /**
-           * Required. The optional `job_id` for this Job . If not specified, an id is generated.
-           * `job_id` should be no more than 128 characters and must include only characters
-           * available in DNS names, as defined by RFC-1123.
+           * Required. A unique identifier for the job. `job_id` must be up to 128 characters and
+           * must include only characters available in DNS names, as defined by RFC-1123.
            */
           public Create setJobId(java.lang.String jobId) {
             this.jobId = jobId;
@@ -868,18 +865,17 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID in
-           * case you need to retry your request. Requests with same `request_id` will be ignored
-           * for at least 60 minutes since the first request. The request ID must be a valid UUID
-           * with the exception that zero UUID is not supported
-           * (00000000-0000-0000-0000-000000000000).
+           * case you need to retry your request. Requests with same `request_id` are ignored for at
+           * least 60 minutes since the first request. The request ID must be a valid UUID with the
+           * exception that zero UUID isn't supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID in case you need
-         to retry your request. Requests with same `request_id` will be ignored for at least 60 minutes
-         since the first request. The request ID must be a valid UUID with the exception that zero UUID is
-         not supported (00000000-0000-0000-0000-000000000000).
+         to retry your request. Requests with same `request_id` are ignored for at least 60 minutes since
+         the first request. The request ID must be a valid UUID with the exception that zero UUID isn't
+         supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -887,10 +883,9 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID in
-           * case you need to retry your request. Requests with same `request_id` will be ignored
-           * for at least 60 minutes since the first request. The request ID must be a valid UUID
-           * with the exception that zero UUID is not supported
-           * (00000000-0000-0000-0000-000000000000).
+           * case you need to retry your request. Requests with same `request_id` are ignored for at
+           * least 60 minutes since the first request. The request ID must be a valid UUID with the
+           * exception that zero UUID isn't supported (00000000-0000-0000-0000-000000000000).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -911,7 +906,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The `name` of the job to delete. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id} .
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -939,7 +934,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The `name` of the job to delete. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id} .
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1009,13 +1004,13 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Required. The `name` of the job to delete. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id} .
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The `name` of the job to delete. Format:
-         projects/{project_id}/locations/global/jobs/{job_id} .
+         `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public java.lang.String getName() {
             return name;
@@ -1023,7 +1018,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Required. The `name` of the job to delete. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id} .
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1036,27 +1031,27 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
           }
 
           /**
-           * Optional. If set to true, any child bucket operations of the job will also be deleted.
-           * Highly recommended to be set to true by all clients. Users cannot mutate bucket
-           * operations directly, so only the jobs.delete permission is required to delete a job
-           * (and its child bucket operations).
+           * Optional. If set to true, any child bucket operations of the job are deleted. We
+           * recommend setting this to `true`. You can't mutate bucket operations directly, so only
+           * the `jobs.delete` permission is required to delete a job (and its child bucket
+           * operations).
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** Optional. If set to true, any child bucket operations of the job will also be deleted. Highly
-         recommended to be set to true by all clients. Users cannot mutate bucket operations directly, so
-         only the jobs.delete permission is required to delete a job (and its child bucket operations).
+          /** Optional. If set to true, any child bucket operations of the job are deleted. We recommend setting
+         this to `true`. You can't mutate bucket operations directly, so only the `jobs.delete` permission
+         is required to delete a job (and its child bucket operations).
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * Optional. If set to true, any child bucket operations of the job will also be deleted.
-           * Highly recommended to be set to true by all clients. Users cannot mutate bucket
-           * operations directly, so only the jobs.delete permission is required to delete a job
-           * (and its child bucket operations).
+           * Optional. If set to true, any child bucket operations of the job are deleted. We
+           * recommend setting this to `true`. You can't mutate bucket operations directly, so only
+           * the `jobs.delete` permission is required to delete a job (and its child bucket
+           * operations).
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -1065,18 +1060,17 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID in
-           * case you need to retry your request. Requests with same `request_id` will be ignored
-           * for at least 60 minutes since the first request. The request ID must be a valid UUID
-           * with the exception that zero UUID is not supported
-           * (00000000-0000-0000-0000-000000000000).
+           * case you need to retry your request. Requests with same `request_id` are ignored for at
+           * least 60 minutes since the first request. The request ID must be a valid UUID with the
+           * exception that zero UUID isn't supported (00000000-0000-0000-0000-000000000000).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID in case you need
-         to retry your request. Requests with same `request_id` will be ignored for at least 60 minutes
-         since the first request. The request ID must be a valid UUID with the exception that zero UUID is
-         not supported (00000000-0000-0000-0000-000000000000).
+         to retry your request. Requests with same `request_id` are ignored for at least 60 minutes since
+         the first request. The request ID must be a valid UUID with the exception that zero UUID isn't
+         supported (00000000-0000-0000-0000-000000000000).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -1084,10 +1078,9 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID in
-           * case you need to retry your request. Requests with same `request_id` will be ignored
-           * for at least 60 minutes since the first request. The request ID must be a valid UUID
-           * with the exception that zero UUID is not supported
-           * (00000000-0000-0000-0000-000000000000).
+           * case you need to retry your request. Requests with same `request_id` are ignored for at
+           * least 60 minutes since the first request. The request ID must be a valid UUID with the
+           * exception that zero UUID isn't supported (00000000-0000-0000-0000-000000000000).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -1107,8 +1100,8 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
          * This request holds the parameters needed by the storagebatchoperations server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `name` of the job to retrieve. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id} .
+         * @param name Required. The `name` of the job to retrieve. Format:
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1135,8 +1128,8 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `name` of the job to retrieve. Format:
-         *        projects/{project_id}/locations/global/jobs/{job_id} .
+           * @param name Required. The `name` of the job to retrieve. Format:
+         *        `projects/{project_id}/locations/global/jobs/{job_id}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1215,22 +1208,22 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
           }
 
           /**
-           * Required. `name` of the job to retrieve. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id} .
+           * Required. The `name` of the job to retrieve. Format:
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `name` of the job to retrieve. Format:
-         projects/{project_id}/locations/global/jobs/{job_id} .
+          /** Required. The `name` of the job to retrieve. Format:
+         `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `name` of the job to retrieve. Format:
-           * projects/{project_id}/locations/global/jobs/{job_id} .
+           * Required. The `name` of the job to retrieve. Format:
+           * `projects/{project_id}/locations/global/jobs/{job_id}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1397,33 +1390,33 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
             return this;
           }
 
-          /** Optional. Field to sort by. Supported fields are name, create_time. */
+          /** Optional. Field to sort by. Supported fields are `name` and `create_time`. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Field to sort by. Supported fields are name, create_time.
+          /** Optional. Field to sort by. Supported fields are `name` and `create_time`.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Field to sort by. Supported fields are name, create_time. */
+          /** Optional. Field to sort by. Supported fields are `name` and `create_time`. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Optional. The list page size. default page size is 100. */
+          /** Optional. The list page size. The default page size is 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The list page size. default page size is 100.
+          /** Optional. The list page size. The default page size is 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. The list page size. default page size is 100. */
+          /** Optional. The list page size. The default page size is 100. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -1479,9 +1472,9 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * This request holds the parameters needed by the storagebatchoperations server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. `name` of the bucket operation to retrieve. Format:
-           *        projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id
-           *        }.
+           * @param name Required. The `name` of the bucket operation to retrieve. Format:
+           *        `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_i
+           *        d}`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -1508,9 +1501,9 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. `name` of the bucket operation to retrieve. Format:
-           *        projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id
-           *        }.
+             * @param name Required. The `name` of the bucket operation to retrieve. Format:
+           *        `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_i
+           *        d}`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -1589,22 +1582,22 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
             }
 
             /**
-             * Required. `name` of the bucket operation to retrieve. Format: projects/{project_id}/l
-             * ocations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+             * Required. The `name` of the bucket operation to retrieve. Format: `projects/{project_
+             * id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. `name` of the bucket operation to retrieve. Format:
-           projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+            /** Required. The `name` of the bucket operation to retrieve. Format:
+           `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. `name` of the bucket operation to retrieve. Format: projects/{project_id}/l
-             * ocations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+             * Required. The `name` of the bucket operation to retrieve. Format: `projects/{project_
+             * id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1629,7 +1622,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
            * This request holds the parameters needed by the storagebatchoperations server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+           * @param parent Required. Format: `projects/{project_id}/locations/global/jobs/{job_id}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1656,7 +1649,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+             * @param parent Required. Format: `projects/{project_id}/locations/global/jobs/{job_id}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1734,17 +1727,17 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}. */
+            /** Required. Format: `projects/{project_id}/locations/global/jobs/{job_id}`. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+            /** Required. Format: `projects/{project_id}/locations/global/jobs/{job_id}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}. */
+            /** Required. Format: `projects/{project_id}/locations/global/jobs/{job_id}`. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1771,17 +1764,17 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
               return this;
             }
 
-            /** Optional. Field to sort by. Supported fields are name, create_time. */
+            /** Optional. Field to sort by. Supported fields are `name` and `create_time`. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Field to sort by. Supported fields are name, create_time.
+            /** Optional. Field to sort by. Supported fields are `name` and `create_time`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. Field to sort by. Supported fields are name, create_time. */
+            /** Optional. Field to sort by. Supported fields are `name` and `create_time`. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;

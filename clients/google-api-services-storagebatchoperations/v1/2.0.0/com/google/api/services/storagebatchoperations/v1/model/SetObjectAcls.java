@@ -17,7 +17,7 @@
 package com.google.api.services.storagebatchoperations.v1.model;
 
 /**
- * Describes the payload of a user-defined object custom context.
+ * Describes options for setting object ACLs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Batch Operations API. For a detailed
@@ -28,46 +28,40 @@ package com.google.api.services.storagebatchoperations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ObjectCustomContextPayload extends com.google.api.client.json.GenericJson {
+public final class SetObjectAcls extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value of the object custom context. If set, `value` can't be an empty string because it is
-   * a required field in custom context. If unset, `value` is ignored and no changes are made to the
-   * `value` field of the custom context payload.
+   * Required. Add, update, or remove grants from the object's existing ACLs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String value;
+  private AccessControlsUpdates accessControlsUpdates;
 
   /**
-   * The value of the object custom context. If set, `value` can't be an empty string because it is
-   * a required field in custom context. If unset, `value` is ignored and no changes are made to the
-   * `value` field of the custom context payload.
+   * Required. Add, update, or remove grants from the object's existing ACLs.
    * @return value or {@code null} for none
    */
-  public java.lang.String getValue() {
-    return value;
+  public AccessControlsUpdates getAccessControlsUpdates() {
+    return accessControlsUpdates;
   }
 
   /**
-   * The value of the object custom context. If set, `value` can't be an empty string because it is
-   * a required field in custom context. If unset, `value` is ignored and no changes are made to the
-   * `value` field of the custom context payload.
-   * @param value value or {@code null} for none
+   * Required. Add, update, or remove grants from the object's existing ACLs.
+   * @param accessControlsUpdates accessControlsUpdates or {@code null} for none
    */
-  public ObjectCustomContextPayload setValue(java.lang.String value) {
-    this.value = value;
+  public SetObjectAcls setAccessControlsUpdates(AccessControlsUpdates accessControlsUpdates) {
+    this.accessControlsUpdates = accessControlsUpdates;
     return this;
   }
 
   @Override
-  public ObjectCustomContextPayload set(String fieldName, Object value) {
-    return (ObjectCustomContextPayload) super.set(fieldName, value);
+  public SetObjectAcls set(String fieldName, Object value) {
+    return (SetObjectAcls) super.set(fieldName, value);
   }
 
   @Override
-  public ObjectCustomContextPayload clone() {
-    return (ObjectCustomContextPayload) super.clone();
+  public SetObjectAcls clone() {
+    return (SetObjectAcls) super.clone();
   }
 
 }

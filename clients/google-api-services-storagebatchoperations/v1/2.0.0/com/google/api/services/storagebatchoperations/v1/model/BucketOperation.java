@@ -81,7 +81,7 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
+   * `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,6 +93,13 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private PrefixList prefixList;
+
+  /**
+   * Specifies objects matching the object filters in a project source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProjectSource projectSource;
 
   /**
    * Updates object metadata. Allows updating fixed-key and custom metadata and fixed-key metadata
@@ -116,6 +123,13 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private RewriteObject rewriteObject;
+
+  /**
+   * Updates object ACLs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SetObjectAcls setObjectAcls;
 
   /**
    * Output only. The time that the BucketOperation was started.
@@ -259,7 +273,7 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
+   * `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -268,7 +282,7 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
+   * `projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}`.
    * @param name name or {@code null} for none
    */
   public BucketOperation setName(java.lang.String name) {
@@ -290,6 +304,23 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
    */
   public BucketOperation setPrefixList(PrefixList prefixList) {
     this.prefixList = prefixList;
+    return this;
+  }
+
+  /**
+   * Specifies objects matching the object filters in a project source.
+   * @return value or {@code null} for none
+   */
+  public ProjectSource getProjectSource() {
+    return projectSource;
+  }
+
+  /**
+   * Specifies objects matching the object filters in a project source.
+   * @param projectSource projectSource or {@code null} for none
+   */
+  public BucketOperation setProjectSource(ProjectSource projectSource) {
+    this.projectSource = projectSource;
     return this;
   }
 
@@ -345,6 +376,23 @@ public final class BucketOperation extends com.google.api.client.json.GenericJso
    */
   public BucketOperation setRewriteObject(RewriteObject rewriteObject) {
     this.rewriteObject = rewriteObject;
+    return this;
+  }
+
+  /**
+   * Updates object ACLs.
+   * @return value or {@code null} for none
+   */
+  public SetObjectAcls getSetObjectAcls() {
+    return setObjectAcls;
+  }
+
+  /**
+   * Updates object ACLs.
+   * @param setObjectAcls setObjectAcls or {@code null} for none
+   */
+  public BucketOperation setSetObjectAcls(SetObjectAcls setObjectAcls) {
+    this.setObjectAcls = setObjectAcls;
     return this;
   }
 

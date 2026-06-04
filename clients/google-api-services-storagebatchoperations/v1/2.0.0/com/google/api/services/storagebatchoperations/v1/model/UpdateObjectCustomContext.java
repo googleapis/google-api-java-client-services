@@ -31,7 +31,7 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class UpdateObjectCustomContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set, must be set to true and all existing object custom contexts will be deleted.
+   * If set, must be set to true and all existing object custom contexts are deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class UpdateObjectCustomContext extends com.google.api.client.json.
   private CustomContextUpdates customContextUpdates;
 
   /**
-   * If set, must be set to true and all existing object custom contexts will be deleted.
+   * If set, must be set to true and all existing object custom contexts are deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClearAll() {
@@ -54,7 +54,7 @@ public final class UpdateObjectCustomContext extends com.google.api.client.json.
   }
 
   /**
-   * If set, must be set to true and all existing object custom contexts will be deleted.
+   * If set, must be set to true and all existing object custom contexts are deleted.
    * @param clearAll clearAll or {@code null} for none
    */
   public UpdateObjectCustomContext setClearAll(java.lang.Boolean clearAll) {

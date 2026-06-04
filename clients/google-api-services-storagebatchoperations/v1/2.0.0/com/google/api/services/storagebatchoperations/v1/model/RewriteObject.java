@@ -31,26 +31,34 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class RewriteObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Resource name of the Cloud KMS key that will be used to encrypt the object. The Cloud
-   * KMS key must be located in same location as the object. Refer to
-   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key for
-   * additional documentation. Format:
-   * projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key} For example:
-   * "projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key". The object will
-   * be rewritten and set with the specified KMS key.
+   * Optional. Resource name of the Cloud KMS key that is used to encrypt the object. The Cloud KMS
+   * key must be located in same location as the object. For details, see
+   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` For
+   * example: `projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key`. The
+   * object will be rewritten and set with the specified KMS key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * Required. Resource name of the Cloud KMS key that will be used to encrypt the object. The Cloud
-   * KMS key must be located in same location as the object. Refer to
-   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key for
-   * additional documentation. Format:
-   * projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key} For example:
-   * "projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key". The object will
-   * be rewritten and set with the specified KMS key.
+   * Optional. Rewrites the object to the specified storage class. Setting this field will perform a
+   * full byte copy of the object if the storage class is different from the object's current
+   * storage class. If Autoclass is enabled on the bucket, storage class changes are ignored by
+   * Cloud Storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageClass;
+
+  /**
+   * Optional. Resource name of the Cloud KMS key that is used to encrypt the object. The Cloud KMS
+   * key must be located in same location as the object. For details, see
+   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` For
+   * example: `projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key`. The
+   * object will be rewritten and set with the specified KMS key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -58,17 +66,39 @@ public final class RewriteObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Resource name of the Cloud KMS key that will be used to encrypt the object. The Cloud
-   * KMS key must be located in same location as the object. Refer to
-   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key for
-   * additional documentation. Format:
-   * projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key} For example:
-   * "projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key". The object will
-   * be rewritten and set with the specified KMS key.
+   * Optional. Resource name of the Cloud KMS key that is used to encrypt the object. The Cloud KMS
+   * key must be located in same location as the object. For details, see
+   * https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys#add-object-key
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}` For
+   * example: `projects/123456/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key`. The
+   * object will be rewritten and set with the specified KMS key.
    * @param kmsKey kmsKey or {@code null} for none
    */
   public RewriteObject setKmsKey(java.lang.String kmsKey) {
     this.kmsKey = kmsKey;
+    return this;
+  }
+
+  /**
+   * Optional. Rewrites the object to the specified storage class. Setting this field will perform a
+   * full byte copy of the object if the storage class is different from the object's current
+   * storage class. If Autoclass is enabled on the bucket, storage class changes are ignored by
+   * Cloud Storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageClass() {
+    return storageClass;
+  }
+
+  /**
+   * Optional. Rewrites the object to the specified storage class. Setting this field will perform a
+   * full byte copy of the object if the storage class is different from the object's current
+   * storage class. If Autoclass is enabled on the bucket, storage class changes are ignored by
+   * Cloud Storage.
+   * @param storageClass storageClass or {@code null} for none
+   */
+  public RewriteObject setStorageClass(java.lang.String storageClass) {
+    this.storageClass = storageClass;
     return this;
   }
 

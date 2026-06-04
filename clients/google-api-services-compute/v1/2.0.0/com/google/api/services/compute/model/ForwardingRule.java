@@ -124,6 +124,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowPscGlobalAccess;
 
   /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ForwardingRuleAttachedExtension> attachedExtensions;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * internal and external passthrough Network Load Balancers; must be omitted for all other load
    * balancer types.
@@ -688,6 +695,23 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setAllowPscGlobalAccess(java.lang.Boolean allowPscGlobalAccess) {
     this.allowPscGlobalAccess = allowPscGlobalAccess;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ForwardingRuleAttachedExtension> getAttachedExtensions() {
+    return attachedExtensions;
+  }
+
+  /**
+   * Output only. [Output Only]. The extensions that are attached to this ForwardingRule.
+   * @param attachedExtensions attachedExtensions or {@code null} for none
+   */
+  public ForwardingRule setAttachedExtensions(java.util.List<ForwardingRuleAttachedExtension> attachedExtensions) {
+    this.attachedExtensions = attachedExtensions;
     return this;
   }
 

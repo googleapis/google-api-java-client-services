@@ -30,6 +30,33 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 @SuppressWarnings("javadoc")
 public final class CompleteSetupRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The external deal ids of the deals to mark as setup completed. If empty, all the deals in the
+   * proposal will be marked as setup completed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> externalDealIds;
+
+  /**
+   * The external deal ids of the deals to mark as setup completed. If empty, all the deals in the
+   * proposal will be marked as setup completed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExternalDealIds() {
+    return externalDealIds;
+  }
+
+  /**
+   * The external deal ids of the deals to mark as setup completed. If empty, all the deals in the
+   * proposal will be marked as setup completed.
+   * @param externalDealIds externalDealIds or {@code null} for none
+   */
+  public CompleteSetupRequest setExternalDealIds(java.util.List<java.lang.String> externalDealIds) {
+    this.externalDealIds = externalDealIds;
+    return this;
+  }
+
   @Override
   public CompleteSetupRequest set(String fieldName, Object value) {
     return (CompleteSetupRequest) super.set(fieldName, value);

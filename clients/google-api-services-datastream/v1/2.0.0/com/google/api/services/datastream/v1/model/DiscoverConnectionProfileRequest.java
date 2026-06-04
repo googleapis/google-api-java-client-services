@@ -94,6 +94,14 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   private SalesforceOrg salesforceOrg;
 
   /**
+   * Optional. Source catalog to enrich with child data objects and metadata. This is mainly used to
+   * represent SaaS sources databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SourceCatalog sourceCatalog;
+
+  /**
    * Optional. Spanner database to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
@@ -259,6 +267,25 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
    */
   public DiscoverConnectionProfileRequest setSalesforceOrg(SalesforceOrg salesforceOrg) {
     this.salesforceOrg = salesforceOrg;
+    return this;
+  }
+
+  /**
+   * Optional. Source catalog to enrich with child data objects and metadata. This is mainly used to
+   * represent SaaS sources databases.
+   * @return value or {@code null} for none
+   */
+  public SourceCatalog getSourceCatalog() {
+    return sourceCatalog;
+  }
+
+  /**
+   * Optional. Source catalog to enrich with child data objects and metadata. This is mainly used to
+   * represent SaaS sources databases.
+   * @param sourceCatalog sourceCatalog or {@code null} for none
+   */
+  public DiscoverConnectionProfileRequest setSourceCatalog(SourceCatalog sourceCatalog) {
+    this.sourceCatalog = sourceCatalog;
     return this;
   }
 

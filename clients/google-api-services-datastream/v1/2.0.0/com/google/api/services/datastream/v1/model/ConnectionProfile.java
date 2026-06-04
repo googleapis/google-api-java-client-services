@@ -44,6 +44,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
+   * Profile for connecting to a Dataverse source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataverseProfile dataverseProfile;
+
+  /**
    * Required. Display name.
    * The value may be {@code null}.
    */
@@ -114,6 +121,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private PrivateConnectivity privateConnectivity;
 
   /**
+   * Profile for connecting to a Salesforce Marketing Cloud source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceMarketingCloudProfile salesforceMarketingCloudProfile;
+
+  /**
    * Profile for connecting to a Salesforce source.
    * The value may be {@code null}.
    */
@@ -133,6 +147,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
+
+  /**
+   * Profile for connecting to a ServiceNow source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceNowProfile serviceNowProfile;
 
   /**
    * Profile for connecting to a Spanner source.
@@ -193,6 +214,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Profile for connecting to a Dataverse source.
+   * @return value or {@code null} for none
+   */
+  public DataverseProfile getDataverseProfile() {
+    return dataverseProfile;
+  }
+
+  /**
+   * Profile for connecting to a Dataverse source.
+   * @param dataverseProfile dataverseProfile or {@code null} for none
+   */
+  public ConnectionProfile setDataverseProfile(DataverseProfile dataverseProfile) {
+    this.dataverseProfile = dataverseProfile;
     return this;
   }
 
@@ -367,6 +405,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Profile for connecting to a Salesforce Marketing Cloud source.
+   * @return value or {@code null} for none
+   */
+  public SalesforceMarketingCloudProfile getSalesforceMarketingCloudProfile() {
+    return salesforceMarketingCloudProfile;
+  }
+
+  /**
+   * Profile for connecting to a Salesforce Marketing Cloud source.
+   * @param salesforceMarketingCloudProfile salesforceMarketingCloudProfile or {@code null} for none
+   */
+  public ConnectionProfile setSalesforceMarketingCloudProfile(SalesforceMarketingCloudProfile salesforceMarketingCloudProfile) {
+    this.salesforceMarketingCloudProfile = salesforceMarketingCloudProfile;
+    return this;
+  }
+
+  /**
    * Profile for connecting to a Salesforce source.
    * @return value or {@code null} for none
    */
@@ -414,6 +469,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Profile for connecting to a ServiceNow source.
+   * @return value or {@code null} for none
+   */
+  public ServiceNowProfile getServiceNowProfile() {
+    return serviceNowProfile;
+  }
+
+  /**
+   * Profile for connecting to a ServiceNow source.
+   * @param serviceNowProfile serviceNowProfile or {@code null} for none
+   */
+  public ConnectionProfile setServiceNowProfile(ServiceNowProfile serviceNowProfile) {
+    this.serviceNowProfile = serviceNowProfile;
     return this;
   }
 

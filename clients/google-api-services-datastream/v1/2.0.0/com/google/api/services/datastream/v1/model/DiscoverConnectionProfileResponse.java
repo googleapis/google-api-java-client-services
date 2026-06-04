@@ -65,6 +65,13 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
   private SalesforceOrg salesforceOrg;
 
   /**
+   * Enriched source catalog. This is mainly used to represent SaaS sources databases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SourceCatalog sourceCatalog;
+
+  /**
    * Enriched Spanner database.
    * The value may be {@code null}.
    */
@@ -160,6 +167,23 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
    */
   public DiscoverConnectionProfileResponse setSalesforceOrg(SalesforceOrg salesforceOrg) {
     this.salesforceOrg = salesforceOrg;
+    return this;
+  }
+
+  /**
+   * Enriched source catalog. This is mainly used to represent SaaS sources databases.
+   * @return value or {@code null} for none
+   */
+  public SourceCatalog getSourceCatalog() {
+    return sourceCatalog;
+  }
+
+  /**
+   * Enriched source catalog. This is mainly used to represent SaaS sources databases.
+   * @param sourceCatalog sourceCatalog or {@code null} for none
+   */
+  public DiscoverConnectionProfileResponse setSourceCatalog(SourceCatalog sourceCatalog) {
+    this.sourceCatalog = sourceCatalog;
     return this;
   }
 

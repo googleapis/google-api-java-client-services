@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class SourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Dataverse data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataverseSourceConfig dataverseSourceConfig;
+
+  /**
    * MongoDB data source configuration.
    * The value may be {@code null}.
    */
@@ -58,11 +65,25 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private PostgresqlSourceConfig postgresqlSourceConfig;
 
   /**
+   * Salesforce Marketing Cloud data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceMarketingCloudSourceConfig salesforceMarketingCloudSourceConfig;
+
+  /**
    * Salesforce data source configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SalesforceSourceConfig salesforceSourceConfig;
+
+  /**
+   * ServiceNow data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceNowSourceConfig serviceNowSourceConfig;
 
   /**
    * Required. Source connection profile resource. Format:
@@ -85,6 +106,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SqlServerSourceConfig sqlServerSourceConfig;
+
+  /**
+   * Dataverse data source configuration.
+   * @return value or {@code null} for none
+   */
+  public DataverseSourceConfig getDataverseSourceConfig() {
+    return dataverseSourceConfig;
+  }
+
+  /**
+   * Dataverse data source configuration.
+   * @param dataverseSourceConfig dataverseSourceConfig or {@code null} for none
+   */
+  public SourceConfig setDataverseSourceConfig(DataverseSourceConfig dataverseSourceConfig) {
+    this.dataverseSourceConfig = dataverseSourceConfig;
+    return this;
+  }
 
   /**
    * MongoDB data source configuration.
@@ -155,6 +193,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Salesforce Marketing Cloud data source configuration.
+   * @return value or {@code null} for none
+   */
+  public SalesforceMarketingCloudSourceConfig getSalesforceMarketingCloudSourceConfig() {
+    return salesforceMarketingCloudSourceConfig;
+  }
+
+  /**
+   * Salesforce Marketing Cloud data source configuration.
+   * @param salesforceMarketingCloudSourceConfig salesforceMarketingCloudSourceConfig or {@code null} for none
+   */
+  public SourceConfig setSalesforceMarketingCloudSourceConfig(SalesforceMarketingCloudSourceConfig salesforceMarketingCloudSourceConfig) {
+    this.salesforceMarketingCloudSourceConfig = salesforceMarketingCloudSourceConfig;
+    return this;
+  }
+
+  /**
    * Salesforce data source configuration.
    * @return value or {@code null} for none
    */
@@ -168,6 +223,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setSalesforceSourceConfig(SalesforceSourceConfig salesforceSourceConfig) {
     this.salesforceSourceConfig = salesforceSourceConfig;
+    return this;
+  }
+
+  /**
+   * ServiceNow data source configuration.
+   * @return value or {@code null} for none
+   */
+  public ServiceNowSourceConfig getServiceNowSourceConfig() {
+    return serviceNowSourceConfig;
+  }
+
+  /**
+   * ServiceNow data source configuration.
+   * @param serviceNowSourceConfig serviceNowSourceConfig or {@code null} for none
+   */
+  public SourceConfig setServiceNowSourceConfig(ServiceNowSourceConfig serviceNowSourceConfig) {
+    this.serviceNowSourceConfig = serviceNowSourceConfig;
     return this;
   }
 

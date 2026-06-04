@@ -59,6 +59,14 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
   private PostgresqlRdbms postgresqlExcludedObjects;
 
   /**
+   * Source catalog data source objects to avoid backfilling. This is mainly used to represent SaaS
+   * applications objects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SourceCatalog saasExcludedObjects;
+
+  /**
    * Salesforce data source objects to avoid backfilling
    * The value may be {@code null}.
    */
@@ -144,6 +152,25 @@ public final class BackfillAllStrategy extends com.google.api.client.json.Generi
    */
   public BackfillAllStrategy setPostgresqlExcludedObjects(PostgresqlRdbms postgresqlExcludedObjects) {
     this.postgresqlExcludedObjects = postgresqlExcludedObjects;
+    return this;
+  }
+
+  /**
+   * Source catalog data source objects to avoid backfilling. This is mainly used to represent SaaS
+   * applications objects.
+   * @return value or {@code null} for none
+   */
+  public SourceCatalog getSaasExcludedObjects() {
+    return saasExcludedObjects;
+  }
+
+  /**
+   * Source catalog data source objects to avoid backfilling. This is mainly used to represent SaaS
+   * applications objects.
+   * @param saasExcludedObjects saasExcludedObjects or {@code null} for none
+   */
+  public BackfillAllStrategy setSaasExcludedObjects(SourceCatalog saasExcludedObjects) {
+    this.saasExcludedObjects = saasExcludedObjects;
     return this;
   }
 

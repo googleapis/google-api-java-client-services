@@ -9092,6 +9092,149 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class Rollouts {
 
         /**
+         * Cancels a paused Rollout. The rollout will not be started on new clusters, however the rollout
+         * running on the cluster will be allowed to finish. It's only valid to cancel a paused rollout,
+         * otherwise it will return a FAILED_PRECONDITION error.
+         *
+         * Create a request for the method "rollouts.cancel".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout to cancel.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+         * @param content the {@link com.google.api.services.gkehub.v1alpha.model.CancelRolloutRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.CancelRolloutRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+
+          /**
+           * Cancels a paused Rollout. The rollout will not be started on new clusters, however the rollout
+           * running on the cluster will be allowed to finish. It's only valid to cancel a paused rollout,
+           * otherwise it will return a FAILED_PRECONDITION error.
+           *
+           * Create a request for the method "rollouts.cancel".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout to cancel.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+           * @param content the {@link com.google.api.services.gkehub.v1alpha.model.CancelRolloutRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.CancelRolloutRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout to cancel.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout to cancel.
+         projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout to cancel.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
          * Force-completes a rollout stage. Only the active stage of an active rollout can be force-
          * completed.
          *
@@ -9600,6 +9743,286 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Pauses a running Rollout. The rollout will not be started on new clusters, however the rollout
+         * running on the cluster will be allowed to finish.
+         *
+         * Create a request for the method "rollouts.pause".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout to pause.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+         * @param content the {@link com.google.api.services.gkehub.v1alpha.model.PauseRolloutRequest}
+         * @return the request
+         */
+        public Pause pause(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.PauseRolloutRequest content) throws java.io.IOException {
+          Pause result = new Pause(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Pause extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:pause";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+
+          /**
+           * Pauses a running Rollout. The rollout will not be started on new clusters, however the rollout
+           * running on the cluster will be allowed to finish.
+           *
+           * Create a request for the method "rollouts.pause".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
+           * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout to pause.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+           * @param content the {@link com.google.api.services.gkehub.v1alpha.model.PauseRolloutRequest}
+           * @since 1.13
+           */
+          protected Pause(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.PauseRolloutRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Pause set$Xgafv(java.lang.String $Xgafv) {
+            return (Pause) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Pause setAccessToken(java.lang.String accessToken) {
+            return (Pause) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Pause setAlt(java.lang.String alt) {
+            return (Pause) super.setAlt(alt);
+          }
+
+          @Override
+          public Pause setCallback(java.lang.String callback) {
+            return (Pause) super.setCallback(callback);
+          }
+
+          @Override
+          public Pause setFields(java.lang.String fields) {
+            return (Pause) super.setFields(fields);
+          }
+
+          @Override
+          public Pause setKey(java.lang.String key) {
+            return (Pause) super.setKey(key);
+          }
+
+          @Override
+          public Pause setOauthToken(java.lang.String oauthToken) {
+            return (Pause) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Pause) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Pause setQuotaUser(java.lang.String quotaUser) {
+            return (Pause) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Pause setUploadType(java.lang.String uploadType) {
+            return (Pause) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Pause) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout to pause.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout to pause.
+         projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout to pause.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public Pause setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Pause set(String parameterName, Object value) {
+            return (Pause) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resume a paused Rollout. The rollout will be resumed and allowed to be started on clusters.
+         *
+         * Create a request for the method "rollouts.resume".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout to resume.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+         * @param content the {@link com.google.api.services.gkehub.v1alpha.model.ResumeRolloutRequest}
+         * @return the request
+         */
+        public Resume resume(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.ResumeRolloutRequest content) throws java.io.IOException {
+          Resume result = new Resume(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resume extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:resume";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+
+          /**
+           * Resume a paused Rollout. The rollout will be resumed and allowed to be started on clusters.
+           *
+           * Create a request for the method "rollouts.resume".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Resume#execute()} method to invoke the remote operation. <p> {@link
+           * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout to resume.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+           * @param content the {@link com.google.api.services.gkehub.v1alpha.model.ResumeRolloutRequest}
+           * @since 1.13
+           */
+          protected Resume(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.ResumeRolloutRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resume set$Xgafv(java.lang.String $Xgafv) {
+            return (Resume) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resume setAccessToken(java.lang.String accessToken) {
+            return (Resume) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resume setAlt(java.lang.String alt) {
+            return (Resume) super.setAlt(alt);
+          }
+
+          @Override
+          public Resume setCallback(java.lang.String callback) {
+            return (Resume) super.setCallback(callback);
+          }
+
+          @Override
+          public Resume setFields(java.lang.String fields) {
+            return (Resume) super.setFields(fields);
+          }
+
+          @Override
+          public Resume setKey(java.lang.String key) {
+            return (Resume) super.setKey(key);
+          }
+
+          @Override
+          public Resume setOauthToken(java.lang.String oauthToken) {
+            return (Resume) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resume) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resume setQuotaUser(java.lang.String quotaUser) {
+            return (Resume) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resume setUploadType(java.lang.String uploadType) {
+            return (Resume) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resume) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout to resume.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout to resume.
+         projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout to resume.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public Resume setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Resume set(String parameterName, Object value) {
+            return (Resume) super.set(parameterName, value);
           }
         }
 

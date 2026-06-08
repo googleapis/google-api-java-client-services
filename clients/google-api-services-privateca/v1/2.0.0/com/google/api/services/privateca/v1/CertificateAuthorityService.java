@@ -5487,8 +5487,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            *        **Specific CA Pool:** To list certificates within a single CA Pool:
            *        `projects/locations/caPools` 2. **All CA Pools in a Location:** To list certificates
            *        across *all* CA Pools in a given project and location, use the wildcard character (`-`) in
-           *        place of the CA Pool ID. Example: `projects/locations/caPools/-` See go/ccfe-nested-
-           *        collections#aggregate-listing for more details.
+           *        place of the CA Pool ID. Example: `projects/locations/caPools/-`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5519,8 +5518,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            *        **Specific CA Pool:** To list certificates within a single CA Pool:
            *        `projects/locations/caPools` 2. **All CA Pools in a Location:** To list certificates
            *        across *all* CA Pools in a given project and location, use the wildcard character (`-`) in
-           *        place of the CA Pool ID. Example: `projects/locations/caPools/-` See go/ccfe-nested-
-           *        collections#aggregate-listing for more details.
+           *        place of the CA Pool ID. Example: `projects/locations/caPools/-`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5604,8 +5602,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              * forms: 1. **Specific CA Pool:** To list certificates within a single CA Pool:
              * `projects/locations/caPools` 2. **All CA Pools in a Location:** To list certificates
              * across *all* CA Pools in a given project and location, use the wildcard character
-             * (`-`) in place of the CA Pool ID. Example: `projects/locations/caPools/-` See
-             * go/ccfe-nested-collections#aggregate-listing for more details.
+             * (`-`) in place of the CA Pool ID. Example: `projects/locations/caPools/-`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -5615,7 +5612,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
            Pool:** To list certificates within a single CA Pool: `projects/locations/caPools` 2. **All CA
            Pools in a Location:** To list certificates across *all* CA Pools in a given project and location,
            use the wildcard character (`-`) in place of the CA Pool ID. Example:
-           `projects/locations/caPools/-` See go/ccfe-nested-collections#aggregate-listing for more details.
+           `projects/locations/caPools/-`
              */
             public java.lang.String getParent() {
               return parent;
@@ -5627,8 +5624,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
              * forms: 1. **Specific CA Pool:** To list certificates within a single CA Pool:
              * `projects/locations/caPools` 2. **All CA Pools in a Location:** To list certificates
              * across *all* CA Pools in a given project and location, use the wildcard character
-             * (`-`) in place of the CA Pool ID. Example: `projects/locations/caPools/-` See
-             * go/ccfe-nested-collections#aggregate-listing for more details.
+             * (`-`) in place of the CA Pool ID. Example: `projects/locations/caPools/-`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

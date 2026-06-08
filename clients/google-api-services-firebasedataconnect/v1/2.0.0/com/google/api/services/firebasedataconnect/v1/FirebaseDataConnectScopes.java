@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Firebase Data Connect API.
+ * Available OAuth 2.0 scopes for use with the Firebase SQL Connect API.
  *
  * @since 1.4
  */

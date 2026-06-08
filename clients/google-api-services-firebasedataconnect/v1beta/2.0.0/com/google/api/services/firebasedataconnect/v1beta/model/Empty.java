@@ -22,7 +22,7 @@ package com.google.api.services.firebasedataconnect.v1beta.model;
  * instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation
+ * transmitted over HTTP when working with the Firebase SQL Connect API. For a detailed explanation
  * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>

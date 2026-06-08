@@ -51,6 +51,14 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> nodeSelector;
 
   /**
+   * Optional. Restart policy for the Instance. Allowable values are 'Always', 'OnFailure', or
+   * 'Never'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restartPolicy;
+
+  /**
    * Optional. Email address of the IAM service account associated with the Instance. The service
    * account represents the identity of the running container, and determines what permissions the
    * Instance has. If not provided, the Instance will use the project's default service account.
@@ -99,6 +107,25 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
    */
   public InstanceSpec setNodeSelector(java.util.Map<String, java.lang.String> nodeSelector) {
     this.nodeSelector = nodeSelector;
+    return this;
+  }
+
+  /**
+   * Optional. Restart policy for the Instance. Allowable values are 'Always', 'OnFailure', or
+   * 'Never'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestartPolicy() {
+    return restartPolicy;
+  }
+
+  /**
+   * Optional. Restart policy for the Instance. Allowable values are 'Always', 'OnFailure', or
+   * 'Never'.
+   * @param restartPolicy restartPolicy or {@code null} for none
+   */
+  public InstanceSpec setRestartPolicy(java.lang.String restartPolicy) {
+    this.restartPolicy = restartPolicy;
     return this;
   }
 

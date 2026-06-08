@@ -45,7 +45,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   private java.lang.String clusterUuid;
 
   /**
-   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * Optional. Whether the request is submitted by a super user. If true, IAM will check
    * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
    * to give Dataproc superuser the ability to repair clusters without granting the overly broad
    * update permission.
@@ -60,8 +60,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
    * Mapping—Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
-   * versions 1.2+.
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in image versions 1.2+.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +136,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * Optional. Whether the request is submitted by a super user. If true, IAM will check
    * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
    * to give Dataproc superuser the ability to repair clusters without granting the overly broad
    * update permission.
@@ -148,7 +147,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Whether the request is submitted by Dataproc super user. If true, IAM will check
+   * Optional. Whether the request is submitted by a super user. If true, IAM will check
    * 'dataproc.clusters.repair' permission instead of 'dataproc.clusters.update' permission. This is
    * to give Dataproc superuser the ability to repair clusters without granting the overly broad
    * update permission.
@@ -165,8 +164,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
    * Mapping—Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
-   * versions 1.2+.
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in image versions 1.2+.
    * @return value or {@code null} for none
    */
   public String getGracefulDecommissionTimeout() {
@@ -179,8 +177,7 @@ public final class RepairClusterRequest extends com.google.api.client.json.Gener
    * amount of time to wait for jobs finish before forcefully removing nodes. The default timeout is
    * 0 for forceful decommissioning, and the maximum timeout period is 1 day. (see JSON
    * Mapping—Duration (https://developers.google.com/protocol-
-   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in Dataproc image
-   * versions 1.2+.
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in image versions 1.2+.
    * @param gracefulDecommissionTimeout gracefulDecommissionTimeout or {@code null} for none
    */
   public RepairClusterRequest setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {

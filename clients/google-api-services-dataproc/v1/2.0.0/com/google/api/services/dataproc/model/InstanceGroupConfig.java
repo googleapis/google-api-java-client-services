@@ -54,8 +54,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
    * image or image family.Image examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/[image-id]
-   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
-   * the most recent image from the family:
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. The service will
+   * use the most recent image from the family:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/family/[custom-image-
    * family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is
    * unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
@@ -72,8 +72,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private InstanceFlexibilityPolicy instanceFlexibilityPolicy;
 
   /**
-   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
-   * num_instances, and the instance group.
+   * Output only. The list of instance names, derived from cluster_name, num_instances, and the
+   * instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,10 +98,10 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/
    * zones/[zone]/machineTypes/n1-standard-2
    * projects/[project_id]/zones/[zone]/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception:
-   * If you are using the Dataproc Auto Zone Placement
+   * If you are using Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
-   * zone#using_auto_zone_placement) feature, you must use the short name of the machine type
-   * resource, for example, n1-standard-2.
+   * zone#using_auto_zone_placement), you must use the short name of the machine type resource, for
+   * example, n1-standard-2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   private ManagedGroupConfig managedGroupConfig;
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum
-   * CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Minimum CPU Platform
+   * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,8 +198,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
    * image or image family.Image examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/[image-id]
-   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
-   * the most recent image from the family:
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. The service will
+   * use the most recent image from the family:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/family/[custom-image-
    * family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is
    * unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
@@ -213,8 +213,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an
    * image or image family.Image examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/[image-id]
-   * projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use
-   * the most recent image from the family:
+   * projects/[project_id]/global/images/[image-id] image-idImage family examples. The service will
+   * use the most recent image from the family:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/global/images/family/[custom-image-
    * family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is
    * unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
@@ -243,8 +243,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
-   * num_instances, and the instance group.
+   * Output only. The list of instance names, derived from cluster_name, num_instances, and the
+   * instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceNames() {
@@ -252,8 +252,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The list of instance names. Dataproc derives the names from cluster_name,
-   * num_instances, and the instance group.
+   * Output only. The list of instance names, derived from cluster_name, num_instances, and the
+   * instance group.
    * @param instanceNames instanceNames or {@code null} for none
    */
   public InstanceGroupConfig setInstanceNames(java.util.List<java.lang.String> instanceNames) {
@@ -300,10 +300,10 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/
    * zones/[zone]/machineTypes/n1-standard-2
    * projects/[project_id]/zones/[zone]/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception:
-   * If you are using the Dataproc Auto Zone Placement
+   * If you are using Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
-   * zone#using_auto_zone_placement) feature, you must use the short name of the machine type
-   * resource, for example, n1-standard-2.
+   * zone#using_auto_zone_placement), you must use the short name of the machine type resource, for
+   * example, n1-standard-2.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineTypeUri() {
@@ -315,10 +315,10 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
    * or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/
    * zones/[zone]/machineTypes/n1-standard-2
    * projects/[project_id]/zones/[zone]/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception:
-   * If you are using the Dataproc Auto Zone Placement
+   * If you are using Auto Zone Placement
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-
-   * zone#using_auto_zone_placement) feature, you must use the short name of the machine type
-   * resource, for example, n1-standard-2.
+   * zone#using_auto_zone_placement), you must use the short name of the machine type resource, for
+   * example, n1-standard-2.
    * @param machineTypeUri machineTypeUri or {@code null} for none
    */
   public InstanceGroupConfig setMachineTypeUri(java.lang.String machineTypeUri) {
@@ -346,8 +346,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum
-   * CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Minimum CPU Platform
+   * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -355,8 +355,8 @@ public final class InstanceGroupConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum
-   * CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
+   * Optional. Specifies the minimum cpu platform for the Instance Group. See Minimum CPU Platform
+   * (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstanceGroupConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {

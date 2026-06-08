@@ -17,9 +17,9 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * The Dataproc cluster config for a cluster that does not directly control the underlying compute
- * resources, such as a Dataproc-on-GKE cluster
- * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview).
+ * The cluster config for a cluster that does not directly control the underlying compute resources,
+ * such as a GKE cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-
+ * overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -39,7 +39,7 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
   private AuxiliaryServicesConfig auxiliaryServicesConfig;
 
   /**
-   * Required. The configuration for running the Dataproc cluster on Kubernetes.
+   * Required. The configuration for running the cluster on Kubernetes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,10 +47,10 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine
-   * zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The configuration for running the Dataproc cluster on Kubernetes.
+   * Required. The configuration for running the cluster on Kubernetes.
    * @return value or {@code null} for none
    */
   public KubernetesClusterConfig getKubernetesClusterConfig() {
@@ -84,7 +84,7 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The configuration for running the Dataproc cluster on Kubernetes.
+   * Required. The configuration for running the cluster on Kubernetes.
    * @param kubernetesClusterConfig kubernetesClusterConfig or {@code null} for none
    */
   public VirtualClusterConfig setKubernetesClusterConfig(KubernetesClusterConfig kubernetesClusterConfig) {
@@ -94,10 +94,10 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine
-   * zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @return value or {@code null} for none
@@ -108,10 +108,10 @@ public final class VirtualClusterConfig extends com.google.api.client.json.Gener
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine
-   * zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @param stagingBucket stagingBucket or {@code null} for none

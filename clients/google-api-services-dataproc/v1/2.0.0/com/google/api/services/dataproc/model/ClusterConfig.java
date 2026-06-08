@@ -66,10 +66,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for the cluster staging bucket according to the Compute Engine zone
-   * where the cluster is deployed, and then creates and manages this project-level, per-location
-   * bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * The value may be {@code null}.
@@ -78,7 +78,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String configBucket;
 
   /**
-   * Optional. The config for Dataproc metrics.
+   * Optional. The config for metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
    * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
-   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
-   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
-   * gs://... URI to a Cloud Storage bucket.
+   * If you do not specify a diagnostic bucket, The service will use the temp bucket to collect the
+   * checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a gs://... URI
+   * to a Cloud Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,10 +124,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private GceClusterConfig gceClusterConfig;
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
-   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
-   * worker_config, secondary_worker_config, and autoscaling_config.
+   * Optional. BETA. The Kubernetes Engine config for clusters deployed to Kubernetes. These config
+   * settings are mutually exclusive with Compute Engine-based options, such as gce_cluster_config,
+   * master_config, worker_config, secondary_worker_config, and autoscaling_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,11 +188,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Dataproc determines a Cloud
-   * Storage location (US, ASIA, or EU) for the cluster temp bucket according to the Compute Engine
-   * zone where the cluster is deployed, and then creates and manages this project-level, per-
-   * location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if
-   * you specify a bucket (see Dataproc staging and temp buckets
+   * and MapReduce history files. If you do not specify a temp bucket, the service will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * The value may be {@code null}.
@@ -280,10 +279,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for the cluster staging bucket according to the Compute Engine zone
-   * where the cluster is deployed, and then creates and manages this project-level, per-location
-   * bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @return value or {@code null} for none
@@ -294,10 +293,10 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
-   * console output. If you do not specify a staging bucket, Dataproc determines a Cloud Storage
-   * location (US, ASIA, or EU) for the cluster staging bucket according to the Compute Engine zone
-   * where the cluster is deployed, and then creates and manages this project-level, per-location
-   * bucket (see Dataproc staging and temp buckets
+   * console output. If you do not specify a staging bucket, the service will determine a Cloud
+   * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
+   * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
+   * location bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @param configBucket configBucket or {@code null} for none
@@ -308,7 +307,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The config for Dataproc metrics.
+   * Optional. The config for metrics.
    * @return value or {@code null} for none
    */
   public DataprocMetricConfig getDataprocMetricConfig() {
@@ -316,7 +315,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The config for Dataproc metrics.
+   * Optional. The config for metrics.
    * @param dataprocMetricConfig dataprocMetricConfig or {@code null} for none
    */
   public ClusterConfig setDataprocMetricConfig(DataprocMetricConfig dataprocMetricConfig) {
@@ -327,9 +326,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
    * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
-   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
-   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
-   * gs://... URI to a Cloud Storage bucket.
+   * If you do not specify a diagnostic bucket, The service will use the temp bucket to collect the
+   * checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a gs://... URI
+   * to a Cloud Storage bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiagnosticBucket() {
@@ -339,9 +338,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   /**
    * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
    * (https://cloud.google.com/dataproc/docs/support/diagnose-clusters#checkpoint_diagnostic_data).
-   * If you do not specify a diagnostic bucket, Cloud Dataproc will use the Dataproc temp bucket to
-   * collect the checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a
-   * gs://... URI to a Cloud Storage bucket.
+   * If you do not specify a diagnostic bucket, The service will use the temp bucket to collect the
+   * checkpoint diagnostic data. This field requires a Cloud Storage bucket name, not a gs://... URI
+   * to a Cloud Storage bucket.
    * @param diagnosticBucket diagnosticBucket or {@code null} for none
    */
   public ClusterConfig setDiagnosticBucket(java.lang.String diagnosticBucket) {
@@ -418,10 +417,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
-   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
-   * worker_config, secondary_worker_config, and autoscaling_config.
+   * Optional. BETA. The Kubernetes Engine config for clusters deployed to Kubernetes. These config
+   * settings are mutually exclusive with Compute Engine-based options, such as gce_cluster_config,
+   * master_config, worker_config, secondary_worker_config, and autoscaling_config.
    * @return value or {@code null} for none
    */
   public GkeClusterConfig getGkeClusterConfig() {
@@ -429,10 +427,9 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed to The Kubernetes
-   * Engine config for Dataproc clusters deployed to Kubernetes. These config settings are mutually
-   * exclusive with Compute Engine-based options, such as gce_cluster_config, master_config,
-   * worker_config, secondary_worker_config, and autoscaling_config.
+   * Optional. BETA. The Kubernetes Engine config for clusters deployed to Kubernetes. These config
+   * settings are mutually exclusive with Compute Engine-based options, such as gce_cluster_config,
+   * master_config, worker_config, secondary_worker_config, and autoscaling_config.
    * @param gkeClusterConfig gkeClusterConfig or {@code null} for none
    */
   public ClusterConfig setGkeClusterConfig(GkeClusterConfig gkeClusterConfig) {
@@ -571,11 +568,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Dataproc determines a Cloud
-   * Storage location (US, ASIA, or EU) for the cluster temp bucket according to the Compute Engine
-   * zone where the cluster is deployed, and then creates and manages this project-level, per-
-   * location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if
-   * you specify a bucket (see Dataproc staging and temp buckets
+   * and MapReduce history files. If you do not specify a temp bucket, the service will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @return value or {@code null} for none
@@ -586,11 +583,11 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
-   * and MapReduce history files. If you do not specify a temp bucket, Dataproc determines a Cloud
-   * Storage location (US, ASIA, or EU) for the cluster temp bucket according to the Compute Engine
-   * zone where the cluster is deployed, and then creates and manages this project-level, per-
-   * location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if
-   * you specify a bucket (see Dataproc staging and temp buckets
+   * and MapReduce history files. If you do not specify a temp bucket, the service will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket (see staging and temp buckets
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This
    * field requires a Cloud Storage bucket name, not a gs://... URI to a Cloud Storage bucket.
    * @param tempBucket tempBucket or {@code null} for none

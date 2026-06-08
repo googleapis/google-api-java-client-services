@@ -31,9 +31,9 @@ package com.google.api.services.dataproc.model;
 public final class GceClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
-   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
-   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * Optional. An optional list of Compute Engine zones where the cluster will not be located when
+   * Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be set. If both
+   * are omitted, the service will pick a zone in the cluster Compute Engine region. If
    * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
    * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
    * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
@@ -56,10 +56,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
    * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
    * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
-   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
-   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
-   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
-   * cluster VM.
+   * be enabled to access the Dataproc API and other Google Cloud APIs. Off-cluster dependencies
+   * must be configured to be accessible without external IP addresses.When set to false: Cluster
+   * VMs are not restricted to internal IP addresses. Ephemeral external IP addresses are assigned
+   * to each cluster VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
-   * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
+   * creating-and-managing) to add to all instances (see Use secure tags
    * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * The value may be {@code null}.
    */
@@ -118,14 +118,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> resourceManagerTags;
 
   /**
-   * Optional. The Dataproc service account
-   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
-   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * Optional. The VM service account (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
    * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
-   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
-   * access Google Cloud Platform services.If not specified, the Compute Engine default service
-   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
-   * is used.
+   * principals#vm_service_account_data_plane_identity)) used by cluster VM instances to access
+   * Google Cloud Platform services.If not specified, the Compute Engine default service account
+   * (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is
+   * used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,9 +172,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
-   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
-   * always be present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the cluster will be located. If omitted, the service
+   * will pick a zone in the cluster's Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] [zone]
    * The value may be {@code null}.
@@ -184,9 +183,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String zoneUri;
 
   /**
-   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
-   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
-   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * Optional. An optional list of Compute Engine zones where the cluster will not be located when
+   * Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be set. If both
+   * are omitted, the service will pick a zone in the cluster Compute Engine region. If
    * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
    * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
    * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
@@ -199,9 +198,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. An optional list of Compute Engine zones where the Dataproc cluster will not be
-   * located when Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be
-   * set. If both are omitted, the service will pick a zone in the cluster Compute Engine region. If
+   * Optional. An optional list of Compute Engine zones where the cluster will not be located when
+   * Auto Zone is enabled. Only one of zone_uri or auto_zone_exclude_zone_uris can be set. If both
+   * are omitted, the service will pick a zone in the cluster Compute Engine region. If
    * auto_zone_exclude_zone_uris is set and there is more than one non-excluded zone, the service
    * will pick one of the non-excluded zones. Otherwise, cluster creation will fail with
    * INVALID_ARGUMENT error.A full URL, partial URI, or short name are valid. Examples:
@@ -237,10 +236,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
    * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
    * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
-   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
-   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
-   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
-   * cluster VM.
+   * be enabled to access the Dataproc API and other Google Cloud APIs. Off-cluster dependencies
+   * must be configured to be accessible without external IP addresses.When set to false: Cluster
+   * VMs are not restricted to internal IP addresses. Ephemeral external IP addresses are assigned
+   * to each cluster VM.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInternalIpOnly() {
@@ -251,10 +250,10 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. This setting applies to subnetwork-enabled networks. It is set to true by default in
    * clusters created with image versions 2.2.x.When set to true: All cluster VMs have internal IP
    * addresses. Google Private Access (https://cloud.google.com/vpc/docs/private-google-access) must
-   * be enabled to access Dataproc and other Google Cloud APIs. Off-cluster dependencies must be
-   * configured to be accessible without external IP addresses.When set to false: Cluster VMs are
-   * not restricted to internal IP addresses. Ephemeral external IP addresses are assigned to each
-   * cluster VM.
+   * be enabled to access the Dataproc API and other Google Cloud APIs. Off-cluster dependencies
+   * must be configured to be accessible without external IP addresses.When set to false: Cluster
+   * VMs are not restricted to internal IP addresses. Ephemeral external IP addresses are assigned
+   * to each cluster VM.
    * @param internalIpOnly internalIpOnly or {@code null} for none
    */
   public GceClusterConfig setInternalIpOnly(java.lang.Boolean internalIpOnly) {
@@ -365,7 +364,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
-   * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
+   * creating-and-managing) to add to all instances (see Use secure tags
    * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * @return value or {@code null} for none
    */
@@ -375,7 +374,7 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Resource manager tags (https://cloud.google.com/resource-manager/docs/tags/tags-
-   * creating-and-managing) to add to all instances (see Use secure tags in Dataproc
+   * creating-and-managing) to add to all instances (see Use secure tags
    * (https://cloud.google.com/dataproc/docs/guides/use-secure-tags)).
    * @param resourceManagerTags resourceManagerTags or {@code null} for none
    */
@@ -385,14 +384,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account
-   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
-   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * Optional. The VM service account (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
    * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
-   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
-   * access Google Cloud Platform services.If not specified, the Compute Engine default service
-   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
-   * is used.
+   * principals#vm_service_account_data_plane_identity)) used by cluster VM instances to access
+   * Google Cloud Platform services.If not specified, the Compute Engine default service account
+   * (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is
+   * used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -400,14 +398,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account
-   * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
-   * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
+   * Optional. The VM service account (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
    * (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
-   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
-   * access Google Cloud Platform services.If not specified, the Compute Engine default service
-   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
-   * is used.
+   * principals#vm_service_account_data_plane_identity)) used by cluster VM instances to access
+   * Google Cloud Platform services.If not specified, the Compute Engine default service account
+   * (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is
+   * used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GceClusterConfig setServiceAccount(java.lang.String serviceAccount) {
@@ -510,9 +507,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
-   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
-   * always be present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the cluster will be located. If omitted, the service
+   * will pick a zone in the cluster's Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] [zone]
    * @return value or {@code null} for none
@@ -522,9 +519,9 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Compute Engine zone where the Dataproc cluster will be located. If omitted, the
-   * service will pick a zone in the cluster's Compute Engine region. On a get request, zone will
-   * always be present.A full URL, partial URI, or short name are valid. Examples:
+   * Optional. The Compute Engine zone where the cluster will be located. If omitted, the service
+   * will pick a zone in the cluster's Compute Engine region. On a get request, zone will always be
+   * present.A full URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/zones/[zone]
    * projects/[project_id]/zones/[zone] [zone]
    * @param zoneUri zoneUri or {@code null} for none

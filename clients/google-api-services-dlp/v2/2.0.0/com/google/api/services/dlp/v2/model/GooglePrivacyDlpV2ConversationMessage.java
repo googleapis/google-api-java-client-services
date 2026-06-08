@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.
   private java.lang.String messageType;
 
   /**
-   * Optional. The identifier of the participant. For example 'test-user' or 'gemini'. The
+   * Optional. The identifier of the participant, for example 'test-user' or 'gemini'. The
    * participant ID can contain lowercase letters, numbers, and hyphens; that is, it must match the
    * regular expression: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. The maximum length is 63 characters.
    * The value may be {@code null}.
@@ -88,7 +88,7 @@ public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.
   }
 
   /**
-   * Optional. The identifier of the participant. For example 'test-user' or 'gemini'. The
+   * Optional. The identifier of the participant, for example 'test-user' or 'gemini'. The
    * participant ID can contain lowercase letters, numbers, and hyphens; that is, it must match the
    * regular expression: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. The maximum length is 63 characters.
    * @return value or {@code null} for none
@@ -98,7 +98,7 @@ public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.
   }
 
   /**
-   * Optional. The identifier of the participant. For example 'test-user' or 'gemini'. The
+   * Optional. The identifier of the participant, for example 'test-user' or 'gemini'. The
    * participant ID can contain lowercase letters, numbers, and hyphens; that is, it must match the
    * regular expression: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. The maximum length is 63 characters.
    * @param participantId participantId or {@code null} for none

@@ -41,7 +41,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
    * Optional. Allows to configure the context.Supported options: format - The format of the context
    * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
    * intelligently truncated on a best-effort basis to contain approximately the desired amount of
-   * characters. There is no guarantee to achieve the specific amount.
+   * characters. There is no guarantee to achieve the specific amount. all_schema_fields - If set to
+   * true, all schema fields will be returned in the context (regardless of context_budget value).
+   * Otherwise, the list of schema fields is truncated. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +81,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
    * Optional. Allows to configure the context.Supported options: format - The format of the context
    * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
    * intelligently truncated on a best-effort basis to contain approximately the desired amount of
-   * characters. There is no guarantee to achieve the specific amount.
+   * characters. There is no guarantee to achieve the specific amount. all_schema_fields - If set to
+   * true, all schema fields will be returned in the context (regardless of context_budget value).
+   * Otherwise, the list of schema fields is truncated. Default is false.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getOptions() {
@@ -90,7 +94,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
    * Optional. Allows to configure the context.Supported options: format - The format of the context
    * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
    * intelligently truncated on a best-effort basis to contain approximately the desired amount of
-   * characters. There is no guarantee to achieve the specific amount.
+   * characters. There is no guarantee to achieve the specific amount. all_schema_fields - If set to
+   * true, all schema fields will be returned in the context (regardless of context_budget value).
+   * Otherwise, the list of schema fields is truncated. Default is false.
    * @param options options or {@code null} for none
    */
   public GoogleCloudDataplexV1LookupContextRequest setOptions(java.util.Map<String, java.lang.String> options) {

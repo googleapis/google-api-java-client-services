@@ -176,6 +176,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec;
 
   /**
+   * Tuning Spec for Reinforcement Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReinforcementTuningSpec reinforcementTuningSpec;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -611,6 +618,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setPreferenceOptimizationSpec(GoogleCloudAiplatformV1beta1PreferenceOptimizationSpec preferenceOptimizationSpec) {
     this.preferenceOptimizationSpec = preferenceOptimizationSpec;
+    return this;
+  }
+
+  /**
+   * Tuning Spec for Reinforcement Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementTuningSpec getReinforcementTuningSpec() {
+    return reinforcementTuningSpec;
+  }
+
+  /**
+   * Tuning Spec for Reinforcement Tuning.
+   * @param reinforcementTuningSpec reinforcementTuningSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setReinforcementTuningSpec(GoogleCloudAiplatformV1beta1ReinforcementTuningSpec reinforcementTuningSpec) {
+    this.reinforcementTuningSpec = reinforcementTuningSpec;
     return this;
   }
 

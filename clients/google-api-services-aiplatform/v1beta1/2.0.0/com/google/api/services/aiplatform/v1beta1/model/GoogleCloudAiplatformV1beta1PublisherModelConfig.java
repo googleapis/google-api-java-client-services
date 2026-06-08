@@ -30,14 +30,44 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The prediction request/response logging config.
+   * Optional. The model provider (publisher) for which the customer has enabled data sharing. For
+   * publisher models that are configured to require data sharing, a prediction request is only
+   * allowed when the model's publisher matches this provider. Otherwise, the request is rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSharingEnabledProvider;
+
+  /**
+   * Optional. The prediction request/response logging config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig loggingConfig;
 
   /**
-   * The prediction request/response logging config.
+   * Optional. The model provider (publisher) for which the customer has enabled data sharing. For
+   * publisher models that are configured to require data sharing, a prediction request is only
+   * allowed when the model's publisher matches this provider. Otherwise, the request is rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSharingEnabledProvider() {
+    return dataSharingEnabledProvider;
+  }
+
+  /**
+   * Optional. The model provider (publisher) for which the customer has enabled data sharing. For
+   * publisher models that are configured to require data sharing, a prediction request is only
+   * allowed when the model's publisher matches this provider. Otherwise, the request is rejected.
+   * @param dataSharingEnabledProvider dataSharingEnabledProvider or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelConfig setDataSharingEnabledProvider(java.lang.String dataSharingEnabledProvider) {
+    this.dataSharingEnabledProvider = dataSharingEnabledProvider;
+    return this;
+  }
+
+  /**
+   * Optional. The prediction request/response logging config.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig getLoggingConfig() {
@@ -45,7 +75,7 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
   }
 
   /**
-   * The prediction request/response logging config.
+   * Optional. The prediction request/response logging config.
    * @param loggingConfig loggingConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PublisherModelConfig setLoggingConfig(GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig loggingConfig) {

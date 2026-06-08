@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A description of resources that to large degree are decided by Vertex AI, and require only a
+ * A description of resources that to large degree are decided by Agent Platform, and require only a
  * modest additional configuration. Each Model supporting these resources documents its specific
  * guidelines.
  *
@@ -37,8 +37,8 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
-   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
-   * number.
+   * heavy traffic will be assume, though Agent Platform may be unable to scale beyond certain
+   * replica number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
-   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
-   * number.
+   * heavy traffic will be assume, though Agent Platform may be unable to scale beyond certain
+   * replica number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxReplicaCount() {
@@ -74,8 +74,8 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
-   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
-   * number.
+   * heavy traffic will be assume, though Agent Platform may be unable to scale beyond certain
+   * replica number.
    * @param maxReplicaCount maxReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AutomaticResources setMaxReplicaCount(java.lang.Integer maxReplicaCount) {

@@ -63,7 +63,7 @@ public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends c
 
   /**
    * Immutable. The number of machine replicas used at the start of the batch operation. If not set,
-   * Vertex AI decides starting number, not greater than max_replica_count
+   * Agent Platform decides starting number, not greater than max_replica_count
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends c
 
   /**
    * Immutable. The number of machine replicas used at the start of the batch operation. If not set,
-   * Vertex AI decides starting number, not greater than max_replica_count
+   * Agent Platform decides starting number, not greater than max_replica_count
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartingReplicaCount() {
@@ -154,7 +154,7 @@ public final class GoogleCloudAiplatformV1beta1BatchDedicatedResources extends c
 
   /**
    * Immutable. The number of machine replicas used at the start of the batch operation. If not set,
-   * Vertex AI decides starting number, not greater than max_replica_count
+   * Agent Platform decides starting number, not greater than max_replica_count
    * @param startingReplicaCount startingReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1BatchDedicatedResources setStartingReplicaCount(java.lang.Integer startingReplicaCount) {

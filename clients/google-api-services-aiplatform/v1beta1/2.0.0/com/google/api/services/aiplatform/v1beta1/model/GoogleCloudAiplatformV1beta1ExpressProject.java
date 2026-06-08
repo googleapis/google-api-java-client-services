@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   private java.lang.String region;
 
   /**
+   * Output only. The tier of the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tier;
+
+  /**
    * Output only. The time the project was created.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * Output only. The tier of the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTier() {
+    return tier;
+  }
+
+  /**
+   * Output only. The tier of the project.
+   * @param tier tier or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExpressProject setTier(java.lang.String tier) {
+    this.tier = tier;
     return this;
   }
 

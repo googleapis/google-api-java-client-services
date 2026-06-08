@@ -187,6 +187,20 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private java.lang.String uid;
 
   /**
+   * Output only. The result of an unstructured data profile scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1UnstructuredDataProfileResult unstructuredDataProfileResult;
+
+  /**
+   * Optional. Settings for an unstructured data profile scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1UnstructuredDataProfileSpec unstructuredDataProfileSpec;
+
+  /**
    * Output only. The time when the scan was last updated.
    * The value may be {@code null}.
    */
@@ -540,6 +554,40 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setUid(java.lang.String uid) {
     this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Output only. The result of an unstructured data profile scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1UnstructuredDataProfileResult getUnstructuredDataProfileResult() {
+    return unstructuredDataProfileResult;
+  }
+
+  /**
+   * Output only. The result of an unstructured data profile scan.
+   * @param unstructuredDataProfileResult unstructuredDataProfileResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setUnstructuredDataProfileResult(GoogleCloudDataplexV1UnstructuredDataProfileResult unstructuredDataProfileResult) {
+    this.unstructuredDataProfileResult = unstructuredDataProfileResult;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for an unstructured data profile scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1UnstructuredDataProfileSpec getUnstructuredDataProfileSpec() {
+    return unstructuredDataProfileSpec;
+  }
+
+  /**
+   * Optional. Settings for an unstructured data profile scan.
+   * @param unstructuredDataProfileSpec unstructuredDataProfileSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setUnstructuredDataProfileSpec(GoogleCloudDataplexV1UnstructuredDataProfileSpec unstructuredDataProfileSpec) {
+    this.unstructuredDataProfileSpec = unstructuredDataProfileSpec;
     return this;
   }
 

@@ -173,6 +173,13 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   private java.lang.String eventType;
 
   /**
+   * Optional. This field is optional except for the `add-feedback` event types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1Feedback feedback;
+
+  /**
    * Optional. The filter syntax consists of an expression language for constructing a predicate
    * from one or more fields of the documents being filtered. One example is for `search` events,
    * the associated SearchRequest may contain a filter expression in SearchRequest.filter conforming
@@ -574,6 +581,23 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1UserEvent setEventType(java.lang.String eventType) {
     this.eventType = eventType;
+    return this;
+  }
+
+  /**
+   * Optional. This field is optional except for the `add-feedback` event types.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Feedback getFeedback() {
+    return feedback;
+  }
+
+  /**
+   * Optional. This field is optional except for the `add-feedback` event types.
+   * @param feedback feedback or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1UserEvent setFeedback(GoogleCloudDiscoveryengineV1Feedback feedback) {
+    this.feedback = feedback;
     return this;
   }
 

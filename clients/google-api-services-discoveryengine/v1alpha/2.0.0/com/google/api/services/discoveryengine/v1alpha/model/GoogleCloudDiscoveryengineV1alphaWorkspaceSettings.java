@@ -30,11 +30,35 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWorkspaceSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customerDomainValid;
+
+  /**
    * Whether an end user has workspace access enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean workspaceAccessEnabled;
+
+  /**
+   * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomerDomainValid() {
+    return customerDomainValid;
+  }
+
+  /**
+   * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * @param customerDomainValid customerDomainValid or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWorkspaceSettings setCustomerDomainValid(java.lang.Boolean customerDomainValid) {
+    this.customerDomainValid = customerDomainValid;
+    return this;
+  }
 
   /**
    * Whether an end user has workspace access enabled.

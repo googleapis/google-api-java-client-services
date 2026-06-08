@@ -117,7 +117,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
-   * `enable-end-user-sharing-with-groups`
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,6 +137,17 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String interactionType;
+
+  /**
+   * Output only. The resolved, server-side view of model selector configuration. Holds both the
+   * ordered list of models that should appear in the model selector dropdown and the model that
+   * should be selected by default. Clients should render this directly without applying their own
+   * filtering, ordering, or localization. The legacy `model_configs` map above is retained for
+   * backward compatibility with clients that have not yet migrated to consuming this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo modelConfigInfo;
 
   /**
    * Output only. Maps a model name to its specific configuration for this engine. This allows admin
@@ -341,7 +353,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
-   * `enable-end-user-sharing-with-groups`
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -356,7 +369,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * app-access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation`
    * * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `disable-canvas-workspace` * `disable-skills` *
-   * `enable-end-user-sharing-with-groups`
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
@@ -395,6 +409,31 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setInteractionType(java.lang.String interactionType) {
     this.interactionType = interactionType;
+    return this;
+  }
+
+  /**
+   * Output only. The resolved, server-side view of model selector configuration. Holds both the
+   * ordered list of models that should appear in the model selector dropdown and the model that
+   * should be selected by default. Clients should render this directly without applying their own
+   * filtering, ordering, or localization. The legacy `model_configs` map above is retained for
+   * backward compatibility with clients that have not yet migrated to consuming this field.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo getModelConfigInfo() {
+    return modelConfigInfo;
+  }
+
+  /**
+   * Output only. The resolved, server-side view of model selector configuration. Holds both the
+   * ordered list of models that should appear in the model selector dropdown and the model that
+   * should be selected by default. Clients should render this directly without applying their own
+   * filtering, ordering, or localization. The legacy `model_configs` map above is retained for
+   * backward compatibility with clients that have not yet migrated to consuming this field.
+   * @param modelConfigInfo modelConfigInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setModelConfigInfo(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfo modelConfigInfo) {
+    this.modelConfigInfo = modelConfigInfo;
     return this;
   }
 

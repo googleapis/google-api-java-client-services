@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.dialogflow.v2beta1.model;
+package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Model definition for GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -27,58 +28,58 @@ package com.google.api.services.dialogflow.v2beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String queryText;
+  private java.lang.String key;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext> searchContexts;
+  private java.lang.String value;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getQueryText() {
-    return queryText;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * @param queryText queryText or {@code null} for none
+   * @param key key or {@code null} for none
    */
-  public GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery setQueryText(java.lang.String queryText) {
-    this.queryText = queryText;
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext setKey(java.lang.String key) {
+    this.key = key;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext> getSearchContexts() {
-    return searchContexts;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * @param searchContexts searchContexts or {@code null} for none
+   * @param value value or {@code null} for none
    */
-  public GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery setSearchContexts(java.util.List<GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuerySearchContext> searchContexts) {
-    this.searchContexts = searchContexts;
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery set(String fieldName, Object value) {
-    return (GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery) super.set(fieldName, value);
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext set(String fieldName, Object value) {
+    return (GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery clone() {
-    return (GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery) super.clone();
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext clone() {
+    return (GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext) super.clone();
   }
 
 }

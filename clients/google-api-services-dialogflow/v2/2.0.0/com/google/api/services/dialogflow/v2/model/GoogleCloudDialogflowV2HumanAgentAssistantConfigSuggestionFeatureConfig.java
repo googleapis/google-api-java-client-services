@@ -51,6 +51,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean disableQuerySearchContext;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean enableConversationAugmentedQuery;
 
   /**
@@ -94,6 +100,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SuggestionFeature suggestionFeature;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suggestionTriggerEvent;
 
   /**
    * The value may be {@code null}.
@@ -143,6 +155,21 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setDisableAgentQueryLogging(java.lang.Boolean disableAgentQueryLogging) {
     this.disableAgentQueryLogging = disableAgentQueryLogging;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableQuerySearchContext() {
+    return disableQuerySearchContext;
+  }
+
+  /**
+   * @param disableQuerySearchContext disableQuerySearchContext or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setDisableQuerySearchContext(java.lang.Boolean disableQuerySearchContext) {
+    this.disableQuerySearchContext = disableQuerySearchContext;
     return this;
   }
 
@@ -263,6 +290,21 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setSuggestionFeature(GoogleCloudDialogflowV2SuggestionFeature suggestionFeature) {
     this.suggestionFeature = suggestionFeature;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuggestionTriggerEvent() {
+    return suggestionTriggerEvent;
+  }
+
+  /**
+   * @param suggestionTriggerEvent suggestionTriggerEvent or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setSuggestionTriggerEvent(java.lang.String suggestionTriggerEvent) {
+    this.suggestionTriggerEvent = suggestionTriggerEvent;
     return this;
   }
 

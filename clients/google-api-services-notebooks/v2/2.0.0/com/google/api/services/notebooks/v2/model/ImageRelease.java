@@ -30,6 +30,20 @@ package com.google.api.services.notebooks.v2.model;
 public final class ImageRelease extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The description of the image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. The image family of the image. (ex: workbench-instances or workbench-2603)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageFamily;
+
+  /**
    * Output only. The name of the image of the form workbench-instances-vYYYYmmdd--
    * The value may be {@code null}.
    */
@@ -42,6 +56,40 @@ public final class ImageRelease extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseName;
+
+  /**
+   * Output only. The description of the image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. The description of the image.
+   * @param description description or {@code null} for none
+   */
+  public ImageRelease setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The image family of the image. (ex: workbench-instances or workbench-2603)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageFamily() {
+    return imageFamily;
+  }
+
+  /**
+   * Output only. The image family of the image. (ex: workbench-instances or workbench-2603)
+   * @param imageFamily imageFamily or {@code null} for none
+   */
+  public ImageRelease setImageFamily(java.lang.String imageFamily) {
+    this.imageFamily = imageFamily;
+    return this;
+  }
 
   /**
    * Output only. The name of the image of the form workbench-instances-vYYYYmmdd--

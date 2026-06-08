@@ -140,6 +140,13 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.Integer prefixLength;
 
   /**
+   * Output only. Status of the Internal Range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rangeStatus;
+
+  /**
    * Optional. Can be set to narrow down or pick a different address space while searching for a
    * free range. If not set, defaults to the ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
    * address space (for auto-mode networks, the "10.0.0.0/9" range is used instead of "10.0.0.0/8").
@@ -425,6 +432,23 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
    */
   public InternalRange setPrefixLength(java.lang.Integer prefixLength) {
     this.prefixLength = prefixLength;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the Internal Range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRangeStatus() {
+    return rangeStatus;
+  }
+
+  /**
+   * Output only. Status of the Internal Range.
+   * @param rangeStatus rangeStatus or {@code null} for none
+   */
+  public InternalRange setRangeStatus(java.lang.String rangeStatus) {
+    this.rangeStatus = rangeStatus;
     return this;
   }
 

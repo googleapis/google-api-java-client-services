@@ -68,7 +68,8 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
    * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-   * in beta. This field is only available to allowlisted users.
+   * in beta. This field will begin rolling out to all partners on *June 10, 2026* and be available
+   * to all partners on *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +155,8 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
    * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-   * in beta. This field is only available to allowlisted users.
+   * in beta. This field will begin rolling out to all partners on *June 10, 2026* and be available
+   * to all partners on *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeDemographicExpansion() {
@@ -164,7 +166,8 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
    * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-   * in beta. This field is only available to allowlisted users.
+   * in beta. This field will begin rolling out to all partners on *June 10, 2026* and be available
+   * to all partners on *June 24, 2026*.
    * @param excludeDemographicExpansion excludeDemographicExpansion or {@code null} for none
    */
   public TargetingExpansionConfig setExcludeDemographicExpansion(java.lang.Boolean excludeDemographicExpansion) {

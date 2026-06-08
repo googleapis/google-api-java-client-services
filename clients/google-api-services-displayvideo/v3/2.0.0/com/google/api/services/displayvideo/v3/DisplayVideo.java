@@ -1464,8 +1464,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently in beta. This method is only available to
-       * allowlisted users.
+       * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+       * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroupAds.create".
        *
@@ -1491,8 +1491,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently in beta. This method is only available to
-         * allowlisted users.
+         * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+         * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroupAds.create".
          *
@@ -1589,8 +1589,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently in beta. This method is only available to
-       * allowlisted users.
+       * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+       * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroupAds.delete".
        *
@@ -1619,8 +1619,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently in beta. This method is only available to
-         * allowlisted users.
+         * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+         * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroupAds.delete".
          *
@@ -2138,8 +2138,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently in beta. This method is only available to
-       * allowlisted users.
+       * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+       * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroupAds.patch".
        *
@@ -2169,8 +2169,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently in beta. This method is only available to
-         * allowlisted users.
+         * management of Demand Gen resources is currently in beta. This method will begin rolling out to
+         * all partners on *June 10, 2026* and be available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroupAds.patch".
          *
@@ -2328,7 +2328,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * each ad group, and then create the assigned targeting options provided in
        * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported for
        * Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently in beta. This
-       * method is only available to allowlisted users.
+       * method will begin rolling out to all partners on *June 10, 2026* and be available to all partners
+       * on *June 24, 2026*.
        *
        * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
        *
@@ -2361,7 +2362,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * create the assigned targeting options provided in
          * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported
          * for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently in
-         * beta. This method is only available to allowlisted users.
+         * beta. This method will begin rolling out to all partners on *June 10, 2026* and be available to
+         * all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
          *
@@ -2735,7 +2737,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Creates a new ad group. Returns the newly created ad group if successful. This method is only
        * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-       * in beta. This method is only available to allowlisted users.
+       * in beta. This method will begin rolling out to all partners on *June 10, 2026* and be available
+       * to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroups.create".
        *
@@ -2762,7 +2765,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Creates a new ad group. Returns the newly created ad group if successful. This method is only
          * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently in beta. This method is only available to allowlisted users.
+         * currently in beta. This method will begin rolling out to all partners on *June 10, 2026* and be
+         * available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroups.create".
          *
@@ -2860,7 +2864,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method is
        * only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-       * currently in beta. This method is only available to allowlisted users.
+       * currently in beta. This method will begin rolling out to all partners on *June 10, 2026* and be
+       * available to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroups.delete".
        *
@@ -2890,7 +2895,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method
          * is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently in beta. This method is only available to allowlisted users.
+         * currently in beta. This method will begin rolling out to all partners on *June 10, 2026* and be
+         * available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroups.delete".
          *
@@ -3409,7 +3415,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Updates an existing ad group. Returns the updated ad group if successful. This method is only
        * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-       * in beta. This method is only available to allowlisted users.
+       * in beta. This method will begin rolling out to all partners on *June 10, 2026* and be available
+       * to all partners on *June 24, 2026*.
        *
        * Create a request for the method "adGroups.patch".
        *
@@ -3440,7 +3447,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Updates an existing ad group. Returns the updated ad group if successful. This method is only
          * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently in beta. This method is only available to allowlisted users.
+         * currently in beta. This method will begin rolling out to all partners on *June 10, 2026* and be
+         * available to all partners on *June 24, 2026*.
          *
          * Create a request for the method "adGroups.patch".
          *
@@ -3613,7 +3621,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
            * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
-           * resources is currently in beta. This method is only available to allowlisted users.
+           * resources is currently in beta. This method will begin rolling out to all partners on *June 10,
+           * 2026* and be available to all partners on *June 24, 2026*.
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -3653,7 +3662,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
              * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
-             * resources is currently in beta. This method is only available to allowlisted users.
+             * resources is currently in beta. This method will begin rolling out to all partners on *June 10,
+             * 2026* and be available to all partners on *June 24, 2026*.
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -3823,7 +3833,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /**
            * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
            * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
-           * Demand Gen resources is currently in beta. This method is only available to allowlisted users.
+           * Demand Gen resources is currently in beta. This method will begin rolling out to all partners on
+           * *June 10, 2026* and be available to all partners on *June 24, 2026*.
            *
            * Create a request for the method "assignedTargetingOptions.delete".
            *
@@ -3867,7 +3878,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             /**
              * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
              * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
-             * Demand Gen resources is currently in beta. This method is only available to allowlisted users.
+             * Demand Gen resources is currently in beta. This method will begin rolling out to all partners
+             * on *June 10, 2026* and be available to all partners on *June 24, 2026*.
              *
              * Create a request for the method "assignedTargetingOptions.delete".
              *

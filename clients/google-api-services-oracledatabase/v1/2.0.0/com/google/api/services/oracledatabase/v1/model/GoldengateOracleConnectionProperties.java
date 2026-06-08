@@ -45,8 +45,9 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   private java.lang.String connectionString;
 
   /**
-   * Optional. Database instance id of database in Oracle Database @ Google Cloud. If
-   * gcp_oracle_database_id is provided, connection_string must be empty.
+   * Optional. Autonomous AI Database instance id of database in Oracle Database @ Google Cloud. If
+   * gcp_oracle_database_id is provided, connection_string must be empty. Format:
+   * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +133,9 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   }
 
   /**
-   * Optional. Database instance id of database in Oracle Database @ Google Cloud. If
-   * gcp_oracle_database_id is provided, connection_string must be empty.
+   * Optional. Autonomous AI Database instance id of database in Oracle Database @ Google Cloud. If
+   * gcp_oracle_database_id is provided, connection_string must be empty. Format:
+   * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleDatabaseId() {
@@ -141,8 +143,9 @@ public final class GoldengateOracleConnectionProperties extends com.google.api.c
   }
 
   /**
-   * Optional. Database instance id of database in Oracle Database @ Google Cloud. If
-   * gcp_oracle_database_id is provided, connection_string must be empty.
+   * Optional. Autonomous AI Database instance id of database in Oracle Database @ Google Cloud. If
+   * gcp_oracle_database_id is provided, connection_string must be empty. Format:
+   * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
    * @param gcpOracleDatabaseId gcpOracleDatabaseId or {@code null} for none
    */
   public GoldengateOracleConnectionProperties setGcpOracleDatabaseId(java.lang.String gcpOracleDatabaseId) {

@@ -44,6 +44,19 @@ public final class GoogleCloudDiscoveryengineV1alphaBAPConfig extends com.google
   private java.util.List<java.lang.String> supportedConnectorModes;
 
   /**
+   * Optional. Custom toolspec overrides for this connection. For Enterprise BAP connectors that
+   * support admin-curated tool definitions, this holds the (simplified) per-tool overrides. On Get,
+   * populated by the server by merging persisted overrides with live runtime tool definitions and
+   * trimming the result for UI consumption. On Update, the supplied value replaces the persisted
+   * overrides after server-side validation and merging: the `base_version` field MUST match the
+   * server's current base toolspec version (otherwise the request is rejected with a user-facing
+   * error directing the admin to re-download the latest tools first).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaBAPConfigToolspecOverride toolspecOverride;
+
+  /**
    * Optional. The actions enabled on the associated BAP connection.
    * @return value or {@code null} for none
    */
@@ -74,6 +87,35 @@ public final class GoogleCloudDiscoveryengineV1alphaBAPConfig extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaBAPConfig setSupportedConnectorModes(java.util.List<java.lang.String> supportedConnectorModes) {
     this.supportedConnectorModes = supportedConnectorModes;
+    return this;
+  }
+
+  /**
+   * Optional. Custom toolspec overrides for this connection. For Enterprise BAP connectors that
+   * support admin-curated tool definitions, this holds the (simplified) per-tool overrides. On Get,
+   * populated by the server by merging persisted overrides with live runtime tool definitions and
+   * trimming the result for UI consumption. On Update, the supplied value replaces the persisted
+   * overrides after server-side validation and merging: the `base_version` field MUST match the
+   * server's current base toolspec version (otherwise the request is rejected with a user-facing
+   * error directing the admin to re-download the latest tools first).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaBAPConfigToolspecOverride getToolspecOverride() {
+    return toolspecOverride;
+  }
+
+  /**
+   * Optional. Custom toolspec overrides for this connection. For Enterprise BAP connectors that
+   * support admin-curated tool definitions, this holds the (simplified) per-tool overrides. On Get,
+   * populated by the server by merging persisted overrides with live runtime tool definitions and
+   * trimming the result for UI consumption. On Update, the supplied value replaces the persisted
+   * overrides after server-side validation and merging: the `base_version` field MUST match the
+   * server's current base toolspec version (otherwise the request is rejected with a user-facing
+   * error directing the admin to re-download the latest tools first).
+   * @param toolspecOverride toolspecOverride or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaBAPConfig setToolspecOverride(GoogleCloudDiscoveryengineV1alphaBAPConfigToolspecOverride toolspecOverride) {
+    this.toolspecOverride = toolspecOverride;
     return this;
   }
 

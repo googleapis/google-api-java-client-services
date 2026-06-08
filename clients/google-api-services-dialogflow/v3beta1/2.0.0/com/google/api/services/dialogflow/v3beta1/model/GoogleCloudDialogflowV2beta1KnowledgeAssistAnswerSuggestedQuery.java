@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQue
   private java.lang.String queryText;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext> searchContexts;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryText() {
@@ -47,6 +53,21 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQue
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery setQueryText(java.lang.String queryText) {
     this.queryText = queryText;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext> getSearchContexts() {
+    return searchContexts;
+  }
+
+  /**
+   * @param searchContexts searchContexts or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery setSearchContexts(java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuerySearchContext> searchContexts) {
+    this.searchContexts = searchContexts;
     return this;
   }
 

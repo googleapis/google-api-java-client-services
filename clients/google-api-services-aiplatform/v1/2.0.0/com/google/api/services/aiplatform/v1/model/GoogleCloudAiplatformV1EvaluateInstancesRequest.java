@@ -30,7 +30,9 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Not applicable for predefined metrics
+   * (PredefinedMetricSpec); the server uses its own model configuration for predefined metrics and
+   * this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,7 +296,9 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   private GoogleCloudAiplatformV1TrajectorySingleToolUseInput trajectorySingleToolUseInput;
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Not applicable for predefined metrics
+   * (PredefinedMetricSpec); the server uses its own model configuration for predefined metrics and
+   * this field is ignored.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1AutoraterConfig getAutoraterConfig() {
@@ -302,7 +306,9 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   }
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Not applicable for predefined metrics
+   * (PredefinedMetricSpec); the server uses its own model configuration for predefined metrics and
+   * this field is ignored.
    * @param autoraterConfig autoraterConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluateInstancesRequest setAutoraterConfig(GoogleCloudAiplatformV1AutoraterConfig autoraterConfig) {

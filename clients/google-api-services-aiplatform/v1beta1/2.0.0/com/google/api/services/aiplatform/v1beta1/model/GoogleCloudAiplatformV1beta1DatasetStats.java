@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1DatasetStats extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Dataset distributions for the number of contents per example.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DatasetDistribution contentsPerExampleDistribution;
+
+  /**
    * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
    * The value may be {@code null}.
    */
@@ -45,11 +52,25 @@ public final class GoogleCloudAiplatformV1beta1DatasetStats extends com.google.a
   private java.util.List<java.lang.String> droppedExampleReasons;
 
   /**
+   * Output only. Sample user dataset examples in the training dataset uri for Reinforcement Tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReinforcementTuningUserDatasetExamples reinforcementTuningUserDatasetExamples;
+
+  /**
    * Output only. Number of billable characters in the tuning dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalBillableCharacterCount;
+
+  /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBillableTokenCount;
 
   /**
    * Output only. Number of tuning characters in the tuning dataset.
@@ -107,6 +128,23 @@ public final class GoogleCloudAiplatformV1beta1DatasetStats extends com.google.a
   private GoogleCloudAiplatformV1beta1DatasetDistribution userOutputTokenDistribution;
 
   /**
+   * Output only. Dataset distributions for the number of contents per example.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetDistribution getContentsPerExampleDistribution() {
+    return contentsPerExampleDistribution;
+  }
+
+  /**
+   * Output only. Dataset distributions for the number of contents per example.
+   * @param contentsPerExampleDistribution contentsPerExampleDistribution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetStats setContentsPerExampleDistribution(GoogleCloudAiplatformV1beta1DatasetDistribution contentsPerExampleDistribution) {
+    this.contentsPerExampleDistribution = contentsPerExampleDistribution;
+    return this;
+  }
+
+  /**
    * Output only. A partial sample of the indices (starting from 1) of the dropped examples.
    * @return value or {@code null} for none
    */
@@ -143,6 +181,23 @@ public final class GoogleCloudAiplatformV1beta1DatasetStats extends com.google.a
   }
 
   /**
+   * Output only. Sample user dataset examples in the training dataset uri for Reinforcement Tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementTuningUserDatasetExamples getReinforcementTuningUserDatasetExamples() {
+    return reinforcementTuningUserDatasetExamples;
+  }
+
+  /**
+   * Output only. Sample user dataset examples in the training dataset uri for Reinforcement Tuning.
+   * @param reinforcementTuningUserDatasetExamples reinforcementTuningUserDatasetExamples or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetStats setReinforcementTuningUserDatasetExamples(GoogleCloudAiplatformV1beta1ReinforcementTuningUserDatasetExamples reinforcementTuningUserDatasetExamples) {
+    this.reinforcementTuningUserDatasetExamples = reinforcementTuningUserDatasetExamples;
+    return this;
+  }
+
+  /**
    * Output only. Number of billable characters in the tuning dataset.
    * @return value or {@code null} for none
    */
@@ -156,6 +211,23 @@ public final class GoogleCloudAiplatformV1beta1DatasetStats extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1DatasetStats setTotalBillableCharacterCount(java.lang.Long totalBillableCharacterCount) {
     this.totalBillableCharacterCount = totalBillableCharacterCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBillableTokenCount() {
+    return totalBillableTokenCount;
+  }
+
+  /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   * @param totalBillableTokenCount totalBillableTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetStats setTotalBillableTokenCount(java.lang.Long totalBillableTokenCount) {
+    this.totalBillableTokenCount = totalBillableTokenCount;
     return this;
   }
 

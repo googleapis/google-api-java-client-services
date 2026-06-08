@@ -86,10 +86,10 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, will use min_replica_count as the
-   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
-   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
-   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
-   * type).
+   * default value. The value of this field impacts the charge against Agent Platform CPU and GPU
+   * quotas. Specifically, you will be charged for (max_replica_count * number of cores in the
+   * selected machine type) and (max_replica_count * number of GPUs per replica in the selected
+   * machine type).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,10 +237,10 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, will use min_replica_count as the
-   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
-   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
-   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
-   * type).
+   * default value. The value of this field impacts the charge against Agent Platform CPU and GPU
+   * quotas. Specifically, you will be charged for (max_replica_count * number of cores in the
+   * selected machine type) and (max_replica_count * number of GPUs per replica in the selected
+   * machine type).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxReplicaCount() {
@@ -253,10 +253,10 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    * succeeds then the ability to scale to that many replicas is guaranteed (barring service
    * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
    * traffic will be dropped. If this value is not provided, will use min_replica_count as the
-   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
-   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
-   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
-   * type).
+   * default value. The value of this field impacts the charge against Agent Platform CPU and GPU
+   * quotas. Specifically, you will be charged for (max_replica_count * number of cores in the
+   * selected machine type) and (max_replica_count * number of GPUs per replica in the selected
+   * machine type).
    * @param maxReplicaCount maxReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setMaxReplicaCount(java.lang.Integer maxReplicaCount) {

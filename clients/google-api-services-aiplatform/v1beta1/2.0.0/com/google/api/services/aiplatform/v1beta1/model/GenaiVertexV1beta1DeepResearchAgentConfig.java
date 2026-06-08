@@ -39,6 +39,13 @@ public final class GenaiVertexV1beta1DeepResearchAgentConfig extends com.google.
   private java.lang.Boolean collaborativePlanning;
 
   /**
+   * Enables bigquery tool for the Deep Research agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("enable_bigquery_tool")
+  private java.lang.Boolean enableBigqueryTool;
+
+  /**
    * Whether to include thought summaries in the response.
    * The value may be {@code null}.
    */
@@ -70,6 +77,23 @@ public final class GenaiVertexV1beta1DeepResearchAgentConfig extends com.google.
    */
   public GenaiVertexV1beta1DeepResearchAgentConfig setCollaborativePlanning(java.lang.Boolean collaborativePlanning) {
     this.collaborativePlanning = collaborativePlanning;
+    return this;
+  }
+
+  /**
+   * Enables bigquery tool for the Deep Research agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableBigqueryTool() {
+    return enableBigqueryTool;
+  }
+
+  /**
+   * Enables bigquery tool for the Deep Research agent.
+   * @param enableBigqueryTool enableBigqueryTool or {@code null} for none
+   */
+  public GenaiVertexV1beta1DeepResearchAgentConfig setEnableBigqueryTool(java.lang.Boolean enableBigqueryTool) {
+    this.enableBigqueryTool = enableBigqueryTool;
     return this;
   }
 

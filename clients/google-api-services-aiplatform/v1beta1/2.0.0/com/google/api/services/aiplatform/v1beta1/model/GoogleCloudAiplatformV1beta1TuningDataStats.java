@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.googl
   private GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats preferenceOptimizationDataStats;
 
   /**
+   * Output only. Statistics for reinforcement tuning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DatasetStats reinforcementTuningDataStats;
+
+  /**
    * The SFT Tuning data stats.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class GoogleCloudAiplatformV1beta1TuningDataStats extends com.googl
    */
   public GoogleCloudAiplatformV1beta1TuningDataStats setPreferenceOptimizationDataStats(GoogleCloudAiplatformV1beta1PreferenceOptimizationDataStats preferenceOptimizationDataStats) {
     this.preferenceOptimizationDataStats = preferenceOptimizationDataStats;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics for reinforcement tuning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DatasetStats getReinforcementTuningDataStats() {
+    return reinforcementTuningDataStats;
+  }
+
+  /**
+   * Output only. Statistics for reinforcement tuning.
+   * @param reinforcementTuningDataStats reinforcementTuningDataStats or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningDataStats setReinforcementTuningDataStats(GoogleCloudAiplatformV1beta1DatasetStats reinforcementTuningDataStats) {
+    this.reinforcementTuningDataStats = reinforcementTuningDataStats;
     return this;
   }
 

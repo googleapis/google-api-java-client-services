@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, anchors the last frame in video generation by generating a custom border
+   * mask.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean anchorLastFrame;
+
+  /**
    * Optional. Video codec to use for output.
    * The value may be {@code null}.
    */
@@ -43,6 +51,14 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private java.util.List<CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame> conditioningFrames;
+
+  /**
+   * Generic key-value pairs for experimental parameters. This allows adding new parameters without
+   * changing the dataplane binary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> customParameters;
 
   /**
    * Human pose parameters for Pose Control
@@ -93,6 +109,21 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.String requestOriginTag;
 
   /**
+   * Optional. Scheduling configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig schedulingConfig;
+
+  /**
+   * Parameters for seamless (edge-continuous) video generation, enabling temporal looping and/or
+   * spatial tessellation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionSeamless seamless;
+
+  /**
    * If true (default), truncate input videos that exceed the model's maximum frame count by
    * applying a frame_selection_config to __video_file__ inputs. Set to false to preserve the
    * existing fail-fast behavior.
@@ -115,6 +146,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Float videoTransformStrength;
+
+  /**
+   * Optional. If true, anchors the last frame in video generation by generating a custom border
+   * mask.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAnchorLastFrame() {
+    return anchorLastFrame;
+  }
+
+  /**
+   * Optional. If true, anchors the last frame in video generation by generating a custom border
+   * mask.
+   * @param anchorLastFrame anchorLastFrame or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setAnchorLastFrame(java.lang.Boolean anchorLastFrame) {
+    this.anchorLastFrame = anchorLastFrame;
+    return this;
+  }
 
   /**
    * Optional. Video codec to use for output.
@@ -149,6 +199,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setConditioningFrames(java.util.List<CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame> conditioningFrames) {
     this.conditioningFrames = conditioningFrames;
+    return this;
+  }
+
+  /**
+   * Generic key-value pairs for experimental parameters. This allows adding new parameters without
+   * changing the dataplane binary.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCustomParameters() {
+    return customParameters;
+  }
+
+  /**
+   * Generic key-value pairs for experimental parameters. This allows adding new parameters without
+   * changing the dataplane binary.
+   * @param customParameters customParameters or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setCustomParameters(java.util.Map<String, java.lang.Object> customParameters) {
+    this.customParameters = customParameters;
     return this;
   }
 
@@ -263,6 +332,42 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setRequestOriginTag(java.lang.String requestOriginTag) {
     this.requestOriginTag = requestOriginTag;
+    return this;
+  }
+
+  /**
+   * Optional. Scheduling configuration.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig getSchedulingConfig() {
+    return schedulingConfig;
+  }
+
+  /**
+   * Optional. Scheduling configuration.
+   * @param schedulingConfig schedulingConfig or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setSchedulingConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsVESchedulingConfig schedulingConfig) {
+    this.schedulingConfig = schedulingConfig;
+    return this;
+  }
+
+  /**
+   * Parameters for seamless (edge-continuous) video generation, enabling temporal looping and/or
+   * spatial tessellation.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionSeamless getSeamless() {
+    return seamless;
+  }
+
+  /**
+   * Parameters for seamless (edge-continuous) video generation, enabling temporal looping and/or
+   * spatial tessellation.
+   * @param seamless seamless or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setSeamless(CloudAiLargeModelsVisionSeamless seamless) {
+    this.seamless = seamless;
     return this;
   }
 

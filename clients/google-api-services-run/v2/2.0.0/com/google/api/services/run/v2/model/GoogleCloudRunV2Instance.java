@@ -284,6 +284,13 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private java.lang.Boolean reconciling;
 
   /**
+   * Optional. Restart policy for the Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restartPolicy;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -901,6 +908,23 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Instance setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Restart policy for the Instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestartPolicy() {
+    return restartPolicy;
+  }
+
+  /**
+   * Optional. Restart policy for the Instance.
+   * @param restartPolicy restartPolicy or {@code null} for none
+   */
+  public GoogleCloudRunV2Instance setRestartPolicy(java.lang.String restartPolicy) {
+    this.restartPolicy = restartPolicy;
     return this;
   }
 

@@ -17,8 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Dataproc Node Group. The Dataproc NodeGroup resource is not related to the Dataproc
- * NodeGroupAffinity resource.
+ * Node Group. The NodeGroup resource is not related to the NodeGroupAffinity resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

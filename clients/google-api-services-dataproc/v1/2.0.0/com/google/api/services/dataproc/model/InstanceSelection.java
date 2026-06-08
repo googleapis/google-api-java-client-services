@@ -37,10 +37,10 @@ public final class InstanceSelection extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> machineTypes;
 
   /**
-   * Optional. Preference of this instance selection. Lower number means higher preference. Dataproc
-   * will first try to create a VM based on the machine-type with priority rank and fallback to next
-   * rank based on availability. Machine types and instance selections with the same priority have
-   * the same preference.
+   * Optional. Preference of this instance selection. Lower number means higher preference. The
+   * service will first try to create a VM based on the machine-type with priority rank and fallback
+   * to next rank based on availability. Machine types and instance selections with the same
+   * priority have the same preference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,10 +64,10 @@ public final class InstanceSelection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Preference of this instance selection. Lower number means higher preference. Dataproc
-   * will first try to create a VM based on the machine-type with priority rank and fallback to next
-   * rank based on availability. Machine types and instance selections with the same priority have
-   * the same preference.
+   * Optional. Preference of this instance selection. Lower number means higher preference. The
+   * service will first try to create a VM based on the machine-type with priority rank and fallback
+   * to next rank based on availability. Machine types and instance selections with the same
+   * priority have the same preference.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRank() {
@@ -75,10 +75,10 @@ public final class InstanceSelection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Preference of this instance selection. Lower number means higher preference. Dataproc
-   * will first try to create a VM based on the machine-type with priority rank and fallback to next
-   * rank based on availability. Machine types and instance selections with the same priority have
-   * the same preference.
+   * Optional. Preference of this instance selection. Lower number means higher preference. The
+   * service will first try to create a VM based on the machine-type with priority rank and fallback
+   * to next rank based on availability. Machine types and instance selections with the same
+   * priority have the same preference.
    * @param rank rank or {@code null} for none
    */
   public InstanceSelection setRank(java.lang.Integer rank) {

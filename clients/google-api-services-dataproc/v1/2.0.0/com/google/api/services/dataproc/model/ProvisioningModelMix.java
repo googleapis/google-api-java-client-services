@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Defines how Dataproc should create VMs with a mixture of provisioning models.
+ * Defines how to create VMs with a mixture of provisioning models.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -31,11 +31,11 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
 
   /**
    * Optional. The base capacity that will always use Standard VMs to avoid risk of more preemption
-   * than the minimum capacity you need. Dataproc will create only standard VMs until it reaches
+   * than the minimum capacity you need. The service will create only standard VMs until it reaches
    * standard_capacity_base, then it will start using standard_capacity_percent_above_base to mix
-   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5,
-   * Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining
-   * 10 instances.
+   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5, the
+   * service will create 5 standard VMs and thenstart mixing spot and standard VMs for remaining 10
+   * instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +45,9 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
    * Optional. The percentage of target capacity that should use Standard VM. The remaining
    * percentage will use Spot VMs. The percentage applies only to the capacity above
    * standard_capacity_base. eg. If 15 instances are requested and standard_capacity_base is 5 and
-   * standard_capacity_percent_above_base is 30, Dataproc will create 5 standard VMs and then start
-   * mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70%
-   * spot.
+   * standard_capacity_percent_above_base is 30, the service will create 5 standard VMs and then
+   * start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and
+   * 70% spot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,11 +55,11 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
 
   /**
    * Optional. The base capacity that will always use Standard VMs to avoid risk of more preemption
-   * than the minimum capacity you need. Dataproc will create only standard VMs until it reaches
+   * than the minimum capacity you need. The service will create only standard VMs until it reaches
    * standard_capacity_base, then it will start using standard_capacity_percent_above_base to mix
-   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5,
-   * Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining
-   * 10 instances.
+   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5, the
+   * service will create 5 standard VMs and thenstart mixing spot and standard VMs for remaining 10
+   * instances.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStandardCapacityBase() {
@@ -68,11 +68,11 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
 
   /**
    * Optional. The base capacity that will always use Standard VMs to avoid risk of more preemption
-   * than the minimum capacity you need. Dataproc will create only standard VMs until it reaches
+   * than the minimum capacity you need. The service will create only standard VMs until it reaches
    * standard_capacity_base, then it will start using standard_capacity_percent_above_base to mix
-   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5,
-   * Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining
-   * 10 instances.
+   * Spot with Standard VMs. eg. If 15 instances are requested and standard_capacity_base is 5, the
+   * service will create 5 standard VMs and thenstart mixing spot and standard VMs for remaining 10
+   * instances.
    * @param standardCapacityBase standardCapacityBase or {@code null} for none
    */
   public ProvisioningModelMix setStandardCapacityBase(java.lang.Integer standardCapacityBase) {
@@ -84,9 +84,9 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
    * Optional. The percentage of target capacity that should use Standard VM. The remaining
    * percentage will use Spot VMs. The percentage applies only to the capacity above
    * standard_capacity_base. eg. If 15 instances are requested and standard_capacity_base is 5 and
-   * standard_capacity_percent_above_base is 30, Dataproc will create 5 standard VMs and then start
-   * mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70%
-   * spot.
+   * standard_capacity_percent_above_base is 30, the service will create 5 standard VMs and then
+   * start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and
+   * 70% spot.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStandardCapacityPercentAboveBase() {
@@ -97,9 +97,9 @@ public final class ProvisioningModelMix extends com.google.api.client.json.Gener
    * Optional. The percentage of target capacity that should use Standard VM. The remaining
    * percentage will use Spot VMs. The percentage applies only to the capacity above
    * standard_capacity_base. eg. If 15 instances are requested and standard_capacity_base is 5 and
-   * standard_capacity_percent_above_base is 30, Dataproc will create 5 standard VMs and then start
-   * mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70%
-   * spot.
+   * standard_capacity_percent_above_base is 30, the service will create 5 standard VMs and then
+   * start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and
+   * 70% spot.
    * @param standardCapacityPercentAboveBase standardCapacityPercentAboveBase or {@code null} for none
    */
   public ProvisioningModelMix setStandardCapacityPercentAboveBase(java.lang.Integer standardCapacityPercentAboveBase) {

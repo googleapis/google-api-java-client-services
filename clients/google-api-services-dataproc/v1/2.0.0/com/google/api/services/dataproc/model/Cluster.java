@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Describes the identifying information, config, and status of a Dataproc cluster
+ * Describes the identifying information, config, and status of a cluster
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -39,16 +39,16 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterName;
 
   /**
-   * Output only. A cluster UUID (Unique Universal Identifier). Dataproc generates this value when
-   * it creates the cluster.
+   * Output only. A cluster UUID (Unique Universal Identifier). The service generates this value
+   * when it creates the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterUuid;
 
   /**
-   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.Exactly one of
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that the service
+   * may set default values, and values may change when clusters are updated.Exactly one of
    * ClusterConfig or VirtualClusterConfig must be specified.
    * The value may be {@code null}.
    */
@@ -96,11 +96,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<ClusterStatus> statusHistory;
 
   /**
-   * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
-   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
-   * may set default values, and values may change when clusters are updated. Exactly one of config
-   * or virtual_cluster_config must be specified.
+   * Optional. The virtual cluster config is used when creating a cluster that does not directly
+   * control the underlying compute resources, for example, when creating a GKE cluster
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). the service may
+   * set default values, and values may change when clusters are updated. Exactly one of config or
+   * virtual_cluster_config must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,8 +128,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A cluster UUID (Unique Universal Identifier). Dataproc generates this value when
-   * it creates the cluster.
+   * Output only. A cluster UUID (Unique Universal Identifier). The service generates this value
+   * when it creates the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterUuid() {
@@ -137,8 +137,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A cluster UUID (Unique Universal Identifier). Dataproc generates this value when
-   * it creates the cluster.
+   * Output only. A cluster UUID (Unique Universal Identifier). The service generates this value
+   * when it creates the cluster.
    * @param clusterUuid clusterUuid or {@code null} for none
    */
   public Cluster setClusterUuid(java.lang.String clusterUuid) {
@@ -147,8 +147,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.Exactly one of
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that the service
+   * may set default values, and values may change when clusters are updated.Exactly one of
    * ClusterConfig or VirtualClusterConfig must be specified.
    * @return value or {@code null} for none
    */
@@ -157,8 +157,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may
-   * set default values, and values may change when clusters are updated.Exactly one of
+   * Optional. The cluster config for a cluster of Compute Engine Instances. Note that the service
+   * may set default values, and values may change when clusters are updated.Exactly one of
    * ClusterConfig or VirtualClusterConfig must be specified.
    * @param config config or {@code null} for none
    */
@@ -263,11 +263,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
-   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
-   * may set default values, and values may change when clusters are updated. Exactly one of config
-   * or virtual_cluster_config must be specified.
+   * Optional. The virtual cluster config is used when creating a cluster that does not directly
+   * control the underlying compute resources, for example, when creating a GKE cluster
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). the service may
+   * set default values, and values may change when clusters are updated. Exactly one of config or
+   * virtual_cluster_config must be specified.
    * @return value or {@code null} for none
    */
   public VirtualClusterConfig getVirtualClusterConfig() {
@@ -275,11 +275,11 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The virtual cluster config is used when creating a Dataproc cluster that does not
-   * directly control the underlying compute resources, for example, when creating a Dataproc-on-GKE
-   * cluster (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). Dataproc
-   * may set default values, and values may change when clusters are updated. Exactly one of config
-   * or virtual_cluster_config must be specified.
+   * Optional. The virtual cluster config is used when creating a cluster that does not directly
+   * control the underlying compute resources, for example, when creating a GKE cluster
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-overview). the service may
+   * set default values, and values may change when clusters are updated. Exactly one of config or
+   * virtual_cluster_config must be specified.
    * @param virtualClusterConfig virtualClusterConfig or {@code null} for none
    */
   public Cluster setVirtualClusterConfig(VirtualClusterConfig virtualClusterConfig) {

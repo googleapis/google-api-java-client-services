@@ -30,7 +30,7 @@ package com.google.api.services.dataproc.model;
 public final class MetastoreConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * Required. Resource name of an existing Metastore service.Example:
    * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class MetastoreConfig extends com.google.api.client.json.GenericJso
   private java.lang.String dataprocMetastoreService;
 
   /**
-   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * Required. Resource name of an existing Metastore service.Example:
    * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class MetastoreConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Resource name of an existing Dataproc Metastore service.Example:
+   * Required. Resource name of an existing Metastore service.Example:
    * projects/[project_id]/locations/[dataproc_region]/services/[service-name]
    * @param dataprocMetastoreService dataprocMetastoreService or {@code null} for none
    */

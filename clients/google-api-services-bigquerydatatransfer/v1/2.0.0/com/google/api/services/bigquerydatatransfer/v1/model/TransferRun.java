@@ -67,6 +67,13 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private Status errorStatus;
 
   /**
+   * Output only. The metadata destination of the transfer run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetadataDestination metadataDestination;
+
+  /**
    * Identifier. The resource name of the transfer run. Transfer run names have the form
    * `projects/{project_id}/locations/{location}/transferConfigs/{config_id}/runs/{run_id}`. The
    * name is ignored when creating a transfer run.
@@ -230,6 +237,23 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
    */
   public TransferRun setErrorStatus(Status errorStatus) {
     this.errorStatus = errorStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The metadata destination of the transfer run.
+   * @return value or {@code null} for none
+   */
+  public MetadataDestination getMetadataDestination() {
+    return metadataDestination;
+  }
+
+  /**
+   * Output only. The metadata destination of the transfer run.
+   * @param metadataDestination metadataDestination or {@code null} for none
+   */
+  public TransferRun setMetadataDestination(MetadataDestination metadataDestination) {
+    this.metadataDestination = metadataDestination;
     return this;
   }
 

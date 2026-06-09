@@ -114,6 +114,13 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private java.lang.String managedTableType;
 
   /**
+   * The metadata destination of the transfer config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetadataDestination metadataDestination;
+
+  /**
    * Identifier. The resource name of the transfer config. Transfer config names have the form
    * either `projects/{project_id}/locations/{region}/transferConfigs/{config_id}` or
    * `projects/{project_id}/transferConfigs/{config_id}`, where `config_id` is usually a UUID, even
@@ -395,6 +402,23 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setManagedTableType(java.lang.String managedTableType) {
     this.managedTableType = managedTableType;
+    return this;
+  }
+
+  /**
+   * The metadata destination of the transfer config.
+   * @return value or {@code null} for none
+   */
+  public MetadataDestination getMetadataDestination() {
+    return metadataDestination;
+  }
+
+  /**
+   * The metadata destination of the transfer config.
+   * @param metadataDestination metadataDestination or {@code null} for none
+   */
+  public TransferConfig setMetadataDestination(MetadataDestination metadataDestination) {
+    this.metadataDestination = metadataDestination;
     return this;
   }
 

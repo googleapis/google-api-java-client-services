@@ -464,6 +464,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private YoutubeChannelAssignedTargetingOptionDetails youtubeChannelDetails;
 
   /**
+   * YouTube channel pack details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL_PACK`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeChannelPackAssignedTargetingOptionDetails youtubeChannelPackDetails;
+
+  /**
    * YouTube video details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_YOUTUBE_VIDEO`.
    * The value may be {@code null}.
@@ -1488,6 +1496,25 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setYoutubeChannelDetails(YoutubeChannelAssignedTargetingOptionDetails youtubeChannelDetails) {
     this.youtubeChannelDetails = youtubeChannelDetails;
+    return this;
+  }
+
+  /**
+   * YouTube channel pack details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL_PACK`.
+   * @return value or {@code null} for none
+   */
+  public YoutubeChannelPackAssignedTargetingOptionDetails getYoutubeChannelPackDetails() {
+    return youtubeChannelPackDetails;
+  }
+
+  /**
+   * YouTube channel pack details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_YOUTUBE_CHANNEL_PACK`.
+   * @param youtubeChannelPackDetails youtubeChannelPackDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setYoutubeChannelPackDetails(YoutubeChannelPackAssignedTargetingOptionDetails youtubeChannelPackDetails) {
+    this.youtubeChannelPackDetails = youtubeChannelPackDetails;
     return this;
   }
 

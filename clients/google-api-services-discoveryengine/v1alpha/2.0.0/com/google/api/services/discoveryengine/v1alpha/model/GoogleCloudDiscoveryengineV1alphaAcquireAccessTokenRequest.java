@@ -30,12 +30,39 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The tool/action name being executed. If provided, the server will check the required
+   * scopes of the action and dynamically trigger incremental authorization if they are missing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String action;
+
+  /**
    * Optional. The scope to request for the access token. Scope will override default scope if
    * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scope;
+
+  /**
+   * Optional. The tool/action name being executed. If provided, the server will check the required
+   * scopes of the action and dynamically trigger incremental authorization if they are missing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAction() {
+    return action;
+  }
+
+  /**
+   * Optional. The tool/action name being executed. If provided, the server will check the required
+   * scopes of the action and dynamically trigger incremental authorization if they are missing.
+   * @param action action or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest setAction(java.lang.String action) {
+    this.action = action;
+    return this;
+  }
 
   /**
    * Optional. The scope to request for the access token. Scope will override default scope if

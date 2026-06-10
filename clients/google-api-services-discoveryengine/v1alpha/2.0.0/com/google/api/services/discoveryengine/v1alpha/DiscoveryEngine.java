@@ -8628,6 +8628,165 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets a CompletionConfig
+           *
+           * Create a request for the method "dataStores.getCompletionConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Full CompletionConfig resource name. Format:
+           *        `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+           * @return the request
+           */
+          public GetCompletionConfig getCompletionConfig(java.lang.String name) throws java.io.IOException {
+            GetCompletionConfig result = new GetCompletionConfig(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+
+            /**
+             * Gets a CompletionConfig
+             *
+             * Create a request for the method "dataStores.getCompletionConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+             * operation. <p> {@link GetCompletionConfig#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. Full CompletionConfig resource name. Format:
+           *        `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+             * @since 1.13
+             */
+            protected GetCompletionConfig(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (GetCompletionConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetCompletionConfig setAccessToken(java.lang.String accessToken) {
+              return (GetCompletionConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetCompletionConfig setAlt(java.lang.String alt) {
+              return (GetCompletionConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public GetCompletionConfig setCallback(java.lang.String callback) {
+              return (GetCompletionConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public GetCompletionConfig setFields(java.lang.String fields) {
+              return (GetCompletionConfig) super.setFields(fields);
+            }
+
+            @Override
+            public GetCompletionConfig setKey(java.lang.String key) {
+              return (GetCompletionConfig) super.setKey(key);
+            }
+
+            @Override
+            public GetCompletionConfig setOauthToken(java.lang.String oauthToken) {
+              return (GetCompletionConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetCompletionConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+              return (GetCompletionConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetCompletionConfig setUploadType(java.lang.String uploadType) {
+              return (GetCompletionConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetCompletionConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full CompletionConfig resource name. Format:
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full CompletionConfig resource name. Format:
+           `projects/locations/dataStores/completionConfig`
+           `projects/locations/collections/dataStores/completionConfig`
+           `projects/locations/collections/engines/completionConfig`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full CompletionConfig resource name. Format:
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            public GetCompletionConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetCompletionConfig set(String parameterName, Object value) {
+              return (GetCompletionConfig) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets a DocumentProcessingConfig.
            *
            * Create a request for the method "dataStores.getDocumentProcessingConfig".
@@ -9827,6 +9986,195 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public TrainCustomModel set(String parameterName, Object value) {
               return (TrainCustomModel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the CompletionConfigs.
+           *
+           * Create a request for the method "dataStores.updateCompletionConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+           * @return the request
+           */
+          public UpdateCompletionConfig updateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) throws java.io.IOException {
+            UpdateCompletionConfig result = new UpdateCompletionConfig(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+
+            /**
+             * Updates the CompletionConfigs.
+             *
+             * Create a request for the method "dataStores.updateCompletionConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+             * remote operation. <p> {@link UpdateCompletionConfig#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+             * @since 1.13
+             */
+            protected UpdateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) {
+              super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+              }
+            }
+
+            @Override
+            public UpdateCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateCompletionConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateCompletionConfig setAccessToken(java.lang.String accessToken) {
+              return (UpdateCompletionConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateCompletionConfig setAlt(java.lang.String alt) {
+              return (UpdateCompletionConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateCompletionConfig setCallback(java.lang.String callback) {
+              return (UpdateCompletionConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateCompletionConfig setFields(java.lang.String fields) {
+              return (UpdateCompletionConfig) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateCompletionConfig setKey(java.lang.String key) {
+              return (UpdateCompletionConfig) super.setKey(key);
+            }
+
+            @Override
+            public UpdateCompletionConfig setOauthToken(java.lang.String oauthToken) {
+              return (UpdateCompletionConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateCompletionConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateCompletionConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateCompletionConfig setUploadType(java.lang.String uploadType) {
+              return (UpdateCompletionConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateCompletionConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Immutable. Fully qualified name
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           `projects/locations/collections/dataStores/completionConfig`
+           `projects/locations/collections/engines/completionConfig`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Immutable. Fully qualified name
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            public UpdateCompletionConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/completionConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided CompletionConfig to update. The following are
+             * the only supported fields: * CompletionConfig.matching_order *
+             * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+             * CompletionConfig.query_model * CompletionConfig.enable_mode *
+             * CompletionConfig.query_frequency_threshold *
+             * CompletionConfig.num_unique_users_threshold *
+             * CompletionConfig.should_serve_content_suggestions *
+             * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields
+             * are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided CompletionConfig to update. The following are the only
+           supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
+           CompletionConfig.min_prefix_length * CompletionConfig.query_model * CompletionConfig.enable_mode *
+           CompletionConfig.query_frequency_threshold * CompletionConfig.num_unique_users_threshold *
+           CompletionConfig.should_serve_content_suggestions *
+           CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields are updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided CompletionConfig to update. The following are
+             * the only supported fields: * CompletionConfig.matching_order *
+             * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+             * CompletionConfig.query_model * CompletionConfig.enable_mode *
+             * CompletionConfig.query_frequency_threshold *
+             * CompletionConfig.num_unique_users_threshold *
+             * CompletionConfig.should_serve_content_suggestions *
+             * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields
+             * are updated.
+             */
+            public UpdateCompletionConfig setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateCompletionConfig set(String parameterName, Object value) {
+              return (UpdateCompletionConfig) super.set(parameterName, value);
             }
           }
           /**
@@ -25519,6 +25867,165 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Gets a CompletionConfig
+           *
+           * Create a request for the method "engines.getCompletionConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Full CompletionConfig resource name. Format:
+           *        `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+           * @return the request
+           */
+          public GetCompletionConfig getCompletionConfig(java.lang.String name) throws java.io.IOException {
+            GetCompletionConfig result = new GetCompletionConfig(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+
+            /**
+             * Gets a CompletionConfig
+             *
+             * Create a request for the method "engines.getCompletionConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+             * operation. <p> {@link GetCompletionConfig#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. Full CompletionConfig resource name. Format:
+           *        `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+             * @since 1.13
+             */
+            protected GetCompletionConfig(java.lang.String name) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (GetCompletionConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetCompletionConfig setAccessToken(java.lang.String accessToken) {
+              return (GetCompletionConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetCompletionConfig setAlt(java.lang.String alt) {
+              return (GetCompletionConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public GetCompletionConfig setCallback(java.lang.String callback) {
+              return (GetCompletionConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public GetCompletionConfig setFields(java.lang.String fields) {
+              return (GetCompletionConfig) super.setFields(fields);
+            }
+
+            @Override
+            public GetCompletionConfig setKey(java.lang.String key) {
+              return (GetCompletionConfig) super.setKey(key);
+            }
+
+            @Override
+            public GetCompletionConfig setOauthToken(java.lang.String oauthToken) {
+              return (GetCompletionConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetCompletionConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+              return (GetCompletionConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetCompletionConfig setUploadType(java.lang.String uploadType) {
+              return (GetCompletionConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetCompletionConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full CompletionConfig resource name. Format:
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Full CompletionConfig resource name. Format:
+           `projects/locations/dataStores/completionConfig`
+           `projects/locations/collections/dataStores/completionConfig`
+           `projects/locations/collections/engines/completionConfig`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Full CompletionConfig resource name. Format:
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            public GetCompletionConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetCompletionConfig set(String parameterName, Object value) {
+              return (GetCompletionConfig) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the resource
            * does not exist. An empty policy is returned if the resource exists but does not have a policy set
            * on it.
@@ -26824,6 +27331,195 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Tune set(String parameterName, Object value) {
               return (Tune) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the CompletionConfigs.
+           *
+           * Create a request for the method "engines.updateCompletionConfig".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+           * @return the request
+           */
+          public UpdateCompletionConfig updateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) throws java.io.IOException {
+            UpdateCompletionConfig result = new UpdateCompletionConfig(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+
+            /**
+             * Updates the CompletionConfigs.
+             *
+             * Create a request for the method "engines.updateCompletionConfig".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+             * remote operation. <p> {@link UpdateCompletionConfig#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           *        `projects/locations/collections/dataStores/completionConfig`
+           *        `projects/locations/collections/engines/completionConfig`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+             * @since 1.13
+             */
+            protected UpdateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) {
+              super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+              }
+            }
+
+            @Override
+            public UpdateCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateCompletionConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateCompletionConfig setAccessToken(java.lang.String accessToken) {
+              return (UpdateCompletionConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateCompletionConfig setAlt(java.lang.String alt) {
+              return (UpdateCompletionConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateCompletionConfig setCallback(java.lang.String callback) {
+              return (UpdateCompletionConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateCompletionConfig setFields(java.lang.String fields) {
+              return (UpdateCompletionConfig) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateCompletionConfig setKey(java.lang.String key) {
+              return (UpdateCompletionConfig) super.setKey(key);
+            }
+
+            @Override
+            public UpdateCompletionConfig setOauthToken(java.lang.String oauthToken) {
+              return (UpdateCompletionConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateCompletionConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateCompletionConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateCompletionConfig setUploadType(java.lang.String uploadType) {
+              return (UpdateCompletionConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateCompletionConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Immutable. Fully qualified name
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+           `projects/locations/collections/dataStores/completionConfig`
+           `projects/locations/collections/engines/completionConfig`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Immutable. Fully qualified name
+             * `projects/locations/dataStores/completionConfig`
+             * `projects/locations/collections/dataStores/completionConfig`
+             * `projects/locations/collections/engines/completionConfig`
+             */
+            public UpdateCompletionConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/completionConfig$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Indicates which fields in the provided CompletionConfig to update. The following are
+             * the only supported fields: * CompletionConfig.matching_order *
+             * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+             * CompletionConfig.query_model * CompletionConfig.enable_mode *
+             * CompletionConfig.query_frequency_threshold *
+             * CompletionConfig.num_unique_users_threshold *
+             * CompletionConfig.should_serve_content_suggestions *
+             * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields
+             * are updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Indicates which fields in the provided CompletionConfig to update. The following are the only
+           supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
+           CompletionConfig.min_prefix_length * CompletionConfig.query_model * CompletionConfig.enable_mode *
+           CompletionConfig.query_frequency_threshold * CompletionConfig.num_unique_users_threshold *
+           CompletionConfig.should_serve_content_suggestions *
+           CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields are updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Indicates which fields in the provided CompletionConfig to update. The following are
+             * the only supported fields: * CompletionConfig.matching_order *
+             * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+             * CompletionConfig.query_model * CompletionConfig.enable_mode *
+             * CompletionConfig.query_frequency_threshold *
+             * CompletionConfig.num_unique_users_threshold *
+             * CompletionConfig.should_serve_content_suggestions *
+             * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields
+             * are updated.
+             */
+            public UpdateCompletionConfig setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public UpdateCompletionConfig set(String parameterName, Object value) {
+              return (UpdateCompletionConfig) super.set(parameterName, value);
             }
           }
 
@@ -38445,6 +39141,165 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * Gets a CompletionConfig
+         *
+         * Create a request for the method "dataStores.getCompletionConfig".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Full CompletionConfig resource name. Format:
+         *        `projects/locations/dataStores/completionConfig`
+         *        `projects/locations/collections/dataStores/completionConfig`
+         *        `projects/locations/collections/engines/completionConfig`
+         * @return the request
+         */
+        public GetCompletionConfig getCompletionConfig(java.lang.String name) throws java.io.IOException {
+          GetCompletionConfig result = new GetCompletionConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+
+          /**
+           * Gets a CompletionConfig
+           *
+           * Create a request for the method "dataStores.getCompletionConfig".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetCompletionConfig#execute()} method to invoke the remote
+           * operation. <p> {@link GetCompletionConfig#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Full CompletionConfig resource name. Format:
+         *        `projects/locations/dataStores/completionConfig`
+         *        `projects/locations/collections/dataStores/completionConfig`
+         *        `projects/locations/collections/engines/completionConfig`
+           * @since 1.13
+           */
+          protected GetCompletionConfig(java.lang.String name) {
+            super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetCompletionConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetCompletionConfig setAccessToken(java.lang.String accessToken) {
+            return (GetCompletionConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetCompletionConfig setAlt(java.lang.String alt) {
+            return (GetCompletionConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetCompletionConfig setCallback(java.lang.String callback) {
+            return (GetCompletionConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetCompletionConfig setFields(java.lang.String fields) {
+            return (GetCompletionConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetCompletionConfig setKey(java.lang.String key) {
+            return (GetCompletionConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetCompletionConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetCompletionConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetCompletionConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetCompletionConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetCompletionConfig setUploadType(java.lang.String uploadType) {
+            return (GetCompletionConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetCompletionConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full CompletionConfig resource name. Format:
+           * `projects/locations/dataStores/completionConfig`
+           * `projects/locations/collections/dataStores/completionConfig`
+           * `projects/locations/collections/engines/completionConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Full CompletionConfig resource name. Format:
+         `projects/locations/dataStores/completionConfig`
+         `projects/locations/collections/dataStores/completionConfig`
+         `projects/locations/collections/engines/completionConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Full CompletionConfig resource name. Format:
+           * `projects/locations/dataStores/completionConfig`
+           * `projects/locations/collections/dataStores/completionConfig`
+           * `projects/locations/collections/engines/completionConfig`
+           */
+          public GetCompletionConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetCompletionConfig set(String parameterName, Object value) {
+            return (GetCompletionConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a DocumentProcessingConfig.
          *
          * Create a request for the method "dataStores.getDocumentProcessingConfig".
@@ -39496,6 +40351,195 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public ReplacePatientFilter set(String parameterName, Object value) {
             return (ReplacePatientFilter) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the CompletionConfigs.
+         *
+         * Create a request for the method "dataStores.updateCompletionConfig".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+         *        `projects/locations/collections/dataStores/completionConfig`
+         *        `projects/locations/collections/engines/completionConfig`
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+         * @return the request
+         */
+        public UpdateCompletionConfig updateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) throws java.io.IOException {
+          UpdateCompletionConfig result = new UpdateCompletionConfig(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateCompletionConfig extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+
+          /**
+           * Updates the CompletionConfigs.
+           *
+           * Create a request for the method "dataStores.updateCompletionConfig".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UpdateCompletionConfig#execute()} method to invoke the
+           * remote operation. <p> {@link UpdateCompletionConfig#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+         *        `projects/locations/collections/dataStores/completionConfig`
+         *        `projects/locations/collections/engines/completionConfig`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig}
+           * @since 1.13
+           */
+          protected UpdateCompletionConfig(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig content) {
+            super(DiscoveryEngine.this, "PATCH", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCompletionConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+            }
+          }
+
+          @Override
+          public UpdateCompletionConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateCompletionConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateCompletionConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateCompletionConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateCompletionConfig setAlt(java.lang.String alt) {
+            return (UpdateCompletionConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateCompletionConfig setCallback(java.lang.String callback) {
+            return (UpdateCompletionConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateCompletionConfig setFields(java.lang.String fields) {
+            return (UpdateCompletionConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateCompletionConfig setKey(java.lang.String key) {
+            return (UpdateCompletionConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateCompletionConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateCompletionConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateCompletionConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateCompletionConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateCompletionConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateCompletionConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateCompletionConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateCompletionConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateCompletionConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateCompletionConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/dataStores/completionConfig`
+           * `projects/locations/collections/dataStores/completionConfig`
+           * `projects/locations/collections/engines/completionConfig`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Immutable. Fully qualified name `projects/locations/dataStores/completionConfig`
+         `projects/locations/collections/dataStores/completionConfig`
+         `projects/locations/collections/engines/completionConfig`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Immutable. Fully qualified name
+           * `projects/locations/dataStores/completionConfig`
+           * `projects/locations/collections/dataStores/completionConfig`
+           * `projects/locations/collections/engines/completionConfig`
+           */
+          public UpdateCompletionConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/completionConfig$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Indicates which fields in the provided CompletionConfig to update. The following are
+           * the only supported fields: * CompletionConfig.matching_order *
+           * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+           * CompletionConfig.query_model * CompletionConfig.enable_mode *
+           * CompletionConfig.query_frequency_threshold *
+           * CompletionConfig.num_unique_users_threshold *
+           * CompletionConfig.should_serve_content_suggestions *
+           * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields are
+           * updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Indicates which fields in the provided CompletionConfig to update. The following are the only
+         supported fields: * CompletionConfig.matching_order * CompletionConfig.max_suggestions *
+         CompletionConfig.min_prefix_length * CompletionConfig.query_model * CompletionConfig.enable_mode *
+         CompletionConfig.query_frequency_threshold * CompletionConfig.num_unique_users_threshold *
+         CompletionConfig.should_serve_content_suggestions *
+         CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Indicates which fields in the provided CompletionConfig to update. The following are
+           * the only supported fields: * CompletionConfig.matching_order *
+           * CompletionConfig.max_suggestions * CompletionConfig.min_prefix_length *
+           * CompletionConfig.query_model * CompletionConfig.enable_mode *
+           * CompletionConfig.query_frequency_threshold *
+           * CompletionConfig.num_unique_users_threshold *
+           * CompletionConfig.should_serve_content_suggestions *
+           * CompletionConfig.filter_pii_suggestions_using_dlp If not set, all supported fields are
+           * updated.
+           */
+          public UpdateCompletionConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateCompletionConfig set(String parameterName, Object value) {
+            return (UpdateCompletionConfig) super.set(parameterName, value);
           }
         }
         /**

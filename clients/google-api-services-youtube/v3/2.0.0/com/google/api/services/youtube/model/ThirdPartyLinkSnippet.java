@@ -31,6 +31,13 @@ package com.google.api.services.youtube.model;
 public final class ThirdPartyLinkSnippet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Information specific to a link between a channel and an affiliate program of a partner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChannelToAffiliateProgramLinkDetails channelToAffiliateProgramLink;
+
+  /**
    * Information specific to a link between a channel and a store on a merchandising platform.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class ThirdPartyLinkSnippet extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Information specific to a link between a channel and an affiliate program of a partner.
+   * @return value or {@code null} for none
+   */
+  public ChannelToAffiliateProgramLinkDetails getChannelToAffiliateProgramLink() {
+    return channelToAffiliateProgramLink;
+  }
+
+  /**
+   * Information specific to a link between a channel and an affiliate program of a partner.
+   * @param channelToAffiliateProgramLink channelToAffiliateProgramLink or {@code null} for none
+   */
+  public ThirdPartyLinkSnippet setChannelToAffiliateProgramLink(ChannelToAffiliateProgramLinkDetails channelToAffiliateProgramLink) {
+    this.channelToAffiliateProgramLink = channelToAffiliateProgramLink;
+    return this;
+  }
 
   /**
    * Information specific to a link between a channel and a store on a merchandising platform.

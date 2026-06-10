@@ -31,6 +31,13 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * If true, then the user has a Google Analytics role that permits them to edit the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean canEdit;
+
+  /**
    * Display name for the property referred to in this property summary.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class GoogleAnalyticsAdminV1alphaPropertySummary extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String propertyType;
+
+  /**
+   * If true, then the user has a Google Analytics role that permits them to edit the property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCanEdit() {
+    return canEdit;
+  }
+
+  /**
+   * If true, then the user has a Google Analytics role that permits them to edit the property.
+   * @param canEdit canEdit or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaPropertySummary setCanEdit(java.lang.Boolean canEdit) {
+    this.canEdit = canEdit;
+    return this;
+  }
 
   /**
    * Display name for the property referred to in this property summary.

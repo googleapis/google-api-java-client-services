@@ -38,7 +38,8 @@ public final class CreateSubscriptionIntent extends com.google.api.client.json.G
   private CycleOptions cycleOptions;
 
   /**
-   * Required. The parent resource name, which is the identifier of the partner.
+   * Optional. Deprecated: Use the `parent` field in `GenerateUserSessionRequest` instead. The
+   * parent resource name, which is the identifier of the partner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +79,8 @@ public final class CreateSubscriptionIntent extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The parent resource name, which is the identifier of the partner.
+   * Optional. Deprecated: Use the `parent` field in `GenerateUserSessionRequest` instead. The
+   * parent resource name, which is the identifier of the partner.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -86,7 +88,8 @@ public final class CreateSubscriptionIntent extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The parent resource name, which is the identifier of the partner.
+   * Optional. Deprecated: Use the `parent` field in `GenerateUserSessionRequest` instead. The
+   * parent resource name, which is the identifier of the partner.
    * @param parent parent or {@code null} for none
    */
   public CreateSubscriptionIntent setParent(java.lang.String parent) {

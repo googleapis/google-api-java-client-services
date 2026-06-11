@@ -2323,22 +2323,24 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
       }
 
       /**
-       * A token identifying a page of results the server should return. This value is received from
-       * a previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+       * Optional. A token identifying a page of results the server should return. This value is
+       * received from a previous `ListMediaPlanners` call in
+       * ListMediaPlannersResponse.nextPageToken.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A token identifying a page of results the server should return. This value is received from a
-     previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+      /** Optional. A token identifying a page of results the server should return. This value is received
+     from a previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A token identifying a page of results the server should return. This value is received from
-       * a previous `ListMediaPlanners` call in ListMediaPlannersResponse.nextPageToken.
+       * Optional. A token identifying a page of results the server should return. This value is
+       * received from a previous `ListMediaPlanners` call in
+       * ListMediaPlannersResponse.nextPageToken.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

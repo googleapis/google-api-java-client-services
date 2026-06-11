@@ -49,6 +49,13 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String networkAttachmentUri;
 
   /**
+   * Optional. Whether to set up the PSC service connection policy automatically.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscAutoConnectionPolicyEnabled;
+
+  /**
    * Optional. The list of settings for requested Private Service Connect consumer endpoints that
    * can be used to connect to this Cloud SQL instance.
    * The value may be {@code null}.
@@ -63,10 +70,10 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
-   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
-   * Connect (PSC) auto-connections. This will default to true for new instances when Private
-   * Service Connect is enabled.
+   * Optional. Indicates whether Private Service Connect DNS automation is enabled for this
+   * instance. When enabled, Cloud SQL provisions a universal DNS record across all networks
+   * configured with Private Service Connect auto-connections. This will default to true for new
+   * instances when Private Service Connect is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,11 +87,11 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pscEnabled;
 
   /**
-   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
-   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
-   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
-   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
-   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * Optional. Indicates whether Private Service Connect write endpoint DNS automation is enabled
+   * for this instance. When enabled, Cloud SQL provisions a universal global DNS record across all
+   * networks configured with Private Service Connect auto-connections that points to the cluster
+   * primary instance. This feature is only supported for Enterprise Plus edition. This will default
+   * to true for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,6 +142,23 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Whether to set up the PSC service connection policy automatically.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscAutoConnectionPolicyEnabled() {
+    return pscAutoConnectionPolicyEnabled;
+  }
+
+  /**
+   * Optional. Whether to set up the PSC service connection policy automatically.
+   * @param pscAutoConnectionPolicyEnabled pscAutoConnectionPolicyEnabled or {@code null} for none
+   */
+  public PscConfig setPscAutoConnectionPolicyEnabled(java.lang.Boolean pscAutoConnectionPolicyEnabled) {
+    this.pscAutoConnectionPolicyEnabled = pscAutoConnectionPolicyEnabled;
+    return this;
+  }
+
+  /**
    * Optional. The list of settings for requested Private Service Connect consumer endpoints that
    * can be used to connect to this Cloud SQL instance.
    * @return value or {@code null} for none
@@ -154,10 +178,10 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
-   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
-   * Connect (PSC) auto-connections. This will default to true for new instances when Private
-   * Service Connect is enabled.
+   * Optional. Indicates whether Private Service Connect DNS automation is enabled for this
+   * instance. When enabled, Cloud SQL provisions a universal DNS record across all networks
+   * configured with Private Service Connect auto-connections. This will default to true for new
+   * instances when Private Service Connect is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPscAutoDnsEnabled() {
@@ -165,10 +189,10 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
-   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
-   * Connect (PSC) auto-connections. This will default to true for new instances when Private
-   * Service Connect is enabled.
+   * Optional. Indicates whether Private Service Connect DNS automation is enabled for this
+   * instance. When enabled, Cloud SQL provisions a universal DNS record across all networks
+   * configured with Private Service Connect auto-connections. This will default to true for new
+   * instances when Private Service Connect is enabled.
    * @param pscAutoDnsEnabled pscAutoDnsEnabled or {@code null} for none
    */
   public PscConfig setPscAutoDnsEnabled(java.lang.Boolean pscAutoDnsEnabled) {
@@ -194,11 +218,11 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
-   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
-   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
-   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
-   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * Optional. Indicates whether Private Service Connect write endpoint DNS automation is enabled
+   * for this instance. When enabled, Cloud SQL provisions a universal global DNS record across all
+   * networks configured with Private Service Connect auto-connections that points to the cluster
+   * primary instance. This feature is only supported for Enterprise Plus edition. This will default
+   * to true for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPscWriteEndpointDnsEnabled() {
@@ -206,11 +230,11 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
-   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
-   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
-   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
-   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * Optional. Indicates whether Private Service Connect write endpoint DNS automation is enabled
+   * for this instance. When enabled, Cloud SQL provisions a universal global DNS record across all
+   * networks configured with Private Service Connect auto-connections that points to the cluster
+   * primary instance. This feature is only supported for Enterprise Plus edition. This will default
+   * to true for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
    * @param pscWriteEndpointDnsEnabled pscWriteEndpointDnsEnabled or {@code null} for none
    */
   public PscConfig setPscWriteEndpointDnsEnabled(java.lang.Boolean pscWriteEndpointDnsEnabled) {

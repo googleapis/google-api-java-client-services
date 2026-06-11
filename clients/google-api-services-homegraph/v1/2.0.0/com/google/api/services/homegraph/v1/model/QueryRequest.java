@@ -37,6 +37,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String agentUserId;
 
   /**
+   * Optional. Specifies the type of device data to be returned in the response. This allows callers
+   * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
+   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deviceView;
+
+  /**
    * Optional. If true, the response will include device metadata in the device_metadata field.
    * The value may be {@code null}.
    */
@@ -71,6 +80,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setAgentUserId(java.lang.String agentUserId) {
     this.agentUserId = agentUserId;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the type of device data to be returned in the response. This allows callers
+   * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
+   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeviceView() {
+    return deviceView;
+  }
+
+  /**
+   * Optional. Specifies the type of device data to be returned in the response. This allows callers
+   * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
+   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * @param deviceView deviceView or {@code null} for none
+   */
+  public QueryRequest setDeviceView(java.lang.String deviceView) {
+    this.deviceView = deviceView;
     return this;
   }
 

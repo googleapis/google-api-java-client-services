@@ -18,11 +18,19 @@ package com.google.api.services.homegraph.v1.model;
 
 /**
  * Request type for the [`ReportStateAndNotification`](#google.home.graph.v1.HomeGraphApiService.Rep
- * ortStateAndNotification) call. It may include states, notifications, or both. States and
- * notifications are defined per `device_id` (for example, "123" and "456" in the following
- * example). Example: ```json { "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "agentUserId":
- * "1234", "payload": { "devices": { "states": { "123": { "on": true }, "456": { "on": true,
- * "brightness": 10 }, }, } } } ```
+ * ortStateAndNotification) call. It may include states, notifications, home_traits, home_events, or
+ * any combination thereof. Smart Home Device Traits (SHDT) `states` and `notifications` are defined
+ * per `device_id` (for example, "123" and "456" in the following example). Google Home Traits
+ * `home_traits` and `home_events` are lists of updates or events, each associated with a
+ * `device_id` (for example, "789" in the following example). Example: ```json { "requestId":
+ * "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "agentUserId": "1234", "payload": { "devices": {
+ * "states": { "123": { "on": true }, "456": { "on": true, "brightness": 10 }, }, "homeTraits": [ {
+ * "deviceId": "789", "components": [ { "componentId": "main", "traitData": [ { "trait": { "@type":
+ * "type.googleapis.com/home.graph.v1.OnOffTrait", "onOff": true } } ] } ] } ], "homeEvents": [ {
+ * "deviceId": "789", "events": [ { "componentId": "main", "events": [ { "eventId": "event-123",
+ * "eventTime": "2026-01-01T00:00:00Z", "event": { "@type":
+ * "type.googleapis.com/home.graph.v1.DoorbellPressTrait.DoorbellPressedEvent" } } ] } ] } ] } } }
+ * ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:

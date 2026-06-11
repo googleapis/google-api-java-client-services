@@ -17,7 +17,8 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * PrewarmedArtifact represents a streamed artifact.
+ * PrewarmedArtifact represents a streamed artifact. This is not a request message, so
+ * field_behavior annotations are not required.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation

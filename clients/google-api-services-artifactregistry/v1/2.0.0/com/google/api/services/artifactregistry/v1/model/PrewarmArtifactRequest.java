@@ -38,6 +38,13 @@ public final class PrewarmArtifactRequest extends com.google.api.client.json.Gen
   private java.lang.Boolean force;
 
   /**
+   * Optional. The platform (architecture and OS) of the image or tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrewarmPlatform platform;
+
+  /**
    * Optional. The retention days of the prewarmed artifact. If not specified, the artifact will be
    * cached for 3 days.
    * The value may be {@code null}.
@@ -83,6 +90,23 @@ public final class PrewarmArtifactRequest extends com.google.api.client.json.Gen
    */
   public PrewarmArtifactRequest setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Optional. The platform (architecture and OS) of the image or tag.
+   * @return value or {@code null} for none
+   */
+  public PrewarmPlatform getPlatform() {
+    return platform;
+  }
+
+  /**
+   * Optional. The platform (architecture and OS) of the image or tag.
+   * @param platform platform or {@code null} for none
+   */
+  public PrewarmArtifactRequest setPlatform(PrewarmPlatform platform) {
+    this.platform = platform;
     return this;
   }
 

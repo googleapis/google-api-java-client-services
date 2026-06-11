@@ -51,6 +51,20 @@ public final class QueryResponsePayload extends com.google.api.client.json.Gener
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> devices;
 
   /**
+   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
+   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, HomeTraitPayload> homeTraitPayload;
+
+  static {
+    // hack to force ProGuard to consider HomeTraitPayload used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HomeTraitPayload.class);
+  }
+
+  /**
    * Map from the Trait ID (e.g., "action.devices.traits.OnOff") to its last Spanner commit
    * timestamp. If a trait has no recorded timestamp, it will be omitted from this map.
    * @return value or {@code null} for none
@@ -83,6 +97,25 @@ public final class QueryResponsePayload extends com.google.api.client.json.Gener
    */
   public QueryResponsePayload setDevices(java.util.Map<String, java.util.Map<String, java.lang.Object>> devices) {
     this.devices = devices;
+    return this;
+  }
+
+  /**
+   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
+   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, HomeTraitPayload> getHomeTraitPayload() {
+    return homeTraitPayload;
+  }
+
+  /**
+   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
+   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * @param homeTraitPayload homeTraitPayload or {@code null} for none
+   */
+  public QueryResponsePayload setHomeTraitPayload(java.util.Map<String, HomeTraitPayload> homeTraitPayload) {
+    this.homeTraitPayload = homeTraitPayload;
     return this;
   }
 

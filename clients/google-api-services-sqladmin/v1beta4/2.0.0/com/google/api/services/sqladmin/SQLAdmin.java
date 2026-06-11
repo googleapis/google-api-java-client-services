@@ -20,7 +20,7 @@ package com.google.api.services.sqladmin;
  * Service definition for SQLAdmin (v1beta4).
  *
  * <p>
- * API for Cloud SQL database instance management
+ * Cloud SQL Admin API
  * </p>
  *
  * <p>
@@ -1936,6 +1936,151 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves connect settings about a Cloud SQL instance using the instance DNS name.
+     *
+     * Create a request for the method "connect.resolve".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+     *
+     * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param location Required. The region of the instance.
+     * @return the request
+     */
+    public Resolve resolve(java.lang.String dnsName, java.lang.String location) throws java.io.IOException {
+      Resolve result = new Resolve(dnsName, location);
+      initialize(result);
+      return result;
+    }
+
+    public class Resolve extends SQLAdminRequest<com.google.api.services.sqladmin.model.ConnectSettings> {
+
+      private static final String REST_PATH = "sql/v1beta4/dns/{dnsName}/locations/{location}:resolveConnectSettings";
+
+      /**
+       * Retrieves connect settings about a Cloud SQL instance using the instance DNS name.
+       *
+       * Create a request for the method "connect.resolve".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param location Required. The region of the instance.
+       * @since 1.13
+       */
+      protected Resolve(java.lang.String dnsName, java.lang.String location) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.ConnectSettings.class);
+        this.dnsName = com.google.api.client.util.Preconditions.checkNotNull(dnsName, "Required parameter dnsName must be specified.");
+        this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Resolve set$Xgafv(java.lang.String $Xgafv) {
+        return (Resolve) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Resolve setAccessToken(java.lang.String accessToken) {
+        return (Resolve) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Resolve setAlt(java.lang.String alt) {
+        return (Resolve) super.setAlt(alt);
+      }
+
+      @Override
+      public Resolve setCallback(java.lang.String callback) {
+        return (Resolve) super.setCallback(callback);
+      }
+
+      @Override
+      public Resolve setFields(java.lang.String fields) {
+        return (Resolve) super.setFields(fields);
+      }
+
+      @Override
+      public Resolve setKey(java.lang.String key) {
+        return (Resolve) super.setKey(key);
+      }
+
+      @Override
+      public Resolve setOauthToken(java.lang.String oauthToken) {
+        return (Resolve) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Resolve) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Resolve setQuotaUser(java.lang.String quotaUser) {
+        return (Resolve) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Resolve setUploadType(java.lang.String uploadType) {
+        return (Resolve) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Resolve) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String dnsName;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getDnsName() {
+        return dnsName;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public Resolve setDnsName(java.lang.String dnsName) {
+        this.dnsName = dnsName;
+        return this;
+      }
+
+      /** Required. The region of the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Required. The region of the instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Required. The region of the instance. */
+      public Resolve setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
+      @Override
+      public Resolve set(String parameterName, Object value) {
+        return (Resolve) super.set(parameterName, value);
       }
     }
 

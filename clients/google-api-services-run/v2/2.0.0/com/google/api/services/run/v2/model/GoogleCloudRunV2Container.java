@@ -122,6 +122,13 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private GoogleCloudRunV2ResourceRequirements resources;
 
   /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sandboxLauncher;
+
+  /**
    * Optional. Location of the source.
    * The value may be {@code null}.
    */
@@ -365,6 +372,23 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setResources(GoogleCloudRunV2ResourceRequirements resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSandboxLauncher() {
+    return sandboxLauncher;
+  }
+
+  /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * @param sandboxLauncher sandboxLauncher or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setSandboxLauncher(java.lang.Boolean sandboxLauncher) {
+    this.sandboxLauncher = sandboxLauncher;
     return this;
   }
 

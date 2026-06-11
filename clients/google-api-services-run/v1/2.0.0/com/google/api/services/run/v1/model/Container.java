@@ -118,6 +118,13 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private ResourceRequirements resources;
 
   /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sandboxLauncher;
+
+  /**
    * Not supported by Cloud Run.
    * The value may be {@code null}.
    */
@@ -373,6 +380,23 @@ public final class Container extends com.google.api.client.json.GenericJson {
    */
   public Container setResources(ResourceRequirements resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSandboxLauncher() {
+    return sandboxLauncher;
+  }
+
+  /**
+   * Optional. Indicates that this container can act as a sandbox supervisor and launch sandboxes.
+   * @param sandboxLauncher sandboxLauncher or {@code null} for none
+   */
+  public Container setSandboxLauncher(java.lang.Boolean sandboxLauncher) {
+    this.sandboxLauncher = sandboxLauncher;
     return this;
   }
 

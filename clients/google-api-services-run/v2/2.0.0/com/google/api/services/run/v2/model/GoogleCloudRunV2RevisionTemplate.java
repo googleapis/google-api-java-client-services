@@ -151,6 +151,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String revision;
 
   /**
+   * Optional. Configuration for sandboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2SandboxConfiguration sandboxes;
+
+  /**
    * Optional. Scaling settings for this Revision.
    * The value may be {@code null}.
    */
@@ -472,6 +479,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setRevision(java.lang.String revision) {
     this.revision = revision;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for sandboxes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Optional. Configuration for sandboxes.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setSandboxes(GoogleCloudRunV2SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

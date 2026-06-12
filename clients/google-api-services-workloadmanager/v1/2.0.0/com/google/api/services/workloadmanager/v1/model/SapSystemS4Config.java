@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for sap system workload
+ * Message for SAP system workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -36,85 +36,86 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   private java.lang.Boolean allowStoppingForUpdate;
 
   /**
-   * Ansible runner service account - let custoemrs bring their own SA for Ansible runner
+   * Ansible runner service account. Let customers bring their own service account for the Ansible
+   * runner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ansibleRunnerServiceAccount;
 
   /**
-   * instance details
+   * Instance details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppDetails app;
 
   /**
-   * database details
+   * Database details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatabaseDetails database;
 
   /**
-   * Required. two model non-HA and HA supported
+   * Required. Supports non-HA and HA models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deploymentModel;
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environmentType;
 
   /**
-   * the project that infrastructure deployed, current only support the same project where the
-   * deployment resource exist.
+   * The project that infrastructure is deployed in. Currently only supports the same project where
+   * the deployment resource exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpProjectId;
 
   /**
-   * database details
+   * Database details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LocationDetails location;
 
   /**
-   * Required. media_bucket_name
+   * Required. Media bucket name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediaBucketName;
 
   /**
-   * Optional. sap_boot_disk_image
+   * Optional. SAP boot disk image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sapBootDiskImage;
 
   /**
-   * Required. support scale up and scale out
+   * Required. Supports scale up and scale out.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scalingMethod;
 
   /**
-   * Required. sap hana version
+   * Required. SAP HANA version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * vm_prefix
+   * VM prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +137,8 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Ansible runner service account - let custoemrs bring their own SA for Ansible runner
+   * Ansible runner service account. Let customers bring their own service account for the Ansible
+   * runner.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnsibleRunnerServiceAccount() {
@@ -144,7 +146,8 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Ansible runner service account - let custoemrs bring their own SA for Ansible runner
+   * Ansible runner service account. Let customers bring their own service account for the Ansible
+   * runner.
    * @param ansibleRunnerServiceAccount ansibleRunnerServiceAccount or {@code null} for none
    */
   public SapSystemS4Config setAnsibleRunnerServiceAccount(java.lang.String ansibleRunnerServiceAccount) {
@@ -153,7 +156,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * instance details
+   * Instance details.
    * @return value or {@code null} for none
    */
   public AppDetails getApp() {
@@ -161,7 +164,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * instance details
+   * Instance details.
    * @param app app or {@code null} for none
    */
   public SapSystemS4Config setApp(AppDetails app) {
@@ -170,7 +173,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * database details
+   * Database details.
    * @return value or {@code null} for none
    */
   public DatabaseDetails getDatabase() {
@@ -178,7 +181,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * database details
+   * Database details.
    * @param database database or {@code null} for none
    */
   public SapSystemS4Config setDatabase(DatabaseDetails database) {
@@ -187,7 +190,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. two model non-HA and HA supported
+   * Required. Supports non-HA and HA models.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentModel() {
@@ -195,7 +198,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. two model non-HA and HA supported
+   * Required. Supports non-HA and HA models.
    * @param deploymentModel deploymentModel or {@code null} for none
    */
   public SapSystemS4Config setDeploymentModel(java.lang.String deploymentModel) {
@@ -204,7 +207,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironmentType() {
@@ -212,7 +215,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * @param environmentType environmentType or {@code null} for none
    */
   public SapSystemS4Config setEnvironmentType(java.lang.String environmentType) {
@@ -221,8 +224,8 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * the project that infrastructure deployed, current only support the same project where the
-   * deployment resource exist.
+   * The project that infrastructure is deployed in. Currently only supports the same project where
+   * the deployment resource exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpProjectId() {
@@ -230,8 +233,8 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * the project that infrastructure deployed, current only support the same project where the
-   * deployment resource exist.
+   * The project that infrastructure is deployed in. Currently only supports the same project where
+   * the deployment resource exists.
    * @param gcpProjectId gcpProjectId or {@code null} for none
    */
   public SapSystemS4Config setGcpProjectId(java.lang.String gcpProjectId) {
@@ -240,7 +243,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * database details
+   * Database details.
    * @return value or {@code null} for none
    */
   public LocationDetails getLocation() {
@@ -248,7 +251,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * database details
+   * Database details.
    * @param location location or {@code null} for none
    */
   public SapSystemS4Config setLocation(LocationDetails location) {
@@ -257,7 +260,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. media_bucket_name
+   * Required. Media bucket name.
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaBucketName() {
@@ -265,7 +268,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. media_bucket_name
+   * Required. Media bucket name.
    * @param mediaBucketName mediaBucketName or {@code null} for none
    */
   public SapSystemS4Config setMediaBucketName(java.lang.String mediaBucketName) {
@@ -274,7 +277,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. sap_boot_disk_image
+   * Optional. SAP boot disk image.
    * @return value or {@code null} for none
    */
   public java.lang.String getSapBootDiskImage() {
@@ -282,7 +285,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. sap_boot_disk_image
+   * Optional. SAP boot disk image.
    * @param sapBootDiskImage sapBootDiskImage or {@code null} for none
    */
   public SapSystemS4Config setSapBootDiskImage(java.lang.String sapBootDiskImage) {
@@ -291,7 +294,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. support scale up and scale out
+   * Required. Supports scale up and scale out.
    * @return value or {@code null} for none
    */
   public java.lang.String getScalingMethod() {
@@ -299,7 +302,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. support scale up and scale out
+   * Required. Supports scale up and scale out.
    * @param scalingMethod scalingMethod or {@code null} for none
    */
   public SapSystemS4Config setScalingMethod(java.lang.String scalingMethod) {
@@ -308,7 +311,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. sap hana version
+   * Required. SAP HANA version.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -316,7 +319,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. sap hana version
+   * Required. SAP HANA version.
    * @param version version or {@code null} for none
    */
   public SapSystemS4Config setVersion(java.lang.String version) {
@@ -325,7 +328,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * vm_prefix
+   * VM prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmPrefix() {
@@ -333,7 +336,7 @@ public final class SapSystemS4Config extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * vm_prefix
+   * VM prefix.
    * @param vmPrefix vmPrefix or {@code null} for none
    */
   public SapSystemS4Config setVmPrefix(java.lang.String vmPrefix) {

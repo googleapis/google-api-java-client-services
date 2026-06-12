@@ -30,7 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ListActuationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Actuation
+   * The list of actuations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ListActuationsResponse extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Actuation
+   * The list of actuations.
    * @return value or {@code null} for none
    */
   public java.util.List<Actuation> getActuations() {
@@ -66,7 +66,7 @@ public final class ListActuationsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of Actuation
+   * The list of actuations.
    * @param actuations actuations or {@code null} for none
    */
   public ListActuationsResponse setActuations(java.util.List<Actuation> actuations) {

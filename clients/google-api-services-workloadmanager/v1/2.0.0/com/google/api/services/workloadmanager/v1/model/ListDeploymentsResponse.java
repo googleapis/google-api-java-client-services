@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for response to listing Deployments
+ * Message for response to listing deployments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ListDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Deployment
+   * The list of deployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListDeploymentsResponse extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Deployment
+   * The list of deployments.
    * @return value or {@code null} for none
    */
   public java.util.List<Deployment> getDeployments() {
@@ -65,7 +65,7 @@ public final class ListDeploymentsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of Deployment
+   * The list of deployments.
    * @param deployments deployments or {@code null} for none
    */
   public ListDeploymentsResponse setDeployments(java.util.List<Deployment> deployments) {

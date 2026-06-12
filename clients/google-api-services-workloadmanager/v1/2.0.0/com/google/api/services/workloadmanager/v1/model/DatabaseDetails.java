@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for sap instant details
+ * Message for SAP instance details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,56 +30,56 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class DatabaseDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Database service account - let custoemrs bring their own SA for database
+   * Database service account. Let customers bring their own SA for the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseServiceAccount;
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
 
   /**
-   * Required. image for database server
+   * Required. Image for the database server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Optional. instance id
+   * Optional. Instance ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceId;
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Optional. primary db vm name
+   * Optional. Primary DB VM name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryDbVm;
 
   /**
-   * Optional. secondary db vm name
+   * Optional. Secondary DB VM name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryDbVm;
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   private java.lang.String sid;
 
   /**
-   * Database service account - let custoemrs bring their own SA for database
+   * Database service account. Let customers bring their own SA for the database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseServiceAccount() {
@@ -101,7 +101,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Database service account - let custoemrs bring their own SA for database
+   * Database service account. Let customers bring their own SA for the database.
    * @param databaseServiceAccount databaseServiceAccount or {@code null} for none
    */
   public DatabaseDetails setDatabaseServiceAccount(java.lang.String databaseServiceAccount) {
@@ -110,7 +110,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -118,7 +118,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * @param diskType diskType or {@code null} for none
    */
   public DatabaseDetails setDiskType(java.lang.String diskType) {
@@ -127,7 +127,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. image for database server
+   * Required. Image for the database server.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -135,7 +135,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. image for database server
+   * Required. Image for the database server.
    * @param image image or {@code null} for none
    */
   public DatabaseDetails setImage(java.lang.String image) {
@@ -144,7 +144,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. instance id
+   * Optional. Instance ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceId() {
@@ -152,7 +152,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. instance id
+   * Optional. Instance ID.
    * @param instanceId instanceId or {@code null} for none
    */
   public DatabaseDetails setInstanceId(java.lang.String instanceId) {
@@ -161,7 +161,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -169,7 +169,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @param machineType machineType or {@code null} for none
    */
   public DatabaseDetails setMachineType(java.lang.String machineType) {
@@ -178,7 +178,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. primary db vm name
+   * Optional. Primary DB VM name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryDbVm() {
@@ -186,7 +186,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. primary db vm name
+   * Optional. Primary DB VM name.
    * @param primaryDbVm primaryDbVm or {@code null} for none
    */
   public DatabaseDetails setPrimaryDbVm(java.lang.String primaryDbVm) {
@@ -195,7 +195,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. secondary db vm name
+   * Optional. Secondary DB VM name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryDbVm() {
@@ -203,7 +203,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. secondary db vm name
+   * Optional. Secondary DB VM name.
    * @param secondaryDbVm secondaryDbVm or {@code null} for none
    */
   public DatabaseDetails setSecondaryDbVm(java.lang.String secondaryDbVm) {
@@ -212,7 +212,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretManagerSecret() {
@@ -220,7 +220,7 @@ public final class DatabaseDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @param secretManagerSecret secretManagerSecret or {@code null} for none
    */
   public DatabaseDetails setSecretManagerSecret(java.lang.String secretManagerSecret) {

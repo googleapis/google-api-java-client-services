@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for MS SQL workload
+ * Message for MS SQL workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,128 +30,129 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SqlServerWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. active directory details
+   * Required. Active Directory details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActiveDirectory activeDirectory;
 
   /**
-   * Compute engine service account - let customers bring their own SA for Compute engine
+   * Compute Engine service account. Let customers bring their own service account for Compute
+   * Engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String computeEngineServiceAccount;
 
   /**
-   * Required. database details
+   * Required. Database details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Database database;
 
   /**
-   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE
+   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deploymentModel;
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environmentType;
 
   /**
-   * Optional. SHARED_DISK or S2D
+   * Optional. SHARED_DISK or S2D.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fciType;
 
   /**
-   * Optional. AOAG or FCI, it is only needed for High Availability deployment mode
+   * Optional. AOAG or FCI. It is only needed for the High Availability deployment mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String haType;
 
   /**
-   * Required. SQL licensing type
+   * Required. SQL licensing type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSqlPayg;
 
   /**
-   * Required. location details
+   * Required. Location details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SqlLocationDetails location;
 
   /**
-   * Required. name of the media storing SQL server installation files
+   * Required. Name of the media storing SQL server installation files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediaBucket;
 
   /**
-   * Required. type of the operating system the SQL server is going to run on top of
+   * Required. The type of the operating system the SQL server is going to run on top of.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operatingSystemType;
 
   /**
-   * Required. the image of the operating system
+   * Required. The image of the operating system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osImage;
 
   /**
-   * Optional. OS image type, it's used to create boot disks for VM instances When either Windows
-   * licensing type or SQL licensing type is BYOL, this option is disabled and default to custom
-   * image
+   * Optional. OS image type. It's used to create boot disks for VM instances. When either Windows
+   * licensing type or SQL licensing type is BYOL, this option is disabled and defaults to a custom
+   * image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osImageType;
 
   /**
-   * Optional. pacemaker configuration, only applicable for Linux HA deployments
+   * Optional. Pacemaker configuration, only applicable for Linux HA deployments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Pacemaker pacemaker;
 
   /**
-   * Optional. SQL Server Edition type, only applicable when Operating System is Linux
+   * Optional. SQL Server Edition type, only applicable when the operating system is Linux.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlServerEdition;
 
   /**
-   * Optional. 2017 or 2019 or 2022
+   * Optional. 2017, 2019, or 2022.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlServerVersion;
 
   /**
-   * Required. should be unique in the project
+   * Required. Should be unique in the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmPrefix;
 
   /**
-   * Required. active directory details
+   * Required. Active Directory details.
    * @return value or {@code null} for none
    */
   public ActiveDirectory getActiveDirectory() {
@@ -159,7 +160,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. active directory details
+   * Required. Active Directory details.
    * @param activeDirectory activeDirectory or {@code null} for none
    */
   public SqlServerWorkload setActiveDirectory(ActiveDirectory activeDirectory) {
@@ -168,7 +169,8 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Compute engine service account - let customers bring their own SA for Compute engine
+   * Compute Engine service account. Let customers bring their own service account for Compute
+   * Engine.
    * @return value or {@code null} for none
    */
   public java.lang.String getComputeEngineServiceAccount() {
@@ -176,7 +178,8 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Compute engine service account - let customers bring their own SA for Compute engine
+   * Compute Engine service account. Let customers bring their own service account for Compute
+   * Engine.
    * @param computeEngineServiceAccount computeEngineServiceAccount or {@code null} for none
    */
   public SqlServerWorkload setComputeEngineServiceAccount(java.lang.String computeEngineServiceAccount) {
@@ -185,7 +188,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. database details
+   * Required. Database details.
    * @return value or {@code null} for none
    */
   public Database getDatabase() {
@@ -193,7 +196,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. database details
+   * Required. Database details.
    * @param database database or {@code null} for none
    */
   public SqlServerWorkload setDatabase(Database database) {
@@ -202,7 +205,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE
+   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentModel() {
@@ -210,7 +213,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE
+   * Required. HIGH_AVAILABILITY or SINGLE_INSTANCE.
    * @param deploymentModel deploymentModel or {@code null} for none
    */
   public SqlServerWorkload setDeploymentModel(java.lang.String deploymentModel) {
@@ -219,7 +222,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironmentType() {
@@ -227,7 +230,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. deployment environment
+   * Required. Deployment environment.
    * @param environmentType environmentType or {@code null} for none
    */
   public SqlServerWorkload setEnvironmentType(java.lang.String environmentType) {
@@ -236,7 +239,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. SHARED_DISK or S2D
+   * Optional. SHARED_DISK or S2D.
    * @return value or {@code null} for none
    */
   public java.lang.String getFciType() {
@@ -244,7 +247,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. SHARED_DISK or S2D
+   * Optional. SHARED_DISK or S2D.
    * @param fciType fciType or {@code null} for none
    */
   public SqlServerWorkload setFciType(java.lang.String fciType) {
@@ -253,7 +256,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. AOAG or FCI, it is only needed for High Availability deployment mode
+   * Optional. AOAG or FCI. It is only needed for the High Availability deployment mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getHaType() {
@@ -261,7 +264,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. AOAG or FCI, it is only needed for High Availability deployment mode
+   * Optional. AOAG or FCI. It is only needed for the High Availability deployment mode.
    * @param haType haType or {@code null} for none
    */
   public SqlServerWorkload setHaType(java.lang.String haType) {
@@ -270,7 +273,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. SQL licensing type
+   * Required. SQL licensing type.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSqlPayg() {
@@ -278,7 +281,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. SQL licensing type
+   * Required. SQL licensing type.
    * @param isSqlPayg isSqlPayg or {@code null} for none
    */
   public SqlServerWorkload setIsSqlPayg(java.lang.Boolean isSqlPayg) {
@@ -287,7 +290,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. location details
+   * Required. Location details.
    * @return value or {@code null} for none
    */
   public SqlLocationDetails getLocation() {
@@ -295,7 +298,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. location details
+   * Required. Location details.
    * @param location location or {@code null} for none
    */
   public SqlServerWorkload setLocation(SqlLocationDetails location) {
@@ -304,7 +307,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. name of the media storing SQL server installation files
+   * Required. Name of the media storing SQL server installation files.
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaBucket() {
@@ -312,7 +315,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. name of the media storing SQL server installation files
+   * Required. Name of the media storing SQL server installation files.
    * @param mediaBucket mediaBucket or {@code null} for none
    */
   public SqlServerWorkload setMediaBucket(java.lang.String mediaBucket) {
@@ -321,7 +324,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. type of the operating system the SQL server is going to run on top of
+   * Required. The type of the operating system the SQL server is going to run on top of.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatingSystemType() {
@@ -329,7 +332,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. type of the operating system the SQL server is going to run on top of
+   * Required. The type of the operating system the SQL server is going to run on top of.
    * @param operatingSystemType operatingSystemType or {@code null} for none
    */
   public SqlServerWorkload setOperatingSystemType(java.lang.String operatingSystemType) {
@@ -338,7 +341,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. the image of the operating system
+   * Required. The image of the operating system.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsImage() {
@@ -346,7 +349,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. the image of the operating system
+   * Required. The image of the operating system.
    * @param osImage osImage or {@code null} for none
    */
   public SqlServerWorkload setOsImage(java.lang.String osImage) {
@@ -355,9 +358,9 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. OS image type, it's used to create boot disks for VM instances When either Windows
-   * licensing type or SQL licensing type is BYOL, this option is disabled and default to custom
-   * image
+   * Optional. OS image type. It's used to create boot disks for VM instances. When either Windows
+   * licensing type or SQL licensing type is BYOL, this option is disabled and defaults to a custom
+   * image.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsImageType() {
@@ -365,9 +368,9 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. OS image type, it's used to create boot disks for VM instances When either Windows
-   * licensing type or SQL licensing type is BYOL, this option is disabled and default to custom
-   * image
+   * Optional. OS image type. It's used to create boot disks for VM instances. When either Windows
+   * licensing type or SQL licensing type is BYOL, this option is disabled and defaults to a custom
+   * image.
    * @param osImageType osImageType or {@code null} for none
    */
   public SqlServerWorkload setOsImageType(java.lang.String osImageType) {
@@ -376,7 +379,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. pacemaker configuration, only applicable for Linux HA deployments
+   * Optional. Pacemaker configuration, only applicable for Linux HA deployments.
    * @return value or {@code null} for none
    */
   public Pacemaker getPacemaker() {
@@ -384,7 +387,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. pacemaker configuration, only applicable for Linux HA deployments
+   * Optional. Pacemaker configuration, only applicable for Linux HA deployments.
    * @param pacemaker pacemaker or {@code null} for none
    */
   public SqlServerWorkload setPacemaker(Pacemaker pacemaker) {
@@ -393,7 +396,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. SQL Server Edition type, only applicable when Operating System is Linux
+   * Optional. SQL Server Edition type, only applicable when the operating system is Linux.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlServerEdition() {
@@ -401,7 +404,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. SQL Server Edition type, only applicable when Operating System is Linux
+   * Optional. SQL Server Edition type, only applicable when the operating system is Linux.
    * @param sqlServerEdition sqlServerEdition or {@code null} for none
    */
   public SqlServerWorkload setSqlServerEdition(java.lang.String sqlServerEdition) {
@@ -410,7 +413,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. 2017 or 2019 or 2022
+   * Optional. 2017, 2019, or 2022.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlServerVersion() {
@@ -418,7 +421,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. 2017 or 2019 or 2022
+   * Optional. 2017, 2019, or 2022.
    * @param sqlServerVersion sqlServerVersion or {@code null} for none
    */
   public SqlServerWorkload setSqlServerVersion(java.lang.String sqlServerVersion) {
@@ -427,7 +430,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. should be unique in the project
+   * Required. Should be unique in the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmPrefix() {
@@ -435,7 +438,7 @@ public final class SqlServerWorkload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. should be unique in the project
+   * Required. Should be unique in the project.
    * @param vmPrefix vmPrefix or {@code null} for none
    */
   public SqlServerWorkload setVmPrefix(java.lang.String vmPrefix) {

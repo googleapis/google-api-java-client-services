@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for sap instant details
+ * Message for SAP instance details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,37 +30,37 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class LocationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. create firewall, if true, create firewall for the deployment. This field provides an
-   * option to not always create firewall for the deployment.
+   * Optional. Create firewall. If true, creates a firewall for the deployment. This field provides
+   * an option to not always create a firewall for the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean createCommsFirewall;
 
   /**
-   * Optional. network tags
+   * Optional. Network tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> customTags;
 
   /**
-   * Optional. when user skip DNS configuration from UI, deployment_dns_enabled=false otherwise
-   * deployment_dns_enabled=true
+   * Optional. When the user skips DNS configuration in the UI, `deployment_dns_enabled` is false;
+   * otherwise `deployment_dns_enabled` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deploymentDnsEnabled;
 
   /**
-   * Optional. dns zone name
+   * Optional. DNS zone name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsZone;
 
   /**
-   * Optional. dns_zone_name_suffix
+   * Optional. DNS zone name suffix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,50 +73,50 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   private java.lang.String internetAccess;
 
   /**
-   * Optional. network project
+   * Optional. Network project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkProject;
 
   /**
-   * Required. region_name
+   * Required. Region name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionName;
 
   /**
-   * Required. subnet_name
+   * Required. Subnet name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetName;
 
   /**
-   * Required. vpc_name
+   * Required. VPC name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcName;
 
   /**
-   * Required. zone1_name
+   * Required. Zone 1 name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone1Name;
 
   /**
-   * Optional. zone2_name
+   * Optional. Zone 2 name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone2Name;
 
   /**
-   * Optional. create firewall, if true, create firewall for the deployment. This field provides an
-   * option to not always create firewall for the deployment.
+   * Optional. Create firewall. If true, creates a firewall for the deployment. This field provides
+   * an option to not always create a firewall for the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateCommsFirewall() {
@@ -124,8 +124,8 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. create firewall, if true, create firewall for the deployment. This field provides an
-   * option to not always create firewall for the deployment.
+   * Optional. Create firewall. If true, creates a firewall for the deployment. This field provides
+   * an option to not always create a firewall for the deployment.
    * @param createCommsFirewall createCommsFirewall or {@code null} for none
    */
   public LocationDetails setCreateCommsFirewall(java.lang.Boolean createCommsFirewall) {
@@ -134,7 +134,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. network tags
+   * Optional. Network tags.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomTags() {
@@ -142,7 +142,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. network tags
+   * Optional. Network tags.
    * @param customTags customTags or {@code null} for none
    */
   public LocationDetails setCustomTags(java.util.List<java.lang.String> customTags) {
@@ -151,8 +151,8 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. when user skip DNS configuration from UI, deployment_dns_enabled=false otherwise
-   * deployment_dns_enabled=true
+   * Optional. When the user skips DNS configuration in the UI, `deployment_dns_enabled` is false;
+   * otherwise `deployment_dns_enabled` is true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeploymentDnsEnabled() {
@@ -160,8 +160,8 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. when user skip DNS configuration from UI, deployment_dns_enabled=false otherwise
-   * deployment_dns_enabled=true
+   * Optional. When the user skips DNS configuration in the UI, `deployment_dns_enabled` is false;
+   * otherwise `deployment_dns_enabled` is true.
    * @param deploymentDnsEnabled deploymentDnsEnabled or {@code null} for none
    */
   public LocationDetails setDeploymentDnsEnabled(java.lang.Boolean deploymentDnsEnabled) {
@@ -170,7 +170,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. dns zone name
+   * Optional. DNS zone name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsZone() {
@@ -178,7 +178,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. dns zone name
+   * Optional. DNS zone name.
    * @param dnsZone dnsZone or {@code null} for none
    */
   public LocationDetails setDnsZone(java.lang.String dnsZone) {
@@ -187,7 +187,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. dns_zone_name_suffix
+   * Optional. DNS zone name suffix.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsZoneNameSuffix() {
@@ -195,7 +195,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. dns_zone_name_suffix
+   * Optional. DNS zone name suffix.
    * @param dnsZoneNameSuffix dnsZoneNameSuffix or {@code null} for none
    */
   public LocationDetails setDnsZoneNameSuffix(java.lang.String dnsZoneNameSuffix) {
@@ -219,7 +219,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. network project
+   * Optional. Network project.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkProject() {
@@ -227,7 +227,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. network project
+   * Optional. Network project.
    * @param networkProject networkProject or {@code null} for none
    */
   public LocationDetails setNetworkProject(java.lang.String networkProject) {
@@ -236,7 +236,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. region_name
+   * Required. Region name.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionName() {
@@ -244,7 +244,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. region_name
+   * Required. Region name.
    * @param regionName regionName or {@code null} for none
    */
   public LocationDetails setRegionName(java.lang.String regionName) {
@@ -253,7 +253,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. subnet_name
+   * Required. Subnet name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetName() {
@@ -261,7 +261,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. subnet_name
+   * Required. Subnet name.
    * @param subnetName subnetName or {@code null} for none
    */
   public LocationDetails setSubnetName(java.lang.String subnetName) {
@@ -270,7 +270,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. vpc_name
+   * Required. VPC name.
    * @return value or {@code null} for none
    */
   public java.lang.String getVpcName() {
@@ -278,7 +278,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. vpc_name
+   * Required. VPC name.
    * @param vpcName vpcName or {@code null} for none
    */
   public LocationDetails setVpcName(java.lang.String vpcName) {
@@ -287,7 +287,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. zone1_name
+   * Required. Zone 1 name.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone1Name() {
@@ -295,7 +295,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. zone1_name
+   * Required. Zone 1 name.
    * @param zone1Name zone1Name or {@code null} for none
    */
   public LocationDetails setZone1Name(java.lang.String zone1Name) {
@@ -304,7 +304,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. zone2_name
+   * Optional. Zone 2 name.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone2Name() {
@@ -312,7 +312,7 @@ public final class LocationDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. zone2_name
+   * Optional. Zone 2 name.
    * @param zone2Name zone2Name or {@code null} for none
    */
   public LocationDetails setZone2Name(java.lang.String zone2Name) {

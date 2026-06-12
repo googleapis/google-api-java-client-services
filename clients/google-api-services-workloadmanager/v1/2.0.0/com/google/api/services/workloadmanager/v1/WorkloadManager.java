@@ -707,17 +707,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Required. Id of the deployment */
+          /** Required. ID of the deployment. */
           @com.google.api.client.util.Key
           private java.lang.String deploymentId;
 
-          /** Required. Id of the deployment
+          /** Required. ID of the deployment.
            */
           public java.lang.String getDeploymentId() {
             return deploymentId;
           }
 
-          /** Required. Id of the deployment */
+          /** Required. ID of the deployment. */
           public Create setDeploymentId(java.lang.String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
@@ -779,7 +779,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the workloadmanager server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -806,7 +806,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -874,17 +874,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. Name of the resource. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -896,22 +896,22 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If set to true, any actuation will also be deleted. Followed the best
-           * practice from https://aip.dev/135#cascading-delete
+           * Optional. If set to true, any actuation will also be deleted. Follows the best practice
+           * from https://aip.dev/135#cascading-delete.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** Optional. If set to true, any actuation will also be deleted. Followed the best practice from
-         https://aip.dev/135#cascading-delete
+          /** Optional. If set to true, any actuation will also be deleted. Follows the best practice from
+         https://aip.dev/135#cascading-delete.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * Optional. If set to true, any actuation will also be deleted. Followed the best
-           * practice from https://aip.dev/135#cascading-delete
+           * Optional. If set to true, any actuation will also be deleted. Follows the best practice
+           * from https://aip.dev/135#cascading-delete.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -931,8 +931,8 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the workloadmanager server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource. The format will be
-         *        'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+         * @param name Required. Name of the resource. The format is
+         *        'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -958,8 +958,8 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource. The format will be
-         *        'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+           * @param name Required. Name of the resource. The format is
+         *        'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1038,22 +1038,22 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Name of the resource. The format will be
-           * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+           * Required. Name of the resource. The format is
+           * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource. The format will be
-         'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+          /** Required. Name of the resource. The format is
+         'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Name of the resource. The format will be
-           * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+           * Required. Name of the resource. The format is
+           * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1212,17 +1212,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filter resource follow https://google.aip.dev/160 */
+          /** Optional. Filter resource following https://google.aip.dev/160. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter resource follow https://google.aip.dev/160
+          /** Optional. Filter resource following https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filter resource follow https://google.aip.dev/160 */
+          /** Optional. Filter resource following https://google.aip.dev/160. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1322,7 +1322,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the Actuation location using the form:
-           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'.
            * @param content the {@link com.google.api.services.workloadmanager.v1.model.Actuation}
            * @return the request
            */
@@ -1351,7 +1351,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the Actuation location using the form:
-           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              * @param content the {@link com.google.api.services.workloadmanager.v1.model.Actuation}
              * @since 1.13
              */
@@ -1422,13 +1422,13 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Actuation location using the form:
-             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the Actuation location using the form:
-           'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1436,7 +1436,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource name of the Actuation location using the form:
-             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1497,16 +1497,15 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes a single Actuation
+           * Deletes a single Actuation.
            *
            * Create a request for the method "actuations.delete".
            *
            * This request holds the parameters needed by the workloadmanager server.  After setting any
            * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the book to delete.
-           *        project/{project_id}/locations/{location_id}/deployments/{deployment_id}/actuations/{actua
-           *        tion_id}
+           * @param name Required. The name of the actuation to delete.
+           *        projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1523,7 +1522,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deployments/[^/]+/actuations/[^/]+$");
 
             /**
-             * Deletes a single Actuation
+             * Deletes a single Actuation.
              *
              * Create a request for the method "actuations.delete".
              *
@@ -1533,9 +1532,8 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the book to delete.
-           *        project/{project_id}/locations/{location_id}/deployments/{deployment_id}/actuations/{actua
-           *        tion_id}
+             * @param name Required. The name of the actuation to delete.
+           *        projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -1604,22 +1602,22 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The name of the book to delete. project/{project_id}/locations/{location_id
-             * }/deployments/{deployment_id}/actuations/{actuation_id}
+             * Required. The name of the actuation to delete. projects/{project}/locations/{location
+             * }/deployments/{deployment}/actuations/{actuation}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the book to delete.
-           project/{project_id}/locations/{location_id}/deployments/{deployment_id}/actuations/{actuation_id}
+            /** Required. The name of the actuation to delete.
+           projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the book to delete. project/{project_id}/locations/{location_id
-             * }/deployments/{deployment_id}/actuations/{actuation_id}
+             * Required. The name of the actuation to delete. projects/{project}/locations/{location
+             * }/deployments/{deployment}/actuations/{actuation}.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1644,7 +1642,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the workloadmanager server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -1670,7 +1668,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the resource
+             * @param name Required. Name of the resource.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -1748,17 +1746,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Name of the resource */
+            /** Required. Name of the resource. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the resource
+            /** Required. Name of the resource.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Name of the resource */
+            /** Required. Name of the resource. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1783,7 +1781,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource prefix of the Actuation using the form:
-           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1810,7 +1808,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource prefix of the Actuation using the form:
-           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           *        'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1890,13 +1888,13 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource prefix of the Actuation using the form:
-             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource prefix of the Actuation using the form:
-           'projects/{project_id}/locations/{location}/deployments/{deployment}'
+           'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1904,7 +1902,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The resource prefix of the Actuation using the form:
-             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'
+             * 'projects/{project_id}/locations/{location}/deployments/{deployment}'.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1916,17 +1914,17 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
               return this;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filtering results
+            /** Optional. Filtering results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;

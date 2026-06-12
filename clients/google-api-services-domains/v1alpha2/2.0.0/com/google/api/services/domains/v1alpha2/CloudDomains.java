@@ -2740,6 +2740,26 @@ public class CloudDomains extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set, validates the request without actually updating the registration.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validates the request without actually updating the registration.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, validates the request without actually updating the registration.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);

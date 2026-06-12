@@ -66,6 +66,13 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
   private java.lang.String onFailedHealthCheck;
 
   /**
+   * Configuration for VM repairs in the MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceLifecyclePolicyOnRepair onRepair;
+
+  /**
    * The action that a MIG performs on a failed or an unhealthy VM. A VM is marked as unhealthy when
    * the application running on that VM fails a health check. Valid values are         - REPAIR
    * (default): MIG automatically repairs a failed or    an unhealthy VM by recreating it. For more
@@ -143,6 +150,23 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setOnFailedHealthCheck(java.lang.String onFailedHealthCheck) {
     this.onFailedHealthCheck = onFailedHealthCheck;
+    return this;
+  }
+
+  /**
+   * Configuration for VM repairs in the MIG.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceLifecyclePolicyOnRepair getOnRepair() {
+    return onRepair;
+  }
+
+  /**
+   * Configuration for VM repairs in the MIG.
+   * @param onRepair onRepair or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceLifecyclePolicy setOnRepair(InstanceGroupManagerInstanceLifecyclePolicyOnRepair onRepair) {
+    this.onRepair = onRepair;
     return this;
   }
 

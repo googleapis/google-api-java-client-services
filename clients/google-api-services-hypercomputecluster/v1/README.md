@@ -1,6 +1,6 @@
 # Cluster Director API Client Library for Java
 
-The Cluster Director API allows you to deploy, manage, and monitor clusters that run AI, ML, or HPC workloads.
+The Cluster Director API lets you deploy, manage, and monitor clusters that run artificial intelligence (AI), machine learning (ML), or high performance computing (HPC) workloads.
 
 This page contains information about getting started with the Cluster Director API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-hypercomputecluster</artifactId>
-      <version>v1-rev20260506-2.0.0</version>
+      <version>v1-rev20260606-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-hypercomputecluster:v1-rev20260506-2.0.0'
+  implementation 'com.google.apis:google-api-services-hypercomputecluster:v1-rev20260606-2.0.0'
 }
 ```
 

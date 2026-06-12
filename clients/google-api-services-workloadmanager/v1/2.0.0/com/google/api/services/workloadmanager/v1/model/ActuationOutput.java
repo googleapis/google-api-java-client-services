@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for output of Actuation
+ * Message for output of actuation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ActuationOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * A link to gcs file that store build logs
+   * A link to the Cloud Storage file that stores build logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String actuateLogs;
 
   /**
-   * Output only. error message return from ansible.
+   * Output only. Error message returned from Ansible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ansibleError;
 
   /**
-   * Output only. failed task name return from ansible.
+   * Output only. Failed task name returned from Ansible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ansibleFailedTask;
 
   /**
-   * reference to Blueprint Controller deployment and revision resource
+   * Reference to the Blueprint Controller deployment and revision resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,14 +73,14 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   private java.lang.String errorCode;
 
   /**
-   * A link to actuation cloud build log.
+   * A link to the actuation Cloud Build log.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorLogs;
 
   /**
-   * Output only. whether the error message is user facing. If true, the error message will be shown
+   * Output only. Whether the error message is user facing. If true, the error message will be shown
    * in the UI.
    * The value may be {@code null}.
    */
@@ -88,21 +88,21 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   private java.lang.Boolean hasUserFacingErrorMsg;
 
   /**
-   * Output only. error message return from terraform.
+   * Output only. Error message returned from Terraform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terraformError;
 
   /**
-   * reference to terraform template used
+   * Reference to the Terraform template used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String terraformTemplate;
 
   /**
-   * A link to gcs file that store build logs
+   * A link to the Cloud Storage file that stores build logs.
    * @return value or {@code null} for none
    */
   public java.lang.String getActuateLogs() {
@@ -110,7 +110,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to gcs file that store build logs
+   * A link to the Cloud Storage file that stores build logs.
    * @param actuateLogs actuateLogs or {@code null} for none
    */
   public ActuationOutput setActuateLogs(java.lang.String actuateLogs) {
@@ -119,7 +119,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. error message return from ansible.
+   * Output only. Error message returned from Ansible.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnsibleError() {
@@ -127,7 +127,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. error message return from ansible.
+   * Output only. Error message returned from Ansible.
    * @param ansibleError ansibleError or {@code null} for none
    */
   public ActuationOutput setAnsibleError(java.lang.String ansibleError) {
@@ -136,7 +136,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. failed task name return from ansible.
+   * Output only. Failed task name returned from Ansible.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAnsibleFailedTask() {
@@ -144,7 +144,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. failed task name return from ansible.
+   * Output only. Failed task name returned from Ansible.
    * @param ansibleFailedTask ansibleFailedTask or {@code null} for none
    */
   public ActuationOutput setAnsibleFailedTask(java.util.List<java.lang.String> ansibleFailedTask) {
@@ -153,7 +153,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * reference to Blueprint Controller deployment and revision resource
+   * Reference to the Blueprint Controller deployment and revision resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getBlueprintId() {
@@ -161,7 +161,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * reference to Blueprint Controller deployment and revision resource
+   * Reference to the Blueprint Controller deployment and revision resource.
    * @param blueprintId blueprintId or {@code null} for none
    */
   public ActuationOutput setBlueprintId(java.lang.String blueprintId) {
@@ -206,7 +206,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to actuation cloud build log.
+   * A link to the actuation Cloud Build log.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorLogs() {
@@ -214,7 +214,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A link to actuation cloud build log.
+   * A link to the actuation Cloud Build log.
    * @param errorLogs errorLogs or {@code null} for none
    */
   public ActuationOutput setErrorLogs(java.lang.String errorLogs) {
@@ -223,7 +223,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. whether the error message is user facing. If true, the error message will be shown
+   * Output only. Whether the error message is user facing. If true, the error message will be shown
    * in the UI.
    * @return value or {@code null} for none
    */
@@ -232,7 +232,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. whether the error message is user facing. If true, the error message will be shown
+   * Output only. Whether the error message is user facing. If true, the error message will be shown
    * in the UI.
    * @param hasUserFacingErrorMsg hasUserFacingErrorMsg or {@code null} for none
    */
@@ -242,7 +242,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. error message return from terraform.
+   * Output only. Error message returned from Terraform.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerraformError() {
@@ -250,7 +250,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. error message return from terraform.
+   * Output only. Error message returned from Terraform.
    * @param terraformError terraformError or {@code null} for none
    */
   public ActuationOutput setTerraformError(java.lang.String terraformError) {
@@ -259,7 +259,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * reference to terraform template used
+   * Reference to the Terraform template used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerraformTemplate() {
@@ -267,7 +267,7 @@ public final class ActuationOutput extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * reference to terraform template used
+   * Reference to the Terraform template used.
    * @param terraformTemplate terraformTemplate or {@code null} for none
    */
   public ActuationOutput setTerraformTemplate(java.lang.String terraformTemplate) {

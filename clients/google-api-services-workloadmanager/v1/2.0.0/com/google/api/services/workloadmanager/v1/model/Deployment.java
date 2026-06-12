@@ -30,45 +30,45 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Description of the Deployment
+   * Description of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The name of deployment resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * The name of the deployment resource. The format is
+   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * SAP system workload input
+   * SAP system workload input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SapSystemS4Config sapSystemS4Config;
 
   /**
-   * User-specified Service Account (SA) credentials to be used for cloud build Format:
+   * User-specified Service Account (SA) credentials to be used for Cloud Build. Format:
    * `projects/{projectID}/serviceAccounts/{serviceAccount}` The default Cloud Build SA will be used
-   * initially if this field is not set during deployment creation
+   * initially if this field is not set during deployment creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * MS SQL workload input
+   * MS SQL workload input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, TerraformVariable> terraformVariables;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,14 +108,14 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String workerPool;
 
   /**
-   * Optional. Workload type of the deployment
+   * Optional. Workload type of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadType;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -123,7 +123,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp.
    * @param createTime createTime or {@code null} for none
    */
   public Deployment setCreateTime(String createTime) {
@@ -132,7 +132,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the Deployment
+   * Description of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -140,7 +140,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the Deployment
+   * Description of the deployment.
    * @param description description or {@code null} for none
    */
   public Deployment setDescription(java.lang.String description) {
@@ -149,8 +149,8 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of deployment resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * The name of the deployment resource. The format is
+   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -158,8 +158,8 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of deployment resource. The format will be
-   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'
+   * The name of the deployment resource. The format is
+   * 'projects/{project_id}/locations/{location_id}/deployments/{deployment_id}'.
    * @param name name or {@code null} for none
    */
   public Deployment setName(java.lang.String name) {
@@ -168,7 +168,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SAP system workload input
+   * SAP system workload input.
    * @return value or {@code null} for none
    */
   public SapSystemS4Config getSapSystemS4Config() {
@@ -176,7 +176,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SAP system workload input
+   * SAP system workload input.
    * @param sapSystemS4Config sapSystemS4Config or {@code null} for none
    */
   public Deployment setSapSystemS4Config(SapSystemS4Config sapSystemS4Config) {
@@ -185,9 +185,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-specified Service Account (SA) credentials to be used for cloud build Format:
+   * User-specified Service Account (SA) credentials to be used for Cloud Build. Format:
    * `projects/{projectID}/serviceAccounts/{serviceAccount}` The default Cloud Build SA will be used
-   * initially if this field is not set during deployment creation
+   * initially if this field is not set during deployment creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -195,9 +195,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-specified Service Account (SA) credentials to be used for cloud build Format:
+   * User-specified Service Account (SA) credentials to be used for Cloud Build. Format:
    * `projects/{projectID}/serviceAccounts/{serviceAccount}` The default Cloud Build SA will be used
-   * initially if this field is not set during deployment creation
+   * initially if this field is not set during deployment creation.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Deployment setServiceAccount(java.lang.String serviceAccount) {
@@ -206,7 +206,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MS SQL workload input
+   * MS SQL workload input.
    * @return value or {@code null} for none
    */
   public SqlServerWorkload getSqlServerWorkload() {
@@ -214,7 +214,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MS SQL workload input
+   * MS SQL workload input.
    * @param sqlServerWorkload sqlServerWorkload or {@code null} for none
    */
   public Deployment setSqlServerWorkload(SqlServerWorkload sqlServerWorkload) {
@@ -263,7 +263,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -271,7 +271,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public Deployment setUpdateTime(String updateTime) {
@@ -301,7 +301,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Workload type of the deployment
+   * Optional. Workload type of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkloadType() {
@@ -309,7 +309,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Workload type of the deployment
+   * Optional. Workload type of the deployment.
    * @param workloadType workloadType or {@code null} for none
    */
   public Deployment setWorkloadType(java.lang.String workloadType) {

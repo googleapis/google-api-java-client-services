@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for sap instant details
+ * Message for SAP instance details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,98 +30,98 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class AppDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. instance id for app
+   * Optional. Instance ID for app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appInstanceId;
 
   /**
-   * Application service account - let custoemrs bring their own SA for application
+   * Application service account. Let customers bring their own service account for the application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appServiceAccount;
 
   /**
-   * Optional. Customized vm names
+   * Optional. Customized VM names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> appVmNames;
 
   /**
-   * Required. image for ascs server
+   * Required. Image for the ASCS server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsImage;
 
   /**
-   * Optional. instance id for ascs
+   * Optional. Instance ID for ASCS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsInstanceId;
 
   /**
-   * Required. ascs_machine_type
+   * Required. ASCS machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsMachineType;
 
   /**
-   * ASCS service account - let custoemrs bring their own SA for ASCS
+   * ASCS service account. Let customers bring their own service account for ASCS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsServiceAccount;
 
   /**
-   * Optional. ASCS vm name
+   * Optional. ASCS VM name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ascsVm;
 
   /**
-   * Optional. instance id for ers
+   * Optional. Instance ID for ERS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ersInstanceId;
 
   /**
-   * Optional. ERS vm name
+   * Optional. ERS VM name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ersVm;
 
   /**
-   * Required. image for app server and ascs server
+   * Required. Image for the app server and ASCS server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String image;
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretManagerSecret;
 
   /**
-   * Optional. Storage location
+   * Optional. Storage location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,14 +135,14 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String sid;
 
   /**
-   * Required. vms_multiplier
+   * Required. VMs multiplier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer vmsMultiplier;
 
   /**
-   * Optional. instance id for app
+   * Optional. Instance ID for app.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppInstanceId() {
@@ -150,7 +150,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. instance id for app
+   * Optional. Instance ID for app.
    * @param appInstanceId appInstanceId or {@code null} for none
    */
   public AppDetails setAppInstanceId(java.lang.String appInstanceId) {
@@ -159,7 +159,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Application service account - let custoemrs bring their own SA for application
+   * Application service account. Let customers bring their own service account for the application.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppServiceAccount() {
@@ -167,7 +167,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Application service account - let custoemrs bring their own SA for application
+   * Application service account. Let customers bring their own service account for the application.
    * @param appServiceAccount appServiceAccount or {@code null} for none
    */
   public AppDetails setAppServiceAccount(java.lang.String appServiceAccount) {
@@ -176,7 +176,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Customized vm names
+   * Optional. Customized VM names.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAppVmNames() {
@@ -184,7 +184,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Customized vm names
+   * Optional. Customized VM names.
    * @param appVmNames appVmNames or {@code null} for none
    */
   public AppDetails setAppVmNames(java.util.List<java.lang.String> appVmNames) {
@@ -193,7 +193,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. image for ascs server
+   * Required. Image for the ASCS server.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsImage() {
@@ -201,7 +201,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. image for ascs server
+   * Required. Image for the ASCS server.
    * @param ascsImage ascsImage or {@code null} for none
    */
   public AppDetails setAscsImage(java.lang.String ascsImage) {
@@ -210,7 +210,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. instance id for ascs
+   * Optional. Instance ID for ASCS.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsInstanceId() {
@@ -218,7 +218,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. instance id for ascs
+   * Optional. Instance ID for ASCS.
    * @param ascsInstanceId ascsInstanceId or {@code null} for none
    */
   public AppDetails setAscsInstanceId(java.lang.String ascsInstanceId) {
@@ -227,7 +227,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. ascs_machine_type
+   * Required. ASCS machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsMachineType() {
@@ -235,7 +235,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. ascs_machine_type
+   * Required. ASCS machine type.
    * @param ascsMachineType ascsMachineType or {@code null} for none
    */
   public AppDetails setAscsMachineType(java.lang.String ascsMachineType) {
@@ -244,7 +244,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ASCS service account - let custoemrs bring their own SA for ASCS
+   * ASCS service account. Let customers bring their own service account for ASCS.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsServiceAccount() {
@@ -252,7 +252,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ASCS service account - let custoemrs bring their own SA for ASCS
+   * ASCS service account. Let customers bring their own service account for ASCS.
    * @param ascsServiceAccount ascsServiceAccount or {@code null} for none
    */
   public AppDetails setAscsServiceAccount(java.lang.String ascsServiceAccount) {
@@ -261,7 +261,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ASCS vm name
+   * Optional. ASCS VM name.
    * @return value or {@code null} for none
    */
   public java.lang.String getAscsVm() {
@@ -269,7 +269,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ASCS vm name
+   * Optional. ASCS VM name.
    * @param ascsVm ascsVm or {@code null} for none
    */
   public AppDetails setAscsVm(java.lang.String ascsVm) {
@@ -278,7 +278,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. instance id for ers
+   * Optional. Instance ID for ERS.
    * @return value or {@code null} for none
    */
   public java.lang.String getErsInstanceId() {
@@ -286,7 +286,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. instance id for ers
+   * Optional. Instance ID for ERS.
    * @param ersInstanceId ersInstanceId or {@code null} for none
    */
   public AppDetails setErsInstanceId(java.lang.String ersInstanceId) {
@@ -295,7 +295,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ERS vm name
+   * Optional. ERS VM name.
    * @return value or {@code null} for none
    */
   public java.lang.String getErsVm() {
@@ -303,7 +303,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ERS vm name
+   * Optional. ERS VM name.
    * @param ersVm ersVm or {@code null} for none
    */
   public AppDetails setErsVm(java.lang.String ersVm) {
@@ -312,7 +312,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. image for app server and ascs server
+   * Required. Image for the app server and ASCS server.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -320,7 +320,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. image for app server and ascs server
+   * Required. Image for the app server and ASCS server.
    * @param image image or {@code null} for none
    */
   public AppDetails setImage(java.lang.String image) {
@@ -329,7 +329,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -337,7 +337,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @param machineType machineType or {@code null} for none
    */
   public AppDetails setMachineType(java.lang.String machineType) {
@@ -346,7 +346,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretManagerSecret() {
@@ -354,7 +354,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @param secretManagerSecret secretManagerSecret or {@code null} for none
    */
   public AppDetails setSecretManagerSecret(java.lang.String secretManagerSecret) {
@@ -363,7 +363,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Storage location
+   * Optional. Storage location.
    * @return value or {@code null} for none
    */
   public java.lang.String getSharedStorage() {
@@ -371,7 +371,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Storage location
+   * Optional. Storage location.
    * @param sharedStorage sharedStorage or {@code null} for none
    */
   public AppDetails setSharedStorage(java.lang.String sharedStorage) {
@@ -397,7 +397,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. vms_multiplier
+   * Required. VMs multiplier.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVmsMultiplier() {
@@ -405,7 +405,7 @@ public final class AppDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. vms_multiplier
+   * Required. VMs multiplier.
    * @param vmsMultiplier vmsMultiplier or {@code null} for none
    */
   public AppDetails setVmsMultiplier(java.lang.Integer vmsMultiplier) {

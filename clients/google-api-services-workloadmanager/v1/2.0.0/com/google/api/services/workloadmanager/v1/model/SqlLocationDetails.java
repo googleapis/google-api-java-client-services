@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Location and networking details for configuring SQL server workload
+ * Location and networking details for configuring SQL server workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,75 +30,75 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SqlLocationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. create a new DNS Zone when the field is empty, Only show for `Using an existing DNS`
-   * List of existing DNS Zones tf variable name: existing_dns_zone_name
+   * Optional. Create a new DNS zone when the field is empty. Only shown for `Using an existing
+   * DNS`. List of existing DNS zones. Terraform variable name: existing_dns_zone_name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsZone;
 
   /**
-   * Required. the project that infrastructure deployed, currently only supports the same project
-   * where the deployment resource exists.
+   * Required. The project that infrastructure is deployed in. Currently only supports the same
+   * project where the deployment resource exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpProjectId;
 
   /**
-   * Required. Internet Access
+   * Required. Internet Access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String internetAccess;
 
   /**
-   * Required. network name
+   * Required. Network name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Required. primary zone
+   * Required. Primary zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryZone;
 
   /**
-   * Required. region name
+   * Required. Region name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Optional. secondary zone can't be same as primary_zone and is only for High Availability
-   * deployment mode
+   * Optional. Secondary zone cannot be the same as primary_zone and is only for High Availability
+   * deployment mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryZone;
 
   /**
-   * Required. subnetwork name
+   * Required. Subnetwork name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
 
   /**
-   * Optional. teriary zone can't be same as primary_zone and secondary zone, and it is only for
-   * High Availability deployment mode
+   * Optional. Tertiary zone cannot be the same as primary_zone and secondary_zone, and it is only
+   * for High Availability deployment mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tertiaryZone;
 
   /**
-   * Optional. create a new DNS Zone when the field is empty, Only show for `Using an existing DNS`
-   * List of existing DNS Zones tf variable name: existing_dns_zone_name
+   * Optional. Create a new DNS zone when the field is empty. Only shown for `Using an existing
+   * DNS`. List of existing DNS zones. Terraform variable name: existing_dns_zone_name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsZone() {
@@ -106,8 +106,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. create a new DNS Zone when the field is empty, Only show for `Using an existing DNS`
-   * List of existing DNS Zones tf variable name: existing_dns_zone_name
+   * Optional. Create a new DNS zone when the field is empty. Only shown for `Using an existing
+   * DNS`. List of existing DNS zones. Terraform variable name: existing_dns_zone_name.
    * @param dnsZone dnsZone or {@code null} for none
    */
   public SqlLocationDetails setDnsZone(java.lang.String dnsZone) {
@@ -116,8 +116,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. the project that infrastructure deployed, currently only supports the same project
-   * where the deployment resource exists.
+   * Required. The project that infrastructure is deployed in. Currently only supports the same
+   * project where the deployment resource exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpProjectId() {
@@ -125,8 +125,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. the project that infrastructure deployed, currently only supports the same project
-   * where the deployment resource exists.
+   * Required. The project that infrastructure is deployed in. Currently only supports the same
+   * project where the deployment resource exists.
    * @param gcpProjectId gcpProjectId or {@code null} for none
    */
   public SqlLocationDetails setGcpProjectId(java.lang.String gcpProjectId) {
@@ -135,7 +135,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Internet Access
+   * Required. Internet Access.
    * @return value or {@code null} for none
    */
   public java.lang.String getInternetAccess() {
@@ -143,7 +143,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Internet Access
+   * Required. Internet Access.
    * @param internetAccess internetAccess or {@code null} for none
    */
   public SqlLocationDetails setInternetAccess(java.lang.String internetAccess) {
@@ -152,7 +152,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. network name
+   * Required. Network name.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -160,7 +160,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. network name
+   * Required. Network name.
    * @param network network or {@code null} for none
    */
   public SqlLocationDetails setNetwork(java.lang.String network) {
@@ -169,7 +169,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. primary zone
+   * Required. Primary zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryZone() {
@@ -177,7 +177,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. primary zone
+   * Required. Primary zone.
    * @param primaryZone primaryZone or {@code null} for none
    */
   public SqlLocationDetails setPrimaryZone(java.lang.String primaryZone) {
@@ -186,7 +186,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. region name
+   * Required. Region name.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -194,7 +194,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. region name
+   * Required. Region name.
    * @param region region or {@code null} for none
    */
   public SqlLocationDetails setRegion(java.lang.String region) {
@@ -203,8 +203,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. secondary zone can't be same as primary_zone and is only for High Availability
-   * deployment mode
+   * Optional. Secondary zone cannot be the same as primary_zone and is only for High Availability
+   * deployment mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryZone() {
@@ -212,8 +212,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. secondary zone can't be same as primary_zone and is only for High Availability
-   * deployment mode
+   * Optional. Secondary zone cannot be the same as primary_zone and is only for High Availability
+   * deployment mode.
    * @param secondaryZone secondaryZone or {@code null} for none
    */
   public SqlLocationDetails setSecondaryZone(java.lang.String secondaryZone) {
@@ -222,7 +222,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. subnetwork name
+   * Required. Subnetwork name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -230,7 +230,7 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. subnetwork name
+   * Required. Subnetwork name.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public SqlLocationDetails setSubnetwork(java.lang.String subnetwork) {
@@ -239,8 +239,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. teriary zone can't be same as primary_zone and secondary zone, and it is only for
-   * High Availability deployment mode
+   * Optional. Tertiary zone cannot be the same as primary_zone and secondary_zone, and it is only
+   * for High Availability deployment mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getTertiaryZone() {
@@ -248,8 +248,8 @@ public final class SqlLocationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. teriary zone can't be same as primary_zone and secondary zone, and it is only for
-   * High Availability deployment mode
+   * Optional. Tertiary zone cannot be the same as primary_zone and secondary_zone, and it is only
+   * for High Availability deployment mode.
    * @param tertiaryZone tertiaryZone or {@code null} for none
    */
   public SqlLocationDetails setTertiaryZone(java.lang.String tertiaryZone) {

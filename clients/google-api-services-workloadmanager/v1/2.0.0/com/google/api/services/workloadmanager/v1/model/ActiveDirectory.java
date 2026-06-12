@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Active directory details
+ * Active Directory details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,42 +30,42 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ActiveDirectory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. DNS IP address
+   * Optional. DNS IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsAddress;
 
   /**
-   * Optional. human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as “google.com”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * Optional. domain username
+   * Optional. Domain username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domainUsername;
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretManagerSecret;
 
   /**
-   * Required. active directory type
+   * Required. Active Directory type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. DNS IP address
+   * Optional. DNS IP address.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsAddress() {
@@ -73,7 +73,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. DNS IP address
+   * Optional. DNS IP address.
    * @param dnsAddress dnsAddress or {@code null} for none
    */
   public ActiveDirectory setDnsAddress(java.lang.String dnsAddress) {
@@ -82,7 +82,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as “google.com”.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -90,7 +90,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as “google.com”.
    * @param domain domain or {@code null} for none
    */
   public ActiveDirectory setDomain(java.lang.String domain) {
@@ -99,7 +99,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. domain username
+   * Optional. Domain username.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomainUsername() {
@@ -107,7 +107,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. domain username
+   * Optional. Domain username.
    * @param domainUsername domainUsername or {@code null} for none
    */
   public ActiveDirectory setDomainUsername(java.lang.String domainUsername) {
@@ -116,7 +116,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretManagerSecret() {
@@ -124,7 +124,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @param secretManagerSecret secretManagerSecret or {@code null} for none
    */
   public ActiveDirectory setSecretManagerSecret(java.lang.String secretManagerSecret) {
@@ -133,7 +133,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. active directory type
+   * Required. Active Directory type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -141,7 +141,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. active directory type
+   * Required. Active Directory type.
    * @param type type or {@code null} for none
    */
   public ActiveDirectory setType(java.lang.String type) {

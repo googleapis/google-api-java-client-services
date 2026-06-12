@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * pacemaker configuration
+ * Pacemaker configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,49 +30,49 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Pacemaker extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. bucket location for node certificates
+   * Required. Bucket location for node certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bucketNameNodeCertificates;
 
   /**
-   * Required. pacemaker cluster name
+   * Required. Pacemaker cluster name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pacemakerCluster;
 
   /**
-   * Required. pacemaker cluster secret name
+   * Required. Pacemaker cluster secret name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pacemakerClusterSecret;
 
   /**
-   * Required. pacemaker cluster username
+   * Required. Pacemaker cluster username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pacemakerClusterUsername;
 
   /**
-   * Required. sql pacemaker secret name
+   * Required. SQL Pacemaker secret name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlPacemakerSecret;
 
   /**
-   * Required. sql pacemaker username
+   * Required. SQL Pacemaker username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlPacemakerUsername;
 
   /**
-   * Required. bucket location for node certificates
+   * Required. Bucket location for node certificates.
    * @return value or {@code null} for none
    */
   public java.lang.String getBucketNameNodeCertificates() {
@@ -80,7 +80,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. bucket location for node certificates
+   * Required. Bucket location for node certificates.
    * @param bucketNameNodeCertificates bucketNameNodeCertificates or {@code null} for none
    */
   public Pacemaker setBucketNameNodeCertificates(java.lang.String bucketNameNodeCertificates) {
@@ -89,7 +89,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster name
+   * Required. Pacemaker cluster name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPacemakerCluster() {
@@ -97,7 +97,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster name
+   * Required. Pacemaker cluster name.
    * @param pacemakerCluster pacemakerCluster or {@code null} for none
    */
   public Pacemaker setPacemakerCluster(java.lang.String pacemakerCluster) {
@@ -106,7 +106,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster secret name
+   * Required. Pacemaker cluster secret name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPacemakerClusterSecret() {
@@ -114,7 +114,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster secret name
+   * Required. Pacemaker cluster secret name.
    * @param pacemakerClusterSecret pacemakerClusterSecret or {@code null} for none
    */
   public Pacemaker setPacemakerClusterSecret(java.lang.String pacemakerClusterSecret) {
@@ -123,7 +123,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster username
+   * Required. Pacemaker cluster username.
    * @return value or {@code null} for none
    */
   public java.lang.String getPacemakerClusterUsername() {
@@ -131,7 +131,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. pacemaker cluster username
+   * Required. Pacemaker cluster username.
    * @param pacemakerClusterUsername pacemakerClusterUsername or {@code null} for none
    */
   public Pacemaker setPacemakerClusterUsername(java.lang.String pacemakerClusterUsername) {
@@ -140,7 +140,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. sql pacemaker secret name
+   * Required. SQL Pacemaker secret name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlPacemakerSecret() {
@@ -148,7 +148,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. sql pacemaker secret name
+   * Required. SQL Pacemaker secret name.
    * @param sqlPacemakerSecret sqlPacemakerSecret or {@code null} for none
    */
   public Pacemaker setSqlPacemakerSecret(java.lang.String sqlPacemakerSecret) {
@@ -157,7 +157,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. sql pacemaker username
+   * Required. SQL Pacemaker username.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlPacemakerUsername() {
@@ -165,7 +165,7 @@ public final class Pacemaker extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. sql pacemaker username
+   * Required. SQL Pacemaker username.
    * @param sqlPacemakerUsername sqlPacemakerUsername or {@code null} for none
    */
   public Pacemaker setSqlPacemakerUsername(java.lang.String sqlPacemakerUsername) {

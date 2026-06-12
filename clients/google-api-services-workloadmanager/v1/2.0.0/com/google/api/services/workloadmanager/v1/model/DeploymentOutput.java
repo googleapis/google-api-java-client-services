@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for output of deployment resource
+ * Message for output of deployment resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class DeploymentOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * name of the resource
+   * Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * type of the resource
+   * Type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * name of the resource
+   * Name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +52,7 @@ public final class DeploymentOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * name of the resource
+   * Name of the resource.
    * @param name name or {@code null} for none
    */
   public DeploymentOutput setName(java.lang.String name) {
@@ -61,7 +61,7 @@ public final class DeploymentOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * type of the resource
+   * Type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +69,7 @@ public final class DeploymentOutput extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * type of the resource
+   * Type of the resource.
    * @param type type or {@code null} for none
    */
   public DeploymentOutput setType(java.lang.String type) {

@@ -31,50 +31,50 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Actuation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Actuation output
+   * Output only. Actuation output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActuationOutput actuationOutput;
 
   /**
-   * Output only. [Output only] Deployment output
+   * Output only. Deployment output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DeploymentOutput> deploymentOutput;
 
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. End time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The name of actuation resource. The format is
-   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}
+   * The name of the actuation resource. The format is
+   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. Start time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. [Output only] Actuation state
+   * Output only. Actuation state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Actuation output
+   * Output only. Actuation output.
    * @return value or {@code null} for none
    */
   public ActuationOutput getActuationOutput() {
@@ -82,7 +82,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Actuation output
+   * Output only. Actuation output.
    * @param actuationOutput actuationOutput or {@code null} for none
    */
   public Actuation setActuationOutput(ActuationOutput actuationOutput) {
@@ -91,7 +91,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Deployment output
+   * Output only. Deployment output.
    * @return value or {@code null} for none
    */
   public java.util.List<DeploymentOutput> getDeploymentOutput() {
@@ -99,7 +99,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Deployment output
+   * Output only. Deployment output.
    * @param deploymentOutput deploymentOutput or {@code null} for none
    */
   public Actuation setDeploymentOutput(java.util.List<DeploymentOutput> deploymentOutput) {
@@ -108,7 +108,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. End time stamp.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -116,7 +116,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] End time stamp
+   * Output only. End time stamp.
    * @param endTime endTime or {@code null} for none
    */
   public Actuation setEndTime(String endTime) {
@@ -125,8 +125,8 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of actuation resource. The format is
-   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}
+   * The name of the actuation resource. The format is
+   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -134,8 +134,8 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of actuation resource. The format is
-   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}
+   * The name of the actuation resource. The format is
+   * projects/{project}/locations/{location}/deployments/{deployment}/actuations/{actuation}.
    * @param name name or {@code null} for none
    */
   public Actuation setName(java.lang.String name) {
@@ -144,7 +144,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. Start time stamp.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -152,7 +152,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Start time stamp
+   * Output only. Start time stamp.
    * @param startTime startTime or {@code null} for none
    */
   public Actuation setStartTime(String startTime) {
@@ -161,7 +161,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Actuation state
+   * Output only. Actuation state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -169,7 +169,7 @@ public final class Actuation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Actuation state
+   * Output only. Actuation state.
    * @param state state or {@code null} for none
    */
   public Actuation setState(java.lang.String state) {

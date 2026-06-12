@@ -17,9 +17,9 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * In order to align with Infra Manager dependency, we create the same TerraformVariable message to
- * represent a Terraform input variable, by following Infra Manager's API documentation:
- * https://cloud.google.com/infrastructure-manager/docs/reference/rest A Terraform input variable.
+ * In order to align with the Infra Manager dependency, we create the same TerraformVariable message
+ * to represent a Terraform input variable, by following Infra Manager's API documentation:
+ * https://cloud.google.com/infrastructure-manager/docs/reference/rest. A Terraform input variable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:

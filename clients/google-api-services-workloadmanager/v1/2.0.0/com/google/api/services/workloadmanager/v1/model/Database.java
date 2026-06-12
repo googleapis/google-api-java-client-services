@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Database details
+ * Database details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,86 +30,86 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
 
   /**
-   * Optional. only useful for Linux High Availability setup
+   * Optional. Only useful for Linux High Availability setup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String floatingIpAddress;
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * Optional. the name of a secondary-sole-tenant node/node group
+   * Optional. The name of a secondary-sole-tenant node/node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondarySoleTenantNode;
 
   /**
-   * Optional. the type of a secondary-sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a secondary-sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondarySoleTenantNodeType;
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretManagerSecret;
 
   /**
-   * Required. whether simultaneous multithreading is enabled or not
+   * Required. Whether simultaneous multithreading is enabled or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean smt;
 
   /**
-   * Optional. the name of a primary sole-tenant node/node group
+   * Optional. The name of a primary sole-tenant node/node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String soleTenantNode;
 
   /**
-   * Optional. the type of a primary sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a primary sole-tenant node/node group. E.g., compute.googleapis.com/node-
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String soleTenantNodeType;
 
   /**
-   * Required. whether to have TempDB on local SSD
+   * Required. Whether to have TempDB on local SSD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean tempdbOnSsd;
 
   /**
-   * Required. SHARED or SOLE_TENANT
+   * Required. SHARED or SOLE_TENANT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tenancyModel;
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -117,7 +117,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. disk_type
+   * Required. Disk type.
    * @param diskType diskType or {@code null} for none
    */
   public Database setDiskType(java.lang.String diskType) {
@@ -126,7 +126,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. only useful for Linux High Availability setup
+   * Optional. Only useful for Linux High Availability setup.
    * @return value or {@code null} for none
    */
   public java.lang.String getFloatingIpAddress() {
@@ -134,7 +134,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. only useful for Linux High Availability setup
+   * Optional. Only useful for Linux High Availability setup.
    * @param floatingIpAddress floatingIpAddress or {@code null} for none
    */
   public Database setFloatingIpAddress(java.lang.String floatingIpAddress) {
@@ -143,7 +143,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -151,7 +151,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. machine type
+   * Required. Machine type.
    * @param machineType machineType or {@code null} for none
    */
   public Database setMachineType(java.lang.String machineType) {
@@ -160,7 +160,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the name of a secondary-sole-tenant node/node group
+   * Optional. The name of a secondary-sole-tenant node/node group.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondarySoleTenantNode() {
@@ -168,7 +168,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the name of a secondary-sole-tenant node/node group
+   * Optional. The name of a secondary-sole-tenant node/node group.
    * @param secondarySoleTenantNode secondarySoleTenantNode or {@code null} for none
    */
   public Database setSecondarySoleTenantNode(java.lang.String secondarySoleTenantNode) {
@@ -177,8 +177,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the type of a secondary-sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a secondary-sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondarySoleTenantNodeType() {
@@ -186,8 +186,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the type of a secondary-sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a secondary-sole-tenant node/node group. E.g.,
+   * compute.googleapis.com/node-name.
    * @param secondarySoleTenantNodeType secondarySoleTenantNodeType or {@code null} for none
    */
   public Database setSecondarySoleTenantNodeType(java.lang.String secondarySoleTenantNodeType) {
@@ -196,7 +196,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretManagerSecret() {
@@ -204,7 +204,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. secret_manager_secret
+   * Required. Secret Manager secret.
    * @param secretManagerSecret secretManagerSecret or {@code null} for none
    */
   public Database setSecretManagerSecret(java.lang.String secretManagerSecret) {
@@ -213,7 +213,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. whether simultaneous multithreading is enabled or not
+   * Required. Whether simultaneous multithreading is enabled or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSmt() {
@@ -221,7 +221,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. whether simultaneous multithreading is enabled or not
+   * Required. Whether simultaneous multithreading is enabled or not.
    * @param smt smt or {@code null} for none
    */
   public Database setSmt(java.lang.Boolean smt) {
@@ -230,7 +230,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the name of a primary sole-tenant node/node group
+   * Optional. The name of a primary sole-tenant node/node group.
    * @return value or {@code null} for none
    */
   public java.lang.String getSoleTenantNode() {
@@ -238,7 +238,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the name of a primary sole-tenant node/node group
+   * Optional. The name of a primary sole-tenant node/node group.
    * @param soleTenantNode soleTenantNode or {@code null} for none
    */
   public Database setSoleTenantNode(java.lang.String soleTenantNode) {
@@ -247,8 +247,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the type of a primary sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a primary sole-tenant node/node group. E.g., compute.googleapis.com/node-
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSoleTenantNodeType() {
@@ -256,8 +256,8 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. the type of a primary sole-tenant node/node group e.g. compute.googleapis.com/node-
-   * name
+   * Optional. The type of a primary sole-tenant node/node group. E.g., compute.googleapis.com/node-
+   * name.
    * @param soleTenantNodeType soleTenantNodeType or {@code null} for none
    */
   public Database setSoleTenantNodeType(java.lang.String soleTenantNodeType) {
@@ -266,7 +266,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. whether to have TempDB on local SSD
+   * Required. Whether to have TempDB on local SSD.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTempdbOnSsd() {
@@ -274,7 +274,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. whether to have TempDB on local SSD
+   * Required. Whether to have TempDB on local SSD.
    * @param tempdbOnSsd tempdbOnSsd or {@code null} for none
    */
   public Database setTempdbOnSsd(java.lang.Boolean tempdbOnSsd) {
@@ -283,7 +283,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. SHARED or SOLE_TENANT
+   * Required. SHARED or SOLE_TENANT.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenancyModel() {
@@ -291,7 +291,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. SHARED or SOLE_TENANT
+   * Required. SHARED or SOLE_TENANT.
    * @param tenancyModel tenancyModel or {@code null} for none
    */
   public Database setTenancyModel(java.lang.String tenancyModel) {

@@ -121,6 +121,14 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.lang.String unitKind;
 
   /**
+   * Optional. Settings for controlling the pacing of rollouts i.e. the number of units to be rolled
+   * out in parallel in a region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UnitUpdatePacing unitUpdatePacing;
+
+  /**
    * Output only. The timestamp when the resource was last updated. Any change to the resource made
    * by users must refresh this value. Changes to a resource made by the service should refresh this
    * value.
@@ -342,6 +350,25 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    */
   public RolloutKind setUnitKind(java.lang.String unitKind) {
     this.unitKind = unitKind;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for controlling the pacing of rollouts i.e. the number of units to be rolled
+   * out in parallel in a region.
+   * @return value or {@code null} for none
+   */
+  public UnitUpdatePacing getUnitUpdatePacing() {
+    return unitUpdatePacing;
+  }
+
+  /**
+   * Optional. Settings for controlling the pacing of rollouts i.e. the number of units to be rolled
+   * out in parallel in a region.
+   * @param unitUpdatePacing unitUpdatePacing or {@code null} for none
+   */
+  public RolloutKind setUnitUpdatePacing(UnitUpdatePacing unitUpdatePacing) {
+    this.unitUpdatePacing = unitUpdatePacing;
     return this;
   }
 

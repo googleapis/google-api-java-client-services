@@ -88,7 +88,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   private AgentGatewayNetworkConfig networkConfig;
 
   /**
-   * Required. List of protocols supported by an Agent Gateway
+   * Optional. Deprecated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of protocols supported by an Agent Gateway
+   * Optional. Deprecated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProtocols() {
@@ -266,7 +266,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of protocols supported by an Agent Gateway
+   * Optional. Deprecated.
    * @param protocols protocols or {@code null} for none
    */
   public AgentGateway setProtocols(java.util.List<java.lang.String> protocols) {

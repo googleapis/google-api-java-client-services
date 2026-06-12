@@ -32,7 +32,9 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * Optional. Output only. Deprecated: The Google Maps contextual widget behavior in Grounding with
+   * Google Maps is being deprecated; this field is planned for removal and will no longer be
+   * populated once removed. A token that can be used to render a Google Maps widget with the
    * contextual data. This field is populated only when the grounding source is Google Maps.
    * The value may be {@code null}.
    */
@@ -110,7 +112,9 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   private java.util.List<java.lang.String> webSearchQueries;
 
   /**
-   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * Optional. Output only. Deprecated: The Google Maps contextual widget behavior in Grounding with
+   * Google Maps is being deprecated; this field is planned for removal and will no longer be
+   * populated once removed. A token that can be used to render a Google Maps widget with the
    * contextual data. This field is populated only when the grounding source is Google Maps.
    * @return value or {@code null} for none
    */
@@ -119,7 +123,9 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   }
 
   /**
-   * Optional. Output only. A token that can be used to render a Google Maps widget with the
+   * Optional. Output only. Deprecated: The Google Maps contextual widget behavior in Grounding with
+   * Google Maps is being deprecated; this field is planned for removal and will no longer be
+   * populated once removed. A token that can be used to render a Google Maps widget with the
    * contextual data. This field is populated only when the grounding source is Google Maps.
    * @param googleMapsWidgetContextToken googleMapsWidgetContextToken or {@code null} for none
    */

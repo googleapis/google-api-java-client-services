@@ -101,6 +101,20 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
   private String timeBinSize;
 
   /**
+   * The maximum value for the x-axis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double xMax;
+
+  /**
+   * The minimum value for the x-axis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double xMin;
+
+  /**
    * Required. For widgets that use SQL queries, set the value to the name of the column in the
    * results table whose data is charted. For a histogram that uses a time series query, set the
    * value of this field to metric_value.
@@ -261,6 +275,40 @@ public final class Dimension extends com.google.api.client.json.GenericJson {
    */
   public Dimension setTimeBinSize(String timeBinSize) {
     this.timeBinSize = timeBinSize;
+    return this;
+  }
+
+  /**
+   * The maximum value for the x-axis.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getXMax() {
+    return xMax;
+  }
+
+  /**
+   * The maximum value for the x-axis.
+   * @param xMax xMax or {@code null} for none
+   */
+  public Dimension setXMax(java.lang.Double xMax) {
+    this.xMax = xMax;
+    return this;
+  }
+
+  /**
+   * The minimum value for the x-axis.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getXMin() {
+    return xMin;
+  }
+
+  /**
+   * The minimum value for the x-axis.
+   * @param xMin xMin or {@code null} for none
+   */
+  public Dimension setXMin(java.lang.Double xMin) {
+    this.xMin = xMin;
     return this;
   }
 

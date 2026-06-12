@@ -77,6 +77,14 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
   private java.lang.String timeSeriesQueryLanguage;
 
   /**
+   * Optional. Preview: Query for traces. This is a preview feature and may be subject to change
+   * before final release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TraceQuery traceQuery;
+
+  /**
    * The unit of data contained in fetched time series. If non-empty, this unit will override any
    * unit that accompanies fetched data. The format is the same as the unit
    * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in
@@ -193,6 +201,25 @@ public final class TimeSeriesQuery extends com.google.api.client.json.GenericJso
    */
   public TimeSeriesQuery setTimeSeriesQueryLanguage(java.lang.String timeSeriesQueryLanguage) {
     this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
+    return this;
+  }
+
+  /**
+   * Optional. Preview: Query for traces. This is a preview feature and may be subject to change
+   * before final release.
+   * @return value or {@code null} for none
+   */
+  public TraceQuery getTraceQuery() {
+    return traceQuery;
+  }
+
+  /**
+   * Optional. Preview: Query for traces. This is a preview feature and may be subject to change
+   * before final release.
+   * @param traceQuery traceQuery or {@code null} for none
+   */
+  public TimeSeriesQuery setTraceQuery(TraceQuery traceQuery) {
+    this.traceQuery = traceQuery;
     return this;
   }
 

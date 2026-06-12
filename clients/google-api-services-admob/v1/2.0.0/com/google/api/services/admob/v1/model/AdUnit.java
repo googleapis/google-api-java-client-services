@@ -53,8 +53,8 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> adTypes;
 
   /**
-   * The externally visible ID of the ad unit which can be used to integrate with the AdMob SDK.
-   * This is a read only property. Example: ca-app-pub-9876543210987654/0123456789
+   * The externally visible ID of the ad unit which can be used to integrate with AdMob. This is a
+   * read only property. Example: ca-app-pub-9876543210987654/0123456789
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The externally visible ID of the ad unit which can be used to integrate with the AdMob SDK.
-   * This is a read only property. Example: ca-app-pub-9876543210987654/0123456789
+   * The externally visible ID of the ad unit which can be used to integrate with AdMob. This is a
+   * read only property. Example: ca-app-pub-9876543210987654/0123456789
    * @return value or {@code null} for none
    */
   public java.lang.String getAdUnitId() {
@@ -146,8 +146,8 @@ public final class AdUnit extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The externally visible ID of the ad unit which can be used to integrate with the AdMob SDK.
-   * This is a read only property. Example: ca-app-pub-9876543210987654/0123456789
+   * The externally visible ID of the ad unit which can be used to integrate with AdMob. This is a
+   * read only property. Example: ca-app-pub-9876543210987654/0123456789
    * @param adUnitId adUnitId or {@code null} for none
    */
   public AdUnit setAdUnitId(java.lang.String adUnitId) {

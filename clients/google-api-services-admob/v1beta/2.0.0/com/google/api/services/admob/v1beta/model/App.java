@@ -37,8 +37,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.String appApprovalState;
 
   /**
-   * The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is
-   * a read only property. Example: ca-app-pub-9876543210987654~0123456789
+   * The externally visible ID of the app which can be used to integrate with AdMob. This is a read
+   * only property. Example: ca-app-pub-9876543210987654~0123456789
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +94,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is
-   * a read only property. Example: ca-app-pub-9876543210987654~0123456789
+   * The externally visible ID of the app which can be used to integrate with AdMob. This is a read
+   * only property. Example: ca-app-pub-9876543210987654~0123456789
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -103,8 +103,8 @@ public final class App extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is
-   * a read only property. Example: ca-app-pub-9876543210987654~0123456789
+   * The externally visible ID of the app which can be used to integrate with AdMob. This is a read
+   * only property. Example: ca-app-pub-9876543210987654~0123456789
    * @param appId appId or {@code null} for none
    */
   public App setAppId(java.lang.String appId) {

@@ -80,6 +80,13 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   private java.lang.String maintenanceVersion;
 
   /**
+   * Optional. List of next available maintenance versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> nextAvailableMaintenanceVersions;
+
+  /**
    * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
    * generates and publishes upcoming maintenance window.
    * The value may be {@code null}.
@@ -190,6 +197,23 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceVersion(java.lang.String maintenanceVersion) {
     this.maintenanceVersion = maintenanceVersion;
+    return this;
+  }
+
+  /**
+   * Optional. List of next available maintenance versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNextAvailableMaintenanceVersions() {
+    return nextAvailableMaintenanceVersions;
+  }
+
+  /**
+   * Optional. List of next available maintenance versions.
+   * @param nextAvailableMaintenanceVersions nextAvailableMaintenanceVersions or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setNextAvailableMaintenanceVersions(java.util.List<java.lang.String> nextAvailableMaintenanceVersions) {
+    this.nextAvailableMaintenanceVersions = nextAvailableMaintenanceVersions;
     return this;
   }
 

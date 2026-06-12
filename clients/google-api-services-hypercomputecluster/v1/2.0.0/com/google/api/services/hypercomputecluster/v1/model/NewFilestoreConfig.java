@@ -53,7 +53,7 @@ public final class NewFilestoreConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. Name of the Filestore instance to create, in the format
-   * `projects/{project}/locations/{location}/instances/{instance}`
+   * `projects/{project}/locations/{location}/instances/{instance}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class NewFilestoreConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. Name of the Filestore instance to create, in the format
-   * `projects/{project}/locations/{location}/instances/{instance}`
+   * `projects/{project}/locations/{location}/instances/{instance}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilestore() {
@@ -121,7 +121,7 @@ public final class NewFilestoreConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. Name of the Filestore instance to create, in the format
-   * `projects/{project}/locations/{location}/instances/{instance}`
+   * `projects/{project}/locations/{location}/instances/{instance}`.
    * @param filestore filestore or {@code null} for none
    */
   public NewFilestoreConfig setFilestore(java.lang.String filestore) {

@@ -74,6 +74,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String ageGroup;
 
   /**
+   * The amenity features for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> amenityFeature;
+
+  /**
    * A safeguard in the [automated discounts] (https://support.google.com/merchants/answer/10295759)
    * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
    * ensuring that discounts on business offers do not fall below this value, thereby preserving the
@@ -254,6 +261,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private String disclosureDate;
+
+  /**
+   * The display address of the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisplayAddress displayAddress;
 
   /**
    * An identifier for an item for dynamic remarketing campaigns.
@@ -498,6 +512,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String itemGroupTitle;
 
   /**
+   * The latitude of the property. The value must be between -90 (inclusive) and 90 (inclusive), up
+   * to 6 decimal places.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double latitude;
+
+  /**
    * Additional URLs of lifestyle images of the item, used to explicitly identify images that
    * showcase your item in a real-world context. See the [Help Center
    * article](https://support.google.com/merchants/answer/9103186) for more information.
@@ -520,6 +542,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String linkTemplate;
+
+  /**
+   * The longitude of the property. The value must be between -180 (inclusive) and 180 (inclusive),
+   * up to 6 decimal places.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double longitude;
 
   /**
    * Loyalty points that users receive after purchasing the item. Japan only.
@@ -643,6 +673,37 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Long multipack;
 
   /**
+   * The neighborhood (locality) of the property, such as `Wallingford`, `Greenwood`, etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String neighborhood;
+
+  /**
+   * The number of bathrooms in the property. The value must be greater than 0 and a multiple of
+   * 0.5.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double numberOfBathrooms;
+
+  /**
+   * The number of bedrooms in the property. The value must be greater than or equal to 0 and a
+   * multiple of 1.0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double numberOfBedrooms;
+
+  /**
+   * The number of units available for a specific floor plan of the property. The value must be
+   * greater than 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long numberOfUnits;
+
+  /**
    * The item's [pattern](https://support.google.com/merchants/answer/6324483). For example, polka
    * dots.
    * The value may be {@code null}.
@@ -657,6 +718,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String pause;
+
+  /**
+   * The pet policy for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PetPolicy petPolicy;
 
   /**
    * Optional. The [pickup cost](https://support.google.com/merchants/answer/16988704) for an item
@@ -702,6 +770,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductDetail> productDetails;
+
+  /**
+   * The product fee for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ProductFee> productFee;
 
   /**
    * The height of the product in the units provided. The value must be between 0 (exclusive) and
@@ -757,6 +832,20 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> promotionIds;
+
+  /**
+   * The name of the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String propertyName;
+
+  /**
+   * The type of property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String propertyType;
 
   /**
    * Optional. Contains user-, merchant-, and manufacturer-authored [questions and
@@ -878,6 +967,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> shoppingAdsExcludedCountries;
 
   /**
+   * The short title of the item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shortTitle;
+
+  /**
    * Size of the item. Only one value is allowed. For variants with different sizes, insert a
    * separate product for each size with the same `itemGroupId` value, see
    * [Size](https://support.google.com/merchants/answer/6324492).
@@ -902,6 +998,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sizeTypes;
+
+  /**
+   * The specialty housing type for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String specialtyHousingType;
 
   /**
    * Structured description, for algorithmically (AI)-generated descriptions.
@@ -956,6 +1059,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String trim;
 
   /**
+   * The unit area of the property, such as `1000 sqft`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UnitArea unitArea;
+
+  /**
    * The preference of the denominator of the unit price.
    * The value may be {@code null}.
    */
@@ -968,6 +1078,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private UnitPricingMeasure unitPricingMeasure;
+
+  /**
+   * The utilities included for the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> utilitiesIncluded;
 
   /**
    * Optional. Contains the [list of all variant-identifying
@@ -1164,6 +1281,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setAgeGroup(java.lang.String ageGroup) {
     this.ageGroup = ageGroup;
+    return this;
+  }
+
+  /**
+   * The amenity features for the property.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAmenityFeature() {
+    return amenityFeature;
+  }
+
+  /**
+   * The amenity features for the property.
+   * @param amenityFeature amenityFeature or {@code null} for none
+   */
+  public ProductAttributes setAmenityFeature(java.util.List<java.lang.String> amenityFeature) {
+    this.amenityFeature = amenityFeature;
     return this;
   }
 
@@ -1570,6 +1704,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setDisclosureDate(String disclosureDate) {
     this.disclosureDate = disclosureDate;
+    return this;
+  }
+
+  /**
+   * The display address of the property.
+   * @return value or {@code null} for none
+   */
+  public DisplayAddress getDisplayAddress() {
+    return displayAddress;
+  }
+
+  /**
+   * The display address of the property.
+   * @param displayAddress displayAddress or {@code null} for none
+   */
+  public ProductAttributes setDisplayAddress(DisplayAddress displayAddress) {
+    this.displayAddress = displayAddress;
     return this;
   }
 
@@ -2118,6 +2269,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The latitude of the property. The value must be between -90 (inclusive) and 90 (inclusive), up
+   * to 6 decimal places.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLatitude() {
+    return latitude;
+  }
+
+  /**
+   * The latitude of the property. The value must be between -90 (inclusive) and 90 (inclusive), up
+   * to 6 decimal places.
+   * @param latitude latitude or {@code null} for none
+   */
+  public ProductAttributes setLatitude(java.lang.Double latitude) {
+    this.latitude = latitude;
+    return this;
+  }
+
+  /**
    * Additional URLs of lifestyle images of the item, used to explicitly identify images that
    * showcase your item in a real-world context. See the [Help Center
    * article](https://support.google.com/merchants/answer/9103186) for more information.
@@ -2171,6 +2341,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setLinkTemplate(java.lang.String linkTemplate) {
     this.linkTemplate = linkTemplate;
+    return this;
+  }
+
+  /**
+   * The longitude of the property. The value must be between -180 (inclusive) and 180 (inclusive),
+   * up to 6 decimal places.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLongitude() {
+    return longitude;
+  }
+
+  /**
+   * The longitude of the property. The value must be between -180 (inclusive) and 180 (inclusive),
+   * up to 6 decimal places.
+   * @param longitude longitude or {@code null} for none
+   */
+  public ProductAttributes setLongitude(java.lang.Double longitude) {
+    this.longitude = longitude;
     return this;
   }
 
@@ -2450,6 +2639,80 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The neighborhood (locality) of the property, such as `Wallingford`, `Greenwood`, etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNeighborhood() {
+    return neighborhood;
+  }
+
+  /**
+   * The neighborhood (locality) of the property, such as `Wallingford`, `Greenwood`, etc.
+   * @param neighborhood neighborhood or {@code null} for none
+   */
+  public ProductAttributes setNeighborhood(java.lang.String neighborhood) {
+    this.neighborhood = neighborhood;
+    return this;
+  }
+
+  /**
+   * The number of bathrooms in the property. The value must be greater than 0 and a multiple of
+   * 0.5.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getNumberOfBathrooms() {
+    return numberOfBathrooms;
+  }
+
+  /**
+   * The number of bathrooms in the property. The value must be greater than 0 and a multiple of
+   * 0.5.
+   * @param numberOfBathrooms numberOfBathrooms or {@code null} for none
+   */
+  public ProductAttributes setNumberOfBathrooms(java.lang.Double numberOfBathrooms) {
+    this.numberOfBathrooms = numberOfBathrooms;
+    return this;
+  }
+
+  /**
+   * The number of bedrooms in the property. The value must be greater than or equal to 0 and a
+   * multiple of 1.0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getNumberOfBedrooms() {
+    return numberOfBedrooms;
+  }
+
+  /**
+   * The number of bedrooms in the property. The value must be greater than or equal to 0 and a
+   * multiple of 1.0.
+   * @param numberOfBedrooms numberOfBedrooms or {@code null} for none
+   */
+  public ProductAttributes setNumberOfBedrooms(java.lang.Double numberOfBedrooms) {
+    this.numberOfBedrooms = numberOfBedrooms;
+    return this;
+  }
+
+  /**
+   * The number of units available for a specific floor plan of the property. The value must be
+   * greater than 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNumberOfUnits() {
+    return numberOfUnits;
+  }
+
+  /**
+   * The number of units available for a specific floor plan of the property. The value must be
+   * greater than 0.
+   * @param numberOfUnits numberOfUnits or {@code null} for none
+   */
+  public ProductAttributes setNumberOfUnits(java.lang.Long numberOfUnits) {
+    this.numberOfUnits = numberOfUnits;
+    return this;
+  }
+
+  /**
    * The item's [pattern](https://support.google.com/merchants/answer/6324483). For example, polka
    * dots.
    * @return value or {@code null} for none
@@ -2484,6 +2747,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setPause(java.lang.String pause) {
     this.pause = pause;
+    return this;
+  }
+
+  /**
+   * The pet policy for the property.
+   * @return value or {@code null} for none
+   */
+  public PetPolicy getPetPolicy() {
+    return petPolicy;
+  }
+
+  /**
+   * The pet policy for the property.
+   * @param petPolicy petPolicy or {@code null} for none
+   */
+  public ProductAttributes setPetPolicy(PetPolicy petPolicy) {
+    this.petPolicy = petPolicy;
     return this;
   }
 
@@ -2592,6 +2872,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setProductDetails(java.util.List<ProductDetail> productDetails) {
     this.productDetails = productDetails;
+    return this;
+  }
+
+  /**
+   * The product fee for the property.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ProductFee> getProductFee() {
+    return productFee;
+  }
+
+  /**
+   * The product fee for the property.
+   * @param productFee productFee or {@code null} for none
+   */
+  public ProductAttributes setProductFee(java.util.List<ProductFee> productFee) {
+    this.productFee = productFee;
     return this;
   }
 
@@ -2723,6 +3020,40 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setPromotionIds(java.util.List<java.lang.String> promotionIds) {
     this.promotionIds = promotionIds;
+    return this;
+  }
+
+  /**
+   * The name of the property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPropertyName() {
+    return propertyName;
+  }
+
+  /**
+   * The name of the property.
+   * @param propertyName propertyName or {@code null} for none
+   */
+  public ProductAttributes setPropertyName(java.lang.String propertyName) {
+    this.propertyName = propertyName;
+    return this;
+  }
+
+  /**
+   * The type of property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPropertyType() {
+    return propertyType;
+  }
+
+  /**
+   * The type of property.
+   * @param propertyType propertyType or {@code null} for none
+   */
+  public ProductAttributes setPropertyType(java.lang.String propertyType) {
+    this.propertyType = propertyType;
     return this;
   }
 
@@ -3010,6 +3341,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The short title of the item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShortTitle() {
+    return shortTitle;
+  }
+
+  /**
+   * The short title of the item.
+   * @param shortTitle shortTitle or {@code null} for none
+   */
+  public ProductAttributes setShortTitle(java.lang.String shortTitle) {
+    this.shortTitle = shortTitle;
+    return this;
+  }
+
+  /**
    * Size of the item. Only one value is allowed. For variants with different sizes, insert a
    * separate product for each size with the same `itemGroupId` value, see
    * [Size](https://support.google.com/merchants/answer/6324492).
@@ -3067,6 +3415,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setSizeTypes(java.util.List<java.lang.String> sizeTypes) {
     this.sizeTypes = sizeTypes;
+    return this;
+  }
+
+  /**
+   * The specialty housing type for the property.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpecialtyHousingType() {
+    return specialtyHousingType;
+  }
+
+  /**
+   * The specialty housing type for the property.
+   * @param specialtyHousingType specialtyHousingType or {@code null} for none
+   */
+  public ProductAttributes setSpecialtyHousingType(java.lang.String specialtyHousingType) {
+    this.specialtyHousingType = specialtyHousingType;
     return this;
   }
 
@@ -3196,6 +3561,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The unit area of the property, such as `1000 sqft`.
+   * @return value or {@code null} for none
+   */
+  public UnitArea getUnitArea() {
+    return unitArea;
+  }
+
+  /**
+   * The unit area of the property, such as `1000 sqft`.
+   * @param unitArea unitArea or {@code null} for none
+   */
+  public ProductAttributes setUnitArea(UnitArea unitArea) {
+    this.unitArea = unitArea;
+    return this;
+  }
+
+  /**
    * The preference of the denominator of the unit price.
    * @return value or {@code null} for none
    */
@@ -3226,6 +3608,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setUnitPricingMeasure(UnitPricingMeasure unitPricingMeasure) {
     this.unitPricingMeasure = unitPricingMeasure;
+    return this;
+  }
+
+  /**
+   * The utilities included for the property.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUtilitiesIncluded() {
+    return utilitiesIncluded;
+  }
+
+  /**
+   * The utilities included for the property.
+   * @param utilitiesIncluded utilitiesIncluded or {@code null} for none
+   */
+  public ProductAttributes setUtilitiesIncluded(java.util.List<java.lang.String> utilitiesIncluded) {
+    this.utilitiesIncluded = utilitiesIncluded;
     return this;
   }
 

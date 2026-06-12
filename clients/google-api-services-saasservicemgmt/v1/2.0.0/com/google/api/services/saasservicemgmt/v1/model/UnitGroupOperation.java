@@ -48,20 +48,6 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
   private String createTime;
 
   /**
-   * Optional. Represents a deprovision operation on a UnitGroup.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private DeprovisionUnitGroup deprovisionUnitGroup;
-
-  /**
-   * Optional. Represents a detach operation on a UnitGroup.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private DetachUnitGroup detachUnitGroup;
-
-  /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
    * can be used to confirm that the client and server agree on the ordering of a resource being
    * written.
@@ -85,20 +71,6 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. Represents a provision operation on a UnitGroup.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ProvisionUnitGroup provisionUnitGroup;
-
-  /**
-   * Optional. Tier represents the tier level of the UnitGroupOperation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String tier;
 
   /**
    * Output only. The unique identifier of the resource. UID is unique in the time and space for
@@ -160,40 +132,6 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Represents a deprovision operation on a UnitGroup.
-   * @return value or {@code null} for none
-   */
-  public DeprovisionUnitGroup getDeprovisionUnitGroup() {
-    return deprovisionUnitGroup;
-  }
-
-  /**
-   * Optional. Represents a deprovision operation on a UnitGroup.
-   * @param deprovisionUnitGroup deprovisionUnitGroup or {@code null} for none
-   */
-  public UnitGroupOperation setDeprovisionUnitGroup(DeprovisionUnitGroup deprovisionUnitGroup) {
-    this.deprovisionUnitGroup = deprovisionUnitGroup;
-    return this;
-  }
-
-  /**
-   * Optional. Represents a detach operation on a UnitGroup.
-   * @return value or {@code null} for none
-   */
-  public DetachUnitGroup getDetachUnitGroup() {
-    return detachUnitGroup;
-  }
-
-  /**
-   * Optional. Represents a detach operation on a UnitGroup.
-   * @param detachUnitGroup detachUnitGroup or {@code null} for none
-   */
-  public UnitGroupOperation setDetachUnitGroup(DetachUnitGroup detachUnitGroup) {
-    this.detachUnitGroup = detachUnitGroup;
-    return this;
-  }
-
-  /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
    * can be used to confirm that the client and server agree on the ordering of a resource being
    * written.
@@ -249,40 +187,6 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
    */
   public UnitGroupOperation setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. Represents a provision operation on a UnitGroup.
-   * @return value or {@code null} for none
-   */
-  public ProvisionUnitGroup getProvisionUnitGroup() {
-    return provisionUnitGroup;
-  }
-
-  /**
-   * Optional. Represents a provision operation on a UnitGroup.
-   * @param provisionUnitGroup provisionUnitGroup or {@code null} for none
-   */
-  public UnitGroupOperation setProvisionUnitGroup(ProvisionUnitGroup provisionUnitGroup) {
-    this.provisionUnitGroup = provisionUnitGroup;
-    return this;
-  }
-
-  /**
-   * Optional. Tier represents the tier level of the UnitGroupOperation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTier() {
-    return tier;
-  }
-
-  /**
-   * Optional. Tier represents the tier level of the UnitGroupOperation.
-   * @param tier tier or {@code null} for none
-   */
-  public UnitGroupOperation setTier(java.lang.String tier) {
-    this.tier = tier;
     return this;
   }
 

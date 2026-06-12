@@ -38,6 +38,13 @@ public final class InitiatePushTransferRequest extends com.google.api.client.jso
   private java.lang.String tag;
 
   /**
+   * Optional. If set, validates the request without actually initiating the transfer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Required. The Tag of the new registrar. Can be found at [List of
    * registrars](https://nominet.uk/registrar-list/).
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class InitiatePushTransferRequest extends com.google.api.client.jso
    */
   public InitiatePushTransferRequest setTag(java.lang.String tag) {
     this.tag = tag;
+    return this;
+  }
+
+  /**
+   * Optional. If set, validates the request without actually initiating the transfer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set, validates the request without actually initiating the transfer.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public InitiatePushTransferRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

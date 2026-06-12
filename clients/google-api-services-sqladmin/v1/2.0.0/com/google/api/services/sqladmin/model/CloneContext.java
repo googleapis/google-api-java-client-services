@@ -66,7 +66,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
-   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * connected via private services access for private IP. For example:`projects/my-network-
    * project/global/networks/my-network`. This field is only required for cross-project cloning.
    * The value may be {@code null}.
    */
@@ -213,7 +213,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
-   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * connected via private services access for private IP. For example:`projects/my-network-
    * project/global/networks/my-network`. This field is only required for cross-project cloning.
    * @return value or {@code null} for none
    */
@@ -223,7 +223,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
-   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * connected via private services access for private IP. For example:`projects/my-network-
    * project/global/networks/my-network`. This field is only required for cross-project cloning.
    * @param destinationNetwork destinationNetwork or {@code null} for none
    */

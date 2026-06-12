@@ -63,6 +63,23 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String ipAddress;
 
   /**
+   * Output only. The service connection policy created automatically for the consumer network when
+   * `psc_auto_connection_policy_enabled` is true. It is in the format of:
+   * `projects/{project}/regions/{region}/serviceConnectionPolicies/{policy_id}` The `policy_id` is
+   * in format of `$NETWORK-$RANDOM`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceConnectionPolicy;
+
+  /**
+   * Output only. The status of service connection policy creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceConnectionPolicyCreationResult;
+
+  /**
    * The connection status of the consumer endpoint.
    * The value may be {@code null}.
    */
@@ -142,6 +159,46 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
    */
   public PscAutoConnectionConfig setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * Output only. The service connection policy created automatically for the consumer network when
+   * `psc_auto_connection_policy_enabled` is true. It is in the format of:
+   * `projects/{project}/regions/{region}/serviceConnectionPolicies/{policy_id}` The `policy_id` is
+   * in format of `$NETWORK-$RANDOM`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceConnectionPolicy() {
+    return serviceConnectionPolicy;
+  }
+
+  /**
+   * Output only. The service connection policy created automatically for the consumer network when
+   * `psc_auto_connection_policy_enabled` is true. It is in the format of:
+   * `projects/{project}/regions/{region}/serviceConnectionPolicies/{policy_id}` The `policy_id` is
+   * in format of `$NETWORK-$RANDOM`.
+   * @param serviceConnectionPolicy serviceConnectionPolicy or {@code null} for none
+   */
+  public PscAutoConnectionConfig setServiceConnectionPolicy(java.lang.String serviceConnectionPolicy) {
+    this.serviceConnectionPolicy = serviceConnectionPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. The status of service connection policy creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceConnectionPolicyCreationResult() {
+    return serviceConnectionPolicyCreationResult;
+  }
+
+  /**
+   * Output only. The status of service connection policy creation.
+   * @param serviceConnectionPolicyCreationResult serviceConnectionPolicyCreationResult or {@code null} for none
+   */
+  public PscAutoConnectionConfig setServiceConnectionPolicyCreationResult(java.lang.String serviceConnectionPolicyCreationResult) {
+    this.serviceConnectionPolicyCreationResult = serviceConnectionPolicyCreationResult;
     return this;
   }
 

@@ -17,9 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Information about a message that another message quotes. When you create a message, you can quote
- * messages within the same thread, or quote a root message to create a new root message. However,
- * you can't quote a message reply from a different thread. When you update a message, you can't add
+ * Information about a message that another message quotes. When you update a message, you can't add
  * or replace the `quotedMessageMetadata` field, but you can remove it. For example usage, see
  * [Quote another message](https://developers.google.com/workspace/chat/create-messages#quote-a-
  * message).

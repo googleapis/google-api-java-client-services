@@ -38,7 +38,9 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * A page of the requested spaces.
+   * Deprecated: Please use the new `results` field instead. A page of the requested spaces. This
+   * field will be populated only when `useAdminAccess` is set to `true` and deprecated in favor of
+   * the new `results` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +74,9 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A page of the requested spaces.
+   * Deprecated: Please use the new `results` field instead. A page of the requested spaces. This
+   * field will be populated only when `useAdminAccess` is set to `true` and deprecated in favor of
+   * the new `results` field.
    * @return value or {@code null} for none
    */
   public java.util.List<Space> getSpaces() {
@@ -80,7 +84,9 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * A page of the requested spaces.
+   * Deprecated: Please use the new `results` field instead. A page of the requested spaces. This
+   * field will be populated only when `useAdminAccess` is set to `true` and deprecated in favor of
+   * the new `results` field.
    * @param spaces spaces or {@code null} for none
    */
   public SearchSpacesResponse setSpaces(java.util.List<Space> spaces) {

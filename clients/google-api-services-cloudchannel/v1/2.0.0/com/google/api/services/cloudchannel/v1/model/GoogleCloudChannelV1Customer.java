@@ -79,7 +79,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Optional. Indicate if a customer is attesting about the correctness of provided information.
-   * Only required if creating a GCP Entitlement.
+   * Only required if creating a GCP Entitlement. NOTE: This field will be mandatory for all new GCP
+   * customers starting Aug 31st, 2026 and this field will also be required for all existing
+   * customers purchasing new GCP Entitlements.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +256,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Optional. Indicate if a customer is attesting about the correctness of provided information.
-   * Only required if creating a GCP Entitlement.
+   * Only required if creating a GCP Entitlement. NOTE: This field will be mandatory for all new GCP
+   * customers starting Aug 31st, 2026 and this field will also be required for all existing
+   * customers purchasing new GCP Entitlements.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerAttestationState() {
@@ -263,7 +267,9 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
 
   /**
    * Optional. Indicate if a customer is attesting about the correctness of provided information.
-   * Only required if creating a GCP Entitlement.
+   * Only required if creating a GCP Entitlement. NOTE: This field will be mandatory for all new GCP
+   * customers starting Aug 31st, 2026 and this field will also be required for all existing
+   * customers purchasing new GCP Entitlements.
    * @param customerAttestationState customerAttestationState or {@code null} for none
    */
   public GoogleCloudChannelV1Customer setCustomerAttestationState(java.lang.String customerAttestationState) {

@@ -63,6 +63,13 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> pemCertificateChain;
 
   /**
+   * Output only. Specifies the DNS name to use with PSC service automation for the Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscAutoDnsName;
+
+  /**
    * Output only. The DNS name to use with PSC for the Instance.
    * The value may be {@code null}.
    */
@@ -152,6 +159,23 @@ public final class ConnectionInfo extends com.google.api.client.json.GenericJson
    */
   public ConnectionInfo setPemCertificateChain(java.util.List<java.lang.String> pemCertificateChain) {
     this.pemCertificateChain = pemCertificateChain;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the DNS name to use with PSC service automation for the Instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscAutoDnsName() {
+    return pscAutoDnsName;
+  }
+
+  /**
+   * Output only. Specifies the DNS name to use with PSC service automation for the Instance.
+   * @param pscAutoDnsName pscAutoDnsName or {@code null} for none
+   */
+  public ConnectionInfo setPscAutoDnsName(java.lang.String pscAutoDnsName) {
+    this.pscAutoDnsName = pscAutoDnsName;
     return this;
   }
 

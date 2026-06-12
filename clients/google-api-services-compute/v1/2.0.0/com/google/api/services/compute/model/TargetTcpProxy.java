@@ -63,6 +63,13 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancingScheme;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -186,6 +193,23 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
    */
   public TargetTcpProxy setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancingScheme() {
+    return loadBalancingScheme;
+  }
+
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
+   */
+  public TargetTcpProxy setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
+    this.loadBalancingScheme = loadBalancingScheme;
     return this;
   }
 

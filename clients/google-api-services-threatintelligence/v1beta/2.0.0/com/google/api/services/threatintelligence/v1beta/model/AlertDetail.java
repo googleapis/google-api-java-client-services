@@ -60,6 +60,13 @@ public final class AlertDetail extends com.google.api.client.json.GenericJson {
   private InsiderThreatAlertDetail insiderThreat;
 
   /**
+   * Technology Watchlist alert detail type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetTechnologyAlertDetail targetTechnology;
+
+  /**
    * Data Leak alert detail type.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class AlertDetail extends com.google.api.client.json.GenericJson {
    */
   public AlertDetail setInsiderThreat(InsiderThreatAlertDetail insiderThreat) {
     this.insiderThreat = insiderThreat;
+    return this;
+  }
+
+  /**
+   * Technology Watchlist alert detail type.
+   * @return value or {@code null} for none
+   */
+  public TargetTechnologyAlertDetail getTargetTechnology() {
+    return targetTechnology;
+  }
+
+  /**
+   * Technology Watchlist alert detail type.
+   * @param targetTechnology targetTechnology or {@code null} for none
+   */
+  public AlertDetail setTargetTechnology(TargetTechnologyAlertDetail targetTechnology) {
+    this.targetTechnology = targetTechnology;
     return this;
   }
 

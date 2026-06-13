@@ -61,6 +61,13 @@ public final class FindingDetail extends com.google.api.client.json.GenericJson 
   private InsiderThreatFindingDetail insiderThreat;
 
   /**
+   * Technology Watchlist finding detail type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetTechnologyFindingDetail targetTechnology;
+
+  /**
    * Data Leak finding detail type.
    * @return value or {@code null} for none
    */
@@ -127,6 +134,23 @@ public final class FindingDetail extends com.google.api.client.json.GenericJson 
    */
   public FindingDetail setInsiderThreat(InsiderThreatFindingDetail insiderThreat) {
     this.insiderThreat = insiderThreat;
+    return this;
+  }
+
+  /**
+   * Technology Watchlist finding detail type.
+   * @return value or {@code null} for none
+   */
+  public TargetTechnologyFindingDetail getTargetTechnology() {
+    return targetTechnology;
+  }
+
+  /**
+   * Technology Watchlist finding detail type.
+   * @param targetTechnology targetTechnology or {@code null} for none
+   */
+  public FindingDetail setTargetTechnology(TargetTechnologyFindingDetail targetTechnology) {
+    this.targetTechnology = targetTechnology;
     return this;
   }
 

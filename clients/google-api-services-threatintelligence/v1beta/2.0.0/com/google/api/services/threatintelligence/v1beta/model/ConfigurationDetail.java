@@ -47,6 +47,13 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
   private java.lang.String detailType;
 
   /**
+   * Technology Watchlist detail config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TechnologyWatchListConfig technologyWatchlist;
+
+  /**
    * Customer Profile detail config.
    * @return value or {@code null} for none
    */
@@ -79,6 +86,23 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
    */
   public ConfigurationDetail setDetailType(java.lang.String detailType) {
     this.detailType = detailType;
+    return this;
+  }
+
+  /**
+   * Technology Watchlist detail config.
+   * @return value or {@code null} for none
+   */
+  public TechnologyWatchListConfig getTechnologyWatchlist() {
+    return technologyWatchlist;
+  }
+
+  /**
+   * Technology Watchlist detail config.
+   * @param technologyWatchlist technologyWatchlist or {@code null} for none
+   */
+  public ConfigurationDetail setTechnologyWatchlist(TechnologyWatchListConfig technologyWatchlist) {
+    this.technologyWatchlist = technologyWatchlist;
     return this;
   }
 

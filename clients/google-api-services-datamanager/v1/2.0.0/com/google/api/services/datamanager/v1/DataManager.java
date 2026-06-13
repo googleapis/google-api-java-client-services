@@ -3549,6 +3549,130 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the AdEvents collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DataManager datamanager = new DataManager(...);}
+   *   {@code DataManager.AdEvents.List request = datamanager.adEvents().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AdEvents adEvents() {
+    return new AdEvents();
+  }
+
+  /**
+   * The "adEvents" collection of methods.
+   */
+  public class AdEvents {
+
+    /**
+     * Uploads a list of AdEvent resources to Google Analytics. This feature is only available to
+     * accounts on an allowlist.
+     *
+     * Create a request for the method "adEvents.ingest".
+     *
+     * This request holds the parameters needed by the datamanager server.  After setting any optional
+     * parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.datamanager.v1.model.IngestAdEventsRequest}
+     * @return the request
+     */
+    public Ingest ingest(com.google.api.services.datamanager.v1.model.IngestAdEventsRequest content) throws java.io.IOException {
+      Ingest result = new Ingest(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Ingest extends DataManagerRequest<com.google.api.services.datamanager.v1.model.IngestAdEventsResponse> {
+
+      private static final String REST_PATH = "v1/adEvents:ingest";
+
+      /**
+       * Uploads a list of AdEvent resources to Google Analytics. This feature is only available to
+       * accounts on an allowlist.
+       *
+       * Create a request for the method "adEvents.ingest".
+       *
+       * This request holds the parameters needed by the the datamanager server.  After setting any
+       * optional parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Ingest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.datamanager.v1.model.IngestAdEventsRequest}
+       * @since 1.13
+       */
+      protected Ingest(com.google.api.services.datamanager.v1.model.IngestAdEventsRequest content) {
+        super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.IngestAdEventsResponse.class);
+      }
+
+      @Override
+      public Ingest set$Xgafv(java.lang.String $Xgafv) {
+        return (Ingest) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Ingest setAccessToken(java.lang.String accessToken) {
+        return (Ingest) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Ingest setAlt(java.lang.String alt) {
+        return (Ingest) super.setAlt(alt);
+      }
+
+      @Override
+      public Ingest setCallback(java.lang.String callback) {
+        return (Ingest) super.setCallback(callback);
+      }
+
+      @Override
+      public Ingest setFields(java.lang.String fields) {
+        return (Ingest) super.setFields(fields);
+      }
+
+      @Override
+      public Ingest setKey(java.lang.String key) {
+        return (Ingest) super.setKey(key);
+      }
+
+      @Override
+      public Ingest setOauthToken(java.lang.String oauthToken) {
+        return (Ingest) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Ingest setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Ingest) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Ingest setQuotaUser(java.lang.String quotaUser) {
+        return (Ingest) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Ingest setUploadType(java.lang.String uploadType) {
+        return (Ingest) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Ingest setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Ingest) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Ingest set(String parameterName, Object value) {
+        return (Ingest) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the AudienceMembers collection.
    *
    * <p>The typical use is:</p>

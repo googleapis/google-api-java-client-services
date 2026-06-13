@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Represents a specific account.
+ * Represents a customer account in the partner's system.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -27,32 +27,32 @@ package com.google.api.services.datamanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProductAccount extends com.google.api.client.json.GenericJson {
+public final class PartnerCustomerAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the account. For example, your Google Ads account ID.
+   * Required. The identifier of the customer account in the partner's ID space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountId;
 
   /**
-   * Required. The type of the account. For example, `GOOGLE_ADS`. Either `account_type` or the
-   * deprecated `product` is required. If both are set, the values must match.
+   * Optional. The name of the account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountName;
+
+  /**
+   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
+   * business level accounts, for example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountType;
 
   /**
-   * Deprecated. Use `account_type` instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String product;
-
-  /**
-   * Required. The ID of the account. For example, your Google Ads account ID.
+   * Required. The identifier of the customer account in the partner's ID space.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -60,17 +60,34 @@ public final class ProductAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The ID of the account. For example, your Google Ads account ID.
+   * Required. The identifier of the customer account in the partner's ID space.
    * @param accountId accountId or {@code null} for none
    */
-  public ProductAccount setAccountId(java.lang.String accountId) {
+  public PartnerCustomerAccount setAccountId(java.lang.String accountId) {
     this.accountId = accountId;
     return this;
   }
 
   /**
-   * Required. The type of the account. For example, `GOOGLE_ADS`. Either `account_type` or the
-   * deprecated `product` is required. If both are set, the values must match.
+   * Optional. The name of the account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountName() {
+    return accountName;
+  }
+
+  /**
+   * Optional. The name of the account.
+   * @param accountName accountName or {@code null} for none
+   */
+  public PartnerCustomerAccount setAccountName(java.lang.String accountName) {
+    this.accountName = accountName;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
+   * business level accounts, for example.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountType() {
@@ -78,40 +95,23 @@ public final class ProductAccount extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The type of the account. For example, `GOOGLE_ADS`. Either `account_type` or the
-   * deprecated `product` is required. If both are set, the values must match.
+   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
+   * business level accounts, for example.
    * @param accountType accountType or {@code null} for none
    */
-  public ProductAccount setAccountType(java.lang.String accountType) {
+  public PartnerCustomerAccount setAccountType(java.lang.String accountType) {
     this.accountType = accountType;
     return this;
   }
 
-  /**
-   * Deprecated. Use `account_type` instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProduct() {
-    return product;
-  }
-
-  /**
-   * Deprecated. Use `account_type` instead.
-   * @param product product or {@code null} for none
-   */
-  public ProductAccount setProduct(java.lang.String product) {
-    this.product = product;
-    return this;
+  @Override
+  public PartnerCustomerAccount set(String fieldName, Object value) {
+    return (PartnerCustomerAccount) super.set(fieldName, value);
   }
 
   @Override
-  public ProductAccount set(String fieldName, Object value) {
-    return (ProductAccount) super.set(fieldName, value);
-  }
-
-  @Override
-  public ProductAccount clone() {
-    return (ProductAccount) super.clone();
+  public PartnerCustomerAccount clone() {
+    return (PartnerCustomerAccount) super.clone();
   }
 
 }

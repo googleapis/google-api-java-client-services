@@ -30,6 +30,14 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerLink extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
+   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String featureSet;
+
+  /**
    * Identifier. The name of the partner link. Format:
    * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
    * The value may be {@code null}.
@@ -52,11 +60,46 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   private ProductAccount partnerAccount;
 
   /**
+   * Optional. The customer account in the partner system. This is required for partner links with
+   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartnerCustomerAccount partnerCustomerAccount;
+
+  /**
    * Output only. The partner link ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partnerLinkId;
+
+  /**
+   * Optional. Metadata associated with the partner link. This is optional and only accepted for
+   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartnerLinkMetadata partnerLinkMetadata;
+
+  /**
+   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
+   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFeatureSet() {
+    return featureSet;
+  }
+
+  /**
+   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
+   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
+   * @param featureSet featureSet or {@code null} for none
+   */
+  public PartnerLink setFeatureSet(java.lang.String featureSet) {
+    this.featureSet = featureSet;
+    return this;
+  }
 
   /**
    * Identifier. The name of the partner link. Format:
@@ -112,6 +155,25 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The customer account in the partner system. This is required for partner links with
+   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
+   * @return value or {@code null} for none
+   */
+  public PartnerCustomerAccount getPartnerCustomerAccount() {
+    return partnerCustomerAccount;
+  }
+
+  /**
+   * Optional. The customer account in the partner system. This is required for partner links with
+   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
+   * @param partnerCustomerAccount partnerCustomerAccount or {@code null} for none
+   */
+  public PartnerLink setPartnerCustomerAccount(PartnerCustomerAccount partnerCustomerAccount) {
+    this.partnerCustomerAccount = partnerCustomerAccount;
+    return this;
+  }
+
+  /**
    * Output only. The partner link ID.
    * @return value or {@code null} for none
    */
@@ -125,6 +187,25 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
    */
   public PartnerLink setPartnerLinkId(java.lang.String partnerLinkId) {
     this.partnerLinkId = partnerLinkId;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata associated with the partner link. This is optional and only accepted for
+   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
+   * @return value or {@code null} for none
+   */
+  public PartnerLinkMetadata getPartnerLinkMetadata() {
+    return partnerLinkMetadata;
+  }
+
+  /**
+   * Optional. Metadata associated with the partner link. This is optional and only accepted for
+   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
+   * @param partnerLinkMetadata partnerLinkMetadata or {@code null} for none
+   */
+  public PartnerLink setPartnerLinkMetadata(PartnerLinkMetadata partnerLinkMetadata) {
+    this.partnerLinkMetadata = partnerLinkMetadata;
     return this;
   }
 

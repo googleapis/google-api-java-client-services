@@ -55,7 +55,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
 
   /**
    * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
+   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
+   * deprecated and has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +217,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
 
   /**
    * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
+   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
+   * deprecated and has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailoverCapacity() {
@@ -225,7 +227,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
 
   /**
    * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
+   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
+   * deprecated and has no effect.
    * @param failoverCapacity failoverCapacity or {@code null} for none
    */
   public HaController setFailoverCapacity(java.lang.String failoverCapacity) {

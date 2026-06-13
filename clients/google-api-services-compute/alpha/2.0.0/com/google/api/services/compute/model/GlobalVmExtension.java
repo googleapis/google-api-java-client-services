@@ -30,16 +30,122 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtension extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationTimestamp;
+
+  /**
+   * Output only. [Output Only] An optional textual description of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger id;
+
+  /**
+   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kind;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
+   * Output only. [Output Only] Server-defined URL for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLink;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> versions;
+
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationTimestamp() {
+    return creationTimestamp;
+  }
+
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * @param creationTimestamp creationTimestamp or {@code null} for none
+   */
+  public GlobalVmExtension setCreationTimestamp(java.lang.String creationTimestamp) {
+    this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] An optional textual description of the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. [Output Only] An optional textual description of the resource.
+   * @param description description or {@code null} for none
+   */
+  public GlobalVmExtension setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getId() {
+    return id;
+  }
+
+  /**
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
+   * @param id id or {@code null} for none
+   */
+  public GlobalVmExtension setId(java.math.BigInteger id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtension.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKind() {
+    return kind;
+  }
+
+  /**
+   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtension.
+   * @param kind kind or {@code null} for none
+   */
+  public GlobalVmExtension setKind(java.lang.String kind) {
+    this.kind = kind;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -53,6 +159,23 @@ public final class GlobalVmExtension extends com.google.api.client.json.GenericJ
    */
   public GlobalVmExtension setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Server-defined URL for the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLink() {
+    return selfLink;
+  }
+
+  /**
+   * Output only. [Output Only] Server-defined URL for the resource.
+   * @param selfLink selfLink or {@code null} for none
+   */
+  public GlobalVmExtension setSelfLink(java.lang.String selfLink) {
+    this.selfLink = selfLink;
     return this;
   }
 

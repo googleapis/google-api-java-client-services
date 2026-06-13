@@ -73,6 +73,14 @@ public final class UrlRewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String pathTemplateRewrite;
 
   /**
+   * The regex rewrite to be applied to the URL. Only one ofpathPrefixRewrite, pathTemplateRewrite,
+   * orregexRewrite may be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RegexRewrite regexRewrite;
+
+  /**
    * Before forwarding the request to the selected service, the request's host header is replaced
    * with contents of hostRewrite.
    *
@@ -164,6 +172,25 @@ public final class UrlRewrite extends com.google.api.client.json.GenericJson {
    */
   public UrlRewrite setPathTemplateRewrite(java.lang.String pathTemplateRewrite) {
     this.pathTemplateRewrite = pathTemplateRewrite;
+    return this;
+  }
+
+  /**
+   * The regex rewrite to be applied to the URL. Only one ofpathPrefixRewrite, pathTemplateRewrite,
+   * orregexRewrite may be specified.
+   * @return value or {@code null} for none
+   */
+  public RegexRewrite getRegexRewrite() {
+    return regexRewrite;
+  }
+
+  /**
+   * The regex rewrite to be applied to the URL. Only one ofpathPrefixRewrite, pathTemplateRewrite,
+   * orregexRewrite may be specified.
+   * @param regexRewrite regexRewrite or {@code null} for none
+   */
+  public UrlRewrite setRegexRewrite(RegexRewrite regexRewrite) {
+    this.regexRewrite = regexRewrite;
     return this;
   }
 

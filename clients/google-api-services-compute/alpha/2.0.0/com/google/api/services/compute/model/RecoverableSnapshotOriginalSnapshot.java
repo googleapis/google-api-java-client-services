@@ -45,13 +45,6 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   private java.lang.Boolean autoCreated;
 
   /**
-   * ResourceKey of the resource policy or flow which created this auto snapshot
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String autoCreatedBy;
-
-  /**
    * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name
    * must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for
    * advanced service owners who needs to create separate snapshot chains, for example, for
@@ -111,13 +104,6 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
-
-  /**
-   * Indicates the created snapshot is a full snapshot.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean full;
 
   /**
    * Output only. [Output Only] A list of features to enable on the guest operating system.
@@ -348,10 +334,11 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   private java.lang.Long storageBytes;
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * Output only. [Deprecated] Instead, check the storageBytes field. After snapshot creation, the
+   * storageBytesStatus field is alwaysUP_TO_DATE. [Output Only] An indicator whether storageBytes
+   * is in a stable state or it is being adjusted as a result of shared storage reallocation. This
+   * status can either be unset, meaning the snapshot is being created, or UP_TO_DATE, meaning the
+   * size of the snapshot is up-to-date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -397,23 +384,6 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
    */
   public RecoverableSnapshotOriginalSnapshot setAutoCreated(java.lang.Boolean autoCreated) {
     this.autoCreated = autoCreated;
-    return this;
-  }
-
-  /**
-   * ResourceKey of the resource policy or flow which created this auto snapshot
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAutoCreatedBy() {
-    return autoCreatedBy;
-  }
-
-  /**
-   * ResourceKey of the resource policy or flow which created this auto snapshot
-   * @param autoCreatedBy autoCreatedBy or {@code null} for none
-   */
-  public RecoverableSnapshotOriginalSnapshot setAutoCreatedBy(java.lang.String autoCreatedBy) {
-    this.autoCreatedBy = autoCreatedBy;
     return this;
   }
 
@@ -560,23 +530,6 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
    */
   public RecoverableSnapshotOriginalSnapshot setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
     this.enableConfidentialCompute = enableConfidentialCompute;
-    return this;
-  }
-
-  /**
-   * Indicates the created snapshot is a full snapshot.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFull() {
-    return full;
-  }
-
-  /**
-   * Indicates the created snapshot is a full snapshot.
-   * @param full full or {@code null} for none
-   */
-  public RecoverableSnapshotOriginalSnapshot setFull(java.lang.Boolean full) {
-    this.full = full;
     return this;
   }
 
@@ -1146,10 +1099,11 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * Output only. [Deprecated] Instead, check the storageBytes field. After snapshot creation, the
+   * storageBytesStatus field is alwaysUP_TO_DATE. [Output Only] An indicator whether storageBytes
+   * is in a stable state or it is being adjusted as a result of shared storage reallocation. This
+   * status can either be unset, meaning the snapshot is being created, or UP_TO_DATE, meaning the
+   * size of the snapshot is up-to-date.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBytesStatus() {
@@ -1157,10 +1111,11 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * Output only. [Deprecated] Instead, check the storageBytes field. After snapshot creation, the
+   * storageBytesStatus field is alwaysUP_TO_DATE. [Output Only] An indicator whether storageBytes
+   * is in a stable state or it is being adjusted as a result of shared storage reallocation. This
+   * status can either be unset, meaning the snapshot is being created, or UP_TO_DATE, meaning the
+   * size of the snapshot is up-to-date.
    * @param storageBytesStatus storageBytesStatus or {@code null} for none
    */
   public RecoverableSnapshotOriginalSnapshot setStorageBytesStatus(java.lang.String storageBytesStatus) {

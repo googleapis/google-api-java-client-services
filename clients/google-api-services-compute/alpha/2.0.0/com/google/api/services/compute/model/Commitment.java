@@ -144,6 +144,14 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private CommitmentParams params;
 
   /**
+   * Optional. Used when category is PERSISTENT_DISK. Each entry in the list represents a commitment
+   * to a specific Persistent Disk product type and dimension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PersistentDiskResourceCommitment> persistentDiskResources;
+
+  /**
    * The minimum time duration that you commit to purchasing resources. The plan that you choose
    * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
    * the discount rate that you receive for your resources. Committing to a longer time duration
@@ -509,6 +517,25 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    */
   public Commitment setParams(CommitmentParams params) {
     this.params = params;
+    return this;
+  }
+
+  /**
+   * Optional. Used when category is PERSISTENT_DISK. Each entry in the list represents a commitment
+   * to a specific Persistent Disk product type and dimension.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PersistentDiskResourceCommitment> getPersistentDiskResources() {
+    return persistentDiskResources;
+  }
+
+  /**
+   * Optional. Used when category is PERSISTENT_DISK. Each entry in the list represents a commitment
+   * to a specific Persistent Disk product type and dimension.
+   * @param persistentDiskResources persistentDiskResources or {@code null} for none
+   */
+  public Commitment setPersistentDiskResources(java.util.List<PersistentDiskResourceCommitment> persistentDiskResources) {
+    this.persistentDiskResources = persistentDiskResources;
     return this;
   }
 

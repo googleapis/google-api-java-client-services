@@ -38,6 +38,13 @@ public final class Categories extends com.google.api.client.json.GenericJson {
   private LighthouseCategoryV5 accessibility;
 
   /**
+   * The agentic browsing category, containing all agentic browsing related audits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("agentic-browsing")
+  private LighthouseCategoryV5 agenticBrowsing;
+
+  /**
    * The best practices category, containing all best practices related audits.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class Categories extends com.google.api.client.json.GenericJson {
    */
   public Categories setAccessibility(LighthouseCategoryV5 accessibility) {
     this.accessibility = accessibility;
+    return this;
+  }
+
+  /**
+   * The agentic browsing category, containing all agentic browsing related audits.
+   * @return value or {@code null} for none
+   */
+  public LighthouseCategoryV5 getAgenticBrowsing() {
+    return agenticBrowsing;
+  }
+
+  /**
+   * The agentic browsing category, containing all agentic browsing related audits.
+   * @param agenticBrowsing agenticBrowsing or {@code null} for none
+   */
+  public Categories setAgenticBrowsing(LighthouseCategoryV5 agenticBrowsing) {
+    this.agenticBrowsing = agenticBrowsing;
     return this;
   }
 

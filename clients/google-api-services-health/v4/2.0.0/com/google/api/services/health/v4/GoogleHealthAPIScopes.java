@@ -29,11 +29,17 @@ public class GoogleHealthAPIScopes {
   /** See your Google Health activity and fitness data. */
   public static final String GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY = "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly";
 
+  /** Add activity and fitness data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_ACTIVITY_AND_FITNESS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.writeonly";
+
   /** See your Google Health ECG data. */
   public static final String GOOGLEHEALTH_ECG_READONLY = "https://www.googleapis.com/auth/googlehealth.ecg.readonly";
 
   /** See your Google Health health metrics and measurement data. */
   public static final String GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY = "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly";
+
+  /** Add health metric and measurements data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.writeonly";
 
   /** See your Google Health Irregular Rhythm Notifications data. */
   public static final String GOOGLEHEALTH_IRN_READONLY = "https://www.googleapis.com/auth/googlehealth.irn.readonly";
@@ -41,14 +47,29 @@ public class GoogleHealthAPIScopes {
   /** See exercise GPS location data in Google Health. */
   public static final String GOOGLEHEALTH_LOCATION_READONLY = "https://www.googleapis.com/auth/googlehealth.location.readonly";
 
+  /** Add exercise GPS location data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_LOCATION_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.location.writeonly";
+
+  /** Add nutrition data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_NUTRITION_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.nutrition.writeonly";
+
   /** See your Google Health profile data. */
   public static final String GOOGLEHEALTH_PROFILE_READONLY = "https://www.googleapis.com/auth/googlehealth.profile.readonly";
+
+  /** Add profile data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_PROFILE_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.profile.writeonly";
 
   /** See your Google Health settings. */
   public static final String GOOGLEHEALTH_SETTINGS_READONLY = "https://www.googleapis.com/auth/googlehealth.settings.readonly";
 
+  /** Add settings data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_SETTINGS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.settings.writeonly";
+
   /** See your Google Health sleep data. */
   public static final String GOOGLEHEALTH_SLEEP_READONLY = "https://www.googleapis.com/auth/googlehealth.sleep.readonly";
+
+  /** Add sleep data to Google Health, and edit or delete the data it adds.. */
+  public static final String GOOGLEHEALTH_SLEEP_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.sleep.writeonly";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -59,13 +80,20 @@ public class GoogleHealthAPIScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(GOOGLEHEALTH_ACTIVITY_AND_FITNESS_READONLY);
+    set.add(GOOGLEHEALTH_ACTIVITY_AND_FITNESS_WRITEONLY);
     set.add(GOOGLEHEALTH_ECG_READONLY);
     set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_READONLY);
+    set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_WRITEONLY);
     set.add(GOOGLEHEALTH_IRN_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_READONLY);
+    set.add(GOOGLEHEALTH_LOCATION_WRITEONLY);
+    set.add(GOOGLEHEALTH_NUTRITION_WRITEONLY);
     set.add(GOOGLEHEALTH_PROFILE_READONLY);
+    set.add(GOOGLEHEALTH_PROFILE_WRITEONLY);
     set.add(GOOGLEHEALTH_SETTINGS_READONLY);
+    set.add(GOOGLEHEALTH_SETTINGS_WRITEONLY);
     set.add(GOOGLEHEALTH_SLEEP_READONLY);
+    set.add(GOOGLEHEALTH_SLEEP_WRITEONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

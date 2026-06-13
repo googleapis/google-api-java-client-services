@@ -38,6 +38,17 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   private java.lang.String appEngineInstance;
 
   /**
+   * Optional. The Cloud Run resource to sign the SSH public key for. Expected formats: -
+   * `projects/{project}/locations/{location}/services/{service}` -
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` -
+   * `projects/{project}/locations/{location}/jobs/{job}` -
+   * `projects/{project}/locations/{location}/instances/{instance}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudRunResource;
+
+  /**
    * The Compute instance to sign the SSH public key for. Expected format:
    * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
    * The value may be {@code null}.
@@ -77,6 +88,31 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
    */
   public GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest setAppEngineInstance(java.lang.String appEngineInstance) {
     this.appEngineInstance = appEngineInstance;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud Run resource to sign the SSH public key for. Expected formats: -
+   * `projects/{project}/locations/{location}/services/{service}` -
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` -
+   * `projects/{project}/locations/{location}/jobs/{job}` -
+   * `projects/{project}/locations/{location}/instances/{instance}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudRunResource() {
+    return cloudRunResource;
+  }
+
+  /**
+   * Optional. The Cloud Run resource to sign the SSH public key for. Expected formats: -
+   * `projects/{project}/locations/{location}/services/{service}` -
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` -
+   * `projects/{project}/locations/{location}/jobs/{job}` -
+   * `projects/{project}/locations/{location}/instances/{instance}`
+   * @param cloudRunResource cloudRunResource or {@code null} for none
+   */
+  public GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest setCloudRunResource(java.lang.String cloudRunResource) {
+    this.cloudRunResource = cloudRunResource;
     return this;
   }
 

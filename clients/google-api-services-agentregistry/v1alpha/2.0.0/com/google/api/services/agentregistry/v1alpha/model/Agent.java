@@ -106,7 +106,13 @@ public final class Agent extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Skill> skills;
+  private java.util.List<A2ASkill> skills;
+
+  static {
+    // hack to force ProGuard to consider A2ASkill used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(A2ASkill.class);
+  }
 
   /**
    * Output only. A universally unique identifier for the Agent.
@@ -305,7 +311,7 @@ public final class Agent extends com.google.api.client.json.GenericJson {
    * Output only. Skills the agent possesses, often obtained from the A2A Agent Card.
    * @return value or {@code null} for none
    */
-  public java.util.List<Skill> getSkills() {
+  public java.util.List<A2ASkill> getSkills() {
     return skills;
   }
 
@@ -313,7 +319,7 @@ public final class Agent extends com.google.api.client.json.GenericJson {
    * Output only. Skills the agent possesses, often obtained from the A2A Agent Card.
    * @param skills skills or {@code null} for none
    */
-  public Agent setSkills(java.util.List<Skill> skills) {
+  public Agent setSkills(java.util.List<A2ASkill> skills) {
     this.skills = skills;
     return this;
   }

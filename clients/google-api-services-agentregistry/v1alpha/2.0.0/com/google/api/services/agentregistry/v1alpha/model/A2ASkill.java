@@ -27,7 +27,7 @@ package com.google.api.services.agentregistry.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Skill extends com.google.api.client.json.GenericJson {
+public final class A2ASkill extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A more detailed description of the skill.
@@ -76,7 +76,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    * Output only. A more detailed description of the skill.
    * @param description description or {@code null} for none
    */
-  public Skill setDescription(java.lang.String description) {
+  public A2ASkill setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -93,7 +93,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    * Output only. Example prompts or scenarios this skill can handle.
    * @param examples examples or {@code null} for none
    */
-  public Skill setExamples(java.util.List<java.lang.String> examples) {
+  public A2ASkill setExamples(java.util.List<java.lang.String> examples) {
     this.examples = examples;
     return this;
   }
@@ -110,7 +110,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    * Output only. A unique identifier for the agent's skill.
    * @param id id or {@code null} for none
    */
-  public Skill setId(java.lang.String id) {
+  public A2ASkill setId(java.lang.String id) {
     this.id = id;
     return this;
   }
@@ -127,7 +127,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    * Output only. A human-readable name for the agent's skill.
    * @param name name or {@code null} for none
    */
-  public Skill setName(java.lang.String name) {
+  public A2ASkill setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -144,19 +144,19 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    * Output only. Keywords describing the skill.
    * @param tags tags or {@code null} for none
    */
-  public Skill setTags(java.util.List<java.lang.String> tags) {
+  public A2ASkill setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
     return this;
   }
 
   @Override
-  public Skill set(String fieldName, Object value) {
-    return (Skill) super.set(fieldName, value);
+  public A2ASkill set(String fieldName, Object value) {
+    return (A2ASkill) super.set(fieldName, value);
   }
 
   @Override
-  public Skill clone() {
-    return (Skill) super.clone();
+  public A2ASkill clone() {
+    return (A2ASkill) super.clone();
   }
 
 }

@@ -125,7 +125,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private java.lang.String medium;
 
   /**
-   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * Optional. JSON metadata encoded as a string. This field is primarily used by Insights
    * integrations with various telephony systems and must be in one of Insight's supported formats.
    * The value may be {@code null}.
    */
@@ -425,7 +425,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   }
 
   /**
-   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * Optional. JSON metadata encoded as a string. This field is primarily used by Insights
    * integrations with various telephony systems and must be in one of Insight's supported formats.
    * @return value or {@code null} for none
    */
@@ -434,7 +434,7 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   }
 
   /**
-   * Input only. JSON metadata encoded as a string. This field is primarily used by Insights
+   * Optional. JSON metadata encoded as a string. This field is primarily used by Insights
    * integrations with various telephony systems and must be in one of Insight's supported formats.
    * @param metadataJson metadataJson or {@code null} for none
    */

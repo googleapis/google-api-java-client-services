@@ -52,6 +52,14 @@ public final class PrivateCloud extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Encryption configuration for the private cloud. If this field is left unspecified,
+   * Google default encryption is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
    * Output only. Time when the resource will be irreversibly deleted.
    * The value may be {@code null}.
    */
@@ -181,6 +189,25 @@ public final class PrivateCloud extends com.google.api.client.json.GenericJson {
    */
   public PrivateCloud setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Encryption configuration for the private cloud. If this field is left unspecified,
+   * Google default encryption is used.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. Encryption configuration for the private cloud. If this field is left unspecified,
+   * Google default encryption is used.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public PrivateCloud setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

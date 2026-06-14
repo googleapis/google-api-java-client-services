@@ -3587,6 +3587,957 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
             return (Enable) super.set(parameterName, value);
           }
         }
+        /**
+         * Returns a high-level summary of content transfers for a given customer.
+         *
+         * Create a request for the method "securityInsights.queryContentTransfers".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link QueryContentTransfers#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customer Required. The customer ID in the format "customers/{customer_id}".
+         * @return the request
+         */
+        public QueryContentTransfers queryContentTransfers(java.lang.String customer) throws java.io.IOException {
+          QueryContentTransfers result = new QueryContentTransfers(customer);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryContentTransfers extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryContentTransfersResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:queryContentTransfers";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Returns a high-level summary of content transfers for a given customer.
+           *
+           * Create a request for the method "securityInsights.queryContentTransfers".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link QueryContentTransfers#execute()} method to invoke the
+           * remote operation. <p> {@link QueryContentTransfers#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer ID in the format "customers/{customer_id}".
+           * @since 1.13
+           */
+          protected QueryContentTransfers(java.lang.String customer) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryContentTransfersResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryContentTransfers set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryContentTransfers) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryContentTransfers setAccessToken(java.lang.String accessToken) {
+            return (QueryContentTransfers) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryContentTransfers setAlt(java.lang.String alt) {
+            return (QueryContentTransfers) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryContentTransfers setCallback(java.lang.String callback) {
+            return (QueryContentTransfers) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryContentTransfers setFields(java.lang.String fields) {
+            return (QueryContentTransfers) super.setFields(fields);
+          }
+
+          @Override
+          public QueryContentTransfers setKey(java.lang.String key) {
+            return (QueryContentTransfers) super.setKey(key);
+          }
+
+          @Override
+          public QueryContentTransfers setOauthToken(java.lang.String oauthToken) {
+            return (QueryContentTransfers) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryContentTransfers setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryContentTransfers) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryContentTransfers setQuotaUser(java.lang.String quotaUser) {
+            return (QueryContentTransfers) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryContentTransfers setUploadType(java.lang.String uploadType) {
+            return (QueryContentTransfers) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryContentTransfers setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryContentTransfers) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer ID in the format "customers/{customer_id}".
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          public QueryContentTransfers setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days, and may be unavailable or inaccurate for time
+           * ranges less than 4 hours. If `event_time` is not specified, results will be returned
+           * for the last 30 days. Supported fields for filtering: - `event_time` Supported
+           * operators: - `>=` and `<=` for `event_time` Supported conjunctions: - `AND` Example:
+           * `event_time >= "2024-01-01T00:00:00Z" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not available for
+         events older than 180 days, and may be unavailable or inaccurate for time ranges less than 4 hours.
+         If `event_time` is not specified, results will be returned for the last 30 days. Supported fields
+         for filtering: - `event_time` Supported operators: - `>=` and `<=` for `event_time` Supported
+         conjunctions: - `AND` Example: `event_time >= "2024-01-01T00:00:00Z" AND event_time <=
+         "2024-01-02T00:00:00Z"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days, and may be unavailable or inaccurate for time
+           * ranges less than 4 hours. If `event_time` is not specified, results will be returned
+           * for the last 30 days. Supported fields for filtering: - `event_time` Supported
+           * operators: - `>=` and `<=` for `event_time` Supported conjunctions: - `AND` Example:
+           * `event_time >= "2024-01-01T00:00:00Z" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          public QueryContentTransfers setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @Override
+          public QueryContentTransfers set(String parameterName, Object value) {
+            return (QueryContentTransfers) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns summaries of content transfers for a given metric and breakdown dimension.
+         *
+         * Create a request for the method "securityInsights.queryContentTransfersBreakdowns".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link QueryContentTransfersBreakdowns#execute()} method to invoke
+         * the remote operation.
+         *
+         * @param customer Required. The customer ID in the format "customers/{customer_id}".
+         * @return the request
+         */
+        public QueryContentTransfersBreakdowns queryContentTransfersBreakdowns(java.lang.String customer) throws java.io.IOException {
+          QueryContentTransfersBreakdowns result = new QueryContentTransfersBreakdowns(customer);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryContentTransfersBreakdowns extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryContentTransfersBreakdownsResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:queryContentTransfersBreakdowns";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Returns summaries of content transfers for a given metric and breakdown dimension.
+           *
+           * Create a request for the method "securityInsights.queryContentTransfersBreakdowns".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link QueryContentTransfersBreakdowns#execute()} method to
+           * invoke the remote operation. <p> {@link QueryContentTransfersBreakdowns#initialize(com.google.a
+           * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+           * instance immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer ID in the format "customers/{customer_id}".
+           * @since 1.13
+           */
+          protected QueryContentTransfersBreakdowns(java.lang.String customer) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryContentTransfersBreakdownsResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryContentTransfersBreakdowns) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setAccessToken(java.lang.String accessToken) {
+            return (QueryContentTransfersBreakdowns) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setAlt(java.lang.String alt) {
+            return (QueryContentTransfersBreakdowns) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setCallback(java.lang.String callback) {
+            return (QueryContentTransfersBreakdowns) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setFields(java.lang.String fields) {
+            return (QueryContentTransfersBreakdowns) super.setFields(fields);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setKey(java.lang.String key) {
+            return (QueryContentTransfersBreakdowns) super.setKey(key);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setOauthToken(java.lang.String oauthToken) {
+            return (QueryContentTransfersBreakdowns) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryContentTransfersBreakdowns) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setQuotaUser(java.lang.String quotaUser) {
+            return (QueryContentTransfersBreakdowns) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setUploadType(java.lang.String uploadType) {
+            return (QueryContentTransfersBreakdowns) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryContentTransfersBreakdowns) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer ID in the format "customers/{customer_id}".
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          public QueryContentTransfersBreakdowns setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          /** Optional. The dimension to break down the content transfers by. Defaults to USER. */
+          @com.google.api.client.util.Key
+          private java.lang.String breakdown;
+
+          /** Optional. The dimension to break down the content transfers by. Defaults to USER.
+           */
+          public java.lang.String getBreakdown() {
+            return breakdown;
+          }
+
+          /** Optional. The dimension to break down the content transfers by. Defaults to USER. */
+          public QueryContentTransfersBreakdowns setBreakdown(java.lang.String breakdown) {
+            this.breakdown = breakdown;
+            return this;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days or more recent than 48 hours ago. If
+           * `event_time` is not specified, results will end 48 hours ago. Supported fields for
+           * filtering: - `user` - `event_domain` - `content_category` - `event_time` Filtering by
+           * `user` or `event_domain` requires the `breakdown` dimension to be set to the
+           * corresponding value (e.g., you must set `breakdown = USER` to filter by `user`).
+           * Supported operators: - `=` for `user`, `event_domain`, and `content_category`. - `<=`
+           * for `event_time`. Supported conjunctions: - `AND` Example: `user = "testuser" AND
+           * event_time <= "2024-01-02T00:00:00Z"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not available for
+         events older than 180 days or more recent than 48 hours ago. If `event_time` is not specified,
+         results will end 48 hours ago. Supported fields for filtering: - `user` - `event_domain` -
+         `content_category` - `event_time` Filtering by `user` or `event_domain` requires the `breakdown`
+         dimension to be set to the corresponding value (e.g., you must set `breakdown = USER` to filter by
+         `user`). Supported operators: - `=` for `user`, `event_domain`, and `content_category`. - `<=` for
+         `event_time`. Supported conjunctions: - `AND` Example: `user = "testuser" AND event_time <=
+         "2024-01-02T00:00:00Z"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days or more recent than 48 hours ago. If
+           * `event_time` is not specified, results will end 48 hours ago. Supported fields for
+           * filtering: - `user` - `event_domain` - `content_category` - `event_time` Filtering by
+           * `user` or `event_domain` requires the `breakdown` dimension to be set to the
+           * corresponding value (e.g., you must set `breakdown = USER` to filter by `user`).
+           * Supported operators: - `=` for `user`, `event_domain`, and `content_category`. - `<=`
+           * for `event_time`. Supported conjunctions: - `AND` Example: `user = "testuser" AND
+           * event_time <= "2024-01-02T00:00:00Z"`
+           */
+          public QueryContentTransfersBreakdowns setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The fixed time range to return the breakdowns for. Defaults to
+           * FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and
+           * optimize response times.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fixedTimeRange;
+
+          /** Optional. The fixed time range to return the breakdowns for. Defaults to
+         FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and optimize
+         response times.
+           */
+          public java.lang.String getFixedTimeRange() {
+            return fixedTimeRange;
+          }
+
+          /**
+           * Optional. The fixed time range to return the breakdowns for. Defaults to
+           * FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and
+           * optimize response times.
+           */
+          public QueryContentTransfersBreakdowns setFixedTimeRange(java.lang.String fixedTimeRange) {
+            this.fixedTimeRange = fixedTimeRange;
+            return this;
+          }
+
+          /**
+           * Optional. The metric to return the breakdowns for. Defaults to
+           * CONTENT_TRANSFERS_METRIC_TOTAL_TRANSFERS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String metric;
+
+          /** Optional. The metric to return the breakdowns for. Defaults to
+         CONTENT_TRANSFERS_METRIC_TOTAL_TRANSFERS.
+           */
+          public java.lang.String getMetric() {
+            return metric;
+          }
+
+          /**
+           * Optional. The metric to return the breakdowns for. Defaults to
+           * CONTENT_TRANSFERS_METRIC_TOTAL_TRANSFERS.
+           */
+          public QueryContentTransfersBreakdowns setMetric(java.lang.String metric) {
+            this.metric = metric;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of breakdowns to return. The service may return fewer than
+           * this value. If unspecified, at most 50 breakdowns will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of breakdowns to return. The service may return fewer than this value.
+         If unspecified, at most 50 breakdowns will be returned. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of breakdowns to return. The service may return fewer than
+           * this value. If unspecified, at most 50 breakdowns will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public QueryContentTransfersBreakdowns setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `QueryContentTransfersBreakdowns`
+           * call. Provide this to retrieve the subsequent page. When paginating, all other
+           * parameters provided to `QueryContentTransfersBreakdowns` must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `QueryContentTransfersBreakdowns` call. Provide
+         this to retrieve the subsequent page. When paginating, all other parameters provided to
+         `QueryContentTransfersBreakdowns` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `QueryContentTransfersBreakdowns`
+           * call. Provide this to retrieve the subsequent page. When paginating, all other
+           * parameters provided to `QueryContentTransfersBreakdowns` must match the call that
+           * provided the page token.
+           */
+          public QueryContentTransfersBreakdowns setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public QueryContentTransfersBreakdowns set(String parameterName, Object value) {
+            return (QueryContentTransfersBreakdowns) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a high-level summary of URL visits for a given customer.
+         *
+         * Create a request for the method "securityInsights.queryUrlVisits".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link QueryUrlVisits#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customer Required. The customer ID in the format "customers/{customer_id}".
+         * @return the request
+         */
+        public QueryUrlVisits queryUrlVisits(java.lang.String customer) throws java.io.IOException {
+          QueryUrlVisits result = new QueryUrlVisits(customer);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryUrlVisits extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryUrlVisitsResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:queryUrlVisits";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Returns a high-level summary of URL visits for a given customer.
+           *
+           * Create a request for the method "securityInsights.queryUrlVisits".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link QueryUrlVisits#execute()} method to invoke the remote
+           * operation. <p> {@link QueryUrlVisits#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param customer Required. The customer ID in the format "customers/{customer_id}".
+           * @since 1.13
+           */
+          protected QueryUrlVisits(java.lang.String customer) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryUrlVisitsResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryUrlVisits set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryUrlVisits) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryUrlVisits setAccessToken(java.lang.String accessToken) {
+            return (QueryUrlVisits) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryUrlVisits setAlt(java.lang.String alt) {
+            return (QueryUrlVisits) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryUrlVisits setCallback(java.lang.String callback) {
+            return (QueryUrlVisits) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryUrlVisits setFields(java.lang.String fields) {
+            return (QueryUrlVisits) super.setFields(fields);
+          }
+
+          @Override
+          public QueryUrlVisits setKey(java.lang.String key) {
+            return (QueryUrlVisits) super.setKey(key);
+          }
+
+          @Override
+          public QueryUrlVisits setOauthToken(java.lang.String oauthToken) {
+            return (QueryUrlVisits) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryUrlVisits setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryUrlVisits) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryUrlVisits setQuotaUser(java.lang.String quotaUser) {
+            return (QueryUrlVisits) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryUrlVisits setUploadType(java.lang.String uploadType) {
+            return (QueryUrlVisits) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryUrlVisits setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryUrlVisits) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer ID in the format "customers/{customer_id}".
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          public QueryUrlVisits setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days, and may be unavailable or inaccurate for time
+           * ranges less than 4 hours. If `event_time` is not specified, results will be returned
+           * for the last 30 days. Supported fields for filtering: - `event_time` Supported
+           * operators: - `>=` and `<=` for `event_time` Supported conjunctions: - `AND` Example:
+           * `event_time >= "2024-01-01T00:00:00Z" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not available for
+         events older than 180 days, and may be unavailable or inaccurate for time ranges less than 4 hours.
+         If `event_time` is not specified, results will be returned for the last 30 days. Supported fields
+         for filtering: - `event_time` Supported operators: - `>=` and `<=` for `event_time` Supported
+         conjunctions: - `AND` Example: `event_time >= "2024-01-01T00:00:00Z" AND event_time <=
+         "2024-01-02T00:00:00Z"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days, and may be unavailable or inaccurate for time
+           * ranges less than 4 hours. If `event_time` is not specified, results will be returned
+           * for the last 30 days. Supported fields for filtering: - `event_time` Supported
+           * operators: - `>=` and `<=` for `event_time` Supported conjunctions: - `AND` Example:
+           * `event_time >= "2024-01-01T00:00:00Z" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          public QueryUrlVisits setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @Override
+          public QueryUrlVisits set(String parameterName, Object value) {
+            return (QueryUrlVisits) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns summaries of URL visits for a given metric and breakdown dimension.
+         *
+         * Create a request for the method "securityInsights.queryUrlVisitsBreakdowns".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link QueryUrlVisitsBreakdowns#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param customer Required. The customer ID in the format "customers/{customer_id}".
+         * @return the request
+         */
+        public QueryUrlVisitsBreakdowns queryUrlVisitsBreakdowns(java.lang.String customer) throws java.io.IOException {
+          QueryUrlVisitsBreakdowns result = new QueryUrlVisitsBreakdowns(customer);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryUrlVisitsBreakdowns extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryUrlVisitsBreakdownsResponse> {
+
+          private static final String REST_PATH = "v1/{+customer}/enterprise/securityInsights:queryUrlVisitsBreakdowns";
+
+          private final java.util.regex.Pattern CUSTOMER_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+          /**
+           * Returns summaries of URL visits for a given metric and breakdown dimension.
+           *
+           * Create a request for the method "securityInsights.queryUrlVisitsBreakdowns".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link QueryUrlVisitsBreakdowns#execute()} method to invoke the
+           * remote operation. <p> {@link QueryUrlVisitsBreakdowns#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param customer Required. The customer ID in the format "customers/{customer_id}".
+           * @since 1.13
+           */
+          protected QueryUrlVisitsBreakdowns(java.lang.String customer) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1QueryUrlVisitsBreakdownsResponse.class);
+            this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryUrlVisitsBreakdowns) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setAccessToken(java.lang.String accessToken) {
+            return (QueryUrlVisitsBreakdowns) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setAlt(java.lang.String alt) {
+            return (QueryUrlVisitsBreakdowns) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setCallback(java.lang.String callback) {
+            return (QueryUrlVisitsBreakdowns) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setFields(java.lang.String fields) {
+            return (QueryUrlVisitsBreakdowns) super.setFields(fields);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setKey(java.lang.String key) {
+            return (QueryUrlVisitsBreakdowns) super.setKey(key);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setOauthToken(java.lang.String oauthToken) {
+            return (QueryUrlVisitsBreakdowns) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryUrlVisitsBreakdowns) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setQuotaUser(java.lang.String quotaUser) {
+            return (QueryUrlVisitsBreakdowns) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setUploadType(java.lang.String uploadType) {
+            return (QueryUrlVisitsBreakdowns) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryUrlVisitsBreakdowns) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. The customer ID in the format "customers/{customer_id}".
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /** Required. The customer ID in the format "customers/{customer_id}". */
+          public QueryUrlVisitsBreakdowns setCustomer(java.lang.String customer) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                  "Parameter customer must conform to the pattern " +
+                  "^customers/[^/]+$");
+            }
+            this.customer = customer;
+            return this;
+          }
+
+          /** Optional. The dimension to break down the URL visits by. Defaults to USER. */
+          @com.google.api.client.util.Key
+          private java.lang.String breakdown;
+
+          /** Optional. The dimension to break down the URL visits by. Defaults to USER.
+           */
+          public java.lang.String getBreakdown() {
+            return breakdown;
+          }
+
+          /** Optional. The dimension to break down the URL visits by. Defaults to USER. */
+          public QueryUrlVisitsBreakdowns setBreakdown(java.lang.String breakdown) {
+            this.breakdown = breakdown;
+            return this;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days or more recent than 48 hours ago. If
+           * `event_time` is not specified, results will end 48 hours ago. Supported fields for
+           * filtering: - `user` - `event_domain` - `event_time` Filtering by `user` or
+           * `event_domain` requires the `breakdown` dimension to be set to the corresponding value
+           * (e.g., you must set `breakdown = USER` to filter by `user`). Supported operators: - `=`
+           * for `user` and `event_domain`. - `<=` for `event_time`. Supported conjunctions: - `AND`
+           * Example: `user = "testuser" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not available for
+         events older than 180 days or more recent than 48 hours ago. If `event_time` is not specified,
+         results will end 48 hours ago. Supported fields for filtering: - `user` - `event_domain` -
+         `event_time` Filtering by `user` or `event_domain` requires the `breakdown` dimension to be set to
+         the corresponding value (e.g., you must set `breakdown = USER` to filter by `user`). Supported
+         operators: - `=` for `user` and `event_domain`. - `<=` for `event_time`. Supported conjunctions: -
+         `AND` Example: `user = "testuser" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The filter to apply to the request. For syntax, see AIP-160. Data is not
+           * available for events older than 180 days or more recent than 48 hours ago. If
+           * `event_time` is not specified, results will end 48 hours ago. Supported fields for
+           * filtering: - `user` - `event_domain` - `event_time` Filtering by `user` or
+           * `event_domain` requires the `breakdown` dimension to be set to the corresponding value
+           * (e.g., you must set `breakdown = USER` to filter by `user`). Supported operators: - `=`
+           * for `user` and `event_domain`. - `<=` for `event_time`. Supported conjunctions: - `AND`
+           * Example: `user = "testuser" AND event_time <= "2024-01-02T00:00:00Z"`
+           */
+          public QueryUrlVisitsBreakdowns setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The fixed time range to return the breakdowns for. Defaults to
+           * FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and
+           * optimize response times.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String fixedTimeRange;
+
+          /** Optional. The fixed time range to return the breakdowns for. Defaults to
+         FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and optimize
+         response times.
+           */
+          public java.lang.String getFixedTimeRange() {
+            return fixedTimeRange;
+          }
+
+          /**
+           * Optional. The fixed time range to return the breakdowns for. Defaults to
+           * FIXED_TIME_RANGE_FOUR_WEEKS. Fixed time ranges are used to allow for precomputation and
+           * optimize response times.
+           */
+          public QueryUrlVisitsBreakdowns setFixedTimeRange(java.lang.String fixedTimeRange) {
+            this.fixedTimeRange = fixedTimeRange;
+            return this;
+          }
+
+          /**
+           * Optional. The metric to return the breakdowns for. Defaults to
+           * URL_VISITS_METRIC_TOTAL_SUSPICIOUS_URL_VISITS.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String metric;
+
+          /** Optional. The metric to return the breakdowns for. Defaults to
+         URL_VISITS_METRIC_TOTAL_SUSPICIOUS_URL_VISITS.
+           */
+          public java.lang.String getMetric() {
+            return metric;
+          }
+
+          /**
+           * Optional. The metric to return the breakdowns for. Defaults to
+           * URL_VISITS_METRIC_TOTAL_SUSPICIOUS_URL_VISITS.
+           */
+          public QueryUrlVisitsBreakdowns setMetric(java.lang.String metric) {
+            this.metric = metric;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of breakdowns to return. The service may return fewer than
+           * this value. If unspecified, at most 50 breakdowns will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of breakdowns to return. The service may return fewer than this value.
+         If unspecified, at most 50 breakdowns will be returned. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of breakdowns to return. The service may return fewer than
+           * this value. If unspecified, at most 50 breakdowns will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public QueryUrlVisitsBreakdowns setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `QueryUrlVisitsBreakdowns` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `QueryUrlVisitsBreakdowns` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `QueryUrlVisitsBreakdowns` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `QueryUrlVisitsBreakdowns` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `QueryUrlVisitsBreakdowns` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `QueryUrlVisitsBreakdowns` must match the call that provided the page
+           * token.
+           */
+          public QueryUrlVisitsBreakdowns setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public QueryUrlVisitsBreakdowns set(String parameterName, Object value) {
+            return (QueryUrlVisitsBreakdowns) super.set(parameterName, value);
+          }
+        }
 
       }
     }

@@ -35,6 +35,12 @@ public class ChromeManagementScopes {
   /** See reports about devices and Chrome browsers managed within your organization. */
   public static final String CHROME_MANAGEMENT_REPORTS_READONLY = "https://www.googleapis.com/auth/chrome.management.reports.readonly";
 
+  /** Turn Chrome Security Insights on and off and view the data it generates. */
+  public static final String CHROME_MANAGEMENT_SECURITYINSIGHTS = "https://www.googleapis.com/auth/chrome.management.securityinsights";
+
+  /** See Chrome Security Insights reports. */
+  public static final String CHROME_MANAGEMENT_SECURITYINSIGHTS_READONLY = "https://www.googleapis.com/auth/chrome.management.securityinsights.readonly";
+
   /** See basic device and telemetry information collected from ChromeOS devices or users managed within your organization. */
   public static final String CHROME_MANAGEMENT_TELEMETRY_READONLY = "https://www.googleapis.com/auth/chrome.management.telemetry.readonly";
 
@@ -49,6 +55,8 @@ public class ChromeManagementScopes {
     set.add(CHROME_MANAGEMENT_PROFILES);
     set.add(CHROME_MANAGEMENT_PROFILES_READONLY);
     set.add(CHROME_MANAGEMENT_REPORTS_READONLY);
+    set.add(CHROME_MANAGEMENT_SECURITYINSIGHTS);
+    set.add(CHROME_MANAGEMENT_SECURITYINSIGHTS_READONLY);
     set.add(CHROME_MANAGEMENT_TELEMETRY_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }

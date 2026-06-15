@@ -35,7 +35,7 @@ public final class GenaiVertexV1beta1ImageConfig extends com.google.api.client.j
    * reference images provided.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("aspect_ratio")
+  @com.google.api.client.util.Key
   private java.lang.String aspectRatio;
 
   /**
@@ -43,7 +43,7 @@ public final class GenaiVertexV1beta1ImageConfig extends com.google.api.client.j
    * specified, the model will use default value `1K`.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("image_size")
+  @com.google.api.client.util.Key
   private java.lang.String imageSize;
 
   /**

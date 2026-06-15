@@ -33,20 +33,20 @@ public final class GenaiVertexV1beta1StreamMetadata extends com.google.api.clien
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1InteractionUsage usage;
+  private GenaiVertexV1beta1InteractionUsage totalUsage;
 
   /**
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1InteractionUsage getUsage() {
-    return usage;
+  public GenaiVertexV1beta1InteractionUsage getTotalUsage() {
+    return totalUsage;
   }
 
   /**
-   * @param usage usage or {@code null} for none
+   * @param totalUsage totalUsage or {@code null} for none
    */
-  public GenaiVertexV1beta1StreamMetadata setUsage(GenaiVertexV1beta1InteractionUsage usage) {
-    this.usage = usage;
+  public GenaiVertexV1beta1StreamMetadata setTotalUsage(GenaiVertexV1beta1InteractionUsage totalUsage) {
+    this.totalUsage = totalUsage;
     return this;
   }
 

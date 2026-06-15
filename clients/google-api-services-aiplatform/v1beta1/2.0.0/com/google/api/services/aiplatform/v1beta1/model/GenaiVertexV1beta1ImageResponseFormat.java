@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1ImageResponseFormat extends com.google.api.
    * The aspect ratio for the image output.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("aspect_ratio")
+  @com.google.api.client.util.Key
   private java.lang.String aspectRatio;
 
   /**
@@ -47,14 +47,14 @@ public final class GenaiVertexV1beta1ImageResponseFormat extends com.google.api.
    * The size of the image output.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("image_size")
+  @com.google.api.client.util.Key
   private java.lang.String imageSize;
 
   /**
    * The MIME type of the image output.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**

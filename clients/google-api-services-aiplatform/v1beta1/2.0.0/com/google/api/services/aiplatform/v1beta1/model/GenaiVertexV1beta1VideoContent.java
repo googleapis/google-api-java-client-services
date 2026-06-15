@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1VideoContent extends com.google.api.client.
    * The mime type of the video.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**

@@ -61,7 +61,7 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
    * The event_id token to be used to resume the interaction stream, from this event.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("event_id")
+  @com.google.api.client.util.Key
   private java.lang.String eventId;
 
   /**

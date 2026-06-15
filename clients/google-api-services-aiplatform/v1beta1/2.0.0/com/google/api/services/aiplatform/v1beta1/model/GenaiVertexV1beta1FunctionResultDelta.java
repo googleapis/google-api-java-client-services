@@ -33,12 +33,12 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1FunctionResultSubcontentList contentList;
+  private GenaiVertexV1beta1ContentList contentList;
 
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("is_error")
+  @com.google.api.client.util.Key
   private java.lang.Boolean isError;
 
   /**
@@ -62,14 +62,14 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultSubcontentList getContentList() {
+  public GenaiVertexV1beta1ContentList getContentList() {
     return contentList;
   }
 
   /**
    * @param contentList contentList or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultDelta setContentList(GenaiVertexV1beta1FunctionResultSubcontentList contentList) {
+  public GenaiVertexV1beta1FunctionResultDelta setContentList(GenaiVertexV1beta1ContentList contentList) {
     this.contentList = contentList;
     return this;
   }

@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1UrlContextResultContent extends com.google.
    * Whether the URL context resulted in an error.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("is_error")
+  @com.google.api.client.util.Key
   private java.lang.Boolean isError;
 
   /**

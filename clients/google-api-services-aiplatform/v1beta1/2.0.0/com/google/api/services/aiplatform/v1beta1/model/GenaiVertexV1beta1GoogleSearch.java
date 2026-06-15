@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1GoogleSearch extends com.google.api.client.
    * The types of search grounding to enable.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("search_types")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> searchTypes;
 
   /**

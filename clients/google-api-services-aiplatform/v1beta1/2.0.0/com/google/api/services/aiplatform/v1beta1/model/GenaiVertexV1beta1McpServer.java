@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1McpServer extends com.google.api.client.jso
    * The allowed tools.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("allowed_tools")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1AllowedTools> allowedTools;
 
   static {

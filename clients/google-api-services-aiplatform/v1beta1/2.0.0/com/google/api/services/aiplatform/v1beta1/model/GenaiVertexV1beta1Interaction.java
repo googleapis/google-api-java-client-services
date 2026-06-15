@@ -62,7 +62,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * The environment ID for the interaction. Can be 'remote' for default environment.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("env_id")
+  @com.google.api.client.util.Key
   private java.lang.String envId;
 
   /**
@@ -70,7 +70,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * set in the request.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("environment_id")
+  @com.google.api.client.util.Key
   private java.lang.String environmentId;
 
   /**
@@ -104,7 +104,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * The ID of the previous interaction, if any.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("previous_interaction_id")
+  @com.google.api.client.util.Key
   private java.lang.String previousInteractionId;
 
   /**
@@ -112,6 +112,14 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1EnvironmentConfig remoteEnvironment;
+
+  /**
+   * Enforces that the generated response is a JSON object that complies with the JSON schema
+   * specified in this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiValue responseFormat;
 
   /**
    * The value may be {@code null}.
@@ -126,25 +134,17 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1ResponseFormat responseFormatSingleton;
 
   /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("response_format")
-  private GenaiValue responseFormat;
-
-  /**
    * The mime type of the response. This is required if response_format is set.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("response_mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String responseMimeType;
 
   /**
    * The requested modalities of the response (TEXT, IMAGE, AUDIO).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("response_modalities")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> responseModalities;
 
   /**
@@ -186,7 +186,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * System instruction for the interaction.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("system_instruction")
+  @com.google.api.client.util.Key
   private java.lang.String systemInstruction;
 
   /**
@@ -408,6 +408,25 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
+   * Enforces that the generated response is a JSON object that complies with the JSON schema
+   * specified in this field.
+   * @return value or {@code null} for none
+   */
+  public GenaiValue getResponseFormat() {
+    return responseFormat;
+  }
+
+  /**
+   * Enforces that the generated response is a JSON object that complies with the JSON schema
+   * specified in this field.
+   * @param responseFormat responseFormat or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setResponseFormat(GenaiValue responseFormat) {
+    this.responseFormat = responseFormat;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1ResponseFormatList getResponseFormatList() {
@@ -434,25 +453,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setResponseFormatSingleton(GenaiVertexV1beta1ResponseFormat responseFormatSingleton) {
     this.responseFormatSingleton = responseFormatSingleton;
-    return this;
-  }
-
-  /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * @return value or {@code null} for none
-   */
-  public GenaiValue getResponseFormat() {
-    return responseFormat;
-  }
-
-  /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * @param responseFormat responseFormat or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setResponseFormat(GenaiValue responseFormat) {
-    this.responseFormat = responseFormat;
     return this;
   }
 

@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1AudioResponseFormat extends com.google.api.
    * Bit rate in bits per second (bps). Only applicable for compressed formats (MP3, Opus).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("bit_rate")
+  @com.google.api.client.util.Key
   private java.lang.Integer bitRate;
 
   /**
@@ -47,14 +47,14 @@ public final class GenaiVertexV1beta1AudioResponseFormat extends com.google.api.
    * The MIME type of the audio output.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
    * Sample rate in Hz.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("sample_rate")
+  @com.google.api.client.util.Key
   private java.lang.Integer sampleRate;
 
   /**

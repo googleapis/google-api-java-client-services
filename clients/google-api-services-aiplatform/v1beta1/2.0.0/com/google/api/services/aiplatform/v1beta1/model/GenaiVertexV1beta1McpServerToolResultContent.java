@@ -46,7 +46,7 @@ public final class GenaiVertexV1beta1McpServerToolResultContent extends com.goog
    * The name of the used MCP server.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("server_name")
+  @com.google.api.client.util.Key
   private java.lang.String serverName;
 
   /**

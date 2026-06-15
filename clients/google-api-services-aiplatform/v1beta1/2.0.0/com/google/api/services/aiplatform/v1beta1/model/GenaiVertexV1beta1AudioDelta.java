@@ -45,7 +45,7 @@ public final class GenaiVertexV1beta1AudioDelta extends com.google.api.client.js
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
@@ -59,7 +59,7 @@ public final class GenaiVertexV1beta1AudioDelta extends com.google.api.client.js
    * The sample rate of the audio.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("sample_rate")
+  @com.google.api.client.util.Key
   private java.lang.Integer sampleRate;
 
   /**

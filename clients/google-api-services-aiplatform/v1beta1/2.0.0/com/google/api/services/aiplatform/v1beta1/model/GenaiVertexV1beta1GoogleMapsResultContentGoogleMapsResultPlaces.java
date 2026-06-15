@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1GoogleMapsResultContentGoogleMapsResultPlac
    * The ID of the place, in `places/{place_id}` format.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("place_id")
+  @com.google.api.client.util.Key
   private java.lang.String placeId;
 
   /**
@@ -48,7 +48,7 @@ public final class GenaiVertexV1beta1GoogleMapsResultContentGoogleMapsResultPlac
    * Google Maps.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("review_snippets")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1ReviewSnippet> reviewSnippets;
 
   /**

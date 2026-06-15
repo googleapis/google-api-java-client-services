@@ -33,35 +33,35 @@ public final class GenaiVertexV1beta1FileCitation extends com.google.api.client.
    * User provided metadata about the retrieved context.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("custom_metadata")
+  @com.google.api.client.util.Key
   private GenaiStruct customMetadata;
 
   /**
    * The URI of the file.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("document_uri")
+  @com.google.api.client.util.Key
   private java.lang.String documentUri;
 
   /**
    * The name of the file.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("file_name")
+  @com.google.api.client.util.Key
   private java.lang.String fileName;
 
   /**
    * Media ID in-case of image citations, if applicable.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("media_id")
+  @com.google.api.client.util.Key
   private java.lang.String mediaId;
 
   /**
    * Page number of the cited document, if applicable.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("page_number")
+  @com.google.api.client.util.Key
   private java.lang.Integer pageNumber;
 
   /**

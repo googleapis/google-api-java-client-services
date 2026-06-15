@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1GoogleMaps extends com.google.api.client.js
    * Whether to return a widget context token in the tool call result of the response.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("enable_widget")
+  @com.google.api.client.util.Key
   private java.lang.Boolean enableWidget;
 
   /**

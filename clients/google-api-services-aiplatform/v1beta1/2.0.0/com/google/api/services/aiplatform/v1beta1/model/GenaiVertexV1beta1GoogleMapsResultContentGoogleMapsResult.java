@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1GoogleMapsResultContentGoogleMapsResult ext
    * Resource name of the Google Maps widget context token.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("widget_context_token")
+  @com.google.api.client.util.Key
   private java.lang.String widgetContextToken;
 
   /**

@@ -30,10 +30,31 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1Retrieval extends com.google.api.client.json.GenericJson {
 
   /**
+   * Used to specify configuration for ExaAISearch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("exa_ai_search_config")
+  private GenaiVertexV1beta1ExaAISearchConfig exaAiSearchConfig;
+
+  /**
+   * Used to specify configuration for ParallelAISearch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("parallel_ai_search_config")
+  private GenaiVertexV1beta1ParallelAISearchConfig parallelAiSearchConfig;
+
+  /**
+   * Used to specify configuration for RagStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("rag_store_config")
+  private GenaiVertexV1beta1RagStoreConfig ragStoreConfig;
+
+  /**
    * The types of file retrieval to enable.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("retrieval_types")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> retrievalTypes;
 
   /**
@@ -42,6 +63,57 @@ public final class GenaiVertexV1beta1Retrieval extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key("vertex_ai_search_config")
   private GenaiVertexV1beta1VertexAISearchConfig vertexAiSearchConfig;
+
+  /**
+   * Used to specify configuration for ExaAISearch.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1ExaAISearchConfig getExaAiSearchConfig() {
+    return exaAiSearchConfig;
+  }
+
+  /**
+   * Used to specify configuration for ExaAISearch.
+   * @param exaAiSearchConfig exaAiSearchConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1Retrieval setExaAiSearchConfig(GenaiVertexV1beta1ExaAISearchConfig exaAiSearchConfig) {
+    this.exaAiSearchConfig = exaAiSearchConfig;
+    return this;
+  }
+
+  /**
+   * Used to specify configuration for ParallelAISearch.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1ParallelAISearchConfig getParallelAiSearchConfig() {
+    return parallelAiSearchConfig;
+  }
+
+  /**
+   * Used to specify configuration for ParallelAISearch.
+   * @param parallelAiSearchConfig parallelAiSearchConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1Retrieval setParallelAiSearchConfig(GenaiVertexV1beta1ParallelAISearchConfig parallelAiSearchConfig) {
+    this.parallelAiSearchConfig = parallelAiSearchConfig;
+    return this;
+  }
+
+  /**
+   * Used to specify configuration for RagStore.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1RagStoreConfig getRagStoreConfig() {
+    return ragStoreConfig;
+  }
+
+  /**
+   * Used to specify configuration for RagStore.
+   * @param ragStoreConfig ragStoreConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1Retrieval setRagStoreConfig(GenaiVertexV1beta1RagStoreConfig ragStoreConfig) {
+    this.ragStoreConfig = ragStoreConfig;
+    return this;
+  }
 
   /**
    * The types of file retrieval to enable.

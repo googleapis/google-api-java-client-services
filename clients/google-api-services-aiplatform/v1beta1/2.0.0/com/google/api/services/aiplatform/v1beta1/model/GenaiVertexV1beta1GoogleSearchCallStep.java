@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1GoogleSearchCallStep extends com.google.api
    * The type of search grounding enabled.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("search_type")
+  @com.google.api.client.util.Key
   private java.lang.String searchType;
 
   /**

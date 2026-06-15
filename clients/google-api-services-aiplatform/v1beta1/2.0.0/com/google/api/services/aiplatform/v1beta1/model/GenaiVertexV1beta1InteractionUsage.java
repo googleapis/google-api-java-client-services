@@ -33,77 +33,77 @@ public final class GenaiVertexV1beta1InteractionUsage extends com.google.api.cli
    * A breakdown of cached token usage by modality.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("cached_tokens_by_modality")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1InteractionUsageModalityTokens> cachedTokensByModality;
 
   /**
    * Grounding tool count.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("grounding_tool_count")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1InteractionUsageGroundingToolCount> groundingToolCount;
 
   /**
    * A breakdown of input token usage by modality.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("input_tokens_by_modality")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1InteractionUsageModalityTokens> inputTokensByModality;
 
   /**
    * A breakdown of output token usage by modality.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("output_tokens_by_modality")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1InteractionUsageModalityTokens> outputTokensByModality;
 
   /**
    * A breakdown of tool-use token usage by modality.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("tool_use_tokens_by_modality")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1InteractionUsageModalityTokens> toolUseTokensByModality;
 
   /**
    * Number of tokens in the cached part of the prompt (the cached content).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_cached_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalCachedTokens;
 
   /**
    * Number of tokens in the prompt (context).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_input_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalInputTokens;
 
   /**
    * Total number of tokens across all the generated responses.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_output_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalOutputTokens;
 
   /**
    * Number of tokens of thoughts for thinking models.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_thought_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalThoughtTokens;
 
   /**
    * Total token count for the interaction request (prompt + responses + other internal tokens).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalTokens;
 
   /**
    * Number of tokens present in tool-use prompt(s).
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("total_tool_use_tokens")
+  @com.google.api.client.util.Key
   private java.lang.Integer totalToolUseTokens;
 
   /**

@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1GoogleSearchResultContent extends com.googl
    * Whether the Google Search resulted in an error.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("is_error")
+  @com.google.api.client.util.Key
   private java.lang.Boolean isError;
 
   /**

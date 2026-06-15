@@ -33,21 +33,21 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
    * End of the attributed segment, exclusive.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("end_index")
+  @com.google.api.client.util.Key
   private java.lang.Integer endIndex;
 
   /**
    * A file citation annotation.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("file_citation")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1FileCitation fileCitation;
 
   /**
    * A place citation annotation.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("place_citation")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1PlaceCitation placeCitation;
 
   /**
@@ -55,14 +55,14 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
    * of the segment, measured in bytes.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("start_index")
+  @com.google.api.client.util.Key
   private java.lang.Integer startIndex;
 
   /**
    * A URL citation annotation.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("url_citation")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1UrlCitation urlCitation;
 
   /**

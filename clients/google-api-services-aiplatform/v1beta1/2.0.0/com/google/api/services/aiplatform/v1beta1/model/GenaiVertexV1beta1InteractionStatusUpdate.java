@@ -32,7 +32,7 @@ public final class GenaiVertexV1beta1InteractionStatusUpdate extends com.google.
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("interaction_id")
+  @com.google.api.client.util.Key
   private java.lang.String interactionId;
 
   /**

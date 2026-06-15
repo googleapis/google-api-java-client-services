@@ -38,6 +38,13 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
   private AIInference aiInference;
 
   /**
+   * Optional. Compression/Decompression.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Compression compression;
+
+  /**
    * Optional. If true, the transform is disabled and will not be applied to messages. Defaults to
    * `false`.
    * The value may be {@code null}.
@@ -76,6 +83,23 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
    */
   public MessageTransform setAiInference(AIInference aiInference) {
     this.aiInference = aiInference;
+    return this;
+  }
+
+  /**
+   * Optional. Compression/Decompression.
+   * @return value or {@code null} for none
+   */
+  public Compression getCompression() {
+    return compression;
+  }
+
+  /**
+   * Optional. Compression/Decompression.
+   * @param compression compression or {@code null} for none
+   */
+  public MessageTransform setCompression(Compression compression) {
+    this.compression = compression;
     return this;
   }
 

@@ -33,21 +33,21 @@ public final class GenaiVertexV1beta1FileSearch extends com.google.api.client.js
    * The file search store names to search.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("file_search_store_names")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> fileSearchStoreNames;
 
   /**
    * Metadata filter to apply to the semantic retrieval documents and chunks.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("metadata_filter")
+  @com.google.api.client.util.Key
   private java.lang.String metadataFilter;
 
   /**
    * The number of semantic retrieval chunks to retrieve.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("top_k")
+  @com.google.api.client.util.Key
   private java.lang.Integer topK;
 
   /**

@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1ComputerUse extends com.google.api.client.j
    * The list of predefined functions that are excluded from the model call.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("excluded_predefined_functions")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedPredefinedFunctions;
 
   /**

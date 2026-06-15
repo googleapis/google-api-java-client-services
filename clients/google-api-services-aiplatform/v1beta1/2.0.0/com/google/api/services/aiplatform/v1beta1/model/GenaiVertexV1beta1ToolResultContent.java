@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1ToolResultContent extends com.google.api.cl
    * Required. ID to match the ID from the function call block.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("call_id")
+  @com.google.api.client.util.Key
   private java.lang.String callId;
 
   /**

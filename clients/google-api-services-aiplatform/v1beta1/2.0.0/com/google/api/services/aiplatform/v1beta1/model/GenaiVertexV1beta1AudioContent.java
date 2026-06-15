@@ -47,14 +47,14 @@ public final class GenaiVertexV1beta1AudioContent extends com.google.api.client.
    * The mime type of the audio.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
    * The sample rate of the audio.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("sample_rate")
+  @com.google.api.client.util.Key
   private java.lang.Integer sampleRate;
 
   /**

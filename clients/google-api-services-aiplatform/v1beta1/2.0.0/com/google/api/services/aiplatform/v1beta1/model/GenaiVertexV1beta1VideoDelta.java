@@ -38,7 +38,7 @@ public final class GenaiVertexV1beta1VideoDelta extends com.google.api.client.js
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("mime_type")
+  @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**

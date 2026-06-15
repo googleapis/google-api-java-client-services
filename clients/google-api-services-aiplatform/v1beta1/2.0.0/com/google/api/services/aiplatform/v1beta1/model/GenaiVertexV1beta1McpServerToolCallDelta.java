@@ -44,7 +44,7 @@ public final class GenaiVertexV1beta1McpServerToolCallDelta extends com.google.a
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("server_name")
+  @com.google.api.client.util.Key
   private java.lang.String serverName;
 
   /**

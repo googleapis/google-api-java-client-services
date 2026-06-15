@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1ToolChoiceConfig extends com.google.api.cli
    * The allowed tools.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("allowed_tools")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1AllowedTools allowedTools;
 
   /**

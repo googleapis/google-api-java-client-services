@@ -32,7 +32,7 @@ public final class GenaiVertexV1beta1ResponseFormatList extends com.google.api.c
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("response_formats")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1ResponseFormat> responseFormats;
 
   static {

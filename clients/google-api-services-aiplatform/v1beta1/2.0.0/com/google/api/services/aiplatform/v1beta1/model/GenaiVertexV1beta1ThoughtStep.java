@@ -41,7 +41,13 @@ public final class GenaiVertexV1beta1ThoughtStep extends com.google.api.client.j
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1ThoughtSummaryContent> summary;
+  private java.util.List<GenaiVertexV1beta1Content> summary;
+
+  static {
+    // hack to force ProGuard to consider GenaiVertexV1beta1Content used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GenaiVertexV1beta1Content.class);
+  }
 
   /**
    * A signature hash for backend validation.
@@ -92,7 +98,7 @@ public final class GenaiVertexV1beta1ThoughtStep extends com.google.api.client.j
    * A summary of the thought.
    * @return value or {@code null} for none
    */
-  public java.util.List<GenaiVertexV1beta1ThoughtSummaryContent> getSummary() {
+  public java.util.List<GenaiVertexV1beta1Content> getSummary() {
     return summary;
   }
 
@@ -100,7 +106,7 @@ public final class GenaiVertexV1beta1ThoughtStep extends com.google.api.client.j
    * A summary of the thought.
    * @param summary summary or {@code null} for none
    */
-  public GenaiVertexV1beta1ThoughtStep setSummary(java.util.List<GenaiVertexV1beta1ThoughtSummaryContent> summary) {
+  public GenaiVertexV1beta1ThoughtStep setSummary(java.util.List<GenaiVertexV1beta1Content> summary) {
     this.summary = summary;
     return this;
   }

@@ -34,13 +34,13 @@ public final class GenaiVertexV1beta1ThoughtSummaryDelta extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ThoughtSummaryContent content;
+  private GenaiVertexV1beta1Content content;
 
   /**
    * A new summary item to be added to the thought.
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1ThoughtSummaryContent getContent() {
+  public GenaiVertexV1beta1Content getContent() {
     return content;
   }
 
@@ -48,7 +48,7 @@ public final class GenaiVertexV1beta1ThoughtSummaryDelta extends com.google.api.
    * A new summary item to be added to the thought.
    * @param content content or {@code null} for none
    */
-  public GenaiVertexV1beta1ThoughtSummaryDelta setContent(GenaiVertexV1beta1ThoughtSummaryContent content) {
+  public GenaiVertexV1beta1ThoughtSummaryDelta setContent(GenaiVertexV1beta1Content content) {
     this.content = content;
     return this;
   }

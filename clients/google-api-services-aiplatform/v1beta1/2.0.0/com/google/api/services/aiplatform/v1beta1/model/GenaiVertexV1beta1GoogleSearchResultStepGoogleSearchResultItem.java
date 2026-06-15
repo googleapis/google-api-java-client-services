@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1GoogleSearchResultStepGoogleSearchResultIte
    * Web content snippet that can be embedded in a web page or an app webview.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("search_suggestions")
+  @com.google.api.client.util.Key
   private java.lang.String searchSuggestions;
 
   /**

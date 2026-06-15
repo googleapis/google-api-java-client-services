@@ -35,21 +35,21 @@ public final class GenaiVertexV1beta1DeepResearchAgentConfig extends com.google.
    * if the user confirms the plan in the next turn.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("collaborative_planning")
+  @com.google.api.client.util.Key
   private java.lang.Boolean collaborativePlanning;
 
   /**
    * Enables bigquery tool for the Deep Research agent.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("enable_bigquery_tool")
+  @com.google.api.client.util.Key
   private java.lang.Boolean enableBigqueryTool;
 
   /**
    * Whether to include thought summaries in the response.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("thinking_summaries")
+  @com.google.api.client.util.Key
   private java.lang.String thinkingSummaries;
 
   /**

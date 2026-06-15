@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1FunctionResultSubcontentList contentList;
+  private GenaiVertexV1beta1ContentList contentList;
 
   /**
    * The value may be {@code null}.
@@ -44,7 +44,7 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("server_name")
+  @com.google.api.client.util.Key
   private java.lang.String serverName;
 
   /**
@@ -62,14 +62,14 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
   /**
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultSubcontentList getContentList() {
+  public GenaiVertexV1beta1ContentList getContentList() {
     return contentList;
   }
 
   /**
    * @param contentList contentList or {@code null} for none
    */
-  public GenaiVertexV1beta1McpServerToolResultDelta setContentList(GenaiVertexV1beta1FunctionResultSubcontentList contentList) {
+  public GenaiVertexV1beta1McpServerToolResultDelta setContentList(GenaiVertexV1beta1ContentList contentList) {
     this.contentList = contentList;
     return this;
   }

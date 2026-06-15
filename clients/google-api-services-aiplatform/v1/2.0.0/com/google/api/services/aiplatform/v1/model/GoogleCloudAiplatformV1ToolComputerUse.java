@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ToolComputerUse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Enables the prompt injection detection check on computer-use request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePromptInjectionDetection;
+
+  /**
    * Required. The environment being operated.
    * The value may be {@code null}.
    */
@@ -46,6 +53,23 @@ public final class GoogleCloudAiplatformV1ToolComputerUse extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedPredefinedFunctions;
+
+  /**
+   * Optional. Enables the prompt injection detection check on computer-use request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePromptInjectionDetection() {
+    return enablePromptInjectionDetection;
+  }
+
+  /**
+   * Optional. Enables the prompt injection detection check on computer-use request.
+   * @param enablePromptInjectionDetection enablePromptInjectionDetection or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolComputerUse setEnablePromptInjectionDetection(java.lang.Boolean enablePromptInjectionDetection) {
+    this.enablePromptInjectionDetection = enablePromptInjectionDetection;
+    return this;
+  }
 
   /**
    * Required. The environment being operated.

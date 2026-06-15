@@ -34,7 +34,7 @@ public final class GenaiVertexV1beta1ReviewSnippet extends com.google.api.client
    * The ID of the review snippet.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("review_id")
+  @com.google.api.client.util.Key
   private java.lang.String reviewId;
 
   /**

@@ -54,6 +54,7 @@ public final class GenaiVertexV1beta1Step extends com.google.api.client.json.Gen
   private GenaiVertexV1beta1ToolResultStep toolResult;
 
   /**
+   * DO NOT USE -- These are for 3P JSON only
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,6 +121,7 @@ public final class GenaiVertexV1beta1Step extends com.google.api.client.json.Gen
   }
 
   /**
+   * DO NOT USE -- These are for 3P JSON only
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1UserInputStep getUserInput() {
@@ -127,6 +129,7 @@ public final class GenaiVertexV1beta1Step extends com.google.api.client.json.Gen
   }
 
   /**
+   * DO NOT USE -- These are for 3P JSON only
    * @param userInput userInput or {@code null} for none
    */
   public GenaiVertexV1beta1Step setUserInput(GenaiVertexV1beta1UserInputStep userInput) {

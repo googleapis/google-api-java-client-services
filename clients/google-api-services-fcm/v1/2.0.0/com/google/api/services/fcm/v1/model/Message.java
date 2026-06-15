@@ -71,6 +71,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private FcmOptions fcmOptions;
 
   /**
+   * Optional. Firebase Installation ID to send a message to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fid;
+
+  /**
    * Output Only. The identifier of the message sent, in the format of
    * `projects/messages/{message_id}`.
    * The value may be {@code null}.
@@ -86,7 +93,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private Notification notification;
 
   /**
-   * Registration token to send a message to.
+   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
+   * period, this field also accepts a Firebase Installation ID (FID).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,6 +211,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Firebase Installation ID to send a message to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFid() {
+    return fid;
+  }
+
+  /**
+   * Optional. Firebase Installation ID to send a message to.
+   * @param fid fid or {@code null} for none
+   */
+  public Message setFid(java.lang.String fid) {
+    this.fid = fid;
+    return this;
+  }
+
+  /**
    * Output Only. The identifier of the message sent, in the format of
    * `projects/messages/{message_id}`.
    * @return value or {@code null} for none
@@ -239,7 +264,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Registration token to send a message to.
+   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
+   * period, this field also accepts a Firebase Installation ID (FID).
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -247,7 +273,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Registration token to send a message to.
+   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
+   * period, this field also accepts a Firebase Installation ID (FID).
    * @param token token or {@code null} for none
    */
   public Message setToken(java.lang.String token) {

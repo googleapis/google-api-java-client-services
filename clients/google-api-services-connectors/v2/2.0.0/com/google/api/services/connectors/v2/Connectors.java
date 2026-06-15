@@ -635,6 +635,148 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Executes a generic HTTP request. This supports all payload formats including REST/JSON, GraphQL,
+         * XML, SOAP, and Multipart by passing the rendered payload as raw bytes.
+         *
+         * Create a request for the method "connections.executeHttpRequest".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ExecuteHttpRequest#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+         * @param content the {@link com.google.api.services.connectors.v2.model.ExecuteHttpRequestRequest}
+         * @return the request
+         */
+        public ExecuteHttpRequest executeHttpRequest(java.lang.String name, com.google.api.services.connectors.v2.model.ExecuteHttpRequestRequest content) throws java.io.IOException {
+          ExecuteHttpRequest result = new ExecuteHttpRequest(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExecuteHttpRequest extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ExecuteHttpRequestResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:executeHttpRequest";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Executes a generic HTTP request. This supports all payload formats including REST/JSON,
+           * GraphQL, XML, SOAP, and Multipart by passing the rendered payload as raw bytes.
+           *
+           * Create a request for the method "connections.executeHttpRequest".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ExecuteHttpRequest#execute()} method to invoke the remote
+           * operation. <p> {@link ExecuteHttpRequest#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+           * @param content the {@link com.google.api.services.connectors.v2.model.ExecuteHttpRequestRequest}
+           * @since 1.13
+           */
+          protected ExecuteHttpRequest(java.lang.String name, com.google.api.services.connectors.v2.model.ExecuteHttpRequestRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.ExecuteHttpRequestResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExecuteHttpRequest set$Xgafv(java.lang.String $Xgafv) {
+            return (ExecuteHttpRequest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExecuteHttpRequest setAccessToken(java.lang.String accessToken) {
+            return (ExecuteHttpRequest) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExecuteHttpRequest setAlt(java.lang.String alt) {
+            return (ExecuteHttpRequest) super.setAlt(alt);
+          }
+
+          @Override
+          public ExecuteHttpRequest setCallback(java.lang.String callback) {
+            return (ExecuteHttpRequest) super.setCallback(callback);
+          }
+
+          @Override
+          public ExecuteHttpRequest setFields(java.lang.String fields) {
+            return (ExecuteHttpRequest) super.setFields(fields);
+          }
+
+          @Override
+          public ExecuteHttpRequest setKey(java.lang.String key) {
+            return (ExecuteHttpRequest) super.setKey(key);
+          }
+
+          @Override
+          public ExecuteHttpRequest setOauthToken(java.lang.String oauthToken) {
+            return (ExecuteHttpRequest) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExecuteHttpRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExecuteHttpRequest) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExecuteHttpRequest setQuotaUser(java.lang.String quotaUser) {
+            return (ExecuteHttpRequest) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExecuteHttpRequest setUploadType(java.lang.String uploadType) {
+            return (ExecuteHttpRequest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExecuteHttpRequest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExecuteHttpRequest) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the Connection. Format:
+         projects/{project}/locations/{location}/connections/{connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          public ExecuteHttpRequest setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ExecuteHttpRequest set(String parameterName, Object value) {
+            return (ExecuteHttpRequest) super.set(parameterName, value);
+          }
+        }
+        /**
          * Executes a SQL statement specified in the body of the request. An example of this SQL statement
          * in the case of Salesforce connector would be 'select * from Account a, Order o where a.Id =
          * o.AccountId'.

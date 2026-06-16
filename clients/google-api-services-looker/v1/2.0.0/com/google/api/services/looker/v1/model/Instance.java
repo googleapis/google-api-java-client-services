@@ -31,6 +31,13 @@ package com.google.api.services.looker.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Accelerated security patch enabled for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean acceleratedSecurityPatchEnabled;
+
+  /**
    * Looker Instance Admin settings.
    * The value may be {@code null}.
    */
@@ -244,6 +251,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean publicIpEnabled;
 
   /**
+   * Optional. The selected release channel for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseChannel;
+
+  /**
    * Name of a reserved IP address range within the Instance.consumer_network, to be used for
    * private services access connection. May or may not be specified in a create request.
    * The value may be {@code null}.
@@ -266,11 +280,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String softDeleteReason;
+
+  /**
    * Output only. The state of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String suspendedTime;
 
   /**
    * Output only. The time when the Looker instance was last updated.
@@ -285,6 +313,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UserMetadata userMetadata;
+
+  /**
+   * Optional. Accelerated security patch enabled for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAcceleratedSecurityPatchEnabled() {
+    return acceleratedSecurityPatchEnabled;
+  }
+
+  /**
+   * Optional. Accelerated security patch enabled for the instance.
+   * @param acceleratedSecurityPatchEnabled acceleratedSecurityPatchEnabled or {@code null} for none
+   */
+  public Instance setAcceleratedSecurityPatchEnabled(java.lang.Boolean acceleratedSecurityPatchEnabled) {
+    this.acceleratedSecurityPatchEnabled = acceleratedSecurityPatchEnabled;
+    return this;
+  }
 
   /**
    * Looker Instance Admin settings.
@@ -803,6 +848,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The selected release channel for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseChannel() {
+    return releaseChannel;
+  }
+
+  /**
+   * Optional. The selected release channel for the instance.
+   * @param releaseChannel releaseChannel or {@code null} for none
+   */
+  public Instance setReleaseChannel(java.lang.String releaseChannel) {
+    this.releaseChannel = releaseChannel;
+    return this;
+  }
+
+  /**
    * Name of a reserved IP address range within the Instance.consumer_network, to be used for
    * private services access connection. May or may not be specified in a create request.
    * @return value or {@code null} for none
@@ -856,6 +918,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSoftDeleteReason() {
+    return softDeleteReason;
+  }
+
+  /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * @param softDeleteReason softDeleteReason or {@code null} for none
+   */
+  public Instance setSoftDeleteReason(java.lang.String softDeleteReason) {
+    this.softDeleteReason = softDeleteReason;
+    return this;
+  }
+
+  /**
    * Output only. The state of the instance.
    * @return value or {@code null} for none
    */
@@ -869,6 +948,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * @return value or {@code null} for none
+   */
+  public String getSuspendedTime() {
+    return suspendedTime;
+  }
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * @param suspendedTime suspendedTime or {@code null} for none
+   */
+  public Instance setSuspendedTime(String suspendedTime) {
+    this.suspendedTime = suspendedTime;
     return this;
   }
 

@@ -33,9 +33,9 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
   /**
    * Optional. Specifies the permissions that this rule excludes from the set of affected
    * permissions given by `permissions`. The number of excluded permission strings in this field is
-   * limited to 50. If a permission appears in both `permissions` and `excluded_permissions` then it
-   * will _not_ be subject to the policy effect. The excluded permissions can be specified using the
-   * same syntax as `permissions`.
+   * limited to 50 across all rules in the policy. If a permission appears in both `permissions` and
+   * `excluded_permissions` then it will _not_ be subject to the policy effect. The excluded
+   * permissions can be specified using the same syntax as `permissions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,10 +43,10 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
 
   /**
    * Optional. The permissions that are explicitly affected by this rule. The number of permission
-   * strings in this field is limited to 50. Each permission uses the format
-   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
-   * for the service. `*` can be used as a wildcard to match all permissions for a specific service,
-   * resource type, or verb. The following formats are supported: *
+   * strings in this field is limited to 50 across all rules in the policy. Each permission uses the
+   * format `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain
+   * name for the service. `*` can be used as a wildcard to match all permissions for a specific
+   * service, resource type, or verb. The following formats are supported: *
    * `{service_fqdn}/{resource}.{verb}`: A specific permission. * `{service_fqdn}/{resource}.*`: All
    * permissions for a specific resource type. * `{service_fqdn}.*`: All permissions for all
    * resource types under a specific service. * `{service_fqdn}.{verb}`: All permissions with a
@@ -63,9 +63,9 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
   /**
    * Optional. Specifies the permissions that this rule excludes from the set of affected
    * permissions given by `permissions`. The number of excluded permission strings in this field is
-   * limited to 50. If a permission appears in both `permissions` and `excluded_permissions` then it
-   * will _not_ be subject to the policy effect. The excluded permissions can be specified using the
-   * same syntax as `permissions`.
+   * limited to 50 across all rules in the policy. If a permission appears in both `permissions` and
+   * `excluded_permissions` then it will _not_ be subject to the policy effect. The excluded
+   * permissions can be specified using the same syntax as `permissions`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedPermissions() {
@@ -75,9 +75,9 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
   /**
    * Optional. Specifies the permissions that this rule excludes from the set of affected
    * permissions given by `permissions`. The number of excluded permission strings in this field is
-   * limited to 50. If a permission appears in both `permissions` and `excluded_permissions` then it
-   * will _not_ be subject to the policy effect. The excluded permissions can be specified using the
-   * same syntax as `permissions`.
+   * limited to 50 across all rules in the policy. If a permission appears in both `permissions` and
+   * `excluded_permissions` then it will _not_ be subject to the policy effect. The excluded
+   * permissions can be specified using the same syntax as `permissions`.
    * @param excludedPermissions excludedPermissions or {@code null} for none
    */
   public GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation setExcludedPermissions(java.util.List<java.lang.String> excludedPermissions) {
@@ -87,10 +87,10 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
 
   /**
    * Optional. The permissions that are explicitly affected by this rule. The number of permission
-   * strings in this field is limited to 50. Each permission uses the format
-   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
-   * for the service. `*` can be used as a wildcard to match all permissions for a specific service,
-   * resource type, or verb. The following formats are supported: *
+   * strings in this field is limited to 50 across all rules in the policy. Each permission uses the
+   * format `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain
+   * name for the service. `*` can be used as a wildcard to match all permissions for a specific
+   * service, resource type, or verb. The following formats are supported: *
    * `{service_fqdn}/{resource}.{verb}`: A specific permission. * `{service_fqdn}/{resource}.*`: All
    * permissions for a specific resource type. * `{service_fqdn}.*`: All permissions for all
    * resource types under a specific service. * `{service_fqdn}.{verb}`: All permissions with a
@@ -107,10 +107,10 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRuleOperation extends
 
   /**
    * Optional. The permissions that are explicitly affected by this rule. The number of permission
-   * strings in this field is limited to 50. Each permission uses the format
-   * `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain name
-   * for the service. `*` can be used as a wildcard to match all permissions for a specific service,
-   * resource type, or verb. The following formats are supported: *
+   * strings in this field is limited to 50 across all rules in the policy. Each permission uses the
+   * format `{service_fqdn}/{resource}.{verb}`, where `{service_fqdn}` is the fully qualified domain
+   * name for the service. `*` can be used as a wildcard to match all permissions for a specific
+   * service, resource type, or verb. The following formats are supported: *
    * `{service_fqdn}/{resource}.{verb}`: A specific permission. * `{service_fqdn}/{resource}.*`: All
    * permissions for a specific resource type. * `{service_fqdn}.*`: All permissions for all
    * resource types under a specific service. * `{service_fqdn}.{verb}`: All permissions with a

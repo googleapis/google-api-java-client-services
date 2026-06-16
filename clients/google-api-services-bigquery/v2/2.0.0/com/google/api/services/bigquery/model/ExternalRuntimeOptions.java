@@ -50,8 +50,8 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String containerMemory;
 
   /**
-   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
-   * absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF container instance can handle
+   * concurrently. If absent or if `0`, a default concurrency is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -128,8 +128,8 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
-   * absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF container instance can handle
+   * concurrently. If absent or if `0`, a default concurrency is used.
    * @return value or {@code null} for none
    */
   public java.lang.Long getContainerRequestConcurrency() {
@@ -137,8 +137,8 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maximum number of requests that a Cloud Run instance can handle concurrently. If
-   * absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF container instance can handle
+   * concurrently. If absent or if `0`, a default concurrency is used.
    * @param containerRequestConcurrency containerRequestConcurrency or {@code null} for none
    */
   public ExternalRuntimeOptions setContainerRequestConcurrency(java.lang.Long containerRequestConcurrency) {

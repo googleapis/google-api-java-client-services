@@ -266,12 +266,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
    * allowed to the destination table for autodetection mode. Available for the formats: CSV,
-   * PARQUET, and AVRO. Possible values include: Not Specified, [], or [6]: timestamp(6) for all
-   * auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns
-   * that have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP
-   * columns that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected
-   * TIMESTAMP columns. The order of the elements in this array is ignored. Inputs that have higher
-   * precision than the highest target precision in this array will be truncated.
+   * PARQUET, AVRO, and Iceberg External Table. Possible values include: Not Specified, [], or [6]:
+   * timestamp(6) for all auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto
+   * detected TIMESTAMP columns that have less than 6 digits of subseconds. timestamp(12) for all
+   * auto detected TIMESTAMP columns that have more than 6 digits of subseconds. [12]: timestamp(12)
+   * for all auto detected TIMESTAMP columns. The order of the elements in this array is ignored.
+   * Inputs that have higher precision than the highest target precision in this array will be
+   * truncated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -826,12 +827,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
    * allowed to the destination table for autodetection mode. Available for the formats: CSV,
-   * PARQUET, and AVRO. Possible values include: Not Specified, [], or [6]: timestamp(6) for all
-   * auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns
-   * that have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP
-   * columns that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected
-   * TIMESTAMP columns. The order of the elements in this array is ignored. Inputs that have higher
-   * precision than the highest target precision in this array will be truncated.
+   * PARQUET, AVRO, and Iceberg External Table. Possible values include: Not Specified, [], or [6]:
+   * timestamp(6) for all auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto
+   * detected TIMESTAMP columns that have less than 6 digits of subseconds. timestamp(12) for all
+   * auto detected TIMESTAMP columns that have more than 6 digits of subseconds. [12]: timestamp(12)
+   * for all auto detected TIMESTAMP columns. The order of the elements in this array is ignored.
+   * Inputs that have higher precision than the highest target precision in this array will be
+   * truncated.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getTimestampTargetPrecision() {
@@ -841,12 +843,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   /**
    * Precisions (maximum number of total digits in base 10) for seconds of TIMESTAMP types that are
    * allowed to the destination table for autodetection mode. Available for the formats: CSV,
-   * PARQUET, and AVRO. Possible values include: Not Specified, [], or [6]: timestamp(6) for all
-   * auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto detected TIMESTAMP columns
-   * that have less than 6 digits of subseconds. timestamp(12) for all auto detected TIMESTAMP
-   * columns that have more than 6 digits of subseconds. [12]: timestamp(12) for all auto detected
-   * TIMESTAMP columns. The order of the elements in this array is ignored. Inputs that have higher
-   * precision than the highest target precision in this array will be truncated.
+   * PARQUET, AVRO, and Iceberg External Table. Possible values include: Not Specified, [], or [6]:
+   * timestamp(6) for all auto detected TIMESTAMP columns [6, 12]: timestamp(6) for all auto
+   * detected TIMESTAMP columns that have less than 6 digits of subseconds. timestamp(12) for all
+   * auto detected TIMESTAMP columns that have more than 6 digits of subseconds. [12]: timestamp(12)
+   * for all auto detected TIMESTAMP columns. The order of the elements in this array is ignored.
+   * Inputs that have higher precision than the highest target precision in this array will be
+   * truncated.
    * @param timestampTargetPrecision timestampTargetPrecision or {@code null} for none
    */
   public ExternalDataConfiguration setTimestampTargetPrecision(java.util.List<java.lang.Integer> timestampTargetPrecision) {

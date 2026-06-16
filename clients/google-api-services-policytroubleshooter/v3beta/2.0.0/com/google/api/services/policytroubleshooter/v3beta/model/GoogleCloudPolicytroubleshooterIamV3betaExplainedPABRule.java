@@ -40,6 +40,13 @@ public final class GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule exte
   private java.lang.String combinedResourceInclusionState;
 
   /**
+   * The relevance of the combined resource inclusion state to the overall access state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String combinedResourceRelevance;
+
+  /**
    * Required. The effect of the rule which describes the access relationship.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule exte
    */
   public GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule setCombinedResourceInclusionState(java.lang.String combinedResourceInclusionState) {
     this.combinedResourceInclusionState = combinedResourceInclusionState;
+    return this;
+  }
+
+  /**
+   * The relevance of the combined resource inclusion state to the overall access state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCombinedResourceRelevance() {
+    return combinedResourceRelevance;
+  }
+
+  /**
+   * The relevance of the combined resource inclusion state to the overall access state.
+   * @param combinedResourceRelevance combinedResourceRelevance or {@code null} for none
+   */
+  public GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule setCombinedResourceRelevance(java.lang.String combinedResourceRelevance) {
+    this.combinedResourceRelevance = combinedResourceRelevance;
     return this;
   }
 

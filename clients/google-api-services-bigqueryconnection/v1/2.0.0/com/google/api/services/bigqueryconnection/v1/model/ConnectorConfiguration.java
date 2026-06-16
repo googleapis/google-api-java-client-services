@@ -66,6 +66,17 @@ public final class ConnectorConfiguration extends com.google.api.client.json.Gen
   private ConnectorConfigurationNetwork network;
 
   /**
+   * Optional. A map of name-value pairs for connector-specific parameters. Extra configuration
+   * parameters, that are not standardized in configuration sections. To update a single parameter
+   * value call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If parameter id does not fit `[a-zA-Z0-9_]+` pattern,
+   * it should be escaped with backticks - for example ``configuration.parameters.`parameter id` ``.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ConnectorConfigurationParameterValue> parameters;
+
+  /**
    * Data asset.
    * @return value or {@code null} for none
    */
@@ -147,6 +158,31 @@ public final class ConnectorConfiguration extends com.google.api.client.json.Gen
    */
   public ConnectorConfiguration setNetwork(ConnectorConfigurationNetwork network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. A map of name-value pairs for connector-specific parameters. Extra configuration
+   * parameters, that are not standardized in configuration sections. To update a single parameter
+   * value call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If parameter id does not fit `[a-zA-Z0-9_]+` pattern,
+   * it should be escaped with backticks - for example ``configuration.parameters.`parameter id` ``.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ConnectorConfigurationParameterValue> getParameters() {
+    return parameters;
+  }
+
+  /**
+   * Optional. A map of name-value pairs for connector-specific parameters. Extra configuration
+   * parameters, that are not standardized in configuration sections. To update a single parameter
+   * value call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If parameter id does not fit `[a-zA-Z0-9_]+` pattern,
+   * it should be escaped with backticks - for example ``configuration.parameters.`parameter id` ``.
+   * @param parameters parameters or {@code null} for none
+   */
+  public ConnectorConfiguration setParameters(java.util.Map<String, ConnectorConfigurationParameterValue> parameters) {
+    this.parameters = parameters;
     return this;
   }
 

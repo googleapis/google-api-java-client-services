@@ -154,6 +154,128 @@ public class TravelImpactModel extends com.google.api.client.googleapis.services
   public class Flights {
 
     /**
+     * Retrieves detailed emission estimates. Detailed Flight Emissions are transparent per-passenger
+     * greenhouse gas emission estimates supplemented by comprehensive metadata detailing the
+     * calculation methodology, emissions breakdown, contrail impact, and data provenance. Details on
+     * how emission estimates are computed are in [GitHub](https://github.com/google/travel-impact-
+     * model). The response will contain all entries that match the input flight legs, in the same
+     * order. If there are no estimates available for a certain flight leg, the response will return the
+     * flight leg object with empty emission fields. The request will still be considered successful.
+     * Reasons for missing emission estimates include: * The flight is unknown to the server. * The
+     * input flight leg is missing one or more identifiers. * The flight date is in the past. * The
+     * aircraft type is not supported by the model. * Missing seat configuration. The request can
+     * contain up to 100 flight legs. If the request has more than 100 flight legs, it will fail with an
+     * INVALID_ARGUMENT error.
+     *
+     * Create a request for the method "flights.computeDetailedFlightEmissions".
+     *
+     * This request holds the parameters needed by the travelimpactmodel server.  After setting any
+     * optional parameters, call the {@link ComputeDetailedFlightEmissions#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsRequest}
+     * @return the request
+     */
+    public ComputeDetailedFlightEmissions computeDetailedFlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsRequest content) throws java.io.IOException {
+      ComputeDetailedFlightEmissions result = new ComputeDetailedFlightEmissions(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ComputeDetailedFlightEmissions extends TravelImpactModelRequest<com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsResponse> {
+
+      private static final String REST_PATH = "v1/flights:computeDetailedFlightEmissions";
+
+      /**
+       * Retrieves detailed emission estimates. Detailed Flight Emissions are transparent per-passenger
+       * greenhouse gas emission estimates supplemented by comprehensive metadata detailing the
+       * calculation methodology, emissions breakdown, contrail impact, and data provenance. Details on
+       * how emission estimates are computed are in [GitHub](https://github.com/google/travel-impact-
+       * model). The response will contain all entries that match the input flight legs, in the same
+       * order. If there are no estimates available for a certain flight leg, the response will return
+       * the flight leg object with empty emission fields. The request will still be considered
+       * successful. Reasons for missing emission estimates include: * The flight is unknown to the
+       * server. * The input flight leg is missing one or more identifiers. * The flight date is in the
+       * past. * The aircraft type is not supported by the model. * Missing seat configuration. The
+       * request can contain up to 100 flight legs. If the request has more than 100 flight legs, it
+       * will fail with an INVALID_ARGUMENT error.
+       *
+       * Create a request for the method "flights.computeDetailedFlightEmissions".
+       *
+       * This request holds the parameters needed by the the travelimpactmodel server.  After setting
+       * any optional parameters, call the {@link ComputeDetailedFlightEmissions#execute()} method to
+       * invoke the remote operation. <p> {@link ComputeDetailedFlightEmissions#initialize(com.google.ap
+       * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsRequest}
+       * @since 1.13
+       */
+      protected ComputeDetailedFlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsRequest content) {
+        super(TravelImpactModel.this, "POST", REST_PATH, content, com.google.api.services.travelimpactmodel.v1.model.ComputeDetailedFlightEmissionsResponse.class);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions set$Xgafv(java.lang.String $Xgafv) {
+        return (ComputeDetailedFlightEmissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setAccessToken(java.lang.String accessToken) {
+        return (ComputeDetailedFlightEmissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setAlt(java.lang.String alt) {
+        return (ComputeDetailedFlightEmissions) super.setAlt(alt);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setCallback(java.lang.String callback) {
+        return (ComputeDetailedFlightEmissions) super.setCallback(callback);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setFields(java.lang.String fields) {
+        return (ComputeDetailedFlightEmissions) super.setFields(fields);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setKey(java.lang.String key) {
+        return (ComputeDetailedFlightEmissions) super.setKey(key);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setOauthToken(java.lang.String oauthToken) {
+        return (ComputeDetailedFlightEmissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ComputeDetailedFlightEmissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setQuotaUser(java.lang.String quotaUser) {
+        return (ComputeDetailedFlightEmissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setUploadType(java.lang.String uploadType) {
+        return (ComputeDetailedFlightEmissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ComputeDetailedFlightEmissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ComputeDetailedFlightEmissions set(String parameterName, Object value) {
+        return (ComputeDetailedFlightEmissions) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves emission estimates. Details on how emission estimates are computed are in
      * [GitHub](https://github.com/google/travel-impact-model). The response will contain all entries
      * that match the input flight legs, in the same order. If there are no estimates available for a

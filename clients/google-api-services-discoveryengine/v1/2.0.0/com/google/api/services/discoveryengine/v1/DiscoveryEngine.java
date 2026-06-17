@@ -18557,6 +18557,35 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+               * strings in the response, such as the model selector `display_name` / `description`
+               * on `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the
+               * default language (English).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String languageCode;
+
+              /** Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable strings in the
+             response, such as the model selector `display_name` / `description` on
+             `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the default language
+             (English).
+               */
+              public java.lang.String getLanguageCode() {
+                return languageCode;
+              }
+
+              /**
+               * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+               * strings in the response, such as the model selector `display_name` / `description`
+               * on `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the
+               * default language (English).
+               */
+              public Get setLanguageCode(java.lang.String languageCode) {
+                this.languageCode = languageCode;
+                return this;
+              }
+
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
@@ -28587,6 +28616,35 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                */
               public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
                 this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+                return this;
+              }
+
+              /**
+               * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+               * strings in the response, such as the model selector `display_name` / `description`
+               * on `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the
+               * default language (English).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String languageCode;
+
+              /** Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable strings in the
+             response, such as the model selector `display_name` / `description` on
+             `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the default language
+             (English).
+               */
+              public java.lang.String getLanguageCode() {
+                return languageCode;
+              }
+
+              /**
+               * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+               * strings in the response, such as the model selector `display_name` / `description`
+               * on `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the
+               * default language (English).
+               */
+              public Get setLanguageCode(java.lang.String languageCode) {
+                this.languageCode = languageCode;
                 return this;
               }
 
@@ -42499,6 +42557,35 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
               this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              return this;
+            }
+
+            /**
+             * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+             * strings in the response, such as the model selector `display_name` / `description` on
+             * `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the default
+             * language (English).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String languageCode;
+
+            /** Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable strings in the
+           response, such as the model selector `display_name` / `description` on
+           `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the default language
+           (English).
+             */
+            public java.lang.String getLanguageCode() {
+              return languageCode;
+            }
+
+            /**
+             * Optional. BCP-47 language tag (e.g. "en", "fr-CA"). Used to localize human-readable
+             * strings in the response, such as the model selector `display_name` / `description` on
+             * `WidgetConfig.UiSettings.ModelConfigInfo`. Empty / unset falls back to the default
+             * language (English).
+             */
+            public Get setLanguageCode(java.lang.String languageCode) {
+              this.languageCode = languageCode;
               return this;
             }
 

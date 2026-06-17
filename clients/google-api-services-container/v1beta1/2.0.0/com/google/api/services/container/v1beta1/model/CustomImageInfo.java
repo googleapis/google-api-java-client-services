@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * CustomImageConfig contains the information r
+ * Contains the custom image info for a node pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,64 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CustomImageConfig extends com.google.api.client.json.GenericJson {
+public final class CustomImageInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the image to use for this node.
+   * Output only. The human-readable upgrade message for the custom image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String image;
+  private java.lang.String upgradeMessage;
 
   /**
-   * The project containing the image to use for this node.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String imageProject;
-
-  /**
-   * The name of the image to use for this node.
+   * Output only. The human-readable upgrade message for the custom image.
    * @return value or {@code null} for none
    */
-  public java.lang.String getImage() {
-    return image;
+  public java.lang.String getUpgradeMessage() {
+    return upgradeMessage;
   }
 
   /**
-   * The name of the image to use for this node.
-   * @param image image or {@code null} for none
+   * Output only. The human-readable upgrade message for the custom image.
+   * @param upgradeMessage upgradeMessage or {@code null} for none
    */
-  public CustomImageConfig setImage(java.lang.String image) {
-    this.image = image;
-    return this;
-  }
-
-  /**
-   * The project containing the image to use for this node.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getImageProject() {
-    return imageProject;
-  }
-
-  /**
-   * The project containing the image to use for this node.
-   * @param imageProject imageProject or {@code null} for none
-   */
-  public CustomImageConfig setImageProject(java.lang.String imageProject) {
-    this.imageProject = imageProject;
+  public CustomImageInfo setUpgradeMessage(java.lang.String upgradeMessage) {
+    this.upgradeMessage = upgradeMessage;
     return this;
   }
 
   @Override
-  public CustomImageConfig set(String fieldName, Object value) {
-    return (CustomImageConfig) super.set(fieldName, value);
+  public CustomImageInfo set(String fieldName, Object value) {
+    return (CustomImageInfo) super.set(fieldName, value);
   }
 
   @Override
-  public CustomImageConfig clone() {
-    return (CustomImageConfig) super.clone();
+  public CustomImageInfo clone() {
+    return (CustomImageInfo) super.clone();
   }
 
 }

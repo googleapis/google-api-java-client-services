@@ -38,6 +38,13 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> autoUpgradeStatus;
 
   /**
+   * Output only. Upgrade info for the node pool specific to the usage of custom images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomImageInfo customImageInfo;
+
+  /**
    * The node pool's current minor version's end of extended support timestamp.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
    */
   public NodePoolUpgradeInfo setAutoUpgradeStatus(java.util.List<java.lang.String> autoUpgradeStatus) {
     this.autoUpgradeStatus = autoUpgradeStatus;
+    return this;
+  }
+
+  /**
+   * Output only. Upgrade info for the node pool specific to the usage of custom images.
+   * @return value or {@code null} for none
+   */
+  public CustomImageInfo getCustomImageInfo() {
+    return customImageInfo;
+  }
+
+  /**
+   * Output only. Upgrade info for the node pool specific to the usage of custom images.
+   * @param customImageInfo customImageInfo or {@code null} for none
+   */
+  public NodePoolUpgradeInfo setCustomImageInfo(CustomImageInfo customImageInfo) {
+    this.customImageInfo = customImageInfo;
     return this;
   }
 

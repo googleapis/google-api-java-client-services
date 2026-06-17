@@ -57,7 +57,9 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
 
   /**
    * Optional. Default rule management of the data source. If set, the linked data sources will be
-   * replaced.
+   * replaced. Warning: The update (patch) and create call replaces the entire default rule setup.
+   * It doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +162,9 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
 
   /**
    * Optional. Default rule management of the data source. If set, the linked data sources will be
-   * replaced.
+   * replaced. Warning: The update (patch) and create call replaces the entire default rule setup.
+   * It doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * @return value or {@code null} for none
    */
   public DefaultRule getDefaultRule() {
@@ -169,7 +173,9 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
 
   /**
    * Optional. Default rule management of the data source. If set, the linked data sources will be
-   * replaced.
+   * replaced. Warning: The update (patch) and create call replaces the entire default rule setup.
+   * It doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * @param defaultRule defaultRule or {@code null} for none
    */
   public PrimaryProductDataSource setDefaultRule(DefaultRule defaultRule) {

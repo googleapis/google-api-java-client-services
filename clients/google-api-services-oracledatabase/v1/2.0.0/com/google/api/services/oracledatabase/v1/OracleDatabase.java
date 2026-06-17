@@ -3206,6 +3206,151 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
       public class CloudExadataInfrastructures {
 
         /**
+         * Configures Exascale for a single Exadata Infrastructure.
+         *
+         * Create a request for the method "cloudExadataInfrastructures.configureExascale".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link ConfigureExascale#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the Cloud Exadata Infrastructure in the following format:
+         *        projects/{project}/locations/{location}/cloudExadataInfrastructures/{cloud_exadata_infrast
+         *        ructure}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.ConfigureExascaleCloudExadataInfrastructureRequest}
+         * @return the request
+         */
+        public ConfigureExascale configureExascale(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ConfigureExascaleCloudExadataInfrastructureRequest content) throws java.io.IOException {
+          ConfigureExascale result = new ConfigureExascale(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ConfigureExascale extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:configureExascale";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+
+          /**
+           * Configures Exascale for a single Exadata Infrastructure.
+           *
+           * Create a request for the method "cloudExadataInfrastructures.configureExascale".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link ConfigureExascale#execute()} method to invoke the remote
+           * operation. <p> {@link ConfigureExascale#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Cloud Exadata Infrastructure in the following format:
+         *        projects/{project}/locations/{location}/cloudExadataInfrastructures/{cloud_exadata_infrast
+         *        ructure}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.ConfigureExascaleCloudExadataInfrastructureRequest}
+           * @since 1.13
+           */
+          protected ConfigureExascale(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ConfigureExascaleCloudExadataInfrastructureRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+            }
+          }
+
+          @Override
+          public ConfigureExascale set$Xgafv(java.lang.String $Xgafv) {
+            return (ConfigureExascale) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ConfigureExascale setAccessToken(java.lang.String accessToken) {
+            return (ConfigureExascale) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ConfigureExascale setAlt(java.lang.String alt) {
+            return (ConfigureExascale) super.setAlt(alt);
+          }
+
+          @Override
+          public ConfigureExascale setCallback(java.lang.String callback) {
+            return (ConfigureExascale) super.setCallback(callback);
+          }
+
+          @Override
+          public ConfigureExascale setFields(java.lang.String fields) {
+            return (ConfigureExascale) super.setFields(fields);
+          }
+
+          @Override
+          public ConfigureExascale setKey(java.lang.String key) {
+            return (ConfigureExascale) super.setKey(key);
+          }
+
+          @Override
+          public ConfigureExascale setOauthToken(java.lang.String oauthToken) {
+            return (ConfigureExascale) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ConfigureExascale setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ConfigureExascale) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ConfigureExascale setQuotaUser(java.lang.String quotaUser) {
+            return (ConfigureExascale) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ConfigureExascale setUploadType(java.lang.String uploadType) {
+            return (ConfigureExascale) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ConfigureExascale setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ConfigureExascale) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Cloud Exadata Infrastructure in the following format: project
+           * s/{project}/locations/{location}/cloudExadataInfrastructures/{cloud_exadata_infrastruct
+           * ure}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Cloud Exadata Infrastructure in the following format:
+         projects/{project}/locations/{location}/cloudExadataInfrastructures/{cloud_exadata_infrastructure}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Cloud Exadata Infrastructure in the following format: project
+           * s/{project}/locations/{location}/cloudExadataInfrastructures/{cloud_exadata_infrastruct
+           * ure}.
+           */
+          public ConfigureExascale setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ConfigureExascale set(String parameterName, Object value) {
+            return (ConfigureExascale) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new Exadata Infrastructure in a given project and location.
          *
          * Create a request for the method "cloudExadataInfrastructures.create".
@@ -11034,155 +11179,6 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
       public class GoldengateConnectionTypes {
 
         /**
-         * Gets details of a single GoldengateConnectionType.
-         *
-         * Create a request for the method "goldengateConnectionTypes.get".
-         *
-         * This request holds the parameters needed by the oracledatabase server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. Name of the resource in the format:
-         *        projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_t
-         *        ype}
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.GoldengateConnectionType> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateConnectionTypes/[^/]+$");
-
-          /**
-           * Gets details of a single GoldengateConnectionType.
-           *
-           * Create a request for the method "goldengateConnectionTypes.get".
-           *
-           * This request holds the parameters needed by the the oracledatabase server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. Name of the resource in the format:
-         *        projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_t
-         *        ype}
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.GoldengateConnectionType.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateConnectionTypes/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Name of the resource in the format: projects/{project}/locations/{location}/g
-           * oldengateConnectionTypes/{goldengate_connection_type}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. Name of the resource in the format:
-         projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. Name of the resource in the format: projects/{project}/locations/{location}/g
-           * oldengateConnectionTypes/{goldengate_connection_type}
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateConnectionTypes/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
          * Lists GoldengateConnectionTypes in a given project and location.
          *
          * Create a request for the method "goldengateConnectionTypes.list".
@@ -12191,153 +12187,6 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
       public class GoldengateDeploymentEnvironments {
 
         /**
-         * Gets details of a single GoldengateDeploymentEnvironment.
-         *
-         * Create a request for the method "goldengateDeploymentEnvironments.get".
-         *
-         * This request holds the parameters needed by the oracledatabase server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. Name of the resource with the format: projects/{project}/locations/{location}/goldengateDe
-         *        ploymentEnvironments/{goldengate_deployment_environment}
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentEnvironment> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateDeploymentEnvironments/[^/]+$");
-
-          /**
-           * Gets details of a single GoldengateDeploymentEnvironment.
-           *
-           * Create a request for the method "goldengateDeploymentEnvironments.get".
-           *
-           * This request holds the parameters needed by the the oracledatabase server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. Name of the resource with the format: projects/{project}/locations/{location}/goldengateDe
-         *        ploymentEnvironments/{goldengate_deployment_environment}
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentEnvironment.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentEnvironments/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Name of the resource with the format: projects/{project}/locations/{location}
-           * /goldengateDeploymentEnvironments/{goldengate_deployment_environment}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. Name of the resource with the format: projects/{project}/locations/{location}/goldengateD
-         eploymentEnvironments/{goldengate_deployment_environment}
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. Name of the resource with the format: projects/{project}/locations/{location}
-           * /goldengateDeploymentEnvironments/{goldengate_deployment_environment}
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentEnvironments/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
          * Lists GoldengateDeploymentEnvironments in a given project and location.
          *
          * Create a request for the method "goldengateDeploymentEnvironments.list".
@@ -12547,155 +12396,6 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
        */
       public class GoldengateDeploymentTypes {
 
-        /**
-         * Gets details of a single GoldenGateDeploymentType.
-         *
-         * Create a request for the method "goldengateDeploymentTypes.get".
-         *
-         * This request holds the parameters needed by the oracledatabase server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the GoldengateDeploymentType to retrieve. Format:
-         *        projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_t
-         *        ype}
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentType> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateDeploymentTypes/[^/]+$");
-
-          /**
-           * Gets details of a single GoldenGateDeploymentType.
-           *
-           * Create a request for the method "goldengateDeploymentTypes.get".
-           *
-           * This request holds the parameters needed by the the oracledatabase server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the GoldengateDeploymentType to retrieve. Format:
-         *        projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_t
-         *        ype}
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentType.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentTypes/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the GoldengateDeploymentType to retrieve. Format: projects/{proje
-           * ct}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the GoldengateDeploymentType to retrieve. Format:
-         projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the GoldengateDeploymentType to retrieve. Format: projects/{proje
-           * ct}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentTypes/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
         /**
          * Lists GoldenGateDeploymentTypes in a given project and location.
          *
@@ -12945,157 +12645,6 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
        */
       public class GoldengateDeploymentVersions {
 
-        /**
-         * Gets details of a single GoldengateDeploymentVersion.
-         *
-         * Create a request for the method "goldengateDeploymentVersions.get".
-         *
-         * This request holds the parameters needed by the oracledatabase server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the GoldengateDeploymentVersion to retrieve. Format:
-         *        projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deploymen
-         *        t_version}
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentVersion> {
-
-          private static final String REST_PATH = "v1/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateDeploymentVersions/[^/]+$");
-
-          /**
-           * Gets details of a single GoldengateDeploymentVersion.
-           *
-           * Create a request for the method "goldengateDeploymentVersions.get".
-           *
-           * This request holds the parameters needed by the the oracledatabase server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the GoldengateDeploymentVersion to retrieve. Format:
-         *        projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deploymen
-         *        t_version}
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.GoldengateDeploymentVersion.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentVersions/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the GoldengateDeploymentVersion to retrieve. Format: projects/{pr
-           * oject}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version
-           * }
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the GoldengateDeploymentVersion to retrieve. Format: projects/{project}/locat
-         ions/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the GoldengateDeploymentVersion to retrieve. Format: projects/{pr
-           * oject}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version
-           * }
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/goldengateDeploymentVersions/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
         /**
          * Lists GoldengateDeploymentVersions in a given project and location.
          *

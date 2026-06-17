@@ -77,6 +77,14 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String exadataInfrastructure;
 
   /**
+   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exascaleDbStorageVault;
+
+  /**
    * Output only. The GCP Oracle zone where Oracle CloudVmCluster is hosted. This will be the same
    * as the gcp_oracle_zone of the CloudExadataInfrastructure. Example: us-east4-b-r2.
    * The value may be {@code null}.
@@ -243,6 +251,25 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
    */
   public CloudVmCluster setExadataInfrastructure(java.lang.String exadataInfrastructure) {
     this.exadataInfrastructure = exadataInfrastructure;
+    return this;
+  }
+
+  /**
+   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExascaleDbStorageVault() {
+    return exascaleDbStorageVault;
+  }
+
+  /**
+   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+   * @param exascaleDbStorageVault exascaleDbStorageVault or {@code null} for none
+   */
+  public CloudVmCluster setExascaleDbStorageVault(java.lang.String exascaleDbStorageVault) {
+    this.exascaleDbStorageVault = exascaleDbStorageVault;
     return this;
   }
 

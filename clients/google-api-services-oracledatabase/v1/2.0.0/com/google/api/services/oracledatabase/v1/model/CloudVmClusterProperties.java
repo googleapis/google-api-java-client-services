@@ -243,6 +243,13 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   private java.lang.String state;
 
   /**
+   * Output only. The storage management type of the VM Cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageManagementType;
+
+  /**
    * Output only. The storage allocation for the disk group, in gigabytes (GB).
    * The value may be {@code null}.
    */
@@ -774,6 +781,23 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
    */
   public CloudVmClusterProperties setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The storage management type of the VM Cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageManagementType() {
+    return storageManagementType;
+  }
+
+  /**
+   * Output only. The storage management type of the VM Cluster.
+   * @param storageManagementType storageManagementType or {@code null} for none
+   */
+  public CloudVmClusterProperties setStorageManagementType(java.lang.String storageManagementType) {
+    this.storageManagementType = storageManagementType;
     return this;
   }
 

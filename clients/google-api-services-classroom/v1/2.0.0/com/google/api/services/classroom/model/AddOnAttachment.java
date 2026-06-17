@@ -105,9 +105,9 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
    * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
    * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
-   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
-   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
-   * will also be discarded.
+   * text.studentContext`](/workspace/classroom/reference/rest/v1/AddOnContext#StudentContext) field
+   * when a student views the attachment. If the URI is omitted or removed, `max_points` will also
+   * be discarded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,9 +303,9 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
    * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
    * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
-   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
-   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
-   * will also be discarded.
+   * text.studentContext`](/workspace/classroom/reference/rest/v1/AddOnContext#StudentContext) field
+   * when a student views the attachment. If the URI is omitted or removed, `max_points` will also
+   * be discarded.
    * @return value or {@code null} for none
    */
   public EmbedUri getStudentWorkReviewUri() {
@@ -316,9 +316,9 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
    * URI for the teacher to see student work on the attachment, if applicable. The URI will be
    * opened in an iframe with the `courseId`, `itemId`, `itemType`, `attachmentId`, and
    * `submissionId` query parameters set. This is the same `submissionId` returned in the [`AddOnCon
-   * text.studentContext`](//devsite.google.com/classroom/reference/rest/v1/AddOnContext#StudentCont
-   * ext) field when a student views the attachment. If the URI is omitted or removed, `max_points`
-   * will also be discarded.
+   * text.studentContext`](/workspace/classroom/reference/rest/v1/AddOnContext#StudentContext) field
+   * when a student views the attachment. If the URI is omitted or removed, `max_points` will also
+   * be discarded.
    * @param studentWorkReviewUri studentWorkReviewUri or {@code null} for none
    */
   public AddOnAttachment setStudentWorkReviewUri(EmbedUri studentWorkReviewUri) {

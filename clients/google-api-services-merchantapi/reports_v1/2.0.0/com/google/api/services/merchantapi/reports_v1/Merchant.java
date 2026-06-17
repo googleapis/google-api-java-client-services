@@ -183,8 +183,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Id of the account making the call. Must be a standalone account or an MCA subaccount.
-       *        Format: accounts/{account}
+       * @param parent Required. Id of the account making the call. Must be a standalone account or a subaccount of an
+       *        advanced account. Format: accounts/{account}
        * @param content the {@link com.google.api.services.merchantapi.reports_v1.model.SearchRequest}
        * @return the request
        */
@@ -214,8 +214,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Id of the account making the call. Must be a standalone account or an MCA subaccount.
-       *        Format: accounts/{account}
+         * @param parent Required. Id of the account making the call. Must be a standalone account or a subaccount of an
+       *        advanced account. Format: accounts/{account}
          * @param content the {@link com.google.api.services.merchantapi.reports_v1.model.SearchRequest}
          * @since 1.13
          */
@@ -285,22 +285,22 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. Id of the account making the call. Must be a standalone account or an MCA
-         * subaccount. Format: accounts/{account}
+         * Required. Id of the account making the call. Must be a standalone account or a subaccount
+         * of an advanced account. Format: accounts/{account}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Id of the account making the call. Must be a standalone account or an MCA subaccount.
-       Format: accounts/{account}
+        /** Required. Id of the account making the call. Must be a standalone account or a subaccount of an
+       advanced account. Format: accounts/{account}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Id of the account making the call. Must be a standalone account or an MCA
-         * subaccount. Format: accounts/{account}
+         * Required. Id of the account making the call. Must be a standalone account or a subaccount
+         * of an advanced account. Format: accounts/{account}
          */
         public Search setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

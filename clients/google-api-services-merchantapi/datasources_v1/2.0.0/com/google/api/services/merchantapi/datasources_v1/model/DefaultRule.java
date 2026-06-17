@@ -39,7 +39,9 @@ public final class DefaultRule extends com.google.api.client.json.GenericJson {
    * the order of this list will result in changing the priority of data sources in the default
    * rule. For example, providing the following list: [`1001`, `self`] will take attribute values
    * from supplemental data source `1001`, and fallback to `self` if the attribute is not set in
-   * `1001`.
+   * `1001`. Warning: The update (patch) and create call replaces the entire default rule setup. It
+   * doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,9 @@ public final class DefaultRule extends com.google.api.client.json.GenericJson {
    * the order of this list will result in changing the priority of data sources in the default
    * rule. For example, providing the following list: [`1001`, `self`] will take attribute values
    * from supplemental data source `1001`, and fallback to `self` if the attribute is not set in
-   * `1001`.
+   * `1001`. Warning: The update (patch) and create call replaces the entire default rule setup. It
+   * doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * @return value or {@code null} for none
    */
   public java.util.List<DataSourceReference> getTakeFromDataSources() {
@@ -78,7 +82,9 @@ public final class DefaultRule extends com.google.api.client.json.GenericJson {
    * the order of this list will result in changing the priority of data sources in the default
    * rule. For example, providing the following list: [`1001`, `self`] will take attribute values
    * from supplemental data source `1001`, and fallback to `self` if the attribute is not set in
-   * `1001`.
+   * `1001`. Warning: The update (patch) and create call replaces the entire default rule setup. It
+   * doesn't work as an addition or append. If `self` is missing from the list of
+   * `take_from_data_sources`, the API will ignore attributes from the primary data source itself.
    * @param takeFromDataSources takeFromDataSources or {@code null} for none
    */
   public DefaultRule setTakeFromDataSources(java.util.List<DataSourceReference> takeFromDataSources) {

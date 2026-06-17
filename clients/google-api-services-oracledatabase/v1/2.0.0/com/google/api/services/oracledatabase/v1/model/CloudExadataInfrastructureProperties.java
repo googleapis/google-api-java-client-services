@@ -110,6 +110,13 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.String dbServerVersion;
 
   /**
+   * Output only. The Exascale configuration for the Exadata Infrastructure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExascaleConfig exascaleConfig;
+
+  /**
    * Optional. Maintenance window for repair.
    * The value may be {@code null}.
    */
@@ -435,6 +442,23 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
    */
   public CloudExadataInfrastructureProperties setDbServerVersion(java.lang.String dbServerVersion) {
     this.dbServerVersion = dbServerVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The Exascale configuration for the Exadata Infrastructure.
+   * @return value or {@code null} for none
+   */
+  public ExascaleConfig getExascaleConfig() {
+    return exascaleConfig;
+  }
+
+  /**
+   * Output only. The Exascale configuration for the Exadata Infrastructure.
+   * @param exascaleConfig exascaleConfig or {@code null} for none
+   */
+  public CloudExadataInfrastructureProperties setExascaleConfig(ExascaleConfig exascaleConfig) {
+    this.exascaleConfig = exascaleConfig;
     return this;
   }
 

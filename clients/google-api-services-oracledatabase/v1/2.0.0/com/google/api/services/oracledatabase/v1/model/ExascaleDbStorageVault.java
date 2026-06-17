@@ -55,6 +55,15 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   private java.lang.String entitlementId;
 
   /**
+   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
+   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
+   * res/{cloud_extradata_infrastructure}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exadataInfrastructure;
+
+  /**
    * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted. Example: us-
    * east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
@@ -136,6 +145,27 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
    */
   public ExascaleDbStorageVault setEntitlementId(java.lang.String entitlementId) {
     this.entitlementId = entitlementId;
+    return this;
+  }
+
+  /**
+   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
+   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
+   * res/{cloud_extradata_infrastructure}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExadataInfrastructure() {
+    return exadataInfrastructure;
+  }
+
+  /**
+   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
+   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
+   * res/{cloud_extradata_infrastructure}
+   * @param exadataInfrastructure exadataInfrastructure or {@code null} for none
+   */
+  public ExascaleDbStorageVault setExadataInfrastructure(java.lang.String exadataInfrastructure) {
+    this.exadataInfrastructure = exadataInfrastructure;
     return this;
   }
 

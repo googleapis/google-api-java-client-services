@@ -82,7 +82,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * control task attempts however they control how tasks are attempted in different ways: *
    * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched
    * from the queue, regardless of whether the dispatch is from a first attempt or a retry). *
-   * retry_config controls what happens to particular a task after its first attempt fails. That is,
+   * retry_config controls what happens to a particular task after its first attempt fails. That is,
    * retry_config controls task retries (the second attempt, third attempt, etc).
    * The value may be {@code null}.
    */
@@ -257,7 +257,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * control task attempts however they control how tasks are attempted in different ways: *
    * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched
    * from the queue, regardless of whether the dispatch is from a first attempt or a retry). *
-   * retry_config controls what happens to particular a task after its first attempt fails. That is,
+   * retry_config controls what happens to a particular task after its first attempt fails. That is,
    * retry_config controls task retries (the second attempt, third attempt, etc).
    * @return value or {@code null} for none
    */
@@ -270,7 +270,7 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * control task attempts however they control how tasks are attempted in different ways: *
    * rate_limits controls the total rate of dispatches from a queue (i.e. all traffic dispatched
    * from the queue, regardless of whether the dispatch is from a first attempt or a retry). *
-   * retry_config controls what happens to particular a task after its first attempt fails. That is,
+   * retry_config controls what happens to a particular task after its first attempt fails. That is,
    * retry_config controls task retries (the second attempt, third attempt, etc).
    * @param rateLimits rateLimits or {@code null} for none
    */

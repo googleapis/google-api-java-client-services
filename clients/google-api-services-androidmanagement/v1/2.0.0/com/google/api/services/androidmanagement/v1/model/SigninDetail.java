@@ -68,6 +68,13 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultStatus;
 
   /**
+   * Optional. Options related to Google authentication during the enrollment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SigninDetailGoogleAuthenticationOptions googleAuthenticationOptions;
+
+  /**
    * A JSON string whose UTF-8 representation can be used to generate a QR code to enroll a device
    * with this enrollment token. To enroll a device using NFC, the NFC record must contain a
    * serialized java.util.Properties representation of the properties in the JSON. This is a read-
@@ -155,6 +162,23 @@ public final class SigninDetail extends com.google.api.client.json.GenericJson {
    */
   public SigninDetail setDefaultStatus(java.lang.String defaultStatus) {
     this.defaultStatus = defaultStatus;
+    return this;
+  }
+
+  /**
+   * Optional. Options related to Google authentication during the enrollment.
+   * @return value or {@code null} for none
+   */
+  public SigninDetailGoogleAuthenticationOptions getGoogleAuthenticationOptions() {
+    return googleAuthenticationOptions;
+  }
+
+  /**
+   * Optional. Options related to Google authentication during the enrollment.
+   * @param googleAuthenticationOptions googleAuthenticationOptions or {@code null} for none
+   */
+  public SigninDetail setGoogleAuthenticationOptions(SigninDetailGoogleAuthenticationOptions googleAuthenticationOptions) {
+    this.googleAuthenticationOptions = googleAuthenticationOptions;
     return this;
   }
 

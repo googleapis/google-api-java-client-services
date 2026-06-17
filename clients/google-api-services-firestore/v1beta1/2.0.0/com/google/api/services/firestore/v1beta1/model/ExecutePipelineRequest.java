@@ -30,6 +30,14 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class ExecutePipelineRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Automatically commits the transaction after the pipeline has been executed. Only
+   * permitted in combination with `transaction` or `new_transaction`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoCommitTransaction;
+
+  /**
    * Execute the pipeline in a new transaction. The identifier of the newly created transaction will
    * be returned in the first response on the stream. This defaults to a read-only transaction.
    * The value may be {@code null}.
@@ -60,6 +68,25 @@ public final class ExecutePipelineRequest extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
+
+  /**
+   * Optional. Automatically commits the transaction after the pipeline has been executed. Only
+   * permitted in combination with `transaction` or `new_transaction`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoCommitTransaction() {
+    return autoCommitTransaction;
+  }
+
+  /**
+   * Optional. Automatically commits the transaction after the pipeline has been executed. Only
+   * permitted in combination with `transaction` or `new_transaction`.
+   * @param autoCommitTransaction autoCommitTransaction or {@code null} for none
+   */
+  public ExecutePipelineRequest setAutoCommitTransaction(java.lang.Boolean autoCommitTransaction) {
+    this.autoCommitTransaction = autoCommitTransaction;
+    return this;
+  }
 
   /**
    * Execute the pipeline in a new transaction. The identifier of the newly created transaction will

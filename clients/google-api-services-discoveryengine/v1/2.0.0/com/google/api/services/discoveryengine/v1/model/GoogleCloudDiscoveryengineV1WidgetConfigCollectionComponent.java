@@ -31,6 +31,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The auth uri of the connector source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState connectorAuthState;
+
+  /**
    * Output only. The icon link of the connector source.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The auth uri of the connector source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState getConnectorAuthState() {
+    return connectorAuthState;
+  }
+
+  /**
+   * Output only. The auth uri of the connector source.
+   * @param connectorAuthState connectorAuthState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setConnectorAuthState(GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState connectorAuthState) {
+    this.connectorAuthState = connectorAuthState;
+    return this;
+  }
 
   /**
    * Output only. The icon link of the connector source.

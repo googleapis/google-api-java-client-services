@@ -36,6 +36,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Per-model Agent Search TPM subscription status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus> agentSearchTokenSubscriptionStatuses;
+
+  /**
    * Optional. The currently effective Indexing Core threshold. This is the threshold against which
    * Indexing Core usage is compared for overage calculations.
    * The value may be {@code null}.
@@ -91,6 +98,23 @@ public final class GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingSta
    */
   @com.google.api.client.util.Key
   private java.lang.String updateType;
+
+  /**
+   * Output only. Per-model Agent Search TPM subscription status.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus> getAgentSearchTokenSubscriptionStatuses() {
+    return agentSearchTokenSubscriptionStatuses;
+  }
+
+  /**
+   * Output only. Per-model Agent Search TPM subscription status.
+   * @param agentSearchTokenSubscriptionStatuses agentSearchTokenSubscriptionStatuses or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatus setAgentSearchTokenSubscriptionStatuses(java.util.List<GoogleCloudDiscoveryengineV1betaProjectConfigurableBillingStatusAgentSearchTokenSubscriptionStatus> agentSearchTokenSubscriptionStatuses) {
+    this.agentSearchTokenSubscriptionStatuses = agentSearchTokenSubscriptionStatuses;
+    return this;
+  }
 
   /**
    * Optional. The currently effective Indexing Core threshold. This is the threshold against which

@@ -131,6 +131,13 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String realtimeDatabaseUrl;
 
   /**
+   * Optional. Recaptcha Enterprise site key associated with the Firebase App.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recaptchaSiteKey;
+
+  /**
    * **DEPRECATED.** _Instead, find the name of the default Cloud Storage for Firebase bucket using
    * the [list endpoint](https://firebase.google.com/docs/reference/rest/storage/rest/v1beta/project
    * s.buckets/list) within the Cloud Storage for Firebase REST API. If the default bucket for the
@@ -377,6 +384,23 @@ public final class WebAppConfig extends com.google.api.client.json.GenericJson {
    */
   public WebAppConfig setRealtimeDatabaseUrl(java.lang.String realtimeDatabaseUrl) {
     this.realtimeDatabaseUrl = realtimeDatabaseUrl;
+    return this;
+  }
+
+  /**
+   * Optional. Recaptcha Enterprise site key associated with the Firebase App.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecaptchaSiteKey() {
+    return recaptchaSiteKey;
+  }
+
+  /**
+   * Optional. Recaptcha Enterprise site key associated with the Firebase App.
+   * @param recaptchaSiteKey recaptchaSiteKey or {@code null} for none
+   */
+  public WebAppConfig setRecaptchaSiteKey(java.lang.String recaptchaSiteKey) {
+    this.recaptchaSiteKey = recaptchaSiteKey;
     return this;
   }
 

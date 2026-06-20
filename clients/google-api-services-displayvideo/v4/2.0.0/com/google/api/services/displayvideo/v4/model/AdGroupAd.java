@@ -85,8 +85,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
    * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +94,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
    * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,9 +103,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,9 +113,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field will
-   * begin rolling out to all partners on *June 10, 2026* and be available to all partners on *June
-   * 24, 2026*.
+   * onlyAd). Retrieval and management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +123,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -333,8 +328,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
    * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DcmTrackingInfo getDcmTrackingInfo() {
@@ -344,8 +338,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
    * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @param dcmTrackingInfo dcmTrackingInfo or {@code null} for none
    */
   public AdGroupAd setDcmTrackingInfo(DcmTrackingInfo dcmTrackingInfo) {
@@ -356,8 +349,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
    * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DemandGenCarouselAd getDemandGenCarouselAd() {
@@ -367,8 +359,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
    * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @param demandGenCarouselAd demandGenCarouselAd or {@code null} for none
    */
   public AdGroupAd setDemandGenCarouselAd(DemandGenCarouselAd demandGenCarouselAd) {
@@ -379,9 +370,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DemandGenImageAd getDemandGenImageAd() {
@@ -391,9 +381,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * @param demandGenImageAd demandGenImageAd or {@code null} for none
    */
   public AdGroupAd setDemandGenImageAd(DemandGenImageAd demandGenImageAd) {
@@ -404,9 +393,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field will
-   * begin rolling out to all partners on *June 10, 2026* and be available to all partners on *June
-   * 24, 2026*.
+   * onlyAd). Retrieval and management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DemandGenProductAd getDemandGenProductAd() {
@@ -416,9 +404,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field will
-   * begin rolling out to all partners on *June 10, 2026* and be available to all partners on *June
-   * 24, 2026*.
+   * onlyAd). Retrieval and management of Demand Gen resources is currently rolling out. This field
+   * will be available to all partners by *June 24, 2026*.
    * @param demandGenProductAd demandGenProductAd or {@code null} for none
    */
   public AdGroupAd setDemandGenProductAd(DemandGenProductAd demandGenProductAd) {
@@ -429,9 +416,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DemandGenVideoAd getDemandGenVideoAd() {
@@ -441,9 +427,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
-   * Retrieval and management of Demand Gen resources is currently in beta. This field will begin
-   * rolling out to all partners on *June 10, 2026* and be available to all partners on *June 24,
-   * 2026*.
+   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
+   * available to all partners by *June 24, 2026*.
    * @param demandGenVideoAd demandGenVideoAd or {@code null} for none
    */
   public AdGroupAd setDemandGenVideoAd(DemandGenVideoAd demandGenVideoAd) {

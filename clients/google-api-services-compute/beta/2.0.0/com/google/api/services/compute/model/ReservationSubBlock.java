@@ -51,13 +51,6 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.String creationTimestamp;
 
   /**
-   * Output only. [Output Only] Health information for the reservation subBlock.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ReservationSubBlockHealthInfo healthInfo;
-
-  /**
    * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
    * by the server.
    * The value may be {@code null}.
@@ -134,6 +127,13 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.String status;
 
   /**
+   * Output only. [Output Only] Health information for the reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationSubBlockHealthInfo subBlockHealthInfo;
+
+  /**
    * Output only. [Output Only] Zone in which the reservation subBlock resides.
    * The value may be {@code null}.
    */
@@ -188,23 +188,6 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] Health information for the reservation subBlock.
-   * @return value or {@code null} for none
-   */
-  public ReservationSubBlockHealthInfo getHealthInfo() {
-    return healthInfo;
-  }
-
-  /**
-   * Output only. [Output Only] Health information for the reservation subBlock.
-   * @param healthInfo healthInfo or {@code null} for none
-   */
-  public ReservationSubBlock setHealthInfo(ReservationSubBlockHealthInfo healthInfo) {
-    this.healthInfo = healthInfo;
     return this;
   }
 
@@ -387,6 +370,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Health information for the reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public ReservationSubBlockHealthInfo getSubBlockHealthInfo() {
+    return subBlockHealthInfo;
+  }
+
+  /**
+   * Output only. [Output Only] Health information for the reservation subBlock.
+   * @param subBlockHealthInfo subBlockHealthInfo or {@code null} for none
+   */
+  public ReservationSubBlock setSubBlockHealthInfo(ReservationSubBlockHealthInfo subBlockHealthInfo) {
+    this.subBlockHealthInfo = subBlockHealthInfo;
     return this;
   }
 

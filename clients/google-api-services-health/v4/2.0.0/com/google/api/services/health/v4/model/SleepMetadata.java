@@ -51,7 +51,9 @@ public final class SleepMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean nap;
 
   /**
-   * Output only. Sleep and sleep stages algorithms finished processing.
+   * Output only. Sleep and sleep stages algorithms finished processing. A `true` value indicates
+   * whether all data processing for the session is complete. A `false` value means sleep period is
+   * detected but sleep stages is still processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +118,9 @@ public final class SleepMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Sleep and sleep stages algorithms finished processing.
+   * Output only. Sleep and sleep stages algorithms finished processing. A `true` value indicates
+   * whether all data processing for the session is complete. A `false` value means sleep period is
+   * detected but sleep stages is still processing.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProcessed() {
@@ -124,7 +128,9 @@ public final class SleepMetadata extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Sleep and sleep stages algorithms finished processing.
+   * Output only. Sleep and sleep stages algorithms finished processing. A `true` value indicates
+   * whether all data processing for the session is complete. A `false` value means sleep period is
+   * detected but sleep stages is still processing.
    * @param processed processed or {@code null} for none
    */
   public SleepMetadata setProcessed(java.lang.Boolean processed) {

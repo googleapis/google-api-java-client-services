@@ -30,34 +30,38 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerExactMatchScorer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Assigns this reward score if parsed response string equals the expression.
+   * Assigns this reward score if the parsed response string equals the expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float correctAnswerReward;
 
   /**
-   * The string expression to match against. Supports substitution in the format of
-   * {{references.reference}} before matching. No regex support. For example, customer can define:
-   * ``` correct_answer_reward: 1.0 wrong_answer_reward: -1.0 expression: {{references.reference}}
-   * ``` And during evaluation for each parsed autorater response, the prompt references will be
-   * substituted into the expression here. If references.reference has a value of "3", the
-   * expression becomes "3" and we will give 1.0 reward if parsed response string equals "3". and
-   * -1.0 reward if parsed response string does not equal "3".
+   * The string expression to match against for scoring. This field supports placeholders in the
+   * format of {{references.key}} that will be replaced before matching. Regex is not supported for
+   * this expression. For example, users can define an ExactMatchScorer as follows: {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression":
+   * "{{references.concise_answer}}" } When evaluating the reward for each parsed autorater
+   * response, if the prompt references in the training/validation dataset has the following fields:
+   * ``` { "example": ..., "references": { "concise_ansser": "Yes", "verbose_answer": "The answer is
+   * Yes" } } ``` The above ExactMatchScorer will be replaced as follows for scoring: ``` {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression": "Yes" } ``` If the
+   * *parsed* autorater response is equal to the string `"Yes"`, then the reward is `1.0`, otherwise
+   * the reward is `-1.0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expression;
 
   /**
-   * Assigns this reward score if parsed reward value does not equal the expression.
+   * Assigns this reward score if the parsed reward value does not equal the expression.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float wrongAnswerReward;
 
   /**
-   * Assigns this reward score if parsed response string equals the expression.
+   * Assigns this reward score if the parsed response string equals the expression.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCorrectAnswerReward() {
@@ -65,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Assigns this reward score if parsed response string equals the expression.
+   * Assigns this reward score if the parsed response string equals the expression.
    * @param correctAnswerReward correctAnswerReward or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerExactMatchScorer setCorrectAnswerReward(java.lang.Float correctAnswerReward) {
@@ -74,13 +78,17 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * The string expression to match against. Supports substitution in the format of
-   * {{references.reference}} before matching. No regex support. For example, customer can define:
-   * ``` correct_answer_reward: 1.0 wrong_answer_reward: -1.0 expression: {{references.reference}}
-   * ``` And during evaluation for each parsed autorater response, the prompt references will be
-   * substituted into the expression here. If references.reference has a value of "3", the
-   * expression becomes "3" and we will give 1.0 reward if parsed response string equals "3". and
-   * -1.0 reward if parsed response string does not equal "3".
+   * The string expression to match against for scoring. This field supports placeholders in the
+   * format of {{references.key}} that will be replaced before matching. Regex is not supported for
+   * this expression. For example, users can define an ExactMatchScorer as follows: {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression":
+   * "{{references.concise_answer}}" } When evaluating the reward for each parsed autorater
+   * response, if the prompt references in the training/validation dataset has the following fields:
+   * ``` { "example": ..., "references": { "concise_ansser": "Yes", "verbose_answer": "The answer is
+   * Yes" } } ``` The above ExactMatchScorer will be replaced as follows for scoring: ``` {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression": "Yes" } ``` If the
+   * *parsed* autorater response is equal to the string `"Yes"`, then the reward is `1.0`, otherwise
+   * the reward is `-1.0`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -88,13 +96,17 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * The string expression to match against. Supports substitution in the format of
-   * {{references.reference}} before matching. No regex support. For example, customer can define:
-   * ``` correct_answer_reward: 1.0 wrong_answer_reward: -1.0 expression: {{references.reference}}
-   * ``` And during evaluation for each parsed autorater response, the prompt references will be
-   * substituted into the expression here. If references.reference has a value of "3", the
-   * expression becomes "3" and we will give 1.0 reward if parsed response string equals "3". and
-   * -1.0 reward if parsed response string does not equal "3".
+   * The string expression to match against for scoring. This field supports placeholders in the
+   * format of {{references.key}} that will be replaced before matching. Regex is not supported for
+   * this expression. For example, users can define an ExactMatchScorer as follows: {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression":
+   * "{{references.concise_answer}}" } When evaluating the reward for each parsed autorater
+   * response, if the prompt references in the training/validation dataset has the following fields:
+   * ``` { "example": ..., "references": { "concise_ansser": "Yes", "verbose_answer": "The answer is
+   * Yes" } } ``` The above ExactMatchScorer will be replaced as follows for scoring: ``` {
+   * "correctAnswerReward": 1.0, "wrongAnswerReward": -1.0, "expression": "Yes" } ``` If the
+   * *parsed* autorater response is equal to the string `"Yes"`, then the reward is `1.0`, otherwise
+   * the reward is `-1.0`.
    * @param expression expression or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerExactMatchScorer setExpression(java.lang.String expression) {
@@ -103,7 +115,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Assigns this reward score if parsed reward value does not equal the expression.
+   * Assigns this reward score if the parsed reward value does not equal the expression.
    * @return value or {@code null} for none
    */
   public java.lang.Float getWrongAnswerReward() {
@@ -111,7 +123,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Assigns this reward score if parsed reward value does not equal the expression.
+   * Assigns this reward score if the parsed reward value does not equal the expression.
    * @param wrongAnswerReward wrongAnswerReward or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerExactMatchScorer setWrongAnswerReward(java.lang.Float wrongAnswerReward) {

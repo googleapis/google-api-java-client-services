@@ -46,7 +46,7 @@ public final class GenaiVertexV1beta1ResponseFormat extends com.google.api.clien
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct structValue;
+  private GenaiVertexV1beta1Struct structValue;
 
   /**
    * The value may be {@code null}.
@@ -88,7 +88,7 @@ public final class GenaiVertexV1beta1ResponseFormat extends com.google.api.clien
    * Multi-discriminator values is already enabled in GAOS
    * @return value or {@code null} for none
    */
-  public GenaiStruct getStructValue() {
+  public GenaiVertexV1beta1Struct getStructValue() {
     return structValue;
   }
 
@@ -96,7 +96,7 @@ public final class GenaiVertexV1beta1ResponseFormat extends com.google.api.clien
    * Multi-discriminator values is already enabled in GAOS
    * @param structValue structValue or {@code null} for none
    */
-  public GenaiVertexV1beta1ResponseFormat setStructValue(GenaiStruct structValue) {
+  public GenaiVertexV1beta1ResponseFormat setStructValue(GenaiVertexV1beta1Struct structValue) {
     this.structValue = structValue;
     return this;
   }

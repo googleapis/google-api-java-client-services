@@ -119,7 +119,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiValue responseFormat;
+  private GenaiVertexV1beta1Value responseFormat;
 
   /**
    * The value may be {@code null}.
@@ -412,7 +412,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * specified in this field.
    * @return value or {@code null} for none
    */
-  public GenaiValue getResponseFormat() {
+  public GenaiVertexV1beta1Value getResponseFormat() {
     return responseFormat;
   }
 
@@ -421,7 +421,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * specified in this field.
    * @param responseFormat responseFormat or {@code null} for none
    */
-  public GenaiVertexV1beta1Interaction setResponseFormat(GenaiValue responseFormat) {
+  public GenaiVertexV1beta1Interaction setResponseFormat(GenaiVertexV1beta1Value responseFormat) {
     this.responseFormat = responseFormat;
     return this;
   }

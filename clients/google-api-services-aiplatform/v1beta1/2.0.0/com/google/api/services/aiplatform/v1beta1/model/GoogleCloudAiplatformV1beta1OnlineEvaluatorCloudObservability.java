@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Data source for the OnlineEvaluator, based on GCP Observability stack (Cloud Trace & Cloud
- * Logging).
+ * Data source for the OnlineEvaluator, based on Google Cloud Observability stack (Cloud Trace &
+ * Cloud Logging).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:

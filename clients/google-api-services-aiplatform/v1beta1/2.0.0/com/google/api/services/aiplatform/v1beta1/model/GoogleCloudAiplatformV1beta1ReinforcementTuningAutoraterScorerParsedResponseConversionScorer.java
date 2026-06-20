@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Scores responses by directly converting parsed autorater response to float reward. Important:
- * reward is clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+ * Scores responses by directly converting the parsed autorater response to a float reward. Note:
+ * Reward is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward, 1.0), -1.0)`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:

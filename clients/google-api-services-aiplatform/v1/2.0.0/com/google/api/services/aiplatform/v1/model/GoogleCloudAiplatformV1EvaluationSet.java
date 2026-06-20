@@ -30,6 +30,21 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluationSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Static configurations for each agent associated with the items in this set. Key:
+   * `agent_id` (matches the `author` field in `events`). Value: The static configuration of the
+   * agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> agentConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1AgentConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1AgentConfig.class);
+  }
+
+  /**
    * Output only. Timestamp when this item was created.
    * The value may be {@code null}.
    */
@@ -71,6 +86,27 @@ public final class GoogleCloudAiplatformV1EvaluationSet extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Static configurations for each agent associated with the items in this set. Key:
+   * `agent_id` (matches the `author` field in `events`). Value: The static configuration of the
+   * agent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> getAgentConfigs() {
+    return agentConfigs;
+  }
+
+  /**
+   * Optional. Static configurations for each agent associated with the items in this set. Key:
+   * `agent_id` (matches the `author` field in `events`). Value: The static configuration of the
+   * agent.
+   * @param agentConfigs agentConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationSet setAgentConfigs(java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> agentConfigs) {
+    this.agentConfigs = agentConfigs;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when this item was created.

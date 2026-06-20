@@ -46,8 +46,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to save checkpoints during training. If not set, one checkpoint
-   * per epoch will be set. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * per epoch will be set. ```total_steps = epoch_count * samples_per_prompt /
+   * total_prompts_in_dataset```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,23 +62,21 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to evaluate the tuning job during training. If not set, evel will
-   * be run per epoch. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * be run per epoch. `total_steps = epoch_count * samples_per_prompt / total_prompts_in_dataset`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer evaluateInterval;
 
   /**
-   * Optional. Learning rate multiplier for Reinforcement Learning.
+   * Optional. Learning rate multiplier for Reinforcement Tuning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double learningRateMultiplier;
 
   /**
-   * Optional. The maximum number of tokens to generate per prompt. If not set, we should default to
-   * 32768.
+   * Optional. The maximum number of tokens to generate per prompt. Default to 32768.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,17 +90,18 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   private java.lang.Integer samplesPerPrompt;
 
   /**
-   * Optional. The thinking budget for the tuning job to optimize for. -1 means dynamic thinking 0
-   * means no thinking >0 means thinking budget in tokens If not set, default to -1 (dynamic
-   * thinking).
+   * Optional. The thinking budget for the tuning job to optimize for (Gemini 2.5 only). * -1 means
+   * dynamic thinking * 0 means no thinking * > 0 means thinking budget in tokens If not set,
+   * default to -1 (dynamic thinking).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thinkingBudget;
 
   /**
-   * Indicates the maximum thinking depth, The thinking_level parameter replaces thinking_budget for
-   * Gemini 3 models. Use with earlier models shall result in error.
+   * Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+   * thinking_budget will no longer be supported and will result in a user error if set. Instead,
+   * users should use the thinking_level parameter to control the maximum thinking depth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +145,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to save checkpoints during training. If not set, one checkpoint
-   * per epoch will be set. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * per epoch will be set. ```total_steps = epoch_count * samples_per_prompt /
+   * total_prompts_in_dataset```
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCheckpointInterval() {
@@ -156,8 +155,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to save checkpoints during training. If not set, one checkpoint
-   * per epoch will be set. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * per epoch will be set. ```total_steps = epoch_count * samples_per_prompt /
+   * total_prompts_in_dataset```
    * @param checkpointInterval checkpointInterval or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setCheckpointInterval(java.lang.Integer checkpointInterval) {
@@ -184,8 +183,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to evaluate the tuning job during training. If not set, evel will
-   * be run per epoch. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * be run per epoch. `total_steps = epoch_count * samples_per_prompt / total_prompts_in_dataset`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEvaluateInterval() {
@@ -194,8 +192,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
 
   /**
    * Optional. How often at steps to evaluate the tuning job during training. If not set, evel will
-   * be run per epoch. ```total_steps = epoch_count *
-   * samples_per_prompt/total_prompts_in_dataset.```
+   * be run per epoch. `total_steps = epoch_count * samples_per_prompt / total_prompts_in_dataset`
    * @param evaluateInterval evaluateInterval or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setEvaluateInterval(java.lang.Integer evaluateInterval) {
@@ -204,7 +201,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. Learning rate multiplier for Reinforcement Learning.
+   * Optional. Learning rate multiplier for Reinforcement Tuning.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearningRateMultiplier() {
@@ -212,7 +209,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. Learning rate multiplier for Reinforcement Learning.
+   * Optional. Learning rate multiplier for Reinforcement Tuning.
    * @param learningRateMultiplier learningRateMultiplier or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setLearningRateMultiplier(java.lang.Double learningRateMultiplier) {
@@ -221,8 +218,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. The maximum number of tokens to generate per prompt. If not set, we should default to
-   * 32768.
+   * Optional. The maximum number of tokens to generate per prompt. Default to 32768.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxOutputTokens() {
@@ -230,8 +226,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. The maximum number of tokens to generate per prompt. If not set, we should default to
-   * 32768.
+   * Optional. The maximum number of tokens to generate per prompt. Default to 32768.
    * @param maxOutputTokens maxOutputTokens or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
@@ -257,9 +252,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. The thinking budget for the tuning job to optimize for. -1 means dynamic thinking 0
-   * means no thinking >0 means thinking budget in tokens If not set, default to -1 (dynamic
-   * thinking).
+   * Optional. The thinking budget for the tuning job to optimize for (Gemini 2.5 only). * -1 means
+   * dynamic thinking * 0 means no thinking * > 0 means thinking budget in tokens If not set,
+   * default to -1 (dynamic thinking).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThinkingBudget() {
@@ -267,9 +262,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Optional. The thinking budget for the tuning job to optimize for. -1 means dynamic thinking 0
-   * means no thinking >0 means thinking budget in tokens If not set, default to -1 (dynamic
-   * thinking).
+   * Optional. The thinking budget for the tuning job to optimize for (Gemini 2.5 only). * -1 means
+   * dynamic thinking * 0 means no thinking * > 0 means thinking budget in tokens If not set,
+   * default to -1 (dynamic thinking).
    * @param thinkingBudget thinkingBudget or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setThinkingBudget(java.lang.Integer thinkingBudget) {
@@ -278,8 +273,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Indicates the maximum thinking depth, The thinking_level parameter replaces thinking_budget for
-   * Gemini 3 models. Use with earlier models shall result in error.
+   * Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+   * thinking_budget will no longer be supported and will result in a user error if set. Instead,
+   * users should use the thinking_level parameter to control the maximum thinking depth.
    * @return value or {@code null} for none
    */
   public java.lang.String getThinkingLevel() {
@@ -287,8 +283,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   }
 
   /**
-   * Indicates the maximum thinking depth, The thinking_level parameter replaces thinking_budget for
-   * Gemini 3 models. Use with earlier models shall result in error.
+   * Indicates the maximum thinking depth during tuning. Starting from Gemini 3.5 models, the old
+   * thinking_budget will no longer be supported and will result in a user error if set. Instead,
+   * users should use the thinking_level parameter to control the maximum thinking depth.
    * @param thinkingLevel thinkingLevel or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setThinkingLevel(java.lang.String thinkingLevel) {

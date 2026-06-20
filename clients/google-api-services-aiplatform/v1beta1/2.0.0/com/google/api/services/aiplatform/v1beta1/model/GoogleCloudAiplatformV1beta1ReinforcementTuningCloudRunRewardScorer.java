@@ -17,15 +17,29 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * The Cloud Run service should implement the following HTTP API: ``` HTTP Method: POST HTTP Request
- * Body: { "example": ReinforcementTuningExample, "response": Content, "metadata": { "step": int
- * "tuning_job_id": int64 } } ``` where `example` is a ReinforcementTuningExample in ProtoJSON
- * format and `response` is a Content in ProtoJSON format. ``` HTTP Response Body: { "reward": float
- * } Example HTTP Request Body: { "example": { "contents": [ { "role": "user", "parts": [ { "text":
- * "What is the capital of France?" } ] } ], "references": { "answer": "Paris", } }, "response": {
- * "parts": [ { "text": "London" } ] }, "metadata": { "step": 1 "tuning_job_id": 123456789 } }
- * Example HTTP Response Body: { "reward": -1.0 } ``` Important: reward output by the function is
- * clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+ * ReinforcementTuningCloudRunRewardScorer allows users to implement a reward function through GCP
+ * Cloud Run. Comparing with ReinforcementTuningCodeExecutionRewardScorer that runs in a Sandbox and
+ * has no internet access, Cloud Run reward scorer is fully controlled by users. The Cloud Run
+ * service should implement the following HTTP API: HTTP method: `POST` HTTP request body: ``` {
+ * "example": ReinforcementTuningExample, "response": Content, "metadata": { "step": int
+ * "tuning_job_id": int64 } } ``` * `example` is a ReinforcementTuningExample in ProtoJSON format,
+ * (i.e., the format is the same as as one line in the training/validation dataset except that the
+ * keys must be in camel case). System instructions (i.e., `example.get("systemInstruction")`) and
+ * references (i.e., `example.get("references")`) are also included in the `example` provided that
+ * they are set in the training/validation dataset. * `response` is a Content in ProtoJSON format
+ * (i.e., keys must be in camel case), which is the same as the Online Prediction response for
+ * Gemini models. HTTP response body: { "reward": float, "user_requested_aux_info": str // Optional
+ * } where the field "user_requested_aux_info" is any (optional) string provided by users for
+ * assisting debugging. It's in snake case. This field is mostly useful when calling the
+ * GenAiTuningService.ValidateReinforcementTuningReward API, where the proto field (not Cloud Run
+ * HTTP response body) userRequestedAuxInfo will be populated if the Cloud Run reward function sets
+ * this field in the HTTP response. The following are examples for the HTTP request and response
+ * body. Example HTTP request body: ``` { "example": { "contents": [ { "role": "user", "parts": [ {
+ * "text": "What is the capital of France?" } ] } ], "references": { "answer": "Paris" } },
+ * "response": { "parts": [ { "text": "London" } ] }, "metadata": { "step": 1, "tuning_job_id":
+ * 123456789 } } ``` Example HTTP response body: ``` { "reward": -1.0 } ``` Note: Reward output by
+ * Cloud Run reward function is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward,
+ * 1.0), -1.0)`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -38,18 +52,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningCloudRunRewardScorer extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of the Cloud Run service that will be used to compute the reward. The Vertex AI Secure Fine
-   * Tuning Service Agent (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must be granted
-   * the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run service.
+   * URI of the Cloud Run service that will be used to compute the reward. The [Vertex AI Secure
+   * Fine Tuning Service Agent](https://docs.cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * secure-fine-tuning-service-agent) (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must
+   * be granted the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run
+   * service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cloudRunUri;
 
   /**
-   * URI of the Cloud Run service that will be used to compute the reward. The Vertex AI Secure Fine
-   * Tuning Service Agent (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must be granted
-   * the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run service.
+   * URI of the Cloud Run service that will be used to compute the reward. The [Vertex AI Secure
+   * Fine Tuning Service Agent](https://docs.cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * secure-fine-tuning-service-agent) (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must
+   * be granted the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run
+   * service.
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudRunUri() {
@@ -57,9 +75,11 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningCloudRunReward
   }
 
   /**
-   * URI of the Cloud Run service that will be used to compute the reward. The Vertex AI Secure Fine
-   * Tuning Service Agent (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must be granted
-   * the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run service.
+   * URI of the Cloud Run service that will be used to compute the reward. The [Vertex AI Secure
+   * Fine Tuning Service Agent](https://docs.cloud.google.com/iam/docs/service-agents#vertex-ai-
+   * secure-fine-tuning-service-agent) (`service-@gcp-sa-vertex-tune.iam.gserviceaccount.com`) must
+   * be granted the permission (e.g. by granting `roles/run.invoker` in IAM) to invoke the Cloud Run
+   * service.
    * @param cloudRunUri cloudRunUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningCloudRunRewardScorer setCloudRunUri(java.lang.String cloudRunUri) {

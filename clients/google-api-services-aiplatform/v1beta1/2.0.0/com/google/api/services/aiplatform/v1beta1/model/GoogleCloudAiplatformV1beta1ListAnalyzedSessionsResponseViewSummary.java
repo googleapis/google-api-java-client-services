@@ -50,6 +50,14 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   private java.lang.Integer anomalousSessionsCount;
 
   /**
+   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
+   * LLM judges.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer llmScannedSessionsCount;
+
+  /**
    * The list of severity summaries for the analyzed sessions. The key is the string representation
    * of Severity enum: "SEVERITY_UNSPECIFIED", "SEVERITY_CRITICAL", "SEVERITY_HIGH",
    * "SEVERITY_MEDIUM", "SEVERITY_LOW".
@@ -114,6 +122,25 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
    */
   public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary setAnomalousSessionsCount(java.lang.Integer anomalousSessionsCount) {
     this.anomalousSessionsCount = anomalousSessionsCount;
+    return this;
+  }
+
+  /**
+   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
+   * LLM judges.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLlmScannedSessionsCount() {
+    return llmScannedSessionsCount;
+  }
+
+  /**
+   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
+   * LLM judges.
+   * @param llmScannedSessionsCount llmScannedSessionsCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary setLlmScannedSessionsCount(java.lang.Integer llmScannedSessionsCount) {
+    this.llmScannedSessionsCount = llmScannedSessionsCount;
     return this;
   }
 

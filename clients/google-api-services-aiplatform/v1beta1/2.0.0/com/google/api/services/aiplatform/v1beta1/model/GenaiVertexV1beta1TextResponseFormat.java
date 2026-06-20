@@ -42,7 +42,7 @@ public final class GenaiVertexV1beta1TextResponseFormat extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct schema;
+  private GenaiVertexV1beta1Struct schema;
 
   /**
    * The MIME type of the text output.
@@ -66,7 +66,7 @@ public final class GenaiVertexV1beta1TextResponseFormat extends com.google.api.c
    * application/json.
    * @return value or {@code null} for none
    */
-  public GenaiStruct getSchema() {
+  public GenaiVertexV1beta1Struct getSchema() {
     return schema;
   }
 
@@ -75,7 +75,7 @@ public final class GenaiVertexV1beta1TextResponseFormat extends com.google.api.c
    * application/json.
    * @param schema schema or {@code null} for none
    */
-  public GenaiVertexV1beta1TextResponseFormat setSchema(GenaiStruct schema) {
+  public GenaiVertexV1beta1TextResponseFormat setSchema(GenaiVertexV1beta1Struct schema) {
     this.schema = schema;
     return this;
   }

@@ -29,7 +29,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiValue extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1Value extends com.google.api.client.json.GenericJson {
 
   /**
    * Represents a boolean value.
@@ -43,7 +43,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiListValue listValue;
+  private GenaiVertexV1beta1ListValue listValue;
 
   /**
    * Represents a null value.
@@ -71,7 +71,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct structValue;
+  private GenaiVertexV1beta1Struct structValue;
 
   /**
    * Represents a boolean value.
@@ -85,7 +85,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a boolean value.
    * @param boolValue boolValue or {@code null} for none
    */
-  public GenaiValue setBoolValue(java.lang.Boolean boolValue) {
+  public GenaiVertexV1beta1Value setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
     return this;
   }
@@ -94,7 +94,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a repeated `Value`.
    * @return value or {@code null} for none
    */
-  public GenaiListValue getListValue() {
+  public GenaiVertexV1beta1ListValue getListValue() {
     return listValue;
   }
 
@@ -102,7 +102,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a repeated `Value`.
    * @param listValue listValue or {@code null} for none
    */
-  public GenaiValue setListValue(GenaiListValue listValue) {
+  public GenaiVertexV1beta1Value setListValue(GenaiVertexV1beta1ListValue listValue) {
     this.listValue = listValue;
     return this;
   }
@@ -119,7 +119,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a null value.
    * @param nullValue nullValue or {@code null} for none
    */
-  public GenaiValue setNullValue(java.lang.String nullValue) {
+  public GenaiVertexV1beta1Value setNullValue(java.lang.String nullValue) {
     this.nullValue = nullValue;
     return this;
   }
@@ -136,7 +136,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a double value.
    * @param numberValue numberValue or {@code null} for none
    */
-  public GenaiValue setNumberValue(java.lang.Double numberValue) {
+  public GenaiVertexV1beta1Value setNumberValue(java.lang.Double numberValue) {
     this.numberValue = numberValue;
     return this;
   }
@@ -153,7 +153,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a string value.
    * @param stringValue stringValue or {@code null} for none
    */
-  public GenaiValue setStringValue(java.lang.String stringValue) {
+  public GenaiVertexV1beta1Value setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
     return this;
   }
@@ -162,7 +162,7 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a structured value.
    * @return value or {@code null} for none
    */
-  public GenaiStruct getStructValue() {
+  public GenaiVertexV1beta1Struct getStructValue() {
     return structValue;
   }
 
@@ -170,19 +170,19 @@ public final class GenaiValue extends com.google.api.client.json.GenericJson {
    * Represents a structured value.
    * @param structValue structValue or {@code null} for none
    */
-  public GenaiValue setStructValue(GenaiStruct structValue) {
+  public GenaiVertexV1beta1Value setStructValue(GenaiVertexV1beta1Struct structValue) {
     this.structValue = structValue;
     return this;
   }
 
   @Override
-  public GenaiValue set(String fieldName, Object value) {
-    return (GenaiValue) super.set(fieldName, value);
+  public GenaiVertexV1beta1Value set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1Value) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiValue clone() {
-    return (GenaiValue) super.clone();
+  public GenaiVertexV1beta1Value clone() {
+    return (GenaiVertexV1beta1Value) super.clone();
   }
 
 }

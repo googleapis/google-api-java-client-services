@@ -66,7 +66,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Float frequencyPenalty;
 
   /**
-   * Optional. Config for image generation features.
+   * Optional. Config for image generation features. Deprecated: Use `response_format.image`
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +112,15 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Float presencePenalty;
 
   /**
+   * Optional. New response format field for the model to configure output formatting and delivery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1ResponseFormat> responseFormat;
+
+  /**
    * Optional. When this field is set, response_schema must be omitted and response_mime_type must
-   * be set to `application/json`.
+   * be set to `application/json`. Deprecated: Use `response_format` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +140,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined.
+   * otherwise the behavior is undefined. Deprecated: Use `response_format` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +160,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * conforms to a particular structure. This is useful for generating structured data such as JSON.
    * The schema is a subset of the [OpenAPI 3.0 schema
    * object](https://spec.openapis.org/oas/v3.0.3#schema) object. When this field is set, you must
-   * also set the `response_mime_type` to `application/json`.
+   * also set the `response_mime_type` to `application/json`. Deprecated: Use `response_format`
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +322,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   }
 
   /**
-   * Optional. Config for image generation features.
+   * Optional. Config for image generation features. Deprecated: Use `response_format.image`
+   * instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ImageConfig getImageConfig() {
@@ -321,7 +331,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   }
 
   /**
-   * Optional. Config for image generation features.
+   * Optional. Config for image generation features. Deprecated: Use `response_format.image`
+   * instead.
    * @param imageConfig imageConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfig setImageConfig(GoogleCloudAiplatformV1ImageConfig imageConfig) {
@@ -418,8 +429,25 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   }
 
   /**
+   * Optional. New response format field for the model to configure output formatting and delivery.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1ResponseFormat> getResponseFormat() {
+    return responseFormat;
+  }
+
+  /**
+   * Optional. New response format field for the model to configure output formatting and delivery.
+   * @param responseFormat responseFormat or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setResponseFormat(java.util.List<GoogleCloudAiplatformV1ResponseFormat> responseFormat) {
+    this.responseFormat = responseFormat;
+    return this;
+  }
+
+  /**
    * Optional. When this field is set, response_schema must be omitted and response_mime_type must
-   * be set to `application/json`.
+   * be set to `application/json`. Deprecated: Use `response_format` instead.
    * @return value or {@code null} for none
    */
   public java.lang.Object getResponseJsonSchema() {
@@ -428,7 +456,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
 
   /**
    * Optional. When this field is set, response_schema must be omitted and response_mime_type must
-   * be set to `application/json`.
+   * be set to `application/json`. Deprecated: Use `response_format` instead.
    * @param responseJsonSchema responseJsonSchema or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfig setResponseJsonSchema(java.lang.Object responseJsonSchema) {
@@ -463,7 +491,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined.
+   * otherwise the behavior is undefined. Deprecated: Use `response_format` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseMimeType() {
@@ -474,7 +502,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined.
+   * otherwise the behavior is undefined. Deprecated: Use `response_format` instead.
    * @param responseMimeType responseMimeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {
@@ -508,7 +536,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * conforms to a particular structure. This is useful for generating structured data such as JSON.
    * The schema is a subset of the [OpenAPI 3.0 schema
    * object](https://spec.openapis.org/oas/v3.0.3#schema) object. When this field is set, you must
-   * also set the `response_mime_type` to `application/json`.
+   * also set the `response_mime_type` to `application/json`. Deprecated: Use `response_format`
+   * instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1Schema getResponseSchema() {
@@ -520,7 +549,8 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * conforms to a particular structure. This is useful for generating structured data such as JSON.
    * The schema is a subset of the [OpenAPI 3.0 schema
    * object](https://spec.openapis.org/oas/v3.0.3#schema) object. When this field is set, you must
-   * also set the `response_mime_type` to `application/json`.
+   * also set the `response_mime_type` to `application/json`. Deprecated: Use `response_format`
+   * instead.
    * @param responseSchema responseSchema or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfig setResponseSchema(GoogleCloudAiplatformV1Schema responseSchema) {

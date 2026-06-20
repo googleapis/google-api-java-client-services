@@ -44,14 +44,22 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
 
   /**
    * References for the given prompt. The key is the name of the reference, and the value is the
-   * reference itself.
+   * reference itself. Users can use this field together with the reward configurations to calculate
+   * rewards for reinforcement tuning. For example, users can set the following references: ``` {
+   * "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } ``` Then in a
+   * ReinforcementTuningCodeExecutionRewardScorer reward function config, for example, they can
+   * define a python code snippet as follows: ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` In this case,
+   * references can serve the purpose of holding the ground truth of this example in the
+   * training/validation dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> references;
 
   /**
-   * Corresponds to `system_instruction` in user-facing GenerateContentRequest.
+   * Corresponds to system_instruction in user-facing GenerateContentRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +84,15 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
 
   /**
    * References for the given prompt. The key is the name of the reference, and the value is the
-   * reference itself.
+   * reference itself. Users can use this field together with the reward configurations to calculate
+   * rewards for reinforcement tuning. For example, users can set the following references: ``` {
+   * "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } ``` Then in a
+   * ReinforcementTuningCodeExecutionRewardScorer reward function config, for example, they can
+   * define a python code snippet as follows: ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` In this case,
+   * references can serve the purpose of holding the ground truth of this example in the
+   * training/validation dataset.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getReferences() {
@@ -85,7 +101,15 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
 
   /**
    * References for the given prompt. The key is the name of the reference, and the value is the
-   * reference itself.
+   * reference itself. Users can use this field together with the reward configurations to calculate
+   * rewards for reinforcement tuning. For example, users can set the following references: ``` {
+   * "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } ``` Then in a
+   * ReinforcementTuningCodeExecutionRewardScorer reward function config, for example, they can
+   * define a python code snippet as follows: ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` In this case,
+   * references can serve the purpose of holding the ground truth of this example in the
+   * training/validation dataset.
    * @param references references or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningExample setReferences(java.util.Map<String, java.lang.String> references) {
@@ -94,7 +118,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
   }
 
   /**
-   * Corresponds to `system_instruction` in user-facing GenerateContentRequest.
+   * Corresponds to system_instruction in user-facing GenerateContentRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content getSystemInstruction() {
@@ -102,7 +126,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
   }
 
   /**
-   * Corresponds to `system_instruction` in user-facing GenerateContentRequest.
+   * Corresponds to system_instruction in user-facing GenerateContentRequest.
    * @param systemInstruction systemInstruction or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningExample setSystemInstruction(GoogleCloudAiplatformV1beta1Content systemInstruction) {

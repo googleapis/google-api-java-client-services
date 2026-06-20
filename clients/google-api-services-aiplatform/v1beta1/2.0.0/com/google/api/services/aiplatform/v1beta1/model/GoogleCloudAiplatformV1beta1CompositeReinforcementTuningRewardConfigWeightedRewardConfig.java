@@ -18,8 +18,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * Reward function configuration with a weight. The weight is used to combine the reward with other
- * rewards. The weight can be overridden at the data source level with dataset specific weights,
- * which is a map from reward_name to reward_weight.
+ * rewards.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -32,7 +31,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewardConfigWeightedRewardConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Single Reward configuration.
+   * Single reward configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,19 +39,15 @@ public final class GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewar
 
   /**
    * How much this single reward contributes to the total overall reward. Total reward is a linear
-   * combination of single rewards with their corresponding weights. I.e., ``` Total reward = (
-   * reward_weight_of_reward_a * reward of reward_a + reward_weight_of_reward_b * reward of reward_b
-   * + ... )/(sum of reward_weights) ``` This reward weight represents the default weighting that
-   * will be used to sum up different rewards. This weighting can be overridden at the data source
-   * level with dataset specific weights, which is a map from reward_name to reward_weight. Consider
-   * setting this to 1.
+   * combination of single rewards with their corresponding weights, i.e., ``` total_reward = (
+   * weight_a * reward_a + weight_b * reward_b + ... ) / (weight_a + weight_b + ...) ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float weight;
 
   /**
-   * Single Reward configuration.
+   * Single reward configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig getRewardConfig() {
@@ -60,7 +55,7 @@ public final class GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewar
   }
 
   /**
-   * Single Reward configuration.
+   * Single reward configuration.
    * @param rewardConfig rewardConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewardConfigWeightedRewardConfig setRewardConfig(GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig rewardConfig) {
@@ -70,12 +65,8 @@ public final class GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewar
 
   /**
    * How much this single reward contributes to the total overall reward. Total reward is a linear
-   * combination of single rewards with their corresponding weights. I.e., ``` Total reward = (
-   * reward_weight_of_reward_a * reward of reward_a + reward_weight_of_reward_b * reward of reward_b
-   * + ... )/(sum of reward_weights) ``` This reward weight represents the default weighting that
-   * will be used to sum up different rewards. This weighting can be overridden at the data source
-   * level with dataset specific weights, which is a map from reward_name to reward_weight. Consider
-   * setting this to 1.
+   * combination of single rewards with their corresponding weights, i.e., ``` total_reward = (
+   * weight_a * reward_a + weight_b * reward_b + ... ) / (weight_a + weight_b + ...) ```
    * @return value or {@code null} for none
    */
   public java.lang.Float getWeight() {
@@ -84,12 +75,8 @@ public final class GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewar
 
   /**
    * How much this single reward contributes to the total overall reward. Total reward is a linear
-   * combination of single rewards with their corresponding weights. I.e., ``` Total reward = (
-   * reward_weight_of_reward_a * reward of reward_a + reward_weight_of_reward_b * reward of reward_b
-   * + ... )/(sum of reward_weights) ``` This reward weight represents the default weighting that
-   * will be used to sum up different rewards. This weighting can be overridden at the data source
-   * level with dataset specific weights, which is a map from reward_name to reward_weight. Consider
-   * setting this to 1.
+   * combination of single rewards with their corresponding weights, i.e., ``` total_reward = (
+   * weight_a * reward_a + weight_b * reward_b + ... ) / (weight_a + weight_b + ...) ```
    * @param weight weight or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewardConfigWeightedRewardConfig setWeight(java.lang.Float weight) {

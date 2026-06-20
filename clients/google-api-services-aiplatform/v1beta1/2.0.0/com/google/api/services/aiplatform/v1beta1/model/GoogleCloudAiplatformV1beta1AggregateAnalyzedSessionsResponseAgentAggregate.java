@@ -68,6 +68,15 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
   private String latestSessionTime;
 
   /**
+   * Output only. The GCP location (region) of the agent (e.g. `us-central1`). Denormalized from
+   * `monitored_agents.location`; empty when the agent is not enrolled or its location column is
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * The MonitoredAgent resource name. Format:
    * `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
    * The value may be {@code null}.
@@ -180,6 +189,27 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
    */
   public GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponseAgentAggregate setLatestSessionTime(String latestSessionTime) {
     this.latestSessionTime = latestSessionTime;
+    return this;
+  }
+
+  /**
+   * Output only. The GCP location (region) of the agent (e.g. `us-central1`). Denormalized from
+   * `monitored_agents.location`; empty when the agent is not enrolled or its location column is
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. The GCP location (region) of the agent (e.g. `us-central1`). Denormalized from
+   * `monitored_agents.location`; empty when the agent is not enrolled or its location column is
+   * empty.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponseAgentAggregate setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

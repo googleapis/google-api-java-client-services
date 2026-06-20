@@ -34,13 +34,13 @@ public final class GenaiVertexV1beta1DynamicAgentConfig extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct config;
+  private GenaiVertexV1beta1Struct config;
 
   /**
    * For agents that are not supported statically in the API definition.
    * @return value or {@code null} for none
    */
-  public GenaiStruct getConfig() {
+  public GenaiVertexV1beta1Struct getConfig() {
     return config;
   }
 
@@ -48,7 +48,7 @@ public final class GenaiVertexV1beta1DynamicAgentConfig extends com.google.api.c
    * For agents that are not supported statically in the API definition.
    * @param config config or {@code null} for none
    */
-  public GenaiVertexV1beta1DynamicAgentConfig setConfig(GenaiStruct config) {
+  public GenaiVertexV1beta1DynamicAgentConfig setConfig(GenaiVertexV1beta1Struct config) {
     this.config = config;
     return this;
   }

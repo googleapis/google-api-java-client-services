@@ -40,8 +40,8 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   private java.lang.String agentResource;
 
   /**
-   * Data source for the OnlineEvaluator, based on GCP Observability stack (Cloud Trace & Cloud
-   * Logging).
+   * Data source for the OnlineEvaluator, based on Google Cloud Observability stack (Cloud Trace &
+   * Cloud Logging).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +140,8 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   }
 
   /**
-   * Data source for the OnlineEvaluator, based on GCP Observability stack (Cloud Trace & Cloud
-   * Logging).
+   * Data source for the OnlineEvaluator, based on Google Cloud Observability stack (Cloud Trace &
+   * Cloud Logging).
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability getCloudObservability() {
@@ -149,8 +149,8 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   }
 
   /**
-   * Data source for the OnlineEvaluator, based on GCP Observability stack (Cloud Trace & Cloud
-   * Logging).
+   * Data source for the OnlineEvaluator, based on Google Cloud Observability stack (Cloud Trace &
+   * Cloud Logging).
    * @param cloudObservability cloudObservability or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluator setCloudObservability(GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability cloudObservability) {

@@ -57,7 +57,7 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct structResult;
+  private GenaiVertexV1beta1Struct structResult;
 
   /**
    * @return value or {@code null} for none
@@ -122,14 +122,14 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public GenaiStruct getStructResult() {
+  public GenaiVertexV1beta1Struct getStructResult() {
     return structResult;
   }
 
   /**
    * @param structResult structResult or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultDelta setStructResult(GenaiStruct structResult) {
+  public GenaiVertexV1beta1FunctionResultDelta setStructResult(GenaiVertexV1beta1Struct structResult) {
     this.structResult = structResult;
     return this;
   }

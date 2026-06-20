@@ -34,7 +34,7 @@ public final class GenaiVertexV1beta1FunctionCallContent extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct arguments;
+  private GenaiVertexV1beta1Struct arguments;
 
   /**
    * Required. The name of the tool to call.
@@ -47,7 +47,7 @@ public final class GenaiVertexV1beta1FunctionCallContent extends com.google.api.
    * Required. The arguments to pass to the function.
    * @return value or {@code null} for none
    */
-  public GenaiStruct getArguments() {
+  public GenaiVertexV1beta1Struct getArguments() {
     return arguments;
   }
 
@@ -55,7 +55,7 @@ public final class GenaiVertexV1beta1FunctionCallContent extends com.google.api.
    * Required. The arguments to pass to the function.
    * @param arguments arguments or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionCallContent setArguments(GenaiStruct arguments) {
+  public GenaiVertexV1beta1FunctionCallContent setArguments(GenaiVertexV1beta1Struct arguments) {
     this.arguments = arguments;
     return this;
   }

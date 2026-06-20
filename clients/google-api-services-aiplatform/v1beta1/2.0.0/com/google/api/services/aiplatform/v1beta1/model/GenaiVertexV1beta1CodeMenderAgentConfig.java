@@ -44,6 +44,14 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfig extends com.google.ap
   private GenaiVertexV1beta1CodeMenderAgentConfigFixRequest fixRequest;
 
   /**
+   * The name of the model to use for the CodeMender agent. One CodeMender session will only use one
+   * model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * Optional session-specific configurations to override default agent behavior.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfig extends com.google.ap
    */
   public GenaiVertexV1beta1CodeMenderAgentConfig setFixRequest(GenaiVertexV1beta1CodeMenderAgentConfigFixRequest fixRequest) {
     this.fixRequest = fixRequest;
+    return this;
+  }
+
+  /**
+   * The name of the model to use for the CodeMender agent. One CodeMender session will only use one
+   * model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * The name of the model to use for the CodeMender agent. One CodeMender session will only use one
+   * model.
+   * @param model model or {@code null} for none
+   */
+  public GenaiVertexV1beta1CodeMenderAgentConfig setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 

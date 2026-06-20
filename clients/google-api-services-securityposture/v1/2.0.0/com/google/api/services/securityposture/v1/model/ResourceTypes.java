@@ -33,14 +33,14 @@ package com.google.api.services.securityposture.v1.model;
 public final class ResourceTypes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The resource types we currently support.
+   * Optional. The resource types we support.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> included;
 
   /**
-   * Optional. The resource types we currently support.
+   * Optional. The resource types we support.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncluded() {
@@ -48,7 +48,7 @@ public final class ResourceTypes extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The resource types we currently support.
+   * Optional. The resource types we support.
    * @param included included or {@code null} for none
    */
   public ResourceTypes setIncluded(java.util.List<java.lang.String> included) {

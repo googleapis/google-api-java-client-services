@@ -7318,7 +7318,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Searches direct groups of a member.
+       * Searches direct groups of a member. Groups for which the actor does not have the permission to
+       * view memberships are silently filtered out.
        *
        * Create a request for the method "memberships.searchDirectGroups".
        *
@@ -7344,7 +7345,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Searches direct groups of a member.
+         * Searches direct groups of a member. Groups for which the actor does not have the permission to
+         * view memberships are silently filtered out.
          *
          * Create a request for the method "memberships.searchDirectGroups".
          *

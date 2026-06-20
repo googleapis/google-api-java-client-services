@@ -5663,6 +5663,181 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         return (UpdateGoogleSignalsSettings) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates the reporting identity settings for this property.
+     *
+     * Create a request for the method "properties.updateReportingIdentitySettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link UpdateReportingIdentitySettings#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param name Output only. Identifier. Resource name for this reporting identity settings singleton resource.
+     *        Format: properties/{property_id}/reportingIdentitySettings Example:
+     *        "properties/1234/reportingIdentitySettings"
+     * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings}
+     * @return the request
+     */
+    public UpdateReportingIdentitySettings updateReportingIdentitySettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings content) throws java.io.IOException {
+      UpdateReportingIdentitySettings result = new UpdateReportingIdentitySettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateReportingIdentitySettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/reportingIdentitySettings$");
+
+      /**
+       * Updates the reporting identity settings for this property.
+       *
+       * Create a request for the method "properties.updateReportingIdentitySettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link UpdateReportingIdentitySettings#execute()} method to
+       * invoke the remote operation. <p> {@link UpdateReportingIdentitySettings#initialize(com.google.a
+       * pi.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param name Output only. Identifier. Resource name for this reporting identity settings singleton resource.
+     *        Format: properties/{property_id}/reportingIdentitySettings Example:
+     *        "properties/1234/reportingIdentitySettings"
+       * @param content the {@link com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings}
+       * @since 1.13
+       */
+      protected UpdateReportingIdentitySettings(java.lang.String name, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings content) {
+        super(GoogleAnalyticsAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateReportingIdentitySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateReportingIdentitySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setAlt(java.lang.String alt) {
+        return (UpdateReportingIdentitySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setCallback(java.lang.String callback) {
+        return (UpdateReportingIdentitySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setFields(java.lang.String fields) {
+        return (UpdateReportingIdentitySettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setKey(java.lang.String key) {
+        return (UpdateReportingIdentitySettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateReportingIdentitySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateReportingIdentitySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateReportingIdentitySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setUploadType(java.lang.String uploadType) {
+        return (UpdateReportingIdentitySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateReportingIdentitySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Output only. Identifier. Resource name for this reporting identity settings singleton
+       * resource. Format: properties/{property_id}/reportingIdentitySettings Example:
+       * "properties/1234/reportingIdentitySettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Output only. Identifier. Resource name for this reporting identity settings singleton resource.
+     Format: properties/{property_id}/reportingIdentitySettings Example:
+     "properties/1234/reportingIdentitySettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Output only. Identifier. Resource name for this reporting identity settings singleton
+       * resource. Format: properties/{property_id}/reportingIdentitySettings Example:
+       * "properties/1234/reportingIdentitySettings"
+       */
+      public UpdateReportingIdentitySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. The list of fields to be updated. Field names must be in snake case (for example,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields. If omitted, the service will treat it as
+       * an implied field mask equivalent to all fields that are populated.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to be updated. Field names must be in snake case (for example,
+     "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+     with the string "*" to match all fields. If omitted, the service will treat it as an implied field
+     mask equivalent to all fields that are populated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. The list of fields to be updated. Field names must be in snake case (for example,
+       * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+       * one path with the string "*" to match all fields. If omitted, the service will treat it as
+       * an implied field mask equivalent to all fields that are populated.
+       */
+      public UpdateReportingIdentitySettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateReportingIdentitySettings set(String parameterName, Object value) {
+        return (UpdateReportingIdentitySettings) super.set(parameterName, value);
+      }
+    }
 
     /**
      * An accessor for creating requests from the AccessBindings collection.

@@ -7754,6 +7754,40 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             }
 
             /**
+             * Optional. Field to use to order the list of DeploymentEvents. Expects AIP-132 format
+             * "field_name asc" or "field_name desc", e.g. "deploy_time desc" Supported fields for
+             * ordering are: deploy_time, update_time. Currently, only sorting by a single field is
+             * supported. If this field is not provided, the list will be sorted by "deploy_time
+             * desc". For more details on the ordering syntax, see
+             * https://google.aip.dev/132#ordering.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field to use to order the list of DeploymentEvents. Expects AIP-132 format "field_name
+           asc" or "field_name desc", e.g. "deploy_time desc" Supported fields for ordering are: deploy_time,
+           update_time. Currently, only sorting by a single field is supported. If this field is not provided,
+           the list will be sorted by "deploy_time desc". For more details on the ordering syntax, see
+           https://google.aip.dev/132#ordering.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Field to use to order the list of DeploymentEvents. Expects AIP-132 format
+             * "field_name asc" or "field_name desc", e.g. "deploy_time desc" Supported fields for
+             * ordering are: deploy_time, update_time. Currently, only sorting by a single field is
+             * supported. If this field is not provided, the list will be sorted by "deploy_time
+             * desc". For more details on the ordering syntax, see
+             * https://google.aip.dev/132#ordering.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
              * Optional. The maximum number of deployment events to return. The service may return
              * fewer than this value. If unspecified, at most 50 deployment events will be returned.
              * The maximum value is 1000; values above 1000 will be coerced to 1000.

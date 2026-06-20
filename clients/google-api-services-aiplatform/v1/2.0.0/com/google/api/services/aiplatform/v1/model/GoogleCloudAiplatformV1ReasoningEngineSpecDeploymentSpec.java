@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent Gateway configuration for the Reasoning Engine deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig agentGatewayConfig;
+
+  /**
    * Optional. Concurrency for each container and agent server. Recommended value: 2 * cpu + 1.
    * Defaults to 9.
    * The value may be {@code null}.
@@ -104,6 +111,23 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1SecretEnvVar> secretEnv;
+
+  /**
+   * Optional. Agent Gateway configuration for the Reasoning Engine deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig getAgentGatewayConfig() {
+    return agentGatewayConfig;
+  }
+
+  /**
+   * Optional. Agent Gateway configuration for the Reasoning Engine deployment.
+   * @param agentGatewayConfig agentGatewayConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec setAgentGatewayConfig(GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpecAgentGatewayConfig agentGatewayConfig) {
+    this.agentGatewayConfig = agentGatewayConfig;
+    return this;
+  }
 
   /**
    * Optional. Concurrency for each container and agent server. Recommended value: 2 * cpu + 1.

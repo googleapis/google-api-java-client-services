@@ -17,15 +17,16 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Expects the user to implement the following function: ``` `example` is the dict using exactly the
- * same format as the training, validation dataset, and also includes the system instructions and
- * the references (e.g., user can use references for storing ground truth of this example).
- * `response` is a dict of Content type, which is the same as all the other 1P tuning method, as
- * well as the Online Prediction def evaluate(example: Dict[str, ...], response:Dict[str, Content])
- * -> float: ``` where the first returned argument is reward. References and system instruction will
- * be empty if not provided by the user. Different correct answers can get different rewards.
- * Different wrong answers can also get different rewards. Important: reward output by the function
- * is clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+ * ReinforcementTuningCodeExecutionRewardScorer allows users to implement a function to evaluate
+ * rewards for the sample response. The function signature is as follows: ``` def evaluate(example:
+ * dict[str, Any], response: dict[str, Any]) -> float: ... ``` `example` is a
+ * ReinforcementTuningExample in ProtoJSON format, (i.e., the format is the same as as one line in
+ * the training/validation dataset except that the keys must be in camel case). System instructions
+ * (i.e., `example.get("systemInstruction")`) and references (i.e., `example.get("references")`) are
+ * also included in the `example` provided that they are set in the training/validation dataset.
+ * `response` is a Content in ProtoJSON format (i.e., keys must be in camel case), which is the same
+ * as the Online Prediction response for Gemini models. Note: Reward output by the `evaluate`
+ * function is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward, 1.0), -1.0)`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -38,22 +39,26 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningCodeExecutionRewardScorer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Example python code snippet which assigns reward of 1 to answer matching user provided
-   * reference answer in per prompt references map. ``` def evaluate(example: Dict[str, ...],
-   * response:Dict[str, Content]) -> float: if response == example"references": return 1.0 return
-   * -1.0 ``` Important: reward output by the function is clipped to be within [-1, 1]. I.e., reward
-   * = max(min(reward, 1), -1)
+   * The python code snippet as a string for evaluating rewards. The following is an example python
+   * code snippet that returns a reward `1.0` for a parsed response matching the user-provided
+   * reference answer in per prompt references map. ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` Note: Reward
+   * output by the evaluate function is clipped to be within `[-1, 1]`, i.e., `reward =
+   * max(min(reward, 1.0), -1.0)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pythonCodeSnippet;
 
   /**
-   * Example python code snippet which assigns reward of 1 to answer matching user provided
-   * reference answer in per prompt references map. ``` def evaluate(example: Dict[str, ...],
-   * response:Dict[str, Content]) -> float: if response == example"references": return 1.0 return
-   * -1.0 ``` Important: reward output by the function is clipped to be within [-1, 1]. I.e., reward
-   * = max(min(reward, 1), -1)
+   * The python code snippet as a string for evaluating rewards. The following is an example python
+   * code snippet that returns a reward `1.0` for a parsed response matching the user-provided
+   * reference answer in per prompt references map. ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` Note: Reward
+   * output by the evaluate function is clipped to be within `[-1, 1]`, i.e., `reward =
+   * max(min(reward, 1.0), -1.0)`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonCodeSnippet() {
@@ -61,11 +66,13 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningCodeExecutionR
   }
 
   /**
-   * Example python code snippet which assigns reward of 1 to answer matching user provided
-   * reference answer in per prompt references map. ``` def evaluate(example: Dict[str, ...],
-   * response:Dict[str, Content]) -> float: if response == example"references": return 1.0 return
-   * -1.0 ``` Important: reward output by the function is clipped to be within [-1, 1]. I.e., reward
-   * = max(min(reward, 1), -1)
+   * The python code snippet as a string for evaluating rewards. The following is an example python
+   * code snippet that returns a reward `1.0` for a parsed response matching the user-provided
+   * reference answer in per prompt references map. ``` def evaluate(example, response) -> float:
+   * response_str = response.get("parts", [])0 references = example.get("references", {}) if
+   * response_str == references.get("concise_answer"): return 1.0 return -1.0 ``` Note: Reward
+   * output by the evaluate function is clipped to be within `[-1, 1]`, i.e., `reward =
+   * max(min(reward, 1.0), -1.0)`.
    * @param pythonCodeSnippet pythonCodeSnippet or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningCodeExecutionRewardScorer setPythonCodeSnippet(java.lang.String pythonCodeSnippet) {

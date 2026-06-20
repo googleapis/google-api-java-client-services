@@ -59,7 +59,7 @@ public final class GenaiVertexV1beta1FunctionResultContent extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct structResult;
+  private GenaiVertexV1beta1Struct structResult;
 
   /**
    * @return value or {@code null} for none
@@ -128,14 +128,14 @@ public final class GenaiVertexV1beta1FunctionResultContent extends com.google.ap
   /**
    * @return value or {@code null} for none
    */
-  public GenaiStruct getStructResult() {
+  public GenaiVertexV1beta1Struct getStructResult() {
     return structResult;
   }
 
   /**
    * @param structResult structResult or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultContent setStructResult(GenaiStruct structResult) {
+  public GenaiVertexV1beta1FunctionResultContent setStructResult(GenaiVertexV1beta1Struct structResult) {
     this.structResult = structResult;
     return this;
   }

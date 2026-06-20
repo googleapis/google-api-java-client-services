@@ -18,8 +18,10 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for string matching
- * use cases. For example, for math problems, we can use string match scorer to check if the correct
- * exact answer is generated.
+ * use cases. For example, for math problems, users can use string match scorer to check if the
+ * correct exact answer is generated. Note: Reward returned by the string match reward function is
+ * clipped to be within `[-1, 1]` if wrongAnswerReward or correctAnswerReward are beyond the range,
+ * i.e., `reward = max(min(reward, 1.0), -1.0)`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -32,8 +34,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Correct answer rewawrd is returned if evaluator evaluates to `true`. All correct answers get
-   * the same reward.
+   * Correct answer rewawrd is returned if the parsed response is evaluated as `true`. All correct
+   * answers get the same reward.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,16 +56,16 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   private GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression stringMatchExpression;
 
   /**
-   * Wrong answer reward is returned if evaluator evaluates to `false`. All wrong answers get the
-   * same reward.
+   * Wrong answer reward is returned if the parsed response is evaluated as `false`. All wrong
+   * answers get the same reward.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float wrongAnswerReward;
 
   /**
-   * Correct answer rewawrd is returned if evaluator evaluates to `true`. All correct answers get
-   * the same reward.
+   * Correct answer rewawrd is returned if the parsed response is evaluated as `true`. All correct
+   * answers get the same reward.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCorrectAnswerReward() {
@@ -71,8 +73,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Correct answer rewawrd is returned if evaluator evaluates to `true`. All correct answers get
-   * the same reward.
+   * Correct answer rewawrd is returned if the parsed response is evaluated as `true`. All correct
+   * answers get the same reward.
    * @param correctAnswerReward correctAnswerReward or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer setCorrectAnswerReward(java.lang.Float correctAnswerReward) {
@@ -115,8 +117,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Wrong answer reward is returned if evaluator evaluates to `false`. All wrong answers get the
-   * same reward.
+   * Wrong answer reward is returned if the parsed response is evaluated as `false`. All wrong
+   * answers get the same reward.
    * @return value or {@code null} for none
    */
   public java.lang.Float getWrongAnswerReward() {
@@ -124,8 +126,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Wrong answer reward is returned if evaluator evaluates to `false`. All wrong answers get the
-   * same reward.
+   * Wrong answer reward is returned if the parsed response is evaluated as `false`. All wrong
+   * answers get the same reward.
    * @param wrongAnswerReward wrongAnswerReward or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer setWrongAnswerReward(java.lang.Float wrongAnswerReward) {

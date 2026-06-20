@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Evaluates parsed response using match type against expression. Evaluator returns `true` if
- * `MatchOperation(target, expression)` evaluates to `true` and `false` otherwise.
+ * Evaluates parsed response using match type against the expression. Returns `true` if
+ * `MatchOperation(target, expression)` evaluates to `true`, and `false` otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -31,31 +31,37 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression extends com.google.api.client.json.GenericJson {
 
   /**
-   * String or regular expression to match against. Customer can also provide a references map of
-   * {key_name: value} which value will be substiuted into expression {{references.key_name}} For
-   * example, customer can define: ``` match_operation: REGEX_CONTAINS expression:
-   * .*{{references.reference}}.* ``` And during evaluation for each prompt, the prompt references
-   * map will be substituted into the expression here. If references.reference has a value of
-   * "abcdef", the expression becomes .*abcdef.*
+   * A string or a regular expression to match against for evaluating rewards. Users can also
+   * provide a references map of `{key: value}` whose `value` will be used to replace the
+   * placeholder {{references.key}} in the expression. For example, if the following `references`
+   * are defined in the training / validation dataset: ``` { "systemInstruction": ..., "contents":
+   * ..., "references": { "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } } ``` and
+   * if users define the following StringMatchExpression: { "matchOperation": "REGEX_CONTAINS",
+   * "expression": ".*{{references.concise_answer}}.*" } On evaluating the reward for each sample
+   * response, this StringMatchExpression will be substituted as: ``` { "matchOperation":
+   * "REGEX_CONTAINS", "expression": ".*Yes.*" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expression;
 
   /**
-   * Match operation to use for evaluation.
+   * Match operation to use for evaluating rewards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchOperation;
 
   /**
-   * String or regular expression to match against. Customer can also provide a references map of
-   * {key_name: value} which value will be substiuted into expression {{references.key_name}} For
-   * example, customer can define: ``` match_operation: REGEX_CONTAINS expression:
-   * .*{{references.reference}}.* ``` And during evaluation for each prompt, the prompt references
-   * map will be substituted into the expression here. If references.reference has a value of
-   * "abcdef", the expression becomes .*abcdef.*
+   * A string or a regular expression to match against for evaluating rewards. Users can also
+   * provide a references map of `{key: value}` whose `value` will be used to replace the
+   * placeholder {{references.key}} in the expression. For example, if the following `references`
+   * are defined in the training / validation dataset: ``` { "systemInstruction": ..., "contents":
+   * ..., "references": { "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } } ``` and
+   * if users define the following StringMatchExpression: { "matchOperation": "REGEX_CONTAINS",
+   * "expression": ".*{{references.concise_answer}}.*" } On evaluating the reward for each sample
+   * response, this StringMatchExpression will be substituted as: ``` { "matchOperation":
+   * "REGEX_CONTAINS", "expression": ".*Yes.*" } ```
    * @return value or {@code null} for none
    */
   public java.lang.String getExpression() {
@@ -63,12 +69,15 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * String or regular expression to match against. Customer can also provide a references map of
-   * {key_name: value} which value will be substiuted into expression {{references.key_name}} For
-   * example, customer can define: ``` match_operation: REGEX_CONTAINS expression:
-   * .*{{references.reference}}.* ``` And during evaluation for each prompt, the prompt references
-   * map will be substituted into the expression here. If references.reference has a value of
-   * "abcdef", the expression becomes .*abcdef.*
+   * A string or a regular expression to match against for evaluating rewards. Users can also
+   * provide a references map of `{key: value}` whose `value` will be used to replace the
+   * placeholder {{references.key}} in the expression. For example, if the following `references`
+   * are defined in the training / validation dataset: ``` { "systemInstruction": ..., "contents":
+   * ..., "references": { "concise_answer": "Yes", "verbose_answer": "The answer is Yes" } } ``` and
+   * if users define the following StringMatchExpression: { "matchOperation": "REGEX_CONTAINS",
+   * "expression": ".*{{references.concise_answer}}.*" } On evaluating the reward for each sample
+   * response, this StringMatchExpression will be substituted as: ``` { "matchOperation":
+   * "REGEX_CONTAINS", "expression": ".*Yes.*" } ```
    * @param expression expression or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression setExpression(java.lang.String expression) {
@@ -77,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Match operation to use for evaluation.
+   * Match operation to use for evaluating rewards.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchOperation() {
@@ -85,7 +94,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Match operation to use for evaluation.
+   * Match operation to use for evaluating rewards.
    * @param matchOperation matchOperation or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression setMatchOperation(java.lang.String matchOperation) {

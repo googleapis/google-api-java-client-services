@@ -48,7 +48,7 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiValue parameters;
+  private GenaiVertexV1beta1Value parameters;
 
   /**
    * A description of the function.
@@ -88,7 +88,7 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
    * The JSON Schema for the function's parameters.
    * @return value or {@code null} for none
    */
-  public GenaiValue getParameters() {
+  public GenaiVertexV1beta1Value getParameters() {
     return parameters;
   }
 
@@ -96,7 +96,7 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
    * The JSON Schema for the function's parameters.
    * @param parameters parameters or {@code null} for none
    */
-  public GenaiVertexV1beta1Function setParameters(GenaiValue parameters) {
+  public GenaiVertexV1beta1Function setParameters(GenaiVertexV1beta1Value parameters) {
     this.parameters = parameters;
     return this;
   }

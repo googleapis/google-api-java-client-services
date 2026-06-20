@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1FunctionCallDelta extends com.google.api.cl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct arguments;
+  private GenaiVertexV1beta1Struct arguments;
 
   /**
    * The value may be {@code null}.
@@ -44,14 +44,14 @@ public final class GenaiVertexV1beta1FunctionCallDelta extends com.google.api.cl
   /**
    * @return value or {@code null} for none
    */
-  public GenaiStruct getArguments() {
+  public GenaiVertexV1beta1Struct getArguments() {
     return arguments;
   }
 
   /**
    * @param arguments arguments or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionCallDelta setArguments(GenaiStruct arguments) {
+  public GenaiVertexV1beta1FunctionCallDelta setArguments(GenaiVertexV1beta1Struct arguments) {
     this.arguments = arguments;
     return this;
   }

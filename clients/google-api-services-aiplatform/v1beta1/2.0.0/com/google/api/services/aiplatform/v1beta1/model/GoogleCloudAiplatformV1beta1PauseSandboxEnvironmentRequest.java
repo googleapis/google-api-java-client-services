@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Represents a single field in a struct.
+ * Request message for SandboxEnvironmentService.PauseSandboxEnvironment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,58 +27,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiField extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1PauseSandboxEnvironmentRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiValue value;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * @param name name or {@code null} for none
-   */
-  public GenaiField setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiValue getValue() {
-    return value;
-  }
-
-  /**
-   * @param value value or {@code null} for none
-   */
-  public GenaiField setValue(GenaiValue value) {
-    this.value = value;
-    return this;
+  @Override
+  public GoogleCloudAiplatformV1beta1PauseSandboxEnvironmentRequest set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1PauseSandboxEnvironmentRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiField set(String fieldName, Object value) {
-    return (GenaiField) super.set(fieldName, value);
-  }
-
-  @Override
-  public GenaiField clone() {
-    return (GenaiField) super.clone();
+  public GoogleCloudAiplatformV1beta1PauseSandboxEnvironmentRequest clone() {
+    return (GoogleCloudAiplatformV1beta1PauseSandboxEnvironmentRequest) super.clone();
   }
 
 }

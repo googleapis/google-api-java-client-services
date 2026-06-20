@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * `Struct` represents a structured data value, consisting of fields which map to dynamically typed
- * values.
+ * `ListValue` is a wrapper around a repeated field of values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -28,49 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiStruct extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1ListValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Dynamically typed fields. List instead of map because LLMs are sensitive to ordering, and we
-   * want to give users full control.
+   * Repeated field of dynamically typed values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GenaiField> fields;
-
-  static {
-    // hack to force ProGuard to consider GenaiField used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GenaiField.class);
-  }
+  private java.util.List<GenaiVertexV1beta1Value> values;
 
   /**
-   * Dynamically typed fields. List instead of map because LLMs are sensitive to ordering, and we
-   * want to give users full control.
+   * Repeated field of dynamically typed values.
    * @return value or {@code null} for none
    */
-  public java.util.List<GenaiField> getFields() {
-    return fields;
+  public java.util.List<GenaiVertexV1beta1Value> getValues() {
+    return values;
   }
 
   /**
-   * Dynamically typed fields. List instead of map because LLMs are sensitive to ordering, and we
-   * want to give users full control.
-   * @param fields fields or {@code null} for none
+   * Repeated field of dynamically typed values.
+   * @param values values or {@code null} for none
    */
-  public GenaiStruct setFields(java.util.List<GenaiField> fields) {
-    this.fields = fields;
+  public GenaiVertexV1beta1ListValue setValues(java.util.List<GenaiVertexV1beta1Value> values) {
+    this.values = values;
     return this;
   }
 
   @Override
-  public GenaiStruct set(String fieldName, Object value) {
-    return (GenaiStruct) super.set(fieldName, value);
+  public GenaiVertexV1beta1ListValue set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1ListValue) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiStruct clone() {
-    return (GenaiStruct) super.clone();
+  public GenaiVertexV1beta1ListValue clone() {
+    return (GenaiVertexV1beta1ListValue) super.clone();
   }
 
 }

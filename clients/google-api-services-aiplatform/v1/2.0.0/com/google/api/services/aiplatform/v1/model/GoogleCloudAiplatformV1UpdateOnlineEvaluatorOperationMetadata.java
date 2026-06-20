@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * `ListValue` is a wrapper around a repeated field of values.
+ * Metadata for the UpdateOnlineEvaluator operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiListValue extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Repeated field of dynamically typed values.
+   * Generic operation metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GenaiValue> values;
+  private GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata;
 
   /**
-   * Repeated field of dynamically typed values.
+   * Generic operation metadata.
    * @return value or {@code null} for none
    */
-  public java.util.List<GenaiValue> getValues() {
-    return values;
+  public GoogleCloudAiplatformV1GenericOperationMetadata getGenericMetadata() {
+    return genericMetadata;
   }
 
   /**
-   * Repeated field of dynamically typed values.
-   * @param values values or {@code null} for none
+   * Generic operation metadata.
+   * @param genericMetadata genericMetadata or {@code null} for none
    */
-  public GenaiListValue setValues(java.util.List<GenaiValue> values) {
-    this.values = values;
+  public GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata genericMetadata) {
+    this.genericMetadata = genericMetadata;
     return this;
   }
 
   @Override
-  public GenaiListValue set(String fieldName, Object value) {
-    return (GenaiListValue) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiListValue clone() {
-    return (GenaiListValue) super.clone();
+  public GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata clone() {
+    return (GoogleCloudAiplatformV1UpdateOnlineEvaluatorOperationMetadata) super.clone();
   }
 
 }

@@ -34,7 +34,7 @@ public final class GenaiVertexV1beta1McpServerToolCallContent extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiStruct arguments;
+  private GenaiVertexV1beta1Struct arguments;
 
   /**
    * Required. The name of the tool which was called.
@@ -54,7 +54,7 @@ public final class GenaiVertexV1beta1McpServerToolCallContent extends com.google
    * Required. The JSON object of arguments for the function.
    * @return value or {@code null} for none
    */
-  public GenaiStruct getArguments() {
+  public GenaiVertexV1beta1Struct getArguments() {
     return arguments;
   }
 
@@ -62,7 +62,7 @@ public final class GenaiVertexV1beta1McpServerToolCallContent extends com.google
    * Required. The JSON object of arguments for the function.
    * @param arguments arguments or {@code null} for none
    */
-  public GenaiVertexV1beta1McpServerToolCallContent setArguments(GenaiStruct arguments) {
+  public GenaiVertexV1beta1McpServerToolCallContent setArguments(GenaiVertexV1beta1Struct arguments) {
     this.arguments = arguments;
     return this;
   }

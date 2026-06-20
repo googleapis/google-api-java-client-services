@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Sample Reinforcement Tuning user data in the training dataset. The contents are truncated for
+ * Sample reinforcement tuning user data in the training dataset. The contents are truncated for
  * better UI showing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -18,8 +18,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * ReinforcementTuningAutoraterScorer is used to score parsed responses for classification based
- * autorater use cases. For example, for math problems, we can use classification based autorater to
- * calculate the reward based on the autorater parsed response against reference answer.
+ * autorater use cases. For example, for math problems, users can use classification based autorater
+ * to calculate rewards based on the autorater parsed response against a reference answer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -39,16 +39,18 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   private GoogleCloudAiplatformV1beta1AutoraterConfig autoraterConfig;
 
   /**
-   * Allows substituting {{prompt}}, {{response}}, {{system_instruction}} and
-   * {{references.reference}} into autorater prompt.
+   * The prompt for an autorater to scorer the parsed sample response. This field supports the
+   * following placeholders that will be replaced before scoring: - {{prompt}} - {{response}} -
+   * {{system_instruction}} - {{references.key}}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String autoraterPrompt;
 
   /**
-   * Parses autorater returned response. For example, if autorater response has reward stored in
-   * `2.0` block, defining parsing response config using regex "`.*(.*?)`" will give you "2.0".
+   * Parses autorater returned response for scoring. For example, if the autorater response has
+   * reward stored in the `2.0` block, defining a parsing response config using regex `".*(.*?)"`
+   * will return a score `"2.0"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +64,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   private GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerExactMatchScorer exactMatchScorer;
 
   /**
-   * Scores autorater responses by directly converting parsed autorater response to float reward.
-   * Important: reward is clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+   * Scores autorater responses by directly converting parsed autorater response to a float reward.
+   * Note: Reward is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward, 1.0), -1.0)`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +89,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Allows substituting {{prompt}}, {{response}}, {{system_instruction}} and
-   * {{references.reference}} into autorater prompt.
+   * The prompt for an autorater to scorer the parsed sample response. This field supports the
+   * following placeholders that will be replaced before scoring: - {{prompt}} - {{response}} -
+   * {{system_instruction}} - {{references.key}}
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoraterPrompt() {
@@ -96,8 +99,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Allows substituting {{prompt}}, {{response}}, {{system_instruction}} and
-   * {{references.reference}} into autorater prompt.
+   * The prompt for an autorater to scorer the parsed sample response. This field supports the
+   * following placeholders that will be replaced before scoring: - {{prompt}} - {{response}} -
+   * {{system_instruction}} - {{references.key}}
    * @param autoraterPrompt autoraterPrompt or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorer setAutoraterPrompt(java.lang.String autoraterPrompt) {
@@ -106,8 +110,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Parses autorater returned response. For example, if autorater response has reward stored in
-   * `2.0` block, defining parsing response config using regex "`.*(.*?)`" will give you "2.0".
+   * Parses autorater returned response for scoring. For example, if the autorater response has
+   * reward stored in the `2.0` block, defining a parsing response config using regex `".*(.*?)"`
+   * will return a score `"2.0"`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig getAutoraterResponseParseConfig() {
@@ -115,8 +120,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Parses autorater returned response. For example, if autorater response has reward stored in
-   * `2.0` block, defining parsing response config using regex "`.*(.*?)`" will give you "2.0".
+   * Parses autorater returned response for scoring. For example, if the autorater response has
+   * reward stored in the `2.0` block, defining a parsing response config using regex `".*(.*?)"`
+   * will return a score `"2.0"`.
    * @param autoraterResponseParseConfig autoraterResponseParseConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorer setAutoraterResponseParseConfig(GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig autoraterResponseParseConfig) {
@@ -142,8 +148,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Scores autorater responses by directly converting parsed autorater response to float reward.
-   * Important: reward is clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+   * Scores autorater responses by directly converting parsed autorater response to a float reward.
+   * Note: Reward is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward, 1.0), -1.0)`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerParsedResponseConversionScorer getParsedResponseConversionScorer() {
@@ -151,8 +157,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScore
   }
 
   /**
-   * Scores autorater responses by directly converting parsed autorater response to float reward.
-   * Important: reward is clipped to be within [-1, 1]. I.e., reward = max(min(reward, 1), -1)
+   * Scores autorater responses by directly converting parsed autorater response to a float reward.
+   * Note: Reward is clipped to be within `[-1, 1]`, i.e., `reward = max(min(reward, 1.0), -1.0)`.
    * @param parsedResponseConversionScorer parsedResponseConversionScorer or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorer setParsedResponseConversionScorer(GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorerParsedResponseConversionScorer parsedResponseConversionScorer) {

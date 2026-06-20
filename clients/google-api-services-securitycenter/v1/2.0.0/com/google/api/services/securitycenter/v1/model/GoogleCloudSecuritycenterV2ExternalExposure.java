@@ -112,6 +112,12 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private String networkPathInsightsGenerationTime;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String privateIpAddress;
 
   /**
@@ -342,6 +348,21 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    */
   public GoogleCloudSecuritycenterV2ExternalExposure setNetworkIngressFirewallPolicy(java.lang.String networkIngressFirewallPolicy) {
     this.networkIngressFirewallPolicy = networkIngressFirewallPolicy;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public String getNetworkPathInsightsGenerationTime() {
+    return networkPathInsightsGenerationTime;
+  }
+
+  /**
+   * @param networkPathInsightsGenerationTime networkPathInsightsGenerationTime or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setNetworkPathInsightsGenerationTime(String networkPathInsightsGenerationTime) {
+    this.networkPathInsightsGenerationTime = networkPathInsightsGenerationTime;
     return this;
   }
 

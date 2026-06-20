@@ -108,6 +108,13 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Directories to persist across workstation sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WorkstationPersistentDirectory> persistentDirectories;
+
+  /**
    * Output only. Indicates whether this workstation is currently being updated to match its
    * intended state.
    * The value may be {@code null}.
@@ -340,6 +347,23 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Directories to persist across workstation sessions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WorkstationPersistentDirectory> getPersistentDirectories() {
+    return persistentDirectories;
+  }
+
+  /**
+   * Optional. Directories to persist across workstation sessions.
+   * @param persistentDirectories persistentDirectories or {@code null} for none
+   */
+  public Workstation setPersistentDirectories(java.util.List<WorkstationPersistentDirectory> persistentDirectories) {
+    this.persistentDirectories = persistentDirectories;
     return this;
   }
 

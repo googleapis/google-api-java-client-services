@@ -45,6 +45,14 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
   private String archiveTimeout;
 
   /**
+   * Optional. Maximum size in GB to which this persistent directory can be resized. Defaults to
+   * unlimited if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxSizeGb;
+
+  /**
    * Optional. Whether the persistent disk should be deleted when the workstation is deleted. Valid
    * values are `DELETE` and `RETAIN`. Defaults to `DELETE`.
    * The value may be {@code null}.
@@ -91,6 +99,25 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
    */
   public GceHyperdiskBalancedHighAvailability setArchiveTimeout(String archiveTimeout) {
     this.archiveTimeout = archiveTimeout;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum size in GB to which this persistent directory can be resized. Defaults to
+   * unlimited if not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxSizeGb() {
+    return maxSizeGb;
+  }
+
+  /**
+   * Optional. Maximum size in GB to which this persistent directory can be resized. Defaults to
+   * unlimited if not set.
+   * @param maxSizeGb maxSizeGb or {@code null} for none
+   */
+  public GceHyperdiskBalancedHighAvailability setMaxSizeGb(java.lang.Integer maxSizeGb) {
+    this.maxSizeGb = maxSizeGb;
     return this;
   }
 

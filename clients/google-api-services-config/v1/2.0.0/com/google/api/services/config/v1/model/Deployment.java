@@ -40,10 +40,10 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Optional. User-defined location of Cloud Build logs and artifacts in Google Cloud Storage.
-   * Format: `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set
-   * or empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to
-   * be in the same project as the deployment - The path cannot be within the path of `gcs_source` -
+   * User-defined location of Cloud Build logs and artifacts in Google Cloud Storage. Format:
+   * `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set or
+   * empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to be
+   * in the same project as the deployment - The path cannot be within the path of `gcs_source` -
    * The field cannot be updated, including changing its presence
    * The value may be {@code null}.
    */
@@ -195,7 +195,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String tfVersion;
 
   /**
-   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,9 +209,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. The user-specified Cloud Build worker pool resource in which the Cloud Build job will
-   * execute. Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this
-   * field is unspecified, the default Cloud Build worker pool will be used.
+   * The user-specified Cloud Build worker pool resource in which the Cloud Build job will execute.
+   * Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this field is
+   * unspecified, the default Cloud Build worker pool will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,10 +239,10 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-defined location of Cloud Build logs and artifacts in Google Cloud Storage.
-   * Format: `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set
-   * or empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to
-   * be in the same project as the deployment - The path cannot be within the path of `gcs_source` -
+   * User-defined location of Cloud Build logs and artifacts in Google Cloud Storage. Format:
+   * `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set or
+   * empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to be
+   * in the same project as the deployment - The path cannot be within the path of `gcs_source` -
    * The field cannot be updated, including changing its presence
    * @return value or {@code null} for none
    */
@@ -251,10 +251,10 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-defined location of Cloud Build logs and artifacts in Google Cloud Storage.
-   * Format: `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set
-   * or empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to
-   * be in the same project as the deployment - The path cannot be within the path of `gcs_source` -
+   * User-defined location of Cloud Build logs and artifacts in Google Cloud Storage. Format:
+   * `gs://{bucket}/{folder}` A default bucket will be bootstrapped if the field is not set or
+   * empty. Default bucket format: `gs://--blueprint-config` Constraints: - The bucket needs to be
+   * in the same project as the deployment - The path cannot be within the path of `gcs_source` -
    * The field cannot be updated, including changing its presence
    * @param artifactsGcsBucket artifactsGcsBucket or {@code null} for none
    */
@@ -609,7 +609,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    * @return value or {@code null} for none
    */
   public java.lang.String getTfVersionConstraint() {
@@ -617,7 +617,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The user-specified Terraform version constraint. Example: "=1.3.10".
+   * The user-specified Terraform version constraint. Example: "=1.3.10".
    * @param tfVersionConstraint tfVersionConstraint or {@code null} for none
    */
   public Deployment setTfVersionConstraint(java.lang.String tfVersionConstraint) {
@@ -643,9 +643,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The user-specified Cloud Build worker pool resource in which the Cloud Build job will
-   * execute. Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this
-   * field is unspecified, the default Cloud Build worker pool will be used.
+   * The user-specified Cloud Build worker pool resource in which the Cloud Build job will execute.
+   * Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this field is
+   * unspecified, the default Cloud Build worker pool will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -653,9 +653,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The user-specified Cloud Build worker pool resource in which the Cloud Build job will
-   * execute. Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this
-   * field is unspecified, the default Cloud Build worker pool will be used.
+   * The user-specified Cloud Build worker pool resource in which the Cloud Build job will execute.
+   * Format: `projects/{project}/locations/{location}/workerPools/{workerPoolId}`. If this field is
+   * unspecified, the default Cloud Build worker pool will be used.
    * @param workerPool workerPool or {@code null} for none
    */
   public Deployment setWorkerPool(java.lang.String workerPool) {

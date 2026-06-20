@@ -31,28 +31,28 @@ package com.google.api.services.config.v1.model;
 public final class GitSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Subdirectory inside the repository. Example: 'staging/my-package'
+   * Subdirectory inside the repository. Example: 'staging/my-package'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String directory;
 
   /**
-   * Optional. Git reference (e.g. branch or tag).
+   * Git reference (e.g. branch or tag).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ref;
 
   /**
-   * Optional. Repository URL. Example: 'https://github.com/kubernetes/examples.git'
+   * Repository URL. Example: 'https://github.com/kubernetes/examples.git'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repo;
 
   /**
-   * Optional. Subdirectory inside the repository. Example: 'staging/my-package'
+   * Subdirectory inside the repository. Example: 'staging/my-package'
    * @return value or {@code null} for none
    */
   public java.lang.String getDirectory() {
@@ -60,7 +60,7 @@ public final class GitSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Subdirectory inside the repository. Example: 'staging/my-package'
+   * Subdirectory inside the repository. Example: 'staging/my-package'
    * @param directory directory or {@code null} for none
    */
   public GitSource setDirectory(java.lang.String directory) {
@@ -69,7 +69,7 @@ public final class GitSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Git reference (e.g. branch or tag).
+   * Git reference (e.g. branch or tag).
    * @return value or {@code null} for none
    */
   public java.lang.String getRef() {
@@ -77,7 +77,7 @@ public final class GitSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Git reference (e.g. branch or tag).
+   * Git reference (e.g. branch or tag).
    * @param ref ref or {@code null} for none
    */
   public GitSource setRef(java.lang.String ref) {
@@ -86,7 +86,7 @@ public final class GitSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Repository URL. Example: 'https://github.com/kubernetes/examples.git'
+   * Repository URL. Example: 'https://github.com/kubernetes/examples.git'
    * @return value or {@code null} for none
    */
   public java.lang.String getRepo() {
@@ -94,7 +94,7 @@ public final class GitSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Repository URL. Example: 'https://github.com/kubernetes/examples.git'
+   * Repository URL. Example: 'https://github.com/kubernetes/examples.git'
    * @param repo repo or {@code null} for none
    */
   public GitSource setRepo(java.lang.String repo) {

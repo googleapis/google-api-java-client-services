@@ -30,6 +30,84 @@ package com.google.api.services.monitoring.v1.model;
 @SuppressWarnings("javadoc")
 public final class TraceQuery extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The resource name of the project or Trace scope to fetch data from. If empty, the
+   * widget will default to the project's default Trace scope. If scope cannot be determined, then
+   * we fallback to the current project. Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceContainer;
+
+  /**
+   * The type of span data value to be displayed on the chart. Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanDataValue;
+
+  /**
+   * First version of span filtering that we will support. Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpanFilters spanFilters;
+
+  /**
+   * Optional. The resource name of the project or Trace scope to fetch data from. If empty, the
+   * widget will default to the project's default Trace scope. If scope cannot be determined, then
+   * we fallback to the current project. Optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceContainer() {
+    return resourceContainer;
+  }
+
+  /**
+   * Optional. The resource name of the project or Trace scope to fetch data from. If empty, the
+   * widget will default to the project's default Trace scope. If scope cannot be determined, then
+   * we fallback to the current project. Optional.
+   * @param resourceContainer resourceContainer or {@code null} for none
+   */
+  public TraceQuery setResourceContainer(java.lang.String resourceContainer) {
+    this.resourceContainer = resourceContainer;
+    return this;
+  }
+
+  /**
+   * The type of span data value to be displayed on the chart. Required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanDataValue() {
+    return spanDataValue;
+  }
+
+  /**
+   * The type of span data value to be displayed on the chart. Required.
+   * @param spanDataValue spanDataValue or {@code null} for none
+   */
+  public TraceQuery setSpanDataValue(java.lang.String spanDataValue) {
+    this.spanDataValue = spanDataValue;
+    return this;
+  }
+
+  /**
+   * First version of span filtering that we will support. Required.
+   * @return value or {@code null} for none
+   */
+  public SpanFilters getSpanFilters() {
+    return spanFilters;
+  }
+
+  /**
+   * First version of span filtering that we will support. Required.
+   * @param spanFilters spanFilters or {@code null} for none
+   */
+  public TraceQuery setSpanFilters(SpanFilters spanFilters) {
+    this.spanFilters = spanFilters;
+    return this;
+  }
+
   @Override
   public TraceQuery set(String fieldName, Object value) {
     return (TraceQuery) super.set(fieldName, value);

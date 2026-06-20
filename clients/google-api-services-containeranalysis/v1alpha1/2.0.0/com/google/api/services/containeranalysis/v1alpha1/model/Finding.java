@@ -38,6 +38,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
+   * Optional. Description of the finding category.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String details;
+
+  /**
    * Optional. Location (path and line) where the finding was detected.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Optional. Description of the finding category.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDetails() {
+    return details;
+  }
+
+  /**
+   * Optional. Description of the finding category.
+   * @param details details or {@code null} for none
+   */
+  public Finding setDetails(java.lang.String details) {
+    this.details = details;
     return this;
   }
 

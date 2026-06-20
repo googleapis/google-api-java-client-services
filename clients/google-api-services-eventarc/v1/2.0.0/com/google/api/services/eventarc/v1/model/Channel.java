@@ -17,9 +17,9 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * A representation of the Channel resource. A Channel is a resource on which event providers
- * publish their events. The published events are delivered through the transport associated with
- * the channel. Note that a channel is associated with exactly one event provider.
+ * Represents a subscriber's intent to receive events from an event provider. Published events are
+ * delivered using the transport associated with the Channel resource. A channel is associated with
+ * exactly one event provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:

@@ -17,9 +17,9 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * A GoogleChannelConfig is a resource that stores the custom settings respected by Eventarc first-
- * party triggers in the matching region. Once configured, first-party event data will be protected
- * using the specified custom managed encryption key instead of Google-managed encryption keys.
+ * Can be used to customize security settings for Eventarc first-party triggers in a specific
+ * region. Once the GoogleChannelConfig resource is configured, first-party event data is protected
+ * using the specified customer-managed encryption key instead of a Google-managed encryption key.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:

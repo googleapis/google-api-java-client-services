@@ -224,6 +224,13 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String terminationTime;
 
   /**
+   * The vsock mode of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingVsockMode vsockMode;
+
+  /**
    * Represents the Windows Server License Optimization Mode of the VM. If unspecified, the default
    * mode is `OFF`.
    * The value may be {@code null}.
@@ -685,6 +692,23 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setTerminationTime(java.lang.String terminationTime) {
     this.terminationTime = terminationTime;
+    return this;
+  }
+
+  /**
+   * The vsock mode of the instance.
+   * @return value or {@code null} for none
+   */
+  public SchedulingVsockMode getVsockMode() {
+    return vsockMode;
+  }
+
+  /**
+   * The vsock mode of the instance.
+   * @param vsockMode vsockMode or {@code null} for none
+   */
+  public Scheduling setVsockMode(SchedulingVsockMode vsockMode) {
+    this.vsockMode = vsockMode;
     return this;
   }
 

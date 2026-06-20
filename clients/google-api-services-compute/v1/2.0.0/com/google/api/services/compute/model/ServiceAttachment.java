@@ -149,6 +149,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * The number of NAT IP addresses to be allocated per connected endpoint. If not specified, the
+   * default value is 1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long natIpsPerEndpoint;
+
+  /**
    * An array of URLs where each entry is the URL of a subnet provided by the service producer to
    * use for NAT in this service attachment.
    * The value may be {@code null}.
@@ -527,6 +535,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The number of NAT IP addresses to be allocated per connected endpoint. If not specified, the
+   * default value is 1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNatIpsPerEndpoint() {
+    return natIpsPerEndpoint;
+  }
+
+  /**
+   * The number of NAT IP addresses to be allocated per connected endpoint. If not specified, the
+   * default value is 1.
+   * @param natIpsPerEndpoint natIpsPerEndpoint or {@code null} for none
+   */
+  public ServiceAttachment setNatIpsPerEndpoint(java.lang.Long natIpsPerEndpoint) {
+    this.natIpsPerEndpoint = natIpsPerEndpoint;
     return this;
   }
 

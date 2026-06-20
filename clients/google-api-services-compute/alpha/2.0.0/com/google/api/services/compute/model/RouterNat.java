@@ -50,8 +50,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
-   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
-   * The field is output only.
+   * This value is equal to tcp_time_wait_timeout_sec. If tcp_time_wait_timeout_sec isn't set, the
+   * effective timeout is 30s or 120s. The field is output only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,8 +280,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
-   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
-   * The field is output only.
+   * This value is equal to tcp_time_wait_timeout_sec. If tcp_time_wait_timeout_sec isn't set, the
+   * effective timeout is 30s or 120s. The field is output only.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEffectiveTcpTimeWaitTimeoutSec() {
@@ -290,8 +290,8 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state.
-   * This value is equal to tcp_time_wait_timeout_sec if it is set, otherwise it is equal to 120s.
-   * The field is output only.
+   * This value is equal to tcp_time_wait_timeout_sec. If tcp_time_wait_timeout_sec isn't set, the
+   * effective timeout is 30s or 120s. The field is output only.
    * @param effectiveTcpTimeWaitTimeoutSec effectiveTcpTimeWaitTimeoutSec or {@code null} for none
    */
   public RouterNat setEffectiveTcpTimeWaitTimeoutSec(java.lang.Integer effectiveTcpTimeWaitTimeoutSec) {

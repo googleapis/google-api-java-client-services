@@ -74,6 +74,14 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.Boolean autoDeleteAutoCreatedReservations;
 
   /**
+   * Full or partial URL of an existing future reservation to indicate intent for reserving capacity
+   * in the same cluster as the colocation resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String colocationResource;
+
+  /**
    * If not present, then FR will not deliver a new commitment or update an existing commitment.
    * The value may be {@code null}.
    */
@@ -356,6 +364,25 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setAutoDeleteAutoCreatedReservations(java.lang.Boolean autoDeleteAutoCreatedReservations) {
     this.autoDeleteAutoCreatedReservations = autoDeleteAutoCreatedReservations;
+    return this;
+  }
+
+  /**
+   * Full or partial URL of an existing future reservation to indicate intent for reserving capacity
+   * in the same cluster as the colocation resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getColocationResource() {
+    return colocationResource;
+  }
+
+  /**
+   * Full or partial URL of an existing future reservation to indicate intent for reserving capacity
+   * in the same cluster as the colocation resource.
+   * @param colocationResource colocationResource or {@code null} for none
+   */
+  public FutureReservation setColocationResource(java.lang.String colocationResource) {
+    this.colocationResource = colocationResource;
     return this;
   }
 

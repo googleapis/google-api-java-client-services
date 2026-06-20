@@ -71,6 +71,13 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
   private java.lang.Long ruleNumber;
 
   /**
+   * A list of source workload identities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sourceWorkloadIdentities;
+
+  /**
    * The action to be enforced for traffic that matches this rule.
    * @return value or {@code null} for none
    */
@@ -161,6 +168,23 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    */
   public RouterNatRule setRuleNumber(java.lang.Long ruleNumber) {
     this.ruleNumber = ruleNumber;
+    return this;
+  }
+
+  /**
+   * A list of source workload identities.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSourceWorkloadIdentities() {
+    return sourceWorkloadIdentities;
+  }
+
+  /**
+   * A list of source workload identities.
+   * @param sourceWorkloadIdentities sourceWorkloadIdentities or {@code null} for none
+   */
+  public RouterNatRule setSourceWorkloadIdentities(java.util.List<java.lang.String> sourceWorkloadIdentities) {
+    this.sourceWorkloadIdentities = sourceWorkloadIdentities;
     return this;
   }
 

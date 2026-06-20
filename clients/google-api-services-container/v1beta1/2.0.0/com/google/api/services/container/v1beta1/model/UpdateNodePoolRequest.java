@@ -215,6 +215,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String machineType;
 
   /**
+   * Optional. Specifies the maintenance policy for the node pool, including maintenance exclusion
+   * options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodePoolMaintenancePolicy maintenancePolicy;
+
+  /**
    * The maximum duration for the nodes to exist. If unspecified, the nodes can exist indefinitely.
    * The value may be {@code null}.
    */
@@ -778,6 +786,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the maintenance policy for the node pool, including maintenance exclusion
+   * options.
+   * @return value or {@code null} for none
+   */
+  public NodePoolMaintenancePolicy getMaintenancePolicy() {
+    return maintenancePolicy;
+  }
+
+  /**
+   * Optional. Specifies the maintenance policy for the node pool, including maintenance exclusion
+   * options.
+   * @param maintenancePolicy maintenancePolicy or {@code null} for none
+   */
+  public UpdateNodePoolRequest setMaintenancePolicy(NodePoolMaintenancePolicy maintenancePolicy) {
+    this.maintenancePolicy = maintenancePolicy;
     return this;
   }
 

@@ -784,6 +784,175 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
       }
       /**
+       * An accessor for creating requests from the Violations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+       *   {@code Assuredworkloads.Violations.List request = assuredworkloads.violations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Violations violations() {
+        return new Violations();
+      }
+
+      /**
+       * The "violations" collection of methods.
+       */
+      public class Violations {
+
+        /**
+         * Acknowledges multiple existing violations. By acknowledging violations, users acknowledge the
+         * existence of compliance violations in their workload and decide to ignore them due to a valid
+         * business justification. Acknowledgement is a permanent operation and it cannot be reverted. This
+         * is a batch version of AcknowledgeViolation.
+         *
+         * Create a request for the method "violations.batchAcknowledgeViolations".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link BatchAcknowledgeViolations#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Optional. The parent resource shared by all violations being acknowledged. Format:
+         *        organizations/{organization}/locations/{location}/workloads/{workload}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest}
+         * @return the request
+         */
+        public BatchAcknowledgeViolations batchAcknowledgeViolations(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest content) throws java.io.IOException {
+          BatchAcknowledgeViolations result = new BatchAcknowledgeViolations(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchAcknowledgeViolations extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/violations:batchAcknowledgeViolations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Acknowledges multiple existing violations. By acknowledging violations, users acknowledge the
+           * existence of compliance violations in their workload and decide to ignore them due to a valid
+           * business justification. Acknowledgement is a permanent operation and it cannot be reverted.
+           * This is a batch version of AcknowledgeViolation.
+           *
+           * Create a request for the method "violations.batchAcknowledgeViolations".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link BatchAcknowledgeViolations#execute()} method to invoke the
+           * remote operation. <p> {@link BatchAcknowledgeViolations#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Optional. The parent resource shared by all violations being acknowledged. Format:
+         *        organizations/{organization}/locations/{location}/workloads/{workload}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest}
+           * @since 1.13
+           */
+          protected BatchAcknowledgeViolations(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest content) {
+            super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchAcknowledgeViolations set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchAcknowledgeViolations) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setAccessToken(java.lang.String accessToken) {
+            return (BatchAcknowledgeViolations) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setAlt(java.lang.String alt) {
+            return (BatchAcknowledgeViolations) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setCallback(java.lang.String callback) {
+            return (BatchAcknowledgeViolations) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setFields(java.lang.String fields) {
+            return (BatchAcknowledgeViolations) super.setFields(fields);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setKey(java.lang.String key) {
+            return (BatchAcknowledgeViolations) super.setKey(key);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setOauthToken(java.lang.String oauthToken) {
+            return (BatchAcknowledgeViolations) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchAcknowledgeViolations) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setQuotaUser(java.lang.String quotaUser) {
+            return (BatchAcknowledgeViolations) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setUploadType(java.lang.String uploadType) {
+            return (BatchAcknowledgeViolations) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchAcknowledgeViolations setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchAcknowledgeViolations) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Optional. The parent resource shared by all violations being acknowledged. Format:
+           * organizations/{organization}/locations/{location}/workloads/{workload}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Optional. The parent resource shared by all violations being acknowledged. Format:
+         organizations/{organization}/locations/{location}/workloads/{workload}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Optional. The parent resource shared by all violations being acknowledged. Format:
+           * organizations/{organization}/locations/{location}/workloads/{workload}
+           */
+          public BatchAcknowledgeViolations setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchAcknowledgeViolations set(String parameterName, Object value) {
+            return (BatchAcknowledgeViolations) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Workloads collection.
        *
        * <p>The typical use is:</p>
@@ -3365,6 +3534,22 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /** Optional. Actionable sorting delegation. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Actionable sorting delegation.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Actionable sorting delegation. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
             /** Optional. Page size. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
@@ -3405,6 +3590,175 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
         }
       }
+    }
+    /**
+     * An accessor for creating requests from the Violations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+     *   {@code Assuredworkloads.Violations.List request = assuredworkloads.violations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Violations violations() {
+      return new Violations();
+    }
+
+    /**
+     * The "violations" collection of methods.
+     */
+    public class Violations {
+
+      /**
+       * Acknowledges multiple existing violations. By acknowledging violations, users acknowledge the
+       * existence of compliance violations in their workload and decide to ignore them due to a valid
+       * business justification. Acknowledgement is a permanent operation and it cannot be reverted. This
+       * is a batch version of AcknowledgeViolation.
+       *
+       * Create a request for the method "violations.batchAcknowledgeViolations".
+       *
+       * This request holds the parameters needed by the assuredworkloads server.  After setting any
+       * optional parameters, call the {@link BatchAcknowledgeViolations#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param parent Optional. The parent resource shared by all violations being acknowledged. Format:
+       *        organizations/{organization}/locations/{location}/workloads/{workload}
+       * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest}
+       * @return the request
+       */
+      public BatchAcknowledgeViolations batchAcknowledgeViolations(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest content) throws java.io.IOException {
+        BatchAcknowledgeViolations result = new BatchAcknowledgeViolations(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchAcknowledgeViolations extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/violations:batchAcknowledgeViolations";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Acknowledges multiple existing violations. By acknowledging violations, users acknowledge the
+         * existence of compliance violations in their workload and decide to ignore them due to a valid
+         * business justification. Acknowledgement is a permanent operation and it cannot be reverted.
+         * This is a batch version of AcknowledgeViolation.
+         *
+         * Create a request for the method "violations.batchAcknowledgeViolations".
+         *
+         * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link BatchAcknowledgeViolations#execute()} method to invoke the
+         * remote operation. <p> {@link BatchAcknowledgeViolations#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent Optional. The parent resource shared by all violations being acknowledged. Format:
+       *        organizations/{organization}/locations/{location}/workloads/{workload}
+         * @param content the {@link com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest}
+         * @since 1.13
+         */
+        protected BatchAcknowledgeViolations(java.lang.String parent, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsRequest content) {
+          super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1beta1.model.GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchAcknowledgeViolations set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchAcknowledgeViolations) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setAccessToken(java.lang.String accessToken) {
+          return (BatchAcknowledgeViolations) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setAlt(java.lang.String alt) {
+          return (BatchAcknowledgeViolations) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setCallback(java.lang.String callback) {
+          return (BatchAcknowledgeViolations) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setFields(java.lang.String fields) {
+          return (BatchAcknowledgeViolations) super.setFields(fields);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setKey(java.lang.String key) {
+          return (BatchAcknowledgeViolations) super.setKey(key);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setOauthToken(java.lang.String oauthToken) {
+          return (BatchAcknowledgeViolations) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchAcknowledgeViolations) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setQuotaUser(java.lang.String quotaUser) {
+          return (BatchAcknowledgeViolations) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setUploadType(java.lang.String uploadType) {
+          return (BatchAcknowledgeViolations) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchAcknowledgeViolations setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchAcknowledgeViolations) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Optional. The parent resource shared by all violations being acknowledged. Format:
+         * organizations/{organization}/locations/{location}/workloads/{workload}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Optional. The parent resource shared by all violations being acknowledged. Format:
+       organizations/{organization}/locations/{location}/workloads/{workload}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Optional. The parent resource shared by all violations being acknowledged. Format:
+         * organizations/{organization}/locations/{location}/workloads/{workload}
+         */
+        public BatchAcknowledgeViolations setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchAcknowledgeViolations set(String parameterName, Object value) {
+          return (BatchAcknowledgeViolations) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 

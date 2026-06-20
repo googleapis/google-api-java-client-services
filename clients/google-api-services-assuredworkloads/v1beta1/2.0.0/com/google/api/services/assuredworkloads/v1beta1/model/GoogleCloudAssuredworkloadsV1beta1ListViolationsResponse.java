@@ -38,6 +38,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   private java.lang.String nextPageToken;
 
   /**
+   * The total number of violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * List of Violations under a Workload.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
    */
   public GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The total number of violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total number of violations.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

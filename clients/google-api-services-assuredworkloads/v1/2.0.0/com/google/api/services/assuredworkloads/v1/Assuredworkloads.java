@@ -3508,6 +3508,22 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /** Optional. Actionable sorting delegation. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Actionable sorting delegation.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Actionable sorting delegation. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
             /** Optional. Page size. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;

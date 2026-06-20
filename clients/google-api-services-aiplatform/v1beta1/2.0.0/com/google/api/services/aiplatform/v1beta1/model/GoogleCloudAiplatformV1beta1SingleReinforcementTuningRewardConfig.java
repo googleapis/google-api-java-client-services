@@ -18,11 +18,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * SingleReinforcementTuningRewardConfig defines a single reward function configuration for RL
- * tuning. Each reward calculation/evaluation consists of two stages: stage 1: parse the part of
- * information important from sample response via regex extract or simply take the sample response
- * unmodified. stage 2: Call specific reward scorer to compute the reward and also output whether
- * the sample answer is correct. While wrong answer and correct answer should get assigned different
- * rewards, correct answers could also get assigned different rewards.
+ * tuning. Each reward calculation/evaluation consists of two stages: 1. Stage 1: Parses the part of
+ * information important from sample response via regex extract, or simply takes the sample response
+ * unmodified. 2. Stage 2: Calls the configured reward scorer to compute the reward.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -35,8 +33,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * ReinforcementTuningScoreBasedAutorater is used to score parsed responses based on score
-   * computed by autorater.
+   * ReinforcementTuningAutoraterScorer is used to score parsed responses based on score computed by
+   * an autorater.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,32 +57,34 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   private GoogleCloudAiplatformV1beta1ReinforcementTuningCodeExecutionRewardScorer codeExecutionRewardScorer;
 
   /**
-   * Defines how to parse sample response. For example, we might want to extract only text between
-   * tags and we want text between the last ` ` tags in case there are multiple such tags. We could
-   * define a regex of "`.*(.*?)`" to parse the sample response.
+   * Defines how to parse sample response. For example, given a sample response for evaluating the
+   * reward, users might want to extract the text only between `` and `` in the sample response, and
+   * keeps only the last one in case there are multiple such tags. To achieve such a purpose, they
+   * can define a regex `".*(.*?)"` using the
+   * ReinforcementTuningParseResponseConfig.ResponseParseType.REGEX_EXTRACT parse type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig parseResponseConfig;
 
   /**
-   * A unique reward name used to identify each single reinforcement tuning reward.
+   * A unique reward name for identifying each single reinforcement tuning reward.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rewardName;
 
   /**
-   * ReinforcementTuningClassificationBasedAutorater is used to score parsed responses for simple
-   * string matching use cases against reference answer without writing python code.
+   * ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for simple string
+   * matching use cases against reference answers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer stringMatchRewardScorer;
 
   /**
-   * ReinforcementTuningScoreBasedAutorater is used to score parsed responses based on score
-   * computed by autorater.
+   * ReinforcementTuningAutoraterScorer is used to score parsed responses based on score computed by
+   * an autorater.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorer getAutoraterScorer() {
@@ -92,8 +92,8 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * ReinforcementTuningScoreBasedAutorater is used to score parsed responses based on score
-   * computed by autorater.
+   * ReinforcementTuningAutoraterScorer is used to score parsed responses based on score computed by
+   * an autorater.
    * @param autoraterScorer autoraterScorer or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig setAutoraterScorer(GoogleCloudAiplatformV1beta1ReinforcementTuningAutoraterScorer autoraterScorer) {
@@ -140,9 +140,11 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * Defines how to parse sample response. For example, we might want to extract only text between
-   * tags and we want text between the last ` ` tags in case there are multiple such tags. We could
-   * define a regex of "`.*(.*?)`" to parse the sample response.
+   * Defines how to parse sample response. For example, given a sample response for evaluating the
+   * reward, users might want to extract the text only between `` and `` in the sample response, and
+   * keeps only the last one in case there are multiple such tags. To achieve such a purpose, they
+   * can define a regex `".*(.*?)"` using the
+   * ReinforcementTuningParseResponseConfig.ResponseParseType.REGEX_EXTRACT parse type.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig getParseResponseConfig() {
@@ -150,9 +152,11 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * Defines how to parse sample response. For example, we might want to extract only text between
-   * tags and we want text between the last ` ` tags in case there are multiple such tags. We could
-   * define a regex of "`.*(.*?)`" to parse the sample response.
+   * Defines how to parse sample response. For example, given a sample response for evaluating the
+   * reward, users might want to extract the text only between `` and `` in the sample response, and
+   * keeps only the last one in case there are multiple such tags. To achieve such a purpose, they
+   * can define a regex `".*(.*?)"` using the
+   * ReinforcementTuningParseResponseConfig.ResponseParseType.REGEX_EXTRACT parse type.
    * @param parseResponseConfig parseResponseConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig setParseResponseConfig(GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig parseResponseConfig) {
@@ -161,7 +165,7 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * A unique reward name used to identify each single reinforcement tuning reward.
+   * A unique reward name for identifying each single reinforcement tuning reward.
    * @return value or {@code null} for none
    */
   public java.lang.String getRewardName() {
@@ -169,7 +173,7 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * A unique reward name used to identify each single reinforcement tuning reward.
+   * A unique reward name for identifying each single reinforcement tuning reward.
    * @param rewardName rewardName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig setRewardName(java.lang.String rewardName) {
@@ -178,8 +182,8 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * ReinforcementTuningClassificationBasedAutorater is used to score parsed responses for simple
-   * string matching use cases against reference answer without writing python code.
+   * ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for simple string
+   * matching use cases against reference answers.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer getStringMatchRewardScorer() {
@@ -187,8 +191,8 @@ public final class GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardCo
   }
 
   /**
-   * ReinforcementTuningClassificationBasedAutorater is used to score parsed responses for simple
-   * string matching use cases against reference answer without writing python code.
+   * ReinforcementTuningStringMatchRewardScorer is used to score parsed responses for simple string
+   * matching use cases against reference answers.
    * @param stringMatchRewardScorer stringMatchRewardScorer or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig setStringMatchRewardScorer(GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorer stringMatchRewardScorer) {

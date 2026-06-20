@@ -17,11 +17,13 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Defines how to parse sample response config for reinforcement tuning. For example, the input
- * prompt might be: "Perform step by step thoughts first to problem A, finally output answer in ` `
- * block." And the sample response might look like: "`blahblah`". Here, user can define the
- * following parse config: ``` parse_type: REGEX_EXTRACT regex_extract_expression: ".*(.*?)" ``` And
- * we would have returned "blahblah" to reward scoring function.
+ * Defines how to parse sample response config for reinforcement tuning. The parsed response (i.e.,
+ * substring) will be passed to the reward functions. For example, the input prompt might be: >
+ * "Perform step-by-step thoughts first to problem A, finally output answer in the   block." The
+ * sample response from the model under tuning might look like: > "Yes" Here, users can define the
+ * following parse config: ``` { "parseType": "REGEX_EXTRACT", "regexExtractExpression": ".*(.*?)" }
+ * ``` The resulting parsed response would be `"Yes"` and will be passed to the reward functions for
+ * evaluating rewards.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -34,22 +36,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines how to parse sample response.
+   * Defines the type for parsing sample response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parseType;
 
   /**
-   * Defines the regex to extract the important part of sample response. This field is only used
-   * when `parse_type` is `REGEX_EXTRACT`.
+   * Defines the regex for extracting the important part of sample response. This field is only used
+   * when parse_type is ResponseParseType.REGEX_EXTRACT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regexExtractExpression;
 
   /**
-   * Defines how to parse sample response.
+   * Defines the type for parsing sample response.
    * @return value or {@code null} for none
    */
   public java.lang.String getParseType() {
@@ -57,7 +59,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseC
   }
 
   /**
-   * Defines how to parse sample response.
+   * Defines the type for parsing sample response.
    * @param parseType parseType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig setParseType(java.lang.String parseType) {
@@ -66,8 +68,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseC
   }
 
   /**
-   * Defines the regex to extract the important part of sample response. This field is only used
-   * when `parse_type` is `REGEX_EXTRACT`.
+   * Defines the regex for extracting the important part of sample response. This field is only used
+   * when parse_type is ResponseParseType.REGEX_EXTRACT.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexExtractExpression() {
@@ -75,8 +77,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseC
   }
 
   /**
-   * Defines the regex to extract the important part of sample response. This field is only used
-   * when `parse_type` is `REGEX_EXTRACT`.
+   * Defines the regex for extracting the important part of sample response. This field is only used
+   * when parse_type is ResponseParseType.REGEX_EXTRACT.
    * @param regexExtractExpression regexExtractExpression or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningParseResponseConfig setRegexExtractExpression(java.lang.String regexExtractExpression) {

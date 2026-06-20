@@ -37,7 +37,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo ext
   private java.lang.Float reward;
 
   /**
-   * Optional. Output only. The user-requested auxiliary info for the reward function.
+   * Output only. The user-requested auxiliary info for the reward function. This field is set only
+   * if the Cloud Run reward function configured by user returns a "user_requested_aux_info". Refer
+   * to ReinforcementTuningCloudRunRewardScorer for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo ext
   }
 
   /**
-   * Optional. Output only. The user-requested auxiliary info for the reward function.
+   * Output only. The user-requested auxiliary info for the reward function. This field is set only
+   * if the Cloud Run reward function configured by user returns a "user_requested_aux_info". Refer
+   * to ReinforcementTuningCloudRunRewardScorer for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserRequestedAuxInfo() {
@@ -69,7 +73,9 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo ext
   }
 
   /**
-   * Optional. Output only. The user-requested auxiliary info for the reward function.
+   * Output only. The user-requested auxiliary info for the reward function. This field is set only
+   * if the Cloud Run reward function configured by user returns a "user_requested_aux_info". Refer
+   * to ReinforcementTuningCloudRunRewardScorer for more details.
    * @param userRequestedAuxInfo userRequestedAuxInfo or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo setUserRequestedAuxInfo(java.lang.String userRequestedAuxInfo) {

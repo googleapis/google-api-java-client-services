@@ -37,7 +37,8 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine ex
   private String createTime;
 
   /**
-   * Optional. Configurations for gateways. The keys are user-defined names for each gateway.
+   * Optional. Configurations for gateways. The keys are user-defined names for each gateway. At
+   * most 5 gateway configurations are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +123,8 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine ex
   }
 
   /**
-   * Optional. Configurations for gateways. The keys are user-defined names for each gateway.
+   * Optional. Configurations for gateways. The keys are user-defined names for each gateway. At
+   * most 5 gateway configurations are allowed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1beta1GatewayConfig> getGatewayConfigs() {
@@ -130,7 +132,8 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine ex
   }
 
   /**
-   * Optional. Configurations for gateways. The keys are user-defined names for each gateway.
+   * Optional. Configurations for gateways. The keys are user-defined names for each gateway. At
+   * most 5 gateway configurations are allowed.
    * @param gatewayConfigs gatewayConfigs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine setGatewayConfigs(java.util.Map<String, GoogleCloudAiplatformV1beta1GatewayConfig> gatewayConfigs) {

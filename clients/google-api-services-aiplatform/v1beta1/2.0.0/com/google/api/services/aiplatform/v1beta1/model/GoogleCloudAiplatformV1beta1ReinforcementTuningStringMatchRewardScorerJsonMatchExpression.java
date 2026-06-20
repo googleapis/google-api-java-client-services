@@ -17,9 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * JsonRewardScorer supports converting parsed responses to JSON format, find the first-level key in
- * json matching key name, then perform `StringMatchRewardScorer` operation on the value of matching
- * key name.
+ * JsonMatchExpression supports converting the parsed responses to JSON format, finding the value in
+ * the JSON response that matches the key_name in the first level, and performing
+ * StringMatchExpression operation on the matched JSON value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -32,21 +32,24 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerJsonMatchExpression extends com.google.api.client.json.GenericJson {
 
   /**
-   * Json key name to find the value to match against.
+   * The key name to find the value in the parsed response that's in JSON format. Only first-level
+   * key matching is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyName;
 
   /**
-   * String match expression to match against the value of json key.
+   * String match expression to match against the extracted value from the JSON representation of
+   * the parsed response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression valueStringMatchExpression;
 
   /**
-   * Json key name to find the value to match against.
+   * The key name to find the value in the parsed response that's in JSON format. Only first-level
+   * key matching is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyName() {
@@ -54,7 +57,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * Json key name to find the value to match against.
+   * The key name to find the value in the parsed response that's in JSON format. Only first-level
+   * key matching is supported.
    * @param keyName keyName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerJsonMatchExpression setKeyName(java.lang.String keyName) {
@@ -63,7 +67,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * String match expression to match against the value of json key.
+   * String match expression to match against the extracted value from the JSON representation of
+   * the parsed response.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression getValueStringMatchExpression() {
@@ -71,7 +76,8 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRew
   }
 
   /**
-   * String match expression to match against the value of json key.
+   * String match expression to match against the extracted value from the JSON representation of
+   * the parsed response.
    * @param valueStringMatchExpression valueStringMatchExpression or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerJsonMatchExpression setValueStringMatchExpression(GoogleCloudAiplatformV1beta1ReinforcementTuningStringMatchRewardScorerStringMatchExpression valueStringMatchExpression) {

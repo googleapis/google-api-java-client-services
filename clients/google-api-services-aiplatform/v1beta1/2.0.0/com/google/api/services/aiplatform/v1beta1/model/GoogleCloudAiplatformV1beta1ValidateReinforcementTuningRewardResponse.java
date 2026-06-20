@@ -38,19 +38,19 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   private java.lang.String error;
 
   /**
-   * Output only. The overall weighted reward. For a `CompositeReinforcementTuningRewardConfig`,
-   * this is the weighted average of all rewards. For a `SingleReinforcementTuningRewardConfig`,
-   * this will be the value of the single reward.
+   * Output only. The overall weighted reward. For a CompositeReinforcementTuningRewardConfig, this
+   * is the weighted average of all rewards. For a SingleReinforcementTuningRewardConfig, this will
+   * be the value of the single reward.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float overallReward;
 
   /**
-   * Output only. Deprecated: Use `reward_info_details` instead. A map from reward name to the
+   * Output only. Deprecated: Use reward_info_details instead. A map from reward name to the
    * calculated reward for the reward function. This field will only be populated when a
-   * `CompositeReinforcementTuningRewardConfig` is provided in the request. It will not be set for a
-   * `SingleReinforcementTuningRewardConfig`.
+   * CompositeReinforcementTuningRewardConfig is provided in the request. It will not be set for a
+   * SingleReinforcementTuningRewardConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +89,9 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. The overall weighted reward. For a `CompositeReinforcementTuningRewardConfig`,
-   * this is the weighted average of all rewards. For a `SingleReinforcementTuningRewardConfig`,
-   * this will be the value of the single reward.
+   * Output only. The overall weighted reward. For a CompositeReinforcementTuningRewardConfig, this
+   * is the weighted average of all rewards. For a SingleReinforcementTuningRewardConfig, this will
+   * be the value of the single reward.
    * @return value or {@code null} for none
    */
   public java.lang.Float getOverallReward() {
@@ -99,9 +99,9 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. The overall weighted reward. For a `CompositeReinforcementTuningRewardConfig`,
-   * this is the weighted average of all rewards. For a `SingleReinforcementTuningRewardConfig`,
-   * this will be the value of the single reward.
+   * Output only. The overall weighted reward. For a CompositeReinforcementTuningRewardConfig, this
+   * is the weighted average of all rewards. For a SingleReinforcementTuningRewardConfig, this will
+   * be the value of the single reward.
    * @param overallReward overallReward or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ValidateReinforcementTuningRewardResponse setOverallReward(java.lang.Float overallReward) {
@@ -110,10 +110,10 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. Deprecated: Use `reward_info_details` instead. A map from reward name to the
+   * Output only. Deprecated: Use reward_info_details instead. A map from reward name to the
    * calculated reward for the reward function. This field will only be populated when a
-   * `CompositeReinforcementTuningRewardConfig` is provided in the request. It will not be set for a
-   * `SingleReinforcementTuningRewardConfig`.
+   * CompositeReinforcementTuningRewardConfig is provided in the request. It will not be set for a
+   * SingleReinforcementTuningRewardConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Float> getRewardDetails() {
@@ -121,10 +121,10 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. Deprecated: Use `reward_info_details` instead. A map from reward name to the
+   * Output only. Deprecated: Use reward_info_details instead. A map from reward name to the
    * calculated reward for the reward function. This field will only be populated when a
-   * `CompositeReinforcementTuningRewardConfig` is provided in the request. It will not be set for a
-   * `SingleReinforcementTuningRewardConfig`.
+   * CompositeReinforcementTuningRewardConfig is provided in the request. It will not be set for a
+   * SingleReinforcementTuningRewardConfig.
    * @param rewardDetails rewardDetails or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ValidateReinforcementTuningRewardResponse setRewardDetails(java.util.Map<String, java.lang.Float> rewardDetails) {

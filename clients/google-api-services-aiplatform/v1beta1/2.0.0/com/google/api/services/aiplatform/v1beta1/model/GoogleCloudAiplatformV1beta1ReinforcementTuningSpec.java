@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Spec for Reinforcement Tuning.
+ * Tuning spec for Reinforcement Tuning.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   private GoogleCloudAiplatformV1beta1CompositeReinforcementTuningRewardConfig compositeRewardConfig;
 
   /**
-   * Optional. Additional hyper-parameters to use during tuning.
+   * Optional. Hyper-parameters for reinforcement tuning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   private GoogleCloudAiplatformV1beta1SingleReinforcementTuningRewardConfig singleRewardConfig;
 
   /**
-   * Cloud Storage path to file containing training dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing training dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   private java.lang.String trainingDatasetUri;
 
   /**
-   * Cloud Storage path to file containing validation dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing validation dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Optional. Additional hyper-parameters to use during tuning.
+   * Optional. Hyper-parameters for reinforcement tuning.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters getHyperParameters() {
@@ -92,7 +92,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Optional. Additional hyper-parameters to use during tuning.
+   * Optional. Hyper-parameters for reinforcement tuning.
    * @param hyperParameters hyperParameters or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningSpec setHyperParameters(GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters hyperParameters) {
@@ -118,7 +118,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Cloud Storage path to file containing training dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing training dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Cloud Storage path to file containing training dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing training dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * @param trainingDatasetUri trainingDatasetUri or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Cloud Storage path to file containing validation dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing validation dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningSpec extends c
   }
 
   /**
-   * Cloud Storage path to file containing validation dataset for tuning. The dataset must be
+   * Cloud Storage path to the file containing validation dataset for tuning. The dataset must be
    * formatted as a JSONL file.
    * @param validationDatasetUri validationDatasetUri or {@code null} for none
    */

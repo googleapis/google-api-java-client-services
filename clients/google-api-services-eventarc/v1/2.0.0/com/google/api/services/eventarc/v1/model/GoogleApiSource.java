@@ -17,7 +17,8 @@
 package com.google.api.services.eventarc.v1.model;
 
 /**
- * A GoogleApiSource represents a subscription of 1P events from a MessageBus.
+ * Represents a subscription to first-party events for a MessageBus resource. A GoogleApiSource
+ * resource lets you configure the delivery of events from Google API sources to a designated bus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Eventarc API. For a detailed explanation see:

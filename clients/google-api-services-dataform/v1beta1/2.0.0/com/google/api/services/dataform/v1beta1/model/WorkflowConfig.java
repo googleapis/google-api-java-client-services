@@ -113,6 +113,14 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
   private String updateTime;
 
   /**
+   * Optional. Optional trigger configuration for this workflow. If present, the workflow will be
+   * triggered based on the specified triggers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkflowTriggerConfig workflowTriggerConfig;
+
+  /**
    * Output only. The timestamp of when the WorkflowConfig was created.
    * @return value or {@code null} for none
    */
@@ -293,6 +301,25 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
    */
   public WorkflowConfig setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Optional trigger configuration for this workflow. If present, the workflow will be
+   * triggered based on the specified triggers.
+   * @return value or {@code null} for none
+   */
+  public WorkflowTriggerConfig getWorkflowTriggerConfig() {
+    return workflowTriggerConfig;
+  }
+
+  /**
+   * Optional. Optional trigger configuration for this workflow. If present, the workflow will be
+   * triggered based on the specified triggers.
+   * @param workflowTriggerConfig workflowTriggerConfig or {@code null} for none
+   */
+  public WorkflowConfig setWorkflowTriggerConfig(WorkflowTriggerConfig workflowTriggerConfig) {
+    this.workflowTriggerConfig = workflowTriggerConfig;
     return this;
   }
 

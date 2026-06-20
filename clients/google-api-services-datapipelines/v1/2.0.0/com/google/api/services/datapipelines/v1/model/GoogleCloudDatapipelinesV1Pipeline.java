@@ -77,8 +77,8 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
   private java.lang.String name;
 
   /**
-   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
-   * the corresponding sources during pipeline creation.
+   * Immutable. The sources of the pipeline (for example, Knowledge Catalog). The keys and values
+   * are set by the corresponding sources during pipeline creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,8 +234,8 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
   }
 
   /**
-   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
-   * the corresponding sources during pipeline creation.
+   * Immutable. The sources of the pipeline (for example, Knowledge Catalog). The keys and values
+   * are set by the corresponding sources during pipeline creation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getPipelineSources() {
@@ -243,8 +243,8 @@ public final class GoogleCloudDatapipelinesV1Pipeline extends com.google.api.cli
   }
 
   /**
-   * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by
-   * the corresponding sources during pipeline creation.
+   * Immutable. The sources of the pipeline (for example, Knowledge Catalog). The keys and values
+   * are set by the corresponding sources during pipeline creation.
    * @param pipelineSources pipelineSources or {@code null} for none
    */
   public GoogleCloudDatapipelinesV1Pipeline setPipelineSources(java.util.Map<String, java.lang.String> pipelineSources) {

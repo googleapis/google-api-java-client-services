@@ -33,7 +33,28 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerAdditionalSuggest
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String answerRecord;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery suggestedQuery;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAnswerRecord() {
+    return answerRecord;
+  }
+
+  /**
+   * @param answerRecord answerRecord or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerAdditionalSuggestedQueryResult setAnswerRecord(java.lang.String answerRecord) {
+    this.answerRecord = answerRecord;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

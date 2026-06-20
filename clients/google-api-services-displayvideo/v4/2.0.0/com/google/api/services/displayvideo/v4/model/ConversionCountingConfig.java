@@ -56,8 +56,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
    * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -114,8 +113,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
    * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPrimaryAttributionModelId() {
@@ -127,8 +125,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
    * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently in beta. This field will begin rolling out to all partners on *June 10, 2026* and be
-   * available to all partners on *June 24, 2026*.
+   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
    * @param primaryAttributionModelId primaryAttributionModelId or {@code null} for none
    */
   public ConversionCountingConfig setPrimaryAttributionModelId(java.lang.Long primaryAttributionModelId) {

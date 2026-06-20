@@ -31,22 +31,22 @@ package com.google.api.services.hypercomputecluster.v1.model;
 public final class BootDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The size of the disk in gigabytes (GB), which must be at least 40 GB.
+   * Optional. The size of the disk in gigabytes (GB), which must be at least 40 GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long sizeGb;
 
   /**
-   * Required. Immutable. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-
-   * types), in the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
+   * Optional. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-types), in
+   * the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. Immutable. The size of the disk in gigabytes (GB), which must be at least 40 GB.
+   * Optional. The size of the disk in gigabytes (GB), which must be at least 40 GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSizeGb() {
@@ -54,7 +54,7 @@ public final class BootDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The size of the disk in gigabytes (GB), which must be at least 40 GB.
+   * Optional. The size of the disk in gigabytes (GB), which must be at least 40 GB.
    * @param sizeGb sizeGb or {@code null} for none
    */
   public BootDisk setSizeGb(java.lang.Long sizeGb) {
@@ -63,8 +63,8 @@ public final class BootDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-
-   * types), in the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
+   * Optional. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-types), in
+   * the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,8 +72,8 @@ public final class BootDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-
-   * types), in the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
+   * Optional. [Persistent disk type](https://cloud.google.com/compute/docs/disks#disk-types), in
+   * the format `projects/{project}/zones/{zone}/diskTypes/{disk_type}`.
    * @param type type or {@code null} for none
    */
   public BootDisk setType(java.lang.String type) {

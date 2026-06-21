@@ -18,9 +18,9 @@ package com.google.api.services.pubsub.model;
 
 /**
  * Configuration for a Bigtable subscription. The Pub/Sub message will be written to a Bigtable row
- * as follows: - row key: subscription name and message ID delimited by #. - columns: message bytes
- * written to a single column family "data" with an empty-string column qualifier. - cell timestamp:
- * the message publish timestamp.
+ * as follows: - row key: subscription name, message ID hash, and message ID delimited by `#`. -
+ * columns: message bytes written to a single column family `data` with an empty-string column
+ * qualifier. - cell timestamp: the message publish timestamp.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

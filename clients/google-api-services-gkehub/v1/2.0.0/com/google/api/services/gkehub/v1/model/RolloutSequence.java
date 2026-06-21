@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1.model;
 
 /**
  * RolloutSequence defines the desired order of upgrades. Next ID: 20

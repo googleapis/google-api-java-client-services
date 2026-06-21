@@ -9069,6 +9069,146 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Upgrades a rollout sequence.
+         *
+         * Create a request for the method "rolloutSequences.upgrade".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout sequence. Format:
+         *        projects/{project}/locations/{location}/rolloutSequences/{rollout_sequence}
+         * @param content the {@link com.google.api.services.gkehub.v1alpha.model.UpgradeRolloutSequenceRequest}
+         * @return the request
+         */
+        public Upgrade upgrade(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.UpgradeRolloutSequenceRequest content) throws java.io.IOException {
+          Upgrade result = new Upgrade(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upgrade extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:upgrade";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rolloutSequences/[^/]+$");
+
+          /**
+           * Upgrades a rollout sequence.
+           *
+           * Create a request for the method "rolloutSequences.upgrade".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Upgrade#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout sequence. Format:
+         *        projects/{project}/locations/{location}/rolloutSequences/{rollout_sequence}
+           * @param content the {@link com.google.api.services.gkehub.v1alpha.model.UpgradeRolloutSequenceRequest}
+           * @since 1.13
+           */
+          protected Upgrade(java.lang.String name, com.google.api.services.gkehub.v1alpha.model.UpgradeRolloutSequenceRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rolloutSequences/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upgrade set$Xgafv(java.lang.String $Xgafv) {
+            return (Upgrade) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upgrade setAccessToken(java.lang.String accessToken) {
+            return (Upgrade) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upgrade setAlt(java.lang.String alt) {
+            return (Upgrade) super.setAlt(alt);
+          }
+
+          @Override
+          public Upgrade setCallback(java.lang.String callback) {
+            return (Upgrade) super.setCallback(callback);
+          }
+
+          @Override
+          public Upgrade setFields(java.lang.String fields) {
+            return (Upgrade) super.setFields(fields);
+          }
+
+          @Override
+          public Upgrade setKey(java.lang.String key) {
+            return (Upgrade) super.setKey(key);
+          }
+
+          @Override
+          public Upgrade setOauthToken(java.lang.String oauthToken) {
+            return (Upgrade) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upgrade setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upgrade) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upgrade setQuotaUser(java.lang.String quotaUser) {
+            return (Upgrade) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upgrade setUploadType(java.lang.String uploadType) {
+            return (Upgrade) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upgrade setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upgrade) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout sequence. Format:
+           * projects/{project}/locations/{location}/rolloutSequences/{rollout_sequence}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout sequence. Format:
+         projects/{project}/locations/{location}/rolloutSequences/{rollout_sequence}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout sequence. Format:
+           * projects/{project}/locations/{location}/rolloutSequences/{rollout_sequence}
+           */
+          public Upgrade setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rolloutSequences/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Upgrade set(String parameterName, Object value) {
+            return (Upgrade) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -9092,9 +9232,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class Rollouts {
 
         /**
-         * Cancels a paused Rollout. The rollout will not be started on new clusters, however the rollout
-         * running on the cluster will be allowed to finish. It's only valid to cancel a paused rollout,
-         * otherwise it will return a FAILED_PRECONDITION error.
+         * Cancels a Rollout. The rollout will not be started on new clusters, however the rollout running
+         * on the cluster will be allowed to finish.
          *
          * Create a request for the method "rollouts.cancel".
          *
@@ -9120,9 +9259,8 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
 
           /**
-           * Cancels a paused Rollout. The rollout will not be started on new clusters, however the rollout
-           * running on the cluster will be allowed to finish. It's only valid to cancel a paused rollout,
-           * otherwise it will return a FAILED_PRECONDITION error.
+           * Cancels a Rollout. The rollout will not be started on new clusters, however the rollout running
+           * on the cluster will be allowed to finish.
            *
            * Create a request for the method "rollouts.cancel".
            *
@@ -9232,6 +9370,186 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           @Override
           public Cancel set(String parameterName, Object value) {
             return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Removes a Rollout.
+         *
+         * Create a request for the method "rollouts.delete".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout to delete.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+
+          /**
+           * Removes a Rollout.
+           *
+           * Create a request for the method "rollouts.delete".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout to delete.
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout to delete.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout to delete.
+         projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout to delete.
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+         your request, the server will know to ignore the request if it has already been completed. The
+         server will guarantee that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if original operation with the same request ID
+         was received, and if so, will ignore the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID with the exception that zero
+         UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. A request ID to identify requests. Specify a unique request ID so that if you
+           * must retry your request, the server will know to ignore the request if it has already
+           * been completed. The server will guarantee that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if original operation with the same request ID was received, and if so, will
+           * ignore the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
           }
         }
         /**

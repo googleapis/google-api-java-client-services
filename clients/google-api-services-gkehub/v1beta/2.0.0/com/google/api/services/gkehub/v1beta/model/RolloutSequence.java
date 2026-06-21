@@ -38,6 +38,13 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private AutoUpgradeConfig autoUpgradeConfig;
 
   /**
+   * Output only. The computed release channel used for the Rollout Sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String computedReleaseChannel;
+
+  /**
    * Output only. The timestamp at which the Rollout Sequence was created.
    * The value may be {@code null}.
    */
@@ -87,6 +94,20 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The last qualified control plane version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastQualifiedControlPlaneVersion;
+
+  /**
+   * Output only. The last qualified node version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastQualifiedNodeVersion;
+
+  /**
    * Identifier. Name of the rollout sequence in the format of:
    * projects/{PROJECT_ID}/locations/global/rolloutSequences/{NAME}
    * The value may be {@code null}.
@@ -107,6 +128,20 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<Stage> stages;
+
+  /**
+   * Output only. The target control plane version of the Rollout Sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetControlPlaneVersion;
+
+  /**
+   * Output only. The target node version of the Rollout Sequence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetNodeVersion;
 
   /**
    * Output only. Google-generated UUID for this resource. This is unique across all Rollout
@@ -140,6 +175,23 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setAutoUpgradeConfig(AutoUpgradeConfig autoUpgradeConfig) {
     this.autoUpgradeConfig = autoUpgradeConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The computed release channel used for the Rollout Sequence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComputedReleaseChannel() {
+    return computedReleaseChannel;
+  }
+
+  /**
+   * Output only. The computed release channel used for the Rollout Sequence.
+   * @param computedReleaseChannel computedReleaseChannel or {@code null} for none
+   */
+  public RolloutSequence setComputedReleaseChannel(java.lang.String computedReleaseChannel) {
+    this.computedReleaseChannel = computedReleaseChannel;
     return this;
   }
 
@@ -263,6 +315,40 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Output only. The last qualified control plane version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastQualifiedControlPlaneVersion() {
+    return lastQualifiedControlPlaneVersion;
+  }
+
+  /**
+   * Output only. The last qualified control plane version.
+   * @param lastQualifiedControlPlaneVersion lastQualifiedControlPlaneVersion or {@code null} for none
+   */
+  public RolloutSequence setLastQualifiedControlPlaneVersion(java.lang.String lastQualifiedControlPlaneVersion) {
+    this.lastQualifiedControlPlaneVersion = lastQualifiedControlPlaneVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The last qualified node version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastQualifiedNodeVersion() {
+    return lastQualifiedNodeVersion;
+  }
+
+  /**
+   * Output only. The last qualified node version.
+   * @param lastQualifiedNodeVersion lastQualifiedNodeVersion or {@code null} for none
+   */
+  public RolloutSequence setLastQualifiedNodeVersion(java.lang.String lastQualifiedNodeVersion) {
+    this.lastQualifiedNodeVersion = lastQualifiedNodeVersion;
+    return this;
+  }
+
+  /**
    * Identifier. Name of the rollout sequence in the format of:
    * projects/{PROJECT_ID}/locations/global/rolloutSequences/{NAME}
    * @return value or {@code null} for none
@@ -312,6 +398,40 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setStages(java.util.List<Stage> stages) {
     this.stages = stages;
+    return this;
+  }
+
+  /**
+   * Output only. The target control plane version of the Rollout Sequence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetControlPlaneVersion() {
+    return targetControlPlaneVersion;
+  }
+
+  /**
+   * Output only. The target control plane version of the Rollout Sequence.
+   * @param targetControlPlaneVersion targetControlPlaneVersion or {@code null} for none
+   */
+  public RolloutSequence setTargetControlPlaneVersion(java.lang.String targetControlPlaneVersion) {
+    this.targetControlPlaneVersion = targetControlPlaneVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The target node version of the Rollout Sequence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetNodeVersion() {
+    return targetNodeVersion;
+  }
+
+  /**
+   * Output only. The target node version of the Rollout Sequence.
+   * @param targetNodeVersion targetNodeVersion or {@code null} for none
+   */
+  public RolloutSequence setTargetNodeVersion(java.lang.String targetNodeVersion) {
+    this.targetNodeVersion = targetNodeVersion;
     return this;
   }
 

@@ -30,11 +30,27 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class RolloutStage extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The selector from the sequence that was used to create this stage. Example CEL
+   * expression: resource.labels.canary == 'true'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterSelector clusterSelector;
+
+  /**
    * Optional. Output only. The time at which the stage ended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * Output only. The fleet projects from the sequence that was used to create this stage. Expected
+   * format: projects/{project_number}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> fleetProjects;
 
   /**
    * Optional. Duration to soak after this stage before starting the next stage.
@@ -65,6 +81,25 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The selector from the sequence that was used to create this stage. Example CEL
+   * expression: resource.labels.canary == 'true'
+   * @return value or {@code null} for none
+   */
+  public ClusterSelector getClusterSelector() {
+    return clusterSelector;
+  }
+
+  /**
+   * Output only. The selector from the sequence that was used to create this stage. Example CEL
+   * expression: resource.labels.canary == 'true'
+   * @param clusterSelector clusterSelector or {@code null} for none
+   */
+  public RolloutStage setClusterSelector(ClusterSelector clusterSelector) {
+    this.clusterSelector = clusterSelector;
+    return this;
+  }
+
+  /**
    * Optional. Output only. The time at which the stage ended.
    * @return value or {@code null} for none
    */
@@ -78,6 +113,25 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
    */
   public RolloutStage setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. The fleet projects from the sequence that was used to create this stage. Expected
+   * format: projects/{project_number}
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFleetProjects() {
+    return fleetProjects;
+  }
+
+  /**
+   * Output only. The fleet projects from the sequence that was used to create this stage. Expected
+   * format: projects/{project_number}
+   * @param fleetProjects fleetProjects or {@code null} for none
+   */
+  public RolloutStage setFleetProjects(java.util.List<java.lang.String> fleetProjects) {
+    this.fleetProjects = fleetProjects;
     return this;
   }
 

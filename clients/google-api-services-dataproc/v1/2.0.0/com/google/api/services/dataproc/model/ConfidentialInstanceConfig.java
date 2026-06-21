@@ -18,7 +18,7 @@ package com.google.api.services.dataproc.model;
 
 /**
  * Confidential Instance Config for clusters using Confidential VMs
- * (https://cloud.google.com/compute/confidential-vm/docs)
+ * (https://cloud.google.com/confidential-computing/confidential-vm/docs)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -31,12 +31,36 @@ package com.google.api.services.dataproc.model;
 public final class ConfidentialInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Defines the type of Confidential Compute technology to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String confidentialInstanceType;
+
+  /**
    * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines whether the instance
    * should have confidential compute enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
+
+  /**
+   * Optional. Defines the type of Confidential Compute technology to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfidentialInstanceType() {
+    return confidentialInstanceType;
+  }
+
+  /**
+   * Optional. Defines the type of Confidential Compute technology to use.
+   * @param confidentialInstanceType confidentialInstanceType or {@code null} for none
+   */
+  public ConfidentialInstanceConfig setConfidentialInstanceType(java.lang.String confidentialInstanceType) {
+    this.confidentialInstanceType = confidentialInstanceType;
+    return this;
+  }
 
   /**
    * Optional. Deprecated: Use 'confidential_instance_type' instead. Defines whether the instance

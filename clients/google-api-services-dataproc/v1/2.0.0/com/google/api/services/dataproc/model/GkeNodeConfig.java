@@ -86,6 +86,16 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean preemptible;
 
   /**
+   * Optional. Specifies the service account
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-iam) to be used by the node
+   * pools. Specify the email address of the service account or its full resource name.Format:
+   * projects/{project}/serviceAccounts/{service_account_email} or {service_account_email}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. Whether the nodes are created as Spot VM instances
    * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the latest update to
    * legacy preemptible VMs. Spot VMs do not have a maximum lifetime. Legacy and Spot preemptible
@@ -223,6 +233,29 @@ public final class GkeNodeConfig extends com.google.api.client.json.GenericJson 
    */
   public GkeNodeConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the service account
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-iam) to be used by the node
+   * pools. Specify the email address of the service account or its full resource name.Format:
+   * projects/{project}/serviceAccounts/{service_account_email} or {service_account_email}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. Specifies the service account
+   * (https://cloud.google.com/dataproc/docs/guides/dpgke/dataproc-gke-iam) to be used by the node
+   * pools. Specify the email address of the service account or its full resource name.Format:
+   * projects/{project}/serviceAccounts/{service_account_email} or {service_account_email}.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GkeNodeConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

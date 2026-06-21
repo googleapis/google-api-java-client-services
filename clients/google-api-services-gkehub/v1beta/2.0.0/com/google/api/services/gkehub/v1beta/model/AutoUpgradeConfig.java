@@ -30,6 +30,14 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class AutoUpgradeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Mandatory Safety Policies (Always active) which cannot be disabled. The key is the
+   * policy ID (e.g., "ENFORCED_CONTROL_PLANE_PATCH") and the value is a human-readable description.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> enforcedRollouts;
+
+  /**
    * Optional. Specifies the scope of automation for the creation of rollouts. Represents the types
    * of rollouts (version upgrades) the sequence should initiate automatically. If this field is
    * `unset`, it defaults to all types. If this field is `set` but the internal `upgrade_types` list
@@ -40,6 +48,25 @@ public final class AutoUpgradeConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private RolloutCreationScope rolloutCreationScope;
+
+  /**
+   * Output only. Mandatory Safety Policies (Always active) which cannot be disabled. The key is the
+   * policy ID (e.g., "ENFORCED_CONTROL_PLANE_PATCH") and the value is a human-readable description.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getEnforcedRollouts() {
+    return enforcedRollouts;
+  }
+
+  /**
+   * Output only. Mandatory Safety Policies (Always active) which cannot be disabled. The key is the
+   * policy ID (e.g., "ENFORCED_CONTROL_PLANE_PATCH") and the value is a human-readable description.
+   * @param enforcedRollouts enforcedRollouts or {@code null} for none
+   */
+  public AutoUpgradeConfig setEnforcedRollouts(java.util.Map<String, java.lang.String> enforcedRollouts) {
+    this.enforcedRollouts = enforcedRollouts;
+    return this;
+  }
 
   /**
    * Optional. Specifies the scope of automation for the creation of rollouts. Represents the types

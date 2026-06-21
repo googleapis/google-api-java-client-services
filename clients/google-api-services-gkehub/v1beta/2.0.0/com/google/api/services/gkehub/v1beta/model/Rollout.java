@@ -65,6 +65,13 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. The intent of the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String intent;
+
+  /**
    * Optional. Labels for this Rollout.
    * The value may be {@code null}.
    */
@@ -124,6 +131,13 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String stateReasonType;
+
+  /**
+   * Output only. The trigger of the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trigger;
 
   /**
    * Output only. Google-generated UUID for this resource. This is unique across all Rollout
@@ -230,6 +244,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. The intent of the rollout.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntent() {
+    return intent;
+  }
+
+  /**
+   * Output only. The intent of the rollout.
+   * @param intent intent or {@code null} for none
+   */
+  public Rollout setIntent(java.lang.String intent) {
+    this.intent = intent;
     return this;
   }
 
@@ -376,6 +407,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setStateReasonType(java.lang.String stateReasonType) {
     this.stateReasonType = stateReasonType;
+    return this;
+  }
+
+  /**
+   * Output only. The trigger of the rollout.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrigger() {
+    return trigger;
+  }
+
+  /**
+   * Output only. The trigger of the rollout.
+   * @param trigger trigger or {@code null} for none
+   */
+  public Rollout setTrigger(java.lang.String trigger) {
+    this.trigger = trigger;
     return this;
   }
 

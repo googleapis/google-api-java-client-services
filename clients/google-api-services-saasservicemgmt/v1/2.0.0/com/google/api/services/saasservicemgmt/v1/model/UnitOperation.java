@@ -77,6 +77,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   private String deleteTime;
 
   /**
+   * Optional. Deprovision operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +108,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   private java.lang.String etag;
 
   /**
+   * Optional. Flag update operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,6 +196,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   private String updateTime;
 
   /**
+   * Optional. Upgrade operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,6 +300,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Deprovision operation.
    * @return value or {@code null} for none
    */
   public Deprovision getDeprovision() {
@@ -304,6 +308,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Deprovision operation.
    * @param deprovision deprovision or {@code null} for none
    */
   public UnitOperation setDeprovision(Deprovision deprovision) {
@@ -369,6 +374,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Flag update operation.
    * @return value or {@code null} for none
    */
   public FlagUpdate getFlagUpdate() {
@@ -376,6 +382,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Flag update operation.
    * @param flagUpdate flagUpdate or {@code null} for none
    */
   public UnitOperation setFlagUpdate(FlagUpdate flagUpdate) {
@@ -576,6 +583,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Upgrade operation.
    * @return value or {@code null} for none
    */
   public Upgrade getUpgrade() {
@@ -583,6 +591,7 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. Upgrade operation.
    * @param upgrade upgrade or {@code null} for none
    */
   public UnitOperation setUpgrade(Upgrade upgrade) {

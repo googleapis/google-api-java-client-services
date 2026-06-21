@@ -17,8 +17,8 @@
 package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
- * An object that describes various settings of Rollout execution. Includes built-in policies across
- * GCP and GDC, and customizable policies.
+ * An object that describes various settings of Rollout execution. Includes built-in and
+ * customizable policies.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation

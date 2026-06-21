@@ -97,7 +97,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
+   * dependency's outputVariables, or will be passed on to a dependency's inputVariables. Maximum
    * 100.
    * The value may be {@code null}.
    */
@@ -295,7 +295,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
+   * dependency's outputVariables, or will be passed on to a dependency's inputVariables. Maximum
    * 100.
    * @return value or {@code null} for none
    */
@@ -305,7 +305,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List of inputVariables for this release that will either be retrieved from a
-   * dependency’s outputVariables, or will be passed on to a dependency’s inputVariables. Maximum
+   * dependency's outputVariables, or will be passed on to a dependency's inputVariables. Maximum
    * 100.
    * @param inputVariableMappings inputVariableMappings or {@code null} for none
    */

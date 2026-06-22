@@ -37,6 +37,13 @@ public final class AgentGatewayNetworkConfigEgress extends com.google.api.client
   private java.lang.String networkAttachment;
 
   /**
+   * Optional. TrustConfig defines the trust configuration for egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentGatewayNetworkConfigEgressTrustConfig trustConfig;
+
+  /**
    * Optional. The URI of the Network Attachment resource.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class AgentGatewayNetworkConfigEgress extends com.google.api.client
    */
   public AgentGatewayNetworkConfigEgress setNetworkAttachment(java.lang.String networkAttachment) {
     this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
+   * Optional. TrustConfig defines the trust configuration for egress.
+   * @return value or {@code null} for none
+   */
+  public AgentGatewayNetworkConfigEgressTrustConfig getTrustConfig() {
+    return trustConfig;
+  }
+
+  /**
+   * Optional. TrustConfig defines the trust configuration for egress.
+   * @param trustConfig trustConfig or {@code null} for none
+   */
+  public AgentGatewayNetworkConfigEgress setTrustConfig(AgentGatewayNetworkConfigEgressTrustConfig trustConfig) {
+    this.trustConfig = trustConfig;
     return this;
   }
 

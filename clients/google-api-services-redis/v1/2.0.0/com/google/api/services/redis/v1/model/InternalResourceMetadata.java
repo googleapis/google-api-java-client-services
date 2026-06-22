@@ -54,6 +54,7 @@ public final class InternalResourceMetadata extends com.google.api.client.json.G
   private java.lang.Boolean isDeletionProtectionEnabled;
 
   /**
+   * The product this resource represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,6 +126,7 @@ public final class InternalResourceMetadata extends com.google.api.client.json.G
   }
 
   /**
+   * The product this resource represents.
    * @return value or {@code null} for none
    */
   public Product getProduct() {
@@ -132,6 +134,7 @@ public final class InternalResourceMetadata extends com.google.api.client.json.G
   }
 
   /**
+   * The product this resource represents.
    * @param product product or {@code null} for none
    */
   public InternalResourceMetadata setProduct(Product product) {

@@ -68,18 +68,21 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   private java.lang.String feedType;
 
   /**
+   * Observability metric data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObservabilityMetricData observabilityMetricData;
 
   /**
+   * Database resource recommendation signal data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DatabaseResourceRecommendationSignalData recommendationSignalData;
 
   /**
+   * Database resource health signal data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +97,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   private DatabaseResourceId resourceId;
 
   /**
+   * Database resource metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,6 +201,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Observability metric data.
    * @return value or {@code null} for none
    */
   public ObservabilityMetricData getObservabilityMetricData() {
@@ -204,6 +209,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Observability metric data.
    * @param observabilityMetricData observabilityMetricData or {@code null} for none
    */
   public DatabaseResourceFeed setObservabilityMetricData(ObservabilityMetricData observabilityMetricData) {
@@ -212,6 +218,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource recommendation signal data.
    * @return value or {@code null} for none
    */
   public DatabaseResourceRecommendationSignalData getRecommendationSignalData() {
@@ -219,6 +226,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource recommendation signal data.
    * @param recommendationSignalData recommendationSignalData or {@code null} for none
    */
   public DatabaseResourceFeed setRecommendationSignalData(DatabaseResourceRecommendationSignalData recommendationSignalData) {
@@ -227,6 +235,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource health signal data.
    * @return value or {@code null} for none
    */
   public DatabaseResourceHealthSignalData getResourceHealthSignalData() {
@@ -234,6 +243,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource health signal data.
    * @param resourceHealthSignalData resourceHealthSignalData or {@code null} for none
    */
   public DatabaseResourceFeed setResourceHealthSignalData(DatabaseResourceHealthSignalData resourceHealthSignalData) {
@@ -261,6 +271,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource metadata.
    * @return value or {@code null} for none
    */
   public DatabaseResourceMetadata getResourceMetadata() {
@@ -268,6 +279,7 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
   }
 
   /**
+   * Database resource metadata.
    * @param resourceMetadata resourceMetadata or {@code null} for none
    */
   public DatabaseResourceFeed setResourceMetadata(DatabaseResourceMetadata resourceMetadata) {

@@ -38,6 +38,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   private String durationBasedRetention;
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +52,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   private java.lang.String retentionUnit;
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +83,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantityBasedRetention() {
@@ -88,6 +91,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * @param quantityBasedRetention quantityBasedRetention or {@code null} for none
    */
   public RetentionSettings setQuantityBasedRetention(java.lang.Integer quantityBasedRetention) {
@@ -113,6 +117,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * @return value or {@code null} for none
    */
   public String getTimeBasedRetention() {
@@ -120,6 +125,7 @@ public final class RetentionSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * @param timeBasedRetention timeBasedRetention or {@code null} for none
    */
   public RetentionSettings setTimeBasedRetention(String timeBasedRetention) {

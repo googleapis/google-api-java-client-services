@@ -146,6 +146,7 @@ public final class DatabaseResourceHealthSignalData extends com.google.api.clien
   private java.lang.String signalType;
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -412,6 +413,7 @@ public final class DatabaseResourceHealthSignalData extends com.google.api.clien
   }
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -419,6 +421,7 @@ public final class DatabaseResourceHealthSignalData extends com.google.api.clien
   }
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * @param state state or {@code null} for none
    */
   public DatabaseResourceHealthSignalData setState(java.lang.String state) {

@@ -727,7 +727,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
       public class AclPolicies {
 
         /**
-         * Creates an ACL Policy. The creation is executed synchronously and the policy is available for use
+         * Creates an ACL policy. The creation is executed synchronously and the policy is available for use
          * immediately after the RPC returns.
          *
          * Create a request for the method "aclPolicies.create".
@@ -755,7 +755,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an ACL Policy. The creation is executed synchronously and the policy is available for
+           * Creates an ACL policy. The creation is executed synchronously and the policy is available for
            * use immediately after the RPC returns.
            *
            * Create a request for the method "aclPolicies.create".
@@ -868,7 +868,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The logical name of the ACL Policy in the customer project with the following
+           * Required. The logical name of the ACL policy in the customer project with the following
            * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
            * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter.
            * * Must be unique within the customer project / location
@@ -876,7 +876,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           @com.google.api.client.util.Key
           private java.lang.String aclPolicyId;
 
-          /** Required. The logical name of the ACL Policy in the customer project with the following
+          /** Required. The logical name of the ACL policy in the customer project with the following
          restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
          letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique
          within the customer project / location
@@ -886,7 +886,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The logical name of the ACL Policy in the customer project with the following
+           * Required. The logical name of the ACL policy in the customer project with the following
            * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
            * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter.
            * * Must be unique within the customer project / location
@@ -918,7 +918,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a specific Acl Policy. This action will delete the Acl Policy and all the rules
+         * Deletes a specific ACL policy. This action will delete the ACL policy and all the rules
          * associated with it. An ACL policy cannot be deleted if it is attached to a cluster.
          *
          * Create a request for the method "aclPolicies.delete".
@@ -926,7 +926,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the redis server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Redis ACL Policy resource name using the form:
+         * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
          *        `location_id` refers to a GCP region.
          * @return the request
@@ -945,7 +945,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
 
           /**
-           * Deletes a specific Acl Policy. This action will delete the Acl Policy and all the rules
+           * Deletes a specific ACL policy. This action will delete the ACL policy and all the rules
            * associated with it. An ACL policy cannot be deleted if it is attached to a cluster.
            *
            * Create a request for the method "aclPolicies.delete".
@@ -955,7 +955,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Redis ACL Policy resource name using the form:
+           * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
          *        `location_id` refers to a GCP region.
            * @since 1.13
@@ -1026,14 +1026,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Redis ACL Policy resource name using the form:
+           * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
            * `location_id` refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Redis ACL Policy resource name using the form:
+          /** Required. Redis ACL policy resource name using the form:
          `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
          refers to a GCP region.
            */
@@ -1042,7 +1042,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Redis ACL Policy resource name using the form:
+           * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
            * `location_id` refers to a GCP region.
            */
@@ -1101,14 +1101,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the details of a specific Redis Cluster ACL Policy.
+         * Gets the details of a specific Redis Cluster ACL policy.
          *
          * Create a request for the method "aclPolicies.get".
          *
          * This request holds the parameters needed by the redis server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Redis ACL Policy resource name using the form:
+         * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
          *        `location_id` refers to a GCP region.
          * @return the request
@@ -1127,7 +1127,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
 
           /**
-           * Gets the details of a specific Redis Cluster ACL Policy.
+           * Gets the details of a specific Redis Cluster ACL policy.
            *
            * Create a request for the method "aclPolicies.get".
            *
@@ -1136,7 +1136,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Redis ACL Policy resource name using the form:
+           * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
          *        `location_id` refers to a GCP region.
            * @since 1.13
@@ -1217,14 +1217,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Redis ACL Policy resource name using the form:
+           * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
            * `location_id` refers to a GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Redis ACL Policy resource name using the form:
+          /** Required. Redis ACL policy resource name using the form:
          `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
          refers to a GCP region.
            */
@@ -1233,7 +1233,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. Redis ACL Policy resource name using the form:
+           * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
            * `location_id` refers to a GCP region.
            */
@@ -1253,7 +1253,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists all ACL Policies owned by a project in either the specified location (region) or all
+         * Lists all ACL policies owned by a project in either the specified location (region) or all
          * locations. The location should have the following format: *
          * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-` (wildcard),
          * then all regions available to the project are queried, and the results are aggregated.
@@ -1263,7 +1263,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the redis server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the cluster location using the form:
+         * @param parent Required. The resource name of the ACL policy location using the form:
          *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
          *        Cloud region.
          * @return the request
@@ -1282,7 +1282,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists all ACL Policies owned by a project in either the specified location (region) or all
+           * Lists all ACL policies owned by a project in either the specified location (region) or all
            * locations. The location should have the following format: *
            * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-`
            * (wildcard), then all regions available to the project are queried, and the results are
@@ -1295,7 +1295,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the cluster location using the form:
+           * @param parent Required. The resource name of the ACL policy location using the form:
          *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
          *        Cloud region.
            * @since 1.13
@@ -1376,14 +1376,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The resource name of the cluster location using the form:
+           * Required. The resource name of the ACL policy location using the form:
            * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
            * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The resource name of the cluster location using the form:
+          /** Required. The resource name of the ACL policy location using the form:
          `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
          region.
            */
@@ -1392,7 +1392,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Required. The resource name of the cluster location using the form:
+           * Required. The resource name of the ACL policy location using the form:
            * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
            * Cloud region.
            */
@@ -1469,7 +1469,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * clusters. If Memorystore can apply the policy to all clusters, then the operation returns a
          * SUCCESS status. If Memorystore can't apply the policy to all clusters, then to ensure eventual
          * consistency, Memorystore uses reconciliation to apply the policy to the failed clusters.
-         * Completed longrunning.Operation will contain the new ACL Policy object in the response field.
+         * Completed longrunning.Operation will contain the new ACL policy object in the response field.
          *
          * Create a request for the method "aclPolicies.patch".
          *
@@ -1498,7 +1498,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * clusters. If Memorystore can apply the policy to all clusters, then the operation returns a
            * SUCCESS status. If Memorystore can't apply the policy to all clusters, then to ensure eventual
            * consistency, Memorystore uses reconciliation to apply the policy to the failed clusters.
-           * Completed longrunning.Operation will contain the new ACL Policy object in the response field.
+           * Completed longrunning.Operation will contain the new ACL policy object in the response field.
            *
            * Create a request for the method "aclPolicies.patch".
            *

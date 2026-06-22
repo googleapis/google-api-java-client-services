@@ -47,6 +47,14 @@ public final class ZoneDistributionConfig extends com.google.api.client.json.Gen
   private java.lang.String zone;
 
   /**
+   * Optional. Specify the zones of a multi-zone cluster where Redis Cluster allocates resources.
+   * This flag isn't applicable for single-zone clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> zones;
+
+  /**
    * Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not specified.
    * @return value or {@code null} for none
    */
@@ -81,6 +89,25 @@ public final class ZoneDistributionConfig extends com.google.api.client.json.Gen
    */
   public ZoneDistributionConfig setZone(java.lang.String zone) {
     this.zone = zone;
+    return this;
+  }
+
+  /**
+   * Optional. Specify the zones of a multi-zone cluster where Redis Cluster allocates resources.
+   * This flag isn't applicable for single-zone clusters.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getZones() {
+    return zones;
+  }
+
+  /**
+   * Optional. Specify the zones of a multi-zone cluster where Redis Cluster allocates resources.
+   * This flag isn't applicable for single-zone clusters.
+   * @param zones zones or {@code null} for none
+   */
+  public ZoneDistributionConfig setZones(java.util.List<java.lang.String> zones) {
+    this.zones = zones;
     return this;
   }
 

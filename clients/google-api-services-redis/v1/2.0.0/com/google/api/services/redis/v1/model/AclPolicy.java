@@ -59,7 +59,7 @@ public final class AclPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. The version of the ACL policy. Used in drift resolution.
+   * Output only. Deprecated: Used in drift resolution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -134,7 +134,7 @@ public final class AclPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The version of the ACL policy. Used in drift resolution.
+   * Output only. Deprecated: Used in drift resolution.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersion() {
@@ -142,7 +142,7 @@ public final class AclPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The version of the ACL policy. Used in drift resolution.
+   * Output only. Deprecated: Used in drift resolution.
    * @param version version or {@code null} for none
    */
   public AclPolicy setVersion(java.lang.Long version) {

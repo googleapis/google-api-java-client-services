@@ -45,7 +45,7 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
-   * Optional. Input only. Indicates the type of the disk.
+   * Optional. Indicates the type of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Indicates the type of the disk.
+   * Optional. Indicates the type of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -113,7 +113,7 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Indicates the type of the disk.
+   * Optional. Indicates the type of the disk.
    * @param diskType diskType or {@code null} for none
    */
   public DataDisk setDiskType(java.lang.String diskType) {

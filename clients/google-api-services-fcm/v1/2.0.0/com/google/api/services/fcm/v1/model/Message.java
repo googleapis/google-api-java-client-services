@@ -71,7 +71,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private FcmOptions fcmOptions;
 
   /**
-   * Optional. Firebase Installation ID to send a message to.
+   * Firebase Installation ID to send a message to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Firebase Installation ID to send a message to.
+   * Firebase Installation ID to send a message to.
    * @return value or {@code null} for none
    */
   public java.lang.String getFid() {
@@ -219,7 +219,7 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Firebase Installation ID to send a message to.
+   * Firebase Installation ID to send a message to.
    * @param fid fid or {@code null} for none
    */
   public Message setFid(java.lang.String fid) {

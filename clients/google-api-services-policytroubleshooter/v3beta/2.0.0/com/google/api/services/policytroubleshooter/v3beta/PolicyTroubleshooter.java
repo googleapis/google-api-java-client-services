@@ -255,6 +255,108 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
         return (Troubleshoot) super.set(parameterName, value);
       }
     }
+    /**
+     * Checks the access request associated with the error identifier and explains why the access is
+     * denied by IAM policies.
+     *
+     * Create a request for the method "iam.troubleshootError".
+     *
+     * This request holds the parameters needed by the policytroubleshooter server.  After setting any
+     * optional parameters, call the {@link TroubleshootError#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorRequest}
+     * @return the request
+     */
+    public TroubleshootError troubleshootError(com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorRequest content) throws java.io.IOException {
+      TroubleshootError result = new TroubleshootError(content);
+      initialize(result);
+      return result;
+    }
+
+    public class TroubleshootError extends PolicyTroubleshooterRequest<com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorResponse> {
+
+      private static final String REST_PATH = "v3beta/iam:troubleshootError";
+
+      /**
+       * Checks the access request associated with the error identifier and explains why the access is
+       * denied by IAM policies.
+       *
+       * Create a request for the method "iam.troubleshootError".
+       *
+       * This request holds the parameters needed by the the policytroubleshooter server.  After setting
+       * any optional parameters, call the {@link TroubleshootError#execute()} method to invoke the
+       * remote operation. <p> {@link TroubleshootError#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorRequest}
+       * @since 1.13
+       */
+      protected TroubleshootError(com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorRequest content) {
+        super(PolicyTroubleshooter.this, "POST", REST_PATH, content, com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyErrorResponse.class);
+      }
+
+      @Override
+      public TroubleshootError set$Xgafv(java.lang.String $Xgafv) {
+        return (TroubleshootError) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TroubleshootError setAccessToken(java.lang.String accessToken) {
+        return (TroubleshootError) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TroubleshootError setAlt(java.lang.String alt) {
+        return (TroubleshootError) super.setAlt(alt);
+      }
+
+      @Override
+      public TroubleshootError setCallback(java.lang.String callback) {
+        return (TroubleshootError) super.setCallback(callback);
+      }
+
+      @Override
+      public TroubleshootError setFields(java.lang.String fields) {
+        return (TroubleshootError) super.setFields(fields);
+      }
+
+      @Override
+      public TroubleshootError setKey(java.lang.String key) {
+        return (TroubleshootError) super.setKey(key);
+      }
+
+      @Override
+      public TroubleshootError setOauthToken(java.lang.String oauthToken) {
+        return (TroubleshootError) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TroubleshootError setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TroubleshootError) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TroubleshootError setQuotaUser(java.lang.String quotaUser) {
+        return (TroubleshootError) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TroubleshootError setUploadType(java.lang.String uploadType) {
+        return (TroubleshootError) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TroubleshootError setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TroubleshootError) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public TroubleshootError set(String parameterName, Object value) {
+        return (TroubleshootError) super.set(parameterName, value);
+      }
+    }
 
   }
 

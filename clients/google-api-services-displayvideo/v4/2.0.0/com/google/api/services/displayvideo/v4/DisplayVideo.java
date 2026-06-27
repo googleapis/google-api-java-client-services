@@ -18164,6 +18164,796 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * An accessor for creating requests from the ReachForecast collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.ReachForecast.List request = displayvideo.reachForecast().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ReachForecast reachForecast() {
+      return new ReachForecast();
+    }
+
+    /**
+     * The "reachForecast" collection of methods.
+     */
+    public class ReachForecast {
+
+      /**
+       * Generates a reach forecast for a given advertiser and targeting configuration.
+       *
+       * Create a request for the method "reachForecast.generateReachForecast".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link GenerateReachForecast#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser that will run the planned campaign.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.GenerateReachForecastRequest}
+       * @return the request
+       */
+      public GenerateReachForecast generateReachForecast(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.GenerateReachForecastRequest content) throws java.io.IOException {
+        GenerateReachForecast result = new GenerateReachForecast(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateReachForecast extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.GenerateReachForecastResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/reachForecast:generateReachForecast";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Generates a reach forecast for a given advertiser and targeting configuration.
+         *
+         * Create a request for the method "reachForecast.generateReachForecast".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link GenerateReachForecast#execute()} method to invoke the
+         * remote operation. <p> {@link GenerateReachForecast#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser that will run the planned campaign.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.GenerateReachForecastRequest}
+         * @since 1.13
+         */
+        protected GenerateReachForecast(java.lang.Long advertiserId, com.google.api.services.displayvideo.v4.model.GenerateReachForecastRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v4.model.GenerateReachForecastResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public GenerateReachForecast set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateReachForecast) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateReachForecast setAccessToken(java.lang.String accessToken) {
+          return (GenerateReachForecast) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateReachForecast setAlt(java.lang.String alt) {
+          return (GenerateReachForecast) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateReachForecast setCallback(java.lang.String callback) {
+          return (GenerateReachForecast) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateReachForecast setFields(java.lang.String fields) {
+          return (GenerateReachForecast) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateReachForecast setKey(java.lang.String key) {
+          return (GenerateReachForecast) super.setKey(key);
+        }
+
+        @Override
+        public GenerateReachForecast setOauthToken(java.lang.String oauthToken) {
+          return (GenerateReachForecast) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateReachForecast setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateReachForecast) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateReachForecast setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateReachForecast) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateReachForecast setUploadType(java.lang.String uploadType) {
+          return (GenerateReachForecast) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateReachForecast setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateReachForecast) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser that will run the planned campaign. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser that will run the planned campaign.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser that will run the planned campaign. */
+        public GenerateReachForecast setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public GenerateReachForecast set(String parameterName, Object value) {
+          return (GenerateReachForecast) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the list of countries where reach forecasting is supported.
+       *
+       * Create a request for the method "reachForecast.retrievePlannableLocations".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link RetrievePlannableLocations#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to list plannable locations for.
+       * @return the request
+       */
+      public RetrievePlannableLocations retrievePlannableLocations(java.lang.Long advertiserId) throws java.io.IOException {
+        RetrievePlannableLocations result = new RetrievePlannableLocations(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrievePlannableLocations extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.RetrievePlannableLocationsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableLocations";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Retrieves the list of countries where reach forecasting is supported.
+         *
+         * Create a request for the method "reachForecast.retrievePlannableLocations".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link RetrievePlannableLocations#execute()} method to invoke the
+         * remote operation. <p> {@link RetrievePlannableLocations#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to list plannable locations for.
+         * @since 1.13
+         */
+        protected RetrievePlannableLocations(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.RetrievePlannableLocationsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrievePlannableLocations set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrievePlannableLocations) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrievePlannableLocations setAccessToken(java.lang.String accessToken) {
+          return (RetrievePlannableLocations) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrievePlannableLocations setAlt(java.lang.String alt) {
+          return (RetrievePlannableLocations) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrievePlannableLocations setCallback(java.lang.String callback) {
+          return (RetrievePlannableLocations) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrievePlannableLocations setFields(java.lang.String fields) {
+          return (RetrievePlannableLocations) super.setFields(fields);
+        }
+
+        @Override
+        public RetrievePlannableLocations setKey(java.lang.String key) {
+          return (RetrievePlannableLocations) super.setKey(key);
+        }
+
+        @Override
+        public RetrievePlannableLocations setOauthToken(java.lang.String oauthToken) {
+          return (RetrievePlannableLocations) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrievePlannableLocations setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrievePlannableLocations) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrievePlannableLocations setQuotaUser(java.lang.String quotaUser) {
+          return (RetrievePlannableLocations) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrievePlannableLocations setUploadType(java.lang.String uploadType) {
+          return (RetrievePlannableLocations) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrievePlannableLocations setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrievePlannableLocations) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to list plannable locations for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to list plannable locations for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to list plannable locations for. */
+        public RetrievePlannableLocations setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public RetrievePlannableLocations set(String parameterName, Object value) {
+          return (RetrievePlannableLocations) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the list of products that can be planned for a location.
+       *
+       * Create a request for the method "reachForecast.retrievePlannableProducts".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link RetrievePlannableProducts#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to list plannable products for.
+       * @return the request
+       */
+      public RetrievePlannableProducts retrievePlannableProducts(java.lang.Long advertiserId) throws java.io.IOException {
+        RetrievePlannableProducts result = new RetrievePlannableProducts(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrievePlannableProducts extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.RetrievePlannableProductsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableProducts";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Retrieves the list of products that can be planned for a location.
+         *
+         * Create a request for the method "reachForecast.retrievePlannableProducts".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link RetrievePlannableProducts#execute()} method to invoke the
+         * remote operation. <p> {@link RetrievePlannableProducts#initialize(com.google.api.client.googlea
+         * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to list plannable products for.
+         * @since 1.13
+         */
+        protected RetrievePlannableProducts(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.RetrievePlannableProductsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrievePlannableProducts set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrievePlannableProducts) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrievePlannableProducts setAccessToken(java.lang.String accessToken) {
+          return (RetrievePlannableProducts) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrievePlannableProducts setAlt(java.lang.String alt) {
+          return (RetrievePlannableProducts) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrievePlannableProducts setCallback(java.lang.String callback) {
+          return (RetrievePlannableProducts) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrievePlannableProducts setFields(java.lang.String fields) {
+          return (RetrievePlannableProducts) super.setFields(fields);
+        }
+
+        @Override
+        public RetrievePlannableProducts setKey(java.lang.String key) {
+          return (RetrievePlannableProducts) super.setKey(key);
+        }
+
+        @Override
+        public RetrievePlannableProducts setOauthToken(java.lang.String oauthToken) {
+          return (RetrievePlannableProducts) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrievePlannableProducts setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrievePlannableProducts) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrievePlannableProducts setQuotaUser(java.lang.String quotaUser) {
+          return (RetrievePlannableProducts) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrievePlannableProducts setUploadType(java.lang.String uploadType) {
+          return (RetrievePlannableProducts) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrievePlannableProducts setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrievePlannableProducts) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to list plannable products for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to list plannable products for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to list plannable products for. */
+        public RetrievePlannableProducts setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the plannable location. */
+        @com.google.api.client.util.Key
+        private java.lang.String plannableLocationId;
+
+        /** Required. The ID of the plannable location.
+         */
+        public java.lang.String getPlannableLocationId() {
+          return plannableLocationId;
+        }
+
+        /** Required. The ID of the plannable location. */
+        public RetrievePlannableProducts setPlannableLocationId(java.lang.String plannableLocationId) {
+          this.plannableLocationId = plannableLocationId;
+          return this;
+        }
+
+        @Override
+        public RetrievePlannableProducts set(String parameterName, Object value) {
+          return (RetrievePlannableProducts) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves Google Audiences (User Interests) available for forecasting.
+       *
+       * Create a request for the method "reachForecast.retrievePlannableUserInterests".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link RetrievePlannableUserInterests#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to list plannable user interests for.
+       * @return the request
+       */
+      public RetrievePlannableUserInterests retrievePlannableUserInterests(java.lang.Long advertiserId) throws java.io.IOException {
+        RetrievePlannableUserInterests result = new RetrievePlannableUserInterests(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrievePlannableUserInterests extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.RetrievePlannableUserInterestsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableUserInterests";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Retrieves Google Audiences (User Interests) available for forecasting.
+         *
+         * Create a request for the method "reachForecast.retrievePlannableUserInterests".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link RetrievePlannableUserInterests#execute()} method to invoke
+         * the remote operation. <p> {@link RetrievePlannableUserInterests#initialize(com.google.api.clien
+         * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to list plannable user interests for.
+         * @since 1.13
+         */
+        protected RetrievePlannableUserInterests(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.RetrievePlannableUserInterestsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrievePlannableUserInterests set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrievePlannableUserInterests) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setAccessToken(java.lang.String accessToken) {
+          return (RetrievePlannableUserInterests) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setAlt(java.lang.String alt) {
+          return (RetrievePlannableUserInterests) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setCallback(java.lang.String callback) {
+          return (RetrievePlannableUserInterests) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setFields(java.lang.String fields) {
+          return (RetrievePlannableUserInterests) super.setFields(fields);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setKey(java.lang.String key) {
+          return (RetrievePlannableUserInterests) super.setKey(key);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setOauthToken(java.lang.String oauthToken) {
+          return (RetrievePlannableUserInterests) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrievePlannableUserInterests) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setQuotaUser(java.lang.String quotaUser) {
+          return (RetrievePlannableUserInterests) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setUploadType(java.lang.String uploadType) {
+          return (RetrievePlannableUserInterests) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrievePlannableUserInterests setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrievePlannableUserInterests) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to list plannable user interests for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to list plannable user interests for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to list plannable user interests for. */
+        public RetrievePlannableUserInterests setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The product category to retrieve plannable user interests for. */
+        @com.google.api.client.util.Key
+        private java.lang.String productCategory;
+
+        /** Required. The product category to retrieve plannable user interests for.
+         */
+        public java.lang.String getProductCategory() {
+          return productCategory;
+        }
+
+        /** Required. The product category to retrieve plannable user interests for. */
+        public RetrievePlannableUserInterests setProductCategory(java.lang.String productCategory) {
+          this.productCategory = productCategory;
+          return this;
+        }
+
+        @Override
+        public RetrievePlannableUserInterests set(String parameterName, Object value) {
+          return (RetrievePlannableUserInterests) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves first and third party user lists available for forecasting.
+       *
+       * Create a request for the method "reachForecast.retrievePlannableUserLists".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link RetrievePlannableUserLists#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser to retrieve plannable user lists for.
+       * @return the request
+       */
+      public RetrievePlannableUserLists retrievePlannableUserLists(java.lang.Long advertiserId) throws java.io.IOException {
+        RetrievePlannableUserLists result = new RetrievePlannableUserLists(advertiserId);
+        initialize(result);
+        return result;
+      }
+
+      public class RetrievePlannableUserLists extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.RetrievePlannableUserListsResponse> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/reachForecast:retrievePlannableUserLists";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Retrieves first and third party user lists available for forecasting.
+         *
+         * Create a request for the method "reachForecast.retrievePlannableUserLists".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link RetrievePlannableUserLists#execute()} method to invoke the
+         * remote operation. <p> {@link RetrievePlannableUserLists#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser to retrieve plannable user lists for.
+         * @since 1.13
+         */
+        protected RetrievePlannableUserLists(java.lang.Long advertiserId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.RetrievePlannableUserListsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public RetrievePlannableUserLists set$Xgafv(java.lang.String $Xgafv) {
+          return (RetrievePlannableUserLists) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setAccessToken(java.lang.String accessToken) {
+          return (RetrievePlannableUserLists) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setAlt(java.lang.String alt) {
+          return (RetrievePlannableUserLists) super.setAlt(alt);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setCallback(java.lang.String callback) {
+          return (RetrievePlannableUserLists) super.setCallback(callback);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setFields(java.lang.String fields) {
+          return (RetrievePlannableUserLists) super.setFields(fields);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setKey(java.lang.String key) {
+          return (RetrievePlannableUserLists) super.setKey(key);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setOauthToken(java.lang.String oauthToken) {
+          return (RetrievePlannableUserLists) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RetrievePlannableUserLists) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setQuotaUser(java.lang.String quotaUser) {
+          return (RetrievePlannableUserLists) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setUploadType(java.lang.String uploadType) {
+          return (RetrievePlannableUserLists) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RetrievePlannableUserLists setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RetrievePlannableUserLists) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser to retrieve plannable user lists for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser to retrieve plannable user lists for.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser to retrieve plannable user lists for. */
+        public RetrievePlannableUserLists setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` or `OR` logical operators. * A restriction has the form of `{field} {operator}
+         * {value}`. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
+         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `plannableStatus` Examples: * All plannable user lists:
+         * `plannableStatus="PLANNABLE"` The length of this field should be no more than 500
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
+       expressions are made up of one or more restrictions. * Restrictions can be combined by `AND` or
+       `OR` logical operators. * A restriction has the form of `{field} {operator} {value}`. * The
+       `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
+       operators. * All other fields must use the `EQUALS (=)` operator. Supported fields: *
+       `plannableStatus` Examples: * All plannable user lists: `plannableStatus="PLANNABLE"` The length of
+       this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
+       video/api/guides/how-tos/filters) guide for more information.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * `AND` or `OR` logical operators. * A restriction has the form of `{field} {operator}
+         * {value}`. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
+         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
+         * Supported fields: * `plannableStatus` Examples: * All plannable user lists:
+         * `plannableStatus="PLANNABLE"` The length of this field should be no more than 500
+         * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
+         * tos/filters) guide for more information.
+         */
+        public RetrievePlannableUserLists setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `5000`. If unspecified will
+         * default to `5000`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Requested page size. Must be between `1` and `5000`. If unspecified will default to
+       `5000`.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Requested page size. Must be between `1` and `5000`. If unspecified will
+         * default to `5000`.
+         */
+        public RetrievePlannableUserLists setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to
+         * `RetrievePlannableUserLists` method. If not specified, the first page of results will be
+         * returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token identifying a page of results the server should return. Typically, this is the
+       value of next_page_token returned from the previous call to `RetrievePlannableUserLists` method. If
+       not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token identifying a page of results the server should return. Typically, this
+         * is the value of next_page_token returned from the previous call to
+         * `RetrievePlannableUserLists` method. If not specified, the first page of results will be
+         * returned.
+         */
+        public RetrievePlannableUserLists setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public RetrievePlannableUserLists set(String parameterName, Object value) {
+          return (RetrievePlannableUserLists) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the TargetingTypes collection.
      *
      * <p>The typical use is:</p>

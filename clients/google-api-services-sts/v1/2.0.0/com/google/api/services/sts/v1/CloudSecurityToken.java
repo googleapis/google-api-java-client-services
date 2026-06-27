@@ -134,6 +134,920 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+   *   {@code CloudSecurityToken.Organizations.List request = sts.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+     *   {@code CloudSecurityToken.Locations.List request = sts.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the WorkloadIdentityPools collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+       *   {@code CloudSecurityToken.WorkloadIdentityPools.List request = sts.workloadIdentityPools().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public WorkloadIdentityPools workloadIdentityPools() {
+        return new WorkloadIdentityPools();
+      }
+
+      /**
+       * The "workloadIdentityPools" collection of methods.
+       */
+      public class WorkloadIdentityPools {
+
+        /**
+         * An accessor for creating requests from the Openid collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+         *   {@code CloudSecurityToken.Openid.List request = sts.openid().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Openid openid() {
+          return new Openid();
+        }
+
+        /**
+         * The "openid" collection of methods.
+         */
+        public class Openid {
+
+          /**
+           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
+           * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+           * system pools are supported.
+           *
+           * Create a request for the method "openid.getJwks".
+           *
+           * This request holds the parameters needed by the sts server.  After setting any optional
+           * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
+           *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
+           *        .goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-123456
+           *        78.system.id.goog'
+           * @return the request
+           */
+          public GetJwks getJwks(java.lang.String name) throws java.io.IOException {
+            GetJwks result = new GetJwks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetJwks extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1Jwks> {
+
+            private static final String REST_PATH = "v1/{+name}/openid/jwks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
+             * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+             * system pools are supported.
+             *
+             * Create a request for the method "openid.getJwks".
+             *
+             * This request holds the parameters needed by the the sts server.  After setting any optional
+             * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
+           *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
+           *        .goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-123456
+           *        78.system.id.goog'
+             * @since 1.13
+             */
+            protected GetJwks(java.lang.String name) {
+              super(CloudSecurityToken.this, "GET", REST_PATH, null, com.google.api.services.sts.v1.model.GoogleIdentityStsV1Jwks.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetJwks set$Xgafv(java.lang.String $Xgafv) {
+              return (GetJwks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetJwks setAccessToken(java.lang.String accessToken) {
+              return (GetJwks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetJwks setAlt(java.lang.String alt) {
+              return (GetJwks) super.setAlt(alt);
+            }
+
+            @Override
+            public GetJwks setCallback(java.lang.String callback) {
+              return (GetJwks) super.setCallback(callback);
+            }
+
+            @Override
+            public GetJwks setFields(java.lang.String fields) {
+              return (GetJwks) super.setFields(fields);
+            }
+
+            @Override
+            public GetJwks setKey(java.lang.String key) {
+              return (GetJwks) super.setKey(key);
+            }
+
+            @Override
+            public GetJwks setOauthToken(java.lang.String oauthToken) {
+              return (GetJwks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetJwks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetJwks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetJwks setQuotaUser(java.lang.String quotaUser) {
+              return (GetJwks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetJwks setUploadType(java.lang.String uploadType) {
+              return (GetJwks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetJwks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetJwks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
+             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
+             * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
+             * ents.global.proj-12345678.system.id.goog'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s):
+           'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
+           projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.system.id.goog
+           '
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
+             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
+             * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
+             * ents.global.proj-12345678.system.id.goog'
+             */
+            public GetJwks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetJwks set(String parameterName, Object value) {
+              return (GetJwks) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the WellKnown collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+         *   {@code CloudSecurityToken.WellKnown.List request = sts.wellKnown().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public WellKnown wellKnown() {
+          return new WellKnown();
+        }
+
+        /**
+         * The "well-known" collection of methods.
+         */
+        public class WellKnown {
+
+          /**
+           * Gets the OIDC provider configuration for an agentic or managed workload identity pool following
+           * [the OIDC 1.0 discovery specification](https://openid.net/specs/openid-connect-
+           * discovery-1_0.html#ProviderConfigurationResponse). For now, only agentic system pools are
+           * supported.
+           *
+           * Create a request for the method "well-known.getOpenid-configuration".
+           *
+           * This request holds the parameters needed by the sts server.  After setting any optional
+           * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example: 'org
+           *        anizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.go
+           *        og' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.
+           *        system.id.goog'
+           * @return the request
+           */
+          public GetOpenidConfiguration getOpenidConfiguration(java.lang.String name) throws java.io.IOException {
+            GetOpenidConfiguration result = new GetOpenidConfiguration(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetOpenidConfiguration extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1OpenIdProviderConfig> {
+
+            private static final String REST_PATH = "v1/{+name}/.well-known/openid-configuration";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Gets the OIDC provider configuration for an agentic or managed workload identity pool following
+             * [the OIDC 1.0 discovery specification](https://openid.net/specs/openid-connect-
+             * discovery-1_0.html#ProviderConfigurationResponse). For now, only agentic system pools are
+             * supported.
+             *
+             * Create a request for the method "well-known.getOpenid-configuration".
+             *
+             * This request holds the parameters needed by the the sts server.  After setting any optional
+             * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
+             * operation. <p> {@link GetOpenidConfiguration#initialize(com.google.api.client.googleapis.servic
+             * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example: 'org
+           *        anizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.go
+           *        og' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.
+           *        system.id.goog'
+             * @since 1.13
+             */
+            protected GetOpenidConfiguration(java.lang.String name) {
+              super(CloudSecurityToken.this, "GET", REST_PATH, null, com.google.api.services.sts.v1.model.GoogleIdentityStsV1OpenIdProviderConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetOpenidConfiguration set$Xgafv(java.lang.String $Xgafv) {
+              return (GetOpenidConfiguration) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAccessToken(java.lang.String accessToken) {
+              return (GetOpenidConfiguration) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAlt(java.lang.String alt) {
+              return (GetOpenidConfiguration) super.setAlt(alt);
+            }
+
+            @Override
+            public GetOpenidConfiguration setCallback(java.lang.String callback) {
+              return (GetOpenidConfiguration) super.setCallback(callback);
+            }
+
+            @Override
+            public GetOpenidConfiguration setFields(java.lang.String fields) {
+              return (GetOpenidConfiguration) super.setFields(fields);
+            }
+
+            @Override
+            public GetOpenidConfiguration setKey(java.lang.String key) {
+              return (GetOpenidConfiguration) super.setKey(key);
+            }
+
+            @Override
+            public GetOpenidConfiguration setOauthToken(java.lang.String oauthToken) {
+              return (GetOpenidConfiguration) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetOpenidConfiguration) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetOpenidConfiguration setQuotaUser(java.lang.String quotaUser) {
+              return (GetOpenidConfiguration) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadType(java.lang.String uploadType) {
+              return (GetOpenidConfiguration) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetOpenidConfiguration) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the pool whose OpenID provider configuration to retrieve.
+             * Format: 'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{
+             * POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+             * 'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.sys
+             * tem.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.
+             * proj-12345678.system.id.goog'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+           'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
+           projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.system.id.goog
+           '
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the pool whose OpenID provider configuration to retrieve.
+             * Format: 'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{
+             * POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+             * 'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.sys
+             * tem.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.
+             * proj-12345678.system.id.goog'
+             */
+            public GetOpenidConfiguration setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetOpenidConfiguration set(String parameterName, Object value) {
+              return (GetOpenidConfiguration) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+   *   {@code CloudSecurityToken.Projects.List request = sts.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+     *   {@code CloudSecurityToken.Locations.List request = sts.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the WorkloadIdentityPools collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+       *   {@code CloudSecurityToken.WorkloadIdentityPools.List request = sts.workloadIdentityPools().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public WorkloadIdentityPools workloadIdentityPools() {
+        return new WorkloadIdentityPools();
+      }
+
+      /**
+       * The "workloadIdentityPools" collection of methods.
+       */
+      public class WorkloadIdentityPools {
+
+        /**
+         * An accessor for creating requests from the Openid collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+         *   {@code CloudSecurityToken.Openid.List request = sts.openid().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Openid openid() {
+          return new Openid();
+        }
+
+        /**
+         * The "openid" collection of methods.
+         */
+        public class Openid {
+
+          /**
+           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
+           * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+           * system pools are supported.
+           *
+           * Create a request for the method "openid.getJwks".
+           *
+           * This request holds the parameters needed by the sts server.  After setting any optional
+           * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
+           *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
+           *        .goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-123456
+           *        78.system.id.goog'
+           * @return the request
+           */
+          public GetJwks getJwks(java.lang.String name) throws java.io.IOException {
+            GetJwks result = new GetJwks(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetJwks extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1Jwks> {
+
+            private static final String REST_PATH = "v1/{+name}/openid/jwks";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
+             * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+             * system pools are supported.
+             *
+             * Create a request for the method "openid.getJwks".
+             *
+             * This request holds the parameters needed by the the sts server.  After setting any optional
+             * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
+           *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
+           *        .goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-123456
+           *        78.system.id.goog'
+             * @since 1.13
+             */
+            protected GetJwks(java.lang.String name) {
+              super(CloudSecurityToken.this, "GET", REST_PATH, null, com.google.api.services.sts.v1.model.GoogleIdentityStsV1Jwks.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetJwks set$Xgafv(java.lang.String $Xgafv) {
+              return (GetJwks) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetJwks setAccessToken(java.lang.String accessToken) {
+              return (GetJwks) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetJwks setAlt(java.lang.String alt) {
+              return (GetJwks) super.setAlt(alt);
+            }
+
+            @Override
+            public GetJwks setCallback(java.lang.String callback) {
+              return (GetJwks) super.setCallback(callback);
+            }
+
+            @Override
+            public GetJwks setFields(java.lang.String fields) {
+              return (GetJwks) super.setFields(fields);
+            }
+
+            @Override
+            public GetJwks setKey(java.lang.String key) {
+              return (GetJwks) super.setKey(key);
+            }
+
+            @Override
+            public GetJwks setOauthToken(java.lang.String oauthToken) {
+              return (GetJwks) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetJwks setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetJwks) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetJwks setQuotaUser(java.lang.String quotaUser) {
+              return (GetJwks) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetJwks setUploadType(java.lang.String uploadType) {
+              return (GetJwks) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetJwks setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetJwks) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
+             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
+             * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
+             * ents.global.proj-12345678.system.id.goog'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s):
+           'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
+           projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.system.id.goog
+           '
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
+             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
+             * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
+             * ents.global.proj-12345678.system.id.goog'
+             */
+            public GetJwks setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetJwks set(String parameterName, Object value) {
+              return (GetJwks) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the WellKnown collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudSecurityToken sts = new CloudSecurityToken(...);}
+         *   {@code CloudSecurityToken.WellKnown.List request = sts.wellKnown().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public WellKnown wellKnown() {
+          return new WellKnown();
+        }
+
+        /**
+         * The "well-known" collection of methods.
+         */
+        public class WellKnown {
+
+          /**
+           * Gets the OIDC provider configuration for an agentic or managed workload identity pool following
+           * [the OIDC 1.0 discovery specification](https://openid.net/specs/openid-connect-
+           * discovery-1_0.html#ProviderConfigurationResponse). For now, only agentic system pools are
+           * supported.
+           *
+           * Create a request for the method "well-known.getOpenid-configuration".
+           *
+           * This request holds the parameters needed by the sts server.  After setting any optional
+           * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example: 'org
+           *        anizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.go
+           *        og' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.
+           *        system.id.goog'
+           * @return the request
+           */
+          public GetOpenidConfiguration getOpenidConfiguration(java.lang.String name) throws java.io.IOException {
+            GetOpenidConfiguration result = new GetOpenidConfiguration(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetOpenidConfiguration extends CloudSecurityTokenRequest<com.google.api.services.sts.v1.model.GoogleIdentityStsV1OpenIdProviderConfig> {
+
+            private static final String REST_PATH = "v1/{+name}/.well-known/openid-configuration";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Gets the OIDC provider configuration for an agentic or managed workload identity pool following
+             * [the OIDC 1.0 discovery specification](https://openid.net/specs/openid-connect-
+             * discovery-1_0.html#ProviderConfigurationResponse). For now, only agentic system pools are
+             * supported.
+             *
+             * Create a request for the method "well-known.getOpenid-configuration".
+             *
+             * This request holds the parameters needed by the the sts server.  After setting any optional
+             * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
+             * operation. <p> {@link GetOpenidConfiguration#initialize(com.google.api.client.googleapis.servic
+             * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example: 'org
+           *        anizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.go
+           *        og' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.
+           *        system.id.goog'
+             * @since 1.13
+             */
+            protected GetOpenidConfiguration(java.lang.String name) {
+              super(CloudSecurityToken.this, "GET", REST_PATH, null, com.google.api.services.sts.v1.model.GoogleIdentityStsV1OpenIdProviderConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetOpenidConfiguration set$Xgafv(java.lang.String $Xgafv) {
+              return (GetOpenidConfiguration) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAccessToken(java.lang.String accessToken) {
+              return (GetOpenidConfiguration) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setAlt(java.lang.String alt) {
+              return (GetOpenidConfiguration) super.setAlt(alt);
+            }
+
+            @Override
+            public GetOpenidConfiguration setCallback(java.lang.String callback) {
+              return (GetOpenidConfiguration) super.setCallback(callback);
+            }
+
+            @Override
+            public GetOpenidConfiguration setFields(java.lang.String fields) {
+              return (GetOpenidConfiguration) super.setFields(fields);
+            }
+
+            @Override
+            public GetOpenidConfiguration setKey(java.lang.String key) {
+              return (GetOpenidConfiguration) super.setKey(key);
+            }
+
+            @Override
+            public GetOpenidConfiguration setOauthToken(java.lang.String oauthToken) {
+              return (GetOpenidConfiguration) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetOpenidConfiguration setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetOpenidConfiguration) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetOpenidConfiguration setQuotaUser(java.lang.String quotaUser) {
+              return (GetOpenidConfiguration) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadType(java.lang.String uploadType) {
+              return (GetOpenidConfiguration) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetOpenidConfiguration setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetOpenidConfiguration) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the pool whose OpenID provider configuration to retrieve.
+             * Format: 'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{
+             * POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+             * 'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.sys
+             * tem.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.
+             * proj-12345678.system.id.goog'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the pool whose OpenID provider configuration to retrieve. Format:
+           'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+           'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+           'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
+           projects/12345678/locations/global/workloadIdentityPools/agents.global.proj-12345678.system.id.goog
+           '
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the pool whose OpenID provider configuration to retrieve.
+             * Format: 'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{
+             * POOL_ID}'
+             * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example:
+             * 'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.sys
+             * tem.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/agents.global.
+             * proj-12345678.system.id.goog'
+             */
+            public GetOpenidConfiguration setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetOpenidConfiguration set(String parameterName, Object value) {
+              return (GetOpenidConfiguration) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the V1 collection.
    *
    * <p>The typical use is:</p>

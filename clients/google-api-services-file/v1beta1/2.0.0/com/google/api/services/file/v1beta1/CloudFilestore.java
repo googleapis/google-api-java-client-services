@@ -5408,6 +5408,308 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
         }
 
       }
+      /**
+       * An accessor for creating requests from the SharePools collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudFilestore file = new CloudFilestore(...);}
+       *   {@code CloudFilestore.SharePools.List request = file.sharePools().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SharePools sharePools() {
+        return new SharePools();
+      }
+
+      /**
+       * The "sharePools" collection of methods.
+       */
+      public class SharePools {
+
+        /**
+         * Acquires a share synchronously from the pre-provisioned share pool.
+         *
+         * Create a request for the method "sharePools.acquireShare".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link AcquireShare#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent share pool path, in the format
+         *        `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+         * @param content the {@link com.google.api.services.file.v1beta1.model.AcquireShareRequest}
+         * @return the request
+         */
+        public AcquireShare acquireShare(java.lang.String parent, com.google.api.services.file.v1beta1.model.AcquireShareRequest content) throws java.io.IOException {
+          AcquireShare result = new AcquireShare(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AcquireShare extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.AcquireShareResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}:acquireShare";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+
+          /**
+           * Acquires a share synchronously from the pre-provisioned share pool.
+           *
+           * Create a request for the method "sharePools.acquireShare".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link AcquireShare#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * AcquireShare#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent share pool path, in the format
+         *        `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.AcquireShareRequest}
+           * @since 1.13
+           */
+          protected AcquireShare(java.lang.String parent, com.google.api.services.file.v1beta1.model.AcquireShareRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.AcquireShareResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+            }
+          }
+
+          @Override
+          public AcquireShare set$Xgafv(java.lang.String $Xgafv) {
+            return (AcquireShare) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AcquireShare setAccessToken(java.lang.String accessToken) {
+            return (AcquireShare) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AcquireShare setAlt(java.lang.String alt) {
+            return (AcquireShare) super.setAlt(alt);
+          }
+
+          @Override
+          public AcquireShare setCallback(java.lang.String callback) {
+            return (AcquireShare) super.setCallback(callback);
+          }
+
+          @Override
+          public AcquireShare setFields(java.lang.String fields) {
+            return (AcquireShare) super.setFields(fields);
+          }
+
+          @Override
+          public AcquireShare setKey(java.lang.String key) {
+            return (AcquireShare) super.setKey(key);
+          }
+
+          @Override
+          public AcquireShare setOauthToken(java.lang.String oauthToken) {
+            return (AcquireShare) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AcquireShare setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AcquireShare) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AcquireShare setQuotaUser(java.lang.String quotaUser) {
+            return (AcquireShare) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AcquireShare setUploadType(java.lang.String uploadType) {
+            return (AcquireShare) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AcquireShare setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AcquireShare) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent share pool path, in the format
+           * `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent share pool path, in the format
+         `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent share pool path, in the format
+           * `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          public AcquireShare setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public AcquireShare set(String parameterName, Object value) {
+            return (AcquireShare) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Releases a share synchronously, marking it for background scrubbing.
+         *
+         * Create a request for the method "sharePools.releaseShare".
+         *
+         * This request holds the parameters needed by the file server.  After setting any optional
+         * parameters, call the {@link ReleaseShare#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent share pool path, in the format
+         *        `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+         * @param content the {@link com.google.api.services.file.v1beta1.model.ReleaseShareRequest}
+         * @return the request
+         */
+        public ReleaseShare releaseShare(java.lang.String parent, com.google.api.services.file.v1beta1.model.ReleaseShareRequest content) throws java.io.IOException {
+          ReleaseShare result = new ReleaseShare(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReleaseShare extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.ReleaseShareResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}:releaseShare";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+
+          /**
+           * Releases a share synchronously, marking it for background scrubbing.
+           *
+           * Create a request for the method "sharePools.releaseShare".
+           *
+           * This request holds the parameters needed by the the file server.  After setting any optional
+           * parameters, call the {@link ReleaseShare#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * ReleaseShare#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent share pool path, in the format
+         *        `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.ReleaseShareRequest}
+           * @since 1.13
+           */
+          protected ReleaseShare(java.lang.String parent, com.google.api.services.file.v1beta1.model.ReleaseShareRequest content) {
+            super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.ReleaseShareResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReleaseShare set$Xgafv(java.lang.String $Xgafv) {
+            return (ReleaseShare) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReleaseShare setAccessToken(java.lang.String accessToken) {
+            return (ReleaseShare) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReleaseShare setAlt(java.lang.String alt) {
+            return (ReleaseShare) super.setAlt(alt);
+          }
+
+          @Override
+          public ReleaseShare setCallback(java.lang.String callback) {
+            return (ReleaseShare) super.setCallback(callback);
+          }
+
+          @Override
+          public ReleaseShare setFields(java.lang.String fields) {
+            return (ReleaseShare) super.setFields(fields);
+          }
+
+          @Override
+          public ReleaseShare setKey(java.lang.String key) {
+            return (ReleaseShare) super.setKey(key);
+          }
+
+          @Override
+          public ReleaseShare setOauthToken(java.lang.String oauthToken) {
+            return (ReleaseShare) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReleaseShare setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReleaseShare) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReleaseShare setQuotaUser(java.lang.String quotaUser) {
+            return (ReleaseShare) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReleaseShare setUploadType(java.lang.String uploadType) {
+            return (ReleaseShare) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReleaseShare setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReleaseShare) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent share pool path, in the format
+           * `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent share pool path, in the format
+         `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent share pool path, in the format
+           * `projects/{project}/locations/{location}/sharePools/{share_pool}`.
+           */
+          public ReleaseShare setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/sharePools/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ReleaseShare set(String parameterName, Object value) {
+            return (ReleaseShare) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

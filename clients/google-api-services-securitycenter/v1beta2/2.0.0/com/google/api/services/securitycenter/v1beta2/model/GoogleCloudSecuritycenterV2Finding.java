@@ -316,6 +316,12 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2IamDetails iamDetails;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Indicator indicator;
 
   /**
@@ -1056,6 +1062,21 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setIamBindings(java.util.List<GoogleCloudSecuritycenterV2IamBinding> iamBindings) {
     this.iamBindings = iamBindings;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IamDetails getIamDetails() {
+    return iamDetails;
+  }
+
+  /**
+   * @param iamDetails iamDetails or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setIamDetails(GoogleCloudSecuritycenterV2IamDetails iamDetails) {
+    this.iamDetails = iamDetails;
     return this;
   }
 

@@ -55,6 +55,16 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   private GoogleCloudApigeeV1TraceSamplingConfig samplingConfig;
 
   /**
+   * Optional. The trace protocol to use. Configuration Requirements (if trace_protocol is OTLP): -
+   * Allowed Exporters: CLOUD_TRACE or OPEN_TELEMETRY_COLLECTOR. - If Exporter is
+   * OPEN_TELEMETRY_COLLECTOR: - endpoint refers to a valid OTLP collector URL. - If Exporter is
+   * CLOUD_TRACE: - endpoint refers to a valid project ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String traceProtocol;
+
+  /**
    * Required. Endpoint of the exporter.
    * @return value or {@code null} for none
    */
@@ -110,6 +120,29 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
    */
   public GoogleCloudApigeeV1TraceConfig setSamplingConfig(GoogleCloudApigeeV1TraceSamplingConfig samplingConfig) {
     this.samplingConfig = samplingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The trace protocol to use. Configuration Requirements (if trace_protocol is OTLP): -
+   * Allowed Exporters: CLOUD_TRACE or OPEN_TELEMETRY_COLLECTOR. - If Exporter is
+   * OPEN_TELEMETRY_COLLECTOR: - endpoint refers to a valid OTLP collector URL. - If Exporter is
+   * CLOUD_TRACE: - endpoint refers to a valid project ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTraceProtocol() {
+    return traceProtocol;
+  }
+
+  /**
+   * Optional. The trace protocol to use. Configuration Requirements (if trace_protocol is OTLP): -
+   * Allowed Exporters: CLOUD_TRACE or OPEN_TELEMETRY_COLLECTOR. - If Exporter is
+   * OPEN_TELEMETRY_COLLECTOR: - endpoint refers to a valid OTLP collector URL. - If Exporter is
+   * CLOUD_TRACE: - endpoint refers to a valid project ID.
+   * @param traceProtocol traceProtocol or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TraceConfig setTraceProtocol(java.lang.String traceProtocol) {
+    this.traceProtocol = traceProtocol;
     return this;
   }
 

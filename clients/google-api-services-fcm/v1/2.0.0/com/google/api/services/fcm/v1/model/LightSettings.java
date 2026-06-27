@@ -39,7 +39,7 @@ public final class LightSettings extends com.google.api.client.json.GenericJson 
   private Color color;
 
   /**
-   * Required. Along with `light_on_duration `, define the blink rate of LED flashes. Resolution
+   * Required. Along with `light_on_duration`, define the blink rate of LED flashes. Resolution
    * defined by [proto.Duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
    * The value may be {@code null}.
@@ -76,7 +76,7 @@ public final class LightSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Along with `light_on_duration `, define the blink rate of LED flashes. Resolution
+   * Required. Along with `light_on_duration`, define the blink rate of LED flashes. Resolution
    * defined by [proto.Duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
    * @return value or {@code null} for none
@@ -86,7 +86,7 @@ public final class LightSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Along with `light_on_duration `, define the blink rate of LED flashes. Resolution
+   * Required. Along with `light_on_duration`, define the blink rate of LED flashes. Resolution
    * defined by [proto.Duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#google.protobuf.Duration)
    * @param lightOffDuration lightOffDuration or {@code null} for none

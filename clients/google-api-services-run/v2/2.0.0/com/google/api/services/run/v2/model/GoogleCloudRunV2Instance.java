@@ -149,7 +149,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private java.lang.String encryptionKeyRevocationAction;
 
   /**
-   * If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down all
+   * If `encryption_key_revocation_action` is `SHUTDOWN`, the duration before shutting down all
    * instances. The minimum increment is 1 hour.
    * The value may be {@code null}.
    */
@@ -173,7 +173,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * state. Please note that unlike v1, this is an `int64` value. As with most Google APIs, its JSON
    * representation will be a `string` instead of an `integer`.
    * The value may be {@code null}.
    */
@@ -196,15 +196,15 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Optional. Provides the ingress settings for this Instance. On output, returns the currently
-   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * observed ingress settings, or `INGRESS_TRAFFIC_UNSPECIFIED` if no revision is active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ingress;
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this Instance. For
-   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * Optional. Disables IAM permission check for `run.routes.invoke` for callers of this Instance.
+   * For more information, visit https://cloud.google.com/run/docs/securing/managing-
    * access#invoker_check.
    * The value may be {@code null}.
    */
@@ -227,10 +227,10 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
-   * to allow use of preview features in that stage. On read (or output), describes whether the
-   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
-   * GA-level features are used, this field will be BETA on output.
+   * `GA`. If no value is specified, `GA` is assumed. Set the launch stage to a preview stage on
+   * input to allow use of preview features in that stage. On read (or output), describes whether
+   * the resource uses preview features. For example, if `ALPHA` is provided as input, but only
+   * `BETA` and `GA`-level features are used, this field will be `BETA` on output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,9 +244,9 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private java.lang.String logUri;
 
   /**
-   * The fully qualified name of this Instance. In CreateInstanceRequest, this field is ignored, and
-   * instead composed from CreateInstanceRequest.parent and CreateInstanceRequest.instance_id.
-   * Format: projects/{project}/locations/{location}/instances/{instance_id}
+   * The fully qualified name of this Instance. In `CreateInstanceRequest`, this field is ignored,
+   * and instead composed from `CreateInstanceRequest.parent` and
+   * `CreateInstanceRequest.instance_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,20 +262,20 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * Output only. The generation of this Instance currently serving traffic. See comments in
    * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
-   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
-   * be a `string` instead of an `integer`.
+   * that unlike v1, this is an `int64` value. As with most Google APIs, its JSON representation
+   * will be a `string` instead of an `integer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long observedGeneration;
 
   /**
-   * Output only. Returns true if the Instance is currently being acted upon by the system to bring
-   * it into the desired state. When a new Instance is created, or an existing one is updated, Cloud
-   * Run will asynchronously perform all necessary steps to bring the Instance to the desired
+   * Output only. Returns `true` if the Instance is currently being acted upon by the system to
+   * bring it into the desired state. When a new Instance is created, or an existing one is updated,
+   * Cloud Run will asynchronously perform all necessary steps to bring the Instance to the desired
    * serving state. This process is called reconciliation. While reconciliation is in process,
    * `observed_generation` will have a transient value that might mismatch the intended state. Once
-   * reconciliation is over (and this field is false), there are two possible outcomes:
+   * reconciliation is over (and this field is `false`), there are two possible outcomes:
    * reconciliation succeeded and the serving state matches the Instance, or there was an error, and
    * reconciliation failed. This state can be found in `terminal_condition.state`.
    * The value may be {@code null}.
@@ -594,7 +594,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down all
+   * If `encryption_key_revocation_action` is `SHUTDOWN`, the duration before shutting down all
    * instances. The minimum increment is 1 hour.
    * @return value or {@code null} for none
    */
@@ -603,7 +603,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * If encryption_key_revocation_action is SHUTDOWN, the duration before shutting down all
+   * If `encryption_key_revocation_action` is `SHUTDOWN`, the duration before shutting down all
    * instances. The minimum increment is 1 hour.
    * @param encryptionKeyShutdownDuration encryptionKeyShutdownDuration or {@code null} for none
    */
@@ -650,7 +650,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * state. Please note that unlike v1, this is an `int64` value. As with most Google APIs, its JSON
    * representation will be a `string` instead of an `integer`.
    * @return value or {@code null} for none
    */
@@ -660,7 +660,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Output only. A number that monotonically increases every time the user modifies the desired
-   * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
+   * state. Please note that unlike v1, this is an `int64` value. As with most Google APIs, its JSON
    * representation will be a `string` instead of an `integer`.
    * @param generation generation or {@code null} for none
    */
@@ -705,7 +705,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Optional. Provides the ingress settings for this Instance. On output, returns the currently
-   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * observed ingress settings, or `INGRESS_TRAFFIC_UNSPECIFIED` if no revision is active.
    * @return value or {@code null} for none
    */
   public java.lang.String getIngress() {
@@ -714,7 +714,7 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
 
   /**
    * Optional. Provides the ingress settings for this Instance. On output, returns the currently
-   * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
+   * observed ingress settings, or `INGRESS_TRAFFIC_UNSPECIFIED` if no revision is active.
    * @param ingress ingress or {@code null} for none
    */
   public GoogleCloudRunV2Instance setIngress(java.lang.String ingress) {
@@ -723,8 +723,8 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this Instance. For
-   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * Optional. Disables IAM permission check for `run.routes.invoke` for callers of this Instance.
+   * For more information, visit https://cloud.google.com/run/docs/securing/managing-
    * access#invoker_check.
    * @return value or {@code null} for none
    */
@@ -733,8 +733,8 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this Instance. For
-   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * Optional. Disables IAM permission check for `run.routes.invoke` for callers of this Instance.
+   * For more information, visit https://cloud.google.com/run/docs/securing/managing-
    * access#invoker_check.
    * @param invokerIamDisabled invokerIamDisabled or {@code null} for none
    */
@@ -778,10 +778,10 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
-   * to allow use of preview features in that stage. On read (or output), describes whether the
-   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
-   * GA-level features are used, this field will be BETA on output.
+   * `GA`. If no value is specified, `GA` is assumed. Set the launch stage to a preview stage on
+   * input to allow use of preview features in that stage. On read (or output), describes whether
+   * the resource uses preview features. For example, if `ALPHA` is provided as input, but only
+   * `BETA` and `GA`-level features are used, this field will be `BETA` on output.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -791,10 +791,10 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * The launch stage as defined by [Google Cloud Platform Launch
    * Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and
-   * `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input
-   * to allow use of preview features in that stage. On read (or output), describes whether the
-   * resource uses preview features. For example, if ALPHA is provided as input, but only BETA and
-   * GA-level features are used, this field will be BETA on output.
+   * `GA`. If no value is specified, `GA` is assumed. Set the launch stage to a preview stage on
+   * input to allow use of preview features in that stage. On read (or output), describes whether
+   * the resource uses preview features. For example, if `ALPHA` is provided as input, but only
+   * `BETA` and `GA`-level features are used, this field will be `BETA` on output.
    * @param launchStage launchStage or {@code null} for none
    */
   public GoogleCloudRunV2Instance setLaunchStage(java.lang.String launchStage) {
@@ -820,9 +820,9 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * The fully qualified name of this Instance. In CreateInstanceRequest, this field is ignored, and
-   * instead composed from CreateInstanceRequest.parent and CreateInstanceRequest.instance_id.
-   * Format: projects/{project}/locations/{location}/instances/{instance_id}
+   * The fully qualified name of this Instance. In `CreateInstanceRequest`, this field is ignored,
+   * and instead composed from `CreateInstanceRequest.parent` and
+   * `CreateInstanceRequest.instance_id`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -830,9 +830,9 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * The fully qualified name of this Instance. In CreateInstanceRequest, this field is ignored, and
-   * instead composed from CreateInstanceRequest.parent and CreateInstanceRequest.instance_id.
-   * Format: projects/{project}/locations/{location}/instances/{instance_id}
+   * The fully qualified name of this Instance. In `CreateInstanceRequest`, this field is ignored,
+   * and instead composed from `CreateInstanceRequest.parent` and
+   * `CreateInstanceRequest.instance_id`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRunV2Instance setName(java.lang.String name) {
@@ -860,8 +860,8 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * Output only. The generation of this Instance currently serving traffic. See comments in
    * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
-   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
-   * be a `string` instead of an `integer`.
+   * that unlike v1, this is an `int64` value. As with most Google APIs, its JSON representation
+   * will be a `string` instead of an `integer`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getObservedGeneration() {
@@ -871,8 +871,8 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   /**
    * Output only. The generation of this Instance currently serving traffic. See comments in
    * `reconciling` for additional information on reconciliation process in Cloud Run. Please note
-   * that unlike v1, this is an int64 value. As with most Google APIs, its JSON representation will
-   * be a `string` instead of an `integer`.
+   * that unlike v1, this is an `int64` value. As with most Google APIs, its JSON representation
+   * will be a `string` instead of an `integer`.
    * @param observedGeneration observedGeneration or {@code null} for none
    */
   public GoogleCloudRunV2Instance setObservedGeneration(java.lang.Long observedGeneration) {
@@ -881,12 +881,12 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. Returns true if the Instance is currently being acted upon by the system to bring
-   * it into the desired state. When a new Instance is created, or an existing one is updated, Cloud
-   * Run will asynchronously perform all necessary steps to bring the Instance to the desired
+   * Output only. Returns `true` if the Instance is currently being acted upon by the system to
+   * bring it into the desired state. When a new Instance is created, or an existing one is updated,
+   * Cloud Run will asynchronously perform all necessary steps to bring the Instance to the desired
    * serving state. This process is called reconciliation. While reconciliation is in process,
    * `observed_generation` will have a transient value that might mismatch the intended state. Once
-   * reconciliation is over (and this field is false), there are two possible outcomes:
+   * reconciliation is over (and this field is `false`), there are two possible outcomes:
    * reconciliation succeeded and the serving state matches the Instance, or there was an error, and
    * reconciliation failed. This state can be found in `terminal_condition.state`.
    * @return value or {@code null} for none
@@ -896,12 +896,12 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. Returns true if the Instance is currently being acted upon by the system to bring
-   * it into the desired state. When a new Instance is created, or an existing one is updated, Cloud
-   * Run will asynchronously perform all necessary steps to bring the Instance to the desired
+   * Output only. Returns `true` if the Instance is currently being acted upon by the system to
+   * bring it into the desired state. When a new Instance is created, or an existing one is updated,
+   * Cloud Run will asynchronously perform all necessary steps to bring the Instance to the desired
    * serving state. This process is called reconciliation. While reconciliation is in process,
    * `observed_generation` will have a transient value that might mismatch the intended state. Once
-   * reconciliation is over (and this field is false), there are two possible outcomes:
+   * reconciliation is over (and this field is `false`), there are two possible outcomes:
    * reconciliation succeeded and the serving state matches the Instance, or there was an error, and
    * reconciliation failed. This state can be found in `terminal_condition.state`.
    * @param reconciling reconciling or {@code null} for none

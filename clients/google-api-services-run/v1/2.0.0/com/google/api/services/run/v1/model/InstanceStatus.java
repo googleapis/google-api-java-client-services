@@ -17,7 +17,7 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * InstanceStatus represents the current state of a Instance.
+ * InstanceStatus represents the current state of an Instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

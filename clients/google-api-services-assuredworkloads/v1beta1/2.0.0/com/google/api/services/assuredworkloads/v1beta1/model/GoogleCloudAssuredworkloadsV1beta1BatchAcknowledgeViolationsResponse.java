@@ -30,6 +30,30 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Count of acknowledged violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acknowledgedViolationsCount;
+
+  /**
+   * Count of acknowledged violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcknowledgedViolationsCount() {
+    return acknowledgedViolationsCount;
+  }
+
+  /**
+   * Count of acknowledged violations.
+   * @param acknowledgedViolationsCount acknowledgedViolationsCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse setAcknowledgedViolationsCount(java.lang.Integer acknowledgedViolationsCount) {
+    this.acknowledgedViolationsCount = acknowledgedViolationsCount;
+    return this;
+  }
+
   @Override
   public GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse set(String fieldName, Object value) {
     return (GoogleCloudAssuredworkloadsV1beta1BatchAcknowledgeViolationsResponse) super.set(fieldName, value);

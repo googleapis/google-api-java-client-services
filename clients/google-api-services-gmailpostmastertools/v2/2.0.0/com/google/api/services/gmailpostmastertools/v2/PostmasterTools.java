@@ -278,6 +278,240 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
   public class Domains {
 
     /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Adds a domain to the user's
+     * account. Returns INVALID_ARGUMENT if a domain is not provided. Returns ALREADY_EXISTS if the
+     * domain is already registered by the user.
+     *
+     * Create a request for the method "domains.create".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.CreateDomainRequest}
+     * @return the request
+     */
+    public Create create(com.google.api.services.gmailpostmastertools.v2.model.CreateDomainRequest content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.Domain> {
+
+      private static final String REST_PATH = "v2/domains";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Adds a domain to the
+       * user's account. Returns INVALID_ARGUMENT if a domain is not provided. Returns ALREADY_EXISTS if
+       * the domain is already registered by the user.
+       *
+       * Create a request for the method "domains.create".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.CreateDomainRequest}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.gmailpostmastertools.v2.model.CreateDomainRequest content) {
+        super(PostmasterTools.this, "POST", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.Domain.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a domain from the
+     * user's account. Returns NOT_FOUND if the domain is not registered by the user.
+     *
+     * Create a request for the method "domains.delete".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The domain to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.Empty> {
+
+      private static final String REST_PATH = "v2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^domains/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a domain from the
+       * user's account. Returns NOT_FOUND if the domain is not registered by the user.
+       *
+       * Create a request for the method "domains.delete".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The domain to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(PostmasterTools.this, "DELETE", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The domain to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The domain to delete.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The domain to delete. */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves detailed information about a domain registered by you. Returns NOT_FOUND if the domain
      * is not registered by you. Domain represents the metadata of a domain that has been registered
      * within the system and linked to a user.
@@ -581,6 +815,173 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       }
     }
     /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Gets a verification token
+     * used for verifying a user's ownership over a domain.
+     *
+     * Create a request for the method "domains.getVerificationToken".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link GetVerificationToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the verification token to retrieve. Format:
+     *        `domains/{domain}/verificationToken`
+     * @return the request
+     */
+    public GetVerificationToken getVerificationToken(java.lang.String name) throws java.io.IOException {
+      GetVerificationToken result = new GetVerificationToken(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetVerificationToken extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.DomainVerificationToken> {
+
+      private static final String REST_PATH = "v2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^domains/[^/]+/verificationToken$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Gets a verification token
+       * used for verifying a user's ownership over a domain.
+       *
+       * Create a request for the method "domains.getVerificationToken".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link GetVerificationToken#execute()} method to invoke the
+       * remote operation. <p> {@link GetVerificationToken#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the verification token to retrieve. Format:
+     *        `domains/{domain}/verificationToken`
+       * @since 1.13
+       */
+      protected GetVerificationToken(java.lang.String name) {
+        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.DomainVerificationToken.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+/verificationToken$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetVerificationToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GetVerificationToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetVerificationToken setAccessToken(java.lang.String accessToken) {
+        return (GetVerificationToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetVerificationToken setAlt(java.lang.String alt) {
+        return (GetVerificationToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GetVerificationToken setCallback(java.lang.String callback) {
+        return (GetVerificationToken) super.setCallback(callback);
+      }
+
+      @Override
+      public GetVerificationToken setFields(java.lang.String fields) {
+        return (GetVerificationToken) super.setFields(fields);
+      }
+
+      @Override
+      public GetVerificationToken setKey(java.lang.String key) {
+        return (GetVerificationToken) super.setKey(key);
+      }
+
+      @Override
+      public GetVerificationToken setOauthToken(java.lang.String oauthToken) {
+        return (GetVerificationToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetVerificationToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetVerificationToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetVerificationToken setQuotaUser(java.lang.String quotaUser) {
+        return (GetVerificationToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetVerificationToken setUploadType(java.lang.String uploadType) {
+        return (GetVerificationToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetVerificationToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetVerificationToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the verification token to retrieve. Format:
+       * `domains/{domain}/verificationToken`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the verification token to retrieve. Format:
+     `domains/{domain}/verificationToken`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the verification token to retrieve. Format:
+       * `domains/{domain}/verificationToken`
+       */
+      public GetVerificationToken setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+/verificationToken$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The verification method used. Must be specified, i.e. TXT or CNAME. */
+      @com.google.api.client.util.Key
+      private java.lang.String verificationMethod;
+
+      /** Required. The verification method used. Must be specified, i.e. TXT or CNAME.
+       */
+      public java.lang.String getVerificationMethod() {
+        return verificationMethod;
+      }
+
+      /** Required. The verification method used. Must be specified, i.e. TXT or CNAME. */
+      public GetVerificationToken setVerificationMethod(java.lang.String verificationMethod) {
+        this.verificationMethod = verificationMethod;
+        return this;
+      }
+
+      @Override
+      public GetVerificationToken set(String parameterName, Object value) {
+        return (GetVerificationToken) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves a list of all domains registered by you, along with their corresponding metadata. The
      * order of domains in the response is unspecified and non-deterministic. Newly registered domains
      * will not necessarily be added to the end of this list.
@@ -730,6 +1131,141 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Verifies a user's ownership
+     * of a domain at the DNS level. Note that this is distinct from checking if the user has OWNER
+     * status within IRDB.
+     *
+     * Create a request for the method "domains.verify".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link Verify#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The domain to verify.
+     * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainRequest}
+     * @return the request
+     */
+    public Verify verify(java.lang.String name, com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainRequest content) throws java.io.IOException {
+      Verify result = new Verify(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Verify extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainResponse> {
+
+      private static final String REST_PATH = "v2/{+name}:verify";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^domains/[^/]+$");
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Verifies a user's
+       * ownership of a domain at the DNS level. Note that this is distinct from checking if the user
+       * has OWNER status within IRDB.
+       *
+       * Create a request for the method "domains.verify".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link Verify#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Verify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The domain to verify.
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainRequest}
+       * @since 1.13
+       */
+      protected Verify(java.lang.String name, com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainRequest content) {
+        super(PostmasterTools.this, "POST", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.VerifyDomainResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+$");
+        }
+      }
+
+      @Override
+      public Verify set$Xgafv(java.lang.String $Xgafv) {
+        return (Verify) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Verify setAccessToken(java.lang.String accessToken) {
+        return (Verify) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Verify setAlt(java.lang.String alt) {
+        return (Verify) super.setAlt(alt);
+      }
+
+      @Override
+      public Verify setCallback(java.lang.String callback) {
+        return (Verify) super.setCallback(callback);
+      }
+
+      @Override
+      public Verify setFields(java.lang.String fields) {
+        return (Verify) super.setFields(fields);
+      }
+
+      @Override
+      public Verify setKey(java.lang.String key) {
+        return (Verify) super.setKey(key);
+      }
+
+      @Override
+      public Verify setOauthToken(java.lang.String oauthToken) {
+        return (Verify) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Verify setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Verify) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Verify setQuotaUser(java.lang.String quotaUser) {
+        return (Verify) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Verify setUploadType(java.lang.String uploadType) {
+        return (Verify) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Verify setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Verify) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The domain to verify. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The domain to verify.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The domain to verify. */
+      public Verify setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Verify set(String parameterName, Object value) {
+        return (Verify) super.set(parameterName, value);
       }
     }
 
@@ -890,6 +1426,797 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         @Override
         public Query set(String parameterName, Object value) {
           return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Users collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code PostmasterTools gmailpostmastertools = new PostmasterTools(...);}
+     *   {@code PostmasterTools.Users.List request = gmailpostmastertools.users().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Users users() {
+      return new Users();
+    }
+
+    /**
+     * The "users" collection of methods.
+     */
+    public class Users {
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a user, who has
+       * access to a domain. Returns INVALID_ARGUMENT if a user is not provided.
+       *
+       * Create a request for the method "users.create".
+       *
+       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this user will be created. Format: domains/{domain}
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.CreateUserRequest}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.gmailpostmastertools.v2.model.CreateUserRequest content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.User> {
+
+        private static final String REST_PATH = "v2/{+parent}/users";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^domains/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a user, who has
+         * access to a domain. Returns INVALID_ARGUMENT if a user is not provided.
+         *
+         * Create a request for the method "users.create".
+         *
+         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this user will be created. Format: domains/{domain}
+         * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.CreateUserRequest}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.gmailpostmastertools.v2.model.CreateUserRequest content) {
+          super(PostmasterTools.this, "POST", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.User.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^domains/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this user will be created. Format: domains/{domain}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this user will be created. Format: domains/{domain}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this user will be created. Format: domains/{domain}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^domains/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a user from a
+       * domain. Returns NOT_FOUND if the user does not exist.
+       *
+       * Create a request for the method "users.delete".
+       *
+       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the user to delete. Format: domains/{domain}/users/{user}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.Empty> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^domains/[^/]+/users/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a user from a
+         * domain. Returns NOT_FOUND if the user does not exist.
+         *
+         * Create a request for the method "users.delete".
+         *
+         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the user to delete. Format: domains/{domain}/users/{user}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(PostmasterTools.this, "DELETE", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the user to delete. Format: domains/{domain}/users/{user}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the user to delete. Format: domains/{domain}/users/{user}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the user to delete. Format: domains/{domain}/users/{user}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Retrieves detailed
+       * information about a user that has access to a domain. Returns NOT_FOUND if the user does not
+       * exist.
+       *
+       * Create a request for the method "users.get".
+       *
+       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the user to retrieve. Format: `domains/{domain}/users/{user}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.User> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^domains/[^/]+/users/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Retrieves detailed
+         * information about a user that has access to a domain. Returns NOT_FOUND if the user does not
+         * exist.
+         *
+         * Create a request for the method "users.get".
+         *
+         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the user to retrieve. Format: `domains/{domain}/users/{user}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.User.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the user to retrieve. Format:
+         * `domains/{domain}/users/{user}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the user to retrieve. Format: `domains/{domain}/users/{user}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the user to retrieve. Format:
+         * `domains/{domain}/users/{user}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Lists the users that have
+       * access to a domain.
+       *
+       * Create a request for the method "users.list".
+       *
+       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name for which to list users. Format: `domains/{domain}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.ListUsersResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/users";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^domains/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists the users that have
+         * access to a domain.
+         *
+         * Create a request for the method "users.list".
+         *
+         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name for which to list users. Format: `domains/{domain}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.ListUsersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^domains/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name for which to list users. Format: `domains/{domain}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name for which to list users. Format: `domains/{domain}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name for which to list users. Format: `domains/{domain}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^domains/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Requested page size. Server may return fewer users than requested. If
+         * unspecified, the default value for this field is 10. The maximum value for this field is
+         * 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Requested page size. Server may return fewer users than requested. If unspecified, the
+       default value for this field is 10. The maximum value for this field is 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Requested page size. Server may return fewer users than requested. If
+         * unspecified, the default value for this field is 10. The maximum value for this field is
+         * 200.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The next_page_token value returned from a previous List request, if any. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The next_page_token value returned from a previous List request, if any.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The next_page_token value returned from a previous List request, if any. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Updates a user for a
+       * domain. Only Owners and Admins can execute this RPC, only a user's domain permission will be
+       * allowed to be updated. Returns NOT_FOUND if the user does not exist. Returns INVALID_ARGUMENT if
+       * a permission is not provided or is PERMISSION_UNSPECIFIED, NONE, or OWNER.
+       *
+       * Create a request for the method "users.patch".
+       *
+       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the user. Format: users/{user} Note: {user} is the user's email
+       *        address.
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.User}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.gmailpostmastertools.v2.model.User content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.User> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^domains/[^/]+/users/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Updates a user for a
+         * domain. Only Owners and Admins can execute this RPC, only a user's domain permission will be
+         * allowed to be updated. Returns NOT_FOUND if the user does not exist. Returns INVALID_ARGUMENT
+         * if a permission is not provided or is PERMISSION_UNSPECIFIED, NONE, or OWNER.
+         *
+         * Create a request for the method "users.patch".
+         *
+         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the user. Format: users/{user} Note: {user} is the user's email
+       *        address.
+         * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.User}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.gmailpostmastertools.v2.model.User content) {
+          super(PostmasterTools.this, "PATCH", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.User.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the user. Format: users/{user} Note: {user} is the
+         * user's email address.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the user. Format: users/{user} Note: {user} is the user's email
+       address.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the user. Format: users/{user} Note: {user} is the
+         * user's email address.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^domains/[^/]+/users/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

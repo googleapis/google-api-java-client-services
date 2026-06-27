@@ -31,6 +31,13 @@ package com.google.api.services.gmailpostmastertools.v2.model;
 public final class DomainComplianceData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Deliverability status verdict.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeliverabilityStatusVerdict deliverabilityStatusVerdict;
+
+  /**
    * Domain that this data is for.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class DomainComplianceData extends com.google.api.client.json.Gener
     // hack to force ProGuard to consider ComplianceRowData used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ComplianceRowData.class);
+  }
+
+  /**
+   * Output only. Deliverability status verdict.
+   * @return value or {@code null} for none
+   */
+  public DeliverabilityStatusVerdict getDeliverabilityStatusVerdict() {
+    return deliverabilityStatusVerdict;
+  }
+
+  /**
+   * Output only. Deliverability status verdict.
+   * @param deliverabilityStatusVerdict deliverabilityStatusVerdict or {@code null} for none
+   */
+  public DomainComplianceData setDeliverabilityStatusVerdict(DeliverabilityStatusVerdict deliverabilityStatusVerdict) {
+    this.deliverabilityStatusVerdict = deliverabilityStatusVerdict;
+    return this;
   }
 
   /**

@@ -30,12 +30,36 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to use the global model endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean globalEndpointEnabled;
+
+  /**
    * Optional. Specifies whether deeper semantic inference over the objects' contents using GenAI is
    * enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean semanticInferenceEnabled;
+
+  /**
+   * Optional. Whether to use the global model endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGlobalEndpointEnabled() {
+    return globalEndpointEnabled;
+  }
+
+  /**
+   * Optional. Whether to use the global model endpoint.
+   * @param globalEndpointEnabled globalEndpointEnabled or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions setGlobalEndpointEnabled(java.lang.Boolean globalEndpointEnabled) {
+    this.globalEndpointEnabled = globalEndpointEnabled;
+    return this;
+  }
 
   /**
    * Optional. Specifies whether deeper semantic inference over the objects' contents using GenAI is

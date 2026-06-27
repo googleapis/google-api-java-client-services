@@ -38,7 +38,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String authenticationTokenSecretVersion;
 
   /**
-   * Optional. The Git remote's default branch name. If not set `main` will be used.
+   * Optional. The Git remote's default branch name. If not set, `main` will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   private java.lang.String effectiveDefaultBranch;
 
   /**
-   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
-   * format `projects/locations/connections/gitRepositoryLinks`
+   * Optional. Resource name for the `GitRepositoryLink` used for machine credentials. Must be in
+   * the format `projects/locations/connections/gitRepositoryLinks`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The Git remote's default branch name. If not set `main` will be used.
+   * Optional. The Git remote's default branch name. If not set, `main` will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBranch() {
@@ -109,7 +109,7 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The Git remote's default branch name. If not set `main` will be used.
+   * Optional. The Git remote's default branch name. If not set, `main` will be used.
    * @param defaultBranch defaultBranch or {@code null} for none
    */
   public GitRemoteSettings setDefaultBranch(java.lang.String defaultBranch) {
@@ -137,8 +137,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
-   * format `projects/locations/connections/gitRepositoryLinks`
+   * Optional. Resource name for the `GitRepositoryLink` used for machine credentials. Must be in
+   * the format `projects/locations/connections/gitRepositoryLinks`
    * @return value or {@code null} for none
    */
   public java.lang.String getGitRepositoryLink() {
@@ -146,8 +146,8 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Resource name for the GitRepositoryLink used for machine credentials. Must be in the
-   * format `projects/locations/connections/gitRepositoryLinks`
+   * Optional. Resource name for the `GitRepositoryLink` used for machine credentials. Must be in
+   * the format `projects/locations/connections/gitRepositoryLinks`
    * @param gitRepositoryLink gitRepositoryLink or {@code null} for none
    */
   public GitRemoteSettings setGitRepositoryLink(java.lang.String gitRepositoryLink) {

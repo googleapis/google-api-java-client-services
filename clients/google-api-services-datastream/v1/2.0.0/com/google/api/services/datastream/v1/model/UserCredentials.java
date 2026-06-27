@@ -17,7 +17,8 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Username-password credentials.
+ * Deprecated: Salesforce is retiring Username-Password authentication. Use
+ * `Oauth2ClientCredentials` instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:

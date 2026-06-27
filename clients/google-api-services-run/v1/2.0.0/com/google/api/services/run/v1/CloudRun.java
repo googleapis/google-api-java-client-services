@@ -2424,16 +2424,18 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Instances {
 
       /**
-       * Create a Instance.
+       * Create an Instance.
        *
        * Create a request for the method "instances.create".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The namespace in which the Instance should be created. Replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/instances` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
        * @param content the {@link com.google.api.services.run.v1.model.Instance}
        * @return the request
        */
@@ -2451,7 +2453,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+$");
 
         /**
-         * Create a Instance.
+         * Create an Instance.
          *
          * Create a request for the method "instances.create".
          *
@@ -2460,9 +2462,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The namespace in which the Instance should be created. Replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/instances` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          * @param content the {@link com.google.api.services.run.v1.model.Instance}
          * @since 1.13
          */
@@ -2532,24 +2536,31 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The namespace in which the Instance should be created. Replace {namespace} with
-         * the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/instances` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The namespace in which the Instance should be created. Replace {namespace} with the
-       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/instances` *
+       `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The namespace in which the Instance should be created. Replace {namespace} with
-         * the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/instances` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2567,15 +2578,19 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Delete a Instance.
+       * Delete an Instance.
        *
        * Create a request for the method "instances.delete".
        *
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
-       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param name Required. The fully qualified name of the Instance to delete. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the `endpoint`
+       *        is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2592,7 +2607,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
 
         /**
-         * Delete a Instance.
+         * Delete an Instance.
          *
          * Create a request for the method "instances.delete".
          *
@@ -2601,8 +2616,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
-       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param name Required. The fully qualified name of the Instance to delete. It can be any of the following forms:
+       *        * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the `endpoint`
+       *        is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2671,22 +2690,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The name of the Instance to delete. Replace {namespace} with the project ID or
-         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The fully qualified name of the Instance to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
-       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The fully qualified name of the Instance to delete. It can be any of the following forms:
+       * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent resource
+       namespace.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the Instance to delete. Replace {namespace} with the project ID or
-         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * Required. The fully qualified name of the Instance to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2771,9 +2801,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the Instance to retrieve. It takes the form
-       *        namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
-       *        Replace {namespace} with the project ID or number.
+       * @param name Required. The fully qualified name of the Instance to retrieve. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2799,9 +2832,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the Instance to retrieve. It takes the form
-       *        namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
-       *        Replace {namespace} with the project ID or number.
+         * @param name Required. The fully qualified name of the Instance to retrieve. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2880,25 +2916,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The name of the Instance to retrieve. It takes the form
-         * namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
-         * Replace {namespace} with the project ID or number.
+         * Required. The fully qualified name of the Instance to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the Instance to retrieve. It takes the form
-       namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional. Replace
-       {namespace} with the project ID or number.
+        /** Required. The fully qualified name of the Instance to retrieve. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent resource
+       namespace.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the Instance to retrieve. It takes the form
-         * namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
-         * Replace {namespace} with the project ID or number.
+         * Required. The fully qualified name of the Instance to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2923,9 +2967,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The namespace from which the Instances should be listed. Replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+       * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/instances` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2951,9 +2997,11 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The namespace from which the Instances should be listed. Replace {namespace} with the
-       *        project ID or number. It takes the form namespaces/{namespace}. For example:
-       *        namespaces/PROJECT_ID
+         * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/instances` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3032,24 +3080,31 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The namespace from which the Instances should be listed. Replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/instances` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The namespace from which the Instances should be listed. Replace {namespace} with the
-       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/instances` *
+       `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The namespace from which the Instances should be listed. Replace {namespace}
-         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/instances` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}` Parent resource namespace.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3193,8 +3248,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link ReplaceInstance#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
-       *        number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param name Required. The fully qualified name of the Instance being replaced. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
        * @param content the {@link com.google.api.services.run.v1.model.Instance}
        * @return the request
        */
@@ -3222,8 +3281,12 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * lientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param name Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
-       *        number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param name Required. The fully qualified name of the Instance being replaced. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+       *        resource namespace.
          * @param content the {@link com.google.api.services.run.v1.model.Instance}
          * @since 1.13
          */
@@ -3293,24 +3356,33 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The name of the Instance being replaced. Replace {namespace} with the project
-         * ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The fully qualified name of the Instance being replaced. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
-       number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+        /** Required. The fully qualified name of the Instance being replaced. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only when the `endpoint` is
+       regional) * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+       `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent resource
+       namespace.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the Instance being replaced. Replace {namespace} with the project
-         * ID or number. It takes the form namespaces/{namespace}. For example:
-         * namespaces/PROJECT_ID
+         * Required. The fully qualified name of the Instance being replaced. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/instances/{instance_name}` (only
+         * when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/instances/{instance_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/instances/{instance_name}` Parent
+         * resource namespace.
          */
         public ReplaceInstance setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -10234,7 +10306,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       public class Instances {
 
         /**
-         * Get the IAM Access Control policy currently in effect for the given instance. This result does
+         * Gets the IAM Access Control policy currently in effect for the given instance. This result does
          * not include any inherited policies.
          *
          * Create a request for the method "instances.getIamPolicy".
@@ -10261,7 +10333,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Get the IAM Access Control policy currently in effect for the given instance. This result does
+           * Gets the IAM Access Control policy currently in effect for the given instance. This result does
            * not include any inherited policies.
            *
            * Create a request for the method "instances.getIamPolicy".

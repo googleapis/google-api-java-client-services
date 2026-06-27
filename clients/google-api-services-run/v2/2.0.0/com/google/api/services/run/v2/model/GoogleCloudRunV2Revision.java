@@ -229,13 +229,6 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. Configuration for sandboxes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudRunV2SandboxConfiguration sandboxes;
-
-  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -764,23 +757,6 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
-    return this;
-  }
-
-  /**
-   * Output only. Configuration for sandboxes.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudRunV2SandboxConfiguration getSandboxes() {
-    return sandboxes;
-  }
-
-  /**
-   * Output only. Configuration for sandboxes.
-   * @param sandboxes sandboxes or {@code null} for none
-   */
-  public GoogleCloudRunV2Revision setSandboxes(GoogleCloudRunV2SandboxConfiguration sandboxes) {
-    this.sandboxes = sandboxes;
     return this;
   }
 

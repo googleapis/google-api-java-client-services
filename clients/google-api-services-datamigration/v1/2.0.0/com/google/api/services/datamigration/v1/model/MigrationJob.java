@@ -143,6 +143,13 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Configuration for MySQL homogeneous migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MySqlHomogeneousConfig mysqlHomogeneousConfig;
+
+  /**
    * The name (URI) of this migration job resource, in the form of:
    * projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
    * The value may be {@code null}.
@@ -557,6 +564,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for MySQL homogeneous migration.
+   * @return value or {@code null} for none
+   */
+  public MySqlHomogeneousConfig getMysqlHomogeneousConfig() {
+    return mysqlHomogeneousConfig;
+  }
+
+  /**
+   * Optional. Configuration for MySQL homogeneous migration.
+   * @param mysqlHomogeneousConfig mysqlHomogeneousConfig or {@code null} for none
+   */
+  public MigrationJob setMysqlHomogeneousConfig(MySqlHomogeneousConfig mysqlHomogeneousConfig) {
+    this.mysqlHomogeneousConfig = mysqlHomogeneousConfig;
     return this;
   }
 

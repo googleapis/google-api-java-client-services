@@ -304,6 +304,12 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV1IamDetails iamDetails;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private Indicator indicator;
 
   /**
@@ -1029,6 +1035,21 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setIamBindings(java.util.List<IamBinding> iamBindings) {
     this.iamBindings = iamBindings;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1IamDetails getIamDetails() {
+    return iamDetails;
+  }
+
+  /**
+   * @param iamDetails iamDetails or {@code null} for none
+   */
+  public Finding setIamDetails(GoogleCloudSecuritycenterV1IamDetails iamDetails) {
+    this.iamDetails = iamDetails;
     return this;
   }
 

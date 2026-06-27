@@ -359,6 +359,282 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+   *   {@code Assuredworkloads.Folders.List request = assuredworkloads.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+     *   {@code Assuredworkloads.Locations.List request = assuredworkloads.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the DbFindingSummaries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+       *   {@code Assuredworkloads.DbFindingSummaries.List request = assuredworkloads.dbFindingSummaries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbFindingSummaries dbFindingSummaries() {
+        return new DbFindingSummaries();
+      }
+
+      /**
+       * The "dbFindingSummaries" collection of methods.
+       */
+      public class DbFindingSummaries {
+
+        /**
+         * Lists the finding summary by category for a given scope.
+         *
+         * Create a request for the method "dbFindingSummaries.list".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbFindingSummaries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the finding summary by category for a given scope.
+           *
+           * Create a request for the method "dbFindingSummaries.list".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent scope for the framework overview page. Formats: -
+         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         organizations/{organization}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. The filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The requested page size. The server might return fewer items than requested. If
+         unspecified, the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token that identifies the page of results that the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>
@@ -398,6 +674,239 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
      */
     public class Locations {
 
+      /**
+       * An accessor for creating requests from the DbFindingSummaries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+       *   {@code Assuredworkloads.DbFindingSummaries.List request = assuredworkloads.dbFindingSummaries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbFindingSummaries dbFindingSummaries() {
+        return new DbFindingSummaries();
+      }
+
+      /**
+       * The "dbFindingSummaries" collection of methods.
+       */
+      public class DbFindingSummaries {
+
+        /**
+         * Lists the finding summary by category for a given scope.
+         *
+         * Create a request for the method "dbFindingSummaries.list".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbFindingSummaries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the finding summary by category for a given scope.
+           *
+           * Create a request for the method "dbFindingSummaries.list".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent scope for the framework overview page. Formats: -
+         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         organizations/{organization}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. The filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The requested page size. The server might return fewer items than requested. If
+         unspecified, the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token that identifies the page of results that the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the Operations collection.
        *
@@ -3563,6 +4072,282 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
         }
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+   *   {@code Assuredworkloads.Projects.List request = assuredworkloads.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+     *   {@code Assuredworkloads.Locations.List request = assuredworkloads.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the DbFindingSummaries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+       *   {@code Assuredworkloads.DbFindingSummaries.List request = assuredworkloads.dbFindingSummaries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DbFindingSummaries dbFindingSummaries() {
+        return new DbFindingSummaries();
+      }
+
+      /**
+       * The "dbFindingSummaries" collection of methods.
+       */
+      public class DbFindingSummaries {
+
+        /**
+         * Lists the finding summary by category for a given scope.
+         *
+         * Create a request for the method "dbFindingSummaries.list".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/dbFindingSummaries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the finding summary by category for a given scope.
+           *
+           * Create a request for the method "dbFindingSummaries.list".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent scope for the framework overview page. Formats: -
+         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         *        organizations/{organization}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListDbFindingSummariesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent scope for the framework overview page. Formats: -
+         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+         organizations/{organization}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent scope for the framework overview page. Formats: -
+           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
+           * organizations/{organization}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The filtering results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The filtering results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. The filtering results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The requested page size. The server might return fewer items than requested. If
+         unspecified, the server picks an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The requested page size. The server might return fewer items than requested.
+           * If unspecified, the server picks an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token that identifies the page of results that the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A token that identifies the page of results that the server should return.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

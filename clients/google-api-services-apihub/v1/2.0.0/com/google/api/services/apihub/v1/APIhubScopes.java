@@ -23,6 +23,12 @@ package com.google.api.services.apihub.v1;
  */
 public class APIhubScopes {
 
+  /** See your Google Cloud API hub data and the email address of your Google Account. */
+  public static final String APIHUB_READONLY = "https://www.googleapis.com/auth/apihub.readonly";
+
+  /** See, edit, configure, and delete your Google Cloud API hub data and see the email address for your Google Account. */
+  public static final String APIHUB_READWRITE = "https://www.googleapis.com/auth/apihub.readwrite";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +39,8 @@ public class APIhubScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(APIHUB_READONLY);
+    set.add(APIHUB_READWRITE);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

@@ -1809,6 +1809,13 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAcceptOwnership;
 
     /**
+     * Whether the current user can access this file via Gen AI features.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canAccessViaGenAi;
+
+    /**
      * Output only. Whether the current user can add children to this folder. This is always `false`
      * when the item isn't a folder.
      * The value may be {@code null}.
@@ -2163,6 +2170,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanAcceptOwnership(java.lang.Boolean canAcceptOwnership) {
       this.canAcceptOwnership = canAcceptOwnership;
+      return this;
+    }
+
+    /**
+     * Whether the current user can access this file via Gen AI features.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanAccessViaGenAi() {
+      return canAccessViaGenAi;
+    }
+
+    /**
+     * Whether the current user can access this file via Gen AI features.
+     * @param canAccessViaGenAi canAccessViaGenAi or {@code null} for none
+     */
+    public Capabilities setCanAccessViaGenAi(java.lang.Boolean canAccessViaGenAi) {
+      this.canAccessViaGenAi = canAccessViaGenAi;
       return this;
     }
 

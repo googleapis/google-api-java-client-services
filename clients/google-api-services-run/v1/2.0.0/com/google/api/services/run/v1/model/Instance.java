@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Instance represents the configuration of a single Instance, which references a container image
- * which is run to completion.
+ * An Instance represents the configuration of a single instance that references a container image
+ * and runs to completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -56,14 +56,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ObjectMeta metadata;
 
   /**
-   * Optional. Specification of the desired behavior of a Instance.
+   * Optional. Specification of the desired behavior of an Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceSpec spec;
 
   /**
-   * Output only. Current status of a Instance.
+   * Output only. Current status of an Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of a Instance.
+   * Optional. Specification of the desired behavior of an Instance.
    * @return value or {@code null} for none
    */
   public InstanceSpec getSpec() {
@@ -137,7 +137,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specification of the desired behavior of a Instance.
+   * Optional. Specification of the desired behavior of an Instance.
    * @param spec spec or {@code null} for none
    */
   public Instance setSpec(InstanceSpec spec) {
@@ -146,7 +146,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of a Instance.
+   * Output only. Current status of an Instance.
    * @return value or {@code null} for none
    */
   public InstanceStatus getStatus() {
@@ -154,7 +154,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Current status of a Instance.
+   * Output only. Current status of an Instance.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(InstanceStatus status) {

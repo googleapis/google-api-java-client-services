@@ -42,7 +42,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
-   * prefix.
+   * prefix in format "projects/{project}/regions/{region}/routers/{router}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,30 +78,35 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
-   * corresponding route in NCC Hub's routing table.
+   * corresponding route in NCC Hub's routing table. Format: `projects/{project_id}/locations/global
+   * /hubs/{hub_id}/routeTables/{route_table_id}/routes/{route_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccHubRouteUri;
 
   /**
-   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
-   * are advertised by NCC Hub only.
+   * URI of the NCC Hub the route is advertised by in format
+   * "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and PEERING_DYNAMIC routes
+   * that are advertised by NCC Hub only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccHubUri;
 
   /**
-   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
-   * by NCC Hub only.
+   * URI of the destination NCC Spoke in format
+   * "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+   * "projects/{project}/locations/global/spokes/{spoke}" (global). PEERING_SUBNET and
+   * PEERING_DYNAMIC routes that are advertised by NCC Hub only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccSpokeUri;
 
   /**
-   * URI of a VPC network where route is located.
+   * URI of a VPC network where route is located in format
+   * "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +121,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHop;
 
   /**
-   * URI of a VPC network where the next hop resource is located.
+   * URI of a VPC network where the next hop resource is located in format
+   * "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,6 +152,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * Format: `projects/{project_id}/global/routes/{route_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,8 +212,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> srcPortRanges;
 
   /**
-   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
-   * routes only.
+   * URI of a route in format "projects/{project}/global/routes/{route}". SUBNET, STATIC,
+   * PEERING_SUBNET (only for peering network) and POLICY_BASED routes only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,7 +244,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
-   * prefix.
+   * prefix in format "projects/{project}/regions/{region}/routers/{router}".
    * @return value or {@code null} for none
    */
   public java.lang.String getAdvertisedRouteSourceRouterUri() {
@@ -246,7 +253,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For ADVERTISED dynamic routes, the URI of the Cloud Router that advertised the corresponding IP
-   * prefix.
+   * prefix in format "projects/{project}/regions/{region}/routers/{router}".
    * @param advertisedRouteSourceRouterUri advertisedRouteSourceRouterUri or {@code null} for none
    */
   public RouteInfo setAdvertisedRouteSourceRouterUri(java.lang.String advertisedRouteSourceRouterUri) {
@@ -324,7 +331,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
-   * corresponding route in NCC Hub's routing table.
+   * corresponding route in NCC Hub's routing table. Format: `projects/{project_id}/locations/global
+   * /hubs/{hub_id}/routeTables/{route_table_id}/routes/{route_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNccHubRouteUri() {
@@ -333,7 +341,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised by NCC Hub, the URI of the
-   * corresponding route in NCC Hub's routing table.
+   * corresponding route in NCC Hub's routing table. Format: `projects/{project_id}/locations/global
+   * /hubs/{hub_id}/routeTables/{route_table_id}/routes/{route_id}`
    * @param nccHubRouteUri nccHubRouteUri or {@code null} for none
    */
   public RouteInfo setNccHubRouteUri(java.lang.String nccHubRouteUri) {
@@ -342,8 +351,9 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
-   * are advertised by NCC Hub only.
+   * URI of the NCC Hub the route is advertised by in format
+   * "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and PEERING_DYNAMIC routes
+   * that are advertised by NCC Hub only.
    * @return value or {@code null} for none
    */
   public java.lang.String getNccHubUri() {
@@ -351,8 +361,9 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the NCC Hub the route is advertised by. PEERING_SUBNET and PEERING_DYNAMIC routes that
-   * are advertised by NCC Hub only.
+   * URI of the NCC Hub the route is advertised by in format
+   * "projects/{project}/locations/global/hubs/{hub}". PEERING_SUBNET and PEERING_DYNAMIC routes
+   * that are advertised by NCC Hub only.
    * @param nccHubUri nccHubUri or {@code null} for none
    */
   public RouteInfo setNccHubUri(java.lang.String nccHubUri) {
@@ -361,8 +372,10 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
-   * by NCC Hub only.
+   * URI of the destination NCC Spoke in format
+   * "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+   * "projects/{project}/locations/global/spokes/{spoke}" (global). PEERING_SUBNET and
+   * PEERING_DYNAMIC routes that are advertised by NCC Hub only.
    * @return value or {@code null} for none
    */
   public java.lang.String getNccSpokeUri() {
@@ -370,8 +383,10 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the destination NCC Spoke. PEERING_SUBNET and PEERING_DYNAMIC routes that are advertised
-   * by NCC Hub only.
+   * URI of the destination NCC Spoke in format
+   * "projects/{project}/locations/{location}/spokes/{spoke}" (regional) or
+   * "projects/{project}/locations/global/spokes/{spoke}" (global). PEERING_SUBNET and
+   * PEERING_DYNAMIC routes that are advertised by NCC Hub only.
    * @param nccSpokeUri nccSpokeUri or {@code null} for none
    */
   public RouteInfo setNccSpokeUri(java.lang.String nccSpokeUri) {
@@ -380,7 +395,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a VPC network where route is located.
+   * URI of a VPC network where route is located in format
+   * "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -388,7 +404,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a VPC network where route is located.
+   * URI of a VPC network where route is located in format
+   * "projects/{project}/global/networks/{network}".
    * @param networkUri networkUri or {@code null} for none
    */
   public RouteInfo setNetworkUri(java.lang.String networkUri) {
@@ -416,7 +433,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a VPC network where the next hop resource is located.
+   * URI of a VPC network where the next hop resource is located in format
+   * "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNextHopNetworkUri() {
@@ -424,7 +442,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a VPC network where the next hop resource is located.
+   * URI of a VPC network where the next hop resource is located in format
+   * "projects/{project}/global/networks/{network}".
    * @param nextHopNetworkUri nextHopNetworkUri or {@code null} for none
    */
   public RouteInfo setNextHopNetworkUri(java.lang.String nextHopNetworkUri) {
@@ -487,6 +506,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * Format: `projects/{project_id}/global/routes/{route_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginatingRouteUri() {
@@ -495,6 +515,7 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * For PEERING_SUBNET and PEERING_STATIC routes, the URI of the originating SUBNET/STATIC route.
+   * Format: `projects/{project_id}/global/routes/{route_id}`
    * @param originatingRouteUri originatingRouteUri or {@code null} for none
    */
   public RouteInfo setOriginatingRouteUri(java.lang.String originatingRouteUri) {
@@ -630,8 +651,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
-   * routes only.
+   * URI of a route in format "projects/{project}/global/routes/{route}". SUBNET, STATIC,
+   * PEERING_SUBNET (only for peering network) and POLICY_BASED routes only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -639,8 +660,8 @@ public final class RouteInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a route. SUBNET, STATIC, PEERING_SUBNET (only for peering network) and POLICY_BASED
-   * routes only.
+   * URI of a route in format "projects/{project}/global/routes/{route}". SUBNET, STATIC,
+   * PEERING_SUBNET (only for peering network) and POLICY_BASED routes only.
    * @param uri uri or {@code null} for none
    */
   public RouteInfo setUri(java.lang.String uri) {

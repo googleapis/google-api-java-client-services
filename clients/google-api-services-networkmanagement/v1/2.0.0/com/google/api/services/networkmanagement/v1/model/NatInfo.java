@@ -45,7 +45,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String natGatewayName;
 
   /**
-   * URI of the network where NAT translation takes place.
+   * URI of the VPC network where NAT translation takes place. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String protocol;
 
   /**
-   * Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+   * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +165,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where NAT translation takes place.
+   * URI of the VPC network where NAT translation takes place. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -171,7 +174,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where NAT translation takes place.
+   * URI of the VPC network where NAT translation takes place. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @param networkUri networkUri or {@code null} for none
    */
   public NatInfo setNetworkUri(java.lang.String networkUri) {
@@ -333,7 +337,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+   * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRouterUri() {
@@ -341,7 +346,8 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Uri of the Cloud Router. Only valid when type is CLOUD_NAT.
+   * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
+   * `projects/{project_id}/regions/{region}/routers/{router_id}`
    * @param routerUri routerUri or {@code null} for none
    */
   public NatInfo setRouterUri(java.lang.String routerUri) {

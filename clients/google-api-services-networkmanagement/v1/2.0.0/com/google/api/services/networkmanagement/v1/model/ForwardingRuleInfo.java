@@ -60,7 +60,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String matchedProtocol;
 
   /**
-   * Network URI.
+   * URI of a VPC network where the forwarding rule is located in format
+   * "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String pscGoogleApiTarget;
 
   /**
-   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * URI of the PSC service attachment this forwarding rule targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +97,9 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String target;
 
   /**
-   * URI of the forwarding rule.
+   * URI of the forwarding rule in format
+   * "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+   * "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}" (regional).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,7 +183,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network URI.
+   * URI of a VPC network where the forwarding rule is located in format
+   * "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -187,7 +192,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network URI.
+   * URI of a VPC network where the forwarding rule is located in format
+   * "projects/{project}/global/networks/{network}".
    * @param networkUri networkUri or {@code null} for none
    */
   public ForwardingRuleInfo setNetworkUri(java.lang.String networkUri) {
@@ -213,7 +219,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * URI of the PSC service attachment this forwarding rule targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * @return value or {@code null} for none
    */
   public java.lang.String getPscServiceAttachmentUri() {
@@ -221,7 +228,8 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of the PSC service attachment this forwarding rule targets (if applicable).
+   * URI of the PSC service attachment this forwarding rule targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * @param pscServiceAttachmentUri pscServiceAttachmentUri or {@code null} for none
    */
   public ForwardingRuleInfo setPscServiceAttachmentUri(java.lang.String pscServiceAttachmentUri) {
@@ -264,7 +272,9 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of the forwarding rule.
+   * URI of the forwarding rule in format
+   * "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+   * "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}" (regional).
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -272,7 +282,9 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * URI of the forwarding rule.
+   * URI of the forwarding rule in format
+   * "projects/{project}/global/forwardingRules/{forwarding_rule}" (global) or
+   * "projects/{project}/regions/{region}/forwardingRules/{forwarding_rule}" (regional).
    * @param uri uri or {@code null} for none
    */
   public ForwardingRuleInfo setUri(java.lang.String uri) {

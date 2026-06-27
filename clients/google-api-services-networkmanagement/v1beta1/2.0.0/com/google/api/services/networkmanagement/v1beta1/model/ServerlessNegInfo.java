@@ -31,14 +31,16 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class ServerlessNegInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of the serverless network endpoint group.
+   * URI of the serverless network endpoint group in format
+   * "projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String negUri;
 
   /**
-   * URI of the serverless network endpoint group.
+   * URI of the serverless network endpoint group in format
+   * "projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNegUri() {
@@ -46,7 +48,8 @@ public final class ServerlessNegInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of the serverless network endpoint group.
+   * URI of the serverless network endpoint group in format
+   * "projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}".
    * @param negUri negUri or {@code null} for none
    */
   public ServerlessNegInfo setNegUri(java.lang.String negUri) {

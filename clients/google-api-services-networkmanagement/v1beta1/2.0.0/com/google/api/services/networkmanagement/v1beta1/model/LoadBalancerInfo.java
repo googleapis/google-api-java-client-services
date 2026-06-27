@@ -38,7 +38,11 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   private java.lang.String backendType;
 
   /**
-   * Backend configuration URI.
+   * URI of the backend associated with the load balancer. Format: *
+   * `projects/{project_id}/regions/{region}/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/global/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}` *
+   * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +94,11 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Backend configuration URI.
+   * URI of the backend associated with the load balancer. Format: *
+   * `projects/{project_id}/regions/{region}/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/global/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}` *
+   * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendUri() {
@@ -98,7 +106,11 @@ public final class LoadBalancerInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Backend configuration URI.
+   * URI of the backend associated with the load balancer. Format: *
+   * `projects/{project_id}/regions/{region}/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/global/backendServices/{backend_service_id}` *
+   * `projects/{project_id}/regions/{region}/targetPools/{target_pool_id}` *
+   * `projects/{project_id}/zones/{zone}/targetInstances/{target_instance_id}`
    * @param backendUri backendUri or {@code null} for none
    */
   public LoadBalancerInfo setBackendUri(java.lang.String backendUri) {

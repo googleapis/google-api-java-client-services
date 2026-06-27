@@ -38,7 +38,7 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   private java.lang.String displayName;
 
   /**
-   * URI of a Cloud Redis Instance network.
+   * URI of a Cloud Redis Instance network in format "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,8 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   private java.lang.String region;
 
   /**
-   * URI of a Cloud Redis Instance.
+   * URI of a Cloud Redis Instance in format
+   * "projects/{project}/locations/{location}/instances/{instance}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,7 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud Redis Instance network.
+   * URI of a Cloud Redis Instance network in format "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -98,7 +99,7 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud Redis Instance network.
+   * URI of a Cloud Redis Instance network in format "projects/{project}/global/networks/{network}".
    * @param networkUri networkUri or {@code null} for none
    */
   public RedisInstanceInfo setNetworkUri(java.lang.String networkUri) {
@@ -158,7 +159,8 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud Redis Instance.
+   * URI of a Cloud Redis Instance in format
+   * "projects/{project}/locations/{location}/instances/{instance}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -166,7 +168,8 @@ public final class RedisInstanceInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * URI of a Cloud Redis Instance.
+   * URI of a Cloud Redis Instance in format
+   * "projects/{project}/locations/{location}/instances/{instance}"
    * @param uri uri or {@code null} for none
    */
   public RedisInstanceInfo setUri(java.lang.String uri) {

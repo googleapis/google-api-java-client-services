@@ -66,14 +66,15 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> networkTags;
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
 
   /**
-   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * URI of the PSC network attachment the NIC is attached to (if relevant) in format
+   * "projects/{project}/regions/{region}/networkAttachments/{network_attachment}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +103,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * URI of a Compute Engine instance.
+   * URI of a Compute Engine instance in format
+   * "projects/{project}/zones/{zone}/instances/{instance}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +196,7 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -202,7 +204,7 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * @param networkUri networkUri or {@code null} for none
    */
   public InstanceInfo setNetworkUri(java.lang.String networkUri) {
@@ -211,7 +213,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * URI of the PSC network attachment the NIC is attached to (if relevant) in format
+   * "projects/{project}/regions/{region}/networkAttachments/{network_attachment}"
    * @return value or {@code null} for none
    */
   public java.lang.String getPscNetworkAttachmentUri() {
@@ -219,7 +222,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the PSC network attachment the NIC is attached to (if relevant).
+   * URI of the PSC network attachment the NIC is attached to (if relevant) in format
+   * "projects/{project}/regions/{region}/networkAttachments/{network_attachment}"
    * @param pscNetworkAttachmentUri pscNetworkAttachmentUri or {@code null} for none
    */
   public InstanceInfo setPscNetworkAttachmentUri(java.lang.String pscNetworkAttachmentUri) {
@@ -281,7 +285,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine instance.
+   * URI of a Compute Engine instance in format
+   * "projects/{project}/zones/{zone}/instances/{instance}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -289,7 +294,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine instance.
+   * URI of a Compute Engine instance in format
+   * "projects/{project}/zones/{zone}/instances/{instance}"
    * @param uri uri or {@code null} for none
    */
   public InstanceInfo setUri(java.lang.String uri) {

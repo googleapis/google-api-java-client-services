@@ -31,7 +31,8 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class DirectVpcEgressConnectionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of direct access network.
+   * URI of the VPC network for direct egress. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,14 +60,16 @@ public final class DirectVpcEgressConnectionInfo extends com.google.api.client.j
   private java.lang.String selectedIpRange;
 
   /**
-   * URI of direct access subnetwork.
+   * URI of the subnetwork for direct egress. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkUri;
 
   /**
-   * URI of direct access network.
+   * URI of the VPC network for direct egress. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -74,7 +77,8 @@ public final class DirectVpcEgressConnectionInfo extends com.google.api.client.j
   }
 
   /**
-   * URI of direct access network.
+   * URI of the VPC network for direct egress. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @param networkUri networkUri or {@code null} for none
    */
   public DirectVpcEgressConnectionInfo setNetworkUri(java.lang.String networkUri) {
@@ -134,7 +138,8 @@ public final class DirectVpcEgressConnectionInfo extends com.google.api.client.j
   }
 
   /**
-   * URI of direct access subnetwork.
+   * URI of the subnetwork for direct egress. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetworkUri() {
@@ -142,7 +147,8 @@ public final class DirectVpcEgressConnectionInfo extends com.google.api.client.j
   }
 
   /**
-   * URI of direct access subnetwork.
+   * URI of the subnetwork for direct egress. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * @param subnetworkUri subnetworkUri or {@code null} for none
    */
   public DirectVpcEgressConnectionInfo setSubnetworkUri(java.lang.String subnetworkUri) {

@@ -39,7 +39,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String destinationIp;
 
   /**
-   * URI of the network where this packet is sent to.
+   * URI of the network where this packet is sent to. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceIp;
 
   /**
-   * URI of the network where this packet originates from.
+   * URI of the network where this packet originates from. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +107,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where this packet is sent to.
+   * URI of the network where this packet is sent to. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationNetworkUri() {
@@ -113,7 +116,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where this packet is sent to.
+   * URI of the network where this packet is sent to. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @param destinationNetworkUri destinationNetworkUri or {@code null} for none
    */
   public EndpointInfo setDestinationNetworkUri(java.lang.String destinationNetworkUri) {
@@ -190,7 +194,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where this packet originates from.
+   * URI of the network where this packet originates from. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceNetworkUri() {
@@ -198,7 +203,8 @@ public final class EndpointInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the network where this packet originates from.
+   * URI of the network where this packet originates from. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @param sourceNetworkUri sourceNetworkUri or {@code null} for none
    */
   public EndpointInfo setSourceNetworkUri(java.lang.String sourceNetworkUri) {

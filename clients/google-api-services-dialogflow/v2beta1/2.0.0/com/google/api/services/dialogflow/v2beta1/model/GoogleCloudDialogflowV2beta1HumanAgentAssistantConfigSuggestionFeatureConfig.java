@@ -34,12 +34,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig;
 
   /**
@@ -113,21 +107,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings suggestionTriggerSettings;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig getConversationModelConfig() {
-    return conversationModelConfig;
-  }
-
-  /**
-   * @param conversationModelConfig conversationModelConfig or {@code null} for none
-   */
-  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfig setConversationModelConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig conversationModelConfig) {
-    this.conversationModelConfig = conversationModelConfig;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none

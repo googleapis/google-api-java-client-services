@@ -154,7 +154,7 @@ public final class AutomatedDnsRecord extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. The service class identifier which authorizes this AutomatedDnsRecord. Any
-   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceclasses.use`
+   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceClasses.use`
    * IAM permission for the provided service class.
    * The value may be {@code null}.
    */
@@ -472,7 +472,7 @@ public final class AutomatedDnsRecord extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. The service class identifier which authorizes this AutomatedDnsRecord. Any
-   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceclasses.use`
+   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceClasses.use`
    * IAM permission for the provided service class.
    * @return value or {@code null} for none
    */
@@ -482,7 +482,7 @@ public final class AutomatedDnsRecord extends com.google.api.client.json.Generic
 
   /**
    * Required. Immutable. The service class identifier which authorizes this AutomatedDnsRecord. Any
-   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceclasses.use`
+   * API calls targeting this AutomatedDnsRecord must have `networkconnectivity.serviceClasses.use`
    * IAM permission for the provided service class.
    * @param serviceClass serviceClass or {@code null} for none
    */

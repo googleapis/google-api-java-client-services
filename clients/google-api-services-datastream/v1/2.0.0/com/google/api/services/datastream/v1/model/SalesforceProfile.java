@@ -44,7 +44,8 @@ public final class SalesforceProfile extends com.google.api.client.json.GenericJ
   private Oauth2ClientCredentials oauth2ClientCredentials;
 
   /**
-   * User-password authentication.
+   * Deprecated: Salesforce is retiring Username-Password authentication. Use
+   * `oauth2_client_credentials` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class SalesforceProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * User-password authentication.
+   * Deprecated: Salesforce is retiring Username-Password authentication. Use
+   * `oauth2_client_credentials` instead.
    * @return value or {@code null} for none
    */
   public UserCredentials getUserCredentials() {
@@ -93,7 +95,8 @@ public final class SalesforceProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * User-password authentication.
+   * Deprecated: Salesforce is retiring Username-Password authentication. Use
+   * `oauth2_client_credentials` instead.
    * @param userCredentials userCredentials or {@code null} for none
    */
   public SalesforceProfile setUserCredentials(UserCredentials userCredentials) {

@@ -50,8 +50,10 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String containerMemory;
 
   /**
-   * Optional. Maximum number of requests that a Python UDF container instance can handle
-   * concurrently. If absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF instance can handle concurrently. If
+   * absent or if `0`, the default concurrency value is used. For more information, see [Configure
+   * container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-defined-
+   * functions-python#configure-container-limits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -128,8 +130,10 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maximum number of requests that a Python UDF container instance can handle
-   * concurrently. If absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF instance can handle concurrently. If
+   * absent or if `0`, the default concurrency value is used. For more information, see [Configure
+   * container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-defined-
+   * functions-python#configure-container-limits).
    * @return value or {@code null} for none
    */
   public java.lang.Long getContainerRequestConcurrency() {
@@ -137,8 +141,10 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Maximum number of requests that a Python UDF container instance can handle
-   * concurrently. If absent or if `0`, a default concurrency is used.
+   * Optional. Maximum number of requests that a Python UDF instance can handle concurrently. If
+   * absent or if `0`, the default concurrency value is used. For more information, see [Configure
+   * container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-defined-
+   * functions-python#configure-container-limits).
    * @param containerRequestConcurrency containerRequestConcurrency or {@code null} for none
    */
   public ExternalRuntimeOptions setContainerRequestConcurrency(java.lang.Long containerRequestConcurrency) {

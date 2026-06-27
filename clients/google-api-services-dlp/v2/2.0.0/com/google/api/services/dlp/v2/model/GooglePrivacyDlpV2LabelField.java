@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Metadata on content to be scanned.
+ * The field values of the Google Drive label to match.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2ContentMetadata extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2LabelField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The file labels associated with the content.
+   * The identifier of the Label Field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GooglePrivacyDlpV2FileLabel> fileLabels;
+  private java.lang.String id;
 
   /**
-   * User provided key-value pairs of content metadata.
+   * The value of the Label Field to match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> properties;
+  private java.lang.String value;
 
   /**
-   * Optional. The file labels associated with the content.
+   * The identifier of the Label Field.
    * @return value or {@code null} for none
    */
-  public java.util.List<GooglePrivacyDlpV2FileLabel> getFileLabels() {
-    return fileLabels;
+  public java.lang.String getId() {
+    return id;
   }
 
   /**
-   * Optional. The file labels associated with the content.
-   * @param fileLabels fileLabels or {@code null} for none
+   * The identifier of the Label Field.
+   * @param id id or {@code null} for none
    */
-  public GooglePrivacyDlpV2ContentMetadata setFileLabels(java.util.List<GooglePrivacyDlpV2FileLabel> fileLabels) {
-    this.fileLabels = fileLabels;
+  public GooglePrivacyDlpV2LabelField setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * User provided key-value pairs of content metadata.
+   * The value of the Label Field to match.
    * @return value or {@code null} for none
    */
-  public java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> getProperties() {
-    return properties;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * User provided key-value pairs of content metadata.
-   * @param properties properties or {@code null} for none
+   * The value of the Label Field to match.
+   * @param value value or {@code null} for none
    */
-  public GooglePrivacyDlpV2ContentMetadata setProperties(java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> properties) {
-    this.properties = properties;
+  public GooglePrivacyDlpV2LabelField setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public GooglePrivacyDlpV2ContentMetadata set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2ContentMetadata) super.set(fieldName, value);
+  public GooglePrivacyDlpV2LabelField set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2LabelField) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2ContentMetadata clone() {
-    return (GooglePrivacyDlpV2ContentMetadata) super.clone();
+  public GooglePrivacyDlpV2LabelField clone() {
+    return (GooglePrivacyDlpV2LabelField) super.clone();
   }
 
 }

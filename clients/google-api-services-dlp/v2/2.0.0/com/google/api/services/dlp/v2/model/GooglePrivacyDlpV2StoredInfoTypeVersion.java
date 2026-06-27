@@ -39,22 +39,22 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   private GooglePrivacyDlpV2StoredInfoTypeConfig config;
 
   /**
-   * Create timestamp of the version. Read-only, determined by the system when the version is
-   * created.
+   * Output only. Create timestamp of the version. Read-only, determined by the system when the
+   * version is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
-   * storedInfoType data that render it unusable. Only the five most recent errors will be
-   * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
-   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
-   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
-   * create another version of the storedInfoType to continue using it, reusing the same `config` if
-   * it was not the source of the error.
+   * Output only. Errors that occurred when creating this storedInfoType version, or anomalies
+   * detected in the storedInfoType data that render it unusable. Only the five most recent errors
+   * will be displayed, with the most recent error appearing first. For example, some of the data
+   * for stored custom dictionaries is put in the user's Cloud Storage bucket, and if this data is
+   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
+   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
+   * API method to create another version of the storedInfoType to continue using it, reusing the
+   * same `config` if it was not the source of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,14 +67,15 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Stored info type version state. Read-only, updated by the system during dictionary creation.
+   * Output only. Stored info type version state. Read-only, updated by the system during dictionary
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Statistics about this storedInfoType version.
+   * Output only. Statistics about this storedInfoType version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +99,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Create timestamp of the version. Read-only, determined by the system when the version is
-   * created.
+   * Output only. Create timestamp of the version. Read-only, determined by the system when the
+   * version is created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -107,8 +108,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Create timestamp of the version. Read-only, determined by the system when the version is
-   * created.
+   * Output only. Create timestamp of the version. Read-only, determined by the system when the
+   * version is created.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setCreateTime(String createTime) {
@@ -117,14 +118,14 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
-   * storedInfoType data that render it unusable. Only the five most recent errors will be
-   * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
-   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
-   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
-   * create another version of the storedInfoType to continue using it, reusing the same `config` if
-   * it was not the source of the error.
+   * Output only. Errors that occurred when creating this storedInfoType version, or anomalies
+   * detected in the storedInfoType data that render it unusable. Only the five most recent errors
+   * will be displayed, with the most recent error appearing first. For example, some of the data
+   * for stored custom dictionaries is put in the user's Cloud Storage bucket, and if this data is
+   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
+   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
+   * API method to create another version of the storedInfoType to continue using it, reusing the
+   * same `config` if it was not the source of the error.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Error> getErrors() {
@@ -132,14 +133,14 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Errors that occurred when creating this storedInfoType version, or anomalies detected in the
-   * storedInfoType data that render it unusable. Only the five most recent errors will be
-   * displayed, with the most recent error appearing first. For example, some of the data for stored
-   * custom dictionaries is put in the user's Cloud Storage bucket, and if this data is modified or
-   * deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix
-   * the problem indicated by the error message and use the UpdateStoredInfoType API method to
-   * create another version of the storedInfoType to continue using it, reusing the same `config` if
-   * it was not the source of the error.
+   * Output only. Errors that occurred when creating this storedInfoType version, or anomalies
+   * detected in the storedInfoType data that render it unusable. Only the five most recent errors
+   * will be displayed, with the most recent error appearing first. For example, some of the data
+   * for stored custom dictionaries is put in the user's Cloud Storage bucket, and if this data is
+   * modified or deleted by the user or another system, the dictionary becomes invalid. If any
+   * errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType
+   * API method to create another version of the storedInfoType to continue using it, reusing the
+   * same `config` if it was not the source of the error.
    * @param errors errors or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setErrors(java.util.List<GooglePrivacyDlpV2Error> errors) {
@@ -148,7 +149,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Stored info type version state. Read-only, updated by the system during dictionary creation.
+   * Output only. Stored info type version state. Read-only, updated by the system during dictionary
+   * creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -156,7 +158,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Stored info type version state. Read-only, updated by the system during dictionary creation.
+   * Output only. Stored info type version state. Read-only, updated by the system during dictionary
+   * creation.
    * @param state state or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setState(java.lang.String state) {
@@ -165,7 +168,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Statistics about this storedInfoType version.
+   * Output only. Statistics about this storedInfoType version.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeStats getStats() {
@@ -173,7 +176,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersion extends com.google.ap
   }
 
   /**
-   * Statistics about this storedInfoType version.
+   * Output only. Statistics about this storedInfoType version.
    * @param stats stats or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoTypeVersion setStats(GooglePrivacyDlpV2StoredInfoTypeStats stats) {

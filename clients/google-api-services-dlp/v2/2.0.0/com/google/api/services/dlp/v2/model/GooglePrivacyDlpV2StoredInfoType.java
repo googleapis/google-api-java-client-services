@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2StoredInfoType extends com.google.api.clien
   private GooglePrivacyDlpV2StoredInfoTypeVersion currentVersion;
 
   /**
-   * Resource name.
+   * Output only. Resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2StoredInfoType extends com.google.api.clien
   }
 
   /**
-   * Resource name.
+   * Output only. Resource name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,7 +78,7 @@ public final class GooglePrivacyDlpV2StoredInfoType extends com.google.api.clien
   }
 
   /**
-   * Resource name.
+   * Output only. Resource name.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2StoredInfoType setName(java.lang.String name) {

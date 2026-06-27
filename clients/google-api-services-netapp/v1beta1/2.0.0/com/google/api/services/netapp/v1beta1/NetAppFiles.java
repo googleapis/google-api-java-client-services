@@ -9394,6 +9394,158 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Retrieves the current state, progress, and details of a split operation for a volume. This method
+         * is relevant when the volume is a clone. For volumes that are not clones, this method will return
+         * an error.
+         *
+         * Create a request for the method "volumes.getSplitStatus".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link GetSplitStatus#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name of the volume. Format:
+         *        projects/{project_number}/locations/{location}/volumes/{volume_id}
+         * @return the request
+         */
+        public GetSplitStatus getSplitStatus(java.lang.String name) throws java.io.IOException {
+          GetSplitStatus result = new GetSplitStatus(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetSplitStatus extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.SplitStatus> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:getSplitStatus";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Retrieves the current state, progress, and details of a split operation for a volume. This
+           * method is relevant when the volume is a clone. For volumes that are not clones, this method
+           * will return an error.
+           *
+           * Create a request for the method "volumes.getSplitStatus".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link GetSplitStatus#execute()} method to invoke the remote operation.
+           * <p> {@link GetSplitStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. The full name of the volume. Format:
+         *        projects/{project_number}/locations/{location}/volumes/{volume_id}
+           * @since 1.13
+           */
+          protected GetSplitStatus(java.lang.String name) {
+            super(NetAppFiles.this, "GET", REST_PATH, null, com.google.api.services.netapp.v1beta1.model.SplitStatus.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetSplitStatus set$Xgafv(java.lang.String $Xgafv) {
+            return (GetSplitStatus) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetSplitStatus setAccessToken(java.lang.String accessToken) {
+            return (GetSplitStatus) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetSplitStatus setAlt(java.lang.String alt) {
+            return (GetSplitStatus) super.setAlt(alt);
+          }
+
+          @Override
+          public GetSplitStatus setCallback(java.lang.String callback) {
+            return (GetSplitStatus) super.setCallback(callback);
+          }
+
+          @Override
+          public GetSplitStatus setFields(java.lang.String fields) {
+            return (GetSplitStatus) super.setFields(fields);
+          }
+
+          @Override
+          public GetSplitStatus setKey(java.lang.String key) {
+            return (GetSplitStatus) super.setKey(key);
+          }
+
+          @Override
+          public GetSplitStatus setOauthToken(java.lang.String oauthToken) {
+            return (GetSplitStatus) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetSplitStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetSplitStatus) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetSplitStatus setQuotaUser(java.lang.String quotaUser) {
+            return (GetSplitStatus) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetSplitStatus setUploadType(java.lang.String uploadType) {
+            return (GetSplitStatus) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetSplitStatus setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetSplitStatus) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name of the volume. Format:
+           * projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name of the volume. Format:
+         projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name of the volume. Format:
+           * projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          public GetSplitStatus setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetSplitStatus set(String parameterName, Object value) {
+            return (GetSplitStatus) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists Volumes in a given project.
          *
          * Create a request for the method "volumes.list".
@@ -10040,6 +10192,150 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           @Override
           public Revert set(String parameterName, Object value) {
             return (Revert) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Splits a clone volume from its source volume. This operation will only work for volumes which
+         * have clone_details set(clones). For volumes that are not clones, this operation will return an
+         * error.
+         *
+         * Create a request for the method "volumes.startSplit".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link StartSplit#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full name of the clone volume to be split from its source. Format:
+         *        projects/{project_number}/locations/{location}/volumes/{volume_id}
+         * @param content the {@link com.google.api.services.netapp.v1beta1.model.StartSplitRequest}
+         * @return the request
+         */
+        public StartSplit startSplit(java.lang.String name, com.google.api.services.netapp.v1beta1.model.StartSplitRequest content) throws java.io.IOException {
+          StartSplit result = new StartSplit(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StartSplit extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:startSplit";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Splits a clone volume from its source volume. This operation will only work for volumes which
+           * have clone_details set(clones). For volumes that are not clones, this operation will return an
+           * error.
+           *
+           * Create a request for the method "volumes.startSplit".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link StartSplit#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * StartSplit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full name of the clone volume to be split from its source. Format:
+         *        projects/{project_number}/locations/{location}/volumes/{volume_id}
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.StartSplitRequest}
+           * @since 1.13
+           */
+          protected StartSplit(java.lang.String name, com.google.api.services.netapp.v1beta1.model.StartSplitRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public StartSplit set$Xgafv(java.lang.String $Xgafv) {
+            return (StartSplit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StartSplit setAccessToken(java.lang.String accessToken) {
+            return (StartSplit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StartSplit setAlt(java.lang.String alt) {
+            return (StartSplit) super.setAlt(alt);
+          }
+
+          @Override
+          public StartSplit setCallback(java.lang.String callback) {
+            return (StartSplit) super.setCallback(callback);
+          }
+
+          @Override
+          public StartSplit setFields(java.lang.String fields) {
+            return (StartSplit) super.setFields(fields);
+          }
+
+          @Override
+          public StartSplit setKey(java.lang.String key) {
+            return (StartSplit) super.setKey(key);
+          }
+
+          @Override
+          public StartSplit setOauthToken(java.lang.String oauthToken) {
+            return (StartSplit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StartSplit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StartSplit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StartSplit setQuotaUser(java.lang.String quotaUser) {
+            return (StartSplit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StartSplit setUploadType(java.lang.String uploadType) {
+            return (StartSplit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StartSplit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StartSplit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The full name of the clone volume to be split from its source. Format:
+           * projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full name of the clone volume to be split from its source. Format:
+         projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The full name of the clone volume to be split from its source. Format:
+           * projects/{project_number}/locations/{location}/volumes/{volume_id}
+           */
+          public StartSplit setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public StartSplit set(String parameterName, Object value) {
+            return (StartSplit) super.set(parameterName, value);
           }
         }
 

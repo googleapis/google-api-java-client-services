@@ -45,8 +45,7 @@ public final class ListReleaseConfigsResponse extends com.google.api.client.json
   private java.util.List<ReleaseConfig> releaseConfigs;
 
   /**
-   * Locations which could not be reached. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2m
-   * ain/data_pipelines.proto:ListReleaseConfigsResponse)
+   * Locations which could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +88,7 @@ public final class ListReleaseConfigsResponse extends com.google.api.client.json
   }
 
   /**
-   * Locations which could not be reached. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2m
-   * ain/data_pipelines.proto:ListReleaseConfigsResponse)
+   * Locations which could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -98,8 +96,7 @@ public final class ListReleaseConfigsResponse extends com.google.api.client.json
   }
 
   /**
-   * Locations which could not be reached. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2m
-   * ain/data_pipelines.proto:ListReleaseConfigsResponse)
+   * Locations which could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListReleaseConfigsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

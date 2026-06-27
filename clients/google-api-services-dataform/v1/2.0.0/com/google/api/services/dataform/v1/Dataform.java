@@ -6048,8 +6048,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
-           *        n/data_pipelines.proto:GetCompilationResultRequest)
+           * @param name Required. The compilation result's name.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -6075,8 +6074,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
-           *        n/data_pipelines.proto:GetCompilationResultRequest)
+             * @param name Required. The compilation result's name.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -6154,24 +6152,17 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud
-             * /dataform/v2main/data_pipelines.proto:GetCompilationResultRequest)
-             */
+            /** Required. The compilation result's name. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2ma
-           in/data_pipelines.proto:GetCompilationResultRequest)
+            /** Required. The compilation result's name.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The compilation result's name. LINT.ThenChange(//depot/google3/google/cloud
-             * /dataform/v2main/data_pipelines.proto:GetCompilationResultRequest)
-             */
+            /** Required. The compilation result's name. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6329,24 +6320,17 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /**
-             * Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/
-             * dataform/v2main/data_pipelines.proto:ListCompilationResultsRequest)
-             */
+            /** Optional. Filter for the returned list. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2mai
-           n/data_pipelines.proto:ListCompilationResultsRequest)
+            /** Optional. Filter for the returned list.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * Optional. Filter for the returned list. LINT.ThenChange(//depot/google3/google/cloud/
-             * dataform/v2main/data_pipelines.proto:ListCompilationResultsRequest)
-             */
+            /** Optional. Filter for the returned list. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -6811,15 +6795,13 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the release config, which will become the final component
-             * of the release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/d
-             * ataform/v2main/data_pipelines.proto:CreateReleaseConfigRequest)
+             * of the release config's resource name.
              */
             @com.google.api.client.util.Key
             private java.lang.String releaseConfigId;
 
             /** Required. The ID to use for the release config, which will become the final component of the
-           release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/data_p
-           ipelines.proto:CreateReleaseConfigRequest)
+           release config's resource name.
              */
             public java.lang.String getReleaseConfigId() {
               return releaseConfigId;
@@ -6827,8 +6809,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the release config, which will become the final component
-             * of the release config's resource name. LINT.ThenChange(//depot/google3/google/cloud/d
-             * ataform/v2main/data_pipelines.proto:CreateReleaseConfigRequest)
+             * of the release config's resource name.
              */
             public Create setReleaseConfigId(java.lang.String releaseConfigId) {
               this.releaseConfigId = releaseConfigId;
@@ -6848,8 +6829,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
-           *        ta_pipelines.proto:DeleteReleaseConfigRequest)
+           * @param name Required. The release config's name.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6876,8 +6856,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
-           *        ta_pipelines.proto:DeleteReleaseConfigRequest)
+             * @param name Required. The release config's name.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -6945,24 +6924,17 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
-             * aform/v2main/data_pipelines.proto:DeleteReleaseConfigRequest)
-             */
+            /** Required. The release config's name. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/d
-           ata_pipelines.proto:DeleteReleaseConfigRequest)
+            /** Required. The release config's name.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
-             * aform/v2main/data_pipelines.proto:DeleteReleaseConfigRequest)
-             */
+            /** Required. The release config's name. */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6986,8 +6958,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the dataform server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
-           *        ta_pipelines.proto:GetReleaseConfigRequest)
+           * @param name Required. The release config's name.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -7013,8 +6984,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/da
-           *        ta_pipelines.proto:GetReleaseConfigRequest)
+             * @param name Required. The release config's name.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -7092,24 +7062,17 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
-             * aform/v2main/data_pipelines.proto:GetReleaseConfigRequest)
-             */
+            /** Required. The release config's name. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main/d
-           ata_pipelines.proto:GetReleaseConfigRequest)
+            /** Required. The release config's name.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The release config's name. LINT.ThenChange(//depot/google3/google/cloud/dat
-             * aform/v2main/data_pipelines.proto:GetReleaseConfigRequest)
-             */
+            /** Required. The release config's name. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7294,16 +7257,14 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
              * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
-             * provided the page token. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main
-             * /data_pipelines.proto:ListReleaseConfigsRequest)
+             * provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this to retrieve
            the subsequent page. When paginating, all other parameters provided to `ListReleaseConfigs`, with
-           the exception of `page_size`, must match the call that provided the page token. LINT.ThenChange(//d
-           epot/google3/google/cloud/dataform/v2main/data_pipelines.proto:ListReleaseConfigsRequest)
+           the exception of `page_size`, must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -7313,8 +7274,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * Optional. Page token received from a previous `ListReleaseConfigs` call. Provide this
              * to retrieve the subsequent page. When paginating, all other parameters provided to
              * `ListReleaseConfigs`, with the exception of `page_size`, must match the call that
-             * provided the page token. LINT.ThenChange(//depot/google3/google/cloud/dataform/v2main
-             * /data_pipelines.proto:ListReleaseConfigsRequest)
+             * provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -14379,22 +14339,22 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick a default of page_size = 50.
+           * Optional. Maximum number of `TeamFolders` to return. The server may return fewer items
+           * than requested. If unspecified, the server will pick a default of `page_size` = 50.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of TeamFolders to return. The server may return fewer items than
-         requested. If unspecified, the server will pick a default of page_size = 50.
+          /** Optional. Maximum number of `TeamFolders` to return. The server may return fewer items than
+         requested. If unspecified, the server will pick a default of `page_size` = 50.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Maximum number of TeamFolders to return. The server may return fewer items
-           * than requested. If unspecified, the server will pick a default of page_size = 50.
+           * Optional. Maximum number of `TeamFolders` to return. The server may return fewer items
+           * than requested. If unspecified, the server will pick a default of `page_size` = 50.
            */
           public Search setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

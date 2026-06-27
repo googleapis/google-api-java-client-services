@@ -57,6 +57,13 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private java.lang.String exclusionType;
 
   /**
+   * File label to detect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2FileLabelInfoType fileLabelInfoType;
+
+  /**
    * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the
    * name matches one of existing infoTypes and that infoType is specified in
    * `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by
@@ -169,6 +176,23 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
    */
   public GooglePrivacyDlpV2CustomInfoType setExclusionType(java.lang.String exclusionType) {
     this.exclusionType = exclusionType;
+    return this;
+  }
+
+  /**
+   * File label to detect.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileLabelInfoType getFileLabelInfoType() {
+    return fileLabelInfoType;
+  }
+
+  /**
+   * File label to detect.
+   * @param fileLabelInfoType fileLabelInfoType or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CustomInfoType setFileLabelInfoType(GooglePrivacyDlpV2FileLabelInfoType fileLabelInfoType) {
+    this.fileLabelInfoType = fileLabelInfoType;
     return this;
   }
 

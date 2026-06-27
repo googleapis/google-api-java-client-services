@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Metadata on content to be scanned.
+ * Configuration for a custom infoType that detects file labels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -28,64 +28,64 @@ package com.google.api.services.dlp.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePrivacyDlpV2ContentMetadata extends com.google.api.client.json.GenericJson {
+public final class GooglePrivacyDlpV2FileLabelInfoType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The file labels associated with the content.
+   * Google Drive labels published by Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GooglePrivacyDlpV2FileLabel> fileLabels;
+  private GooglePrivacyDlpV2GoogleDriveLabel googleDriveLabel;
 
   /**
-   * User provided key-value pairs of content metadata.
+   * Sensitivity labels published by Microsoft.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> properties;
+  private GooglePrivacyDlpV2SensitivityLabel sensitivityLabel;
 
   /**
-   * Optional. The file labels associated with the content.
+   * Google Drive labels published by Google.
    * @return value or {@code null} for none
    */
-  public java.util.List<GooglePrivacyDlpV2FileLabel> getFileLabels() {
-    return fileLabels;
+  public GooglePrivacyDlpV2GoogleDriveLabel getGoogleDriveLabel() {
+    return googleDriveLabel;
   }
 
   /**
-   * Optional. The file labels associated with the content.
-   * @param fileLabels fileLabels or {@code null} for none
+   * Google Drive labels published by Google.
+   * @param googleDriveLabel googleDriveLabel or {@code null} for none
    */
-  public GooglePrivacyDlpV2ContentMetadata setFileLabels(java.util.List<GooglePrivacyDlpV2FileLabel> fileLabels) {
-    this.fileLabels = fileLabels;
+  public GooglePrivacyDlpV2FileLabelInfoType setGoogleDriveLabel(GooglePrivacyDlpV2GoogleDriveLabel googleDriveLabel) {
+    this.googleDriveLabel = googleDriveLabel;
     return this;
   }
 
   /**
-   * User provided key-value pairs of content metadata.
+   * Sensitivity labels published by Microsoft.
    * @return value or {@code null} for none
    */
-  public java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> getProperties() {
-    return properties;
+  public GooglePrivacyDlpV2SensitivityLabel getSensitivityLabel() {
+    return sensitivityLabel;
   }
 
   /**
-   * User provided key-value pairs of content metadata.
-   * @param properties properties or {@code null} for none
+   * Sensitivity labels published by Microsoft.
+   * @param sensitivityLabel sensitivityLabel or {@code null} for none
    */
-  public GooglePrivacyDlpV2ContentMetadata setProperties(java.util.List<GooglePrivacyDlpV2KeyValueMetadataProperty> properties) {
-    this.properties = properties;
+  public GooglePrivacyDlpV2FileLabelInfoType setSensitivityLabel(GooglePrivacyDlpV2SensitivityLabel sensitivityLabel) {
+    this.sensitivityLabel = sensitivityLabel;
     return this;
   }
 
   @Override
-  public GooglePrivacyDlpV2ContentMetadata set(String fieldName, Object value) {
-    return (GooglePrivacyDlpV2ContentMetadata) super.set(fieldName, value);
+  public GooglePrivacyDlpV2FileLabelInfoType set(String fieldName, Object value) {
+    return (GooglePrivacyDlpV2FileLabelInfoType) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePrivacyDlpV2ContentMetadata clone() {
-    return (GooglePrivacyDlpV2ContentMetadata) super.clone();
+  public GooglePrivacyDlpV2FileLabelInfoType clone() {
+    return (GooglePrivacyDlpV2FileLabelInfoType) super.clone();
   }
 
 }

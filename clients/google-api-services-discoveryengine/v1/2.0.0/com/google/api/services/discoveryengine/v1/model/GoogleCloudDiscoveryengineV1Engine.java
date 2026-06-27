@@ -45,6 +45,14 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.lang.String appType;
 
   /**
+   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
+   * engine. Field is required if the engine has an Agent Gateway setting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String associatedAgentRegistry;
+
+  /**
    * Configurations for the Chat Engine. Only applicable if solution_type is SOLUTION_TYPE_CHAT.
    * The value may be {@code null}.
    */
@@ -132,7 +140,7 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
    * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence`
+   * `cross-product-intelligence` * `deep-research`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,6 +269,25 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   public GoogleCloudDiscoveryengineV1Engine setAppType(java.lang.String appType) {
     this.appType = appType;
+    return this;
+  }
+
+  /**
+   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
+   * engine. Field is required if the engine has an Agent Gateway setting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssociatedAgentRegistry() {
+    return associatedAgentRegistry;
+  }
+
+  /**
+   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
+   * engine. Field is required if the engine has an Agent Gateway setting.
+   * @param associatedAgentRegistry associatedAgentRegistry or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setAssociatedAgentRegistry(java.lang.String associatedAgentRegistry) {
+    this.associatedAgentRegistry = associatedAgentRegistry;
     return this;
   }
 
@@ -460,7 +487,7 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
    * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence`
+   * `cross-product-intelligence` * `deep-research`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -477,7 +504,7 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
    * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence`
+   * `cross-product-intelligence` * `deep-research`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setFeatures(java.util.Map<String, java.lang.String> features) {

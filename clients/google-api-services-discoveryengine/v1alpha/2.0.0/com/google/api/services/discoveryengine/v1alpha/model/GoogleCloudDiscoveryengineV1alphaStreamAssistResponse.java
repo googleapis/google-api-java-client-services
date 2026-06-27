@@ -51,6 +51,14 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
   private java.lang.String assistToken;
 
   /**
+   * Per-connector authentication errors encountered during the request. Present when one or more
+   * connectors failed authentication but the request proceeded with the remaining connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaStreamAssistResponseConnectorAuthError> connectorAuthErrors;
+
+  /**
    * The tool names of the tools that were invoked.
    * The value may be {@code null}.
    */
@@ -116,6 +124,25 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistResponse extends
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistResponse setAssistToken(java.lang.String assistToken) {
     this.assistToken = assistToken;
+    return this;
+  }
+
+  /**
+   * Per-connector authentication errors encountered during the request. Present when one or more
+   * connectors failed authentication but the request proceeded with the remaining connectors.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaStreamAssistResponseConnectorAuthError> getConnectorAuthErrors() {
+    return connectorAuthErrors;
+  }
+
+  /**
+   * Per-connector authentication errors encountered during the request. Present when one or more
+   * connectors failed authentication but the request proceeded with the remaining connectors.
+   * @param connectorAuthErrors connectorAuthErrors or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistResponse setConnectorAuthErrors(java.util.List<GoogleCloudDiscoveryengineV1alphaStreamAssistResponseConnectorAuthError> connectorAuthErrors) {
+    this.connectorAuthErrors = connectorAuthErrors;
     return this;
   }
 

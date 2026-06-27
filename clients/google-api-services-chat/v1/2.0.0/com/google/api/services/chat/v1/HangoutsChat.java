@@ -2966,10 +2966,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * manage spaces](https://developers.google.com/workspace/chat/search-manage-admin). When
      * `use_admin_access` is set to `false`, the results are limited to spaces where the calling user is
      * a joined member. To search with administrator privileges, set `use_admin_access` to `true`.
-     * Supports the following types of
-     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [User
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-     * with one of the following authorization scopes: -
+     * Setting `use_admin_access` to `false` is available under Developer Preview. Supports the
+     * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
+     * authorize): - [User authentication](https://developers.google.com/workspace/chat/authenticate-
+     * authorize-chat-user) with one of the following authorization scopes: -
      * `https://www.googleapis.com/auth/chat.spaces.readonly` -
      * `https://www.googleapis.com/auth/chat.spaces` - [User authentication with administrator
      * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-
@@ -3000,10 +3000,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * and manage spaces](https://developers.google.com/workspace/chat/search-manage-admin). When
        * `use_admin_access` is set to `false`, the results are limited to spaces where the calling user
        * is a joined member. To search with administrator privileges, set `use_admin_access` to `true`.
-       * Supports the following types of
-       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [User
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * with one of the following authorization scopes: -
+       * Setting `use_admin_access` to `false` is available under Developer Preview. Supports the
+       * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize): - [User authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize-chat-user) with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.spaces.readonly` -
        * `https://www.googleapis.com/auth/chat.spaces` - [User authentication with administrator
        * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
@@ -3203,37 +3203,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `useAdminAccess` is set to `false`: - `display_name` - `external_user_allowed`
        * `create_time` and `last_active_time` accept a timestamp in [RFC-3339](https://www.rfc-
        * editor.org/rfc/rfc3339) format and the supported comparison operators are: `=`, `<`, `>`,
-       * `<=`, `>=`. `customer` is required and is used to indicate which customer to fetch spaces
-       * from. `customers/my_customer` is the only supported value. `display_name` only accepts the
-       * `HAS` (`:`) operator. The text to match is first tokenized into tokens and each token is
-       * prefix-matched case-insensitively and independently as a substring anywhere in the space's
-       * `display_name`. For example, `Fun Eve` matches `Fun event` or `The evening was fun`, but
-       * not `notFun event` or `even`. When `useAdminAccess` is set to `false`, `display_name` is
-       * required to retrieve meaningful results. Otherwise, the default behavior is to return an
-       * empty response. `external_user_allowed` accepts either `true` or `false`.
-       * `space_history_state` only accepts values from the [`historyState`] (https://developers.goo
-       * gle.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState) field of a `space`
-       * resource. `space_type` is required and the only valid value is `SPACE`. Across different
-       * fields, only `AND` operators are supported. A valid example is `space_type = "SPACE" AND
-       * display_name:"Hello"` and an invalid example is `space_type = "SPACE" OR
-       * display_name:"Hello"`. Among the same field, `space_type` doesn't support `AND` or `OR`
-       * operators. `display_name`, 'space_history_state', and 'external_user_allowed' only support
-       * `OR` operators. `last_active_time` and `create_time` support both `AND` and `OR` operators.
-       * `AND` can only be used to represent an interval, such as `last_active_time <
-       * "2022-01-01T00:00:00+00:00" AND last_active_time > "2023-01-01T00:00:00+00:00"`. The
-       * following example queries are valid when `useAdminAccess` is set to `true`: ``` customer =
-       * "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR
-       * last_active_time > "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND (display_name:"Hello World" OR display_name:"Fun event") AND
-       * (last_active_time > "2020-01-01T00:00:00+00:00" AND last_active_time <
+       * `<=`, `>=`. `customer` is required when `useAdminAccess` is set to `true`, and is used to
+       * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
+       * value. `display_name` only accepts the `HAS` (`:`) operator. The text to match is first
+       * tokenized into tokens and each token is prefix-matched case-insensitively and independently
+       * as a substring anywhere in the space's `display_name`. For example, `Fun Eve` matches `Fun
+       * event` or `The evening was fun`, but not `notFun event` or `even`. When `useAdminAccess` is
+       * set to `false`, `display_name` is required to retrieve meaningful results. Otherwise, the
+       * default behavior is to return an empty response. `external_user_allowed` accepts either
+       * `true` or `false`. `space_history_state` only accepts values from the [`historyState`] (htt
+       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState)
+       * field of a `space` resource. `space_type` is required when `useAdminAccess` is set to
+       * `true`, and the only valid value is `SPACE`. Across different fields, only `AND` operators
+       * are supported. A valid example is `space_type = "SPACE" AND display_name:"Hello"` and an
+       * invalid example is `space_type = "SPACE" OR display_name:"Hello"`. Among the same field,
+       * `space_type` doesn't support `AND` or `OR` operators. `display_name`,
+       * 'space_history_state', and 'external_user_allowed' only support `OR` operators.
+       * `last_active_time` and `create_time` support both `AND` and `OR` operators. `AND` can only
+       * be used to represent an interval, such as `last_active_time < "2022-01-01T00:00:00+00:00"
+       * AND last_active_time > "2023-01-01T00:00:00+00:00"`. The following example queries are
+       * valid when `useAdminAccess` is set to `true`: ``` customer = "customers/my_customer" AND
+       * space_type = "SPACE" customer = "customers/my_customer" AND space_type = "SPACE" AND
+       * display_name:"Hello World" customer = "customers/my_customer" AND space_type = "SPACE" AND
+       * (last_active_time < "2020-01-01T00:00:00+00:00" OR last_active_time >
        * "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE"
-       * AND (create_time > "2019-01-01T00:00:00+00:00" AND create_time <
-       * "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND (space_history_state
-       * = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ``` The following example queries
-       * are valid when `useAdminAccess` is set to `false`: ``` display_name:"Hello World"
-       * (display_name:"Hello" OR display_name:"Fun") (external_user_allowed = "true")
+       * AND (display_name:"Hello World" OR display_name:"Fun event") AND (last_active_time >
+       * "2020-01-01T00:00:00+00:00" AND last_active_time < "2022-01-01T00:00:00+00:00") customer =
+       * "customers/my_customer" AND space_type = "SPACE" AND (create_time >
+       * "2019-01-01T00:00:00+00:00" AND create_time < "2020-01-01T00:00:00+00:00") AND
+       * (external_user_allowed = "true") AND (space_history_state = "HISTORY_ON" OR
+       * space_history_state = "HISTORY_OFF") ``` The following example queries are valid when
+       * `useAdminAccess` is set to `false`: ``` display_name:"Hello World" (display_name:"Hello" OR
+       * display_name:"Fun") (external_user_allowed = "true") // Returns an empty response.
        * (external_user_allowed = "true" AND display_name:"Hello") ```
        */
       @com.google.api.client.util.Key
@@ -3244,36 +3245,37 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      `last_active_time` - `space_history_state` - `space_type` When `useAdminAccess` is set to `false`:
      - `display_name` - `external_user_allowed` `create_time` and `last_active_time` accept a timestamp
      in [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and the supported comparison operators
-     are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required and is used to indicate which customer to
-     fetch spaces from. `customers/my_customer` is the only supported value. `display_name` only accepts
-     the `HAS` (`:`) operator. The text to match is first tokenized into tokens and each token is
-     prefix-matched case-insensitively and independently as a substring anywhere in the space's
-     `display_name`. For example, `Fun Eve` matches `Fun event` or `The evening was fun`, but not
-     `notFun event` or `even`. When `useAdminAccess` is set to `false`, `display_name` is required to
-     retrieve meaningful results. Otherwise, the default behavior is to return an empty response.
-     `external_user_allowed` accepts either `true` or `false`. `space_history_state` only accepts values
-     from the [`historyState`]
+     are: `=`, `<`, `>`, `<=`, `>=`. `customer` is required when `useAdminAccess` is set to `true`, and
+     is used to indicate which customer to fetch spaces from. `customers/my_customer` is the only
+     supported value. `display_name` only accepts the `HAS` (`:`) operator. The text to match is first
+     tokenized into tokens and each token is prefix-matched case-insensitively and independently as a
+     substring anywhere in the space's `display_name`. For example, `Fun Eve` matches `Fun event` or
+     `The evening was fun`, but not `notFun event` or `even`. When `useAdminAccess` is set to `false`,
+     `display_name` is required to retrieve meaningful results. Otherwise, the default behavior is to
+     return an empty response. `external_user_allowed` accepts either `true` or `false`.
+     `space_history_state` only accepts values from the [`historyState`]
      (https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState)
-     field of a `space` resource. `space_type` is required and the only valid value is `SPACE`. Across
-     different fields, only `AND` operators are supported. A valid example is `space_type = "SPACE" AND
-     display_name:"Hello"` and an invalid example is `space_type = "SPACE" OR display_name:"Hello"`.
-     Among the same field, `space_type` doesn't support `AND` or `OR` operators. `display_name`,
-     'space_history_state', and 'external_user_allowed' only support `OR` operators. `last_active_time`
-     and `create_time` support both `AND` and `OR` operators. `AND` can only be used to represent an
-     interval, such as `last_active_time < "2022-01-01T00:00:00+00:00" AND last_active_time >
-     "2023-01-01T00:00:00+00:00"`. The following example queries are valid when `useAdminAccess` is set
-     to `true`: ``` customer = "customers/my_customer" AND space_type = "SPACE" customer =
-     "customers/my_customer" AND space_type = "SPACE" AND display_name:"Hello World" customer =
-     "customers/my_customer" AND space_type = "SPACE" AND (last_active_time <
-     "2020-01-01T00:00:00+00:00" OR last_active_time > "2022-01-01T00:00:00+00:00") customer =
-     "customers/my_customer" AND space_type = "SPACE" AND (display_name:"Hello World" OR
-     display_name:"Fun event") AND (last_active_time > "2020-01-01T00:00:00+00:00" AND last_active_time
-     < "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE" AND
-     (create_time > "2019-01-01T00:00:00+00:00" AND create_time < "2020-01-01T00:00:00+00:00") AND
-     (external_user_allowed = "true") AND (space_history_state = "HISTORY_ON" OR space_history_state =
-     "HISTORY_OFF") ``` The following example queries are valid when `useAdminAccess` is set to `false`:
-     ``` display_name:"Hello World" (display_name:"Hello" OR display_name:"Fun") (external_user_allowed
-     = "true") (external_user_allowed = "true" AND display_name:"Hello") ```
+     field of a `space` resource. `space_type` is required when `useAdminAccess` is set to `true`, and
+     the only valid value is `SPACE`. Across different fields, only `AND` operators are supported. A
+     valid example is `space_type = "SPACE" AND display_name:"Hello"` and an invalid example is
+     `space_type = "SPACE" OR display_name:"Hello"`. Among the same field, `space_type` doesn't support
+     `AND` or `OR` operators. `display_name`, 'space_history_state', and 'external_user_allowed' only
+     support `OR` operators. `last_active_time` and `create_time` support both `AND` and `OR` operators.
+     `AND` can only be used to represent an interval, such as `last_active_time <
+     "2022-01-01T00:00:00+00:00" AND last_active_time > "2023-01-01T00:00:00+00:00"`. The following
+     example queries are valid when `useAdminAccess` is set to `true`: ``` customer =
+     "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND space_type
+     = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND space_type =
+     "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR last_active_time >
+     "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE" AND
+     (display_name:"Hello World" OR display_name:"Fun event") AND (last_active_time >
+     "2020-01-01T00:00:00+00:00" AND last_active_time < "2022-01-01T00:00:00+00:00") customer =
+     "customers/my_customer" AND space_type = "SPACE" AND (create_time > "2019-01-01T00:00:00+00:00" AND
+     create_time < "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND
+     (space_history_state = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ``` The following
+     example queries are valid when `useAdminAccess` is set to `false`: ``` display_name:"Hello World"
+     (display_name:"Hello" OR display_name:"Fun") (external_user_allowed = "true") // Returns an empty
+     response. (external_user_allowed = "true" AND display_name:"Hello") ```
        */
       public java.lang.String getQuery() {
         return query;
@@ -3286,37 +3288,38 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `useAdminAccess` is set to `false`: - `display_name` - `external_user_allowed`
        * `create_time` and `last_active_time` accept a timestamp in [RFC-3339](https://www.rfc-
        * editor.org/rfc/rfc3339) format and the supported comparison operators are: `=`, `<`, `>`,
-       * `<=`, `>=`. `customer` is required and is used to indicate which customer to fetch spaces
-       * from. `customers/my_customer` is the only supported value. `display_name` only accepts the
-       * `HAS` (`:`) operator. The text to match is first tokenized into tokens and each token is
-       * prefix-matched case-insensitively and independently as a substring anywhere in the space's
-       * `display_name`. For example, `Fun Eve` matches `Fun event` or `The evening was fun`, but
-       * not `notFun event` or `even`. When `useAdminAccess` is set to `false`, `display_name` is
-       * required to retrieve meaningful results. Otherwise, the default behavior is to return an
-       * empty response. `external_user_allowed` accepts either `true` or `false`.
-       * `space_history_state` only accepts values from the [`historyState`] (https://developers.goo
-       * gle.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState) field of a `space`
-       * resource. `space_type` is required and the only valid value is `SPACE`. Across different
-       * fields, only `AND` operators are supported. A valid example is `space_type = "SPACE" AND
-       * display_name:"Hello"` and an invalid example is `space_type = "SPACE" OR
-       * display_name:"Hello"`. Among the same field, `space_type` doesn't support `AND` or `OR`
-       * operators. `display_name`, 'space_history_state', and 'external_user_allowed' only support
-       * `OR` operators. `last_active_time` and `create_time` support both `AND` and `OR` operators.
-       * `AND` can only be used to represent an interval, such as `last_active_time <
-       * "2022-01-01T00:00:00+00:00" AND last_active_time > "2023-01-01T00:00:00+00:00"`. The
-       * following example queries are valid when `useAdminAccess` is set to `true`: ``` customer =
-       * "customers/my_customer" AND space_type = "SPACE" customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND display_name:"Hello World" customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND (last_active_time < "2020-01-01T00:00:00+00:00" OR
-       * last_active_time > "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND
-       * space_type = "SPACE" AND (display_name:"Hello World" OR display_name:"Fun event") AND
-       * (last_active_time > "2020-01-01T00:00:00+00:00" AND last_active_time <
+       * `<=`, `>=`. `customer` is required when `useAdminAccess` is set to `true`, and is used to
+       * indicate which customer to fetch spaces from. `customers/my_customer` is the only supported
+       * value. `display_name` only accepts the `HAS` (`:`) operator. The text to match is first
+       * tokenized into tokens and each token is prefix-matched case-insensitively and independently
+       * as a substring anywhere in the space's `display_name`. For example, `Fun Eve` matches `Fun
+       * event` or `The evening was fun`, but not `notFun event` or `even`. When `useAdminAccess` is
+       * set to `false`, `display_name` is required to retrieve meaningful results. Otherwise, the
+       * default behavior is to return an empty response. `external_user_allowed` accepts either
+       * `true` or `false`. `space_history_state` only accepts values from the [`historyState`] (htt
+       * ps://developers.google.com/workspace/chat/api/reference/rest/v1/spaces#Space.HistoryState)
+       * field of a `space` resource. `space_type` is required when `useAdminAccess` is set to
+       * `true`, and the only valid value is `SPACE`. Across different fields, only `AND` operators
+       * are supported. A valid example is `space_type = "SPACE" AND display_name:"Hello"` and an
+       * invalid example is `space_type = "SPACE" OR display_name:"Hello"`. Among the same field,
+       * `space_type` doesn't support `AND` or `OR` operators. `display_name`,
+       * 'space_history_state', and 'external_user_allowed' only support `OR` operators.
+       * `last_active_time` and `create_time` support both `AND` and `OR` operators. `AND` can only
+       * be used to represent an interval, such as `last_active_time < "2022-01-01T00:00:00+00:00"
+       * AND last_active_time > "2023-01-01T00:00:00+00:00"`. The following example queries are
+       * valid when `useAdminAccess` is set to `true`: ``` customer = "customers/my_customer" AND
+       * space_type = "SPACE" customer = "customers/my_customer" AND space_type = "SPACE" AND
+       * display_name:"Hello World" customer = "customers/my_customer" AND space_type = "SPACE" AND
+       * (last_active_time < "2020-01-01T00:00:00+00:00" OR last_active_time >
        * "2022-01-01T00:00:00+00:00") customer = "customers/my_customer" AND space_type = "SPACE"
-       * AND (create_time > "2019-01-01T00:00:00+00:00" AND create_time <
-       * "2020-01-01T00:00:00+00:00") AND (external_user_allowed = "true") AND (space_history_state
-       * = "HISTORY_ON" OR space_history_state = "HISTORY_OFF") ``` The following example queries
-       * are valid when `useAdminAccess` is set to `false`: ``` display_name:"Hello World"
-       * (display_name:"Hello" OR display_name:"Fun") (external_user_allowed = "true")
+       * AND (display_name:"Hello World" OR display_name:"Fun event") AND (last_active_time >
+       * "2020-01-01T00:00:00+00:00" AND last_active_time < "2022-01-01T00:00:00+00:00") customer =
+       * "customers/my_customer" AND space_type = "SPACE" AND (create_time >
+       * "2019-01-01T00:00:00+00:00" AND create_time < "2020-01-01T00:00:00+00:00") AND
+       * (external_user_allowed = "true") AND (space_history_state = "HISTORY_ON" OR
+       * space_history_state = "HISTORY_OFF") ``` The following example queries are valid when
+       * `useAdminAccess` is set to `false`: ``` display_name:"Hello World" (display_name:"Hello" OR
+       * display_name:"Fun") (external_user_allowed = "true") // Returns an empty response.
        * (external_user_allowed = "true" AND display_name:"Hello") ```
        */
       public Search setQuery(java.lang.String query) {
@@ -3330,7 +3333,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
        * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-       * scopes).
+       * scopes). Setting `use_admin_access` to `false` is available under Developer Preview.
+       * [Developer Preview](https://developers.google.com/workspace/preview).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
@@ -3340,6 +3344,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
      `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
      scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
+     Setting `use_admin_access` to `false` is available under Developer Preview. [Developer
+     Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
@@ -3351,7 +3357,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
        * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-       * scopes).
+       * scopes). Setting `use_admin_access` to `false` is available under Developer Preview.
+       * [Developer Preview](https://developers.google.com/workspace/preview).
        */
       public Search setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -7833,6 +7840,876 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
    */
   public class Users {
 
+    /**
+     * An accessor for creating requests from the Availability collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.Availability.List request = chat.availability().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Availability availability() {
+      return new Availability();
+    }
+
+    /**
+     * The "availability" collection of methods.
+     */
+    public class Availability {
+
+      /**
+       * Returns availability information for a human user in Google Chat. For example, this can be used
+       * to check if a user is online or away, or to retrieve their custom status message. This method
+       * only retrieves the authenticated user's availability. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.availability.readonly` -
+       * `https://www.googleapis.com/auth/chat.users.availability`
+       *
+       * Create a request for the method "availability.getAvailability".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link GetAvailability#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the availability to retrieve. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+       * @return the request
+       */
+      public GetAvailability getAvailability(java.lang.String name) throws java.io.IOException {
+        GetAvailability result = new GetAvailability(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAvailability extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/availability$");
+
+        /**
+         * Returns availability information for a human user in Google Chat. For example, this can be used
+         * to check if a user is online or away, or to retrieve their custom status message. This method
+         * only retrieves the authenticated user's availability. Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.availability.readonly` -
+         * `https://www.googleapis.com/auth/chat.users.availability`
+         *
+         * Create a request for the method "availability.getAvailability".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link GetAvailability#execute()} method to invoke the remote operation.
+         * <p> {@link GetAvailability#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+         * lientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The resource name of the availability to retrieve. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         * @since 1.13
+         */
+        protected GetAvailability(java.lang.String name) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Availability.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAvailability set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAvailability) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAvailability setAccessToken(java.lang.String accessToken) {
+          return (GetAvailability) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAvailability setAlt(java.lang.String alt) {
+          return (GetAvailability) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAvailability setCallback(java.lang.String callback) {
+          return (GetAvailability) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAvailability setFields(java.lang.String fields) {
+          return (GetAvailability) super.setFields(fields);
+        }
+
+        @Override
+        public GetAvailability setKey(java.lang.String key) {
+          return (GetAvailability) super.setKey(key);
+        }
+
+        @Override
+        public GetAvailability setOauthToken(java.lang.String oauthToken) {
+          return (GetAvailability) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAvailability setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAvailability) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAvailability setQuotaUser(java.lang.String quotaUser) {
+          return (GetAvailability) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAvailability setUploadType(java.lang.String uploadType) {
+          return (GetAvailability) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAvailability setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAvailability) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the availability to retrieve. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the availability to retrieve. Format: users/{user}/availability
+       `{user}` is the id for the Person in the People API or Admin SDK directory API. For example,
+       `users/123456789`. The user's email address or `me` can also be used as an alias to refer to the
+       caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the availability to retrieve. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        public GetAvailability setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAvailability set(String parameterName, Object value) {
+          return (GetAvailability) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Marks user as `ACTIVE` in Google Chat. Sets the user's availability state to `ACTIVE`. The
+       * `ACTIVE` state lasts until the specified expiration, at which point the user's state becomes
+       * `AWAY`. Note that if the user is actively using Chat, the `ACTIVE` state duration may extend
+       * beyond the provided expiration. This method only updates the authenticated user's availability.
+       * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize-chat-user) with [authorization
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.availability`
+       *
+       * Create a request for the method "availability.markAsActive".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link MarkAsActive#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the availability to mark as active. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+       * @param content the {@link com.google.api.services.chat.v1.model.MarkAsActiveRequest}
+       * @return the request
+       */
+      public MarkAsActive markAsActive(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsActiveRequest content) throws java.io.IOException {
+        MarkAsActive result = new MarkAsActive(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class MarkAsActive extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+
+        private static final String REST_PATH = "v1/{+name}:markAsActive";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/availability$");
+
+        /**
+         * Marks user as `ACTIVE` in Google Chat. Sets the user's availability state to `ACTIVE`. The
+         * `ACTIVE` state lasts until the specified expiration, at which point the user's state becomes
+         * `AWAY`. Note that if the user is actively using Chat, the `ACTIVE` state duration may extend
+         * beyond the provided expiration. This method only updates the authenticated user's availability.
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with [authorization
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.availability`
+         *
+         * Create a request for the method "availability.markAsActive".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link MarkAsActive#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * MarkAsActive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the availability to mark as active. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         * @param content the {@link com.google.api.services.chat.v1.model.MarkAsActiveRequest}
+         * @since 1.13
+         */
+        protected MarkAsActive(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsActiveRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Availability.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+        }
+
+        @Override
+        public MarkAsActive set$Xgafv(java.lang.String $Xgafv) {
+          return (MarkAsActive) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public MarkAsActive setAccessToken(java.lang.String accessToken) {
+          return (MarkAsActive) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public MarkAsActive setAlt(java.lang.String alt) {
+          return (MarkAsActive) super.setAlt(alt);
+        }
+
+        @Override
+        public MarkAsActive setCallback(java.lang.String callback) {
+          return (MarkAsActive) super.setCallback(callback);
+        }
+
+        @Override
+        public MarkAsActive setFields(java.lang.String fields) {
+          return (MarkAsActive) super.setFields(fields);
+        }
+
+        @Override
+        public MarkAsActive setKey(java.lang.String key) {
+          return (MarkAsActive) super.setKey(key);
+        }
+
+        @Override
+        public MarkAsActive setOauthToken(java.lang.String oauthToken) {
+          return (MarkAsActive) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public MarkAsActive setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (MarkAsActive) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public MarkAsActive setQuotaUser(java.lang.String quotaUser) {
+          return (MarkAsActive) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public MarkAsActive setUploadType(java.lang.String uploadType) {
+          return (MarkAsActive) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public MarkAsActive setUploadProtocol(java.lang.String uploadProtocol) {
+          return (MarkAsActive) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as active. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the availability to mark as active. Format:
+       users/{user}/availability `{user}` is the id for the Person in the People API or Admin SDK
+       directory API. For example, `users/123456789`. The user's email address or `me` can also be used as
+       an alias to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as active. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        public MarkAsActive setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public MarkAsActive set(String parameterName, Object value) {
+          return (MarkAsActive) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Marks user as `AWAY` in Google Chat. Sets the user's state to away and is not affected by the
+       * user's activity. This method only updates the authenticated user's availability. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.availability`
+       *
+       * Create a request for the method "availability.markAsAway".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link MarkAsAway#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the availability to mark as away. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+       * @param content the {@link com.google.api.services.chat.v1.model.MarkAsAwayRequest}
+       * @return the request
+       */
+      public MarkAsAway markAsAway(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsAwayRequest content) throws java.io.IOException {
+        MarkAsAway result = new MarkAsAway(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class MarkAsAway extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+
+        private static final String REST_PATH = "v1/{+name}:markAsAway";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/availability$");
+
+        /**
+         * Marks user as `AWAY` in Google Chat. Sets the user's state to away and is not affected by the
+         * user's activity. This method only updates the authenticated user's availability. Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.availability`
+         *
+         * Create a request for the method "availability.markAsAway".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link MarkAsAway#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * MarkAsAway#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the availability to mark as away. Format: users/{user}/availability
+       *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+       *        example, `users/123456789`. The user's email address or `me` can also be used as an alias
+       *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         * @param content the {@link com.google.api.services.chat.v1.model.MarkAsAwayRequest}
+         * @since 1.13
+         */
+        protected MarkAsAway(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsAwayRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Availability.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+        }
+
+        @Override
+        public MarkAsAway set$Xgafv(java.lang.String $Xgafv) {
+          return (MarkAsAway) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public MarkAsAway setAccessToken(java.lang.String accessToken) {
+          return (MarkAsAway) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public MarkAsAway setAlt(java.lang.String alt) {
+          return (MarkAsAway) super.setAlt(alt);
+        }
+
+        @Override
+        public MarkAsAway setCallback(java.lang.String callback) {
+          return (MarkAsAway) super.setCallback(callback);
+        }
+
+        @Override
+        public MarkAsAway setFields(java.lang.String fields) {
+          return (MarkAsAway) super.setFields(fields);
+        }
+
+        @Override
+        public MarkAsAway setKey(java.lang.String key) {
+          return (MarkAsAway) super.setKey(key);
+        }
+
+        @Override
+        public MarkAsAway setOauthToken(java.lang.String oauthToken) {
+          return (MarkAsAway) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public MarkAsAway setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (MarkAsAway) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public MarkAsAway setQuotaUser(java.lang.String quotaUser) {
+          return (MarkAsAway) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public MarkAsAway setUploadType(java.lang.String uploadType) {
+          return (MarkAsAway) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public MarkAsAway setUploadProtocol(java.lang.String uploadProtocol) {
+          return (MarkAsAway) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as away. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the availability to mark as away. Format: users/{user}/availability
+       `{user}` is the id for the Person in the People API or Admin SDK directory API. For example,
+       `users/123456789`. The user's email address or `me` can also be used as an alias to refer to the
+       caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as away. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        public MarkAsAway setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public MarkAsAway set(String parameterName, Object value) {
+          return (MarkAsAway) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Marks user as`DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
+       * `DO_NOT_DISTURB` until a specified expiration time. When in `DO_NOT_DISTURB`, users typically
+       * won't receive notifications. This method only updates the authenticated user's availability.
+       * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize-chat-user) with [authorization
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.availability`
+       *
+       * Create a request for the method "availability.markAsDoNotDisturb".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link MarkAsDoNotDisturb#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the availability to mark as Do Not Disturb. Format:
+       *        users/{user}/availability `{user}` is the id for the Person in the People API or Admin SDK
+       *        directory API. For example, `users/123456789`. The user's email address or `me` can also
+       *        be used as an alias to refer to the caller. For example, `users/user@example.com` or
+       *        `users/me`.
+       * @param content the {@link com.google.api.services.chat.v1.model.MarkAsDoNotDisturbRequest}
+       * @return the request
+       */
+      public MarkAsDoNotDisturb markAsDoNotDisturb(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsDoNotDisturbRequest content) throws java.io.IOException {
+        MarkAsDoNotDisturb result = new MarkAsDoNotDisturb(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class MarkAsDoNotDisturb extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+
+        private static final String REST_PATH = "v1/{+name}:markAsDoNotDisturb";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/availability$");
+
+        /**
+         * Marks user as`DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
+         * `DO_NOT_DISTURB` until a specified expiration time. When in `DO_NOT_DISTURB`, users typically
+         * won't receive notifications. This method only updates the authenticated user's availability.
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with [authorization
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.availability`
+         *
+         * Create a request for the method "availability.markAsDoNotDisturb".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link MarkAsDoNotDisturb#execute()} method to invoke the remote
+         * operation. <p> {@link MarkAsDoNotDisturb#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the availability to mark as Do Not Disturb. Format:
+       *        users/{user}/availability `{user}` is the id for the Person in the People API or Admin SDK
+       *        directory API. For example, `users/123456789`. The user's email address or `me` can also
+       *        be used as an alias to refer to the caller. For example, `users/user@example.com` or
+       *        `users/me`.
+         * @param content the {@link com.google.api.services.chat.v1.model.MarkAsDoNotDisturbRequest}
+         * @since 1.13
+         */
+        protected MarkAsDoNotDisturb(java.lang.String name, com.google.api.services.chat.v1.model.MarkAsDoNotDisturbRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.Availability.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+        }
+
+        @Override
+        public MarkAsDoNotDisturb set$Xgafv(java.lang.String $Xgafv) {
+          return (MarkAsDoNotDisturb) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setAccessToken(java.lang.String accessToken) {
+          return (MarkAsDoNotDisturb) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setAlt(java.lang.String alt) {
+          return (MarkAsDoNotDisturb) super.setAlt(alt);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setCallback(java.lang.String callback) {
+          return (MarkAsDoNotDisturb) super.setCallback(callback);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setFields(java.lang.String fields) {
+          return (MarkAsDoNotDisturb) super.setFields(fields);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setKey(java.lang.String key) {
+          return (MarkAsDoNotDisturb) super.setKey(key);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setOauthToken(java.lang.String oauthToken) {
+          return (MarkAsDoNotDisturb) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (MarkAsDoNotDisturb) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setQuotaUser(java.lang.String quotaUser) {
+          return (MarkAsDoNotDisturb) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setUploadType(java.lang.String uploadType) {
+          return (MarkAsDoNotDisturb) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public MarkAsDoNotDisturb setUploadProtocol(java.lang.String uploadProtocol) {
+          return (MarkAsDoNotDisturb) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as Do Not Disturb. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the availability to mark as Do Not Disturb. Format:
+       users/{user}/availability `{user}` is the id for the Person in the People API or Admin SDK
+       directory API. For example, `users/123456789`. The user's email address or `me` can also be used as
+       an alias to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the availability to mark as Do Not Disturb. Format:
+         * users/{user}/availability `{user}` is the id for the Person in the People API or Admin
+         * SDK directory API. For example, `users/123456789`. The user's email address or `me` can
+         * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
+         * `users/me`.
+         */
+        public MarkAsDoNotDisturb setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public MarkAsDoNotDisturb set(String parameterName, Object value) {
+          return (MarkAsDoNotDisturb) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates availability information for a human user. Only the `custom_status` field can be updated
+       * through this method. This method only updates the authenticated user's availability. Requires
+       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user) with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.availability`
+       *
+       * Create a request for the method "availability.updateAvailability".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link UpdateAvailability#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Resource name of the user's availability. Format: `users/{user}/availability` `{user}`
+       *        is the id for the Person in the People API or Admin SDK directory API. For example,
+       *        `users/123456789`. The user's email address or `me` can also be used as an alias to refer
+       *        to the caller. For example, `users/user@example.com` or `users/me`.
+       * @param content the {@link com.google.api.services.chat.v1.model.Availability}
+       * @return the request
+       */
+      public UpdateAvailability updateAvailability(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) throws java.io.IOException {
+        UpdateAvailability result = new UpdateAvailability(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAvailability extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/availability$");
+
+        /**
+         * Updates availability information for a human user. Only the `custom_status` field can be
+         * updated through this method. This method only updates the authenticated user's availability.
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.availability`
+         *
+         * Create a request for the method "availability.updateAvailability".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link UpdateAvailability#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateAvailability#initialize(com.google.api.client.googleapis.services.A
+         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Identifier. Resource name of the user's availability. Format: `users/{user}/availability` `{user}`
+       *        is the id for the Person in the People API or Admin SDK directory API. For example,
+       *        `users/123456789`. The user's email address or `me` can also be used as an alias to refer
+       *        to the caller. For example, `users/user@example.com` or `users/me`.
+         * @param content the {@link com.google.api.services.chat.v1.model.Availability}
+         * @since 1.13
+         */
+        protected UpdateAvailability(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) {
+          super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.Availability.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+        }
+
+        @Override
+        public UpdateAvailability set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAvailability) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAvailability setAccessToken(java.lang.String accessToken) {
+          return (UpdateAvailability) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAvailability setAlt(java.lang.String alt) {
+          return (UpdateAvailability) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAvailability setCallback(java.lang.String callback) {
+          return (UpdateAvailability) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAvailability setFields(java.lang.String fields) {
+          return (UpdateAvailability) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAvailability setKey(java.lang.String key) {
+          return (UpdateAvailability) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAvailability setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAvailability) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAvailability setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAvailability) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAvailability setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAvailability) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAvailability setUploadType(java.lang.String uploadType) {
+          return (UpdateAvailability) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAvailability setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAvailability) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. Resource name of the user's availability. Format: `users/{user}/availability`
+         * `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+         * example, `users/123456789`. The user's email address or `me` can also be used as an alias
+         * to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Resource name of the user's availability. Format: `users/{user}/availability` `{user}`
+       is the id for the Person in the People API or Admin SDK directory API. For example,
+       `users/123456789`. The user's email address or `me` can also be used as an alias to refer to the
+       caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. Resource name of the user's availability. Format: `users/{user}/availability`
+         * `{user}` is the id for the Person in the People API or Admin SDK directory API. For
+         * example, `users/123456789`. The user's email address or `me` can also be used as an alias
+         * to refer to the caller. For example, `users/user@example.com` or `users/me`.
+         */
+        public UpdateAvailability setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/availability$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to update. The only field that can be updated is
+         * `custom_status`.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update. The only field that can be updated is `custom_status`.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to update. The only field that can be updated is
+         * `custom_status`.
+         */
+        public UpdateAvailability setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateAvailability set(String parameterName, Object value) {
+          return (UpdateAvailability) super.set(parameterName, value);
+        }
+      }
+
+    }
     /**
      * An accessor for creating requests from the Sections collection.
      *

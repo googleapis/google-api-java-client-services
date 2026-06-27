@@ -110,6 +110,12 @@ public class HangoutsChatScopes {
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
+  /** See and change your availability status in Google Chat.. */
+  public static final String CHAT_USERS_AVAILABILITY = "https://www.googleapis.com/auth/chat.users.availability";
+
+  /** See your availability status in Google Chat.. */
+  public static final String CHAT_USERS_AVAILABILITY_READONLY = "https://www.googleapis.com/auth/chat.users.availability.readonly";
+
   /** View and modify last read time for Google Chat conversations. */
   public static final String CHAT_USERS_READSTATE = "https://www.googleapis.com/auth/chat.users.readstate";
 
@@ -161,6 +167,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_CREATE);
     set.add(CHAT_SPACES_READONLY);
+    set.add(CHAT_USERS_AVAILABILITY);
+    set.add(CHAT_USERS_AVAILABILITY_READONLY);
     set.add(CHAT_USERS_READSTATE);
     set.add(CHAT_USERS_READSTATE_READONLY);
     set.add(CHAT_USERS_SECTIONS);

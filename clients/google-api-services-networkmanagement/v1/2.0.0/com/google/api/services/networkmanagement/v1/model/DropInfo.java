@@ -59,7 +59,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * URI of the resource that caused the drop.
+   * URI of the resource that caused the drop. Format: *
+   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
+   * `projects/{project_id}/global/routes/{route_id}` (route)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +150,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the resource that caused the drop.
+   * URI of the resource that caused the drop. Format: *
+   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
+   * `projects/{project_id}/global/routes/{route_id}` (route)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -156,7 +160,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the resource that caused the drop.
+   * URI of the resource that caused the drop. Format: *
+   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
+   * `projects/{project_id}/global/routes/{route_id}` (route)
    * @param resourceUri resourceUri or {@code null} for none
    */
   public DropInfo setResourceUri(java.lang.String resourceUri) {

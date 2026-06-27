@@ -31,14 +31,17 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class LoadBalancerBackendInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of the backend bucket this backend targets (if applicable).
+   * URI of the backend bucket this backend targets (if applicable) in format
+   * "projects/{project}/global/backendBuckets/{backend_bucket}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backendBucketUri;
 
   /**
-   * URI of the backend service this backend belongs to (if applicable).
+   * URI of the backend service this backend belongs to (if applicable) in format
+   * "projects/{project}/regions/{region}/backendServices/{backend_service}" (regional) or
+   * "projects/{project}/global/backendServices/{backend_service}" (global).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,22 +59,27 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   private java.lang.String healthCheckFirewallsConfigState;
 
   /**
-   * URI of the health check attached to this backend (if applicable).
+   * URI of the health check attached to this backend (if applicable). Format: *
+   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String healthCheckUri;
 
   /**
-   * URI of the instance group this backend belongs to (if applicable).
+   * URI of the instance group this backend belongs to (if applicable) in format
+   * "projects/{project}/zones/{zone}/instanceGroups/{instance_group}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceGroupUri;
 
   /**
-   * URI of the backend instance (if applicable). Populated for instance group backends, and zonal
-   * NEG backends.
+   * URI of the backend instance (if applicable) in format
+   * "projects/{project}/zones/{zone}/instances/{instance}". Populated for instance group backends,
+   * and zonal NEG backends.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +94,10 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * URI of the network endpoint group this backend belongs to (if applicable).
+   * URI of the network endpoint group this backend belongs to (if applicable) Format: *
+   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
+   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
+   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,14 +111,16 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   private java.lang.String pscGoogleApiTarget;
 
   /**
-   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pscServiceAttachmentUri;
 
   /**
-   * URI of the backend bucket this backend targets (if applicable).
+   * URI of the backend bucket this backend targets (if applicable) in format
+   * "projects/{project}/global/backendBuckets/{backend_bucket}".
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendBucketUri() {
@@ -115,7 +128,8 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the backend bucket this backend targets (if applicable).
+   * URI of the backend bucket this backend targets (if applicable) in format
+   * "projects/{project}/global/backendBuckets/{backend_bucket}".
    * @param backendBucketUri backendBucketUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setBackendBucketUri(java.lang.String backendBucketUri) {
@@ -124,7 +138,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the backend service this backend belongs to (if applicable).
+   * URI of the backend service this backend belongs to (if applicable) in format
+   * "projects/{project}/regions/{region}/backendServices/{backend_service}" (regional) or
+   * "projects/{project}/global/backendServices/{backend_service}" (global).
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendServiceUri() {
@@ -132,7 +148,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the backend service this backend belongs to (if applicable).
+   * URI of the backend service this backend belongs to (if applicable) in format
+   * "projects/{project}/regions/{region}/backendServices/{backend_service}" (regional) or
+   * "projects/{project}/global/backendServices/{backend_service}" (global).
    * @param backendServiceUri backendServiceUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setBackendServiceUri(java.lang.String backendServiceUri) {
@@ -166,7 +184,10 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the health check attached to this backend (if applicable).
+   * URI of the health check attached to this backend (if applicable). Format: *
+   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthCheckUri() {
@@ -174,7 +195,10 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the health check attached to this backend (if applicable).
+   * URI of the health check attached to this backend (if applicable). Format: *
+   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
+   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
    * @param healthCheckUri healthCheckUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setHealthCheckUri(java.lang.String healthCheckUri) {
@@ -183,7 +207,8 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the instance group this backend belongs to (if applicable).
+   * URI of the instance group this backend belongs to (if applicable) in format
+   * "projects/{project}/zones/{zone}/instanceGroups/{instance_group}".
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceGroupUri() {
@@ -191,7 +216,8 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the instance group this backend belongs to (if applicable).
+   * URI of the instance group this backend belongs to (if applicable) in format
+   * "projects/{project}/zones/{zone}/instanceGroups/{instance_group}".
    * @param instanceGroupUri instanceGroupUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setInstanceGroupUri(java.lang.String instanceGroupUri) {
@@ -200,8 +226,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the backend instance (if applicable). Populated for instance group backends, and zonal
-   * NEG backends.
+   * URI of the backend instance (if applicable) in format
+   * "projects/{project}/zones/{zone}/instances/{instance}". Populated for instance group backends,
+   * and zonal NEG backends.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceUri() {
@@ -209,8 +236,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the backend instance (if applicable). Populated for instance group backends, and zonal
-   * NEG backends.
+   * URI of the backend instance (if applicable) in format
+   * "projects/{project}/zones/{zone}/instances/{instance}". Populated for instance group backends,
+   * and zonal NEG backends.
    * @param instanceUri instanceUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setInstanceUri(java.lang.String instanceUri) {
@@ -238,7 +266,10 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the network endpoint group this backend belongs to (if applicable).
+   * URI of the network endpoint group this backend belongs to (if applicable) Format: *
+   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
+   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
+   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointGroupUri() {
@@ -246,7 +277,10 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the network endpoint group this backend belongs to (if applicable).
+   * URI of the network endpoint group this backend belongs to (if applicable) Format: *
+   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
+   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
+   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
    * @param networkEndpointGroupUri networkEndpointGroupUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setNetworkEndpointGroupUri(java.lang.String networkEndpointGroupUri) {
@@ -272,7 +306,8 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * @return value or {@code null} for none
    */
   public java.lang.String getPscServiceAttachmentUri() {
@@ -280,7 +315,8 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * URI of the PSC service attachment this PSC NEG backend targets (if applicable).
+   * URI of the PSC service attachment this PSC NEG backend targets (if applicable) in format
+   * "projects/{project}/regions/{region}/serviceAttachments/{service_attachment}".
    * @param pscServiceAttachmentUri pscServiceAttachmentUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setPscServiceAttachmentUri(java.lang.String pscServiceAttachmentUri) {

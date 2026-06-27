@@ -52,7 +52,8 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   private java.lang.String internalIp;
 
   /**
-   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one. In
+   * format "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +67,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   private java.lang.String region;
 
   /**
-   * URI of a Cloud SQL instance.
+   * URI of a Cloud SQL instance in format "projects/{project}/instances/{instance}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +125,8 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one. In
+   * format "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -132,7 +134,8 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance network or empty string if the instance does not have one.
+   * URI of a Cloud SQL instance network or empty string if the instance does not have one. In
+   * format "projects/{project}/global/networks/{network}".
    * @param networkUri networkUri or {@code null} for none
    */
   public CloudSQLInstanceInfo setNetworkUri(java.lang.String networkUri) {
@@ -158,7 +161,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance.
+   * URI of a Cloud SQL instance in format "projects/{project}/instances/{instance}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -166,7 +169,7 @@ public final class CloudSQLInstanceInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud SQL instance.
+   * URI of a Cloud SQL instance in format "projects/{project}/instances/{instance}"
    * @param uri uri or {@code null} for none
    */
   public CloudSQLInstanceInfo setUri(java.lang.String uri) {

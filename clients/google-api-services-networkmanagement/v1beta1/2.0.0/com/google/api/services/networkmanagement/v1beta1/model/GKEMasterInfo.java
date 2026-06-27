@@ -31,14 +31,16 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class GKEMasterInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of a GKE cluster network.
+   * URI of the GKE cluster network. Format: `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterNetworkUri;
 
   /**
-   * URI of a GKE cluster.
+   * URI of the GKE cluster. Format: *
+   * `projects/{project_id}/locations/{location}/clusters/{cluster_id}` (regional cluster) *
+   * `projects/{project_id}/zones/{zone}/clusters/{cluster_id}` (zonal cluster)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +68,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String internalIp;
 
   /**
-   * URI of a GKE cluster network.
+   * URI of the GKE cluster network. Format: `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterNetworkUri() {
@@ -74,7 +76,7 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a GKE cluster network.
+   * URI of the GKE cluster network. Format: `projects/{project_id}/global/networks/{network_id}`
    * @param clusterNetworkUri clusterNetworkUri or {@code null} for none
    */
   public GKEMasterInfo setClusterNetworkUri(java.lang.String clusterNetworkUri) {
@@ -83,7 +85,9 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a GKE cluster.
+   * URI of the GKE cluster. Format: *
+   * `projects/{project_id}/locations/{location}/clusters/{cluster_id}` (regional cluster) *
+   * `projects/{project_id}/zones/{zone}/clusters/{cluster_id}` (zonal cluster)
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterUri() {
@@ -91,7 +95,9 @@ public final class GKEMasterInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a GKE cluster.
+   * URI of the GKE cluster. Format: *
+   * `projects/{project_id}/locations/{location}/clusters/{cluster_id}` (regional cluster) *
+   * `projects/{project_id}/zones/{zone}/clusters/{cluster_id}` (zonal cluster)
    * @param clusterUri clusterUri or {@code null} for none
    */
   public GKEMasterInfo setClusterUri(java.lang.String clusterUri) {

@@ -45,7 +45,8 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String matchedIpRange;
 
   /**
-   * URI of the subnet matching the source IP address of the test.
+   * URI of the subnet matching the source IP address of the test in format
+   * "projects/{project}/regions/{region}/subnetworks/{subnetwork}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +101,8 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the subnet matching the source IP address of the test.
+   * URI of the subnet matching the source IP address of the test in format
+   * "projects/{project}/regions/{region}/subnetworks/{subnetwork}"
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchedSubnetUri() {
@@ -108,7 +110,8 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the subnet matching the source IP address of the test.
+   * URI of the subnet matching the source IP address of the test in format
+   * "projects/{project}/regions/{region}/subnetworks/{subnetwork}"
    * @param matchedSubnetUri matchedSubnetUri or {@code null} for none
    */
   public NetworkInfo setMatchedSubnetUri(java.lang.String matchedSubnetUri) {
@@ -134,7 +137,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -142,7 +145,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of a Compute Engine network.
+   * URI of a Compute Engine network in format "projects/{project}/global/networks/{network}"
    * @param uri uri or {@code null} for none
    */
   public NetworkInfo setUri(java.lang.String uri) {

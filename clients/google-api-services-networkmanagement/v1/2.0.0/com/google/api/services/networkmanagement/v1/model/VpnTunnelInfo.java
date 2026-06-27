@@ -38,7 +38,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
-   * URI of a Compute Engine network where the VPN tunnel is configured.
+   * URI of the VPC network where the VPN tunnel is configured. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,9 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String region;
 
   /**
-   * URI of a VPN gateway at remote end of the tunnel.
+   * URI of a VPN gateway at remote end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (GCP HA VPN gateway) *
+   * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP peer VPN gateway)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +76,10 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String routingType;
 
   /**
-   * URI of the VPN gateway at local end of the tunnel.
+   * URI of the VPN gateway at local end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
+   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * gateway)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +93,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String sourceGatewayIp;
 
   /**
-   * URI of a VPN tunnel.
+   * URI of the VPN tunnel. Format:
+   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +118,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a Compute Engine network where the VPN tunnel is configured.
+   * URI of the VPC network where the VPN tunnel is configured. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -119,7 +127,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a Compute Engine network where the VPN tunnel is configured.
+   * URI of the VPC network where the VPN tunnel is configured. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
    * @param networkUri networkUri or {@code null} for none
    */
   public VpnTunnelInfo setNetworkUri(java.lang.String networkUri) {
@@ -145,7 +154,9 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a VPN gateway at remote end of the tunnel.
+   * URI of a VPN gateway at remote end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (GCP HA VPN gateway) *
+   * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP peer VPN gateway)
    * @return value or {@code null} for none
    */
   public java.lang.String getRemoteGateway() {
@@ -153,7 +164,9 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a VPN gateway at remote end of the tunnel.
+   * URI of a VPN gateway at remote end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (GCP HA VPN gateway) *
+   * `projects/{project_id}/global/peerVpnGateways/{peer_vpn_gateway_id}` (GCP peer VPN gateway)
    * @param remoteGateway remoteGateway or {@code null} for none
    */
   public VpnTunnelInfo setRemoteGateway(java.lang.String remoteGateway) {
@@ -196,7 +209,10 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of the VPN gateway at local end of the tunnel.
+   * URI of the VPN gateway at local end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
+   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * gateway)
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceGateway() {
@@ -204,7 +220,10 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of the VPN gateway at local end of the tunnel.
+   * URI of the VPN gateway at local end of the tunnel. Format: *
+   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
+   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * gateway)
    * @param sourceGateway sourceGateway or {@code null} for none
    */
   public VpnTunnelInfo setSourceGateway(java.lang.String sourceGateway) {
@@ -230,7 +249,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a VPN tunnel.
+   * URI of the VPN tunnel. Format:
+   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -238,7 +258,8 @@ public final class VpnTunnelInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * URI of a VPN tunnel.
+   * URI of the VPN tunnel. Format:
+   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
    * @param uri uri or {@code null} for none
    */
   public VpnTunnelInfo setUri(java.lang.String uri) {

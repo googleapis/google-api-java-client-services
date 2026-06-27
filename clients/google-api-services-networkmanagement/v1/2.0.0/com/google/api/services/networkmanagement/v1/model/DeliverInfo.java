@@ -52,7 +52,9 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String pscGoogleApiTarget;
 
   /**
-   * URI of the resource that the packet is delivered to.
+   * URI of the resource that the packet is delivered to. For example: *
+   * `"projects/{project}/zones/{zone}/instances/{instance}"` *
+   * `"projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +126,9 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the resource that the packet is delivered to.
+   * URI of the resource that the packet is delivered to. For example: *
+   * `"projects/{project}/zones/{zone}/instances/{instance}"` *
+   * `"projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -132,7 +136,9 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the resource that the packet is delivered to.
+   * URI of the resource that the packet is delivered to. For example: *
+   * `"projects/{project}/zones/{zone}/instances/{instance}"` *
+   * `"projects/{project}/regions/{region}/networkEndpointGroups/{network_endpoint_group}"`
    * @param resourceUri resourceUri or {@code null} for none
    */
   public DeliverInfo setResourceUri(java.lang.String resourceUri) {

@@ -45,7 +45,8 @@ public final class HybridSubnetInfo extends com.google.api.client.json.GenericJs
   private java.lang.String region;
 
   /**
-   * URI of a hybrid subnet.
+   * URI of the hybrid subnet. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class HybridSubnetInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a hybrid subnet.
+   * URI of the hybrid subnet. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -94,7 +96,8 @@ public final class HybridSubnetInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a hybrid subnet.
+   * URI of the hybrid subnet. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
    * @param uri uri or {@code null} for none
    */
   public HybridSubnetInfo setUri(java.lang.String uri) {

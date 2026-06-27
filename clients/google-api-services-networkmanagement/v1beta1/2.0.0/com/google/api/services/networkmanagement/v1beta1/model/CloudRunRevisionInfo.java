@@ -45,14 +45,16 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   private java.lang.String location;
 
   /**
-   * URI of Cloud Run service this revision belongs to.
+   * URI of Cloud Run service this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/services/{service_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceUri;
 
   /**
-   * URI of a Cloud Run revision.
+   * URI of the Cloud Run revision. Format:
+   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +95,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of Cloud Run service this revision belongs to.
+   * URI of Cloud Run service this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/services/{service_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceUri() {
@@ -101,7 +104,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of Cloud Run service this revision belongs to.
+   * URI of Cloud Run service this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/services/{service_id}`
    * @param serviceUri serviceUri or {@code null} for none
    */
   public CloudRunRevisionInfo setServiceUri(java.lang.String serviceUri) {
@@ -110,7 +114,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud Run revision.
+   * URI of the Cloud Run revision. Format:
+   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -118,7 +123,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of a Cloud Run revision.
+   * URI of the Cloud Run revision. Format:
+   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
    * @param uri uri or {@code null} for none
    */
   public CloudRunRevisionInfo setUri(java.lang.String uri) {

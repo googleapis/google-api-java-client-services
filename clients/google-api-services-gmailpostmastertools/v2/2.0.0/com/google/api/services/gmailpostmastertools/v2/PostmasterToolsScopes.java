@@ -32,6 +32,9 @@ public class PostmasterToolsScopes {
   /** Get email traffic metrics for the domains you have registered with Postmaster Tools. */
   public static final String POSTMASTER_TRAFFIC_READONLY = "https://www.googleapis.com/auth/postmaster.traffic.readonly";
 
+  /** View and manage users for the domains you have registered with Postmaster Tools. */
+  public static final String POSTMASTER_USER = "https://www.googleapis.com/auth/postmaster.user";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -42,6 +45,7 @@ public class PostmasterToolsScopes {
     set.add(POSTMASTER);
     set.add(POSTMASTER_DOMAIN);
     set.add(POSTMASTER_TRAFFIC_READONLY);
+    set.add(POSTMASTER_USER);
     return java.util.Collections.unmodifiableSet(set);
   }
 

@@ -150,6 +150,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsElasticNetworkInterfaceDetails awsElasticNetworkInterfaceDetails;
 
   /**
+   * Output only. Asset information specific for AWS ElastiCache Clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsElastiCacheClusterDetails awsElasticacheClusterDetails;
+
+  /**
    * Output only. Asset information specific for AWS Load Balancers.
    * The value may be {@code null}.
    */
@@ -645,6 +652,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsElasticNetworkInterfaceDetails(AwsElasticNetworkInterfaceDetails awsElasticNetworkInterfaceDetails) {
     this.awsElasticNetworkInterfaceDetails = awsElasticNetworkInterfaceDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS ElastiCache Clusters.
+   * @return value or {@code null} for none
+   */
+  public AwsElastiCacheClusterDetails getAwsElasticacheClusterDetails() {
+    return awsElasticacheClusterDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS ElastiCache Clusters.
+   * @param awsElasticacheClusterDetails awsElasticacheClusterDetails or {@code null} for none
+   */
+  public Asset setAwsElasticacheClusterDetails(AwsElastiCacheClusterDetails awsElasticacheClusterDetails) {
+    this.awsElasticacheClusterDetails = awsElasticacheClusterDetails;
     return this;
   }
 

@@ -45,6 +45,16 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
   private java.lang.String instoreProductLocation;
 
   /**
+   * Optional. Specifies a label associated with the shipping for the `LocalInventory` resource. Can
+   * be used to group local shipping services to this particular inventory item. For accepted field
+   * format, see the [Local
+   * delivery](https://support.google.com/merchants/answer/14819809#localdelivery)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localShippingLabel;
+
+  /**
    * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
    * this product at this store. This field is used to show store-specific member prices on Local
    * Inventory Ads (LIA). To use this, the loyalty program must be configured in Google Merchant
@@ -145,6 +155,29 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
    */
   public LocalInventoryAttributes setInstoreProductLocation(java.lang.String instoreProductLocation) {
     this.instoreProductLocation = instoreProductLocation;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a label associated with the shipping for the `LocalInventory` resource. Can
+   * be used to group local shipping services to this particular inventory item. For accepted field
+   * format, see the [Local
+   * delivery](https://support.google.com/merchants/answer/14819809#localdelivery)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalShippingLabel() {
+    return localShippingLabel;
+  }
+
+  /**
+   * Optional. Specifies a label associated with the shipping for the `LocalInventory` resource. Can
+   * be used to group local shipping services to this particular inventory item. For accepted field
+   * format, see the [Local
+   * delivery](https://support.google.com/merchants/answer/14819809#localdelivery)
+   * @param localShippingLabel localShippingLabel or {@code null} for none
+   */
+  public LocalInventoryAttributes setLocalShippingLabel(java.lang.String localShippingLabel) {
+    this.localShippingLabel = localShippingLabel;
     return this;
   }
 

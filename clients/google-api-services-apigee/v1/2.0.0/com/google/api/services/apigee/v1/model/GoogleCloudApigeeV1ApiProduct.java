@@ -192,6 +192,19 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
   private GoogleCloudApigeeV1OperationGroup operationGroup;
 
   /**
+   * Optional. Configuration used to group Apigee proxies with payload-based operations and quotas.
+   * Unlike `operation_group`, which matches on the URL path, this grouping matches on operation
+   * identifiers extracted from the request payload (for example, JSON-RPC method and tool names).
+   * This enables fine-grained authorization and quota enforcement for protocols such as MCP where
+   * multiple operations share a single endpoint. **Note:** The `proxies` and `api_resources`
+   * settings cannot be specified for both the API product and payload operation group; otherwise
+   * the call will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1PayloadOperationGroup payloadOperationGroup;
+
+  /**
    * Comma-separated list of API proxy names to which this API product is bound. By specifying API
    * proxies, you can associate resources in the API product with specific API proxies, preventing
    * developers from accessing those resources through other API proxies. Apigee rejects requests to
@@ -627,6 +640,35 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1ApiProduct setOperationGroup(GoogleCloudApigeeV1OperationGroup operationGroup) {
     this.operationGroup = operationGroup;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with payload-based operations and quotas.
+   * Unlike `operation_group`, which matches on the URL path, this grouping matches on operation
+   * identifiers extracted from the request payload (for example, JSON-RPC method and tool names).
+   * This enables fine-grained authorization and quota enforcement for protocols such as MCP where
+   * multiple operations share a single endpoint. **Note:** The `proxies` and `api_resources`
+   * settings cannot be specified for both the API product and payload operation group; otherwise
+   * the call will fail.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1PayloadOperationGroup getPayloadOperationGroup() {
+    return payloadOperationGroup;
+  }
+
+  /**
+   * Optional. Configuration used to group Apigee proxies with payload-based operations and quotas.
+   * Unlike `operation_group`, which matches on the URL path, this grouping matches on operation
+   * identifiers extracted from the request payload (for example, JSON-RPC method and tool names).
+   * This enables fine-grained authorization and quota enforcement for protocols such as MCP where
+   * multiple operations share a single endpoint. **Note:** The `proxies` and `api_resources`
+   * settings cannot be specified for both the API product and payload operation group; otherwise
+   * the call will fail.
+   * @param payloadOperationGroup payloadOperationGroup or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setPayloadOperationGroup(GoogleCloudApigeeV1PayloadOperationGroup payloadOperationGroup) {
+    this.payloadOperationGroup = payloadOperationGroup;
     return this;
   }
 

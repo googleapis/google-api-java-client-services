@@ -52,6 +52,13 @@ public final class BuildSource extends com.google.api.client.json.GenericJson {
   private ContainerSource container;
 
   /**
+   * A source that was pre-built locally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocallyBuiltSource locallyBuilt;
+
+  /**
    * An archive source.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class BuildSource extends com.google.api.client.json.GenericJson {
    */
   public BuildSource setContainer(ContainerSource container) {
     this.container = container;
+    return this;
+  }
+
+  /**
+   * A source that was pre-built locally.
+   * @return value or {@code null} for none
+   */
+  public LocallyBuiltSource getLocallyBuilt() {
+    return locallyBuilt;
+  }
+
+  /**
+   * A source that was pre-built locally.
+   * @param locallyBuilt locallyBuilt or {@code null} for none
+   */
+  public BuildSource setLocallyBuilt(LocallyBuiltSource locallyBuilt) {
+    this.locallyBuilt = locallyBuilt;
     return this;
   }
 

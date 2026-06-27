@@ -102,6 +102,20 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String hashDigest;
 
   /**
+   * The list of sources that were scanned to find this package. This can be a Docker image, an SBOM
+   * attachment, or both, for example.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<IngestionSource> ingestionSources;
+
+  static {
+    // hack to force ProGuard to consider IngestionSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(IngestionSource.class);
+  }
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,6 +317,25 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setHashDigest(java.lang.String hashDigest) {
     this.hashDigest = hashDigest;
+    return this;
+  }
+
+  /**
+   * The list of sources that were scanned to find this package. This can be a Docker image, an SBOM
+   * attachment, or both, for example.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<IngestionSource> getIngestionSources() {
+    return ingestionSources;
+  }
+
+  /**
+   * The list of sources that were scanned to find this package. This can be a Docker image, an SBOM
+   * attachment, or both, for example.
+   * @param ingestionSources ingestionSources or {@code null} for none
+   */
+  public PackageData setIngestionSources(java.util.List<IngestionSource> ingestionSources) {
+    this.ingestionSources = ingestionSources;
     return this;
   }
 

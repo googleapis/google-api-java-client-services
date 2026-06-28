@@ -104,14 +104,6 @@ public final class EmissionsProvenanceEntry extends com.google.api.client.json.G
   private java.lang.String provenanceEntryType;
 
   /**
-   * Output only. The seat area ratio value for each seating class. If not set, the seat area ratio
-   * value is not available.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SeatAreaRatioData seatAreaRatioData;
-
-  /**
    * Output only. Strategy for IATA seat area ratios.
    * The value may be {@code null}.
    */
@@ -305,25 +297,6 @@ public final class EmissionsProvenanceEntry extends com.google.api.client.json.G
    */
   public EmissionsProvenanceEntry setProvenanceEntryType(java.lang.String provenanceEntryType) {
     this.provenanceEntryType = provenanceEntryType;
-    return this;
-  }
-
-  /**
-   * Output only. The seat area ratio value for each seating class. If not set, the seat area ratio
-   * value is not available.
-   * @return value or {@code null} for none
-   */
-  public SeatAreaRatioData getSeatAreaRatioData() {
-    return seatAreaRatioData;
-  }
-
-  /**
-   * Output only. The seat area ratio value for each seating class. If not set, the seat area ratio
-   * value is not available.
-   * @param seatAreaRatioData seatAreaRatioData or {@code null} for none
-   */
-  public EmissionsProvenanceEntry setSeatAreaRatioData(SeatAreaRatioData seatAreaRatioData) {
-    this.seatAreaRatioData = seatAreaRatioData;
     return this;
   }
 

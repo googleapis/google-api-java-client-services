@@ -89,16 +89,6 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine ex
   private java.lang.String state;
 
   /**
-   * Optional. The project where network, subnetwork and dns resources are located. If not provided,
-   * it is assumed to be the same project of SemanticGovernancePolicyEngine. This field is for
-   * Shared VPC scenarios, where network resources may be in a target project and SGP engine in a
-   * service project.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String targetProject;
-
-  /**
    * Output only. Timestamp when this SemanticGovernancePolicyEngine was last updated.
    * The value may be {@code null}.
    */
@@ -229,29 +219,6 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine ex
    */
   public GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * Optional. The project where network, subnetwork and dns resources are located. If not provided,
-   * it is assumed to be the same project of SemanticGovernancePolicyEngine. This field is for
-   * Shared VPC scenarios, where network resources may be in a target project and SGP engine in a
-   * service project.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTargetProject() {
-    return targetProject;
-  }
-
-  /**
-   * Optional. The project where network, subnetwork and dns resources are located. If not provided,
-   * it is assumed to be the same project of SemanticGovernancePolicyEngine. This field is for
-   * Shared VPC scenarios, where network resources may be in a target project and SGP engine in a
-   * service project.
-   * @param targetProject targetProject or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1SemanticGovernancePolicyEngine setTargetProject(java.lang.String targetProject) {
-    this.targetProject = targetProject;
     return this;
   }
 

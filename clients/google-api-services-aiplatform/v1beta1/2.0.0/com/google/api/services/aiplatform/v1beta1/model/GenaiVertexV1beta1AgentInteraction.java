@@ -39,12 +39,6 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
   /**
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("code_mender_config")
-  private GenaiVertexV1beta1CodeMenderAgentConfig codeMenderConfig;
-
-  /**
-   * The value may be {@code null}.
-   */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1DeepResearchAgentConfig deepResearchConfig;
 
@@ -68,21 +62,6 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
    */
   public GenaiVertexV1beta1AgentInteraction setAgent(java.lang.String agent) {
     this.agent = agent;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1CodeMenderAgentConfig getCodeMenderConfig() {
-    return codeMenderConfig;
-  }
-
-  /**
-   * @param codeMenderConfig codeMenderConfig or {@code null} for none
-   */
-  public GenaiVertexV1beta1AgentInteraction setCodeMenderConfig(GenaiVertexV1beta1CodeMenderAgentConfig codeMenderConfig) {
-    this.codeMenderConfig = codeMenderConfig;
     return this;
   }
 

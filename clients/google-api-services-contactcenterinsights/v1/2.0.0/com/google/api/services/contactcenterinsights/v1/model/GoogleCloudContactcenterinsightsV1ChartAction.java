@@ -31,11 +31,35 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1ChartAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * The conversation filter string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversationFilter;
+
+  /**
    * Redirect action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1RedirectAction redirectAction;
+
+  /**
+   * The conversation filter string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversationFilter() {
+    return conversationFilter;
+  }
+
+  /**
+   * The conversation filter string.
+   * @param conversationFilter conversationFilter or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ChartAction setConversationFilter(java.lang.String conversationFilter) {
+    this.conversationFilter = conversationFilter;
+    return this;
+  }
 
   /**
    * Redirect action.

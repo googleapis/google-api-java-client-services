@@ -46,9 +46,9 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
   private ComputeInstanceSlurmNodeSet computeInstance;
 
   /**
-   * Required. Identifier for the nodeset, which allows it to be referenced by partitions. Must
-   * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
-   * and at most 63 characters).
+   * Required. The ID for the nodeset, which allows it to be referenced by cluster partitions. The
+   * nodeset ID must start with a lowercase letter (`a`-`z`), use only lowercase letters or numbers,
+   * and contain up to 15 characters. For example, specify `nodeset001`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,9 +116,9 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier for the nodeset, which allows it to be referenced by partitions. Must
-   * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
-   * and at most 63 characters).
+   * Required. The ID for the nodeset, which allows it to be referenced by cluster partitions. The
+   * nodeset ID must start with a lowercase letter (`a`-`z`), use only lowercase letters or numbers,
+   * and contain up to 15 characters. For example, specify `nodeset001`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -126,9 +126,9 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier for the nodeset, which allows it to be referenced by partitions. Must
-   * conform to [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
-   * and at most 63 characters).
+   * Required. The ID for the nodeset, which allows it to be referenced by cluster partitions. The
+   * nodeset ID must start with a lowercase letter (`a`-`z`), use only lowercase letters or numbers,
+   * and contain up to 15 characters. For example, specify `nodeset001`.
    * @param id id or {@code null} for none
    */
   public SlurmNodeSet setId(java.lang.String id) {

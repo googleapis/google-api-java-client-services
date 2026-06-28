@@ -710,25 +710,25 @@ public class HypercomputeCluster extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. ID of the cluster to create. Must conform to
-           * [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
-           * and at most 63 characters).
+           * Required. The ID of the cluster to create. The cluster ID must start with a lowercase
+           * letter (`a`-`z`), use only lowercase letters or numbers, and contain up to 10
+           * characters. For example, specify `cluster001`.
            */
           @com.google.api.client.util.Key
           private java.lang.String clusterId;
 
-          /** Required. ID of the cluster to create. Must conform to
-         [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric, and at most 63
-         characters).
+          /** Required. The ID of the cluster to create. The cluster ID must start with a lowercase letter
+         (`a`-`z`), use only lowercase letters or numbers, and contain up to 10 characters. For example,
+         specify `cluster001`.
            */
           public java.lang.String getClusterId() {
             return clusterId;
           }
 
           /**
-           * Required. ID of the cluster to create. Must conform to
-           * [RFC-1034](https://datatracker.ietf.org/doc/html/rfc1034) (lower-case, alphanumeric,
-           * and at most 63 characters).
+           * Required. The ID of the cluster to create. The cluster ID must start with a lowercase
+           * letter (`a`-`z`), use only lowercase letters or numbers, and contain up to 10
+           * characters. For example, specify `cluster001`.
            */
           public Create setClusterId(java.lang.String clusterId) {
             this.clusterId = clusterId;

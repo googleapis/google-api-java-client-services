@@ -30,15 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. When true, agents created in Agent Engine that share log and observability buckets
-   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
-   * enrolled explicitly via MonitoredAgent operations.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean autoEnroll;
-
-  /**
    * Optional. User provided display name of the AgentAnomalyDetectionScope.
    * The value may be {@code null}.
    */
@@ -70,25 +61,11 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   private java.util.List<java.lang.String> observabilityBuckets;
 
   /**
-   * Optional. When true, agents created in Agent Engine that share log and observability buckets
-   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
-   * enrolled explicitly via MonitoredAgent operations.
-   * @return value or {@code null} for none
+   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * The value may be {@code null}.
    */
-  public java.lang.Boolean getAutoEnroll() {
-    return autoEnroll;
-  }
-
-  /**
-   * Optional. When true, agents created in Agent Engine that share log and observability buckets
-   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
-   * enrolled explicitly via MonitoredAgent operations.
-   * @param autoEnroll autoEnroll or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setAutoEnroll(java.lang.Boolean autoEnroll) {
-    this.autoEnroll = autoEnroll;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Optional. User provided display name of the AgentAnomalyDetectionScope.
@@ -161,6 +138,23 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
    */
   public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setObservabilityBuckets(java.util.List<java.lang.String> observabilityBuckets) {
     this.observabilityBuckets = observabilityBuckets;
+    return this;
+  }
+
+  /**
+   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

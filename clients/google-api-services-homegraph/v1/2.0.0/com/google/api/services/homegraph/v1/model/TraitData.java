@@ -30,11 +30,35 @@ package com.google.api.services.homegraph.v1.model;
 public final class TraitData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Other metadata for the trait. The time the client update was committed in the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String commitTime;
+
+  /**
    * The Provider Home API trait payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> trait;
+
+  /**
+   * Other metadata for the trait. The time the client update was committed in the server.
+   * @return value or {@code null} for none
+   */
+  public String getCommitTime() {
+    return commitTime;
+  }
+
+  /**
+   * Other metadata for the trait. The time the client update was committed in the server.
+   * @param commitTime commitTime or {@code null} for none
+   */
+  public TraitData setCommitTime(String commitTime) {
+    this.commitTime = commitTime;
+    return this;
+  }
 
   /**
    * The Provider Home API trait payload.

@@ -79,6 +79,18 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> includePrefixes;
 
   /**
+   * Optional. If specified, objects in the source matching any of the storage classes in this field
+   * will be transferred. Objects in storage classes not included in this field will be skipped. If
+   * empty, the default behavior regarding the storage classes is applied. This includes all storage
+   * classes except "GLACIER" as per default behavior. Currently, this field only supports S3 data
+   * source. For the list of valid Amazon S3 storage classnames, please refer to the AWS
+   * documentation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeStorageClasses;
+
+  /**
    * If specified, only objects with a "last modification time" before this timestamp and objects
    * that don't have a "last modification time" are transferred.
    * The value may be {@code null}.
@@ -212,6 +224,33 @@ public final class ObjectConditions extends com.google.api.client.json.GenericJs
    */
   public ObjectConditions setIncludePrefixes(java.util.List<java.lang.String> includePrefixes) {
     this.includePrefixes = includePrefixes;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, objects in the source matching any of the storage classes in this field
+   * will be transferred. Objects in storage classes not included in this field will be skipped. If
+   * empty, the default behavior regarding the storage classes is applied. This includes all storage
+   * classes except "GLACIER" as per default behavior. Currently, this field only supports S3 data
+   * source. For the list of valid Amazon S3 storage classnames, please refer to the AWS
+   * documentation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeStorageClasses() {
+    return includeStorageClasses;
+  }
+
+  /**
+   * Optional. If specified, objects in the source matching any of the storage classes in this field
+   * will be transferred. Objects in storage classes not included in this field will be skipped. If
+   * empty, the default behavior regarding the storage classes is applied. This includes all storage
+   * classes except "GLACIER" as per default behavior. Currently, this field only supports S3 data
+   * source. For the list of valid Amazon S3 storage classnames, please refer to the AWS
+   * documentation: https://docs.aws.amazon.com/AmazonS3/latest/userguide/sc-howtoset.html
+   * @param includeStorageClasses includeStorageClasses or {@code null} for none
+   */
+  public ObjectConditions setIncludeStorageClasses(java.util.List<java.lang.String> includeStorageClasses) {
+    this.includeStorageClasses = includeStorageClasses;
     return this;
   }
 

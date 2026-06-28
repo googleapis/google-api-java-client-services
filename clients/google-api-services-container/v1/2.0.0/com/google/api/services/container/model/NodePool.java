@@ -58,7 +58,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private BestEffortProvisioning bestEffortProvisioning;
 
   /**
-   * Which conditions caused the current node pool state.
+   * Output only. Which conditions caused the current node pool state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeConfig config;
 
   /**
-   * This checksum is computed by the server based on the value of node pool fields, and may be sent
-   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * Output only. This checksum is computed by the server based on the value of node pool fields,
+   * and may be sent on update requests to ensure the client has an up-to-date value before
+   * proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,7 +278,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which conditions caused the current node pool state.
+   * Output only. Which conditions caused the current node pool state.
    * @return value or {@code null} for none
    */
   public java.util.List<StatusCondition> getConditions() {
@@ -285,7 +286,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which conditions caused the current node pool state.
+   * Output only. Which conditions caused the current node pool state.
    * @param conditions conditions or {@code null} for none
    */
   public NodePool setConditions(java.util.List<StatusCondition> conditions) {
@@ -311,8 +312,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This checksum is computed by the server based on the value of node pool fields, and may be sent
-   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * Output only. This checksum is computed by the server based on the value of node pool fields,
+   * and may be sent on update requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -320,8 +322,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This checksum is computed by the server based on the value of node pool fields, and may be sent
-   * on update requests to ensure the client has an up-to-date value before proceeding.
+   * Output only. This checksum is computed by the server based on the value of node pool fields,
+   * and may be sent on update requests to ensure the client has an up-to-date value before
+   * proceeding.
    * @param etag etag or {@code null} for none
    */
   public NodePool setEtag(java.lang.String etag) {

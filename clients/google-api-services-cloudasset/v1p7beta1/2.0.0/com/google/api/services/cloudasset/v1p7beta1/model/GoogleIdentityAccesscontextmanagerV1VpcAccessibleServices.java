@@ -30,6 +30,20 @@ package com.google.api.services.cloudasset.v1p7beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifies which Google services are allowed to be accessed from VPC networks in the service
+   * perimeter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleIdentityAccesscontextmanagerV1ServicePattern> allowedServicePatterns;
+
+  static {
+    // hack to force ProGuard to consider GoogleIdentityAccesscontextmanagerV1ServicePattern used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleIdentityAccesscontextmanagerV1ServicePattern.class);
+  }
+
+  /**
    * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
    * is True. You can specify a list of individual services, as well as include the 'RESTRICTED-
    * SERVICES' value, which automatically includes all of the services protected by the perimeter.
@@ -45,6 +59,32 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableRestriction;
+
+  /**
+   * Defines the enforcement scopes of service patterns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> servicePatternsEnforcementScopes;
+
+  /**
+   * Specifies which Google services are allowed to be accessed from VPC networks in the service
+   * perimeter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleIdentityAccesscontextmanagerV1ServicePattern> getAllowedServicePatterns() {
+    return allowedServicePatterns;
+  }
+
+  /**
+   * Specifies which Google services are allowed to be accessed from VPC networks in the service
+   * perimeter.
+   * @param allowedServicePatterns allowedServicePatterns or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices setAllowedServicePatterns(java.util.List<GoogleIdentityAccesscontextmanagerV1ServicePattern> allowedServicePatterns) {
+    this.allowedServicePatterns = allowedServicePatterns;
+    return this;
+  }
 
   /**
    * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
@@ -83,6 +123,23 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
    */
   public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices setEnableRestriction(java.lang.Boolean enableRestriction) {
     this.enableRestriction = enableRestriction;
+    return this;
+  }
+
+  /**
+   * Defines the enforcement scopes of service patterns.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServicePatternsEnforcementScopes() {
+    return servicePatternsEnforcementScopes;
+  }
+
+  /**
+   * Defines the enforcement scopes of service patterns.
+   * @param servicePatternsEnforcementScopes servicePatternsEnforcementScopes or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices setServicePatternsEnforcementScopes(java.util.List<java.lang.String> servicePatternsEnforcementScopes) {
+    this.servicePatternsEnforcementScopes = servicePatternsEnforcementScopes;
     return this;
   }
 

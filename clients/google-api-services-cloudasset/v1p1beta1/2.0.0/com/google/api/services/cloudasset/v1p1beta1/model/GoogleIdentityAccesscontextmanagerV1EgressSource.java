@@ -44,6 +44,13 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   private java.lang.String accessLevel;
 
   /**
+   * Requests from this PSC will be allowed from access perimeter data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint pscEndpoint;
+
+  /**
    * A Google Cloud resource from the service perimeter that you want to allow to access data
    * outside the perimeter. This field supports only projects. The project format is
    * `projects/{project_number}`. You can't use `*` in this field to allow all Google Cloud
@@ -79,6 +86,23 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
    */
   public GoogleIdentityAccesscontextmanagerV1EgressSource setAccessLevel(java.lang.String accessLevel) {
     this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * Requests from this PSC will be allowed from access perimeter data.
+   * @return value or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint getPscEndpoint() {
+    return pscEndpoint;
+  }
+
+  /**
+   * Requests from this PSC will be allowed from access perimeter data.
+   * @param pscEndpoint pscEndpoint or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1EgressSource setPscEndpoint(GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint pscEndpoint) {
+    this.pscEndpoint = pscEndpoint;
     return this;
   }
 

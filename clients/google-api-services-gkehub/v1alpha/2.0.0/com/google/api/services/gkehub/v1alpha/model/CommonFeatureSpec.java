@@ -65,6 +65,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private FleetObservabilityFeatureSpec fleetobservability;
 
   /**
+   * Servicemesh feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshFeatureSpec mesh;
+
+  /**
    * Multicluster Ingress-specific spec.
    * The value may be {@code null}.
    */
@@ -181,6 +188,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setFleetobservability(FleetObservabilityFeatureSpec fleetobservability) {
     this.fleetobservability = fleetobservability;
+    return this;
+  }
+
+  /**
+   * Servicemesh feature spec.
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshFeatureSpec getMesh() {
+    return mesh;
+  }
+
+  /**
+   * Servicemesh feature spec.
+   * @param mesh mesh or {@code null} for none
+   */
+  public CommonFeatureSpec setMesh(ServiceMeshFeatureSpec mesh) {
+    this.mesh = mesh;
     return this;
   }
 

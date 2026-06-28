@@ -30,13 +30,6 @@ package com.google.api.services.compute.model;
 public final class ReservationBlock extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Health information for the reservation block.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ReservationBlockHealthInfo blockHealthInfo;
-
-  /**
    * Output only. [Output Only] The number of resources that are allocated in this reservation
    * block.
    * The value may be {@code null}.
@@ -50,6 +43,13 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
+
+  /**
+   * Output only. [Output Only] Health information for the reservation block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationBlockHealthInfo healthInfo;
 
   /**
    * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
@@ -160,23 +160,6 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
   private java.lang.String zone;
 
   /**
-   * Output only. [Output Only] Health information for the reservation block.
-   * @return value or {@code null} for none
-   */
-  public ReservationBlockHealthInfo getBlockHealthInfo() {
-    return blockHealthInfo;
-  }
-
-  /**
-   * Output only. [Output Only] Health information for the reservation block.
-   * @param blockHealthInfo blockHealthInfo or {@code null} for none
-   */
-  public ReservationBlock setBlockHealthInfo(ReservationBlockHealthInfo blockHealthInfo) {
-    this.blockHealthInfo = blockHealthInfo;
-    return this;
-  }
-
-  /**
    * Output only. [Output Only] The number of resources that are allocated in this reservation
    * block.
    * @return value or {@code null} for none
@@ -209,6 +192,23 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   public ReservationBlock setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Health information for the reservation block.
+   * @return value or {@code null} for none
+   */
+  public ReservationBlockHealthInfo getHealthInfo() {
+    return healthInfo;
+  }
+
+  /**
+   * Output only. [Output Only] Health information for the reservation block.
+   * @param healthInfo healthInfo or {@code null} for none
+   */
+  public ReservationBlock setHealthInfo(ReservationBlockHealthInfo healthInfo) {
+    this.healthInfo = healthInfo;
     return this;
   }
 

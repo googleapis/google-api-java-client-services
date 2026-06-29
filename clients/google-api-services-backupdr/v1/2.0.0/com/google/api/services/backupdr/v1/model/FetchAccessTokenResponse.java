@@ -45,7 +45,7 @@ public final class FetchAccessTokenResponse extends com.google.api.client.json.G
   private java.lang.String readLocation;
 
   /**
-   * The downscoped token that was created.
+   * Input only. The downscoped token that was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class FetchAccessTokenResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The downscoped token that was created.
+   * Input only. The downscoped token that was created.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -101,7 +101,7 @@ public final class FetchAccessTokenResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The downscoped token that was created.
+   * Input only. The downscoped token that was created.
    * @param token token or {@code null} for none
    */
   public FetchAccessTokenResponse setToken(java.lang.String token) {

@@ -3,7 +3,7 @@
   "description": "Java libraries for Google APIs.",
   "generator": "java1_15",
   "releaseVersion": "2.0.0",
-  "baseClientLibrary": "2.7.2",
+  "baseClientLibrary": "2.9.0",
   "descriptor_additions": {
     "proguard-config": "proguard-google-api-client.txt",
     "files": [

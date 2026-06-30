@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   schedule:
     # Runs at 04:00 am
@@ -46,13 +49,14 @@ jobs:
       failed_libraries_y: ${{ steps.compile.outputs.failed_libraries_y }}
       failed_libraries_z: ${{ steps.compile.outputs.failed_libraries_z }}
     steps:
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@17f84c3641ba7b8f6deff6309fc4c864478f5d62 # v3
         with:
           distribution: temurin
           java-version: 8
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         with:
           path: google-api-java-client-services
+          persist-credentials: false
 
       - id: compile
         working-directory: google-api-java-client-services

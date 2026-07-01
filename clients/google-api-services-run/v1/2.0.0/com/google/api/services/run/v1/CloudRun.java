@@ -2572,6 +2572,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public Create setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -2741,6 +2764,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /** Optional. Cloud Run currently ignores this parameter. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 
@@ -3394,6 +3440,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public ReplaceInstance setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public ReplaceInstance set(String parameterName, Object value) {
           return (ReplaceInstance) super.set(parameterName, value);
@@ -3835,6 +3904,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public Create setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -3985,6 +4077,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         /** Optional. Cloud Run currently ignores this parameter. */
         public Delete setApiVersion(java.lang.String apiVersion) {
           this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 
@@ -4591,6 +4706,29 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
                 "^namespaces/[^/]+/jobs/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Optional. Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Optional. Indicates that the server should validate the request and populate default
+         * values without persisting the request. Supported values: `all`
+         */
+        public ReplaceJob setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
           return this;
         }
 

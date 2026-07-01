@@ -57,12 +57,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
    * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
    * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
-   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
-   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
-   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
-   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
-   * Execution.
+   * Revision, Execution, Instance. * `run.googleapis.com/post-key-revocation-action-type`:
+   * Revision. `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision,
+   * Execution. * `run.googleapis.com/secure-session-agent`: Revision. *
+   * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-boost`:
+   * Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
+   * `run.googleapis.com/vpc-access-egress`: Revision, Execution, Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,12 +203,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
    * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
    * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
-   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
-   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
-   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
-   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
-   * Execution.
+   * Revision, Execution, Instance. * `run.googleapis.com/post-key-revocation-action-type`:
+   * Revision. `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision,
+   * Execution. * `run.googleapis.com/secure-session-agent`: Revision. *
+   * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-boost`:
+   * Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
+   * `run.googleapis.com/vpc-access-egress`: Revision, Execution, Instance.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -242,12 +242,12 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
    * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
    * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
-   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
-   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
-   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
-   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
-   * connector`: Revision, Execution . * `run.googleapis.com/vpc-access-egress`: Revision,
-   * Execution.
+   * Revision, Execution, Instance. * `run.googleapis.com/post-key-revocation-action-type`:
+   * Revision. `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision,
+   * Execution. * `run.googleapis.com/secure-session-agent`: Revision. *
+   * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-boost`:
+   * Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
+   * `run.googleapis.com/vpc-access-egress`: Revision, Execution, Instance.
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {

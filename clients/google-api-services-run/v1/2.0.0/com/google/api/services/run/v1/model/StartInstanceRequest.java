@@ -29,6 +29,33 @@ package com.google.api.services.run.v1.model;
 @SuppressWarnings("javadoc")
 public final class StartInstanceRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Indicates that the server should validate the request and populate default values
+   * without persisting the request. Supported values: `all`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dryRun;
+
+  /**
+   * Optional. Indicates that the server should validate the request and populate default values
+   * without persisting the request. Supported values: `all`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDryRun() {
+    return dryRun;
+  }
+
+  /**
+   * Optional. Indicates that the server should validate the request and populate default values
+   * without persisting the request. Supported values: `all`
+   * @param dryRun dryRun or {@code null} for none
+   */
+  public StartInstanceRequest setDryRun(java.lang.String dryRun) {
+    this.dryRun = dryRun;
+    return this;
+  }
+
   @Override
   public StartInstanceRequest set(String fieldName, Object value) {
     return (StartInstanceRequest) super.set(fieldName, value);

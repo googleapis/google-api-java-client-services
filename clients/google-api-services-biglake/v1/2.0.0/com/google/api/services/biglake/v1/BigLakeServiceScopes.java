@@ -17,7 +17,7 @@
 package com.google.api.services.biglake.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the BigLake API.
+ * Available OAuth 2.0 scopes for use with the Lakehouse API.
  *
  * @since 1.4
  */

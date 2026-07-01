@@ -87,8 +87,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes allocated to this instance partition. Users can set the `node_count` field
-   * to specify the target number of nodes allocated to the instance partition. This may be zero in
-   * API responses for instance partitions that are not yet in state `READY`.
+   * to specify the target number of nodes allocated to the instance partition. If autoscaling is
+   * enabled, node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
+   * allocated to the instance partition. This may be zero in API responses for instance partitions
+   * that are not yet in state `READY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +99,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   /**
    * The number of processing units allocated to this instance partition. Users can set the
    * `processing_units` field to specify the target number of processing units allocated to the
-   * instance partition. This might be zero in API responses for instance partitions that are not
-   * yet in the `READY` state.
+   * instance partition. If autoscaling is enabled, processing_units is treated as an OUTPUT_ONLY
+   * field and reflects the current number of processing units allocated to the instance partition.
+   * This might be zero in API responses for instance partitions that are not yet in the `READY`
+   * state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,8 +272,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes allocated to this instance partition. Users can set the `node_count` field
-   * to specify the target number of nodes allocated to the instance partition. This may be zero in
-   * API responses for instance partitions that are not yet in state `READY`.
+   * to specify the target number of nodes allocated to the instance partition. If autoscaling is
+   * enabled, node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
+   * allocated to the instance partition. This may be zero in API responses for instance partitions
+   * that are not yet in state `READY`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -278,8 +284,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
 
   /**
    * The number of nodes allocated to this instance partition. Users can set the `node_count` field
-   * to specify the target number of nodes allocated to the instance partition. This may be zero in
-   * API responses for instance partitions that are not yet in state `READY`.
+   * to specify the target number of nodes allocated to the instance partition. If autoscaling is
+   * enabled, node_count is treated as an OUTPUT_ONLY field and reflects the current number of nodes
+   * allocated to the instance partition. This may be zero in API responses for instance partitions
+   * that are not yet in state `READY`.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public InstancePartition setNodeCount(java.lang.Integer nodeCount) {
@@ -290,8 +298,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   /**
    * The number of processing units allocated to this instance partition. Users can set the
    * `processing_units` field to specify the target number of processing units allocated to the
-   * instance partition. This might be zero in API responses for instance partitions that are not
-   * yet in the `READY` state.
+   * instance partition. If autoscaling is enabled, processing_units is treated as an OUTPUT_ONLY
+   * field and reflects the current number of processing units allocated to the instance partition.
+   * This might be zero in API responses for instance partitions that are not yet in the `READY`
+   * state.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProcessingUnits() {
@@ -301,8 +311,10 @@ public final class InstancePartition extends com.google.api.client.json.GenericJ
   /**
    * The number of processing units allocated to this instance partition. Users can set the
    * `processing_units` field to specify the target number of processing units allocated to the
-   * instance partition. This might be zero in API responses for instance partitions that are not
-   * yet in the `READY` state.
+   * instance partition. If autoscaling is enabled, processing_units is treated as an OUTPUT_ONLY
+   * field and reflects the current number of processing units allocated to the instance partition.
+   * This might be zero in API responses for instance partitions that are not yet in the `READY`
+   * state.
    * @param processingUnits processingUnits or {@code null} for none
    */
   public InstancePartition setProcessingUnits(java.lang.Integer processingUnits) {

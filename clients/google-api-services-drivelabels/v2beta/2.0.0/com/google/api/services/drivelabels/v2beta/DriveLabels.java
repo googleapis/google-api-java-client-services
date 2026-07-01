@@ -2693,7 +2693,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
         private static final String REST_PATH = "v2beta/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^labels/[^/]+/permissions/[^/]+$");
+            java.util.regex.Pattern.compile("^labels/[^/]+/permissions/.*$");
 
         /**
          * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
@@ -2716,7 +2716,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^labels/[^/]+/permissions/[^/]+$");
+                "^labels/[^/]+/permissions/.*$");
           }
         }
 
@@ -2790,7 +2790,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^labels/[^/]+/permissions/[^/]+$");
+                "^labels/[^/]+/permissions/.*$");
           }
           this.name = name;
           return this;
@@ -3905,7 +3905,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
           private static final String REST_PATH = "v2beta/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
+              java.util.regex.Pattern.compile("^labels/[^/]+/revisions/[^/]+/permissions/.*$");
 
           /**
            * Deletes a label's permission. Permissions affect the label resource as a whole, aren't
@@ -3928,7 +3928,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
+                  "^labels/[^/]+/revisions/[^/]+/permissions/.*$");
             }
           }
 
@@ -4002,7 +4002,7 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^labels/[^/]+/revisions/[^/]+/permissions/[^/]+$");
+                  "^labels/[^/]+/revisions/[^/]+/permissions/.*$");
             }
             this.name = name;
             return this;

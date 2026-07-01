@@ -424,6 +424,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.String privateEndpointLabel;
 
   /**
+   * Optional. Indicates if the Autonomous Database is a refreshable clone. This field is used in
+   * update flow to connect / disconnect a refreshable clone from its source database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean refreshableClone;
+
+  /**
    * Output only. The refresh mode of the cloned Autonomous Database.
    * The value may be {@code null}.
    */
@@ -1451,6 +1459,25 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   public AutonomousDatabaseProperties setPrivateEndpointLabel(java.lang.String privateEndpointLabel) {
     this.privateEndpointLabel = privateEndpointLabel;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the Autonomous Database is a refreshable clone. This field is used in
+   * update flow to connect / disconnect a refreshable clone from its source database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRefreshableClone() {
+    return refreshableClone;
+  }
+
+  /**
+   * Optional. Indicates if the Autonomous Database is a refreshable clone. This field is used in
+   * update flow to connect / disconnect a refreshable clone from its source database.
+   * @param refreshableClone refreshableClone or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setRefreshableClone(java.lang.Boolean refreshableClone) {
+    this.refreshableClone = refreshableClone;
     return this;
   }
 

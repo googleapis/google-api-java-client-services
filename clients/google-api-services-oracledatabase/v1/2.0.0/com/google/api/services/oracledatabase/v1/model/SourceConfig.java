@@ -31,6 +31,30 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class SourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The frequency in seconds a refreshable clone is refreshed after auto-refresh is
+   * enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer autoRefreshFrequencySeconds;
+
+  /**
+   * Optional. The time, in seconds, the data of the automatic refreshable clone lags the primary
+   * database at the point of refresh.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer autoRefreshPointLagSeconds;
+
+  /**
+   * Optional. The date and time that auto-refreshing will begin for an Autonomous Database
+   * refreshable clone. This value controls only the start time for the first refresh operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String autoRefreshStartTime;
+
+  /**
    * Optional. This field specifies if the replication of automatic backups is enabled when creating
    * a Data Guard.
    * The value may be {@code null}.
@@ -45,6 +69,111 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String autonomousDatabase;
+
+  /**
+   * Optional. The name of the Autonomous Database Backup resource with the format:
+   * projects/{project}/locations/{region}/autonomousDatabaseBackups/{autonomous_database_backup}
+   * Required when source_type is BACKUP_FROM_ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autonomousDatabaseBackup;
+
+  /**
+   * Optional. The timestamp specified for the point-in-time clone of the source Autonomous
+   * Database. This field is only applicable in case of BACKUP_FROM_TIMESTAMP source type and when
+   * use_latest_available_backup is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String backupTime;
+
+  /**
+   * Optional. The clone type of the Autonomous Database. This field is only applicable in case of
+   * cloning
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloneType;
+
+  /**
+   * Optional. The refresh mode of the clone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String refreshableMode;
+
+  /**
+   * Optional. The source type of the Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceType;
+
+  /**
+   * Optional. Clone from latest available backup timestamp. This field is only applicable in case
+   * of BACKUP_FROM_TIMESTAMP source type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useLatestAvailableBackup;
+
+  /**
+   * Optional. The frequency in seconds a refreshable clone is refreshed after auto-refresh is
+   * enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAutoRefreshFrequencySeconds() {
+    return autoRefreshFrequencySeconds;
+  }
+
+  /**
+   * Optional. The frequency in seconds a refreshable clone is refreshed after auto-refresh is
+   * enabled.
+   * @param autoRefreshFrequencySeconds autoRefreshFrequencySeconds or {@code null} for none
+   */
+  public SourceConfig setAutoRefreshFrequencySeconds(java.lang.Integer autoRefreshFrequencySeconds) {
+    this.autoRefreshFrequencySeconds = autoRefreshFrequencySeconds;
+    return this;
+  }
+
+  /**
+   * Optional. The time, in seconds, the data of the automatic refreshable clone lags the primary
+   * database at the point of refresh.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAutoRefreshPointLagSeconds() {
+    return autoRefreshPointLagSeconds;
+  }
+
+  /**
+   * Optional. The time, in seconds, the data of the automatic refreshable clone lags the primary
+   * database at the point of refresh.
+   * @param autoRefreshPointLagSeconds autoRefreshPointLagSeconds or {@code null} for none
+   */
+  public SourceConfig setAutoRefreshPointLagSeconds(java.lang.Integer autoRefreshPointLagSeconds) {
+    this.autoRefreshPointLagSeconds = autoRefreshPointLagSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. The date and time that auto-refreshing will begin for an Autonomous Database
+   * refreshable clone. This value controls only the start time for the first refresh operation.
+   * @return value or {@code null} for none
+   */
+  public String getAutoRefreshStartTime() {
+    return autoRefreshStartTime;
+  }
+
+  /**
+   * Optional. The date and time that auto-refreshing will begin for an Autonomous Database
+   * refreshable clone. This value controls only the start time for the first refresh operation.
+   * @param autoRefreshStartTime autoRefreshStartTime or {@code null} for none
+   */
+  public SourceConfig setAutoRefreshStartTime(String autoRefreshStartTime) {
+    this.autoRefreshStartTime = autoRefreshStartTime;
+    return this;
+  }
 
   /**
    * Optional. This field specifies if the replication of automatic backups is enabled when creating
@@ -81,6 +210,120 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setAutonomousDatabase(java.lang.String autonomousDatabase) {
     this.autonomousDatabase = autonomousDatabase;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the Autonomous Database Backup resource with the format:
+   * projects/{project}/locations/{region}/autonomousDatabaseBackups/{autonomous_database_backup}
+   * Required when source_type is BACKUP_FROM_ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutonomousDatabaseBackup() {
+    return autonomousDatabaseBackup;
+  }
+
+  /**
+   * Optional. The name of the Autonomous Database Backup resource with the format:
+   * projects/{project}/locations/{region}/autonomousDatabaseBackups/{autonomous_database_backup}
+   * Required when source_type is BACKUP_FROM_ID.
+   * @param autonomousDatabaseBackup autonomousDatabaseBackup or {@code null} for none
+   */
+  public SourceConfig setAutonomousDatabaseBackup(java.lang.String autonomousDatabaseBackup) {
+    this.autonomousDatabaseBackup = autonomousDatabaseBackup;
+    return this;
+  }
+
+  /**
+   * Optional. The timestamp specified for the point-in-time clone of the source Autonomous
+   * Database. This field is only applicable in case of BACKUP_FROM_TIMESTAMP source type and when
+   * use_latest_available_backup is false.
+   * @return value or {@code null} for none
+   */
+  public String getBackupTime() {
+    return backupTime;
+  }
+
+  /**
+   * Optional. The timestamp specified for the point-in-time clone of the source Autonomous
+   * Database. This field is only applicable in case of BACKUP_FROM_TIMESTAMP source type and when
+   * use_latest_available_backup is false.
+   * @param backupTime backupTime or {@code null} for none
+   */
+  public SourceConfig setBackupTime(String backupTime) {
+    this.backupTime = backupTime;
+    return this;
+  }
+
+  /**
+   * Optional. The clone type of the Autonomous Database. This field is only applicable in case of
+   * cloning
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloneType() {
+    return cloneType;
+  }
+
+  /**
+   * Optional. The clone type of the Autonomous Database. This field is only applicable in case of
+   * cloning
+   * @param cloneType cloneType or {@code null} for none
+   */
+  public SourceConfig setCloneType(java.lang.String cloneType) {
+    this.cloneType = cloneType;
+    return this;
+  }
+
+  /**
+   * Optional. The refresh mode of the clone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRefreshableMode() {
+    return refreshableMode;
+  }
+
+  /**
+   * Optional. The refresh mode of the clone.
+   * @param refreshableMode refreshableMode or {@code null} for none
+   */
+  public SourceConfig setRefreshableMode(java.lang.String refreshableMode) {
+    this.refreshableMode = refreshableMode;
+    return this;
+  }
+
+  /**
+   * Optional. The source type of the Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceType() {
+    return sourceType;
+  }
+
+  /**
+   * Optional. The source type of the Autonomous Database.
+   * @param sourceType sourceType or {@code null} for none
+   */
+  public SourceConfig setSourceType(java.lang.String sourceType) {
+    this.sourceType = sourceType;
+    return this;
+  }
+
+  /**
+   * Optional. Clone from latest available backup timestamp. This field is only applicable in case
+   * of BACKUP_FROM_TIMESTAMP source type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseLatestAvailableBackup() {
+    return useLatestAvailableBackup;
+  }
+
+  /**
+   * Optional. Clone from latest available backup timestamp. This field is only applicable in case
+   * of BACKUP_FROM_TIMESTAMP source type.
+   * @param useLatestAvailableBackup useLatestAvailableBackup or {@code null} for none
+   */
+  public SourceConfig setUseLatestAvailableBackup(java.lang.Boolean useLatestAvailableBackup) {
+    this.useLatestAvailableBackup = useLatestAvailableBackup;
     return this;
   }
 

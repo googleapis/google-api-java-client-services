@@ -55,6 +55,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String edition;
 
   /**
+   * Output only. The region where Knowledge Catalog data is synced to and stored, including user-
+   * created aspects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String knowledgeCatalogRegion;
+
+  /**
    * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that
    * reflect a customer's organizational needs and deployment strategies. They can be used to filter
    * resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must
@@ -166,6 +174,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEdition(java.lang.String edition) {
     this.edition = edition;
+    return this;
+  }
+
+  /**
+   * Output only. The region where Knowledge Catalog data is synced to and stored, including user-
+   * created aspects.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKnowledgeCatalogRegion() {
+    return knowledgeCatalogRegion;
+  }
+
+  /**
+   * Output only. The region where Knowledge Catalog data is synced to and stored, including user-
+   * created aspects.
+   * @param knowledgeCatalogRegion knowledgeCatalogRegion or {@code null} for none
+   */
+  public Instance setKnowledgeCatalogRegion(java.lang.String knowledgeCatalogRegion) {
+    this.knowledgeCatalogRegion = knowledgeCatalogRegion;
     return this;
   }
 

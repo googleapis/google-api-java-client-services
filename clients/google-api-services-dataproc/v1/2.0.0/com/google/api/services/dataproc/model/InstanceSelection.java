@@ -30,6 +30,15 @@ package com.google.api.services.dataproc.model;
 public final class InstanceSelection extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Disk configuration to apply to the instances in this instance selection. If specified
+   * on any entry in instanceSelectionList, then it must be specified on every entry in
+   * instanceSelectionList and the instanceGroupConfig must not specify any diskConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskConfig diskConfig;
+
+  /**
    * Optional. Full machine-type names, e.g. "n1-standard-16".
    * The value may be {@code null}.
    */
@@ -45,6 +54,27 @@ public final class InstanceSelection extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rank;
+
+  /**
+   * Optional. Disk configuration to apply to the instances in this instance selection. If specified
+   * on any entry in instanceSelectionList, then it must be specified on every entry in
+   * instanceSelectionList and the instanceGroupConfig must not specify any diskConfig.
+   * @return value or {@code null} for none
+   */
+  public DiskConfig getDiskConfig() {
+    return diskConfig;
+  }
+
+  /**
+   * Optional. Disk configuration to apply to the instances in this instance selection. If specified
+   * on any entry in instanceSelectionList, then it must be specified on every entry in
+   * instanceSelectionList and the instanceGroupConfig must not specify any diskConfig.
+   * @param diskConfig diskConfig or {@code null} for none
+   */
+  public InstanceSelection setDiskConfig(DiskConfig diskConfig) {
+    this.diskConfig = diskConfig;
+    return this;
+  }
 
   /**
    * Optional. Full machine-type names, e.g. "n1-standard-16".

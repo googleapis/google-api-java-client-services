@@ -67,9 +67,11 @@ jobs:
     runs-on: 'ubuntu-24.04'
     needs: [verify]
     steps:
-      - run: |
+      - env:
+          VERIFY_OUTPUTS: ${{ toJSON(needs.verify.outputs) }}
+        run: |
           set -e
-          echo '${{ toJSON(needs.verify.outputs) }}' \
+          echo "$VERIFY_OUTPUTS" \
           | jq -j 'to_entries[] | select(.key | startswith("failed_libraries_")) | .value' \
           | sed 's/,/\n/g' > failed_libs
 

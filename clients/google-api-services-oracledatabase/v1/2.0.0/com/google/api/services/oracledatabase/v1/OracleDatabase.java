@@ -1852,6 +1852,157 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Gets the refreshable clones for a given Autonomous Database.
+         *
+         * Create a request for the method "autonomousDatabases.getRefreshableClones".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link GetRefreshableClones#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The Autonomous Database resource whose refreshable clones are to be listed. Format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+         * @return the request
+         */
+        public GetRefreshableClones getRefreshableClones(java.lang.String name) throws java.io.IOException {
+          GetRefreshableClones result = new GetRefreshableClones(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetRefreshableClones extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.AutonomousDatabaseRefreshableClones> {
+
+          private static final String REST_PATH = "v1/{+name}:getRefreshableClones";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Gets the refreshable clones for a given Autonomous Database.
+           *
+           * Create a request for the method "autonomousDatabases.getRefreshableClones".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link GetRefreshableClones#execute()} method to invoke the
+           * remote operation. <p> {@link GetRefreshableClones#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The Autonomous Database resource whose refreshable clones are to be listed. Format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+           * @since 1.13
+           */
+          protected GetRefreshableClones(java.lang.String name) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.AutonomousDatabaseRefreshableClones.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetRefreshableClones set$Xgafv(java.lang.String $Xgafv) {
+            return (GetRefreshableClones) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetRefreshableClones setAccessToken(java.lang.String accessToken) {
+            return (GetRefreshableClones) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetRefreshableClones setAlt(java.lang.String alt) {
+            return (GetRefreshableClones) super.setAlt(alt);
+          }
+
+          @Override
+          public GetRefreshableClones setCallback(java.lang.String callback) {
+            return (GetRefreshableClones) super.setCallback(callback);
+          }
+
+          @Override
+          public GetRefreshableClones setFields(java.lang.String fields) {
+            return (GetRefreshableClones) super.setFields(fields);
+          }
+
+          @Override
+          public GetRefreshableClones setKey(java.lang.String key) {
+            return (GetRefreshableClones) super.setKey(key);
+          }
+
+          @Override
+          public GetRefreshableClones setOauthToken(java.lang.String oauthToken) {
+            return (GetRefreshableClones) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetRefreshableClones setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetRefreshableClones) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetRefreshableClones setQuotaUser(java.lang.String quotaUser) {
+            return (GetRefreshableClones) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetRefreshableClones setUploadType(java.lang.String uploadType) {
+            return (GetRefreshableClones) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetRefreshableClones setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetRefreshableClones) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Autonomous Database resource whose refreshable clones are to be listed.
+           * Format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The Autonomous Database resource whose refreshable clones are to be listed. Format:
+         projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The Autonomous Database resource whose refreshable clones are to be listed.
+           * Format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}
+           */
+          public GetRefreshableClones setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetRefreshableClones set(String parameterName, Object value) {
+            return (GetRefreshableClones) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the Autonomous Databases in a given project and location.
          *
          * Create a request for the method "autonomousDatabases.list".
@@ -2272,6 +2423,146 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Refreshes the refreshable clone of an Autonomous Database.
+         *
+         * Create a request for the method "autonomousDatabases.refresh".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the AutonomousDatabase resource. Format:
+         *        projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.RefreshAutonomousDatabaseRequest}
+         * @return the request
+         */
+        public Refresh refresh(java.lang.String name, com.google.api.services.oracledatabase.v1.model.RefreshAutonomousDatabaseRequest content) throws java.io.IOException {
+          Refresh result = new Refresh(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Refresh extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:refresh";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Refreshes the refreshable clone of an Autonomous Database.
+           *
+           * Create a request for the method "autonomousDatabases.refresh".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Refresh#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Refresh#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the AutonomousDatabase resource. Format:
+         *        projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.RefreshAutonomousDatabaseRequest}
+           * @since 1.13
+           */
+          protected Refresh(java.lang.String name, com.google.api.services.oracledatabase.v1.model.RefreshAutonomousDatabaseRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Refresh set$Xgafv(java.lang.String $Xgafv) {
+            return (Refresh) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Refresh setAccessToken(java.lang.String accessToken) {
+            return (Refresh) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Refresh setAlt(java.lang.String alt) {
+            return (Refresh) super.setAlt(alt);
+          }
+
+          @Override
+          public Refresh setCallback(java.lang.String callback) {
+            return (Refresh) super.setCallback(callback);
+          }
+
+          @Override
+          public Refresh setFields(java.lang.String fields) {
+            return (Refresh) super.setFields(fields);
+          }
+
+          @Override
+          public Refresh setKey(java.lang.String key) {
+            return (Refresh) super.setKey(key);
+          }
+
+          @Override
+          public Refresh setOauthToken(java.lang.String oauthToken) {
+            return (Refresh) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Refresh setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Refresh) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Refresh setQuotaUser(java.lang.String quotaUser) {
+            return (Refresh) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Refresh setUploadType(java.lang.String uploadType) {
+            return (Refresh) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Refresh setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Refresh) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the AutonomousDatabase resource. Format:
+           * projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the AutonomousDatabase resource. Format:
+         projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the AutonomousDatabase resource. Format:
+           * projects/{project}/location/{location}/autonomousDatabases/{autonomous_database}
+           */
+          public Refresh setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Refresh set(String parameterName, Object value) {
+            return (Refresh) super.set(parameterName, value);
           }
         }
         /**

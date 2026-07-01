@@ -44,6 +44,13 @@ public final class LighthouseCategoryV5 extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. How the category score should be displayed (e.g. as a fraction).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryScoreDisplayMode;
+
+  /**
    * A more detailed description of the category and its importance.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class LighthouseCategoryV5 extends com.google.api.client.json.Gener
    */
   public LighthouseCategoryV5 setAuditRefs(java.util.List<AuditRefs> auditRefs) {
     this.auditRefs = auditRefs;
+    return this;
+  }
+
+  /**
+   * Optional. How the category score should be displayed (e.g. as a fraction).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryScoreDisplayMode() {
+    return categoryScoreDisplayMode;
+  }
+
+  /**
+   * Optional. How the category score should be displayed (e.g. as a fraction).
+   * @param categoryScoreDisplayMode categoryScoreDisplayMode or {@code null} for none
+   */
+  public LighthouseCategoryV5 setCategoryScoreDisplayMode(java.lang.String categoryScoreDisplayMode) {
+    this.categoryScoreDisplayMode = categoryScoreDisplayMode;
     return this;
   }
 

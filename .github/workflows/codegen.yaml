@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   schedule:
   # Runs daily at 00:18 UTC.
@@ -14,7 +17,7 @@ jobs:
     outputs:
       batches: ${{ steps.chunk.outputs.result }}
     steps:
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@211cb3fefb35a799baa5156f9321bb774fe56294 # v5
         id: chunk
         with:
           script: |

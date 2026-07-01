@@ -85,6 +85,13 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
   private java.lang.String confidentialityImpact;
 
   /**
+   * Optional. Exploit Maturity (E). Defined in CVSS v4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exploitMaturity;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -282,6 +289,23 @@ public final class CVSS extends com.google.api.client.json.GenericJson {
    */
   public CVSS setConfidentialityImpact(java.lang.String confidentialityImpact) {
     this.confidentialityImpact = confidentialityImpact;
+    return this;
+  }
+
+  /**
+   * Optional. Exploit Maturity (E). Defined in CVSS v4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExploitMaturity() {
+    return exploitMaturity;
+  }
+
+  /**
+   * Optional. Exploit Maturity (E). Defined in CVSS v4.
+   * @param exploitMaturity exploitMaturity or {@code null} for none
+   */
+  public CVSS setExploitMaturity(java.lang.String exploitMaturity) {
+    this.exploitMaturity = exploitMaturity;
     return this;
   }
 

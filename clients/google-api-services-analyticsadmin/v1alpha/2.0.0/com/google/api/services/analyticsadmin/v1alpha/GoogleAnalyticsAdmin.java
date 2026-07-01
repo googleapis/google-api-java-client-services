@@ -777,7 +777,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     /**
      * Returns all accounts accessible by the caller. Note that these accounts might not currently have
      * GA properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty
-     * list if no relevant accounts are found.
+     * list if no relevant accounts are found. Note: The easiest way to retrieve a list of all
+     * properties you have access to is by using `ListAccountSummaries`.
      *
      * Create a request for the method "accounts.list".
      *
@@ -799,7 +800,8 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       /**
        * Returns all accounts accessible by the caller. Note that these accounts might not currently
        * have GA properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an
-       * empty list if no relevant accounts are found.
+       * empty list if no relevant accounts are found. Note: The easiest way to retrieve a list of all
+       * properties you have access to is by using `ListAccountSummaries`.
        *
        * Create a request for the method "accounts.list".
        *

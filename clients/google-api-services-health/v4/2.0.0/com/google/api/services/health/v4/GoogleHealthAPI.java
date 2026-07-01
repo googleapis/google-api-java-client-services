@@ -193,8 +193,8 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the health server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource where this subscriber will be created. Format: projects/{project}
-       *        Example: projects/my-project-123
+       * @param parent Required. The parent resource where this subscriber will be created. Format:
+       *        projects/{project_number} Example: projects/1234567890
        * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriberPayload}
        * @return the request
        */
@@ -234,8 +234,8 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource where this subscriber will be created. Format: projects/{project}
-       *        Example: projects/my-project-123
+         * @param parent Required. The parent resource where this subscriber will be created. Format:
+       *        projects/{project_number} Example: projects/1234567890
          * @param content the {@link com.google.api.services.health.v4.model.CreateSubscriberPayload}
          * @since 1.13
          */
@@ -306,13 +306,13 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. The parent resource where this subscriber will be created. Format:
-         * projects/{project} Example: projects/my-project-123
+         * projects/{project_number} Example: projects/1234567890
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource where this subscriber will be created. Format: projects/{project}
-       Example: projects/my-project-123
+        /** Required. The parent resource where this subscriber will be created. Format:
+       projects/{project_number} Example: projects/1234567890
          */
         public java.lang.String getParent() {
           return parent;
@@ -320,7 +320,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. The parent resource where this subscriber will be created. Format:
-         * projects/{project} Example: projects/my-project-123
+         * projects/{project_number} Example: projects/1234567890
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

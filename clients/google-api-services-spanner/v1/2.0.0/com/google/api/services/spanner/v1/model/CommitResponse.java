@@ -45,12 +45,26 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private String commitTimestamp;
 
   /**
+   * The isolation level used for the read-write transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String isolationLevel;
+
+  /**
    * If specified, transaction has not committed yet. You must retry the commit with the new
    * precommit token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MultiplexedSessionPrecommitToken precommitToken;
+
+  /**
+   * The read lock mode used for the read-write transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String readLockMode;
 
   /**
    * If `TransactionOptions.isolation_level` is set to `IsolationLevel.REPEATABLE_READ`, then the
@@ -98,6 +112,23 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The isolation level used for the read-write transaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIsolationLevel() {
+    return isolationLevel;
+  }
+
+  /**
+   * The isolation level used for the read-write transaction.
+   * @param isolationLevel isolationLevel or {@code null} for none
+   */
+  public CommitResponse setIsolationLevel(java.lang.String isolationLevel) {
+    this.isolationLevel = isolationLevel;
+    return this;
+  }
+
+  /**
    * If specified, transaction has not committed yet. You must retry the commit with the new
    * precommit token.
    * @return value or {@code null} for none
@@ -113,6 +144,23 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
    */
   public CommitResponse setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
     this.precommitToken = precommitToken;
+    return this;
+  }
+
+  /**
+   * The read lock mode used for the read-write transaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReadLockMode() {
+    return readLockMode;
+  }
+
+  /**
+   * The read lock mode used for the read-write transaction.
+   * @param readLockMode readLockMode or {@code null} for none
+   */
+  public CommitResponse setReadLockMode(java.lang.String readLockMode) {
+    this.readLockMode = readLockMode;
     return this;
   }
 

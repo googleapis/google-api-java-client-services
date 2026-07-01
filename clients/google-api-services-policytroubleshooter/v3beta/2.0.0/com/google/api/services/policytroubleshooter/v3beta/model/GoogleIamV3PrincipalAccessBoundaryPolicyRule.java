@@ -46,6 +46,20 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRule extends com.goog
   private java.lang.String effect;
 
   /**
+   * Optional. A list of Resource Manager resources. If an excluded resource is listed in the rule,
+   * then the rule does not apply for that resource and its descendants. This takes precedence over
+   * the `resources` field. The number of excluded resources in this field is limited to 500 across
+   * all rules in the policy. The following resource types are supported: * Organizations, such as
+   * `//cloudresourcemanager.googleapis.com/organizations/123`. * Folders, such as
+   * `//cloudresourcemanager.googleapis.com/folders/123`. * Projects, such as
+   * `//cloudresourcemanager.googleapis.com/projects/123` or
+   * `//cloudresourcemanager.googleapis.com/projects/my-project-id`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedResources;
+
+  /**
    * Optional. The operation attributes that determine whether this rule applies to a request. If
    * this field is not specified, the rule applies to all operations.
    * The value may be {@code null}.
@@ -99,6 +113,37 @@ public final class GoogleIamV3PrincipalAccessBoundaryPolicyRule extends com.goog
    */
   public GoogleIamV3PrincipalAccessBoundaryPolicyRule setEffect(java.lang.String effect) {
     this.effect = effect;
+    return this;
+  }
+
+  /**
+   * Optional. A list of Resource Manager resources. If an excluded resource is listed in the rule,
+   * then the rule does not apply for that resource and its descendants. This takes precedence over
+   * the `resources` field. The number of excluded resources in this field is limited to 500 across
+   * all rules in the policy. The following resource types are supported: * Organizations, such as
+   * `//cloudresourcemanager.googleapis.com/organizations/123`. * Folders, such as
+   * `//cloudresourcemanager.googleapis.com/folders/123`. * Projects, such as
+   * `//cloudresourcemanager.googleapis.com/projects/123` or
+   * `//cloudresourcemanager.googleapis.com/projects/my-project-id`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedResources() {
+    return excludedResources;
+  }
+
+  /**
+   * Optional. A list of Resource Manager resources. If an excluded resource is listed in the rule,
+   * then the rule does not apply for that resource and its descendants. This takes precedence over
+   * the `resources` field. The number of excluded resources in this field is limited to 500 across
+   * all rules in the policy. The following resource types are supported: * Organizations, such as
+   * `//cloudresourcemanager.googleapis.com/organizations/123`. * Folders, such as
+   * `//cloudresourcemanager.googleapis.com/folders/123`. * Projects, such as
+   * `//cloudresourcemanager.googleapis.com/projects/123` or
+   * `//cloudresourcemanager.googleapis.com/projects/my-project-id`.
+   * @param excludedResources excludedResources or {@code null} for none
+   */
+  public GoogleIamV3PrincipalAccessBoundaryPolicyRule setExcludedResources(java.util.List<java.lang.String> excludedResources) {
+    this.excludedResources = excludedResources;
     return this;
   }
 

@@ -62,6 +62,15 @@ public final class GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule exte
   private java.util.List<GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRuleExplainedResource> explainedResources;
 
   /**
+   * Output only. Unsupported features detected in this rule. Supported values: * `OPERATION`:
+   * Permission Subsetting (Operation constraints). See
+   * google.iam.v3.PrincipalAccessBoundaryPolicyRule.operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> pabUnsupportedFeatures;
+
+  /**
    * The relevance of this rule to the overall access state.
    * The value may be {@code null}.
    */
@@ -144,6 +153,27 @@ public final class GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule exte
    */
   public GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule setExplainedResources(java.util.List<GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRuleExplainedResource> explainedResources) {
     this.explainedResources = explainedResources;
+    return this;
+  }
+
+  /**
+   * Output only. Unsupported features detected in this rule. Supported values: * `OPERATION`:
+   * Permission Subsetting (Operation constraints). See
+   * google.iam.v3.PrincipalAccessBoundaryPolicyRule.operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPabUnsupportedFeatures() {
+    return pabUnsupportedFeatures;
+  }
+
+  /**
+   * Output only. Unsupported features detected in this rule. Supported values: * `OPERATION`:
+   * Permission Subsetting (Operation constraints). See
+   * google.iam.v3.PrincipalAccessBoundaryPolicyRule.operation.
+   * @param pabUnsupportedFeatures pabUnsupportedFeatures or {@code null} for none
+   */
+  public GoogleCloudPolicytroubleshooterIamV3betaExplainedPABRule setPabUnsupportedFeatures(java.util.List<java.lang.String> pabUnsupportedFeatures) {
+    this.pabUnsupportedFeatures = pabUnsupportedFeatures;
     return this;
   }
 

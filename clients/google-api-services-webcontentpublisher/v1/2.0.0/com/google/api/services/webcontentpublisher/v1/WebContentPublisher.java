@@ -134,6 +134,1253 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
   }
 
   /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WebContentPublisher webcontentpublisher = new WebContentPublisher(...);}
+   *   {@code WebContentPublisher.Organizations.List request = webcontentpublisher.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Publications collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code WebContentPublisher webcontentpublisher = new WebContentPublisher(...);}
+     *   {@code WebContentPublisher.Publications.List request = webcontentpublisher.publications().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Publications publications() {
+      return new Publications();
+    }
+
+    /**
+     * The "publications" collection of methods.
+     */
+    public class Publications {
+
+      /**
+       * Creates a publication.
+       *
+       * Create a request for the method "publications.create".
+       *
+       * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this publication will be created. Format:
+       *        `organizations/{organization}`.
+       * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Publication}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.webcontentpublisher.v1.model.Publication content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.Publication> {
+
+        private static final String REST_PATH = "v1/{+parent}/publications";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a publication.
+         *
+         * Create a request for the method "publications.create".
+         *
+         * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this publication will be created. Format:
+       *        `organizations/{organization}`.
+         * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Publication}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.webcontentpublisher.v1.model.Publication content) {
+          super(WebContentPublisher.this, "POST", REST_PATH, content, com.google.api.services.webcontentpublisher.v1.model.Publication.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this publication will be created. Format:
+         * `organizations/{organization}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this publication will be created. Format:
+       `organizations/{organization}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this publication will be created. Format:
+         * `organizations/{organization}`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The unique identifier of the publication to create. If not specified, the
+         * server will generate a random publication ID.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String publicationId;
+
+        /** Optional. The unique identifier of the publication to create. If not specified, the server will
+       generate a random publication ID.
+         */
+        public java.lang.String getPublicationId() {
+          return publicationId;
+        }
+
+        /**
+         * Optional. The unique identifier of the publication to create. If not specified, the
+         * server will generate a random publication ID.
+         */
+        public Create setPublicationId(java.lang.String publicationId) {
+          this.publicationId = publicationId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a publication.
+       *
+       * Create a request for the method "publications.get".
+       *
+       * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the publication to retrieve. Format:
+       *        `organizations/{organization}/publications/{publication}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.Publication> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+$");
+
+        /**
+         * Gets a publication.
+         *
+         * Create a request for the method "publications.get".
+         *
+         * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the publication to retrieve. Format:
+       *        `organizations/{organization}/publications/{publication}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.Publication.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the publication to retrieve. Format:
+         * `organizations/{organization}/publications/{publication}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the publication to retrieve. Format:
+       `organizations/{organization}/publications/{publication}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the publication to retrieve. Format:
+         * `organizations/{organization}/publications/{publication}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists publications.
+       *
+       * Create a request for the method "publications.list".
+       *
+       * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent organization whose publications to list. Format:
+       *        `organizations/{organization}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.ListPublicationsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/publications";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists publications.
+         *
+         * Create a request for the method "publications.list".
+         *
+         * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent organization whose publications to list. Format:
+       *        `organizations/{organization}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.ListPublicationsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent organization whose publications to list. Format:
+         * `organizations/{organization}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent organization whose publications to list. Format:
+       `organizations/{organization}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent organization whose publications to list. Format:
+         * `organizations/{organization}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. A filter expression to filter the publications returned. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter expression to filter the publications returned.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** Optional. A filter expression to filter the publications returned. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of publications to return. The service may return fewer than
+         * this value. If unspecified, at most 50 publications will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of publications to return. The service may return fewer than this
+       value. If unspecified, at most 50 publications will be returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of publications to return. The service may return fewer than
+         * this value. If unspecified, at most 50 publications will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListPublications` call, to retrieve the
+         * next page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListPublications` call, to retrieve the next
+       page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListPublications` call, to retrieve the
+         * next page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a publication.
+       *
+       * Create a request for the method "publications.patch".
+       *
+       * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the publication. Format:
+       *        organizations/{organization}/publications/{publication}
+       * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Publication}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.webcontentpublisher.v1.model.Publication content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.Publication> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+$");
+
+        /**
+         * Updates a publication.
+         *
+         * Create a request for the method "publications.patch".
+         *
+         * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the publication. Format:
+       *        organizations/{organization}/publications/{publication}
+         * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Publication}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.webcontentpublisher.v1.model.Publication content) {
+          super(WebContentPublisher.this, "PATCH", REST_PATH, content, com.google.api.services.webcontentpublisher.v1.model.Publication.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the publication. Format:
+         * organizations/{organization}/publications/{publication}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the publication. Format:
+       organizations/{organization}/publications/{publication}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the publication. Format:
+         * organizations/{organization}/publications/{publication}
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Ctas collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code WebContentPublisher webcontentpublisher = new WebContentPublisher(...);}
+       *   {@code WebContentPublisher.Ctas.List request = webcontentpublisher.ctas().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Ctas ctas() {
+        return new Ctas();
+      }
+
+      /**
+       * The "ctas" collection of methods.
+       */
+      public class Ctas {
+
+        /**
+         * Creates a CTA.
+         *
+         * Create a request for the method "ctas.create".
+         *
+         * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent publication resource where this CTA will be created. Format:
+         *        `organizations/{organization}/publications/{publication}`.
+         * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Cta}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.webcontentpublisher.v1.model.Cta content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.Cta> {
+
+          private static final String REST_PATH = "v1/{+parent}/ctas";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+$");
+
+          /**
+           * Creates a CTA.
+           *
+           * Create a request for the method "ctas.create".
+           *
+           * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent publication resource where this CTA will be created. Format:
+         *        `organizations/{organization}/publications/{publication}`.
+           * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.Cta}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.webcontentpublisher.v1.model.Cta content) {
+            super(WebContentPublisher.this, "POST", REST_PATH, content, com.google.api.services.webcontentpublisher.v1.model.Cta.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent publication resource where this CTA will be created. Format:
+           * `organizations/{organization}/publications/{publication}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent publication resource where this CTA will be created. Format:
+         `organizations/{organization}/publications/{publication}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent publication resource where this CTA will be created. Format:
+           * `organizations/{organization}/publications/{publication}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The unique identifier of the CTA to create. If not specified, the server will
+           * generate a random CTA ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String ctaId;
+
+          /** Optional. The unique identifier of the CTA to create. If not specified, the server will generate a
+         random CTA ID.
+           */
+          public java.lang.String getCtaId() {
+            return ctaId;
+          }
+
+          /**
+           * Optional. The unique identifier of the CTA to create. If not specified, the server will
+           * generate a random CTA ID.
+           */
+          public Create setCtaId(java.lang.String ctaId) {
+            this.ctaId = ctaId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a CTA.
+         *
+         * Create a request for the method "ctas.get".
+         *
+         * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the CTA to retrieve. Format:
+         *        `organizations/{organization}/publications/{publication}/ctas/{cta}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.Cta> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+/ctas/[^/]+$");
+
+          /**
+           * Gets a CTA.
+           *
+           * Create a request for the method "ctas.get".
+           *
+           * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the CTA to retrieve. Format:
+         *        `organizations/{organization}/publications/{publication}/ctas/{cta}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.Cta.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+/ctas/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the CTA to retrieve. Format:
+           * `organizations/{organization}/publications/{publication}/ctas/{cta}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the CTA to retrieve. Format:
+         `organizations/{organization}/publications/{publication}/ctas/{cta}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the CTA to retrieve. Format:
+           * `organizations/{organization}/publications/{publication}/ctas/{cta}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+/ctas/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists CTAs.
+         *
+         * Create a request for the method "ctas.list".
+         *
+         * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent publication resource whose CTAs to list. Format:
+         *        `organizations/{organization}/publications/{publication}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.ListCtasResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/ctas";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+$");
+
+          /**
+           * Lists CTAs.
+           *
+           * Create a request for the method "ctas.list".
+           *
+           * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent publication resource whose CTAs to list. Format:
+         *        `organizations/{organization}/publications/{publication}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.ListCtasResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent publication resource whose CTAs to list. Format:
+           * `organizations/{organization}/publications/{publication}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent publication resource whose CTAs to list. Format:
+         `organizations/{organization}/publications/{publication}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent publication resource whose CTAs to list. Format:
+           * `organizations/{organization}/publications/{publication}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/publications/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of CTAs to return. The service may return fewer than this
+           * value. If unspecified, at most 50 CTAs will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of CTAs to return. The service may return fewer than this value. If
+         unspecified, at most 50 CTAs will be returned.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of CTAs to return. The service may return fewer than this
+           * value. If unspecified, at most 50 CTAs will be returned.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCtas` call, to retrieve the next
+           * page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListCtas` call, to retrieve the next page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCtas` call, to retrieve the next
+           * page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Publications collection.
    *
    * <p>The typical use is:</p>

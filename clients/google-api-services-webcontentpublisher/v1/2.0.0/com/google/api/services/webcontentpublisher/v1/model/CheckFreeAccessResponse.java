@@ -31,14 +31,14 @@ package com.google.api.services.webcontentpublisher.v1.model;
 public final class CheckFreeAccessResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * True if free access should be allowed, false otherwise.
+   * Output only. True if free access should be allowed, false otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAllowed;
 
   /**
-   * True if free access should be allowed, false otherwise.
+   * Output only. True if free access should be allowed, false otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAllowed() {
@@ -46,7 +46,7 @@ public final class CheckFreeAccessResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * True if free access should be allowed, false otherwise.
+   * Output only. True if free access should be allowed, false otherwise.
    * @param isAllowed isAllowed or {@code null} for none
    */
   public CheckFreeAccessResponse setIsAllowed(java.lang.Boolean isAllowed) {

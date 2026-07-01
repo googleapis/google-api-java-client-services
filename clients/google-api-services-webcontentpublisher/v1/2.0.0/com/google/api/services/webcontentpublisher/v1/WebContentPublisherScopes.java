@@ -23,6 +23,9 @@ package com.google.api.services.webcontentpublisher.v1;
  */
 public class WebContentPublisherScopes {
 
+  /** Private Service: https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.manage. */
+  public static final String SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_MANAGE = "https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.manage";
+
   /** See and review your subscription information. */
   public static final String SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_READONLY = "https://www.googleapis.com/auth/subscribewithgoogle.publications.entitlements.readonly";
 
@@ -33,6 +36,7 @@ public class WebContentPublisherScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_MANAGE);
     set.add(SUBSCRIBEWITHGOOGLE_PUBLICATIONS_ENTITLEMENTS_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }

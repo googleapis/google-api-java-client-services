@@ -127,6 +127,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localSsdEncryptionMode;
+
+  /**
    * The machine type to use for instances that are created from these properties. This field only
    * accepts a machine type name, for example `n2-standard-4`. If you use the machine type full or
    * partial URL, for example `projects/my-l7ilb-project/zones/us-
@@ -479,6 +486,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalSsdEncryptionMode() {
+    return localSsdEncryptionMode;
+  }
+
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * @param localSsdEncryptionMode localSsdEncryptionMode or {@code null} for none
+   */
+  public InstanceProperties setLocalSsdEncryptionMode(java.lang.String localSsdEncryptionMode) {
+    this.localSsdEncryptionMode = localSsdEncryptionMode;
     return this;
   }
 

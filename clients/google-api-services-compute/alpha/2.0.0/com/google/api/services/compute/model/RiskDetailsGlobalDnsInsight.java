@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for RiskDetailsGlobalDnsInsight.
+ * Detailed insights for a global DNS reliability risk.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the project default DNS setting is global or not.
+   * Indicates whether the project's default DNS setting is global DNS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.jso
   private String queryObservationWindow;
 
   /**
-   * The number of queries that are risky. This will always be less than total_query_count.
+   * The number of queries that are risky. This is always less than or equal to total_query_count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -58,7 +58,7 @@ public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.jso
   private java.lang.Long totalQueryCount;
 
   /**
-   * Whether the project default DNS setting is global or not.
+   * Indicates whether the project's default DNS setting is global DNS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getProjectDefaultIsGlobalDns() {
@@ -66,7 +66,7 @@ public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.jso
   }
 
   /**
-   * Whether the project default DNS setting is global or not.
+   * Indicates whether the project's default DNS setting is global DNS.
    * @param projectDefaultIsGlobalDns projectDefaultIsGlobalDns or {@code null} for none
    */
   public RiskDetailsGlobalDnsInsight setProjectDefaultIsGlobalDns(java.lang.Boolean projectDefaultIsGlobalDns) {
@@ -92,7 +92,7 @@ public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.jso
   }
 
   /**
-   * The number of queries that are risky. This will always be less than total_query_count.
+   * The number of queries that are risky. This is always less than or equal to total_query_count.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRiskyQueryCount() {
@@ -100,7 +100,7 @@ public final class RiskDetailsGlobalDnsInsight extends com.google.api.client.jso
   }
 
   /**
-   * The number of queries that are risky. This will always be less than total_query_count.
+   * The number of queries that are risky. This is always less than or equal to total_query_count.
    * @param riskyQueryCount riskyQueryCount or {@code null} for none
    */
   public RiskDetailsGlobalDnsInsight setRiskyQueryCount(java.lang.Long riskyQueryCount) {

@@ -178,6 +178,15 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String ipv6GceEndpoint;
 
   /**
+   * Specifies the network tier for EXTERNAL IPv6. Can only be set when ipv6_access_type is
+   * EXTERNAL. Defaults to project defaultNetworkTier if not specified during the creation of the
+   * subnetwork. This field is IMMUTABLE once set with EXTERNAL IPv6.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6NetworkTier;
+
+  /**
    * Output only. [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork
    * resources.
    * The value may be {@code null}.
@@ -705,6 +714,27 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setIpv6GceEndpoint(java.lang.String ipv6GceEndpoint) {
     this.ipv6GceEndpoint = ipv6GceEndpoint;
+    return this;
+  }
+
+  /**
+   * Specifies the network tier for EXTERNAL IPv6. Can only be set when ipv6_access_type is
+   * EXTERNAL. Defaults to project defaultNetworkTier if not specified during the creation of the
+   * subnetwork. This field is IMMUTABLE once set with EXTERNAL IPv6.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6NetworkTier() {
+    return ipv6NetworkTier;
+  }
+
+  /**
+   * Specifies the network tier for EXTERNAL IPv6. Can only be set when ipv6_access_type is
+   * EXTERNAL. Defaults to project defaultNetworkTier if not specified during the creation of the
+   * subnetwork. This field is IMMUTABLE once set with EXTERNAL IPv6.
+   * @param ipv6NetworkTier ipv6NetworkTier or {@code null} for none
+   */
+  public Subnetwork setIpv6NetworkTier(java.lang.String ipv6NetworkTier) {
+    this.ipv6NetworkTier = ipv6NetworkTier;
     return this;
   }
 

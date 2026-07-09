@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Details about a risk.
+ * Detailed insights and metrics about a detected reliability risk.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -37,6 +37,7 @@ public final class RiskDetails extends com.google.api.client.json.GenericJson {
   private String duration;
 
   /**
+   * Insight details for global DNS risk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,6 +82,7 @@ public final class RiskDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Insight details for global DNS risk.
    * @return value or {@code null} for none
    */
   public RiskDetailsGlobalDnsInsight getGlobalDnsInsight() {
@@ -88,6 +90,7 @@ public final class RiskDetails extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Insight details for global DNS risk.
    * @param globalDnsInsight globalDnsInsight or {@code null} for none
    */
   public RiskDetails setGlobalDnsInsight(RiskDetailsGlobalDnsInsight globalDnsInsight) {

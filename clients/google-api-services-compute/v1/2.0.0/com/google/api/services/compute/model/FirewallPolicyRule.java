@@ -32,8 +32,10 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * The Action to perform when the client connection triggers the rule. Valid actions for firewall
-   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next". Valid actions for
-   * packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
+   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next" (
+   * "apply_security_profile_group" can be specified only for global network firewall policies or
+   * hierarchical firewall policies). Valid actions for packet mirroring rules are: "mirror",
+   * "do_not_mirror" and "goto_next".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,10 +113,11 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer ruleTupleCount;
 
   /**
-   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
-   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
-   * profile-group Must be specified if action is one of 'apply_security_profile_group' or 'mirror'.
-   * Cannot be specified for other actions.
+   * A fully-qualified URL of a SecurityProfileGroup resource instance. Example: https://networksecu
+   * rity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-
+   * security-profile-group Must be specified if action is one of 'apply_security_profile_group' or
+   * 'mirror'. Cannot be specified for other actions. Can be specified only for global network
+   * firewall policies or hierarchical firewall policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,8 +181,10 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * The Action to perform when the client connection triggers the rule. Valid actions for firewall
-   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next". Valid actions for
-   * packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
+   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next" (
+   * "apply_security_profile_group" can be specified only for global network firewall policies or
+   * hierarchical firewall policies). Valid actions for packet mirroring rules are: "mirror",
+   * "do_not_mirror" and "goto_next".
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -188,8 +193,10 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * The Action to perform when the client connection triggers the rule. Valid actions for firewall
-   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next". Valid actions for
-   * packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
+   * rules are: "allow", "deny", "apply_security_profile_group" and "goto_next" (
+   * "apply_security_profile_group" can be specified only for global network firewall policies or
+   * hierarchical firewall policies). Valid actions for packet mirroring rules are: "mirror",
+   * "do_not_mirror" and "goto_next".
    * @param action action or {@code null} for none
    */
   public FirewallPolicyRule setAction(java.lang.String action) {
@@ -367,10 +374,11 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
-   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
-   * profile-group Must be specified if action is one of 'apply_security_profile_group' or 'mirror'.
-   * Cannot be specified for other actions.
+   * A fully-qualified URL of a SecurityProfileGroup resource instance. Example: https://networksecu
+   * rity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-
+   * security-profile-group Must be specified if action is one of 'apply_security_profile_group' or
+   * 'mirror'. Cannot be specified for other actions. Can be specified only for global network
+   * firewall policies or hierarchical firewall policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityProfileGroup() {
@@ -378,10 +386,11 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.
-   * googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-
-   * profile-group Must be specified if action is one of 'apply_security_profile_group' or 'mirror'.
-   * Cannot be specified for other actions.
+   * A fully-qualified URL of a SecurityProfileGroup resource instance. Example: https://networksecu
+   * rity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-
+   * security-profile-group Must be specified if action is one of 'apply_security_profile_group' or
+   * 'mirror'. Cannot be specified for other actions. Can be specified only for global network
+   * firewall policies or hierarchical firewall policies.
    * @param securityProfileGroup securityProfileGroup or {@code null} for none
    */
   public FirewallPolicyRule setSecurityProfileGroup(java.lang.String securityProfileGroup) {

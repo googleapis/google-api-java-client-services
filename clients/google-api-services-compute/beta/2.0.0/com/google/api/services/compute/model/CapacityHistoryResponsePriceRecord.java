@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for CapacityHistoryResponsePriceRecord.
+ * A record of price history.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,18 +30,21 @@ package com.google.api.services.compute.model;
 public final class CapacityHistoryResponsePriceRecord extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time interval for this price record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Interval interval;
 
   /**
+   * The Spot VM list price during the interval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Money listPrice;
 
   /**
+   * The time interval for this price record.
    * @return value or {@code null} for none
    */
   public Interval getInterval() {
@@ -49,6 +52,7 @@ public final class CapacityHistoryResponsePriceRecord extends com.google.api.cli
   }
 
   /**
+   * The time interval for this price record.
    * @param interval interval or {@code null} for none
    */
   public CapacityHistoryResponsePriceRecord setInterval(Interval interval) {
@@ -57,6 +61,7 @@ public final class CapacityHistoryResponsePriceRecord extends com.google.api.cli
   }
 
   /**
+   * The Spot VM list price during the interval.
    * @return value or {@code null} for none
    */
   public Money getListPrice() {
@@ -64,6 +69,7 @@ public final class CapacityHistoryResponsePriceRecord extends com.google.api.cli
   }
 
   /**
+   * The Spot VM list price during the interval.
    * @param listPrice listPrice or {@code null} for none
    */
   public CapacityHistoryResponsePriceRecord setListPrice(Money listPrice) {

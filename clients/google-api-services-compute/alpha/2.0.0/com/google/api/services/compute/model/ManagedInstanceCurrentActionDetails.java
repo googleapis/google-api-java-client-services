@@ -49,7 +49,8 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
    * according to    the Instance Lifecycle Policy.    - FAILED_HEALTH_CHECK The managed instance
    * group is    handling failed health check, according to the Instance Lifecycle    Policy.    -
    * TERMINATION_TIMESTAMP Instance reached termination time,    thus managed instance group
-   * stops/deletes it.
+   * stops/deletes it.    - GRACEFUL_SHUTDOWN_TIMESTAMP Instance reached graceful    shutdown time,
+   * thus managed instance group stops/deletes it to    gracefully shut it down.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,8 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
    * according to    the Instance Lifecycle Policy.    - FAILED_HEALTH_CHECK The managed instance
    * group is    handling failed health check, according to the Instance Lifecycle    Policy.    -
    * TERMINATION_TIMESTAMP Instance reached termination time,    thus managed instance group
-   * stops/deletes it.
+   * stops/deletes it.    - GRACEFUL_SHUTDOWN_TIMESTAMP Instance reached graceful    shutdown time,
+   * thus managed instance group stops/deletes it to    gracefully shut it down.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrigger() {
@@ -105,7 +107,8 @@ public final class ManagedInstanceCurrentActionDetails extends com.google.api.cl
    * according to    the Instance Lifecycle Policy.    - FAILED_HEALTH_CHECK The managed instance
    * group is    handling failed health check, according to the Instance Lifecycle    Policy.    -
    * TERMINATION_TIMESTAMP Instance reached termination time,    thus managed instance group
-   * stops/deletes it.
+   * stops/deletes it.    - GRACEFUL_SHUTDOWN_TIMESTAMP Instance reached graceful    shutdown time,
+   * thus managed instance group stops/deletes it to    gracefully shut it down.
    * @param trigger trigger or {@code null} for none
    */
   public ManagedInstanceCurrentActionDetails setTrigger(java.lang.String trigger) {

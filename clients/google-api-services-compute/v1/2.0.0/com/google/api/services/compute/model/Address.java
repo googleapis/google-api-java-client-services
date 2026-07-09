@@ -75,14 +75,22 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
-   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   * Reference to the source of IP addresses.
    *
-   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
-   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
-   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
-   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * It supports the following cases:        -       Case 1: PublicDelegatedPrefix (PDP) for BYOIP
+   * external IPv4      addresses. The PDP must support enhanced IPv4 allocations.    -       Case
+   * 2: Internal Range for global internal addresses.
+   *
+   * Use one of the following formats to specify the resource:
+   *
+   * For a Public Delegated Prefix:        -     Full resource URL:https://www.googleapis.com/comput
+   * e/v1/projects/projectId/regions/region/publicDelegatedPrefixes/pdp    - Partial URL:       -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name       -
    * regions/region/publicDelegatedPrefixes/pdp-name
+   *
+   * For an Internal Range:        - Full URL:https://networkconnectivity.googleapis.com/v1/projects
+   * /project/locations/global/internalRanges/internal-range    - Partial
+   * URL:projects/project/locations/global/internalRanges/internal-range
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,14 +329,22 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
-   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   * Reference to the source of IP addresses.
    *
-   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
-   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
-   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
-   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * It supports the following cases:        -       Case 1: PublicDelegatedPrefix (PDP) for BYOIP
+   * external IPv4      addresses. The PDP must support enhanced IPv4 allocations.    -       Case
+   * 2: Internal Range for global internal addresses.
+   *
+   * Use one of the following formats to specify the resource:
+   *
+   * For a Public Delegated Prefix:        -     Full resource URL:https://www.googleapis.com/comput
+   * e/v1/projects/projectId/regions/region/publicDelegatedPrefixes/pdp    - Partial URL:       -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name       -
    * regions/region/publicDelegatedPrefixes/pdp-name
+   *
+   * For an Internal Range:        - Full URL:https://networkconnectivity.googleapis.com/v1/projects
+   * /project/locations/global/internalRanges/internal-range    - Partial
+   * URL:projects/project/locations/global/internalRanges/internal-range
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCollection() {
@@ -336,14 +352,22 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
-   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   * Reference to the source of IP addresses.
    *
-   * Use one of the following formats to specify a PDP when reserving an external IPv4 address using
-   * BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/projects/proj
-   * ectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
-   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * It supports the following cases:        -       Case 1: PublicDelegatedPrefix (PDP) for BYOIP
+   * external IPv4      addresses. The PDP must support enhanced IPv4 allocations.    -       Case
+   * 2: Internal Range for global internal addresses.
+   *
+   * Use one of the following formats to specify the resource:
+   *
+   * For a Public Delegated Prefix:        -     Full resource URL:https://www.googleapis.com/comput
+   * e/v1/projects/projectId/regions/region/publicDelegatedPrefixes/pdp    - Partial URL:       -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name       -
    * regions/region/publicDelegatedPrefixes/pdp-name
+   *
+   * For an Internal Range:        - Full URL:https://networkconnectivity.googleapis.com/v1/projects
+   * /project/locations/global/internalRanges/internal-range    - Partial
+   * URL:projects/project/locations/global/internalRanges/internal-range
    * @param ipCollection ipCollection or {@code null} for none
    */
   public Address setIpCollection(java.lang.String ipCollection) {

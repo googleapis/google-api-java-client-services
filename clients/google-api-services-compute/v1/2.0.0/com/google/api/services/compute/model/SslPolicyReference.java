@@ -30,16 +30,12 @@ package com.google.api.services.compute.model;
 public final class SslPolicyReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * URL of the SSL policy resource. Set this to empty string to clear any existing SSL policy
-   * associated with the target proxy resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslPolicy;
 
   /**
-   * URL of the SSL policy resource. Set this to empty string to clear any existing SSL policy
-   * associated with the target proxy resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslPolicy() {
@@ -47,8 +43,6 @@ public final class SslPolicyReference extends com.google.api.client.json.Generic
   }
 
   /**
-   * URL of the SSL policy resource. Set this to empty string to clear any existing SSL policy
-   * associated with the target proxy resource.
    * @param sslPolicy sslPolicy or {@code null} for none
    */
   public SslPolicyReference setSslPolicy(java.lang.String sslPolicy) {

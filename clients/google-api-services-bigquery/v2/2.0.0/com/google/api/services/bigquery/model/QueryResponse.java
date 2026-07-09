@@ -30,6 +30,20 @@ package com.google.api.services.bigquery.model;
 public final class QueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Serialized row data in Arrow RecordBatch format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArrowRecordBatch arrowRecordBatch;
+
+  /**
+   * Output only. Arrow schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArrowSchema arrowSchema;
+
+  /**
    * Whether the query result was fetched from the query cache.
    * The value may be {@code null}.
    */
@@ -127,6 +141,14 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Long numDmlAffectedRows;
 
   /**
+   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
+   * not yet available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long pageRowCount;
+
+  /**
    * A token used for paging results. A non-empty token indicates that additional results are
    * available. To see additional results, query the [`jobs.getQueryResults`](https://cloud.google.c
    * om/bigquery/docs/reference/rest/v2/jobs/getQueryResults) method. For more information, see
@@ -205,6 +227,40 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalSlotMs;
+
+  /**
+   * Output only. Serialized row data in Arrow RecordBatch format.
+   * @return value or {@code null} for none
+   */
+  public ArrowRecordBatch getArrowRecordBatch() {
+    return arrowRecordBatch;
+  }
+
+  /**
+   * Output only. Serialized row data in Arrow RecordBatch format.
+   * @param arrowRecordBatch arrowRecordBatch or {@code null} for none
+   */
+  public QueryResponse setArrowRecordBatch(ArrowRecordBatch arrowRecordBatch) {
+    this.arrowRecordBatch = arrowRecordBatch;
+    return this;
+  }
+
+  /**
+   * Output only. Arrow schema
+   * @return value or {@code null} for none
+   */
+  public ArrowSchema getArrowSchema() {
+    return arrowSchema;
+  }
+
+  /**
+   * Output only. Arrow schema
+   * @param arrowSchema arrowSchema or {@code null} for none
+   */
+  public QueryResponse setArrowSchema(ArrowSchema arrowSchema) {
+    this.arrowSchema = arrowSchema;
+    return this;
+  }
 
   /**
    * Whether the query result was fetched from the query cache.
@@ -418,6 +474,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setNumDmlAffectedRows(java.lang.Long numDmlAffectedRows) {
     this.numDmlAffectedRows = numDmlAffectedRows;
+    return this;
+  }
+
+  /**
+   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
+   * not yet available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPageRowCount() {
+    return pageRowCount;
+  }
+
+  /**
+   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
+   * not yet available.
+   * @param pageRowCount pageRowCount or {@code null} for none
+   */
+  public QueryResponse setPageRowCount(java.lang.Long pageRowCount) {
+    this.pageRowCount = pageRowCount;
     return this;
   }
 

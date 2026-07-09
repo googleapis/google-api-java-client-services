@@ -30,6 +30,13 @@ package com.google.api.services.bigquery.model;
 public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Options specific to the Apache Arrow output format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArrowSerializationOptions arrowSerializationOptions;
+
+  /**
    * Optional. Connection properties which can modify the query behavior.
    * The value may be {@code null}.
    */
@@ -202,6 +209,18 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
+   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
+   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
+   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
+   * `QueryResponse.rows` will also not be populated since it is the schema of the
+   * `QueryResponse.rows`. This feature is not yet available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryResultsFormat;
+
+  /**
    * Optional. A unique user provided identifier to ensure idempotent behavior for queries. Note
    * that this is different from the job_id. It has the following properties: 1. It is case-
    * sensitive, limited to up to 36 ASCII characters. A UUID is recommended. 2. Read only queries
@@ -274,6 +293,23 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean writeIncrementalResults;
+
+  /**
+   * Optional. Options specific to the Apache Arrow output format.
+   * @return value or {@code null} for none
+   */
+  public ArrowSerializationOptions getArrowSerializationOptions() {
+    return arrowSerializationOptions;
+  }
+
+  /**
+   * Optional. Options specific to the Apache Arrow output format.
+   * @param arrowSerializationOptions arrowSerializationOptions or {@code null} for none
+   */
+  public QueryRequest setArrowSerializationOptions(ArrowSerializationOptions arrowSerializationOptions) {
+    this.arrowSerializationOptions = arrowSerializationOptions;
+    return this;
+  }
 
   /**
    * Optional. Connection properties which can modify the query behavior.
@@ -649,6 +685,33 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setQueryParameters(java.util.List<QueryParameter> queryParameters) {
     this.queryParameters = queryParameters;
+    return this;
+  }
+
+  /**
+   * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
+   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
+   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
+   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
+   * `QueryResponse.rows` will also not be populated since it is the schema of the
+   * `QueryResponse.rows`. This feature is not yet available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryResultsFormat() {
+    return queryResultsFormat;
+  }
+
+  /**
+   * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
+   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
+   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
+   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
+   * `QueryResponse.rows` will also not be populated since it is the schema of the
+   * `QueryResponse.rows`. This feature is not yet available.
+   * @param queryResultsFormat queryResultsFormat or {@code null} for none
+   */
+  public QueryRequest setQueryResultsFormat(java.lang.String queryResultsFormat) {
+    this.queryResultsFormat = queryResultsFormat;
     return this;
   }
 

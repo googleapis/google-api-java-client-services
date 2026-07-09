@@ -274,7 +274,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Optional. The default application setting for supported types. If the default application is
    * successfully set for at least one app type on a profile, users are prevented from changing any
    * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
-   * DefaultApplicationType.See Default application settings
+   * DefaultApplicationType.Warning: Do not configure this and persistent_preferred_activities for
+   * the same intent domain, such as web browsing. Setting both for the same intent domain can lead
+   * to unpredictable behavior.See Default application settings
    * (https://developers.google.com/android/management/default-application-settings) guide for more
    * details.
    * The value may be {@code null}.
@@ -600,7 +602,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private PackageNameList permittedInputMethods;
 
   /**
-   * Default intent handler activities.
+   * Default intent handler activities.Warning: Do not configure this and
+   * default_application_settings for the same intent domain, such as web browsing. Setting both for
+   * the same intent domain can lead to unpredictable behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1416,7 +1420,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Optional. The default application setting for supported types. If the default application is
    * successfully set for at least one app type on a profile, users are prevented from changing any
    * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
-   * DefaultApplicationType.See Default application settings
+   * DefaultApplicationType.Warning: Do not configure this and persistent_preferred_activities for
+   * the same intent domain, such as web browsing. Setting both for the same intent domain can lead
+   * to unpredictable behavior.See Default application settings
    * (https://developers.google.com/android/management/default-application-settings) guide for more
    * details.
    * @return value or {@code null} for none
@@ -1429,7 +1435,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Optional. The default application setting for supported types. If the default application is
    * successfully set for at least one app type on a profile, users are prevented from changing any
    * default applications on that profile.Only one DefaultApplicationSetting is allowed for each
-   * DefaultApplicationType.See Default application settings
+   * DefaultApplicationType.Warning: Do not configure this and persistent_preferred_activities for
+   * the same intent domain, such as web browsing. Setting both for the same intent domain can lead
+   * to unpredictable behavior.See Default application settings
    * (https://developers.google.com/android/management/default-application-settings) guide for more
    * details.
    * @param defaultApplicationSettings defaultApplicationSettings or {@code null} for none
@@ -2137,7 +2145,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default intent handler activities.
+   * Default intent handler activities.Warning: Do not configure this and
+   * default_application_settings for the same intent domain, such as web browsing. Setting both for
+   * the same intent domain can lead to unpredictable behavior.
    * @return value or {@code null} for none
    */
   public java.util.List<PersistentPreferredActivity> getPersistentPreferredActivities() {
@@ -2145,7 +2155,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default intent handler activities.
+   * Default intent handler activities.Warning: Do not configure this and
+   * default_application_settings for the same intent domain, such as web browsing. Setting both for
+   * the same intent domain can lead to unpredictable behavior.
    * @param persistentPreferredActivities persistentPreferredActivities or {@code null} for none
    */
   public Policy setPersistentPreferredActivities(java.util.List<PersistentPreferredActivity> persistentPreferredActivities) {

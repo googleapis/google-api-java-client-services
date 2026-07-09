@@ -97,7 +97,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of Agent registries containing the agents, MCP servers and tools governed by
    * the Agent Gateway. Note: Currently limited to project-scoped registries Must be of format
-   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/
+   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,7 +277,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of Agent registries containing the agents, MCP servers and tools governed by
    * the Agent Gateway. Note: Currently limited to project-scoped registries Must be of format
-   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/
+   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegistries() {
@@ -287,7 +287,7 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A list of Agent registries containing the agents, MCP servers and tools governed by
    * the Agent Gateway. Note: Currently limited to project-scoped registries Must be of format
-   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/
+   * `//agentregistry.googleapis.com/projects/{project}/locations/{location}/`
    * @param registries registries or {@code null} for none
    */
   public AgentGateway setRegistries(java.util.List<java.lang.String> registries) {

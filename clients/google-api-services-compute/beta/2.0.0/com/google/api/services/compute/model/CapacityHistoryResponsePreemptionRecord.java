@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Model definition for CapacityHistoryResponsePreemptionRecord.
+ * A record of Spot VM preemption history.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,18 +30,23 @@ package com.google.api.services.compute.model;
 public final class CapacityHistoryResponsePreemptionRecord extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time interval for this preemption record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Interval interval;
 
   /**
+   * The preemption rate during the interval, representing the fraction of Spot VMs that were
+   * preempted. Range: 0.0 to 1.0. Preemption rate is calculated as (total preempted Spots) / (total
+   * Spots that stopped running).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double preemptionRate;
 
   /**
+   * The time interval for this preemption record.
    * @return value or {@code null} for none
    */
   public Interval getInterval() {
@@ -49,6 +54,7 @@ public final class CapacityHistoryResponsePreemptionRecord extends com.google.ap
   }
 
   /**
+   * The time interval for this preemption record.
    * @param interval interval or {@code null} for none
    */
   public CapacityHistoryResponsePreemptionRecord setInterval(Interval interval) {
@@ -57,6 +63,9 @@ public final class CapacityHistoryResponsePreemptionRecord extends com.google.ap
   }
 
   /**
+   * The preemption rate during the interval, representing the fraction of Spot VMs that were
+   * preempted. Range: 0.0 to 1.0. Preemption rate is calculated as (total preempted Spots) / (total
+   * Spots that stopped running).
    * @return value or {@code null} for none
    */
   public java.lang.Double getPreemptionRate() {
@@ -64,6 +73,9 @@ public final class CapacityHistoryResponsePreemptionRecord extends com.google.ap
   }
 
   /**
+   * The preemption rate during the interval, representing the fraction of Spot VMs that were
+   * preempted. Range: 0.0 to 1.0. Preemption rate is calculated as (total preempted Spots) / (total
+   * Spots that stopped running).
    * @param preemptionRate preemptionRate or {@code null} for none
    */
   public CapacityHistoryResponsePreemptionRecord setPreemptionRate(java.lang.Double preemptionRate) {

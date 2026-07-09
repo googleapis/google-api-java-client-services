@@ -49,6 +49,13 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private BfdStatus bfdStatus;
 
   /**
+   * Output only. [Output Only] Indicates whether the BGP peer is in a depreferenced state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean depreferenced;
+
+  /**
    * Output only. Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress
    * is version 4.
    * The value may be {@code null}.
@@ -218,6 +225,23 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setBfdStatus(BfdStatus bfdStatus) {
     this.bfdStatus = bfdStatus;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Indicates whether the BGP peer is in a depreferenced state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDepreferenced() {
+    return depreferenced;
+  }
+
+  /**
+   * Output only. [Output Only] Indicates whether the BGP peer is in a depreferenced state.
+   * @param depreferenced depreferenced or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setDepreferenced(java.lang.Boolean depreferenced) {
+    this.depreferenced = depreferenced;
     return this;
   }
 

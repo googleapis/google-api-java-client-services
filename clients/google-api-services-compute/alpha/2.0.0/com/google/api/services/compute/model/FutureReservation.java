@@ -200,6 +200,14 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String reservationName;
 
   /**
+   * Name of the resource intended to be delivered. Name should conform to RFC1035. This will be the
+   * name of storage pool or Exapool for persistent disk FRs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resourceName;
+
+  /**
    * Maintenance information for this reservation
    * The value may be {@code null}.
    */
@@ -249,6 +257,13 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private FutureReservationStatus status;
+
+  /**
+   * Storage pool details for the future reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationStoragePoolProperties storagePoolProperties;
 
   /**
    * Time window for this Future Reservation.
@@ -668,6 +683,25 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Name of the resource intended to be delivered. Name should conform to RFC1035. This will be the
+   * name of storage pool or Exapool for persistent disk FRs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResourceName() {
+    return resourceName;
+  }
+
+  /**
+   * Name of the resource intended to be delivered. Name should conform to RFC1035. This will be the
+   * name of storage pool or Exapool for persistent disk FRs.
+   * @param resourceName resourceName or {@code null} for none
+   */
+  public FutureReservation setResourceName(java.lang.String resourceName) {
+    this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
    * Maintenance information for this reservation
    * @return value or {@code null} for none
    */
@@ -787,6 +821,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setStatus(FutureReservationStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Storage pool details for the future reservation.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationStoragePoolProperties getStoragePoolProperties() {
+    return storagePoolProperties;
+  }
+
+  /**
+   * Storage pool details for the future reservation.
+   * @param storagePoolProperties storagePoolProperties or {@code null} for none
+   */
+  public FutureReservation setStoragePoolProperties(FutureReservationStoragePoolProperties storagePoolProperties) {
+    this.storagePoolProperties = storagePoolProperties;
     return this;
   }
 

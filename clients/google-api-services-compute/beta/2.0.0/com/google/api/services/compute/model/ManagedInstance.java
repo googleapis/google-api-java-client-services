@@ -129,16 +129,15 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy;
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * Output only. Information about the termination timestamp of the instance, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceScheduling scheduling;
 
   /**
-   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
-   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * Output only. Specifies the graceful shutdown details if the instance is in `PENDING_STOP` state
+   * or there is a programmed stop scheduled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -391,8 +390,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * Output only. Information about the termination timestamp of the instance, if applicable.
    * @return value or {@code null} for none
    */
   public ManagedInstanceScheduling getScheduling() {
@@ -400,8 +398,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * Output only. Information about the termination timestamp of the instance, if applicable.
    * @param scheduling scheduling or {@code null} for none
    */
   public ManagedInstance setScheduling(ManagedInstanceScheduling scheduling) {
@@ -410,8 +407,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
-   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * Output only. Specifies the graceful shutdown details if the instance is in `PENDING_STOP` state
+   * or there is a programmed stop scheduled.
    * @return value or {@code null} for none
    */
   public ManagedInstanceShutdownDetails getShutdownDetails() {
@@ -419,8 +416,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Specifies the graceful shutdown details if the instance is in
-   * `PENDING_STOP` state or there is a programmed stop scheduled.
+   * Output only. Specifies the graceful shutdown details if the instance is in `PENDING_STOP` state
+   * or there is a programmed stop scheduled.
    * @param shutdownDetails shutdownDetails or {@code null} for none
    */
   public ManagedInstance setShutdownDetails(ManagedInstanceShutdownDetails shutdownDetails) {

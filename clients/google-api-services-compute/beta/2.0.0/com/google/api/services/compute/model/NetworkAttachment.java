@@ -102,16 +102,18 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String network;
 
   /**
-   * Projects that are allowed to connect to this network attachment. The project can be specified
-   * using its id or number.
+   * Projects or service class ids that are allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> producerAcceptLists;
 
   /**
-   * Projects that are not allowed to connect to this network attachment. The project can be
-   * specified using its id or number.
+   * Projects or service class ids that are not allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,8 +352,9 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are allowed to connect to this network attachment. The project can be specified
-   * using its id or number.
+   * Projects or service class ids that are allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProducerAcceptLists() {
@@ -359,8 +362,9 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are allowed to connect to this network attachment. The project can be specified
-   * using its id or number.
+   * Projects or service class ids that are allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * @param producerAcceptLists producerAcceptLists or {@code null} for none
    */
   public NetworkAttachment setProducerAcceptLists(java.util.List<java.lang.String> producerAcceptLists) {
@@ -369,8 +373,9 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are not allowed to connect to this network attachment. The project can be
-   * specified using its id or number.
+   * Projects or service class ids that are not allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProducerRejectLists() {
@@ -378,8 +383,9 @@ public final class NetworkAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Projects that are not allowed to connect to this network attachment. The project can be
-   * specified using its id or number.
+   * Projects or service class ids that are not allowed to connect to this network attachment. The
+   * project can be specified using its id or number. Service class id can be specified as
+   * "serviceclasses/{service_class_id}".
    * @param producerRejectLists producerRejectLists or {@code null} for none
    */
   public NetworkAttachment setProducerRejectLists(java.util.List<java.lang.String> producerRejectLists) {

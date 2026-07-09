@@ -30,30 +30,39 @@ package com.google.api.services.compute.model;
 public final class CapacityHistoryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The location (region or zone) for which the capacity history is returned. It is
+   * returned as a URL - For
+   * example,https://www.googleapis.com/compute/v1/projects/project/zones/zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
+   * The machine type for which the capacity history is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
+   * The preemption history for the requested machine type and location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CapacityHistoryResponsePreemptionRecord> preemptionHistory;
 
   /**
+   * The price history for the requested machine type and location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CapacityHistoryResponsePriceRecord> priceHistory;
 
   /**
+   * Output only. The location (region or zone) for which the capacity history is returned. It is
+   * returned as a URL - For
+   * example,https://www.googleapis.com/compute/v1/projects/project/zones/zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -61,6 +70,9 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * Output only. The location (region or zone) for which the capacity history is returned. It is
+   * returned as a URL - For
+   * example,https://www.googleapis.com/compute/v1/projects/project/zones/zone.
    * @param location location or {@code null} for none
    */
   public CapacityHistoryResponse setLocation(java.lang.String location) {
@@ -69,6 +81,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The machine type for which the capacity history is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -76,6 +89,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The machine type for which the capacity history is returned.
    * @param machineType machineType or {@code null} for none
    */
   public CapacityHistoryResponse setMachineType(java.lang.String machineType) {
@@ -84,6 +98,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The preemption history for the requested machine type and location.
    * @return value or {@code null} for none
    */
   public java.util.List<CapacityHistoryResponsePreemptionRecord> getPreemptionHistory() {
@@ -91,6 +106,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The preemption history for the requested machine type and location.
    * @param preemptionHistory preemptionHistory or {@code null} for none
    */
   public CapacityHistoryResponse setPreemptionHistory(java.util.List<CapacityHistoryResponsePreemptionRecord> preemptionHistory) {
@@ -99,6 +115,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The price history for the requested machine type and location.
    * @return value or {@code null} for none
    */
   public java.util.List<CapacityHistoryResponsePriceRecord> getPriceHistory() {
@@ -106,6 +123,7 @@ public final class CapacityHistoryResponse extends com.google.api.client.json.Ge
   }
 
   /**
+   * The price history for the requested machine type and location.
    * @param priceHistory priceHistory or {@code null} for none
    */
   public CapacityHistoryResponse setPriceHistory(java.util.List<CapacityHistoryResponsePriceRecord> priceHistory) {

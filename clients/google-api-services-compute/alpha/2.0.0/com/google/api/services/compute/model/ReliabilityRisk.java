@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ReliabilityRisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +66,14 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The recommendations to mitigate the risk.
+   * The recommendation to mitigate the risk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -102,7 +102,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ReliabilityRisk setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -181,7 +181,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -189,7 +189,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Name of the resource. The name must be 1-63 characters long and comply withRFC1035.
+   * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
    * @param name name or {@code null} for none
    */
   public ReliabilityRisk setName(java.lang.String name) {
@@ -198,7 +198,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The recommendations to mitigate the risk.
+   * The recommendation to mitigate the risk.
    * @return value or {@code null} for none
    */
   public RiskRecommendation getRecommendation() {
@@ -206,7 +206,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The recommendations to mitigate the risk.
+   * The recommendation to mitigate the risk.
    * @param recommendation recommendation or {@code null} for none
    */
   public ReliabilityRisk setRecommendation(RiskRecommendation recommendation) {

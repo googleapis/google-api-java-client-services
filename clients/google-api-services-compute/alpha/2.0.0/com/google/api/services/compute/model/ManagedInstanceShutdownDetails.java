@@ -30,24 +30,24 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceShutdownDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The duration for graceful shutdown. Only applicable when the
-   * instance is in `PENDING_STOP` state.
+   * Output only. The duration for graceful shutdown. Only applicable when the instance is in
+   * `PENDING_STOP` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Duration maxDuration;
 
   /**
-   * Output only. [Output Only] Past timestamp indicating the beginning of `PENDING_STOP` state of
-   * instance in RFC3339 text format.
+   * Output only. Past timestamp indicating the beginning of `PENDING_STOP` state of instance in
+   * RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String requestTimestamp;
 
   /**
-   * Output only. [Output Only] The duration for graceful shutdown. Only applicable when the
-   * instance is in `PENDING_STOP` state.
+   * Output only. The duration for graceful shutdown. Only applicable when the instance is in
+   * `PENDING_STOP` state.
    * @return value or {@code null} for none
    */
   public Duration getMaxDuration() {
@@ -55,8 +55,8 @@ public final class ManagedInstanceShutdownDetails extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] The duration for graceful shutdown. Only applicable when the
-   * instance is in `PENDING_STOP` state.
+   * Output only. The duration for graceful shutdown. Only applicable when the instance is in
+   * `PENDING_STOP` state.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public ManagedInstanceShutdownDetails setMaxDuration(Duration maxDuration) {
@@ -65,8 +65,8 @@ public final class ManagedInstanceShutdownDetails extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Past timestamp indicating the beginning of `PENDING_STOP` state of
-   * instance in RFC3339 text format.
+   * Output only. Past timestamp indicating the beginning of `PENDING_STOP` state of instance in
+   * RFC3339 text format.
    * @return value or {@code null} for none
    */
   public String getRequestTimestamp() {
@@ -74,8 +74,8 @@ public final class ManagedInstanceShutdownDetails extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Past timestamp indicating the beginning of `PENDING_STOP` state of
-   * instance in RFC3339 text format.
+   * Output only. Past timestamp indicating the beginning of `PENDING_STOP` state of instance in
+   * RFC3339 text format.
    * @param requestTimestamp requestTimestamp or {@code null} for none
    */
   public ManagedInstanceShutdownDetails setRequestTimestamp(String requestTimestamp) {

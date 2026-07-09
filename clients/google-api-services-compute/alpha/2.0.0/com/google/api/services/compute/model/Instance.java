@@ -235,6 +235,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String lastSuspendedTimestamp;
 
   /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localSsdEncryptionMode;
+
+  /**
    * Full or partial URL of the machine type resource to use for this instance, in the
    * format:zones/zone/machineTypes/machine-type. This is provided by the client when the instance
    * is created. For example, the following is a valid partial url to a predefined machine type:
@@ -1040,6 +1047,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLastSuspendedTimestamp(java.lang.String lastSuspendedTimestamp) {
     this.lastSuspendedTimestamp = lastSuspendedTimestamp;
+    return this;
+  }
+
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalSsdEncryptionMode() {
+    return localSsdEncryptionMode;
+  }
+
+  /**
+   * Specifies which method should be used for encrypting the Local SSDs attached to the VM.
+   * @param localSsdEncryptionMode localSsdEncryptionMode or {@code null} for none
+   */
+  public Instance setLocalSsdEncryptionMode(java.lang.String localSsdEncryptionMode) {
+    this.localSsdEncryptionMode = localSsdEncryptionMode;
     return this;
   }
 

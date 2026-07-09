@@ -30,6 +30,23 @@ package com.google.api.services.compute.model;
 public final class AliasIpRange extends com.google.api.client.json.GenericJson {
 
   /**
+   * Identifies the candidate subnetwork range names for the alias IPs to be allocated from. When it
+   * is set, the IP would be allocated from any subnetwork range defined here if the IPs are
+   * available. Only one of subnetwork_range_name or candidate_subnetwork_range_names should be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> candidateSubnetworkRangeNames;
+
+  /**
+   * Output only. [Output Only] The subnetwork range name where the IP is allocated. It will be set
+   * to the subnetwork range where the IP is allocated only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveSubnetworkRangeName;
+
+  /**
    * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the
    * specified subnetwork and cannot contain IP addresses reserved by system or used by other
    * network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such
@@ -46,6 +63,46 @@ public final class AliasIpRange extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkRangeName;
+
+  /**
+   * Identifies the candidate subnetwork range names for the alias IPs to be allocated from. When it
+   * is set, the IP would be allocated from any subnetwork range defined here if the IPs are
+   * available. Only one of subnetwork_range_name or candidate_subnetwork_range_names should be set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCandidateSubnetworkRangeNames() {
+    return candidateSubnetworkRangeNames;
+  }
+
+  /**
+   * Identifies the candidate subnetwork range names for the alias IPs to be allocated from. When it
+   * is set, the IP would be allocated from any subnetwork range defined here if the IPs are
+   * available. Only one of subnetwork_range_name or candidate_subnetwork_range_names should be set.
+   * @param candidateSubnetworkRangeNames candidateSubnetworkRangeNames or {@code null} for none
+   */
+  public AliasIpRange setCandidateSubnetworkRangeNames(java.util.List<java.lang.String> candidateSubnetworkRangeNames) {
+    this.candidateSubnetworkRangeNames = candidateSubnetworkRangeNames;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The subnetwork range name where the IP is allocated. It will be set
+   * to the subnetwork range where the IP is allocated only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveSubnetworkRangeName() {
+    return effectiveSubnetworkRangeName;
+  }
+
+  /**
+   * Output only. [Output Only] The subnetwork range name where the IP is allocated. It will be set
+   * to the subnetwork range where the IP is allocated only.
+   * @param effectiveSubnetworkRangeName effectiveSubnetworkRangeName or {@code null} for none
+   */
+  public AliasIpRange setEffectiveSubnetworkRangeName(java.lang.String effectiveSubnetworkRangeName) {
+    this.effectiveSubnetworkRangeName = effectiveSubnetworkRangeName;
+    return this;
+  }
 
   /**
    * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the

@@ -2824,7 +2824,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * mode](https://developers.google.com/workspace/chat/import-data-overview). To learn more,
        * see [Make a space discoverable to specific
        * users](https://developers.google.com/workspace/chat/space-target-audience).
-       * `access_settings.audience` is not supported with `useAdminAccess`. `permission_settings`:
+       * `access_settings.audience` is not supported with `useAdminAccess`.
+       * `access_settings.access_permission_settings`: Updates the [access permission
+       * settings](https://support.google.com/chat/answer/11971020) of who can discover and join the
+       * space where `spaceType` field is `SPACE`. Principals allowed to join the space must also be
+       * allowed to discover it. To update access permission settings for a space, the
+       * authenticating user must be a space manager or assistant manager and omit all other field
+       * masks in the request. You can't update this field if the space is in [import
+       * mode](https://developers.google.com/workspace/chat/import-data-overview). To learn more,
+       * see [Make a space discoverable to specific
+       * users](https://developers.google.com/workspace/chat/space-target-audience).
+       * `access_settings.access_permission_settings` is not supported with `useAdminAccess`. The
+       * supported field masks include: -
+       * `access_settings.access_permission_settings.discoverSpaceSetting` -
+       * `access_settings.access_permission_settings.joinSpaceSetting` `permission_settings`:
        * Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space. When updating
        * permission settings, you can only specify `permissionSettings` field masks; you cannot
@@ -2862,7 +2875,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      field if the space is in [import mode](https://developers.google.com/workspace/chat/import-data-
      overview). To learn more, see [Make a space discoverable to specific
      users](https://developers.google.com/workspace/chat/space-target-audience).
-     `access_settings.audience` is not supported with `useAdminAccess`. `permission_settings`: Supports
+     `access_settings.audience` is not supported with `useAdminAccess`.
+     `access_settings.access_permission_settings`: Updates the [access permission
+     settings](https://support.google.com/chat/answer/11971020) of who can discover and join the space
+     where `spaceType` field is `SPACE`. Principals allowed to join the space must also be allowed to
+     discover it. To update access permission settings for a space, the authenticating user must be a
+     space manager or assistant manager and omit all other field masks in the request. You can't update
+     this field if the space is in [import mode](https://developers.google.com/workspace/chat/import-
+     data-overview). To learn more, see [Make a space discoverable to specific
+     users](https://developers.google.com/workspace/chat/space-target-audience).
+     `access_settings.access_permission_settings` is not supported with `useAdminAccess`. The supported
+     field masks include: - `access_settings.access_permission_settings.discoverSpaceSetting` -
+     `access_settings.access_permission_settings.joinSpaceSetting` `permission_settings`: Supports
      changing the [permission settings](https://support.google.com/chat/answer/13340792) of a space.
      When updating permission settings, you can only specify `permissionSettings` field masks; you
      cannot update other field masks at the same time. The supported field masks include: -
@@ -2904,7 +2928,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * mode](https://developers.google.com/workspace/chat/import-data-overview). To learn more,
        * see [Make a space discoverable to specific
        * users](https://developers.google.com/workspace/chat/space-target-audience).
-       * `access_settings.audience` is not supported with `useAdminAccess`. `permission_settings`:
+       * `access_settings.audience` is not supported with `useAdminAccess`.
+       * `access_settings.access_permission_settings`: Updates the [access permission
+       * settings](https://support.google.com/chat/answer/11971020) of who can discover and join the
+       * space where `spaceType` field is `SPACE`. Principals allowed to join the space must also be
+       * allowed to discover it. To update access permission settings for a space, the
+       * authenticating user must be a space manager or assistant manager and omit all other field
+       * masks in the request. You can't update this field if the space is in [import
+       * mode](https://developers.google.com/workspace/chat/import-data-overview). To learn more,
+       * see [Make a space discoverable to specific
+       * users](https://developers.google.com/workspace/chat/space-target-audience).
+       * `access_settings.access_permission_settings` is not supported with `useAdminAccess`. The
+       * supported field masks include: -
+       * `access_settings.access_permission_settings.discoverSpaceSetting` -
+       * `access_settings.access_permission_settings.joinSpaceSetting` `permission_settings`:
        * Supports changing the [permission
        * settings](https://support.google.com/chat/answer/13340792) of a space. When updating
        * permission settings, you can only specify `permissionSettings` field masks; you cannot
@@ -7870,10 +7907,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `https://www.googleapis.com/auth/chat.users.availability.readonly` -
        * `https://www.googleapis.com/auth/chat.users.availability`
        *
-       * Create a request for the method "availability.getAvailability".
+       * Create a request for the method "availability.get".
        *
        * This request holds the parameters needed by the chat server.  After setting any optional
-       * parameters, call the {@link GetAvailability#execute()} method to invoke the remote operation.
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The resource name of the availability to retrieve. Format: users/{user}/availability
        *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
@@ -7881,13 +7918,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
        * @return the request
        */
-      public GetAvailability getAvailability(java.lang.String name) throws java.io.IOException {
-        GetAvailability result = new GetAvailability(name);
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
         initialize(result);
         return result;
       }
 
-      public class GetAvailability extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+      public class Get extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -7904,13 +7941,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `https://www.googleapis.com/auth/chat.users.availability.readonly` -
          * `https://www.googleapis.com/auth/chat.users.availability`
          *
-         * Create a request for the method "availability.getAvailability".
+         * Create a request for the method "availability.get".
          *
          * This request holds the parameters needed by the the chat server.  After setting any optional
-         * parameters, call the {@link GetAvailability#execute()} method to invoke the remote operation.
-         * <p> {@link GetAvailability#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
-         * lientRequest)} must be called to initialize this instance immediately after invoking the
-         * constructor. </p>
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The resource name of the availability to retrieve. Format: users/{user}/availability
        *        `{user}` is the id for the Person in the People API or Admin SDK directory API. For
@@ -7918,7 +7954,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        *        to refer to the caller. For example, `users/user@example.com` or `users/me`.
          * @since 1.13
          */
-        protected GetAvailability(java.lang.String name) {
+        protected Get(java.lang.String name) {
           super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Availability.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
@@ -7939,58 +7975,58 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public GetAvailability set$Xgafv(java.lang.String $Xgafv) {
-          return (GetAvailability) super.set$Xgafv($Xgafv);
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public GetAvailability setAccessToken(java.lang.String accessToken) {
-          return (GetAvailability) super.setAccessToken(accessToken);
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
         }
 
         @Override
-        public GetAvailability setAlt(java.lang.String alt) {
-          return (GetAvailability) super.setAlt(alt);
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
         }
 
         @Override
-        public GetAvailability setCallback(java.lang.String callback) {
-          return (GetAvailability) super.setCallback(callback);
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
         }
 
         @Override
-        public GetAvailability setFields(java.lang.String fields) {
-          return (GetAvailability) super.setFields(fields);
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
         }
 
         @Override
-        public GetAvailability setKey(java.lang.String key) {
-          return (GetAvailability) super.setKey(key);
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
         }
 
         @Override
-        public GetAvailability setOauthToken(java.lang.String oauthToken) {
-          return (GetAvailability) super.setOauthToken(oauthToken);
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public GetAvailability setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (GetAvailability) super.setPrettyPrint(prettyPrint);
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public GetAvailability setQuotaUser(java.lang.String quotaUser) {
-          return (GetAvailability) super.setQuotaUser(quotaUser);
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public GetAvailability setUploadType(java.lang.String uploadType) {
-          return (GetAvailability) super.setUploadType(uploadType);
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
         }
 
         @Override
-        public GetAvailability setUploadProtocol(java.lang.String uploadProtocol) {
-          return (GetAvailability) super.setUploadProtocol(uploadProtocol);
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -8019,7 +8055,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * also be used as an alias to refer to the caller. For example, `users/user@example.com` or
          * `users/me`.
          */
-        public GetAvailability setName(java.lang.String name) {
+        public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
@@ -8030,8 +8066,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public GetAvailability set(String parameterName, Object value) {
-          return (GetAvailability) super.set(parameterName, value);
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
         }
       }
       /**
@@ -8361,7 +8397,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Marks user as`DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
+       * Marks user as `DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
        * `DO_NOT_DISTURB` until a specified expiration time. When in `DO_NOT_DISTURB`, users typically
        * won't receive notifications. This method only updates the authenticated user's availability.
        * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -8396,7 +8432,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+/availability$");
 
         /**
-         * Marks user as`DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
+         * Marks user as `DO_NOT_DISTURB` in Google Chat. Sets a user's availability state to
          * `DO_NOT_DISTURB` until a specified expiration time. When in `DO_NOT_DISTURB`, users typically
          * won't receive notifications. This method only updates the authenticated user's availability.
          * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -8534,10 +8570,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
        * `https://www.googleapis.com/auth/chat.users.availability`
        *
-       * Create a request for the method "availability.updateAvailability".
+       * Create a request for the method "availability.patch".
        *
        * This request holds the parameters needed by the chat server.  After setting any optional
-       * parameters, call the {@link UpdateAvailability#execute()} method to invoke the remote operation.
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Identifier. Resource name of the user's availability. Format: `users/{user}/availability` `{user}`
        *        is the id for the Person in the People API or Admin SDK directory API. For example,
@@ -8546,13 +8582,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * @param content the {@link com.google.api.services.chat.v1.model.Availability}
        * @return the request
        */
-      public UpdateAvailability updateAvailability(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) throws java.io.IOException {
-        UpdateAvailability result = new UpdateAvailability(name, content);
+      public Patch patch(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
         initialize(result);
         return result;
       }
 
-      public class UpdateAvailability extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
+      public class Patch extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Availability> {
 
         private static final String REST_PATH = "v1/{+name}";
 
@@ -8567,13 +8603,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
          * `https://www.googleapis.com/auth/chat.users.availability`
          *
-         * Create a request for the method "availability.updateAvailability".
+         * Create a request for the method "availability.patch".
          *
          * This request holds the parameters needed by the the chat server.  After setting any optional
-         * parameters, call the {@link UpdateAvailability#execute()} method to invoke the remote
-         * operation. <p> {@link UpdateAvailability#initialize(com.google.api.client.googleapis.services.A
-         * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-         * invoking the constructor. </p>
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Identifier. Resource name of the user's availability. Format: `users/{user}/availability` `{user}`
        *        is the id for the Person in the People API or Admin SDK directory API. For example,
@@ -8582,7 +8617,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * @param content the {@link com.google.api.services.chat.v1.model.Availability}
          * @since 1.13
          */
-        protected UpdateAvailability(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) {
+        protected Patch(java.lang.String name, com.google.api.services.chat.v1.model.Availability content) {
           super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.Availability.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
@@ -8593,58 +8628,58 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         @Override
-        public UpdateAvailability set$Xgafv(java.lang.String $Xgafv) {
-          return (UpdateAvailability) super.set$Xgafv($Xgafv);
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public UpdateAvailability setAccessToken(java.lang.String accessToken) {
-          return (UpdateAvailability) super.setAccessToken(accessToken);
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
         }
 
         @Override
-        public UpdateAvailability setAlt(java.lang.String alt) {
-          return (UpdateAvailability) super.setAlt(alt);
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
         }
 
         @Override
-        public UpdateAvailability setCallback(java.lang.String callback) {
-          return (UpdateAvailability) super.setCallback(callback);
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
         }
 
         @Override
-        public UpdateAvailability setFields(java.lang.String fields) {
-          return (UpdateAvailability) super.setFields(fields);
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
         }
 
         @Override
-        public UpdateAvailability setKey(java.lang.String key) {
-          return (UpdateAvailability) super.setKey(key);
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
         }
 
         @Override
-        public UpdateAvailability setOauthToken(java.lang.String oauthToken) {
-          return (UpdateAvailability) super.setOauthToken(oauthToken);
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public UpdateAvailability setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (UpdateAvailability) super.setPrettyPrint(prettyPrint);
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public UpdateAvailability setQuotaUser(java.lang.String quotaUser) {
-          return (UpdateAvailability) super.setQuotaUser(quotaUser);
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public UpdateAvailability setUploadType(java.lang.String uploadType) {
-          return (UpdateAvailability) super.setUploadType(uploadType);
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
         }
 
         @Override
-        public UpdateAvailability setUploadProtocol(java.lang.String uploadProtocol) {
-          return (UpdateAvailability) super.setUploadProtocol(uploadProtocol);
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -8671,7 +8706,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * example, `users/123456789`. The user's email address or `me` can also be used as an alias
          * to refer to the caller. For example, `users/user@example.com` or `users/me`.
          */
-        public UpdateAvailability setName(java.lang.String name) {
+        public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
@@ -8698,14 +8733,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Required. The list of fields to update. The only field that can be updated is
          * `custom_status`.
          */
-        public UpdateAvailability setUpdateMask(String updateMask) {
+        public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
         }
 
         @Override
-        public UpdateAvailability set(String parameterName, Object value) {
-          return (UpdateAvailability) super.set(parameterName, value);
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

@@ -30,6 +30,13 @@ package com.google.api.services.netapp.v1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates the flex performance tier of this location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flexPerformanceTier;
+
+  /**
    * Output only. Indicates if the location has ONTAP Proxy support.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedServiceLevels;
+
+  /**
+   * Output only. Indicates the flex performance tier of this location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlexPerformanceTier() {
+    return flexPerformanceTier;
+  }
+
+  /**
+   * Output only. Indicates the flex performance tier of this location.
+   * @param flexPerformanceTier flexPerformanceTier or {@code null} for none
+   */
+  public LocationMetadata setFlexPerformanceTier(java.lang.String flexPerformanceTier) {
+    this.flexPerformanceTier = flexPerformanceTier;
+    return this;
+  }
 
   /**
    * Output only. Indicates if the location has ONTAP Proxy support.

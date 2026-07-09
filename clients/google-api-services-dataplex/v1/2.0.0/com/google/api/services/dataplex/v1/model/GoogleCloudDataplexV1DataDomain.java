@@ -84,6 +84,13 @@ public final class GoogleCloudDataplexV1DataDomain extends com.google.api.client
   private java.lang.String parentDataDomain;
 
   /**
+   * Output only. Output-only policy member strings of this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamV1ResourcePolicyMember policyMember;
+
+  /**
    * Output only. System-generated globally unique ID for the DataDomain.
    * The value may be {@code null}.
    */
@@ -221,6 +228,23 @@ public final class GoogleCloudDataplexV1DataDomain extends com.google.api.client
    */
   public GoogleCloudDataplexV1DataDomain setParentDataDomain(java.lang.String parentDataDomain) {
     this.parentDataDomain = parentDataDomain;
+    return this;
+  }
+
+  /**
+   * Output only. Output-only policy member strings of this resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamV1ResourcePolicyMember getPolicyMember() {
+    return policyMember;
+  }
+
+  /**
+   * Output only. Output-only policy member strings of this resource.
+   * @param policyMember policyMember or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDomain setPolicyMember(GoogleIamV1ResourcePolicyMember policyMember) {
+    this.policyMember = policyMember;
     return this;
   }
 

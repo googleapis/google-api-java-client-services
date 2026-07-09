@@ -45,8 +45,8 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.lang.String appType;
 
   /**
-   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
-   * engine. Field is required if the engine has an Agent Gateway setting.
+   * Output only. The Agent registry containing the agents, MCP servers and tools associated with
+   * this engine. Derived server-side from the linked Agent Gateway's registry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,9 +138,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,8 +273,8 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
-   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
-   * engine. Field is required if the engine has an Agent Gateway setting.
+   * Output only. The Agent registry containing the agents, MCP servers and tools associated with
+   * this engine. Derived server-side from the linked Agent Gateway's registry.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssociatedAgentRegistry() {
@@ -282,8 +282,8 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
-   * Optional. The Agent registry containing the agents, MCP servers and tools associated with this
-   * engine. Field is required if the engine has an Agent Gateway setting.
+   * Output only. The Agent registry containing the agents, MCP servers and tools associated with
+   * this engine. Derived server-side from the linked Agent Gateway's registry.
    * @param associatedAgentRegistry associatedAgentRegistry or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setAssociatedAgentRegistry(java.lang.String associatedAgentRegistry) {
@@ -485,9 +485,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -502,9 +502,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setFeatures(java.util.Map<String, java.lang.String> features) {

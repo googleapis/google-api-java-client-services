@@ -315,6 +315,16 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private GoogleTypeDateTime nextSyncTime;
 
   /**
+   * Output only. The static IP addresses used by this connector for OAuth APIs (e.g. end user
+   * authentication). These are surfaced separately from `static_ip_addresses` so that customers can
+   * apply granular firewall settings for OAuth endpoints. Only populated for connectors that have
+   * static IP enabled and are used for actions and/or federated search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> oauthStaticIpAddresses;
+
+  /**
    * Required data connector parameters in structured json format.
    * The value may be {@code null}.
    */
@@ -1053,6 +1063,29 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setNextSyncTime(GoogleTypeDateTime nextSyncTime) {
     this.nextSyncTime = nextSyncTime;
+    return this;
+  }
+
+  /**
+   * Output only. The static IP addresses used by this connector for OAuth APIs (e.g. end user
+   * authentication). These are surfaced separately from `static_ip_addresses` so that customers can
+   * apply granular firewall settings for OAuth endpoints. Only populated for connectors that have
+   * static IP enabled and are used for actions and/or federated search.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOauthStaticIpAddresses() {
+    return oauthStaticIpAddresses;
+  }
+
+  /**
+   * Output only. The static IP addresses used by this connector for OAuth APIs (e.g. end user
+   * authentication). These are surfaced separately from `static_ip_addresses` so that customers can
+   * apply granular firewall settings for OAuth endpoints. Only populated for connectors that have
+   * static IP enabled and are used for actions and/or federated search.
+   * @param oauthStaticIpAddresses oauthStaticIpAddresses or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setOauthStaticIpAddresses(java.util.List<java.lang.String> oauthStaticIpAddresses) {
+    this.oauthStaticIpAddresses = oauthStaticIpAddresses;
     return this;
   }
 

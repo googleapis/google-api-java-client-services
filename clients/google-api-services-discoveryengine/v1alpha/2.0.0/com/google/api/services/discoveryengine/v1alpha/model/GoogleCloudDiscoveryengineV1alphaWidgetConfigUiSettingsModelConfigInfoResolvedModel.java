@@ -31,6 +31,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Admin-surface metadata; populated only for the Console admin Feature Control page
+   * (see `AdminView`). Unset for end-user surfaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView adminView;
+
+  /**
    * Output only. Localized description text (e.g. `State-of-the-art reasoning`). Localized using
    * the same locale as `display_name`.
    * The value may be {@code null}.
@@ -72,6 +80,25 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelC
    */
   @com.google.api.client.util.Key
   private java.lang.String modelId;
+
+  /**
+   * Output only. Admin-surface metadata; populated only for the Console admin Feature Control page
+   * (see `AdminView`). Unset for end-user surfaces.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView getAdminView() {
+    return adminView;
+  }
+
+  /**
+   * Output only. Admin-surface metadata; populated only for the Console admin Feature Control page
+   * (see `AdminView`). Unset for end-user surfaces.
+   * @param adminView adminView or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModel setAdminView(GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModelAdminView adminView) {
+    this.adminView = adminView;
+    return this;
+  }
 
   /**
    * Output only. Localized description text (e.g. `State-of-the-art reasoning`). Localized using

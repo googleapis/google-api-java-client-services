@@ -47,6 +47,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata exte
   private java.lang.Long successCount;
 
   /**
+   * Operation last update time. If the operation is done, this is also the finish time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The number of end users under the user store that failed to be deleted.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata exte
    */
   public GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata setSuccessCount(java.lang.Long successCount) {
     this.successCount = successCount;
+    return this;
+  }
+
+  /**
+   * Operation last update time. If the operation is done, this is also the finish time.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Operation last update time. If the operation is done, this is also the finish time.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDeleteUserStoreMetadata setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

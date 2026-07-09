@@ -101,7 +101,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
    * a query shows up less than this threshold, it may indicate that the query is rarely searched
    * and thus will not be generated as a suggestion. This is field can be helpful for preventing PII
    * queries becoming suggestions, as those queries are usually uniquely searched. If not set, the
-   * default value is 8 used in the generation pipeline.
+   * default value is 3 used in the generation pipeline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,7 +287,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
    * a query shows up less than this threshold, it may indicate that the query is rarely searched
    * and thus will not be generated as a suggestion. This is field can be helpful for preventing PII
    * queries becoming suggestions, as those queries are usually uniquely searched. If not set, the
-   * default value is 8 used in the generation pipeline.
+   * default value is 3 used in the generation pipeline.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQueryFrequencyThreshold() {
@@ -299,7 +299,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
    * a query shows up less than this threshold, it may indicate that the query is rarely searched
    * and thus will not be generated as a suggestion. This is field can be helpful for preventing PII
    * queries becoming suggestions, as those queries are usually uniquely searched. If not set, the
-   * default value is 8 used in the generation pipeline.
+   * default value is 3 used in the generation pipeline.
    * @param queryFrequencyThreshold queryFrequencyThreshold or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCompletionConfig setQueryFrequencyThreshold(java.lang.Integer queryFrequencyThreshold) {

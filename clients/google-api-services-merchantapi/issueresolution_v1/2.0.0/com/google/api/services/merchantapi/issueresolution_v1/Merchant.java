@@ -176,14 +176,19 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Lists the `AggregateProductStatuses` resources for your merchant account. The response might
        * contain fewer items than specified by `pageSize`. If `pageToken` was returned in previous
-       * request, it can be used to obtain additional results.
+       * request, it can be used to obtain additional results. This method can only be accessed by
+       * standalone accounts and sub-accounts of an advanced account. To retrieve product statuses for
+       * sub-accounts, you must first call the accounts.listSubaccounts method to obtain a list of sub-
+       * accounts, and then call `accounts.aggregateProductStatuses.list` for each sub-account
+       * individually.
        *
        * Create a request for the method "aggregateProductStatuses.list".
        *
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The account to list aggregate product statuses for. Format: `accounts/{account}`
+       * @param parent Required. The account to list aggregate product statuses for. Format: `accounts/{account}` Can only
+       *        be sub-accounts and standalone accounts.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -202,7 +207,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Lists the `AggregateProductStatuses` resources for your merchant account. The response might
          * contain fewer items than specified by `pageSize`. If `pageToken` was returned in previous
-         * request, it can be used to obtain additional results.
+         * request, it can be used to obtain additional results. This method can only be accessed by
+         * standalone accounts and sub-accounts of an advanced account. To retrieve product statuses for
+         * sub-accounts, you must first call the accounts.listSubaccounts method to obtain a list of sub-
+         * accounts, and then call `accounts.aggregateProductStatuses.list` for each sub-account
+         * individually.
          *
          * Create a request for the method "aggregateProductStatuses.list".
          *
@@ -211,7 +220,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account to list aggregate product statuses for. Format: `accounts/{account}`
+         * @param parent Required. The account to list aggregate product statuses for. Format: `accounts/{account}` Can only
+       *        be sub-accounts and standalone accounts.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -291,12 +301,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The account to list aggregate product statuses for. Format:
-         * `accounts/{account}`
+         * `accounts/{account}` Can only be sub-accounts and standalone accounts.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account to list aggregate product statuses for. Format: `accounts/{account}`
+        /** Required. The account to list aggregate product statuses for. Format: `accounts/{account}` Can only
+       be sub-accounts and standalone accounts.
          */
         public java.lang.String getParent() {
           return parent;
@@ -304,7 +315,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The account to list aggregate product statuses for. Format:
-         * `accounts/{account}`
+         * `accounts/{account}` Can only be sub-accounts and standalone accounts.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

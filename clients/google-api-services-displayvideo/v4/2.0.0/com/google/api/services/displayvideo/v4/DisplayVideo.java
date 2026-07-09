@@ -2309,9 +2309,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class AdGroupAds {
 
       /**
-       * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently rolling out. This method will be available to all
-       * partners by *June 24, 2026*.
+       * Creates an ad group ad. This method is only supported for Demand Gen ads.
        *
        * Create a request for the method "adGroupAds.create".
        *
@@ -2336,9 +2334,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently rolling out. This method will be available to
-         * all partners by *June 24, 2026*.
+         * Creates an ad group ad. This method is only supported for Demand Gen ads.
          *
          * Create a request for the method "adGroupAds.create".
          *
@@ -2434,9 +2430,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently rolling out. This method will be available to all
-       * partners by *June 24, 2026*.
+       * Deletes an ad group ad. This method is only supported for Demand Gen ads.
        *
        * Create a request for the method "adGroupAds.delete".
        *
@@ -2464,9 +2458,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently rolling out. This method will be available to
-         * all partners by *June 24, 2026*.
+         * Deletes an ad group ad. This method is only supported for Demand Gen ads.
          *
          * Create a request for the method "adGroupAds.delete".
          *
@@ -2983,9 +2975,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-       * management of Demand Gen resources is currently rolling out. This method will be available to all
-       * partners by *June 24, 2026*.
+       * Updates an ad group ad. This method is only supported for Demand Gen ads.
        *
        * Create a request for the method "adGroupAds.patch".
        *
@@ -3014,9 +3004,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
-         * management of Demand Gen resources is currently rolling out. This method will be available to
-         * all partners by *June 24, 2026*.
+         * Updates an ad group ad. This method is only supported for Demand Gen ads.
          *
          * Create a request for the method "adGroupAds.patch".
          *
@@ -3173,8 +3161,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * targeting options provided in BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from
        * each ad group, and then create the assigned targeting options provided in
        * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported for
-       * Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently rolling out.
-       * This method will be available to all partners by *June 24, 2026*.
+       * Demand Gen ad groups.
        *
        * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
        *
@@ -3206,8 +3193,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from each ad group, and then
          * create the assigned targeting options provided in
          * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported
-         * for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently rolling
-         * out. This method will be available to all partners by *June 24, 2026*.
+         * for Demand Gen ad groups.
          *
          * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
          *
@@ -3580,8 +3566,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Creates a new ad group. Returns the newly created ad group if successful. This method is only
-       * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-       * rolling out. This method will be available to all partners by *June 24, 2026*.
+       * supported for Demand Gen ad groups.
        *
        * Create a request for the method "adGroups.create".
        *
@@ -3607,8 +3592,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Creates a new ad group. Returns the newly created ad group if successful. This method is only
-         * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently rolling out. This method will be available to all partners by *June 24, 2026*.
+         * supported for Demand Gen ad groups.
          *
          * Create a request for the method "adGroups.create".
          *
@@ -3705,8 +3689,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method is
-       * only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-       * currently rolling out. This method will be available to all partners by *June 24, 2026*.
+       * only supported for Demand Gen ad groups.
        *
        * Create a request for the method "adGroups.delete".
        *
@@ -3735,8 +3718,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method
-         * is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently rolling out. This method will be available to all partners by *June 24, 2026*.
+         * is only supported for Demand Gen ad groups.
          *
          * Create a request for the method "adGroups.delete".
          *
@@ -4254,8 +4236,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates an existing ad group. Returns the updated ad group if successful. This method is only
-       * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
-       * rolling out. This method will be available to all partners by *June 24, 2026*.
+       * supported for Demand Gen ad groups.
        *
        * Create a request for the method "adGroups.patch".
        *
@@ -4285,8 +4266,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates an existing ad group. Returns the updated ad group if successful. This method is only
-         * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
-         * currently rolling out. This method will be available to all partners by *June 24, 2026*.
+         * supported for Demand Gen ad groups.
          *
          * Create a request for the method "adGroups.patch".
          *
@@ -4458,9 +4438,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
-           * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
-           * resources is currently rolling out. This method will be available to all partners by *June 24,
-           * 2026*.
+           * This method is only supported for Demand Gen ad groups.
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -4499,9 +4477,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
             /**
              * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
-             * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
-             * resources is currently rolling out. This method will be available to all partners by *June 24,
-             * 2026*.
+             * This method is only supported for Demand Gen ad groups.
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -4670,9 +4646,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           }
           /**
            * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
-           * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
-           * Demand Gen resources is currently rolling out. This method will be available to all partners by
-           * *June 24, 2026*.
+           * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`.
            *
            * Create a request for the method "assignedTargetingOptions.delete".
            *
@@ -4715,9 +4689,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
             /**
              * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
-             * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
-             * Demand Gen resources is currently rolling out. This method will be available to all partners by
-             * *June 24, 2026*.
+             * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`.
              *
              * Create a request for the method "assignedTargetingOptions.delete".
              *
@@ -18856,10 +18828,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
          * `AND` or `OR` logical operators. * A restriction has the form of `{field} {operator}
-         * {value}`. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
-         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
-         * Supported fields: * `plannableStatus` Examples: * All plannable user lists:
-         * `plannableStatus="PLANNABLE"` The length of this field should be no more than 500
+         * {value}`. * The `displayName` field must use the `HAS (:)` operator. * All other fields
+         * must use the `EQUALS (=)` operator. Supported fields: * `plannableStatus` * `displayName`
+         * * `userListType` * `name` Examples: * All plannable user lists:
+         * `plannableStatus="PLANNABLE"` * Plannable user lists with display name containing
+         * "Shopping": `plannableStatus="PLANNABLE" AND displayName:"Shopping"` * First party user
+         * lists: `userListType="FIRST_PARTY"` The length of this field should be no more than 500
          * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
          * tos/filters) guide for more information.
          */
@@ -18869,11 +18843,13 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /** Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
        expressions are made up of one or more restrictions. * Restrictions can be combined by `AND` or
        `OR` logical operators. * A restriction has the form of `{field} {operator} {value}`. * The
-       `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS THAN OR EQUAL TO (<=)`
-       operators. * All other fields must use the `EQUALS (=)` operator. Supported fields: *
-       `plannableStatus` Examples: * All plannable user lists: `plannableStatus="PLANNABLE"` The length of
-       this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
-       video/api/guides/how-tos/filters) guide for more information.
+       `displayName` field must use the `HAS (:)` operator. * All other fields must use the `EQUALS (=)`
+       operator. Supported fields: * `plannableStatus` * `displayName` * `userListType` * `name` Examples:
+       * All plannable user lists: `plannableStatus="PLANNABLE"` * Plannable user lists with display name
+       containing "Shopping": `plannableStatus="PLANNABLE" AND displayName:"Shopping"` * First party user
+       lists: `userListType="FIRST_PARTY"` The length of this field should be no more than 500 characters.
+       Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more
+       information.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -18883,10 +18859,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * Optional. Allows filtering by plannable user list properties. Supported syntax: * Filter
          * expressions are made up of one or more restrictions. * Restrictions can be combined by
          * `AND` or `OR` logical operators. * A restriction has the form of `{field} {operator}
-         * {value}`. * The `updateTime` field must use the `GREATER THAN OR EQUAL TO (>=)` or `LESS
-         * THAN OR EQUAL TO (<=)` operators. * All other fields must use the `EQUALS (=)` operator.
-         * Supported fields: * `plannableStatus` Examples: * All plannable user lists:
-         * `plannableStatus="PLANNABLE"` The length of this field should be no more than 500
+         * {value}`. * The `displayName` field must use the `HAS (:)` operator. * All other fields
+         * must use the `EQUALS (=)` operator. Supported fields: * `plannableStatus` * `displayName`
+         * * `userListType` * `name` Examples: * All plannable user lists:
+         * `plannableStatus="PLANNABLE"` * Plannable user lists with display name containing
+         * "Shopping": `plannableStatus="PLANNABLE" AND displayName:"Shopping"` * First party user
+         * lists: `userListType="FIRST_PARTY"` The length of this field should be no more than 500
          * characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
          * tos/filters) guide for more information.
          */

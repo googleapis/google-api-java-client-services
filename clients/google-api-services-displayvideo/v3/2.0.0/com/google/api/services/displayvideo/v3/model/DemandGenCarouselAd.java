@@ -31,7 +31,9 @@ package com.google.api.services.displayvideo.v3.model;
 public final class DemandGenCarouselAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +88,9 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   private java.lang.String headline;
 
   /**
-   * Required. The logo image used by this ad.
+   * Required. The logo image used by this ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +111,9 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   private java.lang.String userSpecifiedTrackingUrl;
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessName() {
@@ -115,7 +121,9 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * @param businessName businessName or {@code null} for none
    */
   public DemandGenCarouselAd setBusinessName(java.lang.String businessName) {
@@ -226,7 +234,9 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The logo image used by this ad.
+   * Required. The logo image used by this ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * @return value or {@code null} for none
    */
   public ImageAsset getLogo() {
@@ -234,7 +244,9 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The logo image used by this ad.
+   * Required. The logo image used by this ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * @param logo logo or {@code null} for none
    */
   public DemandGenCarouselAd setLogo(ImageAsset logo) {

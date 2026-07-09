@@ -39,6 +39,13 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> ageRanges;
 
   /**
+   * Output only. The default YouTube Select Lineup for this product, if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YouTubeSelectLineUp defaultYoutubeSelectLineup;
+
+  /**
    * Output only. Targetable devices for the ad product.
    * The value may be {@code null}.
    */
@@ -53,11 +60,11 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> genders;
 
   /**
-   * Output only. Targetable networks for the ad product.
+   * Output only. Targetable network for the ad product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> networks;
+  private java.lang.String network;
 
   /**
    * Output only. Targetable surface combinations for the ad product.
@@ -89,6 +96,23 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
    */
   public PlannableTargeting setAgeRanges(java.util.List<java.lang.String> ageRanges) {
     this.ageRanges = ageRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The default YouTube Select Lineup for this product, if applicable.
+   * @return value or {@code null} for none
+   */
+  public YouTubeSelectLineUp getDefaultYoutubeSelectLineup() {
+    return defaultYoutubeSelectLineup;
+  }
+
+  /**
+   * Output only. The default YouTube Select Lineup for this product, if applicable.
+   * @param defaultYoutubeSelectLineup defaultYoutubeSelectLineup or {@code null} for none
+   */
+  public PlannableTargeting setDefaultYoutubeSelectLineup(YouTubeSelectLineUp defaultYoutubeSelectLineup) {
+    this.defaultYoutubeSelectLineup = defaultYoutubeSelectLineup;
     return this;
   }
 
@@ -127,19 +151,19 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Targetable networks for the ad product.
+   * Output only. Targetable network for the ad product.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getNetworks() {
-    return networks;
+  public java.lang.String getNetwork() {
+    return network;
   }
 
   /**
-   * Output only. Targetable networks for the ad product.
-   * @param networks networks or {@code null} for none
+   * Output only. Targetable network for the ad product.
+   * @param network network or {@code null} for none
    */
-  public PlannableTargeting setNetworks(java.util.List<java.lang.String> networks) {
-    this.networks = networks;
+  public PlannableTargeting setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

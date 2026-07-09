@@ -55,8 +55,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * Optional. The attribution model to use for conversion measurement. This attribution model will
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
-   * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
+   * Only applicable to Demand Gen line items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -112,8 +111,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * Optional. The attribution model to use for conversion measurement. This attribution model will
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
-   * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
+   * Only applicable to Demand Gen line items.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPrimaryAttributionModelId() {
@@ -124,8 +122,7 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    * Optional. The attribution model to use for conversion measurement. This attribution model will
    * determine how conversions are counted. The Primary model can be set by you for a floodlight
    * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
-   * Only applicable to Demand Gen line items. Retrieval and management of Demand Gen resources is
-   * currently rolling out. This field will be available to all partners by *June 24, 2026*.
+   * Only applicable to Demand Gen line items.
    * @param primaryAttributionModelId primaryAttributionModelId or {@code null} for none
    */
   public ConversionCountingConfig setPrimaryAttributionModelId(java.lang.Long primaryAttributionModelId) {

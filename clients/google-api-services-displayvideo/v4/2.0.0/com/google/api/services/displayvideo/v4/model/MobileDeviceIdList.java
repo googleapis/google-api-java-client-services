@@ -40,7 +40,7 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   private Consent consent;
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * Optional. A list of mobile device IDs defining Customer Match audience members. The size of
    * mobile_device_ids mustn't be greater than 500,000.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * Optional. A list of mobile device IDs defining Customer Match audience members. The size of
    * mobile_device_ids mustn't be greater than 500,000.
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class MobileDeviceIdList extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of mobile device IDs defining Customer Match audience members. The size of
+   * Optional. A list of mobile device IDs defining Customer Match audience members. The size of
    * mobile_device_ids mustn't be greater than 500,000.
    * @param mobileDeviceIds mobileDeviceIds or {@code null} for none
    */

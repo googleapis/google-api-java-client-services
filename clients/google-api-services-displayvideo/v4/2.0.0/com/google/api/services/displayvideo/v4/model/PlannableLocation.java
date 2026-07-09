@@ -52,6 +52,13 @@ public final class PlannableLocation extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
+   * Output only. The parent plannable location ID, for example the country ID for subgeos.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long parentPlannableLocationId;
+
+  /**
    * Output only. The plannable location ID.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class PlannableLocation extends com.google.api.client.json.GenericJ
    */
   public PlannableLocation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The parent plannable location ID, for example the country ID for subgeos.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getParentPlannableLocationId() {
+    return parentPlannableLocationId;
+  }
+
+  /**
+   * Output only. The parent plannable location ID, for example the country ID for subgeos.
+   * @param parentPlannableLocationId parentPlannableLocationId or {@code null} for none
+   */
+  public PlannableLocation setParentPlannableLocationId(java.lang.Long parentPlannableLocationId) {
+    this.parentPlannableLocationId = parentPlannableLocationId;
     return this;
   }
 

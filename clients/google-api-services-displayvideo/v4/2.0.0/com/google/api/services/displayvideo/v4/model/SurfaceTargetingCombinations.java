@@ -38,6 +38,13 @@ public final class SurfaceTargetingCombinations extends com.google.api.client.js
   private java.util.List<java.lang.String> availableSurfaceTypes;
 
   /**
+   * Output only. The default surface types for this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> defaultSurfaceTypes;
+
+  /**
    * Output only. Valid combinations of surfaces that can be selected together.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class SurfaceTargetingCombinations extends com.google.api.client.js
    */
   public SurfaceTargetingCombinations setAvailableSurfaceTypes(java.util.List<java.lang.String> availableSurfaceTypes) {
     this.availableSurfaceTypes = availableSurfaceTypes;
+    return this;
+  }
+
+  /**
+   * Output only. The default surface types for this product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDefaultSurfaceTypes() {
+    return defaultSurfaceTypes;
+  }
+
+  /**
+   * Output only. The default surface types for this product.
+   * @param defaultSurfaceTypes defaultSurfaceTypes or {@code null} for none
+   */
+  public SurfaceTargetingCombinations setDefaultSurfaceTypes(java.util.List<java.lang.String> defaultSurfaceTypes) {
+    this.defaultSurfaceTypes = defaultSurfaceTypes;
     return this;
   }
 

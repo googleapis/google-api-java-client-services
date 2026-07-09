@@ -56,6 +56,13 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String consumerProject;
 
   /**
+   * Output only. The status of automated DNS provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceAutoDnsStatus;
+
+  /**
    * The IP address of the consumer endpoint.
    * The value may be {@code null}.
    */
@@ -85,6 +92,13 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * Output only. The status of automated DNS provisioning for the write endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeEndpointAutoDnsStatus;
 
   /**
    * Optional. The consumer network of this consumer endpoint. This must be a resource path that
@@ -142,6 +156,23 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
    */
   public PscAutoConnectionConfig setConsumerProject(java.lang.String consumerProject) {
     this.consumerProject = consumerProject;
+    return this;
+  }
+
+  /**
+   * Output only. The status of automated DNS provisioning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceAutoDnsStatus() {
+    return instanceAutoDnsStatus;
+  }
+
+  /**
+   * Output only. The status of automated DNS provisioning.
+   * @param instanceAutoDnsStatus instanceAutoDnsStatus or {@code null} for none
+   */
+  public PscAutoConnectionConfig setInstanceAutoDnsStatus(java.lang.String instanceAutoDnsStatus) {
+    this.instanceAutoDnsStatus = instanceAutoDnsStatus;
     return this;
   }
 
@@ -216,6 +247,23 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
    */
   public PscAutoConnectionConfig setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. The status of automated DNS provisioning for the write endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteEndpointAutoDnsStatus() {
+    return writeEndpointAutoDnsStatus;
+  }
+
+  /**
+   * Output only. The status of automated DNS provisioning for the write endpoint.
+   * @param writeEndpointAutoDnsStatus writeEndpointAutoDnsStatus or {@code null} for none
+   */
+  public PscAutoConnectionConfig setWriteEndpointAutoDnsStatus(java.lang.String writeEndpointAutoDnsStatus) {
+    this.writeEndpointAutoDnsStatus = writeEndpointAutoDnsStatus;
     return this;
   }
 

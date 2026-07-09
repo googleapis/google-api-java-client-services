@@ -39,6 +39,14 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String backendType;
 
   /**
+   * Optional. Output only. Connection name of the Cloud SQL instance used in connection strings, in
+   * the format project:region:instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionName;
+
+  /**
    * Custom subject alternative names for the server certificate.
    * The value may be {@code null}.
    */
@@ -163,6 +171,25 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setBackendType(java.lang.String backendType) {
     this.backendType = backendType;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Connection name of the Cloud SQL instance used in connection strings, in
+   * the format project:region:instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionName() {
+    return connectionName;
+  }
+
+  /**
+   * Optional. Output only. Connection name of the Cloud SQL instance used in connection strings, in
+   * the format project:region:instance.
+   * @param connectionName connectionName or {@code null} for none
+   */
+  public ConnectSettings setConnectionName(java.lang.String connectionName) {
+    this.connectionName = connectionName;
     return this;
   }
 

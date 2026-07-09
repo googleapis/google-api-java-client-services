@@ -80,7 +80,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private java.lang.Boolean pointInTimeRecoveryEnabled;
 
   /**
-   * Reserved for future use.
+   * Optional. Deprecated: replication_log_archiving_enabled is deprecated and will be removed from
+   * a future version of the API. Use point_in_time_recovery_enabled instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -230,7 +231,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Reserved for future use.
+   * Optional. Deprecated: replication_log_archiving_enabled is deprecated and will be removed from
+   * a future version of the API. Use point_in_time_recovery_enabled instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReplicationLogArchivingEnabled() {
@@ -238,7 +240,8 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   }
 
   /**
-   * Reserved for future use.
+   * Optional. Deprecated: replication_log_archiving_enabled is deprecated and will be removed from
+   * a future version of the API. Use point_in_time_recovery_enabled instead.
    * @param replicationLogArchivingEnabled replicationLogArchivingEnabled or {@code null} for none
    */
   public BackupConfiguration setReplicationLogArchivingEnabled(java.lang.Boolean replicationLogArchivingEnabled) {

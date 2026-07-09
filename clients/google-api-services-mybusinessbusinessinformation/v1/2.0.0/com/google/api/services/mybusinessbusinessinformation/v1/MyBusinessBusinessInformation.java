@@ -353,9 +353,12 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
        * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The name of the account to fetch locations from. If the parent Account is of AccountType
-       *        PERSONAL, only Locations that are directly owned by the Account are returned, otherwise it
-       *        will return all accessible locations from the Account, either directly or indirectly.
+       * @param parent Required. The name of the account to fetch locations from. * **Specific Account ID**: If the account
+       *        is of type `AccountType.PERSONAL`, the response returns only locations directly owned by
+       *        that account. For all other types (e.g., `AccountType.LOCATION_GROUP`), it returns all
+       *        accessible locations. * **Wildcard (`-`)**: Using `accounts/-` identifies the
+       *        authenticated user. This scope defaults to `AccountType.PERSONAL` but includes both
+       *        directly and indirectly owned locations (e.g., those accessible via member groups).
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -382,9 +385,12 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the account to fetch locations from. If the parent Account is of AccountType
-       *        PERSONAL, only Locations that are directly owned by the Account are returned, otherwise it
-       *        will return all accessible locations from the Account, either directly or indirectly.
+         * @param parent Required. The name of the account to fetch locations from. * **Specific Account ID**: If the account
+       *        is of type `AccountType.PERSONAL`, the response returns only locations directly owned by
+       *        that account. For all other types (e.g., `AccountType.LOCATION_GROUP`), it returns all
+       *        accessible locations. * **Wildcard (`-`)**: Using `accounts/-` identifies the
+       *        authenticated user. This scope defaults to `AccountType.PERSONAL` but includes both
+       *        directly and indirectly owned locations (e.g., those accessible via member groups).
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -463,27 +469,34 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
         }
 
         /**
-         * Required. The name of the account to fetch locations from. If the parent Account is of
-         * AccountType PERSONAL, only Locations that are directly owned by the Account are returned,
-         * otherwise it will return all accessible locations from the Account, either directly or
-         * indirectly.
+         * Required. The name of the account to fetch locations from. * **Specific Account ID**: If
+         * the account is of type `AccountType.PERSONAL`, the response returns only locations
+         * directly owned by that account. For all other types (e.g., `AccountType.LOCATION_GROUP`),
+         * it returns all accessible locations. * **Wildcard (`-`)**: Using `accounts/-` identifies
+         * the authenticated user. This scope defaults to `AccountType.PERSONAL` but includes both
+         * directly and indirectly owned locations (e.g., those accessible via member groups).
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the account to fetch locations from. If the parent Account is of AccountType
-       PERSONAL, only Locations that are directly owned by the Account are returned, otherwise it will
-       return all accessible locations from the Account, either directly or indirectly.
+        /** Required. The name of the account to fetch locations from. * **Specific Account ID**: If the
+       account is of type `AccountType.PERSONAL`, the response returns only locations directly owned by
+       that account. For all other types (e.g., `AccountType.LOCATION_GROUP`), it returns all accessible
+       locations. * **Wildcard (`-`)**: Using `accounts/-` identifies the authenticated user. This scope
+       defaults to `AccountType.PERSONAL` but includes both directly and indirectly owned locations (e.g.,
+       those accessible via member groups).
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The name of the account to fetch locations from. If the parent Account is of
-         * AccountType PERSONAL, only Locations that are directly owned by the Account are returned,
-         * otherwise it will return all accessible locations from the Account, either directly or
-         * indirectly.
+         * Required. The name of the account to fetch locations from. * **Specific Account ID**: If
+         * the account is of type `AccountType.PERSONAL`, the response returns only locations
+         * directly owned by that account. For all other types (e.g., `AccountType.LOCATION_GROUP`),
+         * it returns all accessible locations. * **Wildcard (`-`)**: Using `accounts/-` identifies
+         * the authenticated user. This scope defaults to `AccountType.PERSONAL` but includes both
+         * directly and indirectly owned locations (e.g., those accessible via member groups).
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

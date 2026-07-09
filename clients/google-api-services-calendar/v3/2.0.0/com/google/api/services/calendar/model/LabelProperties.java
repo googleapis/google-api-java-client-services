@@ -29,6 +29,45 @@ package com.google.api.services.calendar.model;
 @SuppressWarnings("javadoc")
 public final class LabelProperties extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Event labels defined on this calendar. If this is present when updating the calendar, it will
+   * replace the existing event labels. Extend the list to add a new event label, and remove
+   * entities from the list to delete a label from calendar. Each calendar can have a maximum of 200
+   * labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EventLabel> eventLabels;
+
+  static {
+    // hack to force ProGuard to consider EventLabel used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EventLabel.class);
+  }
+
+  /**
+   * Event labels defined on this calendar. If this is present when updating the calendar, it will
+   * replace the existing event labels. Extend the list to add a new event label, and remove
+   * entities from the list to delete a label from calendar. Each calendar can have a maximum of 200
+   * labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EventLabel> getEventLabels() {
+    return eventLabels;
+  }
+
+  /**
+   * Event labels defined on this calendar. If this is present when updating the calendar, it will
+   * replace the existing event labels. Extend the list to add a new event label, and remove
+   * entities from the list to delete a label from calendar. Each calendar can have a maximum of 200
+   * labels.
+   * @param eventLabels eventLabels or {@code null} for none
+   */
+  public LabelProperties setEventLabels(java.util.List<EventLabel> eventLabels) {
+    this.eventLabels = eventLabels;
+    return this;
+  }
+
   @Override
   public LabelProperties set(String fieldName, Object value) {
     return (LabelProperties) super.set(fieldName, value);

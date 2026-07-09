@@ -2936,6 +2936,166 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Transfers a secondary calendar between users within a Google Workspace organization. Requires
+     * user authentication with Manage Calendars administrator privilege, and one of the following
+     * authorization scopes: - https://www.googleapis.com/auth/calendar  -
+     * https://www.googleapis.com/auth/calendar.calendars In the request, set useAdminAccess to true.
+     * The secondary calendar must be active to be transferred. Transferring disabled or deleted
+     * calendars isn't supported.
+     *
+     * Create a request for the method "calendars.transferOwnership".
+     *
+     * This request holds the parameters needed by the calendar server.  After setting any optional
+     * parameters, call the {@link TransferOwnership#execute()} method to invoke the remote operation.
+     *
+     * @param calendarId Calendar identifier. To retrieve calendar IDs, call the calendarList.list method.
+     * @param newDataOwner The email address of a user who will become the data owner of the calendar.
+     * @param useAdminAccess When true, the method runs using the user's Google Workspace administrator privileges. The calling
+     *        user must be a Google Workspace administrator with the Manage Calendars privilege. This
+     *        method currently only supports admin access, thus only true is accepted for this field.
+     * @return the request
+     */
+    public TransferOwnership transferOwnership(java.lang.String calendarId, java.lang.String newDataOwner, java.lang.Boolean useAdminAccess) throws java.io.IOException {
+      TransferOwnership result = new TransferOwnership(calendarId, newDataOwner, useAdminAccess);
+      initialize(result);
+      return result;
+    }
+
+    public class TransferOwnership extends CalendarRequest<Void> {
+
+      private static final String REST_PATH = "calendars/{calendarId}/transferOwnership";
+
+      /**
+       * Transfers a secondary calendar between users within a Google Workspace organization. Requires
+       * user authentication with Manage Calendars administrator privilege, and one of the following
+       * authorization scopes: - https://www.googleapis.com/auth/calendar  -
+       * https://www.googleapis.com/auth/calendar.calendars In the request, set useAdminAccess to true.
+       * The secondary calendar must be active to be transferred. Transferring disabled or deleted
+       * calendars isn't supported.
+       *
+       * Create a request for the method "calendars.transferOwnership".
+       *
+       * This request holds the parameters needed by the the calendar server.  After setting any
+       * optional parameters, call the {@link TransferOwnership#execute()} method to invoke the remote
+       * operation. <p> {@link TransferOwnership#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param calendarId Calendar identifier. To retrieve calendar IDs, call the calendarList.list method.
+       * @param newDataOwner The email address of a user who will become the data owner of the calendar.
+       * @param useAdminAccess When true, the method runs using the user's Google Workspace administrator privileges. The calling
+     *        user must be a Google Workspace administrator with the Manage Calendars privilege. This
+     *        method currently only supports admin access, thus only true is accepted for this field.
+       * @since 1.13
+       */
+      protected TransferOwnership(java.lang.String calendarId, java.lang.String newDataOwner, java.lang.Boolean useAdminAccess) {
+        super(Calendar.this, "POST", REST_PATH, null, Void.class);
+        this.calendarId = com.google.api.client.util.Preconditions.checkNotNull(calendarId, "Required parameter calendarId must be specified.");
+        this.newDataOwner = com.google.api.client.util.Preconditions.checkNotNull(newDataOwner, "Required parameter newDataOwner must be specified.");
+        this.useAdminAccess = com.google.api.client.util.Preconditions.checkNotNull(useAdminAccess, "Required parameter useAdminAccess must be specified.");
+      }
+
+      @Override
+      public TransferOwnership setAlt(java.lang.String alt) {
+        return (TransferOwnership) super.setAlt(alt);
+      }
+
+      @Override
+      public TransferOwnership setFields(java.lang.String fields) {
+        return (TransferOwnership) super.setFields(fields);
+      }
+
+      @Override
+      public TransferOwnership setKey(java.lang.String key) {
+        return (TransferOwnership) super.setKey(key);
+      }
+
+      @Override
+      public TransferOwnership setOauthToken(java.lang.String oauthToken) {
+        return (TransferOwnership) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TransferOwnership setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TransferOwnership) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TransferOwnership setQuotaUser(java.lang.String quotaUser) {
+        return (TransferOwnership) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TransferOwnership setUserIp(java.lang.String userIp) {
+        return (TransferOwnership) super.setUserIp(userIp);
+      }
+
+      /** Calendar identifier. To retrieve calendar IDs, call the calendarList.list method. */
+      @com.google.api.client.util.Key
+      private java.lang.String calendarId;
+
+      /** Calendar identifier. To retrieve calendar IDs, call the calendarList.list method.
+       */
+      public java.lang.String getCalendarId() {
+        return calendarId;
+      }
+
+      /** Calendar identifier. To retrieve calendar IDs, call the calendarList.list method. */
+      public TransferOwnership setCalendarId(java.lang.String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+      }
+
+      /** The email address of a user who will become the data owner of the calendar. */
+      @com.google.api.client.util.Key
+      private java.lang.String newDataOwner;
+
+      /** The email address of a user who will become the data owner of the calendar.
+       */
+      public java.lang.String getNewDataOwner() {
+        return newDataOwner;
+      }
+
+      /** The email address of a user who will become the data owner of the calendar. */
+      public TransferOwnership setNewDataOwner(java.lang.String newDataOwner) {
+        this.newDataOwner = newDataOwner;
+        return this;
+      }
+
+      /**
+       * When true, the method runs using the user's Google Workspace administrator privileges. The
+       * calling user must be a Google Workspace administrator with the Manage Calendars privilege.
+       * This method currently only supports admin access, thus only true is accepted for this
+       * field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean useAdminAccess;
+
+      /** When true, the method runs using the user's Google Workspace administrator privileges. The calling
+     user must be a Google Workspace administrator with the Manage Calendars privilege. This method
+     currently only supports admin access, thus only true is accepted for this field.
+       */
+      public java.lang.Boolean getUseAdminAccess() {
+        return useAdminAccess;
+      }
+
+      /**
+       * When true, the method runs using the user's Google Workspace administrator privileges. The
+       * calling user must be a Google Workspace administrator with the Manage Calendars privilege.
+       * This method currently only supports admin access, thus only true is accepted for this
+       * field.
+       */
+      public TransferOwnership setUseAdminAccess(java.lang.Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+      }
+
+      @Override
+      public TransferOwnership set(String parameterName, Object value) {
+        return (TransferOwnership) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates metadata for a calendar.
      *
      * Create a request for the method "calendars.update".
@@ -3800,6 +3960,37 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer eventLabelVersion;
+
+      /** Version number of the event label feature supported by the API client. Version 0 assumes no event
+     label support and processes the colorId field for color management. Version 1 enables support for
+     event labels, and processes the eventLabelId in the event's body. In this case, the colorId field
+     is ignored. The default is 0.
+
+     [minimum: 0] [maximum: 1]
+       */
+      public java.lang.Integer getEventLabelVersion() {
+        return eventLabelVersion;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      public CalendarImport setEventLabelVersion(java.lang.Integer eventLabelVersion) {
+        this.eventLabelVersion = eventLabelVersion;
+        return this;
+      }
+
+      /**
        * Whether API client performing operation supports event attachments. Optional. The default
        * is False.
        */
@@ -3958,6 +4149,37 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        */
       public Insert setConferenceDataVersion(java.lang.Integer conferenceDataVersion) {
         this.conferenceDataVersion = conferenceDataVersion;
+        return this;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer eventLabelVersion;
+
+      /** Version number of the event label feature supported by the API client. Version 0 assumes no event
+     label support and processes the colorId field for color management. Version 1 enables support for
+     event labels, and processes the eventLabelId in the event's body. In this case, the colorId field
+     is ignored. The default is 0.
+
+     [minimum: 0] [maximum: 1]
+       */
+      public java.lang.Integer getEventLabelVersion() {
+        return eventLabelVersion;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      public Insert setEventLabelVersion(java.lang.Integer eventLabelVersion) {
+        this.eventLabelVersion = eventLabelVersion;
         return this;
       }
 
@@ -5372,6 +5594,37 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer eventLabelVersion;
+
+      /** Version number of the event label feature supported by the API client. Version 0 assumes no event
+     label support and processes the colorId field for color management. Version 1 enables support for
+     event labels, and processes the eventLabelId in the event's body. In this case, the colorId field
+     is ignored. The default is 0.
+
+     [minimum: 0] [maximum: 1]
+       */
+      public java.lang.Integer getEventLabelVersion() {
+        return eventLabelVersion;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      public Patch setEventLabelVersion(java.lang.Integer eventLabelVersion) {
+        this.eventLabelVersion = eventLabelVersion;
+        return this;
+      }
+
+      /**
        * The maximum number of attendees to include in the response. If there are more than the
        * specified number of attendees, only the participant is returned. Optional.
        */
@@ -5824,6 +6077,37 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        */
       public Update setConferenceDataVersion(java.lang.Integer conferenceDataVersion) {
         this.conferenceDataVersion = conferenceDataVersion;
+        return this;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer eventLabelVersion;
+
+      /** Version number of the event label feature supported by the API client. Version 0 assumes no event
+     label support and processes the colorId field for color management. Version 1 enables support for
+     event labels, and processes the eventLabelId in the event's body. In this case, the colorId field
+     is ignored. The default is 0.
+
+     [minimum: 0] [maximum: 1]
+       */
+      public java.lang.Integer getEventLabelVersion() {
+        return eventLabelVersion;
+      }
+
+      /**
+       * Version number of the event label feature supported by the API client. Version 0 assumes no
+       * event label support and processes the colorId field for color management. Version 1 enables
+       * support for event labels, and processes the eventLabelId in the event's body. In this case,
+       * the colorId field is ignored. The default is 0.
+       */
+      public Update setEventLabelVersion(java.lang.Integer eventLabelVersion) {
+        this.eventLabelVersion = eventLabelVersion;
         return this;
       }
 

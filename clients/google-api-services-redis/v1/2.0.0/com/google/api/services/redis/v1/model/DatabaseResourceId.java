@@ -49,8 +49,8 @@ public final class DatabaseResourceId extends com.google.api.client.json.Generic
    * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
@@ -107,8 +107,8 @@ public final class DatabaseResourceId extends com.google.api.client.json.Generic
    * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
@@ -124,8 +124,8 @@ public final class DatabaseResourceId extends com.google.api.client.json.Generic
    * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
+   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
    * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-

@@ -36351,6 +36351,1804 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             public class AlphaEvolveExperiments {
 
               /**
+               * Acquires one or more AlphaEvolveProgram from the generated queue of programs for evaluation.
+               *
+               * Create a request for the method "alphaEvolveExperiments.acquirePrograms".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link AcquirePrograms#execute()} method to invoke the remote
+               * operation.
+               *
+               * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveExperiment. Format: `pr
+               *        ojects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{
+               *        session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsRequest}
+               * @return the request
+               */
+              public AcquirePrograms acquirePrograms(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsRequest content) throws java.io.IOException {
+                AcquirePrograms result = new AcquirePrograms(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class AcquirePrograms extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}:acquirePrograms";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Acquires one or more AlphaEvolveProgram from the generated queue of programs for evaluation.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.acquirePrograms".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link AcquirePrograms#execute()} method to invoke the remote
+                 * operation. <p> {@link AcquirePrograms#initialize(com.google.api.client.googleapis.services.Abst
+                 * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+                 * the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveExperiment. Format: `pr
+               *        ojects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{
+               *        session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsRequest}
+                 * @since 1.13
+                 */
+                protected AcquirePrograms(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireProgramsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public AcquirePrograms set$Xgafv(java.lang.String $Xgafv) {
+                  return (AcquirePrograms) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public AcquirePrograms setAccessToken(java.lang.String accessToken) {
+                  return (AcquirePrograms) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public AcquirePrograms setAlt(java.lang.String alt) {
+                  return (AcquirePrograms) super.setAlt(alt);
+                }
+
+                @Override
+                public AcquirePrograms setCallback(java.lang.String callback) {
+                  return (AcquirePrograms) super.setCallback(callback);
+                }
+
+                @Override
+                public AcquirePrograms setFields(java.lang.String fields) {
+                  return (AcquirePrograms) super.setFields(fields);
+                }
+
+                @Override
+                public AcquirePrograms setKey(java.lang.String key) {
+                  return (AcquirePrograms) super.setKey(key);
+                }
+
+                @Override
+                public AcquirePrograms setOauthToken(java.lang.String oauthToken) {
+                  return (AcquirePrograms) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public AcquirePrograms setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (AcquirePrograms) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public AcquirePrograms setQuotaUser(java.lang.String quotaUser) {
+                  return (AcquirePrograms) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public AcquirePrograms setUploadType(java.lang.String uploadType) {
+                  return (AcquirePrograms) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public AcquirePrograms setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (AcquirePrograms) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name (AlphaEvolveExperiment) of the
+                 * AlphaEvolveExperiment. Format: `projects/{project}/locations/{location}/collectio
+                 * ns/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha
+                 * _evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveExperiment. Format: `p
+               rojects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}
+               /alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name (AlphaEvolveExperiment) of the
+                 * AlphaEvolveExperiment. Format: `projects/{project}/locations/{location}/collectio
+                 * ns/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha
+                 * _evolve_experiment}`
+                 */
+                public AcquirePrograms setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public AcquirePrograms set(String parameterName, Object value) {
+                  return (AcquirePrograms) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Creates a new AlphaEvolveExperiment.
+               *
+               * Create a request for the method "alphaEvolveExperiments.create".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name (Session) of the experiment. Format: `projects/{project}/location
+               *        s/{location}/collections/{collection}/engines/{engine}/sessions/{session}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment}
+               * @return the request
+               */
+              public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment content) throws java.io.IOException {
+                Create result = new Create(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/alphaEvolveExperiments";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+                /**
+                 * Creates a new AlphaEvolveExperiment.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.create".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name (Session) of the experiment. Format: `projects/{project}/location
+               *        s/{location}/collections/{collection}/engines/{engine}/sessions/{session}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment}
+                 * @since 1.13
+                 */
+                protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Create set$Xgafv(java.lang.String $Xgafv) {
+                  return (Create) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Create setAccessToken(java.lang.String accessToken) {
+                  return (Create) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Create setAlt(java.lang.String alt) {
+                  return (Create) super.setAlt(alt);
+                }
+
+                @Override
+                public Create setCallback(java.lang.String callback) {
+                  return (Create) super.setCallback(callback);
+                }
+
+                @Override
+                public Create setFields(java.lang.String fields) {
+                  return (Create) super.setFields(fields);
+                }
+
+                @Override
+                public Create setKey(java.lang.String key) {
+                  return (Create) super.setKey(key);
+                }
+
+                @Override
+                public Create setOauthToken(java.lang.String oauthToken) {
+                  return (Create) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Create) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Create setQuotaUser(java.lang.String quotaUser) {
+                  return (Create) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Create setUploadType(java.lang.String uploadType) {
+                  return (Create) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Create) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name (Session) of the experiment. Format: `projects
+                 * /{project}/locations/{location}/collections/{collection}/engines/{engine}/session
+                 * s/{session}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name (Session) of the experiment. Format: `projects/{project}/locatio
+               ns/{location}/collections/{collection}/engines/{engine}/sessions/{session}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name (Session) of the experiment. Format: `projects
+                 * /{project}/locations/{location}/collections/{collection}/engines/{engine}/session
+                 * s/{session}`
+                 */
+                public Create setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public Create set(String parameterName, Object value) {
+                  return (Create) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Deletes an experiment provided the experiment is in an end state (e.g. created, failed,
+               * succeeded).
+               *
+               * Create a request for the method "alphaEvolveExperiments.delete".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The full resource name of the experiment to delete. Format: `projects/{project}/locations/
+               *        {location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperim
+               *        ents/{alpha_evolve_experiment}`
+               * @return the request
+               */
+              public Delete delete(java.lang.String name) throws java.io.IOException {
+                Delete result = new Delete(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Deletes an experiment provided the experiment is in an end state (e.g. created, failed,
+                 * succeeded).
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.delete".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The full resource name of the experiment to delete. Format: `projects/{project}/locations/
+               *        {location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperim
+               *        ents/{alpha_evolve_experiment}`
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String name) {
+                  super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleProtobufEmpty.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The full resource name of the experiment to delete. Format: `projects/{
+                 * project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/
+                 * {session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The full resource name of the experiment to delete. Format: `projects/{project}/locations
+               /{location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{al
+               pha_evolve_experiment}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The full resource name of the experiment to delete. Format: `projects/{
+                 * project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/
+                 * {session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public Delete setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Get an existing Experiment.
+               *
+               * Create a request for the method "alphaEvolveExperiments.get".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The full resource name of the experiment. Format: `projects/{project}/locations/{location}
+               *        /collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alph
+               *        a_evolve_experiment}`
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment> {
+
+                private static final String REST_PATH = "v1alpha/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Get an existing Experiment.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.get".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The full resource name of the experiment. Format: `projects/{project}/locations/{location}
+               *        /collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alph
+               *        a_evolve_experiment}`
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperiment.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The full resource name of the experiment. Format: `projects/{project}/l
+                 * ocations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/
+                 * alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The full resource name of the experiment. Format: `projects/{project}/locations/{location
+               }/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve
+               _experiment}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The full resource name of the experiment. Format: `projects/{project}/l
+                 * ocations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/
+                 * alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * List all AlphaEvolveExperiments in a given session.
+               *
+               * Create a request for the method "alphaEvolveExperiments.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource name (Session) of the Session. Format: `projects/{project}/locations/{
+               *        location}/collections/{collection}/engines/{engine}/sessions/{session}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAlphaEvolveExperimentsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/alphaEvolveExperiments";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+                /**
+                 * List all AlphaEvolveExperiments in a given session.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name (Session) of the Session. Format: `projects/{project}/locations/{
+               *        location}/collections/{collection}/engines/{engine}/sessions/{session}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAlphaEvolveExperimentsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name (Session) of the Session. Format: `projects/{p
+                 * roject}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{
+                 * session}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name (Session) of the Session. Format: `projects/{project}/locations/
+               {location}/collections/{collection}/engines/{engine}/sessions/{session}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name (Session) of the Session. Format: `projects/{p
+                 * roject}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{
+                 * session}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum number of experiments to return. The service may return
+                 * fewer than this value.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Optional. The maximum number of experiments to return. The service may return fewer than this
+               value.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Optional. The maximum number of experiments to return. The service may return
+                 * fewer than this value.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListAlphaEvolveExperiments`
+                 * call. Provide this to retrieve the subsequent page.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Optional. A page token, received from a previous `ListAlphaEvolveExperiments` call. Provide this to
+               retrieve the subsequent page.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListAlphaEvolveExperiments`
+                 * call. Provide this to retrieve the subsequent page.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Resumes a workflow to process the AlphaEvolveExperiment.
+               *
+               * Create a request for the method "alphaEvolveExperiments.resume".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Experiment to resume. Format: `projects/{project}/locations/{location}/collections/{collec
+               *        tion}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}
+               *        `
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeExperimentRequest}
+               * @return the request
+               */
+              public Resume resume(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeExperimentRequest content) throws java.io.IOException {
+                Resume result = new Resume(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Resume extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:resume";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Resumes a workflow to process the AlphaEvolveExperiment.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.resume".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Experiment to resume. Format: `projects/{project}/locations/{location}/collections/{collec
+               *        tion}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}
+               *        `
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeExperimentRequest}
+                 * @since 1.13
+                 */
+                protected Resume(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaResumeExperimentRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Resume set$Xgafv(java.lang.String $Xgafv) {
+                  return (Resume) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Resume setAccessToken(java.lang.String accessToken) {
+                  return (Resume) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Resume setAlt(java.lang.String alt) {
+                  return (Resume) super.setAlt(alt);
+                }
+
+                @Override
+                public Resume setCallback(java.lang.String callback) {
+                  return (Resume) super.setCallback(callback);
+                }
+
+                @Override
+                public Resume setFields(java.lang.String fields) {
+                  return (Resume) super.setFields(fields);
+                }
+
+                @Override
+                public Resume setKey(java.lang.String key) {
+                  return (Resume) super.setKey(key);
+                }
+
+                @Override
+                public Resume setOauthToken(java.lang.String oauthToken) {
+                  return (Resume) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Resume) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Resume setQuotaUser(java.lang.String quotaUser) {
+                  return (Resume) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Resume setUploadType(java.lang.String uploadType) {
+                  return (Resume) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Resume) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Experiment to resume. Format: `projects/{project}/locations/{location}/
+                 * collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperimen
+                 * ts/{alpha_evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Experiment to resume. Format: `projects/{project}/locations/{location}/collections/{colle
+               ction}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Experiment to resume. Format: `projects/{project}/locations/{location}/
+                 * collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperimen
+                 * ts/{alpha_evolve_experiment}`
+                 */
+                public Resume setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Resume set(String parameterName, Object value) {
+                  return (Resume) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Starts a workflow to process the AlphaEvolveExperiment.
+               *
+               * Create a request for the method "alphaEvolveExperiments.start".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Experiment to start. Format: `projects/{project}/locations/{location}/collections/{collect
+               *        ion}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStartExperimentRequest}
+               * @return the request
+               */
+              public Start start(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStartExperimentRequest content) throws java.io.IOException {
+                Start result = new Start(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Start extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+                private static final String REST_PATH = "v1alpha/{+name}:start";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Starts a workflow to process the AlphaEvolveExperiment.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.start".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Experiment to start. Format: `projects/{project}/locations/{location}/collections/{collect
+               *        ion}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStartExperimentRequest}
+                 * @since 1.13
+                 */
+                protected Start(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStartExperimentRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Start set$Xgafv(java.lang.String $Xgafv) {
+                  return (Start) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Start setAccessToken(java.lang.String accessToken) {
+                  return (Start) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Start setAlt(java.lang.String alt) {
+                  return (Start) super.setAlt(alt);
+                }
+
+                @Override
+                public Start setCallback(java.lang.String callback) {
+                  return (Start) super.setCallback(callback);
+                }
+
+                @Override
+                public Start setFields(java.lang.String fields) {
+                  return (Start) super.setFields(fields);
+                }
+
+                @Override
+                public Start setKey(java.lang.String key) {
+                  return (Start) super.setKey(key);
+                }
+
+                @Override
+                public Start setOauthToken(java.lang.String oauthToken) {
+                  return (Start) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Start) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Start setQuotaUser(java.lang.String quotaUser) {
+                  return (Start) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Start setUploadType(java.lang.String uploadType) {
+                  return (Start) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Start setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Start) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. Experiment to start. Format: `projects/{project}/locations/{location}/c
+                 * ollections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiment
+                 * s/{alpha_evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Experiment to start. Format: `projects/{project}/locations/{location}/collections/{collec
+               tion}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. Experiment to start. Format: `projects/{project}/locations/{location}/c
+                 * ollections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiment
+                 * s/{alpha_evolve_experiment}`
+                 */
+                public Start setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Start set(String parameterName, Object value) {
+                  return (Start) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Adds an AlphaEvolveProgramEvaluation to the experiment.
+               *
+               * Create a request for the method "alphaEvolveExperiments.submitProgramsEvaluations".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link SubmitProgramsEvaluations#execute()} method to invoke the
+               * remote operation.
+               *
+               * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the Format: `projects/{project}/locati
+               *        ons/{location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExp
+               *        eriments/{alpha_evolve_experiment}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsRequest}
+               * @return the request
+               */
+              public SubmitProgramsEvaluations submitProgramsEvaluations(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsRequest content) throws java.io.IOException {
+                SubmitProgramsEvaluations result = new SubmitProgramsEvaluations(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class SubmitProgramsEvaluations extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}:submitProgramsEvaluations";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                /**
+                 * Adds an AlphaEvolveProgramEvaluation to the experiment.
+                 *
+                 * Create a request for the method "alphaEvolveExperiments.submitProgramsEvaluations".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link SubmitProgramsEvaluations#execute()} method to invoke the
+                 * remote operation. <p> {@link SubmitProgramsEvaluations#initialize(com.google.api.client.googlea
+                 * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+                 * immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the Format: `projects/{project}/locati
+               *        ons/{location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExp
+               *        eriments/{alpha_evolve_experiment}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsRequest}
+                 * @since 1.13
+                 */
+                protected SubmitProgramsEvaluations(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsRequest content) {
+                  super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaSubmitProgramsEvaluationsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                }
+
+                @Override
+                public SubmitProgramsEvaluations set$Xgafv(java.lang.String $Xgafv) {
+                  return (SubmitProgramsEvaluations) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setAccessToken(java.lang.String accessToken) {
+                  return (SubmitProgramsEvaluations) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setAlt(java.lang.String alt) {
+                  return (SubmitProgramsEvaluations) super.setAlt(alt);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setCallback(java.lang.String callback) {
+                  return (SubmitProgramsEvaluations) super.setCallback(callback);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setFields(java.lang.String fields) {
+                  return (SubmitProgramsEvaluations) super.setFields(fields);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setKey(java.lang.String key) {
+                  return (SubmitProgramsEvaluations) super.setKey(key);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setOauthToken(java.lang.String oauthToken) {
+                  return (SubmitProgramsEvaluations) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (SubmitProgramsEvaluations) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setQuotaUser(java.lang.String quotaUser) {
+                  return (SubmitProgramsEvaluations) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setUploadType(java.lang.String uploadType) {
+                  return (SubmitProgramsEvaluations) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public SubmitProgramsEvaluations setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (SubmitProgramsEvaluations) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent resource name (AlphaEvolveExperiment) of the Format: `projec
+                 * ts/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessi
+                 * ons/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource name (AlphaEvolveExperiment) of the Format: `projects/{project}/locat
+               ions/{location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments
+               /{alpha_evolve_experiment}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent resource name (AlphaEvolveExperiment) of the Format: `projec
+                 * ts/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessi
+                 * ons/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 */
+                public SubmitProgramsEvaluations setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public SubmitProgramsEvaluations set(String parameterName, Object value) {
+                  return (SubmitProgramsEvaluations) super.set(parameterName, value);
+                }
+              }
+
+              /**
+               * An accessor for creating requests from the AlphaEvolvePrograms collection.
+               *
+               * <p>The typical use is:</p>
+               * <pre>
+               *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+               *   {@code DiscoveryEngine.AlphaEvolvePrograms.List request = discoveryengine.alphaEvolvePrograms().list(parameters ...)}
+               * </pre>
+               *
+               * @return the resource collection
+               */
+              public AlphaEvolvePrograms alphaEvolvePrograms() {
+                return new AlphaEvolvePrograms();
+              }
+
+              /**
+               * The "alphaEvolvePrograms" collection of methods.
+               */
+              public class AlphaEvolvePrograms {
+
+                /**
+                 * Creates a new AlphaEvolveProgram.
+                 *
+                 * Create a request for the method "alphaEvolvePrograms.create".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 *
+                 * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveProgram. Format: `proje
+                 *        cts/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{ses
+                 *        sion}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                 * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram}
+                 * @return the request
+                 */
+                public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram content) throws java.io.IOException {
+                  Create result = new Create(parent, content);
+                  initialize(result);
+                  return result;
+                }
+
+                public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram> {
+
+                  private static final String REST_PATH = "v1alpha/{+parent}/alphaEvolvePrograms";
+
+                  private final java.util.regex.Pattern PARENT_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                  /**
+                   * Creates a new AlphaEvolveProgram.
+                   *
+                   * Create a request for the method "alphaEvolvePrograms.create".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                   * <p> {@link
+                   * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                   * be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveProgram. Format: `proje
+                 *        cts/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{ses
+                 *        sion}/alphaEvolveExperiments/{alpha_evolve_experiment}`
+                   * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram}
+                   * @since 1.13
+                   */
+                  protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram content) {
+                    super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram.class);
+                    this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public Create set$Xgafv(java.lang.String $Xgafv) {
+                    return (Create) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public Create setAccessToken(java.lang.String accessToken) {
+                    return (Create) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public Create setAlt(java.lang.String alt) {
+                    return (Create) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public Create setCallback(java.lang.String callback) {
+                    return (Create) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public Create setFields(java.lang.String fields) {
+                    return (Create) super.setFields(fields);
+                  }
+
+                  @Override
+                  public Create setKey(java.lang.String key) {
+                    return (Create) super.setKey(key);
+                  }
+
+                  @Override
+                  public Create setOauthToken(java.lang.String oauthToken) {
+                    return (Create) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (Create) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public Create setQuotaUser(java.lang.String quotaUser) {
+                    return (Create) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public Create setUploadType(java.lang.String uploadType) {
+                    return (Create) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (Create) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The parent resource name (AlphaEvolveExperiment) of the
+                   * AlphaEvolveProgram. Format: `projects/{project}/locations/{location}/collection
+                   * s/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alph
+                   * a_evolve_experiment}`
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String parent;
+
+                  /** Required. The parent resource name (AlphaEvolveExperiment) of the AlphaEvolveProgram. Format: `proj
+                 ects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/al
+                 phaEvolveExperiments/{alpha_evolve_experiment}`
+                   */
+                  public java.lang.String getParent() {
+                    return parent;
+                  }
+
+                  /**
+                   * Required. The parent resource name (AlphaEvolveExperiment) of the
+                   * AlphaEvolveProgram. Format: `projects/{project}/locations/{location}/collection
+                   * s/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alph
+                   * a_evolve_experiment}`
+                   */
+                  public Create setParent(java.lang.String parent) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                    }
+                    this.parent = parent;
+                    return this;
+                  }
+
+                  @Override
+                  public Create set(String parameterName, Object value) {
+                    return (Create) super.set(parameterName, value);
+                  }
+                }
+                /**
+                 * Gets an existing AlphaEvolveProgram.
+                 *
+                 * Create a request for the method "alphaEvolvePrograms.get".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+                 *
+                 * @param name Required. The full resource name of the program. Format: `projects/{project}/locations/{location}/co
+                 *        llections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_e
+                 *        volve_experiment}/alphaEvolvePrograms/{alpha_evolve_program}`
+                 * @return the request
+                 */
+                public Get get(java.lang.String name) throws java.io.IOException {
+                  Get result = new Get(name);
+                  initialize(result);
+                  return result;
+                }
+
+                public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram> {
+
+                  private static final String REST_PATH = "v1alpha/{+name}";
+
+                  private final java.util.regex.Pattern NAME_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+/alphaEvolvePrograms/[^/]+$");
+
+                  /**
+                   * Gets an existing AlphaEvolveProgram.
+                   *
+                   * Create a request for the method "alphaEvolvePrograms.get".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                   * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param name Required. The full resource name of the program. Format: `projects/{project}/locations/{location}/co
+                 *        llections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_e
+                 *        volve_experiment}/alphaEvolvePrograms/{alpha_evolve_program}`
+                   * @since 1.13
+                   */
+                  protected Get(java.lang.String name) {
+                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAlphaEvolveProgram.class);
+                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+/alphaEvolvePrograms/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public Get set$Xgafv(java.lang.String $Xgafv) {
+                    return (Get) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public Get setAccessToken(java.lang.String accessToken) {
+                    return (Get) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public Get setAlt(java.lang.String alt) {
+                    return (Get) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public Get setCallback(java.lang.String callback) {
+                    return (Get) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public Get setFields(java.lang.String fields) {
+                    return (Get) super.setFields(fields);
+                  }
+
+                  @Override
+                  public Get setKey(java.lang.String key) {
+                    return (Get) super.setKey(key);
+                  }
+
+                  @Override
+                  public Get setOauthToken(java.lang.String oauthToken) {
+                    return (Get) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (Get) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public Get setQuotaUser(java.lang.String quotaUser) {
+                    return (Get) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public Get setUploadType(java.lang.String uploadType) {
+                    return (Get) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (Get) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The full resource name of the program. Format: `projects/{project}/lo
+                   * cations/{location}/collections/{collection}/engines/{engine}/sessions/{session}
+                   * /alphaEvolveExperiments/{alpha_evolve_experiment}/alphaEvolvePrograms/{alpha_ev
+                   * olve_program}`
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String name;
+
+                  /** Required. The full resource name of the program. Format: `projects/{project}/locations/{location}/c
+                 ollections/{collection}/engines/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_ex
+                 periment}/alphaEvolvePrograms/{alpha_evolve_program}`
+                   */
+                  public java.lang.String getName() {
+                    return name;
+                  }
+
+                  /**
+                   * Required. The full resource name of the program. Format: `projects/{project}/lo
+                   * cations/{location}/collections/{collection}/engines/{engine}/sessions/{session}
+                   * /alphaEvolveExperiments/{alpha_evolve_experiment}/alphaEvolvePrograms/{alpha_ev
+                   * olve_program}`
+                   */
+                  public Get setName(java.lang.String name) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                          "Parameter name must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+/alphaEvolvePrograms/[^/]+$");
+                    }
+                    this.name = name;
+                    return this;
+                  }
+
+                  @Override
+                  public Get set(String parameterName, Object value) {
+                    return (Get) super.set(parameterName, value);
+                  }
+                }
+                /**
+                 * List all AlphaEvolvePrograms in a given experiment that follow the criteria provided in the
+                 * request.
+                 *
+                 * Create a request for the method "alphaEvolvePrograms.list".
+                 *
+                 * This request holds the parameters needed by the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+                 *
+                 * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the experiment. Format: `projects/{pro
+                 *        ject}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/al
+                 *        phaEvolveExperiments/{alpha_evolve_experiment}`
+                 * @return the request
+                 */
+                public List list(java.lang.String parent) throws java.io.IOException {
+                  List result = new List(parent);
+                  initialize(result);
+                  return result;
+                }
+
+                public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAlphaEvolveProgramsResponse> {
+
+                  private static final String REST_PATH = "v1alpha/{+parent}/alphaEvolvePrograms";
+
+                  private final java.util.regex.Pattern PARENT_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+
+                  /**
+                   * List all AlphaEvolvePrograms in a given experiment that follow the criteria provided in the
+                   * request.
+                   *
+                   * Create a request for the method "alphaEvolvePrograms.list".
+                   *
+                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                   * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param parent Required. The parent resource name (AlphaEvolveExperiment) of the experiment. Format: `projects/{pro
+                 *        ject}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/al
+                 *        phaEvolveExperiments/{alpha_evolve_experiment}`
+                   * @since 1.13
+                   */
+                  protected List(java.lang.String parent) {
+                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListAlphaEvolveProgramsResponse.class);
+                    this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public List set$Xgafv(java.lang.String $Xgafv) {
+                    return (List) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public List setAccessToken(java.lang.String accessToken) {
+                    return (List) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public List setAlt(java.lang.String alt) {
+                    return (List) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public List setCallback(java.lang.String callback) {
+                    return (List) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public List setFields(java.lang.String fields) {
+                    return (List) super.setFields(fields);
+                  }
+
+                  @Override
+                  public List setKey(java.lang.String key) {
+                    return (List) super.setKey(key);
+                  }
+
+                  @Override
+                  public List setOauthToken(java.lang.String oauthToken) {
+                    return (List) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (List) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public List setQuotaUser(java.lang.String quotaUser) {
+                    return (List) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public List setUploadType(java.lang.String uploadType) {
+                    return (List) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public List setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (List) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The parent resource name (AlphaEvolveExperiment) of the experiment.
+                   * Format: `projects/{project}/locations/{location}/collections/{collection}/engin
+                   * es/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}
+                   * `
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String parent;
+
+                  /** Required. The parent resource name (AlphaEvolveExperiment) of the experiment. Format: `projects/{pr
+                 oject}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}/alphaEvolv
+                 eExperiments/{alpha_evolve_experiment}`
+                   */
+                  public java.lang.String getParent() {
+                    return parent;
+                  }
+
+                  /**
+                   * Required. The parent resource name (AlphaEvolveExperiment) of the experiment.
+                   * Format: `projects/{project}/locations/{location}/collections/{collection}/engin
+                   * es/{engine}/sessions/{session}/alphaEvolveExperiments/{alpha_evolve_experiment}
+                   * `
+                   */
+                  public List setParent(java.lang.String parent) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+/alphaEvolveExperiments/[^/]+$");
+                    }
+                    this.parent = parent;
+                    return this;
+                  }
+
+                  /**
+                   * Optional. Sorting criterion for the programs. Comma separated list of metrics
+                   * to sort by and optionally sort order, e.g. "score1 desc, score2". The criteria
+                   * are applied in the order listed in the field. An implicit criterion of sorting
+                   * by create_time descending is always applied as the final tie-breaker after all
+                   * other specified criteria.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String orderBy;
+
+                  /** Optional. Sorting criterion for the programs. Comma separated list of metrics to sort by and
+                 optionally sort order, e.g. "score1 desc, score2". The criteria are applied in the order listed in
+                 the field. An implicit criterion of sorting by create_time descending is always applied as the
+                 final tie-breaker after all other specified criteria.
+                   */
+                  public java.lang.String getOrderBy() {
+                    return orderBy;
+                  }
+
+                  /**
+                   * Optional. Sorting criterion for the programs. Comma separated list of metrics
+                   * to sort by and optionally sort order, e.g. "score1 desc, score2". The criteria
+                   * are applied in the order listed in the field. An implicit criterion of sorting
+                   * by create_time descending is always applied as the final tie-breaker after all
+                   * other specified criteria.
+                   */
+                  public List setOrderBy(java.lang.String orderBy) {
+                    this.orderBy = orderBy;
+                    return this;
+                  }
+
+                  /**
+                   * Optional. The maximum number of programs to return. The service may return
+                   * fewer than this value.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.Integer pageSize;
+
+                  /** Optional. The maximum number of programs to return. The service may return fewer than this value.
+                   */
+                  public java.lang.Integer getPageSize() {
+                    return pageSize;
+                  }
+
+                  /**
+                   * Optional. The maximum number of programs to return. The service may return
+                   * fewer than this value.
+                   */
+                  public List setPageSize(java.lang.Integer pageSize) {
+                    this.pageSize = pageSize;
+                    return this;
+                  }
+
+                  /**
+                   * Optional. A page token, received from a previous `ListAlphaEvolvePrograms`
+                   * call. Provide this to retrieve the subsequent page.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String pageToken;
+
+                  /** Optional. A page token, received from a previous `ListAlphaEvolvePrograms` call. Provide this to
+                 retrieve the subsequent page.
+                   */
+                  public java.lang.String getPageToken() {
+                    return pageToken;
+                  }
+
+                  /**
+                   * Optional. A page token, received from a previous `ListAlphaEvolvePrograms`
+                   * call. Provide this to retrieve the subsequent page.
+                   */
+                  public List setPageToken(java.lang.String pageToken) {
+                    this.pageToken = pageToken;
+                    return this;
+                  }
+
+                  /**
+                   * Optional. Filter to apply to the programs. Examples: "state_filter =
+                   * \'COMPLETED\'" "state_filter = \'INITIALIZED\' OR "state_filter =
+                   * \'EVALUATING\'" If empty, the behavior defaults to listing programs in
+                   * REGISTRATION_COMPLETE state or processing state is NULL.
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String stateFilter;
+
+                  /** Optional. Filter to apply to the programs. Examples: "state_filter = \'COMPLETED\'" "state_filter =
+                 \'INITIALIZED\' OR "state_filter = \'EVALUATING\'" If empty, the behavior defaults to listing
+                 programs in REGISTRATION_COMPLETE state or processing state is NULL.
+                   */
+                  public java.lang.String getStateFilter() {
+                    return stateFilter;
+                  }
+
+                  /**
+                   * Optional. Filter to apply to the programs. Examples: "state_filter =
+                   * \'COMPLETED\'" "state_filter = \'INITIALIZED\' OR "state_filter =
+                   * \'EVALUATING\'" If empty, the behavior defaults to listing programs in
+                   * REGISTRATION_COMPLETE state or processing state is NULL.
+                   */
+                  public List setStateFilter(java.lang.String stateFilter) {
+                    this.stateFilter = stateFilter;
+                    return this;
+                  }
+
+                  @Override
+                  public List set(String parameterName, Object value) {
+                    return (List) super.set(parameterName, value);
+                  }
+                }
+
+              }
+              /**
                * An accessor for creating requests from the Operations collection.
                *
                * <p>The typical use is:</p>
@@ -63344,6 +65142,157 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          */
         public class UserLicenses {
 
+          /**
+           * Exports all the UserLicenses under the parent UserStore as a single CSV document. This is the
+           * backend for the admin console "Download as CSV" action: it reuses the ListUserLicenses read path
+           * so admins can sort/filter offline in Excel or Sheets. The response carries the full CSV (header
+           * row followed by data rows) inline in ExportUserLicensesResponse.csv_data.
+           *
+           * Create a request for the method "userLicenses.export".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`. All UserLicenses
+           *        under this UserStore are exported.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesRequest content) throws java.io.IOException {
+            Export result = new Export(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/userLicenses:export";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Exports all the UserLicenses under the parent UserStore as a single CSV document. This is the
+             * backend for the admin console "Download as CSV" action: it reuses the ListUserLicenses read
+             * path so admins can sort/filter offline in Excel or Sheets. The response carries the full CSV
+             * (header row followed by data rows) inline in ExportUserLicensesResponse.csv_data.
+             *
+             * Create a request for the method "userLicenses.export".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`. All UserLicenses
+           *        under this UserStore are exported.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaExportUserLicensesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`. All
+             * UserLicenses under this UserStore are exported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent UserStore resource name, format:
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`. All UserLicenses under this
+           UserStore are exported.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`. All
+             * UserLicenses under this UserStore are exported.
+             */
+            public Export setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
           /**
            * Lists the User Licenses.
            *

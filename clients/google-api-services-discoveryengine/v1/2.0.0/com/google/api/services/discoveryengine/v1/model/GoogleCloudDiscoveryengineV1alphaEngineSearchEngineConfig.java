@@ -30,9 +30,10 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The required subscription tier of this engine. They cannot be modified after engine
-   * creation. If the required subscription tier is search, user with higher license tier like
-   * assist can still access the standalone app associated with this engine.
+   * Optional. The required subscription tier of this engine. If the required subscription tier is
+   * search, user with higher license tier like assist can still access the standalone app
+   * associated with this engine. Web grounding feature is only available on the app if it is set as
+   * SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,9 +56,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig ext
   private java.lang.String searchTier;
 
   /**
-   * Optional. The required subscription tier of this engine. They cannot be modified after engine
-   * creation. If the required subscription tier is search, user with higher license tier like
-   * assist can still access the standalone app associated with this engine.
+   * Optional. The required subscription tier of this engine. If the required subscription tier is
+   * search, user with higher license tier like assist can still access the standalone app
+   * associated with this engine. Web grounding feature is only available on the app if it is set as
+   * SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequiredSubscriptionTier() {
@@ -65,9 +67,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig ext
   }
 
   /**
-   * Optional. The required subscription tier of this engine. They cannot be modified after engine
-   * creation. If the required subscription tier is search, user with higher license tier like
-   * assist can still access the standalone app associated with this engine.
+   * Optional. The required subscription tier of this engine. If the required subscription tier is
+   * search, user with higher license tier like assist can still access the standalone app
+   * associated with this engine. Web grounding feature is only available on the app if it is set as
+   * SubscriptionTier.SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT.
    * @param requiredSubscriptionTier requiredSubscriptionTier or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig setRequiredSubscriptionTier(java.lang.String requiredSubscriptionTier) {

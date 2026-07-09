@@ -116,9 +116,9 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +130,14 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig;
+
+  /**
+   * Output only. Whether the Google Drive file picker is available to end-users. Declared
+   * `optional` for the same field-presence reason as `onedrive_picker_enabled` above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean googleDrivePickerEnabled;
 
   /**
    * Describes widget (or web app) interaction type
@@ -160,6 +168,18 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> modelConfigs;
+
+  /**
+   * Output only. Whether the OneDrive file picker is available to end-users. Computed by the
+   * backend from admin connector enablement (Business edition) or attached OneDrive connectors
+   * (Enterprise edition), combined with the existing `disable-onedrive-upload` admin feature.
+   * Declared `optional` so an explicitly-computed `false` is serialized with field presence. A
+   * plain proto3 `bool` drops a default `false` on the wire, which prevented clients from
+   * distinguishing "picker disabled" (`false`) from "field not populated" (unset).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean onedrivePickerEnabled;
 
   /**
    * Controls whether result extract is display and how (snippet or extractive answer). Default to
@@ -352,9 +372,9 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -368,9 +388,9 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `enable-
-   * end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` *
-   * `cross-product-intelligence` * `deep-research`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
+   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
+   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
@@ -392,6 +412,25 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setGenerativeAnswerConfig(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig generativeAnswerConfig) {
     this.generativeAnswerConfig = generativeAnswerConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the Google Drive file picker is available to end-users. Declared
+   * `optional` for the same field-presence reason as `onedrive_picker_enabled` above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGoogleDrivePickerEnabled() {
+    return googleDrivePickerEnabled;
+  }
+
+  /**
+   * Output only. Whether the Google Drive file picker is available to end-users. Declared
+   * `optional` for the same field-presence reason as `onedrive_picker_enabled` above.
+   * @param googleDrivePickerEnabled googleDrivePickerEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setGoogleDrivePickerEnabled(java.lang.Boolean googleDrivePickerEnabled) {
+    this.googleDrivePickerEnabled = googleDrivePickerEnabled;
     return this;
   }
 
@@ -461,6 +500,33 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends co
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setModelConfigs(java.util.Map<String, java.lang.String> modelConfigs) {
     this.modelConfigs = modelConfigs;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the OneDrive file picker is available to end-users. Computed by the
+   * backend from admin connector enablement (Business edition) or attached OneDrive connectors
+   * (Enterprise edition), combined with the existing `disable-onedrive-upload` admin feature.
+   * Declared `optional` so an explicitly-computed `false` is serialized with field presence. A
+   * plain proto3 `bool` drops a default `false` on the wire, which prevented clients from
+   * distinguishing "picker disabled" (`false`) from "field not populated" (unset).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOnedrivePickerEnabled() {
+    return onedrivePickerEnabled;
+  }
+
+  /**
+   * Output only. Whether the OneDrive file picker is available to end-users. Computed by the
+   * backend from admin connector enablement (Business edition) or attached OneDrive connectors
+   * (Enterprise edition), combined with the existing `disable-onedrive-upload` admin feature.
+   * Declared `optional` so an explicitly-computed `false` is serialized with field presence. A
+   * plain proto3 `bool` drops a default `false` on the wire, which prevented clients from
+   * distinguishing "picker disabled" (`false`) from "field not populated" (unset).
+   * @param onedrivePickerEnabled onedrivePickerEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettings setOnedrivePickerEnabled(java.lang.Boolean onedrivePickerEnabled) {
+    this.onedrivePickerEnabled = onedrivePickerEnabled;
     return this;
   }
 

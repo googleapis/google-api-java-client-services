@@ -38,6 +38,13 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.lang.String content;
 
   /**
+   * Output only. The length of the `content` field in bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer contentLengthBytes;
+
+  /**
    * Output only. Specifies the data source of the document. Example data source:
    * `firebase.google.com`
    * The value may be {@code null}.
@@ -105,6 +112,23 @@ public final class Document extends com.google.api.client.json.GenericJson {
    */
   public Document setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Output only. The length of the `content` field in bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getContentLengthBytes() {
+    return contentLengthBytes;
+  }
+
+  /**
+   * Output only. The length of the `content` field in bytes.
+   * @param contentLengthBytes contentLengthBytes or {@code null} for none
+   */
+  public Document setContentLengthBytes(java.lang.Integer contentLengthBytes) {
+    this.contentLengthBytes = contentLengthBytes;
     return this;
   }
 

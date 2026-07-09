@@ -51,27 +51,11 @@ public final class GoogleCloudAiplatformV1beta1MonitoredAgent extends com.google
   private java.lang.String displayName;
 
   /**
-   * Optional. The log buckets configured for the agent, in MVP this will be restricted to 1.
-   * Format: `projects/{project}/locations/{location}/buckets/{bucket}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> logBuckets;
-
-  /**
    * Identifier. The resource name of the MonitoredAgent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. The observability buckets configured for the agent, in MVP this will be restricted to
-   * 1. Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> observabilityBuckets;
 
   /**
    * Output only. The current state of the agent's enablement.
@@ -146,25 +130,6 @@ public final class GoogleCloudAiplatformV1beta1MonitoredAgent extends com.google
   }
 
   /**
-   * Optional. The log buckets configured for the agent, in MVP this will be restricted to 1.
-   * Format: `projects/{project}/locations/{location}/buckets/{bucket}`
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getLogBuckets() {
-    return logBuckets;
-  }
-
-  /**
-   * Optional. The log buckets configured for the agent, in MVP this will be restricted to 1.
-   * Format: `projects/{project}/locations/{location}/buckets/{bucket}`
-   * @param logBuckets logBuckets or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1MonitoredAgent setLogBuckets(java.util.List<java.lang.String> logBuckets) {
-    this.logBuckets = logBuckets;
-    return this;
-  }
-
-  /**
    * Identifier. The resource name of the MonitoredAgent.
    * @return value or {@code null} for none
    */
@@ -178,25 +143,6 @@ public final class GoogleCloudAiplatformV1beta1MonitoredAgent extends com.google
    */
   public GoogleCloudAiplatformV1beta1MonitoredAgent setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. The observability buckets configured for the agent, in MVP this will be restricted to
-   * 1. Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getObservabilityBuckets() {
-    return observabilityBuckets;
-  }
-
-  /**
-   * Optional. The observability buckets configured for the agent, in MVP this will be restricted to
-   * 1. Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`
-   * @param observabilityBuckets observabilityBuckets or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1MonitoredAgent setObservabilityBuckets(java.util.List<java.lang.String> observabilityBuckets) {
-    this.observabilityBuckets = observabilityBuckets;
     return this;
   }
 

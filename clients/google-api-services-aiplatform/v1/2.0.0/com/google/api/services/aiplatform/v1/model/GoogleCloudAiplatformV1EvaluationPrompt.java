@@ -31,6 +31,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluationPrompt extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1AgentData agentData;
+
+  /**
    * Prompt template data.
    * The value may be {@code null}.
    */
@@ -45,11 +53,37 @@ public final class GoogleCloudAiplatformV1EvaluationPrompt extends com.google.ap
   private java.lang.String text;
 
   /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationPromptUserScenario userScenario;
+
+  /**
    * Fields and values that can be used to populate the prompt template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AgentData getAgentData() {
+    return agentData;
+  }
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * @param agentData agentData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationPrompt setAgentData(GoogleCloudAiplatformV1AgentData agentData) {
+    this.agentData = agentData;
+    return this;
+  }
 
   /**
    * Prompt template data.
@@ -82,6 +116,23 @@ public final class GoogleCloudAiplatformV1EvaluationPrompt extends com.google.ap
    */
   public GoogleCloudAiplatformV1EvaluationPrompt setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationPromptUserScenario getUserScenario() {
+    return userScenario;
+  }
+
+  /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * @param userScenario userScenario or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationPrompt setUserScenario(GoogleCloudAiplatformV1EvaluationPromptUserScenario userScenario) {
+    this.userScenario = userScenario;
     return this;
   }
 

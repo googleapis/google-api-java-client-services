@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1ComputerUse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Disabled safety policies for computer use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disabledSafetyPolicies;
+
+  /**
    * Whether enable the prompt injection detection check on computer-use request.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GenaiVertexV1beta1ComputerUse extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedPredefinedFunctions;
+
+  /**
+   * Optional. Disabled safety policies for computer use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisabledSafetyPolicies() {
+    return disabledSafetyPolicies;
+  }
+
+  /**
+   * Optional. Disabled safety policies for computer use.
+   * @param disabledSafetyPolicies disabledSafetyPolicies or {@code null} for none
+   */
+  public GenaiVertexV1beta1ComputerUse setDisabledSafetyPolicies(java.util.List<java.lang.String> disabledSafetyPolicies) {
+    this.disabledSafetyPolicies = disabledSafetyPolicies;
+    return this;
+  }
 
   /**
    * Whether enable the prompt injection detection check on computer-use request.

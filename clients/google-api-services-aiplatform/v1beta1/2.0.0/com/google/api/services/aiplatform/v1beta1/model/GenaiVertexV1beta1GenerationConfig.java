@@ -124,6 +124,13 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
   private java.lang.Float topP;
 
   /**
+   * Configuration for video generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1VideoConfig videoConfig;
+
+  /**
    * Penalizes tokens based on their frequency in the generated text. A positive value helps to
    * reduce the repetition of words and phrases. Valid values can range from [-2.0, 2.0].
    * @return value or {@code null} for none
@@ -347,6 +354,23 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
    */
   public GenaiVertexV1beta1GenerationConfig setTopP(java.lang.Float topP) {
     this.topP = topP;
+    return this;
+  }
+
+  /**
+   * Configuration for video generation.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoConfig getVideoConfig() {
+    return videoConfig;
+  }
+
+  /**
+   * Configuration for video generation.
+   * @param videoConfig videoConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1GenerationConfig setVideoConfig(GenaiVertexV1beta1VideoConfig videoConfig) {
+    this.videoConfig = videoConfig;
     return this;
   }
 

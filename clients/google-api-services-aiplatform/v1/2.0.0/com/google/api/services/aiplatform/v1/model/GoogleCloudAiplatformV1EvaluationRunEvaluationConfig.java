@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
   private GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig autoraterConfig;
 
   /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1CloudLoggingConfig cloudLoggingConfig;
+
+  /**
    * Optional. Specifications for custom dataset-level aggregations.
    * The value may be {@code null}.
    */
@@ -48,6 +55,13 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1DatasetCustomMetric.class);
   }
+
+  /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1LossAnalysisConfig> lossAnalysisConfig;
 
   /**
    * Optional. The metrics to be calculated in the evaluation run. Required when analysis_configs is
@@ -108,6 +122,23 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
   }
 
   /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CloudLoggingConfig getCloudLoggingConfig() {
+    return cloudLoggingConfig;
+  }
+
+  /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * @param cloudLoggingConfig cloudLoggingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setCloudLoggingConfig(GoogleCloudAiplatformV1CloudLoggingConfig cloudLoggingConfig) {
+    this.cloudLoggingConfig = cloudLoggingConfig;
+    return this;
+  }
+
+  /**
    * Optional. Specifications for custom dataset-level aggregations.
    * @return value or {@code null} for none
    */
@@ -121,6 +152,23 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
    */
   public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setDatasetCustomMetrics(java.util.List<GoogleCloudAiplatformV1DatasetCustomMetric> datasetCustomMetrics) {
     this.datasetCustomMetrics = datasetCustomMetrics;
+    return this;
+  }
+
+  /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1LossAnalysisConfig> getLossAnalysisConfig() {
+    return lossAnalysisConfig;
+  }
+
+  /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * @param lossAnalysisConfig lossAnalysisConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setLossAnalysisConfig(java.util.List<GoogleCloudAiplatformV1LossAnalysisConfig> lossAnalysisConfig) {
+    this.lossAnalysisConfig = lossAnalysisConfig;
     return this;
   }
 

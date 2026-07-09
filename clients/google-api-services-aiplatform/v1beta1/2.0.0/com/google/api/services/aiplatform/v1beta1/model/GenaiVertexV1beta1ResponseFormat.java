@@ -55,6 +55,12 @@ public final class GenaiVertexV1beta1ResponseFormat extends com.google.api.clien
   private GenaiVertexV1beta1TextResponseFormat text;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1VideoResponseFormat video;
+
+  /**
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1AudioResponseFormat getAudio() {
@@ -113,6 +119,21 @@ public final class GenaiVertexV1beta1ResponseFormat extends com.google.api.clien
    */
   public GenaiVertexV1beta1ResponseFormat setText(GenaiVertexV1beta1TextResponseFormat text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoResponseFormat getVideo() {
+    return video;
+  }
+
+  /**
+   * @param video video or {@code null} for none
+   */
+  public GenaiVertexV1beta1ResponseFormat setVideo(GenaiVertexV1beta1VideoResponseFormat video) {
+    this.video = video;
     return this;
   }
 

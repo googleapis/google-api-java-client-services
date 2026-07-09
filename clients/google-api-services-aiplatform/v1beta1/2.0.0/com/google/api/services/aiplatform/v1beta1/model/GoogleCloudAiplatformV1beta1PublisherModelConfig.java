@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Config for Claude-specific features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelConfigClaudeFeatureConfig claudeFeatureConfig;
+
+  /**
    * Optional. The model provider (publisher) for which the customer has enabled data sharing. For
    * publisher models that are configured to require data sharing, a prediction request is only
    * allowed when the model's publisher matches this provider. Otherwise, the request is rejected.
@@ -39,11 +46,41 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
   private java.lang.String dataSharingEnabledProvider;
 
   /**
+   * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
+   * on or off. The log records structured per-request metadata (such as principal, traffic type,
+   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
+   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
+   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * that one logs raw request/response payloads to a BigQuery table, while this one controls
+   * structured per-request metadata in Cloud Logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1InferenceEventLoggingConfig inferenceEventLoggingConfig;
+
+  /**
    * Optional. The prediction request/response logging config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig loggingConfig;
+
+  /**
+   * Optional. Config for Claude-specific features.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelConfigClaudeFeatureConfig getClaudeFeatureConfig() {
+    return claudeFeatureConfig;
+  }
+
+  /**
+   * Optional. Config for Claude-specific features.
+   * @param claudeFeatureConfig claudeFeatureConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelConfig setClaudeFeatureConfig(GoogleCloudAiplatformV1beta1PublisherModelConfigClaudeFeatureConfig claudeFeatureConfig) {
+    this.claudeFeatureConfig = claudeFeatureConfig;
+    return this;
+  }
 
   /**
    * Optional. The model provider (publisher) for which the customer has enabled data sharing. For
@@ -63,6 +100,35 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1PublisherModelConfig setDataSharingEnabledProvider(java.lang.String dataSharingEnabledProvider) {
     this.dataSharingEnabledProvider = dataSharingEnabledProvider;
+    return this;
+  }
+
+  /**
+   * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
+   * on or off. The log records structured per-request metadata (such as principal, traffic type,
+   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
+   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
+   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * that one logs raw request/response payloads to a BigQuery table, while this one controls
+   * structured per-request metadata in Cloud Logging.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1InferenceEventLoggingConfig getInferenceEventLoggingConfig() {
+    return inferenceEventLoggingConfig;
+  }
+
+  /**
+   * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
+   * on or off. The log records structured per-request metadata (such as principal, traffic type,
+   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
+   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
+   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * that one logs raw request/response payloads to a BigQuery table, while this one controls
+   * structured per-request metadata in Cloud Logging.
+   * @param inferenceEventLoggingConfig inferenceEventLoggingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelConfig setInferenceEventLoggingConfig(GoogleCloudAiplatformV1beta1InferenceEventLoggingConfig inferenceEventLoggingConfig) {
+    this.inferenceEventLoggingConfig = inferenceEventLoggingConfig;
     return this;
   }
 

@@ -52,6 +52,16 @@ public final class GoogleCloudAiplatformV1ToolParallelAiSearch extends com.googl
   private java.util.Map<String, java.lang.Object> customConfigs;
 
   /**
+   * Optional. Deprecated: Use `enable_zero_data_retention` instead. Instructs Vertex Grounding to
+   * use Parallel's Zero Data Retention Marketplace product. If this value is "false" or omitted,
+   * the Parallel Web Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDataRetention;
+
+  /**
    * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
    * If this value is "false" or omitted, the Parallel Web Search for Grounding standard
    * subscription will be used. If this value is "true", the Parallel Web Search for Grounding - ZDR
@@ -59,7 +69,7 @@ public final class GoogleCloudAiplatformV1ToolParallelAiSearch extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean enableDataRetention;
+  private java.lang.Boolean enableZeroDataRetention;
 
   /**
    * Optional. The API key for ParallelAiSearch. If an API key is not provided, the system will
@@ -112,10 +122,10 @@ public final class GoogleCloudAiplatformV1ToolParallelAiSearch extends com.googl
   }
 
   /**
-   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
-   * If this value is "false" or omitted, the Parallel Web Search for Grounding standard
-   * subscription will be used. If this value is "true", the Parallel Web Search for Grounding - ZDR
-   * subscription will be used.
+   * Optional. Deprecated: Use `enable_zero_data_retention` instead. Instructs Vertex Grounding to
+   * use Parallel's Zero Data Retention Marketplace product. If this value is "false" or omitted,
+   * the Parallel Web Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be used.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableDataRetention() {
@@ -123,14 +133,37 @@ public final class GoogleCloudAiplatformV1ToolParallelAiSearch extends com.googl
   }
 
   /**
-   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
-   * If this value is "false" or omitted, the Parallel Web Search for Grounding standard
-   * subscription will be used. If this value is "true", the Parallel Web Search for Grounding - ZDR
-   * subscription will be used.
+   * Optional. Deprecated: Use `enable_zero_data_retention` instead. Instructs Vertex Grounding to
+   * use Parallel's Zero Data Retention Marketplace product. If this value is "false" or omitted,
+   * the Parallel Web Search for Grounding standard subscription will be used. If this value is
+   * "true", the Parallel Web Search for Grounding - ZDR subscription will be used.
    * @param enableDataRetention enableDataRetention or {@code null} for none
    */
   public GoogleCloudAiplatformV1ToolParallelAiSearch setEnableDataRetention(java.lang.Boolean enableDataRetention) {
     this.enableDataRetention = enableDataRetention;
+    return this;
+  }
+
+  /**
+   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
+   * If this value is "false" or omitted, the Parallel Web Search for Grounding standard
+   * subscription will be used. If this value is "true", the Parallel Web Search for Grounding - ZDR
+   * subscription will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableZeroDataRetention() {
+    return enableZeroDataRetention;
+  }
+
+  /**
+   * Optional. Instructs Vertex Grounding to use Parallel's Zero Data Retention Marketplace product.
+   * If this value is "false" or omitted, the Parallel Web Search for Grounding standard
+   * subscription will be used. If this value is "true", the Parallel Web Search for Grounding - ZDR
+   * subscription will be used.
+   * @param enableZeroDataRetention enableZeroDataRetention or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolParallelAiSearch setEnableZeroDataRetention(java.lang.Boolean enableZeroDataRetention) {
+    this.enableZeroDataRetention = enableZeroDataRetention;
     return this;
   }
 

@@ -30,8 +30,10 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A map containing the static configurations for each agent in the system. Key:
+   * Optional. A map containing the static configurations for each agent in the system. Key:
    * agent_id (matches the `author` field in events). Value: The static configuration of the agent.
+   * Required unless `gemini_agent_config` is set, in which case the agents map and `root_agent_id`
+   * are derived from the referenced Gemini Agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +57,8 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   private java.lang.Boolean allowCrossRegionModel;
 
   /**
-   * Required. The agent id to identify the root agent.
+   * Optional. The agent id to identify the root agent. Required unless `gemini_agent_config` is
+   * set, in which case it is derived from the referenced Gemini Agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +72,10 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   private GoogleCloudAiplatformV1UserScenarioGenerationConfig userScenarioGenerationConfig;
 
   /**
-   * Required. A map containing the static configurations for each agent in the system. Key:
+   * Optional. A map containing the static configurations for each agent in the system. Key:
    * agent_id (matches the `author` field in events). Value: The static configuration of the agent.
+   * Required unless `gemini_agent_config` is set, in which case the agents map and `root_agent_id`
+   * are derived from the referenced Gemini Agent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> getAgents() {
@@ -78,8 +83,10 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   }
 
   /**
-   * Required. A map containing the static configurations for each agent in the system. Key:
+   * Optional. A map containing the static configurations for each agent in the system. Key:
    * agent_id (matches the `author` field in events). Value: The static configuration of the agent.
+   * Required unless `gemini_agent_config` is set, in which case the agents map and `root_agent_id`
+   * are derived from the referenced Gemini Agent.
    * @param agents agents or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateUserScenariosRequest setAgents(java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> agents) {
@@ -113,7 +120,8 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   }
 
   /**
-   * Required. The agent id to identify the root agent.
+   * Optional. The agent id to identify the root agent. Required unless `gemini_agent_config` is
+   * set, in which case it is derived from the referenced Gemini Agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootAgentId() {
@@ -121,7 +129,8 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   }
 
   /**
-   * Required. The agent id to identify the root agent.
+   * Optional. The agent id to identify the root agent. Required unless `gemini_agent_config` is
+   * set, in which case it is derived from the referenced Gemini Agent.
    * @param rootAgentId rootAgentId or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateUserScenariosRequest setRootAgentId(java.lang.String rootAgentId) {

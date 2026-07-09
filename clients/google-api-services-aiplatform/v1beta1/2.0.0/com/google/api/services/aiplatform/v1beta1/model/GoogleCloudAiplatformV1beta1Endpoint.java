@@ -191,6 +191,14 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
   private GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig;
 
   /**
+   * Optional. Configuration for a Publisher Model. This message contains details about a publisher
+   * model used with this Endpoint, such as logging config or data sharing settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PublisherModelConfig publisherModelConfig;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -580,6 +588,25 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1Endpoint setPrivateServiceConnectConfig(GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig privateServiceConnectConfig) {
     this.privateServiceConnectConfig = privateServiceConnectConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for a Publisher Model. This message contains details about a publisher
+   * model used with this Endpoint, such as logging config or data sharing settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PublisherModelConfig getPublisherModelConfig() {
+    return publisherModelConfig;
+  }
+
+  /**
+   * Optional. Configuration for a Publisher Model. This message contains details about a publisher
+   * model used with this Endpoint, such as logging config or data sharing settings.
+   * @param publisherModelConfig publisherModelConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setPublisherModelConfig(GoogleCloudAiplatformV1beta1PublisherModelConfig publisherModelConfig) {
+    this.publisherModelConfig = publisherModelConfig;
     return this;
   }
 

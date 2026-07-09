@@ -41,6 +41,20 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   private GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig;
 
   /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> agents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1AgentConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1AgentConfig.class);
+  }
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -68,6 +82,15 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   private java.lang.Integer parallelism;
 
   /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate promptTemplate;
+
+  /**
    * Optional. Agent run config.
    * @return value or {@code null} for none
    */
@@ -81,6 +104,25 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
    */
   public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setAgentRunConfig(GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig) {
     this.agentRunConfig = agentRunConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> getAgents() {
+    return agents;
+  }
+
+  /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * @param agents agents or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setAgents(java.util.Map<String, GoogleCloudAiplatformV1AgentConfig> agents) {
+    this.agents = agents;
     return this;
   }
 
@@ -144,6 +186,27 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
    */
   public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setParallelism(java.lang.Integer parallelism) {
     this.parallelism = parallelism;
+    return this;
+  }
+
+  /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate getPromptTemplate() {
+    return promptTemplate;
+  }
+
+  /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * @param promptTemplate promptTemplate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setPromptTemplate(GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate promptTemplate) {
+    this.promptTemplate = promptTemplate;
     return this;
   }
 

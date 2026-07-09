@@ -35,10 +35,10 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
    * member that sent the message membershipGiftingEvent - the user that made the purchase
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
-   * the moderator that took the action messageRetractedEvent - the author that retracted their
-   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
-   * created the poll
+   * the moderator that took the action. Unused. messageRetractedEvent - the author that retracted
+   * their message. Unused. userBannedEvent - the moderator that took the action superChatEvent -
+   * the user that made the purchase superStickerEvent - the user that made the purchase pollEvent -
+   * the user that created the poll
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,10 +178,10 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
    * member that sent the message membershipGiftingEvent - the user that made the purchase
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
-   * the moderator that took the action messageRetractedEvent - the author that retracted their
-   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
-   * created the poll
+   * the moderator that took the action. Unused. messageRetractedEvent - the author that retracted
+   * their message. Unused. userBannedEvent - the moderator that took the action superChatEvent -
+   * the user that made the purchase superStickerEvent - the user that made the purchase pollEvent -
+   * the user that created the poll
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorChannelId() {
@@ -194,10 +194,10 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    * broadcast newSponsorEvent - the user that just became a sponsor memberMilestoneChatEvent - the
    * member that sent the message membershipGiftingEvent - the user that made the purchase
    * giftMembershipReceivedEvent - the user that received the gift membership messageDeletedEvent -
-   * the moderator that took the action messageRetractedEvent - the author that retracted their
-   * message userBannedEvent - the moderator that took the action superChatEvent - the user that
-   * made the purchase superStickerEvent - the user that made the purchase pollEvent - the user that
-   * created the poll
+   * the moderator that took the action. Unused. messageRetractedEvent - the author that retracted
+   * their message. Unused. userBannedEvent - the moderator that took the action superChatEvent -
+   * the user that made the purchase superStickerEvent - the user that made the purchase pollEvent -
+   * the user that created the poll
    * @param authorChannelId authorChannelId or {@code null} for none
    */
   public LiveChatMessageSnippet setAuthorChannelId(java.lang.String authorChannelId) {

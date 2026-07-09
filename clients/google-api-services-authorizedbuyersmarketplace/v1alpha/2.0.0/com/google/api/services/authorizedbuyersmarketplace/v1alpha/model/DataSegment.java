@@ -48,6 +48,14 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long millipercentOfMediaFee;
+
+  /**
    * Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds to
    * the account ID that created the segment. v1alpha format:
    * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
@@ -104,6 +112,25 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
    */
   public DataSegment setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMillipercentOfMediaFee() {
+    return millipercentOfMediaFee;
+  }
+
+  /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * @param millipercentOfMediaFee millipercentOfMediaFee or {@code null} for none
+   */
+  public DataSegment setMillipercentOfMediaFee(java.lang.Long millipercentOfMediaFee) {
+    this.millipercentOfMediaFee = millipercentOfMediaFee;
     return this;
   }
 

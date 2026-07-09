@@ -79,6 +79,14 @@ public final class CuratedPackage extends com.google.api.client.json.GenericJson
   private Money floorPriceCpm;
 
   /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long millipercentOfMediaFee;
+
+  /**
    * Identifier. The unique resource name for the curated package. Format:
    * `curators/{accountId}/curatedPackages/{curatedPackageId}`
    * The value may be {@code null}.
@@ -220,6 +228,25 @@ public final class CuratedPackage extends com.google.api.client.json.GenericJson
    */
   public CuratedPackage setFloorPriceCpm(Money floorPriceCpm) {
     this.floorPriceCpm = floorPriceCpm;
+    return this;
+  }
+
+  /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMillipercentOfMediaFee() {
+    return millipercentOfMediaFee;
+  }
+
+  /**
+   * Optional. The fee will be charged as a percentage of the impression cost, represented in
+   * millipercent. For example, 1% is represented as 1000.
+   * @param millipercentOfMediaFee millipercentOfMediaFee or {@code null} for none
+   */
+  public CuratedPackage setMillipercentOfMediaFee(java.lang.Long millipercentOfMediaFee) {
+    this.millipercentOfMediaFee = millipercentOfMediaFee;
     return this;
   }
 

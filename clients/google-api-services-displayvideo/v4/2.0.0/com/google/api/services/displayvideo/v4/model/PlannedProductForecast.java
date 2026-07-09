@@ -31,19 +31,6 @@ package com.google.api.services.displayvideo.v4.model;
 public final class PlannedProductForecast extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of effective frequency breakdowns.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<EffectiveFrequencyBreakdown> effectiveFrequencyBreakdowns;
-
-  static {
-    // hack to force ProGuard to consider EffectiveFrequencyBreakdown used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(EffectiveFrequencyBreakdown.class);
-  }
-
-  /**
    * Number of on-target impressions.
    * The value may be {@code null}.
    */
@@ -84,23 +71,6 @@ public final class PlannedProductForecast extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long viewableImpressions;
-
-  /**
-   * A list of effective frequency breakdowns.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<EffectiveFrequencyBreakdown> getEffectiveFrequencyBreakdowns() {
-    return effectiveFrequencyBreakdowns;
-  }
-
-  /**
-   * A list of effective frequency breakdowns.
-   * @param effectiveFrequencyBreakdowns effectiveFrequencyBreakdowns or {@code null} for none
-   */
-  public PlannedProductForecast setEffectiveFrequencyBreakdowns(java.util.List<EffectiveFrequencyBreakdown> effectiveFrequencyBreakdowns) {
-    this.effectiveFrequencyBreakdowns = effectiveFrequencyBreakdowns;
-    return this;
-  }
 
   /**
    * Number of on-target impressions.

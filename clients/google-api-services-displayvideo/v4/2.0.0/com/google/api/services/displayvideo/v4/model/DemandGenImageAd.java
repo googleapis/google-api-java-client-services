@@ -31,7 +31,9 @@ package com.google.api.services.displayvideo.v4.model;
 public final class DemandGenImageAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +90,9 @@ public final class DemandGenImageAd extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> headlines;
 
   /**
-   * The list of logo images shown on the ad.
+   * The list of logo images shown on the ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +134,9 @@ public final class DemandGenImageAd extends com.google.api.client.json.GenericJs
   private java.lang.String userSpecifiedTrackingUrl;
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessName() {
@@ -138,7 +144,9 @@ public final class DemandGenImageAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The business name shown on the ad.
+   * Required. The business name shown on the ad. *Warning*: Starting **July 13, 2026**, this
+   * setting will no longer be required if a default value is set at the advertiser level. If left
+   * unset, the default value will be applied.
    * @param businessName businessName or {@code null} for none
    */
   public DemandGenImageAd setBusinessName(java.lang.String businessName) {
@@ -268,7 +276,9 @@ public final class DemandGenImageAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of logo images shown on the ad.
+   * The list of logo images shown on the ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * @return value or {@code null} for none
    */
   public java.util.List<ImageAsset> getLogoImages() {
@@ -276,7 +286,9 @@ public final class DemandGenImageAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of logo images shown on the ad.
+   * The list of logo images shown on the ad. *Warning*: Starting **July 13, 2026**, this setting
+   * will no longer be required if a default value is set at the advertiser level. If left unset,
+   * the default value will be applied.
    * @param logoImages logoImages or {@code null} for none
    */
   public DemandGenImageAd setLogoImages(java.util.List<ImageAsset> logoImages) {

@@ -45,22 +45,10 @@ public final class GenerateReachForecastRequest extends com.google.api.client.js
   private java.lang.String currencyCode;
 
   /**
-   * Optional. The highest minimum effective frequency to include in
-   * PlannedProductForecast.effective_frequency_breakdowns. Must be between 1 and 10, inclusive. If
-   * not specified, PlannedProductForecast.effective_frequency_breakdowns will not be populated. If
-   * set, this value will also be used as the minimum effective frequency for reach metrics
-   * reporting. This field cannot be combined with the min_effective_frequency field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer effectiveFrequencyBreakdownLimit;
-
-  /**
    * Optional. The minimum effective frequency for the reported reach metrics. This is the smallest
    * number of times a customer must be exposed to the ad for it to be considered effective. This
    * setting only impacts reporting. Must be between 1 and 10, inclusive. If not specified, a
-   * default of 1 is applied. This field cannot be combined with
-   * effective_frequency_breakdown_limit.
+   * default of 1 is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,36 +103,10 @@ public final class GenerateReachForecastRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The highest minimum effective frequency to include in
-   * PlannedProductForecast.effective_frequency_breakdowns. Must be between 1 and 10, inclusive. If
-   * not specified, PlannedProductForecast.effective_frequency_breakdowns will not be populated. If
-   * set, this value will also be used as the minimum effective frequency for reach metrics
-   * reporting. This field cannot be combined with the min_effective_frequency field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getEffectiveFrequencyBreakdownLimit() {
-    return effectiveFrequencyBreakdownLimit;
-  }
-
-  /**
-   * Optional. The highest minimum effective frequency to include in
-   * PlannedProductForecast.effective_frequency_breakdowns. Must be between 1 and 10, inclusive. If
-   * not specified, PlannedProductForecast.effective_frequency_breakdowns will not be populated. If
-   * set, this value will also be used as the minimum effective frequency for reach metrics
-   * reporting. This field cannot be combined with the min_effective_frequency field.
-   * @param effectiveFrequencyBreakdownLimit effectiveFrequencyBreakdownLimit or {@code null} for none
-   */
-  public GenerateReachForecastRequest setEffectiveFrequencyBreakdownLimit(java.lang.Integer effectiveFrequencyBreakdownLimit) {
-    this.effectiveFrequencyBreakdownLimit = effectiveFrequencyBreakdownLimit;
-    return this;
-  }
-
-  /**
    * Optional. The minimum effective frequency for the reported reach metrics. This is the smallest
    * number of times a customer must be exposed to the ad for it to be considered effective. This
    * setting only impacts reporting. Must be between 1 and 10, inclusive. If not specified, a
-   * default of 1 is applied. This field cannot be combined with
-   * effective_frequency_breakdown_limit.
+   * default of 1 is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinEffectiveFrequency() {
@@ -155,8 +117,7 @@ public final class GenerateReachForecastRequest extends com.google.api.client.js
    * Optional. The minimum effective frequency for the reported reach metrics. This is the smallest
    * number of times a customer must be exposed to the ad for it to be considered effective. This
    * setting only impacts reporting. Must be between 1 and 10, inclusive. If not specified, a
-   * default of 1 is applied. This field cannot be combined with
-   * effective_frequency_breakdown_limit.
+   * default of 1 is applied.
    * @param minEffectiveFrequency minEffectiveFrequency or {@code null} for none
    */
   public GenerateReachForecastRequest setMinEffectiveFrequency(java.lang.Integer minEffectiveFrequency) {

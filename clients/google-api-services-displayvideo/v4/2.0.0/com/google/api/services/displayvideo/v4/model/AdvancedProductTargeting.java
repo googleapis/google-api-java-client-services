@@ -66,6 +66,13 @@ public final class AdvancedProductTargeting extends com.google.api.client.json.G
   private java.util.List<java.lang.String> genders;
 
   /**
+   * Optional. The network to target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Optional. Plannable location IDs to target.
    * The value may be {@code null}.
    */
@@ -192,6 +199,23 @@ public final class AdvancedProductTargeting extends com.google.api.client.json.G
    */
   public AdvancedProductTargeting setGenders(java.util.List<java.lang.String> genders) {
     this.genders = genders;
+    return this;
+  }
+
+  /**
+   * Optional. The network to target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Optional. The network to target.
+   * @param network network or {@code null} for none
+   */
+  public AdvancedProductTargeting setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

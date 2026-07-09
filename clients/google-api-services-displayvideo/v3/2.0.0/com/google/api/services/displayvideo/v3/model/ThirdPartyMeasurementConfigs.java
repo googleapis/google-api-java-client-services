@@ -34,6 +34,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
    * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
+   * *Warning*: Starting **July 13, 2026**, this field will no longer support
+   * `THIRD_PARTY_VENDOR_NIELSEN`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +75,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
    * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
+   * *Warning*: Starting **July 13, 2026**, this field will no longer support
+   * `THIRD_PARTY_VENDOR_NIELSEN`.
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getBrandLiftVendorConfigs() {
@@ -83,6 +87,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
    * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
+   * *Warning*: Starting **July 13, 2026**, this field will no longer support
+   * `THIRD_PARTY_VENDOR_NIELSEN`.
    * @param brandLiftVendorConfigs brandLiftVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setBrandLiftVendorConfigs(java.util.List<ThirdPartyVendorConfig> brandLiftVendorConfigs) {

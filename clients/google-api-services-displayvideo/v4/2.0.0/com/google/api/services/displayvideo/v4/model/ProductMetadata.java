@@ -45,6 +45,13 @@ public final class ProductMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String plannableProductCode;
 
   /**
+   * Output only. Core attributes for this product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlannableProductCoreAttributes plannableProductCoreAttributes;
+
+  /**
    * Output only. The plain-text description of the ad product.
    * The value may be {@code null}.
    */
@@ -89,6 +96,23 @@ public final class ProductMetadata extends com.google.api.client.json.GenericJso
    */
   public ProductMetadata setPlannableProductCode(java.lang.String plannableProductCode) {
     this.plannableProductCode = plannableProductCode;
+    return this;
+  }
+
+  /**
+   * Output only. Core attributes for this product.
+   * @return value or {@code null} for none
+   */
+  public PlannableProductCoreAttributes getPlannableProductCoreAttributes() {
+    return plannableProductCoreAttributes;
+  }
+
+  /**
+   * Output only. Core attributes for this product.
+   * @param plannableProductCoreAttributes plannableProductCoreAttributes or {@code null} for none
+   */
+  public ProductMetadata setPlannableProductCoreAttributes(PlannableProductCoreAttributes plannableProductCoreAttributes) {
+    this.plannableProductCoreAttributes = plannableProductCoreAttributes;
     return this;
   }
 

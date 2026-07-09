@@ -86,8 +86,6 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
-   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
-   * available to all partners by *June 24, 2026*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -382,8 +380,6 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
-   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
-   * available to all partners by *June 24, 2026*.
    * @return value or {@code null} for none
    */
   public DemandGenSettings getDemandGenSettings() {
@@ -392,8 +388,6 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings specific to Demand Gen line items. Only applicable to Demand Gen line items.
-   * Retrieval and management of Demand Gen resources is currently rolling out. This field will be
-   * available to all partners by *June 24, 2026*.
    * @param demandGenSettings demandGenSettings or {@code null} for none
    */
   public LineItem setDemandGenSettings(DemandGenSettings demandGenSettings) {

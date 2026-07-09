@@ -46,6 +46,14 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> airflowConfigOverrides;
 
   /**
+   * Optional. The selected mode of audit logs replication. This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String auditLogsReplicationMode;
+
+  /**
    * Optional. The configuration for Cloud Data Lineage integration.
    * The value may be {@code null}.
    */
@@ -155,6 +163,25 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setAirflowConfigOverrides(java.util.Map<String, java.lang.String> airflowConfigOverrides) {
     this.airflowConfigOverrides = airflowConfigOverrides;
+    return this;
+  }
+
+  /**
+   * Optional. The selected mode of audit logs replication. This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuditLogsReplicationMode() {
+    return auditLogsReplicationMode;
+  }
+
+  /**
+   * Optional. The selected mode of audit logs replication. This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * @param auditLogsReplicationMode auditLogsReplicationMode or {@code null} for none
+   */
+  public SoftwareConfig setAuditLogsReplicationMode(java.lang.String auditLogsReplicationMode) {
+    this.auditLogsReplicationMode = auditLogsReplicationMode;
     return this;
   }
 

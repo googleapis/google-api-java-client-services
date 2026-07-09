@@ -39,6 +39,13 @@ public final class GenaiVertexV1beta1Value extends com.google.api.client.json.Ge
   private java.lang.Boolean boolValue;
 
   /**
+   * Represents rich content (text, image, etc.).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1Content contentValue;
+
+  /**
    * Represents a repeated `Value`.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class GenaiVertexV1beta1Value extends com.google.api.client.json.Ge
    */
   public GenaiVertexV1beta1Value setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
+    return this;
+  }
+
+  /**
+   * Represents rich content (text, image, etc.).
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1Content getContentValue() {
+    return contentValue;
+  }
+
+  /**
+   * Represents rich content (text, image, etc.).
+   * @param contentValue contentValue or {@code null} for none
+   */
+  public GenaiVertexV1beta1Value setContentValue(GenaiVertexV1beta1Content contentValue) {
+    this.contentValue = contentValue;
     return this;
   }
 

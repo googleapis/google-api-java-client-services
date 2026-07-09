@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig ext
   private GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig autoraterConfig;
 
   /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CloudLoggingConfig cloudLoggingConfig;
+
+  /**
    * Optional. Specifications for custom dataset-level aggregations.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig ext
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig setAutoraterConfig(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig autoraterConfig) {
     this.autoraterConfig = autoraterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CloudLoggingConfig getCloudLoggingConfig() {
+    return cloudLoggingConfig;
+  }
+
+  /**
+   * Optional. Configuration for exporting evaluation results to Cloud Logging.
+   * @param cloudLoggingConfig cloudLoggingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig setCloudLoggingConfig(GoogleCloudAiplatformV1beta1CloudLoggingConfig cloudLoggingConfig) {
+    this.cloudLoggingConfig = cloudLoggingConfig;
     return this;
   }
 

@@ -44,6 +44,26 @@ public final class GoogleCloudAiplatformV1beta1ProcessDataRequest extends com.go
   private GoogleCloudAiplatformV1beta1GcsSource gcsSource;
 
   /**
+   * Optional. The project number of the project that the user expects to own the input Cloud
+   * Storage bucket referenced by gcs_source. The service verifies that the bucket is actually owned
+   * by this project before reading from it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long inputBucketProjectNumber;
+
+  /**
+   * Optional. The project number of the project that the user expects to own the output Cloud
+   * Storage bucket referenced by gcs_destination. The service verifies that the bucket is actually
+   * owned by this project before writing to it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long outputBucketProjectNumber;
+
+  /**
    * Optional. Spec for Veo data processing.
    * The value may be {@code null}.
    */
@@ -81,6 +101,52 @@ public final class GoogleCloudAiplatformV1beta1ProcessDataRequest extends com.go
    */
   public GoogleCloudAiplatformV1beta1ProcessDataRequest setGcsSource(GoogleCloudAiplatformV1beta1GcsSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Optional. The project number of the project that the user expects to own the input Cloud
+   * Storage bucket referenced by gcs_source. The service verifies that the bucket is actually owned
+   * by this project before reading from it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getInputBucketProjectNumber() {
+    return inputBucketProjectNumber;
+  }
+
+  /**
+   * Optional. The project number of the project that the user expects to own the input Cloud
+   * Storage bucket referenced by gcs_source. The service verifies that the bucket is actually owned
+   * by this project before reading from it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * @param inputBucketProjectNumber inputBucketProjectNumber or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ProcessDataRequest setInputBucketProjectNumber(java.lang.Long inputBucketProjectNumber) {
+    this.inputBucketProjectNumber = inputBucketProjectNumber;
+    return this;
+  }
+
+  /**
+   * Optional. The project number of the project that the user expects to own the output Cloud
+   * Storage bucket referenced by gcs_destination. The service verifies that the bucket is actually
+   * owned by this project before writing to it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOutputBucketProjectNumber() {
+    return outputBucketProjectNumber;
+  }
+
+  /**
+   * Optional. The project number of the project that the user expects to own the output Cloud
+   * Storage bucket referenced by gcs_destination. The service verifies that the bucket is actually
+   * owned by this project before writing to it, in order to prevent bucket squatting. If unset, the
+   * bucket is verified to be owned by the project the request is made for (parent).
+   * @param outputBucketProjectNumber outputBucketProjectNumber or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ProcessDataRequest setOutputBucketProjectNumber(java.lang.Long outputBucketProjectNumber) {
+    this.outputBucketProjectNumber = outputBucketProjectNumber;
     return this;
   }
 

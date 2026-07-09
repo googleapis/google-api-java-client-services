@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1CandidateResult extends com.googl
   private java.lang.String candidate;
 
   /**
+   * Output only. Error while evaluating the candidate for the metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus error;
+
+  /**
    * Optional. The explanation for the metric.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GoogleCloudAiplatformV1beta1CandidateResult extends com.googl
    */
   public GoogleCloudAiplatformV1beta1CandidateResult setCandidate(java.lang.String candidate) {
     this.candidate = candidate;
+    return this;
+  }
+
+  /**
+   * Output only. Error while evaluating the candidate for the metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getError() {
+    return error;
+  }
+
+  /**
+   * Output only. Error while evaluating the candidate for the metric.
+   * @param error error or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CandidateResult setError(GoogleRpcStatus error) {
+    this.error = error;
     return this;
   }
 

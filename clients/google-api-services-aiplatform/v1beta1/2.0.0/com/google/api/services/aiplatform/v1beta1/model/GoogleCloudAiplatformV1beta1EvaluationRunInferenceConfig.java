@@ -89,6 +89,15 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   private java.lang.Integer parallelism;
 
   /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigPromptTemplate promptTemplate;
+
+  /**
    * Optional. Deprecated: Use `agents` instead. Agent config used to generate responses.
    * @return value or {@code null} for none
    */
@@ -201,6 +210,27 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setParallelism(java.lang.Integer parallelism) {
     this.parallelism = parallelism;
+    return this;
+  }
+
+  /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigPromptTemplate getPromptTemplate() {
+    return promptTemplate;
+  }
+
+  /**
+   * Optional. The prompt template used for inference. The values for variables in the prompt
+   * template are defined in EvaluationItem.EvaluationPrompt.PromptTemplateData.values. If not
+   * specified, the prompt template in the EvaluationConfig will be used.
+   * @param promptTemplate promptTemplate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setPromptTemplate(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigPromptTemplate promptTemplate) {
+    this.promptTemplate = promptTemplate;
     return this;
   }
 

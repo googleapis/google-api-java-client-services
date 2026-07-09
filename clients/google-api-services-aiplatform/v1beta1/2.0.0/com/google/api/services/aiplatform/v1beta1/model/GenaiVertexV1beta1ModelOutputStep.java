@@ -42,6 +42,13 @@ public final class GenaiVertexV1beta1ModelOutputStep extends com.google.api.clie
   }
 
   /**
+   * The error result of the operation in case of failure or cancellation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus error;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.util.List<GenaiVertexV1beta1Content> getContent() {
@@ -53,6 +60,23 @@ public final class GenaiVertexV1beta1ModelOutputStep extends com.google.api.clie
    */
   public GenaiVertexV1beta1ModelOutputStep setContent(java.util.List<GenaiVertexV1beta1Content> content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * The error result of the operation in case of failure or cancellation.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getError() {
+    return error;
+  }
+
+  /**
+   * The error result of the operation in case of failure or cancellation.
+   * @param error error or {@code null} for none
+   */
+  public GenaiVertexV1beta1ModelOutputStep setError(GoogleRpcStatus error) {
+    this.error = error;
     return this;
   }
 

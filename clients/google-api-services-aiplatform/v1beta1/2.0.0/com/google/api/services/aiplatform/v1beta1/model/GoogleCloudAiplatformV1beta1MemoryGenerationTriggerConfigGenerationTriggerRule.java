@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfigGene
   private String idleDuration;
 
   /**
+   * Optional. Re-include the last N already-processed events in the next window.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer overlapEventCount;
+
+  /**
    * Optional. Specifies to trigger generation when the event count reaches this limit.
    * @return value or {@code null} for none
    */
@@ -104,6 +111,23 @@ public final class GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfigGene
    */
   public GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfigGenerationTriggerRule setIdleDuration(String idleDuration) {
     this.idleDuration = idleDuration;
+    return this;
+  }
+
+  /**
+   * Optional. Re-include the last N already-processed events in the next window.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOverlapEventCount() {
+    return overlapEventCount;
+  }
+
+  /**
+   * Optional. Re-include the last N already-processed events in the next window.
+   * @param overlapEventCount overlapEventCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MemoryGenerationTriggerConfigGenerationTriggerRule setOverlapEventCount(java.lang.Integer overlapEventCount) {
+    this.overlapEventCount = overlapEventCount;
     return this;
   }
 

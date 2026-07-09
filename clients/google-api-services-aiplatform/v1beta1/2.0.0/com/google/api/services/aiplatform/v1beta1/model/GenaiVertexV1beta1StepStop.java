@@ -36,6 +36,20 @@ public final class GenaiVertexV1beta1StepStop extends com.google.api.client.json
   private java.lang.Integer index;
 
   /**
+   * Model usage stats for this specific step.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1InteractionUsage stepUsage;
+
+  /**
+   * Cumulative model usage stats from the start of the session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1InteractionUsage usage;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -47,6 +61,40 @@ public final class GenaiVertexV1beta1StepStop extends com.google.api.client.json
    */
   public GenaiVertexV1beta1StepStop setIndex(java.lang.Integer index) {
     this.index = index;
+    return this;
+  }
+
+  /**
+   * Model usage stats for this specific step.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionUsage getStepUsage() {
+    return stepUsage;
+  }
+
+  /**
+   * Model usage stats for this specific step.
+   * @param stepUsage stepUsage or {@code null} for none
+   */
+  public GenaiVertexV1beta1StepStop setStepUsage(GenaiVertexV1beta1InteractionUsage stepUsage) {
+    this.stepUsage = stepUsage;
+    return this;
+  }
+
+  /**
+   * Cumulative model usage stats from the start of the session.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionUsage getUsage() {
+    return usage;
+  }
+
+  /**
+   * Cumulative model usage stats from the start of the session.
+   * @param usage usage or {@code null} for none
+   */
+  public GenaiVertexV1beta1StepStop setUsage(GenaiVertexV1beta1InteractionUsage usage) {
+    this.usage = usage;
     return this;
   }
 

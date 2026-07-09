@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   private java.lang.String agentFramework;
 
   /**
+   * Optional. Configuration for building container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec buildSpec;
+
+  /**
    * Optional. Declarations for object class methods in OpenAPI specification format.
    * The value may be {@code null}.
    */
@@ -121,6 +128,23 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec setAgentFramework(java.lang.String agentFramework) {
     this.agentFramework = agentFramework;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for building container image.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec getBuildSpec() {
+    return buildSpec;
+  }
+
+  /**
+   * Optional. Configuration for building container image.
+   * @param buildSpec buildSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpec setBuildSpec(GoogleCloudAiplatformV1ReasoningEngineSpecBuildSpec buildSpec) {
+    this.buildSpec = buildSpec;
     return this;
   }
 

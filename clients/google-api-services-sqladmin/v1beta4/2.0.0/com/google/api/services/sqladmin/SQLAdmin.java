@@ -1946,19 +1946,19 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sqladmin server.  After setting any optional
      * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
      *
-     * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
      * @param location Required. The region of the instance.
+     * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
      * @return the request
      */
-    public Resolve resolve(java.lang.String dnsName, java.lang.String location) throws java.io.IOException {
-      Resolve result = new Resolve(dnsName, location);
+    public Resolve resolve(java.lang.String location, java.lang.String dnsName) throws java.io.IOException {
+      Resolve result = new Resolve(location, dnsName);
       initialize(result);
       return result;
     }
 
     public class Resolve extends SQLAdminRequest<com.google.api.services.sqladmin.model.ConnectSettings> {
 
-      private static final String REST_PATH = "sql/v1beta4/dns/{dnsName}/locations/{location}:resolveConnectSettings";
+      private static final String REST_PATH = "sql/v1beta4/locations/{location}/dns/{dnsName}:resolveConnectSettings";
 
       /**
        * Retrieves connect settings about a Cloud SQL instance using the instance DNS name.
@@ -1971,14 +1971,14 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
        * @param location Required. The region of the instance.
+       * @param dnsName Required. Cloud SQL instance ID. This does not include the project ID.
        * @since 1.13
        */
-      protected Resolve(java.lang.String dnsName, java.lang.String location) {
+      protected Resolve(java.lang.String location, java.lang.String dnsName) {
         super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.ConnectSettings.class);
-        this.dnsName = com.google.api.client.util.Preconditions.checkNotNull(dnsName, "Required parameter dnsName must be specified.");
         this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+        this.dnsName = com.google.api.client.util.Preconditions.checkNotNull(dnsName, "Required parameter dnsName must be specified.");
       }
 
       @Override
@@ -2046,22 +2046,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return (Resolve) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. Cloud SQL instance ID. This does not include the project ID. */
-      @com.google.api.client.util.Key
-      private java.lang.String dnsName;
-
-      /** Required. Cloud SQL instance ID. This does not include the project ID.
-       */
-      public java.lang.String getDnsName() {
-        return dnsName;
-      }
-
-      /** Required. Cloud SQL instance ID. This does not include the project ID. */
-      public Resolve setDnsName(java.lang.String dnsName) {
-        this.dnsName = dnsName;
-        return this;
-      }
-
       /** Required. The region of the instance. */
       @com.google.api.client.util.Key
       private java.lang.String location;
@@ -2075,6 +2059,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Required. The region of the instance. */
       public Resolve setLocation(java.lang.String location) {
         this.location = location;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String dnsName;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getDnsName() {
+        return dnsName;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public Resolve setDnsName(java.lang.String dnsName) {
+        this.dnsName = dnsName;
         return this;
       }
 
@@ -6320,6 +6320,51 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Patch setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /**
+       * Optional. Set PSC config to the same value as the existing config to reconcile the PSC
+       * networking.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean reconcilePscNetworking;
+
+      /** Optional. Set PSC config to the same value as the existing config to reconcile the PSC networking.
+       */
+      public java.lang.Boolean getReconcilePscNetworking() {
+        return reconcilePscNetworking;
+      }
+
+      /**
+       * Optional. Set PSC config to the same value as the existing config to reconcile the PSC
+       * networking.
+       */
+      public Patch setReconcilePscNetworking(java.lang.Boolean reconcilePscNetworking) {
+        this.reconcilePscNetworking = reconcilePscNetworking;
+        return this;
+      }
+
+      /**
+       * Optional. Set PSC config to the same value as the existing config and force reconcile the
+       * PSC networking.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean reconcilePscNetworkingForce;
+
+      /** Optional. Set PSC config to the same value as the existing config and force reconcile the PSC
+     networking.
+       */
+      public java.lang.Boolean getReconcilePscNetworkingForce() {
+        return reconcilePscNetworkingForce;
+      }
+
+      /**
+       * Optional. Set PSC config to the same value as the existing config and force reconcile the
+       * PSC networking.
+       */
+      public Patch setReconcilePscNetworkingForce(java.lang.Boolean reconcilePscNetworkingForce) {
+        this.reconcilePscNetworkingForce = reconcilePscNetworkingForce;
         return this;
       }
 

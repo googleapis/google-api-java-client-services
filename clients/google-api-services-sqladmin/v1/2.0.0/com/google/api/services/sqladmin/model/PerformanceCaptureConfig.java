@@ -30,11 +30,36 @@ package com.google.api.services.sqladmin.model;
 public final class PerformanceCaptureConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the minimum percentage of CPU utilization to trigger the performance
+   * capture. Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cpuUtilizationThresholdPercent;
+
+  /**
    * Optional. Enables or disables the performance capture feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * Optional. Specifies the minimum number of undo log entries in the history list length to
+   * trigger the performance capture. Valid integers range from `10000` to `10000000`. Enter `0` to
+   * disable the check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer historyListLengthThresholdCount;
+
+  /**
+   * Optional. Specifies the minimum percentage of memory usage to trigger the performance capture.
+   * Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer memoryUsageThresholdPercent;
 
   /**
    * Optional. Specifies the minimum number of consecutive probe threshold that triggers performance
@@ -69,12 +94,78 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   private java.lang.Integer secondsBehindSourceThreshold;
 
   /**
+   * Optional. Specifies the minimum allowed number of semaphore waits to trigger the performance
+   * capture. Valid integers range from `10` to `10000`. Enter `0` to disable the check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer semaphoreWaitThresholdCount;
+
+  /**
    * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
    * before the watcher starts recording it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer transactionDurationThreshold;
+
+  /**
+   * Optional. Specifies a customer-defined list of users to exclude from transaction termination.
+   * Entries can be in the format 'user@host' or just 'user'. A standalone 'user' implies 'user@%',
+   * excluding the user from any host. Wildcard '%' is allowed in the host part of the 'user@host'
+   * format. Example: `["app_user", "db_admin@10.1.2.3", "report_user@%"]`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> transactionKillExcludedUserHosts;
+
+  /**
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts terminating it. Valid integers range from `60` to `604800` (7 days).
+   * Enter `0` to disable. If enabled (i.e., > 0), this value must be greater than or equal to
+   * `transaction_duration_threshold`. Configurations where `0 < transaction_kill_threshold_seconds
+   * < transaction_duration_threshold` will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer transactionKillThresholdSeconds;
+
+  /**
+   * Optional. Determines which transactions are allowed to be terminated when they exceed
+   * `transaction_kill_threshold_seconds`. This allows protecting write-heavy transactions from
+   * auto-termination if desired. Defaults to `READ_ONLY_TRANSACTIONS` if unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transactionKillType;
+
+  /**
+   * Optional. Specifies the minimum allowed number of transactions in lock wait state to trigger
+   * the performance capture. Valid integers range from `10` to `10000`. Enter `0` to disable the
+   * check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer transactionLockWaitThresholdCount;
+
+  /**
+   * Optional. Specifies the minimum percentage of CPU utilization to trigger the performance
+   * capture. Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCpuUtilizationThresholdPercent() {
+    return cpuUtilizationThresholdPercent;
+  }
+
+  /**
+   * Optional. Specifies the minimum percentage of CPU utilization to trigger the performance
+   * capture. Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * @param cpuUtilizationThresholdPercent cpuUtilizationThresholdPercent or {@code null} for none
+   */
+  public PerformanceCaptureConfig setCpuUtilizationThresholdPercent(java.lang.Integer cpuUtilizationThresholdPercent) {
+    this.cpuUtilizationThresholdPercent = cpuUtilizationThresholdPercent;
+    return this;
+  }
 
   /**
    * Optional. Enables or disables the performance capture feature.
@@ -90,6 +181,46 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
    */
   public PerformanceCaptureConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the minimum number of undo log entries in the history list length to
+   * trigger the performance capture. Valid integers range from `10000` to `10000000`. Enter `0` to
+   * disable the check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getHistoryListLengthThresholdCount() {
+    return historyListLengthThresholdCount;
+  }
+
+  /**
+   * Optional. Specifies the minimum number of undo log entries in the history list length to
+   * trigger the performance capture. Valid integers range from `10000` to `10000000`. Enter `0` to
+   * disable the check.
+   * @param historyListLengthThresholdCount historyListLengthThresholdCount or {@code null} for none
+   */
+  public PerformanceCaptureConfig setHistoryListLengthThresholdCount(java.lang.Integer historyListLengthThresholdCount) {
+    this.historyListLengthThresholdCount = historyListLengthThresholdCount;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the minimum percentage of memory usage to trigger the performance capture.
+   * Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMemoryUsageThresholdPercent() {
+    return memoryUsageThresholdPercent;
+  }
+
+  /**
+   * Optional. Specifies the minimum percentage of memory usage to trigger the performance capture.
+   * Valid integers range from `10` to `99`. Enter `0` to disable the check.
+   * @param memoryUsageThresholdPercent memoryUsageThresholdPercent or {@code null} for none
+   */
+  public PerformanceCaptureConfig setMemoryUsageThresholdPercent(java.lang.Integer memoryUsageThresholdPercent) {
+    this.memoryUsageThresholdPercent = memoryUsageThresholdPercent;
     return this;
   }
 
@@ -170,6 +301,25 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
   }
 
   /**
+   * Optional. Specifies the minimum allowed number of semaphore waits to trigger the performance
+   * capture. Valid integers range from `10` to `10000`. Enter `0` to disable the check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSemaphoreWaitThresholdCount() {
+    return semaphoreWaitThresholdCount;
+  }
+
+  /**
+   * Optional. Specifies the minimum allowed number of semaphore waits to trigger the performance
+   * capture. Valid integers range from `10` to `10000`. Enter `0` to disable the check.
+   * @param semaphoreWaitThresholdCount semaphoreWaitThresholdCount or {@code null} for none
+   */
+  public PerformanceCaptureConfig setSemaphoreWaitThresholdCount(java.lang.Integer semaphoreWaitThresholdCount) {
+    this.semaphoreWaitThresholdCount = semaphoreWaitThresholdCount;
+    return this;
+  }
+
+  /**
    * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
    * before the watcher starts recording it.
    * @return value or {@code null} for none
@@ -185,6 +335,96 @@ public final class PerformanceCaptureConfig extends com.google.api.client.json.G
    */
   public PerformanceCaptureConfig setTransactionDurationThreshold(java.lang.Integer transactionDurationThreshold) {
     this.transactionDurationThreshold = transactionDurationThreshold;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a customer-defined list of users to exclude from transaction termination.
+   * Entries can be in the format 'user@host' or just 'user'. A standalone 'user' implies 'user@%',
+   * excluding the user from any host. Wildcard '%' is allowed in the host part of the 'user@host'
+   * format. Example: `["app_user", "db_admin@10.1.2.3", "report_user@%"]`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTransactionKillExcludedUserHosts() {
+    return transactionKillExcludedUserHosts;
+  }
+
+  /**
+   * Optional. Specifies a customer-defined list of users to exclude from transaction termination.
+   * Entries can be in the format 'user@host' or just 'user'. A standalone 'user' implies 'user@%',
+   * excluding the user from any host. Wildcard '%' is allowed in the host part of the 'user@host'
+   * format. Example: `["app_user", "db_admin@10.1.2.3", "report_user@%"]`
+   * @param transactionKillExcludedUserHosts transactionKillExcludedUserHosts or {@code null} for none
+   */
+  public PerformanceCaptureConfig setTransactionKillExcludedUserHosts(java.util.List<java.lang.String> transactionKillExcludedUserHosts) {
+    this.transactionKillExcludedUserHosts = transactionKillExcludedUserHosts;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts terminating it. Valid integers range from `60` to `604800` (7 days).
+   * Enter `0` to disable. If enabled (i.e., > 0), this value must be greater than or equal to
+   * `transaction_duration_threshold`. Configurations where `0 < transaction_kill_threshold_seconds
+   * < transaction_duration_threshold` will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTransactionKillThresholdSeconds() {
+    return transactionKillThresholdSeconds;
+  }
+
+  /**
+   * Optional. Specifies the amount of time in seconds that a transaction needs to have been open
+   * before the watcher starts terminating it. Valid integers range from `60` to `604800` (7 days).
+   * Enter `0` to disable. If enabled (i.e., > 0), this value must be greater than or equal to
+   * `transaction_duration_threshold`. Configurations where `0 < transaction_kill_threshold_seconds
+   * < transaction_duration_threshold` will be rejected.
+   * @param transactionKillThresholdSeconds transactionKillThresholdSeconds or {@code null} for none
+   */
+  public PerformanceCaptureConfig setTransactionKillThresholdSeconds(java.lang.Integer transactionKillThresholdSeconds) {
+    this.transactionKillThresholdSeconds = transactionKillThresholdSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. Determines which transactions are allowed to be terminated when they exceed
+   * `transaction_kill_threshold_seconds`. This allows protecting write-heavy transactions from
+   * auto-termination if desired. Defaults to `READ_ONLY_TRANSACTIONS` if unspecified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransactionKillType() {
+    return transactionKillType;
+  }
+
+  /**
+   * Optional. Determines which transactions are allowed to be terminated when they exceed
+   * `transaction_kill_threshold_seconds`. This allows protecting write-heavy transactions from
+   * auto-termination if desired. Defaults to `READ_ONLY_TRANSACTIONS` if unspecified.
+   * @param transactionKillType transactionKillType or {@code null} for none
+   */
+  public PerformanceCaptureConfig setTransactionKillType(java.lang.String transactionKillType) {
+    this.transactionKillType = transactionKillType;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the minimum allowed number of transactions in lock wait state to trigger
+   * the performance capture. Valid integers range from `10` to `10000`. Enter `0` to disable the
+   * check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTransactionLockWaitThresholdCount() {
+    return transactionLockWaitThresholdCount;
+  }
+
+  /**
+   * Optional. Specifies the minimum allowed number of transactions in lock wait state to trigger
+   * the performance capture. Valid integers range from `10` to `10000`. Enter `0` to disable the
+   * check.
+   * @param transactionLockWaitThresholdCount transactionLockWaitThresholdCount or {@code null} for none
+   */
+  public PerformanceCaptureConfig setTransactionLockWaitThresholdCount(java.lang.Integer transactionLockWaitThresholdCount) {
+    this.transactionLockWaitThresholdCount = transactionLockWaitThresholdCount;
     return this;
   }
 

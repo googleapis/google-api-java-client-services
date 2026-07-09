@@ -205,6 +205,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private HttpOptions httpOptions;
 
   /**
+   * Optional. The action to take when the workstation has been idle for the duration specified in
+   * idle_timeout. Defaults to STOP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String idleAction;
+
+  /**
    * Optional. Number of seconds to wait before automatically stopping a workstation after it last
    * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
    * this configuration should never time out due to idleness. Provide
@@ -686,6 +694,25 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    */
   public WorkstationConfig setHttpOptions(HttpOptions httpOptions) {
     this.httpOptions = httpOptions;
+    return this;
+  }
+
+  /**
+   * Optional. The action to take when the workstation has been idle for the duration specified in
+   * idle_timeout. Defaults to STOP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdleAction() {
+    return idleAction;
+  }
+
+  /**
+   * Optional. The action to take when the workstation has been idle for the duration specified in
+   * idle_timeout. Defaults to STOP.
+   * @param idleAction idleAction or {@code null} for none
+   */
+  public WorkstationConfig setIdleAction(java.lang.String idleAction) {
+    this.idleAction = idleAction;
     return this;
   }
 

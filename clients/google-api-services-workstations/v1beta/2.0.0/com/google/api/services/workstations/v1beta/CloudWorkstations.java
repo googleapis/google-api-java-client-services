@@ -5280,6 +5280,137 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
             }
             /**
+             * Suspends a workstation to reduce costs.
+             *
+             * Create a request for the method "workstations.suspend".
+             *
+             * This request holds the parameters needed by the workstations server.  After setting any optional
+             * parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. Name of the workstation to suspend.
+             * @param content the {@link com.google.api.services.workstations.v1beta.model.SuspendWorkstationRequest}
+             * @return the request
+             */
+            public Suspend suspend(java.lang.String name, com.google.api.services.workstations.v1beta.model.SuspendWorkstationRequest content) throws java.io.IOException {
+              Suspend result = new Suspend(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Suspend extends CloudWorkstationsRequest<com.google.api.services.workstations.v1beta.model.Operation> {
+
+              private static final String REST_PATH = "v1beta/{+name}:suspend";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+
+              /**
+               * Suspends a workstation to reduce costs.
+               *
+               * Create a request for the method "workstations.suspend".
+               *
+               * This request holds the parameters needed by the the workstations server.  After setting any
+               * optional parameters, call the {@link Suspend#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Suspend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. Name of the workstation to suspend.
+               * @param content the {@link com.google.api.services.workstations.v1beta.model.SuspendWorkstationRequest}
+               * @since 1.13
+               */
+              protected Suspend(java.lang.String name, com.google.api.services.workstations.v1beta.model.SuspendWorkstationRequest content) {
+                super(CloudWorkstations.this, "POST", REST_PATH, content, com.google.api.services.workstations.v1beta.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Suspend set$Xgafv(java.lang.String $Xgafv) {
+                return (Suspend) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Suspend setAccessToken(java.lang.String accessToken) {
+                return (Suspend) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Suspend setAlt(java.lang.String alt) {
+                return (Suspend) super.setAlt(alt);
+              }
+
+              @Override
+              public Suspend setCallback(java.lang.String callback) {
+                return (Suspend) super.setCallback(callback);
+              }
+
+              @Override
+              public Suspend setFields(java.lang.String fields) {
+                return (Suspend) super.setFields(fields);
+              }
+
+              @Override
+              public Suspend setKey(java.lang.String key) {
+                return (Suspend) super.setKey(key);
+              }
+
+              @Override
+              public Suspend setOauthToken(java.lang.String oauthToken) {
+                return (Suspend) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Suspend setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Suspend) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Suspend setQuotaUser(java.lang.String quotaUser) {
+                return (Suspend) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Suspend setUploadType(java.lang.String uploadType) {
+                return (Suspend) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Suspend setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Suspend) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the workstation to suspend. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. Name of the workstation to suspend.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. Name of the workstation to suspend. */
+              public Suspend setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+/workstations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Suspend set(String parameterName, Object value) {
+                return (Suspend) super.set(parameterName, value);
+              }
+            }
+            /**
              * Returns permissions that a caller has on the specified resource. If the resource does not exist,
              * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
              * designed to be used for building permission-aware UIs and command-line tools, not for

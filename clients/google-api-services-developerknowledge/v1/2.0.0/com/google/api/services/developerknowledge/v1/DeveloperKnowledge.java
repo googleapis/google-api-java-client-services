@@ -599,23 +599,26 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * Optional. Applies a strict filter to the search results. The expression supports a subset
        * of the syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
        * DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields
-       * for filtering: * `data_source` (STRING): The source of the document, e.g.
+       * for filtering: * `content_length_bytes` (INTEGER): The length of the `Document.content`
+       * field in bytes. * `data_source` (STRING): The source of the document, e.g.
        * `docs.cloud.google.com`. See https://developers.google.com/knowledge/reference/corpus-
        * reference for the complete list of data sources in the corpus. * `update_time` (TIMESTAMP):
        * The timestamp of when the document was last meaningfully updated. A meaningful update is
        * one that changes document's markdown content or metadata. * `uri` (STRING): The document
-       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=`
-       * (equals) and `!=` (not equals) operators for **exact match** on the whole string. Partial
-       * match, prefix match, and regexp match are not supported. TIMESTAMP fields support `=`, `<`,
-       * `<=`, `>`, and `>=` operators. Timestamps must be in RFC-3339 format, e.g.,
-       * `"2025-01-01T00:00:00Z"`. You can combine expressions using `AND`, `OR`, and `NOT` (or `-`)
-       * logical operators. `OR` has higher precedence than `AND`. Use parentheses for explicit
-       * precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR data_source =
-       * "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
-       * "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
-       * "developer.chrome.com" OR data_source = "web.dev")` * `uri =
-       * "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500
-       * characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. INTEGER fields support `=`,
+       * `<`, `<=`, `>`, and `>=` operators. STRING fields support `=` (equals) and `!=` (not
+       * equals) operators for **exact match** on the whole string. Partial match, prefix match, and
+       * regexp match are not supported. TIMESTAMP fields support `=`, `<`, `<=`, `>`, and `>=`
+       * operators. Timestamps must be in RFC-3339 format, e.g., `"2025-01-01T00:00:00Z"`. You can
+       * combine expressions using `AND`, `OR`, and `NOT` (or `-`) logical operators. `OR` has
+       * higher precedence than `AND`. Use parentheses for explicit precedence grouping. Examples: *
+       * Filter by `Document.content_length_bytes`: `content_length_bytes < 50000` * `data_source =
+       * "docs.cloud.google.com" OR data_source = "firebase.google.com"` * `data_source !=
+       * "firebase.google.com"` * `update_time < "2024-01-01T00:00:00Z"` * `update_time >=
+       * "2025-01-22T00:00:00Z" AND (data_source = "developer.chrome.com" OR data_source =
+       * "web.dev")` * `uri = "https://docs.cloud.google.com/release-notes"` The `filter` string
+       * must not exceed 500 characters; values longer than 500 characters will result in an
+       * `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
@@ -623,22 +626,24 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /** Optional. Applies a strict filter to the search results. The expression supports a subset of the
      syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
      DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields for
-     filtering: * `data_source` (STRING): The source of the document, e.g. `docs.cloud.google.com`. See
+     filtering: * `content_length_bytes` (INTEGER): The length of the `Document.content` field in bytes.
+     * `data_source` (STRING): The source of the document, e.g. `docs.cloud.google.com`. See
      https://developers.google.com/knowledge/reference/corpus-reference for the complete list of data
      sources in the corpus. * `update_time` (TIMESTAMP): The timestamp of when the document was last
      meaningfully updated. A meaningful update is one that changes document's markdown content or
      metadata. * `uri` (STRING): The document URI, e.g.
-     `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=` (equals) and `!=`
-     (not equals) operators for **exact match** on the whole string. Partial match, prefix match, and
-     regexp match are not supported. TIMESTAMP fields support `=`, `<`, `<=`, `>`, and `>=` operators.
-     Timestamps must be in RFC-3339 format, e.g., `"2025-01-01T00:00:00Z"`. You can combine expressions
-     using `AND`, `OR`, and `NOT` (or `-`) logical operators. `OR` has higher precedence than `AND`. Use
-     parentheses for explicit precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR
-     data_source = "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
-     "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
-     "developer.chrome.com" OR data_source = "web.dev")` * `uri =
-     "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500 characters;
-     values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+     `https://docs.cloud.google.com/bigquery/docs/tables`. INTEGER fields support `=`, `<`, `<=`, `>`,
+     and `>=` operators. STRING fields support `=` (equals) and `!=` (not equals) operators for **exact
+     match** on the whole string. Partial match, prefix match, and regexp match are not supported.
+     TIMESTAMP fields support `=`, `<`, `<=`, `>`, and `>=` operators. Timestamps must be in RFC-3339
+     format, e.g., `"2025-01-01T00:00:00Z"`. You can combine expressions using `AND`, `OR`, and `NOT`
+     (or `-`) logical operators. `OR` has higher precedence than `AND`. Use parentheses for explicit
+     precedence grouping. Examples: * Filter by `Document.content_length_bytes`: `content_length_bytes <
+     50000` * `data_source = "docs.cloud.google.com" OR data_source = "firebase.google.com"` *
+     `data_source != "firebase.google.com"` * `update_time < "2024-01-01T00:00:00Z"` * `update_time >=
+     "2025-01-22T00:00:00Z" AND (data_source = "developer.chrome.com" OR data_source = "web.dev")` *
+     `uri = "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500
+     characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -648,23 +653,26 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * Optional. Applies a strict filter to the search results. The expression supports a subset
        * of the syntax described at https://google.aip.dev/160. While `SearchDocumentChunks` returns
        * DocumentChunks, the filter is applied to `DocumentChunk.document` fields. Supported fields
-       * for filtering: * `data_source` (STRING): The source of the document, e.g.
+       * for filtering: * `content_length_bytes` (INTEGER): The length of the `Document.content`
+       * field in bytes. * `data_source` (STRING): The source of the document, e.g.
        * `docs.cloud.google.com`. See https://developers.google.com/knowledge/reference/corpus-
        * reference for the complete list of data sources in the corpus. * `update_time` (TIMESTAMP):
        * The timestamp of when the document was last meaningfully updated. A meaningful update is
        * one that changes document's markdown content or metadata. * `uri` (STRING): The document
-       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. STRING fields support `=`
-       * (equals) and `!=` (not equals) operators for **exact match** on the whole string. Partial
-       * match, prefix match, and regexp match are not supported. TIMESTAMP fields support `=`, `<`,
-       * `<=`, `>`, and `>=` operators. Timestamps must be in RFC-3339 format, e.g.,
-       * `"2025-01-01T00:00:00Z"`. You can combine expressions using `AND`, `OR`, and `NOT` (or `-`)
-       * logical operators. `OR` has higher precedence than `AND`. Use parentheses for explicit
-       * precedence grouping. Examples: * `data_source = "docs.cloud.google.com" OR data_source =
-       * "firebase.google.com"` * `data_source != "firebase.google.com"` * `update_time <
-       * "2024-01-01T00:00:00Z"` * `update_time >= "2025-01-22T00:00:00Z" AND (data_source =
-       * "developer.chrome.com" OR data_source = "web.dev")` * `uri =
-       * "https://docs.cloud.google.com/release-notes"` The `filter` string must not exceed 500
-       * characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
+       * URI, e.g. `https://docs.cloud.google.com/bigquery/docs/tables`. INTEGER fields support `=`,
+       * `<`, `<=`, `>`, and `>=` operators. STRING fields support `=` (equals) and `!=` (not
+       * equals) operators for **exact match** on the whole string. Partial match, prefix match, and
+       * regexp match are not supported. TIMESTAMP fields support `=`, `<`, `<=`, `>`, and `>=`
+       * operators. Timestamps must be in RFC-3339 format, e.g., `"2025-01-01T00:00:00Z"`. You can
+       * combine expressions using `AND`, `OR`, and `NOT` (or `-`) logical operators. `OR` has
+       * higher precedence than `AND`. Use parentheses for explicit precedence grouping. Examples: *
+       * Filter by `Document.content_length_bytes`: `content_length_bytes < 50000` * `data_source =
+       * "docs.cloud.google.com" OR data_source = "firebase.google.com"` * `data_source !=
+       * "firebase.google.com"` * `update_time < "2024-01-01T00:00:00Z"` * `update_time >=
+       * "2025-01-22T00:00:00Z" AND (data_source = "developer.chrome.com" OR data_source =
+       * "web.dev")` * `uri = "https://docs.cloud.google.com/release-notes"` The `filter` string
+       * must not exceed 500 characters; values longer than 500 characters will result in an
+       * `INVALID_ARGUMENT` error.
        */
       public SearchDocumentChunks setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -674,14 +682,14 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /**
        * Optional. Specifies the maximum number of results to return. The service may return fewer
        * than this value. If unspecified, at most 5 results will be returned. The maximum value is
-       * 20; values above 20 will result in an INVALID_ARGUMENT error.
+       * 100; values above 100 will be coerced to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. Specifies the maximum number of results to return. The service may return fewer than this
-     value. If unspecified, at most 5 results will be returned. The maximum value is 20; values above 20
-     will result in an INVALID_ARGUMENT error.
+     value. If unspecified, at most 5 results will be returned. The maximum value is 100; values above
+     100 will be coerced to 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -690,7 +698,7 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /**
        * Optional. Specifies the maximum number of results to return. The service may return fewer
        * than this value. If unspecified, at most 5 results will be returned. The maximum value is
-       * 20; values above 20 will result in an INVALID_ARGUMENT error.
+       * 100; values above 100 will be coerced to 100.
        */
       public SearchDocumentChunks setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

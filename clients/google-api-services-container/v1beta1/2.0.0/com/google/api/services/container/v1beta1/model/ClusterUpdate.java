@@ -190,6 +190,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DNSConfig desiredDnsConfig;
 
   /**
+   * Optional. The desired emulated version for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String desiredEmulatedVersion;
+
+  /**
    * Enable/Disable Cilium Clusterwide Network Policy for the cluster.
    * The value may be {@code null}.
    */
@@ -1125,6 +1132,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredDnsConfig(DNSConfig desiredDnsConfig) {
     this.desiredDnsConfig = desiredDnsConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The desired emulated version for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDesiredEmulatedVersion() {
+    return desiredEmulatedVersion;
+  }
+
+  /**
+   * Optional. The desired emulated version for the cluster.
+   * @param desiredEmulatedVersion desiredEmulatedVersion or {@code null} for none
+   */
+  public ClusterUpdate setDesiredEmulatedVersion(java.lang.String desiredEmulatedVersion) {
+    this.desiredEmulatedVersion = desiredEmulatedVersion;
     return this;
   }
 

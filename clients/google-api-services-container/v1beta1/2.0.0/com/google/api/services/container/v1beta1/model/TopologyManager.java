@@ -17,8 +17,11 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * TopologyManager defines the configuration options for Topology Manager feature. See
- * https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
+ * TopologyManager defines the configuration options for the [`kubelet` Topology Manager
+ * component](https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/). For more
+ * information about the supported machine types and versions for the Topology Manager in GKE, see
+ * [Customizing node system configuration](https://docs.cloud.google.com/kubernetes-engine/docs/how-
+ * to/node-system-config#kubelet-resource-managers).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

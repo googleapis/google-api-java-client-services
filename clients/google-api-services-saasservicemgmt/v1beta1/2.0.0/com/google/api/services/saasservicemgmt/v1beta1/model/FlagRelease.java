@@ -89,7 +89,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> flagRevisions;
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag revisions.
+   * Optional. Immutable. Specifies the release consisting of a list of flag revisions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> flagSets;
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag sets.
+   * Optional. Immutable. Specifies the release consisting of a list of flag sets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -300,7 +300,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag revisions.
+   * Optional. Immutable. Specifies the release consisting of a list of flag revisions.
    * @return value or {@code null} for none
    */
   public FlagRevisionList getFlagRevisionsRelease() {
@@ -308,7 +308,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag revisions.
+   * Optional. Immutable. Specifies the release consisting of a list of flag revisions.
    * @param flagRevisionsRelease flagRevisionsRelease or {@code null} for none
    */
   public FlagRelease setFlagRevisionsRelease(FlagRevisionList flagRevisionsRelease) {
@@ -336,7 +336,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag sets.
+   * Optional. Immutable. Specifies the release consisting of a list of flag sets.
    * @return value or {@code null} for none
    */
   public FlagSetList getFlagSetsRelease() {
@@ -344,7 +344,7 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Specifies the release consists of a list of flag sets.
+   * Optional. Immutable. Specifies the release consisting of a list of flag sets.
    * @param flagSetsRelease flagSetsRelease or {@code null} for none
    */
   public FlagRelease setFlagSetsRelease(FlagSetList flagSetsRelease) {

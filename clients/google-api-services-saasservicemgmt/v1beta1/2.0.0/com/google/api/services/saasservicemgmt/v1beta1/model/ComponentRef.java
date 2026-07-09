@@ -17,7 +17,7 @@
 package com.google.api.services.saasservicemgmt.v1beta1.model;
 
 /**
- * ComponentRef represents a reference to a component resource. Next ID: 4
+ * ComponentRef represents a reference to a component resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
 public final class ComponentRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the component in composite.Components
+   * Optional. Name of the component in composite.Components
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   private java.lang.String revision;
 
   /**
-   * Name of the component in composite.Components
+   * Optional. Name of the component in composite.Components
    * @return value or {@code null} for none
    */
   public java.lang.String getComponent() {
@@ -61,7 +61,7 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the component in composite.Components
+   * Optional. Name of the component in composite.Components
    * @param component component or {@code null} for none
    */
   public ComponentRef setComponent(java.lang.String component) {

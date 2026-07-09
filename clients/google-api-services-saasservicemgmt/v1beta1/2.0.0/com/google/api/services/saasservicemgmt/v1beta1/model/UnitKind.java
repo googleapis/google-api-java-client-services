@@ -49,7 +49,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private AppParams appParams;
 
   /**
-   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
    * @return value or {@code null} for none
    */
   public ComponentRef getApplicationTemplateComponent() {
@@ -219,7 +219,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
    * @param applicationTemplateComponent applicationTemplateComponent or {@code null} for none
    */
   public UnitKind setApplicationTemplateComponent(ComponentRef applicationTemplateComponent) {

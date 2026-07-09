@@ -2731,6 +2731,172 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates an existing reservation group resource.
+         *
+         * Create a request for the method "reservationGroups.patch".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the reservation group, e.g.,
+         *        `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only
+         *        contain lower case alphanumeric characters or dashes. It must start with a letter and must
+         *        not end with a dash. Its maximum length is 64 characters.
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.ReservationGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.ReservationGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+
+          /**
+           * Updates an existing reservation group resource.
+           *
+           * Create a request for the method "reservationGroups.patch".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the reservation group, e.g.,
+         *        `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only
+         *        contain lower case alphanumeric characters or dashes. It must start with a letter and must
+         *        not end with a dash. Its maximum length is 64 characters.
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.ReservationGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup content) {
+            super(BigQueryReservation.this, "PATCH", REST_PATH, content, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the reservation group, e.g.,
+           * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only
+           * contain lower case alphanumeric characters or dashes. It must start with a letter and
+           * must not end with a dash. Its maximum length is 64 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the reservation group, e.g.,
+         `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only contain lower
+         case alphanumeric characters or dashes. It must start with a letter and must not end with a dash.
+         Its maximum length is 64 characters.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the reservation group, e.g.,
+           * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only
+           * contain lower case alphanumeric characters or dashes. It must start with a letter and
+           * must not end with a dash. Its maximum length is 64 characters.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. Standard field mask for the set of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Standard field mask for the set of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. Standard field mask for the set of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

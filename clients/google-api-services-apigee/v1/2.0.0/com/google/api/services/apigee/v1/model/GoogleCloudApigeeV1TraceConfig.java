@@ -55,6 +55,14 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   private GoogleCloudApigeeV1TraceSamplingConfig samplingConfig;
 
   /**
+   * Optional. The span semantics to use. Configuration Requirements (if span_semantics is OTEL): -
+   * trace_protocol must be OTLP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanSemantics;
+
+  /**
    * Optional. The trace protocol to use. Configuration Requirements (if trace_protocol is OTLP): -
    * Allowed Exporters: CLOUD_TRACE or OPEN_TELEMETRY_COLLECTOR. - If Exporter is
    * OPEN_TELEMETRY_COLLECTOR: - endpoint refers to a valid OTLP collector URL. - If Exporter is
@@ -120,6 +128,25 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
    */
   public GoogleCloudApigeeV1TraceConfig setSamplingConfig(GoogleCloudApigeeV1TraceSamplingConfig samplingConfig) {
     this.samplingConfig = samplingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if span_semantics is OTEL): -
+   * trace_protocol must be OTLP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanSemantics() {
+    return spanSemantics;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if span_semantics is OTEL): -
+   * trace_protocol must be OTLP.
+   * @param spanSemantics spanSemantics or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TraceConfig setSpanSemantics(java.lang.String spanSemantics) {
+    this.spanSemantics = spanSemantics;
     return this;
   }
 

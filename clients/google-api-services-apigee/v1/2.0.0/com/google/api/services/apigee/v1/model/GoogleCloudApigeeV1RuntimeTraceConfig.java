@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * NEXT ID: 10 RuntimeTraceConfig defines the configurations for distributed trace in an
+ * NEXT ID: 11 RuntimeTraceConfig defines the configurations for distributed trace in an
  * environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -94,6 +94,14 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig;
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanSemantics;
 
   /**
    * Optional. The trace protocol to use.
@@ -253,6 +261,25 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   public GoogleCloudApigeeV1RuntimeTraceConfig setSamplingConfig(GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig) {
     this.samplingConfig = samplingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanSemantics() {
+    return spanSemantics;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * @param spanSemantics spanSemantics or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfig setSpanSemantics(java.lang.String spanSemantics) {
+    this.spanSemantics = spanSemantics;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * NEXT ID: 9 Trace configuration override for a specific API proxy in an environment.
+ * NEXT ID: 10 Trace configuration override for a specific API proxy in an environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -78,6 +78,14 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig;
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String spanSemantics;
 
   /**
    * Optional. The trace protocol to use.
@@ -209,6 +217,25 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfigOverride extends com.goo
    */
   public GoogleCloudApigeeV1RuntimeTraceConfigOverride setSamplingConfig(GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig) {
     this.samplingConfig = samplingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpanSemantics() {
+    return spanSemantics;
+  }
+
+  /**
+   * Optional. The span semantics to use. Configuration Requirements (if `span_semantics` is
+   * `OTEL`): - `trace_protocol` must be `OTLP`.
+   * @param spanSemantics spanSemantics or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfigOverride setSpanSemantics(java.lang.String spanSemantics) {
+    this.spanSemantics = spanSemantics;
     return this;
   }
 

@@ -41,6 +41,15 @@ public final class ReservationGroup extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Optional. The parent reservation group of the reservation group. Format:
+   * `projects/locations/reservationGroups/team1-prod` for non-root reservation groups, or
+   * `projects/locations` for root reservation groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentGroup;
+
+  /**
    * Identifier. The resource name of the reservation group, e.g.,
    * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only contain
    * lower case alphanumeric characters or dashes. It must start with a letter and must not end with
@@ -60,6 +69,27 @@ public final class ReservationGroup extends com.google.api.client.json.GenericJs
    */
   public ReservationGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The parent reservation group of the reservation group. Format:
+   * `projects/locations/reservationGroups/team1-prod` for non-root reservation groups, or
+   * `projects/locations` for root reservation groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentGroup() {
+    return parentGroup;
+  }
+
+  /**
+   * Optional. The parent reservation group of the reservation group. Format:
+   * `projects/locations/reservationGroups/team1-prod` for non-root reservation groups, or
+   * `projects/locations` for root reservation groups.
+   * @param parentGroup parentGroup or {@code null} for none
+   */
+  public ReservationGroup setParentGroup(java.lang.String parentGroup) {
+    this.parentGroup = parentGroup;
     return this;
   }
 

@@ -19362,6 +19362,159 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return (Refund) super.set(parameterName, value);
       }
     }
+    /**
+     * Provide refund preference and purchase usage for a chargeback request
+     *
+     * Create a request for the method "orders.reviewrefund".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Reviewrefund#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Required. The package name of the application for which this subscription or in-app item was
+     *        purchased (for example, 'com.some.thing').
+     * @param orderId Required. The order ID provided to the user when the subscription or in-app order was purchased.
+     * @param content the {@link com.google.api.services.androidpublisher.model.OrdersReviewRefundRequest}
+     * @return the request
+     */
+    public Reviewrefund reviewrefund(java.lang.String packageName, java.lang.String orderId, com.google.api.services.androidpublisher.model.OrdersReviewRefundRequest content) throws java.io.IOException {
+      Reviewrefund result = new Reviewrefund(packageName, orderId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Reviewrefund extends AndroidPublisherRequest<Void> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/orders/{orderId}:reviewrefund";
+
+      /**
+       * Provide refund preference and purchase usage for a chargeback request
+       *
+       * Create a request for the method "orders.reviewrefund".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Reviewrefund#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Reviewrefund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param packageName Required. The package name of the application for which this subscription or in-app item was
+     *        purchased (for example, 'com.some.thing').
+       * @param orderId Required. The order ID provided to the user when the subscription or in-app order was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.OrdersReviewRefundRequest}
+       * @since 1.13
+       */
+      protected Reviewrefund(java.lang.String packageName, java.lang.String orderId, com.google.api.services.androidpublisher.model.OrdersReviewRefundRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, Void.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        this.orderId = com.google.api.client.util.Preconditions.checkNotNull(orderId, "Required parameter orderId must be specified.");
+      }
+
+      @Override
+      public Reviewrefund set$Xgafv(java.lang.String $Xgafv) {
+        return (Reviewrefund) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reviewrefund setAccessToken(java.lang.String accessToken) {
+        return (Reviewrefund) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Reviewrefund setAlt(java.lang.String alt) {
+        return (Reviewrefund) super.setAlt(alt);
+      }
+
+      @Override
+      public Reviewrefund setCallback(java.lang.String callback) {
+        return (Reviewrefund) super.setCallback(callback);
+      }
+
+      @Override
+      public Reviewrefund setFields(java.lang.String fields) {
+        return (Reviewrefund) super.setFields(fields);
+      }
+
+      @Override
+      public Reviewrefund setKey(java.lang.String key) {
+        return (Reviewrefund) super.setKey(key);
+      }
+
+      @Override
+      public Reviewrefund setOauthToken(java.lang.String oauthToken) {
+        return (Reviewrefund) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Reviewrefund setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Reviewrefund) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Reviewrefund setQuotaUser(java.lang.String quotaUser) {
+        return (Reviewrefund) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Reviewrefund setUploadType(java.lang.String uploadType) {
+        return (Reviewrefund) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reviewrefund setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reviewrefund) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The package name of the application for which this subscription or in-app item
+       * was purchased (for example, 'com.some.thing').
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. The package name of the application for which this subscription or in-app item was
+     purchased (for example, 'com.some.thing').
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /**
+       * Required. The package name of the application for which this subscription or in-app item
+       * was purchased (for example, 'com.some.thing').
+       */
+      public Reviewrefund setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      /**
+       * Required. The order ID provided to the user when the subscription or in-app order was
+       * purchased.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderId;
+
+      /** Required. The order ID provided to the user when the subscription or in-app order was purchased.
+       */
+      public java.lang.String getOrderId() {
+        return orderId;
+      }
+
+      /**
+       * Required. The order ID provided to the user when the subscription or in-app order was
+       * purchased.
+       */
+      public Reviewrefund setOrderId(java.lang.String orderId) {
+        this.orderId = orderId;
+        return this;
+      }
+
+      @Override
+      public Reviewrefund set(String parameterName, Object value) {
+        return (Reviewrefund) super.set(parameterName, value);
+      }
+    }
 
   }
 

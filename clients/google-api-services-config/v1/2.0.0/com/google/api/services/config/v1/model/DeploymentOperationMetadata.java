@@ -38,6 +38,13 @@ public final class DeploymentOperationMetadata extends com.google.api.client.jso
   private ApplyResults applyResults;
 
   /**
+   * Output only. Indicating if early apply results are available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean applyResultsAvailable;
+
+  /**
    * Output only. Cloud Build instance UUID associated with this operation.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class DeploymentOperationMetadata extends com.google.api.client.jso
    */
   public DeploymentOperationMetadata setApplyResults(ApplyResults applyResults) {
     this.applyResults = applyResults;
+    return this;
+  }
+
+  /**
+   * Output only. Indicating if early apply results are available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getApplyResultsAvailable() {
+    return applyResultsAvailable;
+  }
+
+  /**
+   * Output only. Indicating if early apply results are available.
+   * @param applyResultsAvailable applyResultsAvailable or {@code null} for none
+   */
+  public DeploymentOperationMetadata setApplyResultsAvailable(java.lang.Boolean applyResultsAvailable) {
+    this.applyResultsAvailable = applyResultsAvailable;
     return this;
   }
 

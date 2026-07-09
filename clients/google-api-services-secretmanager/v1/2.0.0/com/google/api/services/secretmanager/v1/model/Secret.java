@@ -93,6 +93,14 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Defines the policy member for the secret. This will be used to check if the caller
+   * has the permission to perform certain operations on the typed secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyMember policyMember;
+
+  /**
    * Optional. Immutable. The replication policy of the secret data attached to the Secret. The
    * replication policy cannot be changed after the Secret has been created.
    * The value may be {@code null}.
@@ -107,6 +115,15 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Rotation rotation;
+
+  /**
+   * Optional. Immutable. This defines the type of the secret. Enforces certain structural
+   * requirements on the SecretVersions. For secret of type UNSPECIFIED, the SecretVersions can be
+   * of any type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretType;
 
   /**
    * Optional. Input only. Immutable. Mapping of Tag keys/values directly bound to this resource.
@@ -300,6 +317,25 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Defines the policy member for the secret. This will be used to check if the caller
+   * has the permission to perform certain operations on the typed secret.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyMember getPolicyMember() {
+    return policyMember;
+  }
+
+  /**
+   * Output only. Defines the policy member for the secret. This will be used to check if the caller
+   * has the permission to perform certain operations on the typed secret.
+   * @param policyMember policyMember or {@code null} for none
+   */
+  public Secret setPolicyMember(ResourcePolicyMember policyMember) {
+    this.policyMember = policyMember;
+    return this;
+  }
+
+  /**
    * Optional. Immutable. The replication policy of the secret data attached to the Secret. The
    * replication policy cannot be changed after the Secret has been created.
    * @return value or {@code null} for none
@@ -334,6 +370,27 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setRotation(Rotation rotation) {
     this.rotation = rotation;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. This defines the type of the secret. Enforces certain structural
+   * requirements on the SecretVersions. For secret of type UNSPECIFIED, the SecretVersions can be
+   * of any type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretType() {
+    return secretType;
+  }
+
+  /**
+   * Optional. Immutable. This defines the type of the secret. Enforces certain structural
+   * requirements on the SecretVersions. For secret of type UNSPECIFIED, the SecretVersions can be
+   * of any type.
+   * @param secretType secretType or {@code null} for none
+   */
+  public Secret setSecretType(java.lang.String secretType) {
+    this.secretType = secretType;
     return this;
   }
 

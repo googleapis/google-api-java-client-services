@@ -32,23 +32,56 @@ package com.google.api.services.kmsinventory.v1.model;
 public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
-   * Set this field instead of external_key_uri when using an EkmConnection.
+   * Optional. The resource name of the backend environment where the key material of
+   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
+   * `projects/locations/ekmConnections`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ekmConnectionBackendOverride;
+
+  /**
+   * Optional. The path to the external key material on the EKM when using EkmConnection e.g.,
+   * "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ekmConnectionKeyPath;
 
   /**
-   * The URI for an external resource that this CryptoKeyVersion represents.
+   * Optional. The URI for an external resource that this CryptoKeyVersion represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalKeyUri;
 
   /**
-   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
-   * Set this field instead of external_key_uri when using an EkmConnection.
+   * Optional. The resource name of the backend environment where the key material of
+   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
+   * `projects/locations/ekmConnections`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEkmConnectionBackendOverride() {
+    return ekmConnectionBackendOverride;
+  }
+
+  /**
+   * Optional. The resource name of the backend environment where the key material of
+   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
+   * `projects/locations/ekmConnections`.
+   * @param ekmConnectionBackendOverride ekmConnectionBackendOverride or {@code null} for none
+   */
+  public GoogleCloudKmsV1ExternalProtectionLevelOptions setEkmConnectionBackendOverride(java.lang.String ekmConnectionBackendOverride) {
+    this.ekmConnectionBackendOverride = ekmConnectionBackendOverride;
+    return this;
+  }
+
+  /**
+   * Optional. The path to the external key material on the EKM when using EkmConnection e.g.,
+   * "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
    * @return value or {@code null} for none
    */
   public java.lang.String getEkmConnectionKeyPath() {
@@ -56,8 +89,8 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
   }
 
   /**
-   * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key".
-   * Set this field instead of external_key_uri when using an EkmConnection.
+   * Optional. The path to the external key material on the EKM when using EkmConnection e.g.,
+   * "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
    * @param ekmConnectionKeyPath ekmConnectionKeyPath or {@code null} for none
    */
   public GoogleCloudKmsV1ExternalProtectionLevelOptions setEkmConnectionKeyPath(java.lang.String ekmConnectionKeyPath) {
@@ -66,7 +99,7 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
   }
 
   /**
-   * The URI for an external resource that this CryptoKeyVersion represents.
+   * Optional. The URI for an external resource that this CryptoKeyVersion represents.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalKeyUri() {
@@ -74,7 +107,7 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
   }
 
   /**
-   * The URI for an external resource that this CryptoKeyVersion represents.
+   * Optional. The URI for an external resource that this CryptoKeyVersion represents.
    * @param externalKeyUri externalKeyUri or {@code null} for none
    */
   public GoogleCloudKmsV1ExternalProtectionLevelOptions setExternalKeyUri(java.lang.String externalKeyUri) {

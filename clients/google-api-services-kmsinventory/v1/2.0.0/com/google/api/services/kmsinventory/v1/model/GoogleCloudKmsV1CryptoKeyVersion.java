@@ -105,6 +105,14 @@ public final class GoogleCloudKmsV1CryptoKeyVersion extends com.google.api.clien
   private java.lang.String generationFailureReason;
 
   /**
+   * Output only. Field indicating that the key wrapping key is trusted. This field is only valid
+   * for key purpose AES_256_WRAPPING, and protection level HSM_SINGLE_TENANT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hsmTrusted;
+
+  /**
    * Output only. The root cause of the most recent import failure. Only present if state is
    * IMPORT_FAILED.
    * The value may be {@code null}.
@@ -157,6 +165,16 @@ public final class GoogleCloudKmsV1CryptoKeyVersion extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
+   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
+   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean trustedWrappingEnabled;
 
   /**
    * Output only. The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
@@ -328,6 +346,25 @@ public final class GoogleCloudKmsV1CryptoKeyVersion extends com.google.api.clien
   }
 
   /**
+   * Output only. Field indicating that the key wrapping key is trusted. This field is only valid
+   * for key purpose AES_256_WRAPPING, and protection level HSM_SINGLE_TENANT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHsmTrusted() {
+    return hsmTrusted;
+  }
+
+  /**
+   * Output only. Field indicating that the key wrapping key is trusted. This field is only valid
+   * for key purpose AES_256_WRAPPING, and protection level HSM_SINGLE_TENANT.
+   * @param hsmTrusted hsmTrusted or {@code null} for none
+   */
+  public GoogleCloudKmsV1CryptoKeyVersion setHsmTrusted(java.lang.Boolean hsmTrusted) {
+    this.hsmTrusted = hsmTrusted;
+    return this;
+  }
+
+  /**
    * Output only. The root cause of the most recent import failure. Only present if state is
    * IMPORT_FAILED.
    * @return value or {@code null} for none
@@ -453,6 +490,29 @@ public final class GoogleCloudKmsV1CryptoKeyVersion extends com.google.api.clien
    */
   public GoogleCloudKmsV1CryptoKeyVersion setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
+   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
+   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTrustedWrappingEnabled() {
+    return trustedWrappingEnabled;
+  }
+
+  /**
+   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
+   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
+   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
+   * @param trustedWrappingEnabled trustedWrappingEnabled or {@code null} for none
+   */
+  public GoogleCloudKmsV1CryptoKeyVersion setTrustedWrappingEnabled(java.lang.Boolean trustedWrappingEnabled) {
+    this.trustedWrappingEnabled = trustedWrappingEnabled;
     return this;
   }
 

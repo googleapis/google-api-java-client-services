@@ -37,7 +37,7 @@ public final class GeneratedExpressionInfo extends com.google.api.client.json.Ge
   private java.lang.Boolean asynchronous;
 
   /**
-   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generated the field.
+   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generate the field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GeneratedExpressionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generated the field.
+   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generate the field.
    * @return value or {@code null} for none
    */
   public java.lang.String getGenerationExpression() {
@@ -76,7 +76,7 @@ public final class GeneratedExpressionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generated the field.
+   * Optional. The generation expression (e.g. AI.EMBED(...)) used to generate the field.
    * @param generationExpression generationExpression or {@code null} for none
    */
   public GeneratedExpressionInfo setGenerationExpression(java.lang.String generationExpression) {

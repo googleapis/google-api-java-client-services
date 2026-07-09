@@ -30,6 +30,14 @@ package com.google.api.services.chat.v1.model;
 public final class AccessSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Access permission settings for the space. To set the target audience when creating a
+   * space, specify the `accessSettings.audience` field in your request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessPermissionSettings accessPermissionSettings;
+
+  /**
    * Output only. Indicates the access state of the space.
    * The value may be {@code null}.
    */
@@ -55,6 +63,25 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String audience;
+
+  /**
+   * Optional. Access permission settings for the space. To set the target audience when creating a
+   * space, specify the `accessSettings.audience` field in your request.
+   * @return value or {@code null} for none
+   */
+  public AccessPermissionSettings getAccessPermissionSettings() {
+    return accessPermissionSettings;
+  }
+
+  /**
+   * Optional. Access permission settings for the space. To set the target audience when creating a
+   * space, specify the `accessSettings.audience` field in your request.
+   * @param accessPermissionSettings accessPermissionSettings or {@code null} for none
+   */
+  public AccessSettings setAccessPermissionSettings(AccessPermissionSettings accessPermissionSettings) {
+    this.accessPermissionSettings = accessPermissionSettings;
+    return this;
+  }
 
   /**
    * Output only. Indicates the access state of the space.

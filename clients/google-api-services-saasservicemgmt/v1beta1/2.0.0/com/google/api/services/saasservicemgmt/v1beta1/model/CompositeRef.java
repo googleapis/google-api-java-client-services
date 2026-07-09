@@ -17,7 +17,7 @@
 package com.google.api.services.saasservicemgmt.v1beta1.model;
 
 /**
- * CompositeRef represents a reference to a composite resource. Next ID: 4
+ * CompositeRef represents a reference to a composite resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation

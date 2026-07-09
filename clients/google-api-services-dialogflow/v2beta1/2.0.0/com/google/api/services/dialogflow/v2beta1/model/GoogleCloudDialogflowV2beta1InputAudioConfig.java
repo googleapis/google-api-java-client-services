@@ -63,6 +63,12 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean enableVoiceActivityEvents;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean enableWordInfo;
 
   /**
@@ -191,6 +197,21 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
     this.enableAutomaticPunctuation = enableAutomaticPunctuation;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVoiceActivityEvents() {
+    return enableVoiceActivityEvents;
+  }
+
+  /**
+   * @param enableVoiceActivityEvents enableVoiceActivityEvents or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setEnableVoiceActivityEvents(java.lang.Boolean enableVoiceActivityEvents) {
+    this.enableVoiceActivityEvents = enableVoiceActivityEvents;
     return this;
   }
 

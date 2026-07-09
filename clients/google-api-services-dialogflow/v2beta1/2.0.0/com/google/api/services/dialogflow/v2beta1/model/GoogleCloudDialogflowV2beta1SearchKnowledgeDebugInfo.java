@@ -33,6 +33,12 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeDebugInfo extends 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> cesDebugInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String datastoreResponseReason;
 
   /**
@@ -52,6 +58,21 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeDebugInfo extends 
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ServiceLatency serviceLatency;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCesDebugInfo() {
+    return cesDebugInfo;
+  }
+
+  /**
+   * @param cesDebugInfo cesDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeDebugInfo setCesDebugInfo(java.util.Map<String, java.lang.Object> cesDebugInfo) {
+    this.cesDebugInfo = cesDebugInfo;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

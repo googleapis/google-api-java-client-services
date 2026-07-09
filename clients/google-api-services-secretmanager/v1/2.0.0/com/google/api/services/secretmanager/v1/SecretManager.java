@@ -1035,6 +1035,151 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Enables the managed rotation feature for a Secret. This method can only be triggered once for a
+         * secret. In order to do further rotations, RotateSecret should be used. This method will add a
+         * secret version and update the password in Cloud SQL.
+         *
+         * Create a request for the method "secrets.enableManagedRotation".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link EnableManagedRotation#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest}
+         * @return the request
+         */
+        public EnableManagedRotation enableManagedRotation(java.lang.String parent, com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest content) throws java.io.IOException {
+          EnableManagedRotation result = new EnableManagedRotation(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableManagedRotation extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+          private static final String REST_PATH = "v1/{+parent}:enableManagedRotation";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Enables the managed rotation feature for a Secret. This method can only be triggered once for a
+           * secret. In order to do further rotations, RotateSecret should be used. This method will add a
+           * secret version and update the password in Cloud SQL.
+           *
+           * Create a request for the method "secrets.enableManagedRotation".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link EnableManagedRotation#execute()} method to invoke the
+           * remote operation. <p> {@link EnableManagedRotation#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest}
+           * @since 1.13
+           */
+          protected EnableManagedRotation(java.lang.String parent, com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableManagedRotation set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableManagedRotation) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableManagedRotation setAccessToken(java.lang.String accessToken) {
+            return (EnableManagedRotation) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableManagedRotation setAlt(java.lang.String alt) {
+            return (EnableManagedRotation) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableManagedRotation setCallback(java.lang.String callback) {
+            return (EnableManagedRotation) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableManagedRotation setFields(java.lang.String fields) {
+            return (EnableManagedRotation) super.setFields(fields);
+          }
+
+          @Override
+          public EnableManagedRotation setKey(java.lang.String key) {
+            return (EnableManagedRotation) super.setKey(key);
+          }
+
+          @Override
+          public EnableManagedRotation setOauthToken(java.lang.String oauthToken) {
+            return (EnableManagedRotation) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableManagedRotation setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableManagedRotation) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableManagedRotation setQuotaUser(java.lang.String quotaUser) {
+            return (EnableManagedRotation) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableManagedRotation setUploadType(java.lang.String uploadType) {
+            return (EnableManagedRotation) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableManagedRotation setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableManagedRotation) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Secret to associate with the SecretVersion in the format
+         `projects/secrets` or `projects/locations/secrets`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          public EnableManagedRotation setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public EnableManagedRotation set(String parameterName, Object value) {
+            return (EnableManagedRotation) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets metadata for a given Secret.
          *
          * Create a request for the method "secrets.get".
@@ -1743,6 +1888,148 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Do a managed rotation for a Secret. This can only be triggered after Managed rotation has been
+         * enabled. This method will add a secret version and update the password in Cloud SQL.
+         *
+         * Create a request for the method "secrets.rotateSecret".
+         *
+         * This request holds the parameters needed by the secretmanager server.  After setting any optional
+         * parameters, call the {@link RotateSecret#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.RotateSecretRequest}
+         * @return the request
+         */
+        public RotateSecret rotateSecret(java.lang.String parent, com.google.api.services.secretmanager.v1.model.RotateSecretRequest content) throws java.io.IOException {
+          RotateSecret result = new RotateSecret(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RotateSecret extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+          private static final String REST_PATH = "v1/{+parent}:rotateSecret";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+
+          /**
+           * Do a managed rotation for a Secret. This can only be triggered after Managed rotation has been
+           * enabled. This method will add a secret version and update the password in Cloud SQL.
+           *
+           * Create a request for the method "secrets.rotateSecret".
+           *
+           * This request holds the parameters needed by the the secretmanager server.  After setting any
+           * optional parameters, call the {@link RotateSecret#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * RotateSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+         *        `projects/secrets` or `projects/locations/secrets`.
+           * @param content the {@link com.google.api.services.secretmanager.v1.model.RotateSecretRequest}
+           * @since 1.13
+           */
+          protected RotateSecret(java.lang.String parent, com.google.api.services.secretmanager.v1.model.RotateSecretRequest content) {
+            super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+          }
+
+          @Override
+          public RotateSecret set$Xgafv(java.lang.String $Xgafv) {
+            return (RotateSecret) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RotateSecret setAccessToken(java.lang.String accessToken) {
+            return (RotateSecret) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RotateSecret setAlt(java.lang.String alt) {
+            return (RotateSecret) super.setAlt(alt);
+          }
+
+          @Override
+          public RotateSecret setCallback(java.lang.String callback) {
+            return (RotateSecret) super.setCallback(callback);
+          }
+
+          @Override
+          public RotateSecret setFields(java.lang.String fields) {
+            return (RotateSecret) super.setFields(fields);
+          }
+
+          @Override
+          public RotateSecret setKey(java.lang.String key) {
+            return (RotateSecret) super.setKey(key);
+          }
+
+          @Override
+          public RotateSecret setOauthToken(java.lang.String oauthToken) {
+            return (RotateSecret) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RotateSecret setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RotateSecret) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RotateSecret setQuotaUser(java.lang.String quotaUser) {
+            return (RotateSecret) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RotateSecret setUploadType(java.lang.String uploadType) {
+            return (RotateSecret) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RotateSecret setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RotateSecret) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Secret to associate with the SecretVersion in the format
+         `projects/secrets` or `projects/locations/secrets`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Secret to associate with the SecretVersion in the
+           * format `projects/secrets` or `projects/locations/secrets`.
+           */
+          public RotateSecret setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/secrets/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public RotateSecret set(String parameterName, Object value) {
+            return (RotateSecret) super.set(parameterName, value);
           }
         }
         /**
@@ -3514,6 +3801,151 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
+       * Enables the managed rotation feature for a Secret. This method can only be triggered once for a
+       * secret. In order to do further rotations, RotateSecret should be used. This method will add a
+       * secret version and update the password in Cloud SQL.
+       *
+       * Create a request for the method "secrets.enableManagedRotation".
+       *
+       * This request holds the parameters needed by the secretmanager server.  After setting any optional
+       * parameters, call the {@link EnableManagedRotation#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+       *        `projects/secrets` or `projects/locations/secrets`.
+       * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest}
+       * @return the request
+       */
+      public EnableManagedRotation enableManagedRotation(java.lang.String parent, com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest content) throws java.io.IOException {
+        EnableManagedRotation result = new EnableManagedRotation(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class EnableManagedRotation extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+        private static final String REST_PATH = "v1/{+parent}:enableManagedRotation";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+$");
+
+        /**
+         * Enables the managed rotation feature for a Secret. This method can only be triggered once for a
+         * secret. In order to do further rotations, RotateSecret should be used. This method will add a
+         * secret version and update the password in Cloud SQL.
+         *
+         * Create a request for the method "secrets.enableManagedRotation".
+         *
+         * This request holds the parameters needed by the the secretmanager server.  After setting any
+         * optional parameters, call the {@link EnableManagedRotation#execute()} method to invoke the
+         * remote operation. <p> {@link EnableManagedRotation#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+       *        `projects/secrets` or `projects/locations/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest}
+         * @since 1.13
+         */
+        protected EnableManagedRotation(java.lang.String parent, com.google.api.services.secretmanager.v1.model.EnableManagedRotationRequest content) {
+          super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/secrets/[^/]+$");
+          }
+        }
+
+        @Override
+        public EnableManagedRotation set$Xgafv(java.lang.String $Xgafv) {
+          return (EnableManagedRotation) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public EnableManagedRotation setAccessToken(java.lang.String accessToken) {
+          return (EnableManagedRotation) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public EnableManagedRotation setAlt(java.lang.String alt) {
+          return (EnableManagedRotation) super.setAlt(alt);
+        }
+
+        @Override
+        public EnableManagedRotation setCallback(java.lang.String callback) {
+          return (EnableManagedRotation) super.setCallback(callback);
+        }
+
+        @Override
+        public EnableManagedRotation setFields(java.lang.String fields) {
+          return (EnableManagedRotation) super.setFields(fields);
+        }
+
+        @Override
+        public EnableManagedRotation setKey(java.lang.String key) {
+          return (EnableManagedRotation) super.setKey(key);
+        }
+
+        @Override
+        public EnableManagedRotation setOauthToken(java.lang.String oauthToken) {
+          return (EnableManagedRotation) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public EnableManagedRotation setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (EnableManagedRotation) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public EnableManagedRotation setQuotaUser(java.lang.String quotaUser) {
+          return (EnableManagedRotation) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public EnableManagedRotation setUploadType(java.lang.String uploadType) {
+          return (EnableManagedRotation) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public EnableManagedRotation setUploadProtocol(java.lang.String uploadProtocol) {
+          return (EnableManagedRotation) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Secret to associate with the SecretVersion in the
+         * format `projects/secrets` or `projects/locations/secrets`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the Secret to associate with the SecretVersion in the format
+       `projects/secrets` or `projects/locations/secrets`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the Secret to associate with the SecretVersion in the
+         * format `projects/secrets` or `projects/locations/secrets`.
+         */
+        public EnableManagedRotation setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/secrets/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public EnableManagedRotation set(String parameterName, Object value) {
+          return (EnableManagedRotation) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets metadata for a given Secret.
        *
        * Create a request for the method "secrets.get".
@@ -4222,6 +4654,148 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Do a managed rotation for a Secret. This can only be triggered after Managed rotation has been
+       * enabled. This method will add a secret version and update the password in Cloud SQL.
+       *
+       * Create a request for the method "secrets.rotateSecret".
+       *
+       * This request holds the parameters needed by the secretmanager server.  After setting any optional
+       * parameters, call the {@link RotateSecret#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+       *        `projects/secrets` or `projects/locations/secrets`.
+       * @param content the {@link com.google.api.services.secretmanager.v1.model.RotateSecretRequest}
+       * @return the request
+       */
+      public RotateSecret rotateSecret(java.lang.String parent, com.google.api.services.secretmanager.v1.model.RotateSecretRequest content) throws java.io.IOException {
+        RotateSecret result = new RotateSecret(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RotateSecret extends SecretManagerRequest<com.google.api.services.secretmanager.v1.model.SecretVersion> {
+
+        private static final String REST_PATH = "v1/{+parent}:rotateSecret";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+$");
+
+        /**
+         * Do a managed rotation for a Secret. This can only be triggered after Managed rotation has been
+         * enabled. This method will add a secret version and update the password in Cloud SQL.
+         *
+         * Create a request for the method "secrets.rotateSecret".
+         *
+         * This request holds the parameters needed by the the secretmanager server.  After setting any
+         * optional parameters, call the {@link RotateSecret#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * RotateSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
+       *        `projects/secrets` or `projects/locations/secrets`.
+         * @param content the {@link com.google.api.services.secretmanager.v1.model.RotateSecretRequest}
+         * @since 1.13
+         */
+        protected RotateSecret(java.lang.String parent, com.google.api.services.secretmanager.v1.model.RotateSecretRequest content) {
+          super(SecretManager.this, "POST", REST_PATH, content, com.google.api.services.secretmanager.v1.model.SecretVersion.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/secrets/[^/]+$");
+          }
+        }
+
+        @Override
+        public RotateSecret set$Xgafv(java.lang.String $Xgafv) {
+          return (RotateSecret) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RotateSecret setAccessToken(java.lang.String accessToken) {
+          return (RotateSecret) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RotateSecret setAlt(java.lang.String alt) {
+          return (RotateSecret) super.setAlt(alt);
+        }
+
+        @Override
+        public RotateSecret setCallback(java.lang.String callback) {
+          return (RotateSecret) super.setCallback(callback);
+        }
+
+        @Override
+        public RotateSecret setFields(java.lang.String fields) {
+          return (RotateSecret) super.setFields(fields);
+        }
+
+        @Override
+        public RotateSecret setKey(java.lang.String key) {
+          return (RotateSecret) super.setKey(key);
+        }
+
+        @Override
+        public RotateSecret setOauthToken(java.lang.String oauthToken) {
+          return (RotateSecret) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RotateSecret setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RotateSecret) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RotateSecret setQuotaUser(java.lang.String quotaUser) {
+          return (RotateSecret) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RotateSecret setUploadType(java.lang.String uploadType) {
+          return (RotateSecret) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RotateSecret setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RotateSecret) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Secret to associate with the SecretVersion in the
+         * format `projects/secrets` or `projects/locations/secrets`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the Secret to associate with the SecretVersion in the format
+       `projects/secrets` or `projects/locations/secrets`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the Secret to associate with the SecretVersion in the
+         * format `projects/secrets` or `projects/locations/secrets`.
+         */
+        public RotateSecret setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/secrets/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public RotateSecret set(String parameterName, Object value) {
+          return (RotateSecret) super.set(parameterName, value);
         }
       }
       /**

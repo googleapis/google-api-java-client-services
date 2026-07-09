@@ -32,6 +32,14 @@ package com.google.api.services.secretmanager.v1.model;
 public final class Rotation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The current status of the managed rotation. This field is only applicable to Typed
+   * Secrets. This field is set by the service and cannot be set by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedRotationStatus managedRotationStatus;
+
+  /**
    * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less
    * than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be
    * set if rotation_period is set.
@@ -49,6 +57,25 @@ public final class Rotation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String rotationPeriod;
+
+  /**
+   * Output only. The current status of the managed rotation. This field is only applicable to Typed
+   * Secrets. This field is set by the service and cannot be set by the user.
+   * @return value or {@code null} for none
+   */
+  public ManagedRotationStatus getManagedRotationStatus() {
+    return managedRotationStatus;
+  }
+
+  /**
+   * Output only. The current status of the managed rotation. This field is only applicable to Typed
+   * Secrets. This field is set by the service and cannot be set by the user.
+   * @param managedRotationStatus managedRotationStatus or {@code null} for none
+   */
+  public Rotation setManagedRotationStatus(ManagedRotationStatus managedRotationStatus) {
+    this.managedRotationStatus = managedRotationStatus;
+    return this;
+  }
 
   /**
    * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less

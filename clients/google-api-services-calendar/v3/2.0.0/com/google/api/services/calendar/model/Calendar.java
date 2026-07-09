@@ -79,6 +79,14 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Label properties defined on this calendar. If specified, overwrites the existing label
+   * properties. If not specified, the label properties remain unchanged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LabelProperties labelProperties;
+
+  /**
    * Geographic location of the calendar as free-form text. Optional.
    * The value may be {@code null}.
    */
@@ -216,6 +224,25 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
    */
   public Calendar setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Label properties defined on this calendar. If specified, overwrites the existing label
+   * properties. If not specified, the label properties remain unchanged.
+   * @return value or {@code null} for none
+   */
+  public LabelProperties getLabelProperties() {
+    return labelProperties;
+  }
+
+  /**
+   * Label properties defined on this calendar. If specified, overwrites the existing label
+   * properties. If not specified, the label properties remain unchanged.
+   * @param labelProperties labelProperties or {@code null} for none
+   */
+  public Calendar setLabelProperties(LabelProperties labelProperties) {
+    this.labelProperties = labelProperties;
     return this;
   }
 

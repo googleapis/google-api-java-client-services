@@ -135,6 +135,18 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * The ID of the event label assigned to the event. Optional. This refers to the ID of an entry in
+   * the labelProperties.eventLabels property of the calendar (see the Calendars.get endpoint.) This
+   * property supersedes the index-based colorId property. To set or change this property, you need
+   * to specify eventLabelVersion=1 in the parameters of the insert, import, update, and patch
+   * methods. Setting an empty string, or not setting this field at all, will remove the existing
+   * label from the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventLabelId;
+
+  /**
    * Specific type of the event. This cannot be modified after the event is created. Possible values
    * are: - "birthday" - A special all-day event with an annual recurrence.  - "default" - A regular
    * event or not further specified.  - "focusTime" - A focus-time event.  - "fromGmail" - An event
@@ -740,6 +752,33 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * The ID of the event label assigned to the event. Optional. This refers to the ID of an entry in
+   * the labelProperties.eventLabels property of the calendar (see the Calendars.get endpoint.) This
+   * property supersedes the index-based colorId property. To set or change this property, you need
+   * to specify eventLabelVersion=1 in the parameters of the insert, import, update, and patch
+   * methods. Setting an empty string, or not setting this field at all, will remove the existing
+   * label from the event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventLabelId() {
+    return eventLabelId;
+  }
+
+  /**
+   * The ID of the event label assigned to the event. Optional. This refers to the ID of an entry in
+   * the labelProperties.eventLabels property of the calendar (see the Calendars.get endpoint.) This
+   * property supersedes the index-based colorId property. To set or change this property, you need
+   * to specify eventLabelVersion=1 in the parameters of the insert, import, update, and patch
+   * methods. Setting an empty string, or not setting this field at all, will remove the existing
+   * label from the event.
+   * @param eventLabelId eventLabelId or {@code null} for none
+   */
+  public Event setEventLabelId(java.lang.String eventLabelId) {
+    this.eventLabelId = eventLabelId;
     return this;
   }
 

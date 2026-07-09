@@ -29,6 +29,87 @@ package com.google.api.services.calendar.model;
 @SuppressWarnings("javadoc")
 public final class EventLabel extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Background color of the label in hexadecimal format, such as "#039be5". Events with this label
+   * are displayed in this color. Required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backgroundColor;
+
+  /**
+   * The ID of the label. Optional when inserting a new label. If not provided, a unique ID will be
+   * generated. Required when updating a label. If provided, the ID must be unique within the
+   * calendar and follow UUID format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
+   * Name of the label. Optional. If provided this must have at most 50 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Background color of the label in hexadecimal format, such as "#039be5". Events with this label
+   * are displayed in this color. Required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackgroundColor() {
+    return backgroundColor;
+  }
+
+  /**
+   * Background color of the label in hexadecimal format, such as "#039be5". Events with this label
+   * are displayed in this color. Required.
+   * @param backgroundColor backgroundColor or {@code null} for none
+   */
+  public EventLabel setBackgroundColor(java.lang.String backgroundColor) {
+    this.backgroundColor = backgroundColor;
+    return this;
+  }
+
+  /**
+   * The ID of the label. Optional when inserting a new label. If not provided, a unique ID will be
+   * generated. Required when updating a label. If provided, the ID must be unique within the
+   * calendar and follow UUID format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * The ID of the label. Optional when inserting a new label. If not provided, a unique ID will be
+   * generated. Required when updating a label. If provided, the ID must be unique within the
+   * calendar and follow UUID format.
+   * @param id id or {@code null} for none
+   */
+  public EventLabel setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Name of the label. Optional. If provided this must have at most 50 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Name of the label. Optional. If provided this must have at most 50 characters.
+   * @param name name or {@code null} for none
+   */
+  public EventLabel setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
   @Override
   public EventLabel set(String fieldName, Object value) {
     return (EventLabel) super.set(fieldName, value);

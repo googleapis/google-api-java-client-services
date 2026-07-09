@@ -33,7 +33,8 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
    * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
    * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
    * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
-   * 10,000 years. If not specified, the default duration is 1 hour.
+   * 10,000 years. If not specified, the default duration is 1 hour. In the JSON REST API, this is
+   * represented as a string (e.g., `3600s`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
    * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
    * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
    * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
-   * 10,000 years. If not specified, the default duration is 1 hour.
+   * 10,000 years. If not specified, the default duration is 1 hour. In the JSON REST API, this is
+   * represented as a string (e.g., `3600s`).
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -76,7 +78,8 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
    * [Optional] The length of time the enrollment token is valid, ranging from 1 minute to
    * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-
    * buffers/docs/reference/java/com/google/protobuf/util/Durations.html#MAX_VALUE), approximately
-   * 10,000 years. If not specified, the default duration is 1 hour.
+   * 10,000 years. If not specified, the default duration is 1 hour. In the JSON REST API, this is
+   * represented as a string (e.g., `3600s`).
    * @param duration duration or {@code null} for none
    */
   public EnrollmentToken setDuration(String duration) {

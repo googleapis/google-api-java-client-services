@@ -17,7 +17,7 @@
 package com.google.api.services.workstations.v1beta.model;
 
 /**
- * OAuth token.
+ * Represents an OAuth 2.0 access token and its associated metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Workstations API. For a detailed explanation
@@ -31,14 +31,14 @@ package com.google.api.services.workstations.v1beta.model;
 public final class OAuthToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The OAuth token.
+   * Required. The OAuth 2.0 access token value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessToken;
 
   /**
-   * Optional. The email address encapsulated in the OAuth token.
+   * Optional. The email address associated with the OAuth 2.0 access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,14 +46,23 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the OAuth access token will expire. This should be the time the access token
-   * was generated plus the expires_in offset returned from the Access Token Response.
+   * was generated plus the expires_in offset returned from the Access Token Response. Only one of
+   * `expire_time` or `expires_in` should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * Optional. The scopes encapsulated in the OAuth token. See
+   * Optional. The lifetime duration of the access token. Only one of `expire_time` or `expires_in`
+   * should be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expiresIn;
+
+  /**
+   * Optional. The scopes associated with the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/oauth2/scopes for more information.
    * The value may be {@code null}.
    */
@@ -61,7 +70,7 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   private java.lang.String scopes;
 
   /**
-   * Required. The OAuth token.
+   * Required. The OAuth 2.0 access token value.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessToken() {
@@ -69,7 +78,7 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OAuth token.
+   * Required. The OAuth 2.0 access token value.
    * @param accessToken accessToken or {@code null} for none
    */
   public OAuthToken setAccessToken(java.lang.String accessToken) {
@@ -78,7 +87,7 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The email address encapsulated in the OAuth token.
+   * Optional. The email address associated with the OAuth 2.0 access token.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -86,7 +95,7 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The email address encapsulated in the OAuth token.
+   * Optional. The email address associated with the OAuth 2.0 access token.
    * @param email email or {@code null} for none
    */
   public OAuthToken setEmail(java.lang.String email) {
@@ -96,7 +105,8 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the OAuth access token will expire. This should be the time the access token
-   * was generated plus the expires_in offset returned from the Access Token Response.
+   * was generated plus the expires_in offset returned from the Access Token Response. Only one of
+   * `expire_time` or `expires_in` should be specified.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -105,7 +115,8 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The time the OAuth access token will expire. This should be the time the access token
-   * was generated plus the expires_in offset returned from the Access Token Response.
+   * was generated plus the expires_in offset returned from the Access Token Response. Only one of
+   * `expire_time` or `expires_in` should be specified.
    * @param expireTime expireTime or {@code null} for none
    */
   public OAuthToken setExpireTime(String expireTime) {
@@ -114,7 +125,26 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The scopes encapsulated in the OAuth token. See
+   * Optional. The lifetime duration of the access token. Only one of `expire_time` or `expires_in`
+   * should be specified.
+   * @return value or {@code null} for none
+   */
+  public String getExpiresIn() {
+    return expiresIn;
+  }
+
+  /**
+   * Optional. The lifetime duration of the access token. Only one of `expire_time` or `expires_in`
+   * should be specified.
+   * @param expiresIn expiresIn or {@code null} for none
+   */
+  public OAuthToken setExpiresIn(String expiresIn) {
+    this.expiresIn = expiresIn;
+    return this;
+  }
+
+  /**
+   * Optional. The scopes associated with the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/oauth2/scopes for more information.
    * @return value or {@code null} for none
    */
@@ -123,7 +153,7 @@ public final class OAuthToken extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The scopes encapsulated in the OAuth token. See
+   * Optional. The scopes associated with the OAuth 2.0 access token. See
    * https://developers.google.com/identity/protocols/oauth2/scopes for more information.
    * @param scopes scopes or {@code null} for none
    */

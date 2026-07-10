@@ -52,6 +52,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private CustomNodeInit customNodeInit;
 
   /**
+   * Optional. Controls the configuration for the disk IO scheduler.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskIoScheduler diskIoScheduler;
+
+  /**
    * Optional. Amounts for 2M and 1G hugepages
    * The value may be {@code null}.
    */
@@ -66,6 +73,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private NodeKernelModuleLoading nodeKernelModuleLoading;
+
+  /**
+   * Optional. Contains VFIO-related configurations for this node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeVfioConfig nodeVfioConfig;
 
   /**
    * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
@@ -87,13 +101,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
    * kernel.keys.maxkeys kernel.keys.maxbytes kernel.shmmni kernel.shmmax kernel.shmall
-   * kernel.perf_event_paranoid kernel.sched_rt_runtime_us kernel.softlockup_panic
-   * kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr
-   * fs.file-max fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open
-   * vm.dirty_background_ratio vm.dirty_background_bytes vm.dirty_expire_centisecs vm.dirty_ratio
-   * vm.dirty_bytes vm.dirty_writeback_centisecs vm.max_map_count vm.overcommit_memory
-   * vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness vm.watermark_scale_factor
-   * vm.min_free_kbytes
+   * kernel.core_pattern kernel.perf_event_paranoid kernel.sched_rt_runtime_us
+   * kernel.softlockup_panic kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict
+   * kernel.sysrq fs.aio-max-nr fs.file-max fs.inotify.max_user_instances
+   * fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio vm.dirty_background_bytes
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_bytes vm.dirty_writeback_centisecs
+   * vm.max_map_count vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,6 +185,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Controls the configuration for the disk IO scheduler.
+   * @return value or {@code null} for none
+   */
+  public DiskIoScheduler getDiskIoScheduler() {
+    return diskIoScheduler;
+  }
+
+  /**
+   * Optional. Controls the configuration for the disk IO scheduler.
+   * @param diskIoScheduler diskIoScheduler or {@code null} for none
+   */
+  public LinuxNodeConfig setDiskIoScheduler(DiskIoScheduler diskIoScheduler) {
+    this.diskIoScheduler = diskIoScheduler;
+    return this;
+  }
+
+  /**
    * Optional. Amounts for 2M and 1G hugepages
    * @return value or {@code null} for none
    */
@@ -209,6 +240,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Contains VFIO-related configurations for this node.
+   * @return value or {@code null} for none
+   */
+  public NodeVfioConfig getNodeVfioConfig() {
+    return nodeVfioConfig;
+  }
+
+  /**
+   * Optional. Contains VFIO-related configurations for this node.
+   * @param nodeVfioConfig nodeVfioConfig or {@code null} for none
+   */
+  public LinuxNodeConfig setNodeVfioConfig(NodeVfioConfig nodeVfioConfig) {
+    this.nodeVfioConfig = nodeVfioConfig;
+    return this;
+  }
+
+  /**
    * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
    * @return value or {@code null} for none
    */
@@ -238,13 +286,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
    * kernel.keys.maxkeys kernel.keys.maxbytes kernel.shmmni kernel.shmmax kernel.shmall
-   * kernel.perf_event_paranoid kernel.sched_rt_runtime_us kernel.softlockup_panic
-   * kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr
-   * fs.file-max fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open
-   * vm.dirty_background_ratio vm.dirty_background_bytes vm.dirty_expire_centisecs vm.dirty_ratio
-   * vm.dirty_bytes vm.dirty_writeback_centisecs vm.max_map_count vm.overcommit_memory
-   * vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness vm.watermark_scale_factor
-   * vm.min_free_kbytes
+   * kernel.core_pattern kernel.perf_event_paranoid kernel.sched_rt_runtime_us
+   * kernel.softlockup_panic kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict
+   * kernel.sysrq fs.aio-max-nr fs.file-max fs.inotify.max_user_instances
+   * fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio vm.dirty_background_bytes
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_bytes vm.dirty_writeback_centisecs
+   * vm.max_map_count vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSysctls() {
@@ -264,13 +312,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
    * kernel.keys.maxkeys kernel.keys.maxbytes kernel.shmmni kernel.shmmax kernel.shmall
-   * kernel.perf_event_paranoid kernel.sched_rt_runtime_us kernel.softlockup_panic
-   * kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict kernel.sysrq fs.aio-max-nr
-   * fs.file-max fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open
-   * vm.dirty_background_ratio vm.dirty_background_bytes vm.dirty_expire_centisecs vm.dirty_ratio
-   * vm.dirty_bytes vm.dirty_writeback_centisecs vm.max_map_count vm.overcommit_memory
-   * vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness vm.watermark_scale_factor
-   * vm.min_free_kbytes
+   * kernel.core_pattern kernel.perf_event_paranoid kernel.sched_rt_runtime_us
+   * kernel.softlockup_panic kernel.yama.ptrace_scope kernel.kptr_restrict kernel.dmesg_restrict
+   * kernel.sysrq fs.aio-max-nr fs.file-max fs.inotify.max_user_instances
+   * fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio vm.dirty_background_bytes
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_bytes vm.dirty_writeback_centisecs
+   * vm.max_map_count vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * @param sysctls sysctls or {@code null} for none
    */
   public LinuxNodeConfig setSysctls(java.util.Map<String, java.lang.String> sysctls) {

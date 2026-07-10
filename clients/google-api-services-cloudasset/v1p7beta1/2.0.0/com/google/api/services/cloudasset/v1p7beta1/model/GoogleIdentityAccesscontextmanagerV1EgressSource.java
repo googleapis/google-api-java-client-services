@@ -44,7 +44,9 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   private java.lang.String accessLevel;
 
   /**
-   * Requests from this PSC will be allowed from access perimeter data.
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +92,9 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   }
 
   /**
-   * Requests from this PSC will be allowed from access perimeter data.
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint getPscEndpoint() {
@@ -98,7 +102,9 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   }
 
   /**
-   * Requests from this PSC will be allowed from access perimeter data.
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
    * @param pscEndpoint pscEndpoint or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressSource setPscEndpoint(GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint pscEndpoint) {

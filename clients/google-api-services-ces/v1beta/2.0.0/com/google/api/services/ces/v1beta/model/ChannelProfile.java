@@ -55,6 +55,13 @@ public final class ChannelProfile extends com.google.api.client.json.GenericJson
   private java.lang.Boolean disableDtmf;
 
   /**
+   * Optional. Configuration specific to Instagram deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChannelProfileInstagramConfig instagramConfig;
+
+  /**
    * Optional. The noise suppression level of the channel profile. Available values are "low",
    * "moderate", "high", "very_high".
    * The value may be {@code null}.
@@ -82,6 +89,13 @@ public final class ChannelProfile extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private ChannelProfileWebWidgetConfig webWidgetConfig;
+
+  /**
+   * Optional. Configuration specific to WhatsApp deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChannelProfileWhatsAppConfig whatsappConfig;
 
   /**
    * Optional. The type of the channel profile.
@@ -135,6 +149,23 @@ public final class ChannelProfile extends com.google.api.client.json.GenericJson
    */
   public ChannelProfile setDisableDtmf(java.lang.Boolean disableDtmf) {
     this.disableDtmf = disableDtmf;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration specific to Instagram deployments.
+   * @return value or {@code null} for none
+   */
+  public ChannelProfileInstagramConfig getInstagramConfig() {
+    return instagramConfig;
+  }
+
+  /**
+   * Optional. Configuration specific to Instagram deployments.
+   * @param instagramConfig instagramConfig or {@code null} for none
+   */
+  public ChannelProfile setInstagramConfig(ChannelProfileInstagramConfig instagramConfig) {
+    this.instagramConfig = instagramConfig;
     return this;
   }
 
@@ -205,6 +236,23 @@ public final class ChannelProfile extends com.google.api.client.json.GenericJson
    */
   public ChannelProfile setWebWidgetConfig(ChannelProfileWebWidgetConfig webWidgetConfig) {
     this.webWidgetConfig = webWidgetConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration specific to WhatsApp deployments.
+   * @return value or {@code null} for none
+   */
+  public ChannelProfileWhatsAppConfig getWhatsappConfig() {
+    return whatsappConfig;
+  }
+
+  /**
+   * Optional. Configuration specific to WhatsApp deployments.
+   * @param whatsappConfig whatsappConfig or {@code null} for none
+   */
+  public ChannelProfile setWhatsappConfig(ChannelProfileWhatsAppConfig whatsappConfig) {
+    this.whatsappConfig = whatsappConfig;
     return this;
   }
 

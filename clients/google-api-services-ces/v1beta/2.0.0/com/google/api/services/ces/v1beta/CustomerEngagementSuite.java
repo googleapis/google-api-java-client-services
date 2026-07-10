@@ -1732,6 +1732,146 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
           }
         }
         /**
+         * Gets the extended agent card for the authenticated agent.
+         *
+         * Create a request for the method "apps.getExtendedAgentCard".
+         *
+         * This request holds the parameters needed by the ces server.  After setting any optional
+         * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param tenant Optional. Tenant ID, provided as a path parameter.
+         * @return the request
+         */
+        public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
+          GetExtendedAgentCard result = new GetExtendedAgentCard(tenant);
+          initialize(result);
+          return result;
+        }
+
+        public class GetExtendedAgentCard extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard> {
+
+          private static final String REST_PATH = "v1beta/{+tenant}/extendedAgentCard";
+
+          private final java.util.regex.Pattern TENANT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+          /**
+           * Gets the extended agent card for the authenticated agent.
+           *
+           * Create a request for the method "apps.getExtendedAgentCard".
+           *
+           * This request holds the parameters needed by the the ces server.  After setting any optional
+           * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+           * operation. <p> {@link GetExtendedAgentCard#initialize(com.google.api.client.googleapis.services
+           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @since 1.13
+           */
+          protected GetExtendedAgentCard(java.lang.String tenant) {
+            super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard.class);
+            this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                  "Parameter tenant must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetExtendedAgentCard set$Xgafv(java.lang.String $Xgafv) {
+            return (GetExtendedAgentCard) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetExtendedAgentCard setAccessToken(java.lang.String accessToken) {
+            return (GetExtendedAgentCard) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetExtendedAgentCard setAlt(java.lang.String alt) {
+            return (GetExtendedAgentCard) super.setAlt(alt);
+          }
+
+          @Override
+          public GetExtendedAgentCard setCallback(java.lang.String callback) {
+            return (GetExtendedAgentCard) super.setCallback(callback);
+          }
+
+          @Override
+          public GetExtendedAgentCard setFields(java.lang.String fields) {
+            return (GetExtendedAgentCard) super.setFields(fields);
+          }
+
+          @Override
+          public GetExtendedAgentCard setKey(java.lang.String key) {
+            return (GetExtendedAgentCard) super.setKey(key);
+          }
+
+          @Override
+          public GetExtendedAgentCard setOauthToken(java.lang.String oauthToken) {
+            return (GetExtendedAgentCard) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetExtendedAgentCard setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetExtendedAgentCard) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetExtendedAgentCard setQuotaUser(java.lang.String quotaUser) {
+            return (GetExtendedAgentCard) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetExtendedAgentCard setUploadType(java.lang.String uploadType) {
+            return (GetExtendedAgentCard) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetExtendedAgentCard setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Optional. Tenant ID, provided as a path parameter. */
+          @com.google.api.client.util.Key
+          private java.lang.String tenant;
+
+          /** Optional. Tenant ID, provided as a path parameter.
+           */
+          public java.lang.String getTenant() {
+            return tenant;
+          }
+
+          /** Optional. Tenant ID, provided as a path parameter. */
+          public GetExtendedAgentCard setTenant(java.lang.String tenant) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                  "Parameter tenant must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+            this.tenant = tenant;
+            return this;
+          }
+
+          @Override
+          public GetExtendedAgentCard set(String parameterName, Object value) {
+            return (GetExtendedAgentCard) super.set(parameterName, value);
+          }
+        }
+        /**
          * Imports the specified app.
          *
          * Create a request for the method "apps.importApp".
@@ -10204,6 +10344,149 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               @Override
               public List set(String parameterName, Object value) {
                 return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Runs metrics on an existing evaluation result.
+             *
+             * Create a request for the method "results.runEvaluationResultMetrics".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link RunEvaluationResultMetrics#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param evaluationResultId Required. The evaluation result to run metrics for. Format: `projects/{project}/locations/{location}
+             *        /apps/{app}/evaluations/{evaluation}/results/{evaluation_result_id}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.RunEvaluationResultMetricsRequest}
+             * @return the request
+             */
+            public RunEvaluationResultMetrics runEvaluationResultMetrics(java.lang.String evaluationResultId, com.google.api.services.ces.v1beta.model.RunEvaluationResultMetricsRequest content) throws java.io.IOException {
+              RunEvaluationResultMetrics result = new RunEvaluationResultMetrics(evaluationResultId, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RunEvaluationResultMetrics extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.Operation> {
+
+              private static final String REST_PATH = "v1beta/{+evaluationResultId}:runEvaluationResultMetrics";
+
+              private final java.util.regex.Pattern EVALUATION_RESULT_ID_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+/results/[^/]+$");
+
+              /**
+               * Runs metrics on an existing evaluation result.
+               *
+               * Create a request for the method "results.runEvaluationResultMetrics".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link RunEvaluationResultMetrics#execute()} method to invoke the remote
+               * operation. <p> {@link RunEvaluationResultMetrics#initialize(com.google.api.client.googleapis.se
+               * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param evaluationResultId Required. The evaluation result to run metrics for. Format: `projects/{project}/locations/{location}
+             *        /apps/{app}/evaluations/{evaluation}/results/{evaluation_result_id}`
+               * @param content the {@link com.google.api.services.ces.v1beta.model.RunEvaluationResultMetricsRequest}
+               * @since 1.13
+               */
+              protected RunEvaluationResultMetrics(java.lang.String evaluationResultId, com.google.api.services.ces.v1beta.model.RunEvaluationResultMetricsRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.Operation.class);
+                this.evaluationResultId = com.google.api.client.util.Preconditions.checkNotNull(evaluationResultId, "Required parameter evaluationResultId must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(EVALUATION_RESULT_ID_PATTERN.matcher(evaluationResultId).matches(),
+                      "Parameter evaluationResultId must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+/results/[^/]+$");
+                }
+              }
+
+              @Override
+              public RunEvaluationResultMetrics set$Xgafv(java.lang.String $Xgafv) {
+                return (RunEvaluationResultMetrics) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setAccessToken(java.lang.String accessToken) {
+                return (RunEvaluationResultMetrics) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setAlt(java.lang.String alt) {
+                return (RunEvaluationResultMetrics) super.setAlt(alt);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setCallback(java.lang.String callback) {
+                return (RunEvaluationResultMetrics) super.setCallback(callback);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setFields(java.lang.String fields) {
+                return (RunEvaluationResultMetrics) super.setFields(fields);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setKey(java.lang.String key) {
+                return (RunEvaluationResultMetrics) super.setKey(key);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setOauthToken(java.lang.String oauthToken) {
+                return (RunEvaluationResultMetrics) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RunEvaluationResultMetrics) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setQuotaUser(java.lang.String quotaUser) {
+                return (RunEvaluationResultMetrics) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setUploadType(java.lang.String uploadType) {
+                return (RunEvaluationResultMetrics) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RunEvaluationResultMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RunEvaluationResultMetrics) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The evaluation result to run metrics for. Format: `projects/{project}/loc
+               * ations/{location}/apps/{app}/evaluations/{evaluation}/results/{evaluation_result_id
+               * }`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String evaluationResultId;
+
+              /** Required. The evaluation result to run metrics for. Format: `projects/{project}/locations/{location
+             }/apps/{app}/evaluations/{evaluation}/results/{evaluation_result_id}`
+               */
+              public java.lang.String getEvaluationResultId() {
+                return evaluationResultId;
+              }
+
+              /**
+               * Required. The evaluation result to run metrics for. Format: `projects/{project}/loc
+               * ations/{location}/apps/{app}/evaluations/{evaluation}/results/{evaluation_result_id
+               * }`
+               */
+              public RunEvaluationResultMetrics setEvaluationResultId(java.lang.String evaluationResultId) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(EVALUATION_RESULT_ID_PATTERN.matcher(evaluationResultId).matches(),
+                      "Parameter evaluationResultId must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+/results/[^/]+$");
+                }
+                this.evaluationResultId = evaluationResultId;
+                return this;
+              }
+
+              @Override
+              public RunEvaluationResultMetrics set(String parameterName, Object value) {
+                return (RunEvaluationResultMetrics) super.set(parameterName, value);
               }
             }
 

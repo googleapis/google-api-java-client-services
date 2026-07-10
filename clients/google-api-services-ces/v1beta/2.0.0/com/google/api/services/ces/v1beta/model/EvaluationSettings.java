@@ -31,6 +31,13 @@ package com.google.api.services.ces.v1beta.model;
 public final class EvaluationSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The caching settings to use for the evaluation run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationRunCachingSettings evaluationRunCachingSettings;
+
+  /**
    * Optional. Configures the default tool call behaviour for golden evaluations.
    * The value may be {@code null}.
    */
@@ -65,6 +72,31 @@ public final class EvaluationSettings extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String scenarioEvaluationToolCallBehaviour;
+
+  /**
+   * Optional. The execution mode for scenario evaluations. If not provided, will default to
+   * QUALITY_OPTIMIZED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scenarioExecutionMode;
+
+  /**
+   * Optional. The caching settings to use for the evaluation run.
+   * @return value or {@code null} for none
+   */
+  public EvaluationRunCachingSettings getEvaluationRunCachingSettings() {
+    return evaluationRunCachingSettings;
+  }
+
+  /**
+   * Optional. The caching settings to use for the evaluation run.
+   * @param evaluationRunCachingSettings evaluationRunCachingSettings or {@code null} for none
+   */
+  public EvaluationSettings setEvaluationRunCachingSettings(EvaluationRunCachingSettings evaluationRunCachingSettings) {
+    this.evaluationRunCachingSettings = evaluationRunCachingSettings;
+    return this;
+  }
 
   /**
    * Optional. Configures the default tool call behaviour for golden evaluations.
@@ -150,6 +182,25 @@ public final class EvaluationSettings extends com.google.api.client.json.Generic
    */
   public EvaluationSettings setScenarioEvaluationToolCallBehaviour(java.lang.String scenarioEvaluationToolCallBehaviour) {
     this.scenarioEvaluationToolCallBehaviour = scenarioEvaluationToolCallBehaviour;
+    return this;
+  }
+
+  /**
+   * Optional. The execution mode for scenario evaluations. If not provided, will default to
+   * QUALITY_OPTIMIZED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScenarioExecutionMode() {
+    return scenarioExecutionMode;
+  }
+
+  /**
+   * Optional. The execution mode for scenario evaluations. If not provided, will default to
+   * QUALITY_OPTIMIZED.
+   * @param scenarioExecutionMode scenarioExecutionMode or {@code null} for none
+   */
+  public EvaluationSettings setScenarioExecutionMode(java.lang.String scenarioExecutionMode) {
+    this.scenarioExecutionMode = scenarioExecutionMode;
     return this;
   }
 

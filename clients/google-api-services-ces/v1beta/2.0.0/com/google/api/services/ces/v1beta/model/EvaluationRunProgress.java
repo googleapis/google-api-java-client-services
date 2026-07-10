@@ -31,6 +31,14 @@ package com.google.api.services.ces.v1beta.model;
 public final class EvaluationRunProgress extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Number of evaluation results that were cancelled.
+   * (EvaluationResult.execution_state is CANCELLED).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer cancelledCount;
+
+  /**
    * Output only. Number of evaluation results that finished successfully.
    * (EvaluationResult.execution_state is COMPLETED).
    * The value may be {@code null}.
@@ -68,6 +76,25 @@ public final class EvaluationRunProgress extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalCount;
+
+  /**
+   * Output only. Number of evaluation results that were cancelled.
+   * (EvaluationResult.execution_state is CANCELLED).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCancelledCount() {
+    return cancelledCount;
+  }
+
+  /**
+   * Output only. Number of evaluation results that were cancelled.
+   * (EvaluationResult.execution_state is CANCELLED).
+   * @param cancelledCount cancelledCount or {@code null} for none
+   */
+  public EvaluationRunProgress setCancelledCount(java.lang.Integer cancelledCount) {
+    this.cancelledCount = cancelledCount;
+    return this;
+  }
 
   /**
    * Output only. Number of evaluation results that finished successfully.

@@ -93,6 +93,14 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   private AudioRecordingConfig unredactedAudioRecordingConfig;
 
   /**
+   * Optional. Configures the BigQuery export behaviors for the app. The unredacted conversation
+   * data will be exported to BigQuery tables if it is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryExportSettings unredactedBigqueryExportSettings;
+
+  /**
    * Optional. Configuration for how audio interactions should be recorded. The audio is subject to
    * redaction as configured in RedactionConfig.
    * @return value or {@code null} for none
@@ -237,6 +245,25 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
    */
   public LoggingSettings setUnredactedAudioRecordingConfig(AudioRecordingConfig unredactedAudioRecordingConfig) {
     this.unredactedAudioRecordingConfig = unredactedAudioRecordingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configures the BigQuery export behaviors for the app. The unredacted conversation
+   * data will be exported to BigQuery tables if it is enabled.
+   * @return value or {@code null} for none
+   */
+  public BigQueryExportSettings getUnredactedBigqueryExportSettings() {
+    return unredactedBigqueryExportSettings;
+  }
+
+  /**
+   * Optional. Configures the BigQuery export behaviors for the app. The unredacted conversation
+   * data will be exported to BigQuery tables if it is enabled.
+   * @param unredactedBigqueryExportSettings unredactedBigqueryExportSettings or {@code null} for none
+   */
+  public LoggingSettings setUnredactedBigqueryExportSettings(BigQueryExportSettings unredactedBigqueryExportSettings) {
+    this.unredactedBigqueryExportSettings = unredactedBigqueryExportSettings;
     return this;
   }
 

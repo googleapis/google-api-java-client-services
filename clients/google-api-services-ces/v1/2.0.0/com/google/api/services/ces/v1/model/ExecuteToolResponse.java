@@ -31,6 +31,21 @@ package com.google.api.services.ces.v1.model;
 public final class ExecuteToolResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Citations that provide the source information for the tool's execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Citations citations;
+
+  /**
+   * The suggestions returned from Google Search as a result of invoking the Google Search Tool
+   * during the tool execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleSearchSuggestions googleSearchSuggestions;
+
+  /**
    * The tool execution result in JSON object format. Use "output" key to specify tool response and
    * "error" key to specify error details (if any). If "output" and "error" keys are not specified,
    * then whole "response" is treated as tool execution result.
@@ -60,6 +75,42 @@ public final class ExecuteToolResponse extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> variables;
+
+  /**
+   * Citations that provide the source information for the tool's execution.
+   * @return value or {@code null} for none
+   */
+  public Citations getCitations() {
+    return citations;
+  }
+
+  /**
+   * Citations that provide the source information for the tool's execution.
+   * @param citations citations or {@code null} for none
+   */
+  public ExecuteToolResponse setCitations(Citations citations) {
+    this.citations = citations;
+    return this;
+  }
+
+  /**
+   * The suggestions returned from Google Search as a result of invoking the Google Search Tool
+   * during the tool execution.
+   * @return value or {@code null} for none
+   */
+  public GoogleSearchSuggestions getGoogleSearchSuggestions() {
+    return googleSearchSuggestions;
+  }
+
+  /**
+   * The suggestions returned from Google Search as a result of invoking the Google Search Tool
+   * during the tool execution.
+   * @param googleSearchSuggestions googleSearchSuggestions or {@code null} for none
+   */
+  public ExecuteToolResponse setGoogleSearchSuggestions(GoogleSearchSuggestions googleSearchSuggestions) {
+    this.googleSearchSuggestions = googleSearchSuggestions;
+    return this;
+  }
 
   /**
    * The tool execution result in JSON object format. Use "output" key to specify tool response and

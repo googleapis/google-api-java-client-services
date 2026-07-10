@@ -60,6 +60,13 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
   private AgentTransfer agentTransfer;
 
   /**
+   * Optional. The comparison type to use for the expectation check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String comparisonType;
+
+  /**
    * Optional. Overrides metrics at the step level.
    * The value may be {@code null}.
    */
@@ -73,6 +80,13 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private ToolResponse mockToolResponse;
+
+  /**
+   * Optional. Check that no tools were called during this turn.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean noToolCalls;
 
   /**
    * Optional. A note for this requirement, useful in reporting when specific checks fail. E.g.,
@@ -182,6 +196,23 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
   }
 
   /**
+   * Optional. The comparison type to use for the expectation check.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComparisonType() {
+    return comparisonType;
+  }
+
+  /**
+   * Optional. The comparison type to use for the expectation check.
+   * @param comparisonType comparisonType or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setComparisonType(java.lang.String comparisonType) {
+    this.comparisonType = comparisonType;
+    return this;
+  }
+
+  /**
    * Optional. Overrides metrics at the step level.
    * @return value or {@code null} for none
    */
@@ -214,6 +245,23 @@ public final class EvaluationGoldenExpectation extends com.google.api.client.jso
    */
   public EvaluationGoldenExpectation setMockToolResponse(ToolResponse mockToolResponse) {
     this.mockToolResponse = mockToolResponse;
+    return this;
+  }
+
+  /**
+   * Optional. Check that no tools were called during this turn.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNoToolCalls() {
+    return noToolCalls;
+  }
+
+  /**
+   * Optional. Check that no tools were called during this turn.
+   * @param noToolCalls noToolCalls or {@code null} for none
+   */
+  public EvaluationGoldenExpectation setNoToolCalls(java.lang.Boolean noToolCalls) {
+    this.noToolCalls = noToolCalls;
     return this;
   }
 

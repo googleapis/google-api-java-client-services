@@ -45,6 +45,13 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
   private Citations citations;
 
   /**
+   * Context messages for external supervision guardrails.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.util.Map<String, java.lang.Object>> context;
+
+  /**
    * Optional. Diagnostic information contains execution details during the processing of the input.
    * Only populated in the last SessionOutput (with `turn_completed=true`) for each turn.
    * The value may be {@code null}.
@@ -162,6 +169,23 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
    */
   public SessionOutput setCitations(Citations citations) {
     this.citations = citations;
+    return this;
+  }
+
+  /**
+   * Context messages for external supervision guardrails.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.util.Map<String, java.lang.Object>> getContext() {
+    return context;
+  }
+
+  /**
+   * Context messages for external supervision guardrails.
+   * @param context context or {@code null} for none
+   */
+  public SessionOutput setContext(java.util.List<java.util.Map<String, java.lang.Object>> context) {
+    this.context = context;
     return this;
   }
 

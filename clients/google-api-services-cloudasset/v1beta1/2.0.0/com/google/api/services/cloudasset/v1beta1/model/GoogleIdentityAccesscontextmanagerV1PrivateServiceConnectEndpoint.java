@@ -17,7 +17,7 @@
 package com.google.api.services.cloudasset.v1beta1.model;
 
 /**
- * Specifies the PSC an API call refers to.
+ * Specifies the Private Service Connect endpoint that an API call refers to.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -30,7 +30,8 @@ package com.google.api.services.cloudasset.v1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * The global forwarding rule identifier. Forwarding rule format:
+   * The full resource name of the global forwarding rule that identifies a Private Service Connect
+   * endpoint. Forwarding rule format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE_ID}`.
    * The value may be {@code null}.
    */
@@ -38,7 +39,8 @@ public final class GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndp
   private java.lang.String forwardingRule;
 
   /**
-   * The global forwarding rule identifier. Forwarding rule format:
+   * The full resource name of the global forwarding rule that identifies a Private Service Connect
+   * endpoint. Forwarding rule format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE_ID}`.
    * @return value or {@code null} for none
    */
@@ -47,7 +49,8 @@ public final class GoogleIdentityAccesscontextmanagerV1PrivateServiceConnectEndp
   }
 
   /**
-   * The global forwarding rule identifier. Forwarding rule format:
+   * The full resource name of the global forwarding rule that identifies a Private Service Connect
+   * endpoint. Forwarding rule format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/forwardingRules/{FORWARDING_RULE_ID}`.
    * @param forwardingRule forwardingRule or {@code null} for none
    */

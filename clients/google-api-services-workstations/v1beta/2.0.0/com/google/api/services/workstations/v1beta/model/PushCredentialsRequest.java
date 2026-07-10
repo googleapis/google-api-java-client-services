@@ -32,8 +32,8 @@ public final class PushCredentialsRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. Credentials used by Cloud Client Libraries, Google API Client Libraries, and other
-   * tooling within the user conainer: https://cloud.google.com/docs/authentication/application-
-   * default-credentials
+   * tooling within the user container. For more information, see
+   * https://cloud.google.com/docs/authentication/application-default-credentials
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,8 @@ public final class PushCredentialsRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. Credentials used by Cloud Client Libraries, Google API Client Libraries, and other
-   * tooling within the user conainer: https://cloud.google.com/docs/authentication/application-
-   * default-credentials
+   * tooling within the user container. For more information, see
+   * https://cloud.google.com/docs/authentication/application-default-credentials
    * @return value or {@code null} for none
    */
   public OAuthToken getApplicationDefaultCredentials() {
@@ -51,8 +51,8 @@ public final class PushCredentialsRequest extends com.google.api.client.json.Gen
 
   /**
    * Optional. Credentials used by Cloud Client Libraries, Google API Client Libraries, and other
-   * tooling within the user conainer: https://cloud.google.com/docs/authentication/application-
-   * default-credentials
+   * tooling within the user container. For more information, see
+   * https://cloud.google.com/docs/authentication/application-default-credentials
    * @param applicationDefaultCredentials applicationDefaultCredentials or {@code null} for none
    */
   public PushCredentialsRequest setApplicationDefaultCredentials(OAuthToken applicationDefaultCredentials) {

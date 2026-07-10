@@ -23,6 +23,9 @@ package com.google.api.services.backupdr.v1;
  */
 public class BackupdrScopes {
 
+  /** See, edit, configure, and delete your Google Cloud Backup and DR data and see the email address for your Google Account. */
+  public static final String CLOUD_BACKUPDR = "https://www.googleapis.com/auth/cloud-backupdr";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +36,7 @@ public class BackupdrScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_BACKUPDR);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

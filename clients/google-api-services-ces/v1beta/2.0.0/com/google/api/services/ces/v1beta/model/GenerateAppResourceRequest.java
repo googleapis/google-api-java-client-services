@@ -45,6 +45,13 @@ public final class GenerateAppResourceRequest extends com.google.api.client.json
   private GenerateAppResourceRequestAppGenerationConfig appGenerationConfig;
 
   /**
+   * The app version context specifying the base snapshot and target agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenerateAppResourceRequestAppVersionContext appVersionContext;
+
+  /**
    * Optional. The configuration to be used to generate the evaluations.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class GenerateAppResourceRequest extends com.google.api.client.json
    */
   public GenerateAppResourceRequest setAppGenerationConfig(GenerateAppResourceRequestAppGenerationConfig appGenerationConfig) {
     this.appGenerationConfig = appGenerationConfig;
+    return this;
+  }
+
+  /**
+   * The app version context specifying the base snapshot and target agent.
+   * @return value or {@code null} for none
+   */
+  public GenerateAppResourceRequestAppVersionContext getAppVersionContext() {
+    return appVersionContext;
+  }
+
+  /**
+   * The app version context specifying the base snapshot and target agent.
+   * @param appVersionContext appVersionContext or {@code null} for none
+   */
+  public GenerateAppResourceRequest setAppVersionContext(GenerateAppResourceRequestAppVersionContext appVersionContext) {
+    this.appVersionContext = appVersionContext;
     return this;
   }
 

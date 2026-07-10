@@ -68,6 +68,13 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   private java.lang.String evaluationDataset;
 
   /**
+   * Optional. The caching settings to use for the evaluation run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvaluationRunCachingSettings evaluationRunCachingSettings;
+
+  /**
    * Optional. List of evaluations to run. Format:
    * `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
    * The value may be {@code null}.
@@ -215,6 +222,23 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
    */
   public RunEvaluationRequest setEvaluationDataset(java.lang.String evaluationDataset) {
     this.evaluationDataset = evaluationDataset;
+    return this;
+  }
+
+  /**
+   * Optional. The caching settings to use for the evaluation run.
+   * @return value or {@code null} for none
+   */
+  public EvaluationRunCachingSettings getEvaluationRunCachingSettings() {
+    return evaluationRunCachingSettings;
+  }
+
+  /**
+   * Optional. The caching settings to use for the evaluation run.
+   * @param evaluationRunCachingSettings evaluationRunCachingSettings or {@code null} for none
+   */
+  public RunEvaluationRequest setEvaluationRunCachingSettings(EvaluationRunCachingSettings evaluationRunCachingSettings) {
+    this.evaluationRunCachingSettings = evaluationRunCachingSettings;
     return this;
   }
 

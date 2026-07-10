@@ -31,6 +31,13 @@ package com.google.api.services.ces.v1.model;
 public final class CitationsCitedChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether this citation requires attribution to be shown to the end users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requiresAttribution;
+
+  /**
    * Text used for citation.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class CitationsCitedChunk extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Whether this citation requires attribution to be shown to the end users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequiresAttribution() {
+    return requiresAttribution;
+  }
+
+  /**
+   * Whether this citation requires attribution to be shown to the end users.
+   * @param requiresAttribution requiresAttribution or {@code null} for none
+   */
+  public CitationsCitedChunk setRequiresAttribution(java.lang.Boolean requiresAttribution) {
+    this.requiresAttribution = requiresAttribution;
+    return this;
+  }
 
   /**
    * Text used for citation.

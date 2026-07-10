@@ -40,8 +40,8 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> evaluationExpectations;
 
   /**
-   * Optional. The maximum number of turns to simulate. If not specified, the simulation will
-   * continue until the task is complete.
+   * Optional. The maximum number of turns to simulate. The maximum allowed value is 100. The
+   * default value is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,6 +53,13 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> rubrics;
+
+  /**
+   * Optional. The execution mode for scenario evaluations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scenarioExecutionMode;
 
   /**
    * Required. The ScenarioExpectations to evaluate the conversation produced by the user
@@ -122,8 +129,8 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The maximum number of turns to simulate. If not specified, the simulation will
-   * continue until the task is complete.
+   * Optional. The maximum number of turns to simulate. The maximum allowed value is 100. The
+   * default value is 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxTurns() {
@@ -131,8 +138,8 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The maximum number of turns to simulate. If not specified, the simulation will
-   * continue until the task is complete.
+   * Optional. The maximum number of turns to simulate. The maximum allowed value is 100. The
+   * default value is 100.
    * @param maxTurns maxTurns or {@code null} for none
    */
   public EvaluationScenario setMaxTurns(java.lang.Integer maxTurns) {
@@ -154,6 +161,23 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
    */
   public EvaluationScenario setRubrics(java.util.List<java.lang.String> rubrics) {
     this.rubrics = rubrics;
+    return this;
+  }
+
+  /**
+   * Optional. The execution mode for scenario evaluations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScenarioExecutionMode() {
+    return scenarioExecutionMode;
+  }
+
+  /**
+   * Optional. The execution mode for scenario evaluations.
+   * @param scenarioExecutionMode scenarioExecutionMode or {@code null} for none
+   */
+  public EvaluationScenario setScenarioExecutionMode(java.lang.String scenarioExecutionMode) {
+    this.scenarioExecutionMode = scenarioExecutionMode;
     return this;
   }
 

@@ -53,14 +53,6 @@ public final class AgentTool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Deprecated: Use `agent` instead. The resource name of the root agent that is the
-   * entry point of the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rootAgent;
-
-  /**
    * Optional. The resource name of the agent that is the entry point of the tool. Format:
    * `projects/{project}/locations/{location}/agents/{agent}`
    * @return value or {@code null} for none
@@ -110,25 +102,6 @@ public final class AgentTool extends com.google.api.client.json.GenericJson {
    */
   public AgentTool setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated: Use `agent` instead. The resource name of the root agent that is the
-   * entry point of the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRootAgent() {
-    return rootAgent;
-  }
-
-  /**
-   * Optional. Deprecated: Use `agent` instead. The resource name of the root agent that is the
-   * entry point of the tool. Format: `projects/{project}/locations/{location}/agents/{agent}`
-   * @param rootAgent rootAgent or {@code null} for none
-   */
-  public AgentTool setRootAgent(java.lang.String rootAgent) {
-    this.rootAgent = rootAgent;
     return this;
   }
 

@@ -40,9 +40,9 @@ public final class BargeInConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean bargeInAwareness;
 
   /**
-   * Optional. Disables user barge-in while the agent is speaking. If true, user input during agent
-   * response playback will be ignored. Deprecated: `disable_barge_in` is deprecated in favor of
-   * `disable_barge_in_control` in ChannelProfile.
+   * Optional. Deprecated: `disable_barge_in` is deprecated in favor of `disable_barge_in_control`
+   * in ChannelProfile. Disables user barge-in while the agent is speaking. If true, user input
+   * during agent response playback will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class BargeInConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Disables user barge-in while the agent is speaking. If true, user input during agent
-   * response playback will be ignored. Deprecated: `disable_barge_in` is deprecated in favor of
-   * `disable_barge_in_control` in ChannelProfile.
+   * Optional. Deprecated: `disable_barge_in` is deprecated in favor of `disable_barge_in_control`
+   * in ChannelProfile. Disables user barge-in while the agent is speaking. If true, user input
+   * during agent response playback will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableBargeIn() {
@@ -80,9 +80,9 @@ public final class BargeInConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Disables user barge-in while the agent is speaking. If true, user input during agent
-   * response playback will be ignored. Deprecated: `disable_barge_in` is deprecated in favor of
-   * `disable_barge_in_control` in ChannelProfile.
+   * Optional. Deprecated: `disable_barge_in` is deprecated in favor of `disable_barge_in_control`
+   * in ChannelProfile. Disables user barge-in while the agent is speaking. If true, user input
+   * during agent response playback will be ignored.
    * @param disableBargeIn disableBargeIn or {@code null} for none
    */
   public BargeInConfig setDisableBargeIn(java.lang.Boolean disableBargeIn) {

@@ -40,7 +40,8 @@ public final class EvaluationGolden extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> evaluationExpectations;
 
   /**
-   * Required. The golden turns required to replay a golden conversation.
+   * Required. The golden turns required to replay a golden conversation. The maximum number of
+   * allowed turns is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class EvaluationGolden extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The golden turns required to replay a golden conversation.
+   * Required. The golden turns required to replay a golden conversation. The maximum number of
+   * allowed turns is 100.
    * @return value or {@code null} for none
    */
   public java.util.List<EvaluationGoldenTurn> getTurns() {
@@ -76,7 +78,8 @@ public final class EvaluationGolden extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The golden turns required to replay a golden conversation.
+   * Required. The golden turns required to replay a golden conversation. The maximum number of
+   * allowed turns is 100.
    * @param turns turns or {@code null} for none
    */
   public EvaluationGolden setTurns(java.util.List<EvaluationGoldenTurn> turns) {

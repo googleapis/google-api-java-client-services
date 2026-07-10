@@ -77,6 +77,14 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private ExperimentConfig experimentConfig;
 
   /**
+   * Optional. Input only. Ephemeral Instagram credentials required when configuring a Instagram
+   * channel profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstagramCredentials instagramCredentials;
+
+  /**
    * Identifier. The resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * The value may be {@code null}.
@@ -90,6 +98,14 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Input only. Ephemeral WhatsApp credentials required when configuring a WhatsApp
+   * channel profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WhatsAppCredentials whatsappCredentials;
 
   /**
    * Optional. The resource name of the app version to deploy. Format:
@@ -200,6 +216,25 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Input only. Ephemeral Instagram credentials required when configuring a Instagram
+   * channel profile.
+   * @return value or {@code null} for none
+   */
+  public InstagramCredentials getInstagramCredentials() {
+    return instagramCredentials;
+  }
+
+  /**
+   * Optional. Input only. Ephemeral Instagram credentials required when configuring a Instagram
+   * channel profile.
+   * @param instagramCredentials instagramCredentials or {@code null} for none
+   */
+  public Deployment setInstagramCredentials(InstagramCredentials instagramCredentials) {
+    this.instagramCredentials = instagramCredentials;
+    return this;
+  }
+
+  /**
    * Identifier. The resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * @return value or {@code null} for none
@@ -232,6 +267,25 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   public Deployment setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Ephemeral WhatsApp credentials required when configuring a WhatsApp
+   * channel profile.
+   * @return value or {@code null} for none
+   */
+  public WhatsAppCredentials getWhatsappCredentials() {
+    return whatsappCredentials;
+  }
+
+  /**
+   * Optional. Input only. Ephemeral WhatsApp credentials required when configuring a WhatsApp
+   * channel profile.
+   * @param whatsappCredentials whatsappCredentials or {@code null} for none
+   */
+  public Deployment setWhatsappCredentials(WhatsAppCredentials whatsappCredentials) {
+    this.whatsappCredentials = whatsappCredentials;
     return this;
   }
 

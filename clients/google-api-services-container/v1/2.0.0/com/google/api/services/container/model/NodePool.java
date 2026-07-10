@@ -100,6 +100,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> instanceGroupUrls;
 
   /**
+   * Output only. Contains expiry information about the kubelet certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KubeletCertInfo kubeletCertInfo;
+
+  /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
    * should be located. If this value is unspecified during node pool creation, the
@@ -373,6 +380,23 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
     this.instanceGroupUrls = instanceGroupUrls;
+    return this;
+  }
+
+  /**
+   * Output only. Contains expiry information about the kubelet certificate.
+   * @return value or {@code null} for none
+   */
+  public KubeletCertInfo getKubeletCertInfo() {
+    return kubeletCertInfo;
+  }
+
+  /**
+   * Output only. Contains expiry information about the kubelet certificate.
+   * @param kubeletCertInfo kubeletCertInfo or {@code null} for none
+   */
+  public NodePool setKubeletCertInfo(KubeletCertInfo kubeletCertInfo) {
+    this.kubeletCertInfo = kubeletCertInfo;
     return this;
   }
 

@@ -21,7 +21,9 @@ package com.google.api.services.firebaseapphosting.v1beta.model;
  * specify one of the following runtimes: nodejs20, nodejs22, nodejs24, nodejs. Runtime "nodejs"
  * means that nodejs version will be determined at build time. If not specified or specified with a
  * value that is not in the list above, the default runtime `nodejs` will be used and Automatic Base
- * Image Updates will be disabled.
+ * Image Updates will be disabled. See [Firebase
+ * documentation](https://firebase.google.com/docs/app-hosting/frameworks-
+ * tooling#managing_runtime_versions) for more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Hosting API. For a detailed explanation

@@ -44,21 +44,21 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job was created.
+   * Output only. Time when the job was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Time when the job finished.
+   * Output only. Time when the job finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * A stream of errors encountered running the job.
+   * Output only. A stream of errors encountered running the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,21 +72,22 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   private GooglePrivacyDlpV2InspectDataSourceDetails inspectDetails;
 
   /**
-   * If created by a job trigger, the resource name of the trigger that instantiated the job.
+   * Output only. If created by a job trigger, the resource name of the trigger that instantiated
+   * the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jobTriggerName;
 
   /**
-   * Time when the job was last modified by the system.
+   * Output only. Time when the job was last modified by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastModified;
 
   /**
-   * The server-assigned name.
+   * Output only. The server-assigned name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,14 +101,14 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails riskDetails;
 
   /**
-   * Time when the job started.
+   * Output only. Time when the job started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * State of a job.
+   * Output only. State of a job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +139,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job was created.
+   * Output only. Time when the job was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -146,7 +147,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job was created.
+   * Output only. Time when the job was created.
    * @param createTime createTime or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setCreateTime(String createTime) {
@@ -155,7 +156,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job finished.
+   * Output only. Time when the job finished.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -163,7 +164,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job finished.
+   * Output only. Time when the job finished.
    * @param endTime endTime or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setEndTime(String endTime) {
@@ -172,7 +173,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * A stream of errors encountered running the job.
+   * Output only. A stream of errors encountered running the job.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2Error> getErrors() {
@@ -180,7 +181,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * A stream of errors encountered running the job.
+   * Output only. A stream of errors encountered running the job.
    * @param errors errors or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setErrors(java.util.List<GooglePrivacyDlpV2Error> errors) {
@@ -206,7 +207,8 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * If created by a job trigger, the resource name of the trigger that instantiated the job.
+   * Output only. If created by a job trigger, the resource name of the trigger that instantiated
+   * the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobTriggerName() {
@@ -214,7 +216,8 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * If created by a job trigger, the resource name of the trigger that instantiated the job.
+   * Output only. If created by a job trigger, the resource name of the trigger that instantiated
+   * the job.
    * @param jobTriggerName jobTriggerName or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setJobTriggerName(java.lang.String jobTriggerName) {
@@ -223,7 +226,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job was last modified by the system.
+   * Output only. Time when the job was last modified by the system.
    * @return value or {@code null} for none
    */
   public String getLastModified() {
@@ -231,7 +234,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job was last modified by the system.
+   * Output only. Time when the job was last modified by the system.
    * @param lastModified lastModified or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setLastModified(String lastModified) {
@@ -240,7 +243,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * The server-assigned name.
+   * Output only. The server-assigned name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -248,7 +251,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * The server-assigned name.
+   * Output only. The server-assigned name.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setName(java.lang.String name) {
@@ -274,7 +277,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job started.
+   * Output only. Time when the job started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -282,7 +285,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Time when the job started.
+   * Output only. Time when the job started.
    * @param startTime startTime or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setStartTime(String startTime) {
@@ -291,7 +294,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * State of a job.
+   * Output only. State of a job.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -299,7 +302,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * State of a job.
+   * Output only. State of a job.
    * @param state state or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setState(java.lang.String state) {

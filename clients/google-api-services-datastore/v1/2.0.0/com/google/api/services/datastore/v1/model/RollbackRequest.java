@@ -38,6 +38,13 @@ public final class RollbackRequest extends com.google.api.client.json.GenericJso
   private java.lang.String databaseId;
 
   /**
+   * Optional. The options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * Required. The transaction identifier, returned by a call to Datastore.BeginTransaction.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class RollbackRequest extends com.google.api.client.json.GenericJso
    */
   public RollbackRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
+    return this;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public RollbackRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

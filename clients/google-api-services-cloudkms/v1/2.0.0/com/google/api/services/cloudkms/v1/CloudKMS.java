@@ -441,6 +441,162 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+     *
+     * Create a request for the method "folders.showEffectiveAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link ShowEffectiveAutokeyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configurations on a given resource project. Format: * projects/{project} *
+     *        folders/{folder}
+     * @return the request
+     */
+    public ShowEffectiveAutokeyConfig showEffectiveAutokeyConfig(java.lang.String parent) throws java.io.IOException {
+      ShowEffectiveAutokeyConfig result = new ShowEffectiveAutokeyConfig(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class ShowEffectiveAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ShowEffectiveAutokeyConfigResponse> {
+
+      private static final String REST_PATH = "v1/{+parent}:showEffectiveAutokeyConfig";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+       *
+       * Create a request for the method "folders.showEffectiveAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link ShowEffectiveAutokeyConfig#execute()} method to invoke the
+       * remote operation. <p> {@link ShowEffectiveAutokeyConfig#initialize(com.google.api.client.google
+       * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configurations on a given resource project. Format: * projects/{project} *
+     *        folders/{folder}
+       * @since 1.13
+       */
+      protected ShowEffectiveAutokeyConfig(java.lang.String parent) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ShowEffectiveAutokeyConfigResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (ShowEffectiveAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (ShowEffectiveAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setAlt(java.lang.String alt) {
+        return (ShowEffectiveAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setCallback(java.lang.String callback) {
+        return (ShowEffectiveAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setFields(java.lang.String fields) {
+        return (ShowEffectiveAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setKey(java.lang.String key) {
+        return (ShowEffectiveAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (ShowEffectiveAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ShowEffectiveAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (ShowEffectiveAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (ShowEffectiveAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ShowEffectiveAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     configuration for. This may be helpful for interrogating the effect of nested folder configurations
+     on a given resource project. Format: * projects/{project} * folders/{folder}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
+       */
+      public ShowEffectiveAutokeyConfig setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public ShowEffectiveAutokeyConfig set(String parameterName, Object value) {
+        return (ShowEffectiveAutokeyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the AutokeyConfig for a folder or a project. The caller must have both
      * `cloudkms.autokeyConfigs.update` permission on the parent folder and
      * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
@@ -1393,7 +1549,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Returns the effective Cloud KMS Autokey configuration for a given project.
+     * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
      *
      * Create a request for the method "projects.showEffectiveAutokeyConfig".
      *
@@ -1401,9 +1557,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link ShowEffectiveAutokeyConfig#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
-     *        This may be helpful for interrogating the effect of nested folder configurations on a
-     *        given resource project.
+     * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configurations on a given resource project. Format: * projects/{project} *
+     *        folders/{folder}
      * @return the request
      */
     public ShowEffectiveAutokeyConfig showEffectiveAutokeyConfig(java.lang.String parent) throws java.io.IOException {
@@ -1420,7 +1577,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Returns the effective Cloud KMS Autokey configuration for a given project.
+       * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
        *
        * Create a request for the method "projects.showEffectiveAutokeyConfig".
        *
@@ -1430,9 +1587,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
-     *        This may be helpful for interrogating the effect of nested folder configurations on a
-     *        given resource project.
+       * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configurations on a given resource project. Format: * projects/{project} *
+     *        folders/{folder}
        * @since 1.13
        */
       protected ShowEffectiveAutokeyConfig(java.lang.String parent) {
@@ -1511,25 +1669,25 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Name of the resource project to the show effective Cloud KMS Autokey
+       * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
        * configuration for. This may be helpful for interrogating the effect of nested folder
-       * configurations on a given resource project.
+       * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Name of the resource project to the show effective Cloud KMS Autokey configuration for.
-     This may be helpful for interrogating the effect of nested folder configurations on a given
-     resource project.
+      /** Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
+     configuration for. This may be helpful for interrogating the effect of nested folder configurations
+     on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Name of the resource project to the show effective Cloud KMS Autokey
+       * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
        * configuration for. This may be helpful for interrogating the effect of nested folder
-       * configurations on a given resource project.
+       * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public ShowEffectiveAutokeyConfig setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -6714,6 +6872,34 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /**
+             * Optional. Whether trusted wrapping will be enabled on the first CryptoKeyVersions
+             * created for this CryptoKey. This field is only supported for keys with
+             * CryptoKeyVersionTemplate.protection_level HSM_SINGLE_TENANT. This field is supported
+             * for all CryptoKeyPurposes except ENCRYPT_DECRYPT.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean trustedWrappingEnabled;
+
+            /** Optional. Whether trusted wrapping will be enabled on the first CryptoKeyVersions created for this
+           CryptoKey. This field is only supported for keys with CryptoKeyVersionTemplate.protection_level
+           HSM_SINGLE_TENANT. This field is supported for all CryptoKeyPurposes except ENCRYPT_DECRYPT.
+             */
+            public java.lang.Boolean getTrustedWrappingEnabled() {
+              return trustedWrappingEnabled;
+            }
+
+            /**
+             * Optional. Whether trusted wrapping will be enabled on the first CryptoKeyVersions
+             * created for this CryptoKey. This field is only supported for keys with
+             * CryptoKeyVersionTemplate.protection_level HSM_SINGLE_TENANT. This field is supported
+             * for all CryptoKeyPurposes except ENCRYPT_DECRYPT.
+             */
+            public Create setTrustedWrappingEnabled(java.lang.Boolean trustedWrappingEnabled) {
+              this.trustedWrappingEnabled = trustedWrappingEnabled;
+              return this;
+            }
+
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
@@ -9149,6 +9335,182 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
+             * Exports a CryptoKeyVersion with a trusted key. The CryptoKeyVersion must have
+             * trusted_wrapping_enabled set to true. The CryptoKeyVersion of the [wrapping_key] must have the
+             * AES_WRAPPING purpose. The [wrapping_key] must have the AES_256_KWP algorithm.
+             *
+             * Create a request for the method "cryptoKeyVersions.exportTrustedKeyWrappedCryptoKeyVersion".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link ExportTrustedKeyWrappedCryptoKeyVersion#execute()} method to invoke
+             * the remote operation.
+             *
+             * @param name Required. The name of the CryptoKeyVersion to export. The CryptoKeyVersion must have
+             *        trusted_wrapping_enabled set to true.
+             * @return the request
+             */
+            public ExportTrustedKeyWrappedCryptoKeyVersion exportTrustedKeyWrappedCryptoKeyVersion(java.lang.String name) throws java.io.IOException {
+              ExportTrustedKeyWrappedCryptoKeyVersion result = new ExportTrustedKeyWrappedCryptoKeyVersion(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ExportTrustedKeyWrappedCryptoKeyVersion extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ExportTrustedKeyWrappedCryptoKeyVersionResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:exportTrustedKeyWrappedCryptoKeyVersion";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Exports a CryptoKeyVersion with a trusted key. The CryptoKeyVersion must have
+               * trusted_wrapping_enabled set to true. The CryptoKeyVersion of the [wrapping_key] must have the
+               * AES_WRAPPING purpose. The [wrapping_key] must have the AES_256_KWP algorithm.
+               *
+               * Create a request for the method "cryptoKeyVersions.exportTrustedKeyWrappedCryptoKeyVersion".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link ExportTrustedKeyWrappedCryptoKeyVersion#execute()} method
+               * to invoke the remote operation. <p> {@link ExportTrustedKeyWrappedCryptoKeyVersion#initialize(c
+               * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+               * initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the CryptoKeyVersion to export. The CryptoKeyVersion must have
+             *        trusted_wrapping_enabled set to true.
+               * @since 1.13
+               */
+              protected ExportTrustedKeyWrappedCryptoKeyVersion(java.lang.String name) {
+                super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ExportTrustedKeyWrappedCryptoKeyVersionResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion set$Xgafv(java.lang.String $Xgafv) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setAccessToken(java.lang.String accessToken) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setAlt(java.lang.String alt) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setAlt(alt);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setCallback(java.lang.String callback) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setCallback(callback);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setFields(java.lang.String fields) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setFields(fields);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setKey(java.lang.String key) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setKey(key);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setOauthToken(java.lang.String oauthToken) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setQuotaUser(java.lang.String quotaUser) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setUploadType(java.lang.String uploadType) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the CryptoKeyVersion to export. The CryptoKeyVersion must
+               * have trusted_wrapping_enabled set to true.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the CryptoKeyVersion to export. The CryptoKeyVersion must have
+             trusted_wrapping_enabled set to true.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the CryptoKeyVersion to export. The CryptoKeyVersion must
+               * have trusted_wrapping_enabled set to true.
+               */
+              public ExportTrustedKeyWrappedCryptoKeyVersion setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Required. The name of the CryptoKeyVersion to use as a wrapping key. The
+               * CryptoKeyVersion must have hsm_trusted set to true.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String wrappingKey;
+
+              /** Required. The name of the CryptoKeyVersion to use as a wrapping key. The CryptoKeyVersion must have
+             hsm_trusted set to true.
+               */
+              public java.lang.String getWrappingKey() {
+                return wrappingKey;
+              }
+
+              /**
+               * Required. The name of the CryptoKeyVersion to use as a wrapping key. The
+               * CryptoKeyVersion must have hsm_trusted set to true.
+               */
+              public ExportTrustedKeyWrappedCryptoKeyVersion setWrappingKey(java.lang.String wrappingKey) {
+                this.wrappingKey = wrappingKey;
+                return this;
+              }
+
+              @Override
+              public ExportTrustedKeyWrappedCryptoKeyVersion set(String parameterName, Object value) {
+                return (ExportTrustedKeyWrappedCryptoKeyVersion) super.set(parameterName, value);
+              }
+            }
+            /**
              * Returns metadata for a given CryptoKeyVersion.
              *
              * Create a request for the method "cryptoKeyVersions.get".
@@ -9600,6 +9962,146 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               @Override
               public CloudKMSImport set(String parameterName, Object value) {
                 return (CloudKMSImport) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Import wrapped key material into a CryptoKeyVersion with a trusted key. All requests must specify
+             * a CryptoKey. If a CryptoKeyVersion is additionally specified in the request, key material will be
+             * reimported into that version. Otherwise, a new version will be created, and will be assigned the
+             * next sequential id within the CryptoKey. The CryptoKeyVersion will have trusted_wrapping_enabled
+             * set to true.
+             *
+             * Create a request for the method "cryptoKeyVersions.importTrustedKeyWrappedCryptoKeyVersion".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link ImportTrustedKeyWrappedCryptoKeyVersion#execute()} method to invoke
+             * the remote operation.
+             *
+             * @param parent Required. The name of the CryptoKey to be imported into.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportTrustedKeyWrappedCryptoKeyVersionRequest}
+             * @return the request
+             */
+            public ImportTrustedKeyWrappedCryptoKeyVersion importTrustedKeyWrappedCryptoKeyVersion(java.lang.String parent, com.google.api.services.cloudkms.v1.model.ImportTrustedKeyWrappedCryptoKeyVersionRequest content) throws java.io.IOException {
+              ImportTrustedKeyWrappedCryptoKeyVersion result = new ImportTrustedKeyWrappedCryptoKeyVersion(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ImportTrustedKeyWrappedCryptoKeyVersion extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.CryptoKeyVersion> {
+
+              private static final String REST_PATH = "v1/{+parent}/cryptoKeyVersions:importTrustedKeyWrappedCryptoKeyVersion";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+
+              /**
+               * Import wrapped key material into a CryptoKeyVersion with a trusted key. All requests must
+               * specify a CryptoKey. If a CryptoKeyVersion is additionally specified in the request, key
+               * material will be reimported into that version. Otherwise, a new version will be created, and
+               * will be assigned the next sequential id within the CryptoKey. The CryptoKeyVersion will have
+               * trusted_wrapping_enabled set to true.
+               *
+               * Create a request for the method "cryptoKeyVersions.importTrustedKeyWrappedCryptoKeyVersion".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link ImportTrustedKeyWrappedCryptoKeyVersion#execute()} method
+               * to invoke the remote operation. <p> {@link ImportTrustedKeyWrappedCryptoKeyVersion#initialize(c
+               * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+               * initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the CryptoKey to be imported into.
+               * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportTrustedKeyWrappedCryptoKeyVersionRequest}
+               * @since 1.13
+               */
+              protected ImportTrustedKeyWrappedCryptoKeyVersion(java.lang.String parent, com.google.api.services.cloudkms.v1.model.ImportTrustedKeyWrappedCryptoKeyVersionRequest content) {
+                super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.CryptoKeyVersion.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+                }
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion set$Xgafv(java.lang.String $Xgafv) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setAccessToken(java.lang.String accessToken) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setAlt(java.lang.String alt) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setAlt(alt);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setCallback(java.lang.String callback) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setCallback(callback);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setFields(java.lang.String fields) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setFields(fields);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setKey(java.lang.String key) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setKey(key);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setOauthToken(java.lang.String oauthToken) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setQuotaUser(java.lang.String quotaUser) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setUploadType(java.lang.String uploadType) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the CryptoKey to be imported into. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the CryptoKey to be imported into.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The name of the CryptoKey to be imported into. */
+              public ImportTrustedKeyWrappedCryptoKeyVersion setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public ImportTrustedKeyWrappedCryptoKeyVersion set(String parameterName, Object value) {
+                return (ImportTrustedKeyWrappedCryptoKeyVersion) super.set(parameterName, value);
               }
             }
             /**

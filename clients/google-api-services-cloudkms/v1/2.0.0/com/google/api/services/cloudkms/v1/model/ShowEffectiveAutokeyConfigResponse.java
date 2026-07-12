@@ -31,14 +31,28 @@ package com.google.api.services.cloudkms.v1.model;
 public final class ShowEffectiveAutokeyConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the key project configured in the resource project's folder ancestry.
+   * Name of the key project configured in the ancestry of the project or folder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyProject;
 
   /**
-   * Name of the key project configured in the resource project's folder ancestry.
+   * The KeyProjectResolutionMode for the AutokeyConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyProjectResolutionMode;
+
+  /**
+   * Source of the effective AutokeyConfig.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Source source;
+
+  /**
+   * Name of the key project configured in the ancestry of the project or folder.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyProject() {
@@ -46,11 +60,45 @@ public final class ShowEffectiveAutokeyConfigResponse extends com.google.api.cli
   }
 
   /**
-   * Name of the key project configured in the resource project's folder ancestry.
+   * Name of the key project configured in the ancestry of the project or folder.
    * @param keyProject keyProject or {@code null} for none
    */
   public ShowEffectiveAutokeyConfigResponse setKeyProject(java.lang.String keyProject) {
     this.keyProject = keyProject;
+    return this;
+  }
+
+  /**
+   * The KeyProjectResolutionMode for the AutokeyConfig.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyProjectResolutionMode() {
+    return keyProjectResolutionMode;
+  }
+
+  /**
+   * The KeyProjectResolutionMode for the AutokeyConfig.
+   * @param keyProjectResolutionMode keyProjectResolutionMode or {@code null} for none
+   */
+  public ShowEffectiveAutokeyConfigResponse setKeyProjectResolutionMode(java.lang.String keyProjectResolutionMode) {
+    this.keyProjectResolutionMode = keyProjectResolutionMode;
+    return this;
+  }
+
+  /**
+   * Source of the effective AutokeyConfig.
+   * @return value or {@code null} for none
+   */
+  public Source getSource() {
+    return source;
+  }
+
+  /**
+   * Source of the effective AutokeyConfig.
+   * @param source source or {@code null} for none
+   */
+  public ShowEffectiveAutokeyConfigResponse setSource(Source source) {
+    this.source = source;
     return this;
   }
 

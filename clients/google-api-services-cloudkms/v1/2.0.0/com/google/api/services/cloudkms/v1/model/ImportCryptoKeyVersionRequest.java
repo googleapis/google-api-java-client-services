@@ -68,6 +68,15 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
   private java.lang.String rsaAesWrappedKey;
 
   /**
+   * Optional. Whether trusted wrapping will be enabled on the imported [CryptoKeyVersion]. This
+   * field is only supported for keys with CryptoKeyVersionTemplate.protection_level
+   * HSM_SINGLE_TENANT. This field is supported for all CryptoKeyPurposes besides ENCRYPT_DECRYPT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean trustedWrappingEnabled;
+
+  /**
    * Optional. The wrapped key material to import. Before wrapping, key material must be formatted.
    * If importing symmetric key material, the expected key material format is plain bytes. If
    * importing asymmetric key material, the expected key material format is PKCS#8-encoded DER (the
@@ -199,6 +208,27 @@ public final class ImportCryptoKeyVersionRequest extends com.google.api.client.j
    */
   public ImportCryptoKeyVersionRequest encodeRsaAesWrappedKey(byte[] rsaAesWrappedKey) {
     this.rsaAesWrappedKey = com.google.api.client.util.Base64.encodeBase64URLSafeString(rsaAesWrappedKey);
+    return this;
+  }
+
+  /**
+   * Optional. Whether trusted wrapping will be enabled on the imported [CryptoKeyVersion]. This
+   * field is only supported for keys with CryptoKeyVersionTemplate.protection_level
+   * HSM_SINGLE_TENANT. This field is supported for all CryptoKeyPurposes besides ENCRYPT_DECRYPT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTrustedWrappingEnabled() {
+    return trustedWrappingEnabled;
+  }
+
+  /**
+   * Optional. Whether trusted wrapping will be enabled on the imported [CryptoKeyVersion]. This
+   * field is only supported for keys with CryptoKeyVersionTemplate.protection_level
+   * HSM_SINGLE_TENANT. This field is supported for all CryptoKeyPurposes besides ENCRYPT_DECRYPT.
+   * @param trustedWrappingEnabled trustedWrappingEnabled or {@code null} for none
+   */
+  public ImportCryptoKeyVersionRequest setTrustedWrappingEnabled(java.lang.Boolean trustedWrappingEnabled) {
+    this.trustedWrappingEnabled = trustedWrappingEnabled;
     return this;
   }
 

@@ -18,10 +18,10 @@ package com.google.api.services.health.v4.model;
 
 /**
  * Authorization mechanism for a subscriber endpoint. For all requests sent by the Webhooks service,
- * the JSON payload is cryptographically signed. The signature is delivered in the `X-HEALTHAPI-
- * SIGNATURE` HTTP header. This is an ECDSA (NIST P256) signature of the JSON payload. Clients must
- * verify this signature using Google Health API's public key to confirm the payload was sent by the
- * Health API.
+ * the JSON payload is cryptographically signed. The signature is delivered in the `GOOGLE-HEALTH-
+ * API-SIGNATURE` HTTP header. This is an ECDSA (NIST P256) signature of the JSON payload. Clients
+ * must verify this signature using Google Health API's public key to confirm the payload was sent
+ * by the Health API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Health API. For a detailed explanation see:

@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class EnergyQuantity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Value representing the energy in kilocalories.
+   * Required. The energy value in kilocalories.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class EnergyQuantity extends com.google.api.client.json.GenericJson
   private java.lang.String userProvidedUnit;
 
   /**
-   * Required. Value representing the energy in kilocalories.
+   * Required. The energy value in kilocalories.
    * @return value or {@code null} for none
    */
   public java.lang.Double getKcal() {
@@ -52,7 +52,7 @@ public final class EnergyQuantity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Value representing the energy in kilocalories.
+   * Required. The energy value in kilocalories.
    * @param kcal kcal or {@code null} for none
    */
   public EnergyQuantity setKcal(java.lang.Double kcal) {

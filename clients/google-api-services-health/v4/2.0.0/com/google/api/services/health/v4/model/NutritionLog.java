@@ -17,14 +17,13 @@
 package com.google.api.services.health.v4.model;
 
 /**
- * Holds information about a user logged food. There are two ways of creating a nutrition log based
- * on the food type: 1. Identified food: Using the food field, which is a reference to a Food
+ * Holds information about food logged by a user. There are two ways of creating a nutrition log
+ * based on the food type: 1. Identified food: Using the food field, which is a reference to a Food
  * resource. In this case fields `nutrients`, `energy`, `energy_from_fat`, `total_carbohydrate`,
  * `total_fat`, `food_display_name` will be populated based on the referenced food. 2. Anonymous
  * food: Using the `food_display_name` field and setting the `nutrients`, `energy`,
  * `energy_from_fat`, `total_carbohydrate`, `total_fat` fields manually. The identified food is
- * preferred over the anonymous food. Nutrition logs created from anonymous food are not be
- * editable.
+ * preferred over the anonymous food. Nutrition logs created from anonymous food are not editable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Health API. For a detailed explanation see:
@@ -37,55 +36,51 @@ package com.google.api.services.health.v4.model;
 public final class NutritionLog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Value representing the energy of the nutrition log. For nutrition logs created from
-   * an identified food, this field will be populated based on the referenced food. For anonymous
-   * food, this field will be populated manually.
+   * Optional. The total energy of the food, measured in kilocalories (`kcal`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EnergyQuantity energy;
 
   /**
-   * Optional. Value representing the energy from fat of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The energy from fat, measured in kilocalories (`kcal`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EnergyQuantity energyFromFat;
 
   /**
-   * Required. Represents the food ID.
+   * Optional. The resource name of the Food item. Required when creating a nutrition log from an
+   * identified food. For anonymous food logs, use the `food_display_name` field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String food;
 
   /**
-   * Value representing the display name of the food. For nutrition logs created from an identified
-   * food, this field will be populated based on the referenced food. For anonymous food, this field
-   * will be populated manually.
+   * The display name of the food. For identified food logs, this is populated automatically from
+   * the referenced food.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String foodDisplayName;
 
   /**
-   * Required. Observed interval.
+   * Required. The time window when the food was logged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SessionTimeInterval interval;
 
   /**
-   * Optional. Value representing the meal type of the nutrition log.
+   * Optional. The meal category. One of `BREAKFAST`, `LUNCH`, `DINNER`, or `SNACK`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mealType;
 
   /**
-   * Optional. Value representing the nutrients of the nutrition log.
+   * Optional. An array of individual nutrient values for the nutrition log.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,34 +93,28 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the nutrition log serving.
+   * Optional. The serving information for the logged food.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Serving serving;
 
   /**
-   * Optional. Value representing the total carbohydrate of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total carbohydrate content, measured in grams.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WeightQuantity totalCarbohydrate;
 
   /**
-   * Optional. Value representing the total fat of the nutrition log. For nutrition logs created
-   * from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total fat content, measured in grams.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WeightQuantity totalFat;
 
   /**
-   * Optional. Value representing the energy of the nutrition log. For nutrition logs created from
-   * an identified food, this field will be populated based on the referenced food. For anonymous
-   * food, this field will be populated manually.
+   * Optional. The total energy of the food, measured in kilocalories (`kcal`).
    * @return value or {@code null} for none
    */
   public EnergyQuantity getEnergy() {
@@ -133,9 +122,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the energy of the nutrition log. For nutrition logs created from
-   * an identified food, this field will be populated based on the referenced food. For anonymous
-   * food, this field will be populated manually.
+   * Optional. The total energy of the food, measured in kilocalories (`kcal`).
    * @param energy energy or {@code null} for none
    */
   public NutritionLog setEnergy(EnergyQuantity energy) {
@@ -144,9 +131,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the energy from fat of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The energy from fat, measured in kilocalories (`kcal`).
    * @return value or {@code null} for none
    */
   public EnergyQuantity getEnergyFromFat() {
@@ -154,9 +139,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the energy from fat of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The energy from fat, measured in kilocalories (`kcal`).
    * @param energyFromFat energyFromFat or {@code null} for none
    */
   public NutritionLog setEnergyFromFat(EnergyQuantity energyFromFat) {
@@ -165,7 +148,8 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Represents the food ID.
+   * Optional. The resource name of the Food item. Required when creating a nutrition log from an
+   * identified food. For anonymous food logs, use the `food_display_name` field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getFood() {
@@ -173,7 +157,8 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Represents the food ID.
+   * Optional. The resource name of the Food item. Required when creating a nutrition log from an
+   * identified food. For anonymous food logs, use the `food_display_name` field instead.
    * @param food food or {@code null} for none
    */
   public NutritionLog setFood(java.lang.String food) {
@@ -182,9 +167,8 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value representing the display name of the food. For nutrition logs created from an identified
-   * food, this field will be populated based on the referenced food. For anonymous food, this field
-   * will be populated manually.
+   * The display name of the food. For identified food logs, this is populated automatically from
+   * the referenced food.
    * @return value or {@code null} for none
    */
   public java.lang.String getFoodDisplayName() {
@@ -192,9 +176,8 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value representing the display name of the food. For nutrition logs created from an identified
-   * food, this field will be populated based on the referenced food. For anonymous food, this field
-   * will be populated manually.
+   * The display name of the food. For identified food logs, this is populated automatically from
+   * the referenced food.
    * @param foodDisplayName foodDisplayName or {@code null} for none
    */
   public NutritionLog setFoodDisplayName(java.lang.String foodDisplayName) {
@@ -203,7 +186,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Observed interval.
+   * Required. The time window when the food was logged.
    * @return value or {@code null} for none
    */
   public SessionTimeInterval getInterval() {
@@ -211,7 +194,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Observed interval.
+   * Required. The time window when the food was logged.
    * @param interval interval or {@code null} for none
    */
   public NutritionLog setInterval(SessionTimeInterval interval) {
@@ -220,7 +203,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the meal type of the nutrition log.
+   * Optional. The meal category. One of `BREAKFAST`, `LUNCH`, `DINNER`, or `SNACK`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMealType() {
@@ -228,7 +211,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the meal type of the nutrition log.
+   * Optional. The meal category. One of `BREAKFAST`, `LUNCH`, `DINNER`, or `SNACK`.
    * @param mealType mealType or {@code null} for none
    */
   public NutritionLog setMealType(java.lang.String mealType) {
@@ -237,7 +220,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the nutrients of the nutrition log.
+   * Optional. An array of individual nutrient values for the nutrition log.
    * @return value or {@code null} for none
    */
   public java.util.List<NutrientQuantity> getNutrients() {
@@ -245,7 +228,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the nutrients of the nutrition log.
+   * Optional. An array of individual nutrient values for the nutrition log.
    * @param nutrients nutrients or {@code null} for none
    */
   public NutritionLog setNutrients(java.util.List<NutrientQuantity> nutrients) {
@@ -254,7 +237,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the nutrition log serving.
+   * Optional. The serving information for the logged food.
    * @return value or {@code null} for none
    */
   public Serving getServing() {
@@ -262,7 +245,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the nutrition log serving.
+   * Optional. The serving information for the logged food.
    * @param serving serving or {@code null} for none
    */
   public NutritionLog setServing(Serving serving) {
@@ -271,9 +254,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the total carbohydrate of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total carbohydrate content, measured in grams.
    * @return value or {@code null} for none
    */
   public WeightQuantity getTotalCarbohydrate() {
@@ -281,9 +262,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the total carbohydrate of the nutrition log. For nutrition logs
-   * created from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total carbohydrate content, measured in grams.
    * @param totalCarbohydrate totalCarbohydrate or {@code null} for none
    */
   public NutritionLog setTotalCarbohydrate(WeightQuantity totalCarbohydrate) {
@@ -292,9 +271,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the total fat of the nutrition log. For nutrition logs created
-   * from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total fat content, measured in grams.
    * @return value or {@code null} for none
    */
   public WeightQuantity getTotalFat() {
@@ -302,9 +279,7 @@ public final class NutritionLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value representing the total fat of the nutrition log. For nutrition logs created
-   * from an identified food, this field will be populated based on the referenced food. For
-   * anonymous food, this field will be populated manually.
+   * Optional. The total fat content, measured in grams.
    * @param totalFat totalFat or {@code null} for none
    */
   public NutritionLog setTotalFat(WeightQuantity totalFat) {

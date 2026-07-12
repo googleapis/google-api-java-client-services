@@ -30,21 +30,21 @@ package com.google.api.services.health.v4.model;
 public final class NutrientQuantity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Value representing the nutrient.
+   * Required. The nutrient type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nutrient;
 
   /**
-   * Required. Value representing the quantity of the nutrient.
+   * Required. The quantity of the nutrient, measured in grams.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WeightQuantity quantity;
 
   /**
-   * Required. Value representing the nutrient.
+   * Required. The nutrient type.
    * @return value or {@code null} for none
    */
   public java.lang.String getNutrient() {
@@ -52,7 +52,7 @@ public final class NutrientQuantity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Value representing the nutrient.
+   * Required. The nutrient type.
    * @param nutrient nutrient or {@code null} for none
    */
   public NutrientQuantity setNutrient(java.lang.String nutrient) {
@@ -61,7 +61,7 @@ public final class NutrientQuantity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Value representing the quantity of the nutrient.
+   * Required. The quantity of the nutrient, measured in grams.
    * @return value or {@code null} for none
    */
   public WeightQuantity getQuantity() {
@@ -69,7 +69,7 @@ public final class NutrientQuantity extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Value representing the quantity of the nutrient.
+   * Required. The quantity of the nutrient, measured in grams.
    * @param quantity quantity or {@code null} for none
    */
   public NutrientQuantity setQuantity(WeightQuantity quantity) {

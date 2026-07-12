@@ -5609,6 +5609,146 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
           /**
+           * Gets the extended agent card for the authenticated agent.
+           *
+           * Create a request for the method "deployments.getExtendedAgentCard".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @return the request
+           */
+          public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
+            GetExtendedAgentCard result = new GetExtendedAgentCard(tenant);
+            initialize(result);
+            return result;
+          }
+
+          public class GetExtendedAgentCard extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard> {
+
+            private static final String REST_PATH = "v1beta/{+tenant}/extendedAgentCard";
+
+            private final java.util.regex.Pattern TENANT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+
+            /**
+             * Gets the extended agent card for the authenticated agent.
+             *
+             * Create a request for the method "deployments.getExtendedAgentCard".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+             * operation. <p> {@link GetExtendedAgentCard#initialize(com.google.api.client.googleapis.services
+             * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @since 1.13
+             */
+            protected GetExtendedAgentCard(java.lang.String tenant) {
+              super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard.class);
+              this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetExtendedAgentCard set$Xgafv(java.lang.String $Xgafv) {
+              return (GetExtendedAgentCard) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetExtendedAgentCard setAccessToken(java.lang.String accessToken) {
+              return (GetExtendedAgentCard) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetExtendedAgentCard setAlt(java.lang.String alt) {
+              return (GetExtendedAgentCard) super.setAlt(alt);
+            }
+
+            @Override
+            public GetExtendedAgentCard setCallback(java.lang.String callback) {
+              return (GetExtendedAgentCard) super.setCallback(callback);
+            }
+
+            @Override
+            public GetExtendedAgentCard setFields(java.lang.String fields) {
+              return (GetExtendedAgentCard) super.setFields(fields);
+            }
+
+            @Override
+            public GetExtendedAgentCard setKey(java.lang.String key) {
+              return (GetExtendedAgentCard) super.setKey(key);
+            }
+
+            @Override
+            public GetExtendedAgentCard setOauthToken(java.lang.String oauthToken) {
+              return (GetExtendedAgentCard) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetExtendedAgentCard setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetExtendedAgentCard) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetExtendedAgentCard setQuotaUser(java.lang.String quotaUser) {
+              return (GetExtendedAgentCard) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetExtendedAgentCard setUploadType(java.lang.String uploadType) {
+              return (GetExtendedAgentCard) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetExtendedAgentCard setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Optional. Tenant ID, provided as a path parameter. */
+            @com.google.api.client.util.Key
+            private java.lang.String tenant;
+
+            /** Optional. Tenant ID, provided as a path parameter.
+             */
+            public java.lang.String getTenant() {
+              return tenant;
+            }
+
+            /** Optional. Tenant ID, provided as a path parameter. */
+            public GetExtendedAgentCard setTenant(java.lang.String tenant) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+              }
+              this.tenant = tenant;
+              return this;
+            }
+
+            @Override
+            public GetExtendedAgentCard set(String parameterName, Object value) {
+              return (GetExtendedAgentCard) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists deployments in the given app.
            *
            * Create a request for the method "deployments.list".
@@ -5983,6 +6123,158 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
 
+          /**
+           * An accessor for creating requests from the Message collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CustomerEngagementSuite ces = new CustomerEngagementSuite(...);}
+           *   {@code CustomerEngagementSuite.Message.List request = ces.message().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Message message() {
+            return new Message();
+          }
+
+          /**
+           * The "message" collection of methods.
+           */
+          public class Message {
+
+            /**
+             * Sends a message to an agent.
+             *
+             * Create a request for the method "message.send".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link Send#execute()} method to invoke the remote operation.
+             *
+             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+             * @return the request
+             */
+            public Send send(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) throws java.io.IOException {
+              Send result = new Send(tenant, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Send extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageResponse> {
+
+              private static final String REST_PATH = "v1beta/{+tenant}/message:send";
+
+              private final java.util.regex.Pattern TENANT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+
+              /**
+               * Sends a message to an agent.
+               *
+               * Create a request for the method "message.send".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link Send#execute()} method to invoke the remote operation. <p> {@link
+               * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param tenant Optional. Tenant ID, provided as a path parameter.
+               * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+               * @since 1.13
+               */
+              protected Send(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageResponse.class);
+                this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+                }
+              }
+
+              @Override
+              public Send set$Xgafv(java.lang.String $Xgafv) {
+                return (Send) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Send setAccessToken(java.lang.String accessToken) {
+                return (Send) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Send setAlt(java.lang.String alt) {
+                return (Send) super.setAlt(alt);
+              }
+
+              @Override
+              public Send setCallback(java.lang.String callback) {
+                return (Send) super.setCallback(callback);
+              }
+
+              @Override
+              public Send setFields(java.lang.String fields) {
+                return (Send) super.setFields(fields);
+              }
+
+              @Override
+              public Send setKey(java.lang.String key) {
+                return (Send) super.setKey(key);
+              }
+
+              @Override
+              public Send setOauthToken(java.lang.String oauthToken) {
+                return (Send) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Send setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Send) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Send setQuotaUser(java.lang.String quotaUser) {
+                return (Send) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Send setUploadType(java.lang.String uploadType) {
+                return (Send) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Send setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Send) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Optional. Tenant ID, provided as a path parameter. */
+              @com.google.api.client.util.Key
+              private java.lang.String tenant;
+
+              /** Optional. Tenant ID, provided as a path parameter.
+               */
+              public java.lang.String getTenant() {
+                return tenant;
+              }
+
+              /** Optional. Tenant ID, provided as a path parameter. */
+              public Send setTenant(java.lang.String tenant) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+                }
+                this.tenant = tenant;
+                return this;
+              }
+
+              @Override
+              public Send set(String parameterName, Object value) {
+                return (Send) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the EvaluationDatasets collection.
@@ -16137,6 +16429,146 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
           /**
+           * Gets the extended agent card for the authenticated agent.
+           *
+           * Create a request for the method "versions.getExtendedAgentCard".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @return the request
+           */
+          public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
+            GetExtendedAgentCard result = new GetExtendedAgentCard(tenant);
+            initialize(result);
+            return result;
+          }
+
+          public class GetExtendedAgentCard extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard> {
+
+            private static final String REST_PATH = "v1beta/{+tenant}/extendedAgentCard";
+
+            private final java.util.regex.Pattern TENANT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+
+            /**
+             * Gets the extended agent card for the authenticated agent.
+             *
+             * Create a request for the method "versions.getExtendedAgentCard".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
+             * operation. <p> {@link GetExtendedAgentCard#initialize(com.google.api.client.googleapis.services
+             * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @since 1.13
+             */
+            protected GetExtendedAgentCard(java.lang.String tenant) {
+              super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.LfA2aV1AgentCard.class);
+              this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetExtendedAgentCard set$Xgafv(java.lang.String $Xgafv) {
+              return (GetExtendedAgentCard) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetExtendedAgentCard setAccessToken(java.lang.String accessToken) {
+              return (GetExtendedAgentCard) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetExtendedAgentCard setAlt(java.lang.String alt) {
+              return (GetExtendedAgentCard) super.setAlt(alt);
+            }
+
+            @Override
+            public GetExtendedAgentCard setCallback(java.lang.String callback) {
+              return (GetExtendedAgentCard) super.setCallback(callback);
+            }
+
+            @Override
+            public GetExtendedAgentCard setFields(java.lang.String fields) {
+              return (GetExtendedAgentCard) super.setFields(fields);
+            }
+
+            @Override
+            public GetExtendedAgentCard setKey(java.lang.String key) {
+              return (GetExtendedAgentCard) super.setKey(key);
+            }
+
+            @Override
+            public GetExtendedAgentCard setOauthToken(java.lang.String oauthToken) {
+              return (GetExtendedAgentCard) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetExtendedAgentCard setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetExtendedAgentCard) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetExtendedAgentCard setQuotaUser(java.lang.String quotaUser) {
+              return (GetExtendedAgentCard) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetExtendedAgentCard setUploadType(java.lang.String uploadType) {
+              return (GetExtendedAgentCard) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetExtendedAgentCard setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Optional. Tenant ID, provided as a path parameter. */
+            @com.google.api.client.util.Key
+            private java.lang.String tenant;
+
+            /** Optional. Tenant ID, provided as a path parameter.
+             */
+            public java.lang.String getTenant() {
+              return tenant;
+            }
+
+            /** Optional. Tenant ID, provided as a path parameter. */
+            public GetExtendedAgentCard setTenant(java.lang.String tenant) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+              }
+              this.tenant = tenant;
+              return this;
+            }
+
+            @Override
+            public GetExtendedAgentCard set(String parameterName, Object value) {
+              return (GetExtendedAgentCard) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists all app versions in the given app.
            *
            * Create a request for the method "versions.list".
@@ -16500,6 +16932,158 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
 
+          /**
+           * An accessor for creating requests from the Message collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CustomerEngagementSuite ces = new CustomerEngagementSuite(...);}
+           *   {@code CustomerEngagementSuite.Message.List request = ces.message().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Message message() {
+            return new Message();
+          }
+
+          /**
+           * The "message" collection of methods.
+           */
+          public class Message {
+
+            /**
+             * Sends a message to an agent.
+             *
+             * Create a request for the method "message.send".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link Send#execute()} method to invoke the remote operation.
+             *
+             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+             * @return the request
+             */
+            public Send send(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) throws java.io.IOException {
+              Send result = new Send(tenant, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Send extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageResponse> {
+
+              private static final String REST_PATH = "v1beta/{+tenant}/message:send";
+
+              private final java.util.regex.Pattern TENANT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+
+              /**
+               * Sends a message to an agent.
+               *
+               * Create a request for the method "message.send".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link Send#execute()} method to invoke the remote operation. <p> {@link
+               * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param tenant Optional. Tenant ID, provided as a path parameter.
+               * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+               * @since 1.13
+               */
+              protected Send(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageResponse.class);
+                this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Send set$Xgafv(java.lang.String $Xgafv) {
+                return (Send) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Send setAccessToken(java.lang.String accessToken) {
+                return (Send) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Send setAlt(java.lang.String alt) {
+                return (Send) super.setAlt(alt);
+              }
+
+              @Override
+              public Send setCallback(java.lang.String callback) {
+                return (Send) super.setCallback(callback);
+              }
+
+              @Override
+              public Send setFields(java.lang.String fields) {
+                return (Send) super.setFields(fields);
+              }
+
+              @Override
+              public Send setKey(java.lang.String key) {
+                return (Send) super.setKey(key);
+              }
+
+              @Override
+              public Send setOauthToken(java.lang.String oauthToken) {
+                return (Send) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Send setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Send) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Send setQuotaUser(java.lang.String quotaUser) {
+                return (Send) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Send setUploadType(java.lang.String uploadType) {
+                return (Send) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Send setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Send) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Optional. Tenant ID, provided as a path parameter. */
+              @com.google.api.client.util.Key
+              private java.lang.String tenant;
+
+              /** Optional. Tenant ID, provided as a path parameter.
+               */
+              public java.lang.String getTenant() {
+                return tenant;
+              }
+
+              /** Optional. Tenant ID, provided as a path parameter. */
+              public Send setTenant(java.lang.String tenant) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+                }
+                this.tenant = tenant;
+                return this;
+              }
+
+              @Override
+              public Send set(String parameterName, Object value) {
+                return (Send) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**

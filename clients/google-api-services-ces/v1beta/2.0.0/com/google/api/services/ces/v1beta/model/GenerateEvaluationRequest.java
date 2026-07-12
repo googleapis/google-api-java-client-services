@@ -31,11 +31,35 @@ package com.google.api.services.ces.v1beta.model;
 public final class GenerateEvaluationRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The type of evaluation to generate. Defaults to GOLDEN if unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationType;
+
+  /**
    * Optional. Indicate the source of the conversation. If not set, all sources will be searched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Optional. The type of evaluation to generate. Defaults to GOLDEN if unspecified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationType() {
+    return evaluationType;
+  }
+
+  /**
+   * Optional. The type of evaluation to generate. Defaults to GOLDEN if unspecified.
+   * @param evaluationType evaluationType or {@code null} for none
+   */
+  public GenerateEvaluationRequest setEvaluationType(java.lang.String evaluationType) {
+    this.evaluationType = evaluationType;
+    return this;
+  }
 
   /**
    * Optional. Indicate the source of the conversation. If not set, all sources will be searched.

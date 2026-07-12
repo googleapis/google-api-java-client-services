@@ -31,6 +31,21 @@ package com.google.api.services.ces.v1beta.model;
 public final class SynthesizeSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The instruction used to synthesize speech when using a generative model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instruction;
+
+  /**
+   * Optional. The model used to synthesize audio. Currently supported values: - "gemini-3.1-flash-
+   * tts-preview" If empty, Chirp3-HD is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * Optional. The speaking rate/speed in the range [0.25, 2.0]. 1.0 is the normal native speed
    * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. Values outside
    * of the range [0.25, 2.0] will return an error.
@@ -48,6 +63,52 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String voice;
+
+  /**
+   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
+   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
+   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
+   * object.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String voiceSampleGcsUri;
+
+  /**
+   * Optional. The instruction used to synthesize speech when using a generative model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstruction() {
+    return instruction;
+  }
+
+  /**
+   * Optional. The instruction used to synthesize speech when using a generative model.
+   * @param instruction instruction or {@code null} for none
+   */
+  public SynthesizeSpeechConfig setInstruction(java.lang.String instruction) {
+    this.instruction = instruction;
+    return this;
+  }
+
+  /**
+   * Optional. The model used to synthesize audio. Currently supported values: - "gemini-3.1-flash-
+   * tts-preview" If empty, Chirp3-HD is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Optional. The model used to synthesize audio. Currently supported values: - "gemini-3.1-flash-
+   * tts-preview" If empty, Chirp3-HD is used.
+   * @param model model or {@code null} for none
+   */
+  public SynthesizeSpeechConfig setModel(java.lang.String model) {
+    this.model = model;
+    return this;
+  }
 
   /**
    * Optional. The speaking rate/speed in the range [0.25, 2.0]. 1.0 is the normal native speed
@@ -90,6 +151,29 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
    */
   public SynthesizeSpeechConfig setVoice(java.lang.String voice) {
     this.voice = voice;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
+   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
+   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
+   * object.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVoiceSampleGcsUri() {
+    return voiceSampleGcsUri;
+  }
+
+  /**
+   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
+   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
+   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
+   * object.
+   * @param voiceSampleGcsUri voiceSampleGcsUri or {@code null} for none
+   */
+  public SynthesizeSpeechConfig setVoiceSampleGcsUri(java.lang.String voiceSampleGcsUri) {
+    this.voiceSampleGcsUri = voiceSampleGcsUri;
     return this;
   }
 

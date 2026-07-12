@@ -45,6 +45,13 @@ public final class WhatsAppCredentials extends com.google.api.client.json.Generi
   private java.lang.String businessAccountId;
 
   /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversationProfileId;
+
+  /**
    * Required. The phone number to register with WhatsApp.
    * The value may be {@code null}.
    */
@@ -57,6 +64,13 @@ public final class WhatsAppCredentials extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String pin;
+
+  /**
+   * Required. The WhatsApp Business Account ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String wabaId;
 
   /**
    * Required. The Meta auth code provided by the embedded signup flow.
@@ -93,6 +107,23 @@ public final class WhatsAppCredentials extends com.google.api.client.json.Generi
   }
 
   /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversationProfileId() {
+    return conversationProfileId;
+  }
+
+  /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * @param conversationProfileId conversationProfileId or {@code null} for none
+   */
+  public WhatsAppCredentials setConversationProfileId(java.lang.String conversationProfileId) {
+    this.conversationProfileId = conversationProfileId;
+    return this;
+  }
+
+  /**
    * Required. The phone number to register with WhatsApp.
    * @return value or {@code null} for none
    */
@@ -123,6 +154,23 @@ public final class WhatsAppCredentials extends com.google.api.client.json.Generi
    */
   public WhatsAppCredentials setPin(java.lang.String pin) {
     this.pin = pin;
+    return this;
+  }
+
+  /**
+   * Required. The WhatsApp Business Account ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWabaId() {
+    return wabaId;
+  }
+
+  /**
+   * Required. The WhatsApp Business Account ID.
+   * @param wabaId wabaId or {@code null} for none
+   */
+  public WhatsAppCredentials setWabaId(java.lang.String wabaId) {
+    this.wabaId = wabaId;
     return this;
   }
 

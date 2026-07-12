@@ -1725,6 +1725,356 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Shl collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+   *   {@code GoogleHealthAPI.Shl.List request = health.shl().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Shl shl() {
+    return new Shl();
+  }
+
+  /**
+   * The "shl" collection of methods.
+   */
+  public class Shl {
+
+    /**
+     * An accessor for creating requests from the M collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+     *   {@code GoogleHealthAPI.M.List request = health.m().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public M m() {
+      return new M();
+    }
+
+    /**
+     * The "m" collection of methods.
+     */
+    public class M {
+
+      /**
+       * Forward a manifest request for a given SHL
+       *
+       * Create a request for the method "m.getShlManifest".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link GetShlManifest#execute()} method to invoke the remote operation.
+       *
+       * @param externalShlId Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/d
+       *        ocument/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+       * @param content the {@link com.google.api.services.health.v4.model.ManifestParams}
+       * @return the request
+       */
+      public GetShlManifest getShlManifest(java.lang.String externalShlId, com.google.api.services.health.v4.model.ManifestParams content) throws java.io.IOException {
+        GetShlManifest result = new GetShlManifest(externalShlId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GetShlManifest extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.HttpBody> {
+
+        private static final String REST_PATH = "v4/shl/m/{externalShlId}";
+
+        /**
+         * Forward a manifest request for a given SHL
+         *
+         * Create a request for the method "m.getShlManifest".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link GetShlManifest#execute()} method to invoke the remote operation.
+         * <p> {@link GetShlManifest#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+         * ientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param externalShlId Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/d
+       *        ocument/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+         * @param content the {@link com.google.api.services.health.v4.model.ManifestParams}
+         * @since 1.13
+         */
+        protected GetShlManifest(java.lang.String externalShlId, com.google.api.services.health.v4.model.ManifestParams content) {
+          super(GoogleHealthAPI.this, "POST", REST_PATH, content, com.google.api.services.health.v4.model.HttpBody.class);
+          this.externalShlId = com.google.api.client.util.Preconditions.checkNotNull(externalShlId, "Required parameter externalShlId must be specified.");
+        }
+
+        @Override
+        public GetShlManifest set$Xgafv(java.lang.String $Xgafv) {
+          return (GetShlManifest) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetShlManifest setAccessToken(java.lang.String accessToken) {
+          return (GetShlManifest) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetShlManifest setAlt(java.lang.String alt) {
+          return (GetShlManifest) super.setAlt(alt);
+        }
+
+        @Override
+        public GetShlManifest setCallback(java.lang.String callback) {
+          return (GetShlManifest) super.setCallback(callback);
+        }
+
+        @Override
+        public GetShlManifest setFields(java.lang.String fields) {
+          return (GetShlManifest) super.setFields(fields);
+        }
+
+        @Override
+        public GetShlManifest setKey(java.lang.String key) {
+          return (GetShlManifest) super.setKey(key);
+        }
+
+        @Override
+        public GetShlManifest setOauthToken(java.lang.String oauthToken) {
+          return (GetShlManifest) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetShlManifest setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetShlManifest) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetShlManifest setQuotaUser(java.lang.String quotaUser) {
+          return (GetShlManifest) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetShlManifest setUploadType(java.lang.String uploadType) {
+          return (GetShlManifest) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetShlManifest setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetShlManifest) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.g
+         * oogle.com/document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.
+         * 17wg41voij6q
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String externalShlId;
+
+        /** Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/
+       document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+         */
+        public java.lang.String getExternalShlId() {
+          return externalShlId;
+        }
+
+        /**
+         * Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.g
+         * oogle.com/document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.
+         * 17wg41voij6q
+         */
+        public GetShlManifest setExternalShlId(java.lang.String externalShlId) {
+          this.externalShlId = externalShlId;
+          return this;
+        }
+
+        @Override
+        public GetShlManifest set(String parameterName, Object value) {
+          return (GetShlManifest) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the R collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleHealthAPI health = new GoogleHealthAPI(...);}
+     *   {@code GoogleHealthAPI.R.List request = health.r().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public R r() {
+      return new R();
+    }
+
+    /**
+     * The "r" collection of methods.
+     */
+    public class R {
+
+      /**
+       * Forward a resource request for a given SHL
+       *
+       * Create a request for the method "r.get".
+       *
+       * This request holds the parameters needed by the health server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param externalShlId Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/d
+       *        ocument/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+       * @param resourceToken Required. Encoded, encrypted message containing resource access details
+       * @return the request
+       */
+      public Get get(java.lang.String externalShlId, java.lang.String resourceToken) throws java.io.IOException {
+        Get result = new Get(externalShlId, resourceToken);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleHealthAPIRequest<com.google.api.services.health.v4.model.HttpBody> {
+
+        private static final String REST_PATH = "v4/shl/r/{externalShlId}/{resourceToken}";
+
+        /**
+         * Forward a resource request for a given SHL
+         *
+         * Create a request for the method "r.get".
+         *
+         * This request holds the parameters needed by the the health server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param externalShlId Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/d
+       *        ocument/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+         * @param resourceToken Required. Encoded, encrypted message containing resource access details
+         * @since 1.13
+         */
+        protected Get(java.lang.String externalShlId, java.lang.String resourceToken) {
+          super(GoogleHealthAPI.this, "GET", REST_PATH, null, com.google.api.services.health.v4.model.HttpBody.class);
+          this.externalShlId = com.google.api.client.util.Preconditions.checkNotNull(externalShlId, "Required parameter externalShlId must be specified.");
+          this.resourceToken = com.google.api.client.util.Preconditions.checkNotNull(resourceToken, "Required parameter resourceToken must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.g
+         * oogle.com/document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.
+         * 17wg41voij6q
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String externalShlId;
+
+        /** Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.google.com/
+       document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.17wg41voij6q
+         */
+        public java.lang.String getExternalShlId() {
+          return externalShlId;
+        }
+
+        /**
+         * Required. External ID mapping to a ShlSharedLinkCapabilityToken object See https://docs.g
+         * oogle.com/document/d/1Pch20pxJHRbsaMxp0EYgs3ZU0Gu7QTUznk8LhvbQvfY/edit?tab=t.0#heading=h.
+         * 17wg41voij6q
+         */
+        public Get setExternalShlId(java.lang.String externalShlId) {
+          this.externalShlId = externalShlId;
+          return this;
+        }
+
+        /** Required. Encoded, encrypted message containing resource access details */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceToken;
+
+        /** Required. Encoded, encrypted message containing resource access details
+         */
+        public java.lang.String getResourceToken() {
+          return resourceToken;
+        }
+
+        /** Required. Encoded, encrypted message containing resource access details */
+        public Get setResourceToken(java.lang.String resourceToken) {
+          this.resourceToken = resourceToken;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Users collection.
    *
    * <p>The typical use is:</p>

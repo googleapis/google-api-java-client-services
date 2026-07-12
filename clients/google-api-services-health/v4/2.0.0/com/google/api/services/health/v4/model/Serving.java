@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class Serving extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Amount of food consumed, fractional values are supported.
+   * Optional. The number of servings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class Serving extends com.google.api.client.json.GenericJson {
   private java.lang.String foodMeasurementUnitDisplayName;
 
   /**
-   * Optional. Amount of food consumed, fractional values are supported.
+   * Optional. The number of servings.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAmount() {
@@ -59,7 +59,7 @@ public final class Serving extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Amount of food consumed, fractional values are supported.
+   * Optional. The number of servings.
    * @param amount amount or {@code null} for none
    */
   public Serving setAmount(java.lang.Double amount) {

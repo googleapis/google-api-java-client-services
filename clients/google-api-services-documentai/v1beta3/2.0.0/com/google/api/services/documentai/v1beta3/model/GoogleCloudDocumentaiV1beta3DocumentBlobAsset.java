@@ -33,7 +33,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The id of the blob asset.
+   * Optional. The ID of the blob asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   private java.lang.String mimeType;
 
   /**
-   * Optional. The id of the blob asset.
+   * Optional. The ID of the blob asset.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetId() {
@@ -63,7 +63,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   }
 
   /**
-   * Optional. The id of the blob asset.
+   * Optional. The ID of the blob asset.
    * @param assetId assetId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentBlobAsset setAssetId(java.lang.String assetId) {

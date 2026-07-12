@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentProvenance extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Id of this operation. Needs to be unique within the scope of the revision.
+   * The ID of this operation. Needs to be unique within the scope of the revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentProvenance extends com.go
   private java.lang.String type;
 
   /**
-   * The Id of this operation. Needs to be unique within the scope of the revision.
+   * The ID of this operation. Needs to be unique within the scope of the revision.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getId() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentProvenance extends com.go
   }
 
   /**
-   * The Id of this operation. Needs to be unique within the scope of the revision.
+   * The ID of this operation. Needs to be unique within the scope of the revision.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentProvenance setId(java.lang.Integer id) {

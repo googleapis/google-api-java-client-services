@@ -84,7 +84,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
   private GoogleTypeMoney moneyValue;
 
   /**
-   * A signature - a graphical representation of a person's name, often used to sign a document.
+   * A signature, which is a graphical representation of a person's name, often used to sign a
+   * document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,7 +232,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
   }
 
   /**
-   * A signature - a graphical representation of a person's name, often used to sign a document.
+   * A signature, which is a graphical representation of a person's name, often used to sign a
+   * document.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSignatureValue() {
@@ -239,7 +241,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue ext
   }
 
   /**
-   * A signature - a graphical representation of a person's name, often used to sign a document.
+   * A signature, which is a graphical representation of a person's name, often used to sign a
+   * document.
    * @param signatureValue signatureValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue setSignatureValue(java.lang.Boolean signatureValue) {

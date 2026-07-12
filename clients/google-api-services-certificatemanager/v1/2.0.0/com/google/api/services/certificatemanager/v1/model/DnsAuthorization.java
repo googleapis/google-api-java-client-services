@@ -77,6 +77,14 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Optional. Immutable. Type of DnsAuthorization. If unset during resource creation the following
    * default will be used: - in location `global`: FIXED_RECORD, - in other locations:
    * PER_PROJECT_RECORD.
@@ -197,6 +205,25 @@ public final class DnsAuthorization extends com.google.api.client.json.GenericJs
    */
   public DnsAuthorization setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public DnsAuthorization setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

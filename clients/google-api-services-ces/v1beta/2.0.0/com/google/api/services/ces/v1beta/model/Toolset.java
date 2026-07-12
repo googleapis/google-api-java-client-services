@@ -96,6 +96,14 @@ public final class Toolset extends com.google.api.client.json.GenericJson {
   private OpenApiToolset openApiToolset;
 
   /**
+   * Optional. The timeout for the toolset execution. If not set, the default timeout is 30 seconds
+   * for `SYNCHRONOUS` toolsets and 60 seconds for `ASYNCHRONOUS` toolsets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timeout;
+
+  /**
    * Optional. Configuration for tools behavior in fake mode.
    * The value may be {@code null}.
    */
@@ -263,6 +271,25 @@ public final class Toolset extends com.google.api.client.json.GenericJson {
    */
   public Toolset setOpenApiToolset(OpenApiToolset openApiToolset) {
     this.openApiToolset = openApiToolset;
+    return this;
+  }
+
+  /**
+   * Optional. The timeout for the toolset execution. If not set, the default timeout is 30 seconds
+   * for `SYNCHRONOUS` toolsets and 60 seconds for `ASYNCHRONOUS` toolsets.
+   * @return value or {@code null} for none
+   */
+  public String getTimeout() {
+    return timeout;
+  }
+
+  /**
+   * Optional. The timeout for the toolset execution. If not set, the default timeout is 30 seconds
+   * for `SYNCHRONOUS` toolsets and 60 seconds for `ASYNCHRONOUS` toolsets.
+   * @param timeout timeout or {@code null} for none
+   */
+  public Toolset setTimeout(String timeout) {
+    this.timeout = timeout;
     return this;
   }
 

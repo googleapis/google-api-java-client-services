@@ -31,6 +31,27 @@ package com.google.api.services.ces.v1beta.model;
 public final class ChannelProfileWhatsAppConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The description of the Meta business page or profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Optional. The phone number in E.164 format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phoneNumber;
+
+  /**
    * Required. The Meta phone number ID.
    * The value may be {@code null}.
    */
@@ -38,11 +59,69 @@ public final class ChannelProfileWhatsAppConfig extends com.google.api.client.js
   private java.lang.String phoneNumberId;
 
   /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailUrl;
+
+  /**
    * Required. The WhatsApp Business Account ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wabaId;
+
+  /**
+   * Output only. The description of the Meta business page or profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. The description of the Meta business page or profile.
+   * @param description description or {@code null} for none
+   */
+  public ChannelProfileWhatsAppConfig setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public ChannelProfileWhatsAppConfig setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The phone number in E.164 format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhoneNumber() {
+    return phoneNumber;
+  }
+
+  /**
+   * Optional. The phone number in E.164 format.
+   * @param phoneNumber phoneNumber or {@code null} for none
+   */
+  public ChannelProfileWhatsAppConfig setPhoneNumber(java.lang.String phoneNumber) {
+    this.phoneNumber = phoneNumber;
+    return this;
+  }
 
   /**
    * Required. The Meta phone number ID.
@@ -58,6 +137,23 @@ public final class ChannelProfileWhatsAppConfig extends com.google.api.client.js
    */
   public ChannelProfileWhatsAppConfig setPhoneNumberId(java.lang.String phoneNumberId) {
     this.phoneNumberId = phoneNumberId;
+    return this;
+  }
+
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * @param thumbnailUrl thumbnailUrl or {@code null} for none
+   */
+  public ChannelProfileWhatsAppConfig setThumbnailUrl(java.lang.String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
     return this;
   }
 

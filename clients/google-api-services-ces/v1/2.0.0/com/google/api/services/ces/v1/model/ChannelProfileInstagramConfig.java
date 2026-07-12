@@ -31,11 +31,66 @@ package com.google.api.services.ces.v1.model;
 public final class ChannelProfileInstagramConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The description of the Meta business page or profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Required. The Instagram Account ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instagramAccountId;
+
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailUrl;
+
+  /**
+   * Output only. The description of the Meta business page or profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Output only. The description of the Meta business page or profile.
+   * @param description description or {@code null} for none
+   */
+  public ChannelProfileInstagramConfig setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The fetched Meta business page name.
+   * @param displayName displayName or {@code null} for none
+   */
+  public ChannelProfileInstagramConfig setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Required. The Instagram Account ID.
@@ -51,6 +106,23 @@ public final class ChannelProfileInstagramConfig extends com.google.api.client.j
    */
   public ChannelProfileInstagramConfig setInstagramAccountId(java.lang.String instagramAccountId) {
     this.instagramAccountId = instagramAccountId;
+    return this;
+  }
+
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  /**
+   * Output only. The fetched Meta business profile thumbnail URL.
+   * @param thumbnailUrl thumbnailUrl or {@code null} for none
+   */
+  public ChannelProfileInstagramConfig setThumbnailUrl(java.lang.String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class InstagramCredentials extends com.google.api.client.json.Gener
   private java.lang.String authCode;
 
   /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversationProfileId;
+
+  /**
    * Required. The Meta auth code provided by the embedded signup flow.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class InstagramCredentials extends com.google.api.client.json.Gener
    */
   public InstagramCredentials setAuthCode(java.lang.String authCode) {
     this.authCode = authCode;
+    return this;
+  }
+
+  /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversationProfileId() {
+    return conversationProfileId;
+  }
+
+  /**
+   * Optional. The Conversation Profile ID to use for the deployment.
+   * @param conversationProfileId conversationProfileId or {@code null} for none
+   */
+  public InstagramCredentials setConversationProfileId(java.lang.String conversationProfileId) {
+    this.conversationProfileId = conversationProfileId;
     return this;
   }
 

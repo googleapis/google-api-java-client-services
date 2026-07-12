@@ -31,11 +31,35 @@ package com.google.api.services.ces.v1beta.model;
 public final class GenerateAppResourceRequestQualityReportGenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The loss attribution algorithm to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String algorithm;
+
+  /**
    * Required. The evaluation run used to inform quality report analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String evaluationRun;
+
+  /**
+   * Optional. The loss attribution algorithm to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlgorithm() {
+    return algorithm;
+  }
+
+  /**
+   * Optional. The loss attribution algorithm to use.
+   * @param algorithm algorithm or {@code null} for none
+   */
+  public GenerateAppResourceRequestQualityReportGenerationConfig setAlgorithm(java.lang.String algorithm) {
+    this.algorithm = algorithm;
+    return this;
+  }
 
   /**
    * Required. The evaluation run used to inform quality report analysis.

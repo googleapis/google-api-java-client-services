@@ -55,6 +55,13 @@ public final class ExecutePipelineRequest extends com.google.api.client.json.Gen
   private String readTime;
 
   /**
+   * Optional. The request options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * A pipelined operation.
    * The value may be {@code null}.
    */
@@ -125,6 +132,23 @@ public final class ExecutePipelineRequest extends com.google.api.client.json.Gen
    */
   public ExecutePipelineRequest setReadTime(String readTime) {
     this.readTime = readTime;
+    return this;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public ExecutePipelineRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

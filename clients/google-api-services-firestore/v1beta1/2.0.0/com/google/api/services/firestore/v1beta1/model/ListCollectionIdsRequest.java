@@ -53,6 +53,13 @@ public final class ListCollectionIdsRequest extends com.google.api.client.json.G
   private String readTime;
 
   /**
+   * Optional. The request options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * The maximum number of results to return.
    * @return value or {@code null} for none
    */
@@ -104,6 +111,23 @@ public final class ListCollectionIdsRequest extends com.google.api.client.json.G
    */
   public ListCollectionIdsRequest setReadTime(String readTime) {
     this.readTime = readTime;
+    return this;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public ListCollectionIdsRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

@@ -10202,8 +10202,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * `change_stream_config` * `change_stream_config.retention_period` *
            * `deletion_protection` * `automated_backup_policy` *
            * `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` *
-           * `row_key_schema` If `column_families` is set in `update_mask`, it will return an
-           * UNIMPLEMENTED error.
+           * `automated_backup_policy.locations` * `row_key_schema` If `column_families` is set in
+           * `update_mask`, it will return an UNIMPLEMENTED error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -10213,8 +10213,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
          `table` field, not to the request message. The wildcard (*) path is currently not supported.
          Currently UpdateTable is only supported for the following fields: * `change_stream_config` *
          `change_stream_config.retention_period` * `deletion_protection` * `automated_backup_policy` *
-         `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` * `row_key_schema`
-         If `column_families` is set in `update_mask`, it will return an UNIMPLEMENTED error.
+         `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` *
+         `automated_backup_policy.locations` * `row_key_schema` If `column_families` is set in
+         `update_mask`, it will return an UNIMPLEMENTED error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -10228,8 +10229,8 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * `change_stream_config` * `change_stream_config.retention_period` *
            * `deletion_protection` * `automated_backup_policy` *
            * `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` *
-           * `row_key_schema` If `column_families` is set in `update_mask`, it will return an
-           * UNIMPLEMENTED error.
+           * `automated_backup_policy.locations` * `row_key_schema` If `column_families` is set in
+           * `update_mask`, it will return an UNIMPLEMENTED error.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

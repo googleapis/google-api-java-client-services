@@ -68,7 +68,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Management type of the Realm.
+   * Optional. Management type of the Realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,7 +188,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Management type of the Realm.
+   * Optional. Management type of the Realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagementType() {
@@ -196,7 +196,7 @@ public final class Realm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Management type of the Realm.
+   * Optional. Management type of the Realm.
    * @param managementType managementType or {@code null} for none
    */
   public Realm setManagementType(java.lang.String managementType) {

@@ -67,18 +67,21 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private java.lang.String feedType;
 
   /**
+   * Observability metric data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData;
 
   /**
+   * Database resource recommendation signal data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData;
 
   /**
+   * Database resource health signal data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,6 +96,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
+   * Database resource metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,6 +200,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Observability metric data.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData getObservabilityMetricData() {
@@ -203,6 +208,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Observability metric data.
    * @param observabilityMetricData observabilityMetricData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setObservabilityMetricData(StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData) {
@@ -211,6 +217,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource recommendation signal data.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData getRecommendationSignalData() {
@@ -218,6 +225,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource recommendation signal data.
    * @param recommendationSignalData recommendationSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setRecommendationSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData) {
@@ -226,6 +234,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource health signal data.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData getResourceHealthSignalData() {
@@ -233,6 +242,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource health signal data.
    * @param resourceHealthSignalData resourceHealthSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData) {
@@ -260,6 +270,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource metadata.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata getResourceMetadata() {
@@ -267,6 +278,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
+   * Database resource metadata.
    * @param resourceMetadata resourceMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceMetadata(StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata resourceMetadata) {

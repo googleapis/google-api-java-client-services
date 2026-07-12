@@ -53,6 +53,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   private java.lang.Boolean isDeletionProtectionEnabled;
 
   /**
+   * The product this resource represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,6 +125,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
+   * The product this resource represents.
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterProtoCommonProduct getProduct() {
@@ -131,6 +133,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
+   * The product this resource represents.
    * @param product product or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setProduct(StorageDatabasecenterProtoCommonProduct product) {

@@ -76,6 +76,13 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   private ReadOptions readOptions;
 
   /**
+   * Optional. The options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * The query to run.
    * @return value or {@code null} for none
    */
@@ -182,6 +189,23 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
    */
   public RunAggregationQueryRequest setReadOptions(ReadOptions readOptions) {
     this.readOptions = readOptions;
+    return this;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public RunAggregationQueryRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

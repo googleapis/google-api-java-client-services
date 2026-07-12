@@ -46,6 +46,13 @@ public final class AllocateIdsRequest extends com.google.api.client.json.Generic
   private java.util.List<Key> keys;
 
   /**
+   * Optional. The options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * The ID of the database against which to make the request. '(default)' is not allowed; please
    * use empty string '' to refer the default database.
    * @return value or {@code null} for none
@@ -80,6 +87,23 @@ public final class AllocateIdsRequest extends com.google.api.client.json.Generic
    */
   public AllocateIdsRequest setKeys(java.util.List<Key> keys) {
     this.keys = keys;
+    return this;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public AllocateIdsRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

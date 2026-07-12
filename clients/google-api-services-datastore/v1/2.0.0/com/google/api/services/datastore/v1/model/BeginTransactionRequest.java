@@ -38,6 +38,13 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
   private java.lang.String databaseId;
 
   /**
+   * Optional. The options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * Options for a new transaction.
    * The value may be {@code null}.
    */
@@ -60,6 +67,23 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
    */
   public BeginTransactionRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
+    return this;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public BeginTransactionRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

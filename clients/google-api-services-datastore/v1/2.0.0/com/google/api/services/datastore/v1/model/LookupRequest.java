@@ -67,6 +67,13 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
   private ReadOptions readOptions;
 
   /**
+   * Optional. The options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * The ID of the database against which to make the request. '(default)' is not allowed; please
    * use empty string '' to refer the default database.
    * @return value or {@code null} for none
@@ -137,6 +144,23 @@ public final class LookupRequest extends com.google.api.client.json.GenericJson 
    */
   public LookupRequest setReadOptions(ReadOptions readOptions) {
     this.readOptions = readOptions;
+    return this;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public LookupRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

@@ -37,6 +37,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   private String durationBasedRetention;
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +51,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   private java.lang.String retentionUnit;
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,6 +82,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantityBasedRetention() {
@@ -87,6 +90,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
+   * Quantity based retention period i.e. 7 backups
    * @param quantityBasedRetention quantityBasedRetention or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setQuantityBasedRetention(java.lang.Integer quantityBasedRetention) {
@@ -112,6 +116,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * @return value or {@code null} for none
    */
   public String getTimeBasedRetention() {
@@ -119,6 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
+   * Duration based retention period i.e. 172800 seconds (2 days)
    * @param timeBasedRetention timeBasedRetention or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setTimeBasedRetention(String timeBasedRetention) {

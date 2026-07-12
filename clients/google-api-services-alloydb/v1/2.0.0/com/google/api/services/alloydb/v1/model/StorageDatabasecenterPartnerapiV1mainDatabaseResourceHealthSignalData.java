@@ -145,6 +145,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String signalType;
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -411,6 +412,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -418,6 +420,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
+   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
    * @param state state or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setState(java.lang.String state) {

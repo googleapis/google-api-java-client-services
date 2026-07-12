@@ -37,6 +37,13 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.lang.Integer authproxyPoolerCount;
 
   /**
+   * Optional. The scaling type of the AuthProxy pooler.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String authproxyPoolerScalingType;
+
+  /**
    * Optional. Whether to enable Managed Connection Pool (MCP).
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.lang.Integer poolerCount;
 
   /**
+   * Optional. The scaling type of the regular pooler.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String poolerScalingType;
+
+  /**
    * Output only. The number of running AuthProxy poolers per instance.
    * @return value or {@code null} for none
    */
@@ -71,6 +85,23 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setAuthproxyPoolerCount(java.lang.Integer authproxyPoolerCount) {
     this.authproxyPoolerCount = authproxyPoolerCount;
+    return this;
+  }
+
+  /**
+   * Optional. The scaling type of the AuthProxy pooler.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAuthproxyPoolerScalingType() {
+    return authproxyPoolerScalingType;
+  }
+
+  /**
+   * Optional. The scaling type of the AuthProxy pooler.
+   * @param authproxyPoolerScalingType authproxyPoolerScalingType or {@code null} for none
+   */
+  public ConnectionPoolConfig setAuthproxyPoolerScalingType(java.lang.String authproxyPoolerScalingType) {
+    this.authproxyPoolerScalingType = authproxyPoolerScalingType;
     return this;
   }
 
@@ -122,6 +153,23 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setPoolerCount(java.lang.Integer poolerCount) {
     this.poolerCount = poolerCount;
+    return this;
+  }
+
+  /**
+   * Optional. The scaling type of the regular pooler.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPoolerScalingType() {
+    return poolerScalingType;
+  }
+
+  /**
+   * Optional. The scaling type of the regular pooler.
+   * @param poolerScalingType poolerScalingType or {@code null} for none
+   */
+  public ConnectionPoolConfig setPoolerScalingType(java.lang.String poolerScalingType) {
+    this.poolerScalingType = poolerScalingType;
     return this;
   }
 

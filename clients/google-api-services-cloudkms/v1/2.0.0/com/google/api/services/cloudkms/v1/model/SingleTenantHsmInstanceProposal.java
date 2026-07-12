@@ -167,6 +167,14 @@ public final class SingleTenantHsmInstanceProposal extends com.google.api.client
   private String ttl;
 
   /**
+   * Promotes a key with the AES_WRAPPING purpose to a trusted wrapping key. The key must be in the
+   * ACTIVE state to perform this operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeKeyTrust upgradeKeyTrust;
+
+  /**
    * Add a quorum member to the SingleTenantHsmInstance. This will increase the total_approver_count
    * by 1. The SingleTenantHsmInstance must be in the ACTIVE state to perform this operation.
    * @return value or {@code null} for none
@@ -484,6 +492,25 @@ public final class SingleTenantHsmInstanceProposal extends com.google.api.client
    */
   public SingleTenantHsmInstanceProposal setTtl(String ttl) {
     this.ttl = ttl;
+    return this;
+  }
+
+  /**
+   * Promotes a key with the AES_WRAPPING purpose to a trusted wrapping key. The key must be in the
+   * ACTIVE state to perform this operation.
+   * @return value or {@code null} for none
+   */
+  public UpgradeKeyTrust getUpgradeKeyTrust() {
+    return upgradeKeyTrust;
+  }
+
+  /**
+   * Promotes a key with the AES_WRAPPING purpose to a trusted wrapping key. The key must be in the
+   * ACTIVE state to perform this operation.
+   * @param upgradeKeyTrust upgradeKeyTrust or {@code null} for none
+   */
+  public SingleTenantHsmInstanceProposal setUpgradeKeyTrust(UpgradeKeyTrust upgradeKeyTrust) {
+    this.upgradeKeyTrust = upgradeKeyTrust;
     return this;
   }
 

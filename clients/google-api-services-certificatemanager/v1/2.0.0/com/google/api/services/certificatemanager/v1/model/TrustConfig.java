@@ -91,6 +91,14 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, TrustStore> spiffeTrustStores;
 
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Optional. Set of trust stores to perform validation against. This field is supported when
    * TrustConfig is configured with Load Balancers, currently not supported for SPIFFE certificate
    * validation. Only one TrustStore specified is currently allowed.
@@ -232,6 +240,25 @@ public final class TrustConfig extends com.google.api.client.json.GenericJson {
    */
   public TrustConfig setSpiffeTrustStores(java.util.Map<String, TrustStore> spiffeTrustStores) {
     this.spiffeTrustStores = spiffeTrustStores;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public TrustConfig setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

@@ -91,6 +91,14 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
   private java.lang.Integer rotationWindowPercentage;
 
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. The last update timestamp of a CertificateIssuanceConfig.
    * The value may be {@code null}.
    */
@@ -238,6 +246,25 @@ public final class CertificateIssuanceConfig extends com.google.api.client.json.
    */
   public CertificateIssuanceConfig setRotationWindowPercentage(java.lang.Integer rotationWindowPercentage) {
     this.rotationWindowPercentage = rotationWindowPercentage;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public CertificateIssuanceConfig setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataInd
   private GoogleRpcStatus status;
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentId getDocumentId() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataInd
   }
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * @param documentId documentId or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId documentId) {

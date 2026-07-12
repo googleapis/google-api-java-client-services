@@ -39,7 +39,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
   private java.lang.Float learningRateMultiplier;
 
   /**
-   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * Optional. Resource name of a previously fine tuned version ID to copy the overwritten configs
    * from. The base_processor_version should be newer than the base processor version used to fine
    * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
    * rs/{processor}/processorVersions/{processorVersion}`.
@@ -76,7 +76,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
   }
 
   /**
-   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * Optional. Resource name of a previously fine tuned version ID to copy the overwritten configs
    * from. The base_processor_version should be newer than the base processor version used to fine
    * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
    * rs/{processor}/processorVersions/{processorVersion}`.
@@ -87,7 +87,7 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestFound
   }
 
   /**
-   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * Optional. Resource name of a previously fine tuned version ID to copy the overwritten configs
    * from. The base_processor_version should be newer than the base processor version used to fine
    * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
    * rs/{processor}/processorVersions/{processorVersion}`.

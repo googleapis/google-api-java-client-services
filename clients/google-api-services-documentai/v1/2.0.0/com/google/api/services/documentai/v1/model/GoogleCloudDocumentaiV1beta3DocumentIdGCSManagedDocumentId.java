@@ -32,7 +32,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Id of the document (indexed) managed by Content Warehouse.
+   * ID of the document (indexed) managed by Content Warehouse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId ex
   private java.lang.String gcsUri;
 
   /**
-   * Id of the document (indexed) managed by Content Warehouse.
+   * ID of the document (indexed) managed by Content Warehouse.
    * @return value or {@code null} for none
    */
   public java.lang.String getCwDocId() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId ex
   }
 
   /**
-   * Id of the document (indexed) managed by Content Warehouse.
+   * ID of the document (indexed) managed by Content Warehouse.
    * @param cwDocId cwDocId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId setCwDocId(java.lang.String cwDocId) {

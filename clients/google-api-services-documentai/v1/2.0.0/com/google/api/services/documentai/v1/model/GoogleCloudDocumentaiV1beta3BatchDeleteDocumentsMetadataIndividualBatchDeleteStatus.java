@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndiv
   private GoogleRpcStatus status;
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentId getDocumentId() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndiv
   }
 
   /**
-   * The document id of the document.
+   * The document ID of the document.
    * @param documentId documentId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus setDocumentId(GoogleCloudDocumentaiV1beta3DocumentId documentId) {

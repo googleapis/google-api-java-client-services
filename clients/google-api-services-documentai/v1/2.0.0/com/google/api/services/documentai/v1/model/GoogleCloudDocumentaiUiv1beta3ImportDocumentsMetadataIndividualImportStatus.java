@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividu
   private java.lang.String inputGcsSource;
 
   /**
-   * The document id of imported document if it was successful, otherwise empty.
+   * The document ID of imported document if it was successful, otherwise empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividu
   }
 
   /**
-   * The document id of imported document if it was successful, otherwise empty.
+   * The document ID of imported document if it was successful, otherwise empty.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentId getOutputDocumentId() {
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividu
   }
 
   /**
-   * The document id of imported document if it was successful, otherwise empty.
+   * The document ID of imported document if it was successful, otherwise empty.
    * @param outputDocumentId outputDocumentId or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatus setOutputDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId outputDocumentId) {

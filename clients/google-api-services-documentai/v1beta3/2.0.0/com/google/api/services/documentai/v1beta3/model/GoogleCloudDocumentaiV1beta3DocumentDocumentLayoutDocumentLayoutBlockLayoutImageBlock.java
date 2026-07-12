@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   private GoogleCloudDocumentaiV1beta3DocumentAnnotations annotations;
 
   /**
-   * Optional. Asset id of the inline image. If set, find the image content in the blob_assets
+   * Optional. Asset ID of the inline image. If set, find the image content in the blob_assets
    * field.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   private java.lang.String blobAssetId;
 
   /**
-   * Optional. Data uri of the image. It is composed of four parts: a prefix (data:), a MIME type
+   * Optional. Data URI of the image. It is composed of four parts: a prefix (data:), a MIME type
    * indicating the type of data, an optional base64 token if non-textual, and the data itself:
    * data:,
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   private java.lang.String dataUri;
 
   /**
-   * Optional. Google Cloud Storage uri of the image.
+   * Optional. Google Cloud Storage URI of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Asset id of the inline image. If set, find the image content in the blob_assets
+   * Optional. Asset ID of the inline image. If set, find the image content in the blob_assets
    * field.
    * @return value or {@code null} for none
    */
@@ -103,7 +103,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Asset id of the inline image. If set, find the image content in the blob_assets
+   * Optional. Asset ID of the inline image. If set, find the image content in the blob_assets
    * field.
    * @param blobAssetId blobAssetId or {@code null} for none
    */
@@ -113,7 +113,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Data uri of the image. It is composed of four parts: a prefix (data:), a MIME type
+   * Optional. Data URI of the image. It is composed of four parts: a prefix (data:), a MIME type
    * indicating the type of data, an optional base64 token if non-textual, and the data itself:
    * data:,
    * @return value or {@code null} for none
@@ -123,7 +123,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Data uri of the image. It is composed of four parts: a prefix (data:), a MIME type
+   * Optional. Data URI of the image. It is composed of four parts: a prefix (data:), a MIME type
    * indicating the type of data, an optional base64 token if non-textual, and the data itself:
    * data:,
    * @param dataUri dataUri or {@code null} for none
@@ -134,7 +134,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Google Cloud Storage uri of the image.
+   * Optional. Google Cloud Storage URI of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -142,7 +142,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
   }
 
   /**
-   * Optional. Google Cloud Storage uri of the image.
+   * Optional. Google Cloud Storage URI of the image.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutImageBlock setGcsUri(java.lang.String gcsUri) {

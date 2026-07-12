@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.api.client.json.GenericJson {
 
   /**
-   * A document id within user-managed Cloud Storage.
+   * A document ID within user-managed Cloud Storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +45,14 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
   private GoogleCloudDocumentaiUiv1beta3RevisionRef revisionRef;
 
   /**
-   * A document id within unmanaged dataset.
+   * A document ID within unmanaged dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDocumentaiUiv1beta3DocumentIdUnmanagedDocumentId unmanagedDocId;
 
   /**
-   * A document id within user-managed Cloud Storage.
+   * A document ID within user-managed Cloud Storage.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId getGcsManagedDocId() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
   }
 
   /**
-   * A document id within user-managed Cloud Storage.
+   * A document ID within user-managed Cloud Storage.
    * @param gcsManagedDocId gcsManagedDocId or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentId setGcsManagedDocId(GoogleCloudDocumentaiUiv1beta3DocumentIdGCSManagedDocumentId gcsManagedDocId) {
@@ -86,7 +86,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
   }
 
   /**
-   * A document id within unmanaged dataset.
+   * A document ID within unmanaged dataset.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentIdUnmanagedDocumentId getUnmanagedDocId() {
@@ -94,7 +94,7 @@ public final class GoogleCloudDocumentaiUiv1beta3DocumentId extends com.google.a
   }
 
   /**
-   * A document id within unmanaged dataset.
+   * A document ID within unmanaged dataset.
    * @param unmanagedDocId unmanagedDocId or {@code null} for none
    */
   public GoogleCloudDocumentaiUiv1beta3DocumentId setUnmanagedDocId(GoogleCloudDocumentaiUiv1beta3DocumentIdUnmanagedDocumentId unmanagedDocId) {

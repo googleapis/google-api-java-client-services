@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchema extends com.google
   private java.lang.String displayName;
 
   /**
-   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * Optional. Document-level prompt provided by the user. This custom text is injected into the AI
    * model's prompt to provide extra, document-wide guidance for processing.
    * The value may be {@code null}.
    */
@@ -101,7 +101,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchema extends com.google
   }
 
   /**
-   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * Optional. Document-level prompt provided by the user. This custom text is injected into the AI
    * model's prompt to provide extra, document-wide guidance for processing.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchema extends com.google
   }
 
   /**
-   * Optional. Document level prompt provided by the user. This custom text is injected into the AI
+   * Optional. Document-level prompt provided by the user. This custom text is injected into the AI
    * model's prompt to provide extra, document-wide guidance for processing.
    * @param documentPrompt documentPrompt or {@code null} for none
    */

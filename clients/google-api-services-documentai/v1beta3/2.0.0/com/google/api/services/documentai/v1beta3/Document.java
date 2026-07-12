@@ -3531,17 +3531,17 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Id of the document (indexed) managed by Content Warehouse. */
+            /** ID of the document (indexed) managed by Content Warehouse. */
             @com.google.api.client.util.Key("documentId.gcsManagedDocId.cwDocId")
             private java.lang.String documentIdGcsManagedDocIdCwDocId;
 
-            /** Id of the document (indexed) managed by Content Warehouse.
+            /** ID of the document (indexed) managed by Content Warehouse.
              */
             public java.lang.String getDocumentIdGcsManagedDocIdCwDocId() {
               return documentIdGcsManagedDocIdCwDocId;
             }
 
-            /** Id of the document (indexed) managed by Content Warehouse. */
+            /** ID of the document (indexed) managed by Content Warehouse. */
             public GetDocument setDocumentIdGcsManagedDocIdCwDocId(java.lang.String documentIdGcsManagedDocIdCwDocId) {
               this.documentIdGcsManagedDocIdCwDocId = documentIdGcsManagedDocIdCwDocId;
               return this;
@@ -3621,17 +3621,17 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Required. The id of the document. */
+            /** Required. The ID of the document. */
             @com.google.api.client.util.Key("documentId.unmanagedDocId.docId")
             private java.lang.String documentIdUnmanagedDocIdDocId;
 
-            /** Required. The id of the document.
+            /** Required. The ID of the document.
              */
             public java.lang.String getDocumentIdUnmanagedDocIdDocId() {
               return documentIdUnmanagedDocIdDocId;
             }
 
-            /** Required. The id of the document. */
+            /** Required. The ID of the document. */
             public GetDocument setDocumentIdUnmanagedDocIdDocId(java.lang.String documentIdUnmanagedDocIdDocId) {
               this.documentIdUnmanagedDocIdDocId = documentIdUnmanagedDocIdDocId;
               return this;

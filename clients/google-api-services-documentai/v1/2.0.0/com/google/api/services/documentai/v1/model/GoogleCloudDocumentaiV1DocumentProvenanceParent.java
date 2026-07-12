@@ -32,7 +32,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentProvenanceParent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The id of the parent provenance.
+   * The ID of the parent provenance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiV1DocumentProvenanceParent extends com.g
   private java.lang.Integer revision;
 
   /**
-   * The id of the parent provenance.
+   * The ID of the parent provenance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getId() {
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1DocumentProvenanceParent extends com.g
   }
 
   /**
-   * The id of the parent provenance.
+   * The ID of the parent provenance.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentProvenanceParent setId(java.lang.Integer id) {

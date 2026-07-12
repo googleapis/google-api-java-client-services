@@ -31,14 +31,14 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The id of the document.
+   * Required. The ID of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String docId;
 
   /**
-   * Required. The id of the document.
+   * Required. The ID of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocId() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId ext
   }
 
   /**
-   * Required. The id of the document.
+   * Required. The ID of the document.
    * @param docId docId or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId setDocId(java.lang.String docId) {

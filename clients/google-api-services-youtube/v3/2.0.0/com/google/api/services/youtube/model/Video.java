@@ -37,6 +37,12 @@ public final class Video extends com.google.api.client.json.GenericJson {
   private VideoAgeGating ageGating;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BrandPartner brandPartner;
+
+  /**
    * The contentDetails object contains information about the video content, including the length of
    * the video and its aspect ratio.
    * The value may be {@code null}.
@@ -194,6 +200,21 @@ public final class Video extends com.google.api.client.json.GenericJson {
    */
   public Video setAgeGating(VideoAgeGating ageGating) {
     this.ageGating = ageGating;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public BrandPartner getBrandPartner() {
+    return brandPartner;
+  }
+
+  /**
+   * @param brandPartner brandPartner or {@code null} for none
+   */
+  public Video setBrandPartner(BrandPartner brandPartner) {
+    this.brandPartner = brandPartner;
     return this;
   }
 

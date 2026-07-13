@@ -45,7 +45,8 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
    * per Authorization Policy for regional internal Application Load Balancers, regional external
    * Application Load Balancers, cross-region internal Application Load Balancers, and Cloud Service
-   * Mesh. This field is not supported for global external Application Load Balancers.
+   * Mesh while 25 principals per Authorization Policy for global external Application Load
+   * Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
    * per Authorization Policy for regional internal Application Load Balancers, regional external
    * Application Load Balancers, cross-region internal Application Load Balancers, and Cloud Service
-   * Mesh. This field is not supported for global external Application Load Balancers.
+   * Mesh while 25 principals per Authorization Policy for global external Application Load
+   * Balancers.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRulePrincipal> getPrincipals() {
@@ -101,7 +103,8 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
    * certificate. A match happens when any principal matches with the rule. Limited to 50 principals
    * per Authorization Policy for regional internal Application Load Balancers, regional external
    * Application Load Balancers, cross-region internal Application Load Balancers, and Cloud Service
-   * Mesh. This field is not supported for global external Application Load Balancers.
+   * Mesh while 25 principals per Authorization Policy for global external Application Load
+   * Balancers.
    * @param principals principals or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setPrincipals(java.util.List<AuthzPolicyAuthzRulePrincipal> principals) {

@@ -45,6 +45,15 @@ public final class EgressSource extends com.google.api.client.json.GenericJson {
   private java.lang.String accessLevel;
 
   /**
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnectEndpoint pscEndpoint;
+
+  /**
    * A Google Cloud resource from the service perimeter that you want to allow to access data
    * outside the perimeter. This field supports only projects. The project format is
    * `projects/{project_number}`. You can't use `*` in this field to allow all Google Cloud
@@ -80,6 +89,27 @@ public final class EgressSource extends com.google.api.client.json.GenericJson {
    */
   public EgressSource setAccessLevel(java.lang.String accessLevel) {
     this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnectEndpoint getPscEndpoint() {
+    return pscEndpoint;
+  }
+
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access data outside the perimeter. The
+   * Private Service Connect endpoint may be in any organization, not just the organization that the
+   * perimeter is defined in.
+   * @param pscEndpoint pscEndpoint or {@code null} for none
+   */
+  public EgressSource setPscEndpoint(PrivateServiceConnectEndpoint pscEndpoint) {
+    this.pscEndpoint = pscEndpoint;
     return this;
   }
 

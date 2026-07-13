@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * GitLabConnectedRepository represents a GitLab connected repository request response.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabConnectedRepository represents
+ * a GitLab connected repository request response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

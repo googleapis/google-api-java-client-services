@@ -60,7 +60,7 @@ public final class BitbucketServerConfig extends com.google.api.client.json.Gene
   private java.lang.String hostUri;
 
   /**
-   * The resource name for the config.
+   * Identifier. The resource name for the config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +194,7 @@ public final class BitbucketServerConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resource name for the config.
+   * Identifier. The resource name for the config.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -202,7 +202,7 @@ public final class BitbucketServerConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * The resource name for the config.
+   * Identifier. The resource name for the config.
    * @param name name or {@code null} for none
    */
   public BitbucketServerConfig setName(java.lang.String name) {

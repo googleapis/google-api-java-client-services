@@ -17,8 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * GitLabEventsConfig describes the configuration of a trigger that creates a build whenever a
- * GitLab event is received.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabEventsConfig describes the
+ * configuration of a trigger that creates a build whenever a GitLab event is received.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

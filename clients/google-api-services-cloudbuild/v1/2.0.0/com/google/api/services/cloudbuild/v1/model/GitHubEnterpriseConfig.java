@@ -58,7 +58,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   private java.lang.String hostUrl;
 
   /**
-   * The full resource name for the GitHubEnterpriseConfig For example:
+   * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * The value may be {@code null}.
    */
@@ -168,7 +168,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * The full resource name for the GitHubEnterpriseConfig For example:
+   * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @return value or {@code null} for none
    */
@@ -177,7 +177,7 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * The full resource name for the GitHubEnterpriseConfig For example:
+   * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
    * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
    * @param name name or {@code null} for none
    */

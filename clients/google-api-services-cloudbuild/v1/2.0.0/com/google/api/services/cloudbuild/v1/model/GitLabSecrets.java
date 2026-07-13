@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * GitLabSecrets represents the secrets in Secret Manager for a GitLab integration.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabSecrets represents the secrets
+ * in Secret Manager for a GitLab integration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

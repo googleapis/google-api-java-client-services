@@ -43,6 +43,15 @@ public final class IngressSource extends com.google.api.client.json.GenericJson 
   private java.lang.String accessLevel;
 
   /**
+   * A PrivateServiceConnectEndpoint that is allowed to access the perimeter. The Private Service
+   * Connect endpoint may be in any organization, not just the organization that the perimeter is
+   * defined in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnectEndpoint pscEndpoint;
+
+  /**
    * A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources
    * will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project
    * format: `projects/{project_number}` VPC network format:
@@ -78,6 +87,27 @@ public final class IngressSource extends com.google.api.client.json.GenericJson 
    */
   public IngressSource setAccessLevel(java.lang.String accessLevel) {
     this.accessLevel = accessLevel;
+    return this;
+  }
+
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access the perimeter. The Private Service
+   * Connect endpoint may be in any organization, not just the organization that the perimeter is
+   * defined in.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnectEndpoint getPscEndpoint() {
+    return pscEndpoint;
+  }
+
+  /**
+   * A PrivateServiceConnectEndpoint that is allowed to access the perimeter. The Private Service
+   * Connect endpoint may be in any organization, not just the organization that the perimeter is
+   * defined in.
+   * @param pscEndpoint pscEndpoint or {@code null} for none
+   */
+  public IngressSource setPscEndpoint(PrivateServiceConnectEndpoint pscEndpoint) {
+    this.pscEndpoint = pscEndpoint;
     return this;
   }
 

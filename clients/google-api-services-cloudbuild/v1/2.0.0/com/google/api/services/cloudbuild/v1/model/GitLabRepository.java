@@ -17,7 +17,7 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * Proto Representing a GitLabRepository
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. Proto Representing a GitLabRepository
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

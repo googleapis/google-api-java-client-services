@@ -943,7 +943,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Cancels a build in progress.
+       * Cancels a build in progress. Note: This method only applies to global (non-regional) builds when
+       * using the legacy resource path `projects/{project_id}/builds/{id}:cancel`. To cancel regional
+       * builds, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/builds/{id}:cancel`.
        *
        * Create a request for the method "builds.cancel".
        *
@@ -966,7 +969,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds/{id}:cancel";
 
         /**
-         * Cancels a build in progress.
+         * Cancels a build in progress. Note: This method only applies to global (non-regional) builds
+         * when using the legacy resource path `projects/{project_id}/builds/{id}:cancel`. To cancel
+         * regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}:cancel`.
          *
          * Create a request for the method "builds.cancel".
          *
@@ -1082,7 +1088,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Starts a build with the specified configuration. This method returns a long-running `Operation`,
        * which includes the build ID. Pass the build ID to `GetBuild` to determine the build status (such
-       * as `SUCCESS` or `FAILURE`).
+       * as `SUCCESS` or `FAILURE`). Note: This method only creates global (non-regional) builds when
+       * using the legacy resource path `projects/{project_id}/builds`. To create regional builds, use the
+       * regional resource path: `projects/{project_id}/locations/{location}/builds`.
        *
        * Create a request for the method "builds.create".
        *
@@ -1106,7 +1114,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         /**
          * Starts a build with the specified configuration. This method returns a long-running
          * `Operation`, which includes the build ID. Pass the build ID to `GetBuild` to determine the
-         * build status (such as `SUCCESS` or `FAILURE`).
+         * build status (such as `SUCCESS` or `FAILURE`). Note: This method only creates global (non-
+         * regional) builds when using the legacy resource path `projects/{project_id}/builds`. To create
+         * regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds`.
          *
          * Create a request for the method "builds.create".
          *
@@ -1226,7 +1237,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Returns information about a previously requested build. The `Build` that is returned includes its
-       * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+       * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information. Note: This method
+       * only applies to global (non-regional) builds when using the legacy resource path
+       * `projects/{project_id}/builds/{id}`. To fetch regional builds, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/builds/{id}`.
        *
        * Create a request for the method "builds.get".
        *
@@ -1249,7 +1263,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Returns information about a previously requested build. The `Build` that is returned includes
-         * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+         * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information. Note: This
+         * method only applies to global (non-regional) builds when using the legacy resource path
+         * `projects/{project_id}/builds/{id}`. To fetch regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}`.
          *
          * Create a request for the method "builds.get".
          *
@@ -1395,7 +1412,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Lists previously requested builds. Previously requested builds may still be in-progress, or may
-       * have finished successfully or unsuccessfully.
+       * have finished successfully or unsuccessfully. Note: This method only lists global (non-regional)
+       * builds when using the legacy resource path `projects/{project_id}/builds`. To list regional
+       * builds, use the regional resource path: `projects/{project_id}/locations/{location}/builds`.
        *
        * Create a request for the method "builds.list".
        *
@@ -1417,7 +1436,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Lists previously requested builds. Previously requested builds may still be in-progress, or may
-         * have finished successfully or unsuccessfully.
+         * have finished successfully or unsuccessfully. Note: This method only lists global (non-
+         * regional) builds when using the legacy resource path `projects/{project_id}/builds`. To list
+         * regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds`.
          *
          * Create a request for the method "builds.list".
          *
@@ -1604,13 +1626,16 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Creates a new build based on the specified build. This method creates a new build using the
-       * original build request, which may or may not result in an identical build. For triggered builds:
-       * * Triggered builds resolve to a precise revision; therefore a retry of a triggered build will
-       * result in a build that uses the same revision. For non-triggered builds that specify
-       * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
-       * build from the tip of that branch, which may not be the same revision as the original build. * If
-       * the original build specified a commit sha or revision ID, the retried build will use the
+       * Creates a new build based on the specified build. Note: This method only applies to global (non-
+       * regional) builds when using the legacy resource path `projects/{project_id}/builds/{id}:retry`.
+       * To retry regional builds, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/builds/{id}:retry`. This method creates a new build
+       * using the original build request, which may or may not result in an identical build. For
+       * triggered builds: * Triggered builds resolve to a precise revision; therefore a retry of a
+       * triggered build will result in a build that uses the same revision. For non-triggered builds that
+       * specify `RepoSource`: * If the original build built from the tip of a branch, the retried build
+       * will build from the tip of that branch, which may not be the same revision as the original build.
+       * * If the original build specified a commit sha or revision ID, the retried build will use the
        * identical source. For builds that specify `StorageSource`: * If the original build pulled source
        * from Cloud Storage without specifying the generation of the object, the new build will use the
        * current object, which may be different from the original build source. * If the original build
@@ -1639,19 +1664,22 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds/{id}:retry";
 
         /**
-         * Creates a new build based on the specified build. This method creates a new build using the
-         * original build request, which may or may not result in an identical build. For triggered
-         * builds: * Triggered builds resolve to a precise revision; therefore a retry of a triggered
-         * build will result in a build that uses the same revision. For non-triggered builds that specify
-         * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
-         * build from the tip of that branch, which may not be the same revision as the original build. *
-         * If the original build specified a commit sha or revision ID, the retried build will use the
-         * identical source. For builds that specify `StorageSource`: * If the original build pulled
-         * source from Cloud Storage without specifying the generation of the object, the new build will
-         * use the current object, which may be different from the original build source. * If the
-         * original build pulled source from Cloud Storage and specified the generation of the object, the
-         * new build will attempt to use the same object, which may or may not be available depending on
-         * the bucket's lifecycle management settings.
+         * Creates a new build based on the specified build. Note: This method only applies to global
+         * (non-regional) builds when using the legacy resource path
+         * `projects/{project_id}/builds/{id}:retry`. To retry regional builds, use the regional resource
+         * path: `projects/{project_id}/locations/{location}/builds/{id}:retry`. This method creates a new
+         * build using the original build request, which may or may not result in an identical build. For
+         * triggered builds: * Triggered builds resolve to a precise revision; therefore a retry of a
+         * triggered build will result in a build that uses the same revision. For non-triggered builds
+         * that specify `RepoSource`: * If the original build built from the tip of a branch, the retried
+         * build will build from the tip of that branch, which may not be the same revision as the
+         * original build. * If the original build specified a commit sha or revision ID, the retried
+         * build will use the identical source. For builds that specify `StorageSource`: * If the original
+         * build pulled source from Cloud Storage without specifying the generation of the object, the new
+         * build will use the current object, which may be different from the original build source. * If
+         * the original build pulled source from Cloud Storage and specified the generation of the object,
+         * the new build will attempt to use the same object, which may or may not be available depending
+         * on the bucket's lifecycle management settings.
          *
          * Create a request for the method "builds.retry".
          *
@@ -2487,7 +2515,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudbuild server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The full resource name for the GitHubEnterpriseConfig For example:
+       * @param name Identifier. The full resource name for the GitHubEnterpriseConfig For example:
        *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
        * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
        * @return the request
@@ -2516,7 +2544,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The full resource name for the GitHubEnterpriseConfig For example:
+         * @param name Identifier. The full resource name for the GitHubEnterpriseConfig For example:
        *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @since 1.13
@@ -2587,13 +2615,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The full resource name for the GitHubEnterpriseConfig For example:
+         * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
          * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The full resource name for the GitHubEnterpriseConfig For example:
+        /** Identifier. The full resource name for the GitHubEnterpriseConfig For example:
        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public java.lang.String getName() {
@@ -2601,7 +2629,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * The full resource name for the GitHubEnterpriseConfig For example:
+         * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
          * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          */
         public Patch setName(java.lang.String name) {
@@ -3465,7 +3493,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudbuild server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name for the config.
+         * @param name Identifier. The resource name for the config.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.BitbucketServerConfig}
          * @return the request
          */
@@ -3493,7 +3521,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name for the config.
+           * @param name Identifier. The resource name for the config.
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.BitbucketServerConfig}
            * @since 1.13
            */
@@ -3562,17 +3590,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name for the config. */
+          /** Identifier. The resource name for the config. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name for the config.
+          /** Identifier. The resource name for the config.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name for the config. */
+          /** Identifier. The resource name for the config. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4295,7 +4323,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Cancels a build in progress.
+         * Cancels a build in progress. Note: This method only applies to global (non-regional) builds when
+         * using the legacy resource path `projects/{project_id}/builds/{id}:cancel`. To cancel regional
+         * builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}:cancel`.
          *
          * Create a request for the method "builds.cancel".
          *
@@ -4320,7 +4351,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
 
           /**
-           * Cancels a build in progress.
+           * Cancels a build in progress. Note: This method only applies to global (non-regional) builds
+           * when using the legacy resource path `projects/{project_id}/builds/{id}:cancel`. To cancel
+           * regional builds, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/builds/{id}:cancel`.
            *
            * Create a request for the method "builds.cancel".
            *
@@ -4434,7 +4468,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         /**
          * Starts a build with the specified configuration. This method returns a long-running `Operation`,
          * which includes the build ID. Pass the build ID to `GetBuild` to determine the build status (such
-         * as `SUCCESS` or `FAILURE`).
+         * as `SUCCESS` or `FAILURE`). Note: This method only creates global (non-regional) builds when
+         * using the legacy resource path `projects/{project_id}/builds`. To create regional builds, use the
+         * regional resource path: `projects/{project_id}/locations/{location}/builds`.
          *
          * Create a request for the method "builds.create".
          *
@@ -4462,7 +4498,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           /**
            * Starts a build with the specified configuration. This method returns a long-running
            * `Operation`, which includes the build ID. Pass the build ID to `GetBuild` to determine the
-           * build status (such as `SUCCESS` or `FAILURE`).
+           * build status (such as `SUCCESS` or `FAILURE`). Note: This method only creates global (non-
+           * regional) builds when using the legacy resource path `projects/{project_id}/builds`. To create
+           * regional builds, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/builds`.
            *
            * Create a request for the method "builds.create".
            *
@@ -4593,7 +4632,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Returns information about a previously requested build. The `Build` that is returned includes its
-         * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+         * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information. Note: This method
+         * only applies to global (non-regional) builds when using the legacy resource path
+         * `projects/{project_id}/builds/{id}`. To fetch regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}`.
          *
          * Create a request for the method "builds.get".
          *
@@ -4619,7 +4661,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns information about a previously requested build. The `Build` that is returned includes
-           * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+           * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information. Note: This
+           * method only applies to global (non-regional) builds when using the legacy resource path
+           * `projects/{project_id}/builds/{id}`. To fetch regional builds, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/builds/{id}`.
            *
            * Create a request for the method "builds.get".
            *
@@ -4774,7 +4819,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists previously requested builds. Previously requested builds may still be in-progress, or may
-         * have finished successfully or unsuccessfully.
+         * have finished successfully or unsuccessfully. Note: This method only lists global (non-regional)
+         * builds when using the legacy resource path `projects/{project_id}/builds`. To list regional
+         * builds, use the regional resource path: `projects/{project_id}/locations/{location}/builds`.
          *
          * Create a request for the method "builds.list".
          *
@@ -4799,7 +4846,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists previously requested builds. Previously requested builds may still be in-progress, or may
-           * have finished successfully or unsuccessfully.
+           * have finished successfully or unsuccessfully. Note: This method only lists global (non-
+           * regional) builds when using the legacy resource path `projects/{project_id}/builds`. To list
+           * regional builds, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/builds`.
            *
            * Create a request for the method "builds.list".
            *
@@ -4996,13 +5046,16 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Creates a new build based on the specified build. This method creates a new build using the
-         * original build request, which may or may not result in an identical build. For triggered builds:
-         * * Triggered builds resolve to a precise revision; therefore a retry of a triggered build will
-         * result in a build that uses the same revision. For non-triggered builds that specify
-         * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
-         * build from the tip of that branch, which may not be the same revision as the original build. * If
-         * the original build specified a commit sha or revision ID, the retried build will use the
+         * Creates a new build based on the specified build. Note: This method only applies to global (non-
+         * regional) builds when using the legacy resource path `projects/{project_id}/builds/{id}:retry`.
+         * To retry regional builds, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}:retry`. This method creates a new build
+         * using the original build request, which may or may not result in an identical build. For
+         * triggered builds: * Triggered builds resolve to a precise revision; therefore a retry of a
+         * triggered build will result in a build that uses the same revision. For non-triggered builds that
+         * specify `RepoSource`: * If the original build built from the tip of a branch, the retried build
+         * will build from the tip of that branch, which may not be the same revision as the original build.
+         * * If the original build specified a commit sha or revision ID, the retried build will use the
          * identical source. For builds that specify `StorageSource`: * If the original build pulled source
          * from Cloud Storage without specifying the generation of the object, the new build will use the
          * current object, which may be different from the original build source. * If the original build
@@ -5033,19 +5086,22 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
 
           /**
-           * Creates a new build based on the specified build. This method creates a new build using the
-           * original build request, which may or may not result in an identical build. For triggered
-           * builds: * Triggered builds resolve to a precise revision; therefore a retry of a triggered
-           * build will result in a build that uses the same revision. For non-triggered builds that specify
-           * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
-           * build from the tip of that branch, which may not be the same revision as the original build. *
-           * If the original build specified a commit sha or revision ID, the retried build will use the
-           * identical source. For builds that specify `StorageSource`: * If the original build pulled
-           * source from Cloud Storage without specifying the generation of the object, the new build will
-           * use the current object, which may be different from the original build source. * If the
-           * original build pulled source from Cloud Storage and specified the generation of the object, the
-           * new build will attempt to use the same object, which may or may not be available depending on
-           * the bucket's lifecycle management settings.
+           * Creates a new build based on the specified build. Note: This method only applies to global
+           * (non-regional) builds when using the legacy resource path
+           * `projects/{project_id}/builds/{id}:retry`. To retry regional builds, use the regional resource
+           * path: `projects/{project_id}/locations/{location}/builds/{id}:retry`. This method creates a new
+           * build using the original build request, which may or may not result in an identical build. For
+           * triggered builds: * Triggered builds resolve to a precise revision; therefore a retry of a
+           * triggered build will result in a build that uses the same revision. For non-triggered builds
+           * that specify `RepoSource`: * If the original build built from the tip of a branch, the retried
+           * build will build from the tip of that branch, which may not be the same revision as the
+           * original build. * If the original build specified a commit sha or revision ID, the retried
+           * build will use the identical source. For builds that specify `StorageSource`: * If the original
+           * build pulled source from Cloud Storage without specifying the generation of the object, the new
+           * build will use the current object, which may be different from the original build source. * If
+           * the original build pulled source from Cloud Storage and specified the generation of the object,
+           * the new build will attempt to use the same object, which may or may not be available depending
+           * on the bucket's lifecycle management settings.
            *
            * Create a request for the method "builds.retry".
            *
@@ -5179,7 +5235,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class GitLabConfigs {
 
         /**
-         * Creates a new `GitLabConfig`. This API is experimental
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. Creates a new `GitLabConfig`. This
+         * API is experimental
          *
          * Create a request for the method "gitLabConfigs.create".
          *
@@ -5204,7 +5261,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new `GitLabConfig`. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Creates a new `GitLabConfig`. This
+           * API is experimental
            *
            * Create a request for the method "gitLabConfigs.create".
            *
@@ -5339,7 +5397,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Delete a `GitLabConfig`. This API is experimental
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. Delete a `GitLabConfig`. This API is
+         * experimental
          *
          * Create a request for the method "gitLabConfigs.delete".
          *
@@ -5363,7 +5422,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
           /**
-           * Delete a `GitLabConfig`. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Delete a `GitLabConfig`. This API
+           * is experimental
            *
            * Create a request for the method "gitLabConfigs.delete".
            *
@@ -5468,7 +5528,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Retrieves a `GitLabConfig`. This API is experimental
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. Retrieves a `GitLabConfig`. This API
+         * is experimental
          *
          * Create a request for the method "gitLabConfigs.get".
          *
@@ -5492,7 +5553,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
           /**
-           * Retrieves a `GitLabConfig`. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Retrieves a `GitLabConfig`. This
+           * API is experimental
            *
            * Create a request for the method "gitLabConfigs.get".
            *
@@ -5606,7 +5668,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * List all `GitLabConfigs` for a given project. This API is experimental
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. List all `GitLabConfigs` for a given
+         * project. This API is experimental
          *
          * Create a request for the method "gitLabConfigs.list".
          *
@@ -5630,7 +5693,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List all `GitLabConfigs` for a given project. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. List all `GitLabConfigs` for a
+           * given project. This API is experimental
            *
            * Create a request for the method "gitLabConfigs.list".
            *
@@ -5796,14 +5860,15 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates an existing `GitLabConfig`. This API is experimental
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. Updates an existing `GitLabConfig`.
+         * This API is experimental
          *
          * Create a request for the method "gitLabConfigs.patch".
          *
          * This request holds the parameters needed by the cloudbuild server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name for the config.
+         * @param name Identifier. The resource name for the config.
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
          * @return the request
          */
@@ -5821,7 +5886,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
           /**
-           * Updates an existing `GitLabConfig`. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Updates an existing `GitLabConfig`.
+           * This API is experimental
            *
            * Create a request for the method "gitLabConfigs.patch".
            *
@@ -5831,7 +5897,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name for the config.
+           * @param name Identifier. The resource name for the config.
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitLabConfig}
            * @since 1.13
            */
@@ -5900,17 +5966,17 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name for the config. */
+          /** Identifier. The resource name for the config. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name for the config.
+          /** Identifier. The resource name for the config.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name for the config. */
+          /** Identifier. The resource name for the config. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5952,8 +6018,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Remove a GitLab repository from a given GitLabConfig's connected repositories. This API is
-         * experimental.
+         * Deprecated: CloudBuild GitLab V1 integration is deprecated. Remove a GitLab repository from a
+         * given GitLabConfig's connected repositories. This API is experimental.
          *
          * Create a request for the method "gitLabConfigs.removeGitLabConnectedRepository".
          *
@@ -5980,8 +6046,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
           /**
-           * Remove a GitLab repository from a given GitLabConfig's connected repositories. This API is
-           * experimental.
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Remove a GitLab repository from a
+           * given GitLabConfig's connected repositories. This API is experimental.
            *
            * Create a request for the method "gitLabConfigs.removeGitLabConnectedRepository".
            *
@@ -6116,7 +6182,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         public class ConnectedRepositories {
 
           /**
-           * Batch connecting GitLab repositories to Cloud Build. This API is experimental.
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. Batch connecting GitLab repositories
+           * to Cloud Build. This API is experimental.
            *
            * Create a request for the method "connectedRepositories.batchCreate".
            *
@@ -6142,7 +6209,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
             /**
-             * Batch connecting GitLab repositories to Cloud Build. This API is experimental.
+             * Deprecated: CloudBuild GitLab V1 integration is deprecated. Batch connecting GitLab
+             * repositories to Cloud Build. This API is experimental.
              *
              * Create a request for the method "connectedRepositories.batchCreate".
              *
@@ -6278,7 +6346,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         public class Repos {
 
           /**
-           * List all repositories for a given `GitLabConfig`. This API is experimental
+           * Deprecated: CloudBuild GitLab V1 integration is deprecated. List all repositories for a given
+           * `GitLabConfig`. This API is experimental
            *
            * Create a request for the method "repos.list".
            *
@@ -6302,7 +6371,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/gitLabConfigs/[^/]+$");
 
             /**
-             * List all repositories for a given `GitLabConfig`. This API is experimental
+             * Deprecated: CloudBuild GitLab V1 integration is deprecated. List all repositories for a given
+             * `GitLabConfig`. This API is experimental
              *
              * Create a request for the method "repos.list".
              *
@@ -7187,7 +7257,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudbuild server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The full resource name for the GitHubEnterpriseConfig For example:
+         * @param name Identifier. The full resource name for the GitHubEnterpriseConfig For example:
          *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
          * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
          * @return the request
@@ -7216,7 +7286,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The full resource name for the GitHubEnterpriseConfig For example:
+           * @param name Identifier. The full resource name for the GitHubEnterpriseConfig For example:
          *        "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            * @param content the {@link com.google.api.services.cloudbuild.v1.model.GitHubEnterpriseConfig}
            * @since 1.13
@@ -7287,13 +7357,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The full resource name for the GitHubEnterpriseConfig For example:
+           * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
            * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The full resource name for the GitHubEnterpriseConfig For example:
+          /** Identifier. The full resource name for the GitHubEnterpriseConfig For example:
          "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public java.lang.String getName() {
@@ -7301,7 +7371,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * The full resource name for the GitHubEnterpriseConfig For example:
+           * Identifier. The full resource name for the GitHubEnterpriseConfig For example:
            * "projects/{$project_id}/locations/{$location_id}/githubEnterpriseConfigs/{$config_id}"
            */
           public Patch setName(java.lang.String name) {

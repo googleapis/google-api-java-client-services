@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * Response of BatchCreateGitLabConnectedRepositories RPC method.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. Response of
+ * BatchCreateGitLabConnectedRepositories RPC method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

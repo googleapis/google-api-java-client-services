@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * ServiceDirectoryConfig represents Service Directory configuration for a SCM host connection.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. ServiceDirectoryConfig represents
+ * Service Directory configuration for a SCM host connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

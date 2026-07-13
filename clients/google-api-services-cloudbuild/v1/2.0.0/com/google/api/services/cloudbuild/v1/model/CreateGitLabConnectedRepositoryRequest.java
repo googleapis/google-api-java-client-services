@@ -17,7 +17,8 @@
 package com.google.api.services.cloudbuild.v1.model;
 
 /**
- * Request to connect a repository from a connected GitLab host.
+ * Deprecated: CloudBuild GitLab V1 integration is deprecated. Request to connect a repository from
+ * a connected GitLab host.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:

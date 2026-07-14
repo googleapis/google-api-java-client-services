@@ -1829,16 +1829,40 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Whether to show only entries for calendars from the organization. This parameter is only
+       * applicable to Google Workspace users. Optional. The default is False.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showOwnOrganizationOnly;
+
+      /** Whether to show only entries for calendars from the organization. This parameter is only applicable
+     to Google Workspace users. Optional. The default is False.
+       */
+      public java.lang.Boolean getShowOwnOrganizationOnly() {
+        return showOwnOrganizationOnly;
+      }
+
+      /**
+       * Whether to show only entries for calendars from the organization. This parameter is only
+       * applicable to Google Workspace users. Optional. The default is False.
+       */
+      public List setShowOwnOrganizationOnly(java.lang.Boolean showOwnOrganizationOnly) {
+        this.showOwnOrganizationOnly = showOwnOrganizationOnly;
+        return this;
+      }
+
+      /**
        * Token obtained from the nextSyncToken field returned on the last page of results from the
        * previous list request. It makes the result of this list request contain only entries that
        * have changed since then. If only read-only fields such as calendar properties or ACLs have
        * changed, the entry won't be returned. All entries deleted and hidden since the previous
        * list request will always be in the result set and it is not allowed to set showDeleted
-       * neither showHidden to False. To ensure client state consistency minAccessRole query
-       * parameter cannot be specified together with nextSyncToken. If the syncToken expires, the
-       * server will respond with a 410 GONE response code and the client should clear its storage
-       * and perform a full synchronization without any syncToken. Learn more about incremental
-       * synchronization. Optional. The default is to return all entries.
+       * neither showHidden to False. To ensure client state consistency minAccessRole and
+       * showOwnOrganizationOnly query parameters cannot be specified together with nextSyncToken.
+       * If the syncToken expires, the server will respond with a 410 GONE response code and the
+       * client should clear its storage and perform a full synchronization without any syncToken.
+       * Learn more about incremental synchronization. Optional. The default is to return all
+       * entries.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
@@ -1848,10 +1872,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
      then. If only read-only fields such as calendar properties or ACLs have changed, the entry won't be
      returned. All entries deleted and hidden since the previous list request will always be in the
      result set and it is not allowed to set showDeleted neither showHidden to False. To ensure client
-     state consistency minAccessRole query parameter cannot be specified together with nextSyncToken. If
-     the syncToken expires, the server will respond with a 410 GONE response code and the client should
-     clear its storage and perform a full synchronization without any syncToken. Learn more about
-     incremental synchronization. Optional. The default is to return all entries.
+     state consistency minAccessRole and showOwnOrganizationOnly query parameters cannot be specified
+     together with nextSyncToken. If the syncToken expires, the server will respond with a 410 GONE
+     response code and the client should clear its storage and perform a full synchronization without
+     any syncToken. Learn more about incremental synchronization. Optional. The default is to return all
+     entries.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
@@ -1863,11 +1888,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * have changed since then. If only read-only fields such as calendar properties or ACLs have
        * changed, the entry won't be returned. All entries deleted and hidden since the previous
        * list request will always be in the result set and it is not allowed to set showDeleted
-       * neither showHidden to False. To ensure client state consistency minAccessRole query
-       * parameter cannot be specified together with nextSyncToken. If the syncToken expires, the
-       * server will respond with a 410 GONE response code and the client should clear its storage
-       * and perform a full synchronization without any syncToken. Learn more about incremental
-       * synchronization. Optional. The default is to return all entries.
+       * neither showHidden to False. To ensure client state consistency minAccessRole and
+       * showOwnOrganizationOnly query parameters cannot be specified together with nextSyncToken.
+       * If the syncToken expires, the server will respond with a 410 GONE response code and the
+       * client should clear its storage and perform a full synchronization without any syncToken.
+       * Learn more about incremental synchronization. Optional. The default is to return all
+       * entries.
        */
       public List setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;
@@ -2326,16 +2352,40 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * Whether to show only entries for calendars from the organization. This parameter is only
+       * applicable to Google Workspace users. Optional. The default is False.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean showOwnOrganizationOnly;
+
+      /** Whether to show only entries for calendars from the organization. This parameter is only applicable
+     to Google Workspace users. Optional. The default is False.
+       */
+      public java.lang.Boolean getShowOwnOrganizationOnly() {
+        return showOwnOrganizationOnly;
+      }
+
+      /**
+       * Whether to show only entries for calendars from the organization. This parameter is only
+       * applicable to Google Workspace users. Optional. The default is False.
+       */
+      public Watch setShowOwnOrganizationOnly(java.lang.Boolean showOwnOrganizationOnly) {
+        this.showOwnOrganizationOnly = showOwnOrganizationOnly;
+        return this;
+      }
+
+      /**
        * Token obtained from the nextSyncToken field returned on the last page of results from the
        * previous list request. It makes the result of this list request contain only entries that
        * have changed since then. If only read-only fields such as calendar properties or ACLs have
        * changed, the entry won't be returned. All entries deleted and hidden since the previous
        * list request will always be in the result set and it is not allowed to set showDeleted
-       * neither showHidden to False. To ensure client state consistency minAccessRole query
-       * parameter cannot be specified together with nextSyncToken. If the syncToken expires, the
-       * server will respond with a 410 GONE response code and the client should clear its storage
-       * and perform a full synchronization without any syncToken. Learn more about incremental
-       * synchronization. Optional. The default is to return all entries.
+       * neither showHidden to False. To ensure client state consistency minAccessRole and
+       * showOwnOrganizationOnly query parameters cannot be specified together with nextSyncToken.
+       * If the syncToken expires, the server will respond with a 410 GONE response code and the
+       * client should clear its storage and perform a full synchronization without any syncToken.
+       * Learn more about incremental synchronization. Optional. The default is to return all
+       * entries.
        */
       @com.google.api.client.util.Key
       private java.lang.String syncToken;
@@ -2345,10 +2395,11 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
      then. If only read-only fields such as calendar properties or ACLs have changed, the entry won't be
      returned. All entries deleted and hidden since the previous list request will always be in the
      result set and it is not allowed to set showDeleted neither showHidden to False. To ensure client
-     state consistency minAccessRole query parameter cannot be specified together with nextSyncToken. If
-     the syncToken expires, the server will respond with a 410 GONE response code and the client should
-     clear its storage and perform a full synchronization without any syncToken. Learn more about
-     incremental synchronization. Optional. The default is to return all entries.
+     state consistency minAccessRole and showOwnOrganizationOnly query parameters cannot be specified
+     together with nextSyncToken. If the syncToken expires, the server will respond with a 410 GONE
+     response code and the client should clear its storage and perform a full synchronization without
+     any syncToken. Learn more about incremental synchronization. Optional. The default is to return all
+     entries.
        */
       public java.lang.String getSyncToken() {
         return syncToken;
@@ -2360,11 +2411,12 @@ public class Calendar extends com.google.api.client.googleapis.services.json.Abs
        * have changed since then. If only read-only fields such as calendar properties or ACLs have
        * changed, the entry won't be returned. All entries deleted and hidden since the previous
        * list request will always be in the result set and it is not allowed to set showDeleted
-       * neither showHidden to False. To ensure client state consistency minAccessRole query
-       * parameter cannot be specified together with nextSyncToken. If the syncToken expires, the
-       * server will respond with a 410 GONE response code and the client should clear its storage
-       * and perform a full synchronization without any syncToken. Learn more about incremental
-       * synchronization. Optional. The default is to return all entries.
+       * neither showHidden to False. To ensure client state consistency minAccessRole and
+       * showOwnOrganizationOnly query parameters cannot be specified together with nextSyncToken.
+       * If the syncToken expires, the server will respond with a 410 GONE response code and the
+       * client should clear its storage and perform a full synchronization without any syncToken.
+       * Learn more about incremental synchronization. Optional. The default is to return all
+       * entries.
        */
       public Watch setSyncToken(java.lang.String syncToken) {
         this.syncToken = syncToken;

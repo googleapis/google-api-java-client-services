@@ -51,7 +51,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private java.lang.String customMirroringProfile;
 
   /**
-   * Output only. Identifier used by the data-path. Unique within \{container, location\}.
+   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -161,7 +161,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Identifier used by the data-path. Unique within \{container, location\}.
+   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getDataPathId() {
@@ -169,7 +169,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Identifier used by the data-path. Unique within \{container, location\}.
+   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
    * @param dataPathId dataPathId or {@code null} for none
    */
   public SecurityProfileGroup setDataPathId(java.math.BigInteger dataPathId) {

@@ -54,6 +54,8 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * The role assigned to the scope. Possible values are: - "none" - Provides no access.  -
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
+   * details will be hidden.  - "writerWithoutPrivateAccess" - Provides read and write access to the
+   * calendar. Private events will appear to users with writerWithoutPrivateAccess access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
    * events will appear to users with writer access, and event details will be visible. Provides
    * read access to the calendar's ACLs.  - "owner" - Provides manager access to the calendar. This
@@ -127,6 +129,8 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * The role assigned to the scope. Possible values are: - "none" - Provides no access.  -
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
+   * details will be hidden.  - "writerWithoutPrivateAccess" - Provides read and write access to the
+   * calendar. Private events will appear to users with writerWithoutPrivateAccess access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
    * events will appear to users with writer access, and event details will be visible. Provides
    * read access to the calendar's ACLs.  - "owner" - Provides manager access to the calendar. This
@@ -143,6 +147,8 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * The role assigned to the scope. Possible values are: - "none" - Provides no access.  -
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
+   * details will be hidden.  - "writerWithoutPrivateAccess" - Provides read and write access to the
+   * calendar. Private events will appear to users with writerWithoutPrivateAccess access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
    * events will appear to users with writer access, and event details will be visible. Provides
    * read access to the calendar's ACLs.  - "owner" - Provides manager access to the calendar. This

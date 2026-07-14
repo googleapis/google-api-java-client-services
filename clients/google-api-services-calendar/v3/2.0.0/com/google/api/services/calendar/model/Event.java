@@ -409,7 +409,12 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * visibility for events on the calendar. This is the default value.  - "public" - The event is
    * public and event details are visible to all readers of the calendar.  - "private" - The event
    * is private and only event attendees may view event details.  - "confidential" - The event is
-   * private. This value is provided for compatibility reasons.
+   * private. This value is provided for compatibility reasons.   Note on recurring events: Changing
+   * the visibility of a single instance of a recurring event can affect all instances of the
+   * series. If the new setting is more restrictive (e.g. from public to private), it is applied to
+   * all instances. If the new setting is less restrictive (e.g. from private to public), the change
+   * is ignored. To make a recurring event less restrictive, you must update the parent recurring
+   * event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1527,7 +1532,12 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * visibility for events on the calendar. This is the default value.  - "public" - The event is
    * public and event details are visible to all readers of the calendar.  - "private" - The event
    * is private and only event attendees may view event details.  - "confidential" - The event is
-   * private. This value is provided for compatibility reasons.
+   * private. This value is provided for compatibility reasons.   Note on recurring events: Changing
+   * the visibility of a single instance of a recurring event can affect all instances of the
+   * series. If the new setting is more restrictive (e.g. from public to private), it is applied to
+   * all instances. If the new setting is less restrictive (e.g. from private to public), the change
+   * is ignored. To make a recurring event less restrictive, you must update the parent recurring
+   * event.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -1539,7 +1549,12 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * visibility for events on the calendar. This is the default value.  - "public" - The event is
    * public and event details are visible to all readers of the calendar.  - "private" - The event
    * is private and only event attendees may view event details.  - "confidential" - The event is
-   * private. This value is provided for compatibility reasons.
+   * private. This value is provided for compatibility reasons.   Note on recurring events: Changing
+   * the visibility of a single instance of a recurring event can affect all instances of the
+   * series. If the new setting is more restrictive (e.g. from public to private), it is applied to
+   * all instances. If the new setting is less restrictive (e.g. from private to public), the change
+   * is ignored. To make a recurring event less restrictive, you must update the parent recurring
+   * event.
    * @param visibility visibility or {@code null} for none
    */
   public Event setVisibility(java.lang.String visibility) {

@@ -38,6 +38,24 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
   private java.lang.String availability;
 
   /**
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * any attribute of the data specification in its generic form (for example, `{ "name": "size
+   * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set, with total
+   * size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon insertion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomAttribute> customAttributes;
+
+  static {
+    // hack to force ProGuard to consider CustomAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomAttribute.class);
+  }
+
+  /**
    * Optional. Location of the product inside the store. Maximum length is 20 bytes.
    * The value may be {@code null}.
    */
@@ -138,6 +156,33 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
    */
   public LocalInventoryAttributes setAvailability(java.lang.String availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * any attribute of the data specification in its generic form (for example, `{ "name": "size
+   * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set, with total
+   * size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon insertion.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomAttribute> getCustomAttributes() {
+    return customAttributes;
+  }
+
+  /**
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * any attribute of the data specification in its generic form (for example, `{ "name": "size
+   * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
+   * by the API. Maximum allowed number of characters for each custom attribute is 10240 (represents
+   * sum of characters for name and value). Maximum 2500 custom attributes can be set, with total
+   * size of 102.4kB. Underscores in custom attribute names are replaced by spaces upon insertion.
+   * @param customAttributes customAttributes or {@code null} for none
+   */
+  public LocalInventoryAttributes setCustomAttributes(java.util.List<CustomAttribute> customAttributes) {
+    this.customAttributes = customAttributes;
     return this;
   }
 

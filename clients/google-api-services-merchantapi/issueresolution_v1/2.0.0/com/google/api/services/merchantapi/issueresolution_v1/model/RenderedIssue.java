@@ -86,9 +86,12 @@ public final class RenderedIssue extends com.google.api.client.json.GenericJson 
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
-   * the future. To make sure that a new content element does not break your style, you can hide
-   * everything with this class.
+   * was identified. * `asset-value` - marks the paragraph that contains the asset information. *
+   * `asset-label` - marks the section of the text that contains the label of the asset. * `asset-
+   * link` - marks the section of the text that contains a link to the asset. * `asset-provided-
+   * value` - marks the section of the text that contains the value of the asset. * `new-element` -
+   * Present for new elements added to the pre-rendered content in the future. To make sure that a
+   * new content element does not break your style, you can hide everything with this class.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,9 +216,12 @@ public final class RenderedIssue extends com.google.api.client.json.GenericJson 
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
-   * the future. To make sure that a new content element does not break your style, you can hide
-   * everything with this class.
+   * was identified. * `asset-value` - marks the paragraph that contains the asset information. *
+   * `asset-label` - marks the section of the text that contains the label of the asset. * `asset-
+   * link` - marks the section of the text that contains a link to the asset. * `asset-provided-
+   * value` - marks the section of the text that contains the value of the asset. * `new-element` -
+   * Present for new elements added to the pre-rendered content in the future. To make sure that a
+   * new content element does not break your style, you can hide everything with this class.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrerenderedContent() {
@@ -251,9 +257,12 @@ public final class RenderedIssue extends com.google.api.client.json.GenericJson 
    * `tooltip-style-question` - the tooltip shows helpful information, can use the '?' as an icon. *
    * `tooltip-style-info` - the tooltip adds additional information fitting to the context, can use
    * the 'i' as an icon. * `content-moderation` - marks the paragraph that explains how the issue
-   * was identified. * `new-element` - Present for new elements added to the pre-rendered content in
-   * the future. To make sure that a new content element does not break your style, you can hide
-   * everything with this class.
+   * was identified. * `asset-value` - marks the paragraph that contains the asset information. *
+   * `asset-label` - marks the section of the text that contains the label of the asset. * `asset-
+   * link` - marks the section of the text that contains a link to the asset. * `asset-provided-
+   * value` - marks the section of the text that contains the value of the asset. * `new-element` -
+   * Present for new elements added to the pre-rendered content in the future. To make sure that a
+   * new content element does not break your style, you can hide everything with this class.
    * @param prerenderedContent prerenderedContent or {@code null} for none
    */
   public RenderedIssue setPrerenderedContent(java.lang.String prerenderedContent) {

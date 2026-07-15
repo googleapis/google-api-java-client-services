@@ -50,9 +50,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponse exte
   private java.lang.String nextPageToken;
 
   /**
-   * Summary statistics for the sessions returned on the current page. This is computed across the
-   * current page only (not the full result set) and is populated on every page. Callers that need
-   * aggregate statistics across the entire result set should use AggregateAnalyzedSessions.
+   * Summary statistics computed across the sessions on the current page only. For statistics across
+   * the entire result set, use AggregateAnalyzedSessions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +92,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponse exte
   }
 
   /**
-   * Summary statistics for the sessions returned on the current page. This is computed across the
-   * current page only (not the full result set) and is populated on every page. Callers that need
-   * aggregate statistics across the entire result set should use AggregateAnalyzedSessions.
+   * Summary statistics computed across the sessions on the current page only. For statistics across
+   * the entire result set, use AggregateAnalyzedSessions.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary getSummary() {
@@ -103,9 +101,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponse exte
   }
 
   /**
-   * Summary statistics for the sessions returned on the current page. This is computed across the
-   * current page only (not the full result set) and is populated on every page. Callers that need
-   * aggregate statistics across the entire result set should use AggregateAnalyzedSessions.
+   * Summary statistics computed across the sessions on the current page only. For statistics across
+   * the entire result set, use AggregateAnalyzedSessions.
    * @param summary summary or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponse setSummary(GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary summary) {

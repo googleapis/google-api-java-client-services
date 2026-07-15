@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * An analyzed session for a monitored agent.
+ * Represents an analyzed session for a monitored agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -30,11 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The human-readable display name of the MonitoredAgent that owns this session,
-   * denormalized from `monitored_agents.display_name` so the UI can render an agent name in the
-   * per-session feed without an extra `getMonitoredAgent` round-trip. May be empty when the
-   * session's agent_id is not enrolled as a MonitoredAgent (i.e. the JOIN missed); the
-   * `agent_resource_name` URN is always present and can be used as a fallback identifier.
+   * Output only. The human-readable display name of the MonitoredAgent that owns this session. May
+   * be empty when the session's agent is not enrolled as a MonitoredAgent; the
+   * `agent_resource_name` is always present and can be used as a fallback identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,10 +47,9 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   private java.lang.String agentResourceName;
 
   /**
-   * Output only. The current enablement state of the MonitoredAgent that owns this session (e.g.
-   * ACTIVE, DISABLED, ENABLING, INELIGIBLE, NEEDS_ACTION), denormalized from
-   * `monitored_agents.state`. Defaults to ENABLEMENT_STATE_UNSPECIFIED when the agent is not
-   * enrolled (the JOIN missed) or its state column is empty / unknown.
+   * Output only. The current enablement state of the MonitoredAgent that owns this session (for
+   * example, ACTIVE, DISABLED, or ENABLING). Defaults to ENABLEMENT_STATE_UNSPECIFIED when the
+   * agent is not enrolled or its state is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,9 +77,8 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   private String latestAnalyzedTime;
 
   /**
-   * Output only. The GCP location (region) of the agent that ran this session (e.g. `us-central1`).
-   * Denormalized from `monitored_agents.location`; empty when the agent is not enrolled or its
-   * location column is empty.
+   * Output only. The Google Cloud location (region) of the agent that ran this session (for
+   * example, `us-central1`). Empty when the agent is not enrolled or its location is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,11 +121,9 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   private java.lang.String userId;
 
   /**
-   * Output only. The human-readable display name of the MonitoredAgent that owns this session,
-   * denormalized from `monitored_agents.display_name` so the UI can render an agent name in the
-   * per-session feed without an extra `getMonitoredAgent` round-trip. May be empty when the
-   * session's agent_id is not enrolled as a MonitoredAgent (i.e. the JOIN missed); the
-   * `agent_resource_name` URN is always present and can be used as a fallback identifier.
+   * Output only. The human-readable display name of the MonitoredAgent that owns this session. May
+   * be empty when the session's agent is not enrolled as a MonitoredAgent; the
+   * `agent_resource_name` is always present and can be used as a fallback identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentDisplayName() {
@@ -137,11 +131,9 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   }
 
   /**
-   * Output only. The human-readable display name of the MonitoredAgent that owns this session,
-   * denormalized from `monitored_agents.display_name` so the UI can render an agent name in the
-   * per-session feed without an extra `getMonitoredAgent` round-trip. May be empty when the
-   * session's agent_id is not enrolled as a MonitoredAgent (i.e. the JOIN missed); the
-   * `agent_resource_name` URN is always present and can be used as a fallback identifier.
+   * Output only. The human-readable display name of the MonitoredAgent that owns this session. May
+   * be empty when the session's agent is not enrolled as a MonitoredAgent; the
+   * `agent_resource_name` is always present and can be used as a fallback identifier.
    * @param agentDisplayName agentDisplayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AnalyzedSession setAgentDisplayName(java.lang.String agentDisplayName) {
@@ -169,10 +161,9 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   }
 
   /**
-   * Output only. The current enablement state of the MonitoredAgent that owns this session (e.g.
-   * ACTIVE, DISABLED, ENABLING, INELIGIBLE, NEEDS_ACTION), denormalized from
-   * `monitored_agents.state`. Defaults to ENABLEMENT_STATE_UNSPECIFIED when the agent is not
-   * enrolled (the JOIN missed) or its state column is empty / unknown.
+   * Output only. The current enablement state of the MonitoredAgent that owns this session (for
+   * example, ACTIVE, DISABLED, or ENABLING). Defaults to ENABLEMENT_STATE_UNSPECIFIED when the
+   * agent is not enrolled or its state is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentState() {
@@ -180,10 +171,9 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   }
 
   /**
-   * Output only. The current enablement state of the MonitoredAgent that owns this session (e.g.
-   * ACTIVE, DISABLED, ENABLING, INELIGIBLE, NEEDS_ACTION), denormalized from
-   * `monitored_agents.state`. Defaults to ENABLEMENT_STATE_UNSPECIFIED when the agent is not
-   * enrolled (the JOIN missed) or its state column is empty / unknown.
+   * Output only. The current enablement state of the MonitoredAgent that owns this session (for
+   * example, ACTIVE, DISABLED, or ENABLING). Defaults to ENABLEMENT_STATE_UNSPECIFIED when the
+   * agent is not enrolled or its state is unknown.
    * @param agentState agentState or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AnalyzedSession setAgentState(java.lang.String agentState) {
@@ -243,9 +233,8 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   }
 
   /**
-   * Output only. The GCP location (region) of the agent that ran this session (e.g. `us-central1`).
-   * Denormalized from `monitored_agents.location`; empty when the agent is not enrolled or its
-   * location column is empty.
+   * Output only. The Google Cloud location (region) of the agent that ran this session (for
+   * example, `us-central1`). Empty when the agent is not enrolled or its location is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -253,9 +242,8 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSession extends com.googl
   }
 
   /**
-   * Output only. The GCP location (region) of the agent that ran this session (e.g. `us-central1`).
-   * Denormalized from `monitored_agents.location`; empty when the agent is not enrolled or its
-   * location column is empty.
+   * Output only. The Google Cloud location (region) of the agent that ran this session (for
+   * example, `us-central1`). Empty when the agent is not enrolled or its location is unknown.
    * @param location location or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AnalyzedSession setLocation(java.lang.String location) {

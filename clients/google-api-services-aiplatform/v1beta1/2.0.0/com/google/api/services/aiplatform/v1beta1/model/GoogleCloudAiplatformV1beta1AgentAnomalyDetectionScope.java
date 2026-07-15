@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Resource representing an Agent Anomaly Detection Scope.
+ * Represents an Agent Anomaly Detection Scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. User provided display name of the AgentAnomalyDetectionScope.
+   * Optional. User-provided display name of the AgentAnomalyDetectionScope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. Customer owned Cloud Logging bucket resource names attached to this scope. Format:
+   * Required. Customer-owned Cloud Logging bucket resource names attached to this scope. Format:
    * `projects/{project}/locations/{location}/buckets/{bucket}`.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   private java.lang.String name;
 
   /**
-   * Required. Customer owned Cloud Observability bucket resource names attached to this scope.
+   * Required. Customer-owned Cloud Observability bucket resource names attached to this scope.
    * Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`.
    * The value may be {@code null}.
    */
@@ -61,14 +61,14 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   private java.util.List<java.lang.String> observabilityBuckets;
 
   /**
-   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * Output only. The lifecycle state of the scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. User provided display name of the AgentAnomalyDetectionScope.
+   * Optional. User-provided display name of the AgentAnomalyDetectionScope.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -76,7 +76,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Optional. User provided display name of the AgentAnomalyDetectionScope.
+   * Optional. User-provided display name of the AgentAnomalyDetectionScope.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setDisplayName(java.lang.String displayName) {
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Required. Customer owned Cloud Logging bucket resource names attached to this scope. Format:
+   * Required. Customer-owned Cloud Logging bucket resource names attached to this scope. Format:
    * `projects/{project}/locations/{location}/buckets/{bucket}`.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Required. Customer owned Cloud Logging bucket resource names attached to this scope. Format:
+   * Required. Customer-owned Cloud Logging bucket resource names attached to this scope. Format:
    * `projects/{project}/locations/{location}/buckets/{bucket}`.
    * @param logBuckets logBuckets or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Required. Customer owned Cloud Observability bucket resource names attached to this scope.
+   * Required. Customer-owned Cloud Observability bucket resource names attached to this scope.
    * Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`.
    * @return value or {@code null} for none
    */
@@ -132,7 +132,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Required. Customer owned Cloud Observability bucket resource names attached to this scope.
+   * Required. Customer-owned Cloud Observability bucket resource names attached to this scope.
    * Format: `projects/{project}/locations/{location}/observationBuckets/{observation_bucket}`.
    * @param observabilityBuckets observabilityBuckets or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * Output only. The lifecycle state of the scope.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -150,7 +150,7 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   }
 
   /**
-   * Output only. The lifecycle state of the scope. See `State` for the semantics of each value.
+   * Output only. The lifecycle state of the scope.
    * @param state state or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setState(java.lang.String state) {

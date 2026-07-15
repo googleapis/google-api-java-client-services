@@ -45,9 +45,7 @@ public final class GoogleCloudAiplatformV1beta1ListMonitoredAgentsResponse exten
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of MonitoredAgents in the request scope after the request `filter` (if any) is
-   * applied. With no filter this is the unconditional count of MonitoredAgents in the parent; with
-   * `filter = "state = ACTIVE"` it is the active-agent count, and so on.
+   * The total number of MonitoredAgents matching the request, after any `filter` is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,9 +88,7 @@ public final class GoogleCloudAiplatformV1beta1ListMonitoredAgentsResponse exten
   }
 
   /**
-   * The total number of MonitoredAgents in the request scope after the request `filter` (if any) is
-   * applied. With no filter this is the unconditional count of MonitoredAgents in the parent; with
-   * `filter = "state = ACTIVE"` it is the active-agent count, and so on.
+   * The total number of MonitoredAgents matching the request, after any `filter` is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -100,9 +96,7 @@ public final class GoogleCloudAiplatformV1beta1ListMonitoredAgentsResponse exten
   }
 
   /**
-   * The total number of MonitoredAgents in the request scope after the request `filter` (if any) is
-   * applied. With no filter this is the unconditional count of MonitoredAgents in the parent; with
-   * `filter = "state = ACTIVE"` it is the active-agent count, and so on.
+   * The total number of MonitoredAgents matching the request, after any `filter` is applied.
    * @param totalSize totalSize or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListMonitoredAgentsResponse setTotalSize(java.lang.Integer totalSize) {

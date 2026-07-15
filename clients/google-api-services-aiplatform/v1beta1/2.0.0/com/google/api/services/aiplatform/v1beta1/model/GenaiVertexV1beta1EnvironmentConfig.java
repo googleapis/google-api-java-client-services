@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1EnvironmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The environment ID for the interaction. If specified, the request will update the
+   * existing environment instead of creating a new one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String environmentId;
+
+  /**
    * Allow only specific domains.
    * The value may be {@code null}.
    */
@@ -48,6 +56,25 @@ public final class GenaiVertexV1beta1EnvironmentConfig extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1EnvironmentConfigSource> sources;
+
+  /**
+   * Optional. The environment ID for the interaction. If specified, the request will update the
+   * existing environment instead of creating a new one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironmentId() {
+    return environmentId;
+  }
+
+  /**
+   * Optional. The environment ID for the interaction. If specified, the request will update the
+   * existing environment instead of creating a new one.
+   * @param environmentId environmentId or {@code null} for none
+   */
+  public GenaiVertexV1beta1EnvironmentConfig setEnvironmentId(java.lang.String environmentId) {
+    this.environmentId = environmentId;
+    return this;
+  }
 
   /**
    * Allow only specific domains.

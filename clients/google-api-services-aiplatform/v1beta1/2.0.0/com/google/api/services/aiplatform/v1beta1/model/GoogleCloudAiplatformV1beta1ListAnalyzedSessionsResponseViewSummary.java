@@ -30,13 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of distinct agents matching the request scope that have at least one
-   * anomalous session in the time window. On `AggregateAnalyzedSessionsResponse.summary` (wildcard
-   * parent), this is a true GLOBAL count across all anomalous active agents, NOT the page-row
-   * count. The denominator for an "anomalous active agents" scorecard pairs this with
-   * `ListMonitoredAgentsResponse.total_size` (filtered to `state = ACTIVE`). On
-   * `ListAnalyzedSessionsResponse.summary`, this field is not populated (the API is per-session,
-   * not per-agent).
+   * Output only. The number of distinct agents in the request scope with at least one anomalous
+   * session in the time window. On `AggregateAnalyzedSessionsResponse.summary` this is a global
+   * count; it is not populated on `ListAnalyzedSessionsResponse.summary`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +46,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   private java.lang.Integer anomalousSessionsCount;
 
   /**
-   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
-   * LLM judges.
+   * Output only. The number of distinct sessions in the time window that were scanned by the LLM
+   * judge.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,13 +76,9 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   private java.lang.Integer totalSessionsCount;
 
   /**
-   * Output only. The number of distinct agents matching the request scope that have at least one
-   * anomalous session in the time window. On `AggregateAnalyzedSessionsResponse.summary` (wildcard
-   * parent), this is a true GLOBAL count across all anomalous active agents, NOT the page-row
-   * count. The denominator for an "anomalous active agents" scorecard pairs this with
-   * `ListMonitoredAgentsResponse.total_size` (filtered to `state = ACTIVE`). On
-   * `ListAnalyzedSessionsResponse.summary`, this field is not populated (the API is per-session,
-   * not per-agent).
+   * Output only. The number of distinct agents in the request scope with at least one anomalous
+   * session in the time window. On `AggregateAnalyzedSessionsResponse.summary` this is a global
+   * count; it is not populated on `ListAnalyzedSessionsResponse.summary`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAnomalousAgentsCount() {
@@ -94,13 +86,9 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   }
 
   /**
-   * Output only. The number of distinct agents matching the request scope that have at least one
-   * anomalous session in the time window. On `AggregateAnalyzedSessionsResponse.summary` (wildcard
-   * parent), this is a true GLOBAL count across all anomalous active agents, NOT the page-row
-   * count. The denominator for an "anomalous active agents" scorecard pairs this with
-   * `ListMonitoredAgentsResponse.total_size` (filtered to `state = ACTIVE`). On
-   * `ListAnalyzedSessionsResponse.summary`, this field is not populated (the API is per-session,
-   * not per-agent).
+   * Output only. The number of distinct agents in the request scope with at least one anomalous
+   * session in the time window. On `AggregateAnalyzedSessionsResponse.summary` this is a global
+   * count; it is not populated on `ListAnalyzedSessionsResponse.summary`.
    * @param anomalousAgentsCount anomalousAgentsCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary setAnomalousAgentsCount(java.lang.Integer anomalousAgentsCount) {
@@ -126,8 +114,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   }
 
   /**
-   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
-   * LLM judges.
+   * Output only. The number of distinct sessions in the time window that were scanned by the LLM
+   * judge.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLlmScannedSessionsCount() {
@@ -135,8 +123,8 @@ public final class GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewS
   }
 
   /**
-   * Output only. The number of distinct sessions in the time window that were scanned by Stage 2
-   * LLM judges.
+   * Output only. The number of distinct sessions in the time window that were scanned by the LLM
+   * judge.
    * @param llmScannedSessionsCount llmScannedSessionsCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListAnalyzedSessionsResponseViewSummary setLlmScannedSessionsCount(java.lang.Integer llmScannedSessionsCount) {

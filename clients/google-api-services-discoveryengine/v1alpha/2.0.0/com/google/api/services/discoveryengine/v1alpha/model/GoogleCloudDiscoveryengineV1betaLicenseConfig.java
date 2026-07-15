@@ -73,6 +73,16 @@ public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.goo
   private java.lang.Boolean geminiBundle;
 
   /**
+   * Optional. Timestamp of the most recent user-initiated update (seat count change or subscription
+   * term change). Unlike `update_time`, this field is only stamped when a customer explicitly
+   * updates the license (e.g. via the UI), and is not touched by system-driven writes (subscription
+   * pipeline, BALC propagation, etc.).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastUserUpdateTime;
+
+  /**
    * Required. Number of licenses purchased.
    * The value may be {@code null}.
    */
@@ -216,6 +226,29 @@ public final class GoogleCloudDiscoveryengineV1betaLicenseConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaLicenseConfig setGeminiBundle(java.lang.Boolean geminiBundle) {
     this.geminiBundle = geminiBundle;
+    return this;
+  }
+
+  /**
+   * Optional. Timestamp of the most recent user-initiated update (seat count change or subscription
+   * term change). Unlike `update_time`, this field is only stamped when a customer explicitly
+   * updates the license (e.g. via the UI), and is not touched by system-driven writes (subscription
+   * pipeline, BALC propagation, etc.).
+   * @return value or {@code null} for none
+   */
+  public String getLastUserUpdateTime() {
+    return lastUserUpdateTime;
+  }
+
+  /**
+   * Optional. Timestamp of the most recent user-initiated update (seat count change or subscription
+   * term change). Unlike `update_time`, this field is only stamped when a customer explicitly
+   * updates the license (e.g. via the UI), and is not touched by system-driven writes (subscription
+   * pipeline, BALC propagation, etc.).
+   * @param lastUserUpdateTime lastUserUpdateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaLicenseConfig setLastUserUpdateTime(String lastUserUpdateTime) {
+    this.lastUserUpdateTime = lastUserUpdateTime;
     return this;
   }
 

@@ -37,7 +37,11 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState ex
   private java.lang.String authState;
 
   /**
-   * Output only. The authorization uri for the data connector.
+   * Output only. The authorization uri for the data connector. For synthetic placeholder
+   * `CollectionComponent` entries (returned by `LookupWidgetConfig` with `view =
+   * WITH_AVAILABLE_CONNECTORS` on SaaS / Business engines), this field is left empty. The widget
+   * should call `WidgetService.WidgetBuildAuthorizationUrl` on the user's "Connect" click to obtain
+   * a freshly-built authorization URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +72,11 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState ex
   }
 
   /**
-   * Output only. The authorization uri for the data connector.
+   * Output only. The authorization uri for the data connector. For synthetic placeholder
+   * `CollectionComponent` entries (returned by `LookupWidgetConfig` with `view =
+   * WITH_AVAILABLE_CONNECTORS` on SaaS / Business engines), this field is left empty. The widget
+   * should call `WidgetService.WidgetBuildAuthorizationUrl` on the user's "Connect" click to obtain
+   * a freshly-built authorization URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizationUri() {
@@ -76,7 +84,11 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState ex
   }
 
   /**
-   * Output only. The authorization uri for the data connector.
+   * Output only. The authorization uri for the data connector. For synthetic placeholder
+   * `CollectionComponent` entries (returned by `LookupWidgetConfig` with `view =
+   * WITH_AVAILABLE_CONNECTORS` on SaaS / Business engines), this field is left empty. The widget
+   * should call `WidgetService.WidgetBuildAuthorizationUrl` on the user's "Connect" click to obtain
+   * a freshly-built authorization URL.
    * @param authorizationUri authorizationUri or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigConnectorAuthState setAuthorizationUri(java.lang.String authorizationUri) {

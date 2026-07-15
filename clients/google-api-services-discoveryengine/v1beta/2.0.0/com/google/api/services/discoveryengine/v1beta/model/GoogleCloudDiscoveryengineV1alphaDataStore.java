@@ -134,6 +134,17 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig healthcareFhirConfig;
 
   /**
+   * Output only. Provides the icon URI of the data store's connector source, if this is a
+   * connector-backed data store. Empty for data stores without an associated connector source. In
+   * DataStoreService.ListDataStores and DataStoreService.GetDataStore, this is only populated when
+   * DataStoreView.DATA_STORE_VIEW_FULL is requested via ListDataStoresRequest.view or
+   * GetDataStoreRequest.view respectively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconUri;
+
+  /**
    * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
    * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
    * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
@@ -479,6 +490,31 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setHealthcareFhirConfig(GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig healthcareFhirConfig) {
     this.healthcareFhirConfig = healthcareFhirConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Provides the icon URI of the data store's connector source, if this is a
+   * connector-backed data store. Empty for data stores without an associated connector source. In
+   * DataStoreService.ListDataStores and DataStoreService.GetDataStore, this is only populated when
+   * DataStoreView.DATA_STORE_VIEW_FULL is requested via ListDataStoresRequest.view or
+   * GetDataStoreRequest.view respectively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconUri() {
+    return iconUri;
+  }
+
+  /**
+   * Output only. Provides the icon URI of the data store's connector source, if this is a
+   * connector-backed data store. Empty for data stores without an associated connector source. In
+   * DataStoreService.ListDataStores and DataStoreService.GetDataStore, this is only populated when
+   * DataStoreView.DATA_STORE_VIEW_FULL is requested via ListDataStoresRequest.view or
+   * GetDataStoreRequest.view respectively.
+   * @param iconUri iconUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setIconUri(java.lang.String iconUri) {
+    this.iconUri = iconUri;
     return this;
   }
 

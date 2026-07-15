@@ -8622,6 +8622,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               return this;
             }
 
+            /**
+             * Optional. The view to apply to the returned DataStore. Defaults to
+             * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified.
+             * DataStoreView.DATA_STORE_VIEW_FULL additionally populates DataStore.icon_uri for a
+             * connector-backed data store. Resolving the connector icon requires extra lookups, so
+             * request it only when the caller renders the icon.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The view to apply to the returned DataStore. Defaults to
+           DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL additionally
+           populates DataStore.icon_uri for a connector-backed data store. Resolving the connector icon
+           requires extra lookups, so request it only when the caller renders the icon.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The view to apply to the returned DataStore. Defaults to
+             * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified.
+             * DataStoreView.DATA_STORE_VIEW_FULL additionally populates DataStore.icon_uri for a
+             * connector-backed data store. Resolving the connector icon requires extra lookups, so
+             * request it only when the caller renders the icon.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -9324,6 +9355,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. The view to apply to the returned DataStores. Defaults to
+             * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified.
+             * DataStoreView.DATA_STORE_VIEW_FULL additionally populates DataStore.icon_uri for
+             * connector-backed data stores. Resolving connector icons requires extra lookups, so
+             * request it only when the caller renders the icons.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The view to apply to the returned DataStores. Defaults to
+           DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL additionally
+           populates DataStore.icon_uri for connector-backed data stores. Resolving connector icons requires
+           extra lookups, so request it only when the caller renders the icons.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The view to apply to the returned DataStores. Defaults to
+             * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified.
+             * DataStoreView.DATA_STORE_VIEW_FULL additionally populates DataStore.icon_uri for
+             * connector-backed data stores. Resolving connector icons requires extra lookups, so
+             * request it only when the caller renders the icons.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 
@@ -10178,9 +10240,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleton resource of
            * DataStore. It's empty when DataStore is created. The first call to this method will set up
-           * DocumentProcessingConfig.
+           * DocumentProcessingConfig. The `update_mask` query parameter is not supported; if it is set the
+           * request returns an error. To update mutable fields, omit `update_mask` and send the full
+           * DocumentProcessingConfig as the request body. The entire resource is overwritten, so include all
+           * values you want to retain. For example, to update the layout parser, set
+           * DocumentProcessingConfig.default_parsing_config (or
+           * DocumentProcessingConfig.parsing_config_overrides) and omit `update_mask`. Some fields, such as
+           * DocumentProcessingConfig.chunking_config, are immutable and return an error if changed.
            *
            * Create a request for the method "dataStores.updateDocumentProcessingConfig".
            *
@@ -10207,9 +10275,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
 
             /**
-             * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+             * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleton resource of
              * DataStore. It's empty when DataStore is created. The first call to this method will set up
-             * DocumentProcessingConfig.
+             * DocumentProcessingConfig. The `update_mask` query parameter is not supported; if it is set the
+             * request returns an error. To update mutable fields, omit `update_mask` and send the full
+             * DocumentProcessingConfig as the request body. The entire resource is overwritten, so include
+             * all values you want to retain. For example, to update the layout parser, set
+             * DocumentProcessingConfig.default_parsing_config (or
+             * DocumentProcessingConfig.parsing_config_overrides) and omit `update_mask`. Some fields, such as
+             * DocumentProcessingConfig.chunking_config, are immutable and return an error if changed.
              *
              * Create a request for the method "dataStores.updateDocumentProcessingConfig".
              *
@@ -10318,25 +10392,27 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Indicates which fields in the provided DocumentProcessingConfig to update. The
-             * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
-             * set, all supported fields are updated.
+             * Not supported. If `update_mask` is set, the request returns an
+             * `UnsupportedFieldError`. To update mutable fields, omit `update_mask`; the full
+             * DocumentProcessingConfig in the request body then overwrites the existing resource.
+             * See the method description for details.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
-           only supported fields: * DocumentProcessingConfig.ocr_config If not set, all supported fields are
-           updated.
+            /** Not supported. If `update_mask` is set, the request returns an `UnsupportedFieldError`. To update
+           mutable fields, omit `update_mask`; the full DocumentProcessingConfig in the request body then
+           overwrites the existing resource. See the method description for details.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * Indicates which fields in the provided DocumentProcessingConfig to update. The
-             * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
-             * set, all supported fields are updated.
+             * Not supported. If `update_mask` is set, the request returns an
+             * `UnsupportedFieldError`. To update mutable fields, omit `update_mask`; the full
+             * DocumentProcessingConfig in the request body then overwrites the existing resource.
+             * See the method description for details.
              */
             public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -40991,6 +41067,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. The view to apply to the returned DataStore. Defaults to
+           * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL
+           * additionally populates DataStore.icon_uri for a connector-backed data store. Resolving
+           * the connector icon requires extra lookups, so request it only when the caller renders
+           * the icon.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. The view to apply to the returned DataStore. Defaults to
+         DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL additionally
+         populates DataStore.icon_uri for a connector-backed data store. Resolving the connector icon
+         requires extra lookups, so request it only when the caller renders the icon.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. The view to apply to the returned DataStore. Defaults to
+           * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL
+           * additionally populates DataStore.icon_uri for a connector-backed data store. Resolving
+           * the connector icon requires extra lookups, so request it only when the caller renders
+           * the icon.
+           */
+          public Get setView(java.lang.String view) {
+            this.view = view;
+            return this;
+          }
+
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
@@ -41691,6 +41798,37 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The view to apply to the returned DataStores. Defaults to
+           * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL
+           * additionally populates DataStore.icon_uri for connector-backed data stores. Resolving
+           * connector icons requires extra lookups, so request it only when the caller renders the
+           * icons.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. The view to apply to the returned DataStores. Defaults to
+         DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL additionally
+         populates DataStore.icon_uri for connector-backed data stores. Resolving connector icons requires
+         extra lookups, so request it only when the caller renders the icons.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. The view to apply to the returned DataStores. Defaults to
+           * DataStoreView.DATA_STORE_VIEW_BASIC if unspecified. DataStoreView.DATA_STORE_VIEW_FULL
+           * additionally populates DataStore.icon_uri for connector-backed data stores. Resolving
+           * connector icons requires extra lookups, so request it only when the caller renders the
+           * icons.
+           */
+          public List setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 
@@ -42399,9 +42537,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+         * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleton resource of
          * DataStore. It's empty when DataStore is created. The first call to this method will set up
-         * DocumentProcessingConfig.
+         * DocumentProcessingConfig. The `update_mask` query parameter is not supported; if it is set the
+         * request returns an error. To update mutable fields, omit `update_mask` and send the full
+         * DocumentProcessingConfig as the request body. The entire resource is overwritten, so include all
+         * values you want to retain. For example, to update the layout parser, set
+         * DocumentProcessingConfig.default_parsing_config (or
+         * DocumentProcessingConfig.parsing_config_overrides) and omit `update_mask`. Some fields, such as
+         * DocumentProcessingConfig.chunking_config, are immutable and return an error if changed.
          *
          * Create a request for the method "dataStores.updateDocumentProcessingConfig".
          *
@@ -42428,9 +42572,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+/documentProcessingConfig$");
 
           /**
-           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
+           * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleton resource of
            * DataStore. It's empty when DataStore is created. The first call to this method will set up
-           * DocumentProcessingConfig.
+           * DocumentProcessingConfig. The `update_mask` query parameter is not supported; if it is set the
+           * request returns an error. To update mutable fields, omit `update_mask` and send the full
+           * DocumentProcessingConfig as the request body. The entire resource is overwritten, so include
+           * all values you want to retain. For example, to update the layout parser, set
+           * DocumentProcessingConfig.default_parsing_config (or
+           * DocumentProcessingConfig.parsing_config_overrides) and omit `update_mask`. Some fields, such as
+           * DocumentProcessingConfig.chunking_config, are immutable and return an error if changed.
            *
            * Create a request for the method "dataStores.updateDocumentProcessingConfig".
            *
@@ -42539,25 +42689,27 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Indicates which fields in the provided DocumentProcessingConfig to update. The
-           * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
-           * set, all supported fields are updated.
+           * Not supported. If `update_mask` is set, the request returns an `UnsupportedFieldError`.
+           * To update mutable fields, omit `update_mask`; the full DocumentProcessingConfig in the
+           * request body then overwrites the existing resource. See the method description for
+           * details.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Indicates which fields in the provided DocumentProcessingConfig to update. The following are the
-         only supported fields: * DocumentProcessingConfig.ocr_config If not set, all supported fields are
-         updated.
+          /** Not supported. If `update_mask` is set, the request returns an `UnsupportedFieldError`. To update
+         mutable fields, omit `update_mask`; the full DocumentProcessingConfig in the request body then
+         overwrites the existing resource. See the method description for details.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Indicates which fields in the provided DocumentProcessingConfig to update. The
-           * following are the only supported fields: * DocumentProcessingConfig.ocr_config If not
-           * set, all supported fields are updated.
+           * Not supported. If `update_mask` is set, the request returns an `UnsupportedFieldError`.
+           * To update mutable fields, omit `update_mask`; the full DocumentProcessingConfig in the
+           * request body then overwrites the existing resource. See the method description for
+           * details.
            */
           public UpdateDocumentProcessingConfig setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

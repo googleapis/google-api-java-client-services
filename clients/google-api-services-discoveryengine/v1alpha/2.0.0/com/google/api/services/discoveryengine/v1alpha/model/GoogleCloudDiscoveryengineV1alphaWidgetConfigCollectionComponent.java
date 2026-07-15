@@ -18,7 +18,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
  * Read-only collection component that contains data store collections fields that may be used for
- * filtering
+ * filtering. For SaaS / Business engines, when `LookupWidgetConfig` is called with `view =
+ * WITH_AVAILABLE_CONNECTORS`, instances of this message are also used to represent synthetic
+ * placeholder entries for connectors the caller may attach but has not yet attached. Placeholder
+ * entries have `connector_auth_state.auth_state == AUTH_STATE_UNSPECIFIED` (or `NO_AUTH`), an empty
+ * `connector_auth_state.authorization_uri` (the widget calls `WidgetBuildAuthorizationUrl` on the
+ * user's "Connect" click), and synthetic placeholder values in `name` / `id` (see field comments).
+ * Fields that only make sense for materialized connectors (`data_store_components`, `tenant`,
+ * `action_connector`) are left unset for placeholder entries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -74,7 +81,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. the identifier of the collection, used for widget service. For now it refers to
-   * collection_id, in the future we will migrate the field to encrypted collection name UUID.
+   * collection_id, in the future we will migrate the field to encrypted collection name UUID. For
+   * synthetic placeholder entries (see message-level comment) this is a synthetic placeholder id,
+   * not a real collection_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +93,10 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
    * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
-   * is erased in this field.
+   * is erased in this field. For synthetic placeholder entries (see message-level comment) this
+   * carries a synthetic placeholder collection id that does not correspond to a real collection.
+   * Callers must not attempt to resolve / GET this resource until the user authorizes the
+   * connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +206,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. the identifier of the collection, used for widget service. For now it refers to
-   * collection_id, in the future we will migrate the field to encrypted collection name UUID.
+   * collection_id, in the future we will migrate the field to encrypted collection name UUID. For
+   * synthetic placeholder entries (see message-level comment) this is a synthetic placeholder id,
+   * not a real collection_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -203,7 +217,9 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. the identifier of the collection, used for widget service. For now it refers to
-   * collection_id, in the future we will migrate the field to encrypted collection name UUID.
+   * collection_id, in the future we will migrate the field to encrypted collection name UUID. For
+   * synthetic placeholder entries (see message-level comment) this is a synthetic placeholder id,
+   * not a real collection_id.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setId(java.lang.String id) {
@@ -215,7 +231,10 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
    * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
-   * is erased in this field.
+   * is erased in this field. For synthetic placeholder entries (see message-level comment) this
+   * carries a synthetic placeholder collection id that does not correspond to a real collection.
+   * Callers must not attempt to resolve / GET this resource until the user authorizes the
+   * connector.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -226,7 +245,10 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
    * The name of the collection. It should be collection resource name. Format:
    * `projects/{project}/locations/{location}/collections/{collection_id}`. For APIs under
    * WidgetService, such as WidgetService.LookupWidgetConfig, the project number and location part
-   * is erased in this field.
+   * is erased in this field. For synthetic placeholder entries (see message-level comment) this
+   * carries a synthetic placeholder collection id that does not correspond to a real collection.
+   * Callers must not attempt to resolve / GET this resource until the user authorizes the
+   * connector.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setName(java.lang.String name) {

@@ -61,9 +61,22 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfig extends com.google.a
   private GoogleCloudDiscoveryengineV1WidgetConfigAssistantSettings assistantSettings;
 
   /**
+   * Output only. The batch authorization statuses for the widget's connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus> batchAuthStatuses;
+
+  /**
    * Output only. Collection components that lists all collections and child data stores associated
    * with the widget config, those data sources can be used for filtering in widget service APIs,
-   * users can return results that from selected data sources.
+   * users can return results that from selected data sources. For SaaS / Business engines, when
+   * `LookupWidgetConfig` is called with `view = WITH_AVAILABLE_CONNECTORS`, this list is
+   * additionally augmented with synthetic placeholder entries for connectors the caller may attach
+   * but has not yet attached (see `CollectionComponent` for the placeholder contract). The frontend
+   * can therefore render a unified list of already-attached and available-to-attach sources by
+   * iterating this single field. For Enterprise engines and for the default `view`, only already-
+   * attached connectors are returned (today's behavior).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -383,9 +396,32 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfig extends com.google.a
   }
 
   /**
+   * Output only. The batch authorization statuses for the widget's connectors.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus> getBatchAuthStatuses() {
+    return batchAuthStatuses;
+  }
+
+  /**
+   * Output only. The batch authorization statuses for the widget's connectors.
+   * @param batchAuthStatuses batchAuthStatuses or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfig setBatchAuthStatuses(java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus> batchAuthStatuses) {
+    this.batchAuthStatuses = batchAuthStatuses;
+    return this;
+  }
+
+  /**
    * Output only. Collection components that lists all collections and child data stores associated
    * with the widget config, those data sources can be used for filtering in widget service APIs,
-   * users can return results that from selected data sources.
+   * users can return results that from selected data sources. For SaaS / Business engines, when
+   * `LookupWidgetConfig` is called with `view = WITH_AVAILABLE_CONNECTORS`, this list is
+   * additionally augmented with synthetic placeholder entries for connectors the caller may attach
+   * but has not yet attached (see `CollectionComponent` for the placeholder contract). The frontend
+   * can therefore render a unified list of already-attached and available-to-attach sources by
+   * iterating this single field. For Enterprise engines and for the default `view`, only already-
+   * attached connectors are returned (today's behavior).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent> getCollectionComponents() {
@@ -395,7 +431,13 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfig extends com.google.a
   /**
    * Output only. Collection components that lists all collections and child data stores associated
    * with the widget config, those data sources can be used for filtering in widget service APIs,
-   * users can return results that from selected data sources.
+   * users can return results that from selected data sources. For SaaS / Business engines, when
+   * `LookupWidgetConfig` is called with `view = WITH_AVAILABLE_CONNECTORS`, this list is
+   * additionally augmented with synthetic placeholder entries for connectors the caller may attach
+   * but has not yet attached (see `CollectionComponent` for the placeholder contract). The frontend
+   * can therefore render a unified list of already-attached and available-to-attach sources by
+   * iterating this single field. For Enterprise engines and for the default `view`, only already-
+   * attached connectors are returned (today's behavior).
    * @param collectionComponents collectionComponents or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfig setCollectionComponents(java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent> collectionComponents) {

@@ -69,7 +69,7 @@ public final class QuotaGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current quota usage, meaning the number of calls already made on a given day
-   * to the methods in the group. The daily quota limits reset at at 12:00 PM midday UTC.
+   * to the methods in the group. The daily quota limits reset at 12:00 PM midday UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -149,7 +149,7 @@ public final class QuotaGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current quota usage, meaning the number of calls already made on a given day
-   * to the methods in the group. The daily quota limits reset at at 12:00 PM midday UTC.
+   * to the methods in the group. The daily quota limits reset at 12:00 PM midday UTC.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuotaUsage() {
@@ -158,7 +158,7 @@ public final class QuotaGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The current quota usage, meaning the number of calls already made on a given day
-   * to the methods in the group. The daily quota limits reset at at 12:00 PM midday UTC.
+   * to the methods in the group. The daily quota limits reset at 12:00 PM midday UTC.
    * @param quotaUsage quotaUsage or {@code null} for none
    */
   public QuotaGroup setQuotaUsage(java.lang.Long quotaUsage) {

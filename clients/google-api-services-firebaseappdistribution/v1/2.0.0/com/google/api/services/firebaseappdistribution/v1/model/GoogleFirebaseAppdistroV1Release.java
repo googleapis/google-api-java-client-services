@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappdistribution.v1.model;
 public final class GoogleFirebaseAppdistroV1Release extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Registration state of the Android package (BinaryType.APK).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String androidPackageRegistrationState;
+
+  /**
    * Output only. A signed link (which expires in one hour) to directly download the app binary
    * (IPA/APK/AAB) file.
    * The value may be {@code null}.
@@ -84,7 +91,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   private java.lang.String name;
 
   /**
-   * Notes of the release.
+   * Notes about the release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,6 +112,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Registration state of the Android package (BinaryType.APK).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAndroidPackageRegistrationState() {
+    return androidPackageRegistrationState;
+  }
+
+  /**
+   * Output only. Registration state of the Android package (BinaryType.APK).
+   * @param androidPackageRegistrationState androidPackageRegistrationState or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setAndroidPackageRegistrationState(java.lang.String androidPackageRegistrationState) {
+    this.androidPackageRegistrationState = androidPackageRegistrationState;
+    return this;
+  }
 
   /**
    * Output only. A signed link (which expires in one hour) to directly download the app binary
@@ -234,7 +258,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   }
 
   /**
-   * Notes of the release.
+   * Notes about the release.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1ReleaseNotes getReleaseNotes() {
@@ -242,7 +266,7 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   }
 
   /**
-   * Notes of the release.
+   * Notes about the release.
    * @param releaseNotes releaseNotes or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1Release setReleaseNotes(GoogleFirebaseAppdistroV1ReleaseNotes releaseNotes) {

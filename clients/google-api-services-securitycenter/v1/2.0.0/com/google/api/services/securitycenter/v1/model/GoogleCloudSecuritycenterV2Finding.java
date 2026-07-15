@@ -46,12 +46,36 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Agent agent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AgentAnomaly agentAnomaly;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> agentDataAccessEvents;
 
   static {
     // hack to force ProGuard to consider GoogleCloudSecuritycenterV2AgentDataAccessEvent used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2AgentDataAccessEvent.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2AgentSession> agentSessions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV2AgentSession used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2AgentSession.class);
   }
 
   /**
@@ -543,6 +567,36 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   /**
    * @return value or {@code null} for none
    */
+  public GoogleCloudSecuritycenterV2Agent getAgent() {
+    return agent;
+  }
+
+  /**
+   * @param agent agent or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAgent(GoogleCloudSecuritycenterV2Agent agent) {
+    this.agent = agent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AgentAnomaly getAgentAnomaly() {
+    return agentAnomaly;
+  }
+
+  /**
+   * @param agentAnomaly agentAnomaly or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAgentAnomaly(GoogleCloudSecuritycenterV2AgentAnomaly agentAnomaly) {
+    this.agentAnomaly = agentAnomaly;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> getAgentDataAccessEvents() {
     return agentDataAccessEvents;
   }
@@ -552,6 +606,21 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setAgentDataAccessEvents(java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> agentDataAccessEvents) {
     this.agentDataAccessEvents = agentDataAccessEvents;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2AgentSession> getAgentSessions() {
+    return agentSessions;
+  }
+
+  /**
+   * @param agentSessions agentSessions or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAgentSessions(java.util.List<GoogleCloudSecuritycenterV2AgentSession> agentSessions) {
+    this.agentSessions = agentSessions;
     return this;
   }
 

@@ -51,6 +51,14 @@ public final class GoogleCloudAiplatformV1EvaluationMetric extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * Optional. Customer-managed encryption key spec for this EvaluationMetric. If set, this
+   * EvaluationMetric will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Optional. The Google Cloud Storage URI that stores the metric specification..
    * The value may be {@code null}.
    */
@@ -134,6 +142,25 @@ public final class GoogleCloudAiplatformV1EvaluationMetric extends com.google.ap
    */
   public GoogleCloudAiplatformV1EvaluationMetric setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationMetric. If set, this
+   * EvaluationMetric will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationMetric. If set, this
+   * EvaluationMetric will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationMetric setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

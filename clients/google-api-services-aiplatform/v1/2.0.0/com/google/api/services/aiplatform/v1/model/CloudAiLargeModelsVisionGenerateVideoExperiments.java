@@ -38,6 +38,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.Boolean anchorLastFrame;
 
   /**
+   * CFG scale for video-transform, perf-generation, a2v, video-textures models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float cfgScale;
+
+  /**
    * Optional. Video codec to use for output.
    * The value may be {@code null}.
    */
@@ -163,6 +170,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setAnchorLastFrame(java.lang.Boolean anchorLastFrame) {
     this.anchorLastFrame = anchorLastFrame;
+    return this;
+  }
+
+  /**
+   * CFG scale for video-transform, perf-generation, a2v, video-textures models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCfgScale() {
+    return cfgScale;
+  }
+
+  /**
+   * CFG scale for video-transform, perf-generation, a2v, video-textures models.
+   * @param cfgScale cfgScale or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setCfgScale(java.lang.Float cfgScale) {
+    this.cfgScale = cfgScale;
     return this;
   }
 

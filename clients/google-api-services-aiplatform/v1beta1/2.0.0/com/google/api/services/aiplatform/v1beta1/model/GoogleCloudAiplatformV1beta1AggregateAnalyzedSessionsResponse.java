@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response containing aggregated AnalyzedSession statistics, grouped by MonitoredAgent.
+ * Contains aggregated AnalyzedSession statistics, grouped by MonitoredAgent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:

@@ -30,21 +30,24 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The content block delta data, used for content.delta events.
+   * The content block delta data, used for content.delta events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1ContentDelta contentDelta;
 
   /**
-   * The content block start data, used for content.start events.
+   * The content block start data, used for content.start events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1ContentStart contentStart;
 
   /**
-   * The content block stop data, used for content.stop events.
+   * The content block stop data, used for content.stop events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,28 +68,30 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   private java.lang.String eventId;
 
   /**
-   * The interaction data, used for interaction.complete events.
+   * The interaction data, used for interaction.complete events. Legacy event, used when steps are
+   * disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1InteractionCompleteEvent interactionCompleteEvent;
 
   /**
-   * The interaction data, used for interaction.completed events.
+   * The interaction data, used for interaction.completed events. Used when steps are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1InteractionCompletedSseEvent interactionCompletedEvent;
 
   /**
-   * The interaction data, used for interaction.created events.
+   * The interaction data, used for interaction.created events. Used when steps are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1InteractionCreatedSseEvent interactionCreatedEvent;
 
   /**
-   * The interaction data, used for interaction.start events.
+   * The interaction data, used for interaction.start events. Legacy event, used when steps are
+   * disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,28 +112,32 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   private GenaiVertexV1beta1StreamMetadata metadata;
 
   /**
-   * The step delta data, used for step.delta events.
+   * The step delta data, used for step.delta events. Step-based streaming event, used when steps
+   * are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1StepDelta stepDelta;
 
   /**
-   * The step start data, used for step.start events.
+   * The step start data, used for step.start events. Step-based streaming event, used when steps
+   * are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1StepStart stepStart;
 
   /**
-   * The step stop data, used for step.stop events.
+   * The step stop data, used for step.stop events. Step-based streaming event, used when steps are
+   * enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1StepStop stepStop;
 
   /**
-   * The content block delta data, used for content.delta events.
+   * The content block delta data, used for content.delta events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1ContentDelta getContentDelta() {
@@ -136,7 +145,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The content block delta data, used for content.delta events.
+   * The content block delta data, used for content.delta events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @param contentDelta contentDelta or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setContentDelta(GenaiVertexV1beta1ContentDelta contentDelta) {
@@ -145,7 +155,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The content block start data, used for content.start events.
+   * The content block start data, used for content.start events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1ContentStart getContentStart() {
@@ -153,7 +164,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The content block start data, used for content.start events.
+   * The content block start data, used for content.start events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @param contentStart contentStart or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setContentStart(GenaiVertexV1beta1ContentStart contentStart) {
@@ -162,7 +174,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The content block stop data, used for content.stop events.
+   * The content block stop data, used for content.stop events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1ContentStop getContentStop() {
@@ -170,7 +183,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The content block stop data, used for content.stop events.
+   * The content block stop data, used for content.stop events. Legacy content-based streaming
+   * event, used when steps are disabled.
    * @param contentStop contentStop or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setContentStop(GenaiVertexV1beta1ContentStop contentStop) {
@@ -213,7 +227,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.complete events.
+   * The interaction data, used for interaction.complete events. Legacy event, used when steps are
+   * disabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionCompleteEvent getInteractionCompleteEvent() {
@@ -221,7 +236,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.complete events.
+   * The interaction data, used for interaction.complete events. Legacy event, used when steps are
+   * disabled.
    * @param interactionCompleteEvent interactionCompleteEvent or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setInteractionCompleteEvent(GenaiVertexV1beta1InteractionCompleteEvent interactionCompleteEvent) {
@@ -230,7 +246,7 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.completed events.
+   * The interaction data, used for interaction.completed events. Used when steps are enabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionCompletedSseEvent getInteractionCompletedEvent() {
@@ -238,7 +254,7 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.completed events.
+   * The interaction data, used for interaction.completed events. Used when steps are enabled.
    * @param interactionCompletedEvent interactionCompletedEvent or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setInteractionCompletedEvent(GenaiVertexV1beta1InteractionCompletedSseEvent interactionCompletedEvent) {
@@ -247,7 +263,7 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.created events.
+   * The interaction data, used for interaction.created events. Used when steps are enabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionCreatedSseEvent getInteractionCreatedEvent() {
@@ -255,7 +271,7 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.created events.
+   * The interaction data, used for interaction.created events. Used when steps are enabled.
    * @param interactionCreatedEvent interactionCreatedEvent or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setInteractionCreatedEvent(GenaiVertexV1beta1InteractionCreatedSseEvent interactionCreatedEvent) {
@@ -264,7 +280,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.start events.
+   * The interaction data, used for interaction.start events. Legacy event, used when steps are
+   * disabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStartEvent getInteractionStartEvent() {
@@ -272,7 +289,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The interaction data, used for interaction.start events.
+   * The interaction data, used for interaction.start events. Legacy event, used when steps are
+   * disabled.
    * @param interactionStartEvent interactionStartEvent or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setInteractionStartEvent(GenaiVertexV1beta1InteractionStartEvent interactionStartEvent) {
@@ -315,7 +333,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step delta data, used for step.delta events.
+   * The step delta data, used for step.delta events. Step-based streaming event, used when steps
+   * are enabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1StepDelta getStepDelta() {
@@ -323,7 +342,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step delta data, used for step.delta events.
+   * The step delta data, used for step.delta events. Step-based streaming event, used when steps
+   * are enabled.
    * @param stepDelta stepDelta or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setStepDelta(GenaiVertexV1beta1StepDelta stepDelta) {
@@ -332,7 +352,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step start data, used for step.start events.
+   * The step start data, used for step.start events. Step-based streaming event, used when steps
+   * are enabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1StepStart getStepStart() {
@@ -340,7 +361,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step start data, used for step.start events.
+   * The step start data, used for step.start events. Step-based streaming event, used when steps
+   * are enabled.
    * @param stepStart stepStart or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setStepStart(GenaiVertexV1beta1StepStart stepStart) {
@@ -349,7 +371,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step stop data, used for step.stop events.
+   * The step stop data, used for step.stop events. Step-based streaming event, used when steps are
+   * enabled.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1StepStop getStepStop() {
@@ -357,7 +380,8 @@ public final class GenaiVertexV1beta1InteractionStreamingEvent extends com.googl
   }
 
   /**
-   * The step stop data, used for step.stop events.
+   * The step stop data, used for step.stop events. Step-based streaming event, used when steps are
+   * enabled.
    * @param stepStop stepStop or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionStreamingEvent setStepStop(GenaiVertexV1beta1StepStop stepStop) {

@@ -90,6 +90,13 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
   private java.lang.Integer samplesPerPrompt;
 
   /**
+   * Optional. Number of steps for the tuning job (mutually exclusive with epoch_count).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long stepCount;
+
+  /**
    * Optional. The thinking budget for the tuning job to optimize for (Gemini 2.5 only). * -1 means
    * dynamic thinking * 0 means no thinking * > 0 means thinking budget in tokens If not set,
    * default to -1 (dynamic thinking).
@@ -248,6 +255,23 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameter
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setSamplesPerPrompt(java.lang.Integer samplesPerPrompt) {
     this.samplesPerPrompt = samplesPerPrompt;
+    return this;
+  }
+
+  /**
+   * Optional. Number of steps for the tuning job (mutually exclusive with epoch_count).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStepCount() {
+    return stepCount;
+  }
+
+  /**
+   * Optional. Number of steps for the tuning job (mutually exclusive with epoch_count).
+   * @param stepCount stepCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementTuningHyperParameters setStepCount(java.lang.Long stepCount) {
+    this.stepCount = stepCount;
     return this;
   }
 

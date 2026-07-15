@@ -81,6 +81,17 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String id;
 
   /**
+   * The agent's environment lives on the client connection: its built-in environment operations
+   * (filesystem ops and running commands) are yielded to the client to execute, instead of running
+   * in a server-managed sandbox. Mutually exclusive with `remote_environment`. (Independent of any
+   * client-declared function tools, which are always executed on the client regardless of this
+   * field.)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1LocalEnvironmentConfig localEnvironment;
+
+  /**
    * Interaction for generating the completion using models.
    * The value may be {@code null}.
    */
@@ -338,6 +349,31 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The agent's environment lives on the client connection: its built-in environment operations
+   * (filesystem ops and running commands) are yielded to the client to execute, instead of running
+   * in a server-managed sandbox. Mutually exclusive with `remote_environment`. (Independent of any
+   * client-declared function tools, which are always executed on the client regardless of this
+   * field.)
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1LocalEnvironmentConfig getLocalEnvironment() {
+    return localEnvironment;
+  }
+
+  /**
+   * The agent's environment lives on the client connection: its built-in environment operations
+   * (filesystem ops and running commands) are yielded to the client to execute, instead of running
+   * in a server-managed sandbox. Mutually exclusive with `remote_environment`. (Independent of any
+   * client-declared function tools, which are always executed on the client regardless of this
+   * field.)
+   * @param localEnvironment localEnvironment or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setLocalEnvironment(GenaiVertexV1beta1LocalEnvironmentConfig localEnvironment) {
+    this.localEnvironment = localEnvironment;
     return this;
   }
 

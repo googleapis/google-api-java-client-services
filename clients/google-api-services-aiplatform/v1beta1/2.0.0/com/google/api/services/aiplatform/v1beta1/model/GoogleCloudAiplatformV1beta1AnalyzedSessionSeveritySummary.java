@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Breakdown of anomalies by severity.
+ * Breaks down anomalies by severity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -37,18 +37,10 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary ex
   private java.util.List<java.lang.String> detectorIds;
 
   /**
-   * Output only. The number of distinct sessions whose MAX severity equals `severity_level`. Each
-   * session is counted in exactly one bucket -- the highest severity that any of its detectors
-   * reached -- so summing `sessions_count` across all populated entries in a `severities` map
-   * equals the total anomalous session count for that scope (per-agent or view summary). Distinct
-   * from `detector_ids.size`: a session whose detectors fire at LOW and CRITICAL contributes one
-   * entry to `sessions_count` (in CRITICAL only) but contributes detector IDs to BOTH the LOW and
-   * CRITICAL buckets' `detector_ids` lists. For AAD audit landing-page scorecards, prefer
-   * `sessions_count` -- "Critical anomalies" means sessions ranked critical, not distinct critical-
-   * firing detectors. On AggregateAnalyzedSessionsResponse.summary, this is a TRUE GLOBAL count
-   * across all anomalous active agents in scope (not page-scoped). On per-agent entries within
-   * `agent_aggregates`, it's per-agent. On ListAnalyzedSessionsResponse, it is currently page-
-   * scoped to match the existing summary semantics on that API.
+   * Output only. The number of distinct sessions whose maximum severity equals `severity_level`.
+   * Each session is counted in exactly one bucket (its highest severity). Scope depends on where
+   * this appears: a global count on `AggregateAnalyzedSessionsResponse.summary`, per-agent on
+   * `agent_aggregates` entries, and page-scoped on `ListAnalyzedSessionsResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,18 +71,10 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary ex
   }
 
   /**
-   * Output only. The number of distinct sessions whose MAX severity equals `severity_level`. Each
-   * session is counted in exactly one bucket -- the highest severity that any of its detectors
-   * reached -- so summing `sessions_count` across all populated entries in a `severities` map
-   * equals the total anomalous session count for that scope (per-agent or view summary). Distinct
-   * from `detector_ids.size`: a session whose detectors fire at LOW and CRITICAL contributes one
-   * entry to `sessions_count` (in CRITICAL only) but contributes detector IDs to BOTH the LOW and
-   * CRITICAL buckets' `detector_ids` lists. For AAD audit landing-page scorecards, prefer
-   * `sessions_count` -- "Critical anomalies" means sessions ranked critical, not distinct critical-
-   * firing detectors. On AggregateAnalyzedSessionsResponse.summary, this is a TRUE GLOBAL count
-   * across all anomalous active agents in scope (not page-scoped). On per-agent entries within
-   * `agent_aggregates`, it's per-agent. On ListAnalyzedSessionsResponse, it is currently page-
-   * scoped to match the existing summary semantics on that API.
+   * Output only. The number of distinct sessions whose maximum severity equals `severity_level`.
+   * Each session is counted in exactly one bucket (its highest severity). Scope depends on where
+   * this appears: a global count on `AggregateAnalyzedSessionsResponse.summary`, per-agent on
+   * `agent_aggregates` entries, and page-scoped on `ListAnalyzedSessionsResponse`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSessionsCount() {
@@ -98,18 +82,10 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary ex
   }
 
   /**
-   * Output only. The number of distinct sessions whose MAX severity equals `severity_level`. Each
-   * session is counted in exactly one bucket -- the highest severity that any of its detectors
-   * reached -- so summing `sessions_count` across all populated entries in a `severities` map
-   * equals the total anomalous session count for that scope (per-agent or view summary). Distinct
-   * from `detector_ids.size`: a session whose detectors fire at LOW and CRITICAL contributes one
-   * entry to `sessions_count` (in CRITICAL only) but contributes detector IDs to BOTH the LOW and
-   * CRITICAL buckets' `detector_ids` lists. For AAD audit landing-page scorecards, prefer
-   * `sessions_count` -- "Critical anomalies" means sessions ranked critical, not distinct critical-
-   * firing detectors. On AggregateAnalyzedSessionsResponse.summary, this is a TRUE GLOBAL count
-   * across all anomalous active agents in scope (not page-scoped). On per-agent entries within
-   * `agent_aggregates`, it's per-agent. On ListAnalyzedSessionsResponse, it is currently page-
-   * scoped to match the existing summary semantics on that API.
+   * Output only. The number of distinct sessions whose maximum severity equals `severity_level`.
+   * Each session is counted in exactly one bucket (its highest severity). Scope depends on where
+   * this appears: a global count on `AggregateAnalyzedSessionsResponse.summary`, per-agent on
+   * `agent_aggregates` entries, and page-scoped on `ListAnalyzedSessionsResponse`.
    * @param sessionsCount sessionsCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary setSessionsCount(java.lang.Integer sessionsCount) {

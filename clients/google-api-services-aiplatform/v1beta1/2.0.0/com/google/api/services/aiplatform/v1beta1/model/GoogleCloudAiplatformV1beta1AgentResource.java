@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   private java.lang.String agentType;
 
   /**
-   * Output only. The GCP location (region) of the agent resource (e.g. `us-central1`).
+   * Output only. The Google Cloud location (region) of the agent resource (for example, `us-
+   * central1`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   }
 
   /**
-   * Output only. The GCP location (region) of the agent resource (e.g. `us-central1`).
+   * Output only. The Google Cloud location (region) of the agent resource (for example, `us-
+   * central1`).
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -96,7 +98,8 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   }
 
   /**
-   * Output only. The GCP location (region) of the agent resource (e.g. `us-central1`).
+   * Output only. The Google Cloud location (region) of the agent resource (for example, `us-
+   * central1`).
    * @param location location or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentResource setLocation(java.lang.String location) {

@@ -46,6 +46,13 @@ public final class GoogleFirebaseAppdistroV1ListReleasesResponse extends com.goo
   private java.util.List<GoogleFirebaseAppdistroV1Release> releases;
 
   /**
+   * The total number of releases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalSize;
+
+  /**
    * A short-lived token, which can be sent as `pageToken` to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * @return value or {@code null} for none
@@ -78,6 +85,23 @@ public final class GoogleFirebaseAppdistroV1ListReleasesResponse extends com.goo
    */
   public GoogleFirebaseAppdistroV1ListReleasesResponse setReleases(java.util.List<GoogleFirebaseAppdistroV1Release> releases) {
     this.releases = releases;
+    return this;
+  }
+
+  /**
+   * The total number of releases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalSize() {
+    return totalSize;
+  }
+
+  /**
+   * The total number of releases.
+   * @param totalSize totalSize or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1ListReleasesResponse setTotalSize(java.lang.Integer totalSize) {
+    this.totalSize = totalSize;
     return this;
   }
 

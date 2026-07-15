@@ -1047,10 +1047,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
        * valid: * `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room`
-       * * `section` * `subject` * `levels` Note: patches to ownerId are treated as being effective
-       * immediately, but in practice it may take some time for the ownership transfer of all
-       * affected resources to complete. When set in a query parameter, this field should be
-       * specified as `updateMask=,,...`
+       * * `section` * `subject` * `learningStandardSettings` * `levels` Note: patches to ownerId
+       * are treated as being effective immediately, but in practice it may take some time for the
+       * ownership transfer of all affected resources to complete. When set in a query parameter,
+       * this field should be specified as `updateMask=,,...`
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -1058,9 +1058,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /** Mask that identifies which fields on the course to update. This field is required to do an update.
      The update will fail if invalid fields are specified. The following fields are valid: *
      `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room` * `section` *
-     `subject` * `levels` Note: patches to ownerId are treated as being effective immediately, but in
-     practice it may take some time for the ownership transfer of all affected resources to complete.
-     When set in a query parameter, this field should be specified as `updateMask=,,...`
+     `subject` * `learningStandardSettings` * `levels` Note: patches to ownerId are treated as being
+     effective immediately, but in practice it may take some time for the ownership transfer of all
+     affected resources to complete. When set in a query parameter, this field should be specified as
+     `updateMask=,,...`
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1070,10 +1071,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
        * valid: * `courseState` * `description` * `descriptionHeading` * `name` * `ownerId` * `room`
-       * * `section` * `subject` * `levels` Note: patches to ownerId are treated as being effective
-       * immediately, but in practice it may take some time for the ownership transfer of all
-       * affected resources to complete. When set in a query parameter, this field should be
-       * specified as `updateMask=,,...`
+       * * `section` * `subject` * `learningStandardSettings` * `levels` Note: patches to ownerId
+       * are treated as being effective immediately, but in practice it may take some time for the
+       * ownership transfer of all affected resources to complete. When set in a query parameter,
+       * this field should be specified as `updateMask=,,...`
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

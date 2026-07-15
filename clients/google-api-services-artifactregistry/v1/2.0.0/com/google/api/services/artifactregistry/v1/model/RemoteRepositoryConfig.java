@@ -74,6 +74,13 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
   private MavenRepository mavenRepository;
 
   /**
+   * The remote repository will act as a non-caching proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NoCacheFetching noCache;
+
+  /**
    * Specific settings for an Npm remote repository.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class RemoteRepositoryConfig extends com.google.api.client.json.Gen
    */
   public RemoteRepositoryConfig setMavenRepository(MavenRepository mavenRepository) {
     this.mavenRepository = mavenRepository;
+    return this;
+  }
+
+  /**
+   * The remote repository will act as a non-caching proxy.
+   * @return value or {@code null} for none
+   */
+  public NoCacheFetching getNoCache() {
+    return noCache;
+  }
+
+  /**
+   * The remote repository will act as a non-caching proxy.
+   * @param noCache noCache or {@code null} for none
+   */
+  public RemoteRepositoryConfig setNoCache(NoCacheFetching noCache) {
+    this.noCache = noCache;
     return this;
   }
 

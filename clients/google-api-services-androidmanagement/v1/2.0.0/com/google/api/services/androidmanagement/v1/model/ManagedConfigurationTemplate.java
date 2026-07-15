@@ -38,7 +38,8 @@ public final class ManagedConfigurationTemplate extends com.google.api.client.js
   private java.util.Map<String, java.lang.String> configurationVariables;
 
   /**
-   * The ID of the managed configurations template.
+   * The ID of the managed configurations template. This value must be a numeric string containing
+   * exactly one or more digits (for example, "123456").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class ManagedConfigurationTemplate extends com.google.api.client.js
   }
 
   /**
-   * The ID of the managed configurations template.
+   * The ID of the managed configurations template. This value must be a numeric string containing
+   * exactly one or more digits (for example, "123456").
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplateId() {
@@ -70,7 +72,8 @@ public final class ManagedConfigurationTemplate extends com.google.api.client.js
   }
 
   /**
-   * The ID of the managed configurations template.
+   * The ID of the managed configurations template. This value must be a numeric string containing
+   * exactly one or more digits (for example, "123456").
    * @param templateId templateId or {@code null} for none
    */
   public ManagedConfigurationTemplate setTemplateId(java.lang.String templateId) {

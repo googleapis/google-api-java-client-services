@@ -58,6 +58,13 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private String dueTime;
 
   /**
+   * Output only. The behavior of the approval when the file content changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileContentChangeBehavior;
+
+  /**
    * The user that requested the approval.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class Approval extends com.google.api.client.json.GenericJson {
    */
   public Approval setDueTime(String dueTime) {
     this.dueTime = dueTime;
+    return this;
+  }
+
+  /**
+   * Output only. The behavior of the approval when the file content changes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileContentChangeBehavior() {
+    return fileContentChangeBehavior;
+  }
+
+  /**
+   * Output only. The behavior of the approval when the file content changes.
+   * @param fileContentChangeBehavior fileContentChangeBehavior or {@code null} for none
+   */
+  public Approval setFileContentChangeBehavior(java.lang.String fileContentChangeBehavior) {
+    this.fileContentChangeBehavior = fileContentChangeBehavior;
     return this;
   }
 

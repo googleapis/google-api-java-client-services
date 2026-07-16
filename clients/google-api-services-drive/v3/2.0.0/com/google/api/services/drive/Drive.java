@@ -2904,17 +2904,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeTeamDriveItems;
       }
 
-      /** The maximum number of changes to return per page. */
+      /**
+       * The maximum number of changes to return. The service may return fewer than this value. If
+       * unspecified, at most 100 changes will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of changes to return per page. [default: 100] [minimum: 1] [maximum: 1000]
+      /** The maximum number of changes to return. The service may return fewer than this value. If
+     unspecified, at most 100 changes will be returned. The maximum value is 1000; values above 1000
+     will be coerced to 1000. [default: 100] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of changes to return per page. */
+      /**
+       * The maximum number of changes to return. The service may return fewer than this value. If
+       * unspecified, at most 100 changes will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -3490,17 +3500,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeTeamDriveItems;
       }
 
-      /** The maximum number of changes to return per page. */
+      /**
+       * The maximum number of changes to return. The service may return fewer than this value. If
+       * unspecified, at most 100 changes will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of changes to return per page. [default: 100] [minimum: 1] [maximum: 1000]
+      /** The maximum number of changes to return. The service may return fewer than this value. If
+     unspecified, at most 100 changes will be returned. The maximum value is 1000; values above 1000
+     will be coerced to 1000. [default: 100] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of changes to return per page. */
+      /**
+       * The maximum number of changes to return. The service may return fewer than this value. If
+       * unspecified, at most 100 changes will be returned. The maximum value is 1000; values above
+       * 1000 will be coerced to 1000.
+       */
       public Watch setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -4474,17 +4494,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeDeleted;
       }
 
-      /** The maximum number of comments to return per page. */
+      /**
+       * The maximum number of comments to return. The service may return fewer than this value. If
+       * unspecified, at most 20 comments will be returned. The maximum value is 100; values above
+       * 100 will be coerced to 100.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of comments to return per page. [default: 20] [minimum: 1] [maximum: 100]
+      /** The maximum number of comments to return. The service may return fewer than this value. If
+     unspecified, at most 20 comments will be returned. The maximum value is 100; values above 100 will
+     be coerced to 100. [default: 20] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of comments to return per page. */
+      /**
+       * The maximum number of comments to return. The service may return fewer than this value. If
+       * unspecified, at most 20 comments will be returned. The maximum value is 100; values above
+       * 100 will be coerced to 100.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -5466,17 +5496,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Maximum number of shared drives to return per page. */
+      /**
+       * The maximum number of shared drives to return. The service may return fewer than this
+       * value. If unspecified, at most 10 shared drives will be returned. The maximum value is 100;
+       * values above 100 will be coerced to 100.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of shared drives to return per page. [default: 10] [minimum: 1] [maximum: 100]
+      /** The maximum number of shared drives to return. The service may return fewer than this value. If
+     unspecified, at most 10 shared drives will be returned. The maximum value is 100; values above 100
+     will be coerced to 100. [default: 10] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** Maximum number of shared drives to return per page. */
+      /**
+       * The maximum number of shared drives to return. The service may return fewer than this
+       * value. If unspecified, at most 10 shared drives will be returned. The maximum value is 100;
+       * values above 100 will be coerced to 100.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -8722,28 +8762,28 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of files to return per page. Pages may be partial or empty even before
-       * reaching the end of the file list. If unspecified, at most 100 files are returned for
-       * shared drives, and the entire list of files for non-shared drives. The maximum value is
-       * 100; values above 100 are changed to 100.
+       * The maximum number of files to return. The service may return fewer than this value. If
+       * unspecified, at most 100 files will be returned for shared drives, and the entire list of
+       * files for non-shared drives. The maximum value is 1000; values above 1000 will be coerced
+       * to 1000.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of files to return per page. Pages may be partial or empty even before reaching
-     the end of the file list. If unspecified, at most 100 files are returned for shared drives, and the
-     entire list of files for non-shared drives. The maximum value is 100; values above 100 are changed
-     to 100. [default: 100] [minimum: 1] [maximum: 1000]
+      /** The maximum number of files to return. The service may return fewer than this value. If
+     unspecified, at most 100 files will be returned for shared drives, and the entire list of files for
+     non-shared drives. The maximum value is 1000; values above 1000 will be coerced to 1000. [default:
+     100] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of files to return per page. Pages may be partial or empty even before
-       * reaching the end of the file list. If unspecified, at most 100 files are returned for
-       * shared drives, and the entire list of files for non-shared drives. The maximum value is
-       * 100; values above 100 are changed to 100.
+       * The maximum number of files to return. The service may return fewer than this value. If
+       * unspecified, at most 100 files will be returned for shared drives, and the entire list of
+       * files for non-shared drives. The maximum value is 1000; values above 1000 will be coerced
+       * to 1000.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -11529,16 +11569,18 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of permissions to return per page. When not set for files in a shared
-       * drive, at most 100 results will be returned. When not set for files that are not in a
-       * shared drive, the entire list will be returned.
+       * The maximum number of permissions to return. The service may return fewer than this value.
+       * If unspecified, at most 100 permissions will be returned for shared drives, and the entire
+       * list of permissions for non-shared drives. The maximum value is 100; values above 100 will
+       * be coerced to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of permissions to return per page. When not set for files in a shared drive, at
-     most 100 results will be returned. When not set for files that are not in a shared drive, the
-     entire list will be returned.
+      /** The maximum number of permissions to return. The service may return fewer than this value. If
+     unspecified, at most 100 permissions will be returned for shared drives, and the entire list of
+     permissions for non-shared drives. The maximum value is 100; values above 100 will be coerced to
+     100.
 
      [minimum: 1] [maximum: 100]
        */
@@ -11547,9 +11589,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of permissions to return per page. When not set for files in a shared
-       * drive, at most 100 results will be returned. When not set for files that are not in a
-       * shared drive, the entire list will be returned.
+       * The maximum number of permissions to return. The service may return fewer than this value.
+       * If unspecified, at most 100 permissions will be returned for shared drives, and the entire
+       * list of permissions for non-shared drives. The maximum value is 100; values above 100 will
+       * be coerced to 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -12894,17 +12937,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return includeDeleted;
       }
 
-      /** The maximum number of replies to return per page. */
+      /**
+       * The maximum number of replies to return. The service may return fewer than this value. If
+       * unspecified, at most 20 replies will be returned. The maximum value is 100; values above
+       * 100 will be coerced to 100.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of replies to return per page. [default: 20] [minimum: 1] [maximum: 100]
+      /** The maximum number of replies to return. The service may return fewer than this value. If
+     unspecified, at most 20 replies will be returned. The maximum value is 100; values above 100 will
+     be coerced to 100. [default: 20] [minimum: 1] [maximum: 100]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of replies to return per page. */
+      /**
+       * The maximum number of replies to return. The service may return fewer than this value. If
+       * unspecified, at most 20 replies will be returned. The maximum value is 100; values above
+       * 100 will be coerced to 100.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -13617,17 +13670,27 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** The maximum number of revisions to return per page. */
+      /**
+       * The maximum number of revisions to return. The service may return fewer than this value. If
+       * unspecified, at most 200 revisions will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of revisions to return per page. [default: 200] [minimum: 1] [maximum: 1000]
+      /** The maximum number of revisions to return. The service may return fewer than this value. If
+     unspecified, at most 200 revisions will be returned. The maximum value is 1000; values above 1000
+     will be coerced to 1000. [default: 200] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /** The maximum number of revisions to return per page. */
+      /**
+       * The maximum number of revisions to return. The service may return fewer than this value. If
+       * unspecified, at most 200 revisions will be returned. The maximum value is 1000; values
+       * above 1000 will be coerced to 1000.
+       */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;

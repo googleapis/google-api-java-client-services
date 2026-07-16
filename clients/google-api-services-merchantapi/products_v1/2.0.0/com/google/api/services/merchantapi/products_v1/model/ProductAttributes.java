@@ -875,6 +875,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String returnPolicyLabel;
 
   /**
+   * Optional. [Return rules](https://support.google.com/merchants/answer/17081382) for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Returns> returns;
+
+  /**
    * Advertised sale price of the item.
    * The value may be {@code null}.
    */
@@ -3117,6 +3124,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setReturnPolicyLabel(java.lang.String returnPolicyLabel) {
     this.returnPolicyLabel = returnPolicyLabel;
+    return this;
+  }
+
+  /**
+   * Optional. [Return rules](https://support.google.com/merchants/answer/17081382) for the product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Returns> getReturns() {
+    return returns;
+  }
+
+  /**
+   * Optional. [Return rules](https://support.google.com/merchants/answer/17081382) for the product.
+   * @param returns returns or {@code null} for none
+   */
+  public ProductAttributes setReturns(java.util.List<Returns> returns) {
+    this.returns = returns;
     return this;
   }
 

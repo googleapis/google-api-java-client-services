@@ -50,8 +50,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   private java.lang.Long clicks;
 
   /**
-   * Date in the merchant timezone to which metrics apply. Segment. Condition on `date` is required
-   * in the `WHERE` clause.
+   * Date in the Merchant Center account timezone to which metrics apply. Segment. Condition on
+   * `date` is required in the `WHERE` clause.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   private java.lang.Long impressions;
 
   /**
-   * First day of the week (Monday) of the metrics date in the merchant timezone. Segment.
+   * First day of the week (Monday) of the metrics date in the Merchant Center account timezone.
+   * Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +110,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   }
 
   /**
-   * Date in the merchant timezone to which metrics apply. Segment. Condition on `date` is required
-   * in the `WHERE` clause.
+   * Date in the Merchant Center account timezone to which metrics apply. Segment. Condition on
+   * `date` is required in the `WHERE` clause.
    * @return value or {@code null} for none
    */
   public Date getDate() {
@@ -118,8 +119,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   }
 
   /**
-   * Date in the merchant timezone to which metrics apply. Segment. Condition on `date` is required
-   * in the `WHERE` clause.
+   * Date in the Merchant Center account timezone to which metrics apply. Segment. Condition on
+   * `date` is required in the `WHERE` clause.
    * @param date date or {@code null} for none
    */
   public NonProductPerformanceView setDate(Date date) {
@@ -147,7 +148,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   }
 
   /**
-   * First day of the week (Monday) of the metrics date in the merchant timezone. Segment.
+   * First day of the week (Monday) of the metrics date in the Merchant Center account timezone.
+   * Segment.
    * @return value or {@code null} for none
    */
   public Date getWeek() {
@@ -155,7 +157,8 @@ public final class NonProductPerformanceView extends com.google.api.client.json.
   }
 
   /**
-   * First day of the week (Monday) of the metrics date in the merchant timezone. Segment.
+   * First day of the week (Monday) of the metrics date in the Merchant Center account timezone.
+   * Segment.
    * @param week week or {@code null} for none
    */
   public NonProductPerformanceView setWeek(Date week) {

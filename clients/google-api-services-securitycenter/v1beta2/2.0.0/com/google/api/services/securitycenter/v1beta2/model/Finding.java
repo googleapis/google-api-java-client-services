@@ -46,12 +46,36 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private Agent agent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentAnomaly agentAnomaly;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<AgentDataAccessEvent> agentDataAccessEvents;
 
   static {
     // hack to force ProGuard to consider AgentDataAccessEvent used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(AgentDataAccessEvent.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AgentSession> agentSessions;
+
+  static {
+    // hack to force ProGuard to consider AgentSession used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AgentSession.class);
   }
 
   /**
@@ -531,6 +555,36 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   /**
    * @return value or {@code null} for none
    */
+  public Agent getAgent() {
+    return agent;
+  }
+
+  /**
+   * @param agent agent or {@code null} for none
+   */
+  public Finding setAgent(Agent agent) {
+    this.agent = agent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public AgentAnomaly getAgentAnomaly() {
+    return agentAnomaly;
+  }
+
+  /**
+   * @param agentAnomaly agentAnomaly or {@code null} for none
+   */
+  public Finding setAgentAnomaly(AgentAnomaly agentAnomaly) {
+    this.agentAnomaly = agentAnomaly;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.util.List<AgentDataAccessEvent> getAgentDataAccessEvents() {
     return agentDataAccessEvents;
   }
@@ -540,6 +594,21 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAgentDataAccessEvents(java.util.List<AgentDataAccessEvent> agentDataAccessEvents) {
     this.agentDataAccessEvents = agentDataAccessEvents;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AgentSession> getAgentSessions() {
+    return agentSessions;
+  }
+
+  /**
+   * @param agentSessions agentSessions or {@code null} for none
+   */
+  public Finding setAgentSessions(java.util.List<AgentSession> agentSessions) {
+    this.agentSessions = agentSessions;
     return this;
   }
 

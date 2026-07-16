@@ -2117,6 +2117,151 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         }
       }
       /**
+       * Get the policy for a key.
+       *
+       * Create a request for the method "keys.getPolicy".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link GetPolicy#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the policy to get, in the format `projects/{project}/keys/{key}/policy`.
+       * @return the request
+       */
+      public GetPolicy getPolicy(java.lang.String name) throws java.io.IOException {
+        GetPolicy result = new GetPolicy(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetPolicy extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+/policy$");
+
+        /**
+         * Get the policy for a key.
+         *
+         * Create a request for the method "keys.getPolicy".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link GetPolicy#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the policy to get, in the format `projects/{project}/keys/{key}/policy`.
+         * @since 1.13
+         */
+        protected GetPolicy(java.lang.String name) {
+          super(RecaptchaEnterprise.this, "GET", REST_PATH, null, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+/policy$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetPolicy set$Xgafv(java.lang.String $Xgafv) {
+          return (GetPolicy) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetPolicy setAccessToken(java.lang.String accessToken) {
+          return (GetPolicy) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetPolicy setAlt(java.lang.String alt) {
+          return (GetPolicy) super.setAlt(alt);
+        }
+
+        @Override
+        public GetPolicy setCallback(java.lang.String callback) {
+          return (GetPolicy) super.setCallback(callback);
+        }
+
+        @Override
+        public GetPolicy setFields(java.lang.String fields) {
+          return (GetPolicy) super.setFields(fields);
+        }
+
+        @Override
+        public GetPolicy setKey(java.lang.String key) {
+          return (GetPolicy) super.setKey(key);
+        }
+
+        @Override
+        public GetPolicy setOauthToken(java.lang.String oauthToken) {
+          return (GetPolicy) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetPolicy) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetPolicy setQuotaUser(java.lang.String quotaUser) {
+          return (GetPolicy) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetPolicy setUploadType(java.lang.String uploadType) {
+          return (GetPolicy) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetPolicy) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the policy to get, in the format
+         * `projects/{project}/keys/{key}/policy`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the policy to get, in the format `projects/{project}/keys/{key}/policy`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the policy to get, in the format
+         * `projects/{project}/keys/{key}/policy`.
+         */
+        public GetPolicy setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+/policy$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetPolicy set(String parameterName, Object value) {
+          return (GetPolicy) super.set(parameterName, value);
+        }
+      }
+      /**
        * Returns the list of all keys that belong to a project.
        *
        * Create a request for the method "keys.list".
@@ -3051,6 +3196,170 @@ public class RecaptchaEnterprise extends com.google.api.client.googleapis.servic
         @Override
         public RetrieveLegacySecretKey set(String parameterName, Object value) {
           return (RetrieveLegacySecretKey) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the policy for a key.
+       *
+       * Create a request for the method "keys.updatePolicy".
+       *
+       * This request holds the parameters needed by the recaptchaenterprise server.  After setting any
+       * optional parameters, call the {@link UpdatePolicy#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. Resource name for this policy. Format: "projects/{project}/keys/{key}/policy" for a
+       *        policy under a key.
+       * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy}
+       * @return the request
+       */
+      public UpdatePolicy updatePolicy(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy content) throws java.io.IOException {
+        UpdatePolicy result = new UpdatePolicy(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdatePolicy extends RecaptchaEnterpriseRequest<com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/keys/[^/]+/policy$");
+
+        /**
+         * Updates the policy for a key.
+         *
+         * Create a request for the method "keys.updatePolicy".
+         *
+         * This request holds the parameters needed by the the recaptchaenterprise server.  After setting
+         * any optional parameters, call the {@link UpdatePolicy#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * UpdatePolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Resource name for this policy. Format: "projects/{project}/keys/{key}/policy" for a
+       *        policy under a key.
+         * @param content the {@link com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy}
+         * @since 1.13
+         */
+        protected UpdatePolicy(java.lang.String name, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy content) {
+          super(RecaptchaEnterprise.this, "PATCH", REST_PATH, content, com.google.api.services.recaptchaenterprise.v1.model.GoogleCloudRecaptchaenterpriseV1Policy.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+/policy$");
+          }
+        }
+
+        @Override
+        public UpdatePolicy set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdatePolicy) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdatePolicy setAccessToken(java.lang.String accessToken) {
+          return (UpdatePolicy) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdatePolicy setAlt(java.lang.String alt) {
+          return (UpdatePolicy) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdatePolicy setCallback(java.lang.String callback) {
+          return (UpdatePolicy) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdatePolicy setFields(java.lang.String fields) {
+          return (UpdatePolicy) super.setFields(fields);
+        }
+
+        @Override
+        public UpdatePolicy setKey(java.lang.String key) {
+          return (UpdatePolicy) super.setKey(key);
+        }
+
+        @Override
+        public UpdatePolicy setOauthToken(java.lang.String oauthToken) {
+          return (UpdatePolicy) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdatePolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdatePolicy) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdatePolicy setQuotaUser(java.lang.String quotaUser) {
+          return (UpdatePolicy) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdatePolicy setUploadType(java.lang.String uploadType) {
+          return (UpdatePolicy) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdatePolicy setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdatePolicy) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. Resource name for this policy. Format: "projects/{project}/keys/{key}/policy"
+         * for a policy under a key.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Resource name for this policy. Format: "projects/{project}/keys/{key}/policy" for a
+       policy under a key.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. Resource name for this policy. Format: "projects/{project}/keys/{key}/policy"
+         * for a policy under a key.
+         */
+        public UpdatePolicy setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/keys/[^/]+/policy$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The mask to control which fields of the policy get updated. If the mask is not
+         * present, all fields are updated.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The mask to control which fields of the policy get updated. If the mask is not present,
+       all fields are updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. The mask to control which fields of the policy get updated. If the mask is not
+         * present, all fields are updated.
+         */
+        public UpdatePolicy setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdatePolicy set(String parameterName, Object value) {
+          return (UpdatePolicy) super.set(parameterName, value);
         }
       }
 

@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Assessment returned by account defender when an account identifier is provided.
+   * Output only. Assessment returned by Account defense when an account identifier is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,11 +92,18 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * provided. SMS defense needs to be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment phoneFraudAssessment;
+
+  /**
+   * Output only. Provides information about the policy evaluation for this assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1PolicyEvaluation policyEvaluation;
 
   /**
    * Optional. The private password leak verification field contains the parameters that are used to
@@ -121,7 +128,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private GoogleCloudRecaptchaenterpriseV1TokenProperties tokenProperties;
 
   /**
-   * Output only. Assessment returned by account defender when an account identifier is provided.
+   * Output only. Assessment returned by Account defense when an account identifier is provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment getAccountDefenderAssessment() {
@@ -129,7 +136,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. Assessment returned by account defender when an account identifier is provided.
+   * Output only. Assessment returned by Account defense when an account identifier is provided.
    * @param accountDefenderAssessment accountDefenderAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setAccountDefenderAssessment(GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment accountDefenderAssessment) {
@@ -266,7 +273,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * provided. SMS defense needs to be enabled.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment getPhoneFraudAssessment() {
@@ -275,11 +282,28 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
 
   /**
    * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. Account defender and SMS toll fraud protection need to be enabled.
+   * provided. SMS defense needs to be enabled.
    * @param phoneFraudAssessment phoneFraudAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setPhoneFraudAssessment(GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment phoneFraudAssessment) {
     this.phoneFraudAssessment = phoneFraudAssessment;
+    return this;
+  }
+
+  /**
+   * Output only. Provides information about the policy evaluation for this assessment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1PolicyEvaluation getPolicyEvaluation() {
+    return policyEvaluation;
+  }
+
+  /**
+   * Output only. Provides information about the policy evaluation for this assessment.
+   * @param policyEvaluation policyEvaluation or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Assessment setPolicyEvaluation(GoogleCloudRecaptchaenterpriseV1PolicyEvaluation policyEvaluation) {
+    this.policyEvaluation = policyEvaluation;
     return this;
   }
 

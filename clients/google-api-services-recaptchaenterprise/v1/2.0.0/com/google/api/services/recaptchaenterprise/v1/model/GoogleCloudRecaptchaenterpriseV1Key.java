@@ -88,6 +88,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
   private GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions;
 
   /**
+   * Settings for keys that are configured through their Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1UniversalKeySettings universalSettings;
+
+  /**
    * Optional. Settings for Web Application Firewall (WAF).
    * The value may be {@code null}.
    */
@@ -234,6 +241,23 @@ public final class GoogleCloudRecaptchaenterpriseV1Key extends com.google.api.cl
    */
   public GoogleCloudRecaptchaenterpriseV1Key setTestingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions) {
     this.testingOptions = testingOptions;
+    return this;
+  }
+
+  /**
+   * Settings for keys that are configured through their Policy.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1UniversalKeySettings getUniversalSettings() {
+    return universalSettings;
+  }
+
+  /**
+   * Settings for keys that are configured through their Policy.
+   * @param universalSettings universalSettings or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Key setUniversalSettings(GoogleCloudRecaptchaenterpriseV1UniversalKeySettings universalSettings) {
+    this.universalSettings = universalSettings;
     return this;
   }
 

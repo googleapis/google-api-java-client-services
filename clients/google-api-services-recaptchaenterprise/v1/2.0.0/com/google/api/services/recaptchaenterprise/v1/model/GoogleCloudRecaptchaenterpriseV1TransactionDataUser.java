@@ -31,7 +31,7 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * Optional. Unique account identifier for this user. If using Account defense, this should match
    * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   private java.lang.Boolean phoneVerified;
 
   /**
-   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * Optional. Unique account identifier for this user. If using Account defense, this should match
    * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * @return value or {@code null} for none
    */
@@ -84,7 +84,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
   }
 
   /**
-   * Optional. Unique account identifier for this user. If using account defender, this should match
+   * Optional. Unique account identifier for this user. If using Account defense, this should match
    * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
    * @param accountId accountId or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Risk explainability reasons for account defender.
+ * Risk explainability reasons for Account defense.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation

@@ -34,10 +34,8 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,10 +52,8 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1Service getService() {
@@ -67,10 +63,8 @@ public final class GoogleFirebaseAppcheckV1UpdateServiceRequest extends com.goog
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * @param service service or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1UpdateServiceRequest setService(GoogleFirebaseAppcheckV1Service service) {

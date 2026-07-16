@@ -46,10 +46,10 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
    * this field is omitted or is empty and `limited_use` is set to `true`, a randomly generated
    * `jti` claim with length between 16 and 500 bytes (inclusive) will be used in the returned App
    * Check token. Leaving this field empty is only recommended if your custom attestation provider
-   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, neither the
-   * presence nor the contents of the `jti` claim in the returned App Check token is specified. To
-   * ensure that the returned App Check token is eligible for limited use functionality, set
-   * `limited_use` to `true`.
+   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, the presence
+   * and the contents of the `jti` claim in the returned App Check token are unspecified. To ensure
+   * that the returned App Check token is eligible for limited-use functionality, set `limited_use`
+   * to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,10 +90,10 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
    * this field is omitted or is empty and `limited_use` is set to `true`, a randomly generated
    * `jti` claim with length between 16 and 500 bytes (inclusive) will be used in the returned App
    * Check token. Leaving this field empty is only recommended if your custom attestation provider
-   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, neither the
-   * presence nor the contents of the `jti` claim in the returned App Check token is specified. To
-   * ensure that the returned App Check token is eligible for limited use functionality, set
-   * `limited_use` to `true`.
+   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, the presence
+   * and the contents of the `jti` claim in the returned App Check token are unspecified. To ensure
+   * that the returned App Check token is eligible for limited-use functionality, set `limited_use`
+   * to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getJti() {
@@ -109,10 +109,10 @@ public final class GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest extend
    * this field is omitted or is empty and `limited_use` is set to `true`, a randomly generated
    * `jti` claim with length between 16 and 500 bytes (inclusive) will be used in the returned App
    * Check token. Leaving this field empty is only recommended if your custom attestation provider
-   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, neither the
-   * presence nor the contents of the `jti` claim in the returned App Check token is specified. To
-   * ensure that the returned App Check token is eligible for limited use functionality, set
-   * `limited_use` to `true`.
+   * itself is not vulnerable to replay attacks. When `limited_use` is set to `false`, the presence
+   * and the contents of the `jti` claim in the returned App Check token are unspecified. To ensure
+   * that the returned App Check token is eligible for limited-use functionality, set `limited_use`
+   * to `true`.
    * @param jti jti or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest setJti(java.lang.String jti) {

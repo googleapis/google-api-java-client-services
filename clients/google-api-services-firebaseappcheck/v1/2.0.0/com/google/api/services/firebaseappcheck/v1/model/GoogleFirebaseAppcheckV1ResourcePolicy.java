@@ -32,8 +32,8 @@ package com.google.api.services.firebaseappcheck.v1.model;
 public final class GoogleFirebaseAppcheckV1ResourcePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The App Check enforcement mode for this resource. This will override the App Check
-   * overall EnforcementMode setting on the service.
+   * Required. The baseline protection EnforcementMode for this resource. This will override the
+   * service-level baseline protection EnforcementMode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +81,8 @@ public final class GoogleFirebaseAppcheckV1ResourcePolicy extends com.google.api
   private String updateTime;
 
   /**
-   * Required. The App Check enforcement mode for this resource. This will override the App Check
-   * overall EnforcementMode setting on the service.
+   * Required. The baseline protection EnforcementMode for this resource. This will override the
+   * service-level baseline protection EnforcementMode.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforcementMode() {
@@ -90,8 +90,8 @@ public final class GoogleFirebaseAppcheckV1ResourcePolicy extends com.google.api
   }
 
   /**
-   * Required. The App Check enforcement mode for this resource. This will override the App Check
-   * overall EnforcementMode setting on the service.
+   * Required. The baseline protection EnforcementMode for this resource. This will override the
+   * service-level baseline protection EnforcementMode.
    * @param enforcementMode enforcementMode or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1ResourcePolicy setEnforcementMode(java.lang.String enforcementMode) {

@@ -37,6 +37,16 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
   private String commitTime;
 
   /**
+   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
+   * version timestamp of the existing trait in the database. The server will perform optimistic
+   * locking validation if this field is present and the experiment is enabled. It will not be
+   * persisted to the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String providerVersionTime;
+
+  /**
    * The Provider Home API trait payload.
    * The value may be {@code null}.
    */
@@ -57,6 +67,29 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
    */
   public TraitData setCommitTime(String commitTime) {
     this.commitTime = commitTime;
+    return this;
+  }
+
+  /**
+   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
+   * version timestamp of the existing trait in the database. The server will perform optimistic
+   * locking validation if this field is present and the experiment is enabled. It will not be
+   * persisted to the database.
+   * @return value or {@code null} for none
+   */
+  public String getProviderVersionTime() {
+    return providerVersionTime;
+  }
+
+  /**
+   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
+   * version timestamp of the existing trait in the database. The server will perform optimistic
+   * locking validation if this field is present and the experiment is enabled. It will not be
+   * persisted to the database.
+   * @param providerVersionTime providerVersionTime or {@code null} for none
+   */
+  public TraitData setProviderVersionTime(String providerVersionTime) {
+    this.providerVersionTime = providerVersionTime;
     return this;
   }
 

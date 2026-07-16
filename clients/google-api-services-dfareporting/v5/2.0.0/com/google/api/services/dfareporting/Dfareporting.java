@@ -29038,6 +29038,147 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the ReportData collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dfareporting dfareporting = new Dfareporting(...);}
+   *   {@code Dfareporting.ReportData.List request = dfareporting.reportData().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ReportData reportData() {
+    return new ReportData();
+  }
+
+  /**
+   * The "reportData" collection of methods.
+   */
+  public class ReportData {
+
+    /**
+     * Executes an ad-hoc query and returns structured JSON payload data.
+     *
+     * Create a request for the method "reportData.query".
+     *
+     * This request holds the parameters needed by the dfareporting server.  After setting any optional
+     * parameters, call the {@link Query#execute()} method to invoke the remote operation.
+     *
+     * @param profileId Required. The Campaign Manager 360 user profile ID.
+     * @param content the {@link com.google.api.services.dfareporting.model.ReportDataQueryRequest}
+     * @return the request
+     */
+    public Query query(java.lang.Long profileId, com.google.api.services.dfareporting.model.ReportDataQueryRequest content) throws java.io.IOException {
+      Query result = new Query(profileId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Query extends DfareportingRequest<com.google.api.services.dfareporting.model.ReportDataResponse> {
+
+      private static final String REST_PATH = "userprofiles/{profileId}/reportdata/query";
+
+      /**
+       * Executes an ad-hoc query and returns structured JSON payload data.
+       *
+       * Create a request for the method "reportData.query".
+       *
+       * This request holds the parameters needed by the the dfareporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param profileId Required. The Campaign Manager 360 user profile ID.
+       * @param content the {@link com.google.api.services.dfareporting.model.ReportDataQueryRequest}
+       * @since 1.13
+       */
+      protected Query(java.lang.Long profileId, com.google.api.services.dfareporting.model.ReportDataQueryRequest content) {
+        super(Dfareporting.this, "POST", REST_PATH, content, com.google.api.services.dfareporting.model.ReportDataResponse.class);
+        this.profileId = com.google.api.client.util.Preconditions.checkNotNull(profileId, "Required parameter profileId must be specified.");
+      }
+
+      @Override
+      public Query set$Xgafv(java.lang.String $Xgafv) {
+        return (Query) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Query setAccessToken(java.lang.String accessToken) {
+        return (Query) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Query setAlt(java.lang.String alt) {
+        return (Query) super.setAlt(alt);
+      }
+
+      @Override
+      public Query setCallback(java.lang.String callback) {
+        return (Query) super.setCallback(callback);
+      }
+
+      @Override
+      public Query setFields(java.lang.String fields) {
+        return (Query) super.setFields(fields);
+      }
+
+      @Override
+      public Query setKey(java.lang.String key) {
+        return (Query) super.setKey(key);
+      }
+
+      @Override
+      public Query setOauthToken(java.lang.String oauthToken) {
+        return (Query) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Query) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Query setQuotaUser(java.lang.String quotaUser) {
+        return (Query) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Query setUploadType(java.lang.String uploadType) {
+        return (Query) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Query setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Query) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The Campaign Manager 360 user profile ID. */
+      @com.google.api.client.util.Key
+      private java.lang.Long profileId;
+
+      /** Required. The Campaign Manager 360 user profile ID.
+       */
+      public java.lang.Long getProfileId() {
+        return profileId;
+      }
+
+      /** Required. The Campaign Manager 360 user profile ID. */
+      public Query setProfileId(java.lang.Long profileId) {
+        this.profileId = profileId;
+        return this;
+      }
+
+      @Override
+      public Query set(String parameterName, Object value) {
+        return (Query) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Reports collection.
    *
    * <p>The typical use is:</p>

@@ -77,7 +77,7 @@ public final class ManagementInterface extends com.google.api.client.json.Generi
 
   /**
    * Required. The type of management service this interface provides. Supported types include NMX-C
-   * for partition management and gNMI for switch monitoring.
+   * for partition management, gNMI for switch monitoring, and TPU slice management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +193,7 @@ public final class ManagementInterface extends com.google.api.client.json.Generi
 
   /**
    * Required. The type of management service this interface provides. Supported types include NMX-C
-   * for partition management and gNMI for switch monitoring.
+   * for partition management, gNMI for switch monitoring, and TPU slice management.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -202,7 +202,7 @@ public final class ManagementInterface extends com.google.api.client.json.Generi
 
   /**
    * Required. The type of management service this interface provides. Supported types include NMX-C
-   * for partition management and gNMI for switch monitoring.
+   * for partition management, gNMI for switch monitoring, and TPU slice management.
    * @param type type or {@code null} for none
    */
   public ManagementInterface setType(java.lang.String type) {

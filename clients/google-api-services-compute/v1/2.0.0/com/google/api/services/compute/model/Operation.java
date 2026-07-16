@@ -811,7 +811,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Model definition for OperationErrorErrors.
+     * Represents a single error encountered during the processing of an operation.
      */
     public static final class Errors extends com.google.api.client.json.GenericJson {
 
@@ -937,35 +937,41 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Model definition for OperationErrorErrorsErrorDetails.
+       * Container for structured error details providing additional context specific to the encountered
+       * error code.
        */
       public static final class ErrorDetails extends com.google.api.client.json.GenericJson {
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private ErrorInfo errorInfo;
 
         /**
+         * Links and information to help the user resolve the error.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private Help help;
 
         /**
+         * A localized human-readable error message intended for end users.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private LocalizedMessage localizedMessage;
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private QuotaExceededInfo quotaInfo;
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * @return value or {@code null} for none
          */
         public ErrorInfo getErrorInfo() {
@@ -973,6 +979,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * @param errorInfo errorInfo or {@code null} for none
          */
         public ErrorDetails setErrorInfo(ErrorInfo errorInfo) {
@@ -981,6 +988,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Links and information to help the user resolve the error.
          * @return value or {@code null} for none
          */
         public Help getHelp() {
@@ -988,6 +996,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Links and information to help the user resolve the error.
          * @param help help or {@code null} for none
          */
         public ErrorDetails setHelp(Help help) {
@@ -996,6 +1005,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * A localized human-readable error message intended for end users.
          * @return value or {@code null} for none
          */
         public LocalizedMessage getLocalizedMessage() {
@@ -1003,6 +1013,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * A localized human-readable error message intended for end users.
          * @param localizedMessage localizedMessage or {@code null} for none
          */
         public ErrorDetails setLocalizedMessage(LocalizedMessage localizedMessage) {
@@ -1011,6 +1022,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * @return value or {@code null} for none
          */
         public QuotaExceededInfo getQuotaInfo() {
@@ -1018,6 +1030,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * @param quotaInfo quotaInfo or {@code null} for none
          */
         public ErrorDetails setQuotaInfo(QuotaExceededInfo quotaInfo) {

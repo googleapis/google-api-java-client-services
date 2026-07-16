@@ -31,6 +31,14 @@ package com.google.api.services.compute.model;
 public final class NetworkPolicyTrafficClassificationRuleMatcher extends com.google.api.client.json.GenericJson {
 
   /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10. Example: projects//locations//addressGroups/.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> destAddressGroups;
+
+  /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class NetworkPolicyTrafficClassificationRuleMatcher extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10. Example: projects//locations//addressGroups/.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDestAddressGroups() {
+    return destAddressGroups;
+  }
+
+  /**
+   * Address groups which should be matched against the traffic destination. Maximum number of
+   * destination address groups is 10. Example: projects//locations//addressGroups/.
+   * @param destAddressGroups destAddressGroups or {@code null} for none
+   */
+  public NetworkPolicyTrafficClassificationRuleMatcher setDestAddressGroups(java.util.List<java.lang.String> destAddressGroups) {
+    this.destAddressGroups = destAddressGroups;
+    return this;
+  }
 
   /**
    * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.

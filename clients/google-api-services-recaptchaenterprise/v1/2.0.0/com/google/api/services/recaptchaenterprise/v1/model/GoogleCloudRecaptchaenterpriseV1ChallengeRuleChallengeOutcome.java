@@ -17,7 +17,8 @@
 package com.google.api.services.recaptchaenterprise.v1.model;
 
 /**
- * Trust explainability reasons for Account defense.
+ * An outcome that indicates that a challenge of a specified difficulty should be presented to the
+ * user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the reCAPTCHA Enterprise API. For a detailed explanation
@@ -28,40 +29,43 @@ package com.google.api.services.recaptchaenterprise.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A trust reason associated with this request.
+   * Optional. The difficulty of the challenge to present to the user. If unspecified, `BALANCE` is
+   * used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String difficulty;
 
   /**
-   * Output only. A trust reason associated with this request.
+   * Optional. The difficulty of the challenge to present to the user. If unspecified, `BALANCE` is
+   * used.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getDifficulty() {
+    return difficulty;
   }
 
   /**
-   * Output only. A trust reason associated with this request.
-   * @param reason reason or {@code null} for none
+   * Optional. The difficulty of the challenge to present to the user. If unspecified, `BALANCE` is
+   * used.
+   * @param difficulty difficulty or {@code null} for none
    */
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason setReason(java.lang.String reason) {
-    this.reason = reason;
+  public GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome setDifficulty(java.lang.String difficulty) {
+    this.difficulty = difficulty;
     return this;
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason set(String fieldName, Object value) {
-    return (GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason) super.set(fieldName, value);
+  public GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome set(String fieldName, Object value) {
+    return (GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason clone() {
-    return (GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentAccountTrustReason) super.clone();
+  public GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome clone() {
+    return (GoogleCloudRecaptchaenterpriseV1ChallengeRuleChallengeOutcome) super.clone();
   }
 
 }

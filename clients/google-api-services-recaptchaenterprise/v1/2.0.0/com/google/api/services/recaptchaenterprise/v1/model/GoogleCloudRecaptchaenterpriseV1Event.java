@@ -33,6 +33,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   /**
    * Optional. The expected action for this type of event. This should be the same action provided
    * at token generation time on client-side platforms already integrated with recaptcha enterprise.
+   * Required for Universal keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,6 +159,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   /**
    * Optional. The expected action for this type of event. This should be the same action provided
    * at token generation time on client-side platforms already integrated with recaptcha enterprise.
+   * Required for Universal keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedAction() {
@@ -167,6 +169,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   /**
    * Optional. The expected action for this type of event. This should be the same action provided
    * at token generation time on client-side platforms already integrated with recaptcha enterprise.
+   * Required for Universal keys.
    * @param expectedAction expectedAction or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setExpectedAction(java.lang.String expectedAction) {

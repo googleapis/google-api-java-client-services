@@ -31,7 +31,8 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys.
+   * Output only. Challenge information for Universal, `POLICY_BASED_CHALLENGE` and `INVISIBLE`
+   * keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +46,15 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> extendedVerdictReasons;
+
+  /**
+   * Output only. Type of the last challenge presented to the user for Universal,
+   * `POLICY_BASED_CHALLENGE` and `INVISIBLE` keys. The field is only set when a challenge was
+   * presented to the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastChallengeType;
 
   /**
    * Output only. Reasons contributing to the risk analysis verdict.
@@ -76,7 +86,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys.
+   * Output only. Challenge information for Universal, `POLICY_BASED_CHALLENGE` and `INVISIBLE`
+   * keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getChallenge() {
@@ -84,7 +95,8 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Challenge information for POLICY_BASED_CHALLENGE and INVISIBLE keys.
+   * Output only. Challenge information for Universal, `POLICY_BASED_CHALLENGE` and `INVISIBLE`
+   * keys.
    * @param challenge challenge or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setChallenge(java.lang.String challenge) {
@@ -110,6 +122,27 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setExtendedVerdictReasons(java.util.List<java.lang.String> extendedVerdictReasons) {
     this.extendedVerdictReasons = extendedVerdictReasons;
+    return this;
+  }
+
+  /**
+   * Output only. Type of the last challenge presented to the user for Universal,
+   * `POLICY_BASED_CHALLENGE` and `INVISIBLE` keys. The field is only set when a challenge was
+   * presented to the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastChallengeType() {
+    return lastChallengeType;
+  }
+
+  /**
+   * Output only. Type of the last challenge presented to the user for Universal,
+   * `POLICY_BASED_CHALLENGE` and `INVISIBLE` keys. The field is only set when a challenge was
+   * presented to the user.
+   * @param lastChallengeType lastChallengeType or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setLastChallengeType(java.lang.String lastChallengeType) {
+    this.lastChallengeType = lastChallengeType;
     return this;
   }
 

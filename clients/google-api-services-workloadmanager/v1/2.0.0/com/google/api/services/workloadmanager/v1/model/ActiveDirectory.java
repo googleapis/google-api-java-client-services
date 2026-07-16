@@ -37,7 +37,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   private java.lang.String dnsAddress;
 
   /**
-   * Optional. Human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as `example.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as `example.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -90,7 +90,7 @@ public final class ActiveDirectory extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Human readable form of a domain such as “google.com”.
+   * Optional. Human readable form of a domain such as `example.com`.
    * @param domain domain or {@code null} for none
    */
   public ActiveDirectory setDomain(java.lang.String domain) {

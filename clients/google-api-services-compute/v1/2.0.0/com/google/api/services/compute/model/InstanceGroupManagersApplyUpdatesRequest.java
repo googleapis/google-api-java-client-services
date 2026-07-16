@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
+   * Flag to update all instances instead of specified list of "instances". If the flag is set to
    * true then the instances may not be specified in the request.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   private java.lang.String mostDisruptiveAllowedAction;
 
   /**
-   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
+   * Flag to update all instances instead of specified list of "instances". If the flag is set to
    * true then the instances may not be specified in the request.
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class InstanceGroupManagersApplyUpdatesRequest extends com.google.a
   }
 
   /**
-   * Flag to update all instances instead of specified list of “instances”. If the flag is set to
+   * Flag to update all instances instead of specified list of "instances". If the flag is set to
    * true then the instances may not be specified in the request.
    * @param allInstances allInstances or {@code null} for none
    */

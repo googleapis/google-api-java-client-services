@@ -17,7 +17,11 @@
 package com.google.api.services.health.v4.model;
 
 /**
- * Represents the result of the rollup of the user's total calories.
+ * Represents the result of the rollup of the user's total calories. Note: Queries for the `total-
+ * calories` data type must include a time interval filter (such as
+ * `total_calories.interval.start_time` or `total_calories.interval.civil_start_time`). The maximum
+ * range is 14 days. Example filter query: `total_calories.interval.start_time >=
+ * "2026-04-20T00:00:00Z" AND total_calories.interval.start_time < "2026-04-21T00:00:00Z"`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Health API. For a detailed explanation see:

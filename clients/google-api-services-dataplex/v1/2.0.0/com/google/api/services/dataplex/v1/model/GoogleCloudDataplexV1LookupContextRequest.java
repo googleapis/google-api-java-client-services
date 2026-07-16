@@ -30,14 +30,6 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The text representing contextual information for which metadata context is being
-   * requested.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String context;
-
-  /**
    * Optional. Allows to configure the context.Supported options: format - The format of the context
    * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
    * intelligently truncated on a best-effort basis to contain approximately the desired amount of
@@ -57,25 +49,6 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
-
-  /**
-   * Optional. The text representing contextual information for which metadata context is being
-   * requested.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getContext() {
-    return context;
-  }
-
-  /**
-   * Optional. The text representing contextual information for which metadata context is being
-   * requested.
-   * @param context context or {@code null} for none
-   */
-  public GoogleCloudDataplexV1LookupContextRequest setContext(java.lang.String context) {
-    this.context = context;
-    return this;
-  }
 
   /**
    * Optional. Allows to configure the context.Supported options: format - The format of the context

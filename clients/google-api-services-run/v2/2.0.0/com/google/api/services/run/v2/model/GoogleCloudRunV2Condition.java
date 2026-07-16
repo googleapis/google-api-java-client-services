@@ -37,6 +37,13 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String executionReason;
 
   /**
+   * Output only. A reason for the instance condition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceReason;
+
+  /**
    * Last time the condition transitioned from one status to another.
    * The value may be {@code null}.
    */
@@ -101,6 +108,23 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Condition setExecutionReason(java.lang.String executionReason) {
     this.executionReason = executionReason;
+    return this;
+  }
+
+  /**
+   * Output only. A reason for the instance condition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceReason() {
+    return instanceReason;
+  }
+
+  /**
+   * Output only. A reason for the instance condition.
+   * @param instanceReason instanceReason or {@code null} for none
+   */
+  public GoogleCloudRunV2Condition setInstanceReason(java.lang.String instanceReason) {
+    this.instanceReason = instanceReason;
     return this;
   }
 

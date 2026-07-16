@@ -291,6 +291,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private GoogleCloudRunV2ServiceScaling scaling;
 
   /**
+   * Optional. Enables SSH access to the Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sshEnabled;
+
+  /**
    * Required. The template used to create revisions for this Service.
    * The value may be {@code null}.
    */
@@ -948,6 +955,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setScaling(GoogleCloudRunV2ServiceScaling scaling) {
     this.scaling = scaling;
+    return this;
+  }
+
+  /**
+   * Optional. Enables SSH access to the Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSshEnabled() {
+    return sshEnabled;
+  }
+
+  /**
+   * Optional. Enables SSH access to the Service.
+   * @param sshEnabled sshEnabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setSshEnabled(java.lang.Boolean sshEnabled) {
+    this.sshEnabled = sshEnabled;
     return this;
   }
 

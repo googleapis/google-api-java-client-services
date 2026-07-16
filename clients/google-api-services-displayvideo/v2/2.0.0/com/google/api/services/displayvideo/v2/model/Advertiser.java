@@ -71,6 +71,23 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
   private AdvertiserDataAccessConfig dataAccessConfig;
 
   /**
+   * Optional. The default business name for the advertiser. This is the value used by YouTube and
+   * Demand Gen ads under this advertiser if a business name is not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultBusinessName;
+
+  /**
+   * Optional. The asset ID of the default logo image for the advertiser. This is the asset ID that
+   * will be used by YouTube and Demand ads under this advertiser if a logo asset is not provided.
+   * You must use advertisers.adAssets.upload to upload this asset using the API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long defaultLogoAssetId;
+
+  /**
    * Required. The display name of the advertiser. Must be UTF-8 encoded with a maximum size of 240
    * bytes.
    * The value may be {@code null}.
@@ -236,6 +253,46 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    */
   public Advertiser setDataAccessConfig(AdvertiserDataAccessConfig dataAccessConfig) {
     this.dataAccessConfig = dataAccessConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The default business name for the advertiser. This is the value used by YouTube and
+   * Demand Gen ads under this advertiser if a business name is not provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultBusinessName() {
+    return defaultBusinessName;
+  }
+
+  /**
+   * Optional. The default business name for the advertiser. This is the value used by YouTube and
+   * Demand Gen ads under this advertiser if a business name is not provided.
+   * @param defaultBusinessName defaultBusinessName or {@code null} for none
+   */
+  public Advertiser setDefaultBusinessName(java.lang.String defaultBusinessName) {
+    this.defaultBusinessName = defaultBusinessName;
+    return this;
+  }
+
+  /**
+   * Optional. The asset ID of the default logo image for the advertiser. This is the asset ID that
+   * will be used by YouTube and Demand ads under this advertiser if a logo asset is not provided.
+   * You must use advertisers.adAssets.upload to upload this asset using the API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDefaultLogoAssetId() {
+    return defaultLogoAssetId;
+  }
+
+  /**
+   * Optional. The asset ID of the default logo image for the advertiser. This is the asset ID that
+   * will be used by YouTube and Demand ads under this advertiser if a logo asset is not provided.
+   * You must use advertisers.adAssets.upload to upload this asset using the API.
+   * @param defaultLogoAssetId defaultLogoAssetId or {@code null} for none
+   */
+  public Advertiser setDefaultLogoAssetId(java.lang.Long defaultLogoAssetId) {
+    this.defaultLogoAssetId = defaultLogoAssetId;
     return this;
   }
 

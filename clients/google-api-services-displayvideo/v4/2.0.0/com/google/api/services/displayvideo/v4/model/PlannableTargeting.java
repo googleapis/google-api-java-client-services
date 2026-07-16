@@ -60,11 +60,11 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> genders;
 
   /**
-   * Output only. Targetable network for the ad product.
+   * Output only. Targetable networks for the ad product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String network;
+  private java.util.List<java.lang.String> networks;
 
   /**
    * Output only. Targetable surface combinations for the ad product.
@@ -151,19 +151,19 @@ public final class PlannableTargeting extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Targetable network for the ad product.
+   * Output only. Targetable networks for the ad product.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNetwork() {
-    return network;
+  public java.util.List<java.lang.String> getNetworks() {
+    return networks;
   }
 
   /**
-   * Output only. Targetable network for the ad product.
-   * @param network network or {@code null} for none
+   * Output only. Targetable networks for the ad product.
+   * @param networks networks or {@code null} for none
    */
-  public PlannableTargeting setNetwork(java.lang.String network) {
-    this.network = network;
+  public PlannableTargeting setNetworks(java.util.List<java.lang.String> networks) {
+    this.networks = networks;
     return this;
   }
 

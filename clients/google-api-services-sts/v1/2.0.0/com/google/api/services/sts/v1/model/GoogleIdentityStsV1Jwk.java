@@ -33,6 +33,13 @@ package com.google.api.services.sts.v1.model;
 public final class GoogleIdentityStsV1Jwk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Algorithm intended for use with the key. Currently "RS256".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String alg;
+
+  /**
    * Exponent value for kty="RSA".
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleIdentityStsV1Jwk extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String use;
+
+  /**
+   * Algorithm intended for use with the key. Currently "RS256".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAlg() {
+    return alg;
+  }
+
+  /**
+   * Algorithm intended for use with the key. Currently "RS256".
+   * @param alg alg or {@code null} for none
+   */
+  public GoogleIdentityStsV1Jwk setAlg(java.lang.String alg) {
+    this.alg = alg;
+    return this;
+  }
 
   /**
    * Exponent value for kty="RSA".

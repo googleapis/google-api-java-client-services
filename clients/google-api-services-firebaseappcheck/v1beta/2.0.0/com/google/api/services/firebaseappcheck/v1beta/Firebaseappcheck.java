@@ -2779,161 +2779,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Validates a [SafetyNet
-       * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If
-       * valid, returns an AppCheckToken.
-       *
-       * Create a request for the method "apps.exchangeSafetyNetToken".
-       *
-       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
-       * optional parameters, call the {@link ExchangeSafetyNetToken#execute()} method to invoke the
-       * remote operation.
-       *
-       * @param app Required. The relative resource name of the Android app, in the format: ```
-       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
-       *        be replaced with the project ID of the Firebase project. Learn more about using project
-       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-       * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest}
-       * @return the request
-       */
-      public ExchangeSafetyNetToken exchangeSafetyNetToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest content) throws java.io.IOException {
-        ExchangeSafetyNetToken result = new ExchangeSafetyNetToken(app, content);
-        initialize(result);
-        return result;
-      }
-
-      public class ExchangeSafetyNetToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken> {
-
-        private static final String REST_PATH = "v1beta/{+app}:exchangeSafetyNetToken";
-
-        private final java.util.regex.Pattern APP_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
-
-        /**
-         * Validates a [SafetyNet
-         * token](https://developer.android.com/training/safetynet/attestation#request-attestation-step).
-         * If valid, returns an AppCheckToken.
-         *
-         * Create a request for the method "apps.exchangeSafetyNetToken".
-         *
-         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
-         * optional parameters, call the {@link ExchangeSafetyNetToken#execute()} method to invoke the
-         * remote operation. <p> {@link ExchangeSafetyNetToken#initialize(com.google.api.client.googleapis
-         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-         * after invoking the constructor. </p>
-         *
-         * @param app Required. The relative resource name of the Android app, in the format: ```
-       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
-       *        be replaced with the project ID of the Firebase project. Learn more about using project
-       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest}
-         * @since 1.13
-         */
-        protected ExchangeSafetyNetToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest content) {
-          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAppCheckToken.class);
-          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
-                "Parameter app must conform to the pattern " +
-                "^projects/[^/]+/apps/[^/]+$");
-          }
-        }
-
-        @Override
-        public ExchangeSafetyNetToken set$Xgafv(java.lang.String $Xgafv) {
-          return (ExchangeSafetyNetToken) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setAccessToken(java.lang.String accessToken) {
-          return (ExchangeSafetyNetToken) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setAlt(java.lang.String alt) {
-          return (ExchangeSafetyNetToken) super.setAlt(alt);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setCallback(java.lang.String callback) {
-          return (ExchangeSafetyNetToken) super.setCallback(callback);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setFields(java.lang.String fields) {
-          return (ExchangeSafetyNetToken) super.setFields(fields);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setKey(java.lang.String key) {
-          return (ExchangeSafetyNetToken) super.setKey(key);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setOauthToken(java.lang.String oauthToken) {
-          return (ExchangeSafetyNetToken) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (ExchangeSafetyNetToken) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setQuotaUser(java.lang.String quotaUser) {
-          return (ExchangeSafetyNetToken) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setUploadType(java.lang.String uploadType) {
-          return (ExchangeSafetyNetToken) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public ExchangeSafetyNetToken setUploadProtocol(java.lang.String uploadProtocol) {
-          return (ExchangeSafetyNetToken) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * Required. The relative resource name of the Android app, in the format: ```
-         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
-         * can be replaced with the project ID of the Firebase project. Learn more about using
-         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String app;
-
-        /** Required. The relative resource name of the Android app, in the format: ```
-       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
-       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
-       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-         */
-        public java.lang.String getApp() {
-          return app;
-        }
-
-        /**
-         * Required. The relative resource name of the Android app, in the format: ```
-         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
-         * can be replaced with the project ID of the Firebase project. Learn more about using
-         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
-         */
-        public ExchangeSafetyNetToken setApp(java.lang.String app) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
-                "Parameter app must conform to the pattern " +
-                "^projects/[^/]+/apps/[^/]+$");
-          }
-          this.app = app;
-          return this;
-        }
-
-        @Override
-        public ExchangeSafetyNetToken set(String parameterName, Object value) {
-          return (ExchangeSafetyNetToken) super.set(parameterName, value);
-        }
-      }
-      /**
        * Generates a challenge that protects the integrity of an immediately following call to
        * ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for
        * multiple calls.
@@ -7078,7 +6923,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         }
         /**
          * Updates the RecaptchaV3Config for the specified app. While this configuration is incomplete or
-         * invalid, the app will be unable to exchange reCAPTCHA V3 tokens for App Check tokens. For
+         * invalid, the app will be unable to exchange reCAPTCHA v3 tokens for App Check tokens. For
          * security reasons, the `site_secret` field is never populated in the response.
          *
          * Create a request for the method "recaptchaV3Config.patch".
@@ -7106,7 +6951,7 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
 
           /**
            * Updates the RecaptchaV3Config for the specified app. While this configuration is incomplete or
-           * invalid, the app will be unable to exchange reCAPTCHA V3 tokens for App Check tokens. For
+           * invalid, the app will be unable to exchange reCAPTCHA v3 tokens for App Check tokens. For
            * security reasons, the `site_secret` field is never populated in the response.
            *
            * Create a request for the method "recaptchaV3Config.patch".
@@ -7232,519 +7077,6 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           /**
            * Required. A comma-separated list of names of fields in the RecaptchaV3Config to update.
            * Example: `site_secret`.
-           */
-          public Patch setUpdateMask(String updateMask) {
-            this.updateMask = updateMask;
-            return this;
-          }
-
-          @Override
-          public Patch set(String parameterName, Object value) {
-            return (Patch) super.set(parameterName, value);
-          }
-        }
-
-      }
-      /**
-       * An accessor for creating requests from the SafetyNetConfig collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
-       *   {@code Firebaseappcheck.SafetyNetConfig.List request = firebaseappcheck.safetyNetConfig().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public SafetyNetConfig safetyNetConfig() {
-        return new SafetyNetConfig();
-      }
-
-      /**
-       * The "safetyNetConfig" collection of methods.
-       */
-      public class SafetyNetConfig {
-
-        /**
-         * Atomically gets the SafetyNetConfigs for the specified list of apps.
-         *
-         * Create a request for the method "safetyNetConfig.batchGet".
-         *
-         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
-         * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The parent project name shared by all SafetyNetConfigs being retrieved, in the format ```
-         *        projects/{project_number} ``` The parent collection in the `name` field of any resource
-         *        being retrieved must match this field, or the entire batch fails.
-         * @return the request
-         */
-        public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
-          BatchGet result = new BatchGet(parent);
-          initialize(result);
-          return result;
-        }
-
-        public class BatchGet extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetSafetyNetConfigsResponse> {
-
-          private static final String REST_PATH = "v1beta/{+parent}/apps/-/safetyNetConfig:batchGet";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
-
-          /**
-           * Atomically gets the SafetyNetConfigs for the specified list of apps.
-           *
-           * Create a request for the method "safetyNetConfig.batchGet".
-           *
-           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
-           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The parent project name shared by all SafetyNetConfigs being retrieved, in the format ```
-         *        projects/{project_number} ``` The parent collection in the `name` field of any resource
-         *        being retrieved must match this field, or the entire batch fails.
-           * @since 1.13
-           */
-          protected BatchGet(java.lang.String parent) {
-            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaBatchGetSafetyNetConfigsResponse.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
-            return (BatchGet) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public BatchGet setAccessToken(java.lang.String accessToken) {
-            return (BatchGet) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public BatchGet setAlt(java.lang.String alt) {
-            return (BatchGet) super.setAlt(alt);
-          }
-
-          @Override
-          public BatchGet setCallback(java.lang.String callback) {
-            return (BatchGet) super.setCallback(callback);
-          }
-
-          @Override
-          public BatchGet setFields(java.lang.String fields) {
-            return (BatchGet) super.setFields(fields);
-          }
-
-          @Override
-          public BatchGet setKey(java.lang.String key) {
-            return (BatchGet) super.setKey(key);
-          }
-
-          @Override
-          public BatchGet setOauthToken(java.lang.String oauthToken) {
-            return (BatchGet) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (BatchGet) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public BatchGet setQuotaUser(java.lang.String quotaUser) {
-            return (BatchGet) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public BatchGet setUploadType(java.lang.String uploadType) {
-            return (BatchGet) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
-            return (BatchGet) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The parent project name shared by all SafetyNetConfigs being retrieved, in
-           * the format ``` projects/{project_number} ``` The parent collection in the `name` field
-           * of any resource being retrieved must match this field, or the entire batch fails.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The parent project name shared by all SafetyNetConfigs being retrieved, in the format ```
-         projects/{project_number} ``` The parent collection in the `name` field of any resource being
-         retrieved must match this field, or the entire batch fails.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The parent project name shared by all SafetyNetConfigs being retrieved, in
-           * the format ``` projects/{project_number} ``` The parent collection in the `name` field
-           * of any resource being retrieved must match this field, or the entire batch fails.
-           */
-          public BatchGet setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Required. The relative resource names of the SafetyNetConfigs to retrieve, in the
-           * format ``` projects/{project_number}/apps/{app_id}/safetyNetConfig ``` A maximum of 100
-           * objects can be retrieved in a batch.
-           */
-          @com.google.api.client.util.Key
-          private java.util.List<java.lang.String> names;
-
-          /** Required. The relative resource names of the SafetyNetConfigs to retrieve, in the format ```
-         projects/{project_number}/apps/{app_id}/safetyNetConfig ``` A maximum of 100 objects can be
-         retrieved in a batch.
-           */
-          public java.util.List<java.lang.String> getNames() {
-            return names;
-          }
-
-          /**
-           * Required. The relative resource names of the SafetyNetConfigs to retrieve, in the
-           * format ``` projects/{project_number}/apps/{app_id}/safetyNetConfig ``` A maximum of 100
-           * objects can be retrieved in a batch.
-           */
-          public BatchGet setNames(java.util.List<java.lang.String> names) {
-            this.names = names;
-            return this;
-          }
-
-          @Override
-          public BatchGet set(String parameterName, Object value) {
-            return (BatchGet) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Gets the SafetyNetConfig for the specified app.
-         *
-         * Create a request for the method "safetyNetConfig.get".
-         *
-         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The relative resource name of the SafetyNetConfig, in the format: ```
-         *        projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-         * @return the request
-         */
-        public Get get(java.lang.String name) throws java.io.IOException {
-          Get result = new Get(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig> {
-
-          private static final String REST_PATH = "v1beta/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-
-          /**
-           * Gets the SafetyNetConfig for the specified app.
-           *
-           * Create a request for the method "safetyNetConfig.get".
-           *
-           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
-           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The relative resource name of the SafetyNetConfig, in the format: ```
-         *        projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           * @since 1.13
-           */
-          protected Get(java.lang.String name) {
-            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public Get set$Xgafv(java.lang.String $Xgafv) {
-            return (Get) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Get setAccessToken(java.lang.String accessToken) {
-            return (Get) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Get setAlt(java.lang.String alt) {
-            return (Get) super.setAlt(alt);
-          }
-
-          @Override
-          public Get setCallback(java.lang.String callback) {
-            return (Get) super.setCallback(callback);
-          }
-
-          @Override
-          public Get setFields(java.lang.String fields) {
-            return (Get) super.setFields(fields);
-          }
-
-          @Override
-          public Get setKey(java.lang.String key) {
-            return (Get) super.setKey(key);
-          }
-
-          @Override
-          public Get setOauthToken(java.lang.String oauthToken) {
-            return (Get) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Get) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Get setQuotaUser(java.lang.String quotaUser) {
-            return (Get) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Get setUploadType(java.lang.String uploadType) {
-            return (Get) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Get setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Get) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The relative resource name of the SafetyNetConfig, in the format: ```
-           * projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The relative resource name of the SafetyNetConfig, in the format: ```
-         projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The relative resource name of the SafetyNetConfig, in the format: ```
-           * projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          public Get setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Get set(String parameterName, Object value) {
-            return (Get) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Updates the SafetyNetConfig for the specified app. While this configuration is incomplete or
-         * invalid, the app will be unable to exchange SafetyNet tokens for App Check tokens.
-         *
-         * Create a request for the method "safetyNetConfig.patch".
-         *
-         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
-         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The relative resource name of the SafetyNet configuration object, in the format: ```
-         *        projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig}
-         * @return the request
-         */
-        public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig content) throws java.io.IOException {
-          Patch result = new Patch(name, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig> {
-
-          private static final String REST_PATH = "v1beta/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-
-          /**
-           * Updates the SafetyNetConfig for the specified app. While this configuration is incomplete or
-           * invalid, the app will be unable to exchange SafetyNet tokens for App Check tokens.
-           *
-           * Create a request for the method "safetyNetConfig.patch".
-           *
-           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
-           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The relative resource name of the SafetyNet configuration object, in the format: ```
-         *        projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig}
-           * @since 1.13
-           */
-          protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig content) {
-            super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaSafetyNetConfig.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-            }
-          }
-
-          @Override
-          public Patch set$Xgafv(java.lang.String $Xgafv) {
-            return (Patch) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Patch setAccessToken(java.lang.String accessToken) {
-            return (Patch) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Patch setAlt(java.lang.String alt) {
-            return (Patch) super.setAlt(alt);
-          }
-
-          @Override
-          public Patch setCallback(java.lang.String callback) {
-            return (Patch) super.setCallback(callback);
-          }
-
-          @Override
-          public Patch setFields(java.lang.String fields) {
-            return (Patch) super.setFields(fields);
-          }
-
-          @Override
-          public Patch setKey(java.lang.String key) {
-            return (Patch) super.setKey(key);
-          }
-
-          @Override
-          public Patch setOauthToken(java.lang.String oauthToken) {
-            return (Patch) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Patch) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Patch setQuotaUser(java.lang.String quotaUser) {
-            return (Patch) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Patch setUploadType(java.lang.String uploadType) {
-            return (Patch) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Patch) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The relative resource name of the SafetyNet configuration object, in the
-           * format: ``` projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The relative resource name of the SafetyNet configuration object, in the format: ```
-         projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The relative resource name of the SafetyNet configuration object, in the
-           * format: ``` projects/{project_number}/apps/{app_id}/safetyNetConfig ```
-           */
-          public Patch setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/apps/[^/]+/safetyNetConfig$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
-           * Example: `token_ttl`.
-           */
-          @com.google.api.client.util.Key
-          private String updateMask;
-
-          /** Required. A comma-separated list of names of fields in the SafetyNetConfig to update. Example:
-         `token_ttl`.
-           */
-          public String getUpdateMask() {
-            return updateMask;
-          }
-
-          /**
-           * Required. A comma-separated list of names of fields in the SafetyNetConfig to update.
-           * Example: `token_ttl`.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -7935,11 +7267,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *
        * @param name Required. The relative resource name of the Service to retrieve, in the format: ```
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-       *        must be a supported service ID. Currently, the following service IDs are supported: *
-       *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+       *        must be a supported service ID. Consult the Service.name field for a list of supported
+       *        service IDs.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -7967,11 +7296,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *
          * @param name Required. The relative resource name of the Service to retrieve, in the format: ```
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-       *        must be a supported service ID. Currently, the following service IDs are supported: *
-       *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+       *        must be a supported service ID. Consult the Service.name field for a list of supported
+       *        service IDs.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -8052,23 +7378,15 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * Required. The relative resource name of the Service to retrieve, in the format: ```
          * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-         * must be a supported service ID. Currently, the following service IDs are supported: *
-         * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
-         * iOS)
+         * must be a supported service ID. Consult the Service.name field for a list of supported
+         * service IDs.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The relative resource name of the Service to retrieve, in the format: ```
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
-       supported service ID. Currently, the following service IDs are supported: *
-       `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
-       `identitytoolkit.googleapis.com` (Firebase Authentication with Identity Platform) *
-       `oauth2.googleapis.com` (Google Identity for iOS)
+       supported service ID. Consult the Service.name field for a list of supported service IDs.
          */
         public java.lang.String getName() {
           return name;
@@ -8077,12 +7395,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
         /**
          * Required. The relative resource name of the Service to retrieve, in the format: ```
          * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-         * must be a supported service ID. Currently, the following service IDs are supported: *
-         * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
-         * iOS)
+         * must be a supported service ID. Consult the Service.name field for a list of supported
+         * service IDs.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8315,11 +7629,14 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
        *
        * @param name Required. The relative resource name of the service configuration object, in the format: ```
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-       *        must be a supported service ID. Currently, the following service IDs are supported: *
-       *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+       *        must be a supported service ID. Currently, the following service IDs are supported.
+       *        Firebase and Google Cloud services: * `identitytoolkit.googleapis.com` (Firebase
+       *        Authentication) * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+       *        `firestore.googleapis.com` (Cloud Firestore) * `firebasedatabase.googleapis.com` (Firebase
+       *        Realtime Database) * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
+       *        `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform services: * `maps-
+       *        backend.googleapis.com` (Maps JavaScript API) * `places.googleapis.com` (Places API (New))
+       *        Other supported Google services: * `oauth2.googleapis.com` (Google Identity for iOS)
        * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaService}
        * @return the request
        */
@@ -8349,11 +7666,14 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *
          * @param name Required. The relative resource name of the service configuration object, in the format: ```
        *        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-       *        must be a supported service ID. Currently, the following service IDs are supported: *
-       *        `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-       *        `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-       *        `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-       *        Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+       *        must be a supported service ID. Currently, the following service IDs are supported.
+       *        Firebase and Google Cloud services: * `identitytoolkit.googleapis.com` (Firebase
+       *        Authentication) * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+       *        `firestore.googleapis.com` (Cloud Firestore) * `firebasedatabase.googleapis.com` (Firebase
+       *        Realtime Database) * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
+       *        `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform services: * `maps-
+       *        backend.googleapis.com` (Maps JavaScript API) * `places.googleapis.com` (Places API (New))
+       *        Other supported Google services: * `oauth2.googleapis.com` (Google Identity for iOS)
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaService}
          * @since 1.13
          */
@@ -8426,21 +7746,27 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * Required. The relative resource name of the service configuration object, in the format:
          * ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id`
          * element must be a supported service ID. Currently, the following service IDs are
-         * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
-         * iOS)
+         * supported. Firebase and Google Cloud services: * `identitytoolkit.googleapis.com`
+         * (Firebase Authentication) * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+         * `firestore.googleapis.com` (Cloud Firestore) * `firebasedatabase.googleapis.com`
+         * (Firebase Realtime Database) * `firebasestorage.googleapis.com` (Cloud Storage for
+         * Firebase) * `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform
+         * services: * `maps-backend.googleapis.com` (Maps JavaScript API) * `places.googleapis.com`
+         * (Places API (New)) Other supported Google services: * `oauth2.googleapis.com` (Google
+         * Identity for iOS)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The relative resource name of the service configuration object, in the format: ```
        projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a
-       supported service ID. Currently, the following service IDs are supported: *
-       `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com`
-       (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore) *
-       `identitytoolkit.googleapis.com` (Firebase Authentication with Identity Platform) *
+       supported service ID. Currently, the following service IDs are supported. Firebase and Google Cloud
+       services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+       `firebasedataconnect.googleapis.com` (Firebase SQL Connect) * `firestore.googleapis.com` (Cloud
+       Firestore) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+       `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebaseml.googleapis.com`
+       (Firebase AI Logic) Google Maps Platform services: * `maps-backend.googleapis.com` (Maps JavaScript
+       API) * `places.googleapis.com` (Places API (New)) Other supported Google services: *
        `oauth2.googleapis.com` (Google Identity for iOS)
          */
         public java.lang.String getName() {
@@ -8451,11 +7777,14 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          * Required. The relative resource name of the service configuration object, in the format:
          * ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id`
          * element must be a supported service ID. Currently, the following service IDs are
-         * supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-         * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
-         * `firestore.googleapis.com` (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase
-         * Authentication with Identity Platform) * `oauth2.googleapis.com` (Google Identity for
-         * iOS)
+         * supported. Firebase and Google Cloud services: * `identitytoolkit.googleapis.com`
+         * (Firebase Authentication) * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) *
+         * `firestore.googleapis.com` (Cloud Firestore) * `firebasedatabase.googleapis.com`
+         * (Firebase Realtime Database) * `firebasestorage.googleapis.com` (Cloud Storage for
+         * Firebase) * `firebaseml.googleapis.com` (Firebase AI Logic) Google Maps Platform
+         * services: * `maps-backend.googleapis.com` (Maps JavaScript API) * `places.googleapis.com`
+         * (Places API (New)) Other supported Google services: * `oauth2.googleapis.com` (Google
+         * Identity for iOS)
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -8672,8 +8001,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *
          * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
          * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
          * @return the request
          */
@@ -8703,8 +8032,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            *
            * @param parent Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          *        will be created, in the format: ``` projects/{project_number}/services/{service_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
            * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaResourcePolicy}
            * @since 1.13
            */
@@ -8777,16 +8106,16 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-           * must be a supported service ID. Currently, the following service IDs are supported: *
-           * `oauth2.googleapis.com` (Google Identity for iOS)
+           * must be a supported service ID. Consult the ResourcePolicy.name field for a list of
+           * supported service IDs.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The relative resource name of the parent Service in which the specified ResourcePolicy
          will be created, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-         the `service_id` element must be a supported service ID. Currently, the following service IDs are
-         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         the `service_id` element must be a supported service ID. Consult the ResourcePolicy.name field for
+         a list of supported service IDs.
            */
           public java.lang.String getParent() {
             return parent;
@@ -8796,8 +8125,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the parent Service in which the specified
            * ResourcePolicy will be created, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-           * must be a supported service ID. Currently, the following service IDs are supported: *
-           * `oauth2.googleapis.com` (Google Identity for iOS)
+           * must be a supported service ID. Consult the ResourcePolicy.name field for a list of
+           * supported service IDs.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9002,8 +8331,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *
          * @param name Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -9031,8 +8360,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            *
            * @param name Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
          *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -9114,17 +8443,16 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the ResourcePolicy to retrieve, in the format:
            * ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
-           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
-           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS)
+           * ``` Note that the `service_id` element must be a supported service ID. Consult the
+           * ResourcePolicy.name field for a list of supported service IDs.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The relative resource name of the ResourcePolicy to retrieve, in the format: ```
          projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ``` Note that
-         the `service_id` element must be a supported service ID. Currently, the following service IDs are
-         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         the `service_id` element must be a supported service ID. Consult the ResourcePolicy.name field for
+         a list of supported service IDs.
            */
           public java.lang.String getName() {
             return name;
@@ -9134,9 +8462,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the ResourcePolicy to retrieve, in the format:
            * ```
            * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
-           * ``` Note that the `service_id` element must be a supported service ID. Currently, the
-           * following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for
-           * iOS)
+           * ``` Note that the `service_id` element must be a supported service ID. Consult the
+           * ResourcePolicy.name field for a list of supported service IDs.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -9163,8 +8490,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
          *
          * @param parent Required. The relative resource name of the parent Service for which to list each associated
          *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9192,8 +8519,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            *
            * @param parent Required. The relative resource name of the parent Service for which to list each associated
          *        ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ```
-         *        Note that the `service_id` element must be a supported service ID. Currently, the
-         *        following service IDs are supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         *        Note that the `service_id` element must be a supported service ID. Consult the
+         *        ResourcePolicy.name field for a list of supported service IDs.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9275,16 +8602,16 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the parent Service for which to list each
            * associated ResourcePolicy, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-           * must be a supported service ID. Currently, the following service IDs are supported: *
-           * `oauth2.googleapis.com` (Google Identity for iOS)
+           * must be a supported service ID. Consult the ResourcePolicy.name field for a list of
+           * supported service IDs.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The relative resource name of the parent Service for which to list each associated
          ResourcePolicy, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-         the `service_id` element must be a supported service ID. Currently, the following service IDs are
-         supported: * `oauth2.googleapis.com` (Google Identity for iOS)
+         the `service_id` element must be a supported service ID. Consult the ResourcePolicy.name field for
+         a list of supported service IDs.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9294,8 +8621,8 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
            * Required. The relative resource name of the parent Service for which to list each
            * associated ResourcePolicy, in the format: ```
            * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element
-           * must be a supported service ID. Currently, the following service IDs are supported: *
-           * `oauth2.googleapis.com` (Google Identity for iOS)
+           * must be a supported service ID. Consult the ResourcePolicy.name field for a list of
+           * supported service IDs.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

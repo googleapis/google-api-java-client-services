@@ -59,7 +59,7 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
   /**
    * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
    * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
-   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * during a UpdateDebugToken request. You can, however, delete this debug token using
    * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
    * response.
    * The value may be {@code null}.
@@ -134,7 +134,7 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
   /**
    * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
    * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
-   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * during a UpdateDebugToken request. You can, however, delete this debug token using
    * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
    * response.
    * @return value or {@code null} for none
@@ -146,7 +146,7 @@ public final class GoogleFirebaseAppcheckV1DebugToken extends com.google.api.cli
   /**
    * Required. Input only. Immutable. The secret token itself. Must be provided during creation, and
    * must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided
-   * during an UpdateDebugToken request. You can, however, delete this debug token using
+   * during a UpdateDebugToken request. You can, however, delete this debug token using
    * DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any
    * response.
    * @param token token or {@code null} for none

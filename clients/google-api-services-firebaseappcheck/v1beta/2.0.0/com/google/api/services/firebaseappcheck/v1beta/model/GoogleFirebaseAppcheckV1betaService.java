@@ -31,7 +31,7 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The App Check enforcement mode for this service.
+   * Required. The baseline protection EnforcementMode for this service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,25 +49,29 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
-   * a supported service ID. Currently, the following service IDs are supported: *
-   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * a supported service ID. Currently, the following service IDs are supported. Firebase and Google
+   * Cloud services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) * `firestore.googleapis.com` (Cloud
+   * Firestore) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebaseml.googleapis.com`
+   * (Firebase AI Logic) Google Maps Platform services: * `maps-backend.googleapis.com` (Maps
+   * JavaScript API) * `places.googleapis.com` (Places API (New)) Other supported Google services: *
+   * `oauth2.googleapis.com` (Google Identity for iOS)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
-   * be set to a level higher than the overall App Check enforcement mode. For example, if the
-   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
-   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
-   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
-   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
-   * requests to your protected services may experience higher latency. To opt out of replay
-   * protection after opting in, set this field to `OFF`.
+   * Optional. The replay protection EnforcementMode for this service. Note that this field cannot
+   * be set to a level higher than that of baseline protection. For example, if the enforcement mode
+   * for baseline protection is set to `UNENFORCED`, this field cannot be set to `ENFORCED`. In
+   * order to enforce replay protection, you must first enforce App Check's baseline protection. An
+   * HTTP 400 error will be returned in this case. By default, this field is set to `OFF`. Setting
+   * this field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Opting in
+   * can impact your requests by adding some latency and sometimes cost (depending on your
+   * attestation provider). To opt out of replay protection after opting in, set this field to
+   * `OFF`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +85,7 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   private String updateTime;
 
   /**
-   * Required. The App Check enforcement mode for this service.
+   * Required. The baseline protection EnforcementMode for this service.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnforcementMode() {
@@ -89,7 +93,7 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   }
 
   /**
-   * Required. The App Check enforcement mode for this service.
+   * Required. The baseline protection EnforcementMode for this service.
    * @param enforcementMode enforcementMode or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService setEnforcementMode(java.lang.String enforcementMode) {
@@ -121,11 +125,14 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
-   * a supported service ID. Currently, the following service IDs are supported: *
-   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * a supported service ID. Currently, the following service IDs are supported. Firebase and Google
+   * Cloud services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) * `firestore.googleapis.com` (Cloud
+   * Firestore) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebaseml.googleapis.com`
+   * (Firebase AI Logic) Google Maps Platform services: * `maps-backend.googleapis.com` (Maps
+   * JavaScript API) * `places.googleapis.com` (Places API (New)) Other supported Google services: *
+   * `oauth2.googleapis.com` (Google Identity for iOS)
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,11 +142,14 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   /**
    * Required. The relative resource name of the service configuration object, in the format: ```
    * projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be
-   * a supported service ID. Currently, the following service IDs are supported: *
-   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS)
+   * a supported service ID. Currently, the following service IDs are supported. Firebase and Google
+   * Cloud services: * `identitytoolkit.googleapis.com` (Firebase Authentication) *
+   * `firebasedataconnect.googleapis.com` (Firebase SQL Connect) * `firestore.googleapis.com` (Cloud
+   * Firestore) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) *
+   * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebaseml.googleapis.com`
+   * (Firebase AI Logic) Google Maps Platform services: * `maps-backend.googleapis.com` (Maps
+   * JavaScript API) * `places.googleapis.com` (Places API (New)) Other supported Google services: *
+   * `oauth2.googleapis.com` (Google Identity for iOS)
    * @param name name or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService setName(java.lang.String name) {
@@ -148,14 +158,15 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   }
 
   /**
-   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
-   * be set to a level higher than the overall App Check enforcement mode. For example, if the
-   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
-   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
-   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
-   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
-   * requests to your protected services may experience higher latency. To opt out of replay
-   * protection after opting in, set this field to `OFF`.
+   * Optional. The replay protection EnforcementMode for this service. Note that this field cannot
+   * be set to a level higher than that of baseline protection. For example, if the enforcement mode
+   * for baseline protection is set to `UNENFORCED`, this field cannot be set to `ENFORCED`. In
+   * order to enforce replay protection, you must first enforce App Check's baseline protection. An
+   * HTTP 400 error will be returned in this case. By default, this field is set to `OFF`. Setting
+   * this field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Opting in
+   * can impact your requests by adding some latency and sometimes cost (depending on your
+   * attestation provider). To opt out of replay protection after opting in, set this field to
+   * `OFF`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplayProtection() {
@@ -163,14 +174,15 @@ public final class GoogleFirebaseAppcheckV1betaService extends com.google.api.cl
   }
 
   /**
-   * Optional. The replay protection enforcement mode for this service. Note that this field cannot
-   * be set to a level higher than the overall App Check enforcement mode. For example, if the
-   * overall App Check enforcement mode is set to `UNENFORCED`, this field cannot be set to
-   * `ENFORCED`. In order to enforce replay protection, you must first enforce App Check. An HTTP
-   * 400 error will be returned in this case. By default, this field is set to `OFF`. Setting this
-   * field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Once opted in,
-   * requests to your protected services may experience higher latency. To opt out of replay
-   * protection after opting in, set this field to `OFF`.
+   * Optional. The replay protection EnforcementMode for this service. Note that this field cannot
+   * be set to a level higher than that of baseline protection. For example, if the enforcement mode
+   * for baseline protection is set to `UNENFORCED`, this field cannot be set to `ENFORCED`. In
+   * order to enforce replay protection, you must first enforce App Check's baseline protection. An
+   * HTTP 400 error will be returned in this case. By default, this field is set to `OFF`. Setting
+   * this field to `UNENFORCED` or `ENFORCED` is considered opting into replay protection. Opting in
+   * can impact your requests by adding some latency and sometimes cost (depending on your
+   * attestation provider). To opt out of replay protection after opting in, set this field to
+   * `OFF`.
    * @param replayProtection replayProtection or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService setReplayProtection(java.lang.String replayProtection) {

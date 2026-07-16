@@ -34,13 +34,8 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
-   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
-   * Platform](https://firebase.google.com/docs/auth#identity-platform).
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,13 +52,8 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
-   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
-   * Platform](https://firebase.google.com/docs/auth#identity-platform).
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * @return value or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaService getService() {
@@ -73,13 +63,8 @@ public final class GoogleFirebaseAppcheckV1betaUpdateServiceRequest extends com.
   /**
    * Required. The Service to update. The Service's `name` field is used to identify the Service to
    * be updated, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that
-   * the `service_id` element must be a supported service ID. Currently, the following service IDs
-   * are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) *
-   * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com`
-   * (Cloud Firestore) * `identitytoolkit.googleapis.com` (Firebase Authentication with Identity
-   * Platform) * `oauth2.googleapis.com` (Google Identity for iOS) For Firebase Authentication to
-   * work with App Check, you must first upgrade to [Firebase Authentication with Identity
-   * Platform](https://firebase.google.com/docs/auth#identity-platform).
+   * the `service_id` element must be a supported service ID. Consult the Service.name field for a
+   * list of supported service IDs.
    * @param service service or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaUpdateServiceRequest setService(GoogleFirebaseAppcheckV1betaService service) {

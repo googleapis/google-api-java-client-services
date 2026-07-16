@@ -37,6 +37,13 @@ public final class StartApprovalRequest extends com.google.api.client.json.Gener
   private String dueTime;
 
   /**
+   * Optional. The behavior of the approval when the file content changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileContentChangeBehavior;
+
+  /**
    * Optional. Whether to lock the file when starting the approval.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class StartApprovalRequest extends com.google.api.client.json.Gener
    */
   public StartApprovalRequest setDueTime(String dueTime) {
     this.dueTime = dueTime;
+    return this;
+  }
+
+  /**
+   * Optional. The behavior of the approval when the file content changes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileContentChangeBehavior() {
+    return fileContentChangeBehavior;
+  }
+
+  /**
+   * Optional. The behavior of the approval when the file content changes.
+   * @param fileContentChangeBehavior fileContentChangeBehavior or {@code null} for none
+   */
+  public StartApprovalRequest setFileContentChangeBehavior(java.lang.String fileContentChangeBehavior) {
+    this.fileContentChangeBehavior = fileContentChangeBehavior;
     return this;
   }
 

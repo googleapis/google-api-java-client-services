@@ -244,7 +244,9 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The reservation that jobs.query request would use. User can specify a reservation to
    * execute the job.query. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`. This requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -763,7 +765,9 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The reservation that jobs.query request would use. User can specify a reservation to
    * execute the job.query. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`. This requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservation() {
@@ -773,7 +777,9 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The reservation that jobs.query request would use. User can specify a reservation to
    * execute the job.query. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`. This requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * @param reservation reservation or {@code null} for none
    */
   public QueryRequest setReservation(java.lang.String reservation) {

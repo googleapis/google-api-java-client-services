@@ -237,6 +237,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long numDmlAffectedRows;
 
   /**
+   * Output only. Storage and caching statistics per cloud provider for queries over object storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ObjectStorageStats> objectStorageStats;
+
+  /**
    * Output only. Performance insights.
    * The value may be {@code null}.
    */
@@ -972,6 +979,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setNumDmlAffectedRows(java.lang.Long numDmlAffectedRows) {
     this.numDmlAffectedRows = numDmlAffectedRows;
+    return this;
+  }
+
+  /**
+   * Output only. Storage and caching statistics per cloud provider for queries over object storage.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ObjectStorageStats> getObjectStorageStats() {
+    return objectStorageStats;
+  }
+
+  /**
+   * Output only. Storage and caching statistics per cloud provider for queries over object storage.
+   * @param objectStorageStats objectStorageStats or {@code null} for none
+   */
+  public JobStatistics2 setObjectStorageStats(java.util.List<ObjectStorageStats> objectStorageStats) {
+    this.objectStorageStats = objectStorageStats;
     return this;
   }
 

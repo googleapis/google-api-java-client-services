@@ -68,6 +68,13 @@ public final class Argument extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Set if argument_kind == FIXED_TABLE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StandardSqlTableType tableType;
+
+  /**
    * Optional. Defaults to FIXED_TYPE.
    * @return value or {@code null} for none
    */
@@ -155,6 +162,23 @@ public final class Argument extends com.google.api.client.json.GenericJson {
    */
   public Argument setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Set if argument_kind == FIXED_TABLE.
+   * @return value or {@code null} for none
+   */
+  public StandardSqlTableType getTableType() {
+    return tableType;
+  }
+
+  /**
+   * Optional. Set if argument_kind == FIXED_TABLE.
+   * @param tableType tableType or {@code null} for none
+   */
+  public Argument setTableType(StandardSqlTableType tableType) {
+    this.tableType = tableType;
     return this;
   }
 

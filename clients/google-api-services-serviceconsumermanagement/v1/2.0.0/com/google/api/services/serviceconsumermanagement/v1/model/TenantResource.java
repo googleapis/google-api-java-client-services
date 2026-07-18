@@ -48,6 +48,16 @@ public final class TenantResource extends com.google.api.client.json.GenericJson
   private java.lang.String resource;
 
   /**
+   * Output only. The resource name of the tenant project from which this active regional tenant
+   * project was migrated. This field is only set for active regional migrated mapping tenant
+   * projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceTenantProject;
+
+  /**
    * Status of tenant resource.
    * The value may be {@code null}.
    */
@@ -98,6 +108,29 @@ public final class TenantResource extends com.google.api.client.json.GenericJson
    */
   public TenantResource setResource(java.lang.String resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the tenant project from which this active regional tenant
+   * project was migrated. This field is only set for active regional migrated mapping tenant
+   * projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceTenantProject() {
+    return sourceTenantProject;
+  }
+
+  /**
+   * Output only. The resource name of the tenant project from which this active regional tenant
+   * project was migrated. This field is only set for active regional migrated mapping tenant
+   * projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * @param sourceTenantProject sourceTenantProject or {@code null} for none
+   */
+  public TenantResource setSourceTenantProject(java.lang.String sourceTenantProject) {
+    this.sourceTenantProject = sourceTenantProject;
     return this;
   }
 

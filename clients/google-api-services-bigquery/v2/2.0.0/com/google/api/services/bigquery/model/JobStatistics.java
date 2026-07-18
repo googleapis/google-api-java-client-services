@@ -90,6 +90,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long finalExecutionDurationMs;
 
   /**
+   * Output only. Regions where the global query accesses data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> globalQueryRemoteRegions;
+
+  /**
    * Output only. Statistics for a load job.
    * The value may be {@code null}.
    */
@@ -102,6 +109,13 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long numChildJobs;
+
+  /**
+   * Output only. The global query that created this job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JobReference parentGlobalQueryJob;
 
   /**
    * Output only. If this is a child job, specifies the job ID of the parent.
@@ -355,6 +369,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. Regions where the global query accesses data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGlobalQueryRemoteRegions() {
+    return globalQueryRemoteRegions;
+  }
+
+  /**
+   * Output only. Regions where the global query accesses data.
+   * @param globalQueryRemoteRegions globalQueryRemoteRegions or {@code null} for none
+   */
+  public JobStatistics setGlobalQueryRemoteRegions(java.util.List<java.lang.String> globalQueryRemoteRegions) {
+    this.globalQueryRemoteRegions = globalQueryRemoteRegions;
+    return this;
+  }
+
+  /**
    * Output only. Statistics for a load job.
    * @return value or {@code null} for none
    */
@@ -385,6 +416,23 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
    */
   public JobStatistics setNumChildJobs(java.lang.Long numChildJobs) {
     this.numChildJobs = numChildJobs;
+    return this;
+  }
+
+  /**
+   * Output only. The global query that created this job.
+   * @return value or {@code null} for none
+   */
+  public JobReference getParentGlobalQueryJob() {
+    return parentGlobalQueryJob;
+  }
+
+  /**
+   * Output only. The global query that created this job.
+   * @param parentGlobalQueryJob parentGlobalQueryJob or {@code null} for none
+   */
+  public JobStatistics setParentGlobalQueryJob(JobReference parentGlobalQueryJob) {
+    this.parentGlobalQueryJob = parentGlobalQueryJob;
     return this;
   }
 

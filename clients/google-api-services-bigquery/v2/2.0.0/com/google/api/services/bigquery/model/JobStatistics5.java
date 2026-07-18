@@ -44,6 +44,13 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
   private java.lang.Long copiedRows;
 
   /**
+   * Output only. Destination region for a cross-region copy job. Not set for in-region copy jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remoteDestinationRegion;
+
+  /**
    * Output only. Number of logical bytes copied to the destination table.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class JobStatistics5 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics5 setCopiedRows(java.lang.Long copiedRows) {
     this.copiedRows = copiedRows;
+    return this;
+  }
+
+  /**
+   * Output only. Destination region for a cross-region copy job. Not set for in-region copy jobs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemoteDestinationRegion() {
+    return remoteDestinationRegion;
+  }
+
+  /**
+   * Output only. Destination region for a cross-region copy job. Not set for in-region copy jobs.
+   * @param remoteDestinationRegion remoteDestinationRegion or {@code null} for none
+   */
+  public JobStatistics5 setRemoteDestinationRegion(java.lang.String remoteDestinationRegion) {
+    this.remoteDestinationRegion = remoteDestinationRegion;
     return this;
   }
 

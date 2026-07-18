@@ -109,7 +109,9 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
    * Optional. The reservation that job would use. User can specify a reservation to execute the
    * job. If reservation is not set, reservation is determined based on the rules defined by the
    * reservation assignments. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`, which requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,7 +300,9 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
    * Optional. The reservation that job would use. User can specify a reservation to execute the
    * job. If reservation is not set, reservation is determined based on the rules defined by the
    * reservation assignments. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`, which requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservation() {
@@ -309,7 +313,9 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
    * Optional. The reservation that job would use. User can specify a reservation to execute the
    * job. If reservation is not set, reservation is determined based on the rules defined by the
    * reservation assignments. The expected format is
-   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * `projects/{project}/locations/{location}/reservations/{reservation}`. Forces the query to use
+   * on-demand billing when set to `none`, which requires the project or organization to have
+   * `reservation_override_mode` set to `ALLOW_ANY_OVERRIDE`.
    * @param reservation reservation or {@code null} for none
    */
   public JobConfiguration setReservation(java.lang.String reservation) {

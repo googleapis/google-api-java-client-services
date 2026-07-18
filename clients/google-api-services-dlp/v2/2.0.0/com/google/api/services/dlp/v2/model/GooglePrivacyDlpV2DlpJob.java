@@ -31,7 +31,7 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.GenericJson {
 
   /**
-   * Events that should occur after the job has completed.
+   * Output only. Events that should occur after the job has completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   private java.lang.String type;
 
   /**
-   * Events that should occur after the job has completed.
+   * Output only. Events that should occur after the job has completed.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2ActionDetails> getActionDetails() {
@@ -130,7 +130,7 @@ public final class GooglePrivacyDlpV2DlpJob extends com.google.api.client.json.G
   }
 
   /**
-   * Events that should occur after the job has completed.
+   * Output only. Events that should occur after the job has completed.
    * @param actionDetails actionDetails or {@code null} for none
    */
   public GooglePrivacyDlpV2DlpJob setActionDetails(java.util.List<GooglePrivacyDlpV2ActionDetails> actionDetails) {

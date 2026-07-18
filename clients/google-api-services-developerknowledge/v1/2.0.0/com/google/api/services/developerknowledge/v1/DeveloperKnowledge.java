@@ -760,6 +760,129 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
   }
 
   /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DeveloperKnowledge developerknowledge = new DeveloperKnowledge(...);}
+   *   {@code DeveloperKnowledge.V1.List request = developerknowledge.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * Answers a query using grounded generation.
+     *
+     * Create a request for the method "v1.answerQuery".
+     *
+     * This request holds the parameters needed by the developerknowledge server.  After setting any
+     * optional parameters, call the {@link AnswerQuery#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param content the {@link com.google.api.services.developerknowledge.v1.model.AnswerQueryRequest}
+     * @return the request
+     */
+    public AnswerQuery answerQuery(com.google.api.services.developerknowledge.v1.model.AnswerQueryRequest content) throws java.io.IOException {
+      AnswerQuery result = new AnswerQuery(content);
+      initialize(result);
+      return result;
+    }
+
+    public class AnswerQuery extends DeveloperKnowledgeRequest<com.google.api.services.developerknowledge.v1.model.AnswerQueryResponse> {
+
+      private static final String REST_PATH = "v1:answerQuery";
+
+      /**
+       * Answers a query using grounded generation.
+       *
+       * Create a request for the method "v1.answerQuery".
+       *
+       * This request holds the parameters needed by the the developerknowledge server.  After setting
+       * any optional parameters, call the {@link AnswerQuery#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * AnswerQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.developerknowledge.v1.model.AnswerQueryRequest}
+       * @since 1.13
+       */
+      protected AnswerQuery(com.google.api.services.developerknowledge.v1.model.AnswerQueryRequest content) {
+        super(DeveloperKnowledge.this, "POST", REST_PATH, content, com.google.api.services.developerknowledge.v1.model.AnswerQueryResponse.class);
+      }
+
+      @Override
+      public AnswerQuery set$Xgafv(java.lang.String $Xgafv) {
+        return (AnswerQuery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnswerQuery setAccessToken(java.lang.String accessToken) {
+        return (AnswerQuery) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnswerQuery setAlt(java.lang.String alt) {
+        return (AnswerQuery) super.setAlt(alt);
+      }
+
+      @Override
+      public AnswerQuery setCallback(java.lang.String callback) {
+        return (AnswerQuery) super.setCallback(callback);
+      }
+
+      @Override
+      public AnswerQuery setFields(java.lang.String fields) {
+        return (AnswerQuery) super.setFields(fields);
+      }
+
+      @Override
+      public AnswerQuery setKey(java.lang.String key) {
+        return (AnswerQuery) super.setKey(key);
+      }
+
+      @Override
+      public AnswerQuery setOauthToken(java.lang.String oauthToken) {
+        return (AnswerQuery) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnswerQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnswerQuery) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnswerQuery setQuotaUser(java.lang.String quotaUser) {
+        return (AnswerQuery) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnswerQuery setUploadType(java.lang.String uploadType) {
+        return (AnswerQuery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnswerQuery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnswerQuery) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public AnswerQuery set(String parameterName, Object value) {
+        return (AnswerQuery) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link DeveloperKnowledge}.
    *
    * <p>

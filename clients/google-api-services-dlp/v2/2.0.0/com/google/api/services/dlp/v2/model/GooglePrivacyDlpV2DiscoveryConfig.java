@@ -91,8 +91,9 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
   private String lastRunTime;
 
   /**
-   * Unique resource name for the DiscoveryConfig, assigned by the service when the DiscoveryConfig
-   * is created, for example `projects/dlp-test-project/locations/global/discoveryConfigs/53234423`.
+   * Output only. Unique resource name for the DiscoveryConfig, assigned by the service when the
+   * DiscoveryConfig is created, for example `projects/dlp-test-
+   * project/locations/global/discoveryConfigs/53234423`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,8 +263,9 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
   }
 
   /**
-   * Unique resource name for the DiscoveryConfig, assigned by the service when the DiscoveryConfig
-   * is created, for example `projects/dlp-test-project/locations/global/discoveryConfigs/53234423`.
+   * Output only. Unique resource name for the DiscoveryConfig, assigned by the service when the
+   * DiscoveryConfig is created, for example `projects/dlp-test-
+   * project/locations/global/discoveryConfigs/53234423`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -271,8 +273,9 @@ public final class GooglePrivacyDlpV2DiscoveryConfig extends com.google.api.clie
   }
 
   /**
-   * Unique resource name for the DiscoveryConfig, assigned by the service when the DiscoveryConfig
-   * is created, for example `projects/dlp-test-project/locations/global/discoveryConfigs/53234423`.
+   * Output only. Unique resource name for the DiscoveryConfig, assigned by the service when the
+   * DiscoveryConfig is created, for example `projects/dlp-test-
+   * project/locations/global/discoveryConfigs/53234423`.
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2DiscoveryConfig setName(java.lang.String name) {

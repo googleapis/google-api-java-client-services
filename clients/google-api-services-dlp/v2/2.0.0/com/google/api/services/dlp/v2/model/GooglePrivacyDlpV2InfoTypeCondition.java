@@ -45,6 +45,14 @@ public final class GooglePrivacyDlpV2InfoTypeCondition extends com.google.api.cl
   private GooglePrivacyDlpV2InfoTypes infoTypes;
 
   /**
+   * Optional. The minimum total number of findings of all matching info types required for this
+   * condition to evaluate to true. Defaults to 1 if unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minCount;
+
+  /**
    * match any info types.
    * @return value or {@code null} for none
    */
@@ -75,6 +83,25 @@ public final class GooglePrivacyDlpV2InfoTypeCondition extends com.google.api.cl
    */
   public GooglePrivacyDlpV2InfoTypeCondition setInfoTypes(GooglePrivacyDlpV2InfoTypes infoTypes) {
     this.infoTypes = infoTypes;
+    return this;
+  }
+
+  /**
+   * Optional. The minimum total number of findings of all matching info types required for this
+   * condition to evaluate to true. Defaults to 1 if unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinCount() {
+    return minCount;
+  }
+
+  /**
+   * Optional. The minimum total number of findings of all matching info types required for this
+   * condition to evaluate to true. Defaults to 1 if unset.
+   * @param minCount minCount or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeCondition setMinCount(java.lang.Long minCount) {
+    this.minCount = minCount;
     return this;
   }
 

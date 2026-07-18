@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.cli
   private GooglePrivacyDlpV2InspectJobConfig jobConfig;
 
   /**
-   * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+   * Output only. If run with an InspectTemplate, a snapshot of its state at the time of this run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.cli
   }
 
   /**
-   * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+   * Output only. If run with an InspectTemplate, a snapshot of its state at the time of this run.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate getSnapshotInspectTemplate() {
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2RequestedOptions extends com.google.api.cli
   }
 
   /**
-   * If run with an InspectTemplate, a snapshot of its state at the time of this run.
+   * Output only. If run with an InspectTemplate, a snapshot of its state at the time of this run.
    * @param snapshotInspectTemplate snapshotInspectTemplate or {@code null} for none
    */
   public GooglePrivacyDlpV2RequestedOptions setSnapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplate snapshotInspectTemplate) {

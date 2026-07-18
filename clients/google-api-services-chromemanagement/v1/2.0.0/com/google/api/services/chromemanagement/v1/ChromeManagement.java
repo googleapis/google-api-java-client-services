@@ -4065,7 +4065,9 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Returns a high-level summary of URL visits for a given customer.
+         * Returns a high-level summary of URL visits for a given customer. Requires a Chrome Enterprise
+         * Premium subscription. If the customer does not have this subscription, query results will be
+         * empty.
          *
          * Create a request for the method "securityInsights.queryUrlVisits".
          *
@@ -4090,7 +4092,9 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^customers/[^/]+$");
 
           /**
-           * Returns a high-level summary of URL visits for a given customer.
+           * Returns a high-level summary of URL visits for a given customer. Requires a Chrome Enterprise
+           * Premium subscription. If the customer does not have this subscription, query results will be
+           * empty.
            *
            * Create a request for the method "securityInsights.queryUrlVisits".
            *
@@ -4240,7 +4244,9 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Returns summaries of URL visits for a given metric and breakdown dimension.
+         * Returns summaries of URL visits for a given metric and breakdown dimension. Requires a Chrome
+         * Enterprise Premium subscription. If the customer does not have this subscription, query results
+         * will be empty.
          *
          * Create a request for the method "securityInsights.queryUrlVisitsBreakdowns".
          *
@@ -4265,7 +4271,9 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^customers/[^/]+$");
 
           /**
-           * Returns summaries of URL visits for a given metric and breakdown dimension.
+           * Returns summaries of URL visits for a given metric and breakdown dimension. Requires a Chrome
+           * Enterprise Premium subscription. If the customer does not have this subscription, query results
+           * will be empty.
            *
            * Create a request for the method "securityInsights.queryUrlVisitsBreakdowns".
            *

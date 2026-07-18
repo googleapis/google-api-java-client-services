@@ -113,6 +113,15 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * Network tier to be used for this prefix. All child delegated prefixes will inherit this field.
+   * If this field is not specified, it defaults to the network tier of the project that the
+   * PublicAdvertisedPrefix belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkTier;
+
+  /**
    * Specifies how child public delegated prefix will be scoped. It could be one of following
    * values:              - `REGIONAL`: The public delegated prefix is regional only. The
    * provisioning will take a few minutes.      - `GLOBAL`: The public delegated prefix is global
@@ -385,6 +394,27 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
    */
   public PublicAdvertisedPrefix setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Network tier to be used for this prefix. All child delegated prefixes will inherit this field.
+   * If this field is not specified, it defaults to the network tier of the project that the
+   * PublicAdvertisedPrefix belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkTier() {
+    return networkTier;
+  }
+
+  /**
+   * Network tier to be used for this prefix. All child delegated prefixes will inherit this field.
+   * If this field is not specified, it defaults to the network tier of the project that the
+   * PublicAdvertisedPrefix belongs to.
+   * @param networkTier networkTier or {@code null} for none
+   */
+  public PublicAdvertisedPrefix setNetworkTier(java.lang.String networkTier) {
+    this.networkTier = networkTier;
     return this;
   }
 

@@ -41,12 +41,13 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String authorizationPolicy;
 
   /**
-   * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify
-   * the authentication for traffic from the proxy to the actual endpoints. More specifically, it is
-   * applied to the outgoing traffic from the proxy to the endpoint. This is typically used for
-   * sidecar model where the proxy identifies itself as endpoint to the control plane, with the
-   * connection between sidecar and endpoint requiring authentication. If this field is not set,
-   * authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
+   * Optional. Deprecated: This field is not used and is a no-op. A URL referring to a
+   * ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic
+   * from the proxy to the actual endpoints. More specifically, it is applied to the outgoing
+   * traffic from the proxy to the endpoint. This is typically used for sidecar model where the
+   * proxy identifies itself as endpoint to the control plane, with the connection between sidecar
+   * and endpoint requiring authentication. If this field is not set, authentication is
+   * disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,12 +151,13 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify
-   * the authentication for traffic from the proxy to the actual endpoints. More specifically, it is
-   * applied to the outgoing traffic from the proxy to the endpoint. This is typically used for
-   * sidecar model where the proxy identifies itself as endpoint to the control plane, with the
-   * connection between sidecar and endpoint requiring authentication. If this field is not set,
-   * authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
+   * Optional. Deprecated: This field is not used and is a no-op. A URL referring to a
+   * ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic
+   * from the proxy to the actual endpoints. More specifically, it is applied to the outgoing
+   * traffic from the proxy to the endpoint. This is typically used for sidecar model where the
+   * proxy identifies itself as endpoint to the control plane, with the connection between sidecar
+   * and endpoint requiring authentication. If this field is not set, authentication is
+   * disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientTlsPolicy() {
@@ -163,12 +165,13 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A URL referring to a ClientTlsPolicy resource. ClientTlsPolicy can be set to specify
-   * the authentication for traffic from the proxy to the actual endpoints. More specifically, it is
-   * applied to the outgoing traffic from the proxy to the endpoint. This is typically used for
-   * sidecar model where the proxy identifies itself as endpoint to the control plane, with the
-   * connection between sidecar and endpoint requiring authentication. If this field is not set,
-   * authentication is disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
+   * Optional. Deprecated: This field is not used and is a no-op. A URL referring to a
+   * ClientTlsPolicy resource. ClientTlsPolicy can be set to specify the authentication for traffic
+   * from the proxy to the actual endpoints. More specifically, it is applied to the outgoing
+   * traffic from the proxy to the endpoint. This is typically used for sidecar model where the
+   * proxy identifies itself as endpoint to the control plane, with the connection between sidecar
+   * and endpoint requiring authentication. If this field is not set, authentication is
+   * disabled(open). Applicable only when EndpointPolicyType is SIDECAR_PROXY.
    * @param clientTlsPolicy clientTlsPolicy or {@code null} for none
    */
   public EndpointPolicy setClientTlsPolicy(java.lang.String clientTlsPolicy) {

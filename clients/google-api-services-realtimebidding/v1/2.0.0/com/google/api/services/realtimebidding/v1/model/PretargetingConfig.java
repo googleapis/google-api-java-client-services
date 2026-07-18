@@ -32,9 +32,9 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class PretargetingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Targeting modes included by this config. A bid request must allow all the specified targeting
-   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
-   * they allow.
+   * Deprecated: The value of this field no longer has any effect. Targeting modes included by this
+   * config. A bid request must allow all the specified targeting modes. An unset value allows all
+   * bid requests to be sent, regardless of which targeting modes they allow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,9 +246,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private StringTargetingDimension webTargeting;
 
   /**
-   * Targeting modes included by this config. A bid request must allow all the specified targeting
-   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
-   * they allow.
+   * Deprecated: The value of this field no longer has any effect. Targeting modes included by this
+   * config. A bid request must allow all the specified targeting modes. An unset value allows all
+   * bid requests to be sent, regardless of which targeting modes they allow.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedUserTargetingModes() {
@@ -256,9 +256,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Targeting modes included by this config. A bid request must allow all the specified targeting
-   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
-   * they allow.
+   * Deprecated: The value of this field no longer has any effect. Targeting modes included by this
+   * config. A bid request must allow all the specified targeting modes. An unset value allows all
+   * bid requests to be sent, regardless of which targeting modes they allow.
    * @param allowedUserTargetingModes allowedUserTargetingModes or {@code null} for none
    */
   public PretargetingConfig setAllowedUserTargetingModes(java.util.List<java.lang.String> allowedUserTargetingModes) {

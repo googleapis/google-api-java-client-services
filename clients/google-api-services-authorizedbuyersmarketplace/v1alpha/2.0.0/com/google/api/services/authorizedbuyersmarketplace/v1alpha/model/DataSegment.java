@@ -19,7 +19,7 @@ package com.google.api.services.authorizedbuyersmarketplace.v1alpha.model;
 /**
  * Defines an identifier for a segment of inventory that can be targeted by curators or media
  * planners in the deals or auction packages UI. Curation of inventory is done by curators on
- * external platforms.
+ * external platforms. -- Next ID: 9 --
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Authorized Buyers Marketplace API. For a detailed

@@ -139,6 +139,15 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * Network tier of the public delegated prefix. If populated, it must match the network tier of
+   * the parent public advertised prefix. If not populated, it defaults to the network tier of the
+   * parent public advertised prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkTier;
+
+  /**
    * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
    * The value may be {@code null}.
    */
@@ -489,6 +498,27 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    */
   public PublicDelegatedPrefix setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Network tier of the public delegated prefix. If populated, it must match the network tier of
+   * the parent public advertised prefix. If not populated, it defaults to the network tier of the
+   * parent public advertised prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkTier() {
+    return networkTier;
+  }
+
+  /**
+   * Network tier of the public delegated prefix. If populated, it must match the network tier of
+   * the parent public advertised prefix. If not populated, it defaults to the network tier of the
+   * parent public advertised prefix.
+   * @param networkTier networkTier or {@code null} for none
+   */
+  public PublicDelegatedPrefix setNetworkTier(java.lang.String networkTier) {
+    this.networkTier = networkTier;
     return this;
   }
 

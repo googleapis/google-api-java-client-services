@@ -1157,6 +1157,146 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
         }
       }
       /**
+       * Get the decrypted password of an alert.
+       *
+       * Create a request for the method "alerts.getPassword".
+       *
+       * This request holds the parameters needed by the threatintelligence server.  After setting any
+       * optional parameters, call the {@link GetPassword#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+       * @return the request
+       */
+      public GetPassword getPassword(java.lang.String name) throws java.io.IOException {
+        GetPassword result = new GetPassword(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetPassword extends ThreatIntelligenceServiceRequest<com.google.api.services.threatintelligence.v1beta.model.Alert> {
+
+        private static final String REST_PATH = "v1beta/{+name}:GetPassword";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/alerts/[^/]+$");
+
+        /**
+         * Get the decrypted password of an alert.
+         *
+         * Create a request for the method "alerts.getPassword".
+         *
+         * This request holds the parameters needed by the the threatintelligence server.  After setting
+         * any optional parameters, call the {@link GetPassword#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetPassword#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+         * @since 1.13
+         */
+        protected GetPassword(java.lang.String name) {
+          super(ThreatIntelligenceService.this, "GET", REST_PATH, null, com.google.api.services.threatintelligence.v1beta.model.Alert.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/alerts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetPassword set$Xgafv(java.lang.String $Xgafv) {
+          return (GetPassword) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetPassword setAccessToken(java.lang.String accessToken) {
+          return (GetPassword) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetPassword setAlt(java.lang.String alt) {
+          return (GetPassword) super.setAlt(alt);
+        }
+
+        @Override
+        public GetPassword setCallback(java.lang.String callback) {
+          return (GetPassword) super.setCallback(callback);
+        }
+
+        @Override
+        public GetPassword setFields(java.lang.String fields) {
+          return (GetPassword) super.setFields(fields);
+        }
+
+        @Override
+        public GetPassword setKey(java.lang.String key) {
+          return (GetPassword) super.setKey(key);
+        }
+
+        @Override
+        public GetPassword setOauthToken(java.lang.String oauthToken) {
+          return (GetPassword) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetPassword setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetPassword) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetPassword setQuotaUser(java.lang.String quotaUser) {
+          return (GetPassword) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetPassword setUploadType(java.lang.String uploadType) {
+          return (GetPassword) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetPassword setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetPassword) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert} */
+        public GetPassword setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/alerts/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetPassword set(String parameterName, Object value) {
+          return (GetPassword) super.set(parameterName, value);
+        }
+      }
+      /**
        * Get a list of alerts that meet the filter criteria.
        *
        * Create a request for the method "alerts.list".

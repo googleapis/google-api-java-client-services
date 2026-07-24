@@ -37,13 +37,6 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
   private TransactionOptions options;
 
   /**
-   * Optional. The request options for this request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * The options for the transaction. Defaults to a read-write transaction.
    * @return value or {@code null} for none
    */
@@ -57,23 +50,6 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
    */
   public BeginTransactionRequest setOptions(TransactionOptions options) {
     this.options = options;
-    return this;
-  }
-
-  /**
-   * Optional. The request options for this request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for this request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public BeginTransactionRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
     return this;
   }
 

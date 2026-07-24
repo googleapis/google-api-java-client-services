@@ -128,6 +128,9 @@ public class DataPortabilityScopes {
   /** Move a copy of your food purchase and reservation activity. */
   public static final String DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS = "https://www.googleapis.com/auth/dataportability.order_reserve.purchases_reservations";
 
+  /** Usage and diagnostic data from your Pixel devices.. */
+  public static final String DATAPORTABILITY_PIXEL_DEVICE_DATA = "https://www.googleapis.com/auth/dataportability.pixel.device_data";
+
   /** Move a copy of information about your devices with Google Play Store installed. */
   public static final String DATAPORTABILITY_PLAY_DEVICES = "https://www.googleapis.com/auth/dataportability.play.devices";
 
@@ -281,6 +284,7 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_NEST_STORE);
     set.add(DATAPORTABILITY_NEST_USER);
     set.add(DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS);
+    set.add(DATAPORTABILITY_PIXEL_DEVICE_DATA);
     set.add(DATAPORTABILITY_PLAY_DEVICES);
     set.add(DATAPORTABILITY_PLAY_GROUPING);
     set.add(DATAPORTABILITY_PLAY_INSTALLS);

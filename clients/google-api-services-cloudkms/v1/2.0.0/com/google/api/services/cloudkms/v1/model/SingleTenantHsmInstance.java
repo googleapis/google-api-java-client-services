@@ -59,7 +59,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
   /**
    * Optional. Immutable. Indicates whether key portability is enabled for the
    * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
-   * disabled by default and not yet available in GA.
+   * disabled by default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
   /**
    * Optional. Immutable. Indicates whether key portability is enabled for the
    * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
-   * disabled by default and not yet available in GA.
+   * disabled by default.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKeyPortabilityEnabled() {
@@ -165,7 +165,7 @@ public final class SingleTenantHsmInstance extends com.google.api.client.json.Ge
   /**
    * Optional. Immutable. Indicates whether key portability is enabled for the
    * SingleTenantHsmInstance. This can only be set at creation time. Key portability features are
-   * disabled by default and not yet available in GA.
+   * disabled by default.
    * @param keyPortabilityEnabled keyPortabilityEnabled or {@code null} for none
    */
   public SingleTenantHsmInstance setKeyPortabilityEnabled(java.lang.Boolean keyPortabilityEnabled) {

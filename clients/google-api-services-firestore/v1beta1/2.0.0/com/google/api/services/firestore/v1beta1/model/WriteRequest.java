@@ -41,13 +41,6 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. The request options for the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * The ID of the write stream to resume. This may only be set in the first message. When left
    * empty, a new write stream will be created.
    * The value may be {@code null}.
@@ -95,23 +88,6 @@ public final class WriteRequest extends com.google.api.client.json.GenericJson {
    */
   public WriteRequest setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public WriteRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
     return this;
   }
 

@@ -55,13 +55,6 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
   private String readTime;
 
   /**
-   * Optional. The request options for the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * An aggregation query.
    * The value may be {@code null}.
    */
@@ -132,23 +125,6 @@ public final class RunAggregationQueryRequest extends com.google.api.client.json
    */
   public RunAggregationQueryRequest setReadTime(String readTime) {
     this.readTime = readTime;
-    return this;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public RunAggregationQueryRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
     return this;
   }
 

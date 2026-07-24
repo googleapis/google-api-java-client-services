@@ -4502,22 +4502,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public CreateDocument setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
-            return this;
-          }
-
           @Override
           public CreateDocument set(String parameterName, Object value) {
             return (CreateDocument) super.set(parameterName, value);
@@ -4699,22 +4683,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Delete setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
-            return this;
-          }
-
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public Delete setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5045,22 +5013,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Get setReadTime(String readTime) {
             this.readTime = readTime;
-            return this;
-          }
-
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public Get setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5429,22 +5381,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setRecursive(java.lang.Boolean recursive) {
             this.recursive = recursive;
-            return this;
-          }
-
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public List setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5998,22 +5934,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public ListDocuments setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
-            return this;
-          }
-
           /**
            * If the list should show missing documents. A document is missing if it does not exist,
            * but there are sub-documents nested underneath it. When true, such missing documents
@@ -6550,22 +6470,6 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Patch setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
             this.maskFieldPaths = maskFieldPaths;
-            return this;
-          }
-
-          /** Optional. The request tags for the request. */
-          @com.google.api.client.util.Key("requestOptions.requestTags")
-          private java.util.List<java.lang.String> requestOptionsRequestTags;
-
-          /** Optional. The request tags for the request.
-           */
-          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
-            return requestOptionsRequestTags;
-          }
-
-          /** Optional. The request tags for the request. */
-          public Patch setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
-            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 

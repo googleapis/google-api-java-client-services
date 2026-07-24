@@ -62,6 +62,18 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   private java.lang.String partialResultMode;
 
   /**
+   * Optional. The resource name of the Secret Manager secret holding the password for the user to
+   * log into the database. The secret should be created using the regional endpoint (for API) or
+   * from the Regional Secrets page (for UI), and stored in the same region as the Cloud SQL
+   * instance. The expected resource name format is
+   * `projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}`. Used
+   * together with the `user` field. The secret resource name will not be stored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String passwordSecretVersion;
+
+  /**
    * Optional. The maximum number of rows returned per SQL statement.
    * The value may be {@code null}.
    */
@@ -157,6 +169,33 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
    */
   public ExecuteSqlPayload setPartialResultMode(java.lang.String partialResultMode) {
     this.partialResultMode = partialResultMode;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the Secret Manager secret holding the password for the user to
+   * log into the database. The secret should be created using the regional endpoint (for API) or
+   * from the Regional Secrets page (for UI), and stored in the same region as the Cloud SQL
+   * instance. The expected resource name format is
+   * `projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}`. Used
+   * together with the `user` field. The secret resource name will not be stored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPasswordSecretVersion() {
+    return passwordSecretVersion;
+  }
+
+  /**
+   * Optional. The resource name of the Secret Manager secret holding the password for the user to
+   * log into the database. The secret should be created using the regional endpoint (for API) or
+   * from the Regional Secrets page (for UI), and stored in the same region as the Cloud SQL
+   * instance. The expected resource name format is
+   * `projects/{project}/locations/{location}/secrets/{secret}/versions/{secret_version}`. Used
+   * together with the `user` field. The secret resource name will not be stored.
+   * @param passwordSecretVersion passwordSecretVersion or {@code null} for none
+   */
+  public ExecuteSqlPayload setPasswordSecretVersion(java.lang.String passwordSecretVersion) {
+    this.passwordSecretVersion = passwordSecretVersion;
     return this;
   }
 

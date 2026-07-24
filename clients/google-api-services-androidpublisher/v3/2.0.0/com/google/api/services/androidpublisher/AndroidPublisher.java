@@ -1650,6 +1650,984 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Appstoreappsreview collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Appstoreappsreview.List request = androidpublisher.appstoreappsreview().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Appstoreappsreview appstoreappsreview() {
+    return new Appstoreappsreview();
+  }
+
+  /**
+   * The "appstoreappsreview" collection of methods.
+   */
+  public class Appstoreappsreview {
+
+    /**
+     * Creates an app store hosted app. This must be called before any other RPCs for this hosted app.
+     *
+     * Create a request for the method "appstoreappsreview.createappstorehostedapp".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Createappstorehostedapp#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param content the {@link com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppRequest}
+     * @return the request
+     */
+    public Createappstorehostedapp createappstorehostedapp(java.lang.String appStorePackageName, com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppRequest content) throws java.io.IOException {
+      Createappstorehostedapp result = new Createappstorehostedapp(appStorePackageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Createappstorehostedapp extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps:create";
+
+      /**
+       * Creates an app store hosted app. This must be called before any other RPCs for this hosted app.
+       *
+       * Create a request for the method "appstoreappsreview.createappstorehostedapp".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Createappstorehostedapp#execute()} method to invoke the
+       * remote operation. <p> {@link Createappstorehostedapp#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param content the {@link com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppRequest}
+       * @since 1.13
+       */
+      protected Createappstorehostedapp(java.lang.String appStorePackageName, com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.CreateAppStoreHostedAppResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+      }
+
+      @Override
+      public Createappstorehostedapp set$Xgafv(java.lang.String $Xgafv) {
+        return (Createappstorehostedapp) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createappstorehostedapp setAccessToken(java.lang.String accessToken) {
+        return (Createappstorehostedapp) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Createappstorehostedapp setAlt(java.lang.String alt) {
+        return (Createappstorehostedapp) super.setAlt(alt);
+      }
+
+      @Override
+      public Createappstorehostedapp setCallback(java.lang.String callback) {
+        return (Createappstorehostedapp) super.setCallback(callback);
+      }
+
+      @Override
+      public Createappstorehostedapp setFields(java.lang.String fields) {
+        return (Createappstorehostedapp) super.setFields(fields);
+      }
+
+      @Override
+      public Createappstorehostedapp setKey(java.lang.String key) {
+        return (Createappstorehostedapp) super.setKey(key);
+      }
+
+      @Override
+      public Createappstorehostedapp setOauthToken(java.lang.String oauthToken) {
+        return (Createappstorehostedapp) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Createappstorehostedapp setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Createappstorehostedapp) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Createappstorehostedapp setQuotaUser(java.lang.String quotaUser) {
+        return (Createappstorehostedapp) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Createappstorehostedapp setUploadType(java.lang.String uploadType) {
+        return (Createappstorehostedapp) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createappstorehostedapp setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createappstorehostedapp) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Createappstorehostedapp setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      @Override
+      public Createappstorehostedapp set(String parameterName, Object value) {
+        return (Createappstorehostedapp) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates details for an app hosted on an app store. Use this to provide details for a new app, or
+     * to update details for an existing app. The update will be sent for review immediately after
+     * creation.
+     *
+     * Create a request for the method "appstoreappsreview.updateappstorehostedapp".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Updateappstorehostedapp#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppRequest}
+     * @return the request
+     */
+    public Updateappstorehostedapp updateappstorehostedapp(java.lang.String appStorePackageName, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppRequest content) throws java.io.IOException {
+      Updateappstorehostedapp result = new Updateappstorehostedapp(appStorePackageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Updateappstorehostedapp extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps:update";
+
+      /**
+       * Updates details for an app hosted on an app store. Use this to provide details for a new app,
+       * or to update details for an existing app. The update will be sent for review immediately after
+       * creation.
+       *
+       * Create a request for the method "appstoreappsreview.updateappstorehostedapp".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Updateappstorehostedapp#execute()} method to invoke the
+       * remote operation. <p> {@link Updateappstorehostedapp#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppRequest}
+       * @since 1.13
+       */
+      protected Updateappstorehostedapp(java.lang.String appStorePackageName, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+      }
+
+      @Override
+      public Updateappstorehostedapp set$Xgafv(java.lang.String $Xgafv) {
+        return (Updateappstorehostedapp) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updateappstorehostedapp setAccessToken(java.lang.String accessToken) {
+        return (Updateappstorehostedapp) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Updateappstorehostedapp setAlt(java.lang.String alt) {
+        return (Updateappstorehostedapp) super.setAlt(alt);
+      }
+
+      @Override
+      public Updateappstorehostedapp setCallback(java.lang.String callback) {
+        return (Updateappstorehostedapp) super.setCallback(callback);
+      }
+
+      @Override
+      public Updateappstorehostedapp setFields(java.lang.String fields) {
+        return (Updateappstorehostedapp) super.setFields(fields);
+      }
+
+      @Override
+      public Updateappstorehostedapp setKey(java.lang.String key) {
+        return (Updateappstorehostedapp) super.setKey(key);
+      }
+
+      @Override
+      public Updateappstorehostedapp setOauthToken(java.lang.String oauthToken) {
+        return (Updateappstorehostedapp) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Updateappstorehostedapp setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Updateappstorehostedapp) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Updateappstorehostedapp setQuotaUser(java.lang.String quotaUser) {
+        return (Updateappstorehostedapp) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Updateappstorehostedapp setUploadType(java.lang.String uploadType) {
+        return (Updateappstorehostedapp) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updateappstorehostedapp setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updateappstorehostedapp) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Updateappstorehostedapp setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      @Override
+      public Updateappstorehostedapp set(String parameterName, Object value) {
+        return (Updateappstorehostedapp) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the publish status of an app store hosted app. The default state after calling
+     * UpdateAppStoreHostedApp is PUBLISHED. It is not necessary to call this RPC explicitly to set an
+     * app to PUBLISHED.
+     *
+     * Create a request for the method "appstoreappsreview.updateappstorehostedapppublishstatus".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Updateappstorehostedapppublishstatus#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusRequest}
+     * @return the request
+     */
+    public Updateappstorehostedapppublishstatus updateappstorehostedapppublishstatus(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusRequest content) throws java.io.IOException {
+      Updateappstorehostedapppublishstatus result = new Updateappstorehostedapppublishstatus(appStorePackageName, packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Updateappstorehostedapppublishstatus extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}:updateAppStoreHostedAppPublishStatus";
+
+      /**
+       * Updates the publish status of an app store hosted app. The default state after calling
+       * UpdateAppStoreHostedApp is PUBLISHED. It is not necessary to call this RPC explicitly to set an
+       * app to PUBLISHED.
+       *
+       * Create a request for the method "appstoreappsreview.updateappstorehostedapppublishstatus".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Updateappstorehostedapppublishstatus#execute()} method to
+       * invoke the remote operation. <p> {@link Updateappstorehostedapppublishstatus#initialize(com.goo
+       * gle.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusRequest}
+       * @since 1.13
+       */
+      protected Updateappstorehostedapppublishstatus(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.UpdateAppStoreHostedAppPublishStatusResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus set$Xgafv(java.lang.String $Xgafv) {
+        return (Updateappstorehostedapppublishstatus) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setAccessToken(java.lang.String accessToken) {
+        return (Updateappstorehostedapppublishstatus) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setAlt(java.lang.String alt) {
+        return (Updateappstorehostedapppublishstatus) super.setAlt(alt);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setCallback(java.lang.String callback) {
+        return (Updateappstorehostedapppublishstatus) super.setCallback(callback);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setFields(java.lang.String fields) {
+        return (Updateappstorehostedapppublishstatus) super.setFields(fields);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setKey(java.lang.String key) {
+        return (Updateappstorehostedapppublishstatus) super.setKey(key);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setOauthToken(java.lang.String oauthToken) {
+        return (Updateappstorehostedapppublishstatus) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Updateappstorehostedapppublishstatus) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setQuotaUser(java.lang.String quotaUser) {
+        return (Updateappstorehostedapppublishstatus) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setUploadType(java.lang.String uploadType) {
+        return (Updateappstorehostedapppublishstatus) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Updateappstorehostedapppublishstatus) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Updateappstorehostedapppublishstatus setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      /** Required. Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app. */
+      public Updateappstorehostedapppublishstatus setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Updateappstorehostedapppublishstatus set(String parameterName, Object value) {
+        return (Updateappstorehostedapppublishstatus) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Upload an APK file for the hosted app. Returns an ID to track this APK.
+     *
+     * Create a request for the method "appstoreappsreview.uploadapk".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadApkRequest}
+     * @return the request
+     */
+    public Uploadapk uploadapk(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadApkRequest content) throws java.io.IOException {
+      Uploadapk result = new Uploadapk(appStorePackageName, packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Upload an APK file for the hosted app. Returns an ID to track this APK.
+     *
+     * Create a request for the method "appstoreappsreview.uploadapk".
+     *
+     * This request holds the parameters needed by the the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadApkRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Uploadapk uploadapk(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadApkRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Uploadapk result = new Uploadapk(appStorePackageName, packageName, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Uploadapk extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.UploadApkResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/apks:upload";
+
+      /**
+       * Upload an APK file for the hosted app. Returns an ID to track this APK.
+       *
+       * Create a request for the method "appstoreappsreview.uploadapk".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadapk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadApkRequest}
+       * @since 1.13
+       */
+      protected Uploadapk(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadApkRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.UploadApkResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      /**
+       * Upload an APK file for the hosted app. Returns an ID to track this APK.
+       *
+       * Create a request for the method "appstoreappsreview.uploadapk".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadapk#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadapk#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadApkRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Uploadapk(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadApkRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.androidpublisher.model.UploadApkResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Uploadapk set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadapk) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadapk setAccessToken(java.lang.String accessToken) {
+        return (Uploadapk) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Uploadapk setAlt(java.lang.String alt) {
+        return (Uploadapk) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadapk setCallback(java.lang.String callback) {
+        return (Uploadapk) super.setCallback(callback);
+      }
+
+      @Override
+      public Uploadapk setFields(java.lang.String fields) {
+        return (Uploadapk) super.setFields(fields);
+      }
+
+      @Override
+      public Uploadapk setKey(java.lang.String key) {
+        return (Uploadapk) super.setKey(key);
+      }
+
+      @Override
+      public Uploadapk setOauthToken(java.lang.String oauthToken) {
+        return (Uploadapk) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Uploadapk setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Uploadapk) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Uploadapk setQuotaUser(java.lang.String quotaUser) {
+        return (Uploadapk) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Uploadapk setUploadType(java.lang.String uploadType) {
+        return (Uploadapk) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Uploadapk setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadapk) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Uploadapk setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      /** Required. Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app. */
+      public Uploadapk setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Uploadapk set(String parameterName, Object value) {
+        return (Uploadapk) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Upload a policy declaration file for the hosted app. Returns an ID to track the file.
+     *
+     * Create a request for the method "appstoreappsreview.uploadappstoreapppolicydeclarationfile".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadappstoreapppolicydeclarationfile#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest}
+     * @return the request
+     */
+    public Uploadappstoreapppolicydeclarationfile uploadappstoreapppolicydeclarationfile(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest content) throws java.io.IOException {
+      Uploadappstoreapppolicydeclarationfile result = new Uploadappstoreapppolicydeclarationfile(appStorePackageName, packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Upload a policy declaration file for the hosted app. Returns an ID to track the file.
+     *
+     * Create a request for the method "appstoreappsreview.uploadappstoreapppolicydeclarationfile".
+     *
+     * This request holds the parameters needed by the the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadappstoreapppolicydeclarationfile#execute()} method to
+     * invoke the remote operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Uploadappstoreapppolicydeclarationfile uploadappstoreapppolicydeclarationfile(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Uploadappstoreapppolicydeclarationfile result = new Uploadappstoreapppolicydeclarationfile(appStorePackageName, packageName, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Uploadappstoreapppolicydeclarationfile extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/policyDeclarationFiles:upload";
+
+      /**
+       * Upload a policy declaration file for the hosted app. Returns an ID to track the file.
+       *
+       * Create a request for the method "appstoreappsreview.uploadappstoreapppolicydeclarationfile".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadappstoreapppolicydeclarationfile#execute()} method
+       * to invoke the remote operation. <p> {@link Uploadappstoreapppolicydeclarationfile#initialize(co
+       * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest}
+       * @since 1.13
+       */
+      protected Uploadappstoreapppolicydeclarationfile(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      /**
+       * Upload a policy declaration file for the hosted app. Returns an ID to track the file.
+       *
+       * Create a request for the method "appstoreappsreview.uploadappstoreapppolicydeclarationfile".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadappstoreapppolicydeclarationfile#execute()} method
+       * to invoke the remote operation. <p> {@link Uploadappstoreapppolicydeclarationfile#initialize(co
+       * m.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+       * initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Uploadappstoreapppolicydeclarationfile(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.androidpublisher.model.UploadAppStoreAppPolicyDeclarationFileResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadappstoreapppolicydeclarationfile) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setAccessToken(java.lang.String accessToken) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setAlt(java.lang.String alt) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setCallback(java.lang.String callback) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setCallback(callback);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setFields(java.lang.String fields) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setFields(fields);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setKey(java.lang.String key) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setKey(key);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setOauthToken(java.lang.String oauthToken) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setQuotaUser(java.lang.String quotaUser) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setUploadType(java.lang.String uploadType) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadappstoreapppolicydeclarationfile) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Uploadappstoreapppolicydeclarationfile setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      /** Required. Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app. */
+      public Uploadappstoreapppolicydeclarationfile setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Uploadappstoreapppolicydeclarationfile set(String parameterName, Object value) {
+        return (Uploadappstoreapppolicydeclarationfile) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Upload a screenshot or app icon for the hosted app. Returns an ID to track the image.
+     *
+     * Create a request for the method "appstoreappsreview.uploadimage".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadimage#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.
+     * @param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadImageRequest}
+     * @return the request
+     */
+    public Uploadimage uploadimage(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadImageRequest content) throws java.io.IOException {
+      Uploadimage result = new Uploadimage(appStorePackageName, packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    /**
+     * Upload a screenshot or app icon for the hosted app. Returns an ID to track the image.
+     *
+     * Create a request for the method "appstoreappsreview.uploadimage".
+     *
+     * This request holds the parameters needed by the the androidpublisher server.  After setting any
+     * optional parameters, call the {@link Uploadimage#execute()} method to invoke the remote
+     * operation.
+     *
+     * <p>
+     * This method should be used for uploading media content.
+     * </p>
+     *
+     * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+     * @param content the {@link com.google.api.services.androidpublisher.model.UploadImageRequest} media metadata or {@code null} if none
+     * @param mediaContent The media HTTP content.
+     * @return the request
+     * @throws java.io.IOException if the initialization of the request fails
+     */
+    public Uploadimage uploadimage(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadImageRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+      Uploadimage result = new Uploadimage(appStorePackageName, packageName, content, mediaContent);
+      initialize(result);
+      return result;
+    }
+
+    public class Uploadimage extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.UploadImageResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/appstore/{appStorePackageName}/apps/{packageName}/images:upload";
+
+      /**
+       * Upload a screenshot or app icon for the hosted app. Returns an ID to track the image.
+       *
+       * Create a request for the method "appstoreappsreview.uploadimage".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadimage#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadimage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.
+       * @param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadImageRequest}
+       * @since 1.13
+       */
+      protected Uploadimage(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadImageRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.UploadImageResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+      }
+
+      /**
+       * Upload a screenshot or app icon for the hosted app. Returns an ID to track the image.
+       *
+       * Create a request for the method "appstoreappsreview.uploadimage".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Uploadimage#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Uploadimage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * <p>
+       * This constructor should be used for uploading media content.
+       * </p>
+       *
+       * @param appStorePackageName Required. Package name of the third-party app store.@param packageName Required. Package name of the app.
+       * @param content the {@link com.google.api.services.androidpublisher.model.UploadImageRequest} media metadata or {@code null} if none
+       * @param mediaContent The media HTTP content.
+       * @since 1.13
+       */
+      protected Uploadimage(java.lang.String appStorePackageName, java.lang.String packageName, com.google.api.services.androidpublisher.model.UploadImageRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+        super(AndroidPublisher.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.androidpublisher.model.UploadImageResponse.class);
+        this.appStorePackageName = com.google.api.client.util.Preconditions.checkNotNull(appStorePackageName, "Required parameter appStorePackageName must be specified.");
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+        initializeMediaUpload(mediaContent);
+      }
+
+      @Override
+      public Uploadimage set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadimage) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadimage setAccessToken(java.lang.String accessToken) {
+        return (Uploadimage) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Uploadimage setAlt(java.lang.String alt) {
+        return (Uploadimage) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadimage setCallback(java.lang.String callback) {
+        return (Uploadimage) super.setCallback(callback);
+      }
+
+      @Override
+      public Uploadimage setFields(java.lang.String fields) {
+        return (Uploadimage) super.setFields(fields);
+      }
+
+      @Override
+      public Uploadimage setKey(java.lang.String key) {
+        return (Uploadimage) super.setKey(key);
+      }
+
+      @Override
+      public Uploadimage setOauthToken(java.lang.String oauthToken) {
+        return (Uploadimage) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Uploadimage setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Uploadimage) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Uploadimage setQuotaUser(java.lang.String quotaUser) {
+        return (Uploadimage) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Uploadimage setUploadType(java.lang.String uploadType) {
+        return (Uploadimage) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Uploadimage setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadimage) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Package name of the third-party app store. */
+      @com.google.api.client.util.Key
+      private java.lang.String appStorePackageName;
+
+      /** Required. Package name of the third-party app store.
+       */
+      public java.lang.String getAppStorePackageName() {
+        return appStorePackageName;
+      }
+
+      /** Required. Package name of the third-party app store. */
+      public Uploadimage setAppStorePackageName(java.lang.String appStorePackageName) {
+        this.appStorePackageName = appStorePackageName;
+        return this;
+      }
+
+      /** Required. Package name of the app. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Required. Package name of the app.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Required. Package name of the app. */
+      public Uploadimage setPackageName(java.lang.String packageName) {
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public Uploadimage set(String parameterName, Object value) {
+        return (Uploadimage) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Edits collection.
    *
    * <p>The typical use is:</p>
@@ -20762,514 +21740,6 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         @Override
         public Defer set(String parameterName, Object value) {
           return (Defer) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Deprecated: Use purchases.subscriptionsv2.get instead. Checks whether a user's subscription
-       * purchase is valid and returns its expiry time.
-       *
-       * Create a request for the method "subscriptions.get".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
-       * @return the request
-       */
-      public Get get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
-        Get result = new Get(packageName, subscriptionId, token);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SubscriptionPurchase> {
-
-        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}";
-
-        /**
-         * Deprecated: Use purchases.subscriptionsv2.get instead. Checks whether a user's subscription
-         * purchase is valid and returns its expiry time.
-         *
-         * Create a request for the method "subscriptions.get".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
-         * @since 1.13
-         */
-        protected Get(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
-          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.SubscriptionPurchase.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.subscriptionId = com.google.api.client.util.Preconditions.checkNotNull(subscriptionId, "Required parameter subscriptionId must be specified.");
-          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** The package name of the application for which this subscription was purchased (for example,
-       'com.some.thing').
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        public Get setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        @com.google.api.client.util.Key
-        private java.lang.String subscriptionId;
-
-        /** The purchased subscription ID (for example, 'monthly001').
-         */
-        public java.lang.String getSubscriptionId() {
-          return subscriptionId;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        public Get setSubscriptionId(java.lang.String subscriptionId) {
-          this.subscriptionId = subscriptionId;
-          return this;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        @com.google.api.client.util.Key
-        private java.lang.String token;
-
-        /** The token provided to the user's device when the subscription was purchased.
-         */
-        public java.lang.String getToken() {
-          return token;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        public Get setToken(java.lang.String token) {
-          this.token = token;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Deprecated: Use orders.refund instead. Refunds a user's subscription purchase, but the
-       * subscription remains valid until its expiration time and it will continue to recur.
-       *
-       * Create a request for the method "subscriptions.refund".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
-       *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-       * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
-       * @return the request
-       */
-      public Refund refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
-        Refund result = new Refund(packageName, subscriptionId, token);
-        initialize(result);
-        return result;
-      }
-
-      public class Refund extends AndroidPublisherRequest<Void> {
-
-        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund";
-
-        /**
-         * Deprecated: Use orders.refund instead. Refunds a user's subscription purchase, but the
-         * subscription remains valid until its expiration time and it will continue to recur.
-         *
-         * Create a request for the method "subscriptions.refund".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Refund#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Refund#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-         * @param subscriptionId "The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
-         * @since 1.13
-         */
-        protected Refund(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
-          super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.subscriptionId = com.google.api.client.util.Preconditions.checkNotNull(subscriptionId, "Required parameter subscriptionId must be specified.");
-          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
-        }
-
-        @Override
-        public Refund set$Xgafv(java.lang.String $Xgafv) {
-          return (Refund) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Refund setAccessToken(java.lang.String accessToken) {
-          return (Refund) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Refund setAlt(java.lang.String alt) {
-          return (Refund) super.setAlt(alt);
-        }
-
-        @Override
-        public Refund setCallback(java.lang.String callback) {
-          return (Refund) super.setCallback(callback);
-        }
-
-        @Override
-        public Refund setFields(java.lang.String fields) {
-          return (Refund) super.setFields(fields);
-        }
-
-        @Override
-        public Refund setKey(java.lang.String key) {
-          return (Refund) super.setKey(key);
-        }
-
-        @Override
-        public Refund setOauthToken(java.lang.String oauthToken) {
-          return (Refund) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Refund setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Refund) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Refund setQuotaUser(java.lang.String quotaUser) {
-          return (Refund) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Refund setUploadType(java.lang.String uploadType) {
-          return (Refund) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Refund setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Refund) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** The package name of the application for which this subscription was purchased (for example,
-       'com.some.thing').
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        public Refund setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** "The purchased subscription ID (for example, 'monthly001'). */
-        @com.google.api.client.util.Key
-        private java.lang.String subscriptionId;
-
-        /**" The purchased subscription ID (for example, 'monthly001').
-      "
-
-         */
-        public java.lang.String getSubscriptionId() {
-          return subscriptionId;
-        }
-
-        /** "The purchased subscription ID (for example, 'monthly001'). */
-        public Refund setSubscriptionId(java.lang.String subscriptionId) {
-          this.subscriptionId = subscriptionId;
-          return this;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        @com.google.api.client.util.Key
-        private java.lang.String token;
-
-        /** The token provided to the user's device when the subscription was purchased.
-         */
-        public java.lang.String getToken() {
-          return token;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        public Refund setToken(java.lang.String token) {
-          this.token = token;
-          return this;
-        }
-
-        @Override
-        public Refund set(String parameterName, Object value) {
-          return (Refund) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Deprecated: Use purchases.subscriptionsv2.revoke instead. Refunds and immediately revokes a
-       * user's subscription purchase. Access to the subscription will be terminated immediately and it
-       * will stop recurring.
-       *
-       * Create a request for the method "subscriptions.revoke".
-       *
-       * This request holds the parameters needed by the androidpublisher server.  After setting any
-       * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
-       *
-       * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-       * @param token The token provided to the user's device when the subscription was purchased.
-       * @return the request
-       */
-      public Revoke revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) throws java.io.IOException {
-        Revoke result = new Revoke(packageName, subscriptionId, token);
-        initialize(result);
-        return result;
-      }
-
-      public class Revoke extends AndroidPublisherRequest<Void> {
-
-        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke";
-
-        /**
-         * Deprecated: Use purchases.subscriptionsv2.revoke instead. Refunds and immediately revokes a
-         * user's subscription purchase. Access to the subscription will be terminated immediately and it
-         * will stop recurring.
-         *
-         * Create a request for the method "subscriptions.revoke".
-         *
-         * This request holds the parameters needed by the the androidpublisher server.  After setting any
-         * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param packageName The package name of the application for which this subscription was purchased (for example,
-       *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
-         * @param token The token provided to the user's device when the subscription was purchased.
-         * @since 1.13
-         */
-        protected Revoke(java.lang.String packageName, java.lang.String subscriptionId, java.lang.String token) {
-          super(AndroidPublisher.this, "POST", REST_PATH, null, Void.class);
-          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
-          this.subscriptionId = com.google.api.client.util.Preconditions.checkNotNull(subscriptionId, "Required parameter subscriptionId must be specified.");
-          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
-        }
-
-        @Override
-        public Revoke set$Xgafv(java.lang.String $Xgafv) {
-          return (Revoke) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Revoke setAccessToken(java.lang.String accessToken) {
-          return (Revoke) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Revoke setAlt(java.lang.String alt) {
-          return (Revoke) super.setAlt(alt);
-        }
-
-        @Override
-        public Revoke setCallback(java.lang.String callback) {
-          return (Revoke) super.setCallback(callback);
-        }
-
-        @Override
-        public Revoke setFields(java.lang.String fields) {
-          return (Revoke) super.setFields(fields);
-        }
-
-        @Override
-        public Revoke setKey(java.lang.String key) {
-          return (Revoke) super.setKey(key);
-        }
-
-        @Override
-        public Revoke setOauthToken(java.lang.String oauthToken) {
-          return (Revoke) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Revoke) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Revoke setQuotaUser(java.lang.String quotaUser) {
-          return (Revoke) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Revoke setUploadType(java.lang.String uploadType) {
-          return (Revoke) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Revoke) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String packageName;
-
-        /** The package name of the application for which this subscription was purchased (for example,
-       'com.some.thing').
-         */
-        public java.lang.String getPackageName() {
-          return packageName;
-        }
-
-        /**
-         * The package name of the application for which this subscription was purchased (for
-         * example, 'com.some.thing').
-         */
-        public Revoke setPackageName(java.lang.String packageName) {
-          this.packageName = packageName;
-          return this;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        @com.google.api.client.util.Key
-        private java.lang.String subscriptionId;
-
-        /** The purchased subscription ID (for example, 'monthly001').
-         */
-        public java.lang.String getSubscriptionId() {
-          return subscriptionId;
-        }
-
-        /** The purchased subscription ID (for example, 'monthly001'). */
-        public Revoke setSubscriptionId(java.lang.String subscriptionId) {
-          this.subscriptionId = subscriptionId;
-          return this;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        @com.google.api.client.util.Key
-        private java.lang.String token;
-
-        /** The token provided to the user's device when the subscription was purchased.
-         */
-        public java.lang.String getToken() {
-          return token;
-        }
-
-        /** The token provided to the user's device when the subscription was purchased. */
-        public Revoke setToken(java.lang.String token) {
-          this.token = token;
-          return this;
-        }
-
-        @Override
-        public Revoke set(String parameterName, Object value) {
-          return (Revoke) super.set(parameterName, value);
         }
       }
 

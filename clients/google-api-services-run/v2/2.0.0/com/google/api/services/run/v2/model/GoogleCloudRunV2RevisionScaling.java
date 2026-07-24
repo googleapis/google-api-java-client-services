@@ -40,7 +40,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
 
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
-   * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
    * scaling. CPU and concurrency scaling cannot both be disabled.
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
 
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
-   * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
    * scaling. CPU and concurrency scaling cannot both be disabled.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
 
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
-   * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
    * scaling. CPU and concurrency scaling cannot both be disabled.
    * @param cpuUtilization cpuUtilization or {@code null} for none
    */

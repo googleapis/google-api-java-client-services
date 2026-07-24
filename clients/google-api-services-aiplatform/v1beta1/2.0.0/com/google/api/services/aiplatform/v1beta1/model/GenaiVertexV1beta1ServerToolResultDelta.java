@@ -60,6 +60,12 @@ public final class GenaiVertexV1beta1ServerToolResultDelta extends com.google.ap
   private GenaiVertexV1beta1McpServerToolResultDelta mcpServerToolResult;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1RetrievalResultDelta retrievalResult;
+
+  /**
    * A signature hash for backend validation.
    * The value may be {@code null}.
    */
@@ -144,6 +150,21 @@ public final class GenaiVertexV1beta1ServerToolResultDelta extends com.google.ap
    */
   public GenaiVertexV1beta1ServerToolResultDelta setMcpServerToolResult(GenaiVertexV1beta1McpServerToolResultDelta mcpServerToolResult) {
     this.mcpServerToolResult = mcpServerToolResult;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1RetrievalResultDelta getRetrievalResult() {
+    return retrievalResult;
+  }
+
+  /**
+   * @param retrievalResult retrievalResult or {@code null} for none
+   */
+  public GenaiVertexV1beta1ServerToolResultDelta setRetrievalResult(GenaiVertexV1beta1RetrievalResultDelta retrievalResult) {
+    this.retrievalResult = retrievalResult;
     return this;
   }
 

@@ -80,6 +80,14 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
   private GoogleCloudAiplatformV1RetrievalMetadata retrievalMetadata;
 
   /**
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> retrievalQueries;
+
+  /**
    * Optional. A web search entry point that can be used to display search results. This field is
    * populated only when the grounding source is Google Search.
    * The value may be {@code null}.
@@ -199,6 +207,25 @@ public final class GoogleCloudAiplatformV1GroundingMetadata extends com.google.a
    */
   public GoogleCloudAiplatformV1GroundingMetadata setRetrievalMetadata(GoogleCloudAiplatformV1RetrievalMetadata retrievalMetadata) {
     this.retrievalMetadata = retrievalMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRetrievalQueries() {
+    return retrievalQueries;
+  }
+
+  /**
+   * Optional. The queries that were executed by the retrieval tools. This field is populated only
+   * when the grounding source is a retrieval tool, such as Vertex AI Search.
+   * @param retrievalQueries retrievalQueries or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingMetadata setRetrievalQueries(java.util.List<java.lang.String> retrievalQueries) {
+    this.retrievalQueries = retrievalQueries;
     return this;
   }
 

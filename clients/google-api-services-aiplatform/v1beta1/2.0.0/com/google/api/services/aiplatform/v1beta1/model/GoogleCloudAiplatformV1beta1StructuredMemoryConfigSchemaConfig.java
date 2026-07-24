@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1beta1StructuredMemoryConfigSchemaConfi
   private java.lang.String id;
 
   /**
+   * Optional. Represents the JSON Schema of the structured memories.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object jsonSchema;
+
+  /**
    * Optional. Represents the type of the structured memories associated with the schema. If not
    * set, then `STRUCTURED_PROFILE` will be used.
    * The value may be {@code null}.
@@ -69,6 +76,23 @@ public final class GoogleCloudAiplatformV1beta1StructuredMemoryConfigSchemaConfi
    */
   public GoogleCloudAiplatformV1beta1StructuredMemoryConfigSchemaConfig setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the JSON Schema of the structured memories.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getJsonSchema() {
+    return jsonSchema;
+  }
+
+  /**
+   * Optional. Represents the JSON Schema of the structured memories.
+   * @param jsonSchema jsonSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1StructuredMemoryConfigSchemaConfig setJsonSchema(java.lang.Object jsonSchema) {
+    this.jsonSchema = jsonSchema;
     return this;
   }
 

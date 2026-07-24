@@ -30,6 +30,33 @@ package com.google.api.services.aiplatform.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1DeprovisionSemanticGovernancePolicyEngineRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. If true, the operation bypass checks on current state and force the deprovisioning
+   * operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean force;
+
+  /**
+   * Optional. If true, the operation bypass checks on current state and force the deprovisioning
+   * operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForce() {
+    return force;
+  }
+
+  /**
+   * Optional. If true, the operation bypass checks on current state and force the deprovisioning
+   * operation.
+   * @param force force or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeprovisionSemanticGovernancePolicyEngineRequest setForce(java.lang.Boolean force) {
+    this.force = force;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1beta1DeprovisionSemanticGovernancePolicyEngineRequest set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1beta1DeprovisionSemanticGovernancePolicyEngineRequest) super.set(fieldName, value);

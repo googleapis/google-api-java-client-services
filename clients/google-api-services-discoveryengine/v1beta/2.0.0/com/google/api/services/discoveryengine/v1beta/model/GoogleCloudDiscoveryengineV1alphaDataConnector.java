@@ -402,6 +402,18 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private java.lang.String syncMode;
 
   /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
+
+  /**
    * Output only. Timestamp the DataConnector was last updated.
    * The value may be {@code null}.
    */
@@ -1270,6 +1282,33 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setSyncMode(java.lang.String syncMode) {
     this.syncMode = syncMode;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * @param tag tag or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 

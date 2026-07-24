@@ -140,7 +140,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -487,7 +487,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -504,7 +504,7 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

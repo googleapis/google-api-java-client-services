@@ -48,9 +48,8 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
   /**
    * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
    * on or off. The log records structured per-request metadata (such as principal, traffic type,
-   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
-   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
-   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * and token usage). When enabled, logs are emitted for all publisher-model traffic on the model
+   * -- Provisioned Throughput and on-demand alike. This is distinct from `logging_config` above:
    * that one logs raw request/response payloads to a BigQuery table, while this one controls
    * structured per-request metadata in Cloud Logging.
    * The value may be {@code null}.
@@ -106,9 +105,8 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
   /**
    * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
    * on or off. The log records structured per-request metadata (such as principal, traffic type,
-   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
-   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
-   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * and token usage). When enabled, logs are emitted for all publisher-model traffic on the model
+   * -- Provisioned Throughput and on-demand alike. This is distinct from `logging_config` above:
    * that one logs raw request/response payloads to a BigQuery table, while this one controls
    * structured per-request metadata in Cloud Logging.
    * @return value or {@code null} for none
@@ -120,9 +118,8 @@ public final class GoogleCloudAiplatformV1beta1PublisherModelConfig extends com.
   /**
    * Optional. Turns the per-request `aiplatform.googleapis.com/inference_request` Cloud Logging log
    * on or off. The log records structured per-request metadata (such as principal, traffic type,
-   * and token usage). Logs are emitted only for projects with Provisioned Throughput, including
-   * their on-demand and spill-over traffic; enabling this on a project without Provisioned
-   * Throughput has no effect until it is provisioned. This is distinct from `logging_config` above:
+   * and token usage). When enabled, logs are emitted for all publisher-model traffic on the model
+   * -- Provisioned Throughput and on-demand alike. This is distinct from `logging_config` above:
    * that one logs raw request/response payloads to a BigQuery table, while this one controls
    * structured per-request metadata in Cloud Logging.
    * @param inferenceEventLoggingConfig inferenceEventLoggingConfig or {@code null} for none

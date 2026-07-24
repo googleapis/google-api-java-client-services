@@ -49,6 +49,13 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
   private GenaiVertexV1beta1DynamicAgentConfig dynamicConfig;
 
   /**
+   * Max total tokens for the agent run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxTotalTokens;
+
+  /**
    * The name of the `Agent` used for generating the completion.
    * @return value or {@code null} for none
    */
@@ -92,6 +99,23 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
    */
   public GenaiVertexV1beta1AgentInteraction setDynamicConfig(GenaiVertexV1beta1DynamicAgentConfig dynamicConfig) {
     this.dynamicConfig = dynamicConfig;
+    return this;
+  }
+
+  /**
+   * Max total tokens for the agent run.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxTotalTokens() {
+    return maxTotalTokens;
+  }
+
+  /**
+   * Max total tokens for the agent run.
+   * @param maxTotalTokens maxTotalTokens or {@code null} for none
+   */
+  public GenaiVertexV1beta1AgentInteraction setMaxTotalTokens(java.lang.Long maxTotalTokens) {
+    this.maxTotalTokens = maxTotalTokens;
     return this;
   }
 

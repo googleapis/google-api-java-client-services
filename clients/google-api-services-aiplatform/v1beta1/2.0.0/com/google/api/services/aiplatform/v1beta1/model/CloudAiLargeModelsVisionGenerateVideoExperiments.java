@@ -52,6 +52,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.String codec;
 
   /**
+   * Optional. Color alignment configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig colorAlignment;
+
+  /**
    * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
    * in GenerateVideoRequest.
    * The value may be {@code null}.
@@ -131,6 +138,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionSeamless seamless;
 
   /**
+   * Optional. Spatial alignment configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsSpatialAlignmentConfig spatialAlignment;
+
+  /**
    * If true (default), truncate input videos that exceed the model's maximum frame count by
    * applying a frame_selection_config to __video_file__ inputs. Set to false to preserve the
    * existing fail-fast behavior.
@@ -204,6 +218,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setCodec(java.lang.String codec) {
     this.codec = codec;
+    return this;
+  }
+
+  /**
+   * Optional. Color alignment configuration.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig getColorAlignment() {
+    return colorAlignment;
+  }
+
+  /**
+   * Optional. Color alignment configuration.
+   * @param colorAlignment colorAlignment or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setColorAlignment(CloudAiLargeModelsVisionGenerateVideoExperimentsColorAlignmentConfig colorAlignment) {
+    this.colorAlignment = colorAlignment;
     return this;
   }
 
@@ -392,6 +423,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setSeamless(CloudAiLargeModelsVisionSeamless seamless) {
     this.seamless = seamless;
+    return this;
+  }
+
+  /**
+   * Optional. Spatial alignment configuration.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsSpatialAlignmentConfig getSpatialAlignment() {
+    return spatialAlignment;
+  }
+
+  /**
+   * Optional. Spatial alignment configuration.
+   * @param spatialAlignment spatialAlignment or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setSpatialAlignment(CloudAiLargeModelsVisionGenerateVideoExperimentsSpatialAlignmentConfig spatialAlignment) {
+    this.spatialAlignment = spatialAlignment;
     return this;
   }
 

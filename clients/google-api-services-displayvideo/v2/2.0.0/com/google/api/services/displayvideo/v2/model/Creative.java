@@ -379,6 +379,13 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean skippable;
 
   /**
+   * Optional. Whether the creative contains synthetic content or was created using AI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syntheticContentAttestationStatus;
+
+  /**
    * Optional. The original third-party tag used for the creative. Required and only valid for
    * third-party tag creatives. Third-party tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
@@ -1252,6 +1259,23 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setSkippable(java.lang.Boolean skippable) {
     this.skippable = skippable;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the creative contains synthetic content or was created using AI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyntheticContentAttestationStatus() {
+    return syntheticContentAttestationStatus;
+  }
+
+  /**
+   * Optional. Whether the creative contains synthetic content or was created using AI.
+   * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
+   */
+  public Creative setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {
+    this.syntheticContentAttestationStatus = syntheticContentAttestationStatus;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.serviceusage.v1beta1.model;
 
 /**
- * The consumer policy rule that defines usable services and service groups.
+ * The consumer policy rule that defines enabled services and groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -37,16 +37,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   private java.lang.String enableType;
 
   /**
-   * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> groups;
-
-  /**
-   * DEPRECATED: Please use field `values`. Service should have prefix `services/`. The names of the
-   * services that are enabled. Example: `storage.googleapis.com`.
+   * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,27 +69,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getGroups() {
-    return groups;
-  }
-
-  /**
-   * DEPRECATED: Please use field `values`. Service group should have prefix `groups/`. The names of
-   * the service groups that are enabled (Not Implemented). Example: `groups/googleServices`.
-   * @param groups groups or {@code null} for none
-   */
-  public EnableRule setGroups(java.util.List<java.lang.String> groups) {
-    this.groups = groups;
-    return this;
-  }
-
-  /**
-   * DEPRECATED: Please use field `values`. Service should have prefix `services/`. The names of the
-   * services that are enabled. Example: `storage.googleapis.com`.
+   * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -106,8 +77,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * DEPRECATED: Please use field `values`. Service should have prefix `services/`. The names of the
-   * services that are enabled. Example: `storage.googleapis.com`.
+   * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
    * @param services services or {@code null} for none
    */
   public EnableRule setServices(java.util.List<java.lang.String> services) {

@@ -34,7 +34,7 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AnalysisResult analysis;
+  private AnalysisResult analysisResult;
 
   /**
    * Output only. The type of analysis.
@@ -63,16 +63,16 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * Output only. Analysis result of updating a policy.
    * @return value or {@code null} for none
    */
-  public AnalysisResult getAnalysis() {
-    return analysis;
+  public AnalysisResult getAnalysisResult() {
+    return analysisResult;
   }
 
   /**
    * Output only. Analysis result of updating a policy.
-   * @param analysis analysis or {@code null} for none
+   * @param analysisResult analysisResult or {@code null} for none
    */
-  public Analysis setAnalysis(AnalysisResult analysis) {
-    this.analysis = analysis;
+  public Analysis setAnalysisResult(AnalysisResult analysisResult) {
+    this.analysisResult = analysisResult;
     return this;
   }
 

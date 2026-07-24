@@ -27,14 +27,14 @@ package com.google.api.services.serviceusage.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Analysis extends com.google.api.client.json.GenericJson {
+public final class GoogleApiServiceusageV2alphaAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Analysis result of updating a policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AnalysisResult analysisResult;
+  private GoogleApiServiceusageV2alphaAnalysisResult analysisResult;
 
   /**
    * Output only. The type of analysis.
@@ -63,7 +63,7 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * Output only. Analysis result of updating a policy.
    * @return value or {@code null} for none
    */
-  public AnalysisResult getAnalysisResult() {
+  public GoogleApiServiceusageV2alphaAnalysisResult getAnalysisResult() {
     return analysisResult;
   }
 
@@ -71,7 +71,7 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * Output only. Analysis result of updating a policy.
    * @param analysisResult analysisResult or {@code null} for none
    */
-  public Analysis setAnalysisResult(AnalysisResult analysisResult) {
+  public GoogleApiServiceusageV2alphaAnalysis setAnalysisResult(GoogleApiServiceusageV2alphaAnalysisResult analysisResult) {
     this.analysisResult = analysisResult;
     return this;
   }
@@ -88,7 +88,7 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * Output only. The type of analysis.
    * @param analysisType analysisType or {@code null} for none
    */
-  public Analysis setAnalysisType(java.lang.String analysisType) {
+  public GoogleApiServiceusageV2alphaAnalysis setAnalysisType(java.lang.String analysisType) {
     this.analysisType = analysisType;
     return this;
   }
@@ -107,7 +107,7 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * analysis, service resource usage analysis, etc.
    * @param displayName displayName or {@code null} for none
    */
-  public Analysis setDisplayName(java.lang.String displayName) {
+  public GoogleApiServiceusageV2alphaAnalysis setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -126,19 +126,19 @@ public final class Analysis extends com.google.api.client.json.GenericJson {
    * `services/storage.googleapis.com`.
    * @param service service or {@code null} for none
    */
-  public Analysis setService(java.lang.String service) {
+  public GoogleApiServiceusageV2alphaAnalysis setService(java.lang.String service) {
     this.service = service;
     return this;
   }
 
   @Override
-  public Analysis set(String fieldName, Object value) {
-    return (Analysis) super.set(fieldName, value);
+  public GoogleApiServiceusageV2alphaAnalysis set(String fieldName, Object value) {
+    return (GoogleApiServiceusageV2alphaAnalysis) super.set(fieldName, value);
   }
 
   @Override
-  public Analysis clone() {
-    return (Analysis) super.clone();
+  public GoogleApiServiceusageV2alphaAnalysis clone() {
+    return (GoogleApiServiceusageV2alphaAnalysis) super.clone();
   }
 
 }

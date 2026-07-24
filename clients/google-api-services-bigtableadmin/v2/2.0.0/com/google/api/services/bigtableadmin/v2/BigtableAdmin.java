@@ -7444,6 +7444,26 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
           /**
+           * Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreWarnings;
+
+          /** Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          public java.lang.Boolean getIgnoreWarnings() {
+            return ignoreWarnings;
+          }
+
+          /**
+           * Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          public Create setIgnoreWarnings(java.lang.Boolean ignoreWarnings) {
+            this.ignoreWarnings = ignoreWarnings;
+            return this;
+          }
+
+          /**
            * Required. The ID to use for the materialized view, which will become the final
            * component of the materialized view's resource name.
            */

@@ -32,6 +32,13 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class DbSystemShape extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Available core count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availableCoreCount;
+
+  /**
    * Optional. Number of cores per node.
    * The value may be {@code null}.
    */
@@ -51,6 +58,13 @@ public final class DbSystemShape extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Integer availableMemoryPerNodeGb;
+
+  /**
+   * Optional. Core count increment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer coreCountIncrement;
 
   /**
    * Optional. Maximum number of database servers.
@@ -102,6 +116,13 @@ public final class DbSystemShape extends com.google.api.client.json.GenericJson 
   private java.lang.Integer minStorageCount;
 
   /**
+   * Optional. Minimum core count per node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minimumCoreCount;
+
+  /**
    * Identifier. The name of the Database System Shape resource with the format:
    * projects/{project}/locations/{region}/dbSystemShapes/{db_system_shape}
    * The value may be {@code null}.
@@ -115,6 +136,23 @@ public final class DbSystemShape extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String shape;
+
+  /**
+   * Optional. Available core count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailableCoreCount() {
+    return availableCoreCount;
+  }
+
+  /**
+   * Optional. Available core count.
+   * @param availableCoreCount availableCoreCount or {@code null} for none
+   */
+  public DbSystemShape setAvailableCoreCount(java.lang.Integer availableCoreCount) {
+    this.availableCoreCount = availableCoreCount;
+    return this;
+  }
 
   /**
    * Optional. Number of cores per node.
@@ -164,6 +202,23 @@ public final class DbSystemShape extends com.google.api.client.json.GenericJson 
    */
   public DbSystemShape setAvailableMemoryPerNodeGb(java.lang.Integer availableMemoryPerNodeGb) {
     this.availableMemoryPerNodeGb = availableMemoryPerNodeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Core count increment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCoreCountIncrement() {
+    return coreCountIncrement;
+  }
+
+  /**
+   * Optional. Core count increment.
+   * @param coreCountIncrement coreCountIncrement or {@code null} for none
+   */
+  public DbSystemShape setCoreCountIncrement(java.lang.Integer coreCountIncrement) {
+    this.coreCountIncrement = coreCountIncrement;
     return this;
   }
 
@@ -283,6 +338,23 @@ public final class DbSystemShape extends com.google.api.client.json.GenericJson 
    */
   public DbSystemShape setMinStorageCount(java.lang.Integer minStorageCount) {
     this.minStorageCount = minStorageCount;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum core count per node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinimumCoreCount() {
+    return minimumCoreCount;
+  }
+
+  /**
+   * Optional. Minimum core count per node.
+   * @param minimumCoreCount minimumCoreCount or {@code null} for none
+   */
+  public DbSystemShape setMinimumCoreCount(java.lang.Integer minimumCoreCount) {
+    this.minimumCoreCount = minimumCoreCount;
     return this;
   }
 

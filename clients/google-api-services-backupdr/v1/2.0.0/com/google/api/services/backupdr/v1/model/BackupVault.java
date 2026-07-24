@@ -31,9 +31,9 @@ package com.google.api.services.backupdr.v1.model;
 public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
-   * if not provided during creation.
+   * Optional. Restricts access to certain sources and destinations for data being sent into, or
+   * restored from, the backup vault. Defaults to WITHIN_ORGANIZATION if not provided during
+   * creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +169,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
-   * if not provided during creation.
+   * Optional. Restricts access to certain sources and destinations for data being sent into, or
+   * restored from, the backup vault. Defaults to WITHIN_ORGANIZATION if not provided during
+   * creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessRestriction() {
@@ -179,9 +179,9 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
-   * if not provided during creation.
+   * Optional. Restricts access to certain sources and destinations for data being sent into, or
+   * restored from, the backup vault. Defaults to WITHIN_ORGANIZATION if not provided during
+   * creation.
    * @param accessRestriction accessRestriction or {@code null} for none
    */
   public BackupVault setAccessRestriction(java.lang.String accessRestriction) {

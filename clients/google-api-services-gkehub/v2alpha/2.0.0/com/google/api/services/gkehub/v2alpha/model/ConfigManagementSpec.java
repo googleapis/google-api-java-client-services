@@ -66,8 +66,9 @@ public final class ConfigManagementSpec extends com.google.api.client.json.Gener
   private ConfigManagementHierarchyControllerConfig hierarchyController;
 
   /**
-   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
-   * Config Sync only supports manual upgrades.
+   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
+   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
+   * this field instead, which is behaviorally equivalent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +176,9 @@ public final class ConfigManagementSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
-   * Config Sync only supports manual upgrades.
+   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
+   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
+   * this field instead, which is behaviorally equivalent.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -184,8 +186,9 @@ public final class ConfigManagementSpec extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
-   * Config Sync only supports manual upgrades.
+   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
+   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
+   * this field instead, which is behaviorally equivalent.
    * @param management management or {@code null} for none
    */
   public ConfigManagementSpec setManagement(java.lang.String management) {

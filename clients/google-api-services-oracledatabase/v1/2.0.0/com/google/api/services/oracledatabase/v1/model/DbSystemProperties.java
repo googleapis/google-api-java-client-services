@@ -52,7 +52,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   private DataCollectionOptionsDbSystem dataCollectionOptions;
 
   /**
-   * Optional. The data storage size in GB that is currently available to DbSystems.
+   * Optional. The data storage size in GB that is currently available to DbSystems. The value is
+   * same as initial_data_storage_size_gb. This can be modified from OCI console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,14 +123,16 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   private java.lang.String lifecycleState;
 
   /**
-   * Optional. The memory size in GB.
+   * Optional. The memory size in GB. This value can not be set and is automatically calculated
+   * based on the number of ECPUs allocated to the DbSystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer memorySizeGb;
 
   /**
-   * Optional. The number of nodes in the DbSystem.
+   * Optional. The number of nodes to launch for a virtual machine DbSystem. By default this will be
+   * set to 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +153,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   private java.lang.String privateIp;
 
   /**
-   * Optional. The reco/redo storage size in GB.
+   * Optional. The reco/redo storage size in GB. The value for recovery storage size is based on the
+   * available data storage size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +233,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The data storage size in GB that is currently available to DbSystems.
+   * Optional. The data storage size in GB that is currently available to DbSystems. The value is
+   * same as initial_data_storage_size_gb. This can be modified from OCI console.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataStorageSizeGb() {
@@ -237,7 +242,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The data storage size in GB that is currently available to DbSystems.
+   * Optional. The data storage size in GB that is currently available to DbSystems. The value is
+   * same as initial_data_storage_size_gb. This can be modified from OCI console.
    * @param dataStorageSizeGb dataStorageSizeGb or {@code null} for none
    */
   public DbSystemProperties setDataStorageSizeGb(java.lang.Integer dataStorageSizeGb) {
@@ -399,7 +405,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The memory size in GB.
+   * Optional. The memory size in GB. This value can not be set and is automatically calculated
+   * based on the number of ECPUs allocated to the DbSystem.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMemorySizeGb() {
@@ -407,7 +414,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The memory size in GB.
+   * Optional. The memory size in GB. This value can not be set and is automatically calculated
+   * based on the number of ECPUs allocated to the DbSystem.
    * @param memorySizeGb memorySizeGb or {@code null} for none
    */
   public DbSystemProperties setMemorySizeGb(java.lang.Integer memorySizeGb) {
@@ -416,7 +424,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The number of nodes in the DbSystem.
+   * Optional. The number of nodes to launch for a virtual machine DbSystem. By default this will be
+   * set to 1.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -424,7 +433,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The number of nodes in the DbSystem.
+   * Optional. The number of nodes to launch for a virtual machine DbSystem. By default this will be
+   * set to 1.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public DbSystemProperties setNodeCount(java.lang.Integer nodeCount) {
@@ -467,7 +477,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The reco/redo storage size in GB.
+   * Optional. The reco/redo storage size in GB. The value for recovery storage size is based on the
+   * available data storage size.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRecoStorageSizeGb() {
@@ -475,7 +486,8 @@ public final class DbSystemProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The reco/redo storage size in GB.
+   * Optional. The reco/redo storage size in GB. The value for recovery storage size is based on the
+   * available data storage size.
    * @param recoStorageSizeGb recoStorageSizeGb or {@code null} for none
    */
   public DbSystemProperties setRecoStorageSizeGb(java.lang.Integer recoStorageSizeGb) {

@@ -32,7 +32,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * It is required when the `service` field points to a backend service or a wasm plugin.
+   * It is required when the `service` field points to a backend service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +96,10 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
-   * omitted for AuthzExtensions that do not reference a backend service. For more information,
-   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
-   * service).
+   * same load balancing scheme. The supported values are `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
+   * You can omit this field for `AuthzExtensions` resources that don't reference a backend service.
+   * For more information, see [Backend services overview](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,11 +126,17 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension: For global AuthzExtension, `service` must be a fully-qualified reference to a
+   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in
+   * the format: `https://www.googleapis.com/compute/v1/projects/{project}/global/backendServices/{b
+   * ackendService}`. For regional AuthzExtension, `service` must be a fully-qualified reference to
+   * one of the following: * a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
-   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ces/{backendService}`. * a fully qualified domain name that can be resolved by the Google Cloud
+   * DNS. * `iap.googleapis.com` and it can only be referenced by an AuthzPolicy with the
+   * policyProfile set to REQUEST_AUTHZ. * `modelarmor..rep.googleapis.com` and it can only be
+   * referenced by an AuthzPolicy with the policyProfile set to CONTENT_AUTHZ.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +168,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * It is required when the `service` field points to a backend service or a wasm plugin.
+   * It is required when the `service` field points to a backend service.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -171,7 +177,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
-   * It is required when the `service` field points to a backend service or a wasm plugin.
+   * It is required when the `service` field points to a backend service.
    * @param authority authority or {@code null} for none
    */
   public AuthzExtension setAuthority(java.lang.String authority) {
@@ -311,10 +317,10 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
-   * omitted for AuthzExtensions that do not reference a backend service. For more information,
-   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
-   * service).
+   * same load balancing scheme. The supported values are `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
+   * You can omit this field for `AuthzExtensions` resources that don't reference a backend service.
+   * For more information, see [Backend services overview](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -323,10 +329,10 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
-   * omitted for AuthzExtensions that do not reference a backend service. For more information,
-   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
-   * service).
+   * same load balancing scheme. The supported values are `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
+   * You can omit this field for `AuthzExtensions` resources that don't reference a backend service.
+   * For more information, see [Backend services overview](https://cloud.google.com/load-
+   * balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public AuthzExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -380,11 +386,17 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension: For global AuthzExtension, `service` must be a fully-qualified reference to a
+   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in
+   * the format: `https://www.googleapis.com/compute/v1/projects/{project}/global/backendServices/{b
+   * ackendService}`. For regional AuthzExtension, `service` must be a fully-qualified reference to
+   * one of the following: * a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
-   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ces/{backendService}`. * a fully qualified domain name that can be resolved by the Google Cloud
+   * DNS. * `iap.googleapis.com` and it can only be referenced by an AuthzPolicy with the
+   * policyProfile set to REQUEST_AUTHZ. * `modelarmor..rep.googleapis.com` and it can only be
+   * referenced by an AuthzPolicy with the policyProfile set to CONTENT_AUTHZ.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -393,11 +405,17 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension: For global AuthzExtension, `service` must be a fully-qualified reference to a
+   * [backend service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in
+   * the format: `https://www.googleapis.com/compute/v1/projects/{project}/global/backendServices/{b
+   * ackendService}`. For regional AuthzExtension, `service` must be a fully-qualified reference to
+   * one of the following: * a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
-   * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
-   * ndServices/{backendService}`.
+   * ces/{backendService}`. * a fully qualified domain name that can be resolved by the Google Cloud
+   * DNS. * `iap.googleapis.com` and it can only be referenced by an AuthzPolicy with the
+   * policyProfile set to REQUEST_AUTHZ. * `modelarmor..rep.googleapis.com` and it can only be
+   * referenced by an AuthzPolicy with the policyProfile set to CONTENT_AUTHZ.
    * @param service service or {@code null} for none
    */
   public AuthzExtension setService(java.lang.String service) {

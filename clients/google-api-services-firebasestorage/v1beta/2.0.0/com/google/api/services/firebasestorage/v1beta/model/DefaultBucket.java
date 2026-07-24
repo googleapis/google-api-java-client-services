@@ -40,7 +40,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   private Bucket bucket;
 
   /**
-   * Immutable. Location of the default bucket.
+   * Required. Immutable. Location of the default bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. Location of the default bucket.
+   * Required. Immutable. Location of the default bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -87,7 +87,7 @@ public final class DefaultBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. Location of the default bucket.
+   * Required. Immutable. Location of the default bucket.
    * @param location location or {@code null} for none
    */
   public DefaultBucket setLocation(java.lang.String location) {

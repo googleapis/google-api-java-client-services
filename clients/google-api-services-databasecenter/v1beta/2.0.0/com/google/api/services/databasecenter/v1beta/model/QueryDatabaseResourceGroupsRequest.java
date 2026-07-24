@@ -103,6 +103,14 @@ public final class QueryDatabaseResourceGroupsRequest extends com.google.api.cli
   private java.util.List<SignalFilter> signalFilters;
 
   /**
+   * Optional. Filters based on signal and product. The filter list will be ORed across pairs and
+   * ANDed within a signal and products pair.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SignalProductsFilters> signalProductsFilters;
+
+  /**
    * Optional. Groups of signal types that are requested.
    * The value may be {@code null}.
    */
@@ -270,6 +278,25 @@ public final class QueryDatabaseResourceGroupsRequest extends com.google.api.cli
    */
   public QueryDatabaseResourceGroupsRequest setSignalFilters(java.util.List<SignalFilter> signalFilters) {
     this.signalFilters = signalFilters;
+    return this;
+  }
+
+  /**
+   * Optional. Filters based on signal and product. The filter list will be ORed across pairs and
+   * ANDed within a signal and products pair.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SignalProductsFilters> getSignalProductsFilters() {
+    return signalProductsFilters;
+  }
+
+  /**
+   * Optional. Filters based on signal and product. The filter list will be ORed across pairs and
+   * ANDed within a signal and products pair.
+   * @param signalProductsFilters signalProductsFilters or {@code null} for none
+   */
+  public QueryDatabaseResourceGroupsRequest setSignalProductsFilters(java.util.List<SignalProductsFilters> signalProductsFilters) {
+    this.signalProductsFilters = signalProductsFilters;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class Proto2FileDescriptorProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_begin TODO(b/538805613) Deprecate and remove this field in favor of enums.
    * copybara:strip_end
    * The value may be {@code null}.
    */
@@ -95,7 +95,7 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   private java.lang.String syntax;
 
   /**
-   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_begin TODO(b/538805613) Deprecate and remove this field in favor of enums.
    * copybara:strip_end
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   }
 
   /**
-   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_begin TODO(b/538805613) Deprecate and remove this field in favor of enums.
    * copybara:strip_end
    * @param editionDeprecated editionDeprecated or {@code null} for none
    */

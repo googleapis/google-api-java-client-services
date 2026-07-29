@@ -17,7 +17,9 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * Response message for CompletionService.PurgeCompletionSuggestions method.
+ * Response message for CompletionService.PurgeCompletionSuggestions method. If the long running
+ * operation is successfully done, then this message is returned by the
+ * google.longrunning.Operations.response field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

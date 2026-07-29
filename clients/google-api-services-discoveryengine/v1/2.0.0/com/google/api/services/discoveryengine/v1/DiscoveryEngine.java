@@ -18586,6 +18586,40 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 return this;
               }
 
+              /**
+               * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
+               * backend computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin
+               * "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced
+               * model set with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB`
+               * returns the end-user selector. The mobile surface is detected from the `X-Goog-
+               * Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String modelInfoView;
+
+              /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
+             `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin "Feature Management" page
+             (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+             populated; unset / `MODEL_INFO_VIEW_WEB` returns the end-user selector. The mobile surface is
+             detected from the `X-Goog-Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              public java.lang.String getModelInfoView() {
+                return modelInfoView;
+              }
+
+              /**
+               * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
+               * backend computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin
+               * "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced
+               * model set with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB`
+               * returns the end-user selector. The mobile surface is detected from the `X-Goog-
+               * Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              public Get setModelInfoView(java.lang.String modelInfoView) {
+                this.modelInfoView = modelInfoView;
+                return this;
+              }
+
               @Override
               public Get set(String parameterName, Object value) {
                 return (Get) super.set(parameterName, value);
@@ -28645,6 +28679,40 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                */
               public Get setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
+                return this;
+              }
+
+              /**
+               * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
+               * backend computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin
+               * "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced
+               * model set with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB`
+               * returns the end-user selector. The mobile surface is detected from the `X-Goog-
+               * Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String modelInfoView;
+
+              /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
+             `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin "Feature Management" page
+             (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+             populated; unset / `MODEL_INFO_VIEW_WEB` returns the end-user selector. The mobile surface is
+             detected from the `X-Goog-Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              public java.lang.String getModelInfoView() {
+                return modelInfoView;
+              }
+
+              /**
+               * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
+               * backend computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin
+               * "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced
+               * model set with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB`
+               * returns the end-user selector. The mobile surface is detected from the `X-Goog-
+               * Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+               */
+              public Get setModelInfoView(java.lang.String modelInfoView) {
+                this.modelInfoView = modelInfoView;
                 return this;
               }
 
@@ -42586,6 +42654,40 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
+              return this;
+            }
+
+            /**
+             * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend
+             * computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin "Feature
+             * Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set
+             * with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB` returns the
+             * end-user selector. The mobile surface is detected from the `X-Goog-Gemini-Enterprise-
+             * Mobile` header instead (see `ModelInfoView`).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String modelInfoView;
+
+            /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
+           `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin "Feature Management" page
+           (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+           populated; unset / `MODEL_INFO_VIEW_WEB` returns the end-user selector. The mobile surface is
+           detected from the `X-Goog-Gemini-Enterprise-Mobile` header instead (see `ModelInfoView`).
+             */
+            public java.lang.String getModelInfoView() {
+              return modelInfoView;
+            }
+
+            /**
+             * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend
+             * computes. `MODEL_INFO_VIEW_ADMIN` is set by the Cloud Console admin "Feature
+             * Management" page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set
+             * with `ResolvedModel.admin_view` populated; unset / `MODEL_INFO_VIEW_WEB` returns the
+             * end-user selector. The mobile surface is detected from the `X-Goog-Gemini-Enterprise-
+             * Mobile` header instead (see `ModelInfoView`).
+             */
+            public Get setModelInfoView(java.lang.String modelInfoView) {
+              this.modelInfoView = modelInfoView;
               return this;
             }
 

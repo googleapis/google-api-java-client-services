@@ -137,18 +137,10 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   private String createTime;
 
   /**
-   * Required. The identifier for the data source. This is a partial list of supported connectors.
-   * Please refer to the
-   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
-   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
-   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
-   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
-   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
-   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
-   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
-   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
-   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
-   * `trello` * `workday` * `zendesk`
+   * Required. The identifier for the data source. For the full, up-to-date list of supported
+   * connectors and their values, see [Connect a third-party data
+   * source](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-third-party-
+   * data-source#sources-by-launch-stage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,6 +281,14 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   private String latestPauseTime;
 
   /**
+   * Optional. User-facing metadata for the connector. Populated from the connector's generated
+   * metadata / registry `ConnectorSource`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata metadata;
+
+  /**
    * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    * The value may be {@code null}.
@@ -393,6 +393,18 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncMode;
+
+  /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
 
   /**
    * Output only. Timestamp the DataConnector was last updated.
@@ -644,18 +656,10 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   }
 
   /**
-   * Required. The identifier for the data source. This is a partial list of supported connectors.
-   * Please refer to the
-   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
-   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
-   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
-   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
-   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
-   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
-   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
-   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
-   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
-   * `trello` * `workday` * `zendesk`
+   * Required. The identifier for the data source. For the full, up-to-date list of supported
+   * connectors and their values, see [Connect a third-party data
+   * source](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-third-party-
+   * data-source#sources-by-launch-stage).
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSource() {
@@ -663,18 +667,10 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   }
 
   /**
-   * Required. The identifier for the data source. This is a partial list of supported connectors.
-   * Please refer to the
-   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
-   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
-   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
-   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
-   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
-   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
-   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
-   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
-   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
-   * `trello` * `workday` * `zendesk`
+   * Required. The identifier for the data source. For the full, up-to-date list of supported
+   * connectors and their values, see [Connect a third-party data
+   * source](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-third-party-
+   * data-source#sources-by-launch-stage).
    * @param dataSource dataSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1DataConnector setDataSource(java.lang.String dataSource) {
@@ -999,6 +995,25 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   }
 
   /**
+   * Optional. User-facing metadata for the connector. Populated from the connector's generated
+   * metadata / registry `ConnectorSource`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional. User-facing metadata for the connector. Populated from the connector's generated
+   * metadata / registry `ConnectorSource`.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnector setMetadata(GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
    * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    * @return value or {@code null} for none
@@ -1246,6 +1261,33 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
    */
   public GoogleCloudDiscoveryengineV1DataConnector setSyncMode(java.lang.String syncMode) {
     this.syncMode = syncMode;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
+   * by multiple connectors under the same (project, location, collection, data_source); tag-based
+   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
+   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
+   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * backfill.
+   * @param tag tag or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnector setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 

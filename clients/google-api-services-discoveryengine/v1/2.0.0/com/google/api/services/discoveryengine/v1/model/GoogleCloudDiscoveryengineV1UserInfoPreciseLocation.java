@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * Precise location info with multiple representation options. Currently only latitude and longitude
- * point is supported.
+ * Precise location info with multiple representation options.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -31,8 +30,8 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1UserInfoPreciseLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Location represented by a natural language address. Will later be geocoded and
-   * converted to either a point or a polygon.
+   * Location represented by a natural language address. Will later be geocoded and converted to
+   * either a point or a polygon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +45,8 @@ public final class GoogleCloudDiscoveryengineV1UserInfoPreciseLocation extends c
   private GoogleTypeLatLng point;
 
   /**
-   * Optional. Location represented by a natural language address. Will later be geocoded and
-   * converted to either a point or a polygon.
+   * Location represented by a natural language address. Will later be geocoded and converted to
+   * either a point or a polygon.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -55,8 +54,8 @@ public final class GoogleCloudDiscoveryengineV1UserInfoPreciseLocation extends c
   }
 
   /**
-   * Optional. Location represented by a natural language address. Will later be geocoded and
-   * converted to either a point or a polygon.
+   * Location represented by a natural language address. Will later be geocoded and converted to
+   * either a point or a polygon.
    * @param address address or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1UserInfoPreciseLocation setAddress(java.lang.String address) {

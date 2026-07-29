@@ -40,9 +40,9 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
   private java.lang.String enableMode;
 
   /**
-   * If true, with best effort, try to detect and remove the suggestions containing certain types of
-   * PII information. This detection is performated by
-   * [DLP](https://cloud.google.com/security/products/dlp) under the hood.
+   * Deprecated: this field has no effect. As of May 2025, PII suggestion filtering using
+   * [DLP](https://cloud.google.com/security/products/dlp) is always on for all data stores and
+   * can't be configured per data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,9 +151,9 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
   }
 
   /**
-   * If true, with best effort, try to detect and remove the suggestions containing certain types of
-   * PII information. This detection is performated by
-   * [DLP](https://cloud.google.com/security/products/dlp) under the hood.
+   * Deprecated: this field has no effect. As of May 2025, PII suggestion filtering using
+   * [DLP](https://cloud.google.com/security/products/dlp) is always on for all data stores and
+   * can't be configured per data store.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFilterPiiSuggestionsUsingDlp() {
@@ -161,9 +161,9 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionConfig extends com
   }
 
   /**
-   * If true, with best effort, try to detect and remove the suggestions containing certain types of
-   * PII information. This detection is performated by
-   * [DLP](https://cloud.google.com/security/products/dlp) under the hood.
+   * Deprecated: this field has no effect. As of May 2025, PII suggestion filtering using
+   * [DLP](https://cloud.google.com/security/products/dlp) is always on for all data stores and
+   * can't be configured per data store.
    * @param filterPiiSuggestionsUsingDlp filterPiiSuggestionsUsingDlp or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCompletionConfig setFilterPiiSuggestionsUsingDlp(java.lang.Boolean filterPiiSuggestionsUsingDlp) {

@@ -118,7 +118,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,6 +196,14 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec;
+
+  /**
+   * Optional. Whether to show the admin-configured display name for data connectors in the widget
+   * sources UI (instead of the connector kind). Opt-in; defaults to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sourceAdminDisplayNameEnabled;
 
   /**
    * Per data store configuration.
@@ -382,7 +390,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -398,7 +406,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
    * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
    * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence` * `deep-research`
+   * agent-orchestration` * `cross-product-intelligence`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
@@ -573,6 +581,25 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setSearchAddonSpec(GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsSearchAddonSpec searchAddonSpec) {
     this.searchAddonSpec = searchAddonSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to show the admin-configured display name for data connectors in the widget
+   * sources UI (instead of the connector kind). Opt-in; defaults to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSourceAdminDisplayNameEnabled() {
+    return sourceAdminDisplayNameEnabled;
+  }
+
+  /**
+   * Optional. Whether to show the admin-configured display name for data connectors in the widget
+   * sources UI (instead of the connector kind). Opt-in; defaults to false.
+   * @param sourceAdminDisplayNameEnabled sourceAdminDisplayNameEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setSourceAdminDisplayNameEnabled(java.lang.Boolean sourceAdminDisplayNameEnabled) {
+    this.sourceAdminDisplayNameEnabled = sourceAdminDisplayNameEnabled;
     return this;
   }
 

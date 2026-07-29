@@ -53,7 +53,8 @@ public final class LfA2aV1TaskPushNotificationConfig extends com.google.api.clie
   private java.lang.String taskId;
 
   /**
-   * Optional. Tenant ID.
+   * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+   * `AgentInterface` in the Agent Card when that field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +128,8 @@ public final class LfA2aV1TaskPushNotificationConfig extends com.google.api.clie
   }
 
   /**
-   * Optional. Tenant ID.
+   * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+   * `AgentInterface` in the Agent Card when that field is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenant() {
@@ -135,7 +137,8 @@ public final class LfA2aV1TaskPushNotificationConfig extends com.google.api.clie
   }
 
   /**
-   * Optional. Tenant ID.
+   * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+   * `AgentInterface` in the Agent Card when that field is set.
    * @param tenant tenant or {@code null} for none
    */
   public LfA2aV1TaskPushNotificationConfig setTenant(java.lang.String tenant) {

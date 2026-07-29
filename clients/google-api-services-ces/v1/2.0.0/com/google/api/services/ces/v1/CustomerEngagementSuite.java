@@ -1297,7 +1297,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
          * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
          * operation.
          *
-         * @param tenant Optional. Tenant ID, provided as a path parameter.
+         * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+         *        `AgentInterface` in the Agent Card when that field is set.
          * @return the request
          */
         public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
@@ -1324,7 +1325,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+         *        `AgentInterface` in the Agent Card when that field is set.
            * @since 1.13
            */
           protected GetExtendedAgentCard(java.lang.String tenant) {
@@ -1402,17 +1404,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Optional. Tenant ID, provided as a path parameter. */
+          /**
+           * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           * `AgentInterface` in the Agent Card when that field is set.
+           */
           @com.google.api.client.util.Key
           private java.lang.String tenant;
 
-          /** Optional. Tenant ID, provided as a path parameter.
+          /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+         `AgentInterface` in the Agent Card when that field is set.
            */
           public java.lang.String getTenant() {
             return tenant;
           }
 
-          /** Optional. Tenant ID, provided as a path parameter. */
+          /**
+           * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           * `AgentInterface` in the Agent Card when that field is set.
+           */
           public GetExtendedAgentCard setTenant(java.lang.String tenant) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
@@ -4617,7 +4626,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
            * operation.
            *
-           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
            * @return the request
            */
           public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
@@ -4644,7 +4654,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
              * @since 1.13
              */
             protected GetExtendedAgentCard(java.lang.String tenant) {
@@ -4722,17 +4733,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             @com.google.api.client.util.Key
             private java.lang.String tenant;
 
-            /** Optional. Tenant ID, provided as a path parameter.
+            /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           `AgentInterface` in the Agent Card when that field is set.
              */
             public java.lang.String getTenant() {
               return tenant;
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             public GetExtendedAgentCard setTenant(java.lang.String tenant) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
@@ -5151,7 +5169,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * This request holds the parameters needed by the ces server.  After setting any optional
              * parameters, call the {@link Send#execute()} method to invoke the remote operation.
              *
-             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
              * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
              * @return the request
              */
@@ -5178,7 +5197,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param tenant Optional. Tenant ID, provided as a path parameter.
+               * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
                * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
                * @since 1.13
                */
@@ -5247,17 +5267,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                 return (Send) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Optional. Tenant ID, provided as a path parameter. */
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
               @com.google.api.client.util.Key
               private java.lang.String tenant;
 
-              /** Optional. Tenant ID, provided as a path parameter.
+              /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             `AgentInterface` in the Agent Card when that field is set.
                */
               public java.lang.String getTenant() {
                 return tenant;
               }
 
-              /** Optional. Tenant ID, provided as a path parameter. */
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
               public Send setTenant(java.lang.String tenant) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
@@ -7057,7 +7084,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * This request holds the parameters needed by the ces server.  After setting any optional
            * parameters, call the {@link Send#execute()} method to invoke the remote operation.
            *
-           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
            * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
            * @return the request
            */
@@ -7084,7 +7112,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
              * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
              * @since 1.13
              */
@@ -7153,17 +7182,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return (Send) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             @com.google.api.client.util.Key
             private java.lang.String tenant;
 
-            /** Optional. Tenant ID, provided as a path parameter.
+            /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           `AgentInterface` in the Agent Card when that field is set.
              */
             public java.lang.String getTenant() {
               return tenant;
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             public Send setTenant(java.lang.String tenant) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
@@ -10051,7 +10087,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * parameters, call the {@link GetExtendedAgentCard#execute()} method to invoke the remote
            * operation.
            *
-           * @param tenant Optional. Tenant ID, provided as a path parameter.
+           * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
            * @return the request
            */
           public GetExtendedAgentCard getExtendedAgentCard(java.lang.String tenant) throws java.io.IOException {
@@ -10078,7 +10115,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
              * @since 1.13
              */
             protected GetExtendedAgentCard(java.lang.String tenant) {
@@ -10156,17 +10194,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return (GetExtendedAgentCard) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             @com.google.api.client.util.Key
             private java.lang.String tenant;
 
-            /** Optional. Tenant ID, provided as a path parameter.
+            /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           `AgentInterface` in the Agent Card when that field is set.
              */
             public java.lang.String getTenant() {
               return tenant;
             }
 
-            /** Optional. Tenant ID, provided as a path parameter. */
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
             public GetExtendedAgentCard setTenant(java.lang.String tenant) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
@@ -10574,7 +10619,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * This request holds the parameters needed by the ces server.  After setting any optional
              * parameters, call the {@link Send#execute()} method to invoke the remote operation.
              *
-             * @param tenant Optional. Tenant ID, provided as a path parameter.
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
              * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
              * @return the request
              */
@@ -10601,7 +10647,8 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param tenant Optional. Tenant ID, provided as a path parameter.
+               * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
                * @param content the {@link com.google.api.services.ces.v1.model.LfA2aV1SendMessageRequest}
                * @since 1.13
                */
@@ -10670,17 +10717,24 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                 return (Send) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Optional. Tenant ID, provided as a path parameter. */
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
               @com.google.api.client.util.Key
               private java.lang.String tenant;
 
-              /** Optional. Tenant ID, provided as a path parameter.
+              /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             `AgentInterface` in the Agent Card when that field is set.
                */
               public java.lang.String getTenant() {
                 return tenant;
               }
 
-              /** Optional. Tenant ID, provided as a path parameter. */
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
               public Send setTenant(java.lang.String tenant) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),

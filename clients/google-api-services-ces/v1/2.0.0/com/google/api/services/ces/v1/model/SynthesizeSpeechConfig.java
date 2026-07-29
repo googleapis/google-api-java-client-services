@@ -31,6 +31,13 @@ package com.google.api.services.ces.v1.model;
 public final class SynthesizeSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consentAudioGcsUri;
+
+  /**
    * Optional. The instruction used to synthesize speech when using a generative model.
    * The value may be {@code null}.
    */
@@ -73,6 +80,23 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String voiceSampleGcsUri;
+
+  /**
+   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsentAudioGcsUri() {
+    return consentAudioGcsUri;
+  }
+
+  /**
+   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * @param consentAudioGcsUri consentAudioGcsUri or {@code null} for none
+   */
+  public SynthesizeSpeechConfig setConsentAudioGcsUri(java.lang.String consentAudioGcsUri) {
+    this.consentAudioGcsUri = consentAudioGcsUri;
+    return this;
+  }
 
   /**
    * Optional. The instruction used to synthesize speech when using a generative model.

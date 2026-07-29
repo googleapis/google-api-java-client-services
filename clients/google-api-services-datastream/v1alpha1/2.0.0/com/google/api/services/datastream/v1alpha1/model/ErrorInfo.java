@@ -59,7 +59,7 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * The reason of the error. This is a constant value that identifies the proximate cause of the
+   * The reason for the error. This is a constant value that identifies the proximate cause of the
    * error. Error reasons are unique within a particular domain of errors. This should be at most 63
    * characters and match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.
    * The value may be {@code null}.
@@ -120,7 +120,7 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason of the error. This is a constant value that identifies the proximate cause of the
+   * The reason for the error. This is a constant value that identifies the proximate cause of the
    * error. Error reasons are unique within a particular domain of errors. This should be at most 63
    * characters and match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.
    * @return value or {@code null} for none
@@ -130,7 +130,7 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason of the error. This is a constant value that identifies the proximate cause of the
+   * The reason for the error. This is a constant value that identifies the proximate cause of the
    * error. Error reasons are unique within a particular domain of errors. This should be at most 63
    * characters and match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.
    * @param reason reason or {@code null} for none

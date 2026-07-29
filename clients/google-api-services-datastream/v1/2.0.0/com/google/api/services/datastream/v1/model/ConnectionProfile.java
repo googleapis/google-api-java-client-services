@@ -184,6 +184,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private String updateTime;
 
   /**
+   * Optional. Profile for connecting to a Workday source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkdayProfile workdayProfile;
+
+  /**
    * Profile for connecting to a BigQuery destination.
    * @return value or {@code null} for none
    */
@@ -554,6 +561,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Profile for connecting to a Workday source.
+   * @return value or {@code null} for none
+   */
+  public WorkdayProfile getWorkdayProfile() {
+    return workdayProfile;
+  }
+
+  /**
+   * Optional. Profile for connecting to a Workday source.
+   * @param workdayProfile workdayProfile or {@code null} for none
+   */
+  public ConnectionProfile setWorkdayProfile(WorkdayProfile workdayProfile) {
+    this.workdayProfile = workdayProfile;
     return this;
   }
 

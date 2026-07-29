@@ -108,6 +108,13 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private SqlServerSourceConfig sqlServerSourceConfig;
 
   /**
+   * Optional. Workday data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkdaySourceConfig workdaySourceConfig;
+
+  /**
    * Dataverse data source configuration.
    * @return value or {@code null} for none
    */
@@ -293,6 +300,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setSqlServerSourceConfig(SqlServerSourceConfig sqlServerSourceConfig) {
     this.sqlServerSourceConfig = sqlServerSourceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Workday data source configuration.
+   * @return value or {@code null} for none
+   */
+  public WorkdaySourceConfig getWorkdaySourceConfig() {
+    return workdaySourceConfig;
+  }
+
+  /**
+   * Optional. Workday data source configuration.
+   * @param workdaySourceConfig workdaySourceConfig or {@code null} for none
+   */
+  public SourceConfig setWorkdaySourceConfig(WorkdaySourceConfig workdaySourceConfig) {
+    this.workdaySourceConfig = workdaySourceConfig;
     return this;
   }
 

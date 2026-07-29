@@ -63,7 +63,7 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
   private LocalizedMessage localizedMessage;
 
   /**
-   * The reason of the field-level error. This is a constant value that identifies the proximate
+   * The reason for the field-level error. This is a constant value that identifies the proximate
    * cause of the field-level error. It should uniquely identify the type of the FieldViolation
    * within the scope of the google.rpc.ErrorInfo.domain. This should be at most 63 characters and
    * match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.
@@ -148,7 +148,7 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The reason of the field-level error. This is a constant value that identifies the proximate
+   * The reason for the field-level error. This is a constant value that identifies the proximate
    * cause of the field-level error. It should uniquely identify the type of the FieldViolation
    * within the scope of the google.rpc.ErrorInfo.domain. This should be at most 63 characters and
    * match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.
@@ -159,7 +159,7 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The reason of the field-level error. This is a constant value that identifies the proximate
+   * The reason for the field-level error. This is a constant value that identifies the proximate
    * cause of the field-level error. It should uniquely identify the type of the FieldViolation
    * within the scope of the google.rpc.ErrorInfo.domain. This should be at most 63 characters and
    * match a regular expression of `A-Z+[A-Z0-9]`, which represents UPPER_SNAKE_CASE.

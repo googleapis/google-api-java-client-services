@@ -31,12 +31,36 @@ package com.google.api.services.firebasedataconnect.v1.model;
 public final class CloudSqlInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output only] The Cloud SQL instance edition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Required. Name of the CloudSQL instance, in the format: ```
    * projects/{project}/locations/{location}/instances/{instance} ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
+
+  /**
+   * Output only. [Output only] The Cloud SQL instance edition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Output only. [Output only] The Cloud SQL instance edition.
+   * @param edition edition or {@code null} for none
+   */
+  public CloudSqlInstance setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
 
   /**
    * Required. Name of the CloudSQL instance, in the format: ```

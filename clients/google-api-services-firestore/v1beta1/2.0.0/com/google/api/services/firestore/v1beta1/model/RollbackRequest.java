@@ -30,35 +30,11 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class RollbackRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The request options for this request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * Required. The transaction to roll back.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transaction;
-
-  /**
-   * Optional. The request options for this request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for this request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public RollbackRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
-    return this;
-  }
 
   /**
    * Required. The transaction to roll back.

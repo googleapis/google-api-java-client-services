@@ -57,7 +57,25 @@ public final class GoogleCloudDialogflowV2beta1SipTrunk extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String googleRootCertFile;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1SipHostname> peerHostnames;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1SipHostname used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1SipHostname.class);
+  }
 
   /**
    * @return value or {@code null} for none
@@ -107,6 +125,21 @@ public final class GoogleCloudDialogflowV2beta1SipTrunk extends com.google.api.c
   /**
    * @return value or {@code null} for none
    */
+  public java.lang.String getGoogleRootCertFile() {
+    return googleRootCertFile;
+  }
+
+  /**
+   * @param googleRootCertFile googleRootCertFile or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SipTrunk setGoogleRootCertFile(java.lang.String googleRootCertFile) {
+    this.googleRootCertFile = googleRootCertFile;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.String getName() {
     return name;
   }
@@ -116,6 +149,21 @@ public final class GoogleCloudDialogflowV2beta1SipTrunk extends com.google.api.c
    */
   public GoogleCloudDialogflowV2beta1SipTrunk setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1SipHostname> getPeerHostnames() {
+    return peerHostnames;
+  }
+
+  /**
+   * @param peerHostnames peerHostnames or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SipTrunk setPeerHostnames(java.util.List<GoogleCloudDialogflowV2beta1SipHostname> peerHostnames) {
+    this.peerHostnames = peerHostnames;
     return this;
   }
 

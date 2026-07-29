@@ -46,6 +46,13 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   private java.lang.String filename;
 
   /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syntheticContentAttestationStatus;
+
+  /**
    * Required. The type of the ad asset. Only `AD_ASSET_TYPE_IMAGE` is supported.
    * @return value or {@code null} for none
    */
@@ -78,6 +85,23 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
    */
   public UploadAdAssetRequest setFilename(java.lang.String filename) {
     this.filename = filename;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyntheticContentAttestationStatus() {
+    return syntheticContentAttestationStatus;
+  }
+
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
+   */
+  public UploadAdAssetRequest setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {
+    this.syntheticContentAttestationStatus = syntheticContentAttestationStatus;
     return this;
   }
 

@@ -155,8 +155,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
     /**
      * The method enrolls a solution of type Retail Search into a project. The Recommendations AI
-     * solution type is enrolled by default when your project enables Retail API, so you don't need to
-     * call the enrollSolution method for recommendations.
+     * solution type is enrolled by default when your project enables AI Commerce Search API, so you
+     * don't need to call the enrollSolution method for recommendations.
      *
      * Create a request for the method "projects.enrollSolution".
      *
@@ -182,8 +182,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
 
       /**
        * The method enrolls a solution of type Retail Search into a project. The Recommendations AI
-       * solution type is enrolled by default when your project enables Retail API, so you don't need to
-       * call the enrollSolution method for recommendations.
+       * solution type is enrolled by default when your project enables AI Commerce Search API, so you
+       * don't need to call the enrollSolution method for recommendations.
        *
        * Create a request for the method "projects.enrollSolution".
        *
@@ -575,8 +575,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the Retail API
-     * service.
+     * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the AI Commerce Search
+     * API service.
      *
      * Create a request for the method "projects.getRetailProject".
      *
@@ -600,8 +600,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^projects/[^/]+/retailProject$");
 
       /**
-       * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the Retail API
-       * service.
+       * Gets the project. Throws `NOT_FOUND` if the project wasn't initialized for the AI Commerce
+       * Search API service.
        *
        * Create a request for the method "projects.getRetailProject".
        *
@@ -723,7 +723,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
-     * Lists all the retail API solutions the project has enrolled.
+     * Lists all the AI Commerce Search API solutions the project has enrolled.
      *
      * Create a request for the method "projects.listEnrolledSolutions".
      *
@@ -748,7 +748,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Lists all the retail API solutions the project has enrolled.
+       * Lists all the AI Commerce Search API solutions the project has enrolled.
        *
        * Create a request for the method "projects.listEnrolledSolutions".
        *
@@ -13129,8 +13129,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           /**
            * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
            * method should be used instead, otherwise a 400 Bad Request error is returned. This method is used
-           * only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this method
-           * directly.
+           * only by the AI Commerce Search API JavaScript pixel and Google Tag Manager. Users should not call
+           * this method directly.
            *
            * Create a request for the method "userEvents.collect".
            *
@@ -13158,8 +13158,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             /**
              * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
              * method should be used instead, otherwise a 400 Bad Request error is returned. This method is
-             * used only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this
-             * method directly.
+             * used only by the AI Commerce Search API JavaScript pixel and Google Tag Manager. Users should
+             * not call this method directly.
              *
              * Create a request for the method "userEvents.collect".
              *

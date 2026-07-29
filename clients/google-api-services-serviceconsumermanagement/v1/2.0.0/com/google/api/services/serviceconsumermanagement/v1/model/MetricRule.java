@@ -32,6 +32,16 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class MetricRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.Map<String, java.lang.Long> agenticMetricCosts;
+
+  /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
    * metric. The key of the map is the metric name, and the values are the amount increased for the
    * metric against which the quota limits are defined. The value must not be negative.
@@ -41,11 +51,44 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Long> metricCosts;
 
   /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is not an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.Map<String, java.lang.Long> nonagenticMetricCosts;
+
+  /**
    * Selects the methods to which this rule applies. Refer to selector for syntax details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selector;
+
+  /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Long> getAgenticMetricCosts() {
+    return agenticMetricCosts;
+  }
+
+  /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * @param agenticMetricCosts agenticMetricCosts or {@code null} for none
+   */
+  public MetricRule setAgenticMetricCosts(java.util.Map<String, java.lang.Long> agenticMetricCosts) {
+    this.agenticMetricCosts = agenticMetricCosts;
+    return this;
+  }
 
   /**
    * Metrics to update when the selected methods are called, and the associated cost applied to each
@@ -65,6 +108,29 @@ public final class MetricRule extends com.google.api.client.json.GenericJson {
    */
   public MetricRule setMetricCosts(java.util.Map<String, java.lang.Long> metricCosts) {
     this.metricCosts = metricCosts;
+    return this;
+  }
+
+  /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is not an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Long> getNonagenticMetricCosts() {
+    return nonagenticMetricCosts;
+  }
+
+  /**
+   * Optional. Metrics to update when the selected methods are called, and the associated cost
+   * applied to each metric, iff the source of the call is not an agent. The key of the map is the
+   * metric name, and the values are the amount increased for the metric against which the quota
+   * limits are defined. The value must not be negative.
+   * @param nonagenticMetricCosts nonagenticMetricCosts or {@code null} for none
+   */
+  public MetricRule setNonagenticMetricCosts(java.util.Map<String, java.lang.Long> nonagenticMetricCosts) {
+    this.nonagenticMetricCosts = nonagenticMetricCosts;
     return this;
   }
 

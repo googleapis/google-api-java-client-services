@@ -110,6 +110,14 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. This is only informational, the logic to allocate the quota to the correct metric
+   * (such as in `metric_rules`) should identify which quota metrics to allocate to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficSource;
+
+  /**
    * Specify the unit of the quota limit. It uses the same syntax as MetricDescriptor.unit. The
    * supported unit kinds are determined by the quota backend system. Here are some examples: *
    * "1/min/{project}" for quota per minute per project. Note: the order of unit components is
@@ -303,6 +311,25 @@ public final class QuotaLimit extends com.google.api.client.json.GenericJson {
    */
   public QuotaLimit setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. This is only informational, the logic to allocate the quota to the correct metric
+   * (such as in `metric_rules`) should identify which quota metrics to allocate to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficSource() {
+    return trafficSource;
+  }
+
+  /**
+   * Optional. This is only informational, the logic to allocate the quota to the correct metric
+   * (such as in `metric_rules`) should identify which quota metrics to allocate to.
+   * @param trafficSource trafficSource or {@code null} for none
+   */
+  public QuotaLimit setTrafficSource(java.lang.String trafficSource) {
+    this.trafficSource = trafficSource;
     return this;
   }
 

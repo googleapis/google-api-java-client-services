@@ -173,6 +173,16 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String reservationGroup;
 
   /**
+   * Output only. The reservation group path of the reservation from root to leaf. The order of
+   * elements matters: the first element is the top level group and the last element is the direct
+   * parent reservation group. For example, if a reservation is under group-1 -> group-2 -> group-3,
+   * then the reservation group path is ["group-1", "group-2", "group-3"].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> reservationGroupPath;
+
+  /**
    * Optional. The scaling mode for the reservation. If the field is present but max_slots is not
    * present, requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
    * The value may be {@code null}.
@@ -541,6 +551,29 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setReservationGroup(java.lang.String reservationGroup) {
     this.reservationGroup = reservationGroup;
+    return this;
+  }
+
+  /**
+   * Output only. The reservation group path of the reservation from root to leaf. The order of
+   * elements matters: the first element is the top level group and the last element is the direct
+   * parent reservation group. For example, if a reservation is under group-1 -> group-2 -> group-3,
+   * then the reservation group path is ["group-1", "group-2", "group-3"].
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReservationGroupPath() {
+    return reservationGroupPath;
+  }
+
+  /**
+   * Output only. The reservation group path of the reservation from root to leaf. The order of
+   * elements matters: the first element is the top level group and the last element is the direct
+   * parent reservation group. For example, if a reservation is under group-1 -> group-2 -> group-3,
+   * then the reservation group path is ["group-1", "group-2", "group-3"].
+   * @param reservationGroupPath reservationGroupPath or {@code null} for none
+   */
+  public Reservation setReservationGroupPath(java.util.List<java.lang.String> reservationGroupPath) {
+    this.reservationGroupPath = reservationGroupPath;
     return this;
   }
 

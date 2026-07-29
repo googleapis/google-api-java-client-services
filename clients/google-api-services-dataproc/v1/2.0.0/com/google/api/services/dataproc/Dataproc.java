@@ -2951,6 +2951,360 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Obtain build data for Native Job
+           *
+           * Create a request for the method "sparkApplications.accessNativeBuildInfo".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessNativeBuildInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessNativeBuildInfo accessNativeBuildInfo(java.lang.String name) throws java.io.IOException {
+            AccessNativeBuildInfo result = new AccessNativeBuildInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessNativeBuildInfo extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationNativeBuildInfoResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessNativeBuildInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain build data for Native Job
+             *
+             * Create a request for the method "sparkApplications.accessNativeBuildInfo".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessNativeBuildInfo#execute()} method to invoke the
+             * remote operation. <p> {@link AccessNativeBuildInfo#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessNativeBuildInfo(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationNativeBuildInfoResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessNativeBuildInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessNativeBuildInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setAccessToken(java.lang.String accessToken) {
+              return (AccessNativeBuildInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setAlt(java.lang.String alt) {
+              return (AccessNativeBuildInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setCallback(java.lang.String callback) {
+              return (AccessNativeBuildInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setFields(java.lang.String fields) {
+              return (AccessNativeBuildInfo) super.setFields(fields);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setKey(java.lang.String key) {
+              return (AccessNativeBuildInfo) super.setKey(key);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setOauthToken(java.lang.String oauthToken) {
+              return (AccessNativeBuildInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessNativeBuildInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setQuotaUser(java.lang.String quotaUser) {
+              return (AccessNativeBuildInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setUploadType(java.lang.String uploadType) {
+              return (AccessNativeBuildInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessNativeBuildInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessNativeBuildInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessNativeBuildInfo setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessNativeBuildInfo set(String parameterName, Object value) {
+              return (AccessNativeBuildInfo) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a particular Native SQL Query for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessNativeSqlQuery".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessNativeSqlQuery#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public AccessNativeSqlQuery accessNativeSqlQuery(java.lang.String name) throws java.io.IOException {
+            AccessNativeSqlQuery result = new AccessNativeSqlQuery(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessNativeSqlQuery extends DataprocRequest<com.google.api.services.dataproc.model.AccessSparkApplicationNativeSqlQueryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessNativeSqlQuery";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a particular Native SQL Query for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessNativeSqlQuery".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessNativeSqlQuery#execute()} method to invoke the
+             * remote operation. <p> {@link AccessNativeSqlQuery#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected AccessNativeSqlQuery(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSparkApplicationNativeSqlQueryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessNativeSqlQuery set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessNativeSqlQuery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setAccessToken(java.lang.String accessToken) {
+              return (AccessNativeSqlQuery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setAlt(java.lang.String alt) {
+              return (AccessNativeSqlQuery) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setCallback(java.lang.String callback) {
+              return (AccessNativeSqlQuery) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setFields(java.lang.String fields) {
+              return (AccessNativeSqlQuery) super.setFields(fields);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setKey(java.lang.String key) {
+              return (AccessNativeSqlQuery) super.setKey(key);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setOauthToken(java.lang.String oauthToken) {
+              return (AccessNativeSqlQuery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessNativeSqlQuery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setQuotaUser(java.lang.String quotaUser) {
+              return (AccessNativeSqlQuery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setUploadType(java.lang.String uploadType) {
+              return (AccessNativeSqlQuery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessNativeSqlQuery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public AccessNativeSqlQuery setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessNativeSqlQuery setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public AccessNativeSqlQuery setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessNativeSqlQuery set(String parameterName, Object value) {
+              return (AccessNativeSqlQuery) super.set(parameterName, value);
+            }
+          }
+          /**
            * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
            * returned as part of the graph to 10000.
            *
@@ -3770,6 +4124,209 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public AccessStageRddGraph set(String parameterName, Object value) {
               return (AccessStageRddGraph) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns autotuning configuration for a specific query plan id and cohort id. Called by Spark
+           * during query planning.
+           *
+           * Create a request for the method "sparkApplications.computeTuningConfig".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link ComputeTuningConfig#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The fully qualified name of the spark application to retrieve autotuning configuration for
+           *        in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplica
+           *        tions/APPLICATION_ID"
+           * @return the request
+           */
+          public ComputeTuningConfig computeTuningConfig(java.lang.String name) throws java.io.IOException {
+            ComputeTuningConfig result = new ComputeTuningConfig(name);
+            initialize(result);
+            return result;
+          }
+
+          public class ComputeTuningConfig extends DataprocRequest<com.google.api.services.dataproc.model.ComputeTuningConfigResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:computeTuningConfig";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Returns autotuning configuration for a specific query plan id and cohort id. Called by Spark
+             * during query planning.
+             *
+             * Create a request for the method "sparkApplications.computeTuningConfig".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link ComputeTuningConfig#execute()} method to invoke the remote
+             * operation. <p> {@link ComputeTuningConfig#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the spark application to retrieve autotuning configuration for
+           *        in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplica
+           *        tions/APPLICATION_ID"
+             * @since 1.13
+             */
+            protected ComputeTuningConfig(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.ComputeTuningConfigResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ComputeTuningConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (ComputeTuningConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ComputeTuningConfig setAccessToken(java.lang.String accessToken) {
+              return (ComputeTuningConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ComputeTuningConfig setAlt(java.lang.String alt) {
+              return (ComputeTuningConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public ComputeTuningConfig setCallback(java.lang.String callback) {
+              return (ComputeTuningConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public ComputeTuningConfig setFields(java.lang.String fields) {
+              return (ComputeTuningConfig) super.setFields(fields);
+            }
+
+            @Override
+            public ComputeTuningConfig setKey(java.lang.String key) {
+              return (ComputeTuningConfig) super.setKey(key);
+            }
+
+            @Override
+            public ComputeTuningConfig setOauthToken(java.lang.String oauthToken) {
+              return (ComputeTuningConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ComputeTuningConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ComputeTuningConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ComputeTuningConfig setQuotaUser(java.lang.String quotaUser) {
+              return (ComputeTuningConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ComputeTuningConfig setUploadType(java.lang.String uploadType) {
+              return (ComputeTuningConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ComputeTuningConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ComputeTuningConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to retrieve autotuning
+             * configuration for in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batche
+             * s/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the spark application to retrieve autotuning configuration
+           for in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the spark application to retrieve autotuning
+             * configuration for in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batche
+             * s/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public ComputeTuningConfig setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Spark execution ID for the query. */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Spark execution ID for the query.
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Spark execution ID for the query. */
+            public ComputeTuningConfig setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public ComputeTuningConfig setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Spark semantic query ID. */
+            @com.google.api.client.util.Key
+            private java.lang.String semanticQueryId;
+
+            /** Required. Spark semantic query ID.
+             */
+            public java.lang.String getSemanticQueryId() {
+              return semanticQueryId;
+            }
+
+            /** Required. Spark semantic query ID. */
+            public ComputeTuningConfig setSemanticQueryId(java.lang.String semanticQueryId) {
+              this.semanticQueryId = semanticQueryId;
+              return this;
+            }
+
+            @Override
+            public ComputeTuningConfig set(String parameterName, Object value) {
+              return (ComputeTuningConfig) super.set(parameterName, value);
             }
           }
           /**
@@ -4755,6 +5312,223 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public SearchJobs set(String parameterName, Object value) {
               return (SearchJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to Native SQL Queries for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchNativeSqlQueries".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchNativeSqlQueries#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+           * @return the request
+           */
+          public SearchNativeSqlQueries searchNativeSqlQueries(java.lang.String name) throws java.io.IOException {
+            SearchNativeSqlQueries result = new SearchNativeSqlQueries(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchNativeSqlQueries extends DataprocRequest<com.google.api.services.dataproc.model.SearchSparkApplicationNativeSqlQueriesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchNativeSqlQueries";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to Native SQL Queries for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchNativeSqlQueries".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchNativeSqlQueries#execute()} method to invoke the
+             * remote operation. <p> {@link SearchNativeSqlQueries#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the batch to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICAT
+           *        ION_ID"
+             * @since 1.13
+             */
+            protected SearchNativeSqlQueries(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSparkApplicationNativeSqlQueriesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchNativeSqlQueries set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchNativeSqlQueries) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setAccessToken(java.lang.String accessToken) {
+              return (SearchNativeSqlQueries) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setAlt(java.lang.String alt) {
+              return (SearchNativeSqlQueries) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setCallback(java.lang.String callback) {
+              return (SearchNativeSqlQueries) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setFields(java.lang.String fields) {
+              return (SearchNativeSqlQueries) super.setFields(fields);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setKey(java.lang.String key) {
+              return (SearchNativeSqlQueries) super.setKey(key);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setOauthToken(java.lang.String oauthToken) {
+              return (SearchNativeSqlQueries) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchNativeSqlQueries) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setQuotaUser(java.lang.String quotaUser) {
+              return (SearchNativeSqlQueries) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setUploadType(java.lang.String uploadType) {
+              return (SearchNativeSqlQueries) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchNativeSqlQueries) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the batch to retrieve in the format
+           "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the batch to retrieve in the format "projects/P
+             * ROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID/sparkApplications/APPLICATION_ID
+             * "
+             */
+            public SearchNativeSqlQueries setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/batches/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of queries to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchNativeSqlQueries setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSparkApplicationNativeSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSparkApplicationNativeSqlQueries call.
+           Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSparkApplicationNativeSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            public SearchNativeSqlQueries setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Batch) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Batch) resource reference. */
+            public SearchNativeSqlQueries setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchNativeSqlQueries set(String parameterName, Object value) {
+              return (SearchNativeSqlQueries) super.set(parameterName, value);
             }
           }
           /**
@@ -9499,6 +10273,360 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Obtain data corresponding to Native Build Information for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessNativeBuildInfo".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessNativeBuildInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessNativeBuildInfo accessNativeBuildInfo(java.lang.String name) throws java.io.IOException {
+            AccessNativeBuildInfo result = new AccessNativeBuildInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessNativeBuildInfo extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationNativeBuildInfoResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessNativeBuildInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to Native Build Information for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessNativeBuildInfo".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessNativeBuildInfo#execute()} method to invoke the
+             * remote operation. <p> {@link AccessNativeBuildInfo#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessNativeBuildInfo(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationNativeBuildInfoResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessNativeBuildInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessNativeBuildInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setAccessToken(java.lang.String accessToken) {
+              return (AccessNativeBuildInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setAlt(java.lang.String alt) {
+              return (AccessNativeBuildInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setCallback(java.lang.String callback) {
+              return (AccessNativeBuildInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setFields(java.lang.String fields) {
+              return (AccessNativeBuildInfo) super.setFields(fields);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setKey(java.lang.String key) {
+              return (AccessNativeBuildInfo) super.setKey(key);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setOauthToken(java.lang.String oauthToken) {
+              return (AccessNativeBuildInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessNativeBuildInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setQuotaUser(java.lang.String quotaUser) {
+              return (AccessNativeBuildInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setUploadType(java.lang.String uploadType) {
+              return (AccessNativeBuildInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessNativeBuildInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessNativeBuildInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessNativeBuildInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessNativeBuildInfo setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessNativeBuildInfo set(String parameterName, Object value) {
+              return (AccessNativeBuildInfo) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to a particular Native SQL Query for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.accessNativeSqlQuery".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link AccessNativeSqlQuery#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public AccessNativeSqlQuery accessNativeSqlQuery(java.lang.String name) throws java.io.IOException {
+            AccessNativeSqlQuery result = new AccessNativeSqlQuery(name);
+            initialize(result);
+            return result;
+          }
+
+          public class AccessNativeSqlQuery extends DataprocRequest<com.google.api.services.dataproc.model.AccessSessionSparkApplicationNativeSqlQueryResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:accessNativeSqlQuery";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to a particular Native SQL Query for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.accessNativeSqlQuery".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link AccessNativeSqlQuery#execute()} method to invoke the
+             * remote operation. <p> {@link AccessNativeSqlQuery#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected AccessNativeSqlQuery(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.AccessSessionSparkApplicationNativeSqlQueryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public AccessNativeSqlQuery set$Xgafv(java.lang.String $Xgafv) {
+              return (AccessNativeSqlQuery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setAccessToken(java.lang.String accessToken) {
+              return (AccessNativeSqlQuery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setAlt(java.lang.String alt) {
+              return (AccessNativeSqlQuery) super.setAlt(alt);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setCallback(java.lang.String callback) {
+              return (AccessNativeSqlQuery) super.setCallback(callback);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setFields(java.lang.String fields) {
+              return (AccessNativeSqlQuery) super.setFields(fields);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setKey(java.lang.String key) {
+              return (AccessNativeSqlQuery) super.setKey(key);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setOauthToken(java.lang.String oauthToken) {
+              return (AccessNativeSqlQuery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AccessNativeSqlQuery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setQuotaUser(java.lang.String quotaUser) {
+              return (AccessNativeSqlQuery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setUploadType(java.lang.String uploadType) {
+              return (AccessNativeSqlQuery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AccessNativeSqlQuery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AccessNativeSqlQuery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public AccessNativeSqlQuery setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. Execution ID */
+            @com.google.api.client.util.Key
+            private java.lang.Long executionId;
+
+            /** Required. Execution ID
+             */
+            public java.lang.Long getExecutionId() {
+              return executionId;
+            }
+
+            /** Required. Execution ID */
+            public AccessNativeSqlQuery setExecutionId(java.lang.Long executionId) {
+              this.executionId = executionId;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public AccessNativeSqlQuery setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public AccessNativeSqlQuery set(String parameterName, Object value) {
+              return (AccessNativeSqlQuery) super.set(parameterName, value);
+            }
+          }
+          /**
            * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the number of clusters
            * returned as part of the graph to 10000.
            *
@@ -11323,6 +12451,223 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public SearchJobs set(String parameterName, Object value) {
               return (SearchJobs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Obtain data corresponding to Native SQL Queries for a Spark Application.
+           *
+           * Create a request for the method "sparkApplications.searchNativeSqlQueries".
+           *
+           * This request holds the parameters needed by the dataproc server.  After setting any optional
+           * parameters, call the {@link SearchNativeSqlQueries#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+           * @return the request
+           */
+          public SearchNativeSqlQueries searchNativeSqlQueries(java.lang.String name) throws java.io.IOException {
+            SearchNativeSqlQueries result = new SearchNativeSqlQueries(name);
+            initialize(result);
+            return result;
+          }
+
+          public class SearchNativeSqlQueries extends DataprocRequest<com.google.api.services.dataproc.model.SearchSessionSparkApplicationNativeSqlQueriesResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:searchNativeSqlQueries";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+
+            /**
+             * Obtain data corresponding to Native SQL Queries for a Spark Application.
+             *
+             * Create a request for the method "sparkApplications.searchNativeSqlQueries".
+             *
+             * This request holds the parameters needed by the the dataproc server.  After setting any
+             * optional parameters, call the {@link SearchNativeSqlQueries#execute()} method to invoke the
+             * remote operation. <p> {@link SearchNativeSqlQueries#initialize(com.google.api.client.googleapis
+             * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The fully qualified name of the session to retrieve in the format
+           *        "projects/PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLI
+           *        CATION_ID"
+             * @since 1.13
+             */
+            protected SearchNativeSqlQueries(java.lang.String name) {
+              super(Dataproc.this, "GET", REST_PATH, null, com.google.api.services.dataproc.model.SearchSessionSparkApplicationNativeSqlQueriesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public SearchNativeSqlQueries set$Xgafv(java.lang.String $Xgafv) {
+              return (SearchNativeSqlQueries) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setAccessToken(java.lang.String accessToken) {
+              return (SearchNativeSqlQueries) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setAlt(java.lang.String alt) {
+              return (SearchNativeSqlQueries) super.setAlt(alt);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setCallback(java.lang.String callback) {
+              return (SearchNativeSqlQueries) super.setCallback(callback);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setFields(java.lang.String fields) {
+              return (SearchNativeSqlQueries) super.setFields(fields);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setKey(java.lang.String key) {
+              return (SearchNativeSqlQueries) super.setKey(key);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setOauthToken(java.lang.String oauthToken) {
+              return (SearchNativeSqlQueries) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SearchNativeSqlQueries) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setQuotaUser(java.lang.String quotaUser) {
+              return (SearchNativeSqlQueries) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setUploadType(java.lang.String uploadType) {
+              return (SearchNativeSqlQueries) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SearchNativeSqlQueries setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SearchNativeSqlQueries) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The fully qualified name of the session to retrieve in the format "projects/PROJECT_ID/lo
+           cations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATION_ID"
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The fully qualified name of the session to retrieve in the format "projects
+             * /PROJECT_ID/locations/DATAPROC_REGION/sessions/SESSION_ID/sparkApplications/APPLICATI
+             * ON_ID"
+             */
+            public SearchNativeSqlQueries setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/sessions/[^/]+/sparkApplications/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of queries to return in each response. The service may return fewer than
+           this. The default page size is 10; the maximum page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of queries to return in each response. The service may
+             * return fewer than this. The default page size is 10; the maximum page size is 100.
+             */
+            public SearchNativeSqlQueries setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token received from a previous SearchSessionSparkApplicationSqlQueries call.
+           Provide this token to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token received from a previous
+             * SearchSessionSparkApplicationSqlQueries call. Provide this token to retrieve the
+             * subsequent page.
+             */
+            public SearchNativeSqlQueries setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent (Session) resource reference.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent (Session) resource reference. */
+            public SearchNativeSqlQueries setParent(java.lang.String parent) {
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public SearchNativeSqlQueries set(String parameterName, Object value) {
+              return (SearchNativeSqlQueries) super.set(parameterName, value);
             }
           }
           /**

@@ -31,11 +31,41 @@ package com.google.api.services.dataproc.model;
 public final class IdentityConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to enable SSH access for the cluster. The default is true for image versions
+   * prior to 3.1 and false for image versions 3.1 and later. The default behavior can be changed
+   * when creating clusters using image versions 2.3.30 and later.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSsh;
+
+  /**
    * Required. Map of user to service account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> userServiceAccountMapping;
+
+  /**
+   * Optional. Whether to enable SSH access for the cluster. The default is true for image versions
+   * prior to 3.1 and false for image versions 3.1 and later. The default behavior can be changed
+   * when creating clusters using image versions 2.3.30 and later.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSsh() {
+    return enableSsh;
+  }
+
+  /**
+   * Optional. Whether to enable SSH access for the cluster. The default is true for image versions
+   * prior to 3.1 and false for image versions 3.1 and later. The default behavior can be changed
+   * when creating clusters using image versions 2.3.30 and later.
+   * @param enableSsh enableSsh or {@code null} for none
+   */
+  public IdentityConfig setEnableSsh(java.lang.Boolean enableSsh) {
+    this.enableSsh = enableSsh;
+    return this;
+  }
 
   /**
    * Required. Map of user to service account.

@@ -41,8 +41,9 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   private java.lang.String detail;
 
   /**
-   * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now().
+   * Optional. Expiration time of the entitlement. If unset, the entitlement does not expire
+   * (indefinite entitlement). We need to support indefinite entitlements for platform publishers.
+   * dd: go/rrm-sl-notedotcom Entitlements that have expired over 30 days will be purged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +89,9 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now().
+   * Optional. Expiration time of the entitlement. If unset, the entitlement does not expire
+   * (indefinite entitlement). We need to support indefinite entitlements for platform publishers.
+   * dd: go/rrm-sl-notedotcom Entitlements that have expired over 30 days will be purged.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -97,8 +99,9 @@ public final class Entitlement extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Expiration time of the entitlement. Entitlements that have expired over 30 days will
-   * be purged. The max expire_time is 398 days from now().
+   * Optional. Expiration time of the entitlement. If unset, the entitlement does not expire
+   * (indefinite entitlement). We need to support indefinite entitlements for platform publishers.
+   * dd: go/rrm-sl-notedotcom Entitlements that have expired over 30 days will be purged.
    * @param expireTime expireTime or {@code null} for none
    */
   public Entitlement setExpireTime(String expireTime) {

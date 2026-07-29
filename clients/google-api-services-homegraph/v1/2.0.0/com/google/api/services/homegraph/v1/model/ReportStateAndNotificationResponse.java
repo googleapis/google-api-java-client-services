@@ -31,11 +31,38 @@ package com.google.api.services.homegraph.v1.model;
 public final class ReportStateAndNotificationResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Map from agent device ID to the result of reporting state and notifications. This is only
+   * populated for UDDM updates for now.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, Result> deviceResults;
+
+  /**
    * Request ID copied from ReportStateAndNotificationRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Map from agent device ID to the result of reporting state and notifications. This is only
+   * populated for UDDM updates for now.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, Result> getDeviceResults() {
+    return deviceResults;
+  }
+
+  /**
+   * Map from agent device ID to the result of reporting state and notifications. This is only
+   * populated for UDDM updates for now.
+   * @param deviceResults deviceResults or {@code null} for none
+   */
+  public ReportStateAndNotificationResponse setDeviceResults(java.util.Map<String, Result> deviceResults) {
+    this.deviceResults = deviceResults;
+    return this;
+  }
 
   /**
    * Request ID copied from ReportStateAndNotificationRequest.

@@ -1644,6 +1644,366 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+        /**
+         * An accessor for creating requests from the Revisions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRedis redis = new CloudRedis(...);}
+         *   {@code CloudRedis.Revisions.List request = redis.revisions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Revisions revisions() {
+          return new Revisions();
+        }
+
+        /**
+         * The "revisions" collection of methods.
+         */
+        public class Revisions {
+
+          /**
+           * Gets details of a specific ACL policy revision.
+           *
+           * Create a request for the method "revisions.get".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Redis ACL policy revision resource name using the form:
+           *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revi
+           *        sion_id}` where `location_id` refers to a GCP region.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.AclPolicyRevision> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+/revisions/[^/]+$");
+
+            /**
+             * Gets details of a specific ACL policy revision.
+             *
+             * Create a request for the method "revisions.get".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Redis ACL policy revision resource name using the form:
+           *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revi
+           *        sion_id}` where `location_id` refers to a GCP region.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1beta1.model.AclPolicyRevision.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+/revisions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Redis ACL policy revision resource name using the form: `projects/{project_
+             * id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+             * where `location_id` refers to a GCP region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Redis ACL policy revision resource name using the form:
+           `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+           where `location_id` refers to a GCP region.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Redis ACL policy revision resource name using the form: `projects/{project_
+             * id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
+             * where `location_id` refers to a GCP region.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+/revisions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all ACL policy revisions in a given ACL policy.
+           *
+           * Create a request for the method "revisions.list".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the ACL policy to list revisions for. Format:
+           *        "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.ListAclPolicyRevisionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/revisions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+
+            /**
+             * Lists all ACL policy revisions in a given ACL policy.
+             *
+             * Create a request for the method "revisions.list".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the ACL policy to list revisions for. Format:
+           *        "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1beta1.model.ListAclPolicyRevisionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the ACL policy to list revisions for. Format:
+             * "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the ACL policy to list revisions for. Format:
+           "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the ACL policy to list revisions for. Format:
+             * "projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}"
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. The maximum number of items to return. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The maximum number of items to return. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The `next_page_token` value returned from a previous
+             * `ListAclPolicyRevisions` request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The `next_page_token` value returned from a previous `ListAclPolicyRevisions` request, if
+           any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The `next_page_token` value returned from a previous
+             * `ListAclPolicyRevisions` request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the BackupCollections collection.

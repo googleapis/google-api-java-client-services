@@ -46,6 +46,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean aclPolicyInSync;
 
   /**
+   * Output only. Details of the applied ACL policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AclPolicyInfo aclPolicyInfo;
+
+  /**
    * Optional. Immutable. Deprecated, do not use.
    * The value may be {@code null}.
    */
@@ -400,6 +407,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAclPolicyInSync(java.lang.Boolean aclPolicyInSync) {
     this.aclPolicyInSync = aclPolicyInSync;
+    return this;
+  }
+
+  /**
+   * Output only. Details of the applied ACL policy.
+   * @return value or {@code null} for none
+   */
+  public AclPolicyInfo getAclPolicyInfo() {
+    return aclPolicyInfo;
+  }
+
+  /**
+   * Output only. Details of the applied ACL policy.
+   * @param aclPolicyInfo aclPolicyInfo or {@code null} for none
+   */
+  public Cluster setAclPolicyInfo(AclPolicyInfo aclPolicyInfo) {
+    this.aclPolicyInfo = aclPolicyInfo;
     return this;
   }
 

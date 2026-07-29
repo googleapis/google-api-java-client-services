@@ -74,6 +74,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.lang.String ipAddress;
 
   /**
+   * Whether the activity was performed by an agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isAgenticAction;
+
+  /**
    * The type of API resource. For an activity report, the value is `audit#activity`.
    * The value may be {@code null}.
    */
@@ -101,6 +108,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceDetails> resourceDetails;
+
+  /**
+   * Device details of the user doing the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ActivityUserDeviceInfo userDeviceInfo;
 
   /**
    * User doing the action.
@@ -194,6 +208,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the activity was performed by an agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsAgenticAction() {
+    return isAgenticAction;
+  }
+
+  /**
+   * Whether the activity was performed by an agent.
+   * @param isAgenticAction isAgenticAction or {@code null} for none
+   */
+  public Activity setIsAgenticAction(java.lang.Boolean isAgenticAction) {
+    this.isAgenticAction = isAgenticAction;
+    return this;
+  }
+
+  /**
    * The type of API resource. For an activity report, the value is `audit#activity`.
    * @return value or {@code null} for none
    */
@@ -263,6 +294,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * Device details of the user doing the action.
+   * @return value or {@code null} for none
+   */
+  public ActivityUserDeviceInfo getUserDeviceInfo() {
+    return userDeviceInfo;
+  }
+
+  /**
+   * Device details of the user doing the action.
+   * @param userDeviceInfo userDeviceInfo or {@code null} for none
+   */
+  public Activity setUserDeviceInfo(ActivityUserDeviceInfo userDeviceInfo) {
+    this.userDeviceInfo = userDeviceInfo;
+    return this;
+  }
+
   @Override
   public Activity set(String fieldName, Object value) {
     return (Activity) super.set(fieldName, value);
@@ -277,6 +325,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
    * User doing the action.
    */
   public static final class Actor extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Details of the AI agent that was the actor for the activity.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private AgentAttributionInfo agentAttributionInfo;
 
     /**
      * Details of the application that was the actor for the activity.
@@ -316,6 +371,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.String profileId;
+
+    /**
+     * Details of the AI agent that was the actor for the activity.
+     * @return value or {@code null} for none
+     */
+    public AgentAttributionInfo getAgentAttributionInfo() {
+      return agentAttributionInfo;
+    }
+
+    /**
+     * Details of the AI agent that was the actor for the activity.
+     * @param agentAttributionInfo agentAttributionInfo or {@code null} for none
+     */
+    public Actor setAgentAttributionInfo(AgentAttributionInfo agentAttributionInfo) {
+      this.agentAttributionInfo = agentAttributionInfo;
+      return this;
+    }
 
     /**
      * Details of the application that was the actor for the activity.

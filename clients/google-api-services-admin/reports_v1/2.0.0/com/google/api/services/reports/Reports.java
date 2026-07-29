@@ -383,6 +383,32 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Optional. Filters on agent info fields in the activity. This filter gets applied in
+       * conjunction(AND) with other filters. Example: "agentInfoFilter=agentId=\"agent-id\" AND
+       * agentName=\"agent-name\" AND agentOwnerEmail=\"agent-owner-email\""
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String agentInfoFilter;
+
+      /** Optional. Filters on agent info fields in the activity. This filter gets applied in
+     conjunction(AND) with other filters. Example: "agentInfoFilter=agentId=\"agent-id\" AND
+     agentName=\"agent-name\" AND agentOwnerEmail=\"agent-owner-email\""
+       */
+      public java.lang.String getAgentInfoFilter() {
+        return agentInfoFilter;
+      }
+
+      /**
+       * Optional. Filters on agent info fields in the activity. This filter gets applied in
+       * conjunction(AND) with other filters. Example: "agentInfoFilter=agentId=\"agent-id\" AND
+       * agentName=\"agent-name\" AND agentOwnerEmail=\"agent-owner-email\""
+       */
+      public List setAgentInfoFilter(java.lang.String agentInfoFilter) {
+        this.agentInfoFilter = agentInfoFilter;
+        return this;
+      }
+
+      /**
        * Optional. Used to filter on the `oAuthClientId` field present in
        * [`ApplicationInfo`](#applicationinfo) message. **Usage** ```
        * GET...&applicationInfoFilter=oAuthClientId="clientId"

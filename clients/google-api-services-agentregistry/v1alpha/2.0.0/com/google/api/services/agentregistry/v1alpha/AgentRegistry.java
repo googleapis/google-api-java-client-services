@@ -3851,6 +3851,349 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
 
       }
       /**
+       * An accessor for creating requests from the Publishers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AgentRegistry agentregistry = new AgentRegistry(...);}
+       *   {@code AgentRegistry.Publishers.List request = agentregistry.publishers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Publishers publishers() {
+        return new Publishers();
+      }
+
+      /**
+       * The "publishers" collection of methods.
+       */
+      public class Publishers {
+
+        /**
+         * Fetches details of a specific Publisher.
+         *
+         * Create a request for the method "publishers.get".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Target publisher resource name. Format:
+         *        `projects/{project}/locations/{location}/publishers/{publisher}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Publisher> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+
+          /**
+           * Fetches details of a specific Publisher.
+           *
+           * Create a request for the method "publishers.get".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Target publisher resource name. Format:
+         *        `projects/{project}/locations/{location}/publishers/{publisher}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.Publisher.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Target publisher resource name. Format:
+           * `projects/{project}/locations/{location}/publishers/{publisher}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Target publisher resource name. Format:
+         `projects/{project}/locations/{location}/publishers/{publisher}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Target publisher resource name. Format:
+           * `projects/{project}/locations/{location}/publishers/{publisher}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all Publishers in a location.
+         *
+         * Create a request for the method "publishers.list".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent location to query. Format: `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.ListPublishersResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/publishers";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all Publishers in a location.
+           *
+           * Create a request for the method "publishers.list".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent location to query. Format: `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.ListPublishersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent location to query. Format: `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent location to query. Format: `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent location to query. Format: `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Page limit size. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Page limit size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Page limit size. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page offset token. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page offset token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page offset token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Services collection.
        *
        * <p>The typical use is:</p>
@@ -4838,6 +5181,1922 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the Skills collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AgentRegistry agentregistry = new AgentRegistry(...);}
+       *   {@code AgentRegistry.Skills.List request = agentregistry.skills().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Skills skills() {
+        return new Skills();
+      }
+
+      /**
+       * The "skills" collection of methods.
+       */
+      public class Skills {
+
+        /**
+         * ========================================================================= # Skills Collection
+         * APIs Creates a Skill resource container, optionally publishing the initial SkillRevision inline
+         * in a single, atomic CRUD roundtrip.
+         *
+         * Create a request for the method "skills.create".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location location to bootstrap.
+         * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.Skill}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.Skill content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/skills";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * ========================================================================= # Skills Collection
+           * APIs Creates a Skill resource container, optionally publishing the initial SkillRevision inline
+           * in a single, atomic CRUD roundtrip.
+           *
+           * Create a request for the method "skills.create".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location location to bootstrap.
+           * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.Skill}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.Skill content) {
+            super(AgentRegistry.this, "POST", REST_PATH, content, com.google.api.services.agentregistry.v1alpha.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The project and location location to bootstrap. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location location to bootstrap.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The project and location location to bootstrap. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Signed UUID request idempotency token.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. Custom, user-defined unique container identifier. Must be unique within the
+           * parent project and location. This value should be 4-63 characters, and valid characters
+           * are `/a-z-/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String skillId;
+
+          /** Required. Custom, user-defined unique container identifier. Must be unique within the parent
+         project and location. This value should be 4-63 characters, and valid characters are `/a-z-/`.
+           */
+          public java.lang.String getSkillId() {
+            return skillId;
+          }
+
+          /**
+           * Required. Custom, user-defined unique container identifier. Must be unique within the
+           * parent project and location. This value should be 4-63 characters, and valid characters
+           * are `/a-z-/`.
+           */
+          public Create setSkillId(java.lang.String skillId) {
+            this.skillId = skillId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Skill container along with all its revisions.
+         *
+         * Create a request for the method "skills.delete".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Target Skill container name to remove.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+
+          /**
+           * Deletes a Skill container along with all its revisions.
+           *
+           * Create a request for the method "skills.delete".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Target Skill container name to remove.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(AgentRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Target Skill container name to remove. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Target Skill container name to remove.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Target Skill container name to remove. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any child SkillRevisions under this Skill will also be
+           * deleted. Otherwise, the request will only succeed if the Skill has no child
+           * SkillRevisions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any child SkillRevisions under this Skill will also be deleted.
+         Otherwise, the request will only succeed if the Skill has no child SkillRevisions.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any child SkillRevisions under this Skill will also be
+           * deleted. Otherwise, the request will only succeed if the Skill has no child
+           * SkillRevisions.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Signed UUID request idempotency token.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetches the active configuration and metadata of a Skill.
+         *
+         * Create a request for the method "skills.get".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Target resource container name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Skill> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+
+          /**
+           * Fetches the active configuration and metadata of a Skill.
+           *
+           * Create a request for the method "skills.get".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Target resource container name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.Skill.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Target resource container name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Target resource container name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Target resource container name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists logical Skills available in a project.
+         *
+         * Create a request for the method "skills.list".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListSkillsRequest
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.ListSkillsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/skills";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists logical Skills available in a project.
+           *
+           * Create a request for the method "skills.list".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListSkillsRequest
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.ListSkillsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for ListSkillsRequest */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListSkillsRequest
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for ListSkillsRequest */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Use this field to specify filter criteria on list results. Filter expressions
+           * can be used to restrict results based upon filterable fields, where equality operators
+           * can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-
+           * agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`,
+           * `OR`, and `()`. | Field | `=` | `<`, `>` | |--------------|-----|----------| | state |
+           * Yes | No | | targetState | Yes | No | | createTime | Yes | Yes | | updateTime | Yes |
+           * Yes | Examples: * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Use this field to specify filter criteria on list results. Filter expressions can be used
+         to restrict results based upon filterable fields, where equality operators can be used. See
+         [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools) for more
+         details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
+         |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | | createTime |
+         Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to restrict results to skills in
+         the `ACTIVE` state.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Use this field to specify filter criteria on list results. Filter expressions
+           * can be used to restrict results based upon filterable fields, where equality operators
+           * can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-
+           * agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`,
+           * `OR`, and `()`. | Field | `=` | `<`, `>` | |--------------|-----|----------| | state |
+           * Yes | No | | targetState | Yes | No | | createTime | Yes | Yes | | updateTime | Yes |
+           * Yes | Examples: * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates Skill metadata or overrides active pointers/state using REST standard PATCH.
+         *
+         * Create a request for the method "skills.patch".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the Skill. Format:
+         *        `projects/{project}/locations/{location}/skills/{skill}` The `{skill}` segment acts as the
+         *        resource ID. If the skill is associated with a Publisher, this segment typically uses a
+         *        hyphenated namespace prefix corresponding to the publisher (e.g., `google-workspace-
+         *        create-docs`).
+         * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.Skill}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.agentregistry.v1alpha.model.Skill content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+
+          /**
+           * Updates Skill metadata or overrides active pointers/state using REST standard PATCH.
+           *
+           * Create a request for the method "skills.patch".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the Skill. Format:
+         *        `projects/{project}/locations/{location}/skills/{skill}` The `{skill}` segment acts as the
+         *        resource ID. If the skill is associated with a Publisher, this segment typically uses a
+         *        hyphenated namespace prefix corresponding to the publisher (e.g., `google-workspace-
+         *        create-docs`).
+           * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.Skill}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.agentregistry.v1alpha.model.Skill content) {
+            super(AgentRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.agentregistry.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name of the Skill. Format:
+           * `projects/{project}/locations/{location}/skills/{skill}` The `{skill}` segment acts as
+           * the resource ID. If the skill is associated with a Publisher, this segment typically
+           * uses a hyphenated namespace prefix corresponding to the publisher (e.g., `google-
+           * workspace-create-docs`).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the Skill. Format:
+         `projects/{project}/locations/{location}/skills/{skill}` The `{skill}` segment acts as the resource
+         ID. If the skill is associated with a Publisher, this segment typically uses a hyphenated namespace
+         prefix corresponding to the publisher (e.g., `google-workspace-create-docs`).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name of the Skill. Format:
+           * `projects/{project}/locations/{location}/skills/{skill}` The `{skill}` segment acts as
+           * the resource ID. If the skill is associated with a Publisher, this segment typically
+           * uses a hyphenated namespace prefix corresponding to the publisher (e.g., `google-
+           * workspace-create-docs`).
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Signed UUID request idempotency token.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Signed UUID request idempotency token. */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. Standard update target mask mapping relative fields. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Standard update target mask mapping relative fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. Standard update target mask mapping relative fields. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Custom deep-search method to filter by frontmatter or query SKILL.md text blobs.
+         *
+         * Create a request for the method "skills.search".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for SearchSkillsRequest. Format: `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.SearchSkillsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/skills:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Custom deep-search method to filter by frontmatter or query SKILL.md text blobs.
+           *
+           * Create a request for the method "skills.search".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for SearchSkillsRequest. Format: `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.SearchSkillsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent value for SearchSkillsRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for SearchSkillsRequest. Format: `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent value for SearchSkillsRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Use this field to specify additional filter criteria on search results.
+           * Filter expressions can be used to restrict results based upon filterable fields, where
+           * equality operators can be used. See [instructions](https://docs.cloud.google.com/agent-
+           * registry/search-agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`,
+           * `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
+           * |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | |
+           * createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to
+           * restrict results to skills in the `ACTIVE` state.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Use this field to specify additional filter criteria on search results. Filter
+         expressions can be used to restrict results based upon filterable fields, where equality operators
+         can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-
+         tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`, `OR`, and `()`. | Field |
+         `=` | `<`, `>` | |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No |
+         | createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to restrict
+         results to skills in the `ACTIVE` state.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Use this field to specify additional filter criteria on search results.
+           * Filter expressions can be used to restrict results based upon filterable fields, where
+           * equality operators can be used. See [instructions](https://docs.cloud.google.com/agent-
+           * registry/search-agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`,
+           * `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
+           * |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | |
+           * createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to
+           * restrict results to skills in the `ACTIVE` state.
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of search results to return per page. The page size is
+           * capped at `100`, even if a larger value is specified. A negative value will result in
+           * an `INVALID_ARGUMENT` error. If unspecified or set to `0`, a default value of `20` will
+           * be used. The server may return fewer results than requested.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of search results to return per page. The page size is capped at
+         `100`, even if a larger value is specified. A negative value will result in an `INVALID_ARGUMENT`
+         error. If unspecified or set to `0`, a default value of `20` will be used. The server may return
+         fewer results than requested.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of search results to return per page. The page size is
+           * capped at `100`, even if a larger value is specified. A negative value will result in
+           * an `INVALID_ARGUMENT` error. If unspecified or set to `0`, a default value of `20` will
+           * be used. The server may return fewer results than requested.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. If present, retrieve the next batch of results from the preceding call to
+           * this method. `page_token` must be the value of `next_page_token` from the previous
+           * response. The values of all other method parameters, must be identical to those in the
+           * previous call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. If present, retrieve the next batch of results from the preceding call to this method.
+         `page_token` must be the value of `next_page_token` from the previous response. The values of all
+         other method parameters, must be identical to those in the previous call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. If present, retrieve the next batch of results from the preceding call to
+           * this method. `page_token` must be the value of `next_page_token` from the previous
+           * response. The values of all other method parameters, must be identical to those in the
+           * previous call.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Search criteria used to select the Skills to return. If no search criteria is
+           * specified then all accessible Skills will be returned. Search expressions can be used
+           * to restrict results based upon searchable fields, where the operators can be used along
+           * with the suffix wildcard symbol `*`. See
+           * [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools)
+           * for more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable
+           * fields: | Field | `=` | `:` | `*` | Keyword Search |
+           * |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
+           * | Yes | Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes
+           * | Included | | description | No | Yes | No | Included | | frontmatter.name | No | Yes |
+           * No | Included | | frontmatter.description | No | Yes | No | Included | |
+           * frontmatter.compatibility | No | Yes | No | Included | | frontmatter.license | No | Yes
+           * | No | Included | Examples: *
+           * `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find
+           * the skill with the specified skill ID. * `name:important` to find skills whose name
+           * contains `important` as a word. * `displayName:works*` to find skills whose display
+           * name contains words that start with `works`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String searchString;
+
+          /** Optional. Search criteria used to select the Skills to return. If no search criteria is specified
+         then all accessible Skills will be returned. Search expressions can be used to restrict results
+         based upon searchable fields, where the operators can be used along with the suffix wildcard symbol
+         `*`. See [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools) for
+         more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable fields: | Field
+         | `=` | `:` | `*` | Keyword Search |
+         |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes | Yes |
+         Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes | Included | |
+         description | No | Yes | No | Included | | frontmatter.name | No | Yes | No | Included | |
+         frontmatter.description | No | Yes | No | Included | | frontmatter.compatibility | No | Yes | No |
+         Included | | frontmatter.license | No | Yes | No | Included | Examples: *
+         `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find the skill with
+         the specified skill ID. * `name:important` to find skills whose name contains `important` as a
+         word. * `displayName:works*` to find skills whose display name contains words that start with
+         `works`.
+           */
+          public java.lang.String getSearchString() {
+            return searchString;
+          }
+
+          /**
+           * Optional. Search criteria used to select the Skills to return. If no search criteria is
+           * specified then all accessible Skills will be returned. Search expressions can be used
+           * to restrict results based upon searchable fields, where the operators can be used along
+           * with the suffix wildcard symbol `*`. See
+           * [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools)
+           * for more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable
+           * fields: | Field | `=` | `:` | `*` | Keyword Search |
+           * |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
+           * | Yes | Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes
+           * | Included | | description | No | Yes | No | Included | | frontmatter.name | No | Yes |
+           * No | Included | | frontmatter.description | No | Yes | No | Included | |
+           * frontmatter.compatibility | No | Yes | No | Included | | frontmatter.license | No | Yes
+           * | No | Included | Examples: *
+           * `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find
+           * the skill with the specified skill ID. * `name:important` to find skills whose name
+           * contains `important` as a word. * `displayName:works*` to find skills whose display
+           * name contains words that start with `works`.
+           */
+          public Search setSearchString(java.lang.String searchString) {
+            this.searchString = searchString;
+            return this;
+          }
+
+          /** Optional. The type of search. */
+          @com.google.api.client.util.Key
+          private java.lang.String searchType;
+
+          /** Optional. The type of search.
+           */
+          public java.lang.String getSearchType() {
+            return searchType;
+          }
+
+          /** Optional. The type of search. */
+          public Search setSearchType(java.lang.String searchType) {
+            this.searchType = searchType;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Revisions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code AgentRegistry agentregistry = new AgentRegistry(...);}
+         *   {@code AgentRegistry.Revisions.List request = agentregistry.revisions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Revisions revisions() {
+          return new Revisions();
+        }
+
+        /**
+         * The "revisions" collection of methods.
+         */
+        public class Revisions {
+
+          /**
+           * Creates a new immutable revision and triggers validation pipelines.
+           *
+           * Create a request for the method "revisions.create".
+           *
+           * This request holds the parameters needed by the agentregistry server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent logical container name.
+           * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SkillRevision}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SkillRevision content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Operation> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/revisions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+
+            /**
+             * Creates a new immutable revision and triggers validation pipelines.
+             *
+             * Create a request for the method "revisions.create".
+             *
+             * This request holds the parameters needed by the the agentregistry server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent logical container name.
+             * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SkillRevision}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SkillRevision content) {
+              super(AgentRegistry.this, "POST", REST_PATH, content, com.google.api.services.agentregistry.v1alpha.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Parent logical container name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent logical container name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent logical container name. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Signed UUID request idempotency token. */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. Signed UUID request idempotency token.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /** Optional. Signed UUID request idempotency token. */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. Custom, user-defined unique revision identifier. Format: 4-63 characters,
+             * matching regex `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String skillRevisionId;
+
+            /** Optional. Custom, user-defined unique revision identifier. Format: 4-63 characters, matching regex
+           `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`
+             */
+            public java.lang.String getSkillRevisionId() {
+              return skillRevisionId;
+            }
+
+            /**
+             * Optional. Custom, user-defined unique revision identifier. Format: 4-63 characters,
+             * matching regex `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`
+             */
+            public Create setSkillRevisionId(java.lang.String skillRevisionId) {
+              this.skillRevisionId = skillRevisionId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a specific revision (restricted to admins to purge accidentally committed secrets).
+           *
+           * Create a request for the method "revisions.delete".
+           *
+           * This request holds the parameters needed by the agentregistry server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Target revision name to remove.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.Operation> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+
+            /**
+             * Deletes a specific revision (restricted to admins to purge accidentally committed secrets).
+             *
+             * Create a request for the method "revisions.delete".
+             *
+             * This request holds the parameters needed by the the agentregistry server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Target revision name to remove.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(AgentRegistry.this, "DELETE", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Target revision name to remove. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Target revision name to remove.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Target revision name to remove. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. Signed UUID request idempotency token. */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. Signed UUID request idempotency token.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /** Optional. Signed UUID request idempotency token. */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single immutable Revision.
+           *
+           * Create a request for the method "revisions.get".
+           *
+           * This request holds the parameters needed by the agentregistry server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Target revision name.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.SkillRevision> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+
+            /**
+             * Gets details of a single immutable Revision.
+             *
+             * Create a request for the method "revisions.get".
+             *
+             * This request holds the parameters needed by the the agentregistry server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Target revision name.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.SkillRevision.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+              }
+              initializeMediaDownload();
+            }
+
+            @Override
+            public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+              super.executeMediaAndDownloadTo(outputStream);
+            }
+
+            @Override
+            public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+              return super.executeMediaAsInputStream();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+              return super.executeMedia();
+            }
+
+            @Override
+            public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+              java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+                  ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+              return new com.google.api.client.http.GenericUrl(
+                  com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Target revision name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Target revision name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Target revision name. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+/revisions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all revisions belonging to a parent Skill.
+           *
+           * Create a request for the method "revisions.list".
+           *
+           * This request holds the parameters needed by the agentregistry server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent logical container name to query.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.ListSkillRevisionsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/revisions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+
+            /**
+             * Lists all revisions belonging to a parent Skill.
+             *
+             * Create a request for the method "revisions.list".
+             *
+             * This request holds the parameters needed by the the agentregistry server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent logical container name to query.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(AgentRegistry.this, "GET", REST_PATH, null, com.google.api.services.agentregistry.v1alpha.model.ListSkillRevisionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Parent logical container name to query. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent logical container name to query.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent logical container name to query. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Page limit size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Page limit size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. Page limit size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. Page offset token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page offset token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. Page offset token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

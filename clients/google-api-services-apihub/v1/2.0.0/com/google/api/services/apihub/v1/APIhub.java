@@ -17759,6 +17759,166 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
       }
+      /**
+       * An accessor for creating requests from the Servers collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code APIhub apihub = new APIhub(...);}
+       *   {@code APIhub.Servers.List request = apihub.servers().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Servers servers() {
+        return new Servers();
+      }
+
+      /**
+       * The "servers" collection of methods.
+       */
+      public class Servers {
+
+        /**
+         * Configures and deploys a given server config for given target. Currently this API supports only
+         * deploying MCP server in Apigee X. For mcp server deployment in apigee X, if there is already a
+         * mcp proxy deployed, then this method will try to overwrite it by creating new revision i.e. all
+         * existing tools will be removed and new set of tools will be deployed.
+         *
+         * Create a request for the method "servers.configureAndDeployServer".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link ConfigureAndDeployServer#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. Format: `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ConfigureAndDeployServerRequest}
+         * @return the request
+         */
+        public ConfigureAndDeployServer configureAndDeployServer(java.lang.String parent, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ConfigureAndDeployServerRequest content) throws java.io.IOException {
+          ConfigureAndDeployServer result = new ConfigureAndDeployServer(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ConfigureAndDeployServer extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/servers:configureAndDeployServer";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Configures and deploys a given server config for given target. Currently this API supports only
+           * deploying MCP server in Apigee X. For mcp server deployment in apigee X, if there is already a
+           * mcp proxy deployed, then this method will try to overwrite it by creating new revision i.e. all
+           * existing tools will be removed and new set of tools will be deployed.
+           *
+           * Create a request for the method "servers.configureAndDeployServer".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link ConfigureAndDeployServer#execute()} method to invoke the remote
+           * operation. <p> {@link ConfigureAndDeployServer#initialize(com.google.api.client.googleapis.serv
+           * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. Format: `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ConfigureAndDeployServerRequest}
+           * @since 1.13
+           */
+          protected ConfigureAndDeployServer(java.lang.String parent, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ConfigureAndDeployServerRequest content) {
+            super(APIhub.this, "POST", REST_PATH, content, com.google.api.services.apihub.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ConfigureAndDeployServer set$Xgafv(java.lang.String $Xgafv) {
+            return (ConfigureAndDeployServer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setAccessToken(java.lang.String accessToken) {
+            return (ConfigureAndDeployServer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setAlt(java.lang.String alt) {
+            return (ConfigureAndDeployServer) super.setAlt(alt);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setCallback(java.lang.String callback) {
+            return (ConfigureAndDeployServer) super.setCallback(callback);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setFields(java.lang.String fields) {
+            return (ConfigureAndDeployServer) super.setFields(fields);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setKey(java.lang.String key) {
+            return (ConfigureAndDeployServer) super.setKey(key);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setOauthToken(java.lang.String oauthToken) {
+            return (ConfigureAndDeployServer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ConfigureAndDeployServer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setQuotaUser(java.lang.String quotaUser) {
+            return (ConfigureAndDeployServer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setUploadType(java.lang.String uploadType) {
+            return (ConfigureAndDeployServer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ConfigureAndDeployServer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ConfigureAndDeployServer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: `projects/{project}/locations/{location}` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Format: `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Format: `projects/{project}/locations/{location}` */
+          public ConfigureAndDeployServer setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ConfigureAndDeployServer set(String parameterName, Object value) {
+            return (ConfigureAndDeployServer) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

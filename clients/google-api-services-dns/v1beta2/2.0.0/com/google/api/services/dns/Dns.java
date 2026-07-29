@@ -154,7 +154,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Changes {
 
     /**
-     * Atomically updates the ResourceRecordSet collection.
+     * Atomically updates the ResourceRecordSet collection. Note: While `dns.changes.create` is the
+     * baseline permission required to invoke this method, additional permissions are checked depending
+     * on the specific additions or deletions contained in the payload.
      *
      * Create a request for the method "changes.create".
      *
@@ -177,7 +179,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/changes";
 
       /**
-       * Atomically updates the ResourceRecordSet collection.
+       * Atomically updates the ResourceRecordSet collection. Note: While `dns.changes.create` is the
+       * baseline permission required to invoke this method, additional permissions are checked
+       * depending on the specific additions or deletions contained in the payload.
        *
        * Create a request for the method "changes.create".
        *
@@ -1628,7 +1632,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ManagedZones {
 
     /**
-     * Creates a new ManagedZone.
+     * Creates a new ManagedZone. Note: While `dns.managedZones.create` is the baseline permission
+     * required to invoke this method, additional permissions are required if the managed zone
+     * configuration references other resources.
      *
      * Create a request for the method "managedZones.create".
      *
@@ -1650,7 +1656,9 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones";
 
       /**
-       * Creates a new ManagedZone.
+       * Creates a new ManagedZone. Note: While `dns.managedZones.create` is the baseline permission
+       * required to invoke this method, additional permissions are required if the managed zone
+       * configuration references other resources.
        *
        * Create a request for the method "managedZones.create".
        *

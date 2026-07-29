@@ -88,8 +88,8 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   /**
    * Immutable. The resource name of the constraint. Must be in one of the following forms: *
    * `projects/{project_number}/constraints/{constraint_name}` *
-   * `folders/{folder_id}/constraints/{constraint_name}` *
-   * `organizations/{organization_id}/constraints/{constraint_name}` For example,
+   * `folders/{folder_number}/constraints/{constraint_name}` *
+   * `organizations/{organization_number}/constraints/{constraint_name}` For example,
    * "/projects/123/constraints/compute.disableSerialPortAccess".
    * The value may be {@code null}.
    */
@@ -223,8 +223,8 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   /**
    * Immutable. The resource name of the constraint. Must be in one of the following forms: *
    * `projects/{project_number}/constraints/{constraint_name}` *
-   * `folders/{folder_id}/constraints/{constraint_name}` *
-   * `organizations/{organization_id}/constraints/{constraint_name}` For example,
+   * `folders/{folder_number}/constraints/{constraint_name}` *
+   * `organizations/{organization_number}/constraints/{constraint_name}` For example,
    * "/projects/123/constraints/compute.disableSerialPortAccess".
    * @return value or {@code null} for none
    */
@@ -235,8 +235,8 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   /**
    * Immutable. The resource name of the constraint. Must be in one of the following forms: *
    * `projects/{project_number}/constraints/{constraint_name}` *
-   * `folders/{folder_id}/constraints/{constraint_name}` *
-   * `organizations/{organization_id}/constraints/{constraint_name}` For example,
+   * `folders/{folder_number}/constraints/{constraint_name}` *
+   * `organizations/{organization_number}/constraints/{constraint_name}` For example,
    * "/projects/123/constraints/compute.disableSerialPortAccess".
    * @param name name or {@code null} for none
    */

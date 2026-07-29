@@ -182,8 +182,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -210,8 +210,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -292,14 +292,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -308,7 +308,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -404,8 +404,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
        * @return the request
        */
@@ -436,8 +436,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
          * @since 1.13
          */
@@ -509,14 +509,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that will parent the new policy. Must be in one of the
-       following forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       following forms: * `projects/{project_number}` * `projects/{project_id}` *
+       `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -525,7 +525,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -995,8 +995,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        *
        * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1024,8 +1024,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          *
          * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1106,16 +1106,16 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The target Google Cloud resource that parents the set of constraints and policies that
        will be returned from this call. Must be in one of the following forms: *
-       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -1124,8 +1124,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1202,8 +1202,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -1240,8 +1240,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -1317,8 +1317,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
@@ -1329,8 +1329,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
        `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
-       `folders/{folder_id}/policies/{constraint_name}` *
-       `organizations/{organization_id}/policies/{constraint_name}` For example,
+       `folders/{folder_number}/policies/{constraint_name}` *
+       `organizations/{organization_number}/policies/{constraint_name}` For example,
        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
@@ -1343,8 +1343,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
@@ -1440,8 +1440,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1468,8 +1468,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1550,14 +1550,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -1566,7 +1566,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2464,8 +2464,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
        * @return the request
        */
@@ -2496,8 +2496,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
          * @since 1.13
          */
@@ -2569,14 +2569,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that will parent the new policy. Must be in one of the
-       following forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       following forms: * `projects/{project_number}` * `projects/{project_id}` *
+       `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -2585,7 +2585,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3055,8 +3055,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        *
        * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3084,8 +3084,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          *
          * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3166,16 +3166,16 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The target Google Cloud resource that parents the set of constraints and policies that
        will be returned from this call. Must be in one of the following forms: *
-       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -3184,8 +3184,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3262,8 +3262,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -3300,8 +3300,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -3377,8 +3377,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
@@ -3389,8 +3389,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
        `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
-       `folders/{folder_id}/policies/{constraint_name}` *
-       `organizations/{organization_id}/policies/{constraint_name}` For example,
+       `folders/{folder_number}/policies/{constraint_name}` *
+       `organizations/{organization_number}/policies/{constraint_name}` For example,
        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
@@ -3403,8 +3403,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
@@ -3500,8 +3500,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3528,8 +3528,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3610,14 +3610,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that parents the constraint. Must be in one of the following
-       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -3626,7 +3626,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that parents the constraint. Must be in one of the
          * following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3722,8 +3722,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
        * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
        * @return the request
        */
@@ -3754,8 +3754,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The Google Cloud resource that will parent the new policy. Must be in one of the following
-       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}`
+       *        * `organizations/{organization_number}`
          * @param content the {@link com.google.api.services.orgpolicy.v2.model.GoogleCloudOrgpolicyV2Policy}
          * @since 1.13
          */
@@ -3827,14 +3827,14 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The Google Cloud resource that will parent the new policy. Must be in one of the
-       following forms: * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       following forms: * `projects/{project_number}` * `projects/{project_id}` *
+       `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -3843,7 +3843,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The Google Cloud resource that will parent the new policy. Must be in one of
          * the following forms: * `projects/{project_number}` * `projects/{project_id}` *
-         * `folders/{folder_id}` * `organizations/{organization_id}`
+         * `folders/{folder_number}` * `organizations/{organization_number}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4313,8 +4313,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        *
        * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4342,8 +4342,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          *
          * @param parent Required. The target Google Cloud resource that parents the set of constraints and policies that
        *        will be returned from this call. Must be in one of the following forms: *
-       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       *        `organizations/{organization_id}`
+       *        `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       *        `organizations/{organization_number}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4424,16 +4424,16 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The target Google Cloud resource that parents the set of constraints and policies that
        will be returned from this call. Must be in one of the following forms: *
-       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-       `organizations/{organization_id}`
+       `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+       `organizations/{organization_number}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -4442,8 +4442,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /**
          * Required. The target Google Cloud resource that parents the set of constraints and
          * policies that will be returned from this call. Must be in one of the following forms: *
-         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_id}` *
-         * `organizations/{organization_id}`
+         * `projects/{project_number}` * `projects/{project_id}` * `folders/{folder_number}` *
+         * `organizations/{organization_number}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4520,8 +4520,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -4558,8 +4558,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
        *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
-       *        `folders/{folder_id}/policies/{constraint_name}` *
-       *        `organizations/{organization_id}/policies/{constraint_name}` For example,
+       *        `folders/{folder_number}/policies/{constraint_name}` *
+       *        `organizations/{organization_number}/policies/{constraint_name}` For example,
        *        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        *        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
        *        requests, but responses will return the name using the equivalent project number.
@@ -4635,8 +4635,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.
@@ -4647,8 +4647,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
        `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
-       `folders/{folder_id}/policies/{constraint_name}` *
-       `organizations/{organization_id}/policies/{constraint_name}` For example,
+       `folders/{folder_number}/policies/{constraint_name}` *
+       `organizations/{organization_number}/policies/{constraint_name}` For example,
        `projects/123/policies/compute.disableSerialPortAccess`. Note:
        `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but
        responses will return the name using the equivalent project number.
@@ -4661,8 +4661,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * Immutable. The resource name of the policy. Must be one of the following forms, where
          * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
-         * `folders/{folder_id}/policies/{constraint_name}` *
-         * `organizations/{organization_id}/policies/{constraint_name}` For example,
+         * `folders/{folder_number}/policies/{constraint_name}` *
+         * `organizations/{organization_number}/policies/{constraint_name}` For example,
          * `projects/123/policies/compute.disableSerialPortAccess`. Note:
          * `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API
          * requests, but responses will return the name using the equivalent project number.

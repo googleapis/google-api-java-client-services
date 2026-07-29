@@ -53,9 +53,7 @@ public final class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents exten
   /**
    * The percentage of accepted messages that were delayed due to message throttling, such as
    * [collapsible message throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_throttling) or [maximum message rate
-   * throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#device_throttling).
+   * options#collapsible_throttling).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,9 +122,7 @@ public final class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents exten
   /**
    * The percentage of accepted messages that were delayed due to message throttling, such as
    * [collapsible message throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_throttling) or [maximum message rate
-   * throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#device_throttling).
+   * options#collapsible_throttling).
    * @return value or {@code null} for none
    */
   public java.lang.Float getDelayedMessageThrottled() {
@@ -136,9 +132,7 @@ public final class GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents exten
   /**
    * The percentage of accepted messages that were delayed due to message throttling, such as
    * [collapsible message throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#collapsible_throttling) or [maximum message rate
-   * throttling](https://firebase.google.com/docs/cloud-messaging/concept-
-   * options#device_throttling).
+   * options#collapsible_throttling).
    * @param delayedMessageThrottled delayedMessageThrottled or {@code null} for none
    */
   public GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents setDelayedMessageThrottled(java.lang.Float delayedMessageThrottled) {

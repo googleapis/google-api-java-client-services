@@ -30,8 +30,8 @@ package com.google.api.services.merchantapi.datasources_v1.model;
 public final class DataSourceReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the primary data source. Format:
-   * `accounts/{account}/dataSources/{datasource}`
+   * Optional. Deprecated: Use `self` instead to reference the primary data source. The name of the
+   * primary data source. Format: `accounts/{account}/dataSources/{datasource}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   private java.lang.String supplementalDataSourceName;
 
   /**
-   * Optional. The name of the primary data source. Format:
-   * `accounts/{account}/dataSources/{datasource}`
+   * Optional. Deprecated: Use `self` instead to reference the primary data source. The name of the
+   * primary data source. Format: `accounts/{account}/dataSources/{datasource}`
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryDataSourceName() {
@@ -62,8 +62,8 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The name of the primary data source. Format:
-   * `accounts/{account}/dataSources/{datasource}`
+   * Optional. Deprecated: Use `self` instead to reference the primary data source. The name of the
+   * primary data source. Format: `accounts/{account}/dataSources/{datasource}`
    * @param primaryDataSourceName primaryDataSourceName or {@code null} for none
    */
   public DataSourceReference setPrimaryDataSourceName(java.lang.String primaryDataSourceName) {

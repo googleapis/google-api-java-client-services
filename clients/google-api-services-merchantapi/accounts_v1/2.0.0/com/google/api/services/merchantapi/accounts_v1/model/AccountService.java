@@ -147,6 +147,14 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private java.lang.String providerDisplayName;
 
   /**
+   * Service type for UCP Checkout Management. The provider is managing the UCP Checkout capability
+   * integration for the merchant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UcpCheckoutManagement ucpCheckoutManagement;
+
+  /**
    * Service type for account aggregation. This enables the provider, which is an advanced account,
    * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
    * provider can perform administrative and operational tasks across all linked sub-accounts. This
@@ -393,6 +401,25 @@ public final class AccountService extends com.google.api.client.json.GenericJson
    */
   public AccountService setProviderDisplayName(java.lang.String providerDisplayName) {
     this.providerDisplayName = providerDisplayName;
+    return this;
+  }
+
+  /**
+   * Service type for UCP Checkout Management. The provider is managing the UCP Checkout capability
+   * integration for the merchant.
+   * @return value or {@code null} for none
+   */
+  public UcpCheckoutManagement getUcpCheckoutManagement() {
+    return ucpCheckoutManagement;
+  }
+
+  /**
+   * Service type for UCP Checkout Management. The provider is managing the UCP Checkout capability
+   * integration for the merchant.
+   * @param ucpCheckoutManagement ucpCheckoutManagement or {@code null} for none
+   */
+  public AccountService setUcpCheckoutManagement(UcpCheckoutManagement ucpCheckoutManagement) {
+    this.ucpCheckoutManagement = ucpCheckoutManagement;
     return this;
   }
 

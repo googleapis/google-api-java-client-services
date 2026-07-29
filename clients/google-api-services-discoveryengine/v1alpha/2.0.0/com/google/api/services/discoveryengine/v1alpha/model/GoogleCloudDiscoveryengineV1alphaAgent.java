@@ -58,6 +58,14 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
   private String createTime;
 
   /**
+   * Output only. The reason why the agent creation (provisioning) failed. Only set if the state is
+   * CREATION_FAILED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creationFailureReason;
+
+  /**
    * Optional. The custom placeholder text that appears in the text box before the user enters any
    * text.
    * The value may be {@code null}.
@@ -241,6 +249,25 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaAgent setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The reason why the agent creation (provisioning) failed. Only set if the state is
+   * CREATION_FAILED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreationFailureReason() {
+    return creationFailureReason;
+  }
+
+  /**
+   * Output only. The reason why the agent creation (provisioning) failed. Only set if the state is
+   * CREATION_FAILED.
+   * @param creationFailureReason creationFailureReason or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgent setCreationFailureReason(java.lang.String creationFailureReason) {
+    this.creationFailureReason = creationFailureReason;
     return this;
   }
 

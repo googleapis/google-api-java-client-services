@@ -128,7 +128,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceBackupVault;
 
   /**
-   * Output only. Region in which the backup vault is created. Format:
+   * Optional. Region in which the backup vault is created. Format:
    * `projects/{project_id}/locations/{location}`
    * The value may be {@code null}.
    */
@@ -378,7 +378,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Region in which the backup vault is created. Format:
+   * Optional. Region in which the backup vault is created. Format:
    * `projects/{project_id}/locations/{location}`
    * @return value or {@code null} for none
    */
@@ -387,7 +387,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Region in which the backup vault is created. Format:
+   * Optional. Region in which the backup vault is created. Format:
    * `projects/{project_id}/locations/{location}`
    * @param sourceRegion sourceRegion or {@code null} for none
    */

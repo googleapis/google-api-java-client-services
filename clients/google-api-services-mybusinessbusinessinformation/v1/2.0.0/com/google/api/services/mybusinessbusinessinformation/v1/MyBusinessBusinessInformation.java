@@ -771,22 +771,25 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
 
       /**
-       * The primary category stable ID to find available attributes. Must be of the format
-       * categories/{category_id}.
+       * Optional. The primary category stable ID to find available attributes. Must be of the
+       * format `categories/{category_id}` (e.g., `categories/gcid:restaurant`). Required if
+       * `parent` is not set and `show_all` is false.
        */
       @com.google.api.client.util.Key
       private java.lang.String categoryName;
 
-      /** The primary category stable ID to find available attributes. Must be of the format
-     categories/{category_id}.
+      /** Optional. The primary category stable ID to find available attributes. Must be of the format
+     `categories/{category_id}` (e.g., `categories/gcid:restaurant`). Required if `parent` is not set
+     and `show_all` is false.
        */
       public java.lang.String getCategoryName() {
         return categoryName;
       }
 
       /**
-       * The primary category stable ID to find available attributes. Must be of the format
-       * categories/{category_id}.
+       * Optional. The primary category stable ID to find available attributes. Must be of the
+       * format `categories/{category_id}` (e.g., `categories/gcid:restaurant`). Required if
+       * `parent` is not set and `show_all` is false.
        */
       public List setCategoryName(java.lang.String categoryName) {
         this.categoryName = categoryName;
@@ -794,22 +797,22 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
 
       /**
-       * The BCP 47 code of language to get attribute display names in. If this language is not
-       * available, they will be provided in English.
+       * Optional. The BCP 47 code of language to get attribute display names in. If this language
+       * is not available, they will be provided in English.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** The BCP 47 code of language to get attribute display names in. If this language is not available,
-     they will be provided in English.
+      /** Optional. The BCP 47 code of language to get attribute display names in. If this language is not
+     available, they will be provided in English.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
       }
 
       /**
-       * The BCP 47 code of language to get attribute display names in. If this language is not
-       * available, they will be provided in English.
+       * Optional. The BCP 47 code of language to get attribute display names in. If this language
+       * is not available, they will be provided in English.
        */
       public List setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -849,66 +852,74 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
       }
 
       /**
-       * Resource name of the location to look up available attributes. If this field is set,
-       * category_name, region_code, language_code and show_all are not required and must not be
-       * set.
+       * Optional. Resource name of the location to look up available attributes. If this field is
+       * set, `category_name`, `region_code`, `language_code` and `show_all` are not required and
+       * must not be set. Format: `locations/{location_id}` (e.g., `locations/1234567890`).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Resource name of the location to look up available attributes. If this field is set, category_name,
-     region_code, language_code and show_all are not required and must not be set.
+      /** Optional. Resource name of the location to look up available attributes. If this field is set,
+     `category_name`, `region_code`, `language_code` and `show_all` are not required and must not be
+     set. Format: `locations/{location_id}` (e.g., `locations/1234567890`).
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Resource name of the location to look up available attributes. If this field is set,
-       * category_name, region_code, language_code and show_all are not required and must not be
-       * set.
+       * Optional. Resource name of the location to look up available attributes. If this field is
+       * set, `category_name`, `region_code`, `language_code` and `show_all` are not required and
+       * must not be set. Format: `locations/{location_id}` (e.g., `locations/1234567890`).
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
       }
 
-      /** The ISO 3166-1 alpha-2 country code to find available attributes. */
+      /**
+       * Optional. The ISO 3166-1 alpha-2 country code to find available attributes. Required if
+       * `parent` is not set.
+       */
       @com.google.api.client.util.Key
       private java.lang.String regionCode;
 
-      /** The ISO 3166-1 alpha-2 country code to find available attributes.
+      /** Optional. The ISO 3166-1 alpha-2 country code to find available attributes. Required if `parent` is
+     not set.
        */
       public java.lang.String getRegionCode() {
         return regionCode;
       }
 
-      /** The ISO 3166-1 alpha-2 country code to find available attributes. */
+      /**
+       * Optional. The ISO 3166-1 alpha-2 country code to find available attributes. Required if
+       * `parent` is not set.
+       */
       public List setRegionCode(java.lang.String regionCode) {
         this.regionCode = regionCode;
         return this;
       }
 
       /**
-       * Metadata for all available attributes are returned when this field is set to true,
-       * disregarding parent and category_name fields. language_code and region_code are required
-       * when show_all is set to true.
+       * Optional. If set to true, metadata for all available attributes are returned, disregarding
+       * `parent` and `category_name` fields. `language_code` and `region_code` are required when
+       * `show_all` is set to true.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showAll;
 
-      /** Metadata for all available attributes are returned when this field is set to true, disregarding
-     parent and category_name fields. language_code and region_code are required when show_all is set to
-     true.
+      /** Optional. If set to true, metadata for all available attributes are returned, disregarding `parent`
+     and `category_name` fields. `language_code` and `region_code` are required when `show_all` is set
+     to true.
        */
       public java.lang.Boolean getShowAll() {
         return showAll;
       }
 
       /**
-       * Metadata for all available attributes are returned when this field is set to true,
-       * disregarding parent and category_name fields. language_code and region_code are required
-       * when show_all is set to true.
+       * Optional. If set to true, metadata for all available attributes are returned, disregarding
+       * `parent` and `category_name` fields. `language_code` and `region_code` are required when
+       * `show_all` is set to true.
        */
       public List setShowAll(java.lang.Boolean showAll) {
         this.showAll = showAll;

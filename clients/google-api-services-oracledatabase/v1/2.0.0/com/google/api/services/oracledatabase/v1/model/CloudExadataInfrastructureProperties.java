@@ -89,7 +89,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.Double dataStorageSizeTb;
 
   /**
-   * Output only. The database server type of the Exadata Infrastructure.
+   * Optional. The database server type of the Exadata Infrastructure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,7 +233,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   private java.lang.Integer storageCount;
 
   /**
-   * Output only. The storage server type of the Exadata Infrastructure.
+   * Optional. The storage server type of the Exadata Infrastructure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,7 +395,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Output only. The database server type of the Exadata Infrastructure.
+   * Optional. The database server type of the Exadata Infrastructure.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseServerType() {
@@ -403,7 +403,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Output only. The database server type of the Exadata Infrastructure.
+   * Optional. The database server type of the Exadata Infrastructure.
    * @param databaseServerType databaseServerType or {@code null} for none
    */
   public CloudExadataInfrastructureProperties setDatabaseServerType(java.lang.String databaseServerType) {
@@ -743,7 +743,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Output only. The storage server type of the Exadata Infrastructure.
+   * Optional. The storage server type of the Exadata Infrastructure.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageServerType() {
@@ -751,7 +751,7 @@ public final class CloudExadataInfrastructureProperties extends com.google.api.c
   }
 
   /**
-   * Output only. The storage server type of the Exadata Infrastructure.
+   * Optional. The storage server type of the Exadata Infrastructure.
    * @param storageServerType storageServerType or {@code null} for none
    */
   public CloudExadataInfrastructureProperties setStorageServerType(java.lang.String storageServerType) {

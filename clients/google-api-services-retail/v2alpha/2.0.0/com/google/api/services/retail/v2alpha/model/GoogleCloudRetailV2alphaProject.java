@@ -31,7 +31,7 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaProject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Retail API solutions that the project has enrolled.
+   * Output only. AI Commerce Search API solutions that the project has enrolled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaProject extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Output only. Retail API solutions that the project has enrolled.
+   * Output only. AI Commerce Search API solutions that the project has enrolled.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnrolledSolutions() {
@@ -54,7 +54,7 @@ public final class GoogleCloudRetailV2alphaProject extends com.google.api.client
   }
 
   /**
-   * Output only. Retail API solutions that the project has enrolled.
+   * Output only. AI Commerce Search API solutions that the project has enrolled.
    * @param enrolledSolutions enrolledSolutions or {@code null} for none
    */
   public GoogleCloudRetailV2alphaProject setEnrolledSolutions(java.util.List<java.lang.String> enrolledSolutions) {

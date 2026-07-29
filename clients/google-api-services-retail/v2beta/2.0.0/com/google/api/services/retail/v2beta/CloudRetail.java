@@ -11363,8 +11363,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           /**
            * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
            * method should be used instead, otherwise a 400 Bad Request error is returned. This method is used
-           * only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this method
-           * directly.
+           * only by the AI Commerce Search API JavaScript pixel and Google Tag Manager. Users should not call
+           * this method directly.
            *
            * Create a request for the method "userEvents.collect".
            *
@@ -11392,8 +11392,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
             /**
              * Writes a single user event from the browser. For larger user event payload over 16 KB, the POST
              * method should be used instead, otherwise a 400 Bad Request error is returned. This method is
-             * used only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this
-             * method directly.
+             * used only by the AI Commerce Search API JavaScript pixel and Google Tag Manager. Users should
+             * not call this method directly.
              *
              * Create a request for the method "userEvents.collect".
              *

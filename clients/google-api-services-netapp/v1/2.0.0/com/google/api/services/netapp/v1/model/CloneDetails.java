@@ -54,6 +54,13 @@ public final class CloneDetails extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceVolume;
 
   /**
+   * Output only. The current state of the clone split operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String splitState;
+
+  /**
    * Output only. Shared space in GiB. Determined at volume creation time based on size of source
    * snapshot.
    * @return value or {@code null} for none
@@ -107,6 +114,23 @@ public final class CloneDetails extends com.google.api.client.json.GenericJson {
    */
   public CloneDetails setSourceVolume(java.lang.String sourceVolume) {
     this.sourceVolume = sourceVolume;
+    return this;
+  }
+
+  /**
+   * Output only. The current state of the clone split operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSplitState() {
+    return splitState;
+  }
+
+  /**
+   * Output only. The current state of the clone split operation.
+   * @param splitState splitState or {@code null} for none
+   */
+  public CloneDetails setSplitState(java.lang.String splitState) {
+    this.splitState = splitState;
     return this;
   }
 

@@ -23,6 +23,18 @@ package com.google.api.services.workspaceevents.v1;
  */
 public class WorkspaceEventsScopes {
 
+  /** On their own behalf, apps in Google Chat can see all members in Google Chat spaces and conversations throughout your Workspace organization, even when the Chat app isn't a member. */
+  public static final String CHAT_APP_ALL_MEMBERSHIPS_READONLY = "https://www.googleapis.com/auth/chat.app.all.memberships.readonly";
+
+  /** On their own behalf, apps in Google Chat can see all messages and reactions throughout your Workspace organization, even when the Chat app isn't a member of a space or conversation. */
+  public static final String CHAT_APP_ALL_MESSAGES_READONLY = "https://www.googleapis.com/auth/chat.app.all.messages.readonly";
+
+  /** On their own behalf, apps in Google Chat can see metadata about all spaces and conversations in Google Chat throughout your Workspace organization, even when the Chat app isn't a member. */
+  public static final String CHAT_APP_ALL_SPACES_READONLY = "https://www.googleapis.com/auth/chat.app.all.spaces.readonly";
+
+  /** On their own behalf, apps in Google Chat can see the last read time for all users in all spaces and conversations throughout your Workspace organization, even when the Chat app isn't a member.. */
+  public static final String CHAT_APP_ALL_USERS_READSTATE_READONLY = "https://www.googleapis.com/auth/chat.app.all.users.readstate.readonly";
+
   /** On their own behalf, apps in Google Chat can see, add, update, and remove members from conversations and spaces. */
   public static final String CHAT_APP_MEMBERSHIPS = "https://www.googleapis.com/auth/chat.app.memberships";
 
@@ -105,6 +117,10 @@ public class WorkspaceEventsScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CHAT_APP_ALL_MEMBERSHIPS_READONLY);
+    set.add(CHAT_APP_ALL_MESSAGES_READONLY);
+    set.add(CHAT_APP_ALL_SPACES_READONLY);
+    set.add(CHAT_APP_ALL_USERS_READSTATE_READONLY);
     set.add(CHAT_APP_MEMBERSHIPS);
     set.add(CHAT_APP_MEMBERSHIPS_READONLY);
     set.add(CHAT_APP_MESSAGES_READONLY);

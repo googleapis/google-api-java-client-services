@@ -55,13 +55,6 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
   private String readTime;
 
   /**
-   * Optional. The request options for this request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * A structured query.
    * The value may be {@code null}.
    */
@@ -132,23 +125,6 @@ public final class RunQueryRequest extends com.google.api.client.json.GenericJso
    */
   public RunQueryRequest setReadTime(String readTime) {
     this.readTime = readTime;
-    return this;
-  }
-
-  /**
-   * Optional. The request options for this request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for this request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public RunQueryRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
     return this;
   }
 

@@ -74,13 +74,6 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private String readTime;
 
   /**
-   * Optional. The request options for the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RequestOptions requestOptions;
-
-  /**
    * A structured query. Query must specify collection with all descendants and be ordered by name
    * ascending. Other filters, order bys, limits, offsets, and start/end cursors are not supported.
    * The value may be {@code null}.
@@ -185,23 +178,6 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
    */
   public PartitionQueryRequest setReadTime(String readTime) {
     this.readTime = readTime;
-    return this;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @return value or {@code null} for none
-   */
-  public RequestOptions getRequestOptions() {
-    return requestOptions;
-  }
-
-  /**
-   * Optional. The request options for the request.
-   * @param requestOptions requestOptions or {@code null} for none
-   */
-  public PartitionQueryRequest setRequestOptions(RequestOptions requestOptions) {
-    this.requestOptions = requestOptions;
     return this;
   }
 

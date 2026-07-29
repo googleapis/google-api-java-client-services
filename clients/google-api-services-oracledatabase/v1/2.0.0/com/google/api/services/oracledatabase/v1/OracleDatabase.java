@@ -6620,24 +6620,28 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the
-           * gcp_oracle_zone_id field is supported in this format:
-           * `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+           * Optional. An expression for filtering the results of the request. The
+           * `gcp_oracle_zone_id`, `shape_family`, and `database_edition` fields are supported in
+           * the following format: `gcp_oracle_zone_id="{gcp_oracle_zone_id}" AND
+           * shape_family="{shape_family}" AND database_edition="{database_edition}"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. An expression for filtering the results of the request. Only the gcp_oracle_zone_id field
-         is supported in this format: `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+          /** Optional. An expression for filtering the results of the request. The `gcp_oracle_zone_id`,
+         `shape_family`, and `database_edition` fields are supported in the following format:
+         `gcp_oracle_zone_id="{gcp_oracle_zone_id}" AND shape_family="{shape_family}" AND
+         database_edition="{database_edition}"`.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the
-           * gcp_oracle_zone_id field is supported in this format:
-           * `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+           * Optional. An expression for filtering the results of the request. The
+           * `gcp_oracle_zone_id`, `shape_family`, and `database_edition` fields are supported in
+           * the following format: `gcp_oracle_zone_id="{gcp_oracle_zone_id}" AND
+           * shape_family="{shape_family}" AND database_edition="{database_edition}"`.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -10190,22 +10194,25 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the shape,
-           * gcp_oracle_zone and gi_version fields are supported in this format: `shape="{shape}"`.
+           * Optional. An expression for filtering the results of the request. Only the `shape` and
+           * `gcp_oracle_zone_id` fields are supported in the following format: `shape="{shape}" AND
+           * gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. An expression for filtering the results of the request. Only the shape, gcp_oracle_zone
-         and gi_version fields are supported in this format: `shape="{shape}"`.
+          /** Optional. An expression for filtering the results of the request. Only the `shape` and
+         `gcp_oracle_zone_id` fields are supported in the following format: `shape="{shape}" AND
+         gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. An expression for filtering the results of the request. Only the shape,
-           * gcp_oracle_zone and gi_version fields are supported in this format: `shape="{shape}"`.
+           * Optional. An expression for filtering the results of the request. Only the `shape` and
+           * `gcp_oracle_zone_id` fields are supported in the following format: `shape="{shape}" AND
+           * gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -10424,25 +10431,25 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             }
 
             /**
-             * Optional. An expression for filtering the results of the request. Only shapeFamily
-             * and gcp_oracle_zone_id are supported in this format: `shape_family="{shapeFamily}"
-             * AND gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+             * Optional. An expression for filtering the results of the request. Only the
+             * `shape_family` and `gcp_oracle_zone_id` fields are supported in the following format:
+             * `shape_family="{shape_family}" AND gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. An expression for filtering the results of the request. Only shapeFamily and
-           gcp_oracle_zone_id are supported in this format: `shape_family="{shapeFamily}" AND
-           gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+            /** Optional. An expression for filtering the results of the request. Only the `shape_family` and
+           `gcp_oracle_zone_id` fields are supported in the following format: `shape_family="{shape_family}"
+           AND gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. An expression for filtering the results of the request. Only shapeFamily
-             * and gcp_oracle_zone_id are supported in this format: `shape_family="{shapeFamily}"
-             * AND gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
+             * Optional. An expression for filtering the results of the request. Only the
+             * `shape_family` and `gcp_oracle_zone_id` fields are supported in the following format:
+             * `shape_family="{shape_family}" AND gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

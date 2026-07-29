@@ -31,6 +31,20 @@ package com.google.api.services.displayvideo.v4.model;
 public final class PlannedProductForecast extends com.google.api.client.json.GenericJson {
 
   /**
+   * Number of on-target impressions including co-viewers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long onTargetCoviewImpressions;
+
+  /**
+   * Number of unique people reached that match the on-target definition including co-viewers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long onTargetCoviewReach;
+
+  /**
    * Number of on-target impressions.
    * The value may be {@code null}.
    */
@@ -43,6 +57,20 @@ public final class PlannedProductForecast extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long onTargetReach;
+
+  /**
+   * Total number of impressions including co-viewers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalCoviewImpressions;
+
+  /**
+   * Total number of unique people reached including co-viewers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalCoviewReach;
 
   /**
    * Total number of impressions.
@@ -71,6 +99,40 @@ public final class PlannedProductForecast extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long viewableImpressions;
+
+  /**
+   * Number of on-target impressions including co-viewers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOnTargetCoviewImpressions() {
+    return onTargetCoviewImpressions;
+  }
+
+  /**
+   * Number of on-target impressions including co-viewers.
+   * @param onTargetCoviewImpressions onTargetCoviewImpressions or {@code null} for none
+   */
+  public PlannedProductForecast setOnTargetCoviewImpressions(java.lang.Long onTargetCoviewImpressions) {
+    this.onTargetCoviewImpressions = onTargetCoviewImpressions;
+    return this;
+  }
+
+  /**
+   * Number of unique people reached that match the on-target definition including co-viewers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOnTargetCoviewReach() {
+    return onTargetCoviewReach;
+  }
+
+  /**
+   * Number of unique people reached that match the on-target definition including co-viewers.
+   * @param onTargetCoviewReach onTargetCoviewReach or {@code null} for none
+   */
+  public PlannedProductForecast setOnTargetCoviewReach(java.lang.Long onTargetCoviewReach) {
+    this.onTargetCoviewReach = onTargetCoviewReach;
+    return this;
+  }
 
   /**
    * Number of on-target impressions.
@@ -103,6 +165,40 @@ public final class PlannedProductForecast extends com.google.api.client.json.Gen
    */
   public PlannedProductForecast setOnTargetReach(java.lang.Long onTargetReach) {
     this.onTargetReach = onTargetReach;
+    return this;
+  }
+
+  /**
+   * Total number of impressions including co-viewers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalCoviewImpressions() {
+    return totalCoviewImpressions;
+  }
+
+  /**
+   * Total number of impressions including co-viewers.
+   * @param totalCoviewImpressions totalCoviewImpressions or {@code null} for none
+   */
+  public PlannedProductForecast setTotalCoviewImpressions(java.lang.Long totalCoviewImpressions) {
+    this.totalCoviewImpressions = totalCoviewImpressions;
+    return this;
+  }
+
+  /**
+   * Total number of unique people reached including co-viewers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalCoviewReach() {
+    return totalCoviewReach;
+  }
+
+  /**
+   * Total number of unique people reached including co-viewers.
+   * @param totalCoviewReach totalCoviewReach or {@code null} for none
+   */
+  public PlannedProductForecast setTotalCoviewReach(java.lang.Long totalCoviewReach) {
+    this.totalCoviewReach = totalCoviewReach;
     return this;
   }
 

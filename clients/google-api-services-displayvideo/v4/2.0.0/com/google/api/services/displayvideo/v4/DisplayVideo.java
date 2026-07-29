@@ -2111,6 +2111,180 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Updates an ad asset. Returns the updated ad asset if successful. Supports updating assets of
+       * AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO` and `AD_ASSET_TYPE_IMAGE`. Only the
+       * `synthetic_content_attestation_status` field is mutable.
+       *
+       * Create a request for the method "adAssets.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+       * @param adAssetId Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
+       * @param content the {@link com.google.api.services.displayvideo.v4.model.AdAsset}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long adAssetId, com.google.api.services.displayvideo.v4.model.AdAsset content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, adAssetId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.AdAsset> {
+
+        private static final String REST_PATH = "v4/advertisers/{+advertiserId}/adAssets/{+adAssetId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_ASSET_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates an ad asset. Returns the updated ad asset if successful. Supports updating assets of
+         * AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO` and `AD_ASSET_TYPE_IMAGE`. Only the
+         * `synthetic_content_attestation_status` field is mutable.
+         *
+         * Create a request for the method "adAssets.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad asset belongs to.
+         * @param adAssetId Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
+         * @param content the {@link com.google.api.services.displayvideo.v4.model.AdAsset}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long adAssetId, com.google.api.services.displayvideo.v4.model.AdAsset content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v4.model.AdAsset.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adAssetId = com.google.api.client.util.Preconditions.checkNotNull(adAssetId, "Required parameter adAssetId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad asset belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad asset belongs to. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /**
+         * Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long adAssetId;
+
+        /** Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
+         */
+        public java.lang.Long getAdAssetId() {
+          return adAssetId;
+        }
+
+        /**
+         * Output only. The ID of the ad asset. Referred to as the asset ID when assigned to an ad.
+         */
+        public Patch setAdAssetId(java.lang.Long adAssetId) {
+          this.adAssetId = adAssetId;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to update. Only AdAsset.synthetic_content_attestation_status
+         * is mutable.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update. Only AdAsset.synthetic_content_attestation_status is
+       mutable.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to update. Only AdAsset.synthetic_content_attestation_status
+         * is mutable.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
        * Uploads and creates an ad asset. Returns the ID of the newly-created ad asset if successful. Only
        * supports the uploading of assets with the AdAssetType `AD_ASSET_TYPE_IMAGE`.
        *

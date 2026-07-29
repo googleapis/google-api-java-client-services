@@ -59,6 +59,13 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syntheticContentAttestationStatus;
+
+  /**
    * Youtube video asset data.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
    */
   public AdAsset setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyntheticContentAttestationStatus() {
+    return syntheticContentAttestationStatus;
+  }
+
+  /**
+   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
+   */
+  public AdAsset setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {
+    this.syntheticContentAttestationStatus = syntheticContentAttestationStatus;
     return this;
   }
 

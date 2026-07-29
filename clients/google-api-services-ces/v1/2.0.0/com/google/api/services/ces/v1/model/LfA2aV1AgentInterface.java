@@ -50,7 +50,11 @@ public final class LfA2aV1AgentInterface extends com.google.api.client.json.Gene
   private java.lang.String protocolVersion;
 
   /**
-   * Tenant ID to be used in the request when calling the agent.
+   * Optional. An opaque string used for routing requests to a specific agent or tenant when
+   * multiple agents are served behind a single A2A endpoint. When set, clients MUST include this
+   * value in the `tenant` field of all request messages sent to this interface. The server is
+   * responsible for interpreting the value and routing requests accordingly; the protocol does not
+   * define its format or semantics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +109,11 @@ public final class LfA2aV1AgentInterface extends com.google.api.client.json.Gene
   }
 
   /**
-   * Tenant ID to be used in the request when calling the agent.
+   * Optional. An opaque string used for routing requests to a specific agent or tenant when
+   * multiple agents are served behind a single A2A endpoint. When set, clients MUST include this
+   * value in the `tenant` field of all request messages sent to this interface. The server is
+   * responsible for interpreting the value and routing requests accordingly; the protocol does not
+   * define its format or semantics.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenant() {
@@ -113,7 +121,11 @@ public final class LfA2aV1AgentInterface extends com.google.api.client.json.Gene
   }
 
   /**
-   * Tenant ID to be used in the request when calling the agent.
+   * Optional. An opaque string used for routing requests to a specific agent or tenant when
+   * multiple agents are served behind a single A2A endpoint. When set, clients MUST include this
+   * value in the `tenant` field of all request messages sent to this interface. The server is
+   * responsible for interpreting the value and routing requests accordingly; the protocol does not
+   * define its format or semantics.
    * @param tenant tenant or {@code null} for none
    */
   public LfA2aV1AgentInterface setTenant(java.lang.String tenant) {

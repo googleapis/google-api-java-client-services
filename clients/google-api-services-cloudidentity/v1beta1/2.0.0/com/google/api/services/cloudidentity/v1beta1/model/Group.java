@@ -73,6 +73,21 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private DynamicGroupMetadata dynamicGroupMetadata;
 
   /**
+   * Optional. External identifiers associated with the `Group`. Enables external identity providers
+   * and directory sync tools to link their native unique identifiers with this group. Currently,
+   * the only allowable namespace is `"system/external"`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalId> externalIds;
+
+  static {
+    // hack to force ProGuard to consider ExternalId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalId.class);
+  }
+
+  /**
    * Required. The `EntityKey` of the `Group`.
    * The value may be {@code null}.
    */
@@ -214,6 +229,27 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setDynamicGroupMetadata(DynamicGroupMetadata dynamicGroupMetadata) {
     this.dynamicGroupMetadata = dynamicGroupMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. External identifiers associated with the `Group`. Enables external identity providers
+   * and directory sync tools to link their native unique identifiers with this group. Currently,
+   * the only allowable namespace is `"system/external"`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalId> getExternalIds() {
+    return externalIds;
+  }
+
+  /**
+   * Optional. External identifiers associated with the `Group`. Enables external identity providers
+   * and directory sync tools to link their native unique identifiers with this group. Currently,
+   * the only allowable namespace is `"system/external"`.
+   * @param externalIds externalIds or {@code null} for none
+   */
+  public Group setExternalIds(java.util.List<ExternalId> externalIds) {
+    this.externalIds = externalIds;
     return this;
   }
 

@@ -515,6 +515,15 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long subaccountId;
 
   /**
+   * Optional. Whether to add a label to the creative as created or edited using AI when served in
+   * regions with local AI labeling regulations. [Learn more about labeling requirements in AI
+   * regulations.](https://support.google.com/campaignmanager/answer/17232030)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String syntheticContentAttestationStatus;
+
+  /**
    * Third-party URL used to record backup image impressions. Applicable to the following creative
    * types: all RICH_MEDIA.
    * The value may be {@code null}.
@@ -1703,6 +1712,27 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setSubaccountId(java.lang.Long subaccountId) {
     this.subaccountId = subaccountId;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to add a label to the creative as created or edited using AI when served in
+   * regions with local AI labeling regulations. [Learn more about labeling requirements in AI
+   * regulations.](https://support.google.com/campaignmanager/answer/17232030)
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSyntheticContentAttestationStatus() {
+    return syntheticContentAttestationStatus;
+  }
+
+  /**
+   * Optional. Whether to add a label to the creative as created or edited using AI when served in
+   * regions with local AI labeling regulations. [Learn more about labeling requirements in AI
+   * regulations.](https://support.google.com/campaignmanager/answer/17232030)
+   * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
+   */
+  public Creative setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {
+    this.syntheticContentAttestationStatus = syntheticContentAttestationStatus;
     return this;
   }
 

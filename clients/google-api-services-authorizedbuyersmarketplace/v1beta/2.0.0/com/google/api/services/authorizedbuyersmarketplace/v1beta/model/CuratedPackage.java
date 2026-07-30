@@ -48,6 +48,14 @@ public final class CuratedPackage extends com.google.api.client.json.GenericJson
   private String createTime;
 
   /**
+   * Optional. Immutable. The visibility of the combined curation package fee and data segment fees
+   * (the total curation fee).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String curationFeeVisibility;
+
+  /**
    * Optional. A description of the curated package, provided by the curator.
    * The value may be {@code null}.
    */
@@ -154,6 +162,25 @@ public final class CuratedPackage extends com.google.api.client.json.GenericJson
    */
   public CuratedPackage setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The visibility of the combined curation package fee and data segment fees
+   * (the total curation fee).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurationFeeVisibility() {
+    return curationFeeVisibility;
+  }
+
+  /**
+   * Optional. Immutable. The visibility of the combined curation package fee and data segment fees
+   * (the total curation fee).
+   * @param curationFeeVisibility curationFeeVisibility or {@code null} for none
+   */
+  public CuratedPackage setCurationFeeVisibility(java.lang.String curationFeeVisibility) {
+    this.curationFeeVisibility = curationFeeVisibility;
     return this;
   }
 

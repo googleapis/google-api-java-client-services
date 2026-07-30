@@ -6244,6 +6244,181 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Searches for messages in Google Chat that the calling user has access to. Returns a list of
+       * messages matching the search criteria. To search across all spaces the user has access to, set
+       * `parent` to `spaces/-`. Using any other value for `parent` results in an `INVALID_ARGUMENT`
+       * error. The returned messages have their `name` field populated with the full resource name, which
+       * includes the specific `space` in which the message resides. This API doesn't return all message
+       * types. The types of messages listed below aren't included in the response. Use ListMessages to
+       * list all messages. - Private Messages that are visible to the authenticated user. - Messages
+       * posted by Chat apps in spaces or group chats. - Messages in a Chat app DM. - Messages from
+       * blocked users. - Messages in spaces that the caller has muted. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.messages.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages`
+       *
+       * Create a request for the method "messages.search".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the space to search within. To search across all spaces the user has
+       *        access to, set this field to `spaces/-`. Using any other value for `parent` results in an
+       *        `INVALID_ARGUMENT` error. To limit the search to one or more spaces, use `space.name` or
+       *        `space.display_name` in the `filter`.
+       * @param content the {@link com.google.api.services.chat.v1.model.SearchMessagesRequest}
+       * @return the request
+       */
+      public Search search(java.lang.String parent, com.google.api.services.chat.v1.model.SearchMessagesRequest content) throws java.io.IOException {
+        Search result = new Search(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Search extends HangoutsChatRequest<com.google.api.services.chat.v1.model.SearchMessagesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/messages:search";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * Searches for messages in Google Chat that the calling user has access to. Returns a list of
+         * messages matching the search criteria. To search across all spaces the user has access to, set
+         * `parent` to `spaces/-`. Using any other value for `parent` results in an `INVALID_ARGUMENT`
+         * error. The returned messages have their `name` field populated with the full resource name,
+         * which includes the specific `space` in which the message resides. This API doesn't return all
+         * message types. The types of messages listed below aren't included in the response. Use
+         * ListMessages to list all messages. - Private Messages that are visible to the authenticated
+         * user. - Messages posted by Chat apps in spaces or group chats. - Messages in a Chat app DM. -
+         * Messages from blocked users. - Messages in spaces that the caller has muted. Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages`
+         *
+         * Create a request for the method "messages.search".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation. <p> {@link
+         * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the space to search within. To search across all spaces the user has
+       *        access to, set this field to `spaces/-`. Using any other value for `parent` results in an
+       *        `INVALID_ARGUMENT` error. To limit the search to one or more spaces, use `space.name` or
+       *        `space.display_name` in the `filter`.
+         * @param content the {@link com.google.api.services.chat.v1.model.SearchMessagesRequest}
+         * @since 1.13
+         */
+        protected Search(java.lang.String parent, com.google.api.services.chat.v1.model.SearchMessagesRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.SearchMessagesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Search set$Xgafv(java.lang.String $Xgafv) {
+          return (Search) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Search setAccessToken(java.lang.String accessToken) {
+          return (Search) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Search setAlt(java.lang.String alt) {
+          return (Search) super.setAlt(alt);
+        }
+
+        @Override
+        public Search setCallback(java.lang.String callback) {
+          return (Search) super.setCallback(callback);
+        }
+
+        @Override
+        public Search setFields(java.lang.String fields) {
+          return (Search) super.setFields(fields);
+        }
+
+        @Override
+        public Search setKey(java.lang.String key) {
+          return (Search) super.setKey(key);
+        }
+
+        @Override
+        public Search setOauthToken(java.lang.String oauthToken) {
+          return (Search) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Search) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Search setQuotaUser(java.lang.String quotaUser) {
+          return (Search) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Search setUploadType(java.lang.String uploadType) {
+          return (Search) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Search setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Search) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the space to search within. To search across all spaces
+         * the user has access to, set this field to `spaces/-`. Using any other value for `parent`
+         * results in an `INVALID_ARGUMENT` error. To limit the search to one or more spaces, use
+         * `space.name` or `space.display_name` in the `filter`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the space to search within. To search across all spaces the user has
+       access to, set this field to `spaces/-`. Using any other value for `parent` results in an
+       `INVALID_ARGUMENT` error. To limit the search to one or more spaces, use `space.name` or
+       `space.display_name` in the `filter`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource name of the space to search within. To search across all spaces
+         * the user has access to, set this field to `spaces/-`. Using any other value for `parent`
+         * results in an `INVALID_ARGUMENT` error. To limit the search to one or more spaces, use
+         * `space.name` or `space.display_name` in the `filter`.
+         */
+        public Search setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Search set(String parameterName, Object value) {
+          return (Search) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates a message. There's a difference between the `patch` and `update` methods. The `patch`
        * method uses a `patch` request while the `update` method uses a `put` request. We recommend using
        * the `patch` method. For an example, see [Update a

@@ -250,6 +250,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean credentialsConfigDisabled;
 
   /**
+   * Optional. Policies controlling cross-device communication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossDevicePolicies crossDevicePolicies;
+
+  /**
    * Cross-profile policies applied on the device.
    * The value may be {@code null}.
    */
@@ -1362,6 +1369,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setCredentialsConfigDisabled(java.lang.Boolean credentialsConfigDisabled) {
     this.credentialsConfigDisabled = credentialsConfigDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. Policies controlling cross-device communication.
+   * @return value or {@code null} for none
+   */
+  public CrossDevicePolicies getCrossDevicePolicies() {
+    return crossDevicePolicies;
+  }
+
+  /**
+   * Optional. Policies controlling cross-device communication.
+   * @param crossDevicePolicies crossDevicePolicies or {@code null} for none
+   */
+  public Policy setCrossDevicePolicies(CrossDevicePolicies crossDevicePolicies) {
+    this.crossDevicePolicies = crossDevicePolicies;
     return this;
   }
 

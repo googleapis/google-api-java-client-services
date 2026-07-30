@@ -31,16 +31,16 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class ConsumerPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
+   * Output only. The time the policy was created. For singleton policies, this is the first touch
+   * of the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> annotations;
+  private String createTime;
 
   /**
-   * Enable rules define usable services and service groups.
+   * Enable rules define usable services and groups. There can currently be at most one
+   * `EnableRule`. This restriction will be lifted in later releases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String etag;
 
   /**
-   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
-   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * Output only. The resource name of the policy. Only the `default` policy is supported:
+   * `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
    * `organizations/12345/consumerPolicies/default`.
    * The value may be {@code null}.
    */
@@ -63,35 +63,34 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * The last-modified time.
+   * Output only. The time the policy was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
+   * Output only. The time the policy was created. For singleton policies, this is the first touch
+   * of the policy.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getAnnotations() {
-    return annotations;
+  public String getCreateTime() {
+    return createTime;
   }
 
   /**
-   * Optional. Annotations is an unstructured key-value map stored with a policy that may be set by
-   * external tools to store and retrieve arbitrary metadata. They are not queryable and should be
-   * preserved when modifying objects. [AIP-128](https://google.aip.dev/128#annotations)
-   * @param annotations annotations or {@code null} for none
+   * Output only. The time the policy was created. For singleton policies, this is the first touch
+   * of the policy.
+   * @param createTime createTime or {@code null} for none
    */
-  public ConsumerPolicy setAnnotations(java.util.Map<String, java.lang.String> annotations) {
-    this.annotations = annotations;
+  public ConsumerPolicy setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
   /**
-   * Enable rules define usable services and service groups.
+   * Enable rules define usable services and groups. There can currently be at most one
+   * `EnableRule`. This restriction will be lifted in later releases.
    * @return value or {@code null} for none
    */
   public java.util.List<EnableRule> getEnableRules() {
@@ -99,7 +98,8 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Enable rules define usable services and service groups.
+   * Enable rules define usable services and groups. There can currently be at most one
+   * `EnableRule`. This restriction will be lifted in later releases.
    * @param enableRules enableRules or {@code null} for none
    */
   public ConsumerPolicy setEnableRules(java.util.List<EnableRule> enableRules) {
@@ -125,8 +125,8 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
-   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * Output only. The resource name of the policy. Only the `default` policy is supported:
+   * `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
    * `organizations/12345/consumerPolicies/default`.
    * @return value or {@code null} for none
    */
@@ -135,8 +135,8 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The resource name of the policy. We only allow consumer policy name as `default`
-   * for now: `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
+   * Output only. The resource name of the policy. Only the `default` policy is supported:
+   * `projects/12345/consumerPolicies/default`, `folders/12345/consumerPolicies/default`,
    * `organizations/12345/consumerPolicies/default`.
    * @param name name or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The last-modified time.
+   * Output only. The time the policy was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -154,7 +154,7 @@ public final class ConsumerPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The last-modified time.
+   * Output only. The time the policy was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public ConsumerPolicy setUpdateTime(String updateTime) {

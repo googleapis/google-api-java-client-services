@@ -44,18 +44,13 @@ public final class Impact extends com.google.api.client.json.GenericJson {
   private java.lang.String impactType;
 
   /**
-   * The parent resource that the analysis is based on and the service name that the analysis is
-   * for. Example: `projects/100/services/compute.googleapis.com`,
-   * folders/101/services/compute.googleapis.com` and
-   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
-   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
-   * be different. For example, for resource existence analysis, if the parent resource of the
-   * analyzed policy is a folder or an organization, the parent resource here can still be the
-   * project that contains the resources.
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String parent;
+  private java.lang.String missingDependency;
 
   /**
    * Output only. User friendly impact detail in a free form message.
@@ -92,33 +87,23 @@ public final class Impact extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The parent resource that the analysis is based on and the service name that the analysis is
-   * for. Example: `projects/100/services/compute.googleapis.com`,
-   * folders/101/services/compute.googleapis.com` and
-   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
-   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
-   * be different. For example, for resource existence analysis, if the parent resource of the
-   * analyzed policy is a folder or an organization, the parent resource here can still be the
-   * project that contains the resources.
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
    * @return value or {@code null} for none
    */
-  public java.lang.String getParent() {
-    return parent;
+  public java.lang.String getMissingDependency() {
+    return missingDependency;
   }
 
   /**
-   * The parent resource that the analysis is based on and the service name that the analysis is
-   * for. Example: `projects/100/services/compute.googleapis.com`,
-   * folders/101/services/compute.googleapis.com` and
-   * `organizations/102/services/compute.googleapis.com`. Usually, the parent resource here is same
-   * as the parent resource of the analyzed policy. However, for some analysis types, the parent can
-   * be different. For example, for resource existence analysis, if the parent resource of the
-   * analyzed policy is a folder or an organization, the parent resource here can still be the
-   * project that contains the resources.
-   * @param parent parent or {@code null} for none
+   * Output only. This field will be populated only for the `DEPENDENCY_MISSING_DEPENDENCIES` impact
+   * type. Example: `services/compute.googleapis.com`. Impact.detail will be in format : `missing
+   * service dependency: {missing_dependency}.`
+   * @param missingDependency missingDependency or {@code null} for none
    */
-  public Impact setParent(java.lang.String parent) {
-    this.parent = parent;
+  public Impact setMissingDependency(java.lang.String missingDependency) {
+    this.missingDependency = missingDependency;
     return this;
   }
 

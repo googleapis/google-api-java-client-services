@@ -520,6 +520,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Double latitude;
 
   /**
+   * The lease term of the property.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LeaseTerm leaseTerm;
+
+  /**
    * Additional URLs of lifestyle images of the item, used to explicitly identify images that
    * showcase your item in a real-world context. See the [Help Center
    * article](https://support.google.com/merchants/answer/9103186) for more information.
@@ -2291,6 +2298,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setLatitude(java.lang.Double latitude) {
     this.latitude = latitude;
+    return this;
+  }
+
+  /**
+   * The lease term of the property.
+   * @return value or {@code null} for none
+   */
+  public LeaseTerm getLeaseTerm() {
+    return leaseTerm;
+  }
+
+  /**
+   * The lease term of the property.
+   * @param leaseTerm leaseTerm or {@code null} for none
+   */
+  public ProductAttributes setLeaseTerm(LeaseTerm leaseTerm) {
+    this.leaseTerm = leaseTerm;
     return this;
   }
 

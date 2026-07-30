@@ -38,6 +38,16 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
   private java.lang.String displayName;
 
   /**
+   * Output only. State of the firewalls allowing health check traffic to the load balancer frontend
+   * (Envoy proxies). This is the result of the firewall configuration analysis verifying that
+   * health check traffic from required IP ranges to the the Envoy-based load balancer frontend is
+   * allowed by firewall rules with the load balancer target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String envoyHealthCheckFirewallsConfigState;
+
+  /**
    * Name of the load balancer the forwarding rule belongs to. Empty for forwarding rules not
    * related to load balancers (like PSC forwarding rules).
    * The value may be {@code null}.
@@ -126,6 +136,29 @@ public final class ForwardingRuleInfo extends com.google.api.client.json.Generic
    */
   public ForwardingRuleInfo setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. State of the firewalls allowing health check traffic to the load balancer frontend
+   * (Envoy proxies). This is the result of the firewall configuration analysis verifying that
+   * health check traffic from required IP ranges to the the Envoy-based load balancer frontend is
+   * allowed by firewall rules with the load balancer target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvoyHealthCheckFirewallsConfigState() {
+    return envoyHealthCheckFirewallsConfigState;
+  }
+
+  /**
+   * Output only. State of the firewalls allowing health check traffic to the load balancer frontend
+   * (Envoy proxies). This is the result of the firewall configuration analysis verifying that
+   * health check traffic from required IP ranges to the the Envoy-based load balancer frontend is
+   * allowed by firewall rules with the load balancer target.
+   * @param envoyHealthCheckFirewallsConfigState envoyHealthCheckFirewallsConfigState or {@code null} for none
+   */
+  public ForwardingRuleInfo setEnvoyHealthCheckFirewallsConfigState(java.lang.String envoyHealthCheckFirewallsConfigState) {
+    this.envoyHealthCheckFirewallsConfigState = envoyHealthCheckFirewallsConfigState;
     return this;
   }
 

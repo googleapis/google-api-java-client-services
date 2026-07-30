@@ -26,6 +26,12 @@ public class OrgPolicyAPIScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** See, edit, configure, and delete your Google Cloud Organization Policy data and see the email address for your Google Account. */
+  public static final String ORGANIZATIONPOLICY = "https://www.googleapis.com/auth/organizationpolicy";
+
+  /** See your Google Cloud Organization Policy data and the email address of your Google Account. */
+  public static final String ORGANIZATIONPOLICY_READONLY = "https://www.googleapis.com/auth/organizationpolicy.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +40,8 @@ public class OrgPolicyAPIScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(ORGANIZATIONPOLICY);
+    set.add(ORGANIZATIONPOLICY_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

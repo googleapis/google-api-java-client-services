@@ -72,6 +72,13 @@ public final class BackupRuleDetail extends com.google.api.client.json.GenericJs
   private java.lang.String ruleName;
 
   /**
+   * The storage tier of the BackupRule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String storageTier;
+
+  /**
    * Backup Window For Eg. “00:00 to 06:00”
    * @return value or {@code null} for none
    */
@@ -170,6 +177,23 @@ public final class BackupRuleDetail extends com.google.api.client.json.GenericJs
    */
   public BackupRuleDetail setRuleName(java.lang.String ruleName) {
     this.ruleName = ruleName;
+    return this;
+  }
+
+  /**
+   * The storage tier of the BackupRule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStorageTier() {
+    return storageTier;
+  }
+
+  /**
+   * The storage tier of the BackupRule.
+   * @param storageTier storageTier or {@code null} for none
+   */
+  public BackupRuleDetail setStorageTier(java.lang.String storageTier) {
+    this.storageTier = storageTier;
     return this;
   }
 

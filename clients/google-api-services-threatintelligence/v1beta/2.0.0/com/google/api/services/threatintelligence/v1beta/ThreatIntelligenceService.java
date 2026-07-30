@@ -1176,7 +1176,7 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
 
       public class GetPassword extends ThreatIntelligenceServiceRequest<com.google.api.services.threatintelligence.v1beta.model.Alert> {
 
-        private static final String REST_PATH = "v1beta/{+name}:GetPassword";
+        private static final String REST_PATH = "v1beta/{+name}:getPassword";
 
         private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+/alerts/[^/]+$");

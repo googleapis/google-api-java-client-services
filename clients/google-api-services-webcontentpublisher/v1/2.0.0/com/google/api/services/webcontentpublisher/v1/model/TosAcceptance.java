@@ -31,6 +31,13 @@ package com.google.api.services.webcontentpublisher.v1.model;
 public final class TosAcceptance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether the user opted in to receive product updates and email communications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean emailOptIn;
+
+  /**
    * Optional. The name of the person who accepted the TOS.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class TosAcceptance extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean userAccepted;
+
+  /**
+   * Optional. Whether the user opted in to receive product updates and email communications.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEmailOptIn() {
+    return emailOptIn;
+  }
+
+  /**
+   * Optional. Whether the user opted in to receive product updates and email communications.
+   * @param emailOptIn emailOptIn or {@code null} for none
+   */
+  public TosAcceptance setEmailOptIn(java.lang.Boolean emailOptIn) {
+    this.emailOptIn = emailOptIn;
+    return this;
+  }
 
   /**
    * Optional. The name of the person who accepted the TOS.

@@ -129,6 +129,14 @@ public final class Publication extends com.google.api.client.json.GenericJson {
   private java.lang.String publicationTosUrl;
 
   /**
+   * Optional. The publication entity type (for-profit vs non-profit). Defaults to FOR_PROFIT if
+   * omitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicationType;
+
+  /**
    * Required. The ISO 3166-1 alpha-2 region code where the publication is registered (e.g., "US").
    * The value may be {@code null}.
    */
@@ -369,6 +377,25 @@ public final class Publication extends com.google.api.client.json.GenericJson {
    */
   public Publication setPublicationTosUrl(java.lang.String publicationTosUrl) {
     this.publicationTosUrl = publicationTosUrl;
+    return this;
+  }
+
+  /**
+   * Optional. The publication entity type (for-profit vs non-profit). Defaults to FOR_PROFIT if
+   * omitted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicationType() {
+    return publicationType;
+  }
+
+  /**
+   * Optional. The publication entity type (for-profit vs non-profit). Defaults to FOR_PROFIT if
+   * omitted.
+   * @param publicationType publicationType or {@code null} for none
+   */
+  public Publication setPublicationType(java.lang.String publicationType) {
+    this.publicationType = publicationType;
     return this;
   }
 

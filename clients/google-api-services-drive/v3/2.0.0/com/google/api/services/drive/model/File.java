@@ -1809,7 +1809,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAcceptOwnership;
 
     /**
-     * Whether the current user can access this file via Gen AI features.
+     * Whether the current user can access this file via Gen AI features. For more information, see
+     * [Drive MCP file eligibility](https://developers.google.com/workspace/drive/api/guides/drive-
+     * mcp-server-file-eligibility).
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2174,7 +2176,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can access this file via Gen AI features.
+     * Whether the current user can access this file via Gen AI features. For more information, see
+     * [Drive MCP file eligibility](https://developers.google.com/workspace/drive/api/guides/drive-
+     * mcp-server-file-eligibility).
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanAccessViaGenAi() {
@@ -2182,7 +2186,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can access this file via Gen AI features.
+     * Whether the current user can access this file via Gen AI features. For more information, see
+     * [Drive MCP file eligibility](https://developers.google.com/workspace/drive/api/guides/drive-
+     * mcp-server-file-eligibility).
      * @param canAccessViaGenAi canAccessViaGenAi or {@code null} for none
      */
     public Capabilities setCanAccessViaGenAi(java.lang.Boolean canAccessViaGenAi) {

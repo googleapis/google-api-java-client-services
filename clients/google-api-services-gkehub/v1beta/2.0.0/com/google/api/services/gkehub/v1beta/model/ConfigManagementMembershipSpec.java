@@ -66,9 +66,10 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementHierarchyControllerConfig hierarchyController;
 
   /**
-   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
-   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
-   * this field instead, which is behaviorally equivalent.
+   * Optional. Deprecated: Automatic Feature management is in Preview and is unavailable in version
+   * 1.21.0 and later, after which Config Sync only supports manual upgrades. If set to manual
+   * upgrades, clear this field instead, which is behaviorally equivalent but helps prevent
+   * compatibility issues with newer fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,9 +177,10 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
-   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
-   * this field instead, which is behaviorally equivalent.
+   * Optional. Deprecated: Automatic Feature management is in Preview and is unavailable in version
+   * 1.21.0 and later, after which Config Sync only supports manual upgrades. If set to manual
+   * upgrades, clear this field instead, which is behaviorally equivalent but helps prevent
+   * compatibility issues with newer fields.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -186,9 +188,10 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Deprecated: In Preview, automatic Feature management is unavailable from version
-   * 1.21.0 onwards, and Config Sync only supports manual upgrades. If set to manual upgrades, clear
-   * this field instead, which is behaviorally equivalent.
+   * Optional. Deprecated: Automatic Feature management is in Preview and is unavailable in version
+   * 1.21.0 and later, after which Config Sync only supports manual upgrades. If set to manual
+   * upgrades, clear this field instead, which is behaviorally equivalent but helps prevent
+   * compatibility issues with newer fields.
    * @param management management or {@code null} for none
    */
   public ConfigManagementMembershipSpec setManagement(java.lang.String management) {

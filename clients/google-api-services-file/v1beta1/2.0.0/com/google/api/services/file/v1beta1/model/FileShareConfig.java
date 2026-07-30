@@ -53,6 +53,17 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.util.List<NfsExportOptions> nfsExportOptions;
 
   /**
+   * Optional. Input only. Specifies options for restoring from a backup source. Use this field to
+   * configure a partial restore, allowing recovery of specific files or directories instead of the
+   * entire backup. This field is only valid if the source oneof is set to `source_backup` or
+   * `source_backupdr_backup`. If this field is not provided, restoring from a backup will perform a
+   * full restore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestoreConfig restoreConfig;
+
+  /**
    * The resource name of the backup, in the format
    * `projects/{project_id}/locations/{location_id}/backups/{backup_id}`, that this file share has
    * been restored from.
@@ -121,6 +132,31 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setNfsExportOptions(java.util.List<NfsExportOptions> nfsExportOptions) {
     this.nfsExportOptions = nfsExportOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Specifies options for restoring from a backup source. Use this field to
+   * configure a partial restore, allowing recovery of specific files or directories instead of the
+   * entire backup. This field is only valid if the source oneof is set to `source_backup` or
+   * `source_backupdr_backup`. If this field is not provided, restoring from a backup will perform a
+   * full restore.
+   * @return value or {@code null} for none
+   */
+  public RestoreConfig getRestoreConfig() {
+    return restoreConfig;
+  }
+
+  /**
+   * Optional. Input only. Specifies options for restoring from a backup source. Use this field to
+   * configure a partial restore, allowing recovery of specific files or directories instead of the
+   * entire backup. This field is only valid if the source oneof is set to `source_backup` or
+   * `source_backupdr_backup`. If this field is not provided, restoring from a backup will perform a
+   * full restore.
+   * @param restoreConfig restoreConfig or {@code null} for none
+   */
+  public FileShareConfig setRestoreConfig(RestoreConfig restoreConfig) {
+    this.restoreConfig = restoreConfig;
     return this;
   }
 

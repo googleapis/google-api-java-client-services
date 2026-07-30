@@ -3927,6 +3927,164 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             return (Update) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the memory layer of a cluster. To enable the memory layer, set the memory_config. To
+         * disable the memory layer, unset the memory_config.
+         *
+         * Create a request for the method "clusters.updateMemoryLayer".
+         *
+         * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+         * parameters, call the {@link UpdateMemoryLayer#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Name of the memory layer. This is always:
+         *        "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+         * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MemoryLayer}
+         * @return the request
+         */
+        public UpdateMemoryLayer updateMemoryLayer(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.MemoryLayer content) throws java.io.IOException {
+          UpdateMemoryLayer result = new UpdateMemoryLayer(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateMemoryLayer extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+
+          /**
+           * Updates the memory layer of a cluster. To enable the memory layer, set the memory_config. To
+           * disable the memory layer, unset the memory_config.
+           *
+           * Create a request for the method "clusters.updateMemoryLayer".
+           *
+           * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+           * optional parameters, call the {@link UpdateMemoryLayer#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateMemoryLayer#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Identifier. Name of the memory layer. This is always:
+         *        "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MemoryLayer}
+           * @since 1.13
+           */
+          protected UpdateMemoryLayer(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.MemoryLayer content) {
+            super(BigtableAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+          }
+
+          @Override
+          public UpdateMemoryLayer set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateMemoryLayer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateMemoryLayer setAccessToken(java.lang.String accessToken) {
+            return (UpdateMemoryLayer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateMemoryLayer setAlt(java.lang.String alt) {
+            return (UpdateMemoryLayer) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateMemoryLayer setCallback(java.lang.String callback) {
+            return (UpdateMemoryLayer) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateMemoryLayer setFields(java.lang.String fields) {
+            return (UpdateMemoryLayer) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateMemoryLayer setKey(java.lang.String key) {
+            return (UpdateMemoryLayer) super.setKey(key);
+          }
+
+          @Override
+          public UpdateMemoryLayer setOauthToken(java.lang.String oauthToken) {
+            return (UpdateMemoryLayer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateMemoryLayer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateMemoryLayer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateMemoryLayer setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateMemoryLayer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateMemoryLayer setUploadType(java.lang.String uploadType) {
+            return (UpdateMemoryLayer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateMemoryLayer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateMemoryLayer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Name of the memory layer. This is always:
+           * "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Name of the memory layer. This is always:
+         "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Name of the memory layer. This is always:
+           * "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          public UpdateMemoryLayer setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public UpdateMemoryLayer setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateMemoryLayer set(String parameterName, Object value) {
+            return (UpdateMemoryLayer) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Backups collection.
@@ -7440,6 +7598,26 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
                   "^projects/[^/]+/instances/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreWarnings;
+
+          /** Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          public java.lang.Boolean getIgnoreWarnings() {
+            return ignoreWarnings;
+          }
+
+          /**
+           * Optional. If true, ignore optional safety checks when creating the materialized view.
+           */
+          public Create setIgnoreWarnings(java.lang.Boolean ignoreWarnings) {
+            this.ignoreWarnings = ignoreWarnings;
             return this;
           }
 

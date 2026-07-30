@@ -64,6 +64,20 @@ public final class ColumnFamilyStats extends com.google.api.client.json.GenericJ
   private java.lang.Long logicalDataBytes;
 
   /**
+   * Output only. The logical data bytes of the column family stored on HDD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long logicalDataHddBytes;
+
+  /**
+   * Output only. The logical data bytes of the column family stored on SSD.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long logicalDataSsdBytes;
+
+  /**
    * How many cells are present per column qualifier in this column family, averaged over all rows
    * containing any column in the column family. e.g. For column family "family" in a table with 3
    * rows: * A row with 3 cells in "family:col" and 1 cell in "other:col" (3 cells / 1 column in
@@ -131,6 +145,40 @@ public final class ColumnFamilyStats extends com.google.api.client.json.GenericJ
    */
   public ColumnFamilyStats setLogicalDataBytes(java.lang.Long logicalDataBytes) {
     this.logicalDataBytes = logicalDataBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The logical data bytes of the column family stored on HDD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLogicalDataHddBytes() {
+    return logicalDataHddBytes;
+  }
+
+  /**
+   * Output only. The logical data bytes of the column family stored on HDD.
+   * @param logicalDataHddBytes logicalDataHddBytes or {@code null} for none
+   */
+  public ColumnFamilyStats setLogicalDataHddBytes(java.lang.Long logicalDataHddBytes) {
+    this.logicalDataHddBytes = logicalDataHddBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The logical data bytes of the column family stored on SSD.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLogicalDataSsdBytes() {
+    return logicalDataSsdBytes;
+  }
+
+  /**
+   * Output only. The logical data bytes of the column family stored on SSD.
+   * @param logicalDataSsdBytes logicalDataSsdBytes or {@code null} for none
+   */
+  public ColumnFamilyStats setLogicalDataSsdBytes(java.lang.Long logicalDataSsdBytes) {
+    this.logicalDataSsdBytes = logicalDataSsdBytes;
     return this;
   }
 

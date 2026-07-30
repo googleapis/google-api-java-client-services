@@ -31,6 +31,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class CreateMaterializedViewRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, ignore optional safety checks when creating the materialized view.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreWarnings;
+
+  /**
    * Required. The materialized view to create.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class CreateMaterializedViewRequest extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
+
+  /**
+   * Optional. If true, ignore optional safety checks when creating the materialized view.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreWarnings() {
+    return ignoreWarnings;
+  }
+
+  /**
+   * Optional. If true, ignore optional safety checks when creating the materialized view.
+   * @param ignoreWarnings ignoreWarnings or {@code null} for none
+   */
+  public CreateMaterializedViewRequest setIgnoreWarnings(java.lang.Boolean ignoreWarnings) {
+    this.ignoreWarnings = ignoreWarnings;
+    return this;
+  }
 
   /**
    * Required. The materialized view to create.

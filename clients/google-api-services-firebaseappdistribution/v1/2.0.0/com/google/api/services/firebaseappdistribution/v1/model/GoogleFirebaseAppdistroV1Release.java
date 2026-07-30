@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappdistribution.v1.model;
 public final class GoogleFirebaseAppdistroV1Release extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Number of testers with accepted invitations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer acceptedInvitationCount;
+
+  /**
    * Output only. Registration state of the Android package (BinaryType.APK).
    * The value may be {@code null}.
    */
@@ -44,6 +51,13 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String binaryDownloadUri;
+
+  /**
+   * Output only. Type of binary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String binaryType;
 
   /**
    * Output only. Build version of the release. For an Android release, the build version is the
@@ -76,11 +90,25 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   private String expireTime;
 
   /**
+   * Output only. Number of feedback reports left by testers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer feedbackCount;
+
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firebaseConsoleUri;
+
+  /**
+   * Output only. Number of testers who have downloaded this release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer installationCount;
 
   /**
    * The name of the release resource. Format:
@@ -91,11 +119,26 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * Output only. Number of testers who were invited (incl. expired invitations), but did not (yet)
+   * accept the invitation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer openInvitationCount;
+
+  /**
    * Notes about the release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppdistroV1ReleaseNotes releaseNotes;
+
+  /**
+   * Output only. The overall state of tests run on this release
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testState;
 
   /**
    * Output only. A link to the release in the tester web clip or Android app that lets testers
@@ -112,6 +155,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Number of testers with accepted invitations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAcceptedInvitationCount() {
+    return acceptedInvitationCount;
+  }
+
+  /**
+   * Output only. Number of testers with accepted invitations.
+   * @param acceptedInvitationCount acceptedInvitationCount or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setAcceptedInvitationCount(java.lang.Integer acceptedInvitationCount) {
+    this.acceptedInvitationCount = acceptedInvitationCount;
+    return this;
+  }
 
   /**
    * Output only. Registration state of the Android package (BinaryType.APK).
@@ -146,6 +206,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   public GoogleFirebaseAppdistroV1Release setBinaryDownloadUri(java.lang.String binaryDownloadUri) {
     this.binaryDownloadUri = binaryDownloadUri;
+    return this;
+  }
+
+  /**
+   * Output only. Type of binary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBinaryType() {
+    return binaryType;
+  }
+
+  /**
+   * Output only. Type of binary.
+   * @param binaryType binaryType or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setBinaryType(java.lang.String binaryType) {
+    this.binaryType = binaryType;
     return this;
   }
 
@@ -222,6 +299,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   }
 
   /**
+   * Output only. Number of feedback reports left by testers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFeedbackCount() {
+    return feedbackCount;
+  }
+
+  /**
+   * Output only. Number of feedback reports left by testers.
+   * @param feedbackCount feedbackCount or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setFeedbackCount(java.lang.Integer feedbackCount) {
+    this.feedbackCount = feedbackCount;
+    return this;
+  }
+
+  /**
    * Output only. A link to the Firebase console displaying a single release.
    * @return value or {@code null} for none
    */
@@ -235,6 +329,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   public GoogleFirebaseAppdistroV1Release setFirebaseConsoleUri(java.lang.String firebaseConsoleUri) {
     this.firebaseConsoleUri = firebaseConsoleUri;
+    return this;
+  }
+
+  /**
+   * Output only. Number of testers who have downloaded this release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInstallationCount() {
+    return installationCount;
+  }
+
+  /**
+   * Output only. Number of testers who have downloaded this release.
+   * @param installationCount installationCount or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setInstallationCount(java.lang.Integer installationCount) {
+    this.installationCount = installationCount;
     return this;
   }
 
@@ -258,6 +369,25 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
   }
 
   /**
+   * Output only. Number of testers who were invited (incl. expired invitations), but did not (yet)
+   * accept the invitation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOpenInvitationCount() {
+    return openInvitationCount;
+  }
+
+  /**
+   * Output only. Number of testers who were invited (incl. expired invitations), but did not (yet)
+   * accept the invitation.
+   * @param openInvitationCount openInvitationCount or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setOpenInvitationCount(java.lang.Integer openInvitationCount) {
+    this.openInvitationCount = openInvitationCount;
+    return this;
+  }
+
+  /**
    * Notes about the release.
    * @return value or {@code null} for none
    */
@@ -271,6 +401,23 @@ public final class GoogleFirebaseAppdistroV1Release extends com.google.api.clien
    */
   public GoogleFirebaseAppdistroV1Release setReleaseNotes(GoogleFirebaseAppdistroV1ReleaseNotes releaseNotes) {
     this.releaseNotes = releaseNotes;
+    return this;
+  }
+
+  /**
+   * Output only. The overall state of tests run on this release
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestState() {
+    return testState;
+  }
+
+  /**
+   * Output only. The overall state of tests run on this release
+   * @param testState testState or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1Release setTestState(java.lang.String testState) {
+    this.testState = testState;
     return this;
   }
 

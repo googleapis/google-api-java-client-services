@@ -44232,6 +44232,944 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the Hosts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.Hosts.List request = compute.hosts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Hosts hosts() {
+    return new Hosts();
+  }
+
+  /**
+   * The "hosts" collection of methods.
+   */
+  public class Hosts {
+
+    /**
+     * Retrieves information about the specified host.
+     *
+     * Create a request for the method "hosts.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project The project ID for this request.
+     * @param zone The name of the zone for this request, formatted as RFC1035.
+     * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host. For example,
+     *        reservations/reservation_name,
+     *        reservations/reservation_name/reservationBlocks/reservation_block_name or
+    reservations/res
+     *        ervation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_su
+     *        b_block_name.
+     * @param host The name of the host, formatted as RFC1035 or a resource ID
+    number.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String zone, java.lang.String association, java.lang.String host) throws java.io.IOException {
+      Get result = new Get(project, zone, association, host);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.Host> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts/{host}";
+
+      /**
+       * Retrieves information about the specified host.
+       *
+       * Create a request for the method "hosts.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project The project ID for this request.
+       * @param zone The name of the zone for this request, formatted as RFC1035.
+       * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host. For example,
+     *        reservations/reservation_name,
+     *        reservations/reservation_name/reservationBlocks/reservation_block_name or
+    reservations/res
+     *        ervation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_su
+     *        b_block_name.
+       * @param host The name of the host, formatted as RFC1035 or a resource ID
+    number.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String zone, java.lang.String association, java.lang.String host) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Host.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.association = com.google.api.client.util.Preconditions.checkNotNull(association, "Required parameter association must be specified.");
+        this.host = com.google.api.client.util.Preconditions.checkNotNull(host, "Required parameter host must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** The project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** The project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** The project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request, formatted as RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request, formatted as RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request, formatted as RFC1035. */
+      public Get setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host. For example,
+       * reservations/reservation_name,
+       * reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/rese
+       * rvation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_
+       * block_name.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String association;
+
+      /** The parent resource association for the Host. This field specifies the hierarchical context (e.g.,
+     reservation, block, sub-block) when accessing the host. For example, reservations/reservation_name,
+     reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/reservation_
+     name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_block_name.
+       */
+      public java.lang.String getAssociation() {
+        return association;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host. For example,
+       * reservations/reservation_name,
+       * reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/rese
+       * rvation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_
+       * block_name.
+       */
+      public Get setAssociation(java.lang.String association) {
+        this.association = association;
+        return this;
+      }
+
+      /**
+       * The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String host;
+
+      /** The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      public java.lang.String getHost() {
+        return host;
+      }
+
+      /**
+       * The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      public Get setHost(java.lang.String host) {
+        this.host = host;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Allows customers to get SBOM versions of a host.
+     *
+     * Create a request for the method "hosts.getVersion".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetVersion#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone Name of the zone for this request. Zone name should conform to RFC1035.
+     * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host.
+     * @param host The name of the host, formatted as RFC1035 or a resource ID
+    number.
+     * @param content the {@link com.google.api.services.compute.model.HostsGetVersionRequest}
+     * @return the request
+     */
+    public GetVersion getVersion(java.lang.String project, java.lang.String zone, java.lang.String association, java.lang.String host, com.google.api.services.compute.model.HostsGetVersionRequest content) throws java.io.IOException {
+      GetVersion result = new GetVersion(project, zone, association, host, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetVersion extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts/{host}/getVersion";
+
+      /**
+       * Allows customers to get SBOM versions of a host.
+       *
+       * Create a request for the method "hosts.getVersion".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetVersion#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetVersion#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone Name of the zone for this request. Zone name should conform to RFC1035.
+       * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host.
+       * @param host The name of the host, formatted as RFC1035 or a resource ID
+    number.
+       * @param content the {@link com.google.api.services.compute.model.HostsGetVersionRequest}
+       * @since 1.13
+       */
+      protected GetVersion(java.lang.String project, java.lang.String zone, java.lang.String association, java.lang.String host, com.google.api.services.compute.model.HostsGetVersionRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.association = com.google.api.client.util.Preconditions.checkNotNull(association, "Required parameter association must be specified.");
+        this.host = com.google.api.client.util.Preconditions.checkNotNull(host, "Required parameter host must be specified.");
+      }
+
+      @Override
+      public GetVersion set$Xgafv(java.lang.String $Xgafv) {
+        return (GetVersion) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetVersion setAccessToken(java.lang.String accessToken) {
+        return (GetVersion) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetVersion setAlt(java.lang.String alt) {
+        return (GetVersion) super.setAlt(alt);
+      }
+
+      @Override
+      public GetVersion setCallback(java.lang.String callback) {
+        return (GetVersion) super.setCallback(callback);
+      }
+
+      @Override
+      public GetVersion setFields(java.lang.String fields) {
+        return (GetVersion) super.setFields(fields);
+      }
+
+      @Override
+      public GetVersion setKey(java.lang.String key) {
+        return (GetVersion) super.setKey(key);
+      }
+
+      @Override
+      public GetVersion setOauthToken(java.lang.String oauthToken) {
+        return (GetVersion) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetVersion) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetVersion setQuotaUser(java.lang.String quotaUser) {
+        return (GetVersion) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetVersion setUploadType(java.lang.String uploadType) {
+        return (GetVersion) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetVersion setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetVersion) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetVersion setUserIp(java.lang.String userIp) {
+        return (GetVersion) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetVersion setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035. */
+      public GetVersion setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String association;
+
+      /** The parent resource association for the Host. This field specifies the hierarchical context (e.g.,
+     reservation, block, sub-block) when accessing the host.
+       */
+      public java.lang.String getAssociation() {
+        return association;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host.
+       */
+      public GetVersion setAssociation(java.lang.String association) {
+        this.association = association;
+        return this;
+      }
+
+      /**
+       * The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String host;
+
+      /** The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      public java.lang.String getHost() {
+        return host;
+      }
+
+      /**
+       * The name of the host, formatted as RFC1035 or a resource ID number.
+       */
+      public GetVersion setHost(java.lang.String host) {
+        this.host = host;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      public GetVersion setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public GetVersion set(String parameterName, Object value) {
+        return (GetVersion) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of hosts.
+     *
+     * Create a request for the method "hosts.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project The project ID for this request.
+     * @param zone The name of the zone for this request, formatted as RFC1035.
+     * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host. For example,
+     *        reservations/reservation_name,
+     *        reservations/reservation_name/reservationBlocks/reservation_block_name or
+    reservations/res
+     *        ervation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_su
+     *        b_block_name.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String zone, java.lang.String association) throws java.io.IOException {
+      List result = new List(project, zone, association);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.HostsListResponse> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts";
+
+      /**
+       * Retrieves a list of hosts.
+       *
+       * Create a request for the method "hosts.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project The project ID for this request.
+       * @param zone The name of the zone for this request, formatted as RFC1035.
+       * @param association The parent resource association for the Host. This field specifies the
+    hierarchical context (e.g.,
+     *        reservation, block, sub-block) when
+    accessing the host. For example,
+     *        reservations/reservation_name,
+     *        reservations/reservation_name/reservationBlocks/reservation_block_name or
+    reservations/res
+     *        ervation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_su
+     *        b_block_name.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String zone, java.lang.String association) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.HostsListResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.association = com.google.api.client.util.Preconditions.checkNotNull(association, "Required parameter association must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** The project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** The project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** The project ID for this request. */
+      public List setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request, formatted as RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request, formatted as RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request, formatted as RFC1035. */
+      public List setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host. For example,
+       * reservations/reservation_name,
+       * reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/rese
+       * rvation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_
+       * block_name.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String association;
+
+      /** The parent resource association for the Host. This field specifies the hierarchical context (e.g.,
+     reservation, block, sub-block) when accessing the host. For example, reservations/reservation_name,
+     reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/reservation_
+     name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_block_name.
+       */
+      public java.lang.String getAssociation() {
+        return association;
+      }
+
+      /**
+       * The parent resource association for the Host. This field specifies the hierarchical context
+       * (e.g., reservation, block, sub-block) when accessing the host. For example,
+       * reservations/reservation_name,
+       * reservations/reservation_name/reservationBlocks/reservation_block_name or reservations/rese
+       * rvation_name/reservationBlocks/reservation_block_name/reservationSubBlocks/reservation_sub_
+       * block_name.
+       */
+      public List setAssociation(java.lang.String association) {
+        this.association = association;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false.
+       *
+       * For example, when partial success behavior is enabled, aggregatedList for a single zone
+       * scope either returns all resources in the zone or no resources, with an error code.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false.
+
+     For example, when partial success behavior is enabled, aggregatedList for a single zone scope
+     either returns all resources in the zone or no resources, with an error code.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false.
+       *
+       * For example, when partial success behavior is enabled, aggregatedList for a single zone
+       * scope either returns all resources in the zone or no resources, with an error code.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the HttpHealthChecks collection.
    *
    * <p>The typical use is:</p>
@@ -65897,6 +66835,22 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** If set to true, Graceful Shutdown is skipped. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean noGracefulShutdown;
+
+      /** If set to true, Graceful Shutdown is skipped.
+       */
+      public java.lang.Boolean getNoGracefulShutdown() {
+        return noGracefulShutdown;
+      }
+
+      /** If set to true, Graceful Shutdown is skipped. */
+      public Delete setNoGracefulShutdown(java.lang.Boolean noGracefulShutdown) {
+        this.noGracefulShutdown = noGracefulShutdown;
+        return this;
+      }
+
       /**
        * An optional request ID to identify requests. Specify a unique request ID so that if you
        * must retry your request, the server will know to ignore the request if it has already been
@@ -75598,6 +76552,22 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        */
       public Stop setDiscardLocalSsd(java.lang.Boolean discardLocalSsd) {
         this.discardLocalSsd = discardLocalSsd;
+        return this;
+      }
+
+      /** If set to true, Graceful Shutdown is skipped. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean noGracefulShutdown;
+
+      /** If set to true, Graceful Shutdown is skipped.
+       */
+      public java.lang.Boolean getNoGracefulShutdown() {
+        return noGracefulShutdown;
+      }
+
+      /** If set to true, Graceful Shutdown is skipped. */
+      public Stop setNoGracefulShutdown(java.lang.Boolean noGracefulShutdown) {
+        this.noGracefulShutdown = noGracefulShutdown;
         return this;
       }
 
@@ -196162,6 +197132,611 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        */
       protected List(java.lang.String project) {
         super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.RegionList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public List setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false.
+       *
+       * For example, when partial success behavior is enabled, aggregatedList for a single zone
+       * scope either returns all resources in the zone or no resources, with an error code.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false.
+
+     For example, when partial success behavior is enabled, aggregatedList for a single zone scope
+     either returns all resources in the zone or no resources, with an error code.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false.
+       *
+       * For example, when partial success behavior is enabled, aggregatedList for a single zone
+       * scope either returns all resources in the zone or no resources, with an error code.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the ReliabilityRisks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.ReliabilityRisks.List request = compute.reliabilityRisks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ReliabilityRisks reliabilityRisks() {
+    return new ReliabilityRisks();
+  }
+
+  /**
+   * The "reliabilityRisks" collection of methods.
+   */
+  public class ReliabilityRisks {
+
+    /**
+     * Returns the specified ReliabilityRisk resource.
+     *
+     * Create a request for the method "reliabilityRisks.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param reliabilityRisk Name of the ReliabilityRisk resource to return.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String reliabilityRisk) throws java.io.IOException {
+      Get result = new Get(project, reliabilityRisk);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.ReliabilityRisk> {
+
+      private static final String REST_PATH = "projects/{project}/global/reliabilityRisks/{reliabilityRisk}";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RELIABILITY_RISK_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns the specified ReliabilityRisk resource.
+       *
+       * Create a request for the method "reliabilityRisks.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param reliabilityRisk Name of the ReliabilityRisk resource to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String reliabilityRisk) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ReliabilityRisk.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.reliabilityRisk = com.google.api.client.util.Preconditions.checkNotNull(reliabilityRisk, "Required parameter reliabilityRisk must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RELIABILITY_RISK_PATTERN.matcher(reliabilityRisk).matches(),
+              "Parameter reliabilityRisk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the ReliabilityRisk resource to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String reliabilityRisk;
+
+      /** Name of the ReliabilityRisk resource to return.
+       */
+      public java.lang.String getReliabilityRisk() {
+        return reliabilityRisk;
+      }
+
+      /** Name of the ReliabilityRisk resource to return. */
+      public Get setReliabilityRisk(java.lang.String reliabilityRisk) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RELIABILITY_RISK_PATTERN.matcher(reliabilityRisk).matches(),
+              "Parameter reliabilityRisk must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.reliabilityRisk = reliabilityRisk;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the list of reliabilityRisks available in the specified project.
+     *
+     * Create a request for the method "reliabilityRisks.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @return the request
+     */
+    public List list(java.lang.String project) throws java.io.IOException {
+      List result = new List(project);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.ReliabilityRisksListResponse> {
+
+      private static final String REST_PATH = "projects/{project}/global/reliabilityRisks";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      /**
+       * Retrieves the list of reliabilityRisks available in the specified project.
+       *
+       * Create a request for the method "reliabilityRisks.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ReliabilityRisksListResponse.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),

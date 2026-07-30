@@ -39,6 +39,14 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   private java.lang.Integer availabilityDomain;
 
   /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gracefulShutdownTimestamp;
+
+  /**
    * Time in future when the instance will be terminated inRFC3339 text format.
    * The value may be {@code null}.
    */
@@ -63,6 +71,25 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
    */
   public ResourceStatusScheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGracefulShutdownTimestamp() {
+    return gracefulShutdownTimestamp;
+  }
+
+  /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * @param gracefulShutdownTimestamp gracefulShutdownTimestamp or {@code null} for none
+   */
+  public ResourceStatusScheduling setGracefulShutdownTimestamp(java.lang.String gracefulShutdownTimestamp) {
+    this.gracefulShutdownTimestamp = gracefulShutdownTimestamp;
     return this;
   }
 

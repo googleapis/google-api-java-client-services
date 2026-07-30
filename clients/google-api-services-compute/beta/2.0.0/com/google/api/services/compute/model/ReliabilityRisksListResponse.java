@@ -30,6 +30,7 @@ package com.google.api.services.compute.model;
 public final class ReliabilityRisksListResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] An ETag of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,6 +89,7 @@ public final class ReliabilityRisksListResponse extends com.google.api.client.js
   private Warning warning;
 
   /**
+   * [Output Only] An ETag of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -95,6 +97,7 @@ public final class ReliabilityRisksListResponse extends com.google.api.client.js
   }
 
   /**
+   * [Output Only] An ETag of the resource.
    * @param etag etag or {@code null} for none
    */
   public ReliabilityRisksListResponse setEtag(java.lang.String etag) {

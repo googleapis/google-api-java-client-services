@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtensionPolicyExtensionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GlobalVmExtensionPolicyInstalledSoftwareSelector installedSoftwareSelector;
+
+  /**
    * Optional. The version pinning for the extension. If empty, the extension will be installed with
    * the latest version released by the extension producer.
    * The value may be {@code null}.
@@ -43,6 +52,27 @@ public final class GlobalVmExtensionPolicyExtensionPolicy extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String stringConfig;
+
+  /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * @return value or {@code null} for none
+   */
+  public GlobalVmExtensionPolicyInstalledSoftwareSelector getInstalledSoftwareSelector() {
+    return installedSoftwareSelector;
+  }
+
+  /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * @param installedSoftwareSelector installedSoftwareSelector or {@code null} for none
+   */
+  public GlobalVmExtensionPolicyExtensionPolicy setInstalledSoftwareSelector(GlobalVmExtensionPolicyInstalledSoftwareSelector installedSoftwareSelector) {
+    this.installedSoftwareSelector = installedSoftwareSelector;
+    return this;
+  }
 
   /**
    * Optional. The version pinning for the extension. If empty, the extension will be installed with

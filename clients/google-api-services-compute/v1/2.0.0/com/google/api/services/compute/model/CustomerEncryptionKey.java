@@ -54,9 +54,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String kmsKeyServiceAccount;
 
   /**
-   * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource. You can provide either the rawKey or thersaEncryptedKey. For
-   * example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies a 256-bit customer-
+   * supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
+   * You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * The value may be {@code null}.
@@ -65,9 +65,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String rawKey;
 
   /**
-   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. You can provide either the rawKey or
-   * thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies an RFC 4648 base64
+   * encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt
+   * this resource. You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
    * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
@@ -86,8 +86,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   private java.lang.String rsaEncryptedKey;
 
   /**
-   * [Output only] TheRFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key
-   * that protects this resource.
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. [Output only] TheRFC 4648 base64
+   * encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,9 +148,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource. You can provide either the rawKey or thersaEncryptedKey. For
-   * example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies a 256-bit customer-
+   * supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
+   * You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * @return value or {@code null} for none
@@ -160,9 +160,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either
-   * encrypt or decrypt this resource. You can provide either the rawKey or thersaEncryptedKey. For
-   * example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies a 256-bit customer-
+   * supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.
+   * You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
    * @param rawKey rawKey or {@code null} for none
@@ -173,9 +173,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. You can provide either the rawKey or
-   * thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies an RFC 4648 base64
+   * encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt
+   * this resource. You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
    * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
@@ -195,9 +195,9 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to
-   * either encrypt or decrypt this resource. You can provide either the rawKey or
-   * thersaEncryptedKey. For example:
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. Specifies an RFC 4648 base64
+   * encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt
+   * this resource. You can provide either the rawKey or thersaEncryptedKey. For example:
    *
    * "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH
    * z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD
@@ -218,8 +218,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output only] TheRFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key
-   * that protects this resource.
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. [Output only] TheRFC 4648 base64
+   * encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSha256() {
@@ -227,8 +227,8 @@ public final class CustomerEncryptionKey extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output only] TheRFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key
-   * that protects this resource.
+   * [DEPRECATED] CSEK is no longer supported. Use CMEK instead. [Output only] TheRFC 4648 base64
+   * encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.
    * @param sha256 sha256 or {@code null} for none
    */
   public CustomerEncryptionKey setSha256(java.lang.String sha256) {

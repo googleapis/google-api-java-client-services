@@ -38,6 +38,15 @@ public final class ResourceStatusPhysicalHostTopologyAdditionalAttributes extend
   private java.util.Map<String, java.lang.String> acceleratorTopologyIds;
 
   /**
+   * Output only. Key-value store for arbitrary network topology identifiers defined by the
+   * underlying infrastructure. The key will be the topology label and the value will be the
+   * location ID for the topology.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> networkTopologyIds;
+
+  /**
    * Output only. The IDs of the accelerator topologies the instance belongs to. For example The key
    * will be topologies like "4x4", "2x2x2" and the value will be the location ID of the topologies.
    * @return value or {@code null} for none
@@ -53,6 +62,27 @@ public final class ResourceStatusPhysicalHostTopologyAdditionalAttributes extend
    */
   public ResourceStatusPhysicalHostTopologyAdditionalAttributes setAcceleratorTopologyIds(java.util.Map<String, java.lang.String> acceleratorTopologyIds) {
     this.acceleratorTopologyIds = acceleratorTopologyIds;
+    return this;
+  }
+
+  /**
+   * Output only. Key-value store for arbitrary network topology identifiers defined by the
+   * underlying infrastructure. The key will be the topology label and the value will be the
+   * location ID for the topology.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getNetworkTopologyIds() {
+    return networkTopologyIds;
+  }
+
+  /**
+   * Output only. Key-value store for arbitrary network topology identifiers defined by the
+   * underlying infrastructure. The key will be the topology label and the value will be the
+   * location ID for the topology.
+   * @param networkTopologyIds networkTopologyIds or {@code null} for none
+   */
+  public ResourceStatusPhysicalHostTopologyAdditionalAttributes setNetworkTopologyIds(java.util.Map<String, java.lang.String> networkTopologyIds) {
+    this.networkTopologyIds = networkTopologyIds;
     return this;
   }
 

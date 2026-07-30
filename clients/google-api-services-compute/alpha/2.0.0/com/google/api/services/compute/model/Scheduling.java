@@ -67,6 +67,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Long currentMemoryMb;
 
   /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exposeHostTopology;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,9 +186,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean preemptible;
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
-   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
-   * Soft  Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,6 +329,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setCurrentMemoryMb(java.lang.Long currentMemoryMb) {
     this.currentMemoryMb = currentMemoryMb;
+    return this;
+  }
+
+  /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExposeHostTopology() {
+    return exposeHostTopology;
+  }
+
+  /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * @param exposeHostTopology exposeHostTopology or {@code null} for none
+   */
+  public Scheduling setExposeHostTopology(java.lang.Boolean exposeHostTopology) {
+    this.exposeHostTopology = exposeHostTopology;
     return this;
   }
 
@@ -589,9 +616,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
-   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
-   * Soft  Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
    * @return value or {@code null} for none
    */
   public Duration getPreemptionNoticeDuration() {
@@ -599,9 +626,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the Metadata Service preemption notice duration before the  GCE ACPI G2 Soft  Off
-   * signal is triggered for Spot  VMs only. If not specified, there will be no wait before the G2
-   * Soft  Off signal is triggered.
+   * Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off
+   * signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2
+   * Soft Off signal is triggered.
    * @param preemptionNoticeDuration preemptionNoticeDuration or {@code null} for none
    */
   public Scheduling setPreemptionNoticeDuration(Duration preemptionNoticeDuration) {

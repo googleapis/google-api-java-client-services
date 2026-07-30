@@ -51,7 +51,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Provisioned capacities for each SKU for this Exapool in GiB
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Provisioned capacities for each SKU for this Exapool in GiB
    * @return value or {@code null} for none
    */
   public StoragePoolExapoolProvisionedCapacityGb getExapoolProvisionedCapacityGb() {
@@ -283,7 +283,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Provisioned capacities for each SKU for this Exapool in GiB
+   * Provisioned capacities for each SKU for this Exapool in GiB
    * @param exapoolProvisionedCapacityGb exapoolProvisionedCapacityGb or {@code null} for none
    */
   public StoragePool setExapoolProvisionedCapacityGb(StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb) {

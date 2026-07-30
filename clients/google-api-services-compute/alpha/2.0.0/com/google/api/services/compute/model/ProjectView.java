@@ -32,14 +32,20 @@ package com.google.api.services.compute.model;
 public final class ProjectView extends com.google.api.client.json.GenericJson {
 
   /**
-   * The project data.
+   * The project data. The returned Project data does not contain regional or zonal quota usage
+   * data. Global quota limits are present. For accurate, real-time quota usage numbers, query the
+   * global [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get)
+   * endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Project project;
 
   /**
-   * The project data.
+   * The project data. The returned Project data does not contain regional or zonal quota usage
+   * data. Global quota limits are present. For accurate, real-time quota usage numbers, query the
+   * global [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get)
+   * endpoint.
    * @return value or {@code null} for none
    */
   public Project getProject() {
@@ -47,7 +53,10 @@ public final class ProjectView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The project data.
+   * The project data. The returned Project data does not contain regional or zonal quota usage
+   * data. Global quota limits are present. For accurate, real-time quota usage numbers, query the
+   * global [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get)
+   * endpoint.
    * @param project project or {@code null} for none
    */
   public ProjectView setProject(Project project) {

@@ -124,6 +124,13 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String routerUri;
 
   /**
+   * The number of the NAT rule that was matched.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ruleNumber;
+
+  /**
    * Type of NAT.
    * The value may be {@code null}.
    */
@@ -352,6 +359,23 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
    */
   public NatInfo setRouterUri(java.lang.String routerUri) {
     this.routerUri = routerUri;
+    return this;
+  }
+
+  /**
+   * The number of the NAT rule that was matched.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRuleNumber() {
+    return ruleNumber;
+  }
+
+  /**
+   * The number of the NAT rule that was matched.
+   * @param ruleNumber ruleNumber or {@code null} for none
+   */
+  public NatInfo setRuleNumber(java.lang.Integer ruleNumber) {
+    this.ruleNumber = ruleNumber;
     return this;
   }
 

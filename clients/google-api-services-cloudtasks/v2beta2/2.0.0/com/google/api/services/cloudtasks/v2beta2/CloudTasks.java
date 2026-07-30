@@ -1031,6 +1031,168 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudTasks cloudtasks = new CloudTasks(...);}
+       *   {@code CloudTasks.Operations.List request = cloudtasks.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.Operation> {
+
+          private static final String REST_PATH = "v2beta2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the cloudtasks server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudTasks.this, "GET", REST_PATH, null, com.google.api.services.cloudtasks.v2beta2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Queues collection.
        *
        * <p>The typical use is:</p>
@@ -3051,6 +3213,294 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             @Override
             public Acknowledge set(String parameterName, Object value) {
               return (Acknowledge) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a batch of tasks and adds them to a queue. This call is not atomic. All tasks must be for
+           * the same queue. A maximum of 100 tasks can be created in a single batch.
+           *
+           * Create a request for the method "tasks.batchCreate".
+           *
+           * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+           * parameters, call the {@link BatchCreate#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           *        The queue must already exist.
+           * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BatchCreateTasksRequest}
+           * @return the request
+           */
+          public BatchCreate batchCreate(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BatchCreateTasksRequest content) throws java.io.IOException {
+            BatchCreate result = new BatchCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchCreate extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.Operation> {
+
+            private static final String REST_PATH = "v2beta2/{+parent}/tasks:batchCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+
+            /**
+             * Creates a batch of tasks and adds them to a queue. This call is not atomic. All tasks must be
+             * for the same queue. A maximum of 100 tasks can be created in a single batch.
+             *
+             * Create a request for the method "tasks.batchCreate".
+             *
+             * This request holds the parameters needed by the the cloudtasks server.  After setting any
+             * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           *        The queue must already exist.
+             * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BatchCreateTasksRequest}
+             * @since 1.13
+             */
+            protected BatchCreate(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BatchCreateTasksRequest content) {
+              super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchCreate setAccessToken(java.lang.String accessToken) {
+              return (BatchCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchCreate setAlt(java.lang.String alt) {
+              return (BatchCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchCreate setCallback(java.lang.String callback) {
+              return (BatchCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchCreate setFields(java.lang.String fields) {
+              return (BatchCreate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchCreate setKey(java.lang.String key) {
+              return (BatchCreate) super.setKey(key);
+            }
+
+            @Override
+            public BatchCreate setOauthToken(java.lang.String oauthToken) {
+              return (BatchCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchCreate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchCreate setUploadType(java.lang.String uploadType) {
+              return (BatchCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The queue name. For example:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           The queue must already exist.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The queue name. For example:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
+             */
+            public BatchCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchCreate set(String parameterName, Object value) {
+              return (BatchCreate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a batch of tasks. This is a non-atomic operation: if deletion fails for some tasks, it
+           * can still succeed for others. The metadata field of google.longrunning.Operation contains details
+           * of failed deletions. A maximum of 1000 tasks can be deleted in a batch.
+           *
+           * Create a request for the method "tasks.batchDelete".
+           *
+           * This request holds the parameters needed by the cloudtasks server.  After setting any optional
+           * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The queue name. For example: Format:
+           *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BatchDeleteTasksRequest}
+           * @return the request
+           */
+          public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BatchDeleteTasksRequest content) throws java.io.IOException {
+            BatchDelete result = new BatchDelete(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchDelete extends CloudTasksRequest<com.google.api.services.cloudtasks.v2beta2.model.Operation> {
+
+            private static final String REST_PATH = "v2beta2/{+parent}/tasks:batchDelete";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+
+            /**
+             * Deletes a batch of tasks. This is a non-atomic operation: if deletion fails for some tasks, it
+             * can still succeed for others. The metadata field of google.longrunning.Operation contains
+             * details of failed deletions. A maximum of 1000 tasks can be deleted in a batch.
+             *
+             * Create a request for the method "tasks.batchDelete".
+             *
+             * This request holds the parameters needed by the the cloudtasks server.  After setting any
+             * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The queue name. For example: Format:
+           *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             * @param content the {@link com.google.api.services.cloudtasks.v2beta2.model.BatchDeleteTasksRequest}
+             * @since 1.13
+             */
+            protected BatchDelete(java.lang.String parent, com.google.api.services.cloudtasks.v2beta2.model.BatchDeleteTasksRequest content) {
+              super(CloudTasks.this, "POST", REST_PATH, content, com.google.api.services.cloudtasks.v2beta2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchDelete setAccessToken(java.lang.String accessToken) {
+              return (BatchDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchDelete setAlt(java.lang.String alt) {
+              return (BatchDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchDelete setCallback(java.lang.String callback) {
+              return (BatchDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchDelete setFields(java.lang.String fields) {
+              return (BatchDelete) super.setFields(fields);
+            }
+
+            @Override
+            public BatchDelete setKey(java.lang.String key) {
+              return (BatchDelete) super.setKey(key);
+            }
+
+            @Override
+            public BatchDelete setOauthToken(java.lang.String oauthToken) {
+              return (BatchDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+              return (BatchDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchDelete setUploadType(java.lang.String uploadType) {
+              return (BatchDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The queue name. For example: Format:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The queue name. For example: Format:
+           `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The queue name. For example: Format:
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             */
+            public BatchDelete setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchDelete set(String parameterName, Object value) {
+              return (BatchDelete) super.set(parameterName, value);
             }
           }
           /**

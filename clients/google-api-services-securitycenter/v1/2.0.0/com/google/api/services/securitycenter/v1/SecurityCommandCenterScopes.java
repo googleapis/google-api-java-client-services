@@ -26,6 +26,9 @@ public class SecurityCommandCenterScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** See, edit, configure, and delete your Google Cloud Security Command Center data and see the email address for your Google Account. */
+  public static final String SECURITYCENTER = "https://www.googleapis.com/auth/securitycenter";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class SecurityCommandCenterScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(SECURITYCENTER);
     return java.util.Collections.unmodifiableSet(set);
   }
 

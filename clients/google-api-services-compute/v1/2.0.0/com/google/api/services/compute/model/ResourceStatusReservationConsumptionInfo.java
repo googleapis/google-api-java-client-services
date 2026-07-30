@@ -38,6 +38,22 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   private java.lang.String consumedReservation;
 
   /**
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumedReservationBlock;
+
+  /**
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumedReservationSubBlock;
+
+  /**
    * Output only. [Output Only] The full resource name of the reservation that this instance is
    * consuming from.
    * @return value or {@code null} for none
@@ -53,6 +69,44 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
    */
   public ResourceStatusReservationConsumptionInfo setConsumedReservation(java.lang.String consumedReservation) {
     this.consumedReservation = consumedReservation;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumedReservationBlock() {
+    return consumedReservationBlock;
+  }
+
+  /**
+   * Output only. [Output Only] The full resource name of the reservation block that this instance
+   * is consuming from.
+   * @param consumedReservationBlock consumedReservationBlock or {@code null} for none
+   */
+  public ResourceStatusReservationConsumptionInfo setConsumedReservationBlock(java.lang.String consumedReservationBlock) {
+    this.consumedReservationBlock = consumedReservationBlock;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumedReservationSubBlock() {
+    return consumedReservationSubBlock;
+  }
+
+  /**
+   * Output only. [Output Only] The full resource name of the reservation sub-block that this
+   * instance is consuming from.
+   * @param consumedReservationSubBlock consumedReservationSubBlock or {@code null} for none
+   */
+  public ResourceStatusReservationConsumptionInfo setConsumedReservationSubBlock(java.lang.String consumedReservationSubBlock) {
+    this.consumedReservationSubBlock = consumedReservationSubBlock;
     return this;
   }
 

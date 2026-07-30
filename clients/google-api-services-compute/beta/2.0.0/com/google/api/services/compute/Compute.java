@@ -134774,7 +134774,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class ProjectViews {
 
     /**
-     * Returns the specified global ProjectViews resource, with a regional context.
+     * Returns the specified global ProjectViews resource, with a regional context. This regional API
+     * endpoint reads resource metadata from regional read-only replicas. Because changes are copied to
+     * these regional replicas asynchronously, for real-time resource reads or any write operations
+     * (creating, updating, or deleting resources), use the global
+     * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
      *
      * Create a request for the method "projectViews.get".
      *
@@ -134802,7 +134806,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Returns the specified global ProjectViews resource, with a regional context.
+       * Returns the specified global ProjectViews resource, with a regional context. This regional API
+       * endpoint reads resource metadata from regional read-only replicas. Because changes are copied
+       * to these regional replicas asynchronously, for real-time resource reads or any write operations
+       * (creating, updating, or deleting resources), use the global
+       * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
        *
        * Create a request for the method "projectViews.get".
        *

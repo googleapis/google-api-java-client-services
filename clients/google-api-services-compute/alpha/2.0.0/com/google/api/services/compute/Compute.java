@@ -4916,6 +4916,179 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Advise on whether extending an existing Future Reservation is possible based on the desired
+     * extension end time. If capacity is not available for the entire requested duration, the method
+     * will recommend the longest possible extension.
+     *
+     * Create a request for the method "advice.calendarModeExtension".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link CalendarModeExtension#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param content the {@link com.google.api.services.compute.model.CalendarModeExtensionAdviceRequest}
+     * @return the request
+     */
+    public CalendarModeExtension calendarModeExtension(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CalendarModeExtensionAdviceRequest content) throws java.io.IOException {
+      CalendarModeExtension result = new CalendarModeExtension(project, region, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CalendarModeExtension extends ComputeRequest<com.google.api.services.compute.model.CalendarModeExtensionAdviceResponse> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/advice/calendarModeExtension";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Advise on whether extending an existing Future Reservation is possible based on the desired
+       * extension end time. If capacity is not available for the entire requested duration, the method
+       * will recommend the longest possible extension.
+       *
+       * Create a request for the method "advice.calendarModeExtension".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link CalendarModeExtension#execute()} method to invoke the remote
+       * operation. <p> {@link CalendarModeExtension#initialize(com.google.api.client.googleapis.service
+       * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param content the {@link com.google.api.services.compute.model.CalendarModeExtensionAdviceRequest}
+       * @since 1.13
+       */
+      protected CalendarModeExtension(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CalendarModeExtensionAdviceRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.CalendarModeExtensionAdviceResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public CalendarModeExtension set$Xgafv(java.lang.String $Xgafv) {
+        return (CalendarModeExtension) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CalendarModeExtension setAccessToken(java.lang.String accessToken) {
+        return (CalendarModeExtension) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CalendarModeExtension setAlt(java.lang.String alt) {
+        return (CalendarModeExtension) super.setAlt(alt);
+      }
+
+      @Override
+      public CalendarModeExtension setCallback(java.lang.String callback) {
+        return (CalendarModeExtension) super.setCallback(callback);
+      }
+
+      @Override
+      public CalendarModeExtension setFields(java.lang.String fields) {
+        return (CalendarModeExtension) super.setFields(fields);
+      }
+
+      @Override
+      public CalendarModeExtension setKey(java.lang.String key) {
+        return (CalendarModeExtension) super.setKey(key);
+      }
+
+      @Override
+      public CalendarModeExtension setOauthToken(java.lang.String oauthToken) {
+        return (CalendarModeExtension) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CalendarModeExtension setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CalendarModeExtension) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CalendarModeExtension setQuotaUser(java.lang.String quotaUser) {
+        return (CalendarModeExtension) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CalendarModeExtension setUploadType(java.lang.String uploadType) {
+        return (CalendarModeExtension) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CalendarModeExtension setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CalendarModeExtension) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CalendarModeExtension setUserIp(java.lang.String userIp) {
+        return (CalendarModeExtension) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public CalendarModeExtension setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public CalendarModeExtension setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      @Override
+      public CalendarModeExtension set(String parameterName, Object value) {
+        return (CalendarModeExtension) super.set(parameterName, value);
+      }
+    }
+    /**
      * Advice on making real-time decisions (such as choosing zone or machine types) during deployment
      * to maximize your chances of obtaining capacity.
      *
@@ -154803,7 +154976,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   public class ProjectViews {
 
     /**
-     * Returns the specified global ProjectViews resource, with a regional context.
+     * Returns the specified global ProjectViews resource, with a regional context. This regional API
+     * endpoint reads resource metadata from regional read-only replicas. Because changes are copied to
+     * these regional replicas asynchronously, for real-time resource reads or any write operations
+     * (creating, updating, or deleting resources), use the global
+     * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
      *
      * Create a request for the method "projectViews.get".
      *
@@ -154831,7 +155008,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Returns the specified global ProjectViews resource, with a regional context.
+       * Returns the specified global ProjectViews resource, with a regional context. This regional API
+       * endpoint reads resource metadata from regional read-only replicas. Because changes are copied
+       * to these regional replicas asynchronously, for real-time resource reads or any write operations
+       * (creating, updating, or deleting resources), use the global
+       * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
        *
        * Create a request for the method "projectViews.get".
        *

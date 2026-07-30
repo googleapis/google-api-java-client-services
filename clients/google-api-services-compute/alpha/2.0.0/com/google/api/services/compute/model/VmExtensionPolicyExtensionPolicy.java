@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class VmExtensionPolicyExtensionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmExtensionPolicyInstalledSoftwareSelector installedSoftwareSelector;
+
+  /**
    * Optional. The specific version of the extension to install. If not set, the latest version is
    * used.
    * The value may be {@code null}.
@@ -43,6 +52,27 @@ public final class VmExtensionPolicyExtensionPolicy extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private java.lang.String stringConfig;
+
+  /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * @return value or {@code null} for none
+   */
+  public VmExtensionPolicyInstalledSoftwareSelector getInstalledSoftwareSelector() {
+    return installedSoftwareSelector;
+  }
+
+  /**
+   * Optional. Only deploy this extension if the specified software is detected on the VM. For a
+   * live list of valid software values, see: https://cloud.google.com/compute/docs/vm-
+   * extensions/supported-software
+   * @param installedSoftwareSelector installedSoftwareSelector or {@code null} for none
+   */
+  public VmExtensionPolicyExtensionPolicy setInstalledSoftwareSelector(VmExtensionPolicyInstalledSoftwareSelector installedSoftwareSelector) {
+    this.installedSoftwareSelector = installedSoftwareSelector;
+    return this;
+  }
 
   /**
    * Optional. The specific version of the extension to install. If not set, the latest version is

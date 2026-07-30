@@ -71,6 +71,13 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private ResourceStatusScheduling scheduling;
 
   /**
+   * Output only. [Output Only] Details about the instance stopping state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusShutdownDetails shutdownDetails;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,6 +175,23 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setScheduling(ResourceStatusScheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Details about the instance stopping state.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusShutdownDetails getShutdownDetails() {
+    return shutdownDetails;
+  }
+
+  /**
+   * Output only. [Output Only] Details about the instance stopping state.
+   * @param shutdownDetails shutdownDetails or {@code null} for none
+   */
+  public ResourceStatus setShutdownDetails(ResourceStatusShutdownDetails shutdownDetails) {
+    this.shutdownDetails = shutdownDetails;
     return this;
   }
 

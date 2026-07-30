@@ -39,6 +39,21 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
   private java.lang.Integer availabilityDomain;
 
   /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gracefulShutdownTimestamp;
+
+  /**
+   * Time in future when the instance will be terminated inRFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String terminationTimestamp;
+
+  /**
    * Specifies the availability domain to place the instance in. The value must be a number between
    * 1 and the number of availability domains specified in the spread placement policy attached to
    * the instance.
@@ -56,6 +71,42 @@ public final class ResourceStatusScheduling extends com.google.api.client.json.G
    */
   public ResourceStatusScheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGracefulShutdownTimestamp() {
+    return gracefulShutdownTimestamp;
+  }
+
+  /**
+   * Output only. Specifies the timestamp, when the instance will start graceful shutdown process,
+   * in RFC3339 text format.
+   * @param gracefulShutdownTimestamp gracefulShutdownTimestamp or {@code null} for none
+   */
+  public ResourceStatusScheduling setGracefulShutdownTimestamp(java.lang.String gracefulShutdownTimestamp) {
+    this.gracefulShutdownTimestamp = gracefulShutdownTimestamp;
+    return this;
+  }
+
+  /**
+   * Time in future when the instance will be terminated inRFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTerminationTimestamp() {
+    return terminationTimestamp;
+  }
+
+  /**
+   * Time in future when the instance will be terminated inRFC3339 text format.
+   * @param terminationTimestamp terminationTimestamp or {@code null} for none
+   */
+  public ResourceStatusScheduling setTerminationTimestamp(java.lang.String terminationTimestamp) {
+    this.terminationTimestamp = terminationTimestamp;
     return this;
   }
 

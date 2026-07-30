@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecContainerSpec 
   private java.lang.String imageUri;
 
   /**
+   * Optional. The port the container listens on. Defaults to 8080 if unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer port;
+
+  /**
    * Required. The Artifact Registry Docker image URI (e.g., us-central1-docker.pkg.dev/my-
    * project/my-repo/my-image:tag) of the container image that is to be run on each worker replica.
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecContainerSpec 
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecContainerSpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. The port the container listens on. Defaults to 8080 if unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPort() {
+    return port;
+  }
+
+  /**
+   * Optional. The port the container listens on. Defaults to 8080 if unset.
+   * @param port port or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecContainerSpec setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 

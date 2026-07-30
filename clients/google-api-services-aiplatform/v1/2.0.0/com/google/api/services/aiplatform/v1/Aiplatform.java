@@ -81546,6 +81546,34 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. The update mask applies to the resource. The supported paths are
+           * `automatic_resources`, `dedicated_resources`, `enable_access_logging` and
+           * `deployed_index_auth_config`. When omitted, the service will perform a full update of
+           * all fields. See google.protobuf.FieldMask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The update mask applies to the resource. The supported paths are `automatic_resources`,
+         `dedicated_resources`, `enable_access_logging` and `deployed_index_auth_config`. When omitted, the
+         service will perform a full update of all fields. See google.protobuf.FieldMask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The update mask applies to the resource. The supported paths are
+           * `automatic_resources`, `dedicated_resources`, `enable_access_logging` and
+           * `deployed_index_auth_config`. When omitted, the service will perform a full update of
+           * all fields. See google.protobuf.FieldMask.
+           */
+          public MutateDeployedIndex setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
           @Override
           public MutateDeployedIndex set(String parameterName, Object value) {
             return (MutateDeployedIndex) super.set(parameterName, value);
@@ -84753,6 +84781,147 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
        * The "memoryBanks" collection of methods.
        */
       public class MemoryBanks {
+
+        /**
+         * Ingests events for a Memory Bank.
+         *
+         * Create a request for the method "memoryBanks.ingestEvents".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link IngestEvents#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the ReasoningEngine to ingest events to. Format:
+         *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1IngestEventsRequest}
+         * @return the request
+         */
+        public IngestEvents ingestEvents(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1IngestEventsRequest content) throws java.io.IOException {
+          IngestEvents result = new IngestEvents(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IngestEvents extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}:ingestEvents";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memoryBanks/[^/]+$");
+
+          /**
+           * Ingests events for a Memory Bank.
+           *
+           * Create a request for the method "memoryBanks.ingestEvents".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link IngestEvents#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * IngestEvents#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the ReasoningEngine to ingest events to. Format:
+         *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1IngestEventsRequest}
+           * @since 1.13
+           */
+          protected IngestEvents(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1IngestEventsRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/memoryBanks/[^/]+$");
+            }
+          }
+
+          @Override
+          public IngestEvents set$Xgafv(java.lang.String $Xgafv) {
+            return (IngestEvents) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IngestEvents setAccessToken(java.lang.String accessToken) {
+            return (IngestEvents) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IngestEvents setAlt(java.lang.String alt) {
+            return (IngestEvents) super.setAlt(alt);
+          }
+
+          @Override
+          public IngestEvents setCallback(java.lang.String callback) {
+            return (IngestEvents) super.setCallback(callback);
+          }
+
+          @Override
+          public IngestEvents setFields(java.lang.String fields) {
+            return (IngestEvents) super.setFields(fields);
+          }
+
+          @Override
+          public IngestEvents setKey(java.lang.String key) {
+            return (IngestEvents) super.setKey(key);
+          }
+
+          @Override
+          public IngestEvents setOauthToken(java.lang.String oauthToken) {
+            return (IngestEvents) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IngestEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IngestEvents) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IngestEvents setQuotaUser(java.lang.String quotaUser) {
+            return (IngestEvents) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IngestEvents setUploadType(java.lang.String uploadType) {
+            return (IngestEvents) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IngestEvents setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IngestEvents) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the ReasoningEngine to ingest events to. Format:
+           * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the ReasoningEngine to ingest events to. Format:
+         `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the ReasoningEngine to ingest events to. Format:
+           * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           */
+          public IngestEvents setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/memoryBanks/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public IngestEvents set(String parameterName, Object value) {
+            return (IngestEvents) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Memories collection.
@@ -121314,6 +121483,187 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
           }
+        }
+        /**
+         * An accessor for creating requests from the V1 collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+         *   {@code Aiplatform.V1.List request = aiplatform.v1().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public V1 v1() {
+          return new V1();
+        }
+
+        /**
+         * The "v1" collection of methods.
+         */
+        public class V1 {
+
+          /**
+           * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this method,
+           * invoke_route_prefix must be set to allow the paths that will be specified in the request.
+           *
+           * Create a request for the method "v1.responses".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Responses#execute()} method to invoke the remote operation.
+           *
+           * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+           * @return the request
+           */
+          public Responses responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) throws java.io.IOException {
+            Responses result = new Responses(endpoint, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Responses extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+            private static final String REST_PATH = "v1/{+endpoint}/v1/responses";
+
+            private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+
+            /**
+             * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this
+             * method, invoke_route_prefix must be set to allow the paths that will be specified in the
+             * request.
+             *
+             * Create a request for the method "v1.responses".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Responses#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Responses#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+             * @since 1.13
+             */
+            protected Responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+              this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Responses set$Xgafv(java.lang.String $Xgafv) {
+              return (Responses) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Responses setAccessToken(java.lang.String accessToken) {
+              return (Responses) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Responses setAlt(java.lang.String alt) {
+              return (Responses) super.setAlt(alt);
+            }
+
+            @Override
+            public Responses setCallback(java.lang.String callback) {
+              return (Responses) super.setCallback(callback);
+            }
+
+            @Override
+            public Responses setFields(java.lang.String fields) {
+              return (Responses) super.setFields(fields);
+            }
+
+            @Override
+            public Responses setKey(java.lang.String key) {
+              return (Responses) super.setKey(key);
+            }
+
+            @Override
+            public Responses setOauthToken(java.lang.String oauthToken) {
+              return (Responses) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Responses setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Responses) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Responses setQuotaUser(java.lang.String quotaUser) {
+              return (Responses) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Responses setUploadType(java.lang.String uploadType) {
+              return (Responses) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Responses setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Responses) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String endpoint;
+
+            /** Required. The name of the Endpoint requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public java.lang.String getEndpoint() {
+              return endpoint;
+            }
+
+            /**
+             * Required. The name of the Endpoint requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             */
+            public Responses setEndpoint(java.lang.String endpoint) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                    "Parameter endpoint must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+              }
+              this.endpoint = endpoint;
+              return this;
+            }
+
+            /** ID of the DeployedModel that serves the invoke request. */
+            @com.google.api.client.util.Key
+            private java.lang.String deployedModelId;
+
+            /** ID of the DeployedModel that serves the invoke request.
+             */
+            public java.lang.String getDeployedModelId() {
+              return deployedModelId;
+            }
+
+            /** ID of the DeployedModel that serves the invoke request. */
+            public Responses setDeployedModelId(java.lang.String deployedModelId) {
+              this.deployedModelId = deployedModelId;
+              return this;
+            }
+
+            @Override
+            public Responses set(String parameterName, Object value) {
+              return (Responses) super.set(parameterName, value);
+            }
+          }
+
         }
       }
       /**

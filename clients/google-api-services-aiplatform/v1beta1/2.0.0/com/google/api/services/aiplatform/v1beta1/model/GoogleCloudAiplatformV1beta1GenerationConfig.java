@@ -40,6 +40,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Boolean audioTimestamp;
 
   /**
+   * Optional. Config for audio transcription (speech recognition).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AudioTranscriptionConfig audioTranscriptionConfig;
+
+  /**
    * Optional. The number of candidate responses to generate. A higher `candidate_count` can provide
    * more options to choose from, but it also consumes more resources. This can be useful for
    * generating a variety of responses and selecting the best one.
@@ -264,6 +271,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setAudioTimestamp(java.lang.Boolean audioTimestamp) {
     this.audioTimestamp = audioTimestamp;
+    return this;
+  }
+
+  /**
+   * Optional. Config for audio transcription (speech recognition).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AudioTranscriptionConfig getAudioTranscriptionConfig() {
+    return audioTranscriptionConfig;
+  }
+
+  /**
+   * Optional. Config for audio transcription (speech recognition).
+   * @param audioTranscriptionConfig audioTranscriptionConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setAudioTranscriptionConfig(GoogleCloudAiplatformV1beta1AudioTranscriptionConfig audioTranscriptionConfig) {
+    this.audioTranscriptionConfig = audioTranscriptionConfig;
     return this;
   }
 

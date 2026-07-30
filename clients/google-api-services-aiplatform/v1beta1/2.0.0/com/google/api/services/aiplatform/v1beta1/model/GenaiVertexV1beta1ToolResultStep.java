@@ -73,6 +73,12 @@ public final class GenaiVertexV1beta1ToolResultStep extends com.google.api.clien
   private GenaiVertexV1beta1McpServerToolResultStep mcpServerToolResult;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1RetrievalResultStep retrievalResult;
+
+  /**
    * A signature hash for backend validation.
    * The value may be {@code null}.
    */
@@ -189,6 +195,21 @@ public final class GenaiVertexV1beta1ToolResultStep extends com.google.api.clien
    */
   public GenaiVertexV1beta1ToolResultStep setMcpServerToolResult(GenaiVertexV1beta1McpServerToolResultStep mcpServerToolResult) {
     this.mcpServerToolResult = mcpServerToolResult;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1RetrievalResultStep getRetrievalResult() {
+    return retrievalResult;
+  }
+
+  /**
+   * @param retrievalResult retrievalResult or {@code null} for none
+   */
+  public GenaiVertexV1beta1ToolResultStep setRetrievalResult(GenaiVertexV1beta1RetrievalResultStep retrievalResult) {
+    this.retrievalResult = retrievalResult;
     return this;
   }
 

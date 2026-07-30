@@ -30,12 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1McpServerToolResultStep extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ContentList contentList;
-
-  /**
    * Name of the tool which is called for this specific tool call.
    * The value may be {@code null}.
    */
@@ -43,38 +37,18 @@ public final class GenaiVertexV1beta1McpServerToolResultStep extends com.google.
   private java.lang.String name;
 
   /**
+   * Required. The output from the MCP server call. Can be simple text or rich content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1Value result;
+
+  /**
    * The name of the used MCP server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serverName;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stringResult;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Struct structResult;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ContentList getContentList() {
-    return contentList;
-  }
-
-  /**
-   * @param contentList contentList or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultStep setContentList(GenaiVertexV1beta1ContentList contentList) {
-    this.contentList = contentList;
-    return this;
-  }
 
   /**
    * Name of the tool which is called for this specific tool call.
@@ -94,6 +68,23 @@ public final class GenaiVertexV1beta1McpServerToolResultStep extends com.google.
   }
 
   /**
+   * Required. The output from the MCP server call. Can be simple text or rich content.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1Value getResult() {
+    return result;
+  }
+
+  /**
+   * Required. The output from the MCP server call. Can be simple text or rich content.
+   * @param result result or {@code null} for none
+   */
+  public GenaiVertexV1beta1McpServerToolResultStep setResult(GenaiVertexV1beta1Value result) {
+    this.result = result;
+    return this;
+  }
+
+  /**
    * The name of the used MCP server.
    * @return value or {@code null} for none
    */
@@ -107,36 +98,6 @@ public final class GenaiVertexV1beta1McpServerToolResultStep extends com.google.
    */
   public GenaiVertexV1beta1McpServerToolResultStep setServerName(java.lang.String serverName) {
     this.serverName = serverName;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStringResult() {
-    return stringResult;
-  }
-
-  /**
-   * @param stringResult stringResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultStep setStringResult(java.lang.String stringResult) {
-    this.stringResult = stringResult;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1Struct getStructResult() {
-    return structResult;
-  }
-
-  /**
-   * @param structResult structResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultStep setStructResult(GenaiVertexV1beta1Struct structResult) {
-    this.structResult = structResult;
     return this;
   }
 

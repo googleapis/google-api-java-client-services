@@ -89,6 +89,16 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJob extends com.go
   private String endTime;
 
   /**
+   * For Bring-Your-Own-Endpoint (BYOE), the name of the Endpoint resource that produces the
+   * predictions via this job, must share the same ancestor Location. Exactly one of model,
+   * unmanaged_container_model, or endpoint must be set. Example:
+   * `projects/193595526740/locations/us-central1/endpoints/4203439000301600768`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpoint;
+
+  /**
    * Output only. Only populated when the job's state is JOB_STATE_FAILED or JOB_STATE_CANCELLED.
    * The value may be {@code null}.
    */
@@ -433,6 +443,29 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJob extends com.go
    */
   public GoogleCloudAiplatformV1beta1BatchPredictionJob setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * For Bring-Your-Own-Endpoint (BYOE), the name of the Endpoint resource that produces the
+   * predictions via this job, must share the same ancestor Location. Exactly one of model,
+   * unmanaged_container_model, or endpoint must be set. Example:
+   * `projects/193595526740/locations/us-central1/endpoints/4203439000301600768`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpoint() {
+    return endpoint;
+  }
+
+  /**
+   * For Bring-Your-Own-Endpoint (BYOE), the name of the Endpoint resource that produces the
+   * predictions via this job, must share the same ancestor Location. Exactly one of model,
+   * unmanaged_container_model, or endpoint must be set. Example:
+   * `projects/193595526740/locations/us-central1/endpoints/4203439000301600768`
+   * @param endpoint endpoint or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BatchPredictionJob setEndpoint(java.lang.String endpoint) {
+    this.endpoint = endpoint;
     return this;
   }
 

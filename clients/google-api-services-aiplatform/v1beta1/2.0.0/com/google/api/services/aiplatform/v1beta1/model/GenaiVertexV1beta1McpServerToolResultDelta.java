@@ -33,46 +33,19 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ContentList contentList;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GenaiVertexV1beta1Value result;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String serverName;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stringResult;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Struct structResult;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ContentList getContentList() {
-    return contentList;
-  }
-
-  /**
-   * @param contentList contentList or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultDelta setContentList(GenaiVertexV1beta1ContentList contentList) {
-    this.contentList = contentList;
-    return this;
-  }
 
   /**
    * @return value or {@code null} for none
@@ -92,6 +65,21 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
   /**
    * @return value or {@code null} for none
    */
+  public GenaiVertexV1beta1Value getResult() {
+    return result;
+  }
+
+  /**
+   * @param result result or {@code null} for none
+   */
+  public GenaiVertexV1beta1McpServerToolResultDelta setResult(GenaiVertexV1beta1Value result) {
+    this.result = result;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
   public java.lang.String getServerName() {
     return serverName;
   }
@@ -101,36 +89,6 @@ public final class GenaiVertexV1beta1McpServerToolResultDelta extends com.google
    */
   public GenaiVertexV1beta1McpServerToolResultDelta setServerName(java.lang.String serverName) {
     this.serverName = serverName;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStringResult() {
-    return stringResult;
-  }
-
-  /**
-   * @param stringResult stringResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultDelta setStringResult(java.lang.String stringResult) {
-    this.stringResult = stringResult;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1Struct getStructResult() {
-    return structResult;
-  }
-
-  /**
-   * @param structResult structResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1McpServerToolResultDelta setStructResult(GenaiVertexV1beta1Struct structResult) {
-    this.structResult = structResult;
     return this;
   }
 

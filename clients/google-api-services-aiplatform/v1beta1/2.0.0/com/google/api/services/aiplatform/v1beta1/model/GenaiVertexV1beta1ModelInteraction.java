@@ -30,16 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1ModelInteraction extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the cached content used as context to serve the prediction. Note: only used in
-   * explicit caching, where users can have control over caching (e.g. what content to cache) and
-   * enjoy guaranteed cost savings. Format:
-   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("cached_content")
-  private java.lang.String cachedContent;
-
-  /**
    * Input only. Configuration parameters for the model interaction.
    * The value may be {@code null}.
    */
@@ -52,29 +42,6 @@ public final class GenaiVertexV1beta1ModelInteraction extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
-
-  /**
-   * The name of the cached content used as context to serve the prediction. Note: only used in
-   * explicit caching, where users can have control over caching (e.g. what content to cache) and
-   * enjoy guaranteed cost savings. Format:
-   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCachedContent() {
-    return cachedContent;
-  }
-
-  /**
-   * The name of the cached content used as context to serve the prediction. Note: only used in
-   * explicit caching, where users can have control over caching (e.g. what content to cache) and
-   * enjoy guaranteed cost savings. Format:
-   * `projects/{project}/locations/{location}/cachedContents/{cachedContent}`
-   * @param cachedContent cachedContent or {@code null} for none
-   */
-  public GenaiVertexV1beta1ModelInteraction setCachedContent(java.lang.String cachedContent) {
-    this.cachedContent = cachedContent;
-    return this;
-  }
 
   /**
    * Input only. Configuration parameters for the model interaction.

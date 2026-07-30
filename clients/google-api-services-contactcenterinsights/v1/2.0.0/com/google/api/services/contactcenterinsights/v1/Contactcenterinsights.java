@@ -3693,6 +3693,697 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
 
       }
       /**
+       * An accessor for creating requests from the AssistantSessions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
+       *   {@code Contactcenterinsights.AssistantSessions.List request = contactcenterinsights.assistantSessions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AssistantSessions assistantSessions() {
+        return new AssistantSessions();
+      }
+
+      /**
+       * The "assistantSessions" collection of methods.
+       */
+      public class AssistantSessions {
+
+        /**
+         * Creates an assistant session.
+         *
+         * Create a request for the method "assistantSessions.create".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this assistant session will be created. Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession> {
+
+          private static final String REST_PATH = "v1/{+parent}/assistantSessions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an assistant session.
+           *
+           * Create a request for the method "assistantSessions.create".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this assistant session will be created. Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this assistant session will be created. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this assistant session will be created. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this assistant session will be created. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The ID to use for the assistant session, which will become the final
+           * component of the assistant session's resource name. If not provided, a random UUID will
+           * be generated by the server. This value should be 4-64 characters and must match the
+           * regular expression `^[a-z0-9-]{4,64}$`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String assistantSessionId;
+
+          /** Optional. The ID to use for the assistant session, which will become the final component of the
+         assistant session's resource name. If not provided, a random UUID will be generated by the server.
+         This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`.
+           */
+          public java.lang.String getAssistantSessionId() {
+            return assistantSessionId;
+          }
+
+          /**
+           * Optional. The ID to use for the assistant session, which will become the final
+           * component of the assistant session's resource name. If not provided, a random UUID will
+           * be generated by the server. This value should be 4-64 characters and must match the
+           * regular expression `^[a-z0-9-]{4,64}$`.
+           */
+          public Create setAssistantSessionId(java.lang.String assistantSessionId) {
+            this.assistantSessionId = assistantSessionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an assistant session.
+         *
+         * Create a request for the method "assistantSessions.get".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the assistant session to retrieve. Format:
+         *        `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+
+          /**
+           * Gets an assistant session.
+           *
+           * Create a request for the method "assistantSessions.get".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the assistant session to retrieve. Format:
+         *        `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AssistantSession.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the assistant session to retrieve. Format:
+           * `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the assistant session to retrieve. Format:
+         `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the assistant session to retrieve. Format:
+           * `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists assistant sessions.
+         *
+         * Create a request for the method "assistantSessions.list".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource, which owns this collection of assistant sessions. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAssistantSessionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/assistantSessions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists assistant sessions.
+           *
+           * Create a request for the method "assistantSessions.list".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource, which owns this collection of assistant sessions. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAssistantSessionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of assistant sessions.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource, which owns this collection of assistant sessions. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of assistant sessions.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. A filter to reduce results to a specific subset. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter to reduce results to a specific subset.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. A filter to reduce results to a specific subset. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of assistant sessions to return in a single response. If
+           * unspecified, at most 100 assistant sessions will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of assistant sessions to return in a single response. If unspecified,
+         at most 100 assistant sessions will be returned. The maximum value is 1000; values above 1000 will
+         be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of assistant sessions to return in a single response. If
+           * unspecified, at most 100 assistant sessions will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAssistantSessions` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListAssistantSessions` call. Provide this to
+         retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAssistantSessions` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Streams chat messages from the assistant.
+         *
+         * Create a request for the method "assistantSessions.streamChat".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link StreamChat#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the assistant session to stream chat. Format:
+         *        `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatRequest}
+         * @return the request
+         */
+        public StreamChat streamChat(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatRequest content) throws java.io.IOException {
+          StreamChat result = new StreamChat(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class StreamChat extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:streamChat";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+
+          /**
+           * Streams chat messages from the assistant.
+           *
+           * Create a request for the method "assistantSessions.streamChat".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link StreamChat#execute()} method to invoke the
+           * remote operation. <p> {@link
+           * StreamChat#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the assistant session to stream chat. Format:
+         *        `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatRequest}
+           * @since 1.13
+           */
+          protected StreamChat(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1StreamChatResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+            }
+          }
+
+          @Override
+          public StreamChat set$Xgafv(java.lang.String $Xgafv) {
+            return (StreamChat) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public StreamChat setAccessToken(java.lang.String accessToken) {
+            return (StreamChat) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public StreamChat setAlt(java.lang.String alt) {
+            return (StreamChat) super.setAlt(alt);
+          }
+
+          @Override
+          public StreamChat setCallback(java.lang.String callback) {
+            return (StreamChat) super.setCallback(callback);
+          }
+
+          @Override
+          public StreamChat setFields(java.lang.String fields) {
+            return (StreamChat) super.setFields(fields);
+          }
+
+          @Override
+          public StreamChat setKey(java.lang.String key) {
+            return (StreamChat) super.setKey(key);
+          }
+
+          @Override
+          public StreamChat setOauthToken(java.lang.String oauthToken) {
+            return (StreamChat) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public StreamChat setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (StreamChat) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public StreamChat setQuotaUser(java.lang.String quotaUser) {
+            return (StreamChat) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public StreamChat setUploadType(java.lang.String uploadType) {
+            return (StreamChat) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public StreamChat setUploadProtocol(java.lang.String uploadProtocol) {
+            return (StreamChat) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the assistant session to stream chat. Format:
+           * `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the assistant session to stream chat. Format:
+         `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the assistant session to stream chat. Format:
+           * `projects/{project}/locations/{location}/assistantSessions/{assistant_session}`
+           */
+          public StreamChat setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/assistantSessions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public StreamChat set(String parameterName, Object value) {
+            return (StreamChat) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the AuthorizedViewSets collection.
        *
        * <p>The typical use is:</p>

@@ -37,6 +37,13 @@ public final class ServiceMeshFeatureSpec extends com.google.api.client.json.Gen
   private java.lang.String modernizationCompatibility;
 
   /**
+   * Optional. Declares your intended modernization strategy for the fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modernizationStrategy;
+
+  /**
    * Optional. Specifies modernization compatibility for the fleet.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class ServiceMeshFeatureSpec extends com.google.api.client.json.Gen
    */
   public ServiceMeshFeatureSpec setModernizationCompatibility(java.lang.String modernizationCompatibility) {
     this.modernizationCompatibility = modernizationCompatibility;
+    return this;
+  }
+
+  /**
+   * Optional. Declares your intended modernization strategy for the fleet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModernizationStrategy() {
+    return modernizationStrategy;
+  }
+
+  /**
+   * Optional. Declares your intended modernization strategy for the fleet.
+   * @param modernizationStrategy modernizationStrategy or {@code null} for none
+   */
+  public ServiceMeshFeatureSpec setModernizationStrategy(java.lang.String modernizationStrategy) {
+    this.modernizationStrategy = modernizationStrategy;
     return this;
   }
 

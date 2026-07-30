@@ -7645,6 +7645,32 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
               return this;
             }
 
+            /**
+             * The type of certificate chain validation to perform at creation. The request will be
+             * rejected if the uploaded chain fails to satisfy the requested validation checks. When
+             * unspecified, this parameter defaults to `all`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String chainValidation;
+
+            /** The type of certificate chain validation to perform at creation. The request will be rejected if
+           the uploaded chain fails to satisfy the requested validation checks. When unspecified, this
+           parameter defaults to `all`. [default: all]
+             */
+            public java.lang.String getChainValidation() {
+              return chainValidation;
+            }
+
+            /**
+             * The type of certificate chain validation to perform at creation. The request will be
+             * rejected if the uploaded chain fails to satisfy the requested validation checks. When
+             * unspecified, this parameter defaults to `all`.
+             */
+            public Create setChainValidation(java.lang.String chainValidation) {
+              this.chainValidation = chainValidation;
+              return this;
+            }
+
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);

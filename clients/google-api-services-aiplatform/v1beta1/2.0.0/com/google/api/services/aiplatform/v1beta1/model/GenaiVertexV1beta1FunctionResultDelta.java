@@ -33,12 +33,6 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ContentList contentList;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.Boolean isError;
 
   /**
@@ -51,28 +45,7 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String stringResult;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Struct structResult;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ContentList getContentList() {
-    return contentList;
-  }
-
-  /**
-   * @param contentList contentList or {@code null} for none
-   */
-  public GenaiVertexV1beta1FunctionResultDelta setContentList(GenaiVertexV1beta1ContentList contentList) {
-    this.contentList = contentList;
-    return this;
-  }
+  private GenaiVertexV1beta1Value result;
 
   /**
    * @return value or {@code null} for none
@@ -107,30 +80,15 @@ public final class GenaiVertexV1beta1FunctionResultDelta extends com.google.api.
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getStringResult() {
-    return stringResult;
+  public GenaiVertexV1beta1Value getResult() {
+    return result;
   }
 
   /**
-   * @param stringResult stringResult or {@code null} for none
+   * @param result result or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultDelta setStringResult(java.lang.String stringResult) {
-    this.stringResult = stringResult;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1Struct getStructResult() {
-    return structResult;
-  }
-
-  /**
-   * @param structResult structResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1FunctionResultDelta setStructResult(GenaiVertexV1beta1Struct structResult) {
-    this.structResult = structResult;
+  public GenaiVertexV1beta1FunctionResultDelta setResult(GenaiVertexV1beta1Value result) {
+    this.result = result;
     return this;
   }
 

@@ -59,6 +59,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationSet extends com.google.
   private java.lang.String displayName;
 
   /**
+   * Optional. Customer-managed encryption key spec for this EvaluationSet. If set, this
+   * EvaluationSet and its sub-resources will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Required. The EvaluationItems that are part of this dataset.
    * The value may be {@code null}.
    */
@@ -139,6 +147,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationSet extends com.google.
    */
   public GoogleCloudAiplatformV1beta1EvaluationSet setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationSet. If set, this
+   * EvaluationSet and its sub-resources will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationSet. If set, this
+   * EvaluationSet and its sub-resources will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationSet setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

@@ -37,6 +37,16 @@ public final class GoogleCloudAiplatformV1beta1SetPublisherModelConfigRequest ex
   private GoogleCloudAiplatformV1beta1PublisherModelConfig publisherModelConfig;
 
   /**
+   * Optional. The fields of `publisher_model_config` to overwrite. If empty, the entire config is
+   * replaced. If set, only the listed fields are overwritten and the others are left unchanged;
+   * this lets you update one setting (for example `inference_event_logging_config`) without
+   * clearing its siblings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
+
+  /**
    * Required. The publisher model config.
    * @return value or {@code null} for none
    */
@@ -50,6 +60,29 @@ public final class GoogleCloudAiplatformV1beta1SetPublisherModelConfigRequest ex
    */
   public GoogleCloudAiplatformV1beta1SetPublisherModelConfigRequest setPublisherModelConfig(GoogleCloudAiplatformV1beta1PublisherModelConfig publisherModelConfig) {
     this.publisherModelConfig = publisherModelConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The fields of `publisher_model_config` to overwrite. If empty, the entire config is
+   * replaced. If set, only the listed fields are overwritten and the others are left unchanged;
+   * this lets you update one setting (for example `inference_event_logging_config`) without
+   * clearing its siblings.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Optional. The fields of `publisher_model_config` to overwrite. If empty, the entire config is
+   * replaced. If set, only the listed fields are overwritten and the others are left unchanged;
+   * this lets you update one setting (for example `inference_event_logging_config`) without
+   * clearing its siblings.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SetPublisherModelConfigRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

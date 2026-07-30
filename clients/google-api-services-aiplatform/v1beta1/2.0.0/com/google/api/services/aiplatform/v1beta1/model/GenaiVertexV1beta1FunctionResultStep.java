@@ -30,12 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1FunctionResultStep extends com.google.api.client.json.GenericJson {
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ContentList contentList;
-
-  /**
    * Whether the tool call resulted in an error.
    * The value may be {@code null}.
    */
@@ -50,31 +44,11 @@ public final class GenaiVertexV1beta1FunctionResultStep extends com.google.api.c
   private java.lang.String name;
 
   /**
+   * Required. The result of the tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String stringResult;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Struct structResult;
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ContentList getContentList() {
-    return contentList;
-  }
-
-  /**
-   * @param contentList contentList or {@code null} for none
-   */
-  public GenaiVertexV1beta1FunctionResultStep setContentList(GenaiVertexV1beta1ContentList contentList) {
-    this.contentList = contentList;
-    return this;
-  }
+  private GenaiVertexV1beta1Value result;
 
   /**
    * Whether the tool call resulted in an error.
@@ -111,32 +85,19 @@ public final class GenaiVertexV1beta1FunctionResultStep extends com.google.api.c
   }
 
   /**
+   * Required. The result of the tool call.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStringResult() {
-    return stringResult;
+  public GenaiVertexV1beta1Value getResult() {
+    return result;
   }
 
   /**
-   * @param stringResult stringResult or {@code null} for none
+   * Required. The result of the tool call.
+   * @param result result or {@code null} for none
    */
-  public GenaiVertexV1beta1FunctionResultStep setStringResult(java.lang.String stringResult) {
-    this.stringResult = stringResult;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1Struct getStructResult() {
-    return structResult;
-  }
-
-  /**
-   * @param structResult structResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1FunctionResultStep setStructResult(GenaiVertexV1beta1Struct structResult) {
-    this.structResult = structResult;
+  public GenaiVertexV1beta1FunctionResultStep setResult(GenaiVertexV1beta1Value result) {
+    this.result = result;
     return this;
   }
 

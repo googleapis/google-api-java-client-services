@@ -30,14 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Penalizes tokens based on their frequency in the generated text. A positive value helps to
-   * reduce the repetition of words and phrases. Valid values can range from [-2.0, 2.0].
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("frequency_penalty")
-  private java.lang.Float frequencyPenalty;
-
-  /**
    * Configuration for image interaction.
    * The value may be {@code null}.
    */
@@ -50,15 +42,6 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxOutputTokens;
-
-  /**
-   * Penalizes tokens that have already appeared in the generated text. A positive value encourages
-   * the model to generate more diverse and less repetitive text. Valid values can range from [-2.0,
-   * 2.0].
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key("presence_penalty")
-  private java.lang.Float presencePenalty;
 
   /**
    * Seed used in decoding for reproducibility.
@@ -131,25 +114,6 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
   private GenaiVertexV1beta1VideoConfig videoConfig;
 
   /**
-   * Penalizes tokens based on their frequency in the generated text. A positive value helps to
-   * reduce the repetition of words and phrases. Valid values can range from [-2.0, 2.0].
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getFrequencyPenalty() {
-    return frequencyPenalty;
-  }
-
-  /**
-   * Penalizes tokens based on their frequency in the generated text. A positive value helps to
-   * reduce the repetition of words and phrases. Valid values can range from [-2.0, 2.0].
-   * @param frequencyPenalty frequencyPenalty or {@code null} for none
-   */
-  public GenaiVertexV1beta1GenerationConfig setFrequencyPenalty(java.lang.Float frequencyPenalty) {
-    this.frequencyPenalty = frequencyPenalty;
-    return this;
-  }
-
-  /**
    * Configuration for image interaction.
    * @return value or {@code null} for none
    */
@@ -180,27 +144,6 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
    */
   public GenaiVertexV1beta1GenerationConfig setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
     this.maxOutputTokens = maxOutputTokens;
-    return this;
-  }
-
-  /**
-   * Penalizes tokens that have already appeared in the generated text. A positive value encourages
-   * the model to generate more diverse and less repetitive text. Valid values can range from [-2.0,
-   * 2.0].
-   * @return value or {@code null} for none
-   */
-  public java.lang.Float getPresencePenalty() {
-    return presencePenalty;
-  }
-
-  /**
-   * Penalizes tokens that have already appeared in the generated text. A positive value encourages
-   * the model to generate more diverse and less repetitive text. Valid values can range from [-2.0,
-   * 2.0].
-   * @param presencePenalty presencePenalty or {@code null} for none
-   */
-  public GenaiVertexV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
-    this.presencePenalty = presencePenalty;
     return this;
   }
 

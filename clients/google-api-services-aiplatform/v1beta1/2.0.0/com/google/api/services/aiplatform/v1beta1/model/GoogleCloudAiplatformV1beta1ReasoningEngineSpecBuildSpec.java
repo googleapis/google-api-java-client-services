@@ -30,12 +30,48 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecBuildSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The service account that Cloud Build uses to run the build. This field is only
+   * applicable when `worker_pool` is specified (i.e., for custom worker pools). If `worker_pool` is
+   * not specified, this field is ignored and the build runs using the Google-managed service agent.
+   * Format: `projects/{project}/serviceAccounts/{service_account}` or
+   * `{service_account}@{project}.iam.gserviceaccount.com`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. Identifier. The resource name of the Cloud Build WorkerPool to use for the build.
    * Format: `projects/{project}/locations/{location}/workerPools/{worker_pool}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Optional. The service account that Cloud Build uses to run the build. This field is only
+   * applicable when `worker_pool` is specified (i.e., for custom worker pools). If `worker_pool` is
+   * not specified, this field is ignored and the build runs using the Google-managed service agent.
+   * Format: `projects/{project}/serviceAccounts/{service_account}` or
+   * `{service_account}@{project}.iam.gserviceaccount.com`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account that Cloud Build uses to run the build. This field is only
+   * applicable when `worker_pool` is specified (i.e., for custom worker pools). If `worker_pool` is
+   * not specified, this field is ignored and the build runs using the Google-managed service agent.
+   * Format: `projects/{project}/serviceAccounts/{service_account}` or
+   * `{service_account}@{project}.iam.gserviceaccount.com`
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecBuildSpec setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
+    return this;
+  }
 
   /**
    * Optional. Identifier. The resource name of the Cloud Build WorkerPool to use for the build.

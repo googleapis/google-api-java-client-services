@@ -30,6 +30,18 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Additional consumer projects permitted to attach their own PSC endpoint to this
+   * gateway's ServiceAttachment. This is the "decoupled" mode, where the customer creates the PSC
+   * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
+   * SC enforced: it must be within the caller's service perimeter. The owning
+   * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
+   * listed. Format: project ID or number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedProjects;
+
+  /**
    * Output only. The fully qualified record name of the created A-record in Cloud DNS.
    * The value may be {@code null}.
    */
@@ -80,6 +92,33 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Optional. Additional consumer projects permitted to attach their own PSC endpoint to this
+   * gateway's ServiceAttachment. This is the "decoupled" mode, where the customer creates the PSC
+   * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
+   * SC enforced: it must be within the caller's service perimeter. The owning
+   * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
+   * listed. Format: project ID or number.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedProjects() {
+    return allowedProjects;
+  }
+
+  /**
+   * Optional. Additional consumer projects permitted to attach their own PSC endpoint to this
+   * gateway's ServiceAttachment. This is the "decoupled" mode, where the customer creates the PSC
+   * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
+   * SC enforced: it must be within the caller's service perimeter. The owning
+   * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
+   * listed. Format: project ID or number.
+   * @param allowedProjects allowedProjects or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GatewayConfig setAllowedProjects(java.util.List<java.lang.String> allowedProjects) {
+    this.allowedProjects = allowedProjects;
+    return this;
+  }
 
   /**
    * Output only. The fully qualified record name of the created A-record in Cloud DNS.

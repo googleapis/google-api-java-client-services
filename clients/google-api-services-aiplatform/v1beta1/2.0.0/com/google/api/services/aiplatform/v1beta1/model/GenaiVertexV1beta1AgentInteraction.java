@@ -37,6 +37,20 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
   private java.lang.String agent;
 
   /**
+   * Antigravity agent configuration. This configuration is session-level settings that are passed
+   * to the agent runtime on a per-request basis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1AntigravityAgentConfig antigravityConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1CodeMenderAgentConfig codeMenderConfig;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +76,40 @@ public final class GenaiVertexV1beta1AgentInteraction extends com.google.api.cli
    */
   public GenaiVertexV1beta1AgentInteraction setAgent(java.lang.String agent) {
     this.agent = agent;
+    return this;
+  }
+
+  /**
+   * Antigravity agent configuration. This configuration is session-level settings that are passed
+   * to the agent runtime on a per-request basis.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1AntigravityAgentConfig getAntigravityConfig() {
+    return antigravityConfig;
+  }
+
+  /**
+   * Antigravity agent configuration. This configuration is session-level settings that are passed
+   * to the agent runtime on a per-request basis.
+   * @param antigravityConfig antigravityConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1AgentInteraction setAntigravityConfig(GenaiVertexV1beta1AntigravityAgentConfig antigravityConfig) {
+    this.antigravityConfig = antigravityConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1CodeMenderAgentConfig getCodeMenderConfig() {
+    return codeMenderConfig;
+  }
+
+  /**
+   * @param codeMenderConfig codeMenderConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1AgentInteraction setCodeMenderConfig(GenaiVertexV1beta1CodeMenderAgentConfig codeMenderConfig) {
+    this.codeMenderConfig = codeMenderConfig;
     return this;
   }
 

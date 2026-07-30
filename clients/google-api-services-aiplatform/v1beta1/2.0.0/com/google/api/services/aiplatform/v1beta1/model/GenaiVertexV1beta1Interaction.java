@@ -81,6 +81,17 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String id;
 
   /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * The agent's environment lives on the client connection: its built-in environment operations
    * (filesystem ops and running commands) are yielded to the client to execute, instead of running
    * in a server-managed sandbox. Mutually exclusive with `remote_environment`. (Independent of any
@@ -164,6 +175,13 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
+
+  /**
+   * Safety settings for the interaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("safety_settings")
+  private java.util.List<GenaiVertexV1beta1SafetySetting> safetySettings;
 
   /**
    * Required. Output only. The status of the interaction.
@@ -349,6 +367,31 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -540,6 +583,23 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setRole(java.lang.String role) {
     this.role = role;
+    return this;
+  }
+
+  /**
+   * Safety settings for the interaction.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GenaiVertexV1beta1SafetySetting> getSafetySettings() {
+    return safetySettings;
+  }
+
+  /**
+   * Safety settings for the interaction.
+   * @param safetySettings safetySettings or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setSafetySettings(java.util.List<GenaiVertexV1beta1SafetySetting> safetySettings) {
+    this.safetySettings = safetySettings;
     return this;
   }
 

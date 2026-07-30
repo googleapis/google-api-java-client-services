@@ -62,9 +62,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   private String createTime;
 
   /**
-   * Optional. Human-readable name for the `OnlineEvaluator`. The name doesn't have to be unique.
-   * The name can consist of any UTF-8 characters. The maximum length is `63` characters. If the
-   * display name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
+   * Optional. Human-readable name for the OnlineEvaluator. The name doesn't have to be unique. The
+   * name can consist of any UTF-8 characters. The maximum length is `63` characters. If the display
+   * name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,9 +193,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   }
 
   /**
-   * Optional. Human-readable name for the `OnlineEvaluator`. The name doesn't have to be unique.
-   * The name can consist of any UTF-8 characters. The maximum length is `63` characters. If the
-   * display name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
+   * Optional. Human-readable name for the OnlineEvaluator. The name doesn't have to be unique. The
+   * name can consist of any UTF-8 characters. The maximum length is `63` characters. If the display
+   * name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -203,9 +203,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluator extends com.googl
   }
 
   /**
-   * Optional. Human-readable name for the `OnlineEvaluator`. The name doesn't have to be unique.
-   * The name can consist of any UTF-8 characters. The maximum length is `63` characters. If the
-   * display name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
+   * Optional. Human-readable name for the OnlineEvaluator. The name doesn't have to be unique. The
+   * name can consist of any UTF-8 characters. The maximum length is `63` characters. If the display
+   * name exceeds max characters, an `INVALID_ARGUMENT` error is returned.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluator setDisplayName(java.lang.String displayName) {

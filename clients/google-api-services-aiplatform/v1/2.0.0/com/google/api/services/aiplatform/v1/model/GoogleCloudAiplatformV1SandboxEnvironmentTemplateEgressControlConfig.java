@@ -30,11 +30,70 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The customer VPC network that sandbox egress is routed into.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerVpcNetwork;
+
+  /**
+   * Optional. DNS peering configurations that allow sandbox egress to resolve customer-internal
+   * domains via the customer VPC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfigDnsPeeringConfig> dnsPeeringConfigs;
+
+  /**
    * Optional. Whether to allow internet access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean internetAccess;
+
+  /**
+   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * the customer VPC for sandbox egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
+   * Optional. The customer VPC network that sandbox egress is routed into.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerVpcNetwork() {
+    return customerVpcNetwork;
+  }
+
+  /**
+   * Optional. The customer VPC network that sandbox egress is routed into.
+   * @param customerVpcNetwork customerVpcNetwork or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig setCustomerVpcNetwork(java.lang.String customerVpcNetwork) {
+    this.customerVpcNetwork = customerVpcNetwork;
+    return this;
+  }
+
+  /**
+   * Optional. DNS peering configurations that allow sandbox egress to resolve customer-internal
+   * domains via the customer VPC.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfigDnsPeeringConfig> getDnsPeeringConfigs() {
+    return dnsPeeringConfigs;
+  }
+
+  /**
+   * Optional. DNS peering configurations that allow sandbox egress to resolve customer-internal
+   * domains via the customer VPC.
+   * @param dnsPeeringConfigs dnsPeeringConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig setDnsPeeringConfigs(java.util.List<GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfigDnsPeeringConfig> dnsPeeringConfigs) {
+    this.dnsPeeringConfigs = dnsPeeringConfigs;
+    return this;
+  }
 
   /**
    * Optional. Whether to allow internet access.
@@ -50,6 +109,25 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressContro
    */
   public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig setInternetAccess(java.lang.Boolean internetAccess) {
     this.internetAccess = internetAccess;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * the customer VPC for sandbox egress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * the customer VPC for sandbox egress.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressControlConfig setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
     return this;
   }
 

@@ -80,6 +80,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private PullMessage pullMessage;
 
   /**
+   * Optional. Specifies the task-level retry config. If present, this overrides the queue-level
+   * retry config for this task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RetryConfig retryConfig;
+
+  /**
    * The time when the task is scheduled to be attempted. For App Engine queues, this is when the
    * task will be attempted or retried. For pull queues, this is the time when the task is available
    * to be leased; if a task is currently leased, this is the time when the current lease expires,
@@ -216,6 +224,25 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setPullMessage(PullMessage pullMessage) {
     this.pullMessage = pullMessage;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the task-level retry config. If present, this overrides the queue-level
+   * retry config for this task.
+   * @return value or {@code null} for none
+   */
+  public RetryConfig getRetryConfig() {
+    return retryConfig;
+  }
+
+  /**
+   * Optional. Specifies the task-level retry config. If present, this overrides the queue-level
+   * retry config for this task.
+   * @param retryConfig retryConfig or {@code null} for none
+   */
+  public Task setRetryConfig(RetryConfig retryConfig) {
+    this.retryConfig = retryConfig;
     return this;
   }
 

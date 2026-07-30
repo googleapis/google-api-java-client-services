@@ -30,6 +30,14 @@ package com.google.api.services.cloudtasks.v2beta2.model;
 public final class CreateTaskRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parent;
+
+  /**
    * The response_view specifies which subset of the Task will be returned. By default response_view
    * is BASIC; not all information is retrieved by default because some data, such as payloads,
    * might be desirable to return only when needed because of its large size or because of the
@@ -62,6 +70,25 @@ public final class CreateTaskRequest extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private Task task;
+
+  /**
+   * Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParent() {
+    return parent;
+  }
+
+  /**
+   * Required. The queue name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already exist.
+   * @param parent parent or {@code null} for none
+   */
+  public CreateTaskRequest setParent(java.lang.String parent) {
+    this.parent = parent;
+    return this;
+  }
 
   /**
    * The response_view specifies which subset of the Task will be returned. By default response_view

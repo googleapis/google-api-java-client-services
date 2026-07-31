@@ -30,20 +30,20 @@ package com.google.api.services.notebooks.v2.model;
 public final class AccessConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Optional. An external IP address associated with this instance. Specify an unused static
+   * external IP address available to the project or leave this field undefined to use an IP from a
+   * shared ephemeral IP address pool. If you specify a static external IP address, it must live in
+   * the same region as the zone of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalIp;
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Optional. An external IP address associated with this instance. Specify an unused static
+   * external IP address available to the project or leave this field undefined to use an IP from a
+   * shared ephemeral IP address pool. If you specify a static external IP address, it must live in
+   * the same region as the zone of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalIp() {
@@ -51,10 +51,10 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An external IP address associated with this instance. Specify an unused static external IP
-   * address available to the project or leave this field undefined to use an IP from a shared
-   * ephemeral IP address pool. If you specify a static external IP address, it must live in the
-   * same region as the zone of the instance.
+   * Optional. An external IP address associated with this instance. Specify an unused static
+   * external IP address available to the project or leave this field undefined to use an IP from a
+   * shared ephemeral IP address pool. If you specify a static external IP address, it must live in
+   * the same region as the zone of the instance.
    * @param externalIp externalIp or {@code null} for none
    */
   public AccessConfig setExternalIp(java.lang.String externalIp) {

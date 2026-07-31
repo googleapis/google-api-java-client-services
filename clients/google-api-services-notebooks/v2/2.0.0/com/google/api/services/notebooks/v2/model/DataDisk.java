@@ -30,7 +30,7 @@ package com.google.api.services.notebooks.v2.model;
 public final class DataDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+   * Optional. Disk encryption method used on the boot and data disks, defaults to GMEK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,10 +52,9 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   private java.lang.String diskType;
 
   /**
-   * Optional. Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption
-   * is CMEK. Format:
-   * `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn
-   * more about using your own encryption keys.
+   * Optional. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK.
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}`
+   * Learn more about using your own encryption keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +68,7 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+   * Optional. Disk encryption method used on the boot and data disks, defaults to GMEK.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskEncryption() {
@@ -77,7 +76,7 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
+   * Optional. Disk encryption method used on the boot and data disks, defaults to GMEK.
    * @param diskEncryption diskEncryption or {@code null} for none
    */
   public DataDisk setDiskEncryption(java.lang.String diskEncryption) {
@@ -122,10 +121,9 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption
-   * is CMEK. Format:
-   * `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn
-   * more about using your own encryption keys.
+   * Optional. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK.
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}`
+   * Learn more about using your own encryption keys.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -133,10 +131,9 @@ public final class DataDisk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption
-   * is CMEK. Format:
-   * `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn
-   * more about using your own encryption keys.
+   * Optional. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK.
+   * Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}`
+   * Learn more about using your own encryption keys.
    * @param kmsKey kmsKey or {@code null} for none
    */
   public DataDisk setKmsKey(java.lang.String kmsKey) {

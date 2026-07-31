@@ -44,7 +44,7 @@ public final class Sleep extends com.google.api.client.json.GenericJson {
   private SessionTimeInterval interval;
 
   /**
-   * Optional. Sleep metadata: processing, main, manually edited, stages status.
+   * Optional. Sleep metadata: `processed`, `main_sleep`, `manually_edited`, and `stages_status`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class Sleep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Sleep metadata: processing, main, manually edited, stages status.
+   * Optional. Sleep metadata: `processed`, `main_sleep`, `manually_edited`, and `stages_status`.
    * @return value or {@code null} for none
    */
   public SleepMetadata getMetadata() {
@@ -134,7 +134,7 @@ public final class Sleep extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Sleep metadata: processing, main, manually edited, stages status.
+   * Optional. Sleep metadata: `processed`, `main_sleep`, `manually_edited`, and `stages_status`.
    * @param metadata metadata or {@code null} for none
    */
   public Sleep setMetadata(SleepMetadata metadata) {

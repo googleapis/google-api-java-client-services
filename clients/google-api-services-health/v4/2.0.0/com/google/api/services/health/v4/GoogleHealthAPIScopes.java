@@ -50,6 +50,12 @@ public class GoogleHealthAPIScopes {
   /** Add exercise GPS location data to Google Health, and edit or delete the data it adds.. */
   public static final String GOOGLEHEALTH_LOCATION_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.location.writeonly";
 
+  /** Add logged symptoms data to Google Health, and edit or delete the data it adds. */
+  public static final String GOOGLEHEALTH_LOGGED_SYMPTOMS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.logged_symptoms.writeonly";
+
+  /** Add mindfulness data to Google Health, and edit or delete the data it adds. */
+  public static final String GOOGLEHEALTH_MINDFULNESS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.mindfulness.writeonly";
+
   /** Add nutrition data to Google Health, and edit or delete the data it adds.. */
   public static final String GOOGLEHEALTH_NUTRITION_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.nutrition.writeonly";
 
@@ -58,6 +64,9 @@ public class GoogleHealthAPIScopes {
 
   /** Add profile data to Google Health, and edit or delete the data it adds.. */
   public static final String GOOGLEHEALTH_PROFILE_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.profile.writeonly";
+
+  /** Add reproductive health data to Google Health, and edit or delete the data it adds. */
+  public static final String GOOGLEHEALTH_REPRODUCTIVE_HEALTH_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.reproductive_health.writeonly";
 
   /** See your Google Health settings. */
   public static final String GOOGLEHEALTH_SETTINGS_READONLY = "https://www.googleapis.com/auth/googlehealth.settings.readonly";
@@ -87,9 +96,12 @@ public class GoogleHealthAPIScopes {
     set.add(GOOGLEHEALTH_IRN_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_WRITEONLY);
+    set.add(GOOGLEHEALTH_LOGGED_SYMPTOMS_WRITEONLY);
+    set.add(GOOGLEHEALTH_MINDFULNESS_WRITEONLY);
     set.add(GOOGLEHEALTH_NUTRITION_WRITEONLY);
     set.add(GOOGLEHEALTH_PROFILE_READONLY);
     set.add(GOOGLEHEALTH_PROFILE_WRITEONLY);
+    set.add(GOOGLEHEALTH_REPRODUCTIVE_HEALTH_WRITEONLY);
     set.add(GOOGLEHEALTH_SETTINGS_READONLY);
     set.add(GOOGLEHEALTH_SETTINGS_WRITEONLY);
     set.add(GOOGLEHEALTH_SLEEP_READONLY);

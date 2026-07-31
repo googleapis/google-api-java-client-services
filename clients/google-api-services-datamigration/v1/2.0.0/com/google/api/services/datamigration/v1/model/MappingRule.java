@@ -129,7 +129,7 @@ public final class MappingRule extends com.google.api.client.json.GenericJson {
   private java.lang.String ruleScope;
 
   /**
-   * Optional. Rule to specify the primary key for a table
+   * Optional. Deprecated: This rule is no longer supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -402,7 +402,7 @@ public final class MappingRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Rule to specify the primary key for a table
+   * Optional. Deprecated: This rule is no longer supported.
    * @return value or {@code null} for none
    */
   public SetTablePrimaryKey getSetTablePrimaryKey() {
@@ -410,7 +410,7 @@ public final class MappingRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Rule to specify the primary key for a table
+   * Optional. Deprecated: This rule is no longer supported.
    * @param setTablePrimaryKey setTablePrimaryKey or {@code null} for none
    */
   public MappingRule setSetTablePrimaryKey(SetTablePrimaryKey setTablePrimaryKey) {

@@ -17,9 +17,9 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * Options to configure rule type SetTablePrimaryKey. The rule is used to specify the columns and
- * name to configure/alter the primary key of a table. The rule filter field can refer to one
- * entity. The rule scope can be one of: Table.
+ * Deprecated: Options to configure rule type SetTablePrimaryKey. The rule is used to specify the
+ * columns and name to configure/alter the primary key of a table. The rule filter field can refer
+ * to one entity. The rule scope can be one of: Table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation

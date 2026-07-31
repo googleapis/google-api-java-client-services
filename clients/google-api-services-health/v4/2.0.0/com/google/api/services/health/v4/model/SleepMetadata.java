@@ -37,6 +37,15 @@ public final class SleepMetadata extends com.google.api.client.json.GenericJson 
   private java.lang.String externalId;
 
   /**
+   * Output only. `main_sleep`: the longest sleep session with stages within one day. If no sleep
+   * session has stages, then the longest sleep is the `main_sleep`. If there are multiple days of
+   * sleep in the response, there is one `main_sleep` per day.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mainSleep;
+
+  /**
    * Output only. Some sleeps autodetected by algorithms can be manually edited by users.
    * The value may be {@code null}.
    */
@@ -80,6 +89,27 @@ public final class SleepMetadata extends com.google.api.client.json.GenericJson 
    */
   public SleepMetadata setExternalId(java.lang.String externalId) {
     this.externalId = externalId;
+    return this;
+  }
+
+  /**
+   * Output only. `main_sleep`: the longest sleep session with stages within one day. If no sleep
+   * session has stages, then the longest sleep is the `main_sleep`. If there are multiple days of
+   * sleep in the response, there is one `main_sleep` per day.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMainSleep() {
+    return mainSleep;
+  }
+
+  /**
+   * Output only. `main_sleep`: the longest sleep session with stages within one day. If no sleep
+   * session has stages, then the longest sleep is the `main_sleep`. If there are multiple days of
+   * sleep in the response, there is one `main_sleep` per day.
+   * @param mainSleep mainSleep or {@code null} for none
+   */
+  public SleepMetadata setMainSleep(java.lang.Boolean mainSleep) {
+    this.mainSleep = mainSleep;
     return this;
   }
 

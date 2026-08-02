@@ -68,7 +68,7 @@ public final class GoogleIdentityStsV1Jwk extends com.google.api.client.json.Gen
   private java.lang.String n;
 
   /**
-   * Public key use. Currently "jwt-svid".
+   * Public key use. Currently "sig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +160,7 @@ public final class GoogleIdentityStsV1Jwk extends com.google.api.client.json.Gen
   }
 
   /**
-   * Public key use. Currently "jwt-svid".
+   * Public key use. Currently "sig".
    * @return value or {@code null} for none
    */
   public java.lang.String getUse() {
@@ -168,7 +168,7 @@ public final class GoogleIdentityStsV1Jwk extends com.google.api.client.json.Gen
   }
 
   /**
-   * Public key use. Currently "jwt-svid".
+   * Public key use. Currently "sig".
    * @param use use or {@code null} for none
    */
   public GoogleIdentityStsV1Jwk setUse(java.lang.String use) {

@@ -3003,10 +3003,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * manage spaces](https://developers.google.com/workspace/chat/search-manage-admin). When
      * `use_admin_access` is set to `false`, the results are limited to spaces where the calling user is
      * a joined member. To search with administrator privileges, set `use_admin_access` to `true`.
-     * Setting `use_admin_access` to `false` is available under Developer Preview. Supports the
-     * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
-     * authorize): - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-     * authorize-chat-user) with one of the following authorization scopes: -
+     * Supports the following types of
+     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [User
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following authorization scopes: -
      * `https://www.googleapis.com/auth/chat.spaces.readonly` -
      * `https://www.googleapis.com/auth/chat.spaces` - [User authentication with administrator
      * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-
@@ -3037,10 +3037,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * and manage spaces](https://developers.google.com/workspace/chat/search-manage-admin). When
        * `use_admin_access` is set to `false`, the results are limited to spaces where the calling user
        * is a joined member. To search with administrator privileges, set `use_admin_access` to `true`.
-       * Setting `use_admin_access` to `false` is available under Developer Preview. Supports the
-       * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize): - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user) with one of the following authorization scopes: -
+       * Supports the following types of
+       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.spaces.readonly` -
        * `https://www.googleapis.com/auth/chat.spaces` - [User authentication with administrator
        * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
@@ -3373,8 +3373,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
        * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-       * scopes). Setting `use_admin_access` to `false` is available under Developer Preview.
-       * [Developer Preview](https://developers.google.com/workspace/preview).
+       * scopes).
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean useAdminAccess;
@@ -3384,8 +3383,6 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
      `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
      scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes).
-     Setting `use_admin_access` to `false` is available under Developer Preview. [Developer
-     Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.Boolean getUseAdminAccess() {
         return useAdminAccess;
@@ -3397,8 +3394,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * conversations privilege](https://support.google.com/a/answer/13369245). Requires either the
        * `chat.admin.spaces.readonly` or `chat.admin.spaces` [OAuth 2.0
        * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-
-       * scopes). Setting `use_admin_access` to `false` is available under Developer Preview.
-       * [Developer Preview](https://developers.google.com/workspace/preview).
+       * scopes).
        */
       public Search setUseAdminAccess(java.lang.Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
@@ -5640,6 +5636,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return this;
         }
 
+        /**
+         * Optional. Specifies the desired output syntax for the Chat message `formatted_text`
+         * field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String markupSyntax;
+
+        /** Optional. Specifies the desired output syntax for the Chat message `formatted_text` field.
+         */
+        public java.lang.String getMarkupSyntax() {
+          return markupSyntax;
+        }
+
+        /**
+         * Optional. Specifies the desired output syntax for the Chat message `formatted_text`
+         * field.
+         */
+        public Get setMarkupSyntax(java.lang.String markupSyntax) {
+          this.markupSyntax = markupSyntax;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -5871,6 +5889,28 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Specifies the desired output syntax for the Chat message `formatted_text`
+         * field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String markupSyntax;
+
+        /** Optional. Specifies the desired output syntax for the Chat message `formatted_text` field.
+         */
+        public java.lang.String getMarkupSyntax() {
+          return markupSyntax;
+        }
+
+        /**
+         * Optional. Specifies the desired output syntax for the Chat message `formatted_text`
+         * field.
+         */
+        public List setMarkupSyntax(java.lang.String markupSyntax) {
+          this.markupSyntax = markupSyntax;
           return this;
         }
 

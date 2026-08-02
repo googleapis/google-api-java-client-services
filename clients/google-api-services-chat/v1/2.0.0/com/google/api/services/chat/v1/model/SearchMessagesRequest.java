@@ -97,6 +97,13 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
   private java.lang.String filter;
 
   /**
+   * Optional. Specifies the desired output syntax for the Chat message `formatted_text` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String markupSyntax;
+
+  /**
    * Optional. How the results list is ordered. Supported attributes to order by are: -
    * `create_time`: Sorts the results by the time of the message creation. Default value. -
    * `relevance`: Sorts the results by relevance. [Developer
@@ -269,6 +276,23 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    */
   public SearchMessagesRequest setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the desired output syntax for the Chat message `formatted_text` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMarkupSyntax() {
+    return markupSyntax;
+  }
+
+  /**
+   * Optional. Specifies the desired output syntax for the Chat message `formatted_text` field.
+   * @param markupSyntax markupSyntax or {@code null} for none
+   */
+  public SearchMessagesRequest setMarkupSyntax(java.lang.String markupSyntax) {
+    this.markupSyntax = markupSyntax;
     return this;
   }
 

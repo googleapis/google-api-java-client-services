@@ -88,6 +88,21 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. The list of external IDs for the group, such as an immutable identifier from an
+   * external identity provider or directory sync client. Each entry contains a namespace and an ID
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalId> externalIds;
+
+  static {
+    // hack to force ProGuard to consider ExternalId used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalId.class);
+  }
+
+  /**
    * Read-only. The unique ID of a group. A group `id` can be used as a group request URI's
    * `groupKey`.
    * The value may be {@code null}.
@@ -236,6 +251,27 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. The list of external IDs for the group, such as an immutable identifier from an
+   * external identity provider or directory sync client. Each entry contains a namespace and an ID
+   * value.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalId> getExternalIds() {
+    return externalIds;
+  }
+
+  /**
+   * Optional. The list of external IDs for the group, such as an immutable identifier from an
+   * external identity provider or directory sync client. Each entry contains a namespace and an ID
+   * value.
+   * @param externalIds externalIds or {@code null} for none
+   */
+  public Group setExternalIds(java.util.List<ExternalId> externalIds) {
+    this.externalIds = externalIds;
     return this;
   }
 

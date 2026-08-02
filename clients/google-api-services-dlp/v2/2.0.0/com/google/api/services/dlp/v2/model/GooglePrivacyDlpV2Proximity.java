@@ -41,7 +41,7 @@ public final class GooglePrivacyDlpV2Proximity extends com.google.api.client.jso
    * Number of characters before the finding to consider. For tabular data, if you want to modify
    * the likelihood of an entire column of findngs, set this to 1. For more information, see
    * [Hotword example: Set the match likelihood of a table column]
-   * (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
+   * (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
    * likelihood#match-column-values).
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2Proximity extends com.google.api.client.jso
    * Number of characters before the finding to consider. For tabular data, if you want to modify
    * the likelihood of an entire column of findngs, set this to 1. For more information, see
    * [Hotword example: Set the match likelihood of a table column]
-   * (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
+   * (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
    * likelihood#match-column-values).
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class GooglePrivacyDlpV2Proximity extends com.google.api.client.jso
    * Number of characters before the finding to consider. For tabular data, if you want to modify
    * the likelihood of an entire column of findngs, set this to 1. For more information, see
    * [Hotword example: Set the match likelihood of a table column]
-   * (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
+   * (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-infotypes-
    * likelihood#match-column-values).
    * @param windowBefore windowBefore or {@code null} for none
    */

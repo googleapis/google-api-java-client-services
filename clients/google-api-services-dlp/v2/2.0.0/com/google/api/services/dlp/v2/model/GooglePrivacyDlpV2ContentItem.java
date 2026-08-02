@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   private GooglePrivacyDlpV2Conversation conversation;
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/sensitive-data-
+   * Structured content for inspection. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/inspecting-text#inspecting_a_table to learn more.
    * The value may be {@code null}.
    */
@@ -145,7 +145,7 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   }
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/sensitive-data-
+   * Structured content for inspection. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/inspecting-text#inspecting_a_table to learn more.
    * @return value or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   }
 
   /**
-   * Structured content for inspection. See https://cloud.google.com/sensitive-data-
+   * Structured content for inspection. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/inspecting-text#inspecting_a_table to learn more.
    * @param table table or {@code null} for none
    */

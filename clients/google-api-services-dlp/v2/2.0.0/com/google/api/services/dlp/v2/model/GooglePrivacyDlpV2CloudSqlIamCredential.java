@@ -19,8 +19,8 @@ package com.google.api.services.dlp.v2.model;
 /**
  * Use IAM authentication to connect. This requires the Cloud SQL IAM feature to be enabled on the
  * instance, which is not the default for Cloud SQL. See
- * https://cloud.google.com/sql/docs/postgres/authentication and
- * https://cloud.google.com/sql/docs/mysql/authentication.
+ * https://docs.cloud.google.com/sql/docs/postgres/authentication and
+ * https://docs.cloud.google.com/sql/docs/mysql/authentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

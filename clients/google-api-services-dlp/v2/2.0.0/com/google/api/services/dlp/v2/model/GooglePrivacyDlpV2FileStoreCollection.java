@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2FileStoreCollection extends com.google.api.
    * patterns are specified, match at least one pattern. For a resource to match the tag filters,
    * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
    * bound to the resource or its ancestors. For more information, see [Manage
-   * schedules](https://cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
+   * schedules](https://docs.cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
    * storage#manage-schedules).
    * The value may be {@code null}.
    */
@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2FileStoreCollection extends com.google.api.
    * patterns are specified, match at least one pattern. For a resource to match the tag filters,
    * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
    * bound to the resource or its ancestors. For more information, see [Manage
-   * schedules](https://cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
+   * schedules](https://docs.cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
    * storage#manage-schedules).
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class GooglePrivacyDlpV2FileStoreCollection extends com.google.api.
    * patterns are specified, match at least one pattern. For a resource to match the tag filters,
    * the resource must have all of the provided tags attached. Tags refer to Resource Manager tags
    * bound to the resource or its ancestors. For more information, see [Manage
-   * schedules](https://cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
+   * schedules](https://docs.cloud.google.com/sensitive-data-protection/docs/profile-project-cloud-
    * storage#manage-schedules).
    * @param includeTags includeTags or {@code null} for none
    */

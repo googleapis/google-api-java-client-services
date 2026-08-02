@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   private java.util.List<java.lang.String> contentOptions;
 
   /**
-   * CustomInfoTypes provided by the user. See https://cloud.google.com/sensitive-data-
+   * CustomInfoTypes provided by the user. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/creating-custom-infotypes to learn more.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Restricts what info_types to look for. The values must correspond to InfoType values returned
-   * by ListInfoTypes or listed at https://cloud.google.com/sensitive-data-
+   * by ListInfoTypes or listed at https://docs.cloud.google.com/sensitive-data-
    * protection/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a
    * request, the system may automatically choose a default list of detectors to run, which may
    * change over time. If you need precise control and predictability as to what detectors are run
@@ -103,7 +103,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
    * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
    * false positive. For more information, see [Match
-   * likelihood](https://cloud.google.com/sensitive-data-protection/docs/likelihood).
+   * likelihood](https://docs.cloud.google.com/sensitive-data-protection/docs/likelihood).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * CustomInfoTypes provided by the user. See https://cloud.google.com/sensitive-data-
+   * CustomInfoTypes provided by the user. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/creating-custom-infotypes to learn more.
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   }
 
   /**
-   * CustomInfoTypes provided by the user. See https://cloud.google.com/sensitive-data-
+   * CustomInfoTypes provided by the user. See https://docs.cloud.google.com/sensitive-data-
    * protection/docs/creating-custom-infotypes to learn more.
    * @param customInfoTypes customInfoTypes or {@code null} for none
    */
@@ -207,7 +207,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Restricts what info_types to look for. The values must correspond to InfoType values returned
-   * by ListInfoTypes or listed at https://cloud.google.com/sensitive-data-
+   * by ListInfoTypes or listed at https://docs.cloud.google.com/sensitive-data-
    * protection/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a
    * request, the system may automatically choose a default list of detectors to run, which may
    * change over time. If you need precise control and predictability as to what detectors are run
@@ -221,7 +221,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
 
   /**
    * Restricts what info_types to look for. The values must correspond to InfoType values returned
-   * by ListInfoTypes or listed at https://cloud.google.com/sensitive-data-
+   * by ListInfoTypes or listed at https://docs.cloud.google.com/sensitive-data-
    * protection/docs/infotypes-reference. When no InfoTypes or CustomInfoTypes are specified in a
    * request, the system may automatically choose a default list of detectors to run, which may
    * change over time. If you need precise control and predictability as to what detectors are run
@@ -267,7 +267,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
    * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
    * false positive. For more information, see [Match
-   * likelihood](https://cloud.google.com/sensitive-data-protection/docs/likelihood).
+   * likelihood](https://docs.cloud.google.com/sensitive-data-protection/docs/likelihood).
    * @return value or {@code null} for none
    */
   public java.lang.String getMinLikelihood() {
@@ -278,7 +278,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
    * Only returns findings equal to or above this threshold. The default is POSSIBLE. In general,
    * the highest likelihood setting yields the fewest findings in results and the lowest chance of a
    * false positive. For more information, see [Match
-   * likelihood](https://cloud.google.com/sensitive-data-protection/docs/likelihood).
+   * likelihood](https://docs.cloud.google.com/sensitive-data-protection/docs/likelihood).
    * @param minLikelihood minLikelihood or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setMinLikelihood(java.lang.String minLikelihood) {

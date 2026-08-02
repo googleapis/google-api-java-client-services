@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Configuration for a risk analysis job. See https://cloud.google.com/sensitive-data-
+ * Configuration for a risk analysis job. See https://docs.cloud.google.com/sensitive-data-
  * protection/docs/concepts-risk-analysis to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

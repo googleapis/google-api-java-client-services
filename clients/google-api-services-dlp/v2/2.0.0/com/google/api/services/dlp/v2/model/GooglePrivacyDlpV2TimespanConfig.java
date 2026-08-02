@@ -39,8 +39,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * triggered by automatic population will scan data that is at least three hours old when the job
    * starts. This is because streaming buffer rows are not read during inspection and reading up to
    * the current timestamp will result in skipped rows. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-
-   * data) related to this operation.
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#recently-
+   * streamed-data) related to this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,14 +69,14 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * is specified, then rows are filtered based on the given start and end times. Rows with a `NULL`
    * value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery
    * column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. If your BigQuery table is
-   * [partitioned at ingestion time](https://cloud.google.com/bigquery/docs/partitioned-
+   * [partitioned at ingestion time](https://docs.cloud.google.com/bigquery/docs/partitioned-
    * tables#ingestion_time), you can use any of the following pseudo-columns as your timestamp
    * field. When used with Cloud DLP, these pseudo-column names are case sensitive. -
    * `_PARTITIONTIME` - `_PARTITIONDATE` - `_PARTITION_LOAD_TIME` **For Datastore** If this value is
    * specified, then entities are filtered based on the given start and end times. If an entity does
    * not contain the provided timestamp property or contains empty or invalid values, then it is
    * included. Valid data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
    * related to this operation.
    * The value may be {@code null}.
    */
@@ -91,8 +91,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * triggered by automatic population will scan data that is at least three hours old when the job
    * starts. This is because streaming buffer rows are not read during inspection and reading up to
    * the current timestamp will result in skipped rows. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-
-   * data) related to this operation.
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#recently-
+   * streamed-data) related to this operation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutoPopulationOfTimespanConfig() {
@@ -107,8 +107,8 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * triggered by automatic population will scan data that is at least three hours old when the job
    * starts. This is because streaming buffer rows are not read during inspection and reading up to
    * the current timestamp will result in skipped rows. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#recently-streamed-
-   * data) related to this operation.
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#recently-
+   * streamed-data) related to this operation.
    * @param enableAutoPopulationOfTimespanConfig enableAutoPopulationOfTimespanConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2TimespanConfig setEnableAutoPopulationOfTimespanConfig(java.lang.Boolean enableAutoPopulationOfTimespanConfig) {
@@ -161,14 +161,14 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * is specified, then rows are filtered based on the given start and end times. Rows with a `NULL`
    * value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery
    * column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. If your BigQuery table is
-   * [partitioned at ingestion time](https://cloud.google.com/bigquery/docs/partitioned-
+   * [partitioned at ingestion time](https://docs.cloud.google.com/bigquery/docs/partitioned-
    * tables#ingestion_time), you can use any of the following pseudo-columns as your timestamp
    * field. When used with Cloud DLP, these pseudo-column names are case sensitive. -
    * `_PARTITIONTIME` - `_PARTITIONDATE` - `_PARTITION_LOAD_TIME` **For Datastore** If this value is
    * specified, then entities are filtered based on the given start and end times. If an entity does
    * not contain the provided timestamp property or contains empty or invalid values, then it is
    * included. Valid data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
    * related to this operation.
    * @return value or {@code null} for none
    */
@@ -183,14 +183,14 @@ public final class GooglePrivacyDlpV2TimespanConfig extends com.google.api.clien
    * is specified, then rows are filtered based on the given start and end times. Rows with a `NULL`
    * value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery
    * column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. If your BigQuery table is
-   * [partitioned at ingestion time](https://cloud.google.com/bigquery/docs/partitioned-
+   * [partitioned at ingestion time](https://docs.cloud.google.com/bigquery/docs/partitioned-
    * tables#ingestion_time), you can use any of the following pseudo-columns as your timestamp
    * field. When used with Cloud DLP, these pseudo-column names are case sensitive. -
    * `_PARTITIONTIME` - `_PARTITIONDATE` - `_PARTITION_LOAD_TIME` **For Datastore** If this value is
    * specified, then entities are filtered based on the given start and end times. If an entity does
    * not contain the provided timestamp property or contains empty or invalid values, then it is
    * included. Valid data types of the provided timestamp property are: `TIMESTAMP`. See the [known
-   * issue](https://cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
+   * issue](https://docs.cloud.google.com/sensitive-data-protection/docs/known-issues#bq-timespan)
    * related to this operation.
    * @param timestampField timestampField or {@code null} for none
    */

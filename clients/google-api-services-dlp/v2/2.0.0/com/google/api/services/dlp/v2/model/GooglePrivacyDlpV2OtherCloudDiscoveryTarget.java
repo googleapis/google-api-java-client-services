@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Target used to match against for discovery of resources from other clouds. An [AWS connector in
- * Security Command Center (Enterprise](https://cloud.google.com/security-command-
+ * Security Command Center (Enterprise](https://docs.cloud.google.com/security-command-
  * center/docs/connect-scc-to-aws) is required to use this feature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

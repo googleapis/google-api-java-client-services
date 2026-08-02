@@ -111,7 +111,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
    * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * The value may be {@code null}.
    */
@@ -407,7 +407,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
    * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * @return value or {@code null} for none
    */
@@ -417,7 +417,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
 
   /**
    * The location of the file store. * Cloud Storage:
-   * https://cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
+   * https://docs.cloud.google.com/storage/docs/locations#available-locations * Amazon S3:
    * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
    * @param fileStoreLocation fileStoreLocation or {@code null} for none
    */

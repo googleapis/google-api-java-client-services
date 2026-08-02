@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
 
   /**
    * If supported, the location where the dataset's data is stored. See
-   * https://cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
+   * https://docs.cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,7 +263,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
 
   /**
    * If supported, the location where the dataset's data is stored. See
-   * https://cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
+   * https://docs.cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetLocation() {
@@ -272,7 +272,7 @@ public final class GooglePrivacyDlpV2ColumnDataProfile extends com.google.api.cl
 
   /**
    * If supported, the location where the dataset's data is stored. See
-   * https://cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
+   * https://docs.cloud.google.com/bigquery/docs/locations for supported BigQuery locations.
    * @param datasetLocation datasetLocation or {@code null} for none
    */
   public GooglePrivacyDlpV2ColumnDataProfile setDatasetLocation(java.lang.String datasetLocation) {

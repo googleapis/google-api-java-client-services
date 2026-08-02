@@ -73,7 +73,7 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded
    * down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
    * Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction
-   * with TimespanConfig. Caution: A [known issue](https://cloud.google.com/sensitive-data-
+   * with TimespanConfig. Caution: A [known issue](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/known-issues#bq-sampling) is causing the `rowsLimitPercent` field to behave
    * unexpectedly. We recommend using `rowsLimit` instead.
    * The value may be {@code null}.
@@ -189,7 +189,7 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded
    * down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
    * Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction
-   * with TimespanConfig. Caution: A [known issue](https://cloud.google.com/sensitive-data-
+   * with TimespanConfig. Caution: A [known issue](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/known-issues#bq-sampling) is causing the `rowsLimitPercent` field to behave
    * unexpectedly. We recommend using `rowsLimit` instead.
    * @return value or {@code null} for none
@@ -202,7 +202,7 @@ public final class GooglePrivacyDlpV2BigQueryOptions extends com.google.api.clie
    * Max percentage of rows to scan. The rest are omitted. The number of rows scanned is rounded
    * down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults to 0.
    * Only one of rows_limit and rows_limit_percent can be specified. Cannot be used in conjunction
-   * with TimespanConfig. Caution: A [known issue](https://cloud.google.com/sensitive-data-
+   * with TimespanConfig. Caution: A [known issue](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/known-issues#bq-sampling) is causing the `rowsLimitPercent` field to behave
    * unexpectedly. We recommend using `rowsLimit` instead.
    * @param rowsLimitPercent rowsLimitPercent or {@code null} for none

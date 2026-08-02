@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Structured content to inspect. Up to 50,000 `Value`s per request allowed. See
- * https://cloud.google.com/sensitive-data-protection/docs/inspecting-structured-
+ * https://docs.cloud.google.com/sensitive-data-protection/docs/inspecting-structured-
  * text#inspecting_a_table to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

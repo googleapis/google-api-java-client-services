@@ -8529,6 +8529,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Cancel setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Cancel set(String parameterName, Object value) {
         return (Cancel) super.set(parameterName, value);
@@ -8673,6 +8689,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Get setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -8813,6 +8845,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public List setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -11680,6 +11728,57 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public Update setRevokeExistingRoles(java.lang.Boolean revokeExistingRoles) {
         this.revokeExistingRoles = revokeExistingRoles;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies whether to revoke existing roles that are not present in the
+       * `server_roles` field. If `false` or unset, the server roles specified in `server_roles` are
+       * added to the user's existing server roles.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean revokeExistingServerRoles;
+
+      /** Optional. Specifies whether to revoke existing roles that are not present in the `server_roles`
+     field. If `false` or unset, the server roles specified in `server_roles` are added to the user's
+     existing server roles.
+       */
+      public java.lang.Boolean getRevokeExistingServerRoles() {
+        return revokeExistingServerRoles;
+      }
+
+      /**
+       * Optional. Specifies whether to revoke existing roles that are not present in the
+       * `server_roles` field. If `false` or unset, the server roles specified in `server_roles` are
+       * added to the user's existing server roles.
+       */
+      public Update setRevokeExistingServerRoles(java.lang.Boolean revokeExistingServerRoles) {
+        this.revokeExistingServerRoles = revokeExistingServerRoles;
+        return this;
+      }
+
+      /**
+       * Optional. The server roles to grant to the SQL Server login. Existing server roles will not
+       * be revoked if revoke_existing_roles is false. body.server_roles will be ignored for update
+       * request.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> serverRoles;
+
+      /** Optional. The server roles to grant to the SQL Server login. Existing server roles will not be
+     revoked if revoke_existing_roles is false. body.server_roles will be ignored for update request.
+       */
+      public java.util.List<java.lang.String> getServerRoles() {
+        return serverRoles;
+      }
+
+      /**
+       * Optional. The server roles to grant to the SQL Server login. Existing server roles will not
+       * be revoked if revoke_existing_roles is false. body.server_roles will be ignored for update
+       * request.
+       */
+      public Update setServerRoles(java.util.List<java.lang.String> serverRoles) {
+        this.serverRoles = serverRoles;
         return this;
       }
 

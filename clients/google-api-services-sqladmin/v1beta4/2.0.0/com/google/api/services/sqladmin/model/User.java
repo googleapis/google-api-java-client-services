@@ -121,6 +121,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String project;
 
   /**
+   * Optional. The server roles for the SQL Server login.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> serverRoles;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -349,6 +356,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Optional. The server roles for the SQL Server login.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServerRoles() {
+    return serverRoles;
+  }
+
+  /**
+   * Optional. The server roles for the SQL Server login.
+   * @param serverRoles serverRoles or {@code null} for none
+   */
+  public User setServerRoles(java.util.List<java.lang.String> serverRoles) {
+    this.serverRoles = serverRoles;
     return this;
   }
 

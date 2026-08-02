@@ -52,6 +52,13 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String clientKey;
 
   /**
+   * Output only. Indicates whether the resource is managed by Database Migration Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dmsManaged;
+
+  /**
    * The dump file to create the Cloud SQL replica.
    * The value may be {@code null}.
    */
@@ -158,6 +165,23 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
    */
   public OnPremisesConfiguration setClientKey(java.lang.String clientKey) {
     this.clientKey = clientKey;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the resource is managed by Database Migration Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDmsManaged() {
+    return dmsManaged;
+  }
+
+  /**
+   * Output only. Indicates whether the resource is managed by Database Migration Service.
+   * @param dmsManaged dmsManaged or {@code null} for none
+   */
+  public OnPremisesConfiguration setDmsManaged(java.lang.Boolean dmsManaged) {
+    this.dmsManaged = dmsManaged;
     return this;
   }
 

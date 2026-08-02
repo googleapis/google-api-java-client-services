@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Deny maintenance period for the database resource. It specifies the time range during which the
- * maintenance cannot start. This is configured by the customer.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,28 +30,28 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deny period end date.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate endDate;
 
   /**
-   * Optional. The start date of the deny maintenance period.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate startDate;
 
   /**
-   * Optional. Time in UTC when the deny period starts on start_date and ends on end_date.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeTimeOfDay time;
 
   /**
-   * Optional. Deny period end date.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getEndDate() {
@@ -60,7 +59,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenyS
   }
 
   /**
-   * Optional. Deny period end date.
+   * Optional. Disable validation warnings
    * @param endDate endDate or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule setEndDate(GoogleTypeDate endDate) {
@@ -69,7 +68,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenyS
   }
 
   /**
-   * Optional. The start date of the deny maintenance period.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getStartDate() {
@@ -77,7 +76,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenyS
   }
 
   /**
-   * Optional. The start date of the deny maintenance period.
+   * Optional. Disable validation warnings
    * @param startDate startDate or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule setStartDate(GoogleTypeDate startDate) {
@@ -86,7 +85,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenyS
   }
 
   /**
-   * Optional. Time in UTC when the deny period starts on start_date and ends on end_date.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public GoogleTypeTimeOfDay getTime() {
@@ -94,7 +93,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenyS
   }
 
   /**
-   * Optional. Time in UTC when the deny period starts on start_date and ends on end_date.
+   * Optional. Disable validation warnings
    * @param time time or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule setTime(GoogleTypeTimeOfDay time) {

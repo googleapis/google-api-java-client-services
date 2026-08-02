@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Model definition for StorageDatabasecenterPartnerapiV1mainRetentionSettings.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,42 +30,42 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String durationBasedRetention;
 
   /**
-   * Quantity based retention period i.e. 7 backups
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer quantityBasedRetention;
 
   /**
-   * The unit that 'retained_backups' represents.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retentionUnit;
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeBasedRetention;
 
   /**
-   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestampBasedRetentionTime;
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getDurationBasedRetention() {
@@ -73,7 +73,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * @param durationBasedRetention durationBasedRetention or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setDurationBasedRetention(String durationBasedRetention) {
@@ -82,7 +82,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Quantity based retention period i.e. 7 backups
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Integer getQuantityBasedRetention() {
@@ -90,7 +90,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Quantity based retention period i.e. 7 backups
+   * Disable validation warnings
    * @param quantityBasedRetention quantityBasedRetention or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setQuantityBasedRetention(java.lang.Integer quantityBasedRetention) {
@@ -99,7 +99,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * The unit that 'retained_backups' represents.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getRetentionUnit() {
@@ -107,7 +107,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * The unit that 'retained_backups' represents.
+   * Disable validation warnings
    * @param retentionUnit retentionUnit or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setRetentionUnit(java.lang.String retentionUnit) {
@@ -116,7 +116,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getTimeBasedRetention() {
@@ -124,7 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Duration based retention period i.e. 172800 seconds (2 days)
+   * Disable validation warnings
    * @param timeBasedRetention timeBasedRetention or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setTimeBasedRetention(String timeBasedRetention) {
@@ -133,7 +133,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getTimestampBasedRetentionTime() {
@@ -141,7 +141,7 @@ public final class StorageDatabasecenterPartnerapiV1mainRetentionSettings extend
   }
 
   /**
-   * Timestamp based retention period i.e. 2024-05-01T00:00:00Z
+   * Disable validation warnings
    * @param timestampBasedRetentionTime timestampBasedRetentionTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings setTimestampBasedRetentionTime(String timestampBasedRetentionTime) {

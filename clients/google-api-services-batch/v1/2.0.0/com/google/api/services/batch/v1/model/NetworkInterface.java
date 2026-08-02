@@ -40,6 +40,13 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
+   * Optional. The NIC type of the network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nicType;
+
+  /**
    * Default is false (with an external IP address). Required if no external public IP address is
    * attached to the VM. If no external public IP address, additional configuration is required to
    * allow the VM to access Google Services. See https://cloud.google.com/vpc/docs/configure-
@@ -81,6 +88,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The NIC type of the network interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNicType() {
+    return nicType;
+  }
+
+  /**
+   * Optional. The NIC type of the network interface.
+   * @param nicType nicType or {@code null} for none
+   */
+  public NetworkInterface setNicType(java.lang.String nicType) {
+    this.nicType = nicType;
     return this;
   }
 

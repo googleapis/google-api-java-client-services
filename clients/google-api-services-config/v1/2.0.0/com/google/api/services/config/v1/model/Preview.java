@@ -67,9 +67,9 @@ public final class Preview extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. Optional deployment reference. If specified, the preview will be performed using the
-   * provided deployment's current state and use any relevant fields from the deployment unless
-   * explicitly specified in the preview create request.
+   * Optional. Deployment reference. If specified, the preview will be performed using the provided
+   * deployment's current state and use any relevant fields from the deployment unless explicitly
+   * specified in the preview create request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,9 +279,9 @@ public final class Preview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional deployment reference. If specified, the preview will be performed using the
-   * provided deployment's current state and use any relevant fields from the deployment unless
-   * explicitly specified in the preview create request.
+   * Optional. Deployment reference. If specified, the preview will be performed using the provided
+   * deployment's current state and use any relevant fields from the deployment unless explicitly
+   * specified in the preview create request.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeployment() {
@@ -289,9 +289,9 @@ public final class Preview extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Optional deployment reference. If specified, the preview will be performed using the
-   * provided deployment's current state and use any relevant fields from the deployment unless
-   * explicitly specified in the preview create request.
+   * Optional. Deployment reference. If specified, the preview will be performed using the provided
+   * deployment's current state and use any relevant fields from the deployment unless explicitly
+   * specified in the preview create request.
    * @param deployment deployment or {@code null} for none
    */
   public Preview setDeployment(java.lang.String deployment) {

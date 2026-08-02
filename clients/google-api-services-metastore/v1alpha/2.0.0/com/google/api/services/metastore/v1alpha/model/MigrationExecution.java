@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class MigrationExecution extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig;
+
+  /**
    * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
    * migration instead. Configuration information specific to migrating from self-managed hive
    * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
@@ -83,6 +90,23 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String stateMessage;
+
+  /**
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
+   * @return value or {@code null} for none
+   */
+  public BigLakeMetastoreMigrationConfig getBiglakeMetastoreMigrationConfig() {
+    return biglakeMetastoreMigrationConfig;
+  }
+
+  /**
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
+   * @param biglakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig or {@code null} for none
+   */
+  public MigrationExecution setBiglakeMetastoreMigrationConfig(BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig) {
+    this.biglakeMetastoreMigrationConfig = biglakeMetastoreMigrationConfig;
+    return this;
+  }
 
   /**
    * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore

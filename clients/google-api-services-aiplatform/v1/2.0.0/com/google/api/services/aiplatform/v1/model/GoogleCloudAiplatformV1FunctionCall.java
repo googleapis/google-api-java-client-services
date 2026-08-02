@@ -39,6 +39,14 @@ public final class GoogleCloudAiplatformV1FunctionCall extends com.google.api.cl
   private java.util.Map<String, java.lang.Object> args;
 
   /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Optional. The name of the function to call. Matches FunctionDeclaration.name.
    * The value may be {@code null}.
    */
@@ -77,6 +85,25 @@ public final class GoogleCloudAiplatformV1FunctionCall extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1FunctionCall setArgs(java.util.Map<String, java.lang.Object> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FunctionCall setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

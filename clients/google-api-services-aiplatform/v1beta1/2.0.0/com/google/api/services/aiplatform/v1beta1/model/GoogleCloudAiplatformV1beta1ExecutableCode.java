@@ -39,6 +39,14 @@ public final class GoogleCloudAiplatformV1beta1ExecutableCode extends com.google
   private java.lang.String code;
 
   /**
+   * Optional. Unique identifier of the `ExecutableCode` part. The server returns the
+   * `CodeExecutionResult` with the matching `id`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Required. Programming language of the `code`.
    * The value may be {@code null}.
    */
@@ -59,6 +67,25 @@ public final class GoogleCloudAiplatformV1beta1ExecutableCode extends com.google
    */
   public GoogleCloudAiplatformV1beta1ExecutableCode setCode(java.lang.String code) {
     this.code = code;
+    return this;
+  }
+
+  /**
+   * Optional. Unique identifier of the `ExecutableCode` part. The server returns the
+   * `CodeExecutionResult` with the matching `id`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. Unique identifier of the `ExecutableCode` part. The server returns the
+   * `CodeExecutionResult` with the matching `id`.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExecutableCode setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

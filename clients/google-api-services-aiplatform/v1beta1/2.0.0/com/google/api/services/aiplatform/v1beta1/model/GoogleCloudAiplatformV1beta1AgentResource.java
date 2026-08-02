@@ -30,15 +30,25 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full resource name of the agent to monitor. For REASONING_ENGINE, format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * Required. The resource name or identifier of the agent to monitor. The format depends on
+   * `agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agent;
 
   /**
-   * Required. The type of the agent.
+   * Optional. The framework used to build the agent, orthogonal to the runtime `agent_type`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentFramework;
+
+  /**
+   * Required. The runtime type of the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +63,11 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   private java.lang.String location;
 
   /**
-   * Required. The full resource name of the agent to monitor. For REASONING_ENGINE, format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * Required. The resource name or identifier of the agent to monitor. The format depends on
+   * `agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -62,8 +75,11 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   }
 
   /**
-   * Required. The full resource name of the agent to monitor. For REASONING_ENGINE, format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * Required. The resource name or identifier of the agent to monitor. The format depends on
+   * `agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentResource setAgent(java.lang.String agent) {
@@ -72,7 +88,24 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   }
 
   /**
-   * Required. The type of the agent.
+   * Optional. The framework used to build the agent, orthogonal to the runtime `agent_type`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentFramework() {
+    return agentFramework;
+  }
+
+  /**
+   * Optional. The framework used to build the agent, orthogonal to the runtime `agent_type`.
+   * @param agentFramework agentFramework or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentResource setAgentFramework(java.lang.String agentFramework) {
+    this.agentFramework = agentFramework;
+    return this;
+  }
+
+  /**
+   * Required. The runtime type of the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentType() {
@@ -80,7 +113,7 @@ public final class GoogleCloudAiplatformV1beta1AgentResource extends com.google.
   }
 
   /**
-   * Required. The type of the agent.
+   * Required. The runtime type of the agent.
    * @param agentType agentType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentResource setAgentType(java.lang.String agentType) {

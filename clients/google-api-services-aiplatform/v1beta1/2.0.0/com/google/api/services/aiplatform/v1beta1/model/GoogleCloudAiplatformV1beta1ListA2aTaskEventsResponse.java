@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for AgentEngineTaskStoreService.ListA2aTaskEvents.
+ * Response message for ListA2aTaskEvents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -30,6 +30,19 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of A2aTaskEvents in the requested page. Populated only by the TaskStoreService.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> events;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1A2aTaskEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1A2aTaskEvent.class);
+  }
+
+  /**
    * A token to retrieve the next page of results.
    * The value may be {@code null}.
    */
@@ -37,11 +50,28 @@ public final class GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse extends
   private java.lang.String nextPageToken;
 
   /**
-   * List of TaskEvents in the requested page.
+   * List of TaskEvents in the requested page. Populated only by the AgentEngineTaskStoreService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> taskEvents;
+
+  /**
+   * List of A2aTaskEvents in the requested page. Populated only by the TaskStoreService.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> getEvents() {
+    return events;
+  }
+
+  /**
+   * List of A2aTaskEvents in the requested page. Populated only by the TaskStoreService.
+   * @param events events or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse setEvents(java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> events) {
+    this.events = events;
+    return this;
+  }
 
   /**
    * A token to retrieve the next page of results.
@@ -61,7 +91,7 @@ public final class GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse extends
   }
 
   /**
-   * List of TaskEvents in the requested page.
+   * List of TaskEvents in the requested page. Populated only by the AgentEngineTaskStoreService.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> getTaskEvents() {
@@ -69,7 +99,7 @@ public final class GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse extends
   }
 
   /**
-   * List of TaskEvents in the requested page.
+   * List of TaskEvents in the requested page. Populated only by the AgentEngineTaskStoreService.
    * @param taskEvents taskEvents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListA2aTaskEventsResponse setTaskEvents(java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> taskEvents) {

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Request message for AgentEngineTaskStoreService.AppendA2aTaskEvents.
+ * Request message for AppendA2aTaskEvents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -30,16 +30,70 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The events to append. Used only if the parent is a TaskStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> events;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1A2aTaskEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1A2aTaskEvent.class);
+  }
+
+  /**
+   * Optional. The current task generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long generation;
+
+  /**
    * Required. The events to append. The number of events to append must be less than or equal to
-   * 100. Otherwise, an exception will be thrown.
+   * 100. Otherwise, an exception will be thrown. Used only if the parent is a ReasoningEngine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> taskEvents;
 
   /**
+   * Optional. The events to append. Used only if the parent is a TaskStore.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> getEvents() {
+    return events;
+  }
+
+  /**
+   * Optional. The events to append. Used only if the parent is a TaskStore.
+   * @param events events or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest setEvents(java.util.List<GoogleCloudAiplatformV1beta1A2aTaskEvent> events) {
+    this.events = events;
+    return this;
+  }
+
+  /**
+   * Optional. The current task generation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGeneration() {
+    return generation;
+  }
+
+  /**
+   * Optional. The current task generation.
+   * @param generation generation or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest setGeneration(java.lang.Long generation) {
+    this.generation = generation;
+    return this;
+  }
+
+  /**
    * Required. The events to append. The number of events to append must be less than or equal to
-   * 100. Otherwise, an exception will be thrown.
+   * 100. Otherwise, an exception will be thrown. Used only if the parent is a ReasoningEngine.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> getTaskEvents() {
@@ -48,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest extend
 
   /**
    * Required. The events to append. The number of events to append must be less than or equal to
-   * 100. Otherwise, an exception will be thrown.
+   * 100. Otherwise, an exception will be thrown. Used only if the parent is a ReasoningEngine.
    * @param taskEvents taskEvents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest setTaskEvents(java.util.List<GoogleCloudAiplatformV1beta1TaskEvent> taskEvents) {

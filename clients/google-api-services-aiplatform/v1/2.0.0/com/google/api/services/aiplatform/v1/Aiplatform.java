@@ -121511,20 +121511,20 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * Create a request for the method "v1.responses".
            *
            * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link Responses#execute()} method to invoke the remote operation.
+           * parameters, call the {@link ResponsesRequest#execute()} method to invoke the remote operation.
            *
            * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
            * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
            * @return the request
            */
-          public Responses responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) throws java.io.IOException {
-            Responses result = new Responses(endpoint, content);
+          public ResponsesRequest responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) throws java.io.IOException {
+            ResponsesRequest result = new ResponsesRequest(endpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Responses extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+          public class ResponsesRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
 
             private static final String REST_PATH = "v1/{+endpoint}/v1/responses";
 
@@ -121539,17 +121539,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Create a request for the method "v1.responses".
              *
              * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link Responses#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * Responses#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             * optional parameters, call the {@link ResponsesRequest#execute()} method to invoke the remote
+             * operation. <p> {@link ResponsesRequest#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
              *
              * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
              * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
              * @since 1.13
              */
-            protected Responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) {
+            protected ResponsesRequest(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) {
               super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
               this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -121560,58 +121560,58 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Responses set$Xgafv(java.lang.String $Xgafv) {
-              return (Responses) super.set$Xgafv($Xgafv);
+            public ResponsesRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (ResponsesRequest) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public Responses setAccessToken(java.lang.String accessToken) {
-              return (Responses) super.setAccessToken(accessToken);
+            public ResponsesRequest setAccessToken(java.lang.String accessToken) {
+              return (ResponsesRequest) super.setAccessToken(accessToken);
             }
 
             @Override
-            public Responses setAlt(java.lang.String alt) {
-              return (Responses) super.setAlt(alt);
+            public ResponsesRequest setAlt(java.lang.String alt) {
+              return (ResponsesRequest) super.setAlt(alt);
             }
 
             @Override
-            public Responses setCallback(java.lang.String callback) {
-              return (Responses) super.setCallback(callback);
+            public ResponsesRequest setCallback(java.lang.String callback) {
+              return (ResponsesRequest) super.setCallback(callback);
             }
 
             @Override
-            public Responses setFields(java.lang.String fields) {
-              return (Responses) super.setFields(fields);
+            public ResponsesRequest setFields(java.lang.String fields) {
+              return (ResponsesRequest) super.setFields(fields);
             }
 
             @Override
-            public Responses setKey(java.lang.String key) {
-              return (Responses) super.setKey(key);
+            public ResponsesRequest setKey(java.lang.String key) {
+              return (ResponsesRequest) super.setKey(key);
             }
 
             @Override
-            public Responses setOauthToken(java.lang.String oauthToken) {
-              return (Responses) super.setOauthToken(oauthToken);
+            public ResponsesRequest setOauthToken(java.lang.String oauthToken) {
+              return (ResponsesRequest) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public Responses setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Responses) super.setPrettyPrint(prettyPrint);
+            public ResponsesRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ResponsesRequest) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public Responses setQuotaUser(java.lang.String quotaUser) {
-              return (Responses) super.setQuotaUser(quotaUser);
+            public ResponsesRequest setQuotaUser(java.lang.String quotaUser) {
+              return (ResponsesRequest) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public Responses setUploadType(java.lang.String uploadType) {
-              return (Responses) super.setUploadType(uploadType);
+            public ResponsesRequest setUploadType(java.lang.String uploadType) {
+              return (ResponsesRequest) super.setUploadType(uploadType);
             }
 
             @Override
-            public Responses setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Responses) super.setUploadProtocol(uploadProtocol);
+            public ResponsesRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ResponsesRequest) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -121632,7 +121632,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Required. The name of the Endpoint requested to serve the prediction. Format:
              * `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
-            public Responses setEndpoint(java.lang.String endpoint) {
+            public ResponsesRequest setEndpoint(java.lang.String endpoint) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
                     "Parameter endpoint must conform to the pattern " +
@@ -121653,17 +121653,198 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /** ID of the DeployedModel that serves the invoke request. */
-            public Responses setDeployedModelId(java.lang.String deployedModelId) {
+            public ResponsesRequest setDeployedModelId(java.lang.String deployedModelId) {
               this.deployedModelId = deployedModelId;
               return this;
             }
 
             @Override
-            public Responses set(String parameterName, Object value) {
-              return (Responses) super.set(parameterName, value);
+            public ResponsesRequest set(String parameterName, Object value) {
+              return (ResponsesRequest) super.set(parameterName, value);
             }
           }
 
+          /**
+           * An accessor for creating requests from the Responses collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+           *   {@code Aiplatform.Responses.List request = aiplatform.responses().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Responses responses() {
+            return new Responses();
+          }
+
+          /**
+           * The "responses" collection of methods.
+           */
+          public class Responses {
+
+            /**
+             * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this method,
+             * invoke_route_prefix must be set to allow the paths that will be specified in the request.
+             *
+             * Create a request for the method "responses.compact".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+             * @return the request
+             */
+            public Compact compact(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) throws java.io.IOException {
+              Compact result = new Compact(endpoint, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Compact extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+              private static final String REST_PATH = "v1/{+endpoint}/v1/responses/compact";
+
+              private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+
+              /**
+               * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this
+               * method, invoke_route_prefix must be set to allow the paths that will be specified in the
+               * request.
+               *
+               * Create a request for the method "responses.compact".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Compact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody}
+               * @since 1.13
+               */
+              protected Compact(java.lang.String endpoint, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+                this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                      "Parameter endpoint must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+                }
+              }
+
+              @Override
+              public Compact set$Xgafv(java.lang.String $Xgafv) {
+                return (Compact) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Compact setAccessToken(java.lang.String accessToken) {
+                return (Compact) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Compact setAlt(java.lang.String alt) {
+                return (Compact) super.setAlt(alt);
+              }
+
+              @Override
+              public Compact setCallback(java.lang.String callback) {
+                return (Compact) super.setCallback(callback);
+              }
+
+              @Override
+              public Compact setFields(java.lang.String fields) {
+                return (Compact) super.setFields(fields);
+              }
+
+              @Override
+              public Compact setKey(java.lang.String key) {
+                return (Compact) super.setKey(key);
+              }
+
+              @Override
+              public Compact setOauthToken(java.lang.String oauthToken) {
+                return (Compact) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Compact setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Compact) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Compact setQuotaUser(java.lang.String quotaUser) {
+                return (Compact) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Compact setUploadType(java.lang.String uploadType) {
+                return (Compact) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Compact setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Compact) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the Endpoint requested to serve the prediction. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String endpoint;
+
+              /** Required. The name of the Endpoint requested to serve the prediction. Format:
+             `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              public java.lang.String getEndpoint() {
+                return endpoint;
+              }
+
+              /**
+               * Required. The name of the Endpoint requested to serve the prediction. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              public Compact setEndpoint(java.lang.String endpoint) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                      "Parameter endpoint must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+                }
+                this.endpoint = endpoint;
+                return this;
+              }
+
+              /** ID of the DeployedModel that serves the invoke request. */
+              @com.google.api.client.util.Key
+              private java.lang.String deployedModelId;
+
+              /** ID of the DeployedModel that serves the invoke request.
+               */
+              public java.lang.String getDeployedModelId() {
+                return deployedModelId;
+              }
+
+              /** ID of the DeployedModel that serves the invoke request. */
+              public Compact setDeployedModelId(java.lang.String deployedModelId) {
+                this.deployedModelId = deployedModelId;
+                return this;
+              }
+
+              @Override
+              public Compact set(String parameterName, Object value) {
+                return (Compact) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -141825,6 +142006,852 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the ServingProfiles collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.ServingProfiles.List request = aiplatform.servingProfiles().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ServingProfiles servingProfiles() {
+        return new ServingProfiles();
+      }
+
+      /**
+       * The "servingProfiles" collection of methods.
+       */
+      public class ServingProfiles {
+
+        /**
+         * An accessor for creating requests from the Operations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+         *   {@code Aiplatform.Operations.List request = aiplatform.operations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Operations operations() {
+          return new Operations();
+        }
+
+        /**
+         * The "operations" collection of methods.
+         */
+        public class Operations {
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name) throws java.io.IOException {
+            Cancel result = new Cancel(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+
+            /**
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+             * `Code.CANCELLED`.
+             *
+             * Create a request for the method "operations.cancel".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be cancelled.
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name) {
+              super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be cancelled.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be cancelled. */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a long-running operation. This method indicates that the client is no longer interested
+           * in the operation result. It does not cancel the operation. If the server doesn't support this
+           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.delete".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+
+            /**
+             * Deletes a long-running operation. This method indicates that the client is no longer interested
+             * in the operation result. It does not cancel the operation. If the server doesn't support this
+             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.delete".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+
+            /**
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
+             * operation result at intervals as recommended by the API service.
+             *
+             * Create a request for the method "operations.get".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists operations that match the specified filter in the request. If the server doesn't support
+           * this method, it returns `UNIMPLEMENTED`.
+           *
+           * Create a request for the method "operations.list".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation's parent resource.
+           * @return the request
+           */
+          public List list(java.lang.String name) throws java.io.IOException {
+            List result = new List(name);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningListOperationsResponse> {
+
+            private static final String REST_PATH = "v1/{+name}/operations";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+$");
+
+            /**
+             * Lists operations that match the specified filter in the request. If the server doesn't support
+             * this method, it returns `UNIMPLEMENTED`.
+             *
+             * Create a request for the method "operations.list".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation's parent resource.
+             * @since 1.13
+             */
+            protected List(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningListOperationsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation's parent resource. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation's parent resource.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation's parent resource. */
+            public List setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** The standard list filter. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** The standard list filter.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** The standard list filter. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** The standard list page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The standard list page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The standard list page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The standard list page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The standard list page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * When set to `true`, operations that are reachable are returned as normal, and those
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** When set to `true`, operations that are reachable are returned as normal, and those that are
+           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+           when reading across collections. For example, when `parent` is set to
+           `"projects/example/locations/-"`. This field is not supported by default and will result in an
+           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+           documentation.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * When set to `true`, operations that are reachable are returned as normal, and those
+             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
+             * This can only be `true` when reading across collections. For example, when `parent`
+             * is set to `"projects/example/locations/-"`. This field is not supported by default
+             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+             * otherwise in service or product specific documentation.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Waits until the specified long-running operation is done or reaches at most a specified timeout,
+           * returning the latest state. If the operation is already done, the latest state is immediately
+           * returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
+           * timeout is used. If the server does not support this method, it returns
+           * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+           * the latest state before the specified timeout (including immediately), meaning even an immediate
+           * response is no guarantee that the operation is done.
+           *
+           * Create a request for the method "operations.wait".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Wait#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the operation resource to wait on.
+           * @return the request
+           */
+          public Wait wait(java.lang.String name) throws java.io.IOException {
+            Wait result = new Wait(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Wait extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:wait";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+
+            /**
+             * Waits until the specified long-running operation is done or reaches at most a specified
+             * timeout, returning the latest state. If the operation is already done, the latest state is
+             * immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout,
+             * the HTTP/RPC timeout is used. If the server does not support this method, it returns
+             * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+             * the latest state before the specified timeout (including immediately), meaning even an
+             * immediate response is no guarantee that the operation is done.
+             *
+             * Create a request for the method "operations.wait".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Wait#execute()} method to invoke the remote operation. <p>
+             * {@link Wait#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the operation resource to wait on.
+             * @since 1.13
+             */
+            protected Wait(java.lang.String name) {
+              super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Wait set$Xgafv(java.lang.String $Xgafv) {
+              return (Wait) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Wait setAccessToken(java.lang.String accessToken) {
+              return (Wait) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Wait setAlt(java.lang.String alt) {
+              return (Wait) super.setAlt(alt);
+            }
+
+            @Override
+            public Wait setCallback(java.lang.String callback) {
+              return (Wait) super.setCallback(callback);
+            }
+
+            @Override
+            public Wait setFields(java.lang.String fields) {
+              return (Wait) super.setFields(fields);
+            }
+
+            @Override
+            public Wait setKey(java.lang.String key) {
+              return (Wait) super.setKey(key);
+            }
+
+            @Override
+            public Wait setOauthToken(java.lang.String oauthToken) {
+              return (Wait) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Wait setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Wait) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Wait setQuotaUser(java.lang.String quotaUser) {
+              return (Wait) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Wait setUploadType(java.lang.String uploadType) {
+              return (Wait) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Wait setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Wait) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the operation resource to wait on. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the operation resource to wait on.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The name of the operation resource to wait on. */
+            public Wait setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/servingProfiles/[^/]+/operations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The maximum duration to wait before timing out. If left blank, the wait will be at
+             * most the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline
+             * is also specified, the shorter one will be used.
+             */
+            @com.google.api.client.util.Key
+            private String timeout;
+
+            /** The maximum duration to wait before timing out. If left blank, the wait will be at most the time
+           permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also specified, the
+           shorter one will be used.
+             */
+            public String getTimeout() {
+              return timeout;
+            }
+
+            /**
+             * The maximum duration to wait before timing out. If left blank, the wait will be at
+             * most the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline
+             * is also specified, the shorter one will be used.
+             */
+            public Wait setTimeout(String timeout) {
+              this.timeout = timeout;
+              return this;
+            }
+
+            @Override
+            public Wait set(String parameterName, Object value) {
+              return (Wait) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Skills collection.
@@ -174021,6 +175048,853 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^semanticGovernancePolicies/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The maximum duration to wait before timing out. If left blank, the wait will be at most
+         * the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also
+         * specified, the shorter one will be used.
+         */
+        @com.google.api.client.util.Key
+        private String timeout;
+
+        /** The maximum duration to wait before timing out. If left blank, the wait will be at most the time
+       permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also specified, the
+       shorter one will be used.
+         */
+        public String getTimeout() {
+          return timeout;
+        }
+
+        /**
+         * The maximum duration to wait before timing out. If left blank, the wait will be at most
+         * the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also
+         * specified, the shorter one will be used.
+         */
+        public Wait setTimeout(String timeout) {
+          this.timeout = timeout;
+          return this;
+        }
+
+        @Override
+        public Wait set(String parameterName, Object value) {
+          return (Wait) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the ServingProfiles collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+   *   {@code Aiplatform.ServingProfiles.List request = aiplatform.servingProfiles().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ServingProfiles servingProfiles() {
+    return new ServingProfiles();
+  }
+
+  /**
+   * The "servingProfiles" collection of methods.
+   */
+  public class ServingProfiles {
+
+    /**
+     * An accessor for creating requests from the Operations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+     *   {@code Aiplatform.Operations.List request = aiplatform.operations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Operations operations() {
+      return new Operations();
+    }
+
+    /**
+     * The "operations" collection of methods.
+     */
+    public class Operations {
+
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+       * `Code.CANCELLED`.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @return the request
+       */
+      public Cancel cancel(java.lang.String name) throws java.io.IOException {
+        Cancel result = new Cancel(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}:cancel";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^servingProfiles/[^/]+/operations/[^/]+$");
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @since 1.13
+         */
+        protected Cancel(java.lang.String name) {
+          super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Cancel set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancel) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancel setAccessToken(java.lang.String accessToken) {
+          return (Cancel) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancel setAlt(java.lang.String alt) {
+          return (Cancel) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancel setCallback(java.lang.String callback) {
+          return (Cancel) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancel setFields(java.lang.String fields) {
+          return (Cancel) super.setFields(fields);
+        }
+
+        @Override
+        public Cancel setKey(java.lang.String key) {
+          return (Cancel) super.setKey(key);
+        }
+
+        @Override
+        public Cancel setOauthToken(java.lang.String oauthToken) {
+          return (Cancel) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancel) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancel setQuotaUser(java.lang.String quotaUser) {
+          return (Cancel) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancel setUploadType(java.lang.String uploadType) {
+          return (Cancel) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancel) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to be cancelled.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to be cancelled. */
+        public Cancel setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Cancel set(String parameterName, Object value) {
+          return (Cancel) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a long-running operation. This method indicates that the client is no longer interested
+       * in the operation result. It does not cancel the operation. If the server doesn't support this
+       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+       *
+       * Create a request for the method "operations.delete".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to be deleted.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^servingProfiles/[^/]+/operations/[^/]+$");
+
+        /**
+         * Deletes a long-running operation. This method indicates that the client is no longer interested
+         * in the operation result. It does not cancel the operation. If the server doesn't support this
+         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.delete".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to be deleted.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to be deleted. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to be deleted.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to be deleted. */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^servingProfiles/[^/]+/operations/[^/]+$");
+
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation's parent resource.
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningListOperationsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}/operations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^servingProfiles/[^/]+$");
+
+        /**
+         * Lists operations that match the specified filter in the request. If the server doesn't support
+         * this method, it returns `UNIMPLEMENTED`.
+         *
+         * Create a request for the method "operations.list".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation's parent resource.
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningListOperationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation's parent resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation's parent resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation's parent resource. */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** The standard list filter. */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** The standard list filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /** The standard list filter. */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** The standard list page size. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The standard list page size.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The standard list page size. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The standard list page token. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The standard list page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The standard list page token. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * When set to `true`, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
+         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** When set to `true`, operations that are reachable are returned as normal, and those that are
+       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+       when reading across collections. For example, when `parent` is set to
+       `"projects/example/locations/-"`. This field is not supported by default and will result in an
+       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+       documentation.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * When set to `true`, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
+         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Waits until the specified long-running operation is done or reaches at most a specified timeout,
+       * returning the latest state. If the operation is already done, the latest state is immediately
+       * returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
+       * timeout is used. If the server does not support this method, it returns
+       * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+       * the latest state before the specified timeout (including immediately), meaning even an immediate
+       * response is no guarantee that the operation is done.
+       *
+       * Create a request for the method "operations.wait".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link Wait#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource to wait on.
+       * @return the request
+       */
+      public Wait wait(java.lang.String name) throws java.io.IOException {
+        Wait result = new Wait(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Wait extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}:wait";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^servingProfiles/[^/]+/operations/[^/]+$");
+
+        /**
+         * Waits until the specified long-running operation is done or reaches at most a specified
+         * timeout, returning the latest state. If the operation is already done, the latest state is
+         * immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout,
+         * the HTTP/RPC timeout is used. If the server does not support this method, it returns
+         * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
+         * the latest state before the specified timeout (including immediately), meaning even an
+         * immediate response is no guarantee that the operation is done.
+         *
+         * Create a request for the method "operations.wait".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link Wait#execute()} method to invoke the remote operation. <p>
+         * {@link Wait#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource to wait on.
+         * @since 1.13
+         */
+        protected Wait(java.lang.String name) {
+          super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Wait set$Xgafv(java.lang.String $Xgafv) {
+          return (Wait) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Wait setAccessToken(java.lang.String accessToken) {
+          return (Wait) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Wait setAlt(java.lang.String alt) {
+          return (Wait) super.setAlt(alt);
+        }
+
+        @Override
+        public Wait setCallback(java.lang.String callback) {
+          return (Wait) super.setCallback(callback);
+        }
+
+        @Override
+        public Wait setFields(java.lang.String fields) {
+          return (Wait) super.setFields(fields);
+        }
+
+        @Override
+        public Wait setKey(java.lang.String key) {
+          return (Wait) super.setKey(key);
+        }
+
+        @Override
+        public Wait setOauthToken(java.lang.String oauthToken) {
+          return (Wait) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Wait setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Wait) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Wait setQuotaUser(java.lang.String quotaUser) {
+          return (Wait) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Wait setUploadType(java.lang.String uploadType) {
+          return (Wait) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Wait setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Wait) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource to wait on. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource to wait on.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource to wait on. */
+        public Wait setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^servingProfiles/[^/]+/operations/[^/]+$");
           }
           this.name = name;
           return this;

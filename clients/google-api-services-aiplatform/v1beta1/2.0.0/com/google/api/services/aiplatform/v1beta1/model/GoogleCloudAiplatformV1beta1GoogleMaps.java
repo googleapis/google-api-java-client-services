@@ -39,6 +39,14 @@ public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api
   private java.lang.Boolean enableWidget;
 
   /**
+   * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
+   * unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes groundingTypes;
+
+  /**
    * Optional. Deprecated: The Google Maps contextual widget behavior in Grounding with Google Maps
    * is being deprecated; this field is planned for removal and no longer has any effect once
    * removed. If true, include the widget context token in the response.
@@ -56,6 +64,25 @@ public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1GoogleMaps setEnableWidget(java.lang.Boolean enableWidget) {
     this.enableWidget = enableWidget;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
+   * unset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes getGroundingTypes() {
+    return groundingTypes;
+  }
+
+  /**
+   * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
+   * unset.
+   * @param groundingTypes groundingTypes or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GoogleMaps setGroundingTypes(GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes groundingTypes) {
+    this.groundingTypes = groundingTypes;
     return this;
   }
 

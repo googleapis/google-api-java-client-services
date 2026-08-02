@@ -66,6 +66,13 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
   private GenaiVertexV1beta1UrlCitation urlCitation;
 
   /**
+   * Word-level ASR annotation with timing and speaker info.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1WordInfo wordInfo;
+
+  /**
    * End of the attributed segment, exclusive.
    * @return value or {@code null} for none
    */
@@ -149,6 +156,23 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
    */
   public GenaiVertexV1beta1TextContentAnnotation setUrlCitation(GenaiVertexV1beta1UrlCitation urlCitation) {
     this.urlCitation = urlCitation;
+    return this;
+  }
+
+  /**
+   * Word-level ASR annotation with timing and speaker info.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1WordInfo getWordInfo() {
+    return wordInfo;
+  }
+
+  /**
+   * Word-level ASR annotation with timing and speaker info.
+   * @param wordInfo wordInfo or {@code null} for none
+   */
+  public GenaiVertexV1beta1TextContentAnnotation setWordInfo(GenaiVertexV1beta1WordInfo wordInfo) {
+    this.wordInfo = wordInfo;
     return this;
   }
 

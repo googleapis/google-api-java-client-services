@@ -107,6 +107,13 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
   private java.lang.Float topP;
 
   /**
+   * Optional. Configuration for speech recognition (transcription). If present, ASR is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1TranscriptionConfig transcriptionConfig;
+
+  /**
    * Configuration for video generation.
    * The value may be {@code null}.
    */
@@ -297,6 +304,23 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
    */
   public GenaiVertexV1beta1GenerationConfig setTopP(java.lang.Float topP) {
     this.topP = topP;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for speech recognition (transcription). If present, ASR is enabled.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1TranscriptionConfig getTranscriptionConfig() {
+    return transcriptionConfig;
+  }
+
+  /**
+   * Optional. Configuration for speech recognition (transcription). If present, ASR is enabled.
+   * @param transcriptionConfig transcriptionConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1GenerationConfig setTranscriptionConfig(GenaiVertexV1beta1TranscriptionConfig transcriptionConfig) {
+    this.transcriptionConfig = transcriptionConfig;
     return this;
   }
 

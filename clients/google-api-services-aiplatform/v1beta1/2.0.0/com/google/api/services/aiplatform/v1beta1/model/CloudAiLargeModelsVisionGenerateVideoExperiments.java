@@ -75,6 +75,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.util.Map<String, java.lang.Object> customParameters;
 
   /**
+   * Optional. Colorspace to be used for all EXR inputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exrColorSpaceOverride;
+
+  /**
    * Human pose parameters for Pose Control
    * The value may be {@code null}.
    */
@@ -280,6 +287,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setCustomParameters(java.util.Map<String, java.lang.Object> customParameters) {
     this.customParameters = customParameters;
+    return this;
+  }
+
+  /**
+   * Optional. Colorspace to be used for all EXR inputs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExrColorSpaceOverride() {
+    return exrColorSpaceOverride;
+  }
+
+  /**
+   * Optional. Colorspace to be used for all EXR inputs.
+   * @param exrColorSpaceOverride exrColorSpaceOverride or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setExrColorSpaceOverride(java.lang.String exrColorSpaceOverride) {
+    this.exrColorSpaceOverride = exrColorSpaceOverride;
     return this;
   }
 

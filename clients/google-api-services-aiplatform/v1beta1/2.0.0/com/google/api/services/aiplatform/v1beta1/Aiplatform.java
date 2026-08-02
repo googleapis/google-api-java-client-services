@@ -156022,20 +156022,20 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * Create a request for the method "v1.responses".
            *
            * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link Responses#execute()} method to invoke the remote operation.
+           * parameters, call the {@link ResponsesRequest#execute()} method to invoke the remote operation.
            *
            * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody}
            * @return the request
            */
-          public Responses responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) throws java.io.IOException {
-            Responses result = new Responses(endpoint, content);
+          public ResponsesRequest responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) throws java.io.IOException {
+            ResponsesRequest result = new ResponsesRequest(endpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Responses extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody> {
+          public class ResponsesRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody> {
 
             private static final String REST_PATH = "v1beta1/{+endpoint}/v1/responses";
 
@@ -156050,17 +156050,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Create a request for the method "v1.responses".
              *
              * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link Responses#execute()} method to invoke the remote
-             * operation. <p> {@link
-             * Responses#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             * optional parameters, call the {@link ResponsesRequest#execute()} method to invoke the remote
+             * operation. <p> {@link ResponsesRequest#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
              *
              * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
            *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
              * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody}
              * @since 1.13
              */
-            protected Responses(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) {
+            protected ResponsesRequest(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) {
               super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
               this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -156071,58 +156071,58 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             @Override
-            public Responses set$Xgafv(java.lang.String $Xgafv) {
-              return (Responses) super.set$Xgafv($Xgafv);
+            public ResponsesRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (ResponsesRequest) super.set$Xgafv($Xgafv);
             }
 
             @Override
-            public Responses setAccessToken(java.lang.String accessToken) {
-              return (Responses) super.setAccessToken(accessToken);
+            public ResponsesRequest setAccessToken(java.lang.String accessToken) {
+              return (ResponsesRequest) super.setAccessToken(accessToken);
             }
 
             @Override
-            public Responses setAlt(java.lang.String alt) {
-              return (Responses) super.setAlt(alt);
+            public ResponsesRequest setAlt(java.lang.String alt) {
+              return (ResponsesRequest) super.setAlt(alt);
             }
 
             @Override
-            public Responses setCallback(java.lang.String callback) {
-              return (Responses) super.setCallback(callback);
+            public ResponsesRequest setCallback(java.lang.String callback) {
+              return (ResponsesRequest) super.setCallback(callback);
             }
 
             @Override
-            public Responses setFields(java.lang.String fields) {
-              return (Responses) super.setFields(fields);
+            public ResponsesRequest setFields(java.lang.String fields) {
+              return (ResponsesRequest) super.setFields(fields);
             }
 
             @Override
-            public Responses setKey(java.lang.String key) {
-              return (Responses) super.setKey(key);
+            public ResponsesRequest setKey(java.lang.String key) {
+              return (ResponsesRequest) super.setKey(key);
             }
 
             @Override
-            public Responses setOauthToken(java.lang.String oauthToken) {
-              return (Responses) super.setOauthToken(oauthToken);
+            public ResponsesRequest setOauthToken(java.lang.String oauthToken) {
+              return (ResponsesRequest) super.setOauthToken(oauthToken);
             }
 
             @Override
-            public Responses setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Responses) super.setPrettyPrint(prettyPrint);
+            public ResponsesRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ResponsesRequest) super.setPrettyPrint(prettyPrint);
             }
 
             @Override
-            public Responses setQuotaUser(java.lang.String quotaUser) {
-              return (Responses) super.setQuotaUser(quotaUser);
+            public ResponsesRequest setQuotaUser(java.lang.String quotaUser) {
+              return (ResponsesRequest) super.setQuotaUser(quotaUser);
             }
 
             @Override
-            public Responses setUploadType(java.lang.String uploadType) {
-              return (Responses) super.setUploadType(uploadType);
+            public ResponsesRequest setUploadType(java.lang.String uploadType) {
+              return (ResponsesRequest) super.setUploadType(uploadType);
             }
 
             @Override
-            public Responses setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Responses) super.setUploadProtocol(uploadProtocol);
+            public ResponsesRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ResponsesRequest) super.setUploadProtocol(uploadProtocol);
             }
 
             /**
@@ -156143,7 +156143,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Required. The name of the Endpoint requested to serve the prediction. Format:
              * `projects/{project}/locations/{location}/endpoints/{endpoint}`
              */
-            public Responses setEndpoint(java.lang.String endpoint) {
+            public ResponsesRequest setEndpoint(java.lang.String endpoint) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
                     "Parameter endpoint must conform to the pattern " +
@@ -156164,17 +156164,483 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /** ID of the DeployedModel that serves the invoke request. */
-            public Responses setDeployedModelId(java.lang.String deployedModelId) {
+            public ResponsesRequest setDeployedModelId(java.lang.String deployedModelId) {
               this.deployedModelId = deployedModelId;
               return this;
             }
 
             @Override
-            public Responses set(String parameterName, Object value) {
-              return (Responses) super.set(parameterName, value);
+            public ResponsesRequest set(String parameterName, Object value) {
+              return (ResponsesRequest) super.set(parameterName, value);
             }
           }
 
+          /**
+           * An accessor for creating requests from the Responses collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+           *   {@code Aiplatform.Responses.List request = aiplatform.responses().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Responses responses() {
+            return new Responses();
+          }
+
+          /**
+           * The "responses" collection of methods.
+           */
+          public class Responses {
+
+            /**
+             * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this method,
+             * invoke_route_prefix must be set to allow the paths that will be specified in the request.
+             *
+             * Create a request for the method "responses.compact".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+             *
+             * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody}
+             * @return the request
+             */
+            public Compact compact(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) throws java.io.IOException {
+              Compact result = new Compact(endpoint, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Compact extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+endpoint}/v1/responses/compact";
+
+              private final java.util.regex.Pattern ENDPOINT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+
+              /**
+               * Forwards arbitrary HTTP requests for both streaming and non-streaming cases. To use this
+               * method, invoke_route_prefix must be set to allow the paths that will be specified in the
+               * request.
+               *
+               * Create a request for the method "responses.compact".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Compact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param endpoint Required. The name of the Endpoint requested to serve the prediction. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody}
+               * @since 1.13
+               */
+              protected Compact(java.lang.String endpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
+                this.endpoint = com.google.api.client.util.Preconditions.checkNotNull(endpoint, "Required parameter endpoint must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                      "Parameter endpoint must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+                }
+              }
+
+              @Override
+              public Compact set$Xgafv(java.lang.String $Xgafv) {
+                return (Compact) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Compact setAccessToken(java.lang.String accessToken) {
+                return (Compact) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Compact setAlt(java.lang.String alt) {
+                return (Compact) super.setAlt(alt);
+              }
+
+              @Override
+              public Compact setCallback(java.lang.String callback) {
+                return (Compact) super.setCallback(callback);
+              }
+
+              @Override
+              public Compact setFields(java.lang.String fields) {
+                return (Compact) super.setFields(fields);
+              }
+
+              @Override
+              public Compact setKey(java.lang.String key) {
+                return (Compact) super.setKey(key);
+              }
+
+              @Override
+              public Compact setOauthToken(java.lang.String oauthToken) {
+                return (Compact) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Compact setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Compact) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Compact setQuotaUser(java.lang.String quotaUser) {
+                return (Compact) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Compact setUploadType(java.lang.String uploadType) {
+                return (Compact) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Compact setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Compact) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the Endpoint requested to serve the prediction. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String endpoint;
+
+              /** Required. The name of the Endpoint requested to serve the prediction. Format:
+             `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              public java.lang.String getEndpoint() {
+                return endpoint;
+              }
+
+              /**
+               * Required. The name of the Endpoint requested to serve the prediction. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+               */
+              public Compact setEndpoint(java.lang.String endpoint) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(ENDPOINT_PATTERN.matcher(endpoint).matches(),
+                      "Parameter endpoint must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+$");
+                }
+                this.endpoint = endpoint;
+                return this;
+              }
+
+              /** ID of the DeployedModel that serves the invoke request. */
+              @com.google.api.client.util.Key
+              private java.lang.String deployedModelId;
+
+              /** ID of the DeployedModel that serves the invoke request.
+               */
+              public java.lang.String getDeployedModelId() {
+                return deployedModelId;
+              }
+
+              /** ID of the DeployedModel that serves the invoke request. */
+              public Compact setDeployedModelId(java.lang.String deployedModelId) {
+                this.deployedModelId = deployedModelId;
+                return this;
+              }
+
+              @Override
+              public Compact set(String parameterName, Object value) {
+                return (Compact) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the response from the endpoint.
+             *
+             * Create a request for the method "responses.delete".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the Response resource to be deleted. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+
+              /**
+               * Deletes the response from the endpoint.
+               *
+               * Create a request for the method "responses.delete".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the Response resource to be deleted. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the Response resource to be deleted. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the Response resource to be deleted. Format:
+             `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the Response resource to be deleted. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the response from the endpoint.
+             *
+             * Create a request for the method "responses.get".
+             *
+             * This request holds the parameters needed by the aiplatform server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the Response resource. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+
+              /**
+               * Gets the response from the endpoint.
+               *
+               * Create a request for the method "responses.get".
+               *
+               * This request holds the parameters needed by the the aiplatform server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the Response resource. Format:
+             *        `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the Response resource. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the Response resource. Format:
+             `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the Response resource. Format:
+               * `projects/{project}/locations/{location}/endpoints/{endpoint}/responses/{response}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/v1/responses/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -168345,7 +168811,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The resource name of the A2aTask to append events to. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest}
            * @return the request
            */
@@ -168375,7 +168842,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The resource name of the A2aTask to append events to. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AppendA2aTaskEventsRequest}
              * @since 1.13
              */
@@ -168447,12 +168915,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The resource name of the A2aTask to append events to. Format: `projects/{pr
              * oject}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the A2aTask to append events to. Format:
            `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+           or `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public java.lang.String getName() {
               return name;
@@ -168461,6 +168932,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. The resource name of the A2aTask to append events to. Format: `projects/{pr
              * oject}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public AppendEvents setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -168485,8 +168958,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the aiplatform server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the ReasoningEngine to create the A2aTask under. Format:
-           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           * @param parent Required. The resource name of the ReasoningEngine or TaskStore to create the A2aTask under. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}`
            * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1A2aTask}
            * @return the request
            */
@@ -168514,8 +168988,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the ReasoningEngine to create the A2aTask under. Format:
-           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * @param parent Required. The resource name of the ReasoningEngine or TaskStore to create the A2aTask under. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}`
              * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1A2aTask}
              * @since 1.13
              */
@@ -168585,22 +169060,27 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The resource name of the ReasoningEngine to create the A2aTask under.
-             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * Required. The resource name of the ReasoningEngine or TaskStore to create the A2aTask
+             * under. Format:
+             * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the ReasoningEngine to create the A2aTask under. Format:
-           `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+            /** Required. The resource name of the ReasoningEngine or TaskStore to create the A2aTask under.
+           Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The resource name of the ReasoningEngine to create the A2aTask under.
-             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * Required. The resource name of the ReasoningEngine or TaskStore to create the A2aTask
+             * under. Format:
+             * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -168613,16 +169093,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. User-defined ID of the A2aTask. This ID must be unique within the
-             * ReasoningEngine. It must be 1-63 characters, start with a lowercase letter or number,
-             * end with a lowercase letter or number, and only contain lowercase letters, numbers,
-             * and hyphens [AIP-122](https://google.aip.dev/122). Starting with a number is allowed
-             * for compatibility with the auto-generated UUID from A2A SDK.
+             * Required. User-defined ID of the A2aTask. This ID must be unique within the parent
+             * resource. It must be 1-63 characters, start with a lowercase letter or number, end
+             * with a lowercase letter or number, and only contain lowercase letters, numbers, and
+             * hyphens [AIP-122](https://google.aip.dev/122). Starting with a number is allowed for
+             * compatibility with the auto-generated UUID from A2A SDK.
              */
             @com.google.api.client.util.Key
             private java.lang.String a2aTaskId;
 
-            /** Required. User-defined ID of the A2aTask. This ID must be unique within the ReasoningEngine. It
+            /** Required. User-defined ID of the A2aTask. This ID must be unique within the parent resource. It
            must be 1-63 characters, start with a lowercase letter or number, end with a lowercase letter or
            number, and only contain lowercase letters, numbers, and hyphens
            [AIP-122](https://google.aip.dev/122). Starting with a number is allowed for compatibility with the
@@ -168633,11 +169113,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. User-defined ID of the A2aTask. This ID must be unique within the
-             * ReasoningEngine. It must be 1-63 characters, start with a lowercase letter or number,
-             * end with a lowercase letter or number, and only contain lowercase letters, numbers,
-             * and hyphens [AIP-122](https://google.aip.dev/122). Starting with a number is allowed
-             * for compatibility with the auto-generated UUID from A2A SDK.
+             * Required. User-defined ID of the A2aTask. This ID must be unique within the parent
+             * resource. It must be 1-63 characters, start with a lowercase letter or number, end
+             * with a lowercase letter or number, and only contain lowercase letters, numbers, and
+             * hyphens [AIP-122](https://google.aip.dev/122). Starting with a number is allowed for
+             * compatibility with the auto-generated UUID from A2A SDK.
              */
             public Create setA2aTaskId(java.lang.String a2aTaskId) {
               this.a2aTaskId = a2aTaskId;
@@ -168659,7 +169139,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The resource name of the A2aTask to delete. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -168688,7 +169169,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The resource name of the A2aTask to delete. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -168758,13 +169240,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The resource name of the A2aTask to delete. Format: `projects/{project}/loc
-             * ations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * ations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the A2aTask to delete. Format:
            `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+           or `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public java.lang.String getName() {
               return name;
@@ -168772,7 +169256,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The resource name of the A2aTask to delete. Format: `projects/{project}/loc
-             * ations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * ations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -168799,7 +169284,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The resource name of the A2aTask. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -168827,7 +169313,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The resource name of the A2aTask. Format:
            *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-           *        _task}`
+           *        _task}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -168907,13 +169394,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The resource name of the A2aTask. Format: `projects/{project}/locations/{lo
-             * cation}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * cation}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the A2aTask. Format:
            `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+           or `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public java.lang.String getName() {
               return name;
@@ -168921,7 +169410,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The resource name of the A2aTask. Format: `projects/{project}/locations/{lo
-             * cation}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             * cation}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -168930,6 +169420,22 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/a2aTasks/[^/]+$");
               }
               this.name = name;
+              return this;
+            }
+
+            /** Optional. The view of the A2aTask to return. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The view of the A2aTask to return.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Optional. The view of the A2aTask to return. */
+            public Get setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 
@@ -168946,8 +169452,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the aiplatform server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the ReasoningEngine to list the A2aTasks under. Format:
-           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+           * @param parent Required. The resource name of the ReasoningEngine or TaskStore to list the A2aTasks under. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -168973,8 +169480,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the ReasoningEngine to list the A2aTasks under. Format:
-           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * @param parent Required. The resource name of the ReasoningEngine or TaskStore to list the A2aTasks under. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           *        `projects/{project}/locations/{location}/taskStores/{task_store}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -169053,22 +169561,27 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. The resource name of the ReasoningEngine to list the A2aTasks under.
-             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * Required. The resource name of the ReasoningEngine or TaskStore to list the A2aTasks
+             * under. Format:
+             * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the ReasoningEngine to list the A2aTasks under. Format:
-           `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+            /** Required. The resource name of the ReasoningEngine or TaskStore to list the A2aTasks under. Format:
+           `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+           `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The resource name of the ReasoningEngine to list the A2aTasks under.
-             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+             * Required. The resource name of the ReasoningEngine or TaskStore to list the A2aTasks
+             * under. Format:
+             * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` or
+             * `projects/{project}/locations/{location}/taskStores/{task_store}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -169163,22 +169676,19 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Optional. The next_page_token value returned from a previous list
-             * AgentEngineTaskStoreService.ListA2aTasks call.
+             * Optional. The next_page_token value returned from a previous list ListA2aTasks call.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. The next_page_token value returned from a previous list
-           AgentEngineTaskStoreService.ListA2aTasks call.
+            /** Optional. The next_page_token value returned from a previous list ListA2aTasks call.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. The next_page_token value returned from a previous list
-             * AgentEngineTaskStoreService.ListA2aTasks call.
+             * Optional. The next_page_token value returned from a previous list ListA2aTasks call.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -169221,7 +169731,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param parent Required. The resource name of the A2aTask to list the TaskEvents under. Format:
              *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-             *        _task}`
+             *        _task}` or
+             *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -169249,7 +169760,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param parent Required. The resource name of the A2aTask to list the TaskEvents under. Format:
              *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a
-             *        _task}`
+             *        _task}` or
+             *        `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -169330,13 +169842,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the A2aTask to list the TaskEvents under. Format: `p
                * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks
-               * /{a2a_task}`
+               * /{a2a_task}` or `projects/{project}/locations/{location}/taskStores/{task_store}/a2
+               * aTasks/{a2a_task}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
               /** Required. The resource name of the A2aTask to list the TaskEvents under. Format:
              `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+             or `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
                */
               public java.lang.String getParent() {
                 return parent;
@@ -169345,7 +169859,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. The resource name of the A2aTask to list the TaskEvents under. Format: `p
                * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/a2aTasks
-               * /{a2a_task}`
+               * /{a2a_task}` or `projects/{project}/locations/{location}/taskStores/{task_store}/a2
+               * aTasks/{a2a_task}`
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -169441,22 +169956,21 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Optional. The next_page_token value returned from a previous list
-               * AgentEngineTaskStoreService.ListA2aTaskEvents call.
+               * Optional. The next_page_token value returned from a previous list ListA2aTaskEvents
+               * call.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. The next_page_token value returned from a previous list
-             AgentEngineTaskStoreService.ListA2aTaskEvents call.
+              /** Optional. The next_page_token value returned from a previous list ListA2aTaskEvents call.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Optional. The next_page_token value returned from a previous list
-               * AgentEngineTaskStoreService.ListA2aTaskEvents call.
+               * Optional. The next_page_token value returned from a previous list ListA2aTaskEvents
+               * call.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;

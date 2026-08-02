@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentS
   private GoogleCloudAiplatformV1PersistentDiskSpec persistentDiskSpec;
 
   /**
+   * Optional. Shielded VM configuration (for example, Secure Boot) for the execution VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpecShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * The specification of a single machine for the execution job.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentS
    */
   public GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpec setPersistentDiskSpec(GoogleCloudAiplatformV1PersistentDiskSpec persistentDiskSpec) {
     this.persistentDiskSpec = persistentDiskSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Shielded VM configuration (for example, Secure Boot) for the execution VM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpecShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Optional. Shielded VM configuration (for example, Secure Boot) for the execution VM.
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpec setShieldedInstanceConfig(GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpecShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
     return this;
   }
 

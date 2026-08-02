@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * DatabaseResourceId will serve as primary key for any resource ingestion event.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,45 +30,35 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provider;
 
   /**
-   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String providerDescription;
 
   /**
-   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
-   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
-   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
-   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * Required. A service-local token that distinguishes this resource from other resources within
-   * the same service.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uniqueId;
 
   /**
-   * Required. Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -76,7 +66,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Required. Disable validation warnings
    * @param provider provider or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setProvider(java.lang.String provider) {
@@ -85,7 +75,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getProviderDescription() {
@@ -93,7 +83,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Optional. Needs to be used only when the provider is PROVIDER_OTHER.
+   * Optional. Disable validation warnings
    * @param providerDescription providerDescription or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setProviderDescription(java.lang.String providerDescription) {
@@ -102,16 +92,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
-   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
-   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
-   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -119,16 +100,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
-   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
-   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
-   * memorystore.googleapis.com/Instance, redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, oracledatabase.googleapis.com/CloudExadataInfrastructure
-   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
-   * datamodel
+   * Required. Disable validation warnings
    * @param resourceType resourceType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setResourceType(java.lang.String resourceType) {
@@ -137,8 +109,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. A service-local token that distinguishes this resource from other resources within
-   * the same service.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -146,8 +117,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. A service-local token that distinguishes this resource from other resources within
-   * the same service.
+   * Required. Disable validation warnings
    * @param uniqueId uniqueId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setUniqueId(java.lang.String uniqueId) {

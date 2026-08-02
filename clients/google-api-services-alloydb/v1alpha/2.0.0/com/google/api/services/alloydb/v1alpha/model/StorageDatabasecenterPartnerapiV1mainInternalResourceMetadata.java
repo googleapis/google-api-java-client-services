@@ -17,9 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Metadata for individual internal resources in an instance. e.g. spanner instance can have
- * multiple databases with unique configuration settings. Similarly bigtable can have multiple
- * clusters within same bigtable instance.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -32,49 +30,49 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup configuration for this database
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration;
 
   /**
-   * Information about the last backup attempt for this database
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
 
   /**
-   * Whether deletion protection is enabled for this internal resource.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDeletionProtectionEnabled;
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterProtoCommonProduct product;
 
   /**
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Required. internal resource name for spanner this will be database name
-   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Backup configuration for this database
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration getBackupConfiguration() {
@@ -82,7 +80,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Backup configuration for this database
+   * Disable validation warnings
    * @param backupConfiguration backupConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration) {
@@ -91,7 +89,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Information about the last backup attempt for this database
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun getBackupRun() {
@@ -99,7 +97,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Information about the last backup attempt for this database
+   * Disable validation warnings
    * @param backupRun backupRun or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
@@ -108,7 +106,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Whether deletion protection is enabled for this internal resource.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDeletionProtectionEnabled() {
@@ -116,7 +114,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Whether deletion protection is enabled for this internal resource.
+   * Disable validation warnings
    * @param isDeletionProtectionEnabled isDeletionProtectionEnabled or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setIsDeletionProtectionEnabled(java.lang.Boolean isDeletionProtectionEnabled) {
@@ -125,7 +123,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterProtoCommonProduct getProduct() {
@@ -133,7 +131,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * @param product product or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setProduct(StorageDatabasecenterProtoCommonProduct product) {
@@ -142,6 +140,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getResourceId() {
@@ -149,6 +148,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
+   * Disable validation warnings
    * @param resourceId resourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {
@@ -157,8 +157,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Required. internal resource name for spanner this will be database name
-   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -166,8 +165,7 @@ public final class StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata
   }
 
   /**
-   * Required. internal resource name for spanner this will be database name
-   * e.g."spanner.googleapis.com/projects/123/abc/instances/inst1/databases/db1"
+   * Required. Disable validation warnings
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata setResourceName(java.lang.String resourceName) {

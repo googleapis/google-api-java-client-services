@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Contains compliance information about a security standard indicating unmet recommendations.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainCompliance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String standard;
 
   /**
-   * Version of the standard or benchmark, for example, 1.1
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getStandard() {
@@ -52,7 +52,7 @@ public final class StorageDatabasecenterPartnerapiV1mainCompliance extends com.g
   }
 
   /**
-   * Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
+   * Disable validation warnings
    * @param standard standard or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainCompliance setStandard(java.lang.String standard) {
@@ -61,7 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainCompliance extends com.g
   }
 
   /**
-   * Version of the standard or benchmark, for example, 1.1
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -69,7 +69,7 @@ public final class StorageDatabasecenterPartnerapiV1mainCompliance extends com.g
   }
 
   /**
-   * Version of the standard or benchmark, for example, 1.1
+   * Disable validation warnings
    * @param version version or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainCompliance setVersion(java.lang.String version) {

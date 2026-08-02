@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * MachineConfiguration describes the configuration of a machine specific to Database Resource.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,50 +30,49 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long baselineSlots;
 
   /**
-   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482) add proto validations
-   * again after bug fix.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer cpuCount;
 
   /**
-   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxReservationSlots;
 
   /**
-   * Memory size in bytes. TODO(b/342344482) add proto validations again after bug fix.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long memorySizeInBytes;
 
   /**
-   * Optional. Number of shards (if applicable).
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer shardCount;
 
   /**
-   * Optional. The number of vCPUs. TODO(b/342344482) add proto validations again after bug fix.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double vcpuCount;
 
   /**
-   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Long getBaselineSlots() {
@@ -81,7 +80,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * Optional. Disable validation warnings
    * @param baselineSlots baselineSlots or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setBaselineSlots(java.lang.Long baselineSlots) {
@@ -90,8 +89,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482) add proto validations
-   * again after bug fix.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCount() {
@@ -99,8 +97,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482) add proto validations
-   * again after bug fix.
+   * Disable validation warnings
    * @param cpuCount cpuCount or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setCpuCount(java.lang.Integer cpuCount) {
@@ -109,7 +106,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxReservationSlots() {
@@ -117,7 +114,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * Optional. Disable validation warnings
    * @param maxReservationSlots maxReservationSlots or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setMaxReservationSlots(java.lang.Long maxReservationSlots) {
@@ -126,7 +123,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Memory size in bytes. TODO(b/342344482) add proto validations again after bug fix.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Long getMemorySizeInBytes() {
@@ -134,7 +131,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Memory size in bytes. TODO(b/342344482) add proto validations again after bug fix.
+   * Disable validation warnings
    * @param memorySizeInBytes memorySizeInBytes or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setMemorySizeInBytes(java.lang.Long memorySizeInBytes) {
@@ -143,7 +140,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. Number of shards (if applicable).
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Integer getShardCount() {
@@ -151,7 +148,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. Number of shards (if applicable).
+   * Optional. Disable validation warnings
    * @param shardCount shardCount or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setShardCount(java.lang.Integer shardCount) {
@@ -160,7 +157,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. The number of vCPUs. TODO(b/342344482) add proto validations again after bug fix.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Double getVcpuCount() {
@@ -168,7 +165,7 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   }
 
   /**
-   * Optional. The number of vCPUs. TODO(b/342344482) add proto validations again after bug fix.
+   * Optional. Disable validation warnings
    * @param vcpuCount vcpuCount or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setVcpuCount(java.lang.Double vcpuCount) {

@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Proto representing the access that a user has to a specific feature/service. NextId: 3.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainEntitlement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current state of user's accessibility to a feature/benefit.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entitlementState;
 
   /**
-   * An enum that represents the type of this entitlement.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The current state of user's accessibility to a feature/benefit.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getEntitlementState() {
@@ -52,7 +52,7 @@ public final class StorageDatabasecenterPartnerapiV1mainEntitlement extends com.
   }
 
   /**
-   * The current state of user's accessibility to a feature/benefit.
+   * Disable validation warnings
    * @param entitlementState entitlementState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainEntitlement setEntitlementState(java.lang.String entitlementState) {
@@ -61,7 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainEntitlement extends com.
   }
 
   /**
-   * An enum that represents the type of this entitlement.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +69,7 @@ public final class StorageDatabasecenterPartnerapiV1mainEntitlement extends com.
   }
 
   /**
-   * An enum that represents the type of this entitlement.
+   * Disable validation warnings
    * @param type type or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainEntitlement setType(java.lang.String type) {

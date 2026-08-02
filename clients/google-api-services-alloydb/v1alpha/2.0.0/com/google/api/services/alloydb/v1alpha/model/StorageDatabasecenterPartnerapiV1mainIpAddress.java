@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Used to send IP address information for a database resource.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,26 +30,21 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainIpAddress extends com.google.api.client.json.GenericJson {
 
   /**
-   * The private IP address assigned to the resource within a Virtual Private Cloud (VPC). This IP
-   * is only reachable from within the same VPC network. Stored in standard string format (e.g.,
-   * "10.0.0.2").
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateIp;
 
   /**
-   * The public IP address assigned to the resource. This IP is reachable from the internet. Stored
-   * in standard string format (e.g., "34.72.1.1").
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publicIp;
 
   /**
-   * The private IP address assigned to the resource within a Virtual Private Cloud (VPC). This IP
-   * is only reachable from within the same VPC network. Stored in standard string format (e.g.,
-   * "10.0.0.2").
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateIp() {
@@ -57,9 +52,7 @@ public final class StorageDatabasecenterPartnerapiV1mainIpAddress extends com.go
   }
 
   /**
-   * The private IP address assigned to the resource within a Virtual Private Cloud (VPC). This IP
-   * is only reachable from within the same VPC network. Stored in standard string format (e.g.,
-   * "10.0.0.2").
+   * Disable validation warnings
    * @param privateIp privateIp or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainIpAddress setPrivateIp(java.lang.String privateIp) {
@@ -68,8 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainIpAddress extends com.go
   }
 
   /**
-   * The public IP address assigned to the resource. This IP is reachable from the internet. Stored
-   * in standard string format (e.g., "34.72.1.1").
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicIp() {
@@ -77,8 +69,7 @@ public final class StorageDatabasecenterPartnerapiV1mainIpAddress extends com.go
   }
 
   /**
-   * The public IP address assigned to the resource. This IP is reachable from the internet. Stored
-   * in standard string format (e.g., "34.72.1.1").
+   * Disable validation warnings
    * @param publicIp publicIp or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainIpAddress setPublicIp(java.lang.String publicIp) {

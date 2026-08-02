@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * An error that occurred during a backup creation operation.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,27 +30,28 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainOperationError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies the specific error that occurred. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorType;
 
   /**
-   * Additional information about the error encountered. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * Identifies the specific error that occurred. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -58,7 +59,7 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   }
 
   /**
-   * Identifies the specific error that occurred. REQUIRED
+   * Disable validation warnings
    * @param code code or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainOperationError setCode(java.lang.String code) {
@@ -67,6 +68,7 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   }
 
   /**
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorType() {
@@ -74,6 +76,7 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   }
 
   /**
+   * Disable validation warnings
    * @param errorType errorType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainOperationError setErrorType(java.lang.String errorType) {
@@ -82,7 +85,7 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   }
 
   /**
-   * Additional information about the error encountered. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -90,7 +93,7 @@ public final class StorageDatabasecenterPartnerapiV1mainOperationError extends c
   }
 
   /**
-   * Additional information about the error encountered. REQUIRED
+   * Disable validation warnings
    * @param message message or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainOperationError setMessage(java.lang.String message) {

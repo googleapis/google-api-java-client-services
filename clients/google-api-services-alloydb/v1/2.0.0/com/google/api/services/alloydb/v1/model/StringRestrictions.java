@@ -38,6 +38,13 @@ public final class StringRestrictions extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> allowedValues;
 
   /**
+   * Output only. Whether the allowed values are case agnostic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean caseAgnostic;
+
+  /**
    * The list of allowed values, if bounded. This field will be empty if there is a unbounded number
    * of allowed values.
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class StringRestrictions extends com.google.api.client.json.Generic
    */
   public StringRestrictions setAllowedValues(java.util.List<java.lang.String> allowedValues) {
     this.allowedValues = allowedValues;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the allowed values are case agnostic.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCaseAgnostic() {
+    return caseAgnostic;
+  }
+
+  /**
+   * Output only. Whether the allowed values are case agnostic.
+   * @param caseAgnostic caseAgnostic or {@code null} for none
+   */
+  public StringRestrictions setCaseAgnostic(java.lang.Boolean caseAgnostic) {
+    this.caseAgnostic = caseAgnostic;
     return this;
   }
 

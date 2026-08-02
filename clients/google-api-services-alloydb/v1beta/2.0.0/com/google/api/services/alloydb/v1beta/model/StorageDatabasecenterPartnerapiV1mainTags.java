@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Message type for storing tags. Tags provide a way to create annotations for resources, and in
- * some cases conditionally allow or deny policies based on whether a resource has a specific tag.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,14 +30,14 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainTags extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Tag key/value mappings.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> tags;
 
   /**
-   * The Tag key/value mappings.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -46,7 +45,7 @@ public final class StorageDatabasecenterPartnerapiV1mainTags extends com.google.
   }
 
   /**
-   * The Tag key/value mappings.
+   * Disable validation warnings
    * @param tags tags or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainTags setTags(java.util.Map<String, java.lang.String> tags) {

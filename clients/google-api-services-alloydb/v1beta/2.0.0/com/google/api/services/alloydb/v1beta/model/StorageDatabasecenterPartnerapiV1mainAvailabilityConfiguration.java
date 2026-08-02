@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Configuration for availability of database instance
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,45 +30,42 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
-   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean automaticFailoverRoutingConfigured;
 
   /**
-   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
-   * more than one zone in a region (it is highly available).
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String availabilityType;
 
   /**
-   * Checks for resources that are configured to have redundancy, and ongoing replication across
-   * regions
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean crossRegionReplicaConfigured;
 
   /**
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean externalReplicaConfigured;
 
   /**
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean promotableReplicaConfigured;
 
   /**
-   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
-   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomaticFailoverRoutingConfigured() {
@@ -76,8 +73,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
-   * Checks for existence of (multi-cluster) routing configuration that allows automatic failover to
-   * a different zone/region in case of an outage. Applicable to Bigtable resources.
+   * Disable validation warnings
    * @param automaticFailoverRoutingConfigured automaticFailoverRoutingConfigured or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setAutomaticFailoverRoutingConfigured(java.lang.Boolean automaticFailoverRoutingConfigured) {
@@ -86,9 +82,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
-   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
-   * more than one zone in a region (it is highly available).
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailabilityType() {
@@ -96,9 +90,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
-   * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone.
-   * Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from
-   * more than one zone in a region (it is highly available).
+   * Disable validation warnings
    * @param availabilityType availabilityType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setAvailabilityType(java.lang.String availabilityType) {
@@ -107,8 +99,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
-   * Checks for resources that are configured to have redundancy, and ongoing replication across
-   * regions
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCrossRegionReplicaConfigured() {
@@ -116,8 +107,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
-   * Checks for resources that are configured to have redundancy, and ongoing replication across
-   * regions
+   * Disable validation warnings
    * @param crossRegionReplicaConfigured crossRegionReplicaConfigured or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setCrossRegionReplicaConfigured(java.lang.Boolean crossRegionReplicaConfigured) {
@@ -126,6 +116,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExternalReplicaConfigured() {
@@ -133,6 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
+   * Disable validation warnings
    * @param externalReplicaConfigured externalReplicaConfigured or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setExternalReplicaConfigured(java.lang.Boolean externalReplicaConfigured) {
@@ -141,6 +133,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPromotableReplicaConfigured() {
@@ -148,6 +141,7 @@ public final class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguratio
   }
 
   /**
+   * Disable validation warnings
    * @param promotableReplicaConfigured promotableReplicaConfigured or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration setPromotableReplicaConfigured(java.lang.Boolean promotableReplicaConfigured) {

@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 13
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,89 +30,84 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends com.google.api.client.json.GenericJson {
 
   /**
-   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupDRMetadata backupdrMetadata;
 
   /**
-   * Config based signal data is used to ingest signals that are generated based on the
-   * configuration of the database resource.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData;
 
   /**
-   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData databaseResourceSignalData;
 
   /**
-   * Required. Timestamp when feed is generated.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String feedTimestamp;
 
   /**
-   * Required. Type feed to be ingested into condor
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String feedType;
 
   /**
-   * Observability metric data.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData;
 
   /**
-   * Database resource recommendation signal data.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData;
 
   /**
-   * Database resource health signal data.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData;
 
   /**
-   * Primary key associated with the Resource. resource_id is available in individual feed level as
-   * well.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Database resource metadata.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata resourceMetadata;
 
   /**
-   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
-   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
-   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
-   * Engine, Persistent Disk) can be skipped.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipIngestion;
 
   /**
-   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata getBackupdrMetadata() {
@@ -121,7 +115,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * BackupDR metadata is used to ingest metadata from BackupDR.
+   * Disable validation warnings
    * @param backupdrMetadata backupdrMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setBackupdrMetadata(StorageDatabasecenterPartnerapiV1mainBackupDRMetadata backupdrMetadata) {
@@ -130,8 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Config based signal data is used to ingest signals that are generated based on the
-   * configuration of the database resource.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData getConfigBasedSignalData() {
@@ -139,8 +132,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Config based signal data is used to ingest signals that are generated based on the
-   * configuration of the database resource.
+   * Disable validation warnings
    * @param configBasedSignalData configBasedSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setConfigBasedSignalData(StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData configBasedSignalData) {
@@ -149,7 +141,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData getDatabaseResourceSignalData() {
@@ -157,7 +149,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource signal data is used to ingest signals from database resource signal feeds.
+   * Disable validation warnings
    * @param databaseResourceSignalData databaseResourceSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setDatabaseResourceSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData databaseResourceSignalData) {
@@ -166,7 +158,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Timestamp when feed is generated.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getFeedTimestamp() {
@@ -174,7 +166,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Timestamp when feed is generated.
+   * Required. Disable validation warnings
    * @param feedTimestamp feedTimestamp or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setFeedTimestamp(String feedTimestamp) {
@@ -183,7 +175,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Type feed to be ingested into condor
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedType() {
@@ -191,7 +183,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Required. Type feed to be ingested into condor
+   * Required. Disable validation warnings
    * @param feedType feedType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setFeedType(java.lang.String feedType) {
@@ -200,7 +192,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Observability metric data.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData getObservabilityMetricData() {
@@ -208,7 +200,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Observability metric data.
+   * Disable validation warnings
    * @param observabilityMetricData observabilityMetricData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setObservabilityMetricData(StorageDatabasecenterPartnerapiV1mainObservabilityMetricData observabilityMetricData) {
@@ -217,7 +209,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource recommendation signal data.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData getRecommendationSignalData() {
@@ -225,7 +217,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource recommendation signal data.
+   * Disable validation warnings
    * @param recommendationSignalData recommendationSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setRecommendationSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData recommendationSignalData) {
@@ -234,7 +226,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource health signal data.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData getResourceHealthSignalData() {
@@ -242,7 +234,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource health signal data.
+   * Disable validation warnings
    * @param resourceHealthSignalData resourceHealthSignalData or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceHealthSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData resourceHealthSignalData) {
@@ -251,8 +243,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Primary key associated with the Resource. resource_id is available in individual feed level as
-   * well.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getResourceId() {
@@ -260,8 +251,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Primary key associated with the Resource. resource_id is available in individual feed level as
-   * well.
+   * Disable validation warnings
    * @param resourceId resourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {
@@ -270,7 +260,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource metadata.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata getResourceMetadata() {
@@ -278,7 +268,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Database resource metadata.
+   * Disable validation warnings
    * @param resourceMetadata resourceMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setResourceMetadata(StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata resourceMetadata) {
@@ -287,10 +277,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
-   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
-   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
-   * Engine, Persistent Disk) can be skipped.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipIngestion() {
@@ -298,10 +285,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   }
 
   /**
-   * Optional. If true, the feed won't be ingested by DB Center. This indicates that the feed is
-   * intentionally skipped. For example, BackupDR feeds are only needed for resources integrated
-   * with DB Center (e.g., CloudSQL, AlloyDB). Feeds for non-integrated resources (e.g., Compute
-   * Engine, Persistent Disk) can be skipped.
+   * Optional. Disable validation warnings
    * @param skipIngestion skipIngestion or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setSkipIngestion(java.lang.Boolean skipIngestion) {

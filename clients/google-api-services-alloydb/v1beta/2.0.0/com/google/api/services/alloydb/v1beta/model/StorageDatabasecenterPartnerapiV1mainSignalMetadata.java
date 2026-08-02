@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * SignalMetadata contains one of the signal metadata proto messages associated with a SignalType.
- * This proto will be mapped to SignalMetadata message in storage.proto. Next ID: 3
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,21 +30,21 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Signal data for backup runs.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean signalBoolValue;
 
   /**
-   * Signal data for backup runs.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun getBackupRun() {
@@ -53,7 +52,7 @@ public final class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends c
   }
 
   /**
-   * Signal data for backup runs.
+   * Disable validation warnings
    * @param backupRun backupRun or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainSignalMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
@@ -62,7 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends c
   }
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSignalBoolValue() {
@@ -70,7 +69,7 @@ public final class StorageDatabasecenterPartnerapiV1mainSignalMetadata extends c
   }
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * @param signalBoolValue signalBoolValue or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainSignalMetadata setSignalBoolValue(java.lang.Boolean signalBoolValue) {

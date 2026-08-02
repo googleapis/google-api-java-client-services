@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Configuration for automatic backups
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,29 +30,28 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether customer visible automated backups are enabled on the instance.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean automatedBackupEnabled;
 
   /**
-   * Backup retention settings.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainRetentionSettings backupRetentionSettings;
 
   /**
-   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
-   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pointInTimeRecoveryEnabled;
 
   /**
-   * Whether customer visible automated backups are enabled on the instance.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutomatedBackupEnabled() {
@@ -60,7 +59,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   }
 
   /**
-   * Whether customer visible automated backups are enabled on the instance.
+   * Disable validation warnings
    * @param automatedBackupEnabled automatedBackupEnabled or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration setAutomatedBackupEnabled(java.lang.Boolean automatedBackupEnabled) {
@@ -69,7 +68,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   }
 
   /**
-   * Backup retention settings.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainRetentionSettings getBackupRetentionSettings() {
@@ -77,7 +76,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   }
 
   /**
-   * Backup retention settings.
+   * Disable validation warnings
    * @param backupRetentionSettings backupRetentionSettings or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration setBackupRetentionSettings(StorageDatabasecenterPartnerapiV1mainRetentionSettings backupRetentionSettings) {
@@ -86,8 +85,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   }
 
   /**
-   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
-   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPointInTimeRecoveryEnabled() {
@@ -95,8 +93,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupConfiguration exte
   }
 
   /**
-   * Whether point-in-time recovery is enabled. This is optional field, if the database service does
-   * not have this feature or metadata is not available in control plane, this can be omitted.
+   * Disable validation warnings
    * @param pointInTimeRecoveryEnabled pointInTimeRecoveryEnabled or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration setPointInTimeRecoveryEnabled(java.lang.Boolean pointInTimeRecoveryEnabled) {

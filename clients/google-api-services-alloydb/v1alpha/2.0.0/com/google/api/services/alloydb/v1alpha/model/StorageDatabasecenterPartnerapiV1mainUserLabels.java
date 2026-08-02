@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Message type for storing user labels. User labels are used to tag App Engine resources, allowing
- * users to search for resources matching a set of labels and to aggregate usage data by labels.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,12 +30,14 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainUserLabels extends com.google.api.client.json.GenericJson {
 
   /**
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -44,6 +45,7 @@ public final class StorageDatabasecenterPartnerapiV1mainUserLabels extends com.g
   }
 
   /**
+   * Disable validation warnings
    * @param labels labels or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainUserLabels setLabels(java.util.Map<String, java.lang.String> labels) {

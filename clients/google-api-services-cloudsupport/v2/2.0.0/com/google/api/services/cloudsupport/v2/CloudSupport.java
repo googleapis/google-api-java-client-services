@@ -3015,1227 +3015,1266 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   }
 
   /**
-   * An accessor for creating requests from the SupportEventSubscriptions collection.
+   * An accessor for creating requests from the Organizations collection.
    *
    * <p>The typical use is:</p>
    * <pre>
    *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
-   *   {@code CloudSupport.SupportEventSubscriptions.List request = cloudsupport.supportEventSubscriptions().list(parameters ...)}
+   *   {@code CloudSupport.Organizations.List request = cloudsupport.organizations().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
    */
-  public SupportEventSubscriptions supportEventSubscriptions() {
-    return new SupportEventSubscriptions();
+  public Organizations organizations() {
+    return new Organizations();
   }
 
   /**
-   * The "supportEventSubscriptions" collection of methods.
+   * The "organizations" collection of methods.
    */
-  public class SupportEventSubscriptions {
+  public class Organizations {
 
     /**
-     * Creates a support event subscription for an organization. EXAMPLES: cURL: ```shell
-     * parent="organizations/123456789" curl \ --request POST \ --header "Authorization: Bearer $(gcloud
-     * auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{
-     * "pub_sub_topic": "projects/my-project/topics/my-topic" }' \
-     * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python: ```python
-     * import googleapiclient.discovery api_version = "v2" supportApiService =
-     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService.supportEventSubscriptions().create(
-     * parent="organizations/123456789", body={ "pub_sub_topic": "projects/my-project/topics/my-topic"
-     * }, ) print(request.execute()) ```
+     * An accessor for creating requests from the SupportEventSubscriptions collection.
      *
-     * Create a request for the method "supportEventSubscriptions.create".
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudSupport cloudsupport = new CloudSupport(...);}
+     *   {@code CloudSupport.SupportEventSubscriptions.List request = cloudsupport.supportEventSubscriptions().list(parameters ...)}
+     * </pre>
      *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
-     *
-     * @param parent Required. The parent resource name where the support event subscription will be created. Format:
-     *        organizations/{organization_id}
-     * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
-     * @return the request
+     * @return the resource collection
      */
-    public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) throws java.io.IOException {
-      Create result = new Create(parent, content);
-      initialize(result);
-      return result;
+    public SupportEventSubscriptions supportEventSubscriptions() {
+      return new SupportEventSubscriptions();
     }
 
-    public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
-
-      private static final String REST_PATH = "v2/{+parent}/supportEventSubscriptions";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+    /**
+     * The "supportEventSubscriptions" collection of methods.
+     */
+    public class SupportEventSubscriptions {
 
       /**
        * Creates a support event subscription for an organization. EXAMPLES: cURL: ```shell
-       * parent="organizations/123456789" curl \ --request POST \ --header "Authorization: Bearer
-       * $(gcloud auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{
+       * parent="organizations/123456789" curl \ --request POST \ --header "Authorization: Bearer $(gcloud
+       * auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{
        * "pub_sub_topic": "projects/my-project/topics/my-topic" }' \
-       * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python:
-       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService.supportEventSubscriptions().create( parent="organizations/123456789",
-       * body={ "pub_sub_topic": "projects/my-project/topics/my-topic" }, ) print(request.execute()) ```
+       * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python: ```python
+       * import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().create(
+       * parent="organizations/123456789", body={ "pub_sub_topic": "projects/my-project/topics/my-topic"
+       * }, ) print(request.execute()) ```
        *
        * Create a request for the method "supportEventSubscriptions.create".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The parent resource name where the support event subscription will be created. Format:
-     *        organizations/{organization_id}
+       *        organizations/{organization_id}
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
-       * @since 1.13
+       * @return the request
        */
-      protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^[^/]+/[^/]+$");
+      public Create create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
+
+        private static final String REST_PATH = "v2/{+parent}/supportEventSubscriptions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a support event subscription for an organization. EXAMPLES: cURL: ```shell
+         * parent="organizations/123456789" curl \ --request POST \ --header "Authorization: Bearer
+         * $(gcloud auth print-access-token)" \ --header 'Content-Type: application/json' \ --data '{
+         * "pub_sub_topic": "projects/my-project/topics/my-topic" }' \
+         * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python:
+         * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().create( parent="organizations/123456789",
+         * body={ "pub_sub_topic": "projects/my-project/topics/my-topic" }, ) print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.create".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name where the support event subscription will be created. Format:
+       *        organizations/{organization_id}
+         * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) {
+          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name where the support event subscription will be created.
+         * Format: organizations/{organization_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name where the support event subscription will be created. Format:
+       organizations/{organization_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name where the support event subscription will be created.
+         * Format: organizations/{organization_id}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public Create set$Xgafv(java.lang.String $Xgafv) {
-        return (Create) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Create setAccessToken(java.lang.String accessToken) {
-        return (Create) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Create setAlt(java.lang.String alt) {
-        return (Create) super.setAlt(alt);
-      }
-
-      @Override
-      public Create setCallback(java.lang.String callback) {
-        return (Create) super.setCallback(callback);
-      }
-
-      @Override
-      public Create setFields(java.lang.String fields) {
-        return (Create) super.setFields(fields);
-      }
-
-      @Override
-      public Create setKey(java.lang.String key) {
-        return (Create) super.setKey(key);
-      }
-
-      @Override
-      public Create setOauthToken(java.lang.String oauthToken) {
-        return (Create) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Create) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Create setQuotaUser(java.lang.String quotaUser) {
-        return (Create) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Create setUploadType(java.lang.String uploadType) {
-        return (Create) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Create setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Create) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The parent resource name where the support event subscription will be created.
-       * Format: organizations/{organization_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** Required. The parent resource name where the support event subscription will be created. Format:
-     organizations/{organization_id}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * Required. The parent resource name where the support event subscription will be created.
-       * Format: organizations/{organization_id}
-       */
-      public Create setParent(java.lang.String parent) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^[^/]+/[^/]+$");
-        }
-        this.parent = parent;
-        return this;
-      }
-
-      @Override
-      public Create set(String parameterName, Object value) {
-        return (Create) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Soft deletes a support event subscription. EXAMPLES: cURL: ```shell
-     * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
-     * \ --request DELETE \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService).supportEventSubscriptions().delete(
-     * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
-     * ```
-     *
-     * Create a request for the method "supportEventSubscriptions.delete".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the support event subscription to delete. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-     * @return the request
-     */
-    public Delete delete(java.lang.String name) throws java.io.IOException {
-      Delete result = new Delete(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Delete extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
-
-      private static final String REST_PATH = "v2/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-
       /**
        * Soft deletes a support event subscription. EXAMPLES: cURL: ```shell
-       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
-       * curl \ --request DELETE \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python
-       * import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService).supportEventSubscriptions().delete(
-       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
-       * print(request.execute()) ```
+       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
+       * \ --request DELETE \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService).supportEventSubscriptions().delete(
+       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
+       * ```
        *
        * Create a request for the method "supportEventSubscriptions.delete".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the support event subscription to delete. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       * @since 1.13
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+       * @return the request
        */
-      protected Delete(java.lang.String name) {
-        super(CloudSupport.this, "DELETE", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+
+        /**
+         * Soft deletes a support event subscription. EXAMPLES: cURL: ```shell
+         * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+         * curl \ --request DELETE \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python
+         * import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService).supportEventSubscriptions().delete(
+         * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+         * print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.delete".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the support event subscription to delete. Format:
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudSupport.this, "DELETE", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the support event subscription to delete. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the support event subscription to delete. Format:
+       organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the support event subscription to delete. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public Delete set$Xgafv(java.lang.String $Xgafv) {
-        return (Delete) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Delete setAlt(java.lang.String alt) {
-        return (Delete) super.setAlt(alt);
-      }
-
-      @Override
-      public Delete setCallback(java.lang.String callback) {
-        return (Delete) super.setCallback(callback);
-      }
-
-      @Override
-      public Delete setFields(java.lang.String fields) {
-        return (Delete) super.setFields(fields);
-      }
-
-      @Override
-      public Delete setKey(java.lang.String key) {
-        return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Delete) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Delete setQuotaUser(java.lang.String quotaUser) {
-        return (Delete) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Delete setUploadType(java.lang.String uploadType) {
-        return (Delete) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Delete) super.setUploadProtocol(uploadProtocol);
-      }
-
       /**
-       * Required. The name of the support event subscription to delete. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the support event subscription to delete. Format:
-     organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The name of the support event subscription to delete. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public Delete setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Delete set(String parameterName, Object value) {
-        return (Delete) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Expunges a support event subscription.
-     *
-     * Create a request for the method "supportEventSubscriptions.expunge".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Expunge#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the support event subscription to expunge. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-     * @param content the {@link com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest}
-     * @return the request
-     */
-    public Expunge expunge(java.lang.String name, com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest content) throws java.io.IOException {
-      Expunge result = new Expunge(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Expunge extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.Empty> {
-
-      private static final String REST_PATH = "v2/{+name}:expunge";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-
-      /**
-       * Expunges a support event subscription.
+       * Expunges a support event subscription. EXAMPLES: cURL: ```shell
+       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
+       * \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge" ``` Python:
+       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().expunge(
+       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
+       * ```
        *
        * Create a request for the method "supportEventSubscriptions.expunge".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Expunge#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Expunge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Expunge#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the support event subscription to expunge. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest}
-       * @since 1.13
+       * @return the request
        */
-      protected Expunge(java.lang.String name, com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Empty.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
+      public Expunge expunge(java.lang.String name, com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest content) throws java.io.IOException {
+        Expunge result = new Expunge(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Expunge extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.Empty> {
+
+        private static final String REST_PATH = "v2/{+name}:expunge";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+
+        /**
+         * Expunges a support event subscription. EXAMPLES: cURL: ```shell
+         * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+         * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:expunge" ``` Python:
+         * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().expunge(
+         * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+         * print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.expunge".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Expunge#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Expunge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the support event subscription to expunge. Format:
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         * @param content the {@link com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest}
+         * @since 1.13
+         */
+        protected Expunge(java.lang.String name, com.google.api.services.cloudsupport.v2.model.ExpungeSupportEventSubscriptionRequest content) {
+          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Expunge set$Xgafv(java.lang.String $Xgafv) {
+          return (Expunge) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Expunge setAccessToken(java.lang.String accessToken) {
+          return (Expunge) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Expunge setAlt(java.lang.String alt) {
+          return (Expunge) super.setAlt(alt);
+        }
+
+        @Override
+        public Expunge setCallback(java.lang.String callback) {
+          return (Expunge) super.setCallback(callback);
+        }
+
+        @Override
+        public Expunge setFields(java.lang.String fields) {
+          return (Expunge) super.setFields(fields);
+        }
+
+        @Override
+        public Expunge setKey(java.lang.String key) {
+          return (Expunge) super.setKey(key);
+        }
+
+        @Override
+        public Expunge setOauthToken(java.lang.String oauthToken) {
+          return (Expunge) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Expunge setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Expunge) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Expunge setQuotaUser(java.lang.String quotaUser) {
+          return (Expunge) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Expunge setUploadType(java.lang.String uploadType) {
+          return (Expunge) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Expunge setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Expunge) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the support event subscription to expunge. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the support event subscription to expunge. Format:
+       organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the support event subscription to expunge. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public Expunge setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Expunge set(String parameterName, Object value) {
+          return (Expunge) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public Expunge set$Xgafv(java.lang.String $Xgafv) {
-        return (Expunge) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Expunge setAccessToken(java.lang.String accessToken) {
-        return (Expunge) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Expunge setAlt(java.lang.String alt) {
-        return (Expunge) super.setAlt(alt);
-      }
-
-      @Override
-      public Expunge setCallback(java.lang.String callback) {
-        return (Expunge) super.setCallback(callback);
-      }
-
-      @Override
-      public Expunge setFields(java.lang.String fields) {
-        return (Expunge) super.setFields(fields);
-      }
-
-      @Override
-      public Expunge setKey(java.lang.String key) {
-        return (Expunge) super.setKey(key);
-      }
-
-      @Override
-      public Expunge setOauthToken(java.lang.String oauthToken) {
-        return (Expunge) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Expunge setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Expunge) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Expunge setQuotaUser(java.lang.String quotaUser) {
-        return (Expunge) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Expunge setUploadType(java.lang.String uploadType) {
-        return (Expunge) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Expunge setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Expunge) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The name of the support event subscription to expunge. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the support event subscription to expunge. Format:
-     organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The name of the support event subscription to expunge. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public Expunge setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Expunge set(String parameterName, Object value) {
-        return (Expunge) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Gets a support event subscription. EXAMPLES: cURL: ```shell
-     * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
-     * \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python import
-     * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
-     * serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService.supportEventSubscriptions().get(
-     * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
-     * ```
-     *
-     * Create a request for the method "supportEventSubscriptions.get".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the support event subscription to retrieve. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-     * @return the request
-     */
-    public Get get(java.lang.String name) throws java.io.IOException {
-      Get result = new Get(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
-
-      private static final String REST_PATH = "v2/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-
       /**
        * Gets a support event subscription. EXAMPLES: cURL: ```shell
-       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
-       * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python
-       * import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService.supportEventSubscriptions().get(
-       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
-       * print(request.execute()) ```
+       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
+       * \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python import
+       * googleapiclient.discovery api_version = "v2" supportApiService = googleapiclient.discovery.build(
+       * serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().get(
+       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
+       * ```
        *
        * Create a request for the method "supportEventSubscriptions.get".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the support event subscription to retrieve. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       * @since 1.13
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+       * @return the request
        */
-      protected Get(java.lang.String name) {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+
+        /**
+         * Gets a support event subscription. EXAMPLES: cURL: ```shell
+         * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+         * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * "https://cloudsupport.googleapis.com/v2/$support_event_subscription" ``` Python: ```python
+         * import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().get(
+         * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+         * print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.get".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the support event subscription to retrieve. Format:
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the support event subscription to retrieve. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the support event subscription to retrieve. Format:
+       organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the support event subscription to retrieve. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get set$Xgafv(java.lang.String $Xgafv) {
-        return (Get) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Get setAccessToken(java.lang.String accessToken) {
-        return (Get) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setCallback(java.lang.String callback) {
-        return (Get) super.setCallback(callback);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUploadType(java.lang.String uploadType) {
-        return (Get) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Get setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Get) super.setUploadProtocol(uploadProtocol);
-      }
-
       /**
-       * Required. The name of the support event subscription to retrieve. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the support event subscription to retrieve. Format:
-     organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The name of the support event subscription to retrieve. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public Get setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Lists support event subscriptions. EXAMPLES: cURL: ```shell parent="organizations/123456789" curl
-     * \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python: ```python
-     * import googleapiclient.discovery api_version = "v2" supportApiService =
-     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService.supportEventSubscriptions().list( parent="organizations/123456789"
-     * ) print(request.execute()) ```
-     *
-     * Create a request for the method "supportEventSubscriptions.list".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @param parent Required. The fully qualified name of the Cloud resource to list support event subscriptions under.
-     *        Format: organizations/{organization_id}
-     * @return the request
-     */
-    public List list(java.lang.String parent) throws java.io.IOException {
-      List result = new List(parent);
-      initialize(result);
-      return result;
-    }
-
-    public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.ListSupportEventSubscriptionsResponse> {
-
-      private static final String REST_PATH = "v2/{+parent}/supportEventSubscriptions";
-
-      private final java.util.regex.Pattern PARENT_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
-
-      /**
-       * Lists support event subscriptions. EXAMPLES: cURL: ```shell parent="organizations/123456789"
-       * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python:
-       * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService.supportEventSubscriptions().list( parent="organizations/123456789" )
-       * print(request.execute()) ```
+       * Lists support event subscriptions. EXAMPLES: cURL: ```shell parent="organizations/123456789" curl
+       * \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python: ```python
+       * import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().list( parent="organizations/123456789"
+       * ) print(request.execute()) ```
        *
        * Create a request for the method "supportEventSubscriptions.list".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The fully qualified name of the Cloud resource to list support event subscriptions under.
-     *        Format: organizations/{organization_id}
-       * @since 1.13
+       *        Format: organizations/{organization_id}
+       * @return the request
        */
-      protected List(java.lang.String parent) {
-        super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.ListSupportEventSubscriptionsResponse.class);
-        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^[^/]+/[^/]+$");
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.ListSupportEventSubscriptionsResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/supportEventSubscriptions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists support event subscriptions. EXAMPLES: cURL: ```shell parent="organizations/123456789"
+         * curl \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * "https://cloudsupport.googleapis.com/v2/$parent/supportEventSubscriptions" ``` Python:
+         * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().list( parent="organizations/123456789" )
+         * print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.list".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The fully qualified name of the Cloud resource to list support event subscriptions under.
+       *        Format: organizations/{organization_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudSupport.this, "GET", REST_PATH, null, com.google.api.services.cloudsupport.v2.model.ListSupportEventSubscriptionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified name of the Cloud resource to list support event
+         * subscriptions under. Format: organizations/{organization_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The fully qualified name of the Cloud resource to list support event subscriptions under.
+       Format: organizations/{organization_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The fully qualified name of the Cloud resource to list support event
+         * subscriptions under. Format: organizations/{organization_id}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state
+         * Examples: - `pub_sub_topic="projects/example-project/topics/example-topic"` -
+         * `state=WORKING` - `pub_sub_topic="projects/example-project/topics/example-topic" AND
+         * state=WORKING`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state Examples: -
+       `pub_sub_topic="projects/example-project/topics/example-topic"` - `state=WORKING` -
+       `pub_sub_topic="projects/example-project/topics/example-topic" AND state=WORKING`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state
+         * Examples: - `pub_sub_topic="projects/example-project/topics/example-topic"` -
+         * `state=WORKING` - `pub_sub_topic="projects/example-project/topics/example-topic" AND
+         * state=WORKING`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Optional. The maximum number of support event subscriptions to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of support event subscriptions to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The maximum number of support event subscriptions to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A token identifying the page of results to return. If unspecified, the first
+         * page is retrieved. When paginating, all other parameters provided to
+         * `ListSupportEventSubscriptions` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A token identifying the page of results to return. If unspecified, the first page is
+       retrieved. When paginating, all other parameters provided to `ListSupportEventSubscriptions` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A token identifying the page of results to return. If unspecified, the first
+         * page is retrieved. When paginating, all other parameters provided to
+         * `ListSupportEventSubscriptions` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are
+         * not returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean showDeleted;
+
+        /** Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are not
+       returned.
+         */
+        public java.lang.Boolean getShowDeleted() {
+          return showDeleted;
+        }
+
+        /**
+         * Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are
+         * not returned.
+         */
+        public List setShowDeleted(java.lang.Boolean showDeleted) {
+          this.showDeleted = showDeleted;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The fully qualified name of the Cloud resource to list support event
-       * subscriptions under. Format: organizations/{organization_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String parent;
-
-      /** Required. The fully qualified name of the Cloud resource to list support event subscriptions under.
-     Format: organizations/{organization_id}
-       */
-      public java.lang.String getParent() {
-        return parent;
-      }
-
-      /**
-       * Required. The fully qualified name of the Cloud resource to list support event
-       * subscriptions under. Format: organizations/{organization_id}
-       */
-      public List setParent(java.lang.String parent) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-              "Parameter parent must conform to the pattern " +
-              "^[^/]+/[^/]+$");
-        }
-        this.parent = parent;
-        return this;
-      }
-
-      /**
-       * Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state
-       * Examples: - `pub_sub_topic="projects/example-project/topics/example-topic"` -
-       * `state=WORKING` - `pub_sub_topic="projects/example-project/topics/example-topic" AND
-       * state=WORKING`
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state Examples: -
-     `pub_sub_topic="projects/example-project/topics/example-topic"` - `state=WORKING` -
-     `pub_sub_topic="projects/example-project/topics/example-topic" AND state=WORKING`
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /**
-       * Optional. Filter expression based on AIP-160. Supported fields: - pub_sub_topic - state
-       * Examples: - `pub_sub_topic="projects/example-project/topics/example-topic"` -
-       * `state=WORKING` - `pub_sub_topic="projects/example-project/topics/example-topic" AND
-       * state=WORKING`
-       */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /** Optional. The maximum number of support event subscriptions to return. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** Optional. The maximum number of support event subscriptions to return.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** Optional. The maximum number of support event subscriptions to return. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /**
-       * Optional. A token identifying the page of results to return. If unspecified, the first page
-       * is retrieved. When paginating, all other parameters provided to
-       * `ListSupportEventSubscriptions` must match the call that provided the page token.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** Optional. A token identifying the page of results to return. If unspecified, the first page is
-     retrieved. When paginating, all other parameters provided to `ListSupportEventSubscriptions` must
-     match the call that provided the page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /**
-       * Optional. A token identifying the page of results to return. If unspecified, the first page
-       * is retrieved. When paginating, all other parameters provided to
-       * `ListSupportEventSubscriptions` must match the call that provided the page token.
-       */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are not
-       * returned.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean showDeleted;
-
-      /** Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are not
-     returned.
-       */
-      public java.lang.Boolean getShowDeleted() {
-        return showDeleted;
-      }
-
-      /**
-       * Optional. Whether to show deleted subscriptions. By default, deleted subscriptions are not
-       * returned.
-       */
-      public List setShowDeleted(java.lang.Boolean showDeleted) {
-        this.showDeleted = showDeleted;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Updates a support event subscription. EXAMPLES: cURL: ```shell
-     * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
-     * \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
-     * "Content-Type: application/json" \ --data '{ "pub_sub_topic": "projects/my-project/topics/new-
-     * topic" }' \
-     * "https://cloudsupport.googleapis.com/v2/$support_event_subscription?updateMask=pub_sub_topic" ```
-     * Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService.supportEventSubscriptions().patch(
-     * name="organizations/123456789/supportEventSubscriptions/abcdef123456", body={ "pub_sub_topic":
-     * "projects/my-project/topics/new-topic" }, ) print(request.execute()) ```
-     *
-     * Create a request for the method "supportEventSubscriptions.patch".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-     *
-     * @param name Identifier. The resource name of the support event subscription.
-     * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
-     * @return the request
-     */
-    public Patch patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) throws java.io.IOException {
-      Patch result = new Patch(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Patch extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
-
-      private static final String REST_PATH = "v2/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-
       /**
        * Updates a support event subscription. EXAMPLES: cURL: ```shell
-       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
-       * curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-       * --header "Content-Type: application/json" \ --data '{ "pub_sub_topic": "projects/my-
-       * project/topics/new-topic" }' \
-       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription?updateMask=pub_sub_topic"
-       * ``` Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService.supportEventSubscriptions().patch(
+       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
+       * \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \ --header
+       * "Content-Type: application/json" \ --data '{ "pub_sub_topic": "projects/my-project/topics/new-
+       * topic" }' \
+       * "https://cloudsupport.googleapis.com/v2/$support_event_subscription?updateMask=pub_sub_topic" ```
+       * Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().patch(
        * name="organizations/123456789/supportEventSubscriptions/abcdef123456", body={ "pub_sub_topic":
        * "projects/my-project/topics/new-topic" }, ) print(request.execute()) ```
        *
        * Create a request for the method "supportEventSubscriptions.patch".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Identifier. The resource name of the support event subscription.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
-       * @since 1.13
+       * @return the request
        */
-      protected Patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) {
-        super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
+      public Patch patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+
+        /**
+         * Updates a support event subscription. EXAMPLES: cURL: ```shell
+         * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+         * curl \ --request PATCH \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * --header "Content-Type: application/json" \ --data '{ "pub_sub_topic": "projects/my-
+         * project/topics/new-topic" }' \
+         * "https://cloudsupport.googleapis.com/v2/$support_event_subscription?updateMask=pub_sub_topic"
+         * ``` Python: ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().patch(
+         * name="organizations/123456789/supportEventSubscriptions/abcdef123456", body={ "pub_sub_topic":
+         * "projects/my-project/topics/new-topic" }, ) print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.patch".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the support event subscription.
+         * @param content the {@link com.google.api.services.cloudsupport.v2.model.SupportEventSubscription}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription content) {
+          super(CloudSupport.this, "PATCH", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Identifier. The resource name of the support event subscription. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the support event subscription.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Identifier. The resource name of the support event subscription. */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The list of fields to update. The only supported value is pub_sub_topic. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update. The only supported value is pub_sub_topic.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to update. The only supported value is pub_sub_topic. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
-
-      @Override
-      public Patch set$Xgafv(java.lang.String $Xgafv) {
-        return (Patch) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Patch setAccessToken(java.lang.String accessToken) {
-        return (Patch) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Patch setAlt(java.lang.String alt) {
-        return (Patch) super.setAlt(alt);
-      }
-
-      @Override
-      public Patch setCallback(java.lang.String callback) {
-        return (Patch) super.setCallback(callback);
-      }
-
-      @Override
-      public Patch setFields(java.lang.String fields) {
-        return (Patch) super.setFields(fields);
-      }
-
-      @Override
-      public Patch setKey(java.lang.String key) {
-        return (Patch) super.setKey(key);
-      }
-
-      @Override
-      public Patch setOauthToken(java.lang.String oauthToken) {
-        return (Patch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Patch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Patch setQuotaUser(java.lang.String quotaUser) {
-        return (Patch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Patch setUploadType(java.lang.String uploadType) {
-        return (Patch) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Patch) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Identifier. The resource name of the support event subscription. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Identifier. The resource name of the support event subscription.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** Identifier. The resource name of the support event subscription. */
-      public Patch setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** Optional. The list of fields to update. The only supported value is pub_sub_topic. */
-      @com.google.api.client.util.Key
-      private String updateMask;
-
-      /** Optional. The list of fields to update. The only supported value is pub_sub_topic.
-       */
-      public String getUpdateMask() {
-        return updateMask;
-      }
-
-      /** Optional. The list of fields to update. The only supported value is pub_sub_topic. */
-      public Patch setUpdateMask(String updateMask) {
-        this.updateMask = updateMask;
-        return this;
-      }
-
-      @Override
-      public Patch set(String parameterName, Object value) {
-        return (Patch) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Undeletes a support event subscription. EXAMPLES: cURL: ```shell
-     * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
-     * \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
-     * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:undelete" ``` Python:
-     * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-     * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
-     * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
-     * ) request = supportApiService.supportEventSubscriptions().undelete(
-     * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
-     * ``` Undeletes a support event subscription.
-     *
-     * Create a request for the method "supportEventSubscriptions.undelete".
-     *
-     * This request holds the parameters needed by the cloudsupport server.  After setting any optional
-     * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
-     *
-     * @param name Required. The name of the support event subscription to undelete. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-     * @param content the {@link com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest}
-     * @return the request
-     */
-    public Undelete undelete(java.lang.String name, com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest content) throws java.io.IOException {
-      Undelete result = new Undelete(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Undelete extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
-
-      private static final String REST_PATH = "v2/{+name}:undelete";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-
       /**
        * Undeletes a support event subscription. EXAMPLES: cURL: ```shell
-       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
-       * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+       * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456" curl
+       * \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
        * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:undelete" ``` Python:
        * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
-       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
-       * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
-       * = supportApiService.supportEventSubscriptions().undelete(
-       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
-       * print(request.execute()) ``` Undeletes a support event subscription.
+       * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version,
+       * discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+       * ) request = supportApiService.supportEventSubscriptions().undelete(
+       * name="organizations/123456789/supportEventSubscriptions/abcdef123456" ) print(request.execute())
+       * ```
        *
        * Create a request for the method "supportEventSubscriptions.undelete".
        *
-       * This request holds the parameters needed by the the cloudsupport server.  After setting any
-       * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the cloudsupport server.  After setting any optional
+       * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the support event subscription to undelete. Format:
-     *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest}
-       * @since 1.13
+       * @return the request
        */
-      protected Undelete(java.lang.String name, com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest content) {
-        super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
+      public Undelete undelete(java.lang.String name, com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest content) throws java.io.IOException {
+        Undelete result = new Undelete(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Undelete extends CloudSupportRequest<com.google.api.services.cloudsupport.v2.model.SupportEventSubscription> {
+
+        private static final String REST_PATH = "v2/{+name}:undelete";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+
+        /**
+         * Undeletes a support event subscription. EXAMPLES: cURL: ```shell
+         * support_event_subscription="organizations/123456789/supportEventSubscriptions/abcdef123456"
+         * curl \ --request POST \ --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+         * "https://cloudsupport.googleapis.com/v2/$support_event_subscription:undelete" ``` Python:
+         * ```python import googleapiclient.discovery api_version = "v2" supportApiService =
+         * googleapiclient.discovery.build( serviceName="cloudsupport", version=api_version, discoveryServ
+         * iceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}", ) request
+         * = supportApiService.supportEventSubscriptions().undelete(
+         * name="organizations/123456789/supportEventSubscriptions/abcdef123456" )
+         * print(request.execute()) ```
+         *
+         * Create a request for the method "supportEventSubscriptions.undelete".
+         *
+         * This request holds the parameters needed by the the cloudsupport server.  After setting any
+         * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the support event subscription to undelete. Format:
+       *        organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         * @param content the {@link com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest}
+         * @since 1.13
+         */
+        protected Undelete(java.lang.String name, com.google.api.services.cloudsupport.v2.model.UndeleteSupportEventSubscriptionRequest content) {
+          super(CloudSupport.this, "POST", REST_PATH, content, com.google.api.services.cloudsupport.v2.model.SupportEventSubscription.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Undelete set$Xgafv(java.lang.String $Xgafv) {
+          return (Undelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Undelete setAccessToken(java.lang.String accessToken) {
+          return (Undelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Undelete setAlt(java.lang.String alt) {
+          return (Undelete) super.setAlt(alt);
+        }
+
+        @Override
+        public Undelete setCallback(java.lang.String callback) {
+          return (Undelete) super.setCallback(callback);
+        }
+
+        @Override
+        public Undelete setFields(java.lang.String fields) {
+          return (Undelete) super.setFields(fields);
+        }
+
+        @Override
+        public Undelete setKey(java.lang.String key) {
+          return (Undelete) super.setKey(key);
+        }
+
+        @Override
+        public Undelete setOauthToken(java.lang.String oauthToken) {
+          return (Undelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Undelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Undelete setQuotaUser(java.lang.String quotaUser) {
+          return (Undelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Undelete setUploadType(java.lang.String uploadType) {
+          return (Undelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Undelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the support event subscription to undelete. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the support event subscription to undelete. Format:
+       organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the support event subscription to undelete. Format:
+         * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
+         */
+        public Undelete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/supportEventSubscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Undelete set(String parameterName, Object value) {
+          return (Undelete) super.set(parameterName, value);
         }
       }
 
-      @Override
-      public Undelete set$Xgafv(java.lang.String $Xgafv) {
-        return (Undelete) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Undelete setAccessToken(java.lang.String accessToken) {
-        return (Undelete) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Undelete setAlt(java.lang.String alt) {
-        return (Undelete) super.setAlt(alt);
-      }
-
-      @Override
-      public Undelete setCallback(java.lang.String callback) {
-        return (Undelete) super.setCallback(callback);
-      }
-
-      @Override
-      public Undelete setFields(java.lang.String fields) {
-        return (Undelete) super.setFields(fields);
-      }
-
-      @Override
-      public Undelete setKey(java.lang.String key) {
-        return (Undelete) super.setKey(key);
-      }
-
-      @Override
-      public Undelete setOauthToken(java.lang.String oauthToken) {
-        return (Undelete) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Undelete) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Undelete setQuotaUser(java.lang.String quotaUser) {
-        return (Undelete) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Undelete setUploadType(java.lang.String uploadType) {
-        return (Undelete) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Undelete) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. The name of the support event subscription to undelete. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** Required. The name of the support event subscription to undelete. Format:
-     organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /**
-       * Required. The name of the support event subscription to undelete. Format:
-       * organizations/{organization_id}/supportEventSubscriptions/{subscription_id}
-       */
-      public Undelete setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^[^/]+/[^/]+/supportEventSubscriptions/[^/]+$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Undelete set(String parameterName, Object value) {
-        return (Undelete) super.set(parameterName, value);
-      }
     }
-
   }
 
   /**

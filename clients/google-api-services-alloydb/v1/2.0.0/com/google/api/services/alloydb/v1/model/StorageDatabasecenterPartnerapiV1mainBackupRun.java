@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * A backup run.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,36 +30,35 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time the backup operation completed. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Information about why the backup operation failed. This is only present if the run has the
-   * FAILED status. OPTIONAL
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainOperationError error;
 
   /**
-   * The time the backup operation started. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The status of this run. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The time the backup operation completed. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -67,7 +66,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * The time the backup operation completed. REQUIRED
+   * Disable validation warnings
    * @param endTime endTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun setEndTime(String endTime) {
@@ -76,8 +75,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * Information about why the backup operation failed. This is only present if the run has the
-   * FAILED status. OPTIONAL
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainOperationError getError() {
@@ -85,8 +83,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * Information about why the backup operation failed. This is only present if the run has the
-   * FAILED status. OPTIONAL
+   * Disable validation warnings
    * @param error error or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun setError(StorageDatabasecenterPartnerapiV1mainOperationError error) {
@@ -95,7 +92,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * The time the backup operation started. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -103,7 +100,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * The time the backup operation started. REQUIRED
+   * Disable validation warnings
    * @param startTime startTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun setStartTime(String startTime) {
@@ -112,7 +109,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * The status of this run. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -120,7 +117,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupRun extends com.go
   }
 
   /**
-   * The status of this run. REQUIRED
+   * Disable validation warnings
    * @param status status or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun setStatus(java.lang.String status) {

@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Message type for storing resource flags.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainResourceFlags extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Key of the resource flag.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Optional. Value of the resource flag.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Optional. Key of the resource flag.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +52,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceFlags extends co
   }
 
   /**
-   * Optional. Key of the resource flag.
+   * Optional. Disable validation warnings
    * @param key key or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceFlags setKey(java.lang.String key) {
@@ -61,7 +61,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceFlags extends co
   }
 
   /**
-   * Optional. Value of the resource flag.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceFlags extends co
   }
 
   /**
-   * Optional. Value of the resource flag.
+   * Optional. Disable validation warnings
    * @param value value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceFlags setValue(java.lang.String value) {

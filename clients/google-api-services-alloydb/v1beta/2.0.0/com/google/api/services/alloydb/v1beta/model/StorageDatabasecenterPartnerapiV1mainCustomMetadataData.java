@@ -17,9 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Any custom metadata associated with the resource. e.g. A spanner instance can have multiple
- * databases with its own unique metadata. Information for these individual databases can be
- * captured in custom metadata data
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -32,16 +30,14 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainCustomMetadataData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
-   * multiple databases with unique configuration.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> internalResourceMetadata;
 
   /**
-   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
-   * multiple databases with unique configuration.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> getInternalResourceMetadata() {
@@ -49,8 +45,7 @@ public final class StorageDatabasecenterPartnerapiV1mainCustomMetadataData exten
   }
 
   /**
-   * Metadata for individual internal resources in an instance. e.g. spanner instance can have
-   * multiple databases with unique configuration.
+   * Disable validation warnings
    * @param internalResourceMetadata internalResourceMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainCustomMetadataData setInternalResourceMetadata(java.util.List<StorageDatabasecenterPartnerapiV1mainInternalResourceMetadata> internalResourceMetadata) {

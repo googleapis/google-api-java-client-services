@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Common model for database resource recommendation signal data.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,72 +30,63 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Any other additional metadata specific to recommendation
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalMetadata;
 
   /**
-   * Required. last time recommendationw as refreshed
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastRefreshTime;
 
   /**
-   * Required. Recommendation state
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommendationState;
 
   /**
-   * Required. Name of recommendation. Examples: organizations/1234/locations/us-
-   * central1/recommenders/google.cloudsql.instance.PerformanceRecommender/recommendations/9876
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommender;
 
   /**
-   * Required. ID of recommender. Examples: "google.cloudsql.instance.PerformanceRecommender"
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommenderId;
 
   /**
-   * Required. Contains an identifier for a subtype of recommendations produced for the same
-   * recommender. Subtype is a function of content and impact, meaning a new subtype might be added
-   * when significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
-   * recommender = "google.cloudsql.instance.PerformanceRecommender", recommender_subtype can be "MY
-   * SQL_HIGH_NUMBER_OF_OPEN_TABLES_BEST_PRACTICE"/"POSTGRES_HIGH_TRANSACTION_ID_UTILIZATION_BEST_PR
-   * ACTICE"
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String recommenderSubtype;
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Required. Type of signal, for example, `SIGNAL_TYPE_IDLE`, `SIGNAL_TYPE_HIGH_NUMBER_OF_TABLES`,
-   * etc.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalType;
 
   /**
-   * Optional. Any other additional metadata specific to recommendation
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalMetadata() {
@@ -103,7 +94,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Optional. Any other additional metadata specific to recommendation
+   * Optional. Disable validation warnings
    * @param additionalMetadata additionalMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setAdditionalMetadata(java.util.Map<String, java.lang.Object> additionalMetadata) {
@@ -112,7 +103,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. last time recommendationw as refreshed
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getLastRefreshTime() {
@@ -120,7 +111,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. last time recommendationw as refreshed
+   * Required. Disable validation warnings
    * @param lastRefreshTime lastRefreshTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setLastRefreshTime(String lastRefreshTime) {
@@ -129,7 +120,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Recommendation state
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommendationState() {
@@ -137,7 +128,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Recommendation state
+   * Required. Disable validation warnings
    * @param recommendationState recommendationState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setRecommendationState(java.lang.String recommendationState) {
@@ -146,8 +137,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Name of recommendation. Examples: organizations/1234/locations/us-
-   * central1/recommenders/google.cloudsql.instance.PerformanceRecommender/recommendations/9876
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommender() {
@@ -155,8 +145,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Name of recommendation. Examples: organizations/1234/locations/us-
-   * central1/recommenders/google.cloudsql.instance.PerformanceRecommender/recommendations/9876
+   * Required. Disable validation warnings
    * @param recommender recommender or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setRecommender(java.lang.String recommender) {
@@ -165,7 +154,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. ID of recommender. Examples: "google.cloudsql.instance.PerformanceRecommender"
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommenderId() {
@@ -173,7 +162,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. ID of recommender. Examples: "google.cloudsql.instance.PerformanceRecommender"
+   * Required. Disable validation warnings
    * @param recommenderId recommenderId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setRecommenderId(java.lang.String recommenderId) {
@@ -182,13 +171,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Contains an identifier for a subtype of recommendations produced for the same
-   * recommender. Subtype is a function of content and impact, meaning a new subtype might be added
-   * when significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
-   * recommender = "google.cloudsql.instance.PerformanceRecommender", recommender_subtype can be "MY
-   * SQL_HIGH_NUMBER_OF_OPEN_TABLES_BEST_PRACTICE"/"POSTGRES_HIGH_TRANSACTION_ID_UTILIZATION_BEST_PR
-   * ACTICE"
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getRecommenderSubtype() {
@@ -196,13 +179,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Contains an identifier for a subtype of recommendations produced for the same
-   * recommender. Subtype is a function of content and impact, meaning a new subtype might be added
-   * when significant changes to `content` or `primary_impact.category` are introduced. See the
-   * Recommenders section to see a list of subtypes for a given Recommender. Examples: For
-   * recommender = "google.cloudsql.instance.PerformanceRecommender", recommender_subtype can be "MY
-   * SQL_HIGH_NUMBER_OF_OPEN_TABLES_BEST_PRACTICE"/"POSTGRES_HIGH_TRANSACTION_ID_UTILIZATION_BEST_PR
-   * ACTICE"
+   * Required. Disable validation warnings
    * @param recommenderSubtype recommenderSubtype or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setRecommenderSubtype(java.lang.String recommenderSubtype) {
@@ -211,8 +188,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -220,8 +196,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setResourceName(java.lang.String resourceName) {
@@ -230,8 +205,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Type of signal, for example, `SIGNAL_TYPE_IDLE`, `SIGNAL_TYPE_HIGH_NUMBER_OF_TABLES`,
-   * etc.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalType() {
@@ -239,8 +213,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommen
   }
 
   /**
-   * Required. Type of signal, for example, `SIGNAL_TYPE_IDLE`, `SIGNAL_TYPE_HIGH_NUMBER_OF_TABLES`,
-   * etc.
+   * Required. Disable validation warnings
    * @param signalType signalType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceRecommendationSignalData setSignalType(java.lang.String signalType) {

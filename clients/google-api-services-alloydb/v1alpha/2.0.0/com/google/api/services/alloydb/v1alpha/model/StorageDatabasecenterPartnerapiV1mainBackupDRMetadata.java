@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * BackupDRMetadata contains information about the backup and disaster recovery metadata of a
- * database resource.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,49 +30,49 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup configuration for this instance.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration;
 
   /**
-   * Latest backup run information for this instance.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
 
   /**
-   * BackupDR configuration for this instance.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration;
 
   /**
-   * Required. Full resource name of this instance.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Required. Last time backup configuration was refreshed.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastRefreshTime;
 
   /**
-   * Required. Database resource id.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Backup configuration for this instance.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration getBackupConfiguration() {
@@ -81,7 +80,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Backup configuration for this instance.
+   * Disable validation warnings
    * @param backupConfiguration backupConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration) {
@@ -90,7 +89,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Latest backup run information for this instance.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun getBackupRun() {
@@ -98,7 +97,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Latest backup run information for this instance.
+   * Disable validation warnings
    * @param backupRun backupRun or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
@@ -107,7 +106,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * BackupDR configuration for this instance.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration getBackupdrConfiguration() {
@@ -115,7 +114,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * BackupDR configuration for this instance.
+   * Disable validation warnings
    * @param backupdrConfiguration backupdrConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration) {
@@ -124,7 +123,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Full resource name of this instance.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -132,7 +131,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Full resource name of this instance.
+   * Required. Disable validation warnings
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setFullResourceName(java.lang.String fullResourceName) {
@@ -141,7 +140,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Last time backup configuration was refreshed.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getLastRefreshTime() {
@@ -149,7 +148,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Last time backup configuration was refreshed.
+   * Required. Disable validation warnings
    * @param lastRefreshTime lastRefreshTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setLastRefreshTime(String lastRefreshTime) {
@@ -158,7 +157,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Database resource id.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getResourceId() {
@@ -166,7 +165,7 @@ public final class StorageDatabasecenterPartnerapiV1mainBackupDRMetadata extends
   }
 
   /**
-   * Required. Database resource id.
+   * Required. Disable validation warnings
    * @param resourceId resourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRMetadata setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {

@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Config based signal data. This is used to send signals to Condor which are based on the DB level
- * configurations. These will be used to send signals for self managed databases.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,42 +30,42 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fullResourceName;
 
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastRefreshTime;
 
   /**
-   * Database resource id.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean signalBoolValue;
 
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalType;
 
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getFullResourceName() {
@@ -74,7 +73,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Required. Full Resource name of the source resource.
+   * Required. Disable validation warnings
    * @param fullResourceName fullResourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData setFullResourceName(java.lang.String fullResourceName) {
@@ -83,7 +82,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getLastRefreshTime() {
@@ -91,7 +90,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Required. Last time signal was refreshed
+   * Required. Disable validation warnings
    * @param lastRefreshTime lastRefreshTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData setLastRefreshTime(String lastRefreshTime) {
@@ -100,7 +99,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Database resource id.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getResourceId() {
@@ -108,7 +107,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Database resource id.
+   * Disable validation warnings
    * @param resourceId resourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId) {
@@ -117,7 +116,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSignalBoolValue() {
@@ -125,7 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Signal data for boolean signals.
+   * Disable validation warnings
    * @param signalBoolValue signalBoolValue or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData setSignalBoolValue(java.lang.Boolean signalBoolValue) {
@@ -134,7 +133,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalType() {
@@ -142,7 +141,7 @@ public final class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData ex
   }
 
   /**
-   * Required. Signal type of the signal
+   * Required. Disable validation warnings
    * @param signalType signalType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData setSignalType(java.lang.String signalType) {

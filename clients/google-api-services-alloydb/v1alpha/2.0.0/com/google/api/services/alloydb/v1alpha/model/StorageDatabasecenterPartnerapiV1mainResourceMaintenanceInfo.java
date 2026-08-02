@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * MaintenanceInfo to capture the maintenance details of database resource.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The date when the current maintenance version was released.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate currentVersionReleaseDate;
 
   /**
-   * Optional. List of Deny maintenance period for the database resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,52 +50,49 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Whether the instance is in stopped state. This information is temporarily being
-   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isInstanceStopped;
 
   /**
-   * Optional. Maintenance window for the database resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule maintenanceSchedule;
 
   /**
-   * Output only. Current state of maintenance on the database resource.
+   * Output only. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maintenanceState;
 
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maintenanceVersion;
 
   /**
-   * Optional. List of next available maintenance versions.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> nextAvailableMaintenanceVersions;
 
   /**
-   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
-   * generates and publishes upcoming maintenance window.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance upcomingMaintenance;
 
   /**
-   * Optional. The date when the current maintenance version was released.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getCurrentVersionReleaseDate() {
@@ -103,7 +100,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. The date when the current maintenance version was released.
+   * Optional. Disable validation warnings
    * @param currentVersionReleaseDate currentVersionReleaseDate or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setCurrentVersionReleaseDate(GoogleTypeDate currentVersionReleaseDate) {
@@ -112,7 +109,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. List of Deny maintenance period for the database resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule> getDenyMaintenanceSchedules() {
@@ -120,7 +117,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. List of Deny maintenance period for the database resource.
+   * Optional. Disable validation warnings
    * @param denyMaintenanceSchedules denyMaintenanceSchedules or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setDenyMaintenanceSchedules(java.util.List<StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule> denyMaintenanceSchedules) {
@@ -129,8 +126,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Whether the instance is in stopped state. This information is temporarily being
-   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsInstanceStopped() {
@@ -138,8 +134,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Whether the instance is in stopped state. This information is temporarily being
-   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * Optional. Disable validation warnings
    * @param isInstanceStopped isInstanceStopped or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setIsInstanceStopped(java.lang.Boolean isInstanceStopped) {
@@ -148,7 +143,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Maintenance window for the database resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule getMaintenanceSchedule() {
@@ -156,7 +151,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Maintenance window for the database resource.
+   * Optional. Disable validation warnings
    * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceSchedule(StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule maintenanceSchedule) {
@@ -165,7 +160,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Output only. Current state of maintenance on the database resource.
+   * Output only. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceState() {
@@ -173,7 +168,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Output only. Current state of maintenance on the database resource.
+   * Output only. Disable validation warnings
    * @param maintenanceState maintenanceState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceState(java.lang.String maintenanceState) {
@@ -182,8 +177,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceVersion() {
@@ -191,8 +185,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Current Maintenance version of the database resource. Example:
-   * "MYSQL_8_0_41.R20250531.01_15"
+   * Optional. Disable validation warnings
    * @param maintenanceVersion maintenanceVersion or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceVersion(java.lang.String maintenanceVersion) {
@@ -201,7 +194,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. List of next available maintenance versions.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNextAvailableMaintenanceVersions() {
@@ -209,7 +202,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. List of next available maintenance versions.
+   * Optional. Disable validation warnings
    * @param nextAvailableMaintenanceVersions nextAvailableMaintenanceVersions or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setNextAvailableMaintenanceVersions(java.util.List<java.lang.String> nextAvailableMaintenanceVersions) {
@@ -218,8 +211,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
-   * generates and publishes upcoming maintenance window.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance getUpcomingMaintenance() {
@@ -227,8 +219,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
-   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
-   * generates and publishes upcoming maintenance window.
+   * Optional. Disable validation warnings
    * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setUpcomingMaintenance(StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance upcomingMaintenance) {

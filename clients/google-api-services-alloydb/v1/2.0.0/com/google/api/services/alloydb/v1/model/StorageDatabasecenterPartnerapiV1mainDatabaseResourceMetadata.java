@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 35
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,243 +30,231 @@ package com.google.api.services.alloydb.v1.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Field to ingest additional metadata whichd does not support proto format.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalMetadata;
 
   /**
-   * Availability configuration for this instance
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration availabilityConfiguration;
 
   /**
-   * Backup configuration for this instance
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration;
 
   /**
-   * Latest backup run information for this instance
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
 
   /**
-   * Optional. BackupDR Configuration for the resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration;
 
   /**
-   * The creation time of the resource, i.e. the time when resource is created and recorded in
-   * partner service.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String creationTime;
 
   /**
-   * Current state of the instance.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentState;
 
   /**
-   * Any custom metadata associated with the resource
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata;
 
   /**
-   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
-   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String edition;
 
   /**
-   * Entitlements associated with the resource
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> entitlements;
 
   /**
-   * The state that the instance is expected to be in. For example, an instance state can transition
-   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expectedState;
 
   /**
-   * GCBDR configuration for the resource.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration gcbdrConfiguration;
 
   /**
-   * Required. Unique identifier for a Database resource
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId id;
 
   /**
-   * The type of the instance. Specified at creation time.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceType;
 
   /**
-   * Field to ingest additional metadata which support proto format.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> internalAdditionalMetadata;
 
   /**
-   * Optional. Private and public IP address of the resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainIpAddress ipAddress;
 
   /**
-   * Optional. Whether deletion protection is enabled for this resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isDeletionProtectionEnabled;
 
   /**
-   * The resource location. REQUIRED
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Machine configuration for this resource.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainMachineConfiguration machineConfiguration;
 
   /**
-   * Optional. Maintenance info for the resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo maintenanceInfo;
 
   /**
-   * Optional. The modes of the database resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> modes;
 
   /**
-   * Identifier for this resource's immediate parent/primary resource if the current resource is a
-   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId;
 
   /**
-   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
-   * getting ingested, otherwise optional.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryResourceLocation;
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterProtoCommonProduct product;
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
-   * Cloud Resource Manager project with the format of "/", such as "projects/123". For GCP provided
-   * resources, number should be project number.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceContainer;
 
   /**
-   * Optional. List of resource flags for the database resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> resourceFlags;
 
   /**
-   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
-   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
-   * resource within the same source. Resource name to follow CAIS resource_name format as noted
-   * here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Optional. Suspension reason for the resource.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suspensionReason;
 
   /**
-   * Optional. Tags associated with this resources.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainTags tagsSet;
 
   /**
-   * The time at which the resource was updated and recorded at partner service.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updationTime;
 
   /**
-   * User-provided labels associated with the resource
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet;
 
   /**
-   * The resource zone. This is only applicable for zonal resources and will be empty for regional
-   * and multi-regional resources.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Field to ingest additional metadata whichd does not support proto format.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalMetadata() {
@@ -274,7 +262,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Field to ingest additional metadata whichd does not support proto format.
+   * Disable validation warnings
    * @param additionalMetadata additionalMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setAdditionalMetadata(java.util.Map<String, java.lang.Object> additionalMetadata) {
@@ -283,7 +271,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Availability configuration for this instance
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration getAvailabilityConfiguration() {
@@ -291,7 +279,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Availability configuration for this instance
+   * Disable validation warnings
    * @param availabilityConfiguration availabilityConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setAvailabilityConfiguration(StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration availabilityConfiguration) {
@@ -300,7 +288,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Backup configuration for this instance
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupConfiguration getBackupConfiguration() {
@@ -308,7 +296,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Backup configuration for this instance
+   * Disable validation warnings
    * @param backupConfiguration backupConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration backupConfiguration) {
@@ -317,7 +305,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Latest backup run information for this instance
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupRun getBackupRun() {
@@ -325,7 +313,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Latest backup run information for this instance
+   * Disable validation warnings
    * @param backupRun backupRun or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
@@ -334,7 +322,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. BackupDR Configuration for the resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration getBackupdrConfiguration() {
@@ -342,7 +330,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. BackupDR Configuration for the resource.
+   * Optional. Disable validation warnings
    * @param backupdrConfiguration backupdrConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration backupdrConfiguration) {
@@ -351,8 +339,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The creation time of the resource, i.e. the time when resource is created and recorded in
-   * partner service.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getCreationTime() {
@@ -360,8 +347,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The creation time of the resource, i.e. the time when resource is created and recorded in
-   * partner service.
+   * Disable validation warnings
    * @param creationTime creationTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCreationTime(String creationTime) {
@@ -370,7 +356,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Current state of the instance.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentState() {
@@ -378,7 +364,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Current state of the instance.
+   * Disable validation warnings
    * @param currentState currentState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCurrentState(java.lang.String currentState) {
@@ -387,7 +373,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Any custom metadata associated with the resource
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainCustomMetadataData getCustomMetadata() {
@@ -395,7 +381,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Any custom metadata associated with the resource
+   * Disable validation warnings
    * @param customMetadata customMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData customMetadata) {
@@ -404,8 +390,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
-   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -413,8 +398,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Edition represents whether the instance is ENTERPRISE or ENTERPRISE_PLUS. This
-   * information is core to Cloud SQL only and is used to identify the edition of the instance.
+   * Optional. Disable validation warnings
    * @param edition edition or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setEdition(java.lang.String edition) {
@@ -423,7 +407,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Entitlements associated with the resource
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> getEntitlements() {
@@ -431,7 +415,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Entitlements associated with the resource
+   * Disable validation warnings
    * @param entitlements entitlements or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setEntitlements(java.util.List<StorageDatabasecenterPartnerapiV1mainEntitlement> entitlements) {
@@ -440,8 +424,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The state that the instance is expected to be in. For example, an instance state can transition
-   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getExpectedState() {
@@ -449,8 +432,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The state that the instance is expected to be in. For example, an instance state can transition
-   * to UNHEALTHY due to wrong patch update, while the expected state will remain at the HEALTHY.
+   * Disable validation warnings
    * @param expectedState expectedState or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setExpectedState(java.lang.String expectedState) {
@@ -459,7 +441,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * GCBDR configuration for the resource.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration getGcbdrConfiguration() {
@@ -467,7 +449,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * GCBDR configuration for the resource.
+   * Disable validation warnings
    * @param gcbdrConfiguration gcbdrConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setGcbdrConfiguration(StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration gcbdrConfiguration) {
@@ -476,7 +458,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Unique identifier for a Database resource
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getId() {
@@ -484,7 +466,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Unique identifier for a Database resource
+   * Required. Disable validation warnings
    * @param id id or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId id) {
@@ -493,7 +475,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The type of the instance. Specified at creation time.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceType() {
@@ -501,7 +483,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The type of the instance. Specified at creation time.
+   * Disable validation warnings
    * @param instanceType instanceType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setInstanceType(java.lang.String instanceType) {
@@ -510,7 +492,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Field to ingest additional metadata which support proto format.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInternalAdditionalMetadata() {
@@ -518,7 +500,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Field to ingest additional metadata which support proto format.
+   * Disable validation warnings
    * @param internalAdditionalMetadata internalAdditionalMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setInternalAdditionalMetadata(java.util.Map<String, java.lang.Object> internalAdditionalMetadata) {
@@ -527,7 +509,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Private and public IP address of the resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainIpAddress getIpAddress() {
@@ -535,7 +517,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Private and public IP address of the resource.
+   * Optional. Disable validation warnings
    * @param ipAddress ipAddress or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setIpAddress(StorageDatabasecenterPartnerapiV1mainIpAddress ipAddress) {
@@ -544,7 +526,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Whether deletion protection is enabled for this resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDeletionProtectionEnabled() {
@@ -552,7 +534,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Whether deletion protection is enabled for this resource.
+   * Optional. Disable validation warnings
    * @param isDeletionProtectionEnabled isDeletionProtectionEnabled or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setIsDeletionProtectionEnabled(java.lang.Boolean isDeletionProtectionEnabled) {
@@ -561,7 +543,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The resource location. REQUIRED
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -569,7 +551,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The resource location. REQUIRED
+   * Disable validation warnings
    * @param location location or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setLocation(java.lang.String location) {
@@ -578,7 +560,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Machine configuration for this resource.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration getMachineConfiguration() {
@@ -586,7 +568,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Machine configuration for this resource.
+   * Disable validation warnings
    * @param machineConfiguration machineConfiguration or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setMachineConfiguration(StorageDatabasecenterPartnerapiV1mainMachineConfiguration machineConfiguration) {
@@ -595,7 +577,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Maintenance info for the resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo getMaintenanceInfo() {
@@ -603,7 +585,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Maintenance info for the resource.
+   * Optional. Disable validation warnings
    * @param maintenanceInfo maintenanceInfo or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setMaintenanceInfo(StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo maintenanceInfo) {
@@ -612,7 +594,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. The modes of the database resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getModes() {
@@ -620,7 +602,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. The modes of the database resource.
+   * Optional. Disable validation warnings
    * @param modes modes or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setModes(java.util.List<java.lang.String> modes) {
@@ -629,9 +611,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Identifier for this resource's immediate parent/primary resource if the current resource is a
-   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId getPrimaryResourceId() {
@@ -639,9 +619,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Identifier for this resource's immediate parent/primary resource if the current resource is a
-   * replica or derived form of another Database resource. Else it would be NULL. REQUIRED if the
-   * immediate parent exists when first time resource is getting ingested, otherwise optional.
+   * Disable validation warnings
    * @param primaryResourceId primaryResourceId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId primaryResourceId) {
@@ -650,8 +628,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
-   * getting ingested, otherwise optional.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryResourceLocation() {
@@ -659,8 +636,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Primary resource location. REQUIRED if the immediate parent exists when first time resource is
-   * getting ingested, otherwise optional.
+   * Disable validation warnings
    * @param primaryResourceLocation primaryResourceLocation or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setPrimaryResourceLocation(java.lang.String primaryResourceLocation) {
@@ -669,7 +645,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterProtoCommonProduct getProduct() {
@@ -677,7 +653,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The product this resource represents.
+   * Disable validation warnings
    * @param product product or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setProduct(StorageDatabasecenterProtoCommonProduct product) {
@@ -686,9 +662,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
-   * Cloud Resource Manager project with the format of "/", such as "projects/123". For GCP provided
-   * resources, number should be project number.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -696,9 +670,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Closest parent Cloud Resource Manager container of this resource. It must be resource name of a
-   * Cloud Resource Manager project with the format of "/", such as "projects/123". For GCP provided
-   * resources, number should be project number.
+   * Disable validation warnings
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceContainer(java.lang.String resourceContainer) {
@@ -707,7 +679,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. List of resource flags for the database resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> getResourceFlags() {
@@ -715,7 +687,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. List of resource flags for the database resource.
+   * Optional. Disable validation warnings
    * @param resourceFlags resourceFlags or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceFlags(java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> resourceFlags) {
@@ -724,10 +696,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
-   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
-   * resource within the same source. Resource name to follow CAIS resource_name format as noted
-   * here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -735,10 +704,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
-   * That is, after a resource named "ABC" is deleted, the name "ABC" can be used to to create a new
-   * resource within the same source. Resource name to follow CAIS resource_name format as noted
-   * here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceName(java.lang.String resourceName) {
@@ -747,7 +713,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Suspension reason for the resource.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSuspensionReason() {
@@ -755,7 +721,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Suspension reason for the resource.
+   * Optional. Disable validation warnings
    * @param suspensionReason suspensionReason or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setSuspensionReason(java.lang.String suspensionReason) {
@@ -764,7 +730,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Tags associated with this resources.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainTags getTagsSet() {
@@ -772,7 +738,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Optional. Tags associated with this resources.
+   * Optional. Disable validation warnings
    * @param tagsSet tagsSet or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setTagsSet(StorageDatabasecenterPartnerapiV1mainTags tagsSet) {
@@ -781,7 +747,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The time at which the resource was updated and recorded at partner service.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getUpdationTime() {
@@ -789,7 +755,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The time at which the resource was updated and recorded at partner service.
+   * Disable validation warnings
    * @param updationTime updationTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUpdationTime(String updationTime) {
@@ -798,7 +764,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * User-provided labels associated with the resource
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainUserLabels getUserLabelSet() {
@@ -806,7 +772,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * User-provided labels associated with the resource
+   * Disable validation warnings
    * @param userLabelSet userLabelSet or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels userLabelSet) {
@@ -815,8 +781,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The resource zone. This is only applicable for zonal resources and will be empty for regional
-   * and multi-regional resources.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -824,8 +789,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * The resource zone. This is only applicable for zonal resources and will be empty for regional
-   * and multi-regional resources.
+   * Disable validation warnings
    * @param zone zone or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setZone(java.lang.String zone) {

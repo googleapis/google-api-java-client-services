@@ -17,8 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Maintenance window for the database resource. It specifies preferred time and day of the week and
- * phase in some cases, when the maintenance can start. This is configured by the customer.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -31,31 +30,28 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String day;
 
   /**
-   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
-   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
-   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
-   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phase;
 
   /**
-   * Optional. Preferred time to start the maintenance operation on the specified day.
+   * Optional. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeTimeOfDay time;
 
   /**
-   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getDay() {
@@ -63,7 +59,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSched
   }
 
   /**
-   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+   * Optional. Disable validation warnings
    * @param day day or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule setDay(java.lang.String day) {
@@ -72,10 +68,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSched
   }
 
   /**
-   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
-   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
-   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
-   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getPhase() {
@@ -83,10 +76,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSched
   }
 
   /**
-   * Optional. Phase of the maintenance window. This is to capture order of maintenance. For
-   * example, for Cloud SQL resources, this can be used to capture if the maintenance window is in
-   * Week1, Week2, Week5, etc. Non production resources are usually part of early phase. For more
-   * details, refer to Cloud SQL resources - https://cloud.google.com/sql/docs/mysql/maintenance
+   * Optional. Disable validation warnings
    * @param phase phase or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule setPhase(java.lang.String phase) {
@@ -95,7 +85,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSched
   }
 
   /**
-   * Optional. Preferred time to start the maintenance operation on the specified day.
+   * Optional. Disable validation warnings
    * @return value or {@code null} for none
    */
   public GoogleTypeTimeOfDay getTime() {
@@ -103,7 +93,7 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSched
   }
 
   /**
-   * Optional. Preferred time to start the maintenance operation on the specified day.
+   * Optional. Disable validation warnings
    * @param time time or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule setTime(GoogleTypeTimeOfDay time) {

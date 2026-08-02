@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Common model for database resource health signal data.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,18 +30,14 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Any other additional metadata
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalMetadata;
 
   /**
-   * Industry standards associated with this signal; if this signal is an issue, that could be a
-   * violation of the associated industry standard(s). For example, AUTO_BACKUP_DISABLED signal is
-   * associated with CIS GCP 1.1, CIS GCP 1.2, CIS GCP 1.3, NIST 800-53 and ISO-27001 compliance
-   * standards. If a database resource does not have automated backup enable, it will violate these
-   * following industry standards.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,105 +50,98 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Description associated with signal
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The last time at which the event described by this signal took place
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTime;
 
   /**
-   * The external-uri of the signal, using which more information about this signal can be obtained.
-   * In GCP, this will take user to SCC page to get more details about signals.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String externalUri;
 
   /**
-   * This is used to identify the location of the resource. Example: "us-central1"
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provider;
 
   /**
-   * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
-   * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "projects/123". For GCP provided resources, number should be project
-   * number.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceContainer;
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalClass;
 
   /**
-   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
-   * partner to identify a signal.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalId;
 
   /**
-   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalSeverity;
 
   /**
-   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
-   * etc.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signalType;
 
   /**
-   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Any other additional metadata
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalMetadata() {
@@ -160,7 +149,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Any other additional metadata
+   * Disable validation warnings
    * @param additionalMetadata additionalMetadata or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setAdditionalMetadata(java.util.Map<String, java.lang.Object> additionalMetadata) {
@@ -169,11 +158,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Industry standards associated with this signal; if this signal is an issue, that could be a
-   * violation of the associated industry standard(s). For example, AUTO_BACKUP_DISABLED signal is
-   * associated with CIS GCP 1.1, CIS GCP 1.2, CIS GCP 1.3, NIST 800-53 and ISO-27001 compliance
-   * standards. If a database resource does not have automated backup enable, it will violate these
-   * following industry standards.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.util.List<StorageDatabasecenterPartnerapiV1mainCompliance> getCompliance() {
@@ -181,11 +166,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Industry standards associated with this signal; if this signal is an issue, that could be a
-   * violation of the associated industry standard(s). For example, AUTO_BACKUP_DISABLED signal is
-   * associated with CIS GCP 1.1, CIS GCP 1.2, CIS GCP 1.3, NIST 800-53 and ISO-27001 compliance
-   * standards. If a database resource does not have automated backup enable, it will violate these
-   * following industry standards.
+   * Disable validation warnings
    * @param compliance compliance or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setCompliance(java.util.List<StorageDatabasecenterPartnerapiV1mainCompliance> compliance) {
@@ -194,7 +175,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Description associated with signal
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -202,7 +183,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Description associated with signal
+   * Disable validation warnings
    * @param description description or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setDescription(java.lang.String description) {
@@ -211,7 +192,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The last time at which the event described by this signal took place
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -219,7 +200,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The last time at which the event described by this signal took place
+   * Required. Disable validation warnings
    * @param eventTime eventTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setEventTime(String eventTime) {
@@ -228,8 +209,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The external-uri of the signal, using which more information about this signal can be obtained.
-   * In GCP, this will take user to SCC page to get more details about signals.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getExternalUri() {
@@ -237,8 +217,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The external-uri of the signal, using which more information about this signal can be obtained.
-   * In GCP, this will take user to SCC page to get more details about signals.
+   * Disable validation warnings
    * @param externalUri externalUri or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setExternalUri(java.lang.String externalUri) {
@@ -247,7 +226,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * This is used to identify the location of the resource. Example: "us-central1"
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -255,7 +234,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * This is used to identify the location of the resource. Example: "us-central1"
+   * Disable validation warnings
    * @param location location or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setLocation(java.lang.String location) {
@@ -264,7 +243,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -272,7 +251,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
+   * Required. Disable validation warnings
    * @param name name or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setName(java.lang.String name) {
@@ -281,7 +260,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -289,7 +268,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Cloud provider name. Ex: GCP/AWS/Azure/OnPrem/SelfManaged
+   * Disable validation warnings
    * @param provider provider or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setProvider(java.lang.String provider) {
@@ -298,10 +277,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
-   * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "projects/123". For GCP provided resources, number should be project
-   * number.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceContainer() {
@@ -309,10 +285,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Closest parent container of this resource. In GCP, 'container' refers to a Cloud Resource
-   * Manager project. It must be resource name of a Cloud Resource Manager project with the format
-   * of "provider//", such as "projects/123". For GCP provided resources, number should be project
-   * number.
+   * Disable validation warnings
    * @param resourceContainer resourceContainer or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setResourceContainer(java.lang.String resourceContainer) {
@@ -321,8 +294,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -330,8 +302,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setResourceName(java.lang.String resourceName) {
@@ -340,7 +311,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalClass() {
@@ -348,7 +319,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The class of the signal, such as if it's a THREAT or VULNERABILITY.
+   * Required. Disable validation warnings
    * @param signalClass signalClass or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalClass(java.lang.String signalClass) {
@@ -357,8 +328,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
-   * partner to identify a signal.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalId() {
@@ -366,8 +336,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Unique identifier for the signal. This is an unique id which would be mainatined by
-   * partner to identify a signal.
+   * Required. Disable validation warnings
    * @param signalId signalId or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalId(java.lang.String signalId) {
@@ -376,7 +345,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalSeverity() {
@@ -384,7 +353,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * The severity of the signal, such as if it's a HIGH or LOW severity.
+   * Disable validation warnings
    * @param signalSeverity signalSeverity or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalSeverity(java.lang.String signalSeverity) {
@@ -393,8 +362,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
-   * etc.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getSignalType() {
@@ -402,8 +370,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. Type of signal, for example, `AVAILABLE_IN_MULTIPLE_ZONES`, `LOGGING_MOST_ERRORS`,
-   * etc.
+   * Required. Disable validation warnings
    * @param signalType signalType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setSignalType(java.lang.String signalType) {
@@ -412,7 +379,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -420,7 +387,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   }
 
   /**
-   * Required. The state of the signal, such as if it's ACTIVE or RESOLVED.
+   * Required. Disable validation warnings
    * @param state state or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setState(java.lang.String state) {

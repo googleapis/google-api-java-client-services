@@ -38,6 +38,13 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> allowedConsumerProjects;
 
   /**
+   * Optional. Configuration for setting up PSC auto connection for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscAutoConnectionPolicyState;
+
+  /**
    * Optional. Configurations for setting up PSC service automation.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(PscAutoConnectionConfig.class);
   }
+
+  /**
+   * Optional. Configuration for setting up PSC auto DNS for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscAutoDnsState;
 
   /**
    * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
@@ -96,6 +110,23 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Configuration for setting up PSC auto connection for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscAutoConnectionPolicyState() {
+    return pscAutoConnectionPolicyState;
+  }
+
+  /**
+   * Optional. Configuration for setting up PSC auto connection for the instance.
+   * @param pscAutoConnectionPolicyState pscAutoConnectionPolicyState or {@code null} for none
+   */
+  public PscInstanceConfig setPscAutoConnectionPolicyState(java.lang.String pscAutoConnectionPolicyState) {
+    this.pscAutoConnectionPolicyState = pscAutoConnectionPolicyState;
+    return this;
+  }
+
+  /**
    * Optional. Configurations for setting up PSC service automation.
    * @return value or {@code null} for none
    */
@@ -109,6 +140,23 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PscInstanceConfig setPscAutoConnections(java.util.List<PscAutoConnectionConfig> pscAutoConnections) {
     this.pscAutoConnections = pscAutoConnections;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for setting up PSC auto DNS for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscAutoDnsState() {
+    return pscAutoDnsState;
+  }
+
+  /**
+   * Optional. Configuration for setting up PSC auto DNS for the instance.
+   * @param pscAutoDnsState pscAutoDnsState or {@code null} for none
+   */
+  public PscInstanceConfig setPscAutoDnsState(java.lang.String pscAutoDnsState) {
+    this.pscAutoDnsState = pscAutoDnsState;
     return this;
   }
 

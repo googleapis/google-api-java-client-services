@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1beta.model;
 
 /**
- * Model definition for StorageDatabasecenterPartnerapiV1mainObservabilityMetricData.
+ * Disable validation warnings
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,43 +30,42 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Type of aggregation performed on the metric.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aggregationType;
 
   /**
-   * Required. Type of metric like CPU, Memory, etc.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metricType;
 
   /**
-   * Required. The time the metric value was observed.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String observationTime;
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
 
   /**
-   * Required. Value of the metric type.
+   * Required. Disable validation warnings
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterProtoCommonTypedValue value;
 
   /**
-   * Required. Type of aggregation performed on the metric.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregationType() {
@@ -74,7 +73,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Type of aggregation performed on the metric.
+   * Required. Disable validation warnings
    * @param aggregationType aggregationType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setAggregationType(java.lang.String aggregationType) {
@@ -83,7 +82,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Type of metric like CPU, Memory, etc.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricType() {
@@ -91,7 +90,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Type of metric like CPU, Memory, etc.
+   * Required. Disable validation warnings
    * @param metricType metricType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setMetricType(java.lang.String metricType) {
@@ -100,7 +99,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. The time the metric value was observed.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public String getObservationTime() {
@@ -108,7 +107,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. The time the metric value was observed.
+   * Required. Disable validation warnings
    * @param observationTime observationTime or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setObservationTime(String observationTime) {
@@ -117,8 +116,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceName() {
@@ -126,8 +124,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Database resource name associated with the signal. Resource name to follow CAIS
-   * resource_name format as noted here go/condor-common-datamodel
+   * Required. Disable validation warnings
    * @param resourceName resourceName or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setResourceName(java.lang.String resourceName) {
@@ -136,7 +133,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Value of the metric type.
+   * Required. Disable validation warnings
    * @return value or {@code null} for none
    */
   public StorageDatabasecenterProtoCommonTypedValue getValue() {
@@ -144,7 +141,7 @@ public final class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData 
   }
 
   /**
-   * Required. Value of the metric type.
+   * Required. Disable validation warnings
    * @param value value or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainObservabilityMetricData setValue(StorageDatabasecenterProtoCommonTypedValue value) {

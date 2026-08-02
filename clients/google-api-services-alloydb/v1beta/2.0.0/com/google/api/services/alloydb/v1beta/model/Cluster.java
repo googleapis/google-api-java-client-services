@@ -234,6 +234,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -820,6 +821,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional.
    * @return value or {@code null} for none
    */
   public NetworkConfig getNetworkConfig() {
@@ -827,6 +829,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional.
    * @param networkConfig networkConfig or {@code null} for none
    */
   public Cluster setNetworkConfig(NetworkConfig networkConfig) {

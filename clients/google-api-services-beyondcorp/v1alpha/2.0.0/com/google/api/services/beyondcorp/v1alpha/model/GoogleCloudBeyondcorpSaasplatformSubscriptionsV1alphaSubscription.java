@@ -85,6 +85,14 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private java.lang.Long seatCount;
 
   /**
+   * Optional. Input only. The source from which the subscription was initiated, for example "admin-
+   * console-browser-overview" or "admin-console-security-insights".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String signupSource;
+
+  /**
    * Required. SKU of subscription.
    * The value may be {@code null}.
    */
@@ -245,6 +253,25 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setSeatCount(java.lang.Long seatCount) {
     this.seatCount = seatCount;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The source from which the subscription was initiated, for example "admin-
+   * console-browser-overview" or "admin-console-security-insights".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSignupSource() {
+    return signupSource;
+  }
+
+  /**
+   * Optional. Input only. The source from which the subscription was initiated, for example "admin-
+   * console-browser-overview" or "admin-console-security-insights".
+   * @param signupSource signupSource or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setSignupSource(java.lang.String signupSource) {
+    this.signupSource = signupSource;
     return this;
   }
 

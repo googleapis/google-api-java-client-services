@@ -37,6 +37,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
   private GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDeviceInfo deviceInfo;
 
   /**
+   * Optional. The dispatch information configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDispatchInfo dispatchInfo;
+
+  /**
    * Optional. Group details.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders setDeviceInfo(GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDeviceInfo deviceInfo) {
     this.deviceInfo = deviceInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The dispatch information configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDispatchInfo getDispatchInfo() {
+    return dispatchInfo;
+  }
+
+  /**
+   * Optional. The dispatch information configuration.
+   * @param dispatchInfo dispatchInfo or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeaders setDispatchInfo(GoogleCloudBeyondcorpSecuritygatewaysV1alphaContextualHeadersDelegatedDispatchInfo dispatchInfo) {
+    this.dispatchInfo = dispatchInfo;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
   private java.lang.String channel;
 
   /**
+   * Output only. List of custom versions for the channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customVersions;
+
+  /**
    * The default version for newly created clusters on the channel.
    * The value may be {@code null}.
    */
@@ -72,6 +79,23 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
    */
   public ReleaseChannelConfig setChannel(java.lang.String channel) {
     this.channel = channel;
+    return this;
+  }
+
+  /**
+   * Output only. List of custom versions for the channel.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomVersions() {
+    return customVersions;
+  }
+
+  /**
+   * Output only. List of custom versions for the channel.
+   * @param customVersions customVersions or {@code null} for none
+   */
+  public ReleaseChannelConfig setCustomVersions(java.util.List<java.lang.String> customVersions) {
+    this.customVersions = customVersions;
     return this;
   }
 

@@ -38,8 +38,8 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   private java.lang.String app;
 
   /**
-   * Optional. The app version to evaluate. Format:
-   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
+   * Optional. The app version to evaluate. At most one of `app_version` or `deployment` can be set.
+   * Format: `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +154,8 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The app version to evaluate. Format:
-   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
+   * Optional. The app version to evaluate. At most one of `app_version` or `deployment` can be set.
+   * Format: `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getAppVersion() {
@@ -163,8 +163,8 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The app version to evaluate. Format:
-   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
+   * Optional. The app version to evaluate. At most one of `app_version` or `deployment` can be set.
+   * Format: `projects/{project}/locations/{location}/apps/{app}/versions/{version}`
    * @param appVersion appVersion or {@code null} for none
    */
   public RunEvaluationRequest setAppVersion(java.lang.String appVersion) {

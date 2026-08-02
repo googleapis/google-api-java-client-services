@@ -85,6 +85,23 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private InstagramCredentials instagramCredentials;
 
   /**
+   * Optional. The modality of the deployment. Note: Deployment-level modality override is gated
+   * behind an allowlist. Contact the CXAS team to enable this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modality;
+
+  /**
+   * Optional. Model settings for the deployment. Overrides model settings configured at the
+   * app/agent levels. Note: Deployment-level model settings override is gated behind an allowlist.
+   * Contact the CXAS team to enable this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ModelSettings modelSettings;
+
+  /**
    * Identifier. The resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * The value may be {@code null}.
@@ -231,6 +248,46 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   public Deployment setInstagramCredentials(InstagramCredentials instagramCredentials) {
     this.instagramCredentials = instagramCredentials;
+    return this;
+  }
+
+  /**
+   * Optional. The modality of the deployment. Note: Deployment-level modality override is gated
+   * behind an allowlist. Contact the CXAS team to enable this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModality() {
+    return modality;
+  }
+
+  /**
+   * Optional. The modality of the deployment. Note: Deployment-level modality override is gated
+   * behind an allowlist. Contact the CXAS team to enable this field.
+   * @param modality modality or {@code null} for none
+   */
+  public Deployment setModality(java.lang.String modality) {
+    this.modality = modality;
+    return this;
+  }
+
+  /**
+   * Optional. Model settings for the deployment. Overrides model settings configured at the
+   * app/agent levels. Note: Deployment-level model settings override is gated behind an allowlist.
+   * Contact the CXAS team to enable this field.
+   * @return value or {@code null} for none
+   */
+  public ModelSettings getModelSettings() {
+    return modelSettings;
+  }
+
+  /**
+   * Optional. Model settings for the deployment. Overrides model settings configured at the
+   * app/agent levels. Note: Deployment-level model settings override is gated behind an allowlist.
+   * Contact the CXAS team to enable this field.
+   * @param modelSettings modelSettings or {@code null} for none
+   */
+  public Deployment setModelSettings(ModelSettings modelSettings) {
+    this.modelSettings = modelSettings;
     return this;
   }
 

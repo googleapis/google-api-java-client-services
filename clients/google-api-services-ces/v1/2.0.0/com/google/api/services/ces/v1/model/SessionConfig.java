@@ -57,6 +57,13 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String entryAgent;
 
   /**
+   * Optional. Whether to exclude diagnostic info from the session output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeDiagnosticInfo;
+
+  /**
    * Optional. The historical context of the session, including user inputs, agent responses, and
    * other messages. Typically, CES agent would manage session automatically so client doesn't need
    * to explicitly populate this field. However, client can optionally override the historical
@@ -172,6 +179,23 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
    */
   public SessionConfig setEntryAgent(java.lang.String entryAgent) {
     this.entryAgent = entryAgent;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to exclude diagnostic info from the session output.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeDiagnosticInfo() {
+    return excludeDiagnosticInfo;
+  }
+
+  /**
+   * Optional. Whether to exclude diagnostic info from the session output.
+   * @param excludeDiagnosticInfo excludeDiagnosticInfo or {@code null} for none
+   */
+  public SessionConfig setExcludeDiagnosticInfo(java.lang.Boolean excludeDiagnosticInfo) {
+    this.excludeDiagnosticInfo = excludeDiagnosticInfo;
     return this;
   }
 

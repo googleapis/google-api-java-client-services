@@ -17,7 +17,10 @@
 package com.google.api.services.searchads360.v23.model;
 
 /**
- * A group placement view.
+ * A view showing performance data for where your ads actually served on the Display Network and
+ * YouTube, including both targeted (managed) and automatic placements. Data for low-traffic
+ * placements may be aggregated. The scope of placements shown is influenced by the ad group's
+ * `TargetingSetting` for the `PLACEMENT` dimension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

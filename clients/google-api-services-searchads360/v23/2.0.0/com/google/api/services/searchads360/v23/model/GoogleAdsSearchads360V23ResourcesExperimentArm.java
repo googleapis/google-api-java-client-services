@@ -32,7 +32,9 @@ package com.google.api.services.searchads360.v23.model;
 public final class GoogleAdsSearchads360V23ResourcesExperimentArm extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the Optimize Assets
+   * experiment construction, the control arm and treatment arm should both contain the same asset
+   * group ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +100,9 @@ public final class GoogleAdsSearchads360V23ResourcesExperimentArm extends com.go
   private java.lang.Long trafficSplit;
 
   /**
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the Optimize Assets
+   * experiment construction, the control arm and treatment arm should both contain the same asset
+   * group ID.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAdsSearchads360V23ResourcesExperimentArmAssetGroupInfo> getAssetGroups() {
@@ -106,7 +110,9 @@ public final class GoogleAdsSearchads360V23ResourcesExperimentArm extends com.go
   }
 
   /**
-   * List of asset groups in the experiment arm.
+   * List of asset groups in the experiment arm. The max length is one. In the Optimize Assets
+   * experiment construction, the control arm and treatment arm should both contain the same asset
+   * group ID.
    * @param assetGroups assetGroups or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesExperimentArm setAssetGroups(java.util.List<GoogleAdsSearchads360V23ResourcesExperimentArmAssetGroupInfo> assetGroups) {

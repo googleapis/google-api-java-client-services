@@ -17,11 +17,13 @@
 package com.google.api.services.searchads360.v23.model;
 
 /**
- * A view with metrics aggregated by ad group and URL or YouTube video. This view primarily surfaces
+ * A view with metrics aggregated by ad group and URL or YouTube video. Provides granular
+ * performance data about specific URLs, YouTube videos, and apps where your ads showed. This offers
+ * a more detailed breakdown compared to the group_placement_view. This view primarily surfaces
  * placement data from the Google Display Network. While you can select segments like
  * `segments.ad_network_type`, this view generally does not include placement data from other
  * networks, such as the Search Partners network. To understand performance on Search Partners,
- * consider other reports and segmentations.
+ * consider other reports and segmentations. Data for low-traffic placements may be aggregated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

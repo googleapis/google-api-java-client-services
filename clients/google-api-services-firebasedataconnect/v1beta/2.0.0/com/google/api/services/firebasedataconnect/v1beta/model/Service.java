@@ -38,6 +38,19 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. The list of connectors in this service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Connector> connectors;
+
+  static {
+    // hack to force ProGuard to consider Connector used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Connector.class);
+  }
+
+  /**
    * Output only. [Output only] Create time stamp.
    * The value may be {@code null}.
    */
@@ -85,6 +98,26 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
+   * Output only. The list of schemas in this service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Schema> schemas;
+
+  static {
+    // hack to force ProGuard to consider Schema used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Schema.class);
+  }
+
+  /**
+   * Optional. Input only. The source files for service, schemas, and connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Source source;
+
+  /**
    * Output only. System-assigned, unique identifier.
    * The value may be {@code null}.
    */
@@ -112,6 +145,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. The list of connectors in this service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Connector> getConnectors() {
+    return connectors;
+  }
+
+  /**
+   * Output only. The list of connectors in this service.
+   * @param connectors connectors or {@code null} for none
+   */
+  public Service setConnectors(java.util.List<Connector> connectors) {
+    this.connectors = connectors;
     return this;
   }
 
@@ -224,6 +274,40 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Output only. The list of schemas in this service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Schema> getSchemas() {
+    return schemas;
+  }
+
+  /**
+   * Output only. The list of schemas in this service.
+   * @param schemas schemas or {@code null} for none
+   */
+  public Service setSchemas(java.util.List<Schema> schemas) {
+    this.schemas = schemas;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The source files for service, schemas, and connectors.
+   * @return value or {@code null} for none
+   */
+  public Source getSource() {
+    return source;
+  }
+
+  /**
+   * Optional. Input only. The source files for service, schemas, and connectors.
+   * @param source source or {@code null} for none
+   */
+  public Service setSource(Source source) {
+    this.source = source;
     return this;
   }
 

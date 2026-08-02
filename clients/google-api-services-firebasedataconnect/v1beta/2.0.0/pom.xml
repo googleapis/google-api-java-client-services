@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebasedataconnect</artifactId>
-  <version>v1beta-rev20260719-2.0.0</version>
-  <name>Firebase SQL Connect API v1beta-rev20260719-2.0.0</name>
+  <version>v1beta-rev20260726-2.0.0</version>
+  <name>Firebase SQL Connect API v1beta-rev20260726-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

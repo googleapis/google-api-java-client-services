@@ -17,7 +17,7 @@
 package com.google.api.services.searchads360.v23.model;
 
 /**
- * An expanded text ad.
+ * An expanded text ad. Expanded text ads are deprecated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

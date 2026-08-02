@@ -156,6 +156,13 @@ public final class GoogleAdsSearchads360V23CommonSegments extends com.google.api
   private GoogleAdsSearchads360V23CommonKeyword keyword;
 
   /**
+   * Mobile device platform to which metrics apply.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mobileDevicePlatform;
+
+  /**
    * Month as represented by the date of the first day of a month. Formatted as yyyy-MM-dd.
    * The value may be {@code null}.
    */
@@ -859,6 +866,23 @@ public final class GoogleAdsSearchads360V23CommonSegments extends com.google.api
    */
   public GoogleAdsSearchads360V23CommonSegments setKeyword(GoogleAdsSearchads360V23CommonKeyword keyword) {
     this.keyword = keyword;
+    return this;
+  }
+
+  /**
+   * Mobile device platform to which metrics apply.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMobileDevicePlatform() {
+    return mobileDevicePlatform;
+  }
+
+  /**
+   * Mobile device platform to which metrics apply.
+   * @param mobileDevicePlatform mobileDevicePlatform or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23CommonSegments setMobileDevicePlatform(java.lang.String mobileDevicePlatform) {
+    this.mobileDevicePlatform = mobileDevicePlatform;
     return this;
   }
 

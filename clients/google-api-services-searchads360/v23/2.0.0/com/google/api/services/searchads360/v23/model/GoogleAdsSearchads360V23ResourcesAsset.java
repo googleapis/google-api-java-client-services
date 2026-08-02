@@ -358,6 +358,15 @@ public final class GoogleAdsSearchads360V23ResourcesAsset extends com.google.api
   private GoogleAdsSearchads360V23CommonStructuredSnippetAsset structuredSnippetAsset;
 
   /**
+   * Synthetic content info for the asset. Only assets with specific asset types are eligible for
+   * updates using the `synthetic_content_info` field. Allowed `AssetType` values: * `IMAGE` *
+   * `MEDIA_BUNDLE` * `YOUTUBE_VIDEO`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V23CommonSyntheticContentInfo syntheticContentInfo;
+
+  /**
    * Immutable. A text asset.
    * The value may be {@code null}.
    */
@@ -1184,6 +1193,27 @@ public final class GoogleAdsSearchads360V23ResourcesAsset extends com.google.api
    */
   public GoogleAdsSearchads360V23ResourcesAsset setStructuredSnippetAsset(GoogleAdsSearchads360V23CommonStructuredSnippetAsset structuredSnippetAsset) {
     this.structuredSnippetAsset = structuredSnippetAsset;
+    return this;
+  }
+
+  /**
+   * Synthetic content info for the asset. Only assets with specific asset types are eligible for
+   * updates using the `synthetic_content_info` field. Allowed `AssetType` values: * `IMAGE` *
+   * `MEDIA_BUNDLE` * `YOUTUBE_VIDEO`
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23CommonSyntheticContentInfo getSyntheticContentInfo() {
+    return syntheticContentInfo;
+  }
+
+  /**
+   * Synthetic content info for the asset. Only assets with specific asset types are eligible for
+   * updates using the `synthetic_content_info` field. Allowed `AssetType` values: * `IMAGE` *
+   * `MEDIA_BUNDLE` * `YOUTUBE_VIDEO`
+   * @param syntheticContentInfo syntheticContentInfo or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ResourcesAsset setSyntheticContentInfo(GoogleAdsSearchads360V23CommonSyntheticContentInfo syntheticContentInfo) {
+    this.syntheticContentInfo = syntheticContentInfo;
     return this;
   }
 

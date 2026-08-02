@@ -33,15 +33,17 @@ package com.google.api.services.searchads360.v23.model;
 public final class GoogleAdsSearchads360V23ResourcesCustomerLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The resource name of the customer to which the label is attached. Read only.
+   * Output only. The resource name of the customer to which the label is attached. This field
+   * should not be set when creating a new `CustomerLabel`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customer;
 
   /**
-   * Output only. The resource name of the label assigned to the customer. Note: the Customer ID
-   * portion of the label resource name is not validated when creating a new CustomerLabel.
+   * Output only. The resource name of the label assigned to the customer. This field should not be
+   * set when creating a new `CustomerLabel`. Note: the Customer ID portion of the label resource
+   * name is not validated when creating a new `CustomerLabel`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +58,8 @@ public final class GoogleAdsSearchads360V23ResourcesCustomerLabel extends com.go
   private java.lang.String resourceName;
 
   /**
-   * Output only. The resource name of the customer to which the label is attached. Read only.
+   * Output only. The resource name of the customer to which the label is attached. This field
+   * should not be set when creating a new `CustomerLabel`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomer() {
@@ -64,7 +67,8 @@ public final class GoogleAdsSearchads360V23ResourcesCustomerLabel extends com.go
   }
 
   /**
-   * Output only. The resource name of the customer to which the label is attached. Read only.
+   * Output only. The resource name of the customer to which the label is attached. This field
+   * should not be set when creating a new `CustomerLabel`.
    * @param customer customer or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesCustomerLabel setCustomer(java.lang.String customer) {
@@ -73,8 +77,9 @@ public final class GoogleAdsSearchads360V23ResourcesCustomerLabel extends com.go
   }
 
   /**
-   * Output only. The resource name of the label assigned to the customer. Note: the Customer ID
-   * portion of the label resource name is not validated when creating a new CustomerLabel.
+   * Output only. The resource name of the label assigned to the customer. This field should not be
+   * set when creating a new `CustomerLabel`. Note: the Customer ID portion of the label resource
+   * name is not validated when creating a new `CustomerLabel`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -82,8 +87,9 @@ public final class GoogleAdsSearchads360V23ResourcesCustomerLabel extends com.go
   }
 
   /**
-   * Output only. The resource name of the label assigned to the customer. Note: the Customer ID
-   * portion of the label resource name is not validated when creating a new CustomerLabel.
+   * Output only. The resource name of the label assigned to the customer. This field should not be
+   * set when creating a new `CustomerLabel`. Note: the Customer ID portion of the label resource
+   * name is not validated when creating a new `CustomerLabel`.
    * @param label label or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesCustomerLabel setLabel(java.lang.String label) {

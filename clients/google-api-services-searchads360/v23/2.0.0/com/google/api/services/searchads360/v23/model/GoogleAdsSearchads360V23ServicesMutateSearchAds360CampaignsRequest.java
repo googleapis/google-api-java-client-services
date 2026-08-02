@@ -17,10 +17,7 @@
 package com.google.api.services.searchads360.v23.model;
 
 /**
- * Request message for CustomerLabelService.MutateCustomerLabels. A single
- * `MutateCustomerLabelsRequest` can only modify labels for the single customer account specified in
- * the request. To apply a label to multiple different accounts, separate
- * `MutateCustomerLabelsRequest` calls must be made.
+ * Request message for SearchAds360CampaignService.MutateSearchAds360Campaigns.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed
@@ -31,20 +28,14 @@ package com.google.api.services.searchads360.v23.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest extends com.google.api.client.json.GenericJson {
+public final class GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of operations to perform on customer-label relationships.
+   * Required. The list of operations to perform on individual Search Ads 360 campaigns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleAdsSearchads360V23ServicesCustomerLabelOperation> operations;
-
-  static {
-    // hack to force ProGuard to consider GoogleAdsSearchads360V23ServicesCustomerLabelOperation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleAdsSearchads360V23ServicesCustomerLabelOperation.class);
-  }
+  private java.util.List<GoogleAdsSearchads360V23ServicesSearchAds360CampaignOperation> operations;
 
   /**
    * If true, successful operations will be carried out and invalid operations will return errors.
@@ -56,6 +47,14 @@ public final class GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest e
   private java.lang.Boolean partialFailure;
 
   /**
+   * The response content type setting. Determines whether the mutable resource or just the resource
+   * name should be returned post mutation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseContentType;
+
+  /**
    * If true, the request is validated but not executed. Only errors are returned, not results.
    * The value may be {@code null}.
    */
@@ -63,18 +62,18 @@ public final class GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest e
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The list of operations to perform on customer-label relationships.
+   * Required. The list of operations to perform on individual Search Ads 360 campaigns.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleAdsSearchads360V23ServicesCustomerLabelOperation> getOperations() {
+  public java.util.List<GoogleAdsSearchads360V23ServicesSearchAds360CampaignOperation> getOperations() {
     return operations;
   }
 
   /**
-   * Required. The list of operations to perform on customer-label relationships.
+   * Required. The list of operations to perform on individual Search Ads 360 campaigns.
    * @param operations operations or {@code null} for none
    */
-  public GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest setOperations(java.util.List<GoogleAdsSearchads360V23ServicesCustomerLabelOperation> operations) {
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest setOperations(java.util.List<GoogleAdsSearchads360V23ServicesSearchAds360CampaignOperation> operations) {
     this.operations = operations;
     return this;
   }
@@ -95,8 +94,27 @@ public final class GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest e
    * valid. Default is false.
    * @param partialFailure partialFailure or {@code null} for none
    */
-  public GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest setPartialFailure(java.lang.Boolean partialFailure) {
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest setPartialFailure(java.lang.Boolean partialFailure) {
     this.partialFailure = partialFailure;
+    return this;
+  }
+
+  /**
+   * The response content type setting. Determines whether the mutable resource or just the resource
+   * name should be returned post mutation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseContentType() {
+    return responseContentType;
+  }
+
+  /**
+   * The response content type setting. Determines whether the mutable resource or just the resource
+   * name should be returned post mutation.
+   * @param responseContentType responseContentType or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest setResponseContentType(java.lang.String responseContentType) {
+    this.responseContentType = responseContentType;
     return this;
   }
 
@@ -112,19 +130,19 @@ public final class GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest e
    * If true, the request is validated but not executed. Only errors are returned, not results.
    * @param validateOnly validateOnly or {@code null} for none
    */
-  public GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest setValidateOnly(java.lang.Boolean validateOnly) {
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest setValidateOnly(java.lang.Boolean validateOnly) {
     this.validateOnly = validateOnly;
     return this;
   }
 
   @Override
-  public GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest set(String fieldName, Object value) {
-    return (GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest) super.set(fieldName, value);
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest set(String fieldName, Object value) {
+    return (GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest clone() {
-    return (GoogleAdsSearchads360V23ServicesMutateCustomerLabelsRequest) super.clone();
+  public GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest clone() {
+    return (GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest) super.clone();
   }
 
 }

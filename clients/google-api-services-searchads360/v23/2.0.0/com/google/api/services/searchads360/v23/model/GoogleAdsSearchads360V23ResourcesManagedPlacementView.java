@@ -17,7 +17,7 @@
 package com.google.api.services.searchads360.v23.model;
 
 /**
- * A managed placement view.
+ * A view providing performance data for placements explicitly targeted in your ad groups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

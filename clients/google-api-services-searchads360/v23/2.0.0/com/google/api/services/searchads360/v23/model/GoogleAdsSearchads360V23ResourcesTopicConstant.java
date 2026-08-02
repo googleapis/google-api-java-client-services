@@ -42,7 +42,7 @@ public final class GoogleAdsSearchads360V23ResourcesTopicConstant extends com.go
    * Output only. The category to target or exclude. Each subsequent element in the array describes
    * a more specific sub-category. For example, {"Pets & Animals", "Pets", "Dogs"} represents the
    * "Pets & Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/google-ads/api/reference/data/verticals
+   * https://developers.google.com/google-ads/api/data/topics
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleAdsSearchads360V23ResourcesTopicConstant extends com.go
    * Output only. The category to target or exclude. Each subsequent element in the array describes
    * a more specific sub-category. For example, {"Pets & Animals", "Pets", "Dogs"} represents the
    * "Pets & Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/google-ads/api/reference/data/verticals
+   * https://developers.google.com/google-ads/api/data/topics
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPath() {
@@ -95,7 +95,7 @@ public final class GoogleAdsSearchads360V23ResourcesTopicConstant extends com.go
    * Output only. The category to target or exclude. Each subsequent element in the array describes
    * a more specific sub-category. For example, {"Pets & Animals", "Pets", "Dogs"} represents the
    * "Pets & Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/google-ads/api/reference/data/verticals
+   * https://developers.google.com/google-ads/api/data/topics
    * @param path path or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesTopicConstant setPath(java.util.List<java.lang.String> path) {

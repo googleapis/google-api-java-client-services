@@ -123,7 +123,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   private GoogleAdsSearchads360V23CommonExpandedDynamicSearchAdInfo expandedDynamicSearchAd;
 
   /**
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `ResponsiveSearchAd` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +252,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   private GoogleAdsSearchads360V23CommonSearchAds360ExpandedDynamicSearchAdInfo searchAds360ExpandedDynamicSearchAd;
 
   /**
-   * Immutable. Details pertaining to an expanded text ad.
+   * Immutable. Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `SearchAds360ResponsiveSearchAd` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,6 +300,15 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private GoogleAdsSearchads360V23CommonSmartCampaignAdInfo smartCampaignAd;
+
+  /**
+   * Synthetic content info for the ad. Only ads with specific ad types are eligible for updates
+   * using the `synthetic_content_info` field. Allowed `AdType` values: * `HTML5_UPLOAD_AD` *
+   * `DYNAMIC_HTML5_AD` * `IMAGE_AD`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V23CommonSyntheticContentInfo syntheticContentInfo;
 
   /**
    * Output only. If this ad is system managed, then this field will indicate the source. This field
@@ -585,7 +596,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   }
 
   /**
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `ResponsiveSearchAd` instead.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonExpandedTextAdInfo getExpandedTextAd() {
@@ -593,7 +605,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   }
 
   /**
-   * Details pertaining to an expanded text ad.
+   * Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `ResponsiveSearchAd` instead.
    * @param expandedTextAd expandedTextAd or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesAd setExpandedTextAd(GoogleAdsSearchads360V23CommonExpandedTextAdInfo expandedTextAd) {
@@ -880,7 +893,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   }
 
   /**
-   * Immutable. Details pertaining to an expanded text ad.
+   * Immutable. Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `SearchAds360ResponsiveSearchAd` instead.
    * @return value or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonSearchAds360ExpandedTextAdInfo getSearchAds360ExpandedTextAd() {
@@ -888,7 +902,8 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
   }
 
   /**
-   * Immutable. Details pertaining to an expanded text ad.
+   * Immutable. Details pertaining to an expanded text ad. Expanded text ads are deprecated. Use
+   * `SearchAds360ResponsiveSearchAd` instead.
    * @param searchAds360ExpandedTextAd searchAds360ExpandedTextAd or {@code null} for none
    */
   public GoogleAdsSearchads360V23ResourcesAd setSearchAds360ExpandedTextAd(GoogleAdsSearchads360V23CommonSearchAds360ExpandedTextAdInfo searchAds360ExpandedTextAd) {
@@ -995,6 +1010,27 @@ public final class GoogleAdsSearchads360V23ResourcesAd extends com.google.api.cl
    */
   public GoogleAdsSearchads360V23ResourcesAd setSmartCampaignAd(GoogleAdsSearchads360V23CommonSmartCampaignAdInfo smartCampaignAd) {
     this.smartCampaignAd = smartCampaignAd;
+    return this;
+  }
+
+  /**
+   * Synthetic content info for the ad. Only ads with specific ad types are eligible for updates
+   * using the `synthetic_content_info` field. Allowed `AdType` values: * `HTML5_UPLOAD_AD` *
+   * `DYNAMIC_HTML5_AD` * `IMAGE_AD`
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23CommonSyntheticContentInfo getSyntheticContentInfo() {
+    return syntheticContentInfo;
+  }
+
+  /**
+   * Synthetic content info for the ad. Only ads with specific ad types are eligible for updates
+   * using the `synthetic_content_info` field. Allowed `AdType` values: * `HTML5_UPLOAD_AD` *
+   * `DYNAMIC_HTML5_AD` * `IMAGE_AD`
+   * @param syntheticContentInfo syntheticContentInfo or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ResourcesAd setSyntheticContentInfo(GoogleAdsSearchads360V23CommonSyntheticContentInfo syntheticContentInfo) {
+    this.syntheticContentInfo = syntheticContentInfo;
     return this;
   }
 

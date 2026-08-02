@@ -3404,6 +3404,414 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Processes the given call conversions. List of thrown errors: [AuthenticationError]()
+     * [AuthorizationError]() [HeaderError]() [InternalError]() [PartialFailureError]() [QuotaError]()
+     * [RequestError]()
+     *
+     * Create a request for the method "customers.uploadCallConversions".
+     *
+     * This request holds the parameters needed by the searchads360 server.  After setting any optional
+     * parameters, call the {@link UploadCallConversions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param customerId Required. The ID of the customer performing the upload.
+     * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsRequest}
+     * @return the request
+     */
+    public UploadCallConversions uploadCallConversions(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsRequest content) throws java.io.IOException {
+      UploadCallConversions result = new UploadCallConversions(customerId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UploadCallConversions extends SA360Request<com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsResponse> {
+
+      private static final String REST_PATH = "v23/customers/{+customerId}:uploadCallConversions";
+
+      private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Processes the given call conversions. List of thrown errors: [AuthenticationError]()
+       * [AuthorizationError]() [HeaderError]() [InternalError]() [PartialFailureError]() [QuotaError]()
+       * [RequestError]()
+       *
+       * Create a request for the method "customers.uploadCallConversions".
+       *
+       * This request holds the parameters needed by the the searchads360 server.  After setting any
+       * optional parameters, call the {@link UploadCallConversions#execute()} method to invoke the
+       * remote operation. <p> {@link UploadCallConversions#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param customerId Required. The ID of the customer performing the upload.
+       * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsRequest}
+       * @since 1.13
+       */
+      protected UploadCallConversions(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsRequest content) {
+        super(SA360.this, "POST", REST_PATH, content, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadCallConversionsResponse.class);
+        this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public UploadCallConversions set$Xgafv(java.lang.String $Xgafv) {
+        return (UploadCallConversions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UploadCallConversions setAccessToken(java.lang.String accessToken) {
+        return (UploadCallConversions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UploadCallConversions setAlt(java.lang.String alt) {
+        return (UploadCallConversions) super.setAlt(alt);
+      }
+
+      @Override
+      public UploadCallConversions setCallback(java.lang.String callback) {
+        return (UploadCallConversions) super.setCallback(callback);
+      }
+
+      @Override
+      public UploadCallConversions setFields(java.lang.String fields) {
+        return (UploadCallConversions) super.setFields(fields);
+      }
+
+      @Override
+      public UploadCallConversions setKey(java.lang.String key) {
+        return (UploadCallConversions) super.setKey(key);
+      }
+
+      @Override
+      public UploadCallConversions setOauthToken(java.lang.String oauthToken) {
+        return (UploadCallConversions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UploadCallConversions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UploadCallConversions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UploadCallConversions setQuotaUser(java.lang.String quotaUser) {
+        return (UploadCallConversions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UploadCallConversions setUploadType(java.lang.String uploadType) {
+        return (UploadCallConversions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UploadCallConversions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UploadCallConversions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Required. The ID of the customer performing the upload.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      public UploadCallConversions setCustomerId(java.lang.String customerId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public UploadCallConversions set(String parameterName, Object value) {
+        return (UploadCallConversions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Processes the given click conversions. List of thrown errors: [AuthenticationError]()
+     * [AuthorizationError]() [ConversionUploadError]() [HeaderError]() [InternalError]()
+     * [PartialFailureError]() [QuotaError]() [RequestError]()
+     *
+     * Create a request for the method "customers.uploadClickConversions".
+     *
+     * This request holds the parameters needed by the searchads360 server.  After setting any optional
+     * parameters, call the {@link UploadClickConversions#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param customerId Required. The ID of the customer performing the upload.
+     * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsRequest}
+     * @return the request
+     */
+    public UploadClickConversions uploadClickConversions(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsRequest content) throws java.io.IOException {
+      UploadClickConversions result = new UploadClickConversions(customerId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UploadClickConversions extends SA360Request<com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsResponse> {
+
+      private static final String REST_PATH = "v23/customers/{+customerId}:uploadClickConversions";
+
+      private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Processes the given click conversions. List of thrown errors: [AuthenticationError]()
+       * [AuthorizationError]() [ConversionUploadError]() [HeaderError]() [InternalError]()
+       * [PartialFailureError]() [QuotaError]() [RequestError]()
+       *
+       * Create a request for the method "customers.uploadClickConversions".
+       *
+       * This request holds the parameters needed by the the searchads360 server.  After setting any
+       * optional parameters, call the {@link UploadClickConversions#execute()} method to invoke the
+       * remote operation. <p> {@link UploadClickConversions#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param customerId Required. The ID of the customer performing the upload.
+       * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsRequest}
+       * @since 1.13
+       */
+      protected UploadClickConversions(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsRequest content) {
+        super(SA360.this, "POST", REST_PATH, content, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadClickConversionsResponse.class);
+        this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public UploadClickConversions set$Xgafv(java.lang.String $Xgafv) {
+        return (UploadClickConversions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UploadClickConversions setAccessToken(java.lang.String accessToken) {
+        return (UploadClickConversions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UploadClickConversions setAlt(java.lang.String alt) {
+        return (UploadClickConversions) super.setAlt(alt);
+      }
+
+      @Override
+      public UploadClickConversions setCallback(java.lang.String callback) {
+        return (UploadClickConversions) super.setCallback(callback);
+      }
+
+      @Override
+      public UploadClickConversions setFields(java.lang.String fields) {
+        return (UploadClickConversions) super.setFields(fields);
+      }
+
+      @Override
+      public UploadClickConversions setKey(java.lang.String key) {
+        return (UploadClickConversions) super.setKey(key);
+      }
+
+      @Override
+      public UploadClickConversions setOauthToken(java.lang.String oauthToken) {
+        return (UploadClickConversions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UploadClickConversions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UploadClickConversions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UploadClickConversions setQuotaUser(java.lang.String quotaUser) {
+        return (UploadClickConversions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UploadClickConversions setUploadType(java.lang.String uploadType) {
+        return (UploadClickConversions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UploadClickConversions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UploadClickConversions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Required. The ID of the customer performing the upload.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      public UploadClickConversions setCustomerId(java.lang.String customerId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public UploadClickConversions set(String parameterName, Object value) {
+        return (UploadClickConversions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Processes the given conversion adjustments. List of thrown errors: [AuthenticationError]()
+     * [AuthorizationError]() [HeaderError]() [InternalError]() [PartialFailureError]() [QuotaError]()
+     * [RequestError]()
+     *
+     * Create a request for the method "customers.uploadConversionAdjustments".
+     *
+     * This request holds the parameters needed by the searchads360 server.  After setting any optional
+     * parameters, call the {@link UploadConversionAdjustments#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param customerId Required. The ID of the customer performing the upload.
+     * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsRequest}
+     * @return the request
+     */
+    public UploadConversionAdjustments uploadConversionAdjustments(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsRequest content) throws java.io.IOException {
+      UploadConversionAdjustments result = new UploadConversionAdjustments(customerId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UploadConversionAdjustments extends SA360Request<com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsResponse> {
+
+      private static final String REST_PATH = "v23/customers/{+customerId}:uploadConversionAdjustments";
+
+      private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Processes the given conversion adjustments. List of thrown errors: [AuthenticationError]()
+       * [AuthorizationError]() [HeaderError]() [InternalError]() [PartialFailureError]() [QuotaError]()
+       * [RequestError]()
+       *
+       * Create a request for the method "customers.uploadConversionAdjustments".
+       *
+       * This request holds the parameters needed by the the searchads360 server.  After setting any
+       * optional parameters, call the {@link UploadConversionAdjustments#execute()} method to invoke
+       * the remote operation. <p> {@link UploadConversionAdjustments#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param customerId Required. The ID of the customer performing the upload.
+       * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsRequest}
+       * @since 1.13
+       */
+      protected UploadConversionAdjustments(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsRequest content) {
+        super(SA360.this, "POST", REST_PATH, content, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesUploadConversionAdjustmentsResponse.class);
+        this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public UploadConversionAdjustments set$Xgafv(java.lang.String $Xgafv) {
+        return (UploadConversionAdjustments) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UploadConversionAdjustments setAccessToken(java.lang.String accessToken) {
+        return (UploadConversionAdjustments) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UploadConversionAdjustments setAlt(java.lang.String alt) {
+        return (UploadConversionAdjustments) super.setAlt(alt);
+      }
+
+      @Override
+      public UploadConversionAdjustments setCallback(java.lang.String callback) {
+        return (UploadConversionAdjustments) super.setCallback(callback);
+      }
+
+      @Override
+      public UploadConversionAdjustments setFields(java.lang.String fields) {
+        return (UploadConversionAdjustments) super.setFields(fields);
+      }
+
+      @Override
+      public UploadConversionAdjustments setKey(java.lang.String key) {
+        return (UploadConversionAdjustments) super.setKey(key);
+      }
+
+      @Override
+      public UploadConversionAdjustments setOauthToken(java.lang.String oauthToken) {
+        return (UploadConversionAdjustments) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UploadConversionAdjustments setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UploadConversionAdjustments) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UploadConversionAdjustments setQuotaUser(java.lang.String quotaUser) {
+        return (UploadConversionAdjustments) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UploadConversionAdjustments setUploadType(java.lang.String uploadType) {
+        return (UploadConversionAdjustments) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UploadConversionAdjustments setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UploadConversionAdjustments) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      @com.google.api.client.util.Key
+      private java.lang.String customerId;
+
+      /** Required. The ID of the customer performing the upload.
+       */
+      public java.lang.String getCustomerId() {
+        return customerId;
+      }
+
+      /** Required. The ID of the customer performing the upload. */
+      public UploadConversionAdjustments setCustomerId(java.lang.String customerId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+              "Parameter customerId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.customerId = customerId;
+        return this;
+      }
+
+      @Override
+      public UploadConversionAdjustments set(String parameterName, Object value) {
+        return (UploadConversionAdjustments) super.set(parameterName, value);
+      }
+    }
+    /**
      * Uploads the given user data. List of thrown errors: [AuthenticationError]()
      * [AuthorizationError]() [CollectionSizeError]() [FieldError]() [HeaderError]() [InternalError]()
      * [MutateError]() [OfflineUserDataJobError]() [QuotaError]() [RequestError]() [UserDataError]()
@@ -20962,6 +21370,163 @@ public class SA360 extends com.google.api.client.googleapis.services.json.Abstra
         @Override
         public Search set(String parameterName, Object value) {
           return (Search) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the SearchAds360Campaigns collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SA360 searchads360 = new SA360(...);}
+     *   {@code SA360.SearchAds360Campaigns.List request = searchads360.searchAds360Campaigns().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SearchAds360Campaigns searchAds360Campaigns() {
+      return new SearchAds360Campaigns();
+    }
+
+    /**
+     * The "searchAds360Campaigns" collection of methods.
+     */
+    public class SearchAds360Campaigns {
+
+      /**
+       * Updates Search Ads 360 campaigns. Operation statuses are returned. List of thrown errors:
+       * [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [MutateError]()
+       * [QuotaError]() [RequestError]()
+       *
+       * Create a request for the method "searchAds360Campaigns.mutate".
+       *
+       * This request holds the parameters needed by the searchads360 server.  After setting any optional
+       * parameters, call the {@link Mutate#execute()} method to invoke the remote operation.
+       *
+       * @param customerId Required. The ID of the customer whose Search Ads 360 campaigns are being modified.
+       * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest}
+       * @return the request
+       */
+      public Mutate mutate(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest content) throws java.io.IOException {
+        Mutate result = new Mutate(customerId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Mutate extends SA360Request<com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsResponse> {
+
+        private static final String REST_PATH = "v23/customers/{+customerId}/searchAds360Campaigns:mutate";
+
+        private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates Search Ads 360 campaigns. Operation statuses are returned. List of thrown errors:
+         * [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]()
+         * [MutateError]() [QuotaError]() [RequestError]()
+         *
+         * Create a request for the method "searchAds360Campaigns.mutate".
+         *
+         * This request holds the parameters needed by the the searchads360 server.  After setting any
+         * optional parameters, call the {@link Mutate#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Mutate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param customerId Required. The ID of the customer whose Search Ads 360 campaigns are being modified.
+         * @param content the {@link com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest}
+         * @since 1.13
+         */
+        protected Mutate(java.lang.String customerId, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsRequest content) {
+          super(SA360.this, "POST", REST_PATH, content, com.google.api.services.searchads360.v23.model.GoogleAdsSearchads360V23ServicesMutateSearchAds360CampaignsResponse.class);
+          this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+                "Parameter customerId must conform to the pattern " +
+                "^[^/]+$");
+          }
+        }
+
+        @Override
+        public Mutate set$Xgafv(java.lang.String $Xgafv) {
+          return (Mutate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Mutate setAccessToken(java.lang.String accessToken) {
+          return (Mutate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Mutate setAlt(java.lang.String alt) {
+          return (Mutate) super.setAlt(alt);
+        }
+
+        @Override
+        public Mutate setCallback(java.lang.String callback) {
+          return (Mutate) super.setCallback(callback);
+        }
+
+        @Override
+        public Mutate setFields(java.lang.String fields) {
+          return (Mutate) super.setFields(fields);
+        }
+
+        @Override
+        public Mutate setKey(java.lang.String key) {
+          return (Mutate) super.setKey(key);
+        }
+
+        @Override
+        public Mutate setOauthToken(java.lang.String oauthToken) {
+          return (Mutate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Mutate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Mutate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Mutate setQuotaUser(java.lang.String quotaUser) {
+          return (Mutate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Mutate setUploadType(java.lang.String uploadType) {
+          return (Mutate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Mutate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Mutate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the customer whose Search Ads 360 campaigns are being modified. */
+        @com.google.api.client.util.Key
+        private java.lang.String customerId;
+
+        /** Required. The ID of the customer whose Search Ads 360 campaigns are being modified.
+         */
+        public java.lang.String getCustomerId() {
+          return customerId;
+        }
+
+        /** Required. The ID of the customer whose Search Ads 360 campaigns are being modified. */
+        public Mutate setCustomerId(java.lang.String customerId) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_ID_PATTERN.matcher(customerId).matches(),
+                "Parameter customerId must conform to the pattern " +
+                "^[^/]+$");
+          }
+          this.customerId = customerId;
+          return this;
+        }
+
+        @Override
+        public Mutate set(String parameterName, Object value) {
+          return (Mutate) super.set(parameterName, value);
         }
       }
 

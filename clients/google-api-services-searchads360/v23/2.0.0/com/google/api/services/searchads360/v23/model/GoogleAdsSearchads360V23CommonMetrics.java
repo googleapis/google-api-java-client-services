@@ -49,8 +49,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The total number of conversions. This includes all conversions regardless of the value of
    * include_in_conversions_metric. When this column is selected with date, the values in date
-   * column means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * column means the conversion date. Details for the `by_conversion_date` columns are available at
+   * [About the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of all conversions. When this column is selected with date, the values in date column
-   * means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * means the conversion date. Details for the `by_conversion_date` columns are available at [About
+   * the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,9 +174,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The total cost of all clicks divided by the total number of clicks received. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,8 +184,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
-   * the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * the customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,8 +229,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The number of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -237,8 +238,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -256,8 +257,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -275,8 +276,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
    * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
    * with cart data. This metric is a monetary value and returned in the customer's currency by
-   * default. See the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -293,8 +295,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -327,8 +330,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
    * for this order is $3. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -345,9 +348,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
    * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
    * This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -364,8 +367,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
    * order is $10. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -440,8 +443,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of conversions by conversion date for biddable conversion types. Can be fractional due
-   * to attribution modeling. When this column is selected with date, the values in date column
-   * means the conversion date.
+   * to attribution modeling. When this column is selected with date, the values in the date column
+   * mean the conversion date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,8 +460,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of conversions from interactions divided by the number of ad interactions. This only
-   * includes conversion actions which include_in_conversions_metric attribute is set to true. If
-   * you use conversion-based bidding, your bid strategies will optimize for these conversions.
+   * includes conversion actions which `include_in_conversions_metric` attribute is set to `true`.
+   * If you use conversion-based bidding, your bid strategies will optimize for these conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -490,8 +493,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -527,7 +530,7 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The cost of ad interactions divided by current model attributed conversions. This only includes
-   * conversion actions which include_in_conversions_metric attribute is set to true. If you use
+   * conversion actions which `include_in_conversions_metric` attribute is set to `true`. If you use
    * conversion-based bidding, your bid strategies will optimize for these conversions.
    * The value may be {@code null}.
    */
@@ -536,15 +539,16 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Conversions from when a customer clicks on an ad on one device, then converts on a different
-   * device or browser. Cross-device conversions are already included in all_conversions.
+   * device or browser. Cross-device conversions are already included in `all_conversions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double crossDeviceConversions;
 
   /**
-   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
-   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * The number of cross-device conversions by conversion date. Details for the `by_conversion_date`
+   * columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -559,7 +563,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of cross-device conversions value by conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -577,8 +582,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -596,8 +601,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
    * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
    * is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -614,8 +619,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
    * of this order is $20. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -649,8 +654,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
    * illegitimate that are detected through routine means of filtration (that is, known invalid
    * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
-   * charged for them, and they don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * charged for them, and they don't affect your account statistics. See [Filtering invalid traffic
+   * to ensure quality](https://support.google.com/campaignmanager/answer/6076504).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -660,8 +665,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
    * through routine means of filtration (such as known invalid data-center traffic, bots and
    * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
-   * don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * don't affect your account statistics. See [Filtering invalid traffic to ensure
+   * quality](https://support.google.com/campaignmanager/answer/6076504).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -781,9 +786,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
    * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
    * is $3. This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -800,8 +805,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
    * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
    * you report conversions with cart data. This metric is a monetary value and returned in the
-   * customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -817,8 +823,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
    * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
    * metric is only available if you report conversions with cart data. This metric is a monetary
-   * value and returned in the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * value and returned in the customer's currency by default. See the `metrics_currency` parameter
+   * at [PARAMETERS clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -881,8 +888,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are shown in the most
-   * prominent Shopping position. See https://support.google.com/sa360/answer/9566729 for details.
-   * Any value below 0.1 is reported as 0.0999.
+   * prominent Shopping position. See [About top and absolute top
+   * metrics](https://support.google.com/sa360/answer/9566729) for details. Any value below 0.1 is
+   * reported as 0.0999.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -907,9 +915,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   private java.lang.Double searchBudgetLostImpressionShare;
 
   /**
-   * The number estimating how often your ad didn't show adjacent to the top organic search results
-   * due to a low budget. Note: Search budget lost top impression share is reported in the range of
-   * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The estimated percent of times that your ad didn't show adjacent to the top organic search
+   * results due to a low budget. Note: Search budget lost top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1020,7 +1028,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The value of all conversions divided by the number of all conversions. When this column is
    * selected with date, the values in date column means the conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1093,8 +1102,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The total number of conversions. This includes all conversions regardless of the value of
    * include_in_conversions_metric. When this column is selected with date, the values in date
-   * column means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * column means the conversion date. Details for the `by_conversion_date` columns are available at
+   * [About the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsByConversionDate() {
@@ -1104,8 +1113,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The total number of conversions. This includes all conversions regardless of the value of
    * include_in_conversions_metric. When this column is selected with date, the values in date
-   * column means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * column means the conversion date. Details for the `by_conversion_date` columns are available at
+   * [About the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * @param allConversionsByConversionDate allConversionsByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setAllConversionsByConversionDate(java.lang.Double allConversionsByConversionDate) {
@@ -1303,8 +1312,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of all conversions. When this column is selected with date, the values in date column
-   * means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * means the conversion date. Details for the `by_conversion_date` columns are available at [About
+   * the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsValueByConversionDate() {
@@ -1313,8 +1322,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of all conversions. When this column is selected with date, the values in date column
-   * means the conversion date. Details for the by_conversion_date columns are available at
-   * https://support.google.com/sa360/answer/9250611.
+   * means the conversion date. Details for the `by_conversion_date` columns are available at [About
+   * the "All conversions" column](https://support.google.com/sa360/answer/9250611).
    * @param allConversionsValueByConversionDate allConversionsValueByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setAllConversionsValueByConversionDate(java.lang.Double allConversionsValueByConversionDate) {
@@ -1389,9 +1398,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The total cost of all clicks divided by the total number of clicks received. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageCpc() {
@@ -1400,9 +1409,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The total cost of all clicks divided by the total number of clicks received. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param averageCpc averageCpc or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setAverageCpc(java.lang.Double averageCpc) {
@@ -1412,8 +1421,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
-   * the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * the customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Double getAverageCpm() {
@@ -1422,8 +1432,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Average cost-per-thousand impressions (CPM). This metric is a monetary value and returned in
-   * the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * the customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @param averageCpm averageCpm or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setAverageCpm(java.lang.Double averageCpm) {
@@ -1515,8 +1526,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The number of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @return value or {@code null} for none
    */
   public java.lang.Double getClientAccountConversions() {
@@ -1525,8 +1536,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The number of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @param clientAccountConversions clientAccountConversions or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountConversions(java.lang.Double clientAccountConversions) {
@@ -1536,8 +1547,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @return value or {@code null} for none
    */
   public java.lang.Double getClientAccountConversionsValue() {
@@ -1546,8 +1557,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of client account conversions. This only includes conversion actions which
-   * include_in_client_account_conversions_metric attribute is set to true. If you use conversion-
-   * based bidding, your bid strategies will optimize for these conversions.
+   * `include_in_client_account_conversions_metric` attribute is set to `true`. If you use
+   * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @param clientAccountConversionsValue clientAccountConversionsValue or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountConversionsValue(java.lang.Double clientAccountConversionsValue) {
@@ -1567,8 +1578,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountCrossSellCostOfGoodsSoldMicros() {
@@ -1587,8 +1598,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param clientAccountCrossSellCostOfGoodsSoldMicros clientAccountCrossSellCostOfGoodsSoldMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountCrossSellCostOfGoodsSoldMicros(java.lang.Long clientAccountCrossSellCostOfGoodsSoldMicros) {
@@ -1608,8 +1619,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
    * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
    * with cart data. This metric is a monetary value and returned in the customer's currency by
-   * default. See the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountCrossSellGrossProfitMicros() {
@@ -1628,8 +1640,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * shirt. The shirt is priced $20 and has a cost of goods sold value of $5. The cross-sell gross
    * profit of this order is $15 = $20 - $5. This metric is only available if you report conversions
    * with cart data. This metric is a monetary value and returned in the customer's currency by
-   * default. See the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @param clientAccountCrossSellGrossProfitMicros clientAccountCrossSellGrossProfitMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountCrossSellGrossProfitMicros(java.lang.Long clientAccountCrossSellGrossProfitMicros) {
@@ -1648,8 +1661,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountCrossSellRevenueMicros() {
@@ -1667,8 +1681,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * a hat then bought the same hat and a shirt. The hat is priced $10 and the shirt is priced $20.
    * The cross-sell revenue of this order is $20. This metric is only available if you report
    * conversions with cart data. This metric is a monetary value and returned in the customer's
-   * currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @param clientAccountCrossSellRevenueMicros clientAccountCrossSellRevenueMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountCrossSellRevenueMicros(java.lang.Long clientAccountCrossSellRevenueMicros) {
@@ -1722,8 +1737,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
    * for this order is $3. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountLeadCostOfGoodsSoldMicros() {
@@ -1741,8 +1756,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * sold value of $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold
    * for this order is $3. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param clientAccountLeadCostOfGoodsSoldMicros clientAccountLeadCostOfGoodsSoldMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountLeadCostOfGoodsSoldMicros(java.lang.Long clientAccountLeadCostOfGoodsSoldMicros) {
@@ -1761,9 +1776,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
    * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
    * This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountLeadGrossProfitMicros() {
@@ -1781,9 +1796,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * clicked on a Shopping ad for a hat then bought the same hat and a shirt. The hat is priced $10
    * and has a cost of goods sold value of $3. The lead gross profit of this order is $7 = $10 - $3.
    * This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param clientAccountLeadGrossProfitMicros clientAccountLeadGrossProfitMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountLeadGrossProfitMicros(java.lang.Long clientAccountLeadGrossProfitMicros) {
@@ -1802,8 +1817,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
    * order is $10. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountLeadRevenueMicros() {
@@ -1821,8 +1836,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * hat and a shirt. The hat is priced $10 and the shirt is priced $20. The lead revenue of this
    * order is $10. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param clientAccountLeadRevenueMicros clientAccountLeadRevenueMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setClientAccountLeadRevenueMicros(java.lang.Long clientAccountLeadRevenueMicros) {
@@ -1987,8 +2002,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of conversions by conversion date for biddable conversion types. Can be fractional due
-   * to attribution modeling. When this column is selected with date, the values in date column
-   * means the conversion date.
+   * to attribution modeling. When this column is selected with date, the values in the date column
+   * mean the conversion date.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConversionsByConversionDate() {
@@ -1997,8 +2012,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of conversions by conversion date for biddable conversion types. Can be fractional due
-   * to attribution modeling. When this column is selected with date, the values in date column
-   * means the conversion date.
+   * to attribution modeling. When this column is selected with date, the values in the date column
+   * mean the conversion date.
    * @param conversionsByConversionDate conversionsByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setConversionsByConversionDate(java.lang.Double conversionsByConversionDate) {
@@ -2027,8 +2042,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of conversions from interactions divided by the number of ad interactions. This only
-   * includes conversion actions which include_in_conversions_metric attribute is set to true. If
-   * you use conversion-based bidding, your bid strategies will optimize for these conversions.
+   * includes conversion actions which `include_in_conversions_metric` attribute is set to `true`.
+   * If you use conversion-based bidding, your bid strategies will optimize for these conversions.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConversionsFromInteractionsValuePerInteraction() {
@@ -2037,8 +2052,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The value of conversions from interactions divided by the number of ad interactions. This only
-   * includes conversion actions which include_in_conversions_metric attribute is set to true. If
-   * you use conversion-based bidding, your bid strategies will optimize for these conversions.
+   * includes conversion actions which `include_in_conversions_metric` attribute is set to `true`.
+   * If you use conversion-based bidding, your bid strategies will optimize for these conversions.
    * @param conversionsFromInteractionsValuePerInteraction conversionsFromInteractionsValuePerInteraction or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setConversionsFromInteractionsValuePerInteraction(java.lang.Double conversionsFromInteractionsValuePerInteraction) {
@@ -2104,8 +2119,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCostMicros() {
@@ -2115,8 +2130,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The sum of your cost-per-click (CPC) and cost-per-thousand impressions (CPM) costs during this
    * period. This metric is a monetary value and returned in the customer's currency by default. See
-   * the metrics_currency parameter at https://developers.google.com/search-
-   * ads/reporting/query/query-structure#parameters_clause
+   * the `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause) for more details.
    * @param costMicros costMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCostMicros(java.lang.Long costMicros) {
@@ -2191,7 +2206,7 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The cost of ad interactions divided by current model attributed conversions. This only includes
-   * conversion actions which include_in_conversions_metric attribute is set to true. If you use
+   * conversion actions which `include_in_conversions_metric` attribute is set to `true`. If you use
    * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @return value or {@code null} for none
    */
@@ -2201,7 +2216,7 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The cost of ad interactions divided by current model attributed conversions. This only includes
-   * conversion actions which include_in_conversions_metric attribute is set to true. If you use
+   * conversion actions which `include_in_conversions_metric` attribute is set to `true`. If you use
    * conversion-based bidding, your bid strategies will optimize for these conversions.
    * @param costPerCurrentModelAttributedConversion costPerCurrentModelAttributedConversion or {@code null} for none
    */
@@ -2212,7 +2227,7 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Conversions from when a customer clicks on an ad on one device, then converts on a different
-   * device or browser. Cross-device conversions are already included in all_conversions.
+   * device or browser. Cross-device conversions are already included in `all_conversions`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getCrossDeviceConversions() {
@@ -2221,7 +2236,7 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * Conversions from when a customer clicks on an ad on one device, then converts on a different
-   * device or browser. Cross-device conversions are already included in all_conversions.
+   * device or browser. Cross-device conversions are already included in `all_conversions`.
    * @param crossDeviceConversions crossDeviceConversions or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossDeviceConversions(java.lang.Double crossDeviceConversions) {
@@ -2230,8 +2245,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   }
 
   /**
-   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
-   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * The number of cross-device conversions by conversion date. Details for the `by_conversion_date`
+   * columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * @return value or {@code null} for none
    */
   public java.lang.Double getCrossDeviceConversionsByConversionDate() {
@@ -2239,8 +2255,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   }
 
   /**
-   * The number of cross-device conversions by conversion date. Details for the by_conversion_date
-   * columns are available at https://support.google.com/sa360/answer/9250611.
+   * The number of cross-device conversions by conversion date. Details for the `by_conversion_date`
+   * columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * @param crossDeviceConversionsByConversionDate crossDeviceConversionsByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossDeviceConversionsByConversionDate(java.lang.Double crossDeviceConversionsByConversionDate) {
@@ -2267,7 +2284,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of cross-device conversions value by conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * @return value or {@code null} for none
    */
   public java.lang.Double getCrossDeviceConversionsValueByConversionDate() {
@@ -2276,7 +2294,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The sum of cross-device conversions value by conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611)
    * @param crossDeviceConversionsValueByConversionDate crossDeviceConversionsValueByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossDeviceConversionsValueByConversionDate(java.lang.Double crossDeviceConversionsValueByConversionDate) {
@@ -2296,8 +2315,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getCrossSellCostOfGoodsSoldMicros() {
@@ -2316,8 +2335,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $3, the shirt has a cost of goods sold value of $5. The cross-sell cost of goods sold for this
    * order is $5. This metric is only available if you report conversions with cart data. This
    * metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param crossSellCostOfGoodsSoldMicros crossSellCostOfGoodsSoldMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossSellCostOfGoodsSoldMicros(java.lang.Long crossSellCostOfGoodsSoldMicros) {
@@ -2337,8 +2356,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
    * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
    * is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getCrossSellGrossProfitMicros() {
@@ -2357,8 +2376,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * $20 and has a cost of goods sold value of $5. The cross-sell gross profit of this order is $15
    * = $20 - $5. This metric is only available if you report conversions with cart data. This metric
    * is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param crossSellGrossProfitMicros crossSellGrossProfitMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossSellGrossProfitMicros(java.lang.Long crossSellGrossProfitMicros) {
@@ -2377,8 +2396,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
    * of this order is $20. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getCrossSellRevenueMicros() {
@@ -2396,8 +2415,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * same hat and a shirt. The hat is priced $10 and the shirt is priced $20. The cross-sell revenue
    * of this order is $20. This metric is only available if you report conversions with cart data.
    * This metric is a monetary value and returned in the customer's currency by default. See the
-   * metrics_currency parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * `metrics_currency` parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param crossSellRevenueMicros crossSellRevenueMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setCrossSellRevenueMicros(java.lang.Long crossSellRevenueMicros) {
@@ -2462,8 +2481,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
    * illegitimate that are detected through routine means of filtration (that is, known invalid
    * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
-   * charged for them, and they don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * charged for them, and they don't affect your account statistics. See [Filtering invalid traffic
+   * to ensure quality](https://support.google.com/campaignmanager/answer/6076504).
    * @return value or {@code null} for none
    */
   public java.lang.Double getGeneralInvalidClickRate() {
@@ -2475,8 +2494,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * non-filtered clicks) due to being general invalid clicks. These are clicks Google considers
    * illegitimate that are detected through routine means of filtration (that is, known invalid
    * data-center traffic, bots and spiders or other crawlers, irregular patterns, etc). You're not
-   * charged for them, and they don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * charged for them, and they don't affect your account statistics. See [Filtering invalid traffic
+   * to ensure quality](https://support.google.com/campaignmanager/answer/6076504).
    * @param generalInvalidClickRate generalInvalidClickRate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setGeneralInvalidClickRate(java.lang.Double generalInvalidClickRate) {
@@ -2488,8 +2507,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
    * through routine means of filtration (such as known invalid data-center traffic, bots and
    * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
-   * don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * don't affect your account statistics. See [Filtering invalid traffic to ensure
+   * quality](https://support.google.com/campaignmanager/answer/6076504).
    * @return value or {@code null} for none
    */
   public java.lang.Long getGeneralInvalidClicks() {
@@ -2500,8 +2519,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Number of general invalid clicks. These are a subset of your invalid clicks that are detected
    * through routine means of filtration (such as known invalid data-center traffic, bots and
    * spiders or other crawlers, irregular patterns, etc.). You're not charged for them, and they
-   * don't affect your account statistics. See the help page at
-   * https://support.google.com/campaignmanager/answer/6076504 for details.
+   * don't affect your account statistics. See [Filtering invalid traffic to ensure
+   * quality](https://support.google.com/campaignmanager/answer/6076504).
    * @param generalInvalidClicks generalInvalidClicks or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setGeneralInvalidClicks(java.lang.Long generalInvalidClicks) {
@@ -2763,9 +2782,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
    * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
    * is $3. This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getLeadCostOfGoodsSoldMicros() {
@@ -2782,9 +2801,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * ad for a hat then bought the same hat and a shirt. The hat has a cost of goods sold value of
    * $3, the shirt has a cost of goods sold value of $5. The lead cost of goods sold for this order
    * is $3. This metric is only available if you report conversions with cart data. This metric is a
-   * monetary value and returned in the customer's currency by default. See the metrics_currency
-   * parameter at https://developers.google.com/search-ads/reporting/query/query-
-   * structure#parameters_clause
+   * monetary value and returned in the customer's currency by default. See the `metrics_currency`
+   * parameter at [PARAMETERS clause](https://developers.google.com/search-
+   * ads/reporting/query/query-structure#parameters_clause).
    * @param leadCostOfGoodsSoldMicros leadCostOfGoodsSoldMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setLeadCostOfGoodsSoldMicros(java.lang.Long leadCostOfGoodsSoldMicros) {
@@ -2803,8 +2822,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
    * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
    * you report conversions with cart data. This metric is a monetary value and returned in the
-   * customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getLeadGrossProfitMicros() {
@@ -2822,8 +2842,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * then bought the same hat and a shirt. The hat is priced $10 and has a cost of goods sold value
    * of $3. The lead gross profit of this order is $7 = $10 - $3. This metric is only available if
    * you report conversions with cart data. This metric is a monetary value and returned in the
-   * customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * customer's currency by default. See the `metrics_currency` parameter at [PARAMETERS
+   * clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @param leadGrossProfitMicros leadGrossProfitMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setLeadGrossProfitMicros(java.lang.Long leadGrossProfitMicros) {
@@ -2841,8 +2862,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
    * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
    * metric is only available if you report conversions with cart data. This metric is a monetary
-   * value and returned in the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * value and returned in the customer's currency by default. See the `metrics_currency` parameter
+   * at [PARAMETERS clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @return value or {@code null} for none
    */
   public java.lang.Long getLeadRevenueMicros() {
@@ -2859,8 +2881,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
    * Example: Someone clicked on a Shopping ad for a hat then bought the same hat and a shirt. The
    * hat is priced $10 and the shirt is priced $20. The lead revenue of this order is $10. This
    * metric is only available if you report conversions with cart data. This metric is a monetary
-   * value and returned in the customer's currency by default. See the metrics_currency parameter at
-   * https://developers.google.com/search-ads/reporting/query/query-structure#parameters_clause
+   * value and returned in the customer's currency by default. See the `metrics_currency` parameter
+   * at [PARAMETERS clause](https://developers.google.com/search-ads/reporting/query/query-
+   * structure#parameters_clause).
    * @param leadRevenueMicros leadRevenueMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setLeadRevenueMicros(java.lang.Long leadRevenueMicros) {
@@ -2995,8 +3018,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are shown in the most
-   * prominent Shopping position. See https://support.google.com/sa360/answer/9566729 for details.
-   * Any value below 0.1 is reported as 0.0999.
+   * prominent Shopping position. See [About top and absolute top
+   * metrics](https://support.google.com/sa360/answer/9566729) for details. Any value below 0.1 is
+   * reported as 0.0999.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSearchAbsoluteTopImpressionShare() {
@@ -3005,8 +3029,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
 
   /**
    * The percentage of the customer's Shopping or Search ad impressions that are shown in the most
-   * prominent Shopping position. See https://support.google.com/sa360/answer/9566729 for details.
-   * Any value below 0.1 is reported as 0.0999.
+   * prominent Shopping position. See [About top and absolute top
+   * metrics](https://support.google.com/sa360/answer/9566729) for details. Any value below 0.1 is
+   * reported as 0.0999.
    * @param searchAbsoluteTopImpressionShare searchAbsoluteTopImpressionShare or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setSearchAbsoluteTopImpressionShare(java.lang.Double searchAbsoluteTopImpressionShare) {
@@ -3057,9 +3082,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   }
 
   /**
-   * The number estimating how often your ad didn't show adjacent to the top organic search results
-   * due to a low budget. Note: Search budget lost top impression share is reported in the range of
-   * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The estimated percent of times that your ad didn't show adjacent to the top organic search
+   * results due to a low budget. Note: Search budget lost top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSearchBudgetLostTopImpressionShare() {
@@ -3067,9 +3092,9 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   }
 
   /**
-   * The number estimating how often your ad didn't show adjacent to the top organic search results
-   * due to a low budget. Note: Search budget lost top impression share is reported in the range of
-   * 0 to 0.9. Any value above 0.9 is reported as 0.9001.
+   * The estimated percent of times that your ad didn't show adjacent to the top organic search
+   * results due to a low budget. Note: Search budget lost top impression share is reported in the
+   * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * @param searchBudgetLostTopImpressionShare searchBudgetLostTopImpressionShare or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setSearchBudgetLostTopImpressionShare(java.lang.Double searchBudgetLostTopImpressionShare) {
@@ -3317,7 +3342,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The value of all conversions divided by the number of all conversions. When this column is
    * selected with date, the values in date column means the conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611).
    * @return value or {@code null} for none
    */
   public java.lang.Double getValuePerAllConversionsByConversionDate() {
@@ -3327,7 +3353,8 @@ public final class GoogleAdsSearchads360V23CommonMetrics extends com.google.api.
   /**
    * The value of all conversions divided by the number of all conversions. When this column is
    * selected with date, the values in date column means the conversion date. Details for the
-   * by_conversion_date columns are available at https://support.google.com/sa360/answer/9250611.
+   * `by_conversion_date` columns are available at [About the "All conversions"
+   * column](https://support.google.com/sa360/answer/9250611).
    * @param valuePerAllConversionsByConversionDate valuePerAllConversionsByConversionDate or {@code null} for none
    */
   public GoogleAdsSearchads360V23CommonMetrics setValuePerAllConversionsByConversionDate(java.lang.Double valuePerAllConversionsByConversionDate) {

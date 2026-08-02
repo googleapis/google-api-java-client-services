@@ -37,6 +37,13 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   private IngestCompositeDataStatus compositeDataIngestionStatus;
 
   /**
+   * The status of the google user id data ingestion to the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestGoogleUserIdDataStatus googleUserIdDataIngestionStatus;
+
+  /**
    * The status of the mobile data ingestion to the destination.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private IngestPairDataStatus pairDataIngestionStatus;
+
+  /**
+   * The status of the partner provided id data ingestion to the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestPartnerProvidedIdDataStatus partnerProvidedIdDataIngestionStatus;
 
   /**
    * The status of the ppid data ingestion to the destination.
@@ -89,6 +103,23 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
+   * The status of the google user id data ingestion to the destination.
+   * @return value or {@code null} for none
+   */
+  public IngestGoogleUserIdDataStatus getGoogleUserIdDataIngestionStatus() {
+    return googleUserIdDataIngestionStatus;
+  }
+
+  /**
+   * The status of the google user id data ingestion to the destination.
+   * @param googleUserIdDataIngestionStatus googleUserIdDataIngestionStatus or {@code null} for none
+   */
+  public IngestAudienceMembersStatus setGoogleUserIdDataIngestionStatus(IngestGoogleUserIdDataStatus googleUserIdDataIngestionStatus) {
+    this.googleUserIdDataIngestionStatus = googleUserIdDataIngestionStatus;
+    return this;
+  }
+
+  /**
    * The status of the mobile data ingestion to the destination.
    * @return value or {@code null} for none
    */
@@ -119,6 +150,23 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
    */
   public IngestAudienceMembersStatus setPairDataIngestionStatus(IngestPairDataStatus pairDataIngestionStatus) {
     this.pairDataIngestionStatus = pairDataIngestionStatus;
+    return this;
+  }
+
+  /**
+   * The status of the partner provided id data ingestion to the destination.
+   * @return value or {@code null} for none
+   */
+  public IngestPartnerProvidedIdDataStatus getPartnerProvidedIdDataIngestionStatus() {
+    return partnerProvidedIdDataIngestionStatus;
+  }
+
+  /**
+   * The status of the partner provided id data ingestion to the destination.
+   * @param partnerProvidedIdDataIngestionStatus partnerProvidedIdDataIngestionStatus or {@code null} for none
+   */
+  public IngestAudienceMembersStatus setPartnerProvidedIdDataIngestionStatus(IngestPartnerProvidedIdDataStatus partnerProvidedIdDataIngestionStatus) {
+    this.partnerProvidedIdDataIngestionStatus = partnerProvidedIdDataIngestionStatus;
     return this;
   }
 

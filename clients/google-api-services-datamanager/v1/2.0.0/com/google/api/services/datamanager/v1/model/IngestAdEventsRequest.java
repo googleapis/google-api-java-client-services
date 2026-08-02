@@ -43,7 +43,7 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Information about encryption keys which are used to encrypt the data.
+   * Required. Information about encryption keys which are used to encrypt the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Information about encryption keys which are used to encrypt the data.
+   * Required. Information about encryption keys which are used to encrypt the data.
    * @return value or {@code null} for none
    */
   public EncryptionInfo getEncryptionInfo() {
@@ -82,7 +82,7 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Information about encryption keys which are used to encrypt the data.
+   * Required. Information about encryption keys which are used to encrypt the data.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public IngestAdEventsRequest setEncryptionInfo(EncryptionInfo encryptionInfo) {

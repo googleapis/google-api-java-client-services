@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the IngestEventsRequest.
+ * Response from the RemoveAllAudienceMembersRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -27,20 +27,7 @@ package com.google.api.services.datamanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class IngestEventsResponse extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Detailed row-level warnings with field paths.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<FieldWarning> fieldWarnings;
-
-  static {
-    // hack to force ProGuard to consider FieldWarning used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(FieldWarning.class);
-  }
+public final class RemoveAllAudienceMembersResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The auto-generated ID of the request.
@@ -48,23 +35,6 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
-
-  /**
-   * Detailed row-level warnings with field paths.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<FieldWarning> getFieldWarnings() {
-    return fieldWarnings;
-  }
-
-  /**
-   * Detailed row-level warnings with field paths.
-   * @param fieldWarnings fieldWarnings or {@code null} for none
-   */
-  public IngestEventsResponse setFieldWarnings(java.util.List<FieldWarning> fieldWarnings) {
-    this.fieldWarnings = fieldWarnings;
-    return this;
-  }
 
   /**
    * The auto-generated ID of the request.
@@ -78,19 +48,19 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
    * The auto-generated ID of the request.
    * @param requestId requestId or {@code null} for none
    */
-  public IngestEventsResponse setRequestId(java.lang.String requestId) {
+  public RemoveAllAudienceMembersResponse setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
     return this;
   }
 
   @Override
-  public IngestEventsResponse set(String fieldName, Object value) {
-    return (IngestEventsResponse) super.set(fieldName, value);
+  public RemoveAllAudienceMembersResponse set(String fieldName, Object value) {
+    return (RemoveAllAudienceMembersResponse) super.set(fieldName, value);
   }
 
   @Override
-  public IngestEventsResponse clone() {
-    return (IngestEventsResponse) super.clone();
+  public RemoveAllAudienceMembersResponse clone() {
+    return (RemoveAllAudienceMembersResponse) super.clone();
   }
 
 }

@@ -30,6 +30,33 @@ package com.google.api.services.datamanager.v1.model;
 public final class AddressInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The street and number of the user's address. Used only for Google Analytics. This
+   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
+   * characters - Convert to lowercase - Remove leading and trailing whitespace
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String addressLine;
+
+  /**
+   * Optional. The administrative area (state/province) of the user's address. Used only for Google
+   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
+   * lowercase - Remove leading and trailing whitespace
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String administrativeArea;
+
+  /**
+   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
+   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
+   * trailing whitespace
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String city;
+
+  /**
    * Required. Family (last) name of the user, all lowercase, with no punctuation, no leading or
    * trailing whitespace, and hashed as SHA-256.
    * The value may be {@code null}.
@@ -58,6 +85,69 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
+
+  /**
+   * Optional. The street and number of the user's address. Used only for Google Analytics. This
+   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
+   * characters - Convert to lowercase - Remove leading and trailing whitespace
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAddressLine() {
+    return addressLine;
+  }
+
+  /**
+   * Optional. The street and number of the user's address. Used only for Google Analytics. This
+   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
+   * characters - Convert to lowercase - Remove leading and trailing whitespace
+   * @param addressLine addressLine or {@code null} for none
+   */
+  public AddressInfo setAddressLine(java.lang.String addressLine) {
+    this.addressLine = addressLine;
+    return this;
+  }
+
+  /**
+   * Optional. The administrative area (state/province) of the user's address. Used only for Google
+   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
+   * lowercase - Remove leading and trailing whitespace
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdministrativeArea() {
+    return administrativeArea;
+  }
+
+  /**
+   * Optional. The administrative area (state/province) of the user's address. Used only for Google
+   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
+   * lowercase - Remove leading and trailing whitespace
+   * @param administrativeArea administrativeArea or {@code null} for none
+   */
+  public AddressInfo setAdministrativeArea(java.lang.String administrativeArea) {
+    this.administrativeArea = administrativeArea;
+    return this;
+  }
+
+  /**
+   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
+   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
+   * trailing whitespace
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCity() {
+    return city;
+  }
+
+  /**
+   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
+   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
+   * trailing whitespace
+   * @param city city or {@code null} for none
+   */
+  public AddressInfo setCity(java.lang.String city) {
+    this.city = city;
+    return this;
+  }
 
   /**
    * Required. Family (last) name of the user, all lowercase, with no punctuation, no leading or

@@ -30,11 +30,41 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestAudienceMembersResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Detailed row-level warnings with field paths.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FieldWarning> fieldWarnings;
+
+  static {
+    // hack to force ProGuard to consider FieldWarning used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(FieldWarning.class);
+  }
+
+  /**
    * The auto-generated ID of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Detailed row-level warnings with field paths.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FieldWarning> getFieldWarnings() {
+    return fieldWarnings;
+  }
+
+  /**
+   * Detailed row-level warnings with field paths.
+   * @param fieldWarnings fieldWarnings or {@code null} for none
+   */
+  public IngestAudienceMembersResponse setFieldWarnings(java.util.List<FieldWarning> fieldWarnings) {
+    this.fieldWarnings = fieldWarnings;
+    return this;
+  }
 
   /**
    * The auto-generated ID of the request.

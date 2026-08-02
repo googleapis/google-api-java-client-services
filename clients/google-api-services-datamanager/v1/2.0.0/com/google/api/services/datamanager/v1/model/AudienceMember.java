@@ -51,6 +51,13 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> destinationReferences;
 
   /**
+   * Encrypted Google User IDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleUserIdData googleUserIdData;
+
+  /**
    * Data identifying the user's mobile devices.
    * The value may be {@code null}.
    */
@@ -65,6 +72,13 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private PairData pairData;
+
+  /**
+   * Partner-provided identifiers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PartnerProvidedIdData partnerProvidedIdData;
 
   /**
    * Data related to publisher provided identifiers. This feature is only available to data
@@ -140,6 +154,23 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Encrypted Google User IDs.
+   * @return value or {@code null} for none
+   */
+  public GoogleUserIdData getGoogleUserIdData() {
+    return googleUserIdData;
+  }
+
+  /**
+   * Encrypted Google User IDs.
+   * @param googleUserIdData googleUserIdData or {@code null} for none
+   */
+  public AudienceMember setGoogleUserIdData(GoogleUserIdData googleUserIdData) {
+    this.googleUserIdData = googleUserIdData;
+    return this;
+  }
+
+  /**
    * Data identifying the user's mobile devices.
    * @return value or {@code null} for none
    */
@@ -174,6 +205,23 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
    */
   public AudienceMember setPairData(PairData pairData) {
     this.pairData = pairData;
+    return this;
+  }
+
+  /**
+   * Partner-provided identifiers.
+   * @return value or {@code null} for none
+   */
+  public PartnerProvidedIdData getPartnerProvidedIdData() {
+    return partnerProvidedIdData;
+  }
+
+  /**
+   * Partner-provided identifiers.
+   * @param partnerProvidedIdData partnerProvidedIdData or {@code null} for none
+   */
+  public AudienceMember setPartnerProvidedIdData(PartnerProvidedIdData partnerProvidedIdData) {
+    this.partnerProvidedIdData = partnerProvidedIdData;
     return this;
   }
 

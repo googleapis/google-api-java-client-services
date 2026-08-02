@@ -182,7 +182,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "admin/reports/v1/activity/users/{userKey}/applications/{applicationName}";
 
       private final java.util.regex.Pattern APPLICATION_NAME_PATTERN =
-          java.util.regex.Pattern.compile("(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)");
+          java.util.regex.Pattern.compile("(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)|(workspace_studio)");
 
       private final java.util.regex.Pattern CUSTOMER_ID_PATTERN =
           java.util.regex.Pattern.compile("C.+|my_customer");
@@ -229,7 +229,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)");
+              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)|(workspace_studio)");
         }
       }
 
@@ -344,7 +344,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(APPLICATION_NAME_PATTERN.matcher(applicationName).matches(),
               "Parameter applicationName must conform to the pattern " +
-              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)");
+              "(access_evaluation)|(access_transparency)|(admin)|(admin_data_action)|(assignments)|(calendar)|(chat)|(chrome)|(classroom)|(cloud_search)|(contacts)|(context_aware_access)|(data_studio)|(data_migration)|(directory_sync)|(drive)|(gcp)|(gmail)|(gplus)|(graduation)|(groups)|(groups_enterprise)|(jamboard)|(keep)|(ldap)|(login)|(meet)|(meet_hardware)|(mobile)|(profile)|(rules)|(saml)|(token)|(user_accounts)|(vault)|(gemini_in_workspace_apps)|(tasks)|(takeout)|(voice)|(chrome_sync)|(workspace_studio)");
         }
         this.applicationName = applicationName;
         return this;
@@ -455,6 +455,34 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
               "C.+|my_customer");
         }
         this.customerId = customerId;
+        return this;
+      }
+
+      /**
+       * Optional. Used to filter on the fields present in [`UserDeviceInfo`](#userdeviceinfo)
+       * message like `deviceId`, `deviceType`, and `deviceOsVersion`. **Usage** ```
+       * GET...&deviceFilter=deviceId="123" GET...&deviceFilter=deviceType="ANDROID"
+       * GET...&deviceFilter=deviceOsVersion="14.0" ```
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String deviceFilter;
+
+      /** Optional. Used to filter on the fields present in [`UserDeviceInfo`](#userdeviceinfo) message like
+     `deviceId`, `deviceType`, and `deviceOsVersion`. **Usage** ``` GET...&deviceFilter=deviceId="123"
+     GET...&deviceFilter=deviceType="ANDROID" GET...&deviceFilter=deviceOsVersion="14.0" ```
+       */
+      public java.lang.String getDeviceFilter() {
+        return deviceFilter;
+      }
+
+      /**
+       * Optional. Used to filter on the fields present in [`UserDeviceInfo`](#userdeviceinfo)
+       * message like `deviceId`, `deviceType`, and `deviceOsVersion`. **Usage** ```
+       * GET...&deviceFilter=deviceId="123" GET...&deviceFilter=deviceType="ANDROID"
+       * GET...&deviceFilter=deviceOsVersion="14.0" ```
+       */
+      public List setDeviceFilter(java.lang.String deviceFilter) {
+        this.deviceFilter = deviceFilter;
         return this;
       }
 

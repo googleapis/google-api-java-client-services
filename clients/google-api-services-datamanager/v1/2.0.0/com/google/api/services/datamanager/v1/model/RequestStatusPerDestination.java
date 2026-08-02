@@ -67,6 +67,13 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   private IngestEventsStatus eventsIngestionStatus;
 
   /**
+   * The status of the remove all audience members request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoveAllAudienceMembersStatus removeAllAudienceMembersStatus;
+
+  /**
    * The request status of the destination.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
    */
   public RequestStatusPerDestination setEventsIngestionStatus(IngestEventsStatus eventsIngestionStatus) {
     this.eventsIngestionStatus = eventsIngestionStatus;
+    return this;
+  }
+
+  /**
+   * The status of the remove all audience members request.
+   * @return value or {@code null} for none
+   */
+  public RemoveAllAudienceMembersStatus getRemoveAllAudienceMembersStatus() {
+    return removeAllAudienceMembersStatus;
+  }
+
+  /**
+   * The status of the remove all audience members request.
+   * @param removeAllAudienceMembersStatus removeAllAudienceMembersStatus or {@code null} for none
+   */
+  public RequestStatusPerDestination setRemoveAllAudienceMembersStatus(RemoveAllAudienceMembersStatus removeAllAudienceMembersStatus) {
+    this.removeAllAudienceMembersStatus = removeAllAudienceMembersStatus;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   private RemoveCompositeDataStatus compositeDataRemovalStatus;
 
   /**
+   * The status of the google user id data removal from the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoveGoogleUserIdDataStatus googleUserIdDataRemovalStatus;
+
+  /**
    * The status of the mobile data removal from the destination.
    * The value may be {@code null}.
    */
@@ -49,6 +56,13 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private RemovePairDataStatus pairDataRemovalStatus;
+
+  /**
+   * The status of the partner provided id data removal from the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemovePartnerProvidedIdDataStatus partnerProvidedIdDataRemovalStatus;
 
   /**
    * The status of the ppid data removal from the destination.
@@ -89,6 +103,23 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
+   * The status of the google user id data removal from the destination.
+   * @return value or {@code null} for none
+   */
+  public RemoveGoogleUserIdDataStatus getGoogleUserIdDataRemovalStatus() {
+    return googleUserIdDataRemovalStatus;
+  }
+
+  /**
+   * The status of the google user id data removal from the destination.
+   * @param googleUserIdDataRemovalStatus googleUserIdDataRemovalStatus or {@code null} for none
+   */
+  public RemoveAudienceMembersStatus setGoogleUserIdDataRemovalStatus(RemoveGoogleUserIdDataStatus googleUserIdDataRemovalStatus) {
+    this.googleUserIdDataRemovalStatus = googleUserIdDataRemovalStatus;
+    return this;
+  }
+
+  /**
    * The status of the mobile data removal from the destination.
    * @return value or {@code null} for none
    */
@@ -119,6 +150,23 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
    */
   public RemoveAudienceMembersStatus setPairDataRemovalStatus(RemovePairDataStatus pairDataRemovalStatus) {
     this.pairDataRemovalStatus = pairDataRemovalStatus;
+    return this;
+  }
+
+  /**
+   * The status of the partner provided id data removal from the destination.
+   * @return value or {@code null} for none
+   */
+  public RemovePartnerProvidedIdDataStatus getPartnerProvidedIdDataRemovalStatus() {
+    return partnerProvidedIdDataRemovalStatus;
+  }
+
+  /**
+   * The status of the partner provided id data removal from the destination.
+   * @param partnerProvidedIdDataRemovalStatus partnerProvidedIdDataRemovalStatus or {@code null} for none
+   */
+  public RemoveAudienceMembersStatus setPartnerProvidedIdDataRemovalStatus(RemovePartnerProvidedIdDataStatus partnerProvidedIdDataRemovalStatus) {
+    this.partnerProvidedIdDataRemovalStatus = partnerProvidedIdDataRemovalStatus;
     return this;
   }
 

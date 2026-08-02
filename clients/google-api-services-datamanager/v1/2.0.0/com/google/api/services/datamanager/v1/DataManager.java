@@ -3915,6 +3915,105 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
         return (Remove) super.set(parameterName, value);
       }
     }
+    /**
+     * Removes all audience members from the provided destinations.
+     *
+     * Create a request for the method "audienceMembers.removeAll".
+     *
+     * This request holds the parameters needed by the datamanager server.  After setting any optional
+     * parameters, call the {@link RemoveAll#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersRequest}
+     * @return the request
+     */
+    public RemoveAll removeAll(com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersRequest content) throws java.io.IOException {
+      RemoveAll result = new RemoveAll(content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveAll extends DataManagerRequest<com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersResponse> {
+
+      private static final String REST_PATH = "v1/audienceMembers:removeAll";
+
+      /**
+       * Removes all audience members from the provided destinations.
+       *
+       * Create a request for the method "audienceMembers.removeAll".
+       *
+       * This request holds the parameters needed by the the datamanager server.  After setting any
+       * optional parameters, call the {@link RemoveAll#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * RemoveAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersRequest}
+       * @since 1.13
+       */
+      protected RemoveAll(com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersRequest content) {
+        super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.RemoveAllAudienceMembersResponse.class);
+      }
+
+      @Override
+      public RemoveAll set$Xgafv(java.lang.String $Xgafv) {
+        return (RemoveAll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RemoveAll setAccessToken(java.lang.String accessToken) {
+        return (RemoveAll) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RemoveAll setAlt(java.lang.String alt) {
+        return (RemoveAll) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveAll setCallback(java.lang.String callback) {
+        return (RemoveAll) super.setCallback(callback);
+      }
+
+      @Override
+      public RemoveAll setFields(java.lang.String fields) {
+        return (RemoveAll) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveAll setKey(java.lang.String key) {
+        return (RemoveAll) super.setKey(key);
+      }
+
+      @Override
+      public RemoveAll setOauthToken(java.lang.String oauthToken) {
+        return (RemoveAll) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveAll setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveAll) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveAll setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveAll) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveAll setUploadType(java.lang.String uploadType) {
+        return (RemoveAll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RemoveAll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RemoveAll) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public RemoveAll set(String parameterName, Object value) {
+        return (RemoveAll) super.set(parameterName, value);
+      }
+    }
 
   }
 

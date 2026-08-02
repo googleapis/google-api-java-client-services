@@ -131,7 +131,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String campaignName;
 
   /**
-   * Optional. Information gathered about the device being used when the ad event happened.
+   * Required. Information gathered about the device being used when the ad event happened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +218,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String platformTypeString;
 
   /**
-   * Required. The ISO 3166-2 country plus subdivision.
+   * Optional. The ISO 3166-2 country plus subdivision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -513,7 +513,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the device being used when the ad event happened.
+   * Required. Information gathered about the device being used when the ad event happened.
    * @return value or {@code null} for none
    */
   public DeviceInfo getDeviceInfo() {
@@ -521,7 +521,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the device being used when the ad event happened.
+   * Required. Information gathered about the device being used when the ad event happened.
    * @param deviceInfo deviceInfo or {@code null} for none
    */
   public AdEvent setDeviceInfo(DeviceInfo deviceInfo) {
@@ -723,7 +723,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ISO 3166-2 country plus subdivision.
+   * Optional. The ISO 3166-2 country plus subdivision.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -731,7 +731,7 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ISO 3166-2 country plus subdivision.
+   * Optional. The ISO 3166-2 country plus subdivision.
    * @param regionCode regionCode or {@code null} for none
    */
   public AdEvent setRegionCode(java.lang.String regionCode) {

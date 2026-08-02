@@ -226,6 +226,13 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String lastUpdateTime;
 
   /**
+   * Optional. Specifies how the server interprets the message `text` field content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String markupSyntax;
+
+  /**
    * Output only. A URL in the Chat message `text` field that matches a link preview pattern. For
    * more information, see [Preview links](https://developers.google.com/workspace/chat/preview-
    * links).
@@ -691,6 +698,23 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setLastUpdateTime(String lastUpdateTime) {
     this.lastUpdateTime = lastUpdateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies how the server interprets the message `text` field content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMarkupSyntax() {
+    return markupSyntax;
+  }
+
+  /**
+   * Optional. Specifies how the server interprets the message `text` field content.
+   * @param markupSyntax markupSyntax or {@code null} for none
+   */
+  public Message setMarkupSyntax(java.lang.String markupSyntax) {
+    this.markupSyntax = markupSyntax;
     return this;
   }
 

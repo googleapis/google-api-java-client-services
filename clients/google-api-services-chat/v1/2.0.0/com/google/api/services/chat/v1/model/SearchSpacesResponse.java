@@ -38,6 +38,19 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
+   * Output only. The list of search results that matched the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SearchSpaceResult> results;
+
+  static {
+    // hack to force ProGuard to consider SearchSpaceResult used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SearchSpaceResult.class);
+  }
+
+  /**
    * Deprecated: Please use the new `results` field instead. A page of the requested spaces. This
    * field will be populated only when `useAdminAccess` is set to `true` and deprecated in favor of
    * the new `results` field.
@@ -70,6 +83,23 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
    */
   public SearchSpacesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Output only. The list of search results that matched the query.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SearchSpaceResult> getResults() {
+    return results;
+  }
+
+  /**
+   * Output only. The list of search results that matched the query.
+   * @param results results or {@code null} for none
+   */
+  public SearchSpacesResponse setResults(java.util.List<SearchSpaceResult> results) {
+    this.results = results;
     return this;
   }
 

@@ -30,35 +30,11 @@ package com.google.api.services.androidenterprise.model;
 public final class GoogleAuthenticationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether dedicated devices are allowed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dedicatedDevicesAllowed;
-
-  /**
    * Whether Google authentication is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleAuthenticationRequired;
-
-  /**
-   * Whether dedicated devices are allowed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDedicatedDevicesAllowed() {
-    return dedicatedDevicesAllowed;
-  }
-
-  /**
-   * Whether dedicated devices are allowed.
-   * @param dedicatedDevicesAllowed dedicatedDevicesAllowed or {@code null} for none
-   */
-  public GoogleAuthenticationSettings setDedicatedDevicesAllowed(java.lang.String dedicatedDevicesAllowed) {
-    this.dedicatedDevicesAllowed = dedicatedDevicesAllowed;
-    return this;
-  }
 
   /**
    * Whether Google authentication is required.

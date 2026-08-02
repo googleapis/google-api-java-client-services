@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for AppendA2aTaskEvents.
+ * An event payload that appends a new message to the task history.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend extends com.google.api.client.json.GenericJson {
 
   /**
-   * Task generation matching the last event
+   * Required. The message to append to the task history.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long generation;
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1A2aTaskMessage message;
 
   /**
-   * Task generation matching the last event
+   * Required. The message to append to the task history.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getGeneration() {
-    return generation;
+  public GoogleCloudAiplatformV1beta1A2aTaskMessage getMessage() {
+    return message;
   }
 
   /**
-   * Task generation matching the last event
-   * @param generation generation or {@code null} for none
+   * Required. The message to append to the task history.
+   * @param message message or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse setGeneration(java.lang.Long generation) {
-    this.generation = generation;
+  public GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend setMessage(GoogleCloudAiplatformV1beta1A2aTaskMessage message) {
+    this.message = message;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse clone() {
-    return (GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend clone() {
+    return (GoogleCloudAiplatformV1beta1A2aTaskHistoryAppend) super.clone();
   }
 
 }

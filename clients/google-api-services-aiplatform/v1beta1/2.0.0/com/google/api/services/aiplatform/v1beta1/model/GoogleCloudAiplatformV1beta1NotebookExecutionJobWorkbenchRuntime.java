@@ -29,6 +29,57 @@ package com.google.api.services.aiplatform.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntime extends com.google.api.client.json.GenericJson {
 
+  /**
+   * A user-provided container image. The notebook executes inside this container on a managed
+   * container-host (COS) VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeContainerImage customContainerImage;
+
+  /**
+   * A specific Compute Engine VM image to run the notebook on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeVmImage vmImage;
+
+  /**
+   * A user-provided container image. The notebook executes inside this container on a managed
+   * container-host (COS) VM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeContainerImage getCustomContainerImage() {
+    return customContainerImage;
+  }
+
+  /**
+   * A user-provided container image. The notebook executes inside this container on a managed
+   * container-host (COS) VM.
+   * @param customContainerImage customContainerImage or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntime setCustomContainerImage(GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeContainerImage customContainerImage) {
+    this.customContainerImage = customContainerImage;
+    return this;
+  }
+
+  /**
+   * A specific Compute Engine VM image to run the notebook on.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeVmImage getVmImage() {
+    return vmImage;
+  }
+
+  /**
+   * A specific Compute Engine VM image to run the notebook on.
+   * @param vmImage vmImage or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntime setVmImage(GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntimeVmImage vmImage) {
+    this.vmImage = vmImage;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntime set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1beta1NotebookExecutionJobWorkbenchRuntime) super.set(fieldName, value);

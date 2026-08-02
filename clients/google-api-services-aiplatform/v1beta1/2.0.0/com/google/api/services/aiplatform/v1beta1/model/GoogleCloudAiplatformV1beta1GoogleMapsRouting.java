@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Response message for AppendA2aTaskEvents.
+ * Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GoogleMapsRouting extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Task generation matching the last event
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long generation;
-
-  /**
-   * Task generation matching the last event
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getGeneration() {
-    return generation;
-  }
-
-  /**
-   * Task generation matching the last event
-   * @param generation generation or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse setGeneration(java.lang.Long generation) {
-    this.generation = generation;
-    return this;
+  @Override
+  public GoogleCloudAiplatformV1beta1GoogleMapsRouting set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GoogleMapsRouting) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse clone() {
-    return (GoogleCloudAiplatformV1beta1AppendA2aTaskEventsResponse) super.clone();
+  public GoogleCloudAiplatformV1beta1GoogleMapsRouting clone() {
+    return (GoogleCloudAiplatformV1beta1GoogleMapsRouting) super.clone();
   }
 
 }

@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1CodeExecutionResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The identifier of the `ExecutableCode` part this result is for. Only populated if the
+   * corresponding `ExecutableCode` has an id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Required. Outcome of the code execution.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleCloudAiplatformV1CodeExecutionResult extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String output;
+
+  /**
+   * Optional. The identifier of the `ExecutableCode` part this result is for. Only populated if the
+   * corresponding `ExecutableCode` has an id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. The identifier of the `ExecutableCode` part this result is for. Only populated if the
+   * corresponding `ExecutableCode` has an id.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CodeExecutionResult setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
 
   /**
    * Required. Outcome of the code execution.

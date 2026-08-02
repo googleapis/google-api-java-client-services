@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityTraceScopePredicate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filter on the duration of a trace.
+   * Filter on the duration of a trace (in seconds).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityTrace
   private GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityNumericPredicate totalTokenUsage;
 
   /**
-   * Filter on the duration of a trace.
+   * Filter on the duration of a trace (in seconds).
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityNumericPredicate getDuration() {
@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityTrace
   }
 
   /**
-   * Filter on the duration of a trace.
+   * Filter on the duration of a trace (in seconds).
    * @param duration duration or {@code null} for none
    */
   public GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityTraceScopePredicate setDuration(GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityNumericPredicate duration) {

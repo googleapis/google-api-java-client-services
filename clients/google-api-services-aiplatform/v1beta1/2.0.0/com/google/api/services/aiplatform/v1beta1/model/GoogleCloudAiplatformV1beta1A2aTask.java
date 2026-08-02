@@ -30,6 +30,20 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent application which created the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appId;
+
+  /**
+   * Output only. The artifacts produced by the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1A2aTaskArtifact> artifacts;
+
+  /**
    * Optional. A generic identifier for grouping related tasks (e.g., session_id, workflow_id).
    * The value may be {@code null}.
    */
@@ -52,6 +66,20 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
   private String expireTime;
 
   /**
+   * Output only. The task generation number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long generation;
+
+  /**
+   * Output only. The history of the task messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1A2aTaskMessage> history;
+
+  /**
    * Optional. Arbitrary, user-defined metadata.
    * The value may be {@code null}.
    */
@@ -60,7 +88,8 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Identifier. The resource name of the task. Format: `projects/{project}/locations/{location}/rea
-   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+   * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,6 +119,13 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
   private java.lang.String state;
 
   /**
+   * Output only. The status of the task, including the state, status message, and timestamp.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1A2aTaskStatus status;
+
+  /**
    * Optional. The status details of the task.
    * The value may be {@code null}.
    */
@@ -110,6 +146,47 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Task owner user ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userId;
+
+  /**
+   * Optional. Agent application which created the task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppId() {
+    return appId;
+  }
+
+  /**
+   * Optional. Agent application which created the task.
+   * @param appId appId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setAppId(java.lang.String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+  /**
+   * Output only. The artifacts produced by the task.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1A2aTaskArtifact> getArtifacts() {
+    return artifacts;
+  }
+
+  /**
+   * Output only. The artifacts produced by the task.
+   * @param artifacts artifacts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setArtifacts(java.util.List<GoogleCloudAiplatformV1beta1A2aTaskArtifact> artifacts) {
+    this.artifacts = artifacts;
+    return this;
+  }
 
   /**
    * Optional. A generic identifier for grouping related tasks (e.g., session_id, workflow_id).
@@ -165,6 +242,40 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
   }
 
   /**
+   * Output only. The task generation number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getGeneration() {
+    return generation;
+  }
+
+  /**
+   * Output only. The task generation number.
+   * @param generation generation or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setGeneration(java.lang.Long generation) {
+    this.generation = generation;
+    return this;
+  }
+
+  /**
+   * Output only. The history of the task messages.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1A2aTaskMessage> getHistory() {
+    return history;
+  }
+
+  /**
+   * Output only. The history of the task messages.
+   * @param history history or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setHistory(java.util.List<GoogleCloudAiplatformV1beta1A2aTaskMessage> history) {
+    this.history = history;
+    return this;
+  }
+
+  /**
    * Optional. Arbitrary, user-defined metadata.
    * @return value or {@code null} for none
    */
@@ -183,7 +294,8 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Identifier. The resource name of the task. Format: `projects/{project}/locations/{location}/rea
-   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+   * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -192,7 +304,8 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Identifier. The resource name of the task. Format: `projects/{project}/locations/{location}/rea
-   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}`
+   * soningEngines/{reasoning_engine}/a2aTasks/{a2a_task}` or
+   * `projects/{project}/locations/{location}/taskStores/{task_store}/a2aTasks/{a2a_task}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2aTask setName(java.lang.String name) {
@@ -256,6 +369,23 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
   }
 
   /**
+   * Output only. The status of the task, including the state, status message, and timestamp.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTaskStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Output only. The status of the task, including the state, status message, and timestamp.
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setStatus(GoogleCloudAiplatformV1beta1A2aTaskStatus status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
    * Optional. The status details of the task.
    * @return value or {@code null} for none
    */
@@ -305,6 +435,23 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1A2aTask setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Task owner user ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserId() {
+    return userId;
+  }
+
+  /**
+   * Optional. Task owner user ID.
+   * @param userId userId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1A2aTask setUserId(java.lang.String userId) {
+    this.userId = userId;
     return this;
   }
 

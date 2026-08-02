@@ -52,6 +52,13 @@ public final class DataStoreToolModalityConfig extends com.google.api.client.jso
   private DataStoreToolRewriterConfig rewriterConfig;
 
   /**
+   * Optional. The snippets configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataStoreToolSnippetsConfig snippetsConfig;
+
+  /**
    * Optional. The summarization config.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class DataStoreToolModalityConfig extends com.google.api.client.jso
    */
   public DataStoreToolModalityConfig setRewriterConfig(DataStoreToolRewriterConfig rewriterConfig) {
     this.rewriterConfig = rewriterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The snippets configuration.
+   * @return value or {@code null} for none
+   */
+  public DataStoreToolSnippetsConfig getSnippetsConfig() {
+    return snippetsConfig;
+  }
+
+  /**
+   * Optional. The snippets configuration.
+   * @param snippetsConfig snippetsConfig or {@code null} for none
+   */
+  public DataStoreToolModalityConfig setSnippetsConfig(DataStoreToolSnippetsConfig snippetsConfig) {
+    this.snippetsConfig = snippetsConfig;
     return this;
   }
 

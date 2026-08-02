@@ -39,6 +39,14 @@ public final class ImportAppRequestImportOptions extends com.google.api.client.j
   private java.lang.String conflictResolutionStrategy;
 
   /**
+   * Optional. Flag for dry-running the import process. If set to true, the import process will only
+   * perform validations and will not make any changes to the existing app or create a new one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Optional. The strategy to use when resolving conflicts during import.
    * @return value or {@code null} for none
    */
@@ -52,6 +60,25 @@ public final class ImportAppRequestImportOptions extends com.google.api.client.j
    */
   public ImportAppRequestImportOptions setConflictResolutionStrategy(java.lang.String conflictResolutionStrategy) {
     this.conflictResolutionStrategy = conflictResolutionStrategy;
+    return this;
+  }
+
+  /**
+   * Optional. Flag for dry-running the import process. If set to true, the import process will only
+   * perform validations and will not make any changes to the existing app or create a new one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. Flag for dry-running the import process. If set to true, the import process will only
+   * perform validations and will not make any changes to the existing app or create a new one.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public ImportAppRequestImportOptions setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

@@ -46,6 +46,14 @@ public final class ConversationTurn extends com.google.api.client.json.GenericJs
   private Span rootSpan;
 
   /**
+   * Optional. The intended ground-truth text from the Simulated Caller (Polysynth). Only populated
+   * when word error rate metrics are enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userIntendedText;
+
+  /**
    * Optional. List of messages in the conversation turn, including user input, agent responses and
    * intermediate events during the processing.
    * @return value or {@code null} for none
@@ -78,6 +86,25 @@ public final class ConversationTurn extends com.google.api.client.json.GenericJs
    */
   public ConversationTurn setRootSpan(Span rootSpan) {
     this.rootSpan = rootSpan;
+    return this;
+  }
+
+  /**
+   * Optional. The intended ground-truth text from the Simulated Caller (Polysynth). Only populated
+   * when word error rate metrics are enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserIntendedText() {
+    return userIntendedText;
+  }
+
+  /**
+   * Optional. The intended ground-truth text from the Simulated Caller (Polysynth). Only populated
+   * when word error rate metrics are enabled.
+   * @param userIntendedText userIntendedText or {@code null} for none
+   */
+  public ConversationTurn setUserIntendedText(java.lang.String userIntendedText) {
+    this.userIntendedText = userIntendedText;
     return this;
   }
 

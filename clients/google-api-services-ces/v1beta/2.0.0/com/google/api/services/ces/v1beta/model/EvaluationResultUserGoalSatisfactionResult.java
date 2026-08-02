@@ -38,15 +38,15 @@ public final class EvaluationResultUserGoalSatisfactionResult extends com.google
   private java.lang.String explanation;
 
   /**
-   * Output only. The label associated with each score. Score 1: User Task Satisfied Score 0: User
-   * Task Not Satisfied Score -1: User Task Unspecified
+   * Output only. The label associated with each score. Score 2: Graceful Handoff Score 1: User Task
+   * Satisfied Score 0: User Task Not Satisfied Score -1: User Task Unspecified
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * Output only. The user task satisfaction score. Can be -1, 0, 1.
+   * Output only. The user task satisfaction score. Can be -1, 0, 1, 2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class EvaluationResultUserGoalSatisfactionResult extends com.google
   }
 
   /**
-   * Output only. The label associated with each score. Score 1: User Task Satisfied Score 0: User
-   * Task Not Satisfied Score -1: User Task Unspecified
+   * Output only. The label associated with each score. Score 2: Graceful Handoff Score 1: User Task
+   * Satisfied Score 0: User Task Not Satisfied Score -1: User Task Unspecified
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -79,8 +79,8 @@ public final class EvaluationResultUserGoalSatisfactionResult extends com.google
   }
 
   /**
-   * Output only. The label associated with each score. Score 1: User Task Satisfied Score 0: User
-   * Task Not Satisfied Score -1: User Task Unspecified
+   * Output only. The label associated with each score. Score 2: Graceful Handoff Score 1: User Task
+   * Satisfied Score 0: User Task Not Satisfied Score -1: User Task Unspecified
    * @param label label or {@code null} for none
    */
   public EvaluationResultUserGoalSatisfactionResult setLabel(java.lang.String label) {
@@ -89,7 +89,7 @@ public final class EvaluationResultUserGoalSatisfactionResult extends com.google
   }
 
   /**
-   * Output only. The user task satisfaction score. Can be -1, 0, 1.
+   * Output only. The user task satisfaction score. Can be -1, 0, 1, 2.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getScore() {
@@ -97,7 +97,7 @@ public final class EvaluationResultUserGoalSatisfactionResult extends com.google
   }
 
   /**
-   * Output only. The user task satisfaction score. Can be -1, 0, 1.
+   * Output only. The user task satisfaction score. Can be -1, 0, 1, 2.
    * @param score score or {@code null} for none
    */
   public EvaluationResultUserGoalSatisfactionResult setScore(java.lang.Integer score) {

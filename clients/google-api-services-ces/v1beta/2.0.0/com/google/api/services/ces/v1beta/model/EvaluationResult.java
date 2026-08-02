@@ -156,11 +156,27 @@ public final class EvaluationResult extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Output only. The outcome metadata of the evaluation. Only populated if execution_state is
+   * COMPLETE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outcomeMetadata;
+
+  /**
    * Output only. The persona used to generate the conversation for the evaluation result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EvaluationPersona persona;
+
+  /**
+   * Output only. The root span of the evaluation execution, which includes information about each
+   * step of the evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Span rootSpan;
 
   /**
    * Output only. The outcome of a scenario evaluation.
@@ -471,6 +487,25 @@ public final class EvaluationResult extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The outcome metadata of the evaluation. Only populated if execution_state is
+   * COMPLETE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutcomeMetadata() {
+    return outcomeMetadata;
+  }
+
+  /**
+   * Output only. The outcome metadata of the evaluation. Only populated if execution_state is
+   * COMPLETE.
+   * @param outcomeMetadata outcomeMetadata or {@code null} for none
+   */
+  public EvaluationResult setOutcomeMetadata(java.lang.String outcomeMetadata) {
+    this.outcomeMetadata = outcomeMetadata;
+    return this;
+  }
+
+  /**
    * Output only. The persona used to generate the conversation for the evaluation result.
    * @return value or {@code null} for none
    */
@@ -484,6 +519,25 @@ public final class EvaluationResult extends com.google.api.client.json.GenericJs
    */
   public EvaluationResult setPersona(EvaluationPersona persona) {
     this.persona = persona;
+    return this;
+  }
+
+  /**
+   * Output only. The root span of the evaluation execution, which includes information about each
+   * step of the evaluation.
+   * @return value or {@code null} for none
+   */
+  public Span getRootSpan() {
+    return rootSpan;
+  }
+
+  /**
+   * Output only. The root span of the evaluation execution, which includes information about each
+   * step of the evaluation.
+   * @param rootSpan rootSpan or {@code null} for none
+   */
+  public EvaluationResult setRootSpan(Span rootSpan) {
+    this.rootSpan = rootSpan;
     return this;
   }
 

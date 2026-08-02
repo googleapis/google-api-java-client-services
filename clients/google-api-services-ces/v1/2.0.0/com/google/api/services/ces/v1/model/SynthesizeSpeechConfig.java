@@ -31,7 +31,8 @@ package com.google.api.services.ces.v1.model;
 public final class SynthesizeSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the consent audio for voice cloning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,17 +73,18 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
   private java.lang.String voice;
 
   /**
-   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
-   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
-   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
-   * object.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
+   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String voiceSampleGcsUri;
 
   /**
-   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the consent audio for voice cloning.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentAudioGcsUri() {
@@ -90,7 +92,8 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Cloud Storage URI to the consent audio for voice cloning.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the consent audio for voice cloning.
    * @param consentAudioGcsUri consentAudioGcsUri or {@code null} for none
    */
   public SynthesizeSpeechConfig setConsentAudioGcsUri(java.lang.String consentAudioGcsUri) {
@@ -179,10 +182,10 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
-   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
-   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
-   * object.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
+   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
    * @return value or {@code null} for none
    */
   public java.lang.String getVoiceSampleGcsUri() {
@@ -190,10 +193,10 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
-   * be a mono-channel, 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-
-   * sa-ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage
-   * object.
+   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
+   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
+   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
    * @param voiceSampleGcsUri voiceSampleGcsUri or {@code null} for none
    */
   public SynthesizeSpeechConfig setVoiceSampleGcsUri(java.lang.String voiceSampleGcsUri) {

@@ -71,6 +71,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.Long currentDiskSize;
 
   /**
+   * Optional. If true, instance metadata is sent to the Database Center. If false, instance
+   * metadata is not sent to the Database Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean databaseCenterIntegrationEnabled;
+
+  /**
    * Output only. Stores the current database version running on the instance including minor
    * version such as `MYSQL_8_0_18`.
    * The value may be {@code null}.
@@ -516,6 +524,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setCurrentDiskSize(java.lang.Long currentDiskSize) {
     this.currentDiskSize = currentDiskSize;
+    return this;
+  }
+
+  /**
+   * Optional. If true, instance metadata is sent to the Database Center. If false, instance
+   * metadata is not sent to the Database Center.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDatabaseCenterIntegrationEnabled() {
+    return databaseCenterIntegrationEnabled;
+  }
+
+  /**
+   * Optional. If true, instance metadata is sent to the Database Center. If false, instance
+   * metadata is not sent to the Database Center.
+   * @param databaseCenterIntegrationEnabled databaseCenterIntegrationEnabled or {@code null} for none
+   */
+  public DatabaseInstance setDatabaseCenterIntegrationEnabled(java.lang.Boolean databaseCenterIntegrationEnabled) {
+    this.databaseCenterIntegrationEnabled = databaseCenterIntegrationEnabled;
     return this;
   }
 

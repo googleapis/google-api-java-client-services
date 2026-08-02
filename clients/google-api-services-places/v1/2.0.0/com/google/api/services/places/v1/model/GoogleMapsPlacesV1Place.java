@@ -167,6 +167,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleTypeLocalizedText editorialSummary;
 
   /**
+   * Entrances for this destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1PlaceEntrance> entrances;
+
+  /**
    * The summary of amenities near the EV charging station.
    * The value may be {@code null}.
    */
@@ -329,6 +336,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String nationalPhoneNumber;
+
+  /**
+   * Navigation points for this destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleMapsPlacesV1PlaceNavigationPoint> navigationPoints;
 
   /**
    * A summary of points of interest near the place.
@@ -974,6 +988,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * Entrances for this destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1PlaceEntrance> getEntrances() {
+    return entrances;
+  }
+
+  /**
+   * Entrances for this destination.
+   * @param entrances entrances or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setEntrances(java.util.List<GoogleMapsPlacesV1PlaceEntrance> entrances) {
+    this.entrances = entrances;
+    return this;
+  }
+
+  /**
    * The summary of amenities near the EV charging station.
    * @return value or {@code null} for none
    */
@@ -1364,6 +1395,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setNationalPhoneNumber(java.lang.String nationalPhoneNumber) {
     this.nationalPhoneNumber = nationalPhoneNumber;
+    return this;
+  }
+
+  /**
+   * Navigation points for this destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleMapsPlacesV1PlaceNavigationPoint> getNavigationPoints() {
+    return navigationPoints;
+  }
+
+  /**
+   * Navigation points for this destination.
+   * @param navigationPoints navigationPoints or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setNavigationPoints(java.util.List<GoogleMapsPlacesV1PlaceNavigationPoint> navigationPoints) {
+    this.navigationPoints = navigationPoints;
     return this;
   }
 

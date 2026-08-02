@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   /**
    * Publishes generated data profiles to Google Security Operations. For more information, see [Use
    * Sensitive Data Protection data in context-aware
-   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * analytics](https://docs.cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
    * download).
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   /**
    * Publishes generated data profiles to Google Security Operations. For more information, see [Use
    * Sensitive Data Protection data in context-aware
-   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * analytics](https://docs.cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
    * download).
    * @return value or {@code null} for none
    */
@@ -124,7 +124,7 @@ public final class GooglePrivacyDlpV2DataProfileAction extends com.google.api.cl
   /**
    * Publishes generated data profiles to Google Security Operations. For more information, see [Use
    * Sensitive Data Protection data in context-aware
-   * analytics](https://cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
+   * analytics](https://docs.cloud.google.com/chronicle/docs/detection/usecase-dlp-high-risk-user-
    * download).
    * @param publishToChronicle publishToChronicle or {@code null} for none
    */

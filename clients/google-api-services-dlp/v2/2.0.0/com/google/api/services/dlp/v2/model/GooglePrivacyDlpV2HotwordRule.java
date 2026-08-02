@@ -52,7 +52,7 @@ public final class GooglePrivacyDlpV2HotwordRule extends com.google.api.client.j
    * known to be the area code of a company's office. In this case, use the hotword regex "\(xxx\)",
    * where "xxx" is the area code in question. For tabular data, if you want to modify the
    * likelihood of an entire column of findngs, see [Hotword example: Set the match likelihood of a
-   * table column] (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-
+   * table column] (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-
    * infotypes-likelihood#match-column-values).
    * The value may be {@code null}.
    */
@@ -101,7 +101,7 @@ public final class GooglePrivacyDlpV2HotwordRule extends com.google.api.client.j
    * known to be the area code of a company's office. In this case, use the hotword regex "\(xxx\)",
    * where "xxx" is the area code in question. For tabular data, if you want to modify the
    * likelihood of an entire column of findngs, see [Hotword example: Set the match likelihood of a
-   * table column] (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-
+   * table column] (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-
    * infotypes-likelihood#match-column-values).
    * @return value or {@code null} for none
    */
@@ -117,7 +117,7 @@ public final class GooglePrivacyDlpV2HotwordRule extends com.google.api.client.j
    * known to be the area code of a company's office. In this case, use the hotword regex "\(xxx\)",
    * where "xxx" is the area code in question. For tabular data, if you want to modify the
    * likelihood of an entire column of findngs, see [Hotword example: Set the match likelihood of a
-   * table column] (https://cloud.google.com/sensitive-data-protection/docs/creating-custom-
+   * table column] (https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-
    * infotypes-likelihood#match-column-values).
    * @param proximity proximity or {@code null} for none
    */

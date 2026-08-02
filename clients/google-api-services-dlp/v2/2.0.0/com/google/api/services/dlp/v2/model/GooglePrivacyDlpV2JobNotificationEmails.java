@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Sends an email when the job completes. The email goes to IAM project owners and technical
- * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+ * [Essential Contacts](https://docs.cloud.google.com/resource-manager/docs/managing-notification-
  * contacts).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

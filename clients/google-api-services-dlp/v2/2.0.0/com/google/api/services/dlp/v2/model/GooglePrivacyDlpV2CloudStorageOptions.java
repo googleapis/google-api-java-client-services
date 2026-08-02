@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * then the rest of the bytes are omitted. Only one of `bytes_limit_per_file` and
    * `bytes_limit_per_file_percent` can be specified. This field can't be set if de-identification
    * is requested. For certain file types, setting this field has no effect. For more information,
-   * see [Limits on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * see [Limits on bytes scanned per file](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/supported-file-types#max-byte-size-per-file).
    * The value may be {@code null}.
    */
@@ -48,8 +48,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
    * specified. This field can't be set if de-identification is requested. For certain file types,
    * setting this field has no effect. For more information, see [Limits on bytes scanned per
-   * file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-
-   * size-per-file).
+   * file](https://docs.cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-
+   * byte-size-per-file).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * then the rest of the bytes are omitted. Only one of `bytes_limit_per_file` and
    * `bytes_limit_per_file_percent` can be specified. This field can't be set if de-identification
    * is requested. For certain file types, setting this field has no effect. For more information,
-   * see [Limits on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * see [Limits on bytes scanned per file](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/supported-file-types#max-byte-size-per-file).
    * @return value or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * then the rest of the bytes are omitted. Only one of `bytes_limit_per_file` and
    * `bytes_limit_per_file_percent` can be specified. This field can't be set if de-identification
    * is requested. For certain file types, setting this field has no effect. For more information,
-   * see [Limits on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * see [Limits on bytes scanned per file](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/supported-file-types#max-byte-size-per-file).
    * @param bytesLimitPerFile bytesLimitPerFile or {@code null} for none
    */
@@ -122,8 +122,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
    * specified. This field can't be set if de-identification is requested. For certain file types,
    * setting this field has no effect. For more information, see [Limits on bytes scanned per
-   * file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-
-   * size-per-file).
+   * file](https://docs.cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-
+   * byte-size-per-file).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBytesLimitPerFilePercent() {
@@ -136,8 +136,8 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
    * specified. This field can't be set if de-identification is requested. For certain file types,
    * setting this field has no effect. For more information, see [Limits on bytes scanned per
-   * file](https://cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-byte-
-   * size-per-file).
+   * file](https://docs.cloud.google.com/sensitive-data-protection/docs/supported-file-types#max-
+   * byte-size-per-file).
    * @param bytesLimitPerFilePercent bytesLimitPerFilePercent or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setBytesLimitPerFilePercent(java.lang.Integer bytesLimitPerFilePercent) {

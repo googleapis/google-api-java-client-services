@@ -62,7 +62,7 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
   private java.lang.String fullResourceName;
 
   /**
-   * The [type of content](https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * The [type of content](https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-
    * reference) that might have been found.
    * The value may be {@code null}.
    */
@@ -179,7 +179,7 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
   }
 
   /**
-   * The [type of content](https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * The [type of content](https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-
    * reference) that might have been found.
    * @return value or {@code null} for none
    */
@@ -188,7 +188,7 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
   }
 
   /**
-   * The [type of content](https://cloud.google.com/sensitive-data-protection/docs/infotypes-
+   * The [type of content](https://docs.cloud.google.com/sensitive-data-protection/docs/infotypes-
    * reference) that might have been found.
    * @param infotype infotype or {@code null} for none
    */

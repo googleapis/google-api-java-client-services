@@ -17,7 +17,7 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * A task to execute on the completion of a job. See https://cloud.google.com/sensitive-data-
+ * A task to execute on the completion of a job. See https://docs.cloud.google.com/sensitive-data-
  * protection/docs/concepts-actions to learn more.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -40,7 +40,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
 
   /**
    * Sends an email when the job completes. The email goes to IAM project owners and technical
-   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * [Essential Contacts](https://docs.cloud.google.com/resource-manager/docs/managing-notification-
    * contacts).
    * The value may be {@code null}.
    */
@@ -109,7 +109,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
 
   /**
    * Sends an email when the job completes. The email goes to IAM project owners and technical
-   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * [Essential Contacts](https://docs.cloud.google.com/resource-manager/docs/managing-notification-
    * contacts).
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class GooglePrivacyDlpV2Action extends com.google.api.client.json.G
 
   /**
    * Sends an email when the job completes. The email goes to IAM project owners and technical
-   * [Essential Contacts](https://cloud.google.com/resource-manager/docs/managing-notification-
+   * [Essential Contacts](https://docs.cloud.google.com/resource-manager/docs/managing-notification-
    * contacts).
    * @param jobNotificationEmails jobNotificationEmails or {@code null} for none
    */

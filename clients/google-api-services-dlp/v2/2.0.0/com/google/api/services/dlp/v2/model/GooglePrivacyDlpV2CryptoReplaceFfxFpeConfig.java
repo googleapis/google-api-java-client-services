@@ -23,10 +23,10 @@ package com.google.api.services.dlp.v2.model;
  * must be encoded as ASCII. For a given crypto key and context, the same identifier will be
  * replaced with the same surrogate. Identifiers must be at least two characters long. In the case
  * that the identifier is the empty string, it will be skipped. See
- * https://cloud.google.com/sensitive-data-protection/docs/pseudonymization to learn more. Note: We
- * recommend using CryptoDeterministicConfig for all use cases which do not require preserving the
- * input alphabet space and size, plus warrant referential integrity. FPE incurs significant latency
- * costs.
+ * https://docs.cloud.google.com/sensitive-data-protection/docs/pseudonymization to learn more.
+ * Note: We recommend using CryptoDeterministicConfig for all use cases which do not require
+ * preserving the input alphabet space and size, plus warrant referential integrity. FPE incurs
+ * significant latency costs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * using the custom infoType [`SurrogateType`](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
    * the surrogate when it occurs in free text. In order for inspection to work properly, the name
    * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find
@@ -224,7 +224,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * using the custom infoType [`SurrogateType`](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
    * the surrogate when it occurs in free text. In order for inspection to work properly, the name
    * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find
@@ -247,7 +247,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig extends com.googl
    * info_type_name(surrogate_character_count):surrogate For example, if the name of custom infoType
    * is 'MY_TOKEN_INFO_TYPE' and the surrogate is 'abc', the full replacement value will be:
    * 'MY_TOKEN_INFO_TYPE(3):abc' This annotation identifies the surrogate when inspecting content
-   * using the custom infoType [`SurrogateType`](https://cloud.google.com/sensitive-data-
+   * using the custom infoType [`SurrogateType`](https://docs.cloud.google.com/sensitive-data-
    * protection/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of
    * the surrogate when it occurs in free text. In order for inspection to work properly, the name
    * of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find

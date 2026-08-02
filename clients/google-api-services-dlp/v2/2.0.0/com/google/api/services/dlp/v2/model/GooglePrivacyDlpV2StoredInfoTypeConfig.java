@@ -18,7 +18,7 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Configuration for stored infoTypes. All fields and subfield are provided by the user. For more
- * information, see https://cloud.google.com/sensitive-data-protection/docs/creating-custom-
+ * information, see https://docs.cloud.google.com/sensitive-data-protection/docs/creating-custom-
  * infotypes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

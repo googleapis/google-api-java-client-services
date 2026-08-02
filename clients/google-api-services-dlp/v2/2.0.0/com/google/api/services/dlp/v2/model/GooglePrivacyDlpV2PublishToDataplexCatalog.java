@@ -18,8 +18,8 @@ package com.google.api.services.dlp.v2.model;
 
 /**
  * Create Dataplex Universal Catalog aspects for profiled resources with the aspect type Sensitive
- * Data Protection Profile. To learn more about aspects, see https://cloud.google.com/sensitive-
- * data-protection/docs/add-aspects.
+ * Data Protection Profile. To learn more about aspects, see
+ * https://docs.cloud.google.com/sensitive-data-protection/docs/add-aspects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

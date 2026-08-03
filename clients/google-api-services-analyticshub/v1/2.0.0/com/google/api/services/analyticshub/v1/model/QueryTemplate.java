@@ -79,8 +79,8 @@ public final class QueryTemplate extends com.google.api.client.json.GenericJson 
   private java.lang.String primaryContact;
 
   /**
-   * Optional. Will be deprecated. Email or URL of the primary point of contact of the
-   * QueryTemplate. Max Length: 1000 bytes.
+   * Optional. Deprecated: Use `primary_contact` instead. Email or URL of the primary point of
+   * contact of the QueryTemplate. Max Length: 1000 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,8 +222,8 @@ public final class QueryTemplate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Will be deprecated. Email or URL of the primary point of contact of the
-   * QueryTemplate. Max Length: 1000 bytes.
+   * Optional. Deprecated: Use `primary_contact` instead. Email or URL of the primary point of
+   * contact of the QueryTemplate. Max Length: 1000 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getProposer() {
@@ -231,8 +231,8 @@ public final class QueryTemplate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Will be deprecated. Email or URL of the primary point of contact of the
-   * QueryTemplate. Max Length: 1000 bytes.
+   * Optional. Deprecated: Use `primary_contact` instead. Email or URL of the primary point of
+   * contact of the QueryTemplate. Max Length: 1000 bytes.
    * @param proposer proposer or {@code null} for none
    */
   public QueryTemplate setProposer(java.lang.String proposer) {

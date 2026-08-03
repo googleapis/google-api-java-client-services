@@ -30,38 +30,38 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class MessageEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
-   * be the same size as the uncompressed size.
+   * Optional. The number of compressed bytes sent or received. If missing, the compressed size is
+   * assumed to be the same size as the uncompressed size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long compressedSizeBytes;
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
-   * MessageEvents.
+   * Optional. An identifier for the MessageEvent's message that can be used to match `SENT` and
+   * `RECEIVED` MessageEvents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long id;
 
   /**
-   * Type of MessageEvent. Indicates whether the message was sent or received.
+   * Optional. Type of MessageEvent. Indicates whether the message was sent or received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The number of uncompressed bytes sent or received.
+   * Optional. The number of uncompressed bytes sent or received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long uncompressedSizeBytes;
 
   /**
-   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
-   * be the same size as the uncompressed size.
+   * Optional. The number of compressed bytes sent or received. If missing, the compressed size is
+   * assumed to be the same size as the uncompressed size.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCompressedSizeBytes() {
@@ -69,8 +69,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of compressed bytes sent or received. If missing, the compressed size is assumed to
-   * be the same size as the uncompressed size.
+   * Optional. The number of compressed bytes sent or received. If missing, the compressed size is
+   * assumed to be the same size as the uncompressed size.
    * @param compressedSizeBytes compressedSizeBytes or {@code null} for none
    */
   public MessageEvent setCompressedSizeBytes(java.lang.Long compressedSizeBytes) {
@@ -79,8 +79,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
-   * MessageEvents.
+   * Optional. An identifier for the MessageEvent's message that can be used to match `SENT` and
+   * `RECEIVED` MessageEvents.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -88,8 +88,8 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An identifier for the MessageEvent's message that can be used to match `SENT` and `RECEIVED`
-   * MessageEvents.
+   * Optional. An identifier for the MessageEvent's message that can be used to match `SENT` and
+   * `RECEIVED` MessageEvents.
    * @param id id or {@code null} for none
    */
   public MessageEvent setId(java.lang.Long id) {
@@ -98,7 +98,7 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of MessageEvent. Indicates whether the message was sent or received.
+   * Optional. Type of MessageEvent. Indicates whether the message was sent or received.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -106,7 +106,7 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of MessageEvent. Indicates whether the message was sent or received.
+   * Optional. Type of MessageEvent. Indicates whether the message was sent or received.
    * @param type type or {@code null} for none
    */
   public MessageEvent setType(java.lang.String type) {
@@ -115,7 +115,7 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of uncompressed bytes sent or received.
+   * Optional. The number of uncompressed bytes sent or received.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUncompressedSizeBytes() {
@@ -123,7 +123,7 @@ public final class MessageEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of uncompressed bytes sent or received.
+   * Optional. The number of uncompressed bytes sent or received.
    * @param uncompressedSizeBytes uncompressedSizeBytes or {@code null} for none
    */
   public MessageEvent setUncompressedSizeBytes(java.lang.Long uncompressedSizeBytes) {

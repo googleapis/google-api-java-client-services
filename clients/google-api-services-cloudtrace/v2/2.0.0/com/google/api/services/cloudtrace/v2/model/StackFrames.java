@@ -30,15 +30,15 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class StackFrames extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of stack frames that were dropped because there were too many stack frames. If this
-   * value is 0, then no stack frames were dropped.
+   * Optional. The number of stack frames that were dropped because there were too many stack
+   * frames. If this value is 0, then no stack frames were dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer droppedFramesCount;
 
   /**
-   * Stack frames in this call stack.
+   * Optional. Stack frames in this call stack.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class StackFrames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of stack frames that were dropped because there were too many stack frames. If this
-   * value is 0, then no stack frames were dropped.
+   * Optional. The number of stack frames that were dropped because there were too many stack
+   * frames. If this value is 0, then no stack frames were dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDroppedFramesCount() {
@@ -60,8 +60,8 @@ public final class StackFrames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of stack frames that were dropped because there were too many stack frames. If this
-   * value is 0, then no stack frames were dropped.
+   * Optional. The number of stack frames that were dropped because there were too many stack
+   * frames. If this value is 0, then no stack frames were dropped.
    * @param droppedFramesCount droppedFramesCount or {@code null} for none
    */
   public StackFrames setDroppedFramesCount(java.lang.Integer droppedFramesCount) {
@@ -70,7 +70,7 @@ public final class StackFrames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Stack frames in this call stack.
+   * Optional. Stack frames in this call stack.
    * @return value or {@code null} for none
    */
   public java.util.List<StackFrame> getFrame() {
@@ -78,7 +78,7 @@ public final class StackFrames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Stack frames in this call stack.
+   * Optional. Stack frames in this call stack.
    * @param frame frame or {@code null} for none
    */
   public StackFrames setFrame(java.util.List<StackFrame> frame) {

@@ -559,13 +559,13 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * End of the time interval (inclusive) during which the trace data was collected from the
-         * application.
+         * Required. End of the time interval (inclusive) during which the trace data was collected
+         * from the application.
          */
         @com.google.api.client.util.Key
         private String endTime;
 
-        /** End of the time interval (inclusive) during which the trace data was collected from the
+        /** Required. End of the time interval (inclusive) during which the trace data was collected from the
        application.
          */
         public String getEndTime() {
@@ -573,8 +573,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * End of the time interval (inclusive) during which the trace data was collected from the
-         * application.
+         * Required. End of the time interval (inclusive) during which the trace data was collected
+         * from the application.
          */
         public List setEndTime(String endTime) {
           this.endTime = endTime;
@@ -662,13 +662,13 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request.
+         * Optional. Token identifying the page of results to return. If provided, use the value of
+         * the `next_page_token` field from a previous request.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token identifying the page of results to return. If provided, use the value of the
+        /** Optional. Token identifying the page of results to return. If provided, use the value of the
        `next_page_token` field from a previous request.
          */
         public java.lang.String getPageToken() {
@@ -676,8 +676,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Token identifying the page of results to return. If provided, use the value of the
-         * `next_page_token` field from a previous request.
+         * Optional. Token identifying the page of results to return. If provided, use the value of
+         * the `next_page_token` field from a previous request.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -685,13 +685,13 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Start of the time interval (inclusive) during which the trace data was collected from the
-         * application.
+         * Required. Start of the time interval (inclusive) during which the trace data was
+         * collected from the application.
          */
         @com.google.api.client.util.Key
         private String startTime;
 
-        /** Start of the time interval (inclusive) during which the trace data was collected from the
+        /** Required. Start of the time interval (inclusive) during which the trace data was collected from the
        application.
          */
         public String getStartTime() {
@@ -699,8 +699,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Start of the time interval (inclusive) during which the trace data was collected from the
-         * application.
+         * Required. Start of the time interval (inclusive) during which the trace data was
+         * collected from the application.
          */
         public List setStartTime(String startTime) {
           this.startTime = startTime;

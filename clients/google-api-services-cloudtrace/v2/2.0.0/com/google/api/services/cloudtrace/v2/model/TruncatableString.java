@@ -30,26 +30,27 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class TruncatableString extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of bytes removed from the original string. If this value is 0, then the string was
-   * not shortened.
+   * Optional. The number of bytes removed from the original string. If this value is 0, then the
+   * string was not shortened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer truncatedByteCount;
 
   /**
-   * The shortened string. For example, if the original string is 500 bytes long and the limit of
-   * the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte string.
-   * Truncation always happens on a UTF8 character boundary. If there are multi-byte characters in
-   * the string, then the length of the shortened string might be less than the size limit.
+   * Optional. The shortened string. For example, if the original string is 500 bytes long and the
+   * limit of the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte
+   * string. Truncation always happens on a UTF8 character boundary. If there are multi-byte
+   * characters in the string, then the length of the shortened string might be less than the size
+   * limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * The number of bytes removed from the original string. If this value is 0, then the string was
-   * not shortened.
+   * Optional. The number of bytes removed from the original string. If this value is 0, then the
+   * string was not shortened.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTruncatedByteCount() {
@@ -57,8 +58,8 @@ public final class TruncatableString extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The number of bytes removed from the original string. If this value is 0, then the string was
-   * not shortened.
+   * Optional. The number of bytes removed from the original string. If this value is 0, then the
+   * string was not shortened.
    * @param truncatedByteCount truncatedByteCount or {@code null} for none
    */
   public TruncatableString setTruncatedByteCount(java.lang.Integer truncatedByteCount) {
@@ -67,10 +68,11 @@ public final class TruncatableString extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The shortened string. For example, if the original string is 500 bytes long and the limit of
-   * the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte string.
-   * Truncation always happens on a UTF8 character boundary. If there are multi-byte characters in
-   * the string, then the length of the shortened string might be less than the size limit.
+   * Optional. The shortened string. For example, if the original string is 500 bytes long and the
+   * limit of the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte
+   * string. Truncation always happens on a UTF8 character boundary. If there are multi-byte
+   * characters in the string, then the length of the shortened string might be less than the size
+   * limit.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -78,10 +80,11 @@ public final class TruncatableString extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The shortened string. For example, if the original string is 500 bytes long and the limit of
-   * the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte string.
-   * Truncation always happens on a UTF8 character boundary. If there are multi-byte characters in
-   * the string, then the length of the shortened string might be less than the size limit.
+   * Optional. The shortened string. For example, if the original string is 500 bytes long and the
+   * limit of the string is 128 bytes, then `value` contains the first 128 bytes of the 500-byte
+   * string. Truncation always happens on a UTF8 character boundary. If there are multi-byte
+   * characters in the string, then the length of the shortened string might be less than the size
+   * limit.
    * @param value value or {@code null} for none
    */
   public TruncatableString setValue(java.lang.String value) {

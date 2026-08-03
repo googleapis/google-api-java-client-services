@@ -33,7 +33,7 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Span extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of attributes on the span. You can have up to 32 attributes per span.
+   * Optional. A set of attributes on the span. You can have up to 32 attributes per span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
-   * Links associated with the span. You can have up to 128 links per Span.
+   * Optional. Links associated with the span. You can have up to 128 links per Span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Links links;
 
   /**
-   * Required. The resource name of the span in the following format: *
+   * Identifier. The resource name of the span in the following format: *
    * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
    * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
    * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
@@ -86,8 +86,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
-   * empty.
+   * Optional. The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field
+   * must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private java.lang.String spanKind;
 
   /**
-   * Stack trace captured at the start of the span.
+   * Optional. Stack trace captured at the start of the span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,14 +142,15 @@ public final class Span extends com.google.api.client.json.GenericJson {
   private Status status;
 
   /**
-   * A set of time events. You can have up to 32 annotations and 128 message events per span.
+   * Optional. A set of time events. You can have up to 32 annotations and 128 message events per
+   * span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeEvents timeEvents;
 
   /**
-   * A set of attributes on the span. You can have up to 32 attributes per span.
+   * Optional. A set of attributes on the span. You can have up to 32 attributes per span.
    * @return value or {@code null} for none
    */
   public Attributes getAttributes() {
@@ -157,7 +158,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of attributes on the span. You can have up to 32 attributes per span.
+   * Optional. A set of attributes on the span. You can have up to 32 attributes per span.
    * @param attributes attributes or {@code null} for none
    */
   public Span setAttributes(Attributes attributes) {
@@ -231,7 +232,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links associated with the span. You can have up to 128 links per Span.
+   * Optional. Links associated with the span. You can have up to 128 links per Span.
    * @return value or {@code null} for none
    */
   public Links getLinks() {
@@ -239,7 +240,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links associated with the span. You can have up to 128 links per Span.
+   * Optional. Links associated with the span. You can have up to 128 links per Span.
    * @param links links or {@code null} for none
    */
   public Span setLinks(Links links) {
@@ -248,7 +249,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the span in the following format: *
+   * Identifier. The resource name of the span in the following format: *
    * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
    * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
    * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
@@ -260,7 +261,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the span in the following format: *
+   * Identifier. The resource name of the span in the following format: *
    * `projects/[PROJECT_ID]/traces/[TRACE_ID]/spans/[SPAN_ID]` `[TRACE_ID]` is a unique identifier
    * for a trace within a project; it is a 32-character hexadecimal encoding of a 16-byte array. It
    * should not be zero. `[SPAN_ID]` is a unique identifier for a span within a trace; it is a
@@ -273,8 +274,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
-   * empty.
+   * Optional. The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field
+   * must be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentSpanId() {
@@ -282,8 +283,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field must be
-   * empty.
+   * Optional. The `[SPAN_ID]` of this span's parent span. If this is a root span, then this field
+   * must be empty.
    * @param parentSpanId parentSpanId or {@code null} for none
    */
   public Span setParentSpanId(java.lang.String parentSpanId) {
@@ -351,7 +352,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Stack trace captured at the start of the span.
+   * Optional. Stack trace captured at the start of the span.
    * @return value or {@code null} for none
    */
   public StackTrace getStackTrace() {
@@ -359,7 +360,7 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Stack trace captured at the start of the span.
+   * Optional. Stack trace captured at the start of the span.
    * @param stackTrace stackTrace or {@code null} for none
    */
   public Span setStackTrace(StackTrace stackTrace) {
@@ -406,7 +407,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of time events. You can have up to 32 annotations and 128 message events per span.
+   * Optional. A set of time events. You can have up to 32 annotations and 128 message events per
+   * span.
    * @return value or {@code null} for none
    */
   public TimeEvents getTimeEvents() {
@@ -414,7 +416,8 @@ public final class Span extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of time events. You can have up to 32 annotations and 128 message events per span.
+   * Optional. A set of time events. You can have up to 32 annotations and 128 message events per
+   * span.
    * @param timeEvents timeEvents or {@code null} for none
    */
   public Span setTimeEvents(TimeEvents timeEvents) {

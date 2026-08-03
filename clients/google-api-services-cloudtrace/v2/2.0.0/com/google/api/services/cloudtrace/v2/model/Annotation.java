@@ -30,22 +30,24 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Annotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of attributes on the annotation. You can have up to 4 attributes per Annotation.
+   * Optional. A set of attributes on the annotation. You can have up to 4 attributes per
+   * Annotation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Attributes attributes;
 
   /**
-   * A user-supplied message describing the event. The maximum length for the description is 256
-   * bytes.
+   * Optional. A user-supplied message describing the event. The maximum length for the description
+   * is 256 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString description;
 
   /**
-   * A set of attributes on the annotation. You can have up to 4 attributes per Annotation.
+   * Optional. A set of attributes on the annotation. You can have up to 4 attributes per
+   * Annotation.
    * @return value or {@code null} for none
    */
   public Attributes getAttributes() {
@@ -53,7 +55,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of attributes on the annotation. You can have up to 4 attributes per Annotation.
+   * Optional. A set of attributes on the annotation. You can have up to 4 attributes per
+   * Annotation.
    * @param attributes attributes or {@code null} for none
    */
   public Annotation setAttributes(Attributes attributes) {
@@ -62,8 +65,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-supplied message describing the event. The maximum length for the description is 256
-   * bytes.
+   * Optional. A user-supplied message describing the event. The maximum length for the description
+   * is 256 bytes.
    * @return value or {@code null} for none
    */
   public TruncatableString getDescription() {
@@ -71,8 +74,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A user-supplied message describing the event. The maximum length for the description is 256
-   * bytes.
+   * Optional. A user-supplied message describing the event. The maximum length for the description
+   * is 256 bytes.
    * @param description description or {@code null} for none
    */
   public Annotation setDescription(TruncatableString description) {

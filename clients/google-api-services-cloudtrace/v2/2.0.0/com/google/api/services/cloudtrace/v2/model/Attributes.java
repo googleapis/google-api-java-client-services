@@ -30,10 +30,10 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
-   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
-   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
-   * { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
+   * Optional. A set of attributes. Each attribute's key can be up to 128 bytes long. The value can
+   * be a string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`.
+   * For example: "/instance_id": { "string_value": { "value": "my-instance" } }
+   * "/http/request_bytes": { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,19 +46,19 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of attributes that were discarded. Attributes can be discarded because their keys
-   * are too long or because there are too many attributes. If this value is 0 then all attributes
-   * are valid.
+   * Optional. The number of attributes that were discarded. Attributes can be discarded because
+   * their keys are too long or because there are too many attributes. If this value is 0 then all
+   * attributes are valid.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer droppedAttributesCount;
 
   /**
-   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
-   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
-   * { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
+   * Optional. A set of attributes. Each attribute's key can be up to 128 bytes long. The value can
+   * be a string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`.
+   * For example: "/instance_id": { "string_value": { "value": "my-instance" } }
+   * "/http/request_bytes": { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AttributeValue> getAttributeMap() {
@@ -66,10 +66,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A set of attributes. Each attribute's key can be up to 128 bytes long. The value can be a
-   * string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`. For
-   * example: "/instance_id": { "string_value": { "value": "my-instance" } } "/http/request_bytes":
-   * { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
+   * Optional. A set of attributes. Each attribute's key can be up to 128 bytes long. The value can
+   * be a string up to 256 bytes, a signed 64-bit integer, or the boolean values `true` or `false`.
+   * For example: "/instance_id": { "string_value": { "value": "my-instance" } }
+   * "/http/request_bytes": { "int_value": 300 } "example.com/myattribute": { "bool_value": false }
    * @param attributeMap attributeMap or {@code null} for none
    */
   public Attributes setAttributeMap(java.util.Map<String, AttributeValue> attributeMap) {
@@ -78,9 +78,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of attributes that were discarded. Attributes can be discarded because their keys
-   * are too long or because there are too many attributes. If this value is 0 then all attributes
-   * are valid.
+   * Optional. The number of attributes that were discarded. Attributes can be discarded because
+   * their keys are too long or because there are too many attributes. If this value is 0 then all
+   * attributes are valid.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDroppedAttributesCount() {
@@ -88,9 +88,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of attributes that were discarded. Attributes can be discarded because their keys
-   * are too long or because there are too many attributes. If this value is 0 then all attributes
-   * are valid.
+   * Optional. The number of attributes that were discarded. Attributes can be discarded because
+   * their keys are too long or because there are too many attributes. If this value is 0 then all
+   * attributes are valid.
    * @param droppedAttributesCount droppedAttributesCount or {@code null} for none
    */
   public Attributes setDroppedAttributesCount(java.lang.Integer droppedAttributesCount) {

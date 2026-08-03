@@ -31,7 +31,7 @@ package com.google.api.services.cloudtrace.v1.model;
 public final class Trace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Project ID of the Cloud project where the trace data is stored.
+   * Required. Project ID of the Cloud project where the trace data is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,16 +45,16 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   private java.util.List<TraceSpan> spans;
 
   /**
-   * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric value
-   * should not be zero.
+   * Required. Globally unique identifier for the trace. This identifier is a 128-bit numeric value
+   * formatted as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric
+   * value should not be zero.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String traceId;
 
   /**
-   * Project ID of the Cloud project where the trace data is stored.
+   * Required. Project ID of the Cloud project where the trace data is stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -62,7 +62,7 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Project ID of the Cloud project where the trace data is stored.
+   * Required. Project ID of the Cloud project where the trace data is stored.
    * @param projectId projectId or {@code null} for none
    */
   public Trace setProjectId(java.lang.String projectId) {
@@ -88,9 +88,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric value
-   * should not be zero.
+   * Required. Globally unique identifier for the trace. This identifier is a 128-bit numeric value
+   * formatted as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric
+   * value should not be zero.
    * @return value or {@code null} for none
    */
   public java.lang.String getTraceId() {
@@ -98,9 +98,9 @@ public final class Trace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Globally unique identifier for the trace. This identifier is a 128-bit numeric value formatted
-   * as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric value
-   * should not be zero.
+   * Required. Globally unique identifier for the trace. This identifier is a 128-bit numeric value
+   * formatted as a 32-byte hex string. For example, `382d4f4c6b7bb2f4a972559d9085001d`. The numeric
+   * value should not be zero.
    * @param traceId traceId or {@code null} for none
    */
   public Trace setTraceId(java.lang.String traceId) {

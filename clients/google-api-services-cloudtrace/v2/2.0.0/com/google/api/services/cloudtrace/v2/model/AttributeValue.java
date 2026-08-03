@@ -30,28 +30,28 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class AttributeValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * A Boolean value represented by `true` or `false`.
+   * Optional. A Boolean value represented by `true` or `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
-   * A 64-bit signed integer.
+   * Optional. A 64-bit signed integer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long intValue;
 
   /**
-   * A string up to 256 bytes long.
+   * Optional. A string up to 256 bytes long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString stringValue;
 
   /**
-   * A Boolean value represented by `true` or `false`.
+   * Optional. A Boolean value represented by `true` or `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -59,7 +59,7 @@ public final class AttributeValue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Boolean value represented by `true` or `false`.
+   * Optional. A Boolean value represented by `true` or `false`.
    * @param boolValue boolValue or {@code null} for none
    */
   public AttributeValue setBoolValue(java.lang.Boolean boolValue) {
@@ -68,7 +68,7 @@ public final class AttributeValue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A 64-bit signed integer.
+   * Optional. A 64-bit signed integer.
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntValue() {
@@ -76,7 +76,7 @@ public final class AttributeValue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A 64-bit signed integer.
+   * Optional. A 64-bit signed integer.
    * @param intValue intValue or {@code null} for none
    */
   public AttributeValue setIntValue(java.lang.Long intValue) {
@@ -85,7 +85,7 @@ public final class AttributeValue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A string up to 256 bytes long.
+   * Optional. A string up to 256 bytes long.
    * @return value or {@code null} for none
    */
   public TruncatableString getStringValue() {
@@ -93,7 +93,7 @@ public final class AttributeValue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A string up to 256 bytes long.
+   * Optional. A string up to 256 bytes long.
    * @param stringValue stringValue or {@code null} for none
    */
   public AttributeValue setStringValue(TruncatableString stringValue) {

@@ -10273,6 +10273,163 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the V3 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.V3.List request = cloudresourcemanager.v3().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V3 v3() {
+    return new V3();
+  }
+
+  /**
+   * The "v3" collection of methods.
+   */
+  public class V3 {
+
+    /**
+     * Returns the semantics associated with the specified resource.
+     *
+     * Create a request for the method "v3.fetchResourceSemantics".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link FetchResourceSemantics#execute()} method to invoke the
+     * remote operation.
+     *
+     * @return the request
+     */
+    public FetchResourceSemantics fetchResourceSemantics() throws java.io.IOException {
+      FetchResourceSemantics result = new FetchResourceSemantics();
+      initialize(result);
+      return result;
+    }
+
+    public class FetchResourceSemantics extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.FetchResourceSemanticsResponse> {
+
+      private static final String REST_PATH = "v3:fetchResourceSemantics";
+
+      /**
+       * Returns the semantics associated with the specified resource.
+       *
+       * Create a request for the method "v3.fetchResourceSemantics".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link FetchResourceSemantics#execute()} method to invoke the
+       * remote operation. <p> {@link FetchResourceSemantics#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected FetchResourceSemantics() {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.FetchResourceSemanticsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FetchResourceSemantics set$Xgafv(java.lang.String $Xgafv) {
+        return (FetchResourceSemantics) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FetchResourceSemantics setAccessToken(java.lang.String accessToken) {
+        return (FetchResourceSemantics) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FetchResourceSemantics setAlt(java.lang.String alt) {
+        return (FetchResourceSemantics) super.setAlt(alt);
+      }
+
+      @Override
+      public FetchResourceSemantics setCallback(java.lang.String callback) {
+        return (FetchResourceSemantics) super.setCallback(callback);
+      }
+
+      @Override
+      public FetchResourceSemantics setFields(java.lang.String fields) {
+        return (FetchResourceSemantics) super.setFields(fields);
+      }
+
+      @Override
+      public FetchResourceSemantics setKey(java.lang.String key) {
+        return (FetchResourceSemantics) super.setKey(key);
+      }
+
+      @Override
+      public FetchResourceSemantics setOauthToken(java.lang.String oauthToken) {
+        return (FetchResourceSemantics) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FetchResourceSemantics setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FetchResourceSemantics) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FetchResourceSemantics setQuotaUser(java.lang.String quotaUser) {
+        return (FetchResourceSemantics) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FetchResourceSemantics setUploadType(java.lang.String uploadType) {
+        return (FetchResourceSemantics) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FetchResourceSemantics setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FetchResourceSemantics) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The full resource name of the GCP resource to retrieve semantics for. Examples:
+       * "//compute.googleapis.com/projects/123/zones/us-central1-a/instances/my-instance"
+       * "//storage.googleapis.com/projects/_/buckets/my_bucket"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String fullResourceName;
+
+      /** Required. The full resource name of the GCP resource to retrieve semantics for. Examples:
+     "//compute.googleapis.com/projects/123/zones/us-central1-a/instances/my-instance"
+     "//storage.googleapis.com/projects/_/buckets/my_bucket"
+       */
+      public java.lang.String getFullResourceName() {
+        return fullResourceName;
+      }
+
+      /**
+       * Required. The full resource name of the GCP resource to retrieve semantics for. Examples:
+       * "//compute.googleapis.com/projects/123/zones/us-central1-a/instances/my-instance"
+       * "//storage.googleapis.com/projects/_/buckets/my_bucket"
+       */
+      public FetchResourceSemantics setFullResourceName(java.lang.String fullResourceName) {
+        this.fullResourceName = fullResourceName;
+        return this;
+      }
+
+      @Override
+      public FetchResourceSemantics set(String parameterName, Object value) {
+        return (FetchResourceSemantics) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link CloudResourceManager}.
    *
    * <p>

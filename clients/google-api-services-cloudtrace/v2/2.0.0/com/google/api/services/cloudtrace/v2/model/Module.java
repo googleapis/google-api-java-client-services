@@ -30,22 +30,22 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Module extends com.google.api.client.json.GenericJson {
 
   /**
-   * A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
+   * Optional. A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString buildId;
 
   /**
-   * For example: main binary, kernel modules, and dynamic libraries such as libc.so, sharedlib.so
-   * (up to 256 bytes).
+   * Optional. For example: main binary, kernel modules, and dynamic libraries such as libc.so,
+   * sharedlib.so (up to 256 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString module;
 
   /**
-   * A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
+   * Optional. A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getBuildId() {
@@ -53,7 +53,7 @@ public final class Module extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
+   * Optional. A unique identifier for the module, usually a hash of its contents (up to 128 bytes).
    * @param buildId buildId or {@code null} for none
    */
   public Module setBuildId(TruncatableString buildId) {
@@ -62,8 +62,8 @@ public final class Module extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For example: main binary, kernel modules, and dynamic libraries such as libc.so, sharedlib.so
-   * (up to 256 bytes).
+   * Optional. For example: main binary, kernel modules, and dynamic libraries such as libc.so,
+   * sharedlib.so (up to 256 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getModule() {
@@ -71,8 +71,8 @@ public final class Module extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For example: main binary, kernel modules, and dynamic libraries such as libc.so, sharedlib.so
-   * (up to 256 bytes).
+   * Optional. For example: main binary, kernel modules, and dynamic libraries such as libc.so,
+   * sharedlib.so (up to 256 bytes).
    * @param module module or {@code null} for none
    */
   public Module setModule(TruncatableString module) {

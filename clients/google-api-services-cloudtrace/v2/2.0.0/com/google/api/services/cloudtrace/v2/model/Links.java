@@ -31,15 +31,15 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class Links extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of dropped links after the maximum size was enforced. If this value is 0, then no
-   * links were dropped.
+   * Optional. The number of dropped links after the maximum size was enforced. If this value is 0,
+   * then no links were dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer droppedLinksCount;
 
   /**
-   * A collection of links.
+   * Optional. A collection of links.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class Links extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped links after the maximum size was enforced. If this value is 0, then no
-   * links were dropped.
+   * Optional. The number of dropped links after the maximum size was enforced. If this value is 0,
+   * then no links were dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDroppedLinksCount() {
@@ -61,8 +61,8 @@ public final class Links extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped links after the maximum size was enforced. If this value is 0, then no
-   * links were dropped.
+   * Optional. The number of dropped links after the maximum size was enforced. If this value is 0,
+   * then no links were dropped.
    * @param droppedLinksCount droppedLinksCount or {@code null} for none
    */
   public Links setDroppedLinksCount(java.lang.Integer droppedLinksCount) {
@@ -71,7 +71,7 @@ public final class Links extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A collection of links.
+   * Optional. A collection of links.
    * @return value or {@code null} for none
    */
   public java.util.List<Link> getLink() {
@@ -79,7 +79,7 @@ public final class Links extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A collection of links.
+   * Optional. A collection of links.
    * @param link link or {@code null} for none
    */
   public Links setLink(java.util.List<Link> link) {

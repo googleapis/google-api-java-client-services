@@ -30,7 +30,7 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class StackFrame extends com.google.api.client.json.GenericJson {
 
   /**
-   * The column number where the function call appears, if available. This is important in
+   * Optional. The column number where the function call appears, if available. This is important in
    * JavaScript because of its anonymous functions.
    * The value may be {@code null}.
    */
@@ -38,52 +38,52 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   private java.lang.Long columnNumber;
 
   /**
-   * The name of the source file where the function call appears (up to 256 bytes).
+   * Optional. The name of the source file where the function call appears (up to 256 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString fileName;
 
   /**
-   * The fully-qualified name that uniquely identifies the function or method that is active in this
-   * frame (up to 1024 bytes).
+   * Optional. The fully-qualified name that uniquely identifies the function or method that is
+   * active in this frame (up to 1024 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString functionName;
 
   /**
-   * The line number in `file_name` where the function call appears.
+   * Optional. The line number in `file_name` where the function call appears.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lineNumber;
 
   /**
-   * The binary module from where the code was loaded.
+   * Optional. The binary module from where the code was loaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Module loadModule;
 
   /**
-   * An un-mangled function name, if `function_name` is mangled. To get information about name
-   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
-   * fully-qualified (up to 1024 bytes).
+   * Optional. An un-mangled function name, if `function_name` is mangled. To get information about
+   * name mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name
+   * can be fully-qualified (up to 1024 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString originalFunctionName;
 
   /**
-   * The version of the deployed source code (up to 128 bytes).
+   * Optional. The version of the deployed source code (up to 128 bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TruncatableString sourceVersion;
 
   /**
-   * The column number where the function call appears, if available. This is important in
+   * Optional. The column number where the function call appears, if available. This is important in
    * JavaScript because of its anonymous functions.
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The column number where the function call appears, if available. This is important in
+   * Optional. The column number where the function call appears, if available. This is important in
    * JavaScript because of its anonymous functions.
    * @param columnNumber columnNumber or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the source file where the function call appears (up to 256 bytes).
+   * Optional. The name of the source file where the function call appears (up to 256 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getFileName() {
@@ -110,7 +110,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the source file where the function call appears (up to 256 bytes).
+   * Optional. The name of the source file where the function call appears (up to 256 bytes).
    * @param fileName fileName or {@code null} for none
    */
   public StackFrame setFileName(TruncatableString fileName) {
@@ -119,8 +119,8 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified name that uniquely identifies the function or method that is active in this
-   * frame (up to 1024 bytes).
+   * Optional. The fully-qualified name that uniquely identifies the function or method that is
+   * active in this frame (up to 1024 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getFunctionName() {
@@ -128,8 +128,8 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified name that uniquely identifies the function or method that is active in this
-   * frame (up to 1024 bytes).
+   * Optional. The fully-qualified name that uniquely identifies the function or method that is
+   * active in this frame (up to 1024 bytes).
    * @param functionName functionName or {@code null} for none
    */
   public StackFrame setFunctionName(TruncatableString functionName) {
@@ -138,7 +138,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The line number in `file_name` where the function call appears.
+   * Optional. The line number in `file_name` where the function call appears.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLineNumber() {
@@ -146,7 +146,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The line number in `file_name` where the function call appears.
+   * Optional. The line number in `file_name` where the function call appears.
    * @param lineNumber lineNumber or {@code null} for none
    */
   public StackFrame setLineNumber(java.lang.Long lineNumber) {
@@ -155,7 +155,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The binary module from where the code was loaded.
+   * Optional. The binary module from where the code was loaded.
    * @return value or {@code null} for none
    */
   public Module getLoadModule() {
@@ -163,7 +163,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The binary module from where the code was loaded.
+   * Optional. The binary module from where the code was loaded.
    * @param loadModule loadModule or {@code null} for none
    */
   public StackFrame setLoadModule(Module loadModule) {
@@ -172,9 +172,9 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An un-mangled function name, if `function_name` is mangled. To get information about name
-   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
-   * fully-qualified (up to 1024 bytes).
+   * Optional. An un-mangled function name, if `function_name` is mangled. To get information about
+   * name mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name
+   * can be fully-qualified (up to 1024 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getOriginalFunctionName() {
@@ -182,9 +182,9 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An un-mangled function name, if `function_name` is mangled. To get information about name
-   * mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name can be
-   * fully-qualified (up to 1024 bytes).
+   * Optional. An un-mangled function name, if `function_name` is mangled. To get information about
+   * name mangling, run [this search](https://www.google.com/search?q=cxx+name+mangling). The name
+   * can be fully-qualified (up to 1024 bytes).
    * @param originalFunctionName originalFunctionName or {@code null} for none
    */
   public StackFrame setOriginalFunctionName(TruncatableString originalFunctionName) {
@@ -193,7 +193,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the deployed source code (up to 128 bytes).
+   * Optional. The version of the deployed source code (up to 128 bytes).
    * @return value or {@code null} for none
    */
   public TruncatableString getSourceVersion() {
@@ -201,7 +201,7 @@ public final class StackFrame extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The version of the deployed source code (up to 128 bytes).
+   * Optional. The version of the deployed source code (up to 128 bytes).
    * @param sourceVersion sourceVersion or {@code null} for none
    */
   public StackFrame setSourceVersion(TruncatableString sourceVersion) {

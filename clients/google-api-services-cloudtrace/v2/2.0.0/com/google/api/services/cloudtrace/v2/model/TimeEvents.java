@@ -31,23 +31,23 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class TimeEvents extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of dropped annotations in all the included time events. If the value is 0, then no
-   * annotations were dropped.
+   * Optional. The number of dropped annotations in all the included time events. If the value is 0,
+   * then no annotations were dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer droppedAnnotationsCount;
 
   /**
-   * The number of dropped message events in all the included time events. If the value is 0, then
-   * no message events were dropped.
+   * Optional. The number of dropped message events in all the included time events. If the value is
+   * 0, then no message events were dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer droppedMessageEventsCount;
 
   /**
-   * A collection of `TimeEvent`s.
+   * Optional. A collection of `TimeEvent`s.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped annotations in all the included time events. If the value is 0, then no
-   * annotations were dropped.
+   * Optional. The number of dropped annotations in all the included time events. If the value is 0,
+   * then no annotations were dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDroppedAnnotationsCount() {
@@ -69,8 +69,8 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped annotations in all the included time events. If the value is 0, then no
-   * annotations were dropped.
+   * Optional. The number of dropped annotations in all the included time events. If the value is 0,
+   * then no annotations were dropped.
    * @param droppedAnnotationsCount droppedAnnotationsCount or {@code null} for none
    */
   public TimeEvents setDroppedAnnotationsCount(java.lang.Integer droppedAnnotationsCount) {
@@ -79,8 +79,8 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped message events in all the included time events. If the value is 0, then
-   * no message events were dropped.
+   * Optional. The number of dropped message events in all the included time events. If the value is
+   * 0, then no message events were dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDroppedMessageEventsCount() {
@@ -88,8 +88,8 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of dropped message events in all the included time events. If the value is 0, then
-   * no message events were dropped.
+   * Optional. The number of dropped message events in all the included time events. If the value is
+   * 0, then no message events were dropped.
    * @param droppedMessageEventsCount droppedMessageEventsCount or {@code null} for none
    */
   public TimeEvents setDroppedMessageEventsCount(java.lang.Integer droppedMessageEventsCount) {
@@ -98,7 +98,7 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A collection of `TimeEvent`s.
+   * Optional. A collection of `TimeEvent`s.
    * @return value or {@code null} for none
    */
   public java.util.List<TimeEvent> getTimeEvent() {
@@ -106,7 +106,7 @@ public final class TimeEvents extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A collection of `TimeEvent`s.
+   * Optional. A collection of `TimeEvent`s.
    * @param timeEvent timeEvent or {@code null} for none
    */
   public TimeEvents setTimeEvent(java.util.List<TimeEvent> timeEvent) {

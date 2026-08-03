@@ -44,7 +44,7 @@ public final class TimeEvent extends com.google.api.client.json.GenericJson {
   private MessageEvent messageEvent;
 
   /**
-   * The timestamp indicating the time the event occurred.
+   * Optional. The timestamp indicating the time the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class TimeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp indicating the time the event occurred.
+   * Optional. The timestamp indicating the time the event occurred.
    * @return value or {@code null} for none
    */
   public String getTime() {
@@ -93,7 +93,7 @@ public final class TimeEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp indicating the time the event occurred.
+   * Optional. The timestamp indicating the time the event occurred.
    * @param time time or {@code null} for none
    */
   public TimeEvent setTime(String time) {

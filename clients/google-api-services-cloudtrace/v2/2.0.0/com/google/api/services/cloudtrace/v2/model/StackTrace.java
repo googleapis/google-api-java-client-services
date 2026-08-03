@@ -30,16 +30,16 @@ package com.google.api.services.cloudtrace.v2.model;
 public final class StackTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Stack frames in this stack trace. A maximum of 128 frames are allowed.
+   * Optional. Stack frames in this stack trace. A maximum of 128 frames are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StackFrames stackFrames;
 
   /**
-   * The hash ID is used to conserve network bandwidth for duplicate stack traces within a single
-   * trace. Often multiple spans will have identical stack traces. The first occurrence of a stack
-   * trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
+   * Optional. The hash ID is used to conserve network bandwidth for duplicate stack traces within a
+   * single trace. Often multiple spans will have identical stack traces. The first occurrence of a
+   * stack trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
    * Subsequent spans within the same request can refer to that stack trace by only setting
    * `stackTraceHashId`.
    * The value may be {@code null}.
@@ -48,7 +48,7 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   private java.lang.Long stackTraceHashId;
 
   /**
-   * Stack frames in this stack trace. A maximum of 128 frames are allowed.
+   * Optional. Stack frames in this stack trace. A maximum of 128 frames are allowed.
    * @return value or {@code null} for none
    */
   public StackFrames getStackFrames() {
@@ -56,7 +56,7 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Stack frames in this stack trace. A maximum of 128 frames are allowed.
+   * Optional. Stack frames in this stack trace. A maximum of 128 frames are allowed.
    * @param stackFrames stackFrames or {@code null} for none
    */
   public StackTrace setStackFrames(StackFrames stackFrames) {
@@ -65,9 +65,9 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hash ID is used to conserve network bandwidth for duplicate stack traces within a single
-   * trace. Often multiple spans will have identical stack traces. The first occurrence of a stack
-   * trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
+   * Optional. The hash ID is used to conserve network bandwidth for duplicate stack traces within a
+   * single trace. Often multiple spans will have identical stack traces. The first occurrence of a
+   * stack trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
    * Subsequent spans within the same request can refer to that stack trace by only setting
    * `stackTraceHashId`.
    * @return value or {@code null} for none
@@ -77,9 +77,9 @@ public final class StackTrace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The hash ID is used to conserve network bandwidth for duplicate stack traces within a single
-   * trace. Often multiple spans will have identical stack traces. The first occurrence of a stack
-   * trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
+   * Optional. The hash ID is used to conserve network bandwidth for duplicate stack traces within a
+   * single trace. Often multiple spans will have identical stack traces. The first occurrence of a
+   * stack trace should contain both the `stackFrame` content and a value in `stackTraceHashId`.
    * Subsequent spans within the same request can refer to that stack trace by only setting
    * `stackTraceHashId`.
    * @param stackTraceHashId stackTraceHashId or {@code null} for none

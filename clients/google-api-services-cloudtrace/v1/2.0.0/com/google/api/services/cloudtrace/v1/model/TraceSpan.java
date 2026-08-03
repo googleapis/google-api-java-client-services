@@ -33,25 +33,25 @@ package com.google.api.services.cloudtrace.v1.model;
 public final class TraceSpan extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. End time of the span in seconds and nanoseconds from the UNIX epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify queueing latency
-   * associated with the span.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify
+   * queueing latency associated with the span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
-   * create your own. For more information, see [Cloud Trace
+   * Optional. Collection of labels associated with the span. Label keys must be less than 128
+   * bytes. Label values must be less than 16 KiB. Some keys might have predefined meaning, and you
+   * can also create your own. For more information, see [Cloud Trace
    * labels](https://cloud.google.com/trace/docs/trace-labels).
    * The value may be {@code null}.
    */
@@ -59,10 +59,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
-   * per-call site name. For the same executable and the same call point, a best practice is to use
-   * a consistent name, which makes it easier to correlate cross-trace spans.
+   * Required. Name of the span. Must be less than 128 bytes. The span name is sanitized and
+   * displayed in the Trace tool in the Google Cloud Platform Console. The name may be a method name
+   * or some other per-call site name. For the same executable and the same call point, a best
+   * practice is to use a consistent name, which makes it easier to correlate cross-trace spans.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,22 +76,22 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger parentSpanId;
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
-   * example, `2205310701640571284`.
+   * Required. Identifier for the span. Must be a 64-bit integer other than 0 and unique within a
+   * trace. For example, `2205310701640571284`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger spanId;
 
   /**
-   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * End time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. End time of the span in seconds and nanoseconds from the UNIX epoch.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -99,7 +99,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * End time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. End time of the span in seconds and nanoseconds from the UNIX epoch.
    * @param endTime endTime or {@code null} for none
    */
   public TraceSpan setEndTime(String endTime) {
@@ -108,9 +108,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify queueing latency
-   * associated with the span.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify
+   * queueing latency associated with the span.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -118,9 +118,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Distinguishes between spans generated in a particular context. For example, two spans with the
-   * same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify queueing latency
-   * associated with the span.
+   * Optional. Distinguishes between spans generated in a particular context. For example, two spans
+   * with the same name may be distinguished using `RPC_CLIENT` and `RPC_SERVER` to identify
+   * queueing latency associated with the span.
    * @param kind kind or {@code null} for none
    */
   public TraceSpan setKind(java.lang.String kind) {
@@ -129,9 +129,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
-   * create your own. For more information, see [Cloud Trace
+   * Optional. Collection of labels associated with the span. Label keys must be less than 128
+   * bytes. Label values must be less than 16 KiB. Some keys might have predefined meaning, and you
+   * can also create your own. For more information, see [Cloud Trace
    * labels](https://cloud.google.com/trace/docs/trace-labels).
    * @return value or {@code null} for none
    */
@@ -140,9 +140,9 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Collection of labels associated with the span. Label keys must be less than 128 bytes. Label
-   * values must be less than 16 KiB. Some keys might have predefined meaning, and you can also
-   * create your own. For more information, see [Cloud Trace
+   * Optional. Collection of labels associated with the span. Label keys must be less than 128
+   * bytes. Label values must be less than 16 KiB. Some keys might have predefined meaning, and you
+   * can also create your own. For more information, see [Cloud Trace
    * labels](https://cloud.google.com/trace/docs/trace-labels).
    * @param labels labels or {@code null} for none
    */
@@ -152,10 +152,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
-   * per-call site name. For the same executable and the same call point, a best practice is to use
-   * a consistent name, which makes it easier to correlate cross-trace spans.
+   * Required. Name of the span. Must be less than 128 bytes. The span name is sanitized and
+   * displayed in the Trace tool in the Google Cloud Platform Console. The name may be a method name
+   * or some other per-call site name. For the same executable and the same call point, a best
+   * practice is to use a consistent name, which makes it easier to correlate cross-trace spans.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -163,10 +163,10 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the span. Must be less than 128 bytes. The span name is sanitized and displayed in the
-   * Trace tool in the Google Cloud Platform Console. The name may be a method name or some other
-   * per-call site name. For the same executable and the same call point, a best practice is to use
-   * a consistent name, which makes it easier to correlate cross-trace spans.
+   * Required. Name of the span. Must be less than 128 bytes. The span name is sanitized and
+   * displayed in the Trace tool in the Google Cloud Platform Console. The name may be a method name
+   * or some other per-call site name. For the same executable and the same call point, a best
+   * practice is to use a consistent name, which makes it easier to correlate cross-trace spans.
    * @param name name or {@code null} for none
    */
   public TraceSpan setName(java.lang.String name) {
@@ -192,8 +192,8 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
-   * example, `2205310701640571284`.
+   * Required. Identifier for the span. Must be a 64-bit integer other than 0 and unique within a
+   * trace. For example, `2205310701640571284`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getSpanId() {
@@ -201,8 +201,8 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier for the span. Must be a 64-bit integer other than 0 and unique within a trace. For
-   * example, `2205310701640571284`.
+   * Required. Identifier for the span. Must be a 64-bit integer other than 0 and unique within a
+   * trace. For example, `2205310701640571284`.
    * @param spanId spanId or {@code null} for none
    */
   public TraceSpan setSpanId(java.math.BigInteger spanId) {
@@ -211,7 +211,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -219,7 +219,7 @@ public final class TraceSpan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start time of the span in seconds and nanoseconds from the UNIX epoch.
+   * Required. Start time of the span in seconds and nanoseconds from the UNIX epoch.
    * @param startTime startTime or {@code null} for none
    */
   public TraceSpan setStartTime(String startTime) {

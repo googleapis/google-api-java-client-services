@@ -17,8 +17,8 @@
 package com.google.api.services.bigquerydatapolicy.v2.model;
 
 /**
- * Data Governance tag This is a namespaced name specifying the key and the value. For example:
- * `project-id/pii/sensitive`.
+ * This is a namespaced name specifying the key and the value. For example: `project-
+ * id/pii/sensitive`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery Data Policy API. For a detailed explanation

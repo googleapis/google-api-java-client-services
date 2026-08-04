@@ -228,6 +228,20 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private IrregularRhythmNotification irregularRhythmNotification;
 
   /**
+   * Optional. Data for points in the `menstrual-period` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MenstrualPeriod menstrualPeriod;
+
+  /**
+   * Optional. Data for points in the `moods` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Moods moods;
+
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable data types. For the
    * majority of the data types, individual data points do not need to be identified and this field
    * would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
@@ -248,6 +262,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private NutritionLog nutritionLog;
+
+  /**
+   * Optional. Data for points in the `ovulation-test` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OvulationTest ovulationTest;
 
   /**
    * Optional. Data for points in the `oxygen-saturation` sample data type collection.
@@ -297,6 +318,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SwimLengthsData swimLengthsData;
+
+  /**
+   * Optional. Data for points in the `symptoms` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Symptoms symptoms;
 
   /**
    * Optional. Data for points in the `time-in-heart-rate-zone` interval data type collection.
@@ -800,6 +828,40 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Data for points in the `menstrual-period` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public MenstrualPeriod getMenstrualPeriod() {
+    return menstrualPeriod;
+  }
+
+  /**
+   * Optional. Data for points in the `menstrual-period` interval data type collection.
+   * @param menstrualPeriod menstrualPeriod or {@code null} for none
+   */
+  public DataPoint setMenstrualPeriod(MenstrualPeriod menstrualPeriod) {
+    this.menstrualPeriod = menstrualPeriod;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `moods` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public Moods getMoods() {
+    return moods;
+  }
+
+  /**
+   * Optional. Data for points in the `moods` sample data type collection.
+   * @param moods moods or {@code null} for none
+   */
+  public DataPoint setMoods(Moods moods) {
+    this.moods = moods;
+    return this;
+  }
+
+  /**
    * Identifier. Data point name, only supported for the subset of identifiable data types. For the
    * majority of the data types, individual data points do not need to be identified and this field
    * would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
@@ -846,6 +908,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setNutritionLog(NutritionLog nutritionLog) {
     this.nutritionLog = nutritionLog;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `ovulation-test` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public OvulationTest getOvulationTest() {
+    return ovulationTest;
+  }
+
+  /**
+   * Optional. Data for points in the `ovulation-test` sample data type collection.
+   * @param ovulationTest ovulationTest or {@code null} for none
+   */
+  public DataPoint setOvulationTest(OvulationTest ovulationTest) {
+    this.ovulationTest = ovulationTest;
     return this;
   }
 
@@ -965,6 +1044,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setSwimLengthsData(SwimLengthsData swimLengthsData) {
     this.swimLengthsData = swimLengthsData;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `symptoms` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public Symptoms getSymptoms() {
+    return symptoms;
+  }
+
+  /**
+   * Optional. Data for points in the `symptoms` sample data type collection.
+   * @param symptoms symptoms or {@code null} for none
+   */
+  public DataPoint setSymptoms(Symptoms symptoms) {
+    this.symptoms = symptoms;
     return this;
   }
 

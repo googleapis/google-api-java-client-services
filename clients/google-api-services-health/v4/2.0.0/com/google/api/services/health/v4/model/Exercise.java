@@ -44,7 +44,10 @@ public final class Exercise extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. Exercise display name.
+   * Required. The localized, human-readable name of the exercise. For all exercise types other than
+   * `OTHER`, the system ignores client input and overrides this field with a generated name based
+   * on `exercise_type` (e.g., "Walking" for `WALKING`). If `exercise_type` is `OTHER`, this field
+   * can contain the user's custom, free-form display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +154,10 @@ public final class Exercise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Exercise display name.
+   * Required. The localized, human-readable name of the exercise. For all exercise types other than
+   * `OTHER`, the system ignores client input and overrides this field with a generated name based
+   * on `exercise_type` (e.g., "Walking" for `WALKING`). If `exercise_type` is `OTHER`, this field
+   * can contain the user's custom, free-form display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -159,7 +165,10 @@ public final class Exercise extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Exercise display name.
+   * Required. The localized, human-readable name of the exercise. For all exercise types other than
+   * `OTHER`, the system ignores client input and overrides this field with a generated name based
+   * on `exercise_type` (e.g., "Walking" for `WALKING`). If `exercise_type` is `OTHER`, this field
+   * can contain the user's custom, free-form display name.
    * @param displayName displayName or {@code null} for none
    */
   public Exercise setDisplayName(java.lang.String displayName) {

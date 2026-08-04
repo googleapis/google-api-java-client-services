@@ -38,6 +38,14 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   private java.lang.String clientDisplayLanguageCode;
 
   /**
+   * Optional. Specifies the country/region where the query originated, as a lowercase ISO 3166-1
+   * alpha-2 region code (using 'uk' instead of 'gb' for the United Kingdom).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String countryCode;
+
+  /**
    * Debug options of the request
    * The value may be {@code null}.
    */
@@ -92,6 +100,25 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    */
   public RequestOptions setClientDisplayLanguageCode(java.lang.String clientDisplayLanguageCode) {
     this.clientDisplayLanguageCode = clientDisplayLanguageCode;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the country/region where the query originated, as a lowercase ISO 3166-1
+   * alpha-2 region code (using 'uk' instead of 'gb' for the United Kingdom).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCountryCode() {
+    return countryCode;
+  }
+
+  /**
+   * Optional. Specifies the country/region where the query originated, as a lowercase ISO 3166-1
+   * alpha-2 region code (using 'uk' instead of 'gb' for the United Kingdom).
+   * @param countryCode countryCode or {@code null} for none
+   */
+  public RequestOptions setCountryCode(java.lang.String countryCode) {
+    this.countryCode = countryCode;
     return this;
   }
 

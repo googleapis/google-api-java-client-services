@@ -31,8 +31,7 @@ package com.google.api.services.looker.v1.model;
 public final class ListInstancesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of instances matching the request filters, up to the requested
-   * ListInstancesRequest.pageSize.
+   * The list of instances matching the request filters, up to the requested `pageSize`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +44,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * If provided, a page token that can look up the next ListInstancesRequest.pageSize results. If
-   * empty, the results list is exhausted.
+   * If provided, a page token that can look up the next `pageSize` results. If empty, the results
+   * list is exhausted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of instances matching the request filters, up to the requested
-   * ListInstancesRequest.pageSize.
+   * The list of instances matching the request filters, up to the requested `pageSize`.
    * @return value or {@code null} for none
    */
   public java.util.List<Instance> getInstances() {
@@ -69,8 +67,7 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The list of instances matching the request filters, up to the requested
-   * ListInstancesRequest.pageSize.
+   * The list of instances matching the request filters, up to the requested `pageSize`.
    * @param instances instances or {@code null} for none
    */
   public ListInstancesResponse setInstances(java.util.List<Instance> instances) {
@@ -79,8 +76,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * If provided, a page token that can look up the next ListInstancesRequest.pageSize results. If
-   * empty, the results list is exhausted.
+   * If provided, a page token that can look up the next `pageSize` results. If empty, the results
+   * list is exhausted.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -88,8 +85,8 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * If provided, a page token that can look up the next ListInstancesRequest.pageSize results. If
-   * empty, the results list is exhausted.
+   * If provided, a page token that can look up the next `pageSize` results. If empty, the results
+   * list is exhausted.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListInstancesResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -1537,22 +1537,24 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. The maximum number of devices to show in a page of results. If unset or 0,
-         * defaults to 1000. If a value greater than 1000 is specified, it will be coerced to 1000.
+         * Optional. The maximum number of devices to show in a page of results. If unset or `0`,
+         * defaults to `5000`. If a value greater than `10000` is specified, it will be coerced to
+         * `10000`.
          */
         @com.google.api.client.util.Key
         private java.lang.Long pageSize;
 
-        /** Optional. The maximum number of devices to show in a page of results. If unset or 0, defaults to
-       1000. If a value greater than 1000 is specified, it will be coerced to 1000.
+        /** Optional. The maximum number of devices to show in a page of results. If unset or `0`, defaults to
+       `5000`. If a value greater than `10000` is specified, it will be coerced to `10000`.
          */
         public java.lang.Long getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional. The maximum number of devices to show in a page of results. If unset or 0,
-         * defaults to 1000. If a value greater than 1000 is specified, it will be coerced to 1000.
+         * Optional. The maximum number of devices to show in a page of results. If unset or `0`,
+         * defaults to `5000`. If a value greater than `10000` is specified, it will be coerced to
+         * `10000`.
          */
         public List setPageSize(java.lang.Long pageSize) {
           this.pageSize = pageSize;

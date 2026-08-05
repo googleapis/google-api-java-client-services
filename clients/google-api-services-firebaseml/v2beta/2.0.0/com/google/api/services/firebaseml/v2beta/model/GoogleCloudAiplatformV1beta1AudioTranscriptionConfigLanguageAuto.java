@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Indicates the language of the audio should be automatically detected.
+ * Deprecated: Use top-level `language_codes` instead. Indicates the language of the audio should be
+ * automatically detected.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:

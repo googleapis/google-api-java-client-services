@@ -93,9 +93,10 @@ public final class GoogleCloudApihubV1Version extends com.google.api.client.json
   private java.util.List<java.lang.String> definitions;
 
   /**
-   * Optional. The deployments linked to this API version. Note: A particular API version could be
-   * deployed to multiple deployments (for dev deployment, UAT deployment, etc) Format is
-   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * Optional. The deployments linked directly to this API version. Only directly-linked deployments
+   * are returned; deployments linked to this version's specs or operations are not included. Note:
+   * A particular API version could be deployed to multiple deployments (for dev deployment, UAT
+   * deployment, etc) Format is `projects/{project}/locations/{location}/deployments/{deployment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,9 +313,10 @@ public final class GoogleCloudApihubV1Version extends com.google.api.client.json
   }
 
   /**
-   * Optional. The deployments linked to this API version. Note: A particular API version could be
-   * deployed to multiple deployments (for dev deployment, UAT deployment, etc) Format is
-   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * Optional. The deployments linked directly to this API version. Only directly-linked deployments
+   * are returned; deployments linked to this version's specs or operations are not included. Note:
+   * A particular API version could be deployed to multiple deployments (for dev deployment, UAT
+   * deployment, etc) Format is `projects/{project}/locations/{location}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeployments() {
@@ -322,9 +324,10 @@ public final class GoogleCloudApihubV1Version extends com.google.api.client.json
   }
 
   /**
-   * Optional. The deployments linked to this API version. Note: A particular API version could be
-   * deployed to multiple deployments (for dev deployment, UAT deployment, etc) Format is
-   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * Optional. The deployments linked directly to this API version. Only directly-linked deployments
+   * are returned; deployments linked to this version's specs or operations are not included. Note:
+   * A particular API version could be deployed to multiple deployments (for dev deployment, UAT
+   * deployment, etc) Format is `projects/{project}/locations/{location}/deployments/{deployment}`
    * @param deployments deployments or {@code null} for none
    */
   public GoogleCloudApihubV1Version setDeployments(java.util.List<java.lang.String> deployments) {

@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Provides hints to the model about possible languages present in the audio.
+ * Deprecated: Use top-level `language_codes` instead. Provides hints to the model about possible
+ * languages present in the audio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,14 +31,16 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1AudioTranscriptionConfigLanguageHints extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. BCP-47 language codes. At least one must be specified.
+   * Required. Deprecated: Use top-level `language_codes` instead. BCP-47 language codes. At least
+   * one must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> languageCodes;
 
   /**
-   * Required. BCP-47 language codes. At least one must be specified.
+   * Required. Deprecated: Use top-level `language_codes` instead. BCP-47 language codes. At least
+   * one must be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLanguageCodes() {
@@ -45,7 +48,8 @@ public final class GoogleCloudAiplatformV1beta1AudioTranscriptionConfigLanguageH
   }
 
   /**
-   * Required. BCP-47 language codes. At least one must be specified.
+   * Required. Deprecated: Use top-level `language_codes` instead. BCP-47 language codes. At least
+   * one must be specified.
    * @param languageCodes languageCodes or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AudioTranscriptionConfigLanguageHints setLanguageCodes(java.util.List<java.lang.String> languageCodes) {

@@ -12080,7 +12080,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Creates a CustomDimension.
+       * Creates a CustomDimension. Warning: It's not permissible to use this method to collect data on
+       * individual users. In particular, sending user IDs in custom dimensions violates the [Google
+       * Analytics Terms of Service](https://www.google.com/analytics/terms/).
        *
        * Create a request for the method "customDimensions.create".
        *
@@ -12105,7 +12107,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+$");
 
         /**
-         * Creates a CustomDimension.
+         * Creates a CustomDimension. Warning: It's not permissible to use this method to collect data on
+         * individual users. In particular, sending user IDs in custom dimensions violates the [Google
+         * Analytics Terms of Service](https://www.google.com/analytics/terms/).
          *
          * Create a request for the method "customDimensions.create".
          *

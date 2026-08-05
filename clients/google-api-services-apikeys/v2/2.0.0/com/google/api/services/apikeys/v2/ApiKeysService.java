@@ -1464,6 +1464,22 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /** Optional. Defines the behavior for checking existing usage when updating a key. */
+          @com.google.api.client.util.Key
+          private java.lang.String checkExistingUsage;
+
+          /** Optional. Defines the behavior for checking existing usage when updating a key.
+           */
+          public java.lang.String getCheckExistingUsage() {
+            return checkExistingUsage;
+          }
+
+          /** Optional. Defines the behavior for checking existing usage when updating a key. */
+          public Patch setCheckExistingUsage(java.lang.String checkExistingUsage) {
+            this.checkExistingUsage = checkExistingUsage;
+            return this;
+          }
+
           /**
            * The field mask specifies which fields to be updated as part of this request. All other
            * fields are ignored. Mutable fields are: `display_name`, `restrictions`, and

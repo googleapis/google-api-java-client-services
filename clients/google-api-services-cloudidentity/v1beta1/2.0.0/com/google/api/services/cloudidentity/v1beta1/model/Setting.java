@@ -30,7 +30,7 @@ package com.google.api.services.cloudidentity.v1beta1.model;
 public final class Setting extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The type of the Setting. .
+   * Required. Immutable. The type of the Setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Setting extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> value;
 
   /**
-   * Required. Immutable. The type of the Setting. .
+   * Required. Immutable. The type of the Setting.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -52,7 +52,7 @@ public final class Setting extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The type of the Setting. .
+   * Required. Immutable. The type of the Setting.
    * @param type type or {@code null} for none
    */
   public Setting setType(java.lang.String type) {

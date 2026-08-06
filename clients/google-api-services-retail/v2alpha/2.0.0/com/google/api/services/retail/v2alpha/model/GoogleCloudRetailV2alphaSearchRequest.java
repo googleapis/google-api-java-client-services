@@ -72,6 +72,23 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private GoogleCloudRetailV2alphaSearchRequestConversationalSearchSpec conversationalSearchSpec;
 
   /**
+   * Optional. A set of controls that are applied dynamically to the search request. These controls
+   * are applied in addition to the controls specified in the serving config. These controls are
+   * expected to not yet be persisted in storage. A control could be applied twice if it is in both
+   * the serving config and specified here. A maximum of 5 values are allowed. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaControl> dynamicControls;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaControl used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaControl.class);
+  }
+
+  /**
    * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
    * facets. Do not set this field. The specification for dynamically generated facets. Notice that
    * only textual facets can be dynamically generated.
@@ -114,6 +131,14 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
+
+  /**
+   * Optional. A list of control IDs to ignore. These controls will not be applied to the search
+   * request, even if they are specified in the serving config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> ignoredControlIds;
 
   /**
    * The labels applied to a resource must meet the following requirements: * Each resource can have
@@ -424,6 +449,31 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
+   * Optional. A set of controls that are applied dynamically to the search request. These controls
+   * are applied in addition to the controls specified in the serving config. These controls are
+   * expected to not yet be persisted in storage. A control could be applied twice if it is in both
+   * the serving config and specified here. A maximum of 5 values are allowed. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaControl> getDynamicControls() {
+    return dynamicControls;
+  }
+
+  /**
+   * Optional. A set of controls that are applied dynamically to the search request. These controls
+   * are applied in addition to the controls specified in the serving config. These controls are
+   * expected to not yet be persisted in storage. A control could be applied twice if it is in both
+   * the serving config and specified here. A maximum of 5 values are allowed. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   * @param dynamicControls dynamicControls or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setDynamicControls(java.util.List<GoogleCloudRetailV2alphaControl> dynamicControls) {
+    this.dynamicControls = dynamicControls;
+    return this;
+  }
+
+  /**
    * Deprecated. Refer to https://cloud.google.com/retail/docs/configs#dynamic to enable dynamic
    * facets. Do not set this field. The specification for dynamically generated facets. Notice that
    * only textual facets can be dynamically generated.
@@ -523,6 +573,25 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
    */
   public GoogleCloudRetailV2alphaSearchRequest setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. A list of control IDs to ignore. These controls will not be applied to the search
+   * request, even if they are specified in the serving config.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIgnoredControlIds() {
+    return ignoredControlIds;
+  }
+
+  /**
+   * Optional. A list of control IDs to ignore. These controls will not be applied to the search
+   * request, even if they are specified in the serving config.
+   * @param ignoredControlIds ignoredControlIds or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setIgnoredControlIds(java.util.List<java.lang.String> ignoredControlIds) {
+    this.ignoredControlIds = ignoredControlIds;
     return this;
   }
 

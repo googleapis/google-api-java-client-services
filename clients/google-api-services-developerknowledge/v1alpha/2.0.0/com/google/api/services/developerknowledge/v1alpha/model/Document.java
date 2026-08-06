@@ -17,7 +17,8 @@
 package com.google.api.services.developerknowledge.v1alpha.model;
 
 /**
- * A Document represents a piece of content from the Developer Knowledge corpus.
+ * A Document represents a page of documentation in the Developer Knowledge corpus, like the page at
+ * https://docs.cloud.google.com/storage/docs/creating-buckets.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Knowledge API. For a detailed explanation

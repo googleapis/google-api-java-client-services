@@ -64,6 +64,14 @@ public final class Sleep extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. List of short awake segments (under a set threshold) that are part of the sleep
+   * session. These can overlap with sleep stages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SleepStage> shortAwakenings;
+
+  /**
    * Optional. List of non-overlapping contiguous sleep stage segments that cover the sleep period.
    * The value may be {@code null}.
    */
@@ -156,6 +164,25 @@ public final class Sleep extends com.google.api.client.json.GenericJson {
    */
   public Sleep setOutOfBedSegments(java.util.List<OutOfBedSegment> outOfBedSegments) {
     this.outOfBedSegments = outOfBedSegments;
+    return this;
+  }
+
+  /**
+   * Output only. List of short awake segments (under a set threshold) that are part of the sleep
+   * session. These can overlap with sleep stages.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SleepStage> getShortAwakenings() {
+    return shortAwakenings;
+  }
+
+  /**
+   * Output only. List of short awake segments (under a set threshold) that are part of the sleep
+   * session. These can overlap with sleep stages.
+   * @param shortAwakenings shortAwakenings or {@code null} for none
+   */
+  public Sleep setShortAwakenings(java.util.List<SleepStage> shortAwakenings) {
+    this.shortAwakenings = shortAwakenings;
     return this;
   }
 

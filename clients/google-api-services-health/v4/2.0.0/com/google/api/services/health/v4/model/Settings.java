@@ -38,8 +38,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autoStrideEnabled;
 
   /**
-   * Optional. The measurement unit defined in the user's account settings. Updates to this field
-   * are currently not supported.
+   * Optional. The measurement unit defined in the user's account settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,8 +167,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The measurement unit defined in the user's account settings. Updates to this field
-   * are currently not supported.
+   * Optional. The measurement unit defined in the user's account settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getDistanceUnit() {
@@ -177,8 +175,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The measurement unit defined in the user's account settings. Updates to this field
-   * are currently not supported.
+   * Optional. The measurement unit defined in the user's account settings.
    * @param distanceUnit distanceUnit or {@code null} for none
    */
   public Settings setDistanceUnit(java.lang.String distanceUnit) {

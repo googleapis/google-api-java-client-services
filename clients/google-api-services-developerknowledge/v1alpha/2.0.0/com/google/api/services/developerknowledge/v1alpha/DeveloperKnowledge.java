@@ -259,7 +259,9 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can
        * be retrieved in a batch. The documents are returned in the same order as the `names` in the
        * request. Format: `documents/{uri_without_scheme}` Example:
-       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets` Each name must not exceed
+       * 500 characters; values longer than 500 characters will result in an `INVALID_ARGUMENT`
+       * error.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> names;
@@ -267,7 +269,8 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /** Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can be
      retrieved in a batch. The documents are returned in the same order as the `names` in the request.
      Format: `documents/{uri_without_scheme}` Example:
-     `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+     `documents/docs.cloud.google.com/storage/docs/creating-buckets` Each name must not exceed 500
+     characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
        */
       public java.util.List<java.lang.String> getNames() {
         return names;
@@ -277,7 +280,9 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * Required. Specifies the names of the documents to retrieve. A maximum of 20 documents can
        * be retrieved in a batch. The documents are returned in the same order as the `names` in the
        * request. Format: `documents/{uri_without_scheme}` Example:
-       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets` Each name must not exceed
+       * 500 characters; values longer than 500 characters will result in an `INVALID_ARGUMENT`
+       * error.
        */
       public BatchGet setNames(java.util.List<java.lang.String> names) {
         this.names = names;
@@ -321,7 +326,9 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
-     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets` The name must not
+     *        exceed 500 characters; values longer than 500 characters will result in an
+     *        `INVALID_ARGUMENT` error.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -349,7 +356,9 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
-     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+     *        Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets` The name must not
+     *        exceed 500 characters; values longer than 500 characters will result in an
+     *        `INVALID_ARGUMENT` error.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -430,13 +439,16 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /**
        * Required. Specifies the name of the document to retrieve. Format:
        * `documents/{uri_without_scheme}` Example:
-       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets` The name must not exceed
+       * 500 characters; values longer than 500 characters will result in an `INVALID_ARGUMENT`
+       * error.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. Specifies the name of the document to retrieve. Format: `documents/{uri_without_scheme}`
-     Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+     Example: `documents/docs.cloud.google.com/storage/docs/creating-buckets` The name must not exceed
+     500 characters; values longer than 500 characters will result in an `INVALID_ARGUMENT` error.
        */
       public java.lang.String getName() {
         return name;
@@ -445,7 +457,9 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
       /**
        * Required. Specifies the name of the document to retrieve. Format:
        * `documents/{uri_without_scheme}` Example:
-       * `documents/docs.cloud.google.com/storage/docs/creating-buckets`
+       * `documents/docs.cloud.google.com/storage/docs/creating-buckets` The name must not exceed
+       * 500 characters; values longer than 500 characters will result in an `INVALID_ARGUMENT`
+       * error.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -730,13 +744,15 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
 
       /**
        * Required. Provides the raw query string provided by the user, such as "How to create a
-       * Cloud Storage bucket?".
+       * Cloud Storage bucket?". The query must not exceed 500 characters; values longer than 500
+       * characters will result in an `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
       /** Required. Provides the raw query string provided by the user, such as "How to create a Cloud
-     Storage bucket?".
+     Storage bucket?". The query must not exceed 500 characters; values longer than 500 characters will
+     result in an `INVALID_ARGUMENT` error.
        */
       public java.lang.String getQuery() {
         return query;
@@ -744,7 +760,8 @@ public class DeveloperKnowledge extends com.google.api.client.googleapis.service
 
       /**
        * Required. Provides the raw query string provided by the user, such as "How to create a
-       * Cloud Storage bucket?".
+       * Cloud Storage bucket?". The query must not exceed 500 characters; values longer than 500
+       * characters will result in an `INVALID_ARGUMENT` error.
        */
       public SearchDocumentChunks setQuery(java.lang.String query) {
         this.query = query;

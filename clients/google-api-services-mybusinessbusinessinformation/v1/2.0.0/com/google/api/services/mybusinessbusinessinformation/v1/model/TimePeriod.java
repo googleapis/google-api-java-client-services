@@ -41,7 +41,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for close_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for open_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +83,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for close_time.
    * @return value or {@code null} for none
    */
   public TimeOfDay getCloseTime() {
@@ -90,7 +93,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for close_time.
    * @param closeTime closeTime or {@code null} for none
    */
   public TimePeriod setCloseTime(TimeOfDay closeTime) {
@@ -117,7 +121,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for open_time.
    * @return value or {@code null} for none
    */
   public TimeOfDay getOpenTime() {
@@ -126,7 +131,8 @@ public final class TimePeriod extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
-   * specified day field.
+   * specified day field. Note: In Proto3 JSON mapping, default zero values (00:00) are omitted,
+   * producing `{}` for open_time.
    * @param openTime openTime or {@code null} for none
    */
   public TimePeriod setOpenTime(TimeOfDay openTime) {

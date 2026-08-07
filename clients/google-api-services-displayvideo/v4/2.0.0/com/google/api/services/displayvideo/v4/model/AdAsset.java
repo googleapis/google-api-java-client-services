@@ -59,7 +59,8 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +142,8 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyntheticContentAttestationStatus() {
@@ -149,7 +151,8 @@ public final class AdAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
    */
   public AdAsset setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {

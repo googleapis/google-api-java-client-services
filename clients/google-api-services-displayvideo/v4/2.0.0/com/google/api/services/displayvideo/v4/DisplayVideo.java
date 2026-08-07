@@ -2113,7 +2113,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       /**
        * Updates an ad asset. Returns the updated ad asset if successful. Supports updating assets of
        * AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO` and `AD_ASSET_TYPE_IMAGE`. Only the
-       * `synthetic_content_attestation_status` field is mutable.
+       * AdAsset.synthetic_content_attestation_status field is mutable.
        *
        * Create a request for the method "adAssets.patch".
        *
@@ -2144,7 +2144,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         /**
          * Updates an ad asset. Returns the updated ad asset if successful. Supports updating assets of
          * AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO` and `AD_ASSET_TYPE_IMAGE`. Only the
-         * `synthetic_content_attestation_status` field is mutable.
+         * AdAsset.synthetic_content_attestation_status field is mutable.
          *
          * Create a request for the method "adAssets.patch".
          *
@@ -18330,7 +18330,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class ReachForecast {
 
       /**
-       * Generates a reach forecast for a given advertiser and targeting configuration.
+       * Generates a reach forecast for a given advertiser and targeting configuration. API support for
+       * generating reach forecasts and retrieving related metadata is in beta. This method is only
+       * available to allowlisted users.
        *
        * Create a request for the method "reachForecast.generateReachForecast".
        *
@@ -18356,7 +18358,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Generates a reach forecast for a given advertiser and targeting configuration.
+         * Generates a reach forecast for a given advertiser and targeting configuration. API support for
+         * generating reach forecasts and retrieving related metadata is in beta. This method is only
+         * available to allowlisted users.
          *
          * Create a request for the method "reachForecast.generateReachForecast".
          *
@@ -18452,7 +18456,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Retrieves the list of countries where reach forecasting is supported.
+       * Retrieves the list of countries where reach forecasting is supported. API support for generating
+       * reach forecasts and retrieving related metadata is in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "reachForecast.retrievePlannableLocations".
        *
@@ -18477,7 +18483,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Retrieves the list of countries where reach forecasting is supported.
+         * Retrieves the list of countries where reach forecasting is supported. API support for
+         * generating reach forecasts and retrieving related metadata is in beta. This method is only
+         * available to allowlisted users.
          *
          * Create a request for the method "reachForecast.retrievePlannableLocations".
          *
@@ -18582,7 +18590,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Retrieves the list of products that can be planned for a location.
+       * Retrieves the list of products that can be planned for a location. API support for generating
+       * reach forecasts and retrieving related metadata is in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "reachForecast.retrievePlannableProducts".
        *
@@ -18607,7 +18617,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Retrieves the list of products that can be planned for a location.
+         * Retrieves the list of products that can be planned for a location. API support for generating
+         * reach forecasts and retrieving related metadata is in beta. This method is only available to
+         * allowlisted users.
          *
          * Create a request for the method "reachForecast.retrievePlannableProducts".
          *
@@ -18728,7 +18740,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Retrieves Google Audiences (User Interests) available for forecasting.
+       * Retrieves Google Audiences (User Interests) available for forecasting. API support for generating
+       * reach forecasts and retrieving related metadata is in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "reachForecast.retrievePlannableUserInterests".
        *
@@ -18753,7 +18767,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Retrieves Google Audiences (User Interests) available for forecasting.
+         * Retrieves Google Audiences (User Interests) available for forecasting. API support for
+         * generating reach forecasts and retrieving related metadata is in beta. This method is only
+         * available to allowlisted users.
          *
          * Create a request for the method "reachForecast.retrievePlannableUserInterests".
          *
@@ -18874,7 +18890,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Retrieves first and third party user lists available for forecasting.
+       * Retrieves first and third party user lists available for forecasting. API support for generating
+       * reach forecasts and retrieving related metadata is in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "reachForecast.retrievePlannableUserLists".
        *
@@ -18899,7 +18917,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Retrieves first and third party user lists available for forecasting.
+         * Retrieves first and third party user lists available for forecasting. API support for
+         * generating reach forecasts and retrieving related metadata is in beta. This method is only
+         * available to allowlisted users.
          *
          * Create a request for the method "reachForecast.retrievePlannableUserLists".
          *

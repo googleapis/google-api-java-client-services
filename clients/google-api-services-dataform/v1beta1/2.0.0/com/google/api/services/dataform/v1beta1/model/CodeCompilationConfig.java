@@ -80,6 +80,14 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   private java.lang.String defaultSchema;
 
   /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PipelineConfig pipelineConfig;
+
+  /**
    * Optional. The suffix that should be appended to all schema (BigQuery dataset ID) names.
    * The value may be {@code null}.
    */
@@ -218,6 +226,25 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
    */
   public CodeCompilationConfig setDefaultSchema(java.lang.String defaultSchema) {
     this.defaultSchema = defaultSchema;
+    return this;
+  }
+
+  /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @return value or {@code null} for none
+   */
+  public PipelineConfig getPipelineConfig() {
+    return pipelineConfig;
+  }
+
+  /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @param pipelineConfig pipelineConfig or {@code null} for none
+   */
+  public CodeCompilationConfig setPipelineConfig(PipelineConfig pipelineConfig) {
+    this.pipelineConfig = pipelineConfig;
     return this;
   }
 

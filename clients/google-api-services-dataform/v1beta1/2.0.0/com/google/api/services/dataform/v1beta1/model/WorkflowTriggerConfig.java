@@ -53,7 +53,8 @@ public final class WorkflowTriggerConfig extends com.google.api.client.json.Gene
 
   /**
    * Optional. Minimum duration between two consecutive executions. If not specified, the workflow
-   * will be executed every time trigger conditions are met and no ongoing workflow execution.
+   * will be executed every time trigger conditions are met and there is no ongoing workflow
+   * execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +143,8 @@ public final class WorkflowTriggerConfig extends com.google.api.client.json.Gene
 
   /**
    * Optional. Minimum duration between two consecutive executions. If not specified, the workflow
-   * will be executed every time trigger conditions are met and no ongoing workflow execution.
+   * will be executed every time trigger conditions are met and there is no ongoing workflow
+   * execution.
    * @return value or {@code null} for none
    */
   public String getMinExecutionDuration() {
@@ -151,7 +153,8 @@ public final class WorkflowTriggerConfig extends com.google.api.client.json.Gene
 
   /**
    * Optional. Minimum duration between two consecutive executions. If not specified, the workflow
-   * will be executed every time trigger conditions are met and no ongoing workflow execution.
+   * will be executed every time trigger conditions are met and there is no ongoing workflow
+   * execution.
    * @param minExecutionDuration minExecutionDuration or {@code null} for none
    */
   public WorkflowTriggerConfig setMinExecutionDuration(String minExecutionDuration) {

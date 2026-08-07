@@ -74,6 +74,14 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
+   * Output only. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PipelineConfig pipelineConfig;
+
+  /**
    * Output only. Metadata indicating whether this resource is user-scoped. `WorkflowInvocation`
    * resource is `user_scoped` only if it is sourced from a compilation result and the compilation
    * result is user-scoped.
@@ -208,6 +216,25 @@ public final class WorkflowInvocation extends com.google.api.client.json.Generic
    */
   public WorkflowInvocation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @return value or {@code null} for none
+   */
+  public PipelineConfig getPipelineConfig() {
+    return pipelineConfig;
+  }
+
+  /**
+   * Output only. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @param pipelineConfig pipelineConfig or {@code null} for none
+   */
+  public WorkflowInvocation setPipelineConfig(PipelineConfig pipelineConfig) {
+    this.pipelineConfig = pipelineConfig;
     return this;
   }
 

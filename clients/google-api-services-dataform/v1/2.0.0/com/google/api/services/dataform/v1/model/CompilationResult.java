@@ -72,6 +72,13 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
   private java.lang.String dataformCoreVersion;
 
   /**
+   * Output only. Metadata about the repository snapshot used by scheduled notebooks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsRepositorySnapshotMetadata gcsRepositorySnapshotMetadata;
+
+  /**
    * Immutable. Git commit/tag/branch name at which the repository should be compiled. Must exist in
    * the remote repository. Examples: - a commit SHA: `12ade345` - a tag: `tag1` - a branch name:
    * `branch1`
@@ -211,6 +218,23 @@ public final class CompilationResult extends com.google.api.client.json.GenericJ
    */
   public CompilationResult setDataformCoreVersion(java.lang.String dataformCoreVersion) {
     this.dataformCoreVersion = dataformCoreVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the repository snapshot used by scheduled notebooks.
+   * @return value or {@code null} for none
+   */
+  public GcsRepositorySnapshotMetadata getGcsRepositorySnapshotMetadata() {
+    return gcsRepositorySnapshotMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the repository snapshot used by scheduled notebooks.
+   * @param gcsRepositorySnapshotMetadata gcsRepositorySnapshotMetadata or {@code null} for none
+   */
+  public CompilationResult setGcsRepositorySnapshotMetadata(GcsRepositorySnapshotMetadata gcsRepositorySnapshotMetadata) {
+    this.gcsRepositorySnapshotMetadata = gcsRepositorySnapshotMetadata;
     return this;
   }
 

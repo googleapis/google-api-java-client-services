@@ -37,6 +37,13 @@ public final class NotebookAction extends com.google.api.client.json.GenericJson
   private java.lang.String contents;
 
   /**
+   * Output only. The path to the notebook file in the repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filePath;
+
+  /**
    * Output only. The ID of the Gemini Enterprise Agent Platform job that executed the notebook in
    * contents and also the ID used for the outputs created in Google Cloud Storage buckets. Only set
    * once the job has started to run.
@@ -59,6 +66,23 @@ public final class NotebookAction extends com.google.api.client.json.GenericJson
    */
   public NotebookAction setContents(java.lang.String contents) {
     this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Output only. The path to the notebook file in the repository.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilePath() {
+    return filePath;
+  }
+
+  /**
+   * Output only. The path to the notebook file in the repository.
+   * @param filePath filePath or {@code null} for none
+   */
+  public NotebookAction setFilePath(java.lang.String filePath) {
+    this.filePath = filePath;
     return this;
   }
 

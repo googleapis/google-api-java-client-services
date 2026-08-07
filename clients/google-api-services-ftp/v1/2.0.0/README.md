@@ -1,6 +1,6 @@
 # Cloud FTP API Client Library for Java
 
-
+Cloud FTP is a managed service that allows transferring files directly to Google Cloud Storage using SFTP.
 
 This page contains information about getting started with the Cloud FTP API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-ftp</artifactId>
-      <version>v1-rev20260722-2.0.0</version>
+      <version>v1-rev20260729-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-ftp:v1-rev20260722-2.0.0'
+  implementation 'com.google.apis:google-api-services-ftp:v1-rev20260729-2.0.0'
 }
 ```
 

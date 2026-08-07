@@ -20,12 +20,12 @@ package com.google.api.services.ftp.v1alpha;
  * Service definition for CloudFTP (v1alpha).
  *
  * <p>
- * 
+ * Cloud FTP is a managed service that allows transferring files directly to Google Cloud Storage using SFTP.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/cloud-ftp/overview" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -30,6 +30,14 @@ package com.google.api.services.youtube.model;
 public final class LiveBroadcastContentDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The broadcast's availability config. Used to set specific region availability or
+   * block specific regions It is optional - if not set, it is not enforced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AvailabilityConfig availabilityConfig;
+
+  /**
    * This value uniquely identifies the live stream bound to the broadcast.
    * The value may be {@code null}.
    */
@@ -170,6 +178,25 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String stereoLayout;
+
+  /**
+   * Optional. The broadcast's availability config. Used to set specific region availability or
+   * block specific regions It is optional - if not set, it is not enforced.
+   * @return value or {@code null} for none
+   */
+  public AvailabilityConfig getAvailabilityConfig() {
+    return availabilityConfig;
+  }
+
+  /**
+   * Optional. The broadcast's availability config. Used to set specific region availability or
+   * block specific regions It is optional - if not set, it is not enforced.
+   * @param availabilityConfig availabilityConfig or {@code null} for none
+   */
+  public LiveBroadcastContentDetails setAvailabilityConfig(AvailabilityConfig availabilityConfig) {
+    this.availabilityConfig = availabilityConfig;
+    return this;
+  }
 
   /**
    * This value uniquely identifies the live stream bound to the broadcast.

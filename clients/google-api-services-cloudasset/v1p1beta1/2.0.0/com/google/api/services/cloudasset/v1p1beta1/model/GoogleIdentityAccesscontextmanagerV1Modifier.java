@@ -30,14 +30,14 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1Modifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * Adds additional HTTP request headers.
+   * Adds an additional HTTP request header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleIdentityAccesscontextmanagerV1AddRequestHeader addRequestHeader;
 
   /**
-   * Adds additional HTTP request headers.
+   * Adds an additional HTTP request header.
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AddRequestHeader getAddRequestHeader() {
@@ -45,7 +45,7 @@ public final class GoogleIdentityAccesscontextmanagerV1Modifier extends com.goog
   }
 
   /**
-   * Adds additional HTTP request headers.
+   * Adds an additional HTTP request header.
    * @param addRequestHeader addRequestHeader or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1Modifier setAddRequestHeader(GoogleIdentityAccesscontextmanagerV1AddRequestHeader addRequestHeader) {

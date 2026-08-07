@@ -47,6 +47,14 @@ public final class NotebookRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String gcsOutputBucket;
 
   /**
+   * Optional. The Google Cloud Storage destination to upload the snapshot to. For empty URI it
+   * defaults to the provided gcs_output_bucket. Format: `gs://bucket-name/path/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsRepositorySnapshotDestination gcsRepositorySnapshotDestination;
+
+  /**
    * Optional. The resource name of the [Colab runtime template]
    * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is created for notebook
    * executions. If not specified, a runtime is created with Colab's default specifications.
@@ -83,6 +91,25 @@ public final class NotebookRuntimeOptions extends com.google.api.client.json.Gen
    */
   public NotebookRuntimeOptions setGcsOutputBucket(java.lang.String gcsOutputBucket) {
     this.gcsOutputBucket = gcsOutputBucket;
+    return this;
+  }
+
+  /**
+   * Optional. The Google Cloud Storage destination to upload the snapshot to. For empty URI it
+   * defaults to the provided gcs_output_bucket. Format: `gs://bucket-name/path/`.
+   * @return value or {@code null} for none
+   */
+  public GcsRepositorySnapshotDestination getGcsRepositorySnapshotDestination() {
+    return gcsRepositorySnapshotDestination;
+  }
+
+  /**
+   * Optional. The Google Cloud Storage destination to upload the snapshot to. For empty URI it
+   * defaults to the provided gcs_output_bucket. Format: `gs://bucket-name/path/`.
+   * @param gcsRepositorySnapshotDestination gcsRepositorySnapshotDestination or {@code null} for none
+   */
+  public NotebookRuntimeOptions setGcsRepositorySnapshotDestination(GcsRepositorySnapshotDestination gcsRepositorySnapshotDestination) {
+    this.gcsRepositorySnapshotDestination = gcsRepositorySnapshotDestination;
     return this;
   }
 

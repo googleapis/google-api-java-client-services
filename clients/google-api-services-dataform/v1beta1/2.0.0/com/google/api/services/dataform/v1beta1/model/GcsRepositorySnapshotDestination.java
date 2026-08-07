@@ -17,7 +17,7 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * `InstallNpmPackages` request message.
+ * Configures the destination for a repository snapshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class InstallNpmPackagesRequest extends com.google.api.client.json.GenericJson {
+public final class GcsRepositorySnapshotDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The pipeline options which defines the pipeline type and path within the Git
-   * repository.
+   * Optional. The Google Cloud Storage destination to upload the repository snapshot to. Format:
+   * `gs://bucket-name/path/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PipelineConfig pipelineConfig;
+  private java.lang.String repositorySnapshotUri;
 
   /**
-   * Optional. The pipeline options which defines the pipeline type and path within the Git
-   * repository.
+   * Optional. The Google Cloud Storage destination to upload the repository snapshot to. Format:
+   * `gs://bucket-name/path/`.
    * @return value or {@code null} for none
    */
-  public PipelineConfig getPipelineConfig() {
-    return pipelineConfig;
+  public java.lang.String getRepositorySnapshotUri() {
+    return repositorySnapshotUri;
   }
 
   /**
-   * Optional. The pipeline options which defines the pipeline type and path within the Git
-   * repository.
-   * @param pipelineConfig pipelineConfig or {@code null} for none
+   * Optional. The Google Cloud Storage destination to upload the repository snapshot to. Format:
+   * `gs://bucket-name/path/`.
+   * @param repositorySnapshotUri repositorySnapshotUri or {@code null} for none
    */
-  public InstallNpmPackagesRequest setPipelineConfig(PipelineConfig pipelineConfig) {
-    this.pipelineConfig = pipelineConfig;
+  public GcsRepositorySnapshotDestination setRepositorySnapshotUri(java.lang.String repositorySnapshotUri) {
+    this.repositorySnapshotUri = repositorySnapshotUri;
     return this;
   }
 
   @Override
-  public InstallNpmPackagesRequest set(String fieldName, Object value) {
-    return (InstallNpmPackagesRequest) super.set(fieldName, value);
+  public GcsRepositorySnapshotDestination set(String fieldName, Object value) {
+    return (GcsRepositorySnapshotDestination) super.set(fieldName, value);
   }
 
   @Override
-  public InstallNpmPackagesRequest clone() {
-    return (InstallNpmPackagesRequest) super.clone();
+  public GcsRepositorySnapshotDestination clone() {
+    return (GcsRepositorySnapshotDestination) super.clone();
   }
 
 }

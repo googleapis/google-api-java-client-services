@@ -97,9 +97,9 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
-   * zone name from the time zone database
-   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
-   * default is UTC.
+   * zone name from the [time zone
+   * database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified,
+   * the default is `UTC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,9 +258,9 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
-   * zone name from the time zone database
-   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
-   * default is UTC.
+   * zone name from the [time zone
+   * database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified,
+   * the default is `UTC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -269,9 +269,9 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Specifies the time zone to be used when interpreting cron_schedule. Must be a time
-   * zone name from the time zone database
-   * (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified, the
-   * default is UTC.
+   * zone name from the [time zone
+   * database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). If left unspecified,
+   * the default is `UTC`.
    * @param timeZone timeZone or {@code null} for none
    */
   public WorkflowConfig setTimeZone(java.lang.String timeZone) {

@@ -29,6 +29,33 @@ package com.google.api.services.dataform.v1.model;
 @SuppressWarnings("javadoc")
 public final class InstallNpmPackagesRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PipelineConfig pipelineConfig;
+
+  /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @return value or {@code null} for none
+   */
+  public PipelineConfig getPipelineConfig() {
+    return pipelineConfig;
+  }
+
+  /**
+   * Optional. The pipeline options which defines the pipeline type and path within the Git
+   * repository.
+   * @param pipelineConfig pipelineConfig or {@code null} for none
+   */
+  public InstallNpmPackagesRequest setPipelineConfig(PipelineConfig pipelineConfig) {
+    this.pipelineConfig = pipelineConfig;
+    return this;
+  }
+
   @Override
   public InstallNpmPackagesRequest set(String fieldName, Object value) {
     return (InstallNpmPackagesRequest) super.set(fieldName, value);

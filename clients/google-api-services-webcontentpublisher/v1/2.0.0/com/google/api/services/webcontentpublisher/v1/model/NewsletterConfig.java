@@ -52,6 +52,13 @@ public final class NewsletterConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean nameRequired;
 
   /**
+   * Optional. Whether checking the opt-in checkbox is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean optInRequired;
+
+  /**
    * Required. The title of the newsletter signup prompt.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class NewsletterConfig extends com.google.api.client.json.GenericJs
    */
   public NewsletterConfig setNameRequired(java.lang.Boolean nameRequired) {
     this.nameRequired = nameRequired;
+    return this;
+  }
+
+  /**
+   * Optional. Whether checking the opt-in checkbox is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOptInRequired() {
+    return optInRequired;
+  }
+
+  /**
+   * Optional. Whether checking the opt-in checkbox is required.
+   * @param optInRequired optInRequired or {@code null} for none
+   */
+  public NewsletterConfig setOptInRequired(java.lang.Boolean optInRequired) {
+    this.optInRequired = optInRequired;
     return this;
   }
 

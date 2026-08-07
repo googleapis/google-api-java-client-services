@@ -17,8 +17,8 @@
 package com.google.api.services.searchconsole.v1.model;
 
 /**
- * A set of dimension value filters to test against each row. Only rows that pass all filter groups
- * will be returned. All results within a filter group are either AND'ed or OR'ed together,
+ * A set of `dimension` value filters to test against each row. Only rows that pass all filter
+ * groups will be returned. All results within a filter group are either AND'ed or OR'ed together,
  * depending on the group type selected. All filter groups are AND'ed together.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -33,6 +33,7 @@ package com.google.api.services.searchconsole.v1.model;
 public final class ApiDimensionFilterGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of single-value filters in this group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +46,14 @@ public final class ApiDimensionFilterGroup extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. The logic operator between filters of the same group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupType;
 
   /**
+   * Optional. A list of single-value filters in this group.
    * @return value or {@code null} for none
    */
   public java.util.List<ApiDimensionFilter> getFilters() {
@@ -58,6 +61,7 @@ public final class ApiDimensionFilterGroup extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. A list of single-value filters in this group.
    * @param filters filters or {@code null} for none
    */
   public ApiDimensionFilterGroup setFilters(java.util.List<ApiDimensionFilter> filters) {
@@ -66,6 +70,7 @@ public final class ApiDimensionFilterGroup extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. The logic operator between filters of the same group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupType() {
@@ -73,6 +78,7 @@ public final class ApiDimensionFilterGroup extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. The logic operator between filters of the same group.
    * @param groupType groupType or {@code null} for none
    */
   public ApiDimensionFilterGroup setGroupType(java.lang.String groupType) {

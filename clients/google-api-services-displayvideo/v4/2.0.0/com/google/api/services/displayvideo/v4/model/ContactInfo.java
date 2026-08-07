@@ -32,7 +32,7 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Country code of the member. Must also be set with the following fields: *
-   * country_code * hashed_first_name * hashed_last_name * zip_codes
+   * hashed_first_name * hashed_last_name * zip_codes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Country code of the member. Must also be set with the following fields: *
-   * country_code * hashed_first_name * hashed_last_name * zip_codes
+   * hashed_first_name * hashed_last_name * zip_codes
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -92,7 +92,7 @@ public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Country code of the member. Must also be set with the following fields: *
-   * country_code * hashed_first_name * hashed_last_name * zip_codes
+   * hashed_first_name * hashed_last_name * zip_codes
    * @param countryCode countryCode or {@code null} for none
    */
   public ContactInfo setCountryCode(java.lang.String countryCode) {

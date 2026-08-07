@@ -46,7 +46,8 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   private java.lang.String filename;
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +90,8 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyntheticContentAttestationStatus() {
@@ -97,7 +99,8 @@ public final class UploadAdAssetRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Whether the asset contains synthetic content or was created using AI.
+   * Optional. Whether to add a label to the asset as created or edited using AI when served in
+   * regions with local AI labeling regulations.
    * @param syntheticContentAttestationStatus syntheticContentAttestationStatus or {@code null} for none
    */
   public UploadAdAssetRequest setSyntheticContentAttestationStatus(java.lang.String syntheticContentAttestationStatus) {

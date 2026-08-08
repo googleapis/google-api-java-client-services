@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest ex
   private java.lang.Boolean deleteUnassignedUserLicenses;
 
   /**
-   * The inline source for the input content for document embeddings.
+   * The inline source for the input content for license assignment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest ex
   }
 
   /**
-   * The inline source for the input content for document embeddings.
+   * The inline source for the input content for license assignment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource getInlineSource() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest ex
   }
 
   /**
-   * The inline source for the input content for document embeddings.
+   * The inline source for the input content for license assignment.
    * @param inlineSource inlineSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest setInlineSource(GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource inlineSource) {

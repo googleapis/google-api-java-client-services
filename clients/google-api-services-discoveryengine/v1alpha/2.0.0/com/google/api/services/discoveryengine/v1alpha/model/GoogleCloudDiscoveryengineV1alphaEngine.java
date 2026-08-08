@@ -138,9 +138,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
-   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,9 +501,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
-   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -517,9 +519,10 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `mobile-app-
    * access` * `disable-agent-sharing` * `disable-image-generation` * `disable-video-generation` *
    * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-google-drive-upload` *
-   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `disable-skills` * `disable-
-   * projects` * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-
-   * agent-orchestration` * `cross-product-intelligence`
+   * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

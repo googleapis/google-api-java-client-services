@@ -2236,6 +2236,145 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * Provisions the project resource. During the process, related systems will get prepared and
+       * initialized. Caller must read the [Terms for data use](https://cloud.google.com/retail/data-use-
+       * terms), and optionally specify in request to provide consent to that service terms.
+       *
+       * Create a request for the method "locations.provision".
+       *
+       * This request holds the parameters needed by the discoveryengine server.  After setting any
+       * optional parameters, call the {@link Provision#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+       * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest}
+       * @return the request
+       */
+      public Provision provision(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest content) throws java.io.IOException {
+        Provision result = new Provision(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Provision extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1alpha/{+name}:provision";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Provisions the project resource. During the process, related systems will get prepared and
+         * initialized. Caller must read the [Terms for data use](https://cloud.google.com/retail/data-
+         * use-terms), and optionally specify in request to provide consent to that service terms.
+         *
+         * Create a request for the method "locations.provision".
+         *
+         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+         * optional parameters, call the {@link Provision#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Provision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest}
+         * @since 1.13
+         */
+        protected Provision(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest content) {
+          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Provision set$Xgafv(java.lang.String $Xgafv) {
+          return (Provision) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Provision setAccessToken(java.lang.String accessToken) {
+          return (Provision) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Provision setAlt(java.lang.String alt) {
+          return (Provision) super.setAlt(alt);
+        }
+
+        @Override
+        public Provision setCallback(java.lang.String callback) {
+          return (Provision) super.setCallback(callback);
+        }
+
+        @Override
+        public Provision setFields(java.lang.String fields) {
+          return (Provision) super.setFields(fields);
+        }
+
+        @Override
+        public Provision setKey(java.lang.String key) {
+          return (Provision) super.setKey(key);
+        }
+
+        @Override
+        public Provision setOauthToken(java.lang.String oauthToken) {
+          return (Provision) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Provision setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Provision) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Provision setQuotaUser(java.lang.String quotaUser) {
+          return (Provision) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Provision setUploadType(java.lang.String uploadType) {
+          return (Provision) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Provision setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Provision) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Full resource name of a Project, such as `projects/{project_id_or_number}`.
+         */
+        public Provision setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Provision set(String parameterName, Object value) {
+          return (Provision) super.set(parameterName, value);
+        }
+      }
+      /**
        * Queries configurable pricing usage stats for a project.
        *
        * Create a request for the method "locations.queryConfigurablePricingUsageStats".

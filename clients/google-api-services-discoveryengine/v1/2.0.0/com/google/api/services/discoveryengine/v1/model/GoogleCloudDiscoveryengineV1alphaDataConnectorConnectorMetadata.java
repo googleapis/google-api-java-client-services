@@ -18,7 +18,7 @@ package com.google.api.services.discoveryengine.v1.model;
 
 /**
  * User-facing metadata for the connector, shown on the connector detail page (title, description,
- * short_description, author, authenticated_account, note).
+ * short_description, author, note).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -29,15 +29,6 @@ package com.google.api.services.discoveryengine.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetadata extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Optional. The end user's account as authenticated to the connector, so the end user can see
-   * which account is connected. May be an email, a username, or any identifier the connector/third
-   * party provides.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String authenticatedAccount;
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-party provider name.
@@ -77,27 +68,6 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetada
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
-
-  /**
-   * Optional. The end user's account as authenticated to the connector, so the end user can see
-   * which account is connected. May be an email, a username, or any identifier the connector/third
-   * party provides.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAuthenticatedAccount() {
-    return authenticatedAccount;
-  }
-
-  /**
-   * Optional. The end user's account as authenticated to the connector, so the end user can see
-   * which account is connected. May be an email, a username, or any identifier the connector/third
-   * party provides.
-   * @param authenticatedAccount authenticatedAccount or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetadata setAuthenticatedAccount(java.lang.String authenticatedAccount) {
-    this.authenticatedAccount = authenticatedAccount;
-    return this;
-  }
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-party provider name.

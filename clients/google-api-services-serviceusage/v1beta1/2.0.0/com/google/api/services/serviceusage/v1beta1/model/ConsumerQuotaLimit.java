@@ -79,6 +79,14 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> supportedLocations;
 
   /**
+   * Indicates the traffic type attribution for this quota limit (e.g. agentic). This is an
+   * informational field used to categorize and filter the quota limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficSource;
+
+  /**
    * The limit unit. An example unit would be `1/{project}/{region}` Note that `{project}` and
    * `{region}` are not placeholders in this example; the literal characters `{` and `}` occur in
    * the string.
@@ -200,6 +208,25 @@ public final class ConsumerQuotaLimit extends com.google.api.client.json.Generic
    */
   public ConsumerQuotaLimit setSupportedLocations(java.util.List<java.lang.String> supportedLocations) {
     this.supportedLocations = supportedLocations;
+    return this;
+  }
+
+  /**
+   * Indicates the traffic type attribution for this quota limit (e.g. agentic). This is an
+   * informational field used to categorize and filter the quota limits.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficSource() {
+    return trafficSource;
+  }
+
+  /**
+   * Indicates the traffic type attribution for this quota limit (e.g. agentic). This is an
+   * informational field used to categorize and filter the quota limits.
+   * @param trafficSource trafficSource or {@code null} for none
+   */
+  public ConsumerQuotaLimit setTrafficSource(java.lang.String trafficSource) {
+    this.trafficSource = trafficSource;
     return this;
   }
 

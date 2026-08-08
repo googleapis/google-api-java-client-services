@@ -172,6 +172,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private AllocationReservationSharingPolicy reservationSharingPolicy;
 
   /**
+   * Output only. [Output Only] Contains standard resource metadata for an Allocation resource. It
+   * is populated for each instance of the Allocation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceMetadata resourceMetadata;
+
+  /**
    * Resource policies to be added to this reservation. The key is defined by user, and the value is
    * resource policy url. This is to define placement policy with reservation.
    * The value may be {@code null}.
@@ -581,6 +590,27 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setReservationSharingPolicy(AllocationReservationSharingPolicy reservationSharingPolicy) {
     this.reservationSharingPolicy = reservationSharingPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Contains standard resource metadata for an Allocation resource. It
+   * is populated for each instance of the Allocation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * @return value or {@code null} for none
+   */
+  public ResourceMetadata getResourceMetadata() {
+    return resourceMetadata;
+  }
+
+  /**
+   * Output only. [Output Only] Contains standard resource metadata for an Allocation resource. It
+   * is populated for each instance of the Allocation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * @param resourceMetadata resourceMetadata or {@code null} for none
+   */
+  public Reservation setResourceMetadata(ResourceMetadata resourceMetadata) {
+    this.resourceMetadata = resourceMetadata;
     return this;
   }
 

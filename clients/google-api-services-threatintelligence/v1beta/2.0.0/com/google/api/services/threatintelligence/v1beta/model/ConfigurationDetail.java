@@ -32,6 +32,13 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class ConfigurationDetail extends com.google.api.client.json.GenericJson {
 
   /**
+   * Custom Threat Scenario detail config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomThreatScenarioConfig customThreatScenario;
+
+  /**
    * Customer Profile detail config.
    * The value may be {@code null}.
    */
@@ -52,6 +59,23 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private TechnologyWatchListConfig technologyWatchlist;
+
+  /**
+   * Custom Threat Scenario detail config.
+   * @return value or {@code null} for none
+   */
+  public CustomThreatScenarioConfig getCustomThreatScenario() {
+    return customThreatScenario;
+  }
+
+  /**
+   * Custom Threat Scenario detail config.
+   * @param customThreatScenario customThreatScenario or {@code null} for none
+   */
+  public ConfigurationDetail setCustomThreatScenario(CustomThreatScenarioConfig customThreatScenario) {
+    this.customThreatScenario = customThreatScenario;
+    return this;
+  }
 
   /**
    * Customer Profile detail config.
